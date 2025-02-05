@@ -59,24 +59,24 @@ namespace Google.Cloud.Trace.V1 {
             "LmRldnRvb2xzLmNsb3VkdHJhY2UudjEuVHJhY2VzQgPgQQIytQUKDFRyYWNl",
             "U2VydmljZRKoAQoKTGlzdFRyYWNlcxIwLmdvb2dsZS5kZXZ0b29scy5jbG91",
             "ZHRyYWNlLnYxLkxpc3RUcmFjZXNSZXF1ZXN0GjEuZ29vZ2xlLmRldnRvb2xz",
-            "LmNsb3VkdHJhY2UudjEuTGlzdFRyYWNlc1Jlc3BvbnNlIjWC0+STAiISIC92",
-            "MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vdHJhY2Vz2kEKcHJvamVjdF9pZBKr",
+            "LmNsb3VkdHJhY2UudjEuTGlzdFRyYWNlc1Jlc3BvbnNlIjXaQQpwcm9qZWN0",
+            "X2lkgtPkkwIiEiAvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3RyYWNlcxKr",
             "AQoIR2V0VHJhY2USLi5nb29nbGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52MS5H",
             "ZXRUcmFjZVJlcXVlc3QaJC5nb29nbGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52",
-            "MS5UcmFjZSJJgtPkkwItEisvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L3Ry",
-            "YWNlcy97dHJhY2VfaWR92kETcHJvamVjdF9pZCx0cmFjZV9pZBKeAQoLUGF0",
+            "MS5UcmFjZSJJ2kETcHJvamVjdF9pZCx0cmFjZV9pZILT5JMCLRIrL3YxL3By",
+            "b2plY3RzL3twcm9qZWN0X2lkfS90cmFjZXMve3RyYWNlX2lkfRKeAQoLUGF0",
             "Y2hUcmFjZXMSMS5nb29nbGUuZGV2dG9vbHMuY2xvdWR0cmFjZS52MS5QYXRj",
-            "aFRyYWNlc1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiRILT5JMC",
-            "KjIgL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS90cmFjZXM6BnRyYWNlc9pB",
-            "EXByb2plY3RfaWQsdHJhY2VzGqoBykEZY2xvdWR0cmFjZS5nb29nbGVhcGlz",
+            "aFRyYWNlc1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiRNpBEXBy",
+            "b2plY3RfaWQsdHJhY2VzgtPkkwIqMiAvdjEvcHJvamVjdHMve3Byb2plY3Rf",
+            "aWR9L3RyYWNlczoGdHJhY2VzGqoBykEZY2xvdWR0cmFjZS5nb29nbGVhcGlz",
             "LmNvbdJBigFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
             "LXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdHJh",
             "Y2UuYXBwZW5kLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdHJh",
-            "Y2UucmVhZG9ubHlCxQEKIWNvbS5nb29nbGUuZGV2dG9vbHMuY2xvdWR0cmFj",
-            "ZS52MUIKVHJhY2VQcm90b1ABWkdnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2RldnRvb2xzL2Nsb3VkdHJhY2UvdjE7Y2xvdWR0cmFj",
-            "ZaoCFUdvb2dsZS5DbG91ZC5UcmFjZS5WMcoCFUdvb2dsZVxDbG91ZFxUcmFj",
-            "ZVxWMeoCGEdvb2dsZTo6Q2xvdWQ6OlRyYWNlOjpWMWIGcHJvdG8z"));
+            "Y2UucmVhZG9ubHlCrQEKIWNvbS5nb29nbGUuZGV2dG9vbHMuY2xvdWR0cmFj",
+            "ZS52MUIKVHJhY2VQcm90b1ABWi9jbG91ZC5nb29nbGUuY29tL2dvL3RyYWNl",
+            "L2FwaXYxL3RyYWNlcGI7dHJhY2VwYqoCFUdvb2dsZS5DbG91ZC5UcmFjZS5W",
+            "McoCFUdvb2dsZVxDbG91ZFxUcmFjZVxWMeoCGEdvb2dsZTo6Q2xvdWQ6OlRy",
+            "YWNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -98,6 +98,7 @@ namespace Google.Cloud.Trace.V1 {
   /// operation. It consists of a set of spans, each of which represent a single
   /// timed event within the operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Trace : pb::IMessage<Trace>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -364,6 +365,7 @@ namespace Google.Cloud.Trace.V1 {
   /// <summary>
   /// List of new or updated traces.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Traces : pb::IMessage<Traces>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -552,6 +554,7 @@ namespace Google.Cloud.Trace.V1 {
   /// its suboperations. Spans do not need to be contiguous. There may be gaps
   /// between spans in a trace.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TraceSpan : pb::IMessage<TraceSpan>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -928,7 +931,7 @@ namespace Google.Cloud.Trace.V1 {
       if (other.ParentSpanId != 0UL) {
         ParentSpanId = other.ParentSpanId;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1067,6 +1070,7 @@ namespace Google.Cloud.Trace.V1 {
   /// The request message for the `ListTraces` method. All fields are required
   /// unless specified.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTracesRequest : pb::IMessage<ListTracesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1641,6 +1645,7 @@ namespace Google.Cloud.Trace.V1 {
   /// <summary>
   /// The response message for the `ListTraces` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTracesResponse : pb::IMessage<ListTracesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1867,6 +1872,7 @@ namespace Google.Cloud.Trace.V1 {
   /// <summary>
   /// The request message for the `GetTrace` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTraceRequest : pb::IMessage<GetTraceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2102,6 +2108,7 @@ namespace Google.Cloud.Trace.V1 {
   /// <summary>
   /// The request message for the `PatchTraces` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PatchTracesRequest : pb::IMessage<PatchTracesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

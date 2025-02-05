@@ -47,6 +47,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Manual batch tuning parameters.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ManualBatchTuningParameters : pb::IMessage<ManualBatchTuningParameters>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

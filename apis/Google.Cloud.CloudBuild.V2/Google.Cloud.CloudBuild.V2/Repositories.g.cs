@@ -28,207 +28,262 @@ namespace Google.Cloud.CloudBuild.V2 {
             "cHJvdG8SHWdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyGhxnb29nbGUv",
             "YXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90",
             "bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2Fw",
-            "aS9odHRwYm9keS5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoj",
-            "Z29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aG2dvb2dsZS9w",
-            "cm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21h",
-            "c2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i3gUK",
-            "CkNvbm5lY3Rpb24SEQoEbmFtZRgBIAEoCUID4EEFEjQKC2NyZWF0ZV90aW1l",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3Vw",
-            "ZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEkQKDWdpdGh1Yl9jb25maWcYBSABKAsyKy5nb29nbGUuZGV2dG9vbHMu",
-            "Y2xvdWRidWlsZC52Mi5HaXRIdWJDb25maWdIABJZChhnaXRodWJfZW50ZXJw",
-            "cmlzZV9jb25maWcYBiABKAsyNS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWls",
-            "ZC52Mi5HaXRIdWJFbnRlcnByaXNlQ29uZmlnSAASUQoSaW5zdGFsbGF0aW9u",
-            "X3N0YXRlGAwgASgLMjAuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIu",
-            "SW5zdGFsbGF0aW9uU3RhdGVCA+BBAxIQCghkaXNhYmxlZBgNIAEoCBIYCgty",
-            "ZWNvbmNpbGluZxgOIAEoCEID4EEDEk8KC2Fubm90YXRpb25zGA8gAygLMjou",
-            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuQ29ubmVjdGlvbi5Bbm5v",
-            "dGF0aW9uc0VudHJ5EgwKBGV0YWcYECABKAkaMgoQQW5ub3RhdGlvbnNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOogB6kGEAQokY2xv",
-            "dWRidWlsZC5nb29nbGVhcGlzLmNvbS9Db25uZWN0aW9uEkBwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29ubmVjdGlvbnMve2Nv",
-            "bm5lY3Rpb259Kgtjb25uZWN0aW9uczIKY29ubmVjdGlvblIBAUITChFjb25u",
-            "ZWN0aW9uX2NvbmZpZyKFAgoRSW5zdGFsbGF0aW9uU3RhdGUSSgoFc3RhZ2UY",
-            "ASABKA4yNi5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5JbnN0YWxs",
-            "YXRpb25TdGF0ZS5TdGFnZUID4EEDEhQKB21lc3NhZ2UYAiABKAlCA+BBAxIX",
-            "CgphY3Rpb25fdXJpGAMgASgJQgPgQQMidQoFU3RhZ2USFQoRU1RBR0VfVU5T",
-            "UEVDSUZJRUQQABIWChJQRU5ESU5HX0NSRUFURV9BUFAQARIWChJQRU5ESU5H",
-            "X1VTRVJfT0FVVEgQAhIXChNQRU5ESU5HX0lOU1RBTExfQVBQEAMSDAoIQ09N",
-            "UExFVEUQCiKLAQogRmV0Y2hMaW5rYWJsZVJlcG9zaXRvcmllc1JlcXVlc3QS",
-            "QAoKY29ubmVjdGlvbhgBIAEoCUIs4EEC+kEmCiRjbG91ZGJ1aWxkLmdvb2ds",
-            "ZWFwaXMuY29tL0Nvbm5lY3Rpb24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBh",
-            "Z2VfdG9rZW4YAyABKAkifQohRmV0Y2hMaW5rYWJsZVJlcG9zaXRvcmllc1Jl",
-            "c3BvbnNlEj8KDHJlcG9zaXRvcmllcxgBIAMoCzIpLmdvb2dsZS5kZXZ0b29s",
-            "cy5jbG91ZGJ1aWxkLnYyLlJlcG9zaXRvcnkSFwoPbmV4dF9wYWdlX3Rva2Vu",
-            "GAIgASgJInoKDEdpdEh1YkNvbmZpZxJNChVhdXRob3JpemVyX2NyZWRlbnRp",
-            "YWwYASABKAsyLi5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5PQXV0",
-            "aENyZWRlbnRpYWwSGwoTYXBwX2luc3RhbGxhdGlvbl9pZBgCIAEoAyK3AwoW",
-            "R2l0SHViRW50ZXJwcmlzZUNvbmZpZxIVCghob3N0X3VyaRgBIAEoCUID4EEC",
-            "EhQKB2FwaV9rZXkYDCABKAlCA+BBAhIOCgZhcHBfaWQYAiABKAMSEAoIYXBw",
-            "X3NsdWcYDSABKAkSUwoacHJpdmF0ZV9rZXlfc2VjcmV0X3ZlcnNpb24YBCAB",
-            "KAlCL/pBLAoqc2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRW",
-            "ZXJzaW9uElYKHXdlYmhvb2tfc2VjcmV0X3NlY3JldF92ZXJzaW9uGAUgASgJ",
-            "Qi/6QSwKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVy",
-            "c2lvbhIbChNhcHBfaW5zdGFsbGF0aW9uX2lkGAkgASgDElcKGHNlcnZpY2Vf",
-            "ZGlyZWN0b3J5X2NvbmZpZxgKIAEoCzI1Lmdvb2dsZS5kZXZ0b29scy5jbG91",
-            "ZGJ1aWxkLnYyLlNlcnZpY2VEaXJlY3RvcnlDb25maWcSDgoGc3NsX2NhGAsg",
-            "ASgJEhsKDnNlcnZlcl92ZXJzaW9uGA4gASgJQgPgQQMiWgoWU2VydmljZURp",
-            "cmVjdG9yeUNvbmZpZxJACgdzZXJ2aWNlGAEgASgJQi/gQQL6QSkKJ3NlcnZp",
-            "Y2VkaXJlY3RvcnkuZ29vZ2xlYXBpcy5jb20vU2VydmljZSLdAwoKUmVwb3Np",
-            "dG9yeRIRCgRuYW1lGAEgASgJQgPgQQUSFwoKcmVtb3RlX3VyaRgCIAEoCUID",
-            "4EECEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEk8KC2Fubm90YXRpb25zGAYgAygLMjou",
-            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuUmVwb3NpdG9yeS5Bbm5v",
-            "dGF0aW9uc0VudHJ5EgwKBGV0YWcYByABKAkaMgoQQW5ub3RhdGlvbnNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOqMB6kGfAQokY2xv",
-            "dWRidWlsZC5nb29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5Elpwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29ubmVjdGlvbnMve2Nv",
-            "bm5lY3Rpb259L3JlcG9zaXRvcmllcy97cmVwb3NpdG9yeX0qDHJlcG9zaXRv",
-            "cmllczIKcmVwb3NpdG9yeVIBASJ9Cg9PQXV0aENyZWRlbnRpYWwSUwoab2F1",
-            "dGhfdG9rZW5fc2VjcmV0X3ZlcnNpb24YASABKAlCL/pBLAoqc2VjcmV0bWFu",
-            "YWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uEhUKCHVzZXJuYW1l",
-            "GAIgASgJQgPgQQMitwEKF0NyZWF0ZUNvbm5lY3Rpb25SZXF1ZXN0EjwKBnBh",
-            "cmVudBgBIAEoCUIs4EEC+kEmEiRjbG91ZGJ1aWxkLmdvb2dsZWFwaXMuY29t",
-            "L0Nvbm5lY3Rpb24SQgoKY29ubmVjdGlvbhgCIAEoCzIpLmdvb2dsZS5kZXZ0",
-            "b29scy5jbG91ZGJ1aWxkLnYyLkNvbm5lY3Rpb25CA+BBAhIaCg1jb25uZWN0",
-            "aW9uX2lkGAMgASgJQgPgQQIiUgoUR2V0Q29ubmVjdGlvblJlcXVlc3QSOgoE",
-            "bmFtZRgBIAEoCUIs4EEC+kEmCiRjbG91ZGJ1aWxkLmdvb2dsZWFwaXMuY29t",
-            "L0Nvbm5lY3Rpb24ifQoWTGlzdENvbm5lY3Rpb25zUmVxdWVzdBI8CgZwYXJl",
+            "aS9odHRwYm9keS5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxou",
+            "Z29vZ2xlL2RldnRvb2xzL2Nsb3VkYnVpbGQvdjIvY2xvdWRidWlsZC5wcm90",
+            "bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aG2dvb2ds",
+            "ZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxk",
+            "X21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
+            "3QcKCkNvbm5lY3Rpb24SEQoEbmFtZRgBIAEoCUID4EEFEjQKC2NyZWF0ZV90",
+            "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
+            "C3VwZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDEkQKDWdpdGh1Yl9jb25maWcYBSABKAsyKy5nb29nbGUuZGV2dG9v",
+            "bHMuY2xvdWRidWlsZC52Mi5HaXRIdWJDb25maWdIABJZChhnaXRodWJfZW50",
+            "ZXJwcmlzZV9jb25maWcYBiABKAsyNS5nb29nbGUuZGV2dG9vbHMuY2xvdWRi",
+            "dWlsZC52Mi5HaXRIdWJFbnRlcnByaXNlQ29uZmlnSAASRAoNZ2l0bGFiX2Nv",
+            "bmZpZxgHIAEoCzIrLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkdp",
+            "dExhYkNvbmZpZ0gAEmAKHGJpdGJ1Y2tldF9kYXRhX2NlbnRlcl9jb25maWcY",
+            "CCABKAsyOC5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5CaXRidWNr",
+            "ZXREYXRhQ2VudGVyQ29uZmlnSAASVQoWYml0YnVja2V0X2Nsb3VkX2NvbmZp",
+            "ZxgJIAEoCzIzLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkJpdGJ1",
+            "Y2tldENsb3VkQ29uZmlnSAASUQoSaW5zdGFsbGF0aW9uX3N0YXRlGAwgASgL",
+            "MjAuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuSW5zdGFsbGF0aW9u",
+            "U3RhdGVCA+BBAxIQCghkaXNhYmxlZBgNIAEoCBIYCgtyZWNvbmNpbGluZxgO",
+            "IAEoCEID4EEDEk8KC2Fubm90YXRpb25zGA8gAygLMjouZ29vZ2xlLmRldnRv",
+            "b2xzLmNsb3VkYnVpbGQudjIuQ29ubmVjdGlvbi5Bbm5vdGF0aW9uc0VudHJ5",
+            "EgwKBGV0YWcYECABKAkaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBOogB6kGEAQokY2xvdWRidWlsZC5nb29n",
+            "bGVhcGlzLmNvbS9Db25uZWN0aW9uEkBwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vY29ubmVjdGlvbnMve2Nvbm5lY3Rpb259Kgtj",
+            "b25uZWN0aW9uczIKY29ubmVjdGlvblIBAUITChFjb25uZWN0aW9uX2NvbmZp",
+            "ZyKFAgoRSW5zdGFsbGF0aW9uU3RhdGUSSgoFc3RhZ2UYASABKA4yNi5nb29n",
+            "bGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5JbnN0YWxsYXRpb25TdGF0ZS5T",
+            "dGFnZUID4EEDEhQKB21lc3NhZ2UYAiABKAlCA+BBAxIXCgphY3Rpb25fdXJp",
+            "GAMgASgJQgPgQQMidQoFU3RhZ2USFQoRU1RBR0VfVU5TUEVDSUZJRUQQABIW",
+            "ChJQRU5ESU5HX0NSRUFURV9BUFAQARIWChJQRU5ESU5HX1VTRVJfT0FVVEgQ",
+            "AhIXChNQRU5ESU5HX0lOU1RBTExfQVBQEAMSDAoIQ09NUExFVEUQCiKLAQog",
+            "RmV0Y2hMaW5rYWJsZVJlcG9zaXRvcmllc1JlcXVlc3QSQAoKY29ubmVjdGlv",
+            "bhgBIAEoCUIs4EEC+kEmCiRjbG91ZGJ1aWxkLmdvb2dsZWFwaXMuY29tL0Nv",
+            "bm5lY3Rpb24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
+            "KAkifQohRmV0Y2hMaW5rYWJsZVJlcG9zaXRvcmllc1Jlc3BvbnNlEj8KDHJl",
+            "cG9zaXRvcmllcxgBIAMoCzIpLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxk",
+            "LnYyLlJlcG9zaXRvcnkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJInoKDEdp",
+            "dEh1YkNvbmZpZxJNChVhdXRob3JpemVyX2NyZWRlbnRpYWwYASABKAsyLi5n",
+            "b29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5PQXV0aENyZWRlbnRpYWwS",
+            "GwoTYXBwX2luc3RhbGxhdGlvbl9pZBgCIAEoAyK3AwoWR2l0SHViRW50ZXJw",
+            "cmlzZUNvbmZpZxIVCghob3N0X3VyaRgBIAEoCUID4EECEhQKB2FwaV9rZXkY",
+            "DCABKAlCA+BBAhIOCgZhcHBfaWQYAiABKAMSEAoIYXBwX3NsdWcYDSABKAkS",
+            "UwoacHJpdmF0ZV9rZXlfc2VjcmV0X3ZlcnNpb24YBCABKAlCL/pBLAoqc2Vj",
+            "cmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uElYKHXdl",
+            "Ymhvb2tfc2VjcmV0X3NlY3JldF92ZXJzaW9uGAUgASgJQi/6QSwKKnNlY3Jl",
+            "dG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lvbhIbChNhcHBf",
+            "aW5zdGFsbGF0aW9uX2lkGAkgASgDElcKGHNlcnZpY2VfZGlyZWN0b3J5X2Nv",
+            "bmZpZxgKIAEoCzI1Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLlNl",
+            "cnZpY2VEaXJlY3RvcnlDb25maWcSDgoGc3NsX2NhGAsgASgJEhsKDnNlcnZl",
+            "cl92ZXJzaW9uGA4gASgJQgPgQQMirwMKDEdpdExhYkNvbmZpZxIQCghob3N0",
+            "X3VyaRgBIAEoCRJcCh13ZWJob29rX3NlY3JldF9zZWNyZXRfdmVyc2lvbhgC",
+            "IAEoCUI14EEC4EEF+kEsCipzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "L1NlY3JldFZlcnNpb24SVgoacmVhZF9hdXRob3JpemVyX2NyZWRlbnRpYWwY",
+            "AyABKAsyLS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5Vc2VyQ3Jl",
+            "ZGVudGlhbEID4EECElEKFWF1dGhvcml6ZXJfY3JlZGVudGlhbBgEIAEoCzIt",
+            "Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLlVzZXJDcmVkZW50aWFs",
+            "QgPgQQISVwoYc2VydmljZV9kaXJlY3RvcnlfY29uZmlnGAUgASgLMjUuZ29v",
+            "Z2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuU2VydmljZURpcmVjdG9yeUNv",
+            "bmZpZxIOCgZzc2xfY2EYBiABKAkSGwoOc2VydmVyX3ZlcnNpb24YByABKAlC",
+            "A+BBAyLLAwoZQml0YnVja2V0RGF0YUNlbnRlckNvbmZpZxIVCghob3N0X3Vy",
+            "aRgBIAEoCUID4EECElwKHXdlYmhvb2tfc2VjcmV0X3NlY3JldF92ZXJzaW9u",
+            "GAIgASgJQjXgQQLgQQX6QSwKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
+            "b20vU2VjcmV0VmVyc2lvbhJWChpyZWFkX2F1dGhvcml6ZXJfY3JlZGVudGlh",
+            "bBgDIAEoCzItLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLlVzZXJD",
+            "cmVkZW50aWFsQgPgQQISUQoVYXV0aG9yaXplcl9jcmVkZW50aWFsGAQgASgL",
+            "Mi0uZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuVXNlckNyZWRlbnRp",
+            "YWxCA+BBAhJcChhzZXJ2aWNlX2RpcmVjdG9yeV9jb25maWcYBSABKAsyNS5n",
+            "b29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5TZXJ2aWNlRGlyZWN0b3J5",
+            "Q29uZmlnQgPgQQESEwoGc3NsX2NhGAYgASgJQgPgQQESGwoOc2VydmVyX3Zl",
+            "cnNpb24YByABKAlCA+BBAyK0AgoUQml0YnVja2V0Q2xvdWRDb25maWcSFgoJ",
+            "d29ya3NwYWNlGAEgASgJQgPgQQISWQodd2ViaG9va19zZWNyZXRfc2VjcmV0",
+            "X3ZlcnNpb24YAiABKAlCMuBBAvpBLAoqc2VjcmV0bWFuYWdlci5nb29nbGVh",
+            "cGlzLmNvbS9TZWNyZXRWZXJzaW9uElYKGnJlYWRfYXV0aG9yaXplcl9jcmVk",
+            "ZW50aWFsGAMgASgLMi0uZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIu",
+            "VXNlckNyZWRlbnRpYWxCA+BBAhJRChVhdXRob3JpemVyX2NyZWRlbnRpYWwY",
+            "BCABKAsyLS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5Vc2VyQ3Jl",
+            "ZGVudGlhbEID4EECIloKFlNlcnZpY2VEaXJlY3RvcnlDb25maWcSQAoHc2Vy",
+            "dmljZRgBIAEoCUIv4EEC+kEpCidzZXJ2aWNlZGlyZWN0b3J5Lmdvb2dsZWFw",
+            "aXMuY29tL1NlcnZpY2Ui9gMKClJlcG9zaXRvcnkSEQoEbmFtZRgBIAEoCUID",
+            "4EEFEhcKCnJlbW90ZV91cmkYAiABKAlCA+BBAhI0CgtjcmVhdGVfdGltZRgE",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRh",
+            "dGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "AxJPCgthbm5vdGF0aW9ucxgGIAMoCzI6Lmdvb2dsZS5kZXZ0b29scy5jbG91",
+            "ZGJ1aWxkLnYyLlJlcG9zaXRvcnkuQW5ub3RhdGlvbnNFbnRyeRIMCgRldGFn",
+            "GAcgASgJEhcKCndlYmhvb2tfaWQYCCABKAlCA+BBAxoyChBBbm5vdGF0aW9u",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6owHqQZ8B",
+            "CiRjbG91ZGJ1aWxkLmdvb2dsZWFwaXMuY29tL1JlcG9zaXRvcnkSWnByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb25uZWN0aW9u",
+            "cy97Y29ubmVjdGlvbn0vcmVwb3NpdG9yaWVzL3tyZXBvc2l0b3J5fSoMcmVw",
+            "b3NpdG9yaWVzMgpyZXBvc2l0b3J5UgEBIn0KD09BdXRoQ3JlZGVudGlhbBJT",
+            "ChpvYXV0aF90b2tlbl9zZWNyZXRfdmVyc2lvbhgBIAEoCUIv+kEsCipzZWNy",
+            "ZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1NlY3JldFZlcnNpb24SFQoIdXNl",
+            "cm5hbWUYAiABKAlCA+BBAyJ+Cg5Vc2VyQ3JlZGVudGlhbBJVChl1c2VyX3Rv",
+            "a2VuX3NlY3JldF92ZXJzaW9uGAEgASgJQjLgQQL6QSwKKnNlY3JldG1hbmFn",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lvbhIVCgh1c2VybmFtZRgC",
+            "IAEoCUID4EEDIrcBChdDcmVhdGVDb25uZWN0aW9uUmVxdWVzdBI8CgZwYXJl",
             "bnQYASABKAlCLOBBAvpBJhIkY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9D",
-            "b25uZWN0aW9uEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMg",
-            "ASgJInIKF0xpc3RDb25uZWN0aW9uc1Jlc3BvbnNlEj4KC2Nvbm5lY3Rpb25z",
-            "GAEgAygLMikuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuQ29ubmVj",
-            "dGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiswEKF1VwZGF0ZUNvbm5l",
-            "Y3Rpb25SZXF1ZXN0EkIKCmNvbm5lY3Rpb24YASABKAsyKS5nb29nbGUuZGV2",
-            "dG9vbHMuY2xvdWRidWlsZC52Mi5Db25uZWN0aW9uQgPgQQISLwoLdXBkYXRl",
-            "X21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEhUKDWFs",
-            "bG93X21pc3NpbmcYAyABKAgSDAoEZXRhZxgEIAEoCSJ6ChdEZWxldGVDb25u",
-            "ZWN0aW9uUmVxdWVzdBI6CgRuYW1lGAEgASgJQizgQQL6QSYKJGNsb3VkYnVp",
-            "bGQuZ29vZ2xlYXBpcy5jb20vQ29ubmVjdGlvbhIMCgRldGFnGAIgASgJEhUK",
-            "DXZhbGlkYXRlX29ubHkYAyABKAgitwEKF0NyZWF0ZVJlcG9zaXRvcnlSZXF1",
-            "ZXN0EjwKBnBhcmVudBgBIAEoCUIs4EEC+kEmCiRjbG91ZGJ1aWxkLmdvb2ds",
-            "ZWFwaXMuY29tL0Nvbm5lY3Rpb24SQgoKcmVwb3NpdG9yeRgCIAEoCzIpLmdv",
-            "b2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLlJlcG9zaXRvcnlCA+BBAhIa",
-            "Cg1yZXBvc2l0b3J5X2lkGAMgASgJQgPgQQIirQEKHkJhdGNoQ3JlYXRlUmVw",
-            "b3NpdG9yaWVzUmVxdWVzdBI8CgZwYXJlbnQYASABKAlCLOBBAvpBJgokY2xv",
-            "dWRidWlsZC5nb29nbGVhcGlzLmNvbS9Db25uZWN0aW9uEk0KCHJlcXVlc3Rz",
-            "GAIgAygLMjYuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuQ3JlYXRl",
-            "UmVwb3NpdG9yeVJlcXVlc3RCA+BBAiJiCh9CYXRjaENyZWF0ZVJlcG9zaXRv",
-            "cmllc1Jlc3BvbnNlEj8KDHJlcG9zaXRvcmllcxgBIAMoCzIpLmdvb2dsZS5k",
-            "ZXZ0b29scy5jbG91ZGJ1aWxkLnYyLlJlcG9zaXRvcnkiUgoUR2V0UmVwb3Np",
-            "dG9yeVJlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4EEC+kEmCiRjbG91ZGJ1aWxk",
-            "Lmdvb2dsZWFwaXMuY29tL1JlcG9zaXRvcnkijgEKF0xpc3RSZXBvc2l0b3Jp",
-            "ZXNSZXF1ZXN0EjwKBnBhcmVudBgBIAEoCUIs4EEC+kEmEiRjbG91ZGJ1aWxk",
-            "Lmdvb2dsZWFwaXMuY29tL1JlcG9zaXRvcnkSEQoJcGFnZV9zaXplGAIgASgF",
-            "EhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJInQKGExpc3RS",
-            "ZXBvc2l0b3JpZXNSZXNwb25zZRI/CgxyZXBvc2l0b3JpZXMYASADKAsyKS5n",
-            "b29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5SZXBvc2l0b3J5EhcKD25l",
-            "eHRfcGFnZV90b2tlbhgCIAEoCSJ6ChdEZWxldGVSZXBvc2l0b3J5UmVxdWVz",
-            "dBI6CgRuYW1lGAEgASgJQizgQQL6QSYKJGNsb3VkYnVpbGQuZ29vZ2xlYXBp",
-            "cy5jb20vUmVwb3NpdG9yeRIMCgRldGFnGAIgASgJEhUKDXZhbGlkYXRlX29u",
-            "bHkYAyABKAgiXgoaRmV0Y2hSZWFkV3JpdGVUb2tlblJlcXVlc3QSQAoKcmVw",
-            "b3NpdG9yeRgBIAEoCUIs4EEC+kEmCiRjbG91ZGJ1aWxkLmdvb2dsZWFwaXMu",
-            "Y29tL1JlcG9zaXRvcnkiWQoVRmV0Y2hSZWFkVG9rZW5SZXF1ZXN0EkAKCnJl",
-            "cG9zaXRvcnkYASABKAlCLOBBAvpBJgokY2xvdWRidWlsZC5nb29nbGVhcGlz",
-            "LmNvbS9SZXBvc2l0b3J5IlwKFkZldGNoUmVhZFRva2VuUmVzcG9uc2USDQoF",
-            "dG9rZW4YASABKAkSMwoPZXhwaXJhdGlvbl90aW1lGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcCJhChtGZXRjaFJlYWRXcml0ZVRva2VuUmVz",
-            "cG9uc2USDQoFdG9rZW4YASABKAkSMwoPZXhwaXJhdGlvbl90aW1lGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcDLgGQoRUmVwb3NpdG9yeU1h",
-            "bmFnZXISkQIKEENyZWF0ZUNvbm5lY3Rpb24SNi5nb29nbGUuZGV2dG9vbHMu",
-            "Y2xvdWRidWlsZC52Mi5DcmVhdGVDb25uZWN0aW9uUmVxdWVzdBodLmdvb2ds",
-            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24ipQGC0+STAj0iLy92Mi97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Nvbm5lY3Rpb25zOgpjb25uZWN0",
-            "aW9u2kEfcGFyZW50LGNvbm5lY3Rpb24sY29ubmVjdGlvbl9pZMpBPQoKQ29u",
-            "bmVjdGlvbhIvZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuT3BlcmF0",
-            "aW9uTWV0YWRhdGESrwEKDUdldENvbm5lY3Rpb24SMy5nb29nbGUuZGV2dG9v",
-            "bHMuY2xvdWRidWlsZC52Mi5HZXRDb25uZWN0aW9uUmVxdWVzdBopLmdvb2ds",
-            "ZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkNvbm5lY3Rpb24iPoLT5JMCMRIv",
-            "L3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29ubmVjdGlvbnMv",
-            "Kn3aQQRuYW1lEsIBCg9MaXN0Q29ubmVjdGlvbnMSNS5nb29nbGUuZGV2dG9v",
-            "bHMuY2xvdWRidWlsZC52Mi5MaXN0Q29ubmVjdGlvbnNSZXF1ZXN0GjYuZ29v",
-            "Z2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuTGlzdENvbm5lY3Rpb25zUmVz",
-            "cG9uc2UiQILT5JMCMRIvL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKn0vY29ubmVjdGlvbnPaQQZwYXJlbnQSkwIKEFVwZGF0ZUNvbm5lY3Rp",
-            "b24SNi5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5VcGRhdGVDb25u",
-            "ZWN0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "pwGC0+STAkgyOi92Mi97Y29ubmVjdGlvbi5uYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovY29ubmVjdGlvbnMvKn06CmNvbm5lY3Rpb27aQRZjb25uZWN0",
-            "aW9uLHVwZGF0ZV9tYXNrykE9CgpDb25uZWN0aW9uEi9nb29nbGUuZGV2dG9v",
-            "bHMuY2xvdWRidWlsZC52Mi5PcGVyYXRpb25NZXRhZGF0YRL1AQoQRGVsZXRl",
-            "Q29ubmVjdGlvbhI2Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkRl",
-            "bGV0ZUNvbm5lY3Rpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiKJAYLT5JMCMSovL3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovY29ubmVjdGlvbnMvKn3aQQRuYW1lykFIChVnb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkSL2dvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLk9wZXJh",
-            "dGlvbk1ldGFkYXRhEqACChBDcmVhdGVSZXBvc2l0b3J5EjYuZ29vZ2xlLmRl",
-            "dnRvb2xzLmNsb3VkYnVpbGQudjIuQ3JlYXRlUmVwb3NpdG9yeVJlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrQBgtPkkwJMIj4vdjIv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp9",
-            "L3JlcG9zaXRvcmllczoKcmVwb3NpdG9yedpBH3BhcmVudCxyZXBvc2l0b3J5",
-            "LHJlcG9zaXRvcnlfaWTKQT0KClJlcG9zaXRvcnkSL2dvb2dsZS5kZXZ0b29s",
-            "cy5jbG91ZGJ1aWxkLnYyLk9wZXJhdGlvbk1ldGFkYXRhErYCChdCYXRjaENy",
-            "ZWF0ZVJlcG9zaXRvcmllcxI9Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxk",
-            "LnYyLkJhdGNoQ3JlYXRlUmVwb3NpdG9yaWVzUmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24ivAGC0+STAk8iSi92Mi97cGFyZW50PXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovY29ubmVjdGlvbnMvKn0vcmVwb3NpdG9y",
-            "aWVzOmJhdGNoQ3JlYXRlOgEq2kEPcGFyZW50LHJlcXVlc3RzykFSCh9CYXRj",
-            "aENyZWF0ZVJlcG9zaXRvcmllc1Jlc3BvbnNlEi9nb29nbGUuZGV2dG9vbHMu",
-            "Y2xvdWRidWlsZC52Mi5PcGVyYXRpb25NZXRhZGF0YRK+AQoNR2V0UmVwb3Np",
-            "dG9yeRIzLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkdldFJlcG9z",
-            "aXRvcnlSZXF1ZXN0GikuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIu",
-            "UmVwb3NpdG9yeSJNgtPkkwJAEj4vdjIve25hbWU9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9jb25uZWN0aW9ucy8qL3JlcG9zaXRvcmllcy8qfdpBBG5hbWUS",
-            "1AEKEExpc3RSZXBvc2l0b3JpZXMSNi5nb29nbGUuZGV2dG9vbHMuY2xvdWRi",
-            "dWlsZC52Mi5MaXN0UmVwb3NpdG9yaWVzUmVxdWVzdBo3Lmdvb2dsZS5kZXZ0",
-            "b29scy5jbG91ZGJ1aWxkLnYyLkxpc3RSZXBvc2l0b3JpZXNSZXNwb25zZSJP",
-            "gtPkkwJAEj4vdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nv",
-            "bm5lY3Rpb25zLyp9L3JlcG9zaXRvcmllc9pBBnBhcmVudBKEAgoQRGVsZXRl",
-            "UmVwb3NpdG9yeRI2Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkRl",
-            "bGV0ZVJlcG9zaXRvcnlSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
-            "ZXJhdGlvbiKYAYLT5JMCQCo+L3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovY29ubmVjdGlvbnMvKi9yZXBvc2l0b3JpZXMvKn3aQQRuYW1lykFI",
-            "ChVnb29nbGUucHJvdG9idWYuRW1wdHkSL2dvb2dsZS5kZXZ0b29scy5jbG91",
-            "ZGJ1aWxkLnYyLk9wZXJhdGlvbk1ldGFkYXRhEv8BChNGZXRjaFJlYWRXcml0",
-            "ZVRva2VuEjkuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuRmV0Y2hS",
-            "ZWFkV3JpdGVUb2tlblJlcXVlc3QaOi5nb29nbGUuZGV2dG9vbHMuY2xvdWRi",
-            "dWlsZC52Mi5GZXRjaFJlYWRXcml0ZVRva2VuUmVzcG9uc2UicYLT5JMCXiJZ",
-            "L3YyL3tyZXBvc2l0b3J5PXByb2plY3RzLyovbG9jYXRpb25zLyovY29ubmVj",
-            "dGlvbnMvKi9yZXBvc2l0b3JpZXMvKn06YWNjZXNzUmVhZFdyaXRlVG9rZW46",
-            "ASraQQpyZXBvc2l0b3J5EusBCg5GZXRjaFJlYWRUb2tlbhI0Lmdvb2dsZS5k",
-            "ZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkZldGNoUmVhZFRva2VuUmVxdWVzdBo1",
-            "Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkZldGNoUmVhZFRva2Vu",
-            "UmVzcG9uc2UibILT5JMCWSJUL3YyL3tyZXBvc2l0b3J5PXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovY29ubmVjdGlvbnMvKi9yZXBvc2l0b3JpZXMvKn06YWNj",
-            "ZXNzUmVhZFRva2VuOgEq2kEKcmVwb3NpdG9yeRL3AQoZRmV0Y2hMaW5rYWJs",
-            "ZVJlcG9zaXRvcmllcxI/Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYy",
-            "LkZldGNoTGlua2FibGVSZXBvc2l0b3JpZXNSZXF1ZXN0GkAuZ29vZ2xlLmRl",
-            "dnRvb2xzLmNsb3VkYnVpbGQudjIuRmV0Y2hMaW5rYWJsZVJlcG9zaXRvcmll",
-            "c1Jlc3BvbnNlIleC0+STAlESTy92Mi97Y29ubmVjdGlvbj1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp9OmZldGNoTGlua2FibGVSZXBv",
-            "c2l0b3JpZXMaTcpBGWNsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQskC",
-            "Chhjb20uZ29vZ2xlLmNsb3VkYnVpbGQudjJCFlJlcG9zaXRvcnlNYW5hZ2Vy",
-            "UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9jbG91ZGJ1aWxkL2FwaXYy",
-            "L2Nsb3VkYnVpbGRwYjtjbG91ZGJ1aWxkcGKiAgNHQ0KqAhpHb29nbGUuQ2xv",
-            "dWQuQ2xvdWRCdWlsZC5WMsoCFUdvb2dsZVxDbG91ZFxCdWlsZFxWMuoCGEdv",
-            "b2dsZTo6Q2xvdWQ6OkJ1aWxkOjpWMupBfAonc2VydmljZWRpcmVjdG9yeS5n",
-            "b29nbGVhcGlzLmNvbS9TZXJ2aWNlElFwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vbmFtZXNwYWNlcy97bmFtZXNwYWNlfS9zZXJ2",
-            "aWNlcy97c2VydmljZX1iBnByb3RvMw=="));
+            "b25uZWN0aW9uEkIKCmNvbm5lY3Rpb24YAiABKAsyKS5nb29nbGUuZGV2dG9v",
+            "bHMuY2xvdWRidWlsZC52Mi5Db25uZWN0aW9uQgPgQQISGgoNY29ubmVjdGlv",
+            "bl9pZBgDIAEoCUID4EECIlIKFEdldENvbm5lY3Rpb25SZXF1ZXN0EjoKBG5h",
+            "bWUYASABKAlCLOBBAvpBJgokY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9D",
+            "b25uZWN0aW9uIn0KFkxpc3RDb25uZWN0aW9uc1JlcXVlc3QSPAoGcGFyZW50",
+            "GAEgASgJQizgQQL6QSYSJGNsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb20vQ29u",
+            "bmVjdGlvbhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEo",
+            "CSJyChdMaXN0Q29ubmVjdGlvbnNSZXNwb25zZRI+Cgtjb25uZWN0aW9ucxgB",
+            "IAMoCzIpLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkNvbm5lY3Rp",
+            "b24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIrMBChdVcGRhdGVDb25uZWN0",
+            "aW9uUmVxdWVzdBJCCgpjb25uZWN0aW9uGAEgASgLMikuZ29vZ2xlLmRldnRv",
+            "b2xzLmNsb3VkYnVpbGQudjIuQ29ubmVjdGlvbkID4EECEi8KC3VwZGF0ZV9t",
+            "YXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxIVCg1hbGxv",
+            "d19taXNzaW5nGAMgASgIEgwKBGV0YWcYBCABKAkiegoXRGVsZXRlQ29ubmVj",
+            "dGlvblJlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4EEC+kEmCiRjbG91ZGJ1aWxk",
+            "Lmdvb2dsZWFwaXMuY29tL0Nvbm5lY3Rpb24SDAoEZXRhZxgCIAEoCRIVCg12",
+            "YWxpZGF0ZV9vbmx5GAMgASgIIrcBChdDcmVhdGVSZXBvc2l0b3J5UmVxdWVz",
+            "dBI8CgZwYXJlbnQYASABKAlCLOBBAvpBJgokY2xvdWRidWlsZC5nb29nbGVh",
+            "cGlzLmNvbS9Db25uZWN0aW9uEkIKCnJlcG9zaXRvcnkYAiABKAsyKS5nb29n",
+            "bGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5SZXBvc2l0b3J5QgPgQQISGgoN",
+            "cmVwb3NpdG9yeV9pZBgDIAEoCUID4EECIq0BCh5CYXRjaENyZWF0ZVJlcG9z",
+            "aXRvcmllc1JlcXVlc3QSPAoGcGFyZW50GAEgASgJQizgQQL6QSYKJGNsb3Vk",
+            "YnVpbGQuZ29vZ2xlYXBpcy5jb20vQ29ubmVjdGlvbhJNCghyZXF1ZXN0cxgC",
+            "IAMoCzI2Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkNyZWF0ZVJl",
+            "cG9zaXRvcnlSZXF1ZXN0QgPgQQIiYgofQmF0Y2hDcmVhdGVSZXBvc2l0b3Jp",
+            "ZXNSZXNwb25zZRI/CgxyZXBvc2l0b3JpZXMYASADKAsyKS5nb29nbGUuZGV2",
+            "dG9vbHMuY2xvdWRidWlsZC52Mi5SZXBvc2l0b3J5IlIKFEdldFJlcG9zaXRv",
+            "cnlSZXF1ZXN0EjoKBG5hbWUYASABKAlCLOBBAvpBJgokY2xvdWRidWlsZC5n",
+            "b29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5Io4BChdMaXN0UmVwb3NpdG9yaWVz",
+            "UmVxdWVzdBI8CgZwYXJlbnQYASABKAlCLOBBAvpBJhIkY2xvdWRidWlsZC5n",
+            "b29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5EhEKCXBhZ2Vfc2l6ZRgCIAEoBRIS",
+            "CgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgEIAEoCSJ0ChhMaXN0UmVw",
+            "b3NpdG9yaWVzUmVzcG9uc2USPwoMcmVwb3NpdG9yaWVzGAEgAygLMikuZ29v",
+            "Z2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuUmVwb3NpdG9yeRIXCg9uZXh0",
+            "X3BhZ2VfdG9rZW4YAiABKAkiegoXRGVsZXRlUmVwb3NpdG9yeVJlcXVlc3QS",
+            "OgoEbmFtZRgBIAEoCUIs4EEC+kEmCiRjbG91ZGJ1aWxkLmdvb2dsZWFwaXMu",
+            "Y29tL1JlcG9zaXRvcnkSDAoEZXRhZxgCIAEoCRIVCg12YWxpZGF0ZV9vbmx5",
+            "GAMgASgIIl4KGkZldGNoUmVhZFdyaXRlVG9rZW5SZXF1ZXN0EkAKCnJlcG9z",
+            "aXRvcnkYASABKAlCLOBBAvpBJgokY2xvdWRidWlsZC5nb29nbGVhcGlzLmNv",
+            "bS9SZXBvc2l0b3J5IlkKFUZldGNoUmVhZFRva2VuUmVxdWVzdBJACgpyZXBv",
+            "c2l0b3J5GAEgASgJQizgQQL6QSYKJGNsb3VkYnVpbGQuZ29vZ2xlYXBpcy5j",
+            "b20vUmVwb3NpdG9yeSJcChZGZXRjaFJlYWRUb2tlblJlc3BvbnNlEg0KBXRv",
+            "a2VuGAEgASgJEjMKD2V4cGlyYXRpb25fdGltZRgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXAiYQobRmV0Y2hSZWFkV3JpdGVUb2tlblJlc3Bv",
+            "bnNlEg0KBXRva2VuGAEgASgJEjMKD2V4cGlyYXRpb25fdGltZRgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAijgEKFVByb2Nlc3NXZWJob29r",
+            "UmVxdWVzdBI8CgZwYXJlbnQYASABKAlCLOBBAvpBJhIkY2xvdWRidWlsZC5n",
+            "b29nbGVhcGlzLmNvbS9Db25uZWN0aW9uEiIKBGJvZHkYAiABKAsyFC5nb29n",
+            "bGUuYXBpLkh0dHBCb2R5EhMKC3dlYmhvb2tfa2V5GAMgASgJIt8BChNGZXRj",
+            "aEdpdFJlZnNSZXF1ZXN0EkAKCnJlcG9zaXRvcnkYASABKAlCLOBBAvpBJgok",
+            "Y2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5EkwKCHJlZl90",
+            "eXBlGAIgASgOMjouZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuRmV0",
+            "Y2hHaXRSZWZzUmVxdWVzdC5SZWZUeXBlIjgKB1JlZlR5cGUSGAoUUkVGX1RZ",
+            "UEVfVU5TUEVDSUZJRUQQABIHCgNUQUcQARIKCgZCUkFOQ0gQAiIpChRGZXRj",
+            "aEdpdFJlZnNSZXNwb25zZRIRCglyZWZfbmFtZXMYASADKAkywhsKEVJlcG9z",
+            "aXRvcnlNYW5hZ2VyEpECChBDcmVhdGVDb25uZWN0aW9uEjYuZ29vZ2xlLmRl",
+            "dnRvb2xzLmNsb3VkYnVpbGQudjIuQ3JlYXRlQ29ubmVjdGlvblJlcXVlc3Qa",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqUBykE9CgpDb25uZWN0",
+            "aW9uEi9nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5PcGVyYXRpb25N",
+            "ZXRhZGF0YdpBH3BhcmVudCxjb25uZWN0aW9uLGNvbm5lY3Rpb25faWSC0+ST",
+            "Aj0iLy92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Nvbm5l",
+            "Y3Rpb25zOgpjb25uZWN0aW9uEq8BCg1HZXRDb25uZWN0aW9uEjMuZ29vZ2xl",
+            "LmRldnRvb2xzLmNsb3VkYnVpbGQudjIuR2V0Q29ubmVjdGlvblJlcXVlc3Qa",
+            "KS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5Db25uZWN0aW9uIj7a",
+            "QQRuYW1lgtPkkwIxEi8vdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9jb25uZWN0aW9ucy8qfRLCAQoPTGlzdENvbm5lY3Rpb25zEjUuZ29vZ2xl",
+            "LmRldnRvb2xzLmNsb3VkYnVpbGQudjIuTGlzdENvbm5lY3Rpb25zUmVxdWVz",
+            "dBo2Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkxpc3RDb25uZWN0",
+            "aW9uc1Jlc3BvbnNlIkDaQQZwYXJlbnSC0+STAjESLy92Mi97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyp9L2Nvbm5lY3Rpb25zEpMCChBVcGRhdGVD",
+            "b25uZWN0aW9uEjYuZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuVXBk",
+            "YXRlQ29ubmVjdGlvblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uIqcBykE9CgpDb25uZWN0aW9uEi9nb29nbGUuZGV2dG9vbHMuY2xv",
+            "dWRidWlsZC52Mi5PcGVyYXRpb25NZXRhZGF0YdpBFmNvbm5lY3Rpb24sdXBk",
+            "YXRlX21hc2uC0+STAkgyOi92Mi97Y29ubmVjdGlvbi5uYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovY29ubmVjdGlvbnMvKn06CmNvbm5lY3Rpb24S9QEK",
+            "EERlbGV0ZUNvbm5lY3Rpb24SNi5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWls",
+            "ZC52Mi5EZWxldGVDb25uZWN0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
+            "bmluZy5PcGVyYXRpb24iiQHKQUgKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIv",
+            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuT3BlcmF0aW9uTWV0YWRh",
+            "dGHaQQRuYW1lgtPkkwIxKi8vdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9jb25uZWN0aW9ucy8qfRKgAgoQQ3JlYXRlUmVwb3NpdG9yeRI2Lmdv",
+            "b2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkNyZWF0ZVJlcG9zaXRvcnlS",
+            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiK0AcpBPQoK",
+            "UmVwb3NpdG9yeRIvZ29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuT3Bl",
+            "cmF0aW9uTWV0YWRhdGHaQR9wYXJlbnQscmVwb3NpdG9yeSxyZXBvc2l0b3J5",
+            "X2lkgtPkkwJMIj4vdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2Nvbm5lY3Rpb25zLyp9L3JlcG9zaXRvcmllczoKcmVwb3NpdG9yeRK2AgoX",
+            "QmF0Y2hDcmVhdGVSZXBvc2l0b3JpZXMSPS5nb29nbGUuZGV2dG9vbHMuY2xv",
+            "dWRidWlsZC52Mi5CYXRjaENyZWF0ZVJlcG9zaXRvcmllc1JlcXVlc3QaHS5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrwBykFSCh9CYXRjaENyZWF0",
+            "ZVJlcG9zaXRvcmllc1Jlc3BvbnNlEi9nb29nbGUuZGV2dG9vbHMuY2xvdWRi",
+            "dWlsZC52Mi5PcGVyYXRpb25NZXRhZGF0YdpBD3BhcmVudCxyZXF1ZXN0c4LT",
+            "5JMCTyJKL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb25u",
+            "ZWN0aW9ucy8qfS9yZXBvc2l0b3JpZXM6YmF0Y2hDcmVhdGU6ASoSvgEKDUdl",
+            "dFJlcG9zaXRvcnkSMy5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5H",
+            "ZXRSZXBvc2l0b3J5UmVxdWVzdBopLmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1",
+            "aWxkLnYyLlJlcG9zaXRvcnkiTdpBBG5hbWWC0+STAkASPi92Mi97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyovcmVwb3NpdG9y",
+            "aWVzLyp9EtQBChBMaXN0UmVwb3NpdG9yaWVzEjYuZ29vZ2xlLmRldnRvb2xz",
+            "LmNsb3VkYnVpbGQudjIuTGlzdFJlcG9zaXRvcmllc1JlcXVlc3QaNy5nb29n",
+            "bGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5MaXN0UmVwb3NpdG9yaWVzUmVz",
+            "cG9uc2UiT9pBBnBhcmVudILT5JMCQBI+L3YyL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9jb25uZWN0aW9ucy8qfS9yZXBvc2l0b3JpZXMShAIK",
+            "EERlbGV0ZVJlcG9zaXRvcnkSNi5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWls",
+            "ZC52Mi5EZWxldGVSZXBvc2l0b3J5UmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
+            "bmluZy5PcGVyYXRpb24imAHKQUgKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIv",
+            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuT3BlcmF0aW9uTWV0YWRh",
+            "dGHaQQRuYW1lgtPkkwJAKj4vdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9jb25uZWN0aW9ucy8qL3JlcG9zaXRvcmllcy8qfRL/AQoTRmV0Y2hS",
+            "ZWFkV3JpdGVUb2tlbhI5Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYy",
+            "LkZldGNoUmVhZFdyaXRlVG9rZW5SZXF1ZXN0GjouZ29vZ2xlLmRldnRvb2xz",
+            "LmNsb3VkYnVpbGQudjIuRmV0Y2hSZWFkV3JpdGVUb2tlblJlc3BvbnNlInHa",
+            "QQpyZXBvc2l0b3J5gtPkkwJeIlkvdjIve3JlcG9zaXRvcnk9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9jb25uZWN0aW9ucy8qL3JlcG9zaXRvcmllcy8qfTph",
+            "Y2Nlc3NSZWFkV3JpdGVUb2tlbjoBKhLrAQoORmV0Y2hSZWFkVG9rZW4SNC5n",
+            "b29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5GZXRjaFJlYWRUb2tlblJl",
+            "cXVlc3QaNS5nb29nbGUuZGV2dG9vbHMuY2xvdWRidWlsZC52Mi5GZXRjaFJl",
+            "YWRUb2tlblJlc3BvbnNlImzaQQpyZXBvc2l0b3J5gtPkkwJZIlQvdjIve3Jl",
+            "cG9zaXRvcnk9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb25uZWN0aW9ucy8q",
+            "L3JlcG9zaXRvcmllcy8qfTphY2Nlc3NSZWFkVG9rZW46ASoS9wEKGUZldGNo",
+            "TGlua2FibGVSZXBvc2l0b3JpZXMSPy5nb29nbGUuZGV2dG9vbHMuY2xvdWRi",
+            "dWlsZC52Mi5GZXRjaExpbmthYmxlUmVwb3NpdG9yaWVzUmVxdWVzdBpALmdv",
+            "b2dsZS5kZXZ0b29scy5jbG91ZGJ1aWxkLnYyLkZldGNoTGlua2FibGVSZXBv",
+            "c2l0b3JpZXNSZXNwb25zZSJXgtPkkwJREk8vdjIve2Nvbm5lY3Rpb249cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9jb25uZWN0aW9ucy8qfTpmZXRjaExpbmth",
+            "YmxlUmVwb3NpdG9yaWVzEt8BCgxGZXRjaEdpdFJlZnMSMi5nb29nbGUuZGV2",
+            "dG9vbHMuY2xvdWRidWlsZC52Mi5GZXRjaEdpdFJlZnNSZXF1ZXN0GjMuZ29v",
+            "Z2xlLmRldnRvb2xzLmNsb3VkYnVpbGQudjIuRmV0Y2hHaXRSZWZzUmVzcG9u",
+            "c2UiZtpBCnJlcG9zaXRvcnmC0+STAlMSUS92Mi97cmVwb3NpdG9yeT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyovcmVwb3NpdG9yaWVz",
+            "Lyp9OmZldGNoR2l0UmVmcxpNykEZY2xvdWRidWlsZC5nb29nbGVhcGlzLmNv",
+            "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
+            "dGZvcm1CyQIKGGNvbS5nb29nbGUuY2xvdWRidWlsZC52MkIWUmVwb3NpdG9y",
+            "eU1hbmFnZXJQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2Nsb3VkYnVp",
+            "bGQvYXBpdjIvY2xvdWRidWlsZHBiO2Nsb3VkYnVpbGRwYqICA0dDQqoCGkdv",
+            "b2dsZS5DbG91ZC5DbG91ZEJ1aWxkLlYyygIVR29vZ2xlXENsb3VkXEJ1aWxk",
+            "XFYy6gIYR29vZ2xlOjpDbG91ZDo6QnVpbGQ6OlYy6kF8CidzZXJ2aWNlZGly",
+            "ZWN0b3J5Lmdvb2dsZWFwaXMuY29tL1NlcnZpY2USUXByb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9uYW1lc3BhY2VzL3tuYW1lc3Bh",
+            "Y2V9L3NlcnZpY2VzL3tzZXJ2aWNlfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.CloudBuild.V2.CloudbuildReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.Connection), global::Google.Cloud.CloudBuild.V2.Connection.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "GithubConfig", "GithubEnterpriseConfig", "InstallationState", "Disabled", "Reconciling", "Annotations", "Etag" }, new[]{ "ConnectionConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.Connection), global::Google.Cloud.CloudBuild.V2.Connection.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "GithubConfig", "GithubEnterpriseConfig", "GitlabConfig", "BitbucketDataCenterConfig", "BitbucketCloudConfig", "InstallationState", "Disabled", "Reconciling", "Annotations", "Etag" }, new[]{ "ConnectionConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.InstallationState), global::Google.Cloud.CloudBuild.V2.InstallationState.Parser, new[]{ "Stage", "Message", "ActionUri" }, null, new[]{ typeof(global::Google.Cloud.CloudBuild.V2.InstallationState.Types.Stage) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesRequest), global::Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesRequest.Parser, new[]{ "Connection", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesResponse), global::Google.Cloud.CloudBuild.V2.FetchLinkableRepositoriesResponse.Parser, new[]{ "Repositories", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.GitHubConfig), global::Google.Cloud.CloudBuild.V2.GitHubConfig.Parser, new[]{ "AuthorizerCredential", "AppInstallationId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.GitHubEnterpriseConfig), global::Google.Cloud.CloudBuild.V2.GitHubEnterpriseConfig.Parser, new[]{ "HostUri", "ApiKey", "AppId", "AppSlug", "PrivateKeySecretVersion", "WebhookSecretSecretVersion", "AppInstallationId", "ServiceDirectoryConfig", "SslCa", "ServerVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.GitLabConfig), global::Google.Cloud.CloudBuild.V2.GitLabConfig.Parser, new[]{ "HostUri", "WebhookSecretSecretVersion", "ReadAuthorizerCredential", "AuthorizerCredential", "ServiceDirectoryConfig", "SslCa", "ServerVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.BitbucketDataCenterConfig), global::Google.Cloud.CloudBuild.V2.BitbucketDataCenterConfig.Parser, new[]{ "HostUri", "WebhookSecretSecretVersion", "ReadAuthorizerCredential", "AuthorizerCredential", "ServiceDirectoryConfig", "SslCa", "ServerVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.BitbucketCloudConfig), global::Google.Cloud.CloudBuild.V2.BitbucketCloudConfig.Parser, new[]{ "Workspace", "WebhookSecretSecretVersion", "ReadAuthorizerCredential", "AuthorizerCredential" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.ServiceDirectoryConfig), global::Google.Cloud.CloudBuild.V2.ServiceDirectoryConfig.Parser, new[]{ "Service" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.Repository), global::Google.Cloud.CloudBuild.V2.Repository.Parser, new[]{ "Name", "RemoteUri", "CreateTime", "UpdateTime", "Annotations", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.Repository), global::Google.Cloud.CloudBuild.V2.Repository.Parser, new[]{ "Name", "RemoteUri", "CreateTime", "UpdateTime", "Annotations", "Etag", "WebhookId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.OAuthCredential), global::Google.Cloud.CloudBuild.V2.OAuthCredential.Parser, new[]{ "OauthTokenSecretVersion", "Username" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.UserCredential), global::Google.Cloud.CloudBuild.V2.UserCredential.Parser, new[]{ "UserTokenSecretVersion", "Username" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.CreateConnectionRequest), global::Google.Cloud.CloudBuild.V2.CreateConnectionRequest.Parser, new[]{ "Parent", "Connection", "ConnectionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.GetConnectionRequest), global::Google.Cloud.CloudBuild.V2.GetConnectionRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.ListConnectionsRequest), global::Google.Cloud.CloudBuild.V2.ListConnectionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
@@ -245,7 +300,10 @@ namespace Google.Cloud.CloudBuild.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.FetchReadWriteTokenRequest), global::Google.Cloud.CloudBuild.V2.FetchReadWriteTokenRequest.Parser, new[]{ "Repository" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.FetchReadTokenRequest), global::Google.Cloud.CloudBuild.V2.FetchReadTokenRequest.Parser, new[]{ "Repository" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.FetchReadTokenResponse), global::Google.Cloud.CloudBuild.V2.FetchReadTokenResponse.Parser, new[]{ "Token", "ExpirationTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.FetchReadWriteTokenResponse), global::Google.Cloud.CloudBuild.V2.FetchReadWriteTokenResponse.Parser, new[]{ "Token", "ExpirationTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.FetchReadWriteTokenResponse), global::Google.Cloud.CloudBuild.V2.FetchReadWriteTokenResponse.Parser, new[]{ "Token", "ExpirationTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.ProcessWebhookRequest), global::Google.Cloud.CloudBuild.V2.ProcessWebhookRequest.Parser, new[]{ "Parent", "Body", "WebhookKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest), global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Parser, new[]{ "Repository", "RefType" }, null, new[]{ typeof(global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Types.RefType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.CloudBuild.V2.FetchGitRefsResponse), global::Google.Cloud.CloudBuild.V2.FetchGitRefsResponse.Parser, new[]{ "RefNames" }, null, null, null, null)
           }));
     }
     #endregion
@@ -253,9 +311,10 @@ namespace Google.Cloud.CloudBuild.V2 {
   }
   #region Messages
   /// <summary>
-  /// A connection to a SCM like GitHub, GitHub Enterprise, Bitbucket Server or
-  /// GitLab.
+  /// A connection to a SCM like GitHub, GitHub Enterprise, Bitbucket Data Center,
+  /// Bitbucket Cloud or GitLab.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Connection : pb::IMessage<Connection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -304,6 +363,15 @@ namespace Google.Cloud.CloudBuild.V2 {
           break;
         case ConnectionConfigOneofCase.GithubEnterpriseConfig:
           GithubEnterpriseConfig = other.GithubEnterpriseConfig.Clone();
+          break;
+        case ConnectionConfigOneofCase.GitlabConfig:
+          GitlabConfig = other.GitlabConfig.Clone();
+          break;
+        case ConnectionConfigOneofCase.BitbucketDataCenterConfig:
+          BitbucketDataCenterConfig = other.BitbucketDataCenterConfig.Clone();
+          break;
+        case ConnectionConfigOneofCase.BitbucketCloudConfig:
+          BitbucketCloudConfig = other.BitbucketCloudConfig.Clone();
           break;
       }
 
@@ -392,6 +460,52 @@ namespace Google.Cloud.CloudBuild.V2 {
       }
     }
 
+    /// <summary>Field number for the "gitlab_config" field.</summary>
+    public const int GitlabConfigFieldNumber = 7;
+    /// <summary>
+    /// Configuration for connections to gitlab.com or an instance of GitLab
+    /// Enterprise.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudBuild.V2.GitLabConfig GitlabConfig {
+      get { return connectionConfigCase_ == ConnectionConfigOneofCase.GitlabConfig ? (global::Google.Cloud.CloudBuild.V2.GitLabConfig) connectionConfig_ : null; }
+      set {
+        connectionConfig_ = value;
+        connectionConfigCase_ = value == null ? ConnectionConfigOneofCase.None : ConnectionConfigOneofCase.GitlabConfig;
+      }
+    }
+
+    /// <summary>Field number for the "bitbucket_data_center_config" field.</summary>
+    public const int BitbucketDataCenterConfigFieldNumber = 8;
+    /// <summary>
+    /// Configuration for connections to Bitbucket Data Center.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudBuild.V2.BitbucketDataCenterConfig BitbucketDataCenterConfig {
+      get { return connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketDataCenterConfig ? (global::Google.Cloud.CloudBuild.V2.BitbucketDataCenterConfig) connectionConfig_ : null; }
+      set {
+        connectionConfig_ = value;
+        connectionConfigCase_ = value == null ? ConnectionConfigOneofCase.None : ConnectionConfigOneofCase.BitbucketDataCenterConfig;
+      }
+    }
+
+    /// <summary>Field number for the "bitbucket_cloud_config" field.</summary>
+    public const int BitbucketCloudConfigFieldNumber = 9;
+    /// <summary>
+    /// Configuration for connections to Bitbucket Cloud.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudBuild.V2.BitbucketCloudConfig BitbucketCloudConfig {
+      get { return connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketCloudConfig ? (global::Google.Cloud.CloudBuild.V2.BitbucketCloudConfig) connectionConfig_ : null; }
+      set {
+        connectionConfig_ = value;
+        connectionConfigCase_ = value == null ? ConnectionConfigOneofCase.None : ConnectionConfigOneofCase.BitbucketCloudConfig;
+      }
+    }
+
     /// <summary>Field number for the "installation_state" field.</summary>
     public const int InstallationStateFieldNumber = 12;
     private global::Google.Cloud.CloudBuild.V2.InstallationState installationState_;
@@ -477,6 +591,9 @@ namespace Google.Cloud.CloudBuild.V2 {
       None = 0,
       GithubConfig = 5,
       GithubEnterpriseConfig = 6,
+      GitlabConfig = 7,
+      BitbucketDataCenterConfig = 8,
+      BitbucketCloudConfig = 9,
     }
     private ConnectionConfigOneofCase connectionConfigCase_ = ConnectionConfigOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -512,6 +629,9 @@ namespace Google.Cloud.CloudBuild.V2 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(GithubConfig, other.GithubConfig)) return false;
       if (!object.Equals(GithubEnterpriseConfig, other.GithubEnterpriseConfig)) return false;
+      if (!object.Equals(GitlabConfig, other.GitlabConfig)) return false;
+      if (!object.Equals(BitbucketDataCenterConfig, other.BitbucketDataCenterConfig)) return false;
+      if (!object.Equals(BitbucketCloudConfig, other.BitbucketCloudConfig)) return false;
       if (!object.Equals(InstallationState, other.InstallationState)) return false;
       if (Disabled != other.Disabled) return false;
       if (Reconciling != other.Reconciling) return false;
@@ -530,6 +650,9 @@ namespace Google.Cloud.CloudBuild.V2 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (connectionConfigCase_ == ConnectionConfigOneofCase.GithubConfig) hash ^= GithubConfig.GetHashCode();
       if (connectionConfigCase_ == ConnectionConfigOneofCase.GithubEnterpriseConfig) hash ^= GithubEnterpriseConfig.GetHashCode();
+      if (connectionConfigCase_ == ConnectionConfigOneofCase.GitlabConfig) hash ^= GitlabConfig.GetHashCode();
+      if (connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketDataCenterConfig) hash ^= BitbucketDataCenterConfig.GetHashCode();
+      if (connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketCloudConfig) hash ^= BitbucketCloudConfig.GetHashCode();
       if (installationState_ != null) hash ^= InstallationState.GetHashCode();
       if (Disabled != false) hash ^= Disabled.GetHashCode();
       if (Reconciling != false) hash ^= Reconciling.GetHashCode();
@@ -573,6 +696,18 @@ namespace Google.Cloud.CloudBuild.V2 {
       if (connectionConfigCase_ == ConnectionConfigOneofCase.GithubEnterpriseConfig) {
         output.WriteRawTag(50);
         output.WriteMessage(GithubEnterpriseConfig);
+      }
+      if (connectionConfigCase_ == ConnectionConfigOneofCase.GitlabConfig) {
+        output.WriteRawTag(58);
+        output.WriteMessage(GitlabConfig);
+      }
+      if (connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketDataCenterConfig) {
+        output.WriteRawTag(66);
+        output.WriteMessage(BitbucketDataCenterConfig);
+      }
+      if (connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketCloudConfig) {
+        output.WriteRawTag(74);
+        output.WriteMessage(BitbucketCloudConfig);
       }
       if (installationState_ != null) {
         output.WriteRawTag(98);
@@ -621,6 +756,18 @@ namespace Google.Cloud.CloudBuild.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(GithubEnterpriseConfig);
       }
+      if (connectionConfigCase_ == ConnectionConfigOneofCase.GitlabConfig) {
+        output.WriteRawTag(58);
+        output.WriteMessage(GitlabConfig);
+      }
+      if (connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketDataCenterConfig) {
+        output.WriteRawTag(66);
+        output.WriteMessage(BitbucketDataCenterConfig);
+      }
+      if (connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketCloudConfig) {
+        output.WriteRawTag(74);
+        output.WriteMessage(BitbucketCloudConfig);
+      }
       if (installationState_ != null) {
         output.WriteRawTag(98);
         output.WriteMessage(InstallationState);
@@ -662,6 +809,15 @@ namespace Google.Cloud.CloudBuild.V2 {
       }
       if (connectionConfigCase_ == ConnectionConfigOneofCase.GithubEnterpriseConfig) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GithubEnterpriseConfig);
+      }
+      if (connectionConfigCase_ == ConnectionConfigOneofCase.GitlabConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GitlabConfig);
+      }
+      if (connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketDataCenterConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BitbucketDataCenterConfig);
+      }
+      if (connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketCloudConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BitbucketCloudConfig);
       }
       if (installationState_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstallationState);
@@ -715,7 +871,7 @@ namespace Google.Cloud.CloudBuild.V2 {
       if (other.Reconciling != false) {
         Reconciling = other.Reconciling;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -731,6 +887,24 @@ namespace Google.Cloud.CloudBuild.V2 {
             GithubEnterpriseConfig = new global::Google.Cloud.CloudBuild.V2.GitHubEnterpriseConfig();
           }
           GithubEnterpriseConfig.MergeFrom(other.GithubEnterpriseConfig);
+          break;
+        case ConnectionConfigOneofCase.GitlabConfig:
+          if (GitlabConfig == null) {
+            GitlabConfig = new global::Google.Cloud.CloudBuild.V2.GitLabConfig();
+          }
+          GitlabConfig.MergeFrom(other.GitlabConfig);
+          break;
+        case ConnectionConfigOneofCase.BitbucketDataCenterConfig:
+          if (BitbucketDataCenterConfig == null) {
+            BitbucketDataCenterConfig = new global::Google.Cloud.CloudBuild.V2.BitbucketDataCenterConfig();
+          }
+          BitbucketDataCenterConfig.MergeFrom(other.BitbucketDataCenterConfig);
+          break;
+        case ConnectionConfigOneofCase.BitbucketCloudConfig:
+          if (BitbucketCloudConfig == null) {
+            BitbucketCloudConfig = new global::Google.Cloud.CloudBuild.V2.BitbucketCloudConfig();
+          }
+          BitbucketCloudConfig.MergeFrom(other.BitbucketCloudConfig);
           break;
       }
 
@@ -783,6 +957,33 @@ namespace Google.Cloud.CloudBuild.V2 {
             }
             input.ReadMessage(subBuilder);
             GithubEnterpriseConfig = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.CloudBuild.V2.GitLabConfig subBuilder = new global::Google.Cloud.CloudBuild.V2.GitLabConfig();
+            if (connectionConfigCase_ == ConnectionConfigOneofCase.GitlabConfig) {
+              subBuilder.MergeFrom(GitlabConfig);
+            }
+            input.ReadMessage(subBuilder);
+            GitlabConfig = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.CloudBuild.V2.BitbucketDataCenterConfig subBuilder = new global::Google.Cloud.CloudBuild.V2.BitbucketDataCenterConfig();
+            if (connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketDataCenterConfig) {
+              subBuilder.MergeFrom(BitbucketDataCenterConfig);
+            }
+            input.ReadMessage(subBuilder);
+            BitbucketDataCenterConfig = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.CloudBuild.V2.BitbucketCloudConfig subBuilder = new global::Google.Cloud.CloudBuild.V2.BitbucketCloudConfig();
+            if (connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketCloudConfig) {
+              subBuilder.MergeFrom(BitbucketCloudConfig);
+            }
+            input.ReadMessage(subBuilder);
+            BitbucketCloudConfig = subBuilder;
             break;
           }
           case 98: {
@@ -859,6 +1060,33 @@ namespace Google.Cloud.CloudBuild.V2 {
             GithubEnterpriseConfig = subBuilder;
             break;
           }
+          case 58: {
+            global::Google.Cloud.CloudBuild.V2.GitLabConfig subBuilder = new global::Google.Cloud.CloudBuild.V2.GitLabConfig();
+            if (connectionConfigCase_ == ConnectionConfigOneofCase.GitlabConfig) {
+              subBuilder.MergeFrom(GitlabConfig);
+            }
+            input.ReadMessage(subBuilder);
+            GitlabConfig = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.CloudBuild.V2.BitbucketDataCenterConfig subBuilder = new global::Google.Cloud.CloudBuild.V2.BitbucketDataCenterConfig();
+            if (connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketDataCenterConfig) {
+              subBuilder.MergeFrom(BitbucketDataCenterConfig);
+            }
+            input.ReadMessage(subBuilder);
+            BitbucketDataCenterConfig = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.CloudBuild.V2.BitbucketCloudConfig subBuilder = new global::Google.Cloud.CloudBuild.V2.BitbucketCloudConfig();
+            if (connectionConfigCase_ == ConnectionConfigOneofCase.BitbucketCloudConfig) {
+              subBuilder.MergeFrom(BitbucketCloudConfig);
+            }
+            input.ReadMessage(subBuilder);
+            BitbucketCloudConfig = subBuilder;
+            break;
+          }
           case 98: {
             if (installationState_ == null) {
               InstallationState = new global::Google.Cloud.CloudBuild.V2.InstallationState();
@@ -894,6 +1122,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// user to complete the installation. Used for GitHub and GitHub Enterprise
   /// based connections.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InstallationState : pb::IMessage<InstallationState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1206,6 +1435,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Request message for FetchLinkableRepositories.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FetchLinkableRepositoriesRequest : pb::IMessage<FetchLinkableRepositoriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1482,6 +1712,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Response message for FetchLinkableRepositories.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FetchLinkableRepositoriesResponse : pb::IMessage<FetchLinkableRepositoriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1706,6 +1937,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Configuration for connections to github.com.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GitHubConfig : pb::IMessage<GitHubConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1952,6 +2184,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Configuration for connections to an instance of GitHub Enterprise.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GitHubEnterpriseConfig : pb::IMessage<GitHubEnterpriseConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2520,9 +2753,1295 @@ namespace Google.Cloud.CloudBuild.V2 {
   }
 
   /// <summary>
+  /// Configuration for connections to gitlab.com or an instance of GitLab
+  /// Enterprise.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GitLabConfig : pb::IMessage<GitLabConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GitLabConfig> _parser = new pb::MessageParser<GitLabConfig>(() => new GitLabConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GitLabConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GitLabConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GitLabConfig(GitLabConfig other) : this() {
+      hostUri_ = other.hostUri_;
+      webhookSecretSecretVersion_ = other.webhookSecretSecretVersion_;
+      readAuthorizerCredential_ = other.readAuthorizerCredential_ != null ? other.readAuthorizerCredential_.Clone() : null;
+      authorizerCredential_ = other.authorizerCredential_ != null ? other.authorizerCredential_.Clone() : null;
+      serviceDirectoryConfig_ = other.serviceDirectoryConfig_ != null ? other.serviceDirectoryConfig_.Clone() : null;
+      sslCa_ = other.sslCa_;
+      serverVersion_ = other.serverVersion_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GitLabConfig Clone() {
+      return new GitLabConfig(this);
+    }
+
+    /// <summary>Field number for the "host_uri" field.</summary>
+    public const int HostUriFieldNumber = 1;
+    private string hostUri_ = "";
+    /// <summary>
+    /// The URI of the GitLab Enterprise host this connection is for.
+    /// If not specified, the default value is https://gitlab.com.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string HostUri {
+      get { return hostUri_; }
+      set {
+        hostUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "webhook_secret_secret_version" field.</summary>
+    public const int WebhookSecretSecretVersionFieldNumber = 2;
+    private string webhookSecretSecretVersion_ = "";
+    /// <summary>
+    /// Required. Immutable. SecretManager resource containing the webhook secret
+    /// of a GitLab Enterprise project, formatted as
+    /// `projects/*/secrets/*/versions/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WebhookSecretSecretVersion {
+      get { return webhookSecretSecretVersion_; }
+      set {
+        webhookSecretSecretVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "read_authorizer_credential" field.</summary>
+    public const int ReadAuthorizerCredentialFieldNumber = 3;
+    private global::Google.Cloud.CloudBuild.V2.UserCredential readAuthorizerCredential_;
+    /// <summary>
+    /// Required. A GitLab personal access token with the minimum `read_api` scope
+    /// access.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudBuild.V2.UserCredential ReadAuthorizerCredential {
+      get { return readAuthorizerCredential_; }
+      set {
+        readAuthorizerCredential_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "authorizer_credential" field.</summary>
+    public const int AuthorizerCredentialFieldNumber = 4;
+    private global::Google.Cloud.CloudBuild.V2.UserCredential authorizerCredential_;
+    /// <summary>
+    /// Required. A GitLab personal access token with the `api` scope access.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudBuild.V2.UserCredential AuthorizerCredential {
+      get { return authorizerCredential_; }
+      set {
+        authorizerCredential_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "service_directory_config" field.</summary>
+    public const int ServiceDirectoryConfigFieldNumber = 5;
+    private global::Google.Cloud.CloudBuild.V2.ServiceDirectoryConfig serviceDirectoryConfig_;
+    /// <summary>
+    /// Configuration for using Service Directory to privately connect to a GitLab
+    /// Enterprise server. This should only be set if the GitLab Enterprise server
+    /// is hosted on-premises and not reachable by public internet. If this field
+    /// is left empty, calls to the GitLab Enterprise server will be made over the
+    /// public internet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudBuild.V2.ServiceDirectoryConfig ServiceDirectoryConfig {
+      get { return serviceDirectoryConfig_; }
+      set {
+        serviceDirectoryConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ssl_ca" field.</summary>
+    public const int SslCaFieldNumber = 6;
+    private string sslCa_ = "";
+    /// <summary>
+    /// SSL certificate to use for requests to GitLab Enterprise.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SslCa {
+      get { return sslCa_; }
+      set {
+        sslCa_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "server_version" field.</summary>
+    public const int ServerVersionFieldNumber = 7;
+    private string serverVersion_ = "";
+    /// <summary>
+    /// Output only. Version of the GitLab Enterprise server running on the
+    /// `host_uri`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServerVersion {
+      get { return serverVersion_; }
+      set {
+        serverVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GitLabConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GitLabConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (HostUri != other.HostUri) return false;
+      if (WebhookSecretSecretVersion != other.WebhookSecretSecretVersion) return false;
+      if (!object.Equals(ReadAuthorizerCredential, other.ReadAuthorizerCredential)) return false;
+      if (!object.Equals(AuthorizerCredential, other.AuthorizerCredential)) return false;
+      if (!object.Equals(ServiceDirectoryConfig, other.ServiceDirectoryConfig)) return false;
+      if (SslCa != other.SslCa) return false;
+      if (ServerVersion != other.ServerVersion) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HostUri.Length != 0) hash ^= HostUri.GetHashCode();
+      if (WebhookSecretSecretVersion.Length != 0) hash ^= WebhookSecretSecretVersion.GetHashCode();
+      if (readAuthorizerCredential_ != null) hash ^= ReadAuthorizerCredential.GetHashCode();
+      if (authorizerCredential_ != null) hash ^= AuthorizerCredential.GetHashCode();
+      if (serviceDirectoryConfig_ != null) hash ^= ServiceDirectoryConfig.GetHashCode();
+      if (SslCa.Length != 0) hash ^= SslCa.GetHashCode();
+      if (ServerVersion.Length != 0) hash ^= ServerVersion.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HostUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(HostUri);
+      }
+      if (WebhookSecretSecretVersion.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(WebhookSecretSecretVersion);
+      }
+      if (readAuthorizerCredential_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadAuthorizerCredential);
+      }
+      if (authorizerCredential_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AuthorizerCredential);
+      }
+      if (serviceDirectoryConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ServiceDirectoryConfig);
+      }
+      if (SslCa.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(SslCa);
+      }
+      if (ServerVersion.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ServerVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HostUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(HostUri);
+      }
+      if (WebhookSecretSecretVersion.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(WebhookSecretSecretVersion);
+      }
+      if (readAuthorizerCredential_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadAuthorizerCredential);
+      }
+      if (authorizerCredential_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AuthorizerCredential);
+      }
+      if (serviceDirectoryConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ServiceDirectoryConfig);
+      }
+      if (SslCa.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(SslCa);
+      }
+      if (ServerVersion.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ServerVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HostUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HostUri);
+      }
+      if (WebhookSecretSecretVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WebhookSecretSecretVersion);
+      }
+      if (readAuthorizerCredential_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadAuthorizerCredential);
+      }
+      if (authorizerCredential_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AuthorizerCredential);
+      }
+      if (serviceDirectoryConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServiceDirectoryConfig);
+      }
+      if (SslCa.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SslCa);
+      }
+      if (ServerVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServerVersion);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GitLabConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HostUri.Length != 0) {
+        HostUri = other.HostUri;
+      }
+      if (other.WebhookSecretSecretVersion.Length != 0) {
+        WebhookSecretSecretVersion = other.WebhookSecretSecretVersion;
+      }
+      if (other.readAuthorizerCredential_ != null) {
+        if (readAuthorizerCredential_ == null) {
+          ReadAuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+        }
+        ReadAuthorizerCredential.MergeFrom(other.ReadAuthorizerCredential);
+      }
+      if (other.authorizerCredential_ != null) {
+        if (authorizerCredential_ == null) {
+          AuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+        }
+        AuthorizerCredential.MergeFrom(other.AuthorizerCredential);
+      }
+      if (other.serviceDirectoryConfig_ != null) {
+        if (serviceDirectoryConfig_ == null) {
+          ServiceDirectoryConfig = new global::Google.Cloud.CloudBuild.V2.ServiceDirectoryConfig();
+        }
+        ServiceDirectoryConfig.MergeFrom(other.ServiceDirectoryConfig);
+      }
+      if (other.SslCa.Length != 0) {
+        SslCa = other.SslCa;
+      }
+      if (other.ServerVersion.Length != 0) {
+        ServerVersion = other.ServerVersion;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            HostUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            WebhookSecretSecretVersion = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (readAuthorizerCredential_ == null) {
+              ReadAuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+            }
+            input.ReadMessage(ReadAuthorizerCredential);
+            break;
+          }
+          case 34: {
+            if (authorizerCredential_ == null) {
+              AuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+            }
+            input.ReadMessage(AuthorizerCredential);
+            break;
+          }
+          case 42: {
+            if (serviceDirectoryConfig_ == null) {
+              ServiceDirectoryConfig = new global::Google.Cloud.CloudBuild.V2.ServiceDirectoryConfig();
+            }
+            input.ReadMessage(ServiceDirectoryConfig);
+            break;
+          }
+          case 50: {
+            SslCa = input.ReadString();
+            break;
+          }
+          case 58: {
+            ServerVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            HostUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            WebhookSecretSecretVersion = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (readAuthorizerCredential_ == null) {
+              ReadAuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+            }
+            input.ReadMessage(ReadAuthorizerCredential);
+            break;
+          }
+          case 34: {
+            if (authorizerCredential_ == null) {
+              AuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+            }
+            input.ReadMessage(AuthorizerCredential);
+            break;
+          }
+          case 42: {
+            if (serviceDirectoryConfig_ == null) {
+              ServiceDirectoryConfig = new global::Google.Cloud.CloudBuild.V2.ServiceDirectoryConfig();
+            }
+            input.ReadMessage(ServiceDirectoryConfig);
+            break;
+          }
+          case 50: {
+            SslCa = input.ReadString();
+            break;
+          }
+          case 58: {
+            ServerVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for connections to Bitbucket Data Center.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BitbucketDataCenterConfig : pb::IMessage<BitbucketDataCenterConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BitbucketDataCenterConfig> _parser = new pb::MessageParser<BitbucketDataCenterConfig>(() => new BitbucketDataCenterConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BitbucketDataCenterConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BitbucketDataCenterConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BitbucketDataCenterConfig(BitbucketDataCenterConfig other) : this() {
+      hostUri_ = other.hostUri_;
+      webhookSecretSecretVersion_ = other.webhookSecretSecretVersion_;
+      readAuthorizerCredential_ = other.readAuthorizerCredential_ != null ? other.readAuthorizerCredential_.Clone() : null;
+      authorizerCredential_ = other.authorizerCredential_ != null ? other.authorizerCredential_.Clone() : null;
+      serviceDirectoryConfig_ = other.serviceDirectoryConfig_ != null ? other.serviceDirectoryConfig_.Clone() : null;
+      sslCa_ = other.sslCa_;
+      serverVersion_ = other.serverVersion_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BitbucketDataCenterConfig Clone() {
+      return new BitbucketDataCenterConfig(this);
+    }
+
+    /// <summary>Field number for the "host_uri" field.</summary>
+    public const int HostUriFieldNumber = 1;
+    private string hostUri_ = "";
+    /// <summary>
+    /// Required. The URI of the Bitbucket Data Center instance or cluster this
+    /// connection is for.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string HostUri {
+      get { return hostUri_; }
+      set {
+        hostUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "webhook_secret_secret_version" field.</summary>
+    public const int WebhookSecretSecretVersionFieldNumber = 2;
+    private string webhookSecretSecretVersion_ = "";
+    /// <summary>
+    /// Required. Immutable. SecretManager resource containing the webhook secret
+    /// used to verify webhook events, formatted as
+    /// `projects/*/secrets/*/versions/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WebhookSecretSecretVersion {
+      get { return webhookSecretSecretVersion_; }
+      set {
+        webhookSecretSecretVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "read_authorizer_credential" field.</summary>
+    public const int ReadAuthorizerCredentialFieldNumber = 3;
+    private global::Google.Cloud.CloudBuild.V2.UserCredential readAuthorizerCredential_;
+    /// <summary>
+    /// Required. A http access token with the `REPO_READ` access.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudBuild.V2.UserCredential ReadAuthorizerCredential {
+      get { return readAuthorizerCredential_; }
+      set {
+        readAuthorizerCredential_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "authorizer_credential" field.</summary>
+    public const int AuthorizerCredentialFieldNumber = 4;
+    private global::Google.Cloud.CloudBuild.V2.UserCredential authorizerCredential_;
+    /// <summary>
+    /// Required. A http access token with the `REPO_ADMIN` scope access.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudBuild.V2.UserCredential AuthorizerCredential {
+      get { return authorizerCredential_; }
+      set {
+        authorizerCredential_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "service_directory_config" field.</summary>
+    public const int ServiceDirectoryConfigFieldNumber = 5;
+    private global::Google.Cloud.CloudBuild.V2.ServiceDirectoryConfig serviceDirectoryConfig_;
+    /// <summary>
+    /// Optional. Configuration for using Service Directory to privately connect to
+    /// a Bitbucket Data Center. This should only be set if the Bitbucket Data
+    /// Center is hosted on-premises and not reachable by public internet. If this
+    /// field is left empty, calls to the Bitbucket Data Center will be made over
+    /// the public internet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudBuild.V2.ServiceDirectoryConfig ServiceDirectoryConfig {
+      get { return serviceDirectoryConfig_; }
+      set {
+        serviceDirectoryConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ssl_ca" field.</summary>
+    public const int SslCaFieldNumber = 6;
+    private string sslCa_ = "";
+    /// <summary>
+    /// Optional. SSL certificate to use for requests to the Bitbucket Data Center.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SslCa {
+      get { return sslCa_; }
+      set {
+        sslCa_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "server_version" field.</summary>
+    public const int ServerVersionFieldNumber = 7;
+    private string serverVersion_ = "";
+    /// <summary>
+    /// Output only. Version of the Bitbucket Data Center running on the
+    /// `host_uri`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServerVersion {
+      get { return serverVersion_; }
+      set {
+        serverVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BitbucketDataCenterConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BitbucketDataCenterConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (HostUri != other.HostUri) return false;
+      if (WebhookSecretSecretVersion != other.WebhookSecretSecretVersion) return false;
+      if (!object.Equals(ReadAuthorizerCredential, other.ReadAuthorizerCredential)) return false;
+      if (!object.Equals(AuthorizerCredential, other.AuthorizerCredential)) return false;
+      if (!object.Equals(ServiceDirectoryConfig, other.ServiceDirectoryConfig)) return false;
+      if (SslCa != other.SslCa) return false;
+      if (ServerVersion != other.ServerVersion) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HostUri.Length != 0) hash ^= HostUri.GetHashCode();
+      if (WebhookSecretSecretVersion.Length != 0) hash ^= WebhookSecretSecretVersion.GetHashCode();
+      if (readAuthorizerCredential_ != null) hash ^= ReadAuthorizerCredential.GetHashCode();
+      if (authorizerCredential_ != null) hash ^= AuthorizerCredential.GetHashCode();
+      if (serviceDirectoryConfig_ != null) hash ^= ServiceDirectoryConfig.GetHashCode();
+      if (SslCa.Length != 0) hash ^= SslCa.GetHashCode();
+      if (ServerVersion.Length != 0) hash ^= ServerVersion.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HostUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(HostUri);
+      }
+      if (WebhookSecretSecretVersion.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(WebhookSecretSecretVersion);
+      }
+      if (readAuthorizerCredential_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadAuthorizerCredential);
+      }
+      if (authorizerCredential_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AuthorizerCredential);
+      }
+      if (serviceDirectoryConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ServiceDirectoryConfig);
+      }
+      if (SslCa.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(SslCa);
+      }
+      if (ServerVersion.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ServerVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HostUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(HostUri);
+      }
+      if (WebhookSecretSecretVersion.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(WebhookSecretSecretVersion);
+      }
+      if (readAuthorizerCredential_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadAuthorizerCredential);
+      }
+      if (authorizerCredential_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AuthorizerCredential);
+      }
+      if (serviceDirectoryConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ServiceDirectoryConfig);
+      }
+      if (SslCa.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(SslCa);
+      }
+      if (ServerVersion.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ServerVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HostUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HostUri);
+      }
+      if (WebhookSecretSecretVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WebhookSecretSecretVersion);
+      }
+      if (readAuthorizerCredential_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadAuthorizerCredential);
+      }
+      if (authorizerCredential_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AuthorizerCredential);
+      }
+      if (serviceDirectoryConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServiceDirectoryConfig);
+      }
+      if (SslCa.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SslCa);
+      }
+      if (ServerVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServerVersion);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BitbucketDataCenterConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HostUri.Length != 0) {
+        HostUri = other.HostUri;
+      }
+      if (other.WebhookSecretSecretVersion.Length != 0) {
+        WebhookSecretSecretVersion = other.WebhookSecretSecretVersion;
+      }
+      if (other.readAuthorizerCredential_ != null) {
+        if (readAuthorizerCredential_ == null) {
+          ReadAuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+        }
+        ReadAuthorizerCredential.MergeFrom(other.ReadAuthorizerCredential);
+      }
+      if (other.authorizerCredential_ != null) {
+        if (authorizerCredential_ == null) {
+          AuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+        }
+        AuthorizerCredential.MergeFrom(other.AuthorizerCredential);
+      }
+      if (other.serviceDirectoryConfig_ != null) {
+        if (serviceDirectoryConfig_ == null) {
+          ServiceDirectoryConfig = new global::Google.Cloud.CloudBuild.V2.ServiceDirectoryConfig();
+        }
+        ServiceDirectoryConfig.MergeFrom(other.ServiceDirectoryConfig);
+      }
+      if (other.SslCa.Length != 0) {
+        SslCa = other.SslCa;
+      }
+      if (other.ServerVersion.Length != 0) {
+        ServerVersion = other.ServerVersion;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            HostUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            WebhookSecretSecretVersion = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (readAuthorizerCredential_ == null) {
+              ReadAuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+            }
+            input.ReadMessage(ReadAuthorizerCredential);
+            break;
+          }
+          case 34: {
+            if (authorizerCredential_ == null) {
+              AuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+            }
+            input.ReadMessage(AuthorizerCredential);
+            break;
+          }
+          case 42: {
+            if (serviceDirectoryConfig_ == null) {
+              ServiceDirectoryConfig = new global::Google.Cloud.CloudBuild.V2.ServiceDirectoryConfig();
+            }
+            input.ReadMessage(ServiceDirectoryConfig);
+            break;
+          }
+          case 50: {
+            SslCa = input.ReadString();
+            break;
+          }
+          case 58: {
+            ServerVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            HostUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            WebhookSecretSecretVersion = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (readAuthorizerCredential_ == null) {
+              ReadAuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+            }
+            input.ReadMessage(ReadAuthorizerCredential);
+            break;
+          }
+          case 34: {
+            if (authorizerCredential_ == null) {
+              AuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+            }
+            input.ReadMessage(AuthorizerCredential);
+            break;
+          }
+          case 42: {
+            if (serviceDirectoryConfig_ == null) {
+              ServiceDirectoryConfig = new global::Google.Cloud.CloudBuild.V2.ServiceDirectoryConfig();
+            }
+            input.ReadMessage(ServiceDirectoryConfig);
+            break;
+          }
+          case 50: {
+            SslCa = input.ReadString();
+            break;
+          }
+          case 58: {
+            ServerVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for connections to Bitbucket Cloud.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BitbucketCloudConfig : pb::IMessage<BitbucketCloudConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BitbucketCloudConfig> _parser = new pb::MessageParser<BitbucketCloudConfig>(() => new BitbucketCloudConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BitbucketCloudConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BitbucketCloudConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BitbucketCloudConfig(BitbucketCloudConfig other) : this() {
+      workspace_ = other.workspace_;
+      webhookSecretSecretVersion_ = other.webhookSecretSecretVersion_;
+      readAuthorizerCredential_ = other.readAuthorizerCredential_ != null ? other.readAuthorizerCredential_.Clone() : null;
+      authorizerCredential_ = other.authorizerCredential_ != null ? other.authorizerCredential_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BitbucketCloudConfig Clone() {
+      return new BitbucketCloudConfig(this);
+    }
+
+    /// <summary>Field number for the "workspace" field.</summary>
+    public const int WorkspaceFieldNumber = 1;
+    private string workspace_ = "";
+    /// <summary>
+    /// Required. The Bitbucket Cloud Workspace ID to be connected to Google Cloud
+    /// Platform.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Workspace {
+      get { return workspace_; }
+      set {
+        workspace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "webhook_secret_secret_version" field.</summary>
+    public const int WebhookSecretSecretVersionFieldNumber = 2;
+    private string webhookSecretSecretVersion_ = "";
+    /// <summary>
+    /// Required. SecretManager resource containing the webhook secret used to
+    /// verify webhook events, formatted as `projects/*/secrets/*/versions/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WebhookSecretSecretVersion {
+      get { return webhookSecretSecretVersion_; }
+      set {
+        webhookSecretSecretVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "read_authorizer_credential" field.</summary>
+    public const int ReadAuthorizerCredentialFieldNumber = 3;
+    private global::Google.Cloud.CloudBuild.V2.UserCredential readAuthorizerCredential_;
+    /// <summary>
+    /// Required. An access token with the `repository` access. It can be either a
+    /// workspace, project or repository access token. It's recommended to use a
+    /// system account to generate the credentials.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudBuild.V2.UserCredential ReadAuthorizerCredential {
+      get { return readAuthorizerCredential_; }
+      set {
+        readAuthorizerCredential_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "authorizer_credential" field.</summary>
+    public const int AuthorizerCredentialFieldNumber = 4;
+    private global::Google.Cloud.CloudBuild.V2.UserCredential authorizerCredential_;
+    /// <summary>
+    /// Required. An access token with the `webhook`, `repository`,
+    /// `repository:admin` and `pullrequest` scope access. It can be either a
+    /// workspace, project or repository access token. It's recommended to use a
+    /// system account to generate these credentials.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudBuild.V2.UserCredential AuthorizerCredential {
+      get { return authorizerCredential_; }
+      set {
+        authorizerCredential_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BitbucketCloudConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BitbucketCloudConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Workspace != other.Workspace) return false;
+      if (WebhookSecretSecretVersion != other.WebhookSecretSecretVersion) return false;
+      if (!object.Equals(ReadAuthorizerCredential, other.ReadAuthorizerCredential)) return false;
+      if (!object.Equals(AuthorizerCredential, other.AuthorizerCredential)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Workspace.Length != 0) hash ^= Workspace.GetHashCode();
+      if (WebhookSecretSecretVersion.Length != 0) hash ^= WebhookSecretSecretVersion.GetHashCode();
+      if (readAuthorizerCredential_ != null) hash ^= ReadAuthorizerCredential.GetHashCode();
+      if (authorizerCredential_ != null) hash ^= AuthorizerCredential.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Workspace);
+      }
+      if (WebhookSecretSecretVersion.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(WebhookSecretSecretVersion);
+      }
+      if (readAuthorizerCredential_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadAuthorizerCredential);
+      }
+      if (authorizerCredential_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AuthorizerCredential);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Workspace.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Workspace);
+      }
+      if (WebhookSecretSecretVersion.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(WebhookSecretSecretVersion);
+      }
+      if (readAuthorizerCredential_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ReadAuthorizerCredential);
+      }
+      if (authorizerCredential_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AuthorizerCredential);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Workspace.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Workspace);
+      }
+      if (WebhookSecretSecretVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WebhookSecretSecretVersion);
+      }
+      if (readAuthorizerCredential_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadAuthorizerCredential);
+      }
+      if (authorizerCredential_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AuthorizerCredential);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BitbucketCloudConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Workspace.Length != 0) {
+        Workspace = other.Workspace;
+      }
+      if (other.WebhookSecretSecretVersion.Length != 0) {
+        WebhookSecretSecretVersion = other.WebhookSecretSecretVersion;
+      }
+      if (other.readAuthorizerCredential_ != null) {
+        if (readAuthorizerCredential_ == null) {
+          ReadAuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+        }
+        ReadAuthorizerCredential.MergeFrom(other.ReadAuthorizerCredential);
+      }
+      if (other.authorizerCredential_ != null) {
+        if (authorizerCredential_ == null) {
+          AuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+        }
+        AuthorizerCredential.MergeFrom(other.AuthorizerCredential);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Workspace = input.ReadString();
+            break;
+          }
+          case 18: {
+            WebhookSecretSecretVersion = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (readAuthorizerCredential_ == null) {
+              ReadAuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+            }
+            input.ReadMessage(ReadAuthorizerCredential);
+            break;
+          }
+          case 34: {
+            if (authorizerCredential_ == null) {
+              AuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+            }
+            input.ReadMessage(AuthorizerCredential);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Workspace = input.ReadString();
+            break;
+          }
+          case 18: {
+            WebhookSecretSecretVersion = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (readAuthorizerCredential_ == null) {
+              ReadAuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+            }
+            input.ReadMessage(ReadAuthorizerCredential);
+            break;
+          }
+          case 34: {
+            if (authorizerCredential_ == null) {
+              AuthorizerCredential = new global::Google.Cloud.CloudBuild.V2.UserCredential();
+            }
+            input.ReadMessage(AuthorizerCredential);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// ServiceDirectoryConfig represents Service Directory configuration for a
   /// connection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceDirectoryConfig : pb::IMessage<ServiceDirectoryConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2537,7 +4056,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2720,6 +4239,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// A repository associated to a parent connection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Repository : pb::IMessage<Repository>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2734,7 +4254,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2760,6 +4280,7 @@ namespace Google.Cloud.CloudBuild.V2 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       annotations_ = other.annotations_.Clone();
       etag_ = other.etag_;
+      webhookId_ = other.webhookId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2861,6 +4382,21 @@ namespace Google.Cloud.CloudBuild.V2 {
       }
     }
 
+    /// <summary>Field number for the "webhook_id" field.</summary>
+    public const int WebhookIdFieldNumber = 8;
+    private string webhookId_ = "";
+    /// <summary>
+    /// Output only. External ID of the webhook created for the repository.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WebhookId {
+      get { return webhookId_; }
+      set {
+        webhookId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2882,6 +4418,7 @@ namespace Google.Cloud.CloudBuild.V2 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
       if (Etag != other.Etag) return false;
+      if (WebhookId != other.WebhookId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2895,6 +4432,7 @@ namespace Google.Cloud.CloudBuild.V2 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       hash ^= Annotations.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (WebhookId.Length != 0) hash ^= WebhookId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2934,6 +4472,10 @@ namespace Google.Cloud.CloudBuild.V2 {
         output.WriteRawTag(58);
         output.WriteString(Etag);
       }
+      if (WebhookId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(WebhookId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2965,6 +4507,10 @@ namespace Google.Cloud.CloudBuild.V2 {
         output.WriteRawTag(58);
         output.WriteString(Etag);
       }
+      if (WebhookId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(WebhookId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2990,6 +4536,9 @@ namespace Google.Cloud.CloudBuild.V2 {
       size += annotations_.CalculateSize(_map_annotations_codec);
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (WebhookId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WebhookId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3021,9 +4570,12 @@ namespace Google.Cloud.CloudBuild.V2 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.WebhookId.Length != 0) {
+        WebhookId = other.WebhookId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3068,6 +4620,10 @@ namespace Google.Cloud.CloudBuild.V2 {
           }
           case 58: {
             Etag = input.ReadString();
+            break;
+          }
+          case 66: {
+            WebhookId = input.ReadString();
             break;
           }
         }
@@ -3115,6 +4671,10 @@ namespace Google.Cloud.CloudBuild.V2 {
             Etag = input.ReadString();
             break;
           }
+          case 66: {
+            WebhookId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -3126,6 +4686,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// Represents an OAuth token of the account that authorized the Connection,
   /// and associated metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OAuthCredential : pb::IMessage<OAuthCredential>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3140,7 +4701,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3360,8 +4921,248 @@ namespace Google.Cloud.CloudBuild.V2 {
   }
 
   /// <summary>
+  /// Represents a personal access token that authorized the Connection,
+  /// and associated metadata.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UserCredential : pb::IMessage<UserCredential>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UserCredential> _parser = new pb::MessageParser<UserCredential>(() => new UserCredential());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UserCredential> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserCredential() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserCredential(UserCredential other) : this() {
+      userTokenSecretVersion_ = other.userTokenSecretVersion_;
+      username_ = other.username_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UserCredential Clone() {
+      return new UserCredential(this);
+    }
+
+    /// <summary>Field number for the "user_token_secret_version" field.</summary>
+    public const int UserTokenSecretVersionFieldNumber = 1;
+    private string userTokenSecretVersion_ = "";
+    /// <summary>
+    /// Required. A SecretManager resource containing the user token that
+    /// authorizes the Cloud Build connection. Format:
+    /// `projects/*/secrets/*/versions/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserTokenSecretVersion {
+      get { return userTokenSecretVersion_; }
+      set {
+        userTokenSecretVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "username" field.</summary>
+    public const int UsernameFieldNumber = 2;
+    private string username_ = "";
+    /// <summary>
+    /// Output only. The username associated to this token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Username {
+      get { return username_; }
+      set {
+        username_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UserCredential);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UserCredential other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UserTokenSecretVersion != other.UserTokenSecretVersion) return false;
+      if (Username != other.Username) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UserTokenSecretVersion.Length != 0) hash ^= UserTokenSecretVersion.GetHashCode();
+      if (Username.Length != 0) hash ^= Username.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UserTokenSecretVersion.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserTokenSecretVersion);
+      }
+      if (Username.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Username);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UserTokenSecretVersion.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserTokenSecretVersion);
+      }
+      if (Username.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Username);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UserTokenSecretVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserTokenSecretVersion);
+      }
+      if (Username.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UserCredential other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UserTokenSecretVersion.Length != 0) {
+        UserTokenSecretVersion = other.UserTokenSecretVersion;
+      }
+      if (other.Username.Length != 0) {
+        Username = other.Username;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            UserTokenSecretVersion = input.ReadString();
+            break;
+          }
+          case 18: {
+            Username = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            UserTokenSecretVersion = input.ReadString();
+            break;
+          }
+          case 18: {
+            Username = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Message for creating a Connection
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateConnectionRequest : pb::IMessage<CreateConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3376,7 +5177,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3650,6 +5451,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for getting the details of a Connection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetConnectionRequest : pb::IMessage<GetConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3664,7 +5466,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3846,6 +5648,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for requesting list of Connections.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListConnectionsRequest : pb::IMessage<ListConnectionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3860,7 +5663,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4122,6 +5925,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for response to listing Connections.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListConnectionsResponse : pb::IMessage<ListConnectionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4136,7 +5940,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4346,6 +6150,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for updating a Connection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateConnectionRequest : pb::IMessage<UpdateConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4360,7 +6165,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4685,6 +6490,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for deleting a Connection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteConnectionRequest : pb::IMessage<DeleteConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4699,7 +6505,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4963,6 +6769,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for creating a Repository.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateRepositoryRequest : pb::IMessage<CreateRepositoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4977,7 +6784,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5252,6 +7059,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for creating repositoritories in batch.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateRepositoriesRequest : pb::IMessage<BatchCreateRepositoriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5266,7 +7074,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5479,6 +7287,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for response of creating repositories in batch.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateRepositoriesResponse : pb::IMessage<BatchCreateRepositoriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5493,7 +7302,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5663,6 +7472,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for getting the details of a Repository.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetRepositoryRequest : pb::IMessage<GetRepositoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5677,7 +7487,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5859,6 +7669,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for requesting list of Repositories.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRepositoriesRequest : pb::IMessage<ListRepositoriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5873,7 +7684,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6178,6 +7989,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for response to listing Repositories.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRepositoriesResponse : pb::IMessage<ListRepositoriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6192,7 +8004,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6402,6 +8214,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for deleting a Repository.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteRepositoryRequest : pb::IMessage<DeleteRepositoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6416,7 +8229,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6680,6 +8493,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for fetching SCM read/write token.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FetchReadWriteTokenRequest : pb::IMessage<FetchReadWriteTokenRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6694,7 +8508,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6876,6 +8690,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for fetching SCM read token.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FetchReadTokenRequest : pb::IMessage<FetchReadTokenRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6890,7 +8705,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7072,6 +8887,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for responding to get read token.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FetchReadTokenResponse : pb::IMessage<FetchReadTokenResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7086,7 +8902,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7316,6 +9132,7 @@ namespace Google.Cloud.CloudBuild.V2 {
   /// <summary>
   /// Message for responding to get read/write token.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FetchReadWriteTokenResponse : pb::IMessage<FetchReadWriteTokenResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7330,7 +9147,7 @@ namespace Google.Cloud.CloudBuild.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7548,6 +9365,741 @@ namespace Google.Cloud.CloudBuild.V2 {
               ExpirationTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(ExpirationTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// RPC request object accepted by the ProcessWebhook RPC method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ProcessWebhookRequest : pb::IMessage<ProcessWebhookRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProcessWebhookRequest> _parser = new pb::MessageParser<ProcessWebhookRequest>(() => new ProcessWebhookRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProcessWebhookRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[30]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProcessWebhookRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProcessWebhookRequest(ProcessWebhookRequest other) : this() {
+      parent_ = other.parent_;
+      body_ = other.body_ != null ? other.body_.Clone() : null;
+      webhookKey_ = other.webhookKey_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProcessWebhookRequest Clone() {
+      return new ProcessWebhookRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. Project and location where the webhook will be received.
+    /// Format: `projects/*/locations/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "body" field.</summary>
+    public const int BodyFieldNumber = 2;
+    private global::Google.Api.HttpBody body_;
+    /// <summary>
+    /// HTTP request body.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Api.HttpBody Body {
+      get { return body_; }
+      set {
+        body_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "webhook_key" field.</summary>
+    public const int WebhookKeyFieldNumber = 3;
+    private string webhookKey_ = "";
+    /// <summary>
+    /// Arbitrary additional key to find the maching repository for a webhook event
+    /// if needed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WebhookKey {
+      get { return webhookKey_; }
+      set {
+        webhookKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProcessWebhookRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProcessWebhookRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(Body, other.Body)) return false;
+      if (WebhookKey != other.WebhookKey) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (body_ != null) hash ^= Body.GetHashCode();
+      if (WebhookKey.Length != 0) hash ^= WebhookKey.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (body_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Body);
+      }
+      if (WebhookKey.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(WebhookKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (body_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Body);
+      }
+      if (WebhookKey.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(WebhookKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (body_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Body);
+      }
+      if (WebhookKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WebhookKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProcessWebhookRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.body_ != null) {
+        if (body_ == null) {
+          Body = new global::Google.Api.HttpBody();
+        }
+        Body.MergeFrom(other.Body);
+      }
+      if (other.WebhookKey.Length != 0) {
+        WebhookKey = other.WebhookKey;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (body_ == null) {
+              Body = new global::Google.Api.HttpBody();
+            }
+            input.ReadMessage(Body);
+            break;
+          }
+          case 26: {
+            WebhookKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (body_ == null) {
+              Body = new global::Google.Api.HttpBody();
+            }
+            input.ReadMessage(Body);
+            break;
+          }
+          case 26: {
+            WebhookKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for fetching git refs
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FetchGitRefsRequest : pb::IMessage<FetchGitRefsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FetchGitRefsRequest> _parser = new pb::MessageParser<FetchGitRefsRequest>(() => new FetchGitRefsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FetchGitRefsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[31]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FetchGitRefsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FetchGitRefsRequest(FetchGitRefsRequest other) : this() {
+      repository_ = other.repository_;
+      refType_ = other.refType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FetchGitRefsRequest Clone() {
+      return new FetchGitRefsRequest(this);
+    }
+
+    /// <summary>Field number for the "repository" field.</summary>
+    public const int RepositoryFieldNumber = 1;
+    private string repository_ = "";
+    /// <summary>
+    /// Required. The resource name of the repository in the format
+    /// `projects/*/locations/*/connections/*/repositories/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Repository {
+      get { return repository_; }
+      set {
+        repository_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ref_type" field.</summary>
+    public const int RefTypeFieldNumber = 2;
+    private global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Types.RefType refType_ = global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Types.RefType.Unspecified;
+    /// <summary>
+    /// Type of refs to fetch
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Types.RefType RefType {
+      get { return refType_; }
+      set {
+        refType_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FetchGitRefsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FetchGitRefsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Repository != other.Repository) return false;
+      if (RefType != other.RefType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Repository.Length != 0) hash ^= Repository.GetHashCode();
+      if (RefType != global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Types.RefType.Unspecified) hash ^= RefType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Repository.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Repository);
+      }
+      if (RefType != global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Types.RefType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) RefType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Repository.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Repository);
+      }
+      if (RefType != global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Types.RefType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) RefType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Repository.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Repository);
+      }
+      if (RefType != global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Types.RefType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RefType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FetchGitRefsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Repository.Length != 0) {
+        Repository = other.Repository;
+      }
+      if (other.RefType != global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Types.RefType.Unspecified) {
+        RefType = other.RefType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Repository = input.ReadString();
+            break;
+          }
+          case 16: {
+            RefType = (global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Types.RefType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Repository = input.ReadString();
+            break;
+          }
+          case 16: {
+            RefType = (global::Google.Cloud.CloudBuild.V2.FetchGitRefsRequest.Types.RefType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the FetchGitRefsRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Type of refs
+      /// </summary>
+      public enum RefType {
+        /// <summary>
+        /// No type specified.
+        /// </summary>
+        [pbr::OriginalName("REF_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// To fetch tags.
+        /// </summary>
+        [pbr::OriginalName("TAG")] Tag = 1,
+        /// <summary>
+        /// To fetch branches.
+        /// </summary>
+        [pbr::OriginalName("BRANCH")] Branch = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Response for fetching git refs
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FetchGitRefsResponse : pb::IMessage<FetchGitRefsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FetchGitRefsResponse> _parser = new pb::MessageParser<FetchGitRefsResponse>(() => new FetchGitRefsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FetchGitRefsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.CloudBuild.V2.RepositoriesReflection.Descriptor.MessageTypes[32]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FetchGitRefsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FetchGitRefsResponse(FetchGitRefsResponse other) : this() {
+      refNames_ = other.refNames_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FetchGitRefsResponse Clone() {
+      return new FetchGitRefsResponse(this);
+    }
+
+    /// <summary>Field number for the "ref_names" field.</summary>
+    public const int RefNamesFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_refNames_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> refNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Name of the refs fetched.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RefNames {
+      get { return refNames_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FetchGitRefsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FetchGitRefsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!refNames_.Equals(other.refNames_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= refNames_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      refNames_.WriteTo(output, _repeated_refNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      refNames_.WriteTo(ref output, _repeated_refNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += refNames_.CalculateSize(_repeated_refNames_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FetchGitRefsResponse other) {
+      if (other == null) {
+        return;
+      }
+      refNames_.Add(other.refNames_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            refNames_.AddEntriesFrom(input, _repeated_refNames_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            refNames_.AddEntriesFrom(ref input, _repeated_refNames_codec);
             break;
           }
         }

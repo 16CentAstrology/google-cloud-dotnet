@@ -85,6 +85,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// <summary>
   /// Represents a managed Microsoft Active Directory domain.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Domain : pb::IMessage<Domain>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -531,7 +532,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       authorizedNetworks_.Add(other.authorizedNetworks_);
       if (other.ReservedIpRange.Length != 0) {
         ReservedIpRange = other.ReservedIpRange;
@@ -758,6 +759,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Represents a relationship between two domains. This allows a controller in
   /// one domain to authenticate a user in another domain.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Trust : pb::IMessage<Trust>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

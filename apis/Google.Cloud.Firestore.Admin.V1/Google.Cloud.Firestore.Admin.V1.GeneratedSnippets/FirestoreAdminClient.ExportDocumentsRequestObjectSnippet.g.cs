@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,11 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Firestore.Admin.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START firestore_v1_generated_FirestoreAdmin_ExportDocuments_sync]
     using Google.Cloud.Firestore.Admin.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedFirestoreAdminClientSnippets
     {
@@ -40,6 +41,8 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
                 DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
                 CollectionIds = { "", },
                 OutputUriPrefix = "",
+                NamespaceIds = { "", },
+                SnapshotTime = new Timestamp(),
             };
             // Make the request
             Operation<ExportDocumentsResponse, ExportDocumentsMetadata> response = firestoreAdminClient.ExportDocuments(request);

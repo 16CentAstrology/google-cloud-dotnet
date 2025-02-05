@@ -1,11 +1,11 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+// Copyright 2016 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -27,12 +27,14 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new ListRowsOptions
             {
                 PageSize = 25,
-                PageToken = "token"
+                PageToken = "token",
+                UseInt64Timestamp = false,
             };
             var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
-            options.ModifyRequest(request);
+            ListRowsOptions.ModifyRequest(options, request);
             Assert.Equal(25, request.MaxResults);
             Assert.Equal("token", request.PageToken);
+            Assert.False(request.FormatOptionsUseInt64Timestamp);
         }
 
         [Fact]
@@ -44,7 +46,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 StartIndex = 10
             };
             var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
-            options.ModifyRequest(request);
+            ListRowsOptions.ModifyRequest(options, request);
             Assert.Equal(25, request.MaxResults);
             Assert.Equal(10UL, request.StartIndex);
         }
@@ -59,46 +61,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 PageToken = "token"
             };
             var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
-            Assert.Throws<ArgumentException>(() => options.ModifyRequest(request));
+            Assert.Throws<ArgumentException>(() => ListRowsOptions.ModifyRequest(options, request));
         }
 
         [Fact]
-        public void ToGetQueryResultsOptions_BothPageTokenAndStartIndexSet()
+        public void ModifyRequest_NoOptions()
         {
-            var options = new ListRowsOptions
-            {
-                StartIndex = 10,
-                PageToken = "foo"
-            };
-            Assert.Throws<ArgumentException>(() => options.ToGetQueryResultsOptions());
-        }
-
-        [Fact]
-        public void ToGetQueryResultsOptions_StartIndex()
-        {
-            var options = new ListRowsOptions
-            {
-                StartIndex = 10,
-                PageSize = 25,
-            };
-            var listOptions = options.ToGetQueryResultsOptions();
-            Assert.Equal(10UL, listOptions.StartIndex);
-            Assert.Equal(25, listOptions.PageSize);
-            Assert.Null(listOptions.PageToken);
-        }
-
-        [Fact]
-        public void ToGetQueryResultsOptions_PageToken()
-        {
-            var options = new ListRowsOptions
-            {
-                PageSize = 25,
-                PageToken = "token"
-            };
-            var listOptions = options.ToGetQueryResultsOptions();
-            Assert.Equal(25, listOptions.PageSize);
-            Assert.Equal("token", listOptions.PageToken);
-            Assert.Null(listOptions.StartIndex);
+            var request = new ListRequest(new BigqueryService(), "project", "dataset", "table");
+            ListRowsOptions.ModifyRequest(null, request);
+            Assert.True(request.FormatOptionsUseInt64Timestamp);
         }
     }
 }

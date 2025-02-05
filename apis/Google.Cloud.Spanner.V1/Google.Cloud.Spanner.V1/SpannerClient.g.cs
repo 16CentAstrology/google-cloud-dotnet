@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcscv = Google.Cloud.Spanner.Common.V1;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using linq = System.Linq;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.V1
 {
@@ -63,6 +63,7 @@ namespace Google.Cloud.Spanner.V1
             RollbackSettings = existing.RollbackSettings;
             PartitionQuerySettings = existing.PartitionQuerySettings;
             PartitionReadSettings = existing.PartitionReadSettings;
+            BatchWriteSettings = existing.BatchWriteSettings;
             OnCopy(existing);
         }
 
@@ -79,12 +80,15 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateSessionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings CreateSessionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -97,12 +101,15 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings BatchCreateSessionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings BatchCreateSessionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>SpannerClient.GetSession</c>
@@ -115,12 +122,15 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetSessionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetSessionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>SpannerClient.ListSessions</c>
@@ -133,12 +143,15 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 3600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListSessionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListSessionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>SpannerClient.DeleteSession</c>
@@ -151,12 +164,15 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteSessionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteSessionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>SpannerClient.ExecuteSql</c>
@@ -169,12 +185,15 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ExecuteSqlSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ExecuteSqlSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -199,12 +218,15 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ExecuteBatchDmlSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ExecuteBatchDmlSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>SpannerClient.Read</c> and
@@ -217,12 +239,15 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ReadSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ReadSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>SpannerClient.StreamingRead</c>
@@ -247,12 +272,15 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings BeginTransactionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings BeginTransactionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>SpannerClient.Commit</c>
@@ -265,12 +293,15 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 3600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CommitSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings CommitSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>SpannerClient.Rollback</c>
@@ -283,12 +314,15 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings RollbackSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings RollbackSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -301,12 +335,15 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings PartitionQuerySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings PartitionQuerySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>SpannerClient.PartitionRead</c>
@@ -319,12 +356,27 @@ namespace Google.Cloud.Spanner.V1
         /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
         /// </item>
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings PartitionReadSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings PartitionReadSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(250), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>SpannerClient.BatchWrite</c>
+        ///  and <c>SpannerClient.BatchWriteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchWriteSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SpannerSettings"/> object.</returns>
@@ -368,14 +420,14 @@ namespace Google.Cloud.Spanner.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SpannerClient.Create(callInvoker, Settings, Logger);
+            return SpannerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<SpannerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SpannerClient.Create(callInvoker, Settings, Logger);
+            return SpannerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -787,7 +839,8 @@ namespace Google.Cloud.Spanner.V1
         /// The API may return fewer than the requested number of sessions. If a
         /// specific number of sessions are desired, the client can make additional
         /// calls to BatchCreateSessions (adjusting
-        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count] as necessary).
+        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+        /// as necessary).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -812,7 +865,8 @@ namespace Google.Cloud.Spanner.V1
         /// The API may return fewer than the requested number of sessions. If a
         /// specific number of sessions are desired, the client can make additional
         /// calls to BatchCreateSessions (adjusting
-        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count] as necessary).
+        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+        /// as necessary).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -837,7 +891,8 @@ namespace Google.Cloud.Spanner.V1
         /// The API may return fewer than the requested number of sessions. If a
         /// specific number of sessions are desired, the client can make additional
         /// calls to BatchCreateSessions (adjusting
-        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count] as necessary).
+        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+        /// as necessary).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -858,7 +913,8 @@ namespace Google.Cloud.Spanner.V1
         /// The API may return fewer than the requested number of sessions. If a
         /// specific number of sessions are desired, the client can make additional
         /// calls to BatchCreateSessions (adjusting
-        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count] as necessary).
+        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+        /// as necessary).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -883,7 +939,8 @@ namespace Google.Cloud.Spanner.V1
         /// The API may return fewer than the requested number of sessions. If a
         /// specific number of sessions are desired, the client can make additional
         /// calls to BatchCreateSessions (adjusting
-        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count] as necessary).
+        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+        /// as necessary).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -908,7 +965,8 @@ namespace Google.Cloud.Spanner.V1
         /// The API may return fewer than the requested number of sessions. If a
         /// specific number of sessions are desired, the client can make additional
         /// calls to BatchCreateSessions (adjusting
-        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count] as necessary).
+        /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count]
+        /// as necessary).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1072,13 +1130,22 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Session"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(string database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessions(new ListSessionsRequest
+        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(string database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionsRequest request = new ListSessionsRequest
             {
                 Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sessions in a given database.
@@ -1096,13 +1163,22 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Session"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(string database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessionsAsync(new ListSessionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(string database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionsRequest request = new ListSessionsRequest
             {
                 Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sessions in a given database.
@@ -1120,13 +1196,22 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Session"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(gcscv::DatabaseName database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessions(new ListSessionsRequest
+        public virtual gax::PagedEnumerable<ListSessionsResponse, Session> ListSessions(gcscv::DatabaseName database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionsRequest request = new ListSessionsRequest
             {
                 DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all sessions in a given database.
@@ -1144,13 +1229,22 @@ namespace Google.Cloud.Spanner.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Session"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(gcscv::DatabaseName database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSessionsAsync(new ListSessionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSessionsResponse, Session> ListSessionsAsync(gcscv::DatabaseName database, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSessionsRequest request = new ListSessionsRequest
             {
                 DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSessionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Ends a session, releasing server resources associated with it. This will
@@ -1283,10 +1377,12 @@ namespace Google.Cloud.Spanner.V1
         /// 
         /// Operations inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
+        /// details.
         /// 
         /// Larger result sets can be fetched in streaming fashion by calling
-        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql]
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1302,10 +1398,12 @@ namespace Google.Cloud.Spanner.V1
         /// 
         /// Operations inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
+        /// details.
         /// 
         /// Larger result sets can be fetched in streaming fashion by calling
-        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql]
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1321,10 +1419,12 @@ namespace Google.Cloud.Spanner.V1
         /// 
         /// Operations inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
+        /// details.
         /// 
         /// Larger result sets can be fetched in streaming fashion by calling
-        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql]
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1340,11 +1440,11 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
-        /// set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
-        /// is no limit on the size of the returned result set. However, no
-        /// individual row in the result set can exceed 100 MiB, and no
-        /// column value can exceed 10 MiB.
+        /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the
+        /// result set as a stream. Unlike
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there is no limit on
+        /// the size of the returned result set. However, no individual row in the
+        /// result set can exceed 100 MiB, and no column value can exceed 10 MiB.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1358,9 +1458,10 @@ namespace Google.Cloud.Spanner.V1
         /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
         /// 
         /// Statements are executed in sequential order. A request can succeed even if
-        /// a statement fails. The [ExecuteBatchDmlResponse.status][google.spanner.v1.ExecuteBatchDmlResponse.status] field in the
-        /// response provides information about the statement that failed. Clients must
-        /// inspect this field to determine whether an error occurred.
+        /// a statement fails. The
+        /// [ExecuteBatchDmlResponse.status][google.spanner.v1.ExecuteBatchDmlResponse.status]
+        /// field in the response provides information about the statement that failed.
+        /// Clients must inspect this field to determine whether an error occurred.
         /// 
         /// Execution stops after the first failed statement; the remaining statements
         /// are not executed.
@@ -1377,9 +1478,10 @@ namespace Google.Cloud.Spanner.V1
         /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
         /// 
         /// Statements are executed in sequential order. A request can succeed even if
-        /// a statement fails. The [ExecuteBatchDmlResponse.status][google.spanner.v1.ExecuteBatchDmlResponse.status] field in the
-        /// response provides information about the statement that failed. Clients must
-        /// inspect this field to determine whether an error occurred.
+        /// a statement fails. The
+        /// [ExecuteBatchDmlResponse.status][google.spanner.v1.ExecuteBatchDmlResponse.status]
+        /// field in the response provides information about the statement that failed.
+        /// Clients must inspect this field to determine whether an error occurred.
         /// 
         /// Execution stops after the first failed statement; the remaining statements
         /// are not executed.
@@ -1396,9 +1498,10 @@ namespace Google.Cloud.Spanner.V1
         /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
         /// 
         /// Statements are executed in sequential order. A request can succeed even if
-        /// a statement fails. The [ExecuteBatchDmlResponse.status][google.spanner.v1.ExecuteBatchDmlResponse.status] field in the
-        /// response provides information about the statement that failed. Clients must
-        /// inspect this field to determine whether an error occurred.
+        /// a statement fails. The
+        /// [ExecuteBatchDmlResponse.status][google.spanner.v1.ExecuteBatchDmlResponse.status]
+        /// field in the response provides information about the statement that failed.
+        /// Clients must inspect this field to determine whether an error occurred.
         /// 
         /// Execution stops after the first failed statement; the remaining statements
         /// are not executed.
@@ -1412,14 +1515,15 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
         /// simple key/value style alternative to
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
-        /// return a result set larger than 10 MiB; if the read matches more
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be
+        /// used to return a result set larger than 10 MiB; if the read matches more
         /// data than that, the read fails with a `FAILED_PRECONDITION`
         /// error.
         /// 
         /// Reads inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
+        /// details.
         /// 
         /// Larger result sets can be yielded in streaming fashion by calling
         /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
@@ -1433,14 +1537,15 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
         /// simple key/value style alternative to
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
-        /// return a result set larger than 10 MiB; if the read matches more
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be
+        /// used to return a result set larger than 10 MiB; if the read matches more
         /// data than that, the read fails with a `FAILED_PRECONDITION`
         /// error.
         /// 
         /// Reads inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
+        /// details.
         /// 
         /// Larger result sets can be yielded in streaming fashion by calling
         /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
@@ -1454,14 +1559,15 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
         /// simple key/value style alternative to
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
-        /// return a result set larger than 10 MiB; if the read matches more
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be
+        /// used to return a result set larger than 10 MiB; if the read matches more
         /// data than that, the read fails with a `FAILED_PRECONDITION`
         /// error.
         /// 
         /// Reads inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
+        /// details.
         /// 
         /// Larger result sets can be yielded in streaming fashion by calling
         /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
@@ -1480,9 +1586,9 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
-        /// stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
-        /// size of the returned result set. However, no individual row in
+        /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set
+        /// as a stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no
+        /// limit on the size of the returned result set. However, no individual row in
         /// the result set can exceed 100 MiB, and no column value can exceed
         /// 10 MiB.
         /// </summary>
@@ -1494,7 +1600,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1506,7 +1613,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1518,7 +1626,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1530,7 +1639,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1551,7 +1661,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1572,7 +1683,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1589,7 +1701,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1610,7 +1723,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -1631,7 +1745,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -2211,8 +2326,9 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-        /// ultimately decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
         /// 
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2227,8 +2343,9 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-        /// ultimately decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
         /// 
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2243,8 +2360,9 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-        /// ultimately decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
         /// 
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2259,8 +2377,9 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-        /// ultimately decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
         /// 
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2284,8 +2403,9 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-        /// ultimately decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
         /// 
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2309,8 +2429,9 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-        /// ultimately decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
         /// 
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2330,8 +2451,9 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-        /// ultimately decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
         /// 
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2355,8 +2477,9 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-        /// ultimately decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
         /// 
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2380,8 +2503,9 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-        /// ultimately decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
         /// 
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -2401,10 +2525,11 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a query
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
-        /// of the query result to read.  The same session and read-only transaction
-        /// must be used by the PartitionQueryRequest used to create the
-        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to
+        /// specify a subset of the query result to read.  The same session and
+        /// read-only transaction must be used by the PartitionQueryRequest used to
+        /// create the partition tokens and the ExecuteSqlRequests that use the
+        /// partition tokens.
         /// 
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -2420,10 +2545,11 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a query
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
-        /// of the query result to read.  The same session and read-only transaction
-        /// must be used by the PartitionQueryRequest used to create the
-        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to
+        /// specify a subset of the query result to read.  The same session and
+        /// read-only transaction must be used by the PartitionQueryRequest used to
+        /// create the partition tokens and the ExecuteSqlRequests that use the
+        /// partition tokens.
         /// 
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -2439,10 +2565,11 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a query
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
-        /// of the query result to read.  The same session and read-only transaction
-        /// must be used by the PartitionQueryRequest used to create the
-        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to
+        /// specify a subset of the query result to read.  The same session and
+        /// read-only transaction must be used by the PartitionQueryRequest used to
+        /// create the partition tokens and the ExecuteSqlRequests that use the
+        /// partition tokens.
         /// 
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -2458,12 +2585,13 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a read
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
-        /// result to read.  The same session and read-only transaction must be used by
-        /// the PartitionReadRequest used to create the partition tokens and the
-        /// ReadRequests that use the partition tokens.  There are no ordering
-        /// guarantees on rows returned among the returned partition tokens, or even
-        /// within each individual StreamingRead call issued with a partition_token.
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a
+        /// subset of the read result to read.  The same session and read-only
+        /// transaction must be used by the PartitionReadRequest used to create the
+        /// partition tokens and the ReadRequests that use the partition tokens.  There
+        /// are no ordering guarantees on rows returned among the returned partition
+        /// tokens, or even within each individual StreamingRead call issued with a
+        /// partition_token.
         /// 
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -2479,12 +2607,13 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a read
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
-        /// result to read.  The same session and read-only transaction must be used by
-        /// the PartitionReadRequest used to create the partition tokens and the
-        /// ReadRequests that use the partition tokens.  There are no ordering
-        /// guarantees on rows returned among the returned partition tokens, or even
-        /// within each individual StreamingRead call issued with a partition_token.
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a
+        /// subset of the read result to read.  The same session and read-only
+        /// transaction must be used by the PartitionReadRequest used to create the
+        /// partition tokens and the ReadRequests that use the partition tokens.  There
+        /// are no ordering guarantees on rows returned among the returned partition
+        /// tokens, or even within each individual StreamingRead call issued with a
+        /// partition_token.
         /// 
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -2500,12 +2629,13 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a read
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
-        /// result to read.  The same session and read-only transaction must be used by
-        /// the PartitionReadRequest used to create the partition tokens and the
-        /// ReadRequests that use the partition tokens.  There are no ordering
-        /// guarantees on rows returned among the returned partition tokens, or even
-        /// within each individual StreamingRead call issued with a partition_token.
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a
+        /// subset of the read result to read.  The same session and read-only
+        /// transaction must be used by the PartitionReadRequest used to create the
+        /// partition tokens and the ReadRequests that use the partition tokens.  There
+        /// are no ordering guarantees on rows returned among the returned partition
+        /// tokens, or even within each individual StreamingRead call issued with a
+        /// partition_token.
         /// 
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -2517,6 +2647,106 @@ namespace Google.Cloud.Spanner.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<PartitionResponse> PartitionReadAsync(PartitionReadRequest request, st::CancellationToken cancellationToken) =>
             PartitionReadAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Server streaming methods for <see cref="BatchWrite(BatchWriteRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class BatchWriteStream : gaxgrpc::ServerStreamingBase<BatchWriteResponse>
+        {
+        }
+
+        /// <summary>
+        /// Batches the supplied mutation groups in a collection of efficient
+        /// transactions. All mutations in a group are committed atomically. However,
+        /// mutations across groups can be committed non-atomically in an unspecified
+        /// order and thus, they must be independent of each other. Partial failure is
+        /// possible, i.e., some groups may have been committed successfully, while
+        /// some may have failed. The results of individual batches are streamed into
+        /// the response as the batches are applied.
+        /// 
+        /// BatchWrite requests are not replay protected, meaning that each mutation
+        /// group may be applied more than once. Replays of non-idempotent mutations
+        /// may have undesirable effects. For example, replays of an insert mutation
+        /// may produce an already exists error or if you use generated or commit
+        /// timestamp-based keys, it may result in additional rows being added to the
+        /// mutation's table. We recommend structuring your mutation groups to be
+        /// idempotent to avoid this issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BatchWriteStream BatchWrite(BatchWriteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batches the supplied mutation groups in a collection of efficient
+        /// transactions. All mutations in a group are committed atomically. However,
+        /// mutations across groups can be committed non-atomically in an unspecified
+        /// order and thus, they must be independent of each other. Partial failure is
+        /// possible, i.e., some groups may have been committed successfully, while
+        /// some may have failed. The results of individual batches are streamed into
+        /// the response as the batches are applied.
+        /// 
+        /// BatchWrite requests are not replay protected, meaning that each mutation
+        /// group may be applied more than once. Replays of non-idempotent mutations
+        /// may have undesirable effects. For example, replays of an insert mutation
+        /// may produce an already exists error or if you use generated or commit
+        /// timestamp-based keys, it may result in additional rows being added to the
+        /// mutation's table. We recommend structuring your mutation groups to be
+        /// idempotent to avoid this issue.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the batch request is to be run.
+        /// </param>
+        /// <param name="mutationGroups">
+        /// Required. The groups of mutations to be applied.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BatchWriteStream BatchWrite(string session, scg::IEnumerable<BatchWriteRequest.Types.MutationGroup> mutationGroups, gaxgrpc::CallSettings callSettings = null) =>
+            BatchWrite(new BatchWriteRequest
+            {
+                Session = gax::GaxPreconditions.CheckNotNullOrEmpty(session, nameof(session)),
+                MutationGroups =
+                {
+                    gax::GaxPreconditions.CheckNotNull(mutationGroups, nameof(mutationGroups)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batches the supplied mutation groups in a collection of efficient
+        /// transactions. All mutations in a group are committed atomically. However,
+        /// mutations across groups can be committed non-atomically in an unspecified
+        /// order and thus, they must be independent of each other. Partial failure is
+        /// possible, i.e., some groups may have been committed successfully, while
+        /// some may have failed. The results of individual batches are streamed into
+        /// the response as the batches are applied.
+        /// 
+        /// BatchWrite requests are not replay protected, meaning that each mutation
+        /// group may be applied more than once. Replays of non-idempotent mutations
+        /// may have undesirable effects. For example, replays of an insert mutation
+        /// may produce an already exists error or if you use generated or commit
+        /// timestamp-based keys, it may result in additional rows being added to the
+        /// mutation's table. We recommend structuring your mutation groups to be
+        /// idempotent to avoid this issue.
+        /// </summary>
+        /// <param name="session">
+        /// Required. The session in which the batch request is to be run.
+        /// </param>
+        /// <param name="mutationGroups">
+        /// Required. The groups of mutations to be applied.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BatchWriteStream BatchWrite(SessionName session, scg::IEnumerable<BatchWriteRequest.Types.MutationGroup> mutationGroups, gaxgrpc::CallSettings callSettings = null) =>
+            BatchWrite(new BatchWriteRequest
+            {
+                SessionAsSessionName = gax::GaxPreconditions.CheckNotNull(session, nameof(session)),
+                MutationGroups =
+                {
+                    gax::GaxPreconditions.CheckNotNull(mutationGroups, nameof(mutationGroups)),
+                },
+            }, callSettings);
     }
 
     /// <summary>Spanner client wrapper implementation, for convenient use.</summary>
@@ -2558,6 +2788,8 @@ namespace Google.Cloud.Spanner.V1
 
         private readonly gaxgrpc::ApiCall<PartitionReadRequest, PartitionResponse> _callPartitionRead;
 
+        private readonly gaxgrpc::ApiServerStreamingCall<BatchWriteRequest, BatchWriteResponse> _callBatchWrite;
+
         /// <summary>
         /// Constructs a client wrapper for the Spanner service, with the specified gRPC client and settings.
         /// </summary>
@@ -2568,7 +2800,11 @@ namespace Google.Cloud.Spanner.V1
         {
             GrpcClient = grpcClient;
             SpannerSettings effectiveSettings = settings ?? SpannerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateSession = clientHelper.BuildApiCall<CreateSessionRequest, Session>("CreateSession", grpcClient.CreateSessionAsync, grpcClient.CreateSession, effectiveSettings.CreateSessionSettings).WithGoogleRequestParam("database", request => request.Database);
             Modify_ApiCall(ref _callCreateSession);
             Modify_CreateSessionApiCall(ref _callCreateSession);
@@ -2614,6 +2850,9 @@ namespace Google.Cloud.Spanner.V1
             _callPartitionRead = clientHelper.BuildApiCall<PartitionReadRequest, PartitionResponse>("PartitionRead", grpcClient.PartitionReadAsync, grpcClient.PartitionRead, effectiveSettings.PartitionReadSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callPartitionRead);
             Modify_PartitionReadApiCall(ref _callPartitionRead);
+            _callBatchWrite = clientHelper.BuildApiCall<BatchWriteRequest, BatchWriteResponse>("BatchWrite", grpcClient.BatchWrite, effectiveSettings.BatchWriteSettings).WithGoogleRequestParam("session", request => request.Session);
+            Modify_ApiCall(ref _callBatchWrite);
+            Modify_BatchWriteApiCall(ref _callBatchWrite);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2651,6 +2890,8 @@ namespace Google.Cloud.Spanner.V1
 
         partial void Modify_PartitionReadApiCall(ref gaxgrpc::ApiCall<PartitionReadRequest, PartitionResponse> call);
 
+        partial void Modify_BatchWriteApiCall(ref gaxgrpc::ApiServerStreamingCall<BatchWriteRequest, BatchWriteResponse> call);
+
         partial void OnConstruction(Spanner.SpannerClient grpcClient, SpannerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Spanner client</summary>
@@ -2681,6 +2922,8 @@ namespace Google.Cloud.Spanner.V1
         partial void Modify_PartitionQueryRequest(ref PartitionQueryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PartitionReadRequest(ref PartitionReadRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchWriteRequest(ref BatchWriteRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new session. A session can be used to perform
@@ -2860,10 +3103,12 @@ namespace Google.Cloud.Spanner.V1
         /// 
         /// Operations inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
+        /// details.
         /// 
         /// Larger result sets can be fetched in streaming fashion by calling
-        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql]
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2882,10 +3127,12 @@ namespace Google.Cloud.Spanner.V1
         /// 
         /// Operations inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
+        /// details.
         /// 
         /// Larger result sets can be fetched in streaming fashion by calling
-        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql]
+        /// instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2906,11 +3153,11 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
-        /// set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
-        /// is no limit on the size of the returned result set. However, no
-        /// individual row in the result set can exceed 100 MiB, and no
-        /// column value can exceed 10 MiB.
+        /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the
+        /// result set as a stream. Unlike
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there is no limit on
+        /// the size of the returned result set. However, no individual row in the
+        /// result set can exceed 100 MiB, and no column value can exceed 10 MiB.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2927,9 +3174,10 @@ namespace Google.Cloud.Spanner.V1
         /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
         /// 
         /// Statements are executed in sequential order. A request can succeed even if
-        /// a statement fails. The [ExecuteBatchDmlResponse.status][google.spanner.v1.ExecuteBatchDmlResponse.status] field in the
-        /// response provides information about the statement that failed. Clients must
-        /// inspect this field to determine whether an error occurred.
+        /// a statement fails. The
+        /// [ExecuteBatchDmlResponse.status][google.spanner.v1.ExecuteBatchDmlResponse.status]
+        /// field in the response provides information about the statement that failed.
+        /// Clients must inspect this field to determine whether an error occurred.
         /// 
         /// Execution stops after the first failed statement; the remaining statements
         /// are not executed.
@@ -2949,9 +3197,10 @@ namespace Google.Cloud.Spanner.V1
         /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
         /// 
         /// Statements are executed in sequential order. A request can succeed even if
-        /// a statement fails. The [ExecuteBatchDmlResponse.status][google.spanner.v1.ExecuteBatchDmlResponse.status] field in the
-        /// response provides information about the statement that failed. Clients must
-        /// inspect this field to determine whether an error occurred.
+        /// a statement fails. The
+        /// [ExecuteBatchDmlResponse.status][google.spanner.v1.ExecuteBatchDmlResponse.status]
+        /// field in the response provides information about the statement that failed.
+        /// Clients must inspect this field to determine whether an error occurred.
         /// 
         /// Execution stops after the first failed statement; the remaining statements
         /// are not executed.
@@ -2968,14 +3217,15 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
         /// simple key/value style alternative to
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
-        /// return a result set larger than 10 MiB; if the read matches more
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be
+        /// used to return a result set larger than 10 MiB; if the read matches more
         /// data than that, the read fails with a `FAILED_PRECONDITION`
         /// error.
         /// 
         /// Reads inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
+        /// details.
         /// 
         /// Larger result sets can be yielded in streaming fashion by calling
         /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
@@ -2992,14 +3242,15 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Reads rows from the database using key lookups and scans, as a
         /// simple key/value style alternative to
-        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
-        /// return a result set larger than 10 MiB; if the read matches more
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be
+        /// used to return a result set larger than 10 MiB; if the read matches more
         /// data than that, the read fails with a `FAILED_PRECONDITION`
         /// error.
         /// 
         /// Reads inside read-write transactions might return `ABORTED`. If
         /// this occurs, the application should restart the transaction from
-        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more
+        /// details.
         /// 
         /// Larger result sets can be yielded in streaming fashion by calling
         /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
@@ -3023,9 +3274,9 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
-        /// stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
-        /// size of the returned result set. However, no individual row in
+        /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set
+        /// as a stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no
+        /// limit on the size of the returned result set. However, no individual row in
         /// the result set can exceed 100 MiB, and no column value can exceed
         /// 10 MiB.
         /// </summary>
@@ -3040,7 +3291,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -3055,7 +3307,8 @@ namespace Google.Cloud.Spanner.V1
 
         /// <summary>
         /// Begins a new transaction. This step can often be skipped:
-        /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+        /// [Read][google.spanner.v1.Spanner.Read],
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
         /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
         /// side-effect.
         /// </summary>
@@ -3121,8 +3374,9 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-        /// ultimately decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
         /// 
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -3140,8 +3394,9 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Rolls back a transaction, releasing any locks it holds. It is a good
         /// idea to call this for any transaction that includes one or more
-        /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-        /// ultimately decides not to commit.
+        /// [Read][google.spanner.v1.Spanner.Read] or
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and ultimately
+        /// decides not to commit.
         /// 
         /// `Rollback` returns `OK` if it successfully aborts the transaction, the
         /// transaction was already aborted, or the transaction is not
@@ -3159,10 +3414,11 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a query
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
-        /// of the query result to read.  The same session and read-only transaction
-        /// must be used by the PartitionQueryRequest used to create the
-        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to
+        /// specify a subset of the query result to read.  The same session and
+        /// read-only transaction must be used by the PartitionQueryRequest used to
+        /// create the partition tokens and the ExecuteSqlRequests that use the
+        /// partition tokens.
         /// 
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -3181,10 +3437,11 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a query
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to specify a subset
-        /// of the query result to read.  The same session and read-only transaction
-        /// must be used by the PartitionQueryRequest used to create the
-        /// partition tokens and the ExecuteSqlRequests that use the partition tokens.
+        /// by [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] to
+        /// specify a subset of the query result to read.  The same session and
+        /// read-only transaction must be used by the PartitionQueryRequest used to
+        /// create the partition tokens and the ExecuteSqlRequests that use the
+        /// partition tokens.
         /// 
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -3203,12 +3460,13 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a read
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
-        /// result to read.  The same session and read-only transaction must be used by
-        /// the PartitionReadRequest used to create the partition tokens and the
-        /// ReadRequests that use the partition tokens.  There are no ordering
-        /// guarantees on rows returned among the returned partition tokens, or even
-        /// within each individual StreamingRead call issued with a partition_token.
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a
+        /// subset of the read result to read.  The same session and read-only
+        /// transaction must be used by the PartitionReadRequest used to create the
+        /// partition tokens and the ReadRequests that use the partition tokens.  There
+        /// are no ordering guarantees on rows returned among the returned partition
+        /// tokens, or even within each individual StreamingRead call issued with a
+        /// partition_token.
         /// 
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -3227,12 +3485,13 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a set of partition tokens that can be used to execute a read
         /// operation in parallel.  Each of the returned partition tokens can be used
-        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a subset of the read
-        /// result to read.  The same session and read-only transaction must be used by
-        /// the PartitionReadRequest used to create the partition tokens and the
-        /// ReadRequests that use the partition tokens.  There are no ordering
-        /// guarantees on rows returned among the returned partition tokens, or even
-        /// within each individual StreamingRead call issued with a partition_token.
+        /// by [StreamingRead][google.spanner.v1.Spanner.StreamingRead] to specify a
+        /// subset of the read result to read.  The same session and read-only
+        /// transaction must be used by the PartitionReadRequest used to create the
+        /// partition tokens and the ReadRequests that use the partition tokens.  There
+        /// are no ordering guarantees on rows returned among the returned partition
+        /// tokens, or even within each individual StreamingRead call issued with a
+        /// partition_token.
         /// 
         /// Partition tokens become invalid when the session used to create them
         /// is deleted, is idle for too long, begins a new transaction, or becomes too
@@ -3246,6 +3505,41 @@ namespace Google.Cloud.Spanner.V1
         {
             Modify_PartitionReadRequest(ref request, ref callSettings);
             return _callPartitionRead.Async(request, callSettings);
+        }
+
+        internal sealed partial class BatchWriteStreamImpl : BatchWriteStream
+        {
+            /// <summary>Construct the server streaming method for <c>BatchWrite</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public BatchWriteStreamImpl(grpccore::AsyncServerStreamingCall<BatchWriteResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<BatchWriteResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Batches the supplied mutation groups in a collection of efficient
+        /// transactions. All mutations in a group are committed atomically. However,
+        /// mutations across groups can be committed non-atomically in an unspecified
+        /// order and thus, they must be independent of each other. Partial failure is
+        /// possible, i.e., some groups may have been committed successfully, while
+        /// some may have failed. The results of individual batches are streamed into
+        /// the response as the batches are applied.
+        /// 
+        /// BatchWrite requests are not replay protected, meaning that each mutation
+        /// group may be applied more than once. Replays of non-idempotent mutations
+        /// may have undesirable effects. For example, replays of an insert mutation
+        /// may produce an already exists error or if you use generated or commit
+        /// timestamp-based keys, it may result in additional rows being added to the
+        /// mutation's table. We recommend structuring your mutation groups to be
+        /// idempotent to avoid this issue.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override SpannerClient.BatchWriteStream BatchWrite(BatchWriteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchWriteRequest(ref request, ref callSettings);
+            return new BatchWriteStreamImpl(_callBatchWrite.Call(request, callSettings));
         }
     }
 

@@ -1,11 +1,11 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
-// 
+// Copyright 2017 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -40,7 +40,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 WriteDisposition = WriteDisposition.WriteAppend,
                 DestinationEncryptionConfiguration = new EncryptionConfiguration { KmsKeyName = "projects/1/locations/us/keyRings/1/cryptoKeys/1" },
                 DestinationSchemaUpdateOptions = SchemaUpdateOption.AllowFieldAddition | SchemaUpdateOption.AllowFieldRelaxation,
-                UseAvroLogicalTypes = true
+                UseAvroLogicalTypes = true,
+                Encoding = "encoding-test",
+                ConfigurationModifier = options => options.ETag = "test"
             };
 
             JobConfigurationLoad load = new JobConfigurationLoad();
@@ -59,11 +61,13 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("DATASTORE_BACKUP", load.SourceFormat);
             Assert.Equal("WRITE_APPEND", load.WriteDisposition);
             Assert.Equal("DAY", load.TimePartitioning.Type);
+            Assert.Equal("encoding-test", load.Encoding);
             Assert.Null(load.TimePartitioning.ExpirationMs);
             Assert.Equal("projects/1/locations/us/keyRings/1/cryptoKeys/1", load.DestinationEncryptionConfiguration.KmsKeyName);
             Assert.Contains("ALLOW_FIELD_ADDITION", load.SchemaUpdateOptions);
             Assert.Contains("ALLOW_FIELD_RELAXATION", load.SchemaUpdateOptions);
             Assert.True(load.UseAvroLogicalTypes);
+            Assert.Equal("test", load.ETag);
         }
     }
 }

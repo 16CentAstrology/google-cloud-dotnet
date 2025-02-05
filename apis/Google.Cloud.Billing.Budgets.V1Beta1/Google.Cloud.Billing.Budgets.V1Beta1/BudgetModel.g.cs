@@ -48,33 +48,35 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             "ASgBQgPgQQISUwoLc3BlbmRfYmFzaXMYAiABKA4yOS5nb29nbGUuY2xvdWQu",
             "YmlsbGluZy5idWRnZXRzLnYxYmV0YTEuVGhyZXNob2xkUnVsZS5CYXNpc0ID",
             "4EEBIkcKBUJhc2lzEhUKEUJBU0lTX1VOU1BFQ0lGSUVEEAASEQoNQ1VSUkVO",
-            "VF9TUEVORBABEhQKEEZPUkVDQVNURURfU1BFTkQQAiKkAQoOQWxsVXBkYXRl",
+            "VF9TUEVORBABEhQKEEZPUkVDQVNURURfU1BFTkQQAiLSAQoOQWxsVXBkYXRl",
             "c1J1bGUSGQoMcHVic3ViX3RvcGljGAEgASgJQgPgQQESGwoOc2NoZW1hX3Zl",
             "cnNpb24YAiABKAlCA+BBARItCiBtb25pdG9yaW5nX25vdGlmaWNhdGlvbl9j",
             "aGFubmVscxgDIAMoCUID4EEBEisKHmRpc2FibGVfZGVmYXVsdF9pYW1fcmVj",
-            "aXBpZW50cxgEIAEoCEID4EEBIrcFCgZGaWx0ZXISFQoIcHJvamVjdHMYASAD",
-            "KAlCA+BBARIZCgxjcmVkaXRfdHlwZXMYByADKAlCA+BBARJmChZjcmVkaXRf",
-            "dHlwZXNfdHJlYXRtZW50GAQgASgOMkEuZ29vZ2xlLmNsb3VkLmJpbGxpbmcu",
-            "YnVkZ2V0cy52MWJldGExLkZpbHRlci5DcmVkaXRUeXBlc1RyZWF0bWVudEID",
-            "4EEBEhUKCHNlcnZpY2VzGAMgAygJQgPgQQESGAoLc3ViYWNjb3VudHMYBSAD",
-            "KAlCA+BBARJNCgZsYWJlbHMYBiADKAsyOC5nb29nbGUuY2xvdWQuYmlsbGlu",
-            "Zy5idWRnZXRzLnYxYmV0YTEuRmlsdGVyLkxhYmVsc0VudHJ5QgPgQQESVAoP",
-            "Y2FsZW5kYXJfcGVyaW9kGAggASgOMjQuZ29vZ2xlLmNsb3VkLmJpbGxpbmcu",
-            "YnVkZ2V0cy52MWJldGExLkNhbGVuZGFyUGVyaW9kQgPgQQFIABJQCg1jdXN0",
-            "b21fcGVyaW9kGAkgASgLMjIuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0",
-            "cy52MWJldGExLkN1c3RvbVBlcmlvZEID4EEBSAAaSQoLTGFiZWxzRW50cnkS",
-            "CwoDa2V5GAEgASgJEikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "Lkxpc3RWYWx1ZToCOAEijwEKFENyZWRpdFR5cGVzVHJlYXRtZW50EiYKIkNS",
-            "RURJVF9UWVBFU19UUkVBVE1FTlRfVU5TUEVDSUZJRUQQABIXChNJTkNMVURF",
-            "X0FMTF9DUkVESVRTEAESFwoTRVhDTFVERV9BTExfQ1JFRElUUxACEh0KGUlO",
-            "Q0xVREVfU1BFQ0lGSUVEX0NSRURJVFMQA0IOCgx1c2FnZV9wZXJpb2QiZAoM",
-            "Q3VzdG9tUGVyaW9kEioKCnN0YXJ0X2RhdGUYASABKAsyES5nb29nbGUudHlw",
-            "ZS5EYXRlQgPgQQISKAoIZW5kX2RhdGUYAiABKAsyES5nb29nbGUudHlwZS5E",
-            "YXRlQgPgQQEqUwoOQ2FsZW5kYXJQZXJpb2QSHwobQ0FMRU5EQVJfUEVSSU9E",
-            "X1VOU1BFQ0lGSUVEEAASCQoFTU9OVEgQARILCgdRVUFSVEVSEAISCAoEWUVB",
-            "UhADQnAKKGNvbS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxYmV0",
-            "YTFQAVpCY2xvdWQuZ29vZ2xlLmNvbS9nby9iaWxsaW5nL2J1ZGdldHMvYXBp",
-            "djFiZXRhMS9idWRnZXRzcGI7YnVkZ2V0c3BiYgZwcm90bzM="));
+            "aXBpZW50cxgEIAEoCEID4EEBEiwKH2VuYWJsZV9wcm9qZWN0X2xldmVsX3Jl",
+            "Y2lwaWVudHMYBSABKAhCA+BBASLYBQoGRmlsdGVyEhUKCHByb2plY3RzGAEg",
+            "AygJQgPgQQESHwoScmVzb3VyY2VfYW5jZXN0b3JzGAIgAygJQgPgQQESGQoM",
+            "Y3JlZGl0X3R5cGVzGAcgAygJQgPgQQESZgoWY3JlZGl0X3R5cGVzX3RyZWF0",
+            "bWVudBgEIAEoDjJBLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFi",
+            "ZXRhMS5GaWx0ZXIuQ3JlZGl0VHlwZXNUcmVhdG1lbnRCA+BBARIVCghzZXJ2",
+            "aWNlcxgDIAMoCUID4EEBEhgKC3N1YmFjY291bnRzGAUgAygJQgPgQQESTQoG",
+            "bGFiZWxzGAYgAygLMjguZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52",
+            "MWJldGExLkZpbHRlci5MYWJlbHNFbnRyeUID4EEBElQKD2NhbGVuZGFyX3Bl",
+            "cmlvZBgIIAEoDjI0Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFi",
+            "ZXRhMS5DYWxlbmRhclBlcmlvZEID4EEBSAASUAoNY3VzdG9tX3BlcmlvZBgJ",
+            "IAEoCzIyLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFiZXRhMS5D",
+            "dXN0b21QZXJpb2RCA+BBAUgAGkkKC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRIpCgV2YWx1ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5MaXN0VmFsdWU6",
+            "AjgBIo8BChRDcmVkaXRUeXBlc1RyZWF0bWVudBImCiJDUkVESVRfVFlQRVNf",
+            "VFJFQVRNRU5UX1VOU1BFQ0lGSUVEEAASFwoTSU5DTFVERV9BTExfQ1JFRElU",
+            "UxABEhcKE0VYQ0xVREVfQUxMX0NSRURJVFMQAhIdChlJTkNMVURFX1NQRUNJ",
+            "RklFRF9DUkVESVRTEANCDgoMdXNhZ2VfcGVyaW9kImQKDEN1c3RvbVBlcmlv",
+            "ZBIqCgpzdGFydF9kYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EEC",
+            "EigKCGVuZF9kYXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EEBKlMK",
+            "DkNhbGVuZGFyUGVyaW9kEh8KG0NBTEVOREFSX1BFUklPRF9VTlNQRUNJRklF",
+            "RBAAEgkKBU1PTlRIEAESCwoHUVVBUlRFUhACEggKBFlFQVIQA0JwCihjb20u",
+            "Z29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MWJldGExUAFaQmNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vYmlsbGluZy9idWRnZXRzL2FwaXYxYmV0YTEvYnVk",
+            "Z2V0c3BiO2J1ZGdldHNwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -82,8 +84,8 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetAmount), global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetAmount.Parser, new[]{ "SpecifiedAmount", "LastPeriodAmount" }, new[]{ "BudgetAmount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount), global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule), global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule.Parser, new[]{ "ThresholdPercent", "SpendBasis" }, null, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule.Types.Basis) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule), global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule.Parser, new[]{ "PubsubTopic", "SchemaVersion", "MonitoringNotificationChannels", "DisableDefaultIamRecipients" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Filter), global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Parser, new[]{ "Projects", "CreditTypes", "CreditTypesTreatment", "Services", "Subaccounts", "Labels", "CalendarPeriod", "CustomPeriod" }, new[]{ "UsagePeriod" }, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule), global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule.Parser, new[]{ "PubsubTopic", "SchemaVersion", "MonitoringNotificationChannels", "DisableDefaultIamRecipients", "EnableProjectLevelRecipients" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Filter), global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Parser, new[]{ "Projects", "ResourceAncestors", "CreditTypes", "CreditTypesTreatment", "Services", "Subaccounts", "Labels", "CalendarPeriod", "CustomPeriod" }, new[]{ "UsagePeriod" }, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod), global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod.Parser, new[]{ "StartDate", "EndDate" }, null, null, null, null)
           }));
     }
@@ -129,6 +131,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
   /// The budget time period is configurable, with options such as month (default),
   /// quarter, year, or custom time period.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Budget : pb::IMessage<Budget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -216,9 +219,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public const int BudgetFilterFieldNumber = 3;
     private global::Google.Cloud.Billing.Budgets.V1Beta1.Filter budgetFilter_;
     /// <summary>
-    /// Optional. Filters that define which resources are used to compute the actual spend
-    /// against the budget amount, such as projects, services, and the budget's
-    /// time period, as well as other filters.
+    /// Optional. Filters that define which resources are used to compute the
+    /// actual spend against the budget amount, such as projects, services, and the
+    /// budget's time period, as well as other filters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -267,7 +270,8 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public const int AllUpdatesRuleFieldNumber = 6;
     private global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule allUpdatesRule_;
     /// <summary>
-    /// Optional. Rules to apply to notifications sent based on budget spend and thresholds.
+    /// Optional. Rules to apply to notifications sent based on budget spend and
+    /// thresholds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -592,6 +596,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
   /// <summary>
   /// The budgeted amount for each usage period.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BudgetAmount : pb::IMessage<BudgetAmount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -668,7 +673,8 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// <summary>
     /// Use the last period's actual spend as the budget for the present period.
     /// LastPeriodAmount can only be set when the budget's time period is a
-    /// [Filter.calendar_period][google.cloud.billing.budgets.v1beta1.Filter.calendar_period]. It cannot be set in combination with
+    /// [Filter.calendar_period][google.cloud.billing.budgets.v1beta1.Filter.calendar_period].
+    /// It cannot be set in combination with
     /// [Filter.custom_period][google.cloud.billing.budgets.v1beta1.Filter.custom_period].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -891,14 +897,17 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
   }
 
   /// <summary>
-  /// Describes a budget amount targeted to the last [Filter.calendar_period][google.cloud.billing.budgets.v1beta1.Filter.calendar_period]
+  /// Describes a budget amount targeted to the last
+  /// [Filter.calendar_period][google.cloud.billing.budgets.v1beta1.Filter.calendar_period]
   /// spend. At this time, the amount is automatically 100% of the last calendar
   /// period's spend; that is, there are no other options yet.
   /// Future configuration options will be described here (for example, configuring
   /// a percentage of last period's spend).
   /// LastPeriodAmount cannot be set for a budget configured with
-  /// a [Filter.custom_period][google.cloud.billing.budgets.v1beta1.Filter.custom_period].
+  /// a
+  /// [Filter.custom_period][google.cloud.billing.budgets.v1beta1.Filter.custom_period].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LastPeriodAmount : pb::IMessage<LastPeriodAmount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1075,6 +1084,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
   /// [set budget threshold rules and
   /// actions](https://cloud.google.com/billing/docs/how-to/budgets#budget-actions).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ThresholdRule : pb::IMessage<ThresholdRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1329,7 +1339,8 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         /// Use forecasted spend for the period as the basis for comparison against
         /// the threshold.
         /// FORECASTED_SPEND can only be set when the budget's time period is a
-        /// [Filter.calendar_period][google.cloud.billing.budgets.v1beta1.Filter.calendar_period].  It cannot be set in combination with
+        /// [Filter.calendar_period][google.cloud.billing.budgets.v1beta1.Filter.calendar_period].
+        /// It cannot be set in combination with
         /// [Filter.custom_period][google.cloud.billing.budgets.v1beta1.Filter.custom_period].
         /// </summary>
         [pbr::OriginalName("FORECASTED_SPEND")] ForecastedSpend = 2,
@@ -1344,6 +1355,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
   /// AllUpdatesRule defines notifications that are sent based on budget spend
   /// and thresholds.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AllUpdatesRule : pb::IMessage<AllUpdatesRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1382,6 +1394,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       schemaVersion_ = other.schemaVersion_;
       monitoringNotificationChannels_ = other.monitoringNotificationChannels_.Clone();
       disableDefaultIamRecipients_ = other.disableDefaultIamRecipients_;
+      enableProjectLevelRecipients_ = other.enableProjectLevelRecipients_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1395,10 +1408,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public const int PubsubTopicFieldNumber = 1;
     private string pubsubTopic_ = "";
     /// <summary>
-    /// Optional. The name of the Pub/Sub topic where budget related messages will be
-    /// published, in the form `projects/{project_id}/topics/{topic_id}`. Updates
-    /// are sent at regular intervals to the topic.
-    /// The topic needs to be created before the budget is created; see
+    /// Optional. The name of the Pub/Sub topic where budget related messages will
+    /// be published, in the form `projects/{project_id}/topics/{topic_id}`.
+    /// Updates are sent at regular intervals to the topic. The topic needs to be
+    /// created before the budget is created; see
     /// https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications
     /// for more details.
     /// Caller is expected to have
@@ -1420,9 +1433,11 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public const int SchemaVersionFieldNumber = 2;
     private string schemaVersion_ = "";
     /// <summary>
-    /// Optional. Required when [AllUpdatesRule.pubsub_topic][google.cloud.billing.budgets.v1beta1.AllUpdatesRule.pubsub_topic] is set. The schema version of
-    /// the notification sent to [AllUpdatesRule.pubsub_topic][google.cloud.billing.budgets.v1beta1.AllUpdatesRule.pubsub_topic]. Only "1.0" is
-    /// accepted. It represents the JSON schema as defined in
+    /// Optional. Required when
+    /// [AllUpdatesRule.pubsub_topic][google.cloud.billing.budgets.v1beta1.AllUpdatesRule.pubsub_topic]
+    /// is set. The schema version of the notification sent to
+    /// [AllUpdatesRule.pubsub_topic][google.cloud.billing.budgets.v1beta1.AllUpdatesRule.pubsub_topic].
+    /// Only "1.0" is accepted. It represents the JSON schema as defined in
     /// https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1440,10 +1455,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> monitoringNotificationChannels_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. Targets to send notifications to when a threshold is exceeded. This is in
-    /// addition to default recipients who have billing account IAM roles.
-    /// The value is the full REST resource name of a monitoring notification
-    /// channel with the form
+    /// Optional. Targets to send notifications to when a threshold is exceeded.
+    /// This is in addition to default recipients who have billing account IAM
+    /// roles. The value is the full REST resource name of a monitoring
+    /// notification channel with the form
     /// `projects/{project_id}/notificationChannels/{channel_id}`. A maximum of 5
     /// channels are allowed. See
     /// https://cloud.google.com/billing/docs/how-to/budgets-notification-recipients
@@ -1459,9 +1474,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public const int DisableDefaultIamRecipientsFieldNumber = 4;
     private bool disableDefaultIamRecipients_;
     /// <summary>
-    /// Optional. When set to true, disables default notifications sent when a threshold is
-    /// exceeded. Default notifications are sent to those with Billing Account
-    /// Administrator and Billing Account User IAM roles for the target account.
+    /// Optional. When set to true, disables default notifications sent when a
+    /// threshold is exceeded. Default notifications are sent to those with Billing
+    /// Account Administrator and Billing Account User IAM roles for the target
+    /// account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1469,6 +1485,27 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       get { return disableDefaultIamRecipients_; }
       set {
         disableDefaultIamRecipients_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "enable_project_level_recipients" field.</summary>
+    public const int EnableProjectLevelRecipientsFieldNumber = 5;
+    private bool enableProjectLevelRecipients_;
+    /// <summary>
+    /// Optional. When set to true, and when the budget has a single project
+    /// configured, notifications will be sent to project level recipients of that
+    /// project. This field will be ignored if the budget has multiple or no
+    /// project configured.
+    ///
+    /// Currently, project level recipients are the users with `Owner` role on a
+    /// cloud project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableProjectLevelRecipients {
+      get { return enableProjectLevelRecipients_; }
+      set {
+        enableProjectLevelRecipients_ = value;
       }
     }
 
@@ -1491,6 +1528,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       if (SchemaVersion != other.SchemaVersion) return false;
       if(!monitoringNotificationChannels_.Equals(other.monitoringNotificationChannels_)) return false;
       if (DisableDefaultIamRecipients != other.DisableDefaultIamRecipients) return false;
+      if (EnableProjectLevelRecipients != other.EnableProjectLevelRecipients) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1502,6 +1540,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       if (SchemaVersion.Length != 0) hash ^= SchemaVersion.GetHashCode();
       hash ^= monitoringNotificationChannels_.GetHashCode();
       if (DisableDefaultIamRecipients != false) hash ^= DisableDefaultIamRecipients.GetHashCode();
+      if (EnableProjectLevelRecipients != false) hash ^= EnableProjectLevelRecipients.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1533,6 +1572,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         output.WriteRawTag(32);
         output.WriteBool(DisableDefaultIamRecipients);
       }
+      if (EnableProjectLevelRecipients != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(EnableProjectLevelRecipients);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1556,6 +1599,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         output.WriteRawTag(32);
         output.WriteBool(DisableDefaultIamRecipients);
       }
+      if (EnableProjectLevelRecipients != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(EnableProjectLevelRecipients);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1574,6 +1621,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       }
       size += monitoringNotificationChannels_.CalculateSize(_repeated_monitoringNotificationChannels_codec);
       if (DisableDefaultIamRecipients != false) {
+        size += 1 + 1;
+      }
+      if (EnableProjectLevelRecipients != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -1597,6 +1647,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       monitoringNotificationChannels_.Add(other.monitoringNotificationChannels_);
       if (other.DisableDefaultIamRecipients != false) {
         DisableDefaultIamRecipients = other.DisableDefaultIamRecipients;
+      }
+      if (other.EnableProjectLevelRecipients != false) {
+        EnableProjectLevelRecipients = other.EnableProjectLevelRecipients;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1627,6 +1680,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
           }
           case 32: {
             DisableDefaultIamRecipients = input.ReadBool();
+            break;
+          }
+          case 40: {
+            EnableProjectLevelRecipients = input.ReadBool();
             break;
           }
         }
@@ -1660,6 +1717,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             DisableDefaultIamRecipients = input.ReadBool();
             break;
           }
+          case 40: {
+            EnableProjectLevelRecipients = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -1670,6 +1731,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
   /// <summary>
   /// A filter for a budget, limiting the scope of the cost to calculate.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Filter : pb::IMessage<Filter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1705,6 +1767,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Filter(Filter other) : this() {
       projects_ = other.projects_.Clone();
+      resourceAncestors_ = other.resourceAncestors_.Clone();
       creditTypes_ = other.creditTypes_.Clone();
       creditTypesTreatment_ = other.creditTypesTreatment_;
       services_ = other.services_.Clone();
@@ -1738,12 +1801,31 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// specifying that usage from only this set of projects should be
     /// included in the budget. If omitted, the report will include all usage for
     /// the billing account, regardless of which project the usage occurred on.
-    /// Only zero or one project can be specified currently.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Projects {
       get { return projects_; }
+    }
+
+    /// <summary>Field number for the "resource_ancestors" field.</summary>
+    public const int ResourceAncestorsFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_resourceAncestors_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> resourceAncestors_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A set of folder and organization names of the form
+    /// `folders/{folderId}` or `organizations/{organizationId}`, specifying that
+    /// usage from only this set of folders and organizations should be included in
+    /// the budget. If omitted, the budget includes all usage that the billing
+    /// account pays for. If the folder or organization contains projects that are
+    /// paid for by a different Cloud Billing account, the budget *doesn't* apply
+    /// to those projects.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ResourceAncestors {
+      get { return resourceAncestors_; }
     }
 
     /// <summary>Field number for the "credit_types" field.</summary>
@@ -1752,14 +1834,16 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         = pb::FieldCodec.ForString(58);
     private readonly pbc::RepeatedField<string> creditTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. If [Filter.credit_types_treatment][google.cloud.billing.budgets.v1beta1.Filter.credit_types_treatment] is INCLUDE_SPECIFIED_CREDITS, this is
-    /// a list of credit types to be subtracted from gross cost to determine the
-    /// spend for threshold calculations. See
-    /// [a list of acceptable credit type
+    /// Optional. If
+    /// [Filter.credit_types_treatment][google.cloud.billing.budgets.v1beta1.Filter.credit_types_treatment]
+    /// is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be
+    /// subtracted from gross cost to determine the spend for threshold
+    /// calculations. See [a list of acceptable credit type
     /// values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).
     ///
-    /// If [Filter.credit_types_treatment][google.cloud.billing.budgets.v1beta1.Filter.credit_types_treatment] is **not** INCLUDE_SPECIFIED_CREDITS,
-    /// this field must be empty.
+    /// If
+    /// [Filter.credit_types_treatment][google.cloud.billing.budgets.v1beta1.Filter.credit_types_treatment]
+    /// is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1807,9 +1891,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> subaccounts_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying
-    /// that usage from only this set of subaccounts should be included in the
-    /// budget. If a subaccount is set to the name of the parent account,
+    /// Optional. A set of subaccounts of the form `billingAccounts/{account_id}`,
+    /// specifying that usage from only this set of subaccounts should be included
+    /// in the budget. If a subaccount is set to the name of the parent account,
     /// usage from the parent account will be included. If omitted, the
     /// report will include usage from the parent account and all
     /// subaccounts, if they exist.
@@ -1826,9 +1910,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.ListValue>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.ListValue.Parser), 50);
     private readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.ListValue> labels_ = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.ListValue>();
     /// <summary>
-    /// Optional. A single label and value pair specifying that usage from only this set of
-    /// labeled resources should be included in the budget. If omitted, the
-    /// report will include all labeled and unlabeled usage.
+    /// Optional. A single label and value pair specifying that usage from only
+    /// this set of labeled resources should be included in the budget. If omitted,
+    /// the report will include all labeled and unlabeled usage.
     ///
     /// An object containing a single `"key": value` pair. Example: `{ "name":
     /// "wrench" }`.
@@ -1855,18 +1939,32 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod CalendarPeriod {
-      get { return usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod ? (global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod) usagePeriod_ : global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod.Unspecified; }
+      get { return HasCalendarPeriod ? (global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod) usagePeriod_ : global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod.Unspecified; }
       set {
         usagePeriod_ = value;
         usagePeriodCase_ = UsagePeriodOneofCase.CalendarPeriod;
+      }
+    }
+    /// <summary>Gets whether the "calendar_period" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCalendarPeriod {
+      get { return usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "calendar_period" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCalendarPeriod() {
+      if (HasCalendarPeriod) {
+        ClearUsagePeriod();
       }
     }
 
     /// <summary>Field number for the "custom_period" field.</summary>
     public const int CustomPeriodFieldNumber = 9;
     /// <summary>
-    /// Optional. Specifies to track usage from any start date (required) to any end date
-    /// (optional). This time period is static, it does not recur.
+    /// Optional. Specifies to track usage from any start date (required) to any
+    /// end date (optional). This time period is static, it does not recur.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1915,6 +2013,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         return true;
       }
       if(!projects_.Equals(other.projects_)) return false;
+      if(!resourceAncestors_.Equals(other.resourceAncestors_)) return false;
       if(!creditTypes_.Equals(other.creditTypes_)) return false;
       if (CreditTypesTreatment != other.CreditTypesTreatment) return false;
       if(!services_.Equals(other.services_)) return false;
@@ -1931,12 +2030,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= projects_.GetHashCode();
+      hash ^= resourceAncestors_.GetHashCode();
       hash ^= creditTypes_.GetHashCode();
       if (CreditTypesTreatment != global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment.Unspecified) hash ^= CreditTypesTreatment.GetHashCode();
       hash ^= services_.GetHashCode();
       hash ^= subaccounts_.GetHashCode();
       hash ^= Labels.GetHashCode();
-      if (usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod) hash ^= CalendarPeriod.GetHashCode();
+      if (HasCalendarPeriod) hash ^= CalendarPeriod.GetHashCode();
       if (usagePeriodCase_ == UsagePeriodOneofCase.CustomPeriod) hash ^= CustomPeriod.GetHashCode();
       hash ^= (int) usagePeriodCase_;
       if (_unknownFields != null) {
@@ -1958,6 +2058,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       output.WriteRawMessage(this);
     #else
       projects_.WriteTo(output, _repeated_projects_codec);
+      resourceAncestors_.WriteTo(output, _repeated_resourceAncestors_codec);
       services_.WriteTo(output, _repeated_services_codec);
       if (CreditTypesTreatment != global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment.Unspecified) {
         output.WriteRawTag(32);
@@ -1966,7 +2067,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       subaccounts_.WriteTo(output, _repeated_subaccounts_codec);
       labels_.WriteTo(output, _map_labels_codec);
       creditTypes_.WriteTo(output, _repeated_creditTypes_codec);
-      if (usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod) {
+      if (HasCalendarPeriod) {
         output.WriteRawTag(64);
         output.WriteEnum((int) CalendarPeriod);
       }
@@ -1985,6 +2086,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       projects_.WriteTo(ref output, _repeated_projects_codec);
+      resourceAncestors_.WriteTo(ref output, _repeated_resourceAncestors_codec);
       services_.WriteTo(ref output, _repeated_services_codec);
       if (CreditTypesTreatment != global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment.Unspecified) {
         output.WriteRawTag(32);
@@ -1993,7 +2095,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       subaccounts_.WriteTo(ref output, _repeated_subaccounts_codec);
       labels_.WriteTo(ref output, _map_labels_codec);
       creditTypes_.WriteTo(ref output, _repeated_creditTypes_codec);
-      if (usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod) {
+      if (HasCalendarPeriod) {
         output.WriteRawTag(64);
         output.WriteEnum((int) CalendarPeriod);
       }
@@ -2012,6 +2114,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public int CalculateSize() {
       int size = 0;
       size += projects_.CalculateSize(_repeated_projects_codec);
+      size += resourceAncestors_.CalculateSize(_repeated_resourceAncestors_codec);
       size += creditTypes_.CalculateSize(_repeated_creditTypes_codec);
       if (CreditTypesTreatment != global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CreditTypesTreatment);
@@ -2019,7 +2122,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       size += services_.CalculateSize(_repeated_services_codec);
       size += subaccounts_.CalculateSize(_repeated_subaccounts_codec);
       size += labels_.CalculateSize(_map_labels_codec);
-      if (usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod) {
+      if (HasCalendarPeriod) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CalendarPeriod);
       }
       if (usagePeriodCase_ == UsagePeriodOneofCase.CustomPeriod) {
@@ -2038,13 +2141,14 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         return;
       }
       projects_.Add(other.projects_);
+      resourceAncestors_.Add(other.resourceAncestors_);
       creditTypes_.Add(other.creditTypes_);
       if (other.CreditTypesTreatment != global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment.Unspecified) {
         CreditTypesTreatment = other.CreditTypesTreatment;
       }
       services_.Add(other.services_);
       subaccounts_.Add(other.subaccounts_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.UsagePeriodCase) {
         case UsagePeriodOneofCase.CalendarPeriod:
           CalendarPeriod = other.CalendarPeriod;
@@ -2074,6 +2178,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             break;
           case 10: {
             projects_.AddEntriesFrom(input, _repeated_projects_codec);
+            break;
+          }
+          case 18: {
+            resourceAncestors_.AddEntriesFrom(input, _repeated_resourceAncestors_codec);
             break;
           }
           case 26: {
@@ -2127,6 +2235,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             break;
           case 10: {
             projects_.AddEntriesFrom(ref input, _repeated_projects_codec);
+            break;
+          }
+          case 18: {
+            resourceAncestors_.AddEntriesFrom(ref input, _repeated_resourceAncestors_codec);
             break;
           }
           case 26: {
@@ -2209,6 +2321,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
   /// <summary>
   /// All date times begin at 12 AM US and Canadian Pacific Time (UTC-8).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomPeriod : pb::IMessage<CustomPeriod>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2273,9 +2386,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public const int EndDateFieldNumber = 2;
     private global::Google.Type.Date endDate_;
     /// <summary>
-    /// Optional. The end date of the time period. Budgets with elapsed end date won't be
-    /// processed. If unset, specifies to track all usage
-    /// incurred since the start_date.
+    /// Optional. The end date of the time period. Budgets with elapsed end date
+    /// won't be processed. If unset, specifies to track all usage incurred since
+    /// the start_date.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

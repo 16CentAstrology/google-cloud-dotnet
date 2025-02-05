@@ -59,6 +59,7 @@ namespace Google.Cloud.Eventarc.V1 {
   /// using the specified custom managed encryption key instead of Google-managed
   /// encryption keys.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GoogleChannelConfig : pb::IMessage<GoogleChannelConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

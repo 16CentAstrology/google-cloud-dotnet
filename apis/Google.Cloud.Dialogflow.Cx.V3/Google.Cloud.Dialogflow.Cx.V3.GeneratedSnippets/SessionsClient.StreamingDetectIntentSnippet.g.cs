@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v3_generated_Sessions_StreamingDetectIntent_sync]
     using Google.Api.Gax.Grpc;
@@ -36,7 +36,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             // Create client
             SessionsClient sessionsClient = SessionsClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SessionsClient.StreamingDetectIntentStream response = sessionsClient.StreamingDetectIntent();
+            using SessionsClient.StreamingDetectIntentStream response = sessionsClient.StreamingDetectIntent();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior
@@ -66,6 +66,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
                     QueryInput = new QueryInput(),
                     OutputAudioConfig = new OutputAudioConfig(),
                     EnablePartialResponse = false,
+                    EnableDebuggingInfo = false,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

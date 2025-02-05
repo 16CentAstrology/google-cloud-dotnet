@@ -1,11 +1,11 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+// Copyright 2016 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -86,7 +86,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
-            
+
             // Get them all in one go, skipping the first row
             var rows1 = table.ListRows(new ListRowsOptions { PageSize = 100, StartIndex = 1 }).ToList();
 
@@ -117,7 +117,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // Make sure we grab a row of a person with children for testing fields that should be present.
             var rowAsyncTask = rowsAsync.FirstAsync(row => ((Dictionary<string, object>[])row["children"])?.Length > 0);
             var rowSync = rows.First(row => ((Dictionary<string, object>[])row["children"])?.Length > 0);
-            var rowAsync = await rowAsyncTask.ConfigureAwait(false);
+            var rowAsync = await rowAsyncTask;
 
             AssertPartialRow(rowSync);
             AssertPartialRow(rowAsync);
@@ -148,7 +148,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             // We should get full rows.
             var rowsAsyncTask = client.ListRowsAsync(datasetId, tableId, new TableSchema()).ToListAsync();
             var rowsSync = client.ListRows(datasetId, tableId, new TableSchema()).ToList();
-            var rowsAsync = await rowsAsyncTask.ConfigureAwait(false);
+            var rowsAsync = await rowsAsyncTask;
 
             AssertFullRows(rowsSync);
             AssertFullRows(rowsAsync);
@@ -159,6 +159,34 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 object dummy;
                 Assert.All(rows, row => dummy = row[6]);
             }
+        }
+
+        [Fact]
+        public void TimestampPrecision()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var schema = new TableSchemaBuilder { { "timestamp", BigQueryDbType.Timestamp } }.Build();
+            var table = client.CreateTable(_fixture.DatasetId, _fixture.CreateTableId(), schema);
+            var originalTimestamp = new DateTime(8000, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddTicks(123456 * 10); // 10 ticks per microsecond
+            table.InsertRow(new BigQueryInsertRow { { "timestamp", originalTimestamp } });
+
+            var noOptionsRows = table.ListRows();
+            var emptyOptionsRows = table.ListRows(new ListRowsOptions());
+            var preciseRows = table.ListRows(new ListRowsOptions { UseInt64Timestamp = true }).ToList();
+            var impreciseRows = table.ListRows(new ListRowsOptions { UseInt64Timestamp = false }).ToList();
+
+            var noOptionsRow = Assert.Single(noOptionsRows);
+            var emptyOptionsRow = Assert.Single(emptyOptionsRows);
+            var preciseRow = Assert.Single(preciseRows);
+            var impreciseRow = Assert.Single(impreciseRows);
+
+            // The default setting is to use the int64 representation, which will provide
+            // microsecond-precise values. When we explicitly request UseInt64Timestamp=false,
+            // we use the floating point representation which won't round-trip for this value.
+            Assert.Equal(originalTimestamp, noOptionsRow["timestamp"]);
+            Assert.Equal(originalTimestamp, emptyOptionsRow["timestamp"]);
+            Assert.Equal(originalTimestamp, preciseRow["timestamp"]);
+            Assert.NotEqual(originalTimestamp, impreciseRow["timestamp"]);
         }
     }
 }

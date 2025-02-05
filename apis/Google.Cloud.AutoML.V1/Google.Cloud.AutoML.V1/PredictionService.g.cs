@@ -56,15 +56,15 @@ namespace Google.Cloud.AutoML.V1 {
             "YXRhRW50cnkaLwoNTWV0YWRhdGFFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
             "dWUYAiABKAk6AjgBMoUEChFQcmVkaWN0aW9uU2VydmljZRKvAQoHUHJlZGlj",
             "dBImLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuUHJlZGljdFJlcXVlc3QaJy5n",
-            "b29nbGUuY2xvdWQuYXV0b21sLnYxLlByZWRpY3RSZXNwb25zZSJTgtPkkwI3",
-            "IjIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9tb2RlbHMvKn06",
-            "cHJlZGljdDoBKtpBE25hbWUscGF5bG9hZCxwYXJhbXMS8gEKDEJhdGNoUHJl",
+            "b29nbGUuY2xvdWQuYXV0b21sLnYxLlByZWRpY3RSZXNwb25zZSJT2kETbmFt",
+            "ZSxwYXlsb2FkLHBhcmFtc4LT5JMCNyIyL3YxL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovbW9kZWxzLyp9OnByZWRpY3Q6ASoS8gEKDEJhdGNoUHJl",
             "ZGljdBIrLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuQmF0Y2hQcmVkaWN0UmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ilQGC0+STAjwi",
-            "Ny92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL21vZGVscy8qfTpi",
-            "YXRjaFByZWRpY3Q6ASraQSZuYW1lLGlucHV0X2NvbmZpZyxvdXRwdXRfY29u",
-            "ZmlnLHBhcmFtc8pBJwoSQmF0Y2hQcmVkaWN0UmVzdWx0EhFPcGVyYXRpb25N",
-            "ZXRhZGF0YRpJykEVYXV0b21sLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ilQHKQScKEkJh",
+            "dGNoUHJlZGljdFJlc3VsdBIRT3BlcmF0aW9uTWV0YWRhdGHaQSZuYW1lLGlu",
+            "cHV0X2NvbmZpZyxvdXRwdXRfY29uZmlnLHBhcmFtc4LT5JMCPCI3L3YxL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovbW9kZWxzLyp9OmJhdGNoUHJl",
+            "ZGljdDoBKhpJykEVYXV0b21sLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
             "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK4AQoaY29t",
             "Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjFCFlByZWRpY3Rpb25TZXJ2aWNlUHJv",
             "dG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9hdXRvbWwvYXBpdjEvYXV0b21s",
@@ -87,6 +87,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Request message for [PredictionService.Predict][google.cloud.automl.v1.PredictionService.Predict].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PredictRequest : pb::IMessage<PredictRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -319,7 +320,7 @@ namespace Google.Cloud.AutoML.V1 {
         }
         Payload.MergeFrom(other.Payload);
       }
-      params_.Add(other.params_);
+      params_.MergeFrom(other.params_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -390,6 +391,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Response message for [PredictionService.Predict][google.cloud.automl.v1.PredictionService.Predict].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PredictResponse : pb::IMessage<PredictResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -607,7 +609,7 @@ namespace Google.Cloud.AutoML.V1 {
         }
         PreprocessedInput.MergeFrom(other.PreprocessedInput);
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -678,6 +680,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Request message for [PredictionService.BatchPredict][google.cloud.automl.v1.PredictionService.BatchPredict].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchPredictRequest : pb::IMessage<BatchPredictRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -997,7 +1000,7 @@ namespace Google.Cloud.AutoML.V1 {
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
-      params_.Add(other.params_);
+      params_.MergeFrom(other.params_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1084,6 +1087,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// [response][google.longrunning.Operation.response] of the operation returned
   /// by the [PredictionService.BatchPredict][google.cloud.automl.v1.PredictionService.BatchPredict].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchPredictResult : pb::IMessage<BatchPredictResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1229,7 +1233,7 @@ namespace Google.Cloud.AutoML.V1 {
       if (other == null) {
         return;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

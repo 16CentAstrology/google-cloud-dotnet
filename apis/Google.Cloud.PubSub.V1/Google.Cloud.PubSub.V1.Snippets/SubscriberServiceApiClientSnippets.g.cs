@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,11 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.PubSub.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.PubSub.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
@@ -54,6 +55,12 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 TopicMessageRetentionDuration = new Duration(),
                 BigqueryConfig = new BigQueryConfig(),
                 State = Subscription.Types.State.Unspecified,
+                CloudStorageConfig = new CloudStorageConfig(),
+                AnalyticsHubSubscriptionInfo = new Subscription.Types.AnalyticsHubSubscriptionInfo(),
+                MessageTransforms =
+                {
+                    new MessageTransform(),
+                },
             };
             // Make the request
             Subscription response = subscriberServiceApiClient.CreateSubscription(request);
@@ -87,6 +94,12 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 TopicMessageRetentionDuration = new Duration(),
                 BigqueryConfig = new BigQueryConfig(),
                 State = Subscription.Types.State.Unspecified,
+                CloudStorageConfig = new CloudStorageConfig(),
+                AnalyticsHubSubscriptionInfo = new Subscription.Types.AnalyticsHubSubscriptionInfo(),
+                MessageTransforms =
+                {
+                    new MessageTransform(),
+                },
             };
             // Make the request
             Subscription response = await subscriberServiceApiClient.CreateSubscriptionAsync(request);
@@ -1035,7 +1048,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             SubscriberServiceApiClient subscriberServiceApiClient = SubscriberServiceApiClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SubscriberServiceApiClient.StreamingPullStream response = subscriberServiceApiClient.StreamingPull();
+            using SubscriberServiceApiClient.StreamingPullStream response = subscriberServiceApiClient.StreamingPull();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior

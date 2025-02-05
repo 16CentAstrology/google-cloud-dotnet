@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -321,14 +321,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return NetworkEndpointGroupsClient.Create(callInvoker, Settings, Logger);
+            return NetworkEndpointGroupsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<NetworkEndpointGroupsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return NetworkEndpointGroupsClient.Create(callInvoker, Settings, Logger);
+            return NetworkEndpointGroupsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -425,7 +425,7 @@ namespace Google.Cloud.Compute.V1
         public virtual NetworkEndpointGroups.NetworkEndpointGroupsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of network endpoint groups and sorts them by zone.
+        /// Retrieves the list of network endpoint groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -434,7 +434,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of network endpoint groups and sorts them by zone.
+        /// Retrieves the list of network endpoint groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -445,7 +445,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves the list of network endpoint groups and sorts them by zone.
+        /// Retrieves the list of network endpoint groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -460,16 +460,25 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
-        public virtual gax::PagedEnumerable<NetworkEndpointGroupAggregatedList, scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedList(new AggregatedListNetworkEndpointGroupsRequest
+        public virtual gax::PagedEnumerable<NetworkEndpointGroupAggregatedList, scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListNetworkEndpointGroupsRequest request = new AggregatedListNetworkEndpointGroupsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedList(request, callSettings);
+        }
 
         /// <summary>
-        /// Retrieves the list of network endpoint groups and sorts them by zone.
+        /// Retrieves the list of network endpoint groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -486,13 +495,22 @@ namespace Google.Cloud.Compute.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<NetworkEndpointGroupAggregatedList, scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedListAsync(new AggregatedListNetworkEndpointGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<NetworkEndpointGroupAggregatedList, scg::KeyValuePair<string, NetworkEndpointGroupsScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListNetworkEndpointGroupsRequest request = new AggregatedListNetworkEndpointGroupsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Attach a list of network endpoints to the specified network endpoint group.
@@ -1099,14 +1117,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NetworkEndpointGroup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> List(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListNetworkEndpointGroupsRequest
+        public virtual gax::PagedEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> List(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkEndpointGroupsRequest request = new ListNetworkEndpointGroupsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of network endpoint groups that are located in the specified project and zone.
@@ -1127,14 +1154,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NetworkEndpointGroup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> ListAsync(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListNetworkEndpointGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<NetworkEndpointGroupList, NetworkEndpointGroup> ListAsync(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkEndpointGroupsRequest request = new ListNetworkEndpointGroupsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the network endpoints in the specified network endpoint group.
@@ -1181,16 +1217,25 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NetworkEndpointWithHealthStatus"/> resources.</returns>
-        public virtual gax::PagedEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> ListNetworkEndpoints(string project, string zone, string networkEndpointGroup, NetworkEndpointGroupsListEndpointsRequest networkEndpointGroupsListEndpointsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkEndpoints(new ListNetworkEndpointsNetworkEndpointGroupsRequest
+        public virtual gax::PagedEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> ListNetworkEndpoints(string project, string zone, string networkEndpointGroup, NetworkEndpointGroupsListEndpointsRequest networkEndpointGroupsListEndpointsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkEndpointsNetworkEndpointGroupsRequest request = new ListNetworkEndpointsNetworkEndpointGroupsRequest
             {
                 NetworkEndpointGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(networkEndpointGroup, nameof(networkEndpointGroup)),
                 NetworkEndpointGroupsListEndpointsRequestResource = gax::GaxPreconditions.CheckNotNull(networkEndpointGroupsListEndpointsRequestResource, nameof(networkEndpointGroupsListEndpointsRequestResource)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkEndpoints(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the network endpoints in the specified network endpoint group.
@@ -1219,16 +1264,25 @@ namespace Google.Cloud.Compute.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="NetworkEndpointWithHealthStatus"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> ListNetworkEndpointsAsync(string project, string zone, string networkEndpointGroup, NetworkEndpointGroupsListEndpointsRequest networkEndpointGroupsListEndpointsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkEndpointsAsync(new ListNetworkEndpointsNetworkEndpointGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<NetworkEndpointGroupsListNetworkEndpoints, NetworkEndpointWithHealthStatus> ListNetworkEndpointsAsync(string project, string zone, string networkEndpointGroup, NetworkEndpointGroupsListEndpointsRequest networkEndpointGroupsListEndpointsRequestResource, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkEndpointsNetworkEndpointGroupsRequest request = new ListNetworkEndpointsNetworkEndpointGroupsRequest
             {
                 NetworkEndpointGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(networkEndpointGroup, nameof(networkEndpointGroup)),
                 NetworkEndpointGroupsListEndpointsRequestResource = gax::GaxPreconditions.CheckNotNull(networkEndpointGroupsListEndpointsRequestResource, nameof(networkEndpointGroupsListEndpointsRequestResource)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkEndpointsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
@@ -1365,7 +1419,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             NetworkEndpointGroupsSettings effectiveSettings = settings ?? NetworkEndpointGroupsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             AttachNetworkEndpointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AttachNetworkEndpointsOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             DetachNetworkEndpointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DetachNetworkEndpointsOperationsSettings, logger);
@@ -1444,7 +1502,7 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_TestIamPermissionsNetworkEndpointGroupRequest(ref TestIamPermissionsNetworkEndpointGroupRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves the list of network endpoint groups and sorts them by zone.
+        /// Retrieves the list of network endpoint groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1456,7 +1514,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves the list of network endpoint groups and sorts them by zone.
+        /// Retrieves the list of network endpoint groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

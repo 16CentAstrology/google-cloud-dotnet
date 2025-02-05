@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -197,7 +197,7 @@ namespace Google.Cloud.Firestore
             GaxPreconditions.CheckNotNull(field, nameof(field));
             Update(documentReference, new Dictionary<string, object> { { field, value } }, precondition);
         }
-        
+
         /// <summary>
         /// Adds an operation to update a document's data in this transaction.
         /// </summary>

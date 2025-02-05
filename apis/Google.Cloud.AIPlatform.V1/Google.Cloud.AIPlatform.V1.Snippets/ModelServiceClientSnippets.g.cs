@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -874,6 +875,282 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListModelVersionCheckpoints</summary>
+        public void ListModelVersionCheckpointsRequestObject()
+        {
+            // Snippet: ListModelVersionCheckpoints(ListModelVersionCheckpointsRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ListModelVersionCheckpointsRequest request = new ListModelVersionCheckpointsRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+            };
+            // Make the request
+            PagedEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> response = modelServiceClient.ListModelVersionCheckpoints(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ModelVersionCheckpoint item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListModelVersionCheckpointsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelVersionCheckpoint item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelVersionCheckpoint> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelVersionCheckpoint item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelVersionCheckpointsAsync</summary>
+        public async Task ListModelVersionCheckpointsRequestObjectAsync()
+        {
+            // Snippet: ListModelVersionCheckpointsAsync(ListModelVersionCheckpointsRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListModelVersionCheckpointsRequest request = new ListModelVersionCheckpointsRequest
+            {
+                ModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> response = modelServiceClient.ListModelVersionCheckpointsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ModelVersionCheckpoint item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListModelVersionCheckpointsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelVersionCheckpoint item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelVersionCheckpoint> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelVersionCheckpoint item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelVersionCheckpoints</summary>
+        public void ListModelVersionCheckpoints()
+        {
+            // Snippet: ListModelVersionCheckpoints(string, string, int?, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            PagedEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> response = modelServiceClient.ListModelVersionCheckpoints(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ModelVersionCheckpoint item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListModelVersionCheckpointsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelVersionCheckpoint item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelVersionCheckpoint> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelVersionCheckpoint item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelVersionCheckpointsAsync</summary>
+        public async Task ListModelVersionCheckpointsAsync()
+        {
+            // Snippet: ListModelVersionCheckpointsAsync(string, string, int?, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            PagedAsyncEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> response = modelServiceClient.ListModelVersionCheckpointsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ModelVersionCheckpoint item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListModelVersionCheckpointsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelVersionCheckpoint item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelVersionCheckpoint> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelVersionCheckpoint item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelVersionCheckpoints</summary>
+        public void ListModelVersionCheckpointsResourceNames()
+        {
+            // Snippet: ListModelVersionCheckpoints(ModelName, string, int?, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            PagedEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> response = modelServiceClient.ListModelVersionCheckpoints(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ModelVersionCheckpoint item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListModelVersionCheckpointsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelVersionCheckpoint item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelVersionCheckpoint> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelVersionCheckpoint item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelVersionCheckpointsAsync</summary>
+        public async Task ListModelVersionCheckpointsResourceNamesAsync()
+        {
+            // Snippet: ListModelVersionCheckpointsAsync(ModelName, string, int?, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelName name = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            PagedAsyncEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> response = modelServiceClient.ListModelVersionCheckpointsAsync(name);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ModelVersionCheckpoint item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListModelVersionCheckpointsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelVersionCheckpoint item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelVersionCheckpoint> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelVersionCheckpoint item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateModel</summary>
         public void UpdateModelRequestObject()
         {
@@ -935,6 +1212,191 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             FieldMask updateMask = new FieldMask();
             // Make the request
             Model response = await modelServiceClient.UpdateModelAsync(model, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExplanationDataset</summary>
+        public void UpdateExplanationDatasetRequestObject()
+        {
+            // Snippet: UpdateExplanationDataset(UpdateExplanationDatasetRequest, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateExplanationDatasetRequest request = new UpdateExplanationDatasetRequest
+            {
+                ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                Examples = new Examples(),
+            };
+            // Make the request
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = modelServiceClient.UpdateExplanationDataset(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpdateExplanationDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> retrievedResponse = modelServiceClient.PollOnceUpdateExplanationDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateExplanationDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExplanationDatasetAsync</summary>
+        public async Task UpdateExplanationDatasetRequestObjectAsync()
+        {
+            // Snippet: UpdateExplanationDatasetAsync(UpdateExplanationDatasetRequest, CallSettings)
+            // Additional: UpdateExplanationDatasetAsync(UpdateExplanationDatasetRequest, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateExplanationDatasetRequest request = new UpdateExplanationDatasetRequest
+            {
+                ModelAsModelName = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]"),
+                Examples = new Examples(),
+            };
+            // Make the request
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = await modelServiceClient.UpdateExplanationDatasetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpdateExplanationDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceUpdateExplanationDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateExplanationDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExplanationDataset</summary>
+        public void UpdateExplanationDataset()
+        {
+            // Snippet: UpdateExplanationDataset(string, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            string model = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = modelServiceClient.UpdateExplanationDataset(model);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpdateExplanationDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> retrievedResponse = modelServiceClient.PollOnceUpdateExplanationDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateExplanationDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExplanationDatasetAsync</summary>
+        public async Task UpdateExplanationDatasetAsync()
+        {
+            // Snippet: UpdateExplanationDatasetAsync(string, CallSettings)
+            // Additional: UpdateExplanationDatasetAsync(string, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string model = "projects/[PROJECT]/locations/[LOCATION]/models/[MODEL]";
+            // Make the request
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = await modelServiceClient.UpdateExplanationDatasetAsync(model);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpdateExplanationDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceUpdateExplanationDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateExplanationDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExplanationDataset</summary>
+        public void UpdateExplanationDatasetResourceNames()
+        {
+            // Snippet: UpdateExplanationDataset(ModelName, CallSettings)
+            // Create client
+            ModelServiceClient modelServiceClient = ModelServiceClient.Create();
+            // Initialize request argument(s)
+            ModelName model = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = modelServiceClient.UpdateExplanationDataset(model);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            UpdateExplanationDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> retrievedResponse = modelServiceClient.PollOnceUpdateExplanationDataset(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateExplanationDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExplanationDatasetAsync</summary>
+        public async Task UpdateExplanationDatasetResourceNamesAsync()
+        {
+            // Snippet: UpdateExplanationDatasetAsync(ModelName, CallSettings)
+            // Additional: UpdateExplanationDatasetAsync(ModelName, CancellationToken)
+            // Create client
+            ModelServiceClient modelServiceClient = await ModelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelName model = ModelName.FromProjectLocationModel("[PROJECT]", "[LOCATION]", "[MODEL]");
+            // Make the request
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> response = await modelServiceClient.UpdateExplanationDatasetAsync(model);
+
+            // Poll until the returned long-running operation is complete
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            UpdateExplanationDatasetResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> retrievedResponse = await modelServiceClient.PollOnceUpdateExplanationDatasetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                UpdateExplanationDatasetResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

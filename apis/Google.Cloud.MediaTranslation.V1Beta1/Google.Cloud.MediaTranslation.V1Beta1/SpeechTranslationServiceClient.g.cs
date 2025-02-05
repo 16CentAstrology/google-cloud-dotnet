@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,15 +17,15 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.MediaTranslation.V1Beta1
 {
@@ -117,14 +117,14 @@ namespace Google.Cloud.MediaTranslation.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SpeechTranslationServiceClient.Create(callInvoker, Settings, Logger);
+            return SpeechTranslationServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<SpeechTranslationServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SpeechTranslationServiceClient.Create(callInvoker, Settings, Logger);
+            return SpeechTranslationServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -258,7 +258,11 @@ namespace Google.Cloud.MediaTranslation.V1Beta1
         {
             GrpcClient = grpcClient;
             SpeechTranslationServiceSettings effectiveSettings = settings ?? SpeechTranslationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callStreamingTranslateSpeech = clientHelper.BuildApiCall<StreamingTranslateSpeechRequest, StreamingTranslateSpeechResponse>("StreamingTranslateSpeech", grpcClient.StreamingTranslateSpeech, effectiveSettings.StreamingTranslateSpeechSettings, effectiveSettings.StreamingTranslateSpeechStreamingSettings);
             Modify_ApiCall(ref _callStreamingTranslateSpeech);
             Modify_StreamingTranslateSpeechApiCall(ref _callStreamingTranslateSpeech);

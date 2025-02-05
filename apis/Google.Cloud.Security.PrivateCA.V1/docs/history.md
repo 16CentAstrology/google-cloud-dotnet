@@ -1,5 +1,63 @@
 # Version history
 
+## Version 3.9.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 3.8.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.7.0, released 2024-04-19
+
+### New features
+
+- Add encoding format to `.google.cloud.security.privateca.v1.CaPool` Resource ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+
+### Documentation improvements
+
+- A comment for field `maximum_lifetime` in message `.google.cloud.security.privateca.v1.CaPool` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for field `maximum_lifetime` in message `.google.cloud.security.privateca.v1.CertificateTemplate` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for field `subject_key_id` in message `.google.cloud.security.privateca.v1.CertificateConfig` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for method `FetchCaCerts` in service `CertificateAuthorityService` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for field `ignore_dependent_resources` in message `.google.cloud.security.privateca.v1.DisableCertificateAuthorityRequest` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for field `ignore_dependent_resources` in message `.google.cloud.security.privateca.v1.DeleteCertificateAuthorityRequest` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for field `ignore_dependent_resources` in message `.google.cloud.security.privateca.v1.DeleteCaPoolRequest` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+- A comment for field `ca_certs` in message `.google.cloud.security.privateca.v1.FetchCaCertsResponse` is changed ([commit 260057c](https://github.com/googleapis/google-cloud-dotnet/commit/260057cebe44759acd64ec7780866f99bb127cea))
+
+## Version 3.6.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.5.0, released 2024-03-21
+
+### New features
+
+- Add custom subject key identifier field ([commit 647855a](https://github.com/googleapis/google-cloud-dotnet/commit/647855a2168e237aa07731c959da23e7194be189))
+- Add support for fine-grained maximum certificate lifetime controls ([commit 647855a](https://github.com/googleapis/google-cloud-dotnet/commit/647855a2168e237aa07731c959da23e7194be189))
+
+### Documentation improvements
+
+- A comment for field `subject` in message `.google.cloud.security.privateca.v1.CertificateConfig` is changed ([commit 647855a](https://github.com/googleapis/google-cloud-dotnet/commit/647855a2168e237aa07731c959da23e7194be189))
+- A comment for method `FetchCaCerts` in service `CertificateAuthorityService` is changed ([commit 647855a](https://github.com/googleapis/google-cloud-dotnet/commit/647855a2168e237aa07731c959da23e7194be189))
+- A comment for field `ca_certs` in message `.google.cloud.security.privateca.v1.FetchCaCertsResponse` is changed ([commit 647855a](https://github.com/googleapis/google-cloud-dotnet/commit/647855a2168e237aa07731c959da23e7194be189))
+
+## Version 3.4.0, released 2024-02-29
+
+No API surface changes; just dependency updates.
+
+## Version 3.3.0, released 2023-04-12
+
+### New features
+
+- Added ignore_dependent_resources to DeleteCaPoolRequest, DeleteCertificateAuthorityRequest, DisableCertificateAuthorityRequest ([commit ca8e6ba](https://github.com/googleapis/google-cloud-dotnet/commit/ca8e6babb24933c41c4b546965de8b88350a178c))
+
 ## Version 3.2.0, released 2023-02-22
 
 ### New features

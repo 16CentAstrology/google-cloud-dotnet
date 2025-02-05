@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -87,6 +87,62 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
+        public async Task Commit_ReturnsToPool()
+        {
+            using var connection = new SpannerConnection(_fixture.ConnectionString);
+            await connection.OpenAsync();
+
+            using var transaction = await connection.BeginTransactionAsync();
+            using var command = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
+            command.Parameters.Add("k", SpannerDbType.String, _key);
+            command.Transaction = transaction;
+
+            var value = await command.ExecuteScalarAsync();
+
+            transaction.Commit();
+
+            var poolStatistics = connection.GetSessionPoolSegmentStatistics();
+
+            // Because the session is eagerly returned to the pool after a commit, there shouldn't
+            // be any active sessions even before we dispose of the transaction explicitly.
+            Assert.Equal(0, poolStatistics.ActiveSessionCount);
+        }
+
+        [Fact]
+        public async Task Rollback_ReturnsToPool()
+        {
+            using var connection = new SpannerConnection(_fixture.ConnectionString);
+            await connection.OpenAsync();
+
+            using var transaction = await connection.BeginTransactionAsync();
+            using var command = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k");
+            command.Parameters.Add("k", SpannerDbType.String, _key);
+            command.Transaction = transaction;
+
+            var value = await command.ExecuteScalarAsync();
+
+            transaction.Rollback();
+
+            var poolStatistics = connection.GetSessionPoolSegmentStatistics();
+
+            // Because the session is eagerly returned to the pool after a rollback, there shouldn't
+            // be any active sessions even before we dispose of the transaction explicitly.
+            Assert.Equal(0, poolStatistics.ActiveSessionCount);
+        }
+
+        [Fact]
+        public async Task DetachOnDisposeTransactionIsDetached()
+        {
+            using var connection = new SpannerConnection(_fixture.ConnectionString);
+            await connection.OpenAsync();
+
+            using var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly.WithIsDetached(true), cancellationToken: default);
+
+            // We are testing (through the CommonTestsDiagnostics attribute) that there
+            // are no active sessions or connections after we have disposed of both.
+        }
+
+        [Fact]
         public async Task DisposedTransactionDoesntLeak()
         {
             // This test ensures that a transaction that had neither commit nor rollback called does
@@ -107,7 +163,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         // Because Cloud Spanner does not have "read your writes"
                         // to test any leaks, we must commit the transaction and then read it.
-                        await tx.CommitAsync();
+                        var exception = await Assert.ThrowsAsync<InvalidOperationException>(() => tx.CommitAsync());
+                        Assert.Contains("no command execution has been attempted", exception.Message);
                     }
                 });
 
@@ -115,7 +172,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var cmd = connection.CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k"))
                 {
                     cmd.Parameters.Add("k", SpannerDbType.String, _key);
-                    Assert.Equal(DBNull.Value, await cmd.ExecuteScalarAsync().ConfigureAwait(false));
+                    Assert.Equal(DBNull.Value, await cmd.ExecuteScalarAsync());
                 }
             }
         }
@@ -131,7 +188,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             // connection 2 reads again -- abort should be thrown.
 
             // Note: deeply nested using statements to ensure that we dispose of everything even in the case of failure,
-            // but we manually dispose of both tx1 and connection1. 
+            // but we manually dispose of both tx1 and connection1.
             using (var connection1 = new SpannerConnection(_fixture.ConnectionString))
             {
                 using (var connection2 = new SpannerConnection(_fixture.ConnectionString))
@@ -171,13 +228,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                                 cmd.Parameters.Add("k", SpannerDbType.String, _key);
                                 cmd.Parameters.Add("Int64Value", SpannerDbType.Int64, 0);
                                 cmd.Transaction = tx1;
-                                await cmd.ExecuteNonQueryAsync().ConfigureAwait(false);
-                                await tx1.CommitAsync().ConfigureAwait(false);
+                                await cmd.ExecuteNonQueryAsync();
+                                await tx1.CommitAsync();
                                 tx1.Dispose();
                             }
                             connection1.Dispose();
 
-                            // TX2 READ AGAIN/THROWS            
+                            // TX2 READ AGAIN/THROWS
                             using (var cmd = CreateSelectAllCommandForKey(connection2))
                             {
                                 cmd.Transaction = tx2;
@@ -212,13 +269,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 tasks[i] = IncrementByOneAsync(connections[i]);
             }
-            await Task.WhenAll(tasks).ConfigureAwait(false);
+            await Task.WhenAll(tasks);
 
             // Now ensure we have the correct value
             using (var cmd = connections[0].CreateSelectCommand($"SELECT Int64Value FROM {_fixture.TableName} WHERE K=@k"))
             {
                 cmd.Parameters.Add("k", SpannerDbType.String, _key);
-                Assert.Equal(5, await cmd.ExecuteScalarAsync<long>().ConfigureAwait(false));
+                Assert.Equal(5, await cmd.ExecuteScalarAsync<long>());
             }
 
             for (var i = 0; i < concurrentThreads; i++)
@@ -254,7 +311,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             cmd2.Parameters.Add("Int64Value", SpannerDbType.Int64).Value = 50;
                             cmd2.ExecuteNonQuery();
                         }
-                        
+
                         // Commit mutations from both commands, atomically.
                         transaction.Commit();
                     }
@@ -295,9 +352,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 await connection.OpenAsync();
                 var targetReadTimestamp = _fixture.TimestampBeforeEntries;
-                using (var tx =
-                    await connection.BeginReadOnlyTransactionAsync(
-                        TimestampBound.OfReadTimestamp(targetReadTimestamp)))
+                var bound = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(TimestampBound.OfReadTimestamp(targetReadTimestamp));
+                using (var tx = await connection.BeginTransactionAsync(bound, cancellationToken: default))
                 {
                     Assert.Equal(TransactionMode.ReadOnly, tx.Mode);
                     Assert.Equal(targetReadTimestamp, tx.TimestampBound.Timestamp);
@@ -321,7 +377,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 await connection.OpenAsync();
                 var cmd = CreateSelectAllCommandForKey(connection);
-                using (var reader = await cmd.ExecuteReaderAsync(TimestampBound.OfReadTimestamp(_oldestEntry.Timestamp)))
+                cmd.EphemeralTransactionCreationOptions = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(TimestampBound.OfReadTimestamp(_oldestEntry.Timestamp));
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     if (await reader.ReadAsync())
                     {
@@ -339,11 +396,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await connection.OpenAsync();
 
                 // Can't use MinReadTimestamp to create a transaction
-                var bound = TimestampBound.OfMinReadTimestamp(_newestEntry.Timestamp);
-                await Assert.ThrowsAsync<ArgumentException>(() => connection.BeginReadOnlyTransactionAsync(bound));
+                var bound = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(TimestampBound.OfMinReadTimestamp(_newestEntry.Timestamp));
+                await Assert.ThrowsAsync<ArgumentException>(() => connection.BeginTransactionAsync(bound, cancellationToken: default));
 
                 var cmd = CreateSelectAllCommandForKey(connection);
-                using (var reader = await cmd.ExecuteReaderAsync(bound))
+                cmd.EphemeralTransactionCreationOptions = bound;
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     if (await reader.ReadAsync())
                     {
@@ -359,8 +417,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = _fixture.GetConnection())
             {
                 await connection.OpenAsync();
-                var bound = TimestampBound.OfExactStaleness(_fixture.Staleness);
-                using (var tx = await connection.BeginReadOnlyTransactionAsync(bound))
+                var bound = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(TimestampBound.OfExactStaleness(_fixture.Staleness));
+                using (var tx = await connection.BeginTransactionAsync(bound, cancellationToken: default))
                 {
                     Assert.Equal(TransactionMode.ReadOnly, tx.Mode);
                     Assert.Equal(_fixture.Staleness, tx.TimestampBound.Staleness);
@@ -382,8 +440,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 await connection.OpenAsync();
                 var cmd = CreateSelectAllCommandForKey(connection);
-                var bound = TimestampBound.OfExactStaleness(_fixture.Staleness);
-                using (var reader = await cmd.ExecuteReaderAsync(bound))
+                cmd.EphemeralTransactionCreationOptions = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(TimestampBound.OfExactStaleness(_fixture.Staleness));
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     Assert.False(await reader.ReadAsync(), "We should have read no rows at this time!");
                 }
@@ -398,12 +456,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await connection.OpenAsync();
 
                 // Can't use MaxStaleness to create a transaction
-                var staleBound = TimestampBound.OfMaxStaleness(_fixture.Staleness);
-                await Assert.ThrowsAsync<ArgumentException>(() => connection.BeginReadOnlyTransactionAsync(staleBound));
+                var staleBound = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(TimestampBound.OfMaxStaleness(_fixture.Staleness));
+                await Assert.ThrowsAsync<ArgumentException>(() => connection.BeginTransactionAsync(staleBound, cancellationToken: default));
 
                 var cmd = CreateSelectAllCommandForKey(connection);
-                var recentBound = TimestampBound.OfMaxStaleness(TimeSpan.FromMilliseconds(5));
-                using (var reader = await cmd.ExecuteReaderAsync(recentBound))
+                cmd.EphemeralTransactionCreationOptions = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(TimestampBound.OfMaxStaleness(TimeSpan.FromMilliseconds(5)));
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     if (await reader.ReadAsync())
                     {
@@ -419,7 +477,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = _fixture.GetConnection())
             {
                 await connection.OpenAsync();
-                using (var tx = await connection.BeginReadOnlyTransactionAsync(TimestampBound.Strong))
+                var strong = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(TimestampBound.Strong);
+                using (var tx = await connection.BeginTransactionAsync(strong, cancellationToken: default))
                 {
                     var cmd = CreateSelectAllCommandForKey(connection);
                     cmd.Transaction = tx;
@@ -443,7 +502,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 await connection.OpenAsync();
                 var cmd = CreateSelectAllCommandForKey(connection);
-                using (var reader = await cmd.ExecuteReaderAsync(TimestampBound.Strong))
+                cmd.EphemeralTransactionCreationOptions = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(TimestampBound.Strong);
+                using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     if (await reader.ReadAsync())
                     {
@@ -460,8 +520,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 await connection.OpenAsync();
                 var cmd = CreateSelectAllCommandForKey(connection);
-                var bound = TimestampBound.OfReadTimestamp(_oldestEntry.Timestamp);
-                using (var reader = (SpannerDataReader)(await cmd.ExecuteReaderAsync(bound)))
+                cmd.EphemeralTransactionCreationOptions = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(TimestampBound.OfReadTimestamp(_oldestEntry.Timestamp));
+                using (var reader = (SpannerDataReader)(await cmd.ExecuteReaderAsync()))
                 {
                     Assert.Null(reader.GetReadTimestamp());
                     if (await reader.ReadAsync())
@@ -479,8 +539,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 await connection.OpenAsync();
                 var cmd = CreateSelectAllCommandForKey(connection);
-                var bound = TimestampBound.OfReadTimestamp(_oldestEntry.Timestamp).WithReturnReadTimestamp(true);
-                using (var reader = (SpannerDataReader)(await cmd.ExecuteReaderAsync(bound)))
+                cmd.EphemeralTransactionCreationOptions = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(
+                    TimestampBound.OfReadTimestamp(_oldestEntry.Timestamp).WithReturnReadTimestamp(true));
+                using (var reader = (SpannerDataReader)(await cmd.ExecuteReaderAsync()))
                 {
                     Assert.Equal(wkt::Timestamp.FromDateTime(_oldestEntry.Timestamp), reader.GetReadTimestamp());
                     if (await reader.ReadAsync())
@@ -498,8 +559,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 await connection.OpenAsync();
                 var targetReadTimestamp = _fixture.TimestampBeforeEntries;
-                var bound = TimestampBound.OfReadTimestamp(targetReadTimestamp);
-                using (var tx = await connection.BeginReadOnlyTransactionAsync(bound))
+                var bound = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(TimestampBound.OfReadTimestamp(targetReadTimestamp));
+                using (var tx = await connection.BeginTransactionAsync(bound, cancellationToken: default))
                 {
                     Assert.Equal(TransactionMode.ReadOnly, tx.Mode);
                     Assert.Equal(targetReadTimestamp, tx.TimestampBound.Timestamp);
@@ -525,8 +586,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 await connection.OpenAsync();
                 var targetReadTimestamp = _fixture.TimestampBeforeEntries;
-                var bound = TimestampBound.OfReadTimestamp(targetReadTimestamp).WithReturnReadTimestamp(true);
-                using (var tx = await connection.BeginReadOnlyTransactionAsync(bound))
+                var bound = SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(
+                    TimestampBound.OfReadTimestamp(targetReadTimestamp).WithReturnReadTimestamp(true));
+                using (var tx = await connection.BeginTransactionAsync(bound, cancellationToken: default))
                 {
                     Assert.Equal(TransactionMode.ReadOnly, tx.Mode);
                     Assert.Equal(targetReadTimestamp, tx.TimestampBound.Timestamp);
@@ -580,7 +642,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             cmd1.Parameters.Add("StringValue", SpannerDbType.String).Value = "text";
                             await cmd1.ExecuteNonQueryAsync();
                         }
-                
+
                         using (var cmd2 = connection.CreateInsertCommand(_fixture.TableName2))
                         {
                             cmd2.Transaction = transaction;
@@ -588,7 +650,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             cmd2.Parameters.Add("Int64Value", SpannerDbType.Int64).Value = 50;
                             await cmd2.ExecuteNonQueryAsync();
                         }
-                
+
                         await transaction.CommitAsync();
                         // MutationCount == 4, as we inserted 2 rows with 2 columns each.
                         Assert.Equal(4, logger.LastCommitResponse?.CommitStats?.MutationCount);

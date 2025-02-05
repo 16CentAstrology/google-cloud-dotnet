@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Grafeas.V1
 {
@@ -347,15 +347,18 @@ namespace Grafeas.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return GrafeasClient.Create(callInvoker, Settings, Logger);
+            return GrafeasClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<GrafeasClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return GrafeasClient.Create(callInvoker, Settings, Logger);
+            return GrafeasClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
+
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
+        protected override gaxgrpc::ChannelPool GetChannelPool() => GrafeasClient.ChannelPool;
     }
 
     /// <summary>Grafeas client wrapper, for convenient use.</summary>
@@ -377,13 +380,18 @@ namespace Grafeas.V1
     /// </remarks>
     public abstract partial class GrafeasClient
     {
+        /// <summary>
+        /// The default endpoint for the Grafeas service, which is a host of "containeranalysis.googleapis.com" and a
+        /// port of 443.
+        /// </summary>
+        public static string DefaultEndpoint { get; } = "containeranalysis.googleapis.com:443";
 
         /// <summary>The default Grafeas scopes.</summary>
         /// <remarks>The default Grafeas scopes are:<list type="bullet"></list></remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Grafeas.Descriptor, null, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Grafeas.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -591,14 +599,23 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Occurrence"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrences(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOccurrences(new ListOccurrencesRequest
+        public virtual gax::PagedEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrences(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOccurrencesRequest request = new ListOccurrencesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOccurrences(request, callSettings);
+        }
 
         /// <summary>
         /// Lists occurrences for the specified project.
@@ -620,14 +637,23 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Occurrence"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrencesAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOccurrencesAsync(new ListOccurrencesRequest
+        public virtual gax::PagedAsyncEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrencesAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOccurrencesRequest request = new ListOccurrencesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOccurrencesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists occurrences for the specified project.
@@ -649,14 +675,23 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Occurrence"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrences(ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOccurrences(new ListOccurrencesRequest
+        public virtual gax::PagedEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrences(ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOccurrencesRequest request = new ListOccurrencesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOccurrences(request, callSettings);
+        }
 
         /// <summary>
         /// Lists occurrences for the specified project.
@@ -678,14 +713,23 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Occurrence"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrencesAsync(ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListOccurrencesAsync(new ListOccurrencesRequest
+        public virtual gax::PagedAsyncEnumerable<ListOccurrencesResponse, Occurrence> ListOccurrencesAsync(ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListOccurrencesRequest request = new ListOccurrencesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListOccurrencesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified occurrence. For example, use this method to delete an
@@ -1518,14 +1562,23 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Note"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotesResponse, Note> ListNotes(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotes(new ListNotesRequest
+        public virtual gax::PagedEnumerable<ListNotesResponse, Note> ListNotes(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotesRequest request = new ListNotesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notes for the specified project.
@@ -1547,14 +1600,23 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Note"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotesResponse, Note> ListNotesAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotesAsync(new ListNotesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotesResponse, Note> ListNotesAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotesRequest request = new ListNotesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notes for the specified project.
@@ -1576,14 +1638,23 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Note"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNotesResponse, Note> ListNotes(ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotes(new ListNotesRequest
+        public virtual gax::PagedEnumerable<ListNotesResponse, Note> ListNotes(ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotesRequest request = new ListNotesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists notes for the specified project.
@@ -1605,14 +1676,23 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Note"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNotesResponse, Note> ListNotesAsync(ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNotesAsync(new ListNotesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNotesResponse, Note> ListNotesAsync(ProjectName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNotesRequest request = new ListNotesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNotesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified note.
@@ -2224,14 +2304,23 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Occurrence"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNoteOccurrencesResponse, Occurrence> ListNoteOccurrences(string name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNoteOccurrences(new ListNoteOccurrencesRequest
+        public virtual gax::PagedEnumerable<ListNoteOccurrencesResponse, Occurrence> ListNoteOccurrences(string name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNoteOccurrencesRequest request = new ListNoteOccurrencesRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNoteOccurrences(request, callSettings);
+        }
 
         /// <summary>
         /// Lists occurrences referencing the specified note. Provider projects can use
@@ -2255,14 +2344,23 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Occurrence"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNoteOccurrencesResponse, Occurrence> ListNoteOccurrencesAsync(string name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNoteOccurrencesAsync(new ListNoteOccurrencesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNoteOccurrencesResponse, Occurrence> ListNoteOccurrencesAsync(string name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNoteOccurrencesRequest request = new ListNoteOccurrencesRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNoteOccurrencesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists occurrences referencing the specified note. Provider projects can use
@@ -2286,14 +2384,23 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Occurrence"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNoteOccurrencesResponse, Occurrence> ListNoteOccurrences(NoteName name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNoteOccurrences(new ListNoteOccurrencesRequest
+        public virtual gax::PagedEnumerable<ListNoteOccurrencesResponse, Occurrence> ListNoteOccurrences(NoteName name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNoteOccurrencesRequest request = new ListNoteOccurrencesRequest
             {
                 NoteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNoteOccurrences(request, callSettings);
+        }
 
         /// <summary>
         /// Lists occurrences referencing the specified note. Provider projects can use
@@ -2317,14 +2424,23 @@ namespace Grafeas.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Occurrence"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNoteOccurrencesResponse, Occurrence> ListNoteOccurrencesAsync(NoteName name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNoteOccurrencesAsync(new ListNoteOccurrencesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNoteOccurrencesResponse, Occurrence> ListNoteOccurrencesAsync(NoteName name, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNoteOccurrencesRequest request = new ListNoteOccurrencesRequest
             {
                 NoteName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNoteOccurrencesAsync(request, callSettings);
+        }
     }
 
     /// <summary>Grafeas client wrapper implementation, for convenient use.</summary>
@@ -2384,7 +2500,11 @@ namespace Grafeas.V1
         {
             GrpcClient = grpcClient;
             GrafeasSettings effectiveSettings = settings ?? GrafeasSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetOccurrence = clientHelper.BuildApiCall<GetOccurrenceRequest, Occurrence>("GetOccurrence", grpcClient.GetOccurrenceAsync, grpcClient.GetOccurrence, effectiveSettings.GetOccurrenceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOccurrence);
             Modify_GetOccurrenceApiCall(ref _callGetOccurrence);

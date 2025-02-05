@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Firestore.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START firestore_v1_generated_Firestore_RunQuery_sync]
     using Google.Api.Gax.Grpc;
@@ -42,9 +42,10 @@ namespace Google.Cloud.Firestore.V1.Snippets
                 Parent = "",
                 StructuredQuery = new StructuredQuery(),
                 Transaction = ByteString.Empty,
+                ExplainOptions = new ExplainOptions(),
             };
             // Make the request, returning a streaming response
-            FirestoreClient.RunQueryStream response = firestoreClient.RunQuery(request);
+            using FirestoreClient.RunQueryStream response = firestoreClient.RunQuery(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Grpc.Core;
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -61,11 +60,16 @@ namespace Google.Cloud.Datastore.V1
         /// (or detected via an emulator environment variable) before building the <see cref="DatastoreDb"/>.
         /// </summary>
         public string ProjectId { get; set; }
-        
+
         /// <summary>
         /// The namespace ID, or null to use the default.
         /// </summary>
         public string NamespaceId { get; set; }
+
+        /// <summary>
+        /// The database ID, or null to use the default database.
+        /// </summary>
+        public string DatabaseId { get; set; }
 
         /// <inheritdoc />
         public override DatastoreDb Build()
@@ -106,6 +110,7 @@ namespace Google.Cloud.Datastore.V1
                     Settings = Settings,
                     ProjectId = ProjectId ?? environment[s_emulatorProjectVariable],
                     NamespaceId = NamespaceId,
+                    DatabaseId = DatabaseId,
                     ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
                 };
                 builder.CopySettingsForEmulator(this);
@@ -115,35 +120,45 @@ namespace Google.Cloud.Datastore.V1
 
             var clientBuilder = new DatastoreClientBuilder(this);
             clientBuilder.Settings = Settings;
-            return new ConfiguredBuilder(ProjectId, NamespaceId, clientBuilder);
+            return new ConfiguredBuilder(ProjectId, NamespaceId, DatabaseId, clientBuilder);
         }
 
         // Convenience class for storing the project ID, namespace ID and a DatastoreClientBuilder for sync/async building.
         private class ConfiguredBuilder
         {
-            private string _projectId;
-            private string _namespaceId;
-            private DatastoreClientBuilder _clientBuilder;
+            private readonly string _projectId;
+            private readonly string _namespaceId;
+            private readonly string _databaseId;
+            private readonly DatastoreClientBuilder _clientBuilder;
 
             internal ChannelBase LastCreatedChannel => _clientBuilder.LastCreatedChannel;
 
-            internal ConfiguredBuilder(string projectId, string namespaceId, DatastoreClientBuilder clientBuilder)
+            internal ConfiguredBuilder(string projectId, string namespaceId, string databaseId, DatastoreClientBuilder clientBuilder)
             {
                 _projectId = projectId;
                 _namespaceId = namespaceId;
+                _databaseId = databaseId;
                 _clientBuilder = clientBuilder;
             }
 
             internal DatastoreDb Build()
             {
                 var client = _clientBuilder.Build();
-                return DatastoreDb.Create(_projectId, _namespaceId ?? DatastoreDb.DefaultNamespaceId, client);
+                return new DatastoreDbImpl(
+                    _projectId,
+                    _namespaceId ?? DatastoreDb.DefaultNamespaceId,
+                    _databaseId ?? DatastoreDb.DefaultDatabaseId,
+                    client ?? DatastoreClient.Create());
             }
 
             internal async Task<DatastoreDb> BuildAsync(CancellationToken cancellationToken)
             {
                 var client = await _clientBuilder.BuildAsync(cancellationToken).ConfigureAwait(false);
-                return DatastoreDb.Create(_projectId, _namespaceId ?? DatastoreDb.DefaultNamespaceId, client);
+                return new DatastoreDbImpl(
+                    _projectId,
+                    _namespaceId ?? DatastoreDb.DefaultNamespaceId,
+                    _databaseId ?? DatastoreDb.DefaultDatabaseId,
+                    client ?? DatastoreClient.Create());
             }
         }
     }

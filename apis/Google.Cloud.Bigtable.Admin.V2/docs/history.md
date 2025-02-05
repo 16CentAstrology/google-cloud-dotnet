@@ -1,5 +1,133 @@
 # Version history
 
+## Version 3.22.0, released 2025-01-27
+
+### Bug fixes
+
+- Extend timeouts for check consistency ([commit 13b35d3](https://github.com/googleapis/google-cloud-dotnet/commit/13b35d36b9a35b8a19139e1f91b04cca289cdff2))
+
+## Version 3.21.0, released 2024-09-26
+
+### New features
+
+- Add support for Cloud Bigtable Node Scaling Factor for CBT Clusters ([commit 75f928c](https://github.com/googleapis/google-cloud-dotnet/commit/75f928cf788216909bc61155af1202558050bc7f))
+
+## Version 3.20.0, released 2024-09-16
+
+### New features
+
+- Add support for Cloud Bigtable Row Affinity in App Profiles ([commit 5a08cf4](https://github.com/googleapis/google-cloud-dotnet/commit/5a08cf49142149d6d38f5a0eea517f362df7eb11))
+
+## Version 3.19.0, released 2024-08-05
+
+### New features
+
+- Add fields and the BackupType proto for Hot Backups ([commit d3cf2d8](https://github.com/googleapis/google-cloud-dotnet/commit/d3cf2d81c0db1160f450cb023ff91a7fb680cbc8))
+
+### Documentation improvements
+
+- Clarify comments and fix typos ([commit d3cf2d8](https://github.com/googleapis/google-cloud-dotnet/commit/d3cf2d81c0db1160f450cb023ff91a7fb680cbc8))
+
+## Version 3.18.0, released 2024-07-22
+
+### New features
+
+- Add min, max, hll aggregators and more types ([commit 7874fc6](https://github.com/googleapis/google-cloud-dotnet/commit/7874fc6abca3df5a590a33bf4d2a7ce40cb35537))
+- Update Go Datastore import path ([commit 83fa86a](https://github.com/googleapis/google-cloud-dotnet/commit/83fa86a145d211f5670a14e875d30b4fa2207b74))
+- Update Go Bigtable import path ([commit 83fa86a](https://github.com/googleapis/google-cloud-dotnet/commit/83fa86a145d211f5670a14e875d30b4fa2207b74))
+
+### Documentation improvements
+
+- Corrected various type documentation ([commit 7874fc6](https://github.com/googleapis/google-cloud-dotnet/commit/7874fc6abca3df5a590a33bf4d2a7ce40cb35537))
+
+## Version 3.17.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 3.16.0, released 2024-05-30
+
+### New features
+
+- Add String type with Utf8Raw encoding to Bigtable API ([commit fe331e5](https://github.com/googleapis/google-cloud-dotnet/commit/fe331e5aaa0a15cc938c59cfaf31ef412a6b04f7))
+
+## Version 3.15.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.14.0, released 2024-04-19
+
+### New features
+
+- Publish Automated Backups protos ([commit 1dff99b](https://github.com/googleapis/google-cloud-dotnet/commit/1dff99b7f0d0f1c14cf2a8e384525dd57436c2fe))
+
+## Version 3.13.0, released 2024-03-27
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 7707366](https://github.com/googleapis/google-cloud-dotnet/commit/77073662b153c73c7f9a869ede1376f4c7a12661))
+
+## Version 3.12.0, released 2024-03-26
+
+### New features
+
+- Add Data Boost configurations to admin API ([commit 1f88775](https://github.com/googleapis/google-cloud-dotnet/commit/1f88775b5da903268208aa11098a99b5283108e2))
+
+## Version 3.11.0, released 2024-03-21
+
+### New features
+
+- Publish new bigtable APIs for types and aggregates ([commit 485f4e8](https://github.com/googleapis/google-cloud-dotnet/commit/485f4e88c7f2e2f153e79f76b04e5a3eb1eba15d))
+
+## Version 3.10.0, released 2024-03-05
+
+### New features
+
+- Cloud Bigtable Authorized Views admin APIs protos ([commit 6e5e476](https://github.com/googleapis/google-cloud-dotnet/commit/6e5e476614109cb6b6aed104b0c8499d926fec4e))
+
+## Version 3.9.0, released 2024-02-09
+
+### Bug fixes
+
+- Extend timeouts for deleting snapshots, backups and tables ([commit b6d9f8f](https://github.com/googleapis/google-cloud-dotnet/commit/b6d9f8fbf570108511cd7c46bb47f099d45b7a20))
+
+## Version 3.8.0, released 2024-01-08
+
+### New features
+
+- Modify ModifyColumnFamiliesRequest proto to expose ignore_warnings field ([commit 34c9afd](https://github.com/googleapis/google-cloud-dotnet/commit/34c9afdafaec3961537ac3211737c8ab972f77c0))
+
+## Version 3.7.0, released 2023-10-30
+
+### New features
+
+- Add support for Cloud Bigtable Request Priorities in App Profiles ([commit d59310f](https://github.com/googleapis/google-cloud-dotnet/commit/d59310fbcc59fbb633048d6188841e43dd59a946))
+
+## Version 3.6.0, released 2023-08-16
+
+### New features
+
+- Publish CopyBackup protos to external customers ([commit bff18a6](https://github.com/googleapis/google-cloud-dotnet/commit/bff18a61c86c6210a779639a1b15f9457ed3f594))
+
+## Version 3.5.0, released 2023-07-13
+
+### New features
+
+- Increase the maximum retention period for a Cloud Bigtable backup from 30 days to 90 days ([commit 0567fa8](https://github.com/googleapis/google-cloud-dotnet/commit/0567fa84747a4ca2e215710692f9abc7f238d017))
+
+## Version 3.4.0, released 2023-05-26
+
+### New features
+
+- Add ChangeStreamConfig to CreateTable and UpdateTable ([commit d00cf93](https://github.com/googleapis/google-cloud-dotnet/commit/d00cf93767c057936cdc6883dca6b62bbdb0a765))
+
+### Documentation improvements
+
+- Remove unnecessary comment ([commit 62c70cb](https://github.com/googleapis/google-cloud-dotnet/commit/62c70cb90901b26652f4961a84dc809386a1c657))
+
 ## Version 3.3.0, released 2022-09-15
 
 ### New features

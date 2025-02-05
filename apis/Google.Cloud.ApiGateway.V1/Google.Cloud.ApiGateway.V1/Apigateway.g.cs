@@ -193,6 +193,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// An API that can be served by one or more Gateways.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Api : pb::IMessage<Api>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -523,7 +524,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -680,6 +681,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// An API Configuration is a combination of settings for both the Managed
   /// Service and Gateways serving this API Config.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApiConfig : pb::IMessage<ApiConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1116,7 +1118,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -1310,6 +1312,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <summary>
       /// A lightweight description of a file.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class File : pb::IMessage<File>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1546,6 +1549,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <summary>
       /// An OpenAPI Specification Document describing an API.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OpenApiDocument : pb::IMessage<OpenApiDocument>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1750,6 +1754,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <summary>
       /// A gRPC service definition.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GrpcServiceDefinition : pb::IMessage<GrpcServiceDefinition>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1999,6 +2004,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// API-Consumer specific actions based on an API Config such as authentication,
   /// policy enforcement, and backend selection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Gateway : pb::IMessage<Gateway>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2357,7 +2363,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -2524,6 +2530,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.ListGateways
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListGatewaysRequest : pb::IMessage<ListGatewaysRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2880,6 +2887,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Response message for ApiGatewayService.ListGateways
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListGatewaysResponse : pb::IMessage<ListGatewaysResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3133,6 +3141,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.GetGateway
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetGatewayRequest : pb::IMessage<GetGatewayRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3329,6 +3338,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.CreateGateway
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateGatewayRequest : pb::IMessage<CreateGatewayRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3615,6 +3625,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.UpdateGateway
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateGatewayRequest : pb::IMessage<UpdateGatewayRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3872,6 +3883,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.DeleteGateway
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteGatewayRequest : pb::IMessage<DeleteGatewayRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4068,6 +4080,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.ListApis
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListApisRequest : pb::IMessage<ListApisRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4424,6 +4437,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Response message for ApiGatewayService.ListApis
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListApisResponse : pb::IMessage<ListApisResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4677,6 +4691,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.GetApi
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetApiRequest : pb::IMessage<GetApiRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4873,6 +4888,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.CreateApi
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateApiRequest : pb::IMessage<CreateApiRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5159,6 +5175,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.UpdateApi
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateApiRequest : pb::IMessage<UpdateApiRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5416,6 +5433,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.DeleteApi
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteApiRequest : pb::IMessage<DeleteApiRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5612,6 +5630,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.ListApiConfigs
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListApiConfigsRequest : pb::IMessage<ListApiConfigsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5968,6 +5987,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Response message for ApiGatewayService.ListApiConfigs
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListApiConfigsResponse : pb::IMessage<ListApiConfigsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6221,6 +6241,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.GetApiConfig
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetApiConfigRequest : pb::IMessage<GetApiConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6481,6 +6502,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.CreateApiConfig
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateApiConfigRequest : pb::IMessage<CreateApiConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6767,6 +6789,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.UpdateApiConfig
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateApiConfigRequest : pb::IMessage<UpdateApiConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7024,6 +7047,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Request message for ApiGatewayService.DeleteApiConfig
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteApiConfigRequest : pb::IMessage<DeleteApiConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7220,6 +7244,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7708,6 +7733,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <summary>
       /// Diagnostic information from configuration processing.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Diagnostic : pb::IMessage<Diagnostic>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

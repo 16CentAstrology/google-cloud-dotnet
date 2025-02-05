@@ -11,6 +11,103 @@
   },
   "snippets": [
     {
+      "regionTag": "retail_v2_generated_AnalyticsService_ExportAnalyticsMetrics_sync",
+      "title": "ExportAnalyticsMetricsRequestObject",
+      "description": "Snippet for ExportAnalyticsMetrics",
+      "file": "AnalyticsServiceClient.ExportAnalyticsMetricsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportAnalyticsMetrics",
+        "fullName": "Google.Cloud.Retail.V2.AnalyticsServiceClient.ExportAnalyticsMetrics",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ExportAnalyticsMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.ExportAnalyticsMetricsResponse, Google.Cloud.Retail.V2.ExportMetadata>",
+        "client": {
+          "shortName": "AnalyticsServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.AnalyticsServiceClient"
+        },
+        "method": {
+          "shortName": "ExportAnalyticsMetrics",
+          "fullName": "google.cloud.retail.v2.AnalyticsService.ExportAnalyticsMetrics",
+          "service": {
+            "shortName": "AnalyticsService",
+            "fullName": "google.cloud.retail.v2.AnalyticsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_AnalyticsService_ExportAnalyticsMetrics_async",
+      "title": "ExportAnalyticsMetricsRequestObjectAsync",
+      "description": "Snippet for ExportAnalyticsMetricsAsync",
+      "file": "AnalyticsServiceClient.ExportAnalyticsMetricsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportAnalyticsMetricsAsync",
+        "fullName": "Google.Cloud.Retail.V2.AnalyticsServiceClient.ExportAnalyticsMetricsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ExportAnalyticsMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.ExportAnalyticsMetricsResponse, Google.Cloud.Retail.V2.ExportMetadata>>",
+        "client": {
+          "shortName": "AnalyticsServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.AnalyticsServiceClient"
+        },
+        "method": {
+          "shortName": "ExportAnalyticsMetrics",
+          "fullName": "google.cloud.retail.v2.AnalyticsService.ExportAnalyticsMetrics",
+          "service": {
+            "shortName": "AnalyticsService",
+            "fullName": "google.cloud.retail.v2.AnalyticsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "retail_v2_generated_CatalogService_ListCatalogs_sync",
       "title": "ListCatalogsRequestObject",
       "description": "Snippet for ListCatalogs",
@@ -2403,12 +2500,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 51,
+          "end": 52,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 49,
+          "end": 50,
           "type": "SHORT"
         }
       ]
@@ -2452,12 +2549,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 52,
+          "end": 53,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 50,
+          "end": 51,
           "type": "SHORT"
         }
       ]
@@ -3964,6 +4061,1283 @@
         {
           "start": 38,
           "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_UpdateGenerativeQuestionsFeatureConfig_sync",
+      "title": "UpdateGenerativeQuestionsFeatureConfigRequestObject",
+      "description": "Snippet for UpdateGenerativeQuestionsFeatureConfig",
+      "file": "GenerativeQuestionServiceClient.UpdateGenerativeQuestionsFeatureConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeQuestionsFeatureConfig",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.UpdateGenerativeQuestionsFeatureConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateGenerativeQuestionsFeatureConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.GenerativeQuestionsFeatureConfig",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeQuestionsFeatureConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.UpdateGenerativeQuestionsFeatureConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_UpdateGenerativeQuestionsFeatureConfig_async",
+      "title": "UpdateGenerativeQuestionsFeatureConfigRequestObjectAsync",
+      "description": "Snippet for UpdateGenerativeQuestionsFeatureConfigAsync",
+      "file": "GenerativeQuestionServiceClient.UpdateGenerativeQuestionsFeatureConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeQuestionsFeatureConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.UpdateGenerativeQuestionsFeatureConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateGenerativeQuestionsFeatureConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.GenerativeQuestionsFeatureConfig>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeQuestionsFeatureConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.UpdateGenerativeQuestionsFeatureConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_UpdateGenerativeQuestionsFeatureConfig_sync_flattened",
+      "title": "UpdateGenerativeQuestionsFeatureConfig",
+      "description": "Snippet for UpdateGenerativeQuestionsFeatureConfig",
+      "file": "GenerativeQuestionServiceClient.UpdateGenerativeQuestionsFeatureConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeQuestionsFeatureConfig",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.UpdateGenerativeQuestionsFeatureConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GenerativeQuestionsFeatureConfig",
+            "name": "generativeQuestionsFeatureConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.GenerativeQuestionsFeatureConfig",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeQuestionsFeatureConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.UpdateGenerativeQuestionsFeatureConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_UpdateGenerativeQuestionsFeatureConfig_async_flattened",
+      "title": "UpdateGenerativeQuestionsFeatureConfigAsync",
+      "description": "Snippet for UpdateGenerativeQuestionsFeatureConfigAsync",
+      "file": "GenerativeQuestionServiceClient.UpdateGenerativeQuestionsFeatureConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeQuestionsFeatureConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.UpdateGenerativeQuestionsFeatureConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GenerativeQuestionsFeatureConfig",
+            "name": "generativeQuestionsFeatureConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.GenerativeQuestionsFeatureConfig>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeQuestionsFeatureConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.UpdateGenerativeQuestionsFeatureConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_GetGenerativeQuestionsFeatureConfig_sync",
+      "title": "GetGenerativeQuestionsFeatureConfigRequestObject",
+      "description": "Snippet for GetGenerativeQuestionsFeatureConfig",
+      "file": "GenerativeQuestionServiceClient.GetGenerativeQuestionsFeatureConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeQuestionsFeatureConfig",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.GetGenerativeQuestionsFeatureConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetGenerativeQuestionsFeatureConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.GenerativeQuestionsFeatureConfig",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeQuestionsFeatureConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.GetGenerativeQuestionsFeatureConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_GetGenerativeQuestionsFeatureConfig_async",
+      "title": "GetGenerativeQuestionsFeatureConfigRequestObjectAsync",
+      "description": "Snippet for GetGenerativeQuestionsFeatureConfigAsync",
+      "file": "GenerativeQuestionServiceClient.GetGenerativeQuestionsFeatureConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeQuestionsFeatureConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.GetGenerativeQuestionsFeatureConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GetGenerativeQuestionsFeatureConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.GenerativeQuestionsFeatureConfig>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeQuestionsFeatureConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.GetGenerativeQuestionsFeatureConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_GetGenerativeQuestionsFeatureConfig_sync_flattened",
+      "title": "GetGenerativeQuestionsFeatureConfig",
+      "description": "Snippet for GetGenerativeQuestionsFeatureConfig",
+      "file": "GenerativeQuestionServiceClient.GetGenerativeQuestionsFeatureConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeQuestionsFeatureConfig",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.GetGenerativeQuestionsFeatureConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.GenerativeQuestionsFeatureConfig",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeQuestionsFeatureConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.GetGenerativeQuestionsFeatureConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_GetGenerativeQuestionsFeatureConfig_async_flattened",
+      "title": "GetGenerativeQuestionsFeatureConfigAsync",
+      "description": "Snippet for GetGenerativeQuestionsFeatureConfigAsync",
+      "file": "GenerativeQuestionServiceClient.GetGenerativeQuestionsFeatureConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeQuestionsFeatureConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.GetGenerativeQuestionsFeatureConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.GenerativeQuestionsFeatureConfig>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeQuestionsFeatureConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.GetGenerativeQuestionsFeatureConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_GetGenerativeQuestionsFeatureConfig_sync_flattened_resourceNames",
+      "title": "GetGenerativeQuestionsFeatureConfigResourceNames",
+      "description": "Snippet for GetGenerativeQuestionsFeatureConfig",
+      "file": "GenerativeQuestionServiceClient.GetGenerativeQuestionsFeatureConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeQuestionsFeatureConfig",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.GetGenerativeQuestionsFeatureConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.GenerativeQuestionsFeatureConfig",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeQuestionsFeatureConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.GetGenerativeQuestionsFeatureConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_GetGenerativeQuestionsFeatureConfig_async_flattened_resourceNames",
+      "title": "GetGenerativeQuestionsFeatureConfigResourceNamesAsync",
+      "description": "Snippet for GetGenerativeQuestionsFeatureConfigAsync",
+      "file": "GenerativeQuestionServiceClient.GetGenerativeQuestionsFeatureConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeQuestionsFeatureConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.GetGenerativeQuestionsFeatureConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "catalog"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.GenerativeQuestionsFeatureConfig>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeQuestionsFeatureConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.GetGenerativeQuestionsFeatureConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_ListGenerativeQuestionConfigs_sync",
+      "title": "ListGenerativeQuestionConfigsRequestObject",
+      "description": "Snippet for ListGenerativeQuestionConfigs",
+      "file": "GenerativeQuestionServiceClient.ListGenerativeQuestionConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGenerativeQuestionConfigs",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.ListGenerativeQuestionConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ListGenerativeQuestionConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.ListGenerativeQuestionConfigsResponse",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "ListGenerativeQuestionConfigs",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.ListGenerativeQuestionConfigs",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_ListGenerativeQuestionConfigs_async",
+      "title": "ListGenerativeQuestionConfigsRequestObjectAsync",
+      "description": "Snippet for ListGenerativeQuestionConfigsAsync",
+      "file": "GenerativeQuestionServiceClient.ListGenerativeQuestionConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGenerativeQuestionConfigsAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.ListGenerativeQuestionConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.ListGenerativeQuestionConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ListGenerativeQuestionConfigsResponse>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "ListGenerativeQuestionConfigs",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.ListGenerativeQuestionConfigs",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_ListGenerativeQuestionConfigs_sync_flattened",
+      "title": "ListGenerativeQuestionConfigs",
+      "description": "Snippet for ListGenerativeQuestionConfigs",
+      "file": "GenerativeQuestionServiceClient.ListGenerativeQuestionConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGenerativeQuestionConfigs",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.ListGenerativeQuestionConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.ListGenerativeQuestionConfigsResponse",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "ListGenerativeQuestionConfigs",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.ListGenerativeQuestionConfigs",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_ListGenerativeQuestionConfigs_async_flattened",
+      "title": "ListGenerativeQuestionConfigsAsync",
+      "description": "Snippet for ListGenerativeQuestionConfigsAsync",
+      "file": "GenerativeQuestionServiceClient.ListGenerativeQuestionConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGenerativeQuestionConfigsAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.ListGenerativeQuestionConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ListGenerativeQuestionConfigsResponse>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "ListGenerativeQuestionConfigs",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.ListGenerativeQuestionConfigs",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_ListGenerativeQuestionConfigs_sync_flattened_resourceNames",
+      "title": "ListGenerativeQuestionConfigsResourceNames",
+      "description": "Snippet for ListGenerativeQuestionConfigs",
+      "file": "GenerativeQuestionServiceClient.ListGenerativeQuestionConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGenerativeQuestionConfigs",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.ListGenerativeQuestionConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.ListGenerativeQuestionConfigsResponse",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "ListGenerativeQuestionConfigs",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.ListGenerativeQuestionConfigs",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_ListGenerativeQuestionConfigs_async_flattened_resourceNames",
+      "title": "ListGenerativeQuestionConfigsResourceNamesAsync",
+      "description": "Snippet for ListGenerativeQuestionConfigsAsync",
+      "file": "GenerativeQuestionServiceClient.ListGenerativeQuestionConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGenerativeQuestionConfigsAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.ListGenerativeQuestionConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.ListGenerativeQuestionConfigsResponse>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "ListGenerativeQuestionConfigs",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.ListGenerativeQuestionConfigs",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_UpdateGenerativeQuestionConfig_sync",
+      "title": "UpdateGenerativeQuestionConfigRequestObject",
+      "description": "Snippet for UpdateGenerativeQuestionConfig",
+      "file": "GenerativeQuestionServiceClient.UpdateGenerativeQuestionConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeQuestionConfig",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.UpdateGenerativeQuestionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateGenerativeQuestionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.GenerativeQuestionConfig",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeQuestionConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.UpdateGenerativeQuestionConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_UpdateGenerativeQuestionConfig_async",
+      "title": "UpdateGenerativeQuestionConfigRequestObjectAsync",
+      "description": "Snippet for UpdateGenerativeQuestionConfigAsync",
+      "file": "GenerativeQuestionServiceClient.UpdateGenerativeQuestionConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeQuestionConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.UpdateGenerativeQuestionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.UpdateGenerativeQuestionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.GenerativeQuestionConfig>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeQuestionConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.UpdateGenerativeQuestionConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_UpdateGenerativeQuestionConfig_sync_flattened",
+      "title": "UpdateGenerativeQuestionConfig",
+      "description": "Snippet for UpdateGenerativeQuestionConfig",
+      "file": "GenerativeQuestionServiceClient.UpdateGenerativeQuestionConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeQuestionConfig",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.UpdateGenerativeQuestionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GenerativeQuestionConfig",
+            "name": "generativeQuestionConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.GenerativeQuestionConfig",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeQuestionConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.UpdateGenerativeQuestionConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_UpdateGenerativeQuestionConfig_async_flattened",
+      "title": "UpdateGenerativeQuestionConfigAsync",
+      "description": "Snippet for UpdateGenerativeQuestionConfigAsync",
+      "file": "GenerativeQuestionServiceClient.UpdateGenerativeQuestionConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeQuestionConfigAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.UpdateGenerativeQuestionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.GenerativeQuestionConfig",
+            "name": "generativeQuestionConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.GenerativeQuestionConfig>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeQuestionConfig",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.UpdateGenerativeQuestionConfig",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_BatchUpdateGenerativeQuestionConfigs_sync",
+      "title": "BatchUpdateGenerativeQuestionConfigsRequestObject",
+      "description": "Snippet for BatchUpdateGenerativeQuestionConfigs",
+      "file": "GenerativeQuestionServiceClient.BatchUpdateGenerativeQuestionConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateGenerativeQuestionConfigs",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.BatchUpdateGenerativeQuestionConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.BatchUpdateGenerativeQuestionConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.BatchUpdateGenerativeQuestionConfigsResponse",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateGenerativeQuestionConfigs",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.BatchUpdateGenerativeQuestionConfigs",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_BatchUpdateGenerativeQuestionConfigs_async",
+      "title": "BatchUpdateGenerativeQuestionConfigsRequestObjectAsync",
+      "description": "Snippet for BatchUpdateGenerativeQuestionConfigsAsync",
+      "file": "GenerativeQuestionServiceClient.BatchUpdateGenerativeQuestionConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateGenerativeQuestionConfigsAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.BatchUpdateGenerativeQuestionConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.BatchUpdateGenerativeQuestionConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.BatchUpdateGenerativeQuestionConfigsResponse>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateGenerativeQuestionConfigs",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.BatchUpdateGenerativeQuestionConfigs",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_BatchUpdateGenerativeQuestionConfigs_sync_flattened",
+      "title": "BatchUpdateGenerativeQuestionConfigs",
+      "description": "Snippet for BatchUpdateGenerativeQuestionConfigs",
+      "file": "GenerativeQuestionServiceClient.BatchUpdateGenerativeQuestionConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateGenerativeQuestionConfigs",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.BatchUpdateGenerativeQuestionConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Retail.V2.UpdateGenerativeQuestionConfigRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.BatchUpdateGenerativeQuestionConfigsResponse",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateGenerativeQuestionConfigs",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.BatchUpdateGenerativeQuestionConfigs",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_BatchUpdateGenerativeQuestionConfigs_async_flattened",
+      "title": "BatchUpdateGenerativeQuestionConfigsAsync",
+      "description": "Snippet for BatchUpdateGenerativeQuestionConfigsAsync",
+      "file": "GenerativeQuestionServiceClient.BatchUpdateGenerativeQuestionConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateGenerativeQuestionConfigsAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.BatchUpdateGenerativeQuestionConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Retail.V2.UpdateGenerativeQuestionConfigRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.BatchUpdateGenerativeQuestionConfigsResponse>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateGenerativeQuestionConfigs",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.BatchUpdateGenerativeQuestionConfigs",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_BatchUpdateGenerativeQuestionConfigs_sync_flattened_resourceNames",
+      "title": "BatchUpdateGenerativeQuestionConfigsResourceNames",
+      "description": "Snippet for BatchUpdateGenerativeQuestionConfigs",
+      "file": "GenerativeQuestionServiceClient.BatchUpdateGenerativeQuestionConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateGenerativeQuestionConfigs",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.BatchUpdateGenerativeQuestionConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Retail.V2.UpdateGenerativeQuestionConfigRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Retail.V2.BatchUpdateGenerativeQuestionConfigsResponse",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateGenerativeQuestionConfigs",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.BatchUpdateGenerativeQuestionConfigs",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_GenerativeQuestionService_BatchUpdateGenerativeQuestionConfigs_async_flattened_resourceNames",
+      "title": "BatchUpdateGenerativeQuestionConfigsResourceNamesAsync",
+      "description": "Snippet for BatchUpdateGenerativeQuestionConfigsAsync",
+      "file": "GenerativeQuestionServiceClient.BatchUpdateGenerativeQuestionConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchUpdateGenerativeQuestionConfigsAsync",
+        "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient.BatchUpdateGenerativeQuestionConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.CatalogName",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Retail.V2.UpdateGenerativeQuestionConfigRequest>",
+            "name": "requests"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Retail.V2.BatchUpdateGenerativeQuestionConfigsResponse>",
+        "client": {
+          "shortName": "GenerativeQuestionServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.GenerativeQuestionServiceClient"
+        },
+        "method": {
+          "shortName": "BatchUpdateGenerativeQuestionConfigs",
+          "fullName": "google.cloud.retail.v2.GenerativeQuestionService.BatchUpdateGenerativeQuestionConfigs",
+          "service": {
+            "shortName": "GenerativeQuestionService",
+            "fullName": "google.cloud.retail.v2.GenerativeQuestionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -7634,6 +9008,103 @@
       ]
     },
     {
+      "regionTag": "retail_v2_generated_ProductService_PurgeProducts_sync",
+      "title": "PurgeProductsRequestObject",
+      "description": "Snippet for PurgeProducts",
+      "file": "ProductServiceClient.PurgeProductsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeProducts",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.PurgeProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.PurgeProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Retail.V2.PurgeProductsResponse, Google.Cloud.Retail.V2.PurgeProductsMetadata>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeProducts",
+          "fullName": "google.cloud.retail.v2.ProductService.PurgeProducts",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "retail_v2_generated_ProductService_PurgeProducts_async",
+      "title": "PurgeProductsRequestObjectAsync",
+      "description": "Snippet for PurgeProductsAsync",
+      "file": "ProductServiceClient.PurgeProductsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PurgeProductsAsync",
+        "fullName": "Google.Cloud.Retail.V2.ProductServiceClient.PurgeProductsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Retail.V2.PurgeProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Retail.V2.PurgeProductsResponse, Google.Cloud.Retail.V2.PurgeProductsMetadata>>",
+        "client": {
+          "shortName": "ProductServiceClient",
+          "fullName": "Google.Cloud.Retail.V2.ProductServiceClient"
+        },
+        "method": {
+          "shortName": "PurgeProducts",
+          "fullName": "google.cloud.retail.v2.ProductService.PurgeProducts",
+          "service": {
+            "shortName": "ProductService",
+            "fullName": "google.cloud.retail.v2.ProductService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "retail_v2_generated_ProductService_ImportProducts_sync",
       "title": "ImportProductsRequestObject",
       "description": "Snippet for ImportProducts",
@@ -9116,12 +10587,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 99,
+          "end": 101,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 97,
+          "end": 99,
           "type": "SHORT"
         }
       ]
@@ -9165,12 +10636,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 101,
+          "end": 103,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 99,
+          "end": 101,
           "type": "SHORT"
         }
       ]

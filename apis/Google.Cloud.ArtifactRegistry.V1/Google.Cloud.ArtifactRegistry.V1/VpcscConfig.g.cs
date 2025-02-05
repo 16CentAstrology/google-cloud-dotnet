@@ -61,6 +61,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The Artifact Registry VPC SC config that apply to a Project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VPCSCConfig : pb::IMessage<VPCSCConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -333,6 +334,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// Gets the VPC SC config for a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetVPCSCConfigRequest : pb::IMessage<GetVPCSCConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -528,6 +530,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// Sets the VPCSC config of the project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateVPCSCConfigRequest : pb::IMessage<UpdateVPCSCConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

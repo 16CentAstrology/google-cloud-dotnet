@@ -96,6 +96,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// [Company][google.cloud.talent.v4beta1.Company], which is the hiring entity
   /// responsible for the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Job : pb::IMessage<Job>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1248,7 +1249,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         }
         CompensationInfo.MergeFrom(other.CompensationInfo);
       }
-      customAttributes_.Add(other.customAttributes_);
+      customAttributes_.MergeFrom(other.customAttributes_);
       degreeTypes_.Add(other.degreeTypes_);
       if (other.Department.Length != 0) {
         Department = other.Department;
@@ -1678,6 +1679,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <summary>
       /// Application related details of a job posting.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ApplicationInfo : pb::IMessage<ApplicationInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1943,6 +1945,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <summary>
       /// Derived details about the job posting.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DerivedInfo : pb::IMessage<DerivedInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2166,6 +2169,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <summary>
       /// Options for job processing.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ProcessingOptions : pb::IMessage<ProcessingOptions>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.BigQuery.DataTransfer.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
@@ -490,7 +491,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
-                AuthorizationCode = "",
                 VersionInfo = "",
                 ServiceAccountName = "",
             };
@@ -511,7 +511,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 TransferConfig = new TransferConfig(),
-                AuthorizationCode = "",
                 VersionInfo = "",
                 ServiceAccountName = "",
             };
@@ -617,7 +616,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
             {
                 TransferConfig = new TransferConfig(),
-                AuthorizationCode = "",
                 UpdateMask = new FieldMask(),
                 VersionInfo = "",
                 ServiceAccountName = "",
@@ -638,7 +636,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             UpdateTransferConfigRequest request = new UpdateTransferConfigRequest
             {
                 TransferConfig = new TransferConfig(),
-                AuthorizationCode = "",
                 UpdateMask = new FieldMask(),
                 VersionInfo = "",
                 ServiceAccountName = "",
@@ -2228,6 +2225,41 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             };
             // Make the request
             await dataTransferServiceClient.EnrollDataSourcesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnenrollDataSources</summary>
+        public void UnenrollDataSourcesRequestObject()
+        {
+            // Snippet: UnenrollDataSources(UnenrollDataSourcesRequest, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            UnenrollDataSourcesRequest request = new UnenrollDataSourcesRequest
+            {
+                Name = "",
+                DataSourceIds = { "", },
+            };
+            // Make the request
+            dataTransferServiceClient.UnenrollDataSources(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnenrollDataSourcesAsync</summary>
+        public async Task UnenrollDataSourcesRequestObjectAsync()
+        {
+            // Snippet: UnenrollDataSourcesAsync(UnenrollDataSourcesRequest, CallSettings)
+            // Additional: UnenrollDataSourcesAsync(UnenrollDataSourcesRequest, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UnenrollDataSourcesRequest request = new UnenrollDataSourcesRequest
+            {
+                Name = "",
+                DataSourceIds = { "", },
+            };
+            // Make the request
+            await dataTransferServiceClient.UnenrollDataSourcesAsync(request);
             // End snippet
         }
     }

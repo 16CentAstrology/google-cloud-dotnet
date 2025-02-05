@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,16 +17,16 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Monitoring.V3
 {
@@ -105,14 +105,14 @@ namespace Google.Cloud.Monitoring.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return QueryServiceClient.Create(callInvoker, Settings, Logger);
+            return QueryServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<QueryServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return QueryServiceClient.Create(callInvoker, Settings, Logger);
+            return QueryServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -121,7 +121,7 @@ namespace Google.Cloud.Monitoring.V3
 
     /// <summary>QueryService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// The QueryService API is used to manage time series data in Stackdriver
+    /// The QueryService API is used to manage time series data in Cloud
     /// Monitoring. Time series data is a collection of data points that describes
     /// the time-varying values of a metric.
     /// </remarks>
@@ -210,33 +210,47 @@ namespace Google.Cloud.Monitoring.V3
         public virtual QueryService.QueryServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+        /// Queries time series by using Monitoring Query Language (MQL). We recommend
+        /// using PromQL instead of MQL. For more information about the status of MQL,
+        /// see the [MQL deprecation
+        /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TimeSeriesData"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<QueryTimeSeriesResponse, TimeSeriesData> QueryTimeSeries(QueryTimeSeriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+        /// Queries time series by using Monitoring Query Language (MQL). We recommend
+        /// using PromQL instead of MQL. For more information about the status of MQL,
+        /// see the [MQL deprecation
+        /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TimeSeriesData"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<QueryTimeSeriesResponse, TimeSeriesData> QueryTimeSeriesAsync(QueryTimeSeriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
     }
 
     /// <summary>QueryService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// The QueryService API is used to manage time series data in Stackdriver
+    /// The QueryService API is used to manage time series data in Cloud
     /// Monitoring. Time series data is a collection of data points that describes
     /// the time-varying values of a metric.
     /// </remarks>
     public sealed partial class QueryServiceClientImpl : QueryServiceClient
     {
+#pragma warning disable CS0612
         private readonly gaxgrpc::ApiCall<QueryTimeSeriesRequest, QueryTimeSeriesResponse> _callQueryTimeSeries;
+#pragma warning restore CS0612
 
         /// <summary>
         /// Constructs a client wrapper for the QueryService service, with the specified gRPC client and settings.
@@ -248,8 +262,14 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             QueryServiceSettings effectiveSettings = settings ?? QueryServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
+#pragma warning disable CS0612
             _callQueryTimeSeries = clientHelper.BuildApiCall<QueryTimeSeriesRequest, QueryTimeSeriesResponse>("QueryTimeSeries", grpcClient.QueryTimeSeriesAsync, grpcClient.QueryTimeSeries, effectiveSettings.QueryTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callQueryTimeSeries);
             Modify_QueryTimeSeriesApiCall(ref _callQueryTimeSeries);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -257,37 +277,57 @@ namespace Google.Cloud.Monitoring.V3
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+#pragma warning disable CS0612
         partial void Modify_QueryTimeSeriesApiCall(ref gaxgrpc::ApiCall<QueryTimeSeriesRequest, QueryTimeSeriesResponse> call);
+#pragma warning restore CS0612
 
         partial void OnConstruction(QueryService.QueryServiceClient grpcClient, QueryServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC QueryService client</summary>
         public override QueryService.QueryServiceClient GrpcClient { get; }
 
+#pragma warning disable CS0612
         partial void Modify_QueryTimeSeriesRequest(ref QueryTimeSeriesRequest request, ref gaxgrpc::CallSettings settings);
+#pragma warning restore CS0612
 
         /// <summary>
-        /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+        /// Queries time series by using Monitoring Query Language (MQL). We recommend
+        /// using PromQL instead of MQL. For more information about the status of MQL,
+        /// see the [MQL deprecation
+        /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TimeSeriesData"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedEnumerable<QueryTimeSeriesResponse, TimeSeriesData> QueryTimeSeries(QueryTimeSeriesRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_QueryTimeSeriesRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedEnumerable<QueryTimeSeriesRequest, QueryTimeSeriesResponse, TimeSeriesData>(_callQueryTimeSeries, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
-        /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+        /// Queries time series by using Monitoring Query Language (MQL). We recommend
+        /// using PromQL instead of MQL. For more information about the status of MQL,
+        /// see the [MQL deprecation
+        /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TimeSeriesData"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedAsyncEnumerable<QueryTimeSeriesResponse, TimeSeriesData> QueryTimeSeriesAsync(QueryTimeSeriesRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_QueryTimeSeriesRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryTimeSeriesRequest, QueryTimeSeriesResponse, TimeSeriesData>(_callQueryTimeSeries, request, callSettings);
+#pragma warning restore CS0612
         }
     }
 

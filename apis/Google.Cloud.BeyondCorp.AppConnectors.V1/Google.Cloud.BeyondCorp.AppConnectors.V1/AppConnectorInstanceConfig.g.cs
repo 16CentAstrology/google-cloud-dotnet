@@ -63,6 +63,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
   /// <summary>
   /// AppConnectorInstanceConfig defines the instance config of a AppConnector.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppConnectorInstanceConfig : pb::IMessage<AppConnectorInstanceConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -409,6 +410,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
   /// <summary>
   /// NotificationConfig defines the mechanisms to notify instance agent.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NotificationConfig : pb::IMessage<NotificationConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -650,6 +652,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
       /// <summary>
       /// The configuration for Pub/Sub messaging for the AppConnector.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CloudPubSubNotificationConfig : pb::IMessage<CloudPubSubNotificationConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -850,6 +853,7 @@ namespace Google.Cloud.BeyondCorp.AppConnectors.V1 {
   /// <summary>
   /// ImageConfig defines the control plane images to run.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageConfig : pb::IMessage<ImageConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,9 +15,31 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gax = Google.Api.Gax;
 
 namespace Google.Cloud.Retail.V2
 {
+    public partial class PurgeProductsRequest
+    {
+        /// <summary><see cref="BranchName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public BranchName ParentAsBranchName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : BranchName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PurgeProductsResponse
+    {
+        /// <summary>
+        /// <see cref="ProductName"/>-typed view over the <see cref="PurgeSample"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<ProductName> PurgeSampleAsProductNames
+        {
+            get => new gax::ResourceNameList<ProductName>(PurgeSample, s => string.IsNullOrEmpty(s) ? null : ProductName.Parse(s, allowUnparsed: true));
+        }
+    }
+
     public partial class PurgeUserEventsRequest
     {
         /// <summary>

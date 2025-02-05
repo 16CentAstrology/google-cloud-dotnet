@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.DocumentAI.V1Beta3;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -41,6 +42,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
                 InlineDocument = new Document(),
                 FieldMask = new FieldMask(),
                 ProcessOptions = new ProcessOptions(),
+                Labels = { { "", "" }, },
+                ImagelessMode = false,
             };
             // Make the request
             ProcessResponse response = documentProcessorServiceClient.ProcessDocument(request);
@@ -62,6 +65,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
                 InlineDocument = new Document(),
                 FieldMask = new FieldMask(),
                 ProcessOptions = new ProcessOptions(),
+                Labels = { { "", "" }, },
+                ImagelessMode = false,
             };
             // Make the request
             ProcessResponse response = await documentProcessorServiceClient.ProcessDocumentAsync(request);
@@ -136,6 +141,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
                 InputDocuments = new BatchDocumentsInputConfig(),
                 DocumentOutputConfig = new DocumentOutputConfig(),
                 ProcessOptions = new ProcessOptions(),
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<BatchProcessResponse, BatchProcessMetadata> response = documentProcessorServiceClient.BatchProcessDocuments(request);
@@ -173,6 +179,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
                 InputDocuments = new BatchDocumentsInputConfig(),
                 DocumentOutputConfig = new DocumentOutputConfig(),
                 ProcessOptions = new ProcessOptions(),
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<BatchProcessResponse, BatchProcessMetadata> response = await documentProcessorServiceClient.BatchProcessDocumentsAsync(request);
@@ -1138,6 +1145,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
                 ParentAsProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
                 ProcessorVersion = new ProcessorVersion(),
                 InputData = new TrainProcessorVersionRequest.Types.InputData(),
+                CustomDocumentExtractionOptions = new TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions(),
                 BaseProcessorVersion = "",
                 DocumentSchema = new DocumentSchema(),
             };
@@ -1175,6 +1183,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
                 ParentAsProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
                 ProcessorVersion = new ProcessorVersion(),
                 InputData = new TrainProcessorVersionRequest.Types.InputData(),
+                CustomDocumentExtractionOptions = new TrainProcessorVersionRequest.Types.CustomDocumentExtractionOptions(),
                 BaseProcessorVersion = "",
                 DocumentSchema = new DocumentSchema(),
             };

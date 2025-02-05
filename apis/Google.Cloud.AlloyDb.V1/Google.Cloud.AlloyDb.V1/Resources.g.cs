@@ -26,203 +26,305 @@ namespace Google.Cloud.AlloyDb.V1 {
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvYWxsb3lkYi92MS9yZXNvdXJjZXMucHJvdG8SF2dv",
             "b2dsZS5jbG91ZC5hbGxveWRiLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
-            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5nb29nbGUv",
-            "cHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
-            "c3RhbXAucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxob",
-            "Z29vZ2xlL3R5cGUvZGF5b2Z3ZWVrLnByb3RvGhtnb29nbGUvdHlwZS90aW1l",
-            "b2ZkYXkucHJvdG8iLgoMVXNlclBhc3N3b3JkEgwKBHVzZXIYASABKAkSEAoI",
-            "cGFzc3dvcmQYAiABKAki4wEKD01pZ3JhdGlvblNvdXJjZRIWCglob3N0X3Bv",
-            "cnQYASABKAlCA+BBAxIZCgxyZWZlcmVuY2VfaWQYAiABKAlCA+BBAxJWCgtz",
-            "b3VyY2VfdHlwZRgDIAEoDjI8Lmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLk1p",
-            "Z3JhdGlvblNvdXJjZS5NaWdyYXRpb25Tb3VyY2VUeXBlQgPgQQMiRQoTTWln",
-            "cmF0aW9uU291cmNlVHlwZRIlCiFNSUdSQVRJT05fU09VUkNFX1RZUEVfVU5T",
-            "UEVDSUZJRUQQABIHCgNETVMQASIoChBFbmNyeXB0aW9uQ29uZmlnEhQKDGtt",
-            "c19rZXlfbmFtZRgBIAEoCSKGAgoORW5jcnlwdGlvbkluZm8SSgoPZW5jcnlw",
-            "dGlvbl90eXBlGAEgASgOMiwuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuRW5j",
-            "cnlwdGlvbkluZm8uVHlwZUID4EEDEkoKEGttc19rZXlfdmVyc2lvbnMYAiAD",
-            "KAlCMOBBA/pBKgooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5",
-            "VmVyc2lvbiJcCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIdChlHT09H",
-            "TEVfREVGQVVMVF9FTkNSWVBUSU9OEAESHwobQ1VTVE9NRVJfTUFOQUdFRF9F",
-            "TkNSWVBUSU9OEAIiuAIKCVNzbENvbmZpZxJBCghzc2xfbW9kZRgBIAEoDjIq",
-            "Lmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLlNzbENvbmZpZy5Tc2xNb2RlQgPg",
-            "QQESQwoJY2Ffc291cmNlGAIgASgOMisuZ29vZ2xlLmNsb3VkLmFsbG95ZGIu",
-            "djEuU3NsQ29uZmlnLkNhU291cmNlQgPgQQEiZQoHU3NsTW9kZRIYChRTU0xf",
-            "TU9ERV9VTlNQRUNJRklFRBAAEhIKDlNTTF9NT0RFX0FMTE9XEAESFAoQU1NM",
-            "X01PREVfUkVRVUlSRRACEhYKElNTTF9NT0RFX1ZFUklGWV9DQRADIjwKCENh",
-            "U291cmNlEhkKFUNBX1NPVVJDRV9VTlNQRUNJRklFRBAAEhUKEUNBX1NPVVJD",
-            "RV9NQU5BR0VEEAEi5QYKFUF1dG9tYXRlZEJhY2t1cFBvbGljeRJYCg93ZWVr",
-            "bHlfc2NoZWR1bGUYAiABKAsyPS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5B",
-            "dXRvbWF0ZWRCYWNrdXBQb2xpY3kuV2Vla2x5U2NoZWR1bGVIABJhChR0aW1l",
-            "X2Jhc2VkX3JldGVudGlvbhgEIAEoCzJBLmdvb2dsZS5jbG91ZC5hbGxveWRi",
-            "LnYxLkF1dG9tYXRlZEJhY2t1cFBvbGljeS5UaW1lQmFzZWRSZXRlbnRpb25I",
-            "ARJpChhxdWFudGl0eV9iYXNlZF9yZXRlbnRpb24YBSABKAsyRS5nb29nbGUu",
-            "Y2xvdWQuYWxsb3lkYi52MS5BdXRvbWF0ZWRCYWNrdXBQb2xpY3kuUXVhbnRp",
-            "dHlCYXNlZFJldGVudGlvbkgBEhQKB2VuYWJsZWQYASABKAhIAogBARIwCg1i",
-            "YWNrdXBfd2luZG93GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "EkkKEWVuY3J5cHRpb25fY29uZmlnGAggASgLMikuZ29vZ2xlLmNsb3VkLmFs",
-            "bG95ZGIudjEuRW5jcnlwdGlvbkNvbmZpZ0ID4EEBEhAKCGxvY2F0aW9uGAYg",
-            "ASgJEkoKBmxhYmVscxgHIAMoCzI6Lmdvb2dsZS5jbG91ZC5hbGxveWRiLnYx",
-            "LkF1dG9tYXRlZEJhY2t1cFBvbGljeS5MYWJlbHNFbnRyeRprCg5XZWVrbHlT",
-            "Y2hlZHVsZRIrCgtzdGFydF90aW1lcxgBIAMoCzIWLmdvb2dsZS50eXBlLlRp",
-            "bWVPZkRheRIsCgxkYXlzX29mX3dlZWsYAiADKA4yFi5nb29nbGUudHlwZS5E",
-            "YXlPZldlZWsaSQoSVGltZUJhc2VkUmV0ZW50aW9uEjMKEHJldGVudGlvbl9w",
-            "ZXJpb2QYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24aJwoWUXVh",
-            "bnRpdHlCYXNlZFJldGVudGlvbhINCgVjb3VudBgBIAEoBRotCgtMYWJlbHNF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQgoKCHNjaGVk",
-            "dWxlQgsKCXJldGVudGlvbkIKCghfZW5hYmxlZCJjCgxCYWNrdXBTb3VyY2US",
-            "FwoKYmFja3VwX3VpZBgCIAEoCUID4EEDEjoKC2JhY2t1cF9uYW1lGAEgASgJ",
-            "QiXgQQL6QR8KHWFsbG95ZGIuZ29vZ2xlYXBpcy5jb20vQmFja3VwIsIOCgdD",
-            "bHVzdGVyEkMKDWJhY2t1cF9zb3VyY2UYDyABKAsyJS5nb29nbGUuY2xvdWQu",
-            "YWxsb3lkYi52MS5CYWNrdXBTb3VyY2VCA+BBA0gAEkkKEG1pZ3JhdGlvbl9z",
-            "b3VyY2UYECABKAsyKC5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5NaWdyYXRp",
-            "b25Tb3VyY2VCA+BBA0gAEhEKBG5hbWUYASABKAlCA+BBAxIUCgxkaXNwbGF5",
-            "X25hbWUYAiABKAkSEAoDdWlkGAMgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUY",
-            "BCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBk",
-            "YXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSNAoLZGVsZXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSPAoGbGFiZWxzGAcgAygLMiwuZ29vZ2xlLmNsb3VkLmFs",
-            "bG95ZGIudjEuQ2x1c3Rlci5MYWJlbHNFbnRyeRI6CgVzdGF0ZRgIIAEoDjIm",
-            "Lmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLkNsdXN0ZXIuU3RhdGVCA+BBAxJH",
-            "CgxjbHVzdGVyX3R5cGUYGCABKA4yLC5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
-            "MS5DbHVzdGVyLkNsdXN0ZXJUeXBlQgPgQQMSRwoQZGF0YWJhc2VfdmVyc2lv",
-            "bhgJIAEoDjIoLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLkRhdGFiYXNlVmVy",
-            "c2lvbkID4EEDEjcKB25ldHdvcmsYCiABKAlCJuBBAvpBIAoeY29tcHV0ZS5n",
-            "b29nbGVhcGlzLmNvbS9OZXR3b3JrEgwKBGV0YWcYCyABKAkSRgoLYW5ub3Rh",
-            "dGlvbnMYDCADKAsyMS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5DbHVzdGVy",
-            "LkFubm90YXRpb25zRW50cnkSGAoLcmVjb25jaWxpbmcYDSABKAhCA+BBAxJA",
-            "Cgxpbml0aWFsX3VzZXIYDiABKAsyJS5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
-            "MS5Vc2VyUGFzc3dvcmRCA+BBBBJPChdhdXRvbWF0ZWRfYmFja3VwX3BvbGlj",
-            "eRgRIAEoCzIuLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLkF1dG9tYXRlZEJh",
-            "Y2t1cFBvbGljeRI2Cgpzc2xfY29uZmlnGBIgASgLMiIuZ29vZ2xlLmNsb3Vk",
-            "LmFsbG95ZGIudjEuU3NsQ29uZmlnEkkKEWVuY3J5cHRpb25fY29uZmlnGBMg",
-            "ASgLMikuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuRW5jcnlwdGlvbkNvbmZp",
-            "Z0ID4EEBEkUKD2VuY3J5cHRpb25faW5mbxgUIAEoCzInLmdvb2dsZS5jbG91",
-            "ZC5hbGxveWRiLnYxLkVuY3J5cHRpb25JbmZvQgPgQQMSSgoQc2Vjb25kYXJ5",
-            "X2NvbmZpZxgWIAEoCzIwLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLkNsdXN0",
-            "ZXIuU2Vjb25kYXJ5Q29uZmlnEksKDnByaW1hcnlfY29uZmlnGBcgASgLMi4u",
-            "Z29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuQ2x1c3Rlci5QcmltYXJ5Q29uZmln",
-            "QgPgQQMaLwoPU2Vjb25kYXJ5Q29uZmlnEhwKFHByaW1hcnlfY2x1c3Rlcl9u",
-            "YW1lGAEgASgJGjUKDVByaW1hcnlDb25maWcSJAoXc2Vjb25kYXJ5X2NsdXN0",
-            "ZXJfbmFtZXMYASADKAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASAB",
-            "KAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKcAQoFU3RhdGUSFQoRU1RB",
-            "VEVfVU5TUEVDSUZJRUQQABIJCgVSRUFEWRABEgsKB1NUT1BQRUQQAhIJCgVF",
-            "TVBUWRADEgwKCENSRUFUSU5HEAQSDAoIREVMRVRJTkcQBRIKCgZGQUlMRUQQ",
-            "BhIRCg1CT09UU1RSQVBQSU5HEAcSDwoLTUFJTlRFTkFOQ0UQCBINCglQUk9N",
-            "T1RJTkcQCSJHCgtDbHVzdGVyVHlwZRIcChhDTFVTVEVSX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABILCgdQUklNQVJZEAESDQoJU0VDT05EQVJZEAI6YupBXwoeYWxs",
-            "b3lkYi5nb29nbGVhcGlzLmNvbS9DbHVzdGVyEjpwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2x1c3RlcnMve2NsdXN0ZXJ9UgEB",
-            "QggKBnNvdXJjZSKzEAoISW5zdGFuY2USEQoEbmFtZRgBIAEoCUID4EEDEhQK",
-            "DGRpc3BsYXlfbmFtZRgCIAEoCRIQCgN1aWQYAyABKAlCA+BBAxI0CgtjcmVh",
-            "dGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxI0Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxI0CgtkZWxldGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI9CgZsYWJlbHMYByADKAsyLS5nb29nbGUu",
-            "Y2xvdWQuYWxsb3lkYi52MS5JbnN0YW5jZS5MYWJlbHNFbnRyeRI7CgVzdGF0",
-            "ZRgIIAEoDjInLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLkluc3RhbmNlLlN0",
-            "YXRlQgPgQQMSSgoNaW5zdGFuY2VfdHlwZRgJIAEoDjIuLmdvb2dsZS5jbG91",
-            "ZC5hbGxveWRiLnYxLkluc3RhbmNlLkluc3RhbmNlVHlwZUID4EECEkcKDm1h",
-            "Y2hpbmVfY29uZmlnGAogASgLMi8uZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjEu",
-            "SW5zdGFuY2UuTWFjaGluZUNvbmZpZxJNChFhdmFpbGFiaWxpdHlfdHlwZRgL",
-            "IAEoDjIyLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLkluc3RhbmNlLkF2YWls",
-            "YWJpbGl0eVR5cGUSEAoIZ2NlX3pvbmUYDCABKAkSTAoOZGF0YWJhc2VfZmxh",
-            "Z3MYDSADKAsyNC5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5JbnN0YW5jZS5E",
-            "YXRhYmFzZUZsYWdzRW50cnkSQgoNd3JpdGFibGVfbm9kZRgTIAEoCzImLmdv",
-            "b2dsZS5jbG91ZC5hbGxveWRiLnYxLkluc3RhbmNlLk5vZGVCA+BBAxI6CgVu",
-            "b2RlcxgUIAMoCzImLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLkluc3RhbmNl",
-            "Lk5vZGVCA+BBAxJcChVxdWVyeV9pbnNpZ2h0c19jb25maWcYFSABKAsyPS5n",
-            "b29nbGUuY2xvdWQuYWxsb3lkYi52MS5JbnN0YW5jZS5RdWVyeUluc2lnaHRz",
-            "SW5zdGFuY2VDb25maWcSSgoQcmVhZF9wb29sX2NvbmZpZxgOIAEoCzIwLmdv",
-            "b2dsZS5jbG91ZC5hbGxveWRiLnYxLkluc3RhbmNlLlJlYWRQb29sQ29uZmln",
-            "EhcKCmlwX2FkZHJlc3MYDyABKAlCA+BBAxIYCgtyZWNvbmNpbGluZxgQIAEo",
-            "CEID4EEDEgwKBGV0YWcYESABKAkSRwoLYW5ub3RhdGlvbnMYEiADKAsyMi5n",
-            "b29nbGUuY2xvdWQuYWxsb3lkYi52MS5JbnN0YW5jZS5Bbm5vdGF0aW9uc0Vu",
-            "dHJ5GiIKDU1hY2hpbmVDb25maWcSEQoJY3B1X2NvdW50GAEgASgFGj4KBE5v",
-            "ZGUSDwoHem9uZV9pZBgBIAEoCRIKCgJpZBgCIAEoCRIKCgJpcBgDIAEoCRIN",
-            "CgVzdGF0ZRgEIAEoCRr6AQobUXVlcnlJbnNpZ2h0c0luc3RhbmNlQ29uZmln",
-            "EiQKF3JlY29yZF9hcHBsaWNhdGlvbl90YWdzGAIgASgISACIAQESIgoVcmVj",
-            "b3JkX2NsaWVudF9hZGRyZXNzGAMgASgISAGIAQESGwoTcXVlcnlfc3RyaW5n",
-            "X2xlbmd0aBgEIAEoDRIjChZxdWVyeV9wbGFuc19wZXJfbWludXRlGAUgASgN",
-            "SAKIAQFCGgoYX3JlY29yZF9hcHBsaWNhdGlvbl90YWdzQhgKFl9yZWNvcmRf",
-            "Y2xpZW50X2FkZHJlc3NCGQoXX3F1ZXJ5X3BsYW5zX3Blcl9taW51dGUaJAoO",
-            "UmVhZFBvb2xDb25maWcSEgoKbm9kZV9jb3VudBgBIAEoBRotCgtMYWJlbHNF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjQKEkRhdGFi",
-            "YXNlRmxhZ3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "GjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4ASKRAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIJCgVS",
-            "RUFEWRABEgsKB1NUT1BQRUQQAhIMCghDUkVBVElORxADEgwKCERFTEVUSU5H",
-            "EAQSDwoLTUFJTlRFTkFOQ0UQBRIKCgZGQUlMRUQQBhIRCg1CT09UU1RSQVBQ",
-            "SU5HEAgSDQoJUFJPTU9USU5HEAkiWAoMSW5zdGFuY2VUeXBlEh0KGUlOU1RB",
-            "TkNFX1RZUEVfVU5TUEVDSUZJRUQQABILCgdQUklNQVJZEAESDQoJUkVBRF9Q",
-            "T09MEAISDQoJU0VDT05EQVJZEAMiTgoQQXZhaWxhYmlsaXR5VHlwZRIhCh1B",
-            "VkFJTEFCSUxJVFlfVFlQRV9VTlNQRUNJRklFRBAAEgkKBVpPTkFMEAESDAoI",
-            "UkVHSU9OQUwQAjp46kF1Ch9hbGxveWRiLmdvb2dsZWFwaXMuY29tL0luc3Rh",
-            "bmNlEk9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "Y2x1c3RlcnMve2NsdXN0ZXJ9L2luc3RhbmNlcy97aW5zdGFuY2V9UgEBIrEJ",
-            "CgZCYWNrdXASEQoEbmFtZRgBIAEoCUID4EEDEhQKDGRpc3BsYXlfbmFtZRgC",
+            "aW9yLnByb3RvGhtnb29nbGUvYXBpL2ZpZWxkX2luZm8ucHJvdG8aGWdvb2ds",
+            "ZS9hcGkvcmVzb3VyY2UucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlv",
+            "bi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoeZ29v",
+            "Z2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvGhtnb29nbGUvdHlwZS9kYXlv",
+            "ZndlZWsucHJvdG8aG2dvb2dsZS90eXBlL3RpbWVvZmRheS5wcm90byIuCgxV",
+            "c2VyUGFzc3dvcmQSDAoEdXNlchgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSLj",
+            "AQoPTWlncmF0aW9uU291cmNlEhYKCWhvc3RfcG9ydBgBIAEoCUID4EEDEhkK",
+            "DHJlZmVyZW5jZV9pZBgCIAEoCUID4EEDElYKC3NvdXJjZV90eXBlGAMgASgO",
+            "MjwuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuTWlncmF0aW9uU291cmNlLk1p",
+            "Z3JhdGlvblNvdXJjZVR5cGVCA+BBAyJFChNNaWdyYXRpb25Tb3VyY2VUeXBl",
+            "EiUKIU1JR1JBVElPTl9TT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEgcKA0RN",
+            "UxABIigKEEVuY3J5cHRpb25Db25maWcSFAoMa21zX2tleV9uYW1lGAEgASgJ",
+            "IoYCCg5FbmNyeXB0aW9uSW5mbxJKCg9lbmNyeXB0aW9uX3R5cGUYASABKA4y",
+            "LC5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5FbmNyeXB0aW9uSW5mby5UeXBl",
+            "QgPgQQMSSgoQa21zX2tleV92ZXJzaW9ucxgCIAMoCUIw4EED+kEqCihjbG91",
+            "ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uIlwKBFR5cGUS",
+            "FAoQVFlQRV9VTlNQRUNJRklFRBAAEh0KGUdPT0dMRV9ERUZBVUxUX0VOQ1JZ",
+            "UFRJT04QARIfChtDVVNUT01FUl9NQU5BR0VEX0VOQ1JZUFRJT04QAiL+AgoJ",
+            "U3NsQ29uZmlnEkEKCHNzbF9tb2RlGAEgASgOMiouZ29vZ2xlLmNsb3VkLmFs",
+            "bG95ZGIudjEuU3NsQ29uZmlnLlNzbE1vZGVCA+BBARJDCgljYV9zb3VyY2UY",
+            "AiABKA4yKy5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5Tc2xDb25maWcuQ2FT",
+            "b3VyY2VCA+BBASKqAQoHU3NsTW9kZRIYChRTU0xfTU9ERV9VTlNQRUNJRklF",
+            "RBAAEhYKDlNTTF9NT0RFX0FMTE9XEAEaAggBEhgKEFNTTF9NT0RFX1JFUVVJ",
+            "UkUQAhoCCAESGgoSU1NMX01PREVfVkVSSUZZX0NBEAMaAggBEiMKH0FMTE9X",
+            "X1VORU5DUllQVEVEX0FORF9FTkNSWVBURUQQBBISCg5FTkNSWVBURURfT05M",
+            "WRAFIjwKCENhU291cmNlEhkKFUNBX1NPVVJDRV9VTlNQRUNJRklFRBAAEhUK",
+            "EUNBX1NPVVJDRV9NQU5BR0VEEAEi5QYKFUF1dG9tYXRlZEJhY2t1cFBvbGlj",
+            "eRJYCg93ZWVrbHlfc2NoZWR1bGUYAiABKAsyPS5nb29nbGUuY2xvdWQuYWxs",
+            "b3lkYi52MS5BdXRvbWF0ZWRCYWNrdXBQb2xpY3kuV2Vla2x5U2NoZWR1bGVI",
+            "ABJhChR0aW1lX2Jhc2VkX3JldGVudGlvbhgEIAEoCzJBLmdvb2dsZS5jbG91",
+            "ZC5hbGxveWRiLnYxLkF1dG9tYXRlZEJhY2t1cFBvbGljeS5UaW1lQmFzZWRS",
+            "ZXRlbnRpb25IARJpChhxdWFudGl0eV9iYXNlZF9yZXRlbnRpb24YBSABKAsy",
+            "RS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5BdXRvbWF0ZWRCYWNrdXBQb2xp",
+            "Y3kuUXVhbnRpdHlCYXNlZFJldGVudGlvbkgBEhQKB2VuYWJsZWQYASABKAhI",
+            "AogBARIwCg1iYWNrdXBfd2luZG93GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uEkkKEWVuY3J5cHRpb25fY29uZmlnGAggASgLMikuZ29vZ2xl",
+            "LmNsb3VkLmFsbG95ZGIudjEuRW5jcnlwdGlvbkNvbmZpZ0ID4EEBEhAKCGxv",
+            "Y2F0aW9uGAYgASgJEkoKBmxhYmVscxgHIAMoCzI6Lmdvb2dsZS5jbG91ZC5h",
+            "bGxveWRiLnYxLkF1dG9tYXRlZEJhY2t1cFBvbGljeS5MYWJlbHNFbnRyeRpr",
+            "Cg5XZWVrbHlTY2hlZHVsZRIrCgtzdGFydF90aW1lcxgBIAMoCzIWLmdvb2ds",
+            "ZS50eXBlLlRpbWVPZkRheRIsCgxkYXlzX29mX3dlZWsYAiADKA4yFi5nb29n",
+            "bGUudHlwZS5EYXlPZldlZWsaSQoSVGltZUJhc2VkUmV0ZW50aW9uEjMKEHJl",
+            "dGVudGlvbl9wZXJpb2QYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
+            "b24aJwoWUXVhbnRpdHlCYXNlZFJldGVudGlvbhINCgVjb3VudBgBIAEoBRot",
+            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "QgoKCHNjaGVkdWxlQgsKCXJldGVudGlvbkIKCghfZW5hYmxlZCKeAQoWQ29u",
+            "dGludW91c0JhY2t1cENvbmZpZxIUCgdlbmFibGVkGAEgASgISACIAQESHAoU",
+            "cmVjb3Zlcnlfd2luZG93X2RheXMYBCABKAUSRAoRZW5jcnlwdGlvbl9jb25m",
+            "aWcYAyABKAsyKS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5FbmNyeXB0aW9u",
+            "Q29uZmlnQgoKCF9lbmFibGVkIoYCChRDb250aW51b3VzQmFja3VwSW5mbxJF",
+            "Cg9lbmNyeXB0aW9uX2luZm8YASABKAsyJy5nb29nbGUuY2xvdWQuYWxsb3lk",
+            "Yi52MS5FbmNyeXB0aW9uSW5mb0ID4EEDEjUKDGVuYWJsZWRfdGltZRgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxItCghzY2hlZHVs",
+            "ZRgDIAMoDjIWLmdvb2dsZS50eXBlLkRheU9mV2Vla0ID4EEDEkEKGGVhcmxp",
+            "ZXN0X3Jlc3RvcmFibGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAyJjCgxCYWNrdXBTb3VyY2USFwoKYmFja3VwX3VpZBgC",
+            "IAEoCUID4EEDEjoKC2JhY2t1cF9uYW1lGAEgASgJQiXgQQL6QR8KHWFsbG95",
+            "ZGIuZ29vZ2xlYXBpcy5jb20vQmFja3VwImYKFkNvbnRpbnVvdXNCYWNrdXBT",
+            "b3VyY2USFAoHY2x1c3RlchgBIAEoCUID4EECEjYKDXBvaW50X2luX3RpbWUY",
+            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQIi4AEKF01h",
+            "aW50ZW5hbmNlVXBkYXRlUG9saWN5El8KE21haW50ZW5hbmNlX3dpbmRvd3MY",
+            "ASADKAsyQi5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5NYWludGVuYW5jZVVw",
+            "ZGF0ZVBvbGljeS5NYWludGVuYW5jZVdpbmRvdxpkChFNYWludGVuYW5jZVdp",
+            "bmRvdxIjCgNkYXkYASABKA4yFi5nb29nbGUudHlwZS5EYXlPZldlZWsSKgoK",
+            "c3RhcnRfdGltZRgCIAEoCzIWLmdvb2dsZS50eXBlLlRpbWVPZkRheSJKChNN",
+            "YWludGVuYW5jZVNjaGVkdWxlEjMKCnN0YXJ0X3RpbWUYASABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMi0hcKB0NsdXN0ZXISQwoNYmFj",
+            "a3VwX3NvdXJjZRgPIAEoCzIlLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLkJh",
+            "Y2t1cFNvdXJjZUID4EEDSAASSQoQbWlncmF0aW9uX3NvdXJjZRgQIAEoCzIo",
+            "Lmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLk1pZ3JhdGlvblNvdXJjZUID4EED",
+            "SAASEQoEbmFtZRgBIAEoCUID4EEDEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIQ",
+            "CgN1aWQYAyABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtkZWxldGVf",
+            "dGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI8",
+            "CgZsYWJlbHMYByADKAsyLC5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5DbHVz",
+            "dGVyLkxhYmVsc0VudHJ5EjoKBXN0YXRlGAggASgOMiYuZ29vZ2xlLmNsb3Vk",
+            "LmFsbG95ZGIudjEuQ2x1c3Rlci5TdGF0ZUID4EEDEkcKDGNsdXN0ZXJfdHlw",
+            "ZRgYIAEoDjIsLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLkNsdXN0ZXIuQ2x1",
+            "c3RlclR5cGVCA+BBAxJHChBkYXRhYmFzZV92ZXJzaW9uGAkgASgOMiguZ29v",
+            "Z2xlLmNsb3VkLmFsbG95ZGIudjEuRGF0YWJhc2VWZXJzaW9uQgPgQQESSwoO",
+            "bmV0d29ya19jb25maWcYHSABKAsyLi5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
+            "MS5DbHVzdGVyLk5ldHdvcmtDb25maWdCA+BBARI5CgduZXR3b3JrGAogASgJ",
+            "QigYAeBBAvpBIAoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEgwK",
+            "BGV0YWcYCyABKAkSRgoLYW5ub3RhdGlvbnMYDCADKAsyMS5nb29nbGUuY2xv",
+            "dWQuYWxsb3lkYi52MS5DbHVzdGVyLkFubm90YXRpb25zRW50cnkSGAoLcmVj",
+            "b25jaWxpbmcYDSABKAhCA+BBAxJACgxpbml0aWFsX3VzZXIYDiABKAsyJS5n",
+            "b29nbGUuY2xvdWQuYWxsb3lkYi52MS5Vc2VyUGFzc3dvcmRCA+BBBBJPChdh",
+            "dXRvbWF0ZWRfYmFja3VwX3BvbGljeRgRIAEoCzIuLmdvb2dsZS5jbG91ZC5h",
+            "bGxveWRiLnYxLkF1dG9tYXRlZEJhY2t1cFBvbGljeRI6Cgpzc2xfY29uZmln",
+            "GBIgASgLMiIuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuU3NsQ29uZmlnQgIY",
+            "ARJJChFlbmNyeXB0aW9uX2NvbmZpZxgTIAEoCzIpLmdvb2dsZS5jbG91ZC5h",
+            "bGxveWRiLnYxLkVuY3J5cHRpb25Db25maWdCA+BBARJFCg9lbmNyeXB0aW9u",
+            "X2luZm8YFCABKAsyJy5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5FbmNyeXB0",
+            "aW9uSW5mb0ID4EEDElYKGGNvbnRpbnVvdXNfYmFja3VwX2NvbmZpZxgbIAEo",
+            "CzIvLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLkNvbnRpbnVvdXNCYWNrdXBD",
+            "b25maWdCA+BBARJSChZjb250aW51b3VzX2JhY2t1cF9pbmZvGBwgASgLMi0u",
+            "Z29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuQ29udGludW91c0JhY2t1cEluZm9C",
+            "A+BBAxJKChBzZWNvbmRhcnlfY29uZmlnGBYgASgLMjAuZ29vZ2xlLmNsb3Vk",
+            "LmFsbG95ZGIudjEuQ2x1c3Rlci5TZWNvbmRhcnlDb25maWcSSwoOcHJpbWFy",
+            "eV9jb25maWcYFyABKAsyLi5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5DbHVz",
+            "dGVyLlByaW1hcnlDb25maWdCA+BBAxIaCg1zYXRpc2ZpZXNfcHpzGB4gASgI",
+            "QgPgQQMSQwoKcHNjX2NvbmZpZxgfIAEoCzIqLmdvb2dsZS5jbG91ZC5hbGxv",
+            "eWRiLnYxLkNsdXN0ZXIuUHNjQ29uZmlnQgPgQQESWAoZbWFpbnRlbmFuY2Vf",
+            "dXBkYXRlX3BvbGljeRggIAEoCzIwLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYx",
+            "Lk1haW50ZW5hbmNlVXBkYXRlUG9saWN5QgPgQQESTwoUbWFpbnRlbmFuY2Vf",
+            "c2NoZWR1bGUYJSABKAsyLC5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5NYWlu",
+            "dGVuYW5jZVNjaGVkdWxlQgPgQQMSSQoRc3Vic2NyaXB0aW9uX3R5cGUYJiAB",
+            "KA4yKS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5TdWJzY3JpcHRpb25UeXBl",
+            "QgPgQQESSwoOdHJpYWxfbWV0YWRhdGEYJyABKAsyLi5nb29nbGUuY2xvdWQu",
+            "YWxsb3lkYi52MS5DbHVzdGVyLlRyaWFsTWV0YWRhdGFCA+BBAxJDCgR0YWdz",
+            "GCkgAygLMiouZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuQ2x1c3Rlci5UYWdz",
+            "RW50cnlCCeBBBOBBBeBBARppCg1OZXR3b3JrQ29uZmlnEjcKB25ldHdvcmsY",
+            "ASABKAlCJuBBAfpBIAoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3Jr",
+            "Eh8KEmFsbG9jYXRlZF9pcF9yYW5nZRgCIAEoCUID4EEBGi8KD1NlY29uZGFy",
+            "eUNvbmZpZxIcChRwcmltYXJ5X2NsdXN0ZXJfbmFtZRgBIAEoCRo1Cg1Qcmlt",
+            "YXJ5Q29uZmlnEiQKF3NlY29uZGFyeV9jbHVzdGVyX25hbWVzGAEgAygJQgPg",
+            "QQMaJQoJUHNjQ29uZmlnEhgKC3BzY19lbmFibGVkGAEgASgIQgPgQQEa0wEK",
+            "DVRyaWFsTWV0YWRhdGESLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEjAKDHVwZ3JhZGVfdGltZRgDIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMgoOZ3JhY2VfZW5kX3RpbWUYBCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGi0KC0xhYmVsc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMgoQQW5ub3RhdGlv",
+            "bnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGisKCVRh",
+            "Z3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIpwBCgVT",
+            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgkKBVJFQURZEAESCwoHU1RP",
+            "UFBFRBACEgkKBUVNUFRZEAMSDAoIQ1JFQVRJTkcQBBIMCghERUxFVElORxAF",
+            "EgoKBkZBSUxFRBAGEhEKDUJPT1RTVFJBUFBJTkcQBxIPCgtNQUlOVEVOQU5D",
+            "RRAIEg0KCVBST01PVElORxAJIkcKC0NsdXN0ZXJUeXBlEhwKGENMVVNURVJf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEgsKB1BSSU1BUlkQARINCglTRUNPTkRBUlkQ",
+            "Ajp16kFyCh5hbGxveWRiLmdvb2dsZWFwaXMuY29tL0NsdXN0ZXISOnByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jbHVzdGVycy97",
+            "Y2x1c3Rlcn0qCGNsdXN0ZXJzMgdjbHVzdGVyUgEBQggKBnNvdXJjZSLPFwoI",
+            "SW5zdGFuY2USEQoEbmFtZRgBIAEoCUID4EEDEhQKDGRpc3BsYXlfbmFtZRgC",
             "IAEoCRIQCgN1aWQYAyABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgEIAEoCzIa",
             "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGlt",
             "ZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgtk",
-            "ZWxldGVfdGltZRgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxI7CgZsYWJlbHMYBiADKAsyKy5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
-            "MS5CYWNrdXAuTGFiZWxzRW50cnkSOQoFc3RhdGUYByABKA4yJS5nb29nbGUu",
-            "Y2xvdWQuYWxsb3lkYi52MS5CYWNrdXAuU3RhdGVCA+BBAxIyCgR0eXBlGAgg",
-            "ASgOMiQuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuQmFja3VwLlR5cGUSEwoL",
-            "ZGVzY3JpcHRpb24YCSABKAkSGAoLY2x1c3Rlcl91aWQYEiABKAlCA+BBAxI8",
-            "CgxjbHVzdGVyX25hbWUYCiABKAlCJuBBAvpBIAoeYWxsb3lkYi5nb29nbGVh",
-            "cGlzLmNvbS9DbHVzdGVyEhgKC3JlY29uY2lsaW5nGAsgASgIQgPgQQMSSQoR",
-            "ZW5jcnlwdGlvbl9jb25maWcYDCABKAsyKS5nb29nbGUuY2xvdWQuYWxsb3lk",
-            "Yi52MS5FbmNyeXB0aW9uQ29uZmlnQgPgQQESRQoPZW5jcnlwdGlvbl9pbmZv",
-            "GA0gASgLMicuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuRW5jcnlwdGlvbklu",
-            "Zm9CA+BBAxIMCgRldGFnGA4gASgJEkUKC2Fubm90YXRpb25zGBAgAygLMjAu",
-            "Z29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuQmFja3VwLkFubm90YXRpb25zRW50",
-            "cnkSFwoKc2l6ZV9ieXRlcxgRIAEoA0ID4EEDEjQKC2V4cGlyeV90aW1lGBMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGi0KC0xhYmVs",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMgoQQW5u",
-            "b3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "IlEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCQoFUkVBRFkQARIM",
-            "CghDUkVBVElORxACEgoKBkZBSUxFRBADEgwKCERFTEVUSU5HEAQiSgoEVHlw",
-            "ZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDQoJT05fREVNQU5EEAESDQoJQVVU",
-            "T01BVEVEEAISDgoKQ09OVElOVU9VUxADOl/qQVwKHWFsbG95ZGIuZ29vZ2xl",
-            "YXBpcy5jb20vQmFja3VwEjhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vYmFja3Vwcy97YmFja3VwfVIBASLIBgoVU3VwcG9ydGVk",
-            "RGF0YWJhc2VGbGFnEmAKE3N0cmluZ19yZXN0cmljdGlvbnMYByABKAsyQS5n",
-            "b29nbGUuY2xvdWQuYWxsb3lkYi52MS5TdXBwb3J0ZWREYXRhYmFzZUZsYWcu",
-            "U3RyaW5nUmVzdHJpY3Rpb25zSAASYgoUaW50ZWdlcl9yZXN0cmljdGlvbnMY",
-            "CCABKAsyQi5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5TdXBwb3J0ZWREYXRh",
-            "YmFzZUZsYWcuSW50ZWdlclJlc3RyaWN0aW9uc0gAEgwKBG5hbWUYASABKAkS",
-            "EQoJZmxhZ19uYW1lGAIgASgJEkwKCnZhbHVlX3R5cGUYAyABKA4yOC5nb29n",
-            "bGUuY2xvdWQuYWxsb3lkYi52MS5TdXBwb3J0ZWREYXRhYmFzZUZsYWcuVmFs",
-            "dWVUeXBlEh8KF2FjY2VwdHNfbXVsdGlwbGVfdmFsdWVzGAQgASgIEkcKFXN1",
-            "cHBvcnRlZF9kYl92ZXJzaW9ucxgFIAMoDjIoLmdvb2dsZS5jbG91ZC5hbGxv",
-            "eWRiLnYxLkRhdGFiYXNlVmVyc2lvbhIbChNyZXF1aXJlc19kYl9yZXN0YXJ0",
-            "GAYgASgIGiwKElN0cmluZ1Jlc3RyaWN0aW9ucxIWCg5hbGxvd2VkX3ZhbHVl",
-            "cxgBIAMoCRp1ChNJbnRlZ2VyUmVzdHJpY3Rpb25zEi4KCW1pbl92YWx1ZRgB",
-            "IAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlEi4KCW1heF92YWx1",
-            "ZRgCIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlIlUKCVZhbHVl",
-            "VHlwZRIaChZWQUxVRV9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGU1RSSU5HEAES",
-            "CwoHSU5URUdFUhACEgkKBUZMT0FUEAMSCAoETk9ORRAEOmfqQWQKLGFsbG95",
-            "ZGIuZ29vZ2xlYXBpcy5jb20vU3VwcG9ydGVkRGF0YWJhc2VGbGFnEjRwcm9q",
-            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZmxhZ3Mve2Zs",
-            "YWd9Qg4KDHJlc3RyaWN0aW9ucypZCg9EYXRhYmFzZVZlcnNpb24SIAocREFU",
-            "QUJBU0VfVkVSU0lPTl9VTlNQRUNJRklFRBAAEhMKC1BPU1RHUkVTXzEzEAEa",
-            "AggBEg8KC1BPU1RHUkVTXzE0EAIqXgoMSW5zdGFuY2VWaWV3Eh0KGUlOU1RB",
-            "TkNFX1ZJRVdfVU5TUEVDSUZJRUQQABIXChNJTlNUQU5DRV9WSUVXX0JBU0lD",
-            "EAESFgoSSU5TVEFOQ0VfVklFV19GVUxMEAJCsgMKG2NvbS5nb29nbGUuY2xv",
-            "dWQuYWxsb3lkYi52MUIOUmVzb3VyY2VzUHJvdG9QAVo1Y2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9hbGxveWRiL2FwaXYxL2FsbG95ZGJwYjthbGxveWRicGKqAhdH",
-            "b29nbGUuQ2xvdWQuQWxsb3lEYi5WMcoCF0dvb2dsZVxDbG91ZFxBbGxveURi",
-            "XFYx6gIaR29vZ2xlOjpDbG91ZDo6QWxsb3lEQjo6VjHqQaYBCihjbG91ZGtt",
-            "cy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uEnpwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9y",
-            "aW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fS9jcnlwdG9LZXlWZXJzaW9u",
-            "cy97Y3J5cHRvX2tleV92ZXJzaW9ufepBTgoeY29tcHV0ZS5nb29nbGVhcGlz",
-            "LmNvbS9OZXR3b3JrEixwcm9qZWN0cy97cHJvamVjdH0vZ2xvYmFsL25ldHdv",
-            "cmtzL3tuZXR3b3JrfWIGcHJvdG8z"));
+            "ZWxldGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAxI9CgZsYWJlbHMYByADKAsyLS5nb29nbGUuY2xvdWQuYWxsb3lkYi52",
+            "MS5JbnN0YW5jZS5MYWJlbHNFbnRyeRI7CgVzdGF0ZRgIIAEoDjInLmdvb2ds",
+            "ZS5jbG91ZC5hbGxveWRiLnYxLkluc3RhbmNlLlN0YXRlQgPgQQMSSgoNaW5z",
+            "dGFuY2VfdHlwZRgJIAEoDjIuLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLklu",
+            "c3RhbmNlLkluc3RhbmNlVHlwZUID4EECEkcKDm1hY2hpbmVfY29uZmlnGAog",
+            "ASgLMi8uZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuSW5zdGFuY2UuTWFjaGlu",
+            "ZUNvbmZpZxJNChFhdmFpbGFiaWxpdHlfdHlwZRgLIAEoDjIyLmdvb2dsZS5j",
+            "bG91ZC5hbGxveWRiLnYxLkluc3RhbmNlLkF2YWlsYWJpbGl0eVR5cGUSEAoI",
+            "Z2NlX3pvbmUYDCABKAkSTAoOZGF0YWJhc2VfZmxhZ3MYDSADKAsyNC5nb29n",
+            "bGUuY2xvdWQuYWxsb3lkYi52MS5JbnN0YW5jZS5EYXRhYmFzZUZsYWdzRW50",
+            "cnkSQgoNd3JpdGFibGVfbm9kZRgTIAEoCzImLmdvb2dsZS5jbG91ZC5hbGxv",
+            "eWRiLnYxLkluc3RhbmNlLk5vZGVCA+BBAxI6CgVub2RlcxgUIAMoCzImLmdv",
+            "b2dsZS5jbG91ZC5hbGxveWRiLnYxLkluc3RhbmNlLk5vZGVCA+BBAxJcChVx",
+            "dWVyeV9pbnNpZ2h0c19jb25maWcYFSABKAsyPS5nb29nbGUuY2xvdWQuYWxs",
+            "b3lkYi52MS5JbnN0YW5jZS5RdWVyeUluc2lnaHRzSW5zdGFuY2VDb25maWcS",
+            "SgoQcmVhZF9wb29sX2NvbmZpZxgOIAEoCzIwLmdvb2dsZS5jbG91ZC5hbGxv",
+            "eWRiLnYxLkluc3RhbmNlLlJlYWRQb29sQ29uZmlnEhcKCmlwX2FkZHJlc3MY",
+            "DyABKAlCA+BBAxImChFwdWJsaWNfaXBfYWRkcmVzcxgbIAEoCUIL4EED4ozP",
+            "1wgCCAISGAoLcmVjb25jaWxpbmcYECABKAhCA+BBAxIMCgRldGFnGBEgASgJ",
+            "EkcKC2Fubm90YXRpb25zGBIgAygLMjIuZ29vZ2xlLmNsb3VkLmFsbG95ZGIu",
+            "djEuSW5zdGFuY2UuQW5ub3RhdGlvbnNFbnRyeRJfChhjbGllbnRfY29ubmVj",
+            "dGlvbl9jb25maWcYFyABKAsyOC5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5J",
+            "bnN0YW5jZS5DbGllbnRDb25uZWN0aW9uQ29uZmlnQgPgQQESGgoNc2F0aXNm",
+            "aWVzX3B6cxgYIAEoCEID4EEDElUKE3BzY19pbnN0YW5jZV9jb25maWcYHCAB",
+            "KAsyMy5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5JbnN0YW5jZS5Qc2NJbnN0",
+            "YW5jZUNvbmZpZ0ID4EEBElQKDm5ldHdvcmtfY29uZmlnGB0gASgLMjcuZ29v",
+            "Z2xlLmNsb3VkLmFsbG95ZGIudjEuSW5zdGFuY2UuSW5zdGFuY2VOZXR3b3Jr",
+            "Q29uZmlnQgPgQQESMQocb3V0Ym91bmRfcHVibGljX2lwX2FkZHJlc3Nlcxgi",
+            "IAMoCUIL4EED4ozP1wgCCAIaIgoNTWFjaGluZUNvbmZpZxIRCgljcHVfY291",
+            "bnQYASABKAUaPgoETm9kZRIPCgd6b25lX2lkGAEgASgJEgoKAmlkGAIgASgJ",
+            "EgoKAmlwGAMgASgJEg0KBXN0YXRlGAQgASgJGvoBChtRdWVyeUluc2lnaHRz",
+            "SW5zdGFuY2VDb25maWcSJAoXcmVjb3JkX2FwcGxpY2F0aW9uX3RhZ3MYAiAB",
+            "KAhIAIgBARIiChVyZWNvcmRfY2xpZW50X2FkZHJlc3MYAyABKAhIAYgBARIb",
+            "ChNxdWVyeV9zdHJpbmdfbGVuZ3RoGAQgASgNEiMKFnF1ZXJ5X3BsYW5zX3Bl",
+            "cl9taW51dGUYBSABKA1IAogBAUIaChhfcmVjb3JkX2FwcGxpY2F0aW9uX3Rh",
+            "Z3NCGAoWX3JlY29yZF9jbGllbnRfYWRkcmVzc0IZChdfcXVlcnlfcGxhbnNf",
+            "cGVyX21pbnV0ZRokCg5SZWFkUG9vbENvbmZpZxISCgpub2RlX2NvdW50GAEg",
+            "ASgFGnYKFkNsaWVudENvbm5lY3Rpb25Db25maWcSHwoScmVxdWlyZV9jb25u",
+            "ZWN0b3JzGAEgASgIQgPgQQESOwoKc3NsX2NvbmZpZxgCIAEoCzIiLmdvb2ds",
+            "ZS5jbG91ZC5hbGxveWRiLnYxLlNzbENvbmZpZ0ID4EEBGnwKEVBzY0luc3Rh",
+            "bmNlQ29uZmlnEiQKF3NlcnZpY2VfYXR0YWNobWVudF9saW5rGAEgASgJQgPg",
+            "QQMSJgoZYWxsb3dlZF9jb25zdW1lcl9wcm9qZWN0cxgCIAMoCUID4EEBEhkK",
+            "DHBzY19kbnNfbmFtZRgHIAEoCUID4EEDGocCChVJbnN0YW5jZU5ldHdvcmtD",
+            "b25maWcSdAocYXV0aG9yaXplZF9leHRlcm5hbF9uZXR3b3JrcxgBIAMoCzJJ",
+            "Lmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLkluc3RhbmNlLkluc3RhbmNlTmV0",
+            "d29ya0NvbmZpZy5BdXRob3JpemVkTmV0d29ya0ID4EEBEh0KEGVuYWJsZV9w",
+            "dWJsaWNfaXAYAiABKAhCA+BBARImChllbmFibGVfb3V0Ym91bmRfcHVibGlj",
+            "X2lwGAMgASgIQgPgQQEaMQoRQXV0aG9yaXplZE5ldHdvcmsSHAoKY2lkcl9y",
+            "YW5nZRgBIAEoCUII4ozP1wgCCAIaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ARo0ChJEYXRhYmFzZUZsYWdzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9u",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEikQEKBVN0",
+            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCQoFUkVBRFkQARILCgdTVE9Q",
+            "UEVEEAISDAoIQ1JFQVRJTkcQAxIMCghERUxFVElORxAEEg8KC01BSU5URU5B",
+            "TkNFEAUSCgoGRkFJTEVEEAYSEQoNQk9PVFNUUkFQUElORxAIEg0KCVBST01P",
+            "VElORxAJIlgKDEluc3RhbmNlVHlwZRIdChlJTlNUQU5DRV9UWVBFX1VOU1BF",
+            "Q0lGSUVEEAASCwoHUFJJTUFSWRABEg0KCVJFQURfUE9PTBACEg0KCVNFQ09O",
+            "REFSWRADIk4KEEF2YWlsYWJpbGl0eVR5cGUSIQodQVZBSUxBQklMSVRZX1RZ",
+            "UEVfVU5TUEVDSUZJRUQQABIJCgVaT05BTBABEgwKCFJFR0lPTkFMEAI6jgHq",
+            "QYoBCh9hbGxveWRiLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEk9wcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2x1c3RlcnMve2Ns",
+            "dXN0ZXJ9L2luc3RhbmNlcy97aW5zdGFuY2V9KglpbnN0YW5jZXMyCGluc3Rh",
+            "bmNlUgEBIqkCCg5Db25uZWN0aW9uSW5mbxIMCgRuYW1lGAEgASgJEhcKCmlw",
+            "X2FkZHJlc3MYAiABKAlCA+BBAxImChFwdWJsaWNfaXBfYWRkcmVzcxgFIAEo",
+            "CUIL4EED4ozP1wgCCAISGQoMaW5zdGFuY2VfdWlkGAQgASgJQgPgQQM6rAHq",
+            "QagBCiVhbGxveWRiLmdvb2dsZWFwaXMuY29tL0Nvbm5lY3Rpb25JbmZvEl5w",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2x1c3Rl",
+            "cnMve2NsdXN0ZXJ9L2luc3RhbmNlcy97aW5zdGFuY2V9L2Nvbm5lY3Rpb25J",
+            "bmZvKg9jb25uZWN0aW9uSW5mb3MyDmNvbm5lY3Rpb25JbmZvIsQMCgZCYWNr",
+            "dXASEQoEbmFtZRgBIAEoCUID4EEDEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIQ",
+            "CgN1aWQYAyABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtkZWxldGVf",
+            "dGltZRgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI7",
+            "CgZsYWJlbHMYBiADKAsyKy5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5CYWNr",
+            "dXAuTGFiZWxzRW50cnkSOQoFc3RhdGUYByABKA4yJS5nb29nbGUuY2xvdWQu",
+            "YWxsb3lkYi52MS5CYWNrdXAuU3RhdGVCA+BBAxIyCgR0eXBlGAggASgOMiQu",
+            "Z29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuQmFja3VwLlR5cGUSEwoLZGVzY3Jp",
+            "cHRpb24YCSABKAkSGAoLY2x1c3Rlcl91aWQYEiABKAlCA+BBAxI8CgxjbHVz",
+            "dGVyX25hbWUYCiABKAlCJuBBAvpBIAoeYWxsb3lkYi5nb29nbGVhcGlzLmNv",
+            "bS9DbHVzdGVyEhgKC3JlY29uY2lsaW5nGAsgASgIQgPgQQMSSQoRZW5jcnlw",
+            "dGlvbl9jb25maWcYDCABKAsyKS5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5F",
+            "bmNyeXB0aW9uQ29uZmlnQgPgQQESRQoPZW5jcnlwdGlvbl9pbmZvGA0gASgL",
+            "MicuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuRW5jcnlwdGlvbkluZm9CA+BB",
+            "AxIMCgRldGFnGA4gASgJEkUKC2Fubm90YXRpb25zGBAgAygLMjAuZ29vZ2xl",
+            "LmNsb3VkLmFsbG95ZGIudjEuQmFja3VwLkFubm90YXRpb25zRW50cnkSFwoK",
+            "c2l6ZV9ieXRlcxgRIAEoA0ID4EEDEjQKC2V4cGlyeV90aW1lGBMgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDElEKD2V4cGlyeV9xdWFu",
+            "dGl0eRgUIAEoCzIzLmdvb2dsZS5jbG91ZC5hbGxveWRiLnYxLkJhY2t1cC5R",
+            "dWFudGl0eUJhc2VkRXhwaXJ5QgPgQQMSGgoNc2F0aXNmaWVzX3B6cxgVIAEo",
+            "CEID4EEDEkcKEGRhdGFiYXNlX3ZlcnNpb24YFiABKA4yKC5nb29nbGUuY2xv",
+            "dWQuYWxsb3lkYi52MS5EYXRhYmFzZVZlcnNpb25CA+BBAxJCCgR0YWdzGBkg",
+            "AygLMikuZ29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuQmFja3VwLlRhZ3NFbnRy",
+            "eUIJ4EEE4EEF4EEBGlcKE1F1YW50aXR5QmFzZWRFeHBpcnkSHAoPcmV0ZW50",
+            "aW9uX2NvdW50GAEgASgFQgPgQQMSIgoVdG90YWxfcmV0ZW50aW9uX2NvdW50",
+            "GAIgASgFQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
+            "bHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAEaKwoJVGFnc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRINCgV2YWx1ZRgCIAEoCToCOAEiUQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVD",
+            "SUZJRUQQABIJCgVSRUFEWRABEgwKCENSRUFUSU5HEAISCgoGRkFJTEVEEAMS",
+            "DAoIREVMRVRJTkcQBCJKCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIN",
+            "CglPTl9ERU1BTkQQARINCglBVVRPTUFURUQQAhIOCgpDT05USU5VT1VTEAM6",
+            "cOpBbQodYWxsb3lkYi5nb29nbGVhcGlzLmNvbS9CYWNrdXASOHByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9iYWNrdXBzL3tiYWNr",
+            "dXB9KgdiYWNrdXBzMgZiYWNrdXBSAQEi+QYKFVN1cHBvcnRlZERhdGFiYXNl",
+            "RmxhZxJgChNzdHJpbmdfcmVzdHJpY3Rpb25zGAcgASgLMkEuZ29vZ2xlLmNs",
+            "b3VkLmFsbG95ZGIudjEuU3VwcG9ydGVkRGF0YWJhc2VGbGFnLlN0cmluZ1Jl",
+            "c3RyaWN0aW9uc0gAEmIKFGludGVnZXJfcmVzdHJpY3Rpb25zGAggASgLMkIu",
+            "Z29vZ2xlLmNsb3VkLmFsbG95ZGIudjEuU3VwcG9ydGVkRGF0YWJhc2VGbGFn",
+            "LkludGVnZXJSZXN0cmljdGlvbnNIABIMCgRuYW1lGAEgASgJEhEKCWZsYWdf",
+            "bmFtZRgCIAEoCRJMCgp2YWx1ZV90eXBlGAMgASgOMjguZ29vZ2xlLmNsb3Vk",
+            "LmFsbG95ZGIudjEuU3VwcG9ydGVkRGF0YWJhc2VGbGFnLlZhbHVlVHlwZRIf",
+            "ChdhY2NlcHRzX211bHRpcGxlX3ZhbHVlcxgEIAEoCBJHChVzdXBwb3J0ZWRf",
+            "ZGJfdmVyc2lvbnMYBSADKA4yKC5nb29nbGUuY2xvdWQuYWxsb3lkYi52MS5E",
+            "YXRhYmFzZVZlcnNpb24SGwoTcmVxdWlyZXNfZGJfcmVzdGFydBgGIAEoCBos",
+            "ChJTdHJpbmdSZXN0cmljdGlvbnMSFgoOYWxsb3dlZF92YWx1ZXMYASADKAka",
+            "dQoTSW50ZWdlclJlc3RyaWN0aW9ucxIuCgltaW5fdmFsdWUYASABKAsyGy5n",
+            "b29nbGUucHJvdG9idWYuSW50NjRWYWx1ZRIuCgltYXhfdmFsdWUYAiABKAsy",
+            "Gy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZSJVCglWYWx1ZVR5cGUSGgoW",
+            "VkFMVUVfVFlQRV9VTlNQRUNJRklFRBAAEgoKBlNUUklORxABEgsKB0lOVEVH",
+            "RVIQAhIJCgVGTE9BVBADEggKBE5PTkUQBDqXAepBkwEKLGFsbG95ZGIuZ29v",
+            "Z2xlYXBpcy5jb20vU3VwcG9ydGVkRGF0YWJhc2VGbGFnEjRwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZmxhZ3Mve2ZsYWd9KhZz",
+            "dXBwb3J0ZWREYXRhYmFzZUZsYWdzMhVzdXBwb3J0ZWREYXRhYmFzZUZsYWdC",
+            "DgoMcmVzdHJpY3Rpb25zIvoCCgRVc2VyEhEKBG5hbWUYASABKAlCA+BBAxIV",
+            "CghwYXNzd29yZBgCIAEoCUID4EEEEhsKDmRhdGFiYXNlX3JvbGVzGAQgAygJ",
+            "QgPgQQESPgoJdXNlcl90eXBlGAUgASgOMiYuZ29vZ2xlLmNsb3VkLmFsbG95",
+            "ZGIudjEuVXNlci5Vc2VyVHlwZUID4EEBEh0KEGtlZXBfZXh0cmFfcm9sZXMY",
+            "BiABKAhCA+BBBCJRCghVc2VyVHlwZRIZChVVU0VSX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIUChBBTExPWURCX0JVSUxUX0lOEAESFAoQQUxMT1lEQl9JQU1fVVNF",
+            "UhACOnnqQXYKG2FsbG95ZGIuZ29vZ2xlYXBpcy5jb20vVXNlchJHcHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NsdXN0ZXJzL3tj",
+            "bHVzdGVyfS91c2Vycy97dXNlcn0qBXVzZXJzMgR1c2VyUgEBItwBCghEYXRh",
+            "YmFzZRIRCgRuYW1lGAEgASgJQgPgQQgSFAoHY2hhcnNldBgCIAEoCUID4EEB",
+            "EhYKCWNvbGxhdGlvbhgDIAEoCUID4EEBOo4B6kGKAQofYWxsb3lkYi5nb29n",
+            "bGVhcGlzLmNvbS9EYXRhYmFzZRJPcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2NsdXN0ZXJzL3tjbHVzdGVyfS9kYXRhYmFzZXMv",
+            "e2RhdGFiYXNlfSoJZGF0YWJhc2VzMghkYXRhYmFzZVIBASpeCgxJbnN0YW5j",
+            "ZVZpZXcSHQoZSU5TVEFOQ0VfVklFV19VTlNQRUNJRklFRBAAEhcKE0lOU1RB",
+            "TkNFX1ZJRVdfQkFTSUMQARIWChJJTlNUQU5DRV9WSUVXX0ZVTEwQAipnCgtD",
+            "bHVzdGVyVmlldxIcChhDTFVTVEVSX1ZJRVdfVU5TUEVDSUZJRUQQABIWChJD",
+            "TFVTVEVSX1ZJRVdfQkFTSUMQARIiCh5DTFVTVEVSX1ZJRVdfQ09OVElOVU9V",
+            "U19CQUNLVVAQAip7Cg9EYXRhYmFzZVZlcnNpb24SIAocREFUQUJBU0VfVkVS",
+            "U0lPTl9VTlNQRUNJRklFRBAAEhMKC1BPU1RHUkVTXzEzEAEaAggBEg8KC1BP",
+            "U1RHUkVTXzE0EAISDwoLUE9TVEdSRVNfMTUQAxIPCgtQT1NUR1JFU18xNhAE",
+            "Kk4KEFN1YnNjcmlwdGlvblR5cGUSIQodU1VCU0NSSVBUSU9OX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABIMCghTVEFOREFSRBABEgkKBVRSSUFMEAJCsgMKG2NvbS5n",
+            "b29nbGUuY2xvdWQuYWxsb3lkYi52MUIOUmVzb3VyY2VzUHJvdG9QAVo1Y2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9hbGxveWRiL2FwaXYxL2FsbG95ZGJwYjthbGxv",
+            "eWRicGKqAhdHb29nbGUuQ2xvdWQuQWxsb3lEYi5WMcoCF0dvb2dsZVxDbG91",
+            "ZFxBbGxveURiXFYx6gIaR29vZ2xlOjpDbG91ZDo6QWxsb3lEQjo6VjHqQaYB",
+            "CihjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uEnpw",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5Umlu",
+            "Z3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fS9jcnlwdG9L",
+            "ZXlWZXJzaW9ucy97Y3J5cHRvX2tleV92ZXJzaW9ufepBTgoeY29tcHV0ZS5n",
+            "b29nbGVhcGlzLmNvbS9OZXR3b3JrEixwcm9qZWN0cy97cHJvamVjdH0vZ2xv",
+            "YmFsL25ldHdvcmtzL3tuZXR3b3JrfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AlloyDb.V1.DatabaseVersion), typeof(global::Google.Cloud.AlloyDb.V1.InstanceView), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AlloyDb.V1.InstanceView), typeof(global::Google.Cloud.AlloyDb.V1.ClusterView), typeof(global::Google.Cloud.AlloyDb.V1.DatabaseVersion), typeof(global::Google.Cloud.AlloyDb.V1.SubscriptionType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.UserPassword), global::Google.Cloud.AlloyDb.V1.UserPassword.Parser, new[]{ "User", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.MigrationSource), global::Google.Cloud.AlloyDb.V1.MigrationSource.Parser, new[]{ "HostPort", "ReferenceId", "SourceType" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1.MigrationSource.Types.MigrationSourceType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.EncryptionConfig), global::Google.Cloud.AlloyDb.V1.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null),
@@ -232,42 +334,39 @@ namespace Google.Cloud.AlloyDb.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.AutomatedBackupPolicy.Types.TimeBasedRetention), global::Google.Cloud.AlloyDb.V1.AutomatedBackupPolicy.Types.TimeBasedRetention.Parser, new[]{ "RetentionPeriod" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.AutomatedBackupPolicy.Types.QuantityBasedRetention), global::Google.Cloud.AlloyDb.V1.AutomatedBackupPolicy.Types.QuantityBasedRetention.Parser, new[]{ "Count" }, null, null, null, null),
             null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.ContinuousBackupConfig), global::Google.Cloud.AlloyDb.V1.ContinuousBackupConfig.Parser, new[]{ "Enabled", "RecoveryWindowDays", "EncryptionConfig" }, new[]{ "Enabled" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.ContinuousBackupInfo), global::Google.Cloud.AlloyDb.V1.ContinuousBackupInfo.Parser, new[]{ "EncryptionInfo", "EnabledTime", "Schedule", "EarliestRestorableTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.BackupSource), global::Google.Cloud.AlloyDb.V1.BackupSource.Parser, new[]{ "BackupUid", "BackupName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Cluster), global::Google.Cloud.AlloyDb.V1.Cluster.Parser, new[]{ "BackupSource", "MigrationSource", "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "Labels", "State", "ClusterType", "DatabaseVersion", "Network", "Etag", "Annotations", "Reconciling", "InitialUser", "AutomatedBackupPolicy", "SslConfig", "EncryptionConfig", "EncryptionInfo", "SecondaryConfig", "PrimaryConfig" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.AlloyDb.V1.Cluster.Types.State), typeof(global::Google.Cloud.AlloyDb.V1.Cluster.Types.ClusterType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Cluster.Types.SecondaryConfig), global::Google.Cloud.AlloyDb.V1.Cluster.Types.SecondaryConfig.Parser, new[]{ "PrimaryClusterName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.ContinuousBackupSource), global::Google.Cloud.AlloyDb.V1.ContinuousBackupSource.Parser, new[]{ "Cluster", "PointInTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy), global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy.Parser, new[]{ "MaintenanceWindows" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy.Types.MaintenanceWindow), global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy.Types.MaintenanceWindow.Parser, new[]{ "Day", "StartTime" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.MaintenanceSchedule), global::Google.Cloud.AlloyDb.V1.MaintenanceSchedule.Parser, new[]{ "StartTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Cluster), global::Google.Cloud.AlloyDb.V1.Cluster.Parser, new[]{ "BackupSource", "MigrationSource", "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "Labels", "State", "ClusterType", "DatabaseVersion", "NetworkConfig", "Network", "Etag", "Annotations", "Reconciling", "InitialUser", "AutomatedBackupPolicy", "SslConfig", "EncryptionConfig", "EncryptionInfo", "ContinuousBackupConfig", "ContinuousBackupInfo", "SecondaryConfig", "PrimaryConfig", "SatisfiesPzs", "PscConfig", "MaintenanceUpdatePolicy", "MaintenanceSchedule", "SubscriptionType", "TrialMetadata", "Tags" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.AlloyDb.V1.Cluster.Types.State), typeof(global::Google.Cloud.AlloyDb.V1.Cluster.Types.ClusterType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Cluster.Types.NetworkConfig), global::Google.Cloud.AlloyDb.V1.Cluster.Types.NetworkConfig.Parser, new[]{ "Network", "AllocatedIpRange" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Cluster.Types.SecondaryConfig), global::Google.Cloud.AlloyDb.V1.Cluster.Types.SecondaryConfig.Parser, new[]{ "PrimaryClusterName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Cluster.Types.PrimaryConfig), global::Google.Cloud.AlloyDb.V1.Cluster.Types.PrimaryConfig.Parser, new[]{ "SecondaryClusterNames" }, null, null, null, null),
-            null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Instance), global::Google.Cloud.AlloyDb.V1.Instance.Parser, new[]{ "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "Labels", "State", "InstanceType", "MachineConfig", "AvailabilityType", "GceZone", "DatabaseFlags", "WritableNode", "Nodes", "QueryInsightsConfig", "ReadPoolConfig", "IpAddress", "Reconciling", "Etag", "Annotations" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.State), typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceType), typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.AvailabilityType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.MachineConfig), global::Google.Cloud.AlloyDb.V1.Instance.Types.MachineConfig.Parser, new[]{ "CpuCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Cluster.Types.PscConfig), global::Google.Cloud.AlloyDb.V1.Cluster.Types.PscConfig.Parser, new[]{ "PscEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Cluster.Types.TrialMetadata), global::Google.Cloud.AlloyDb.V1.Cluster.Types.TrialMetadata.Parser, new[]{ "StartTime", "EndTime", "UpgradeTime", "GraceEndTime" }, null, null, null, null),
+            null, null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Instance), global::Google.Cloud.AlloyDb.V1.Instance.Parser, new[]{ "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "Labels", "State", "InstanceType", "MachineConfig", "AvailabilityType", "GceZone", "DatabaseFlags", "WritableNode", "Nodes", "QueryInsightsConfig", "ReadPoolConfig", "IpAddress", "PublicIpAddress", "Reconciling", "Etag", "Annotations", "ClientConnectionConfig", "SatisfiesPzs", "PscInstanceConfig", "NetworkConfig", "OutboundPublicIpAddresses" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.State), typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceType), typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.AvailabilityType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.MachineConfig), global::Google.Cloud.AlloyDb.V1.Instance.Types.MachineConfig.Parser, new[]{ "CpuCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.Node), global::Google.Cloud.AlloyDb.V1.Instance.Types.Node.Parser, new[]{ "ZoneId", "Id", "Ip", "State" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.QueryInsightsInstanceConfig), global::Google.Cloud.AlloyDb.V1.Instance.Types.QueryInsightsInstanceConfig.Parser, new[]{ "RecordApplicationTags", "RecordClientAddress", "QueryStringLength", "QueryPlansPerMinute" }, new[]{ "RecordApplicationTags", "RecordClientAddress", "QueryPlansPerMinute" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.ReadPoolConfig), global::Google.Cloud.AlloyDb.V1.Instance.Types.ReadPoolConfig.Parser, new[]{ "NodeCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.ClientConnectionConfig), global::Google.Cloud.AlloyDb.V1.Instance.Types.ClientConnectionConfig.Parser, new[]{ "RequireConnectors", "SslConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.PscInstanceConfig), global::Google.Cloud.AlloyDb.V1.Instance.Types.PscInstanceConfig.Parser, new[]{ "ServiceAttachmentLink", "AllowedConsumerProjects", "PscDnsName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig), global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig.Parser, new[]{ "AuthorizedExternalNetworks", "EnablePublicIp", "EnableOutboundPublicIp" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig.Types.AuthorizedNetwork), global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig.Types.AuthorizedNetwork.Parser, new[]{ "CidrRange" }, null, null, null, null)}),
             null, null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Backup), global::Google.Cloud.AlloyDb.V1.Backup.Parser, new[]{ "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "Labels", "State", "Type", "Description", "ClusterUid", "ClusterName", "Reconciling", "EncryptionConfig", "EncryptionInfo", "Etag", "Annotations", "SizeBytes", "ExpiryTime" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1.Backup.Types.State), typeof(global::Google.Cloud.AlloyDb.V1.Backup.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.ConnectionInfo), global::Google.Cloud.AlloyDb.V1.ConnectionInfo.Parser, new[]{ "Name", "IpAddress", "PublicIpAddress", "InstanceUid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Backup), global::Google.Cloud.AlloyDb.V1.Backup.Parser, new[]{ "Name", "DisplayName", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "Labels", "State", "Type", "Description", "ClusterUid", "ClusterName", "Reconciling", "EncryptionConfig", "EncryptionInfo", "Etag", "Annotations", "SizeBytes", "ExpiryTime", "ExpiryQuantity", "SatisfiesPzs", "DatabaseVersion", "Tags" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1.Backup.Types.State), typeof(global::Google.Cloud.AlloyDb.V1.Backup.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Backup.Types.QuantityBasedExpiry), global::Google.Cloud.AlloyDb.V1.Backup.Types.QuantityBasedExpiry.Parser, new[]{ "RetentionCount", "TotalRetentionCount" }, null, null, null, null),
+            null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.SupportedDatabaseFlag), global::Google.Cloud.AlloyDb.V1.SupportedDatabaseFlag.Parser, new[]{ "StringRestrictions", "IntegerRestrictions", "Name", "FlagName", "ValueType", "AcceptsMultipleValues", "SupportedDbVersions", "RequiresDbRestart" }, new[]{ "Restrictions" }, new[]{ typeof(global::Google.Cloud.AlloyDb.V1.SupportedDatabaseFlag.Types.ValueType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.SupportedDatabaseFlag.Types.StringRestrictions), global::Google.Cloud.AlloyDb.V1.SupportedDatabaseFlag.Types.StringRestrictions.Parser, new[]{ "AllowedValues" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.SupportedDatabaseFlag.Types.IntegerRestrictions), global::Google.Cloud.AlloyDb.V1.SupportedDatabaseFlag.Types.IntegerRestrictions.Parser, new[]{ "MinValue", "MaxValue" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.SupportedDatabaseFlag.Types.IntegerRestrictions), global::Google.Cloud.AlloyDb.V1.SupportedDatabaseFlag.Types.IntegerRestrictions.Parser, new[]{ "MinValue", "MaxValue" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.User), global::Google.Cloud.AlloyDb.V1.User.Parser, new[]{ "Name", "Password", "DatabaseRoles", "UserType", "KeepExtraRoles" }, null, new[]{ typeof(global::Google.Cloud.AlloyDb.V1.User.Types.UserType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AlloyDb.V1.Database), global::Google.Cloud.AlloyDb.V1.Database.Parser, new[]{ "Name", "Charset", "Collation" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Enums
-  /// <summary>
-  /// The supported database engine versions.
-  /// </summary>
-  public enum DatabaseVersion {
-    /// <summary>
-    /// This is an unknown database version.
-    /// </summary>
-    [pbr::OriginalName("DATABASE_VERSION_UNSPECIFIED")] Unspecified = 0,
-    /// <summary>
-    /// DEPRECATED - The database version is Postgres 13.
-    /// </summary>
-    [pbr::OriginalName("POSTGRES_13")] Postgres13 = 1,
-    /// <summary>
-    /// The database version is Postgres 14.
-    /// </summary>
-    [pbr::OriginalName("POSTGRES_14")] Postgres14 = 2,
-  }
-
   /// <summary>
   /// View on Instance. Pass this enum to rpcs that returns an Instance message to
   /// control which subsets of fields to get.
@@ -290,6 +389,77 @@ namespace Google.Cloud.AlloyDb.V1 {
     [pbr::OriginalName("INSTANCE_VIEW_FULL")] Full = 2,
   }
 
+  /// <summary>
+  /// View on Cluster. Pass this enum to rpcs that returns a cluster message to
+  /// control which subsets of fields to get.
+  /// </summary>
+  public enum ClusterView {
+    /// <summary>
+    /// CLUSTER_VIEW_UNSPECIFIED Not specified, equivalent to BASIC.
+    /// </summary>
+    [pbr::OriginalName("CLUSTER_VIEW_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// BASIC server responses include all the relevant cluster details, excluding
+    /// Cluster.ContinuousBackupInfo.EarliestRestorableTime and other view-specific
+    /// fields. The default value.
+    /// </summary>
+    [pbr::OriginalName("CLUSTER_VIEW_BASIC")] Basic = 1,
+    /// <summary>
+    /// CONTINUOUS_BACKUP response returns all the fields from BASIC plus
+    /// the earliest restorable time if continuous backups are enabled.
+    /// May increase latency.
+    /// </summary>
+    [pbr::OriginalName("CLUSTER_VIEW_CONTINUOUS_BACKUP")] ContinuousBackup = 2,
+  }
+
+  /// <summary>
+  /// The supported database engine versions.
+  /// </summary>
+  public enum DatabaseVersion {
+    /// <summary>
+    /// This is an unknown database version.
+    /// </summary>
+    [pbr::OriginalName("DATABASE_VERSION_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// DEPRECATED - The database version is Postgres 13.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [pbr::OriginalName("POSTGRES_13")] Postgres13 = 1,
+    /// <summary>
+    /// The database version is Postgres 14.
+    /// </summary>
+    [pbr::OriginalName("POSTGRES_14")] Postgres14 = 2,
+    /// <summary>
+    /// The database version is Postgres 15.
+    /// </summary>
+    [pbr::OriginalName("POSTGRES_15")] Postgres15 = 3,
+    /// <summary>
+    /// The database version is Postgres 16.
+    /// </summary>
+    [pbr::OriginalName("POSTGRES_16")] Postgres16 = 4,
+  }
+
+  /// <summary>
+  /// Subscription_type added to distinguish between Standard and Trial
+  /// subscriptions. By default, a subscription type is considered STANDARD unless
+  /// explicitly specified.
+  /// </summary>
+  public enum SubscriptionType {
+    /// <summary>
+    /// This is an unknown subscription type. By default, the subscription type is
+    /// STANDARD.
+    /// </summary>
+    [pbr::OriginalName("SUBSCRIPTION_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Standard subscription.
+    /// </summary>
+    [pbr::OriginalName("STANDARD")] Standard = 1,
+    /// <summary>
+    /// Trial subscription.
+    /// </summary>
+    [pbr::OriginalName("TRIAL")] Trial = 2,
+  }
+
   #endregion
 
   #region Messages
@@ -297,6 +467,7 @@ namespace Google.Cloud.AlloyDb.V1 {
   /// The username/password for a database user. Used for specifying initial
   /// users at cluster creation time.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserPassword : pb::IMessage<UserPassword>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -533,6 +704,7 @@ namespace Google.Cloud.AlloyDb.V1 {
   /// Subset of the source instance configuration that is available when reading
   /// the cluster resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MigrationSource : pb::IMessage<MigrationSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -833,6 +1005,7 @@ namespace Google.Cloud.AlloyDb.V1 {
   /// EncryptionConfig describes the encryption config of a cluster or a backup
   /// that is encrypted with a CMEK (customer-managed encryption key).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EncryptionConfig : pb::IMessage<EncryptionConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1030,6 +1203,7 @@ namespace Google.Cloud.AlloyDb.V1 {
   /// <summary>
   /// EncryptionInfo describes the encryption information of a cluster or a backup.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EncryptionInfo : pb::IMessage<EncryptionInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1281,8 +1455,9 @@ namespace Google.Cloud.AlloyDb.V1 {
   }
 
   /// <summary>
-  /// SSL configuration for an AlloyDB Cluster.
+  /// SSL configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SslConfig : pb::IMessage<SslConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1524,25 +1699,36 @@ namespace Google.Cloud.AlloyDb.V1 {
       /// </summary>
       public enum SslMode {
         /// <summary>
-        /// SSL mode not specified. Defaults to SSL_MODE_ALLOW.
+        /// SSL mode is not specified. Defaults to ENCRYPTED_ONLY.
         /// </summary>
         [pbr::OriginalName("SSL_MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// SSL connections are optional. CA verification not enforced.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("SSL_MODE_ALLOW")] Allow = 1,
         /// <summary>
         /// SSL connections are required. CA verification not enforced.
         /// Clients may use locally self-signed certificates (default psql client
         /// behavior).
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("SSL_MODE_REQUIRE")] Require = 2,
         /// <summary>
         /// SSL connections are required. CA verification enforced.
-        /// Clients must have certificates signed by a Cluster CA, e.g. via
+        /// Clients must have certificates signed by a Cluster CA, for example, using
         /// GenerateClientCertificate.
         /// </summary>
+        [global::System.ObsoleteAttribute]
         [pbr::OriginalName("SSL_MODE_VERIFY_CA")] VerifyCa = 3,
+        /// <summary>
+        /// SSL connections are optional. CA verification not enforced.
+        /// </summary>
+        [pbr::OriginalName("ALLOW_UNENCRYPTED_AND_ENCRYPTED")] AllowUnencryptedAndEncrypted = 4,
+        /// <summary>
+        /// SSL connections are required. CA verification not enforced.
+        /// </summary>
+        [pbr::OriginalName("ENCRYPTED_ONLY")] EncryptedOnly = 5,
       }
 
       /// <summary>
@@ -1571,6 +1757,7 @@ namespace Google.Cloud.AlloyDb.V1 {
   /// All fields in the automated backup policy are optional. Defaults for each
   /// field are provided if they are not set.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutomatedBackupPolicy : pb::IMessage<AutomatedBackupPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1683,6 +1870,8 @@ namespace Google.Cloud.AlloyDb.V1 {
 
     /// <summary>Field number for the "enabled" field.</summary>
     public const int EnabledFieldNumber = 1;
+    private readonly static bool EnabledDefaultValue = false;
+
     private bool enabled_;
     /// <summary>
     /// Whether automated automated backups are enabled. If not set, defaults to
@@ -1691,7 +1880,7 @@ namespace Google.Cloud.AlloyDb.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Enabled {
-      get { if ((_hasBits0 & 1) != 0) { return enabled_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return enabled_; } else { return EnabledDefaultValue; } }
       set {
         _hasBits0 |= 1;
         enabled_ = value;
@@ -2011,7 +2200,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (other.Location.Length != 0) {
         Location = other.Location;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.ScheduleCase) {
         case ScheduleOneofCase.WeeklySchedule:
           if (WeeklySchedule == null) {
@@ -2191,6 +2380,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       /// 22:00, configure the `start_times` field to have one element "22:00" and
       /// the `days_of_week` field to have all seven days of the week.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WeeklySchedule : pb::IMessage<WeeklySchedule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2414,6 +2604,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       /// A time based retention policy specifies that all backups within a certain
       /// time period should be retained.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TimeBasedRetention : pb::IMessage<TimeBasedRetention>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2619,6 +2810,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       /// A quantity based policy specifies that a certain number of the most recent
       /// successful backups should be retained.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class QuantityBasedRetention : pb::IMessage<QuantityBasedRetention>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2817,8 +3009,656 @@ namespace Google.Cloud.AlloyDb.V1 {
   }
 
   /// <summary>
+  /// ContinuousBackupConfig describes the continuous backups recovery
+  /// configurations of a cluster.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ContinuousBackupConfig : pb::IMessage<ContinuousBackupConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ContinuousBackupConfig> _parser = new pb::MessageParser<ContinuousBackupConfig>(() => new ContinuousBackupConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ContinuousBackupConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContinuousBackupConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContinuousBackupConfig(ContinuousBackupConfig other) : this() {
+      _hasBits0 = other._hasBits0;
+      enabled_ = other.enabled_;
+      recoveryWindowDays_ = other.recoveryWindowDays_;
+      encryptionConfig_ = other.encryptionConfig_ != null ? other.encryptionConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContinuousBackupConfig Clone() {
+      return new ContinuousBackupConfig(this);
+    }
+
+    /// <summary>Field number for the "enabled" field.</summary>
+    public const int EnabledFieldNumber = 1;
+    private readonly static bool EnabledDefaultValue = false;
+
+    private bool enabled_;
+    /// <summary>
+    /// Whether ContinuousBackup is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Enabled {
+      get { if ((_hasBits0 & 1) != 0) { return enabled_; } else { return EnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        enabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEnabled {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEnabled() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "recovery_window_days" field.</summary>
+    public const int RecoveryWindowDaysFieldNumber = 4;
+    private int recoveryWindowDays_;
+    /// <summary>
+    /// The number of days that are eligible to restore from using PITR. To support
+    /// the entire recovery window, backups and logs are retained for one day more
+    /// than the recovery window. If not set, defaults to 14 days.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int RecoveryWindowDays {
+      get { return recoveryWindowDays_; }
+      set {
+        recoveryWindowDays_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "encryption_config" field.</summary>
+    public const int EncryptionConfigFieldNumber = 3;
+    private global::Google.Cloud.AlloyDb.V1.EncryptionConfig encryptionConfig_;
+    /// <summary>
+    /// The encryption config can be specified to encrypt the
+    /// backups with a customer-managed encryption key (CMEK). When this field is
+    /// not specified, the backup will then use default encryption scheme to
+    /// protect the user data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.EncryptionConfig EncryptionConfig {
+      get { return encryptionConfig_; }
+      set {
+        encryptionConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ContinuousBackupConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ContinuousBackupConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Enabled != other.Enabled) return false;
+      if (RecoveryWindowDays != other.RecoveryWindowDays) return false;
+      if (!object.Equals(EncryptionConfig, other.EncryptionConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasEnabled) hash ^= Enabled.GetHashCode();
+      if (RecoveryWindowDays != 0) hash ^= RecoveryWindowDays.GetHashCode();
+      if (encryptionConfig_ != null) hash ^= EncryptionConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasEnabled) {
+        output.WriteRawTag(8);
+        output.WriteBool(Enabled);
+      }
+      if (encryptionConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EncryptionConfig);
+      }
+      if (RecoveryWindowDays != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(RecoveryWindowDays);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasEnabled) {
+        output.WriteRawTag(8);
+        output.WriteBool(Enabled);
+      }
+      if (encryptionConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EncryptionConfig);
+      }
+      if (RecoveryWindowDays != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(RecoveryWindowDays);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasEnabled) {
+        size += 1 + 1;
+      }
+      if (RecoveryWindowDays != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RecoveryWindowDays);
+      }
+      if (encryptionConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ContinuousBackupConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasEnabled) {
+        Enabled = other.Enabled;
+      }
+      if (other.RecoveryWindowDays != 0) {
+        RecoveryWindowDays = other.RecoveryWindowDays;
+      }
+      if (other.encryptionConfig_ != null) {
+        if (encryptionConfig_ == null) {
+          EncryptionConfig = new global::Google.Cloud.AlloyDb.V1.EncryptionConfig();
+        }
+        EncryptionConfig.MergeFrom(other.EncryptionConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Enabled = input.ReadBool();
+            break;
+          }
+          case 26: {
+            if (encryptionConfig_ == null) {
+              EncryptionConfig = new global::Google.Cloud.AlloyDb.V1.EncryptionConfig();
+            }
+            input.ReadMessage(EncryptionConfig);
+            break;
+          }
+          case 32: {
+            RecoveryWindowDays = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Enabled = input.ReadBool();
+            break;
+          }
+          case 26: {
+            if (encryptionConfig_ == null) {
+              EncryptionConfig = new global::Google.Cloud.AlloyDb.V1.EncryptionConfig();
+            }
+            input.ReadMessage(EncryptionConfig);
+            break;
+          }
+          case 32: {
+            RecoveryWindowDays = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ContinuousBackupInfo describes the continuous backup properties of a
+  /// cluster.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ContinuousBackupInfo : pb::IMessage<ContinuousBackupInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ContinuousBackupInfo> _parser = new pb::MessageParser<ContinuousBackupInfo>(() => new ContinuousBackupInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ContinuousBackupInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContinuousBackupInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContinuousBackupInfo(ContinuousBackupInfo other) : this() {
+      encryptionInfo_ = other.encryptionInfo_ != null ? other.encryptionInfo_.Clone() : null;
+      enabledTime_ = other.enabledTime_ != null ? other.enabledTime_.Clone() : null;
+      schedule_ = other.schedule_.Clone();
+      earliestRestorableTime_ = other.earliestRestorableTime_ != null ? other.earliestRestorableTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContinuousBackupInfo Clone() {
+      return new ContinuousBackupInfo(this);
+    }
+
+    /// <summary>Field number for the "encryption_info" field.</summary>
+    public const int EncryptionInfoFieldNumber = 1;
+    private global::Google.Cloud.AlloyDb.V1.EncryptionInfo encryptionInfo_;
+    /// <summary>
+    /// Output only. The encryption information for the WALs and backups required
+    /// for ContinuousBackup.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.EncryptionInfo EncryptionInfo {
+      get { return encryptionInfo_; }
+      set {
+        encryptionInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "enabled_time" field.</summary>
+    public const int EnabledTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp enabledTime_;
+    /// <summary>
+    /// Output only. When ContinuousBackup was most recently enabled. Set to null
+    /// if ContinuousBackup is not enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EnabledTime {
+      get { return enabledTime_; }
+      set {
+        enabledTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "schedule" field.</summary>
+    public const int ScheduleFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Type.DayOfWeek> _repeated_schedule_codec
+        = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::Google.Type.DayOfWeek) x);
+    private readonly pbc::RepeatedField<global::Google.Type.DayOfWeek> schedule_ = new pbc::RepeatedField<global::Google.Type.DayOfWeek>();
+    /// <summary>
+    /// Output only. Days of the week on which a continuous backup is taken. Output
+    /// only field. Ignored if passed into the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Type.DayOfWeek> Schedule {
+      get { return schedule_; }
+    }
+
+    /// <summary>Field number for the "earliest_restorable_time" field.</summary>
+    public const int EarliestRestorableTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp earliestRestorableTime_;
+    /// <summary>
+    /// Output only. The earliest restorable time that can be restored to. Output
+    /// only field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EarliestRestorableTime {
+      get { return earliestRestorableTime_; }
+      set {
+        earliestRestorableTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ContinuousBackupInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ContinuousBackupInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(EncryptionInfo, other.EncryptionInfo)) return false;
+      if (!object.Equals(EnabledTime, other.EnabledTime)) return false;
+      if(!schedule_.Equals(other.schedule_)) return false;
+      if (!object.Equals(EarliestRestorableTime, other.EarliestRestorableTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (encryptionInfo_ != null) hash ^= EncryptionInfo.GetHashCode();
+      if (enabledTime_ != null) hash ^= EnabledTime.GetHashCode();
+      hash ^= schedule_.GetHashCode();
+      if (earliestRestorableTime_ != null) hash ^= EarliestRestorableTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (encryptionInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(EncryptionInfo);
+      }
+      if (enabledTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EnabledTime);
+      }
+      schedule_.WriteTo(output, _repeated_schedule_codec);
+      if (earliestRestorableTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EarliestRestorableTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (encryptionInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(EncryptionInfo);
+      }
+      if (enabledTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EnabledTime);
+      }
+      schedule_.WriteTo(ref output, _repeated_schedule_codec);
+      if (earliestRestorableTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EarliestRestorableTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (encryptionInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionInfo);
+      }
+      if (enabledTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnabledTime);
+      }
+      size += schedule_.CalculateSize(_repeated_schedule_codec);
+      if (earliestRestorableTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EarliestRestorableTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ContinuousBackupInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.encryptionInfo_ != null) {
+        if (encryptionInfo_ == null) {
+          EncryptionInfo = new global::Google.Cloud.AlloyDb.V1.EncryptionInfo();
+        }
+        EncryptionInfo.MergeFrom(other.EncryptionInfo);
+      }
+      if (other.enabledTime_ != null) {
+        if (enabledTime_ == null) {
+          EnabledTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EnabledTime.MergeFrom(other.EnabledTime);
+      }
+      schedule_.Add(other.schedule_);
+      if (other.earliestRestorableTime_ != null) {
+        if (earliestRestorableTime_ == null) {
+          EarliestRestorableTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EarliestRestorableTime.MergeFrom(other.EarliestRestorableTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (encryptionInfo_ == null) {
+              EncryptionInfo = new global::Google.Cloud.AlloyDb.V1.EncryptionInfo();
+            }
+            input.ReadMessage(EncryptionInfo);
+            break;
+          }
+          case 18: {
+            if (enabledTime_ == null) {
+              EnabledTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EnabledTime);
+            break;
+          }
+          case 26:
+          case 24: {
+            schedule_.AddEntriesFrom(input, _repeated_schedule_codec);
+            break;
+          }
+          case 34: {
+            if (earliestRestorableTime_ == null) {
+              EarliestRestorableTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EarliestRestorableTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (encryptionInfo_ == null) {
+              EncryptionInfo = new global::Google.Cloud.AlloyDb.V1.EncryptionInfo();
+            }
+            input.ReadMessage(EncryptionInfo);
+            break;
+          }
+          case 18: {
+            if (enabledTime_ == null) {
+              EnabledTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EnabledTime);
+            break;
+          }
+          case 26:
+          case 24: {
+            schedule_.AddEntriesFrom(ref input, _repeated_schedule_codec);
+            break;
+          }
+          case 34: {
+            if (earliestRestorableTime_ == null) {
+              EarliestRestorableTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EarliestRestorableTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Message describing a BackupSource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BackupSource : pb::IMessage<BackupSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2833,7 +3673,7 @@ namespace Google.Cloud.AlloyDb.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3055,10 +3895,906 @@ namespace Google.Cloud.AlloyDb.V1 {
   }
 
   /// <summary>
+  /// Message describing a ContinuousBackupSource.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ContinuousBackupSource : pb::IMessage<ContinuousBackupSource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ContinuousBackupSource> _parser = new pb::MessageParser<ContinuousBackupSource>(() => new ContinuousBackupSource());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ContinuousBackupSource> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContinuousBackupSource() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContinuousBackupSource(ContinuousBackupSource other) : this() {
+      cluster_ = other.cluster_;
+      pointInTime_ = other.pointInTime_ != null ? other.pointInTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ContinuousBackupSource Clone() {
+      return new ContinuousBackupSource(this);
+    }
+
+    /// <summary>Field number for the "cluster" field.</summary>
+    public const int ClusterFieldNumber = 1;
+    private string cluster_ = "";
+    /// <summary>
+    /// Required. The source cluster from which to restore. This cluster must have
+    /// continuous backup enabled for this operation to succeed. For the required
+    /// format, see the comment on the Cluster.name field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Cluster {
+      get { return cluster_; }
+      set {
+        cluster_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "point_in_time" field.</summary>
+    public const int PointInTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp pointInTime_;
+    /// <summary>
+    /// Required. The point in time to restore to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp PointInTime {
+      get { return pointInTime_; }
+      set {
+        pointInTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ContinuousBackupSource);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ContinuousBackupSource other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Cluster != other.Cluster) return false;
+      if (!object.Equals(PointInTime, other.PointInTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Cluster.Length != 0) hash ^= Cluster.GetHashCode();
+      if (pointInTime_ != null) hash ^= PointInTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Cluster.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Cluster);
+      }
+      if (pointInTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PointInTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Cluster.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Cluster);
+      }
+      if (pointInTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PointInTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Cluster.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Cluster);
+      }
+      if (pointInTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PointInTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ContinuousBackupSource other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Cluster.Length != 0) {
+        Cluster = other.Cluster;
+      }
+      if (other.pointInTime_ != null) {
+        if (pointInTime_ == null) {
+          PointInTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        PointInTime.MergeFrom(other.PointInTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Cluster = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (pointInTime_ == null) {
+              PointInTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(PointInTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Cluster = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (pointInTime_ == null) {
+              PointInTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(PointInTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// MaintenanceUpdatePolicy defines the policy for system updates.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MaintenanceUpdatePolicy : pb::IMessage<MaintenanceUpdatePolicy>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MaintenanceUpdatePolicy> _parser = new pb::MessageParser<MaintenanceUpdatePolicy>(() => new MaintenanceUpdatePolicy());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MaintenanceUpdatePolicy> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenanceUpdatePolicy() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenanceUpdatePolicy(MaintenanceUpdatePolicy other) : this() {
+      maintenanceWindows_ = other.maintenanceWindows_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenanceUpdatePolicy Clone() {
+      return new MaintenanceUpdatePolicy(this);
+    }
+
+    /// <summary>Field number for the "maintenance_windows" field.</summary>
+    public const int MaintenanceWindowsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy.Types.MaintenanceWindow> _repeated_maintenanceWindows_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy.Types.MaintenanceWindow.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy.Types.MaintenanceWindow> maintenanceWindows_ = new pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy.Types.MaintenanceWindow>();
+    /// <summary>
+    /// Preferred windows to perform maintenance. Currently limited to 1.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy.Types.MaintenanceWindow> MaintenanceWindows {
+      get { return maintenanceWindows_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MaintenanceUpdatePolicy);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MaintenanceUpdatePolicy other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!maintenanceWindows_.Equals(other.maintenanceWindows_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= maintenanceWindows_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      maintenanceWindows_.WriteTo(output, _repeated_maintenanceWindows_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      maintenanceWindows_.WriteTo(ref output, _repeated_maintenanceWindows_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += maintenanceWindows_.CalculateSize(_repeated_maintenanceWindows_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MaintenanceUpdatePolicy other) {
+      if (other == null) {
+        return;
+      }
+      maintenanceWindows_.Add(other.maintenanceWindows_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            maintenanceWindows_.AddEntriesFrom(input, _repeated_maintenanceWindows_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            maintenanceWindows_.AddEntriesFrom(ref input, _repeated_maintenanceWindows_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the MaintenanceUpdatePolicy message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// MaintenanceWindow specifies a preferred day and time for maintenance.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class MaintenanceWindow : pb::IMessage<MaintenanceWindow>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<MaintenanceWindow> _parser = new pb::MessageParser<MaintenanceWindow>(() => new MaintenanceWindow());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<MaintenanceWindow> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MaintenanceWindow() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MaintenanceWindow(MaintenanceWindow other) : this() {
+          day_ = other.day_;
+          startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public MaintenanceWindow Clone() {
+          return new MaintenanceWindow(this);
+        }
+
+        /// <summary>Field number for the "day" field.</summary>
+        public const int DayFieldNumber = 1;
+        private global::Google.Type.DayOfWeek day_ = global::Google.Type.DayOfWeek.Unspecified;
+        /// <summary>
+        /// Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.DayOfWeek Day {
+          get { return day_; }
+          set {
+            day_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "start_time" field.</summary>
+        public const int StartTimeFieldNumber = 2;
+        private global::Google.Type.TimeOfDay startTime_;
+        /// <summary>
+        /// Preferred time to start the maintenance operation on the specified day.
+        /// Maintenance will start within 1 hour of this time.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.TimeOfDay StartTime {
+          get { return startTime_; }
+          set {
+            startTime_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as MaintenanceWindow);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(MaintenanceWindow other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Day != other.Day) return false;
+          if (!object.Equals(StartTime, other.StartTime)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Day != global::Google.Type.DayOfWeek.Unspecified) hash ^= Day.GetHashCode();
+          if (startTime_ != null) hash ^= StartTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Day != global::Google.Type.DayOfWeek.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Day);
+          }
+          if (startTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(StartTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Day != global::Google.Type.DayOfWeek.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Day);
+          }
+          if (startTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(StartTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Day != global::Google.Type.DayOfWeek.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Day);
+          }
+          if (startTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(MaintenanceWindow other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Day != global::Google.Type.DayOfWeek.Unspecified) {
+            Day = other.Day;
+          }
+          if (other.startTime_ != null) {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Type.TimeOfDay();
+            }
+            StartTime.MergeFrom(other.StartTime);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Day = (global::Google.Type.DayOfWeek) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (startTime_ == null) {
+                  StartTime = new global::Google.Type.TimeOfDay();
+                }
+                input.ReadMessage(StartTime);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Day = (global::Google.Type.DayOfWeek) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (startTime_ == null) {
+                  StartTime = new global::Google.Type.TimeOfDay();
+                }
+                input.ReadMessage(StartTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// MaintenanceSchedule stores the maintenance schedule generated from
+  /// the MaintenanceUpdatePolicy, once a maintenance rollout is triggered, if
+  /// MaintenanceWindow is set, and if there is no conflicting DenyPeriod.
+  /// The schedule is cleared once the update takes place. This field cannot be
+  /// manually changed; modify the MaintenanceUpdatePolicy instead.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MaintenanceSchedule : pb::IMessage<MaintenanceSchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MaintenanceSchedule> _parser = new pb::MessageParser<MaintenanceSchedule>(() => new MaintenanceSchedule());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MaintenanceSchedule> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenanceSchedule() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenanceSchedule(MaintenanceSchedule other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaintenanceSchedule Clone() {
+      return new MaintenanceSchedule(this);
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Output only. The scheduled start time for the maintenance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MaintenanceSchedule);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MaintenanceSchedule other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MaintenanceSchedule other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// A cluster is a collection of regional AlloyDB resources. It can include a
   /// primary instance and one or more read pool instances.
   /// All cluster resources share a storage layer, which scales as needed.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Cluster : pb::IMessage<Cluster>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3073,7 +4809,7 @@ namespace Google.Cloud.AlloyDb.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3103,6 +4839,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       state_ = other.state_;
       clusterType_ = other.clusterType_;
       databaseVersion_ = other.databaseVersion_;
+      networkConfig_ = other.networkConfig_ != null ? other.networkConfig_.Clone() : null;
       network_ = other.network_;
       etag_ = other.etag_;
       annotations_ = other.annotations_.Clone();
@@ -3112,8 +4849,17 @@ namespace Google.Cloud.AlloyDb.V1 {
       sslConfig_ = other.sslConfig_ != null ? other.sslConfig_.Clone() : null;
       encryptionConfig_ = other.encryptionConfig_ != null ? other.encryptionConfig_.Clone() : null;
       encryptionInfo_ = other.encryptionInfo_ != null ? other.encryptionInfo_.Clone() : null;
+      continuousBackupConfig_ = other.continuousBackupConfig_ != null ? other.continuousBackupConfig_.Clone() : null;
+      continuousBackupInfo_ = other.continuousBackupInfo_ != null ? other.continuousBackupInfo_.Clone() : null;
       secondaryConfig_ = other.secondaryConfig_ != null ? other.secondaryConfig_.Clone() : null;
       primaryConfig_ = other.primaryConfig_ != null ? other.primaryConfig_.Clone() : null;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      pscConfig_ = other.pscConfig_ != null ? other.pscConfig_.Clone() : null;
+      maintenanceUpdatePolicy_ = other.maintenanceUpdatePolicy_ != null ? other.maintenanceUpdatePolicy_.Clone() : null;
+      maintenanceSchedule_ = other.maintenanceSchedule_ != null ? other.maintenanceSchedule_.Clone() : null;
+      subscriptionType_ = other.subscriptionType_;
+      trialMetadata_ = other.trialMetadata_ != null ? other.trialMetadata_.Clone() : null;
+      tags_ = other.tags_.Clone();
       switch (other.SourceCase) {
         case SourceOneofCase.BackupSource:
           BackupSource = other.BackupSource.Clone();
@@ -3309,9 +5055,10 @@ namespace Google.Cloud.AlloyDb.V1 {
     public const int DatabaseVersionFieldNumber = 9;
     private global::Google.Cloud.AlloyDb.V1.DatabaseVersion databaseVersion_ = global::Google.Cloud.AlloyDb.V1.DatabaseVersion.Unspecified;
     /// <summary>
-    /// Output only. The database engine major version. This is an output-only
-    /// field and it's populated at the Cluster creation time. This field cannot be
-    /// changed after cluster creation.
+    /// Optional. The database engine major version. This is an optional field and
+    /// it is populated at the Cluster creation time. If a database version is not
+    /// supplied at cluster creation time, then a default database version will
+    /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3322,6 +5069,18 @@ namespace Google.Cloud.AlloyDb.V1 {
       }
     }
 
+    /// <summary>Field number for the "network_config" field.</summary>
+    public const int NetworkConfigFieldNumber = 29;
+    private global::Google.Cloud.AlloyDb.V1.Cluster.Types.NetworkConfig networkConfig_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.Cluster.Types.NetworkConfig NetworkConfig {
+      get { return networkConfig_; }
+      set {
+        networkConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "network" field.</summary>
     public const int NetworkFieldNumber = 10;
     private string network_ = "";
@@ -3329,9 +5088,10 @@ namespace Google.Cloud.AlloyDb.V1 {
     /// Required. The resource link for the VPC network in which cluster resources
     /// are created and from which they are accessible via Private IP. The network
     /// must belong to the same project as the cluster. It is specified in the
-    /// form: "projects/{project_number}/global/networks/{network_id}". This is
-    /// required to create a cluster. It can be updated, but it cannot be removed.
+    /// form: `projects/{project}/global/networks/{network_id}`. This is required
+    /// to create a cluster. Deprecated, use network_config.network instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Network {
@@ -3432,8 +5192,9 @@ namespace Google.Cloud.AlloyDb.V1 {
     public const int SslConfigFieldNumber = 18;
     private global::Google.Cloud.AlloyDb.V1.SslConfig sslConfig_;
     /// <summary>
-    /// SSL configuration for this AlloyDB Cluster.
+    /// SSL configuration for this AlloyDB cluster.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AlloyDb.V1.SslConfig SslConfig {
@@ -3477,6 +5238,36 @@ namespace Google.Cloud.AlloyDb.V1 {
       }
     }
 
+    /// <summary>Field number for the "continuous_backup_config" field.</summary>
+    public const int ContinuousBackupConfigFieldNumber = 27;
+    private global::Google.Cloud.AlloyDb.V1.ContinuousBackupConfig continuousBackupConfig_;
+    /// <summary>
+    /// Optional. Continuous backup configuration for this cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.ContinuousBackupConfig ContinuousBackupConfig {
+      get { return continuousBackupConfig_; }
+      set {
+        continuousBackupConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "continuous_backup_info" field.</summary>
+    public const int ContinuousBackupInfoFieldNumber = 28;
+    private global::Google.Cloud.AlloyDb.V1.ContinuousBackupInfo continuousBackupInfo_;
+    /// <summary>
+    /// Output only. Continuous backup properties for this cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.ContinuousBackupInfo ContinuousBackupInfo {
+      get { return continuousBackupInfo_; }
+      set {
+        continuousBackupInfo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "secondary_config" field.</summary>
     public const int SecondaryConfigFieldNumber = 22;
     private global::Google.Cloud.AlloyDb.V1.Cluster.Types.SecondaryConfig secondaryConfig_;
@@ -3505,6 +5296,118 @@ namespace Google.Cloud.AlloyDb.V1 {
       set {
         primaryConfig_ = value;
       }
+    }
+
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 30;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "psc_config" field.</summary>
+    public const int PscConfigFieldNumber = 31;
+    private global::Google.Cloud.AlloyDb.V1.Cluster.Types.PscConfig pscConfig_;
+    /// <summary>
+    /// Optional. The configuration for Private Service Connect (PSC) for the
+    /// cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.Cluster.Types.PscConfig PscConfig {
+      get { return pscConfig_; }
+      set {
+        pscConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "maintenance_update_policy" field.</summary>
+    public const int MaintenanceUpdatePolicyFieldNumber = 32;
+    private global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy maintenanceUpdatePolicy_;
+    /// <summary>
+    /// Optional. The maintenance update policy determines when to allow or deny
+    /// updates.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy MaintenanceUpdatePolicy {
+      get { return maintenanceUpdatePolicy_; }
+      set {
+        maintenanceUpdatePolicy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "maintenance_schedule" field.</summary>
+    public const int MaintenanceScheduleFieldNumber = 37;
+    private global::Google.Cloud.AlloyDb.V1.MaintenanceSchedule maintenanceSchedule_;
+    /// <summary>
+    /// Output only. The maintenance schedule for the cluster, generated for a
+    /// specific rollout if a maintenance window is set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.MaintenanceSchedule MaintenanceSchedule {
+      get { return maintenanceSchedule_; }
+      set {
+        maintenanceSchedule_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "subscription_type" field.</summary>
+    public const int SubscriptionTypeFieldNumber = 38;
+    private global::Google.Cloud.AlloyDb.V1.SubscriptionType subscriptionType_ = global::Google.Cloud.AlloyDb.V1.SubscriptionType.Unspecified;
+    /// <summary>
+    /// Optional. Subscription type of the cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.SubscriptionType SubscriptionType {
+      get { return subscriptionType_; }
+      set {
+        subscriptionType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "trial_metadata" field.</summary>
+    public const int TrialMetadataFieldNumber = 39;
+    private global::Google.Cloud.AlloyDb.V1.Cluster.Types.TrialMetadata trialMetadata_;
+    /// <summary>
+    /// Output only. Metadata for free trial clusters
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.Cluster.Types.TrialMetadata TrialMetadata {
+      get { return trialMetadata_; }
+      set {
+        trialMetadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 41;
+    private static readonly pbc::MapField<string, string>.Codec _map_tags_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 330);
+    private readonly pbc::MapField<string, string> tags_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Input only. Immutable. Tag keys/values directly bound to this
+    /// resource. For example:
+    /// ```
+    /// "123/environment": "production",
+    /// "123/costCenter": "marketing"
+    /// ```
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Tags {
+      get { return tags_; }
     }
 
     private object source_;
@@ -3555,6 +5458,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (State != other.State) return false;
       if (ClusterType != other.ClusterType) return false;
       if (DatabaseVersion != other.DatabaseVersion) return false;
+      if (!object.Equals(NetworkConfig, other.NetworkConfig)) return false;
       if (Network != other.Network) return false;
       if (Etag != other.Etag) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
@@ -3564,8 +5468,17 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (!object.Equals(SslConfig, other.SslConfig)) return false;
       if (!object.Equals(EncryptionConfig, other.EncryptionConfig)) return false;
       if (!object.Equals(EncryptionInfo, other.EncryptionInfo)) return false;
+      if (!object.Equals(ContinuousBackupConfig, other.ContinuousBackupConfig)) return false;
+      if (!object.Equals(ContinuousBackupInfo, other.ContinuousBackupInfo)) return false;
       if (!object.Equals(SecondaryConfig, other.SecondaryConfig)) return false;
       if (!object.Equals(PrimaryConfig, other.PrimaryConfig)) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (!object.Equals(PscConfig, other.PscConfig)) return false;
+      if (!object.Equals(MaintenanceUpdatePolicy, other.MaintenanceUpdatePolicy)) return false;
+      if (!object.Equals(MaintenanceSchedule, other.MaintenanceSchedule)) return false;
+      if (SubscriptionType != other.SubscriptionType) return false;
+      if (!object.Equals(TrialMetadata, other.TrialMetadata)) return false;
+      if (!Tags.Equals(other.Tags)) return false;
       if (SourceCase != other.SourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3586,6 +5499,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (State != global::Google.Cloud.AlloyDb.V1.Cluster.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (ClusterType != global::Google.Cloud.AlloyDb.V1.Cluster.Types.ClusterType.Unspecified) hash ^= ClusterType.GetHashCode();
       if (DatabaseVersion != global::Google.Cloud.AlloyDb.V1.DatabaseVersion.Unspecified) hash ^= DatabaseVersion.GetHashCode();
+      if (networkConfig_ != null) hash ^= NetworkConfig.GetHashCode();
       if (Network.Length != 0) hash ^= Network.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= Annotations.GetHashCode();
@@ -3595,8 +5509,17 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (sslConfig_ != null) hash ^= SslConfig.GetHashCode();
       if (encryptionConfig_ != null) hash ^= EncryptionConfig.GetHashCode();
       if (encryptionInfo_ != null) hash ^= EncryptionInfo.GetHashCode();
+      if (continuousBackupConfig_ != null) hash ^= ContinuousBackupConfig.GetHashCode();
+      if (continuousBackupInfo_ != null) hash ^= ContinuousBackupInfo.GetHashCode();
       if (secondaryConfig_ != null) hash ^= SecondaryConfig.GetHashCode();
       if (primaryConfig_ != null) hash ^= PrimaryConfig.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (pscConfig_ != null) hash ^= PscConfig.GetHashCode();
+      if (maintenanceUpdatePolicy_ != null) hash ^= MaintenanceUpdatePolicy.GetHashCode();
+      if (maintenanceSchedule_ != null) hash ^= MaintenanceSchedule.GetHashCode();
+      if (SubscriptionType != global::Google.Cloud.AlloyDb.V1.SubscriptionType.Unspecified) hash ^= SubscriptionType.GetHashCode();
+      if (trialMetadata_ != null) hash ^= TrialMetadata.GetHashCode();
+      hash ^= Tags.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3702,6 +5625,43 @@ namespace Google.Cloud.AlloyDb.V1 {
         output.WriteRawTag(192, 1);
         output.WriteEnum((int) ClusterType);
       }
+      if (continuousBackupConfig_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(ContinuousBackupConfig);
+      }
+      if (continuousBackupInfo_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(ContinuousBackupInfo);
+      }
+      if (networkConfig_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(NetworkConfig);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (pscConfig_ != null) {
+        output.WriteRawTag(250, 1);
+        output.WriteMessage(PscConfig);
+      }
+      if (maintenanceUpdatePolicy_ != null) {
+        output.WriteRawTag(130, 2);
+        output.WriteMessage(MaintenanceUpdatePolicy);
+      }
+      if (maintenanceSchedule_ != null) {
+        output.WriteRawTag(170, 2);
+        output.WriteMessage(MaintenanceSchedule);
+      }
+      if (SubscriptionType != global::Google.Cloud.AlloyDb.V1.SubscriptionType.Unspecified) {
+        output.WriteRawTag(176, 2);
+        output.WriteEnum((int) SubscriptionType);
+      }
+      if (trialMetadata_ != null) {
+        output.WriteRawTag(186, 2);
+        output.WriteMessage(TrialMetadata);
+      }
+      tags_.WriteTo(output, _map_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3798,6 +5758,43 @@ namespace Google.Cloud.AlloyDb.V1 {
         output.WriteRawTag(192, 1);
         output.WriteEnum((int) ClusterType);
       }
+      if (continuousBackupConfig_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(ContinuousBackupConfig);
+      }
+      if (continuousBackupInfo_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(ContinuousBackupInfo);
+      }
+      if (networkConfig_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(NetworkConfig);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (pscConfig_ != null) {
+        output.WriteRawTag(250, 1);
+        output.WriteMessage(PscConfig);
+      }
+      if (maintenanceUpdatePolicy_ != null) {
+        output.WriteRawTag(130, 2);
+        output.WriteMessage(MaintenanceUpdatePolicy);
+      }
+      if (maintenanceSchedule_ != null) {
+        output.WriteRawTag(170, 2);
+        output.WriteMessage(MaintenanceSchedule);
+      }
+      if (SubscriptionType != global::Google.Cloud.AlloyDb.V1.SubscriptionType.Unspecified) {
+        output.WriteRawTag(176, 2);
+        output.WriteEnum((int) SubscriptionType);
+      }
+      if (trialMetadata_ != null) {
+        output.WriteRawTag(186, 2);
+        output.WriteMessage(TrialMetadata);
+      }
+      tags_.WriteTo(ref output, _map_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3842,6 +5839,9 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (DatabaseVersion != global::Google.Cloud.AlloyDb.V1.DatabaseVersion.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DatabaseVersion);
       }
+      if (networkConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NetworkConfig);
+      }
       if (Network.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
       }
@@ -3867,12 +5867,37 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (encryptionInfo_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(EncryptionInfo);
       }
+      if (continuousBackupConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ContinuousBackupConfig);
+      }
+      if (continuousBackupInfo_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ContinuousBackupInfo);
+      }
       if (secondaryConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SecondaryConfig);
       }
       if (primaryConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(PrimaryConfig);
       }
+      if (SatisfiesPzs != false) {
+        size += 2 + 1;
+      }
+      if (pscConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PscConfig);
+      }
+      if (maintenanceUpdatePolicy_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MaintenanceUpdatePolicy);
+      }
+      if (maintenanceSchedule_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MaintenanceSchedule);
+      }
+      if (SubscriptionType != global::Google.Cloud.AlloyDb.V1.SubscriptionType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) SubscriptionType);
+      }
+      if (trialMetadata_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TrialMetadata);
+      }
+      size += tags_.CalculateSize(_map_tags_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3912,7 +5937,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         }
         DeleteTime.MergeFrom(other.DeleteTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.AlloyDb.V1.Cluster.Types.State.Unspecified) {
         State = other.State;
       }
@@ -3922,13 +5947,19 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (other.DatabaseVersion != global::Google.Cloud.AlloyDb.V1.DatabaseVersion.Unspecified) {
         DatabaseVersion = other.DatabaseVersion;
       }
+      if (other.networkConfig_ != null) {
+        if (networkConfig_ == null) {
+          NetworkConfig = new global::Google.Cloud.AlloyDb.V1.Cluster.Types.NetworkConfig();
+        }
+        NetworkConfig.MergeFrom(other.NetworkConfig);
+      }
       if (other.Network.Length != 0) {
         Network = other.Network;
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.Reconciling != false) {
         Reconciling = other.Reconciling;
       }
@@ -3962,6 +5993,18 @@ namespace Google.Cloud.AlloyDb.V1 {
         }
         EncryptionInfo.MergeFrom(other.EncryptionInfo);
       }
+      if (other.continuousBackupConfig_ != null) {
+        if (continuousBackupConfig_ == null) {
+          ContinuousBackupConfig = new global::Google.Cloud.AlloyDb.V1.ContinuousBackupConfig();
+        }
+        ContinuousBackupConfig.MergeFrom(other.ContinuousBackupConfig);
+      }
+      if (other.continuousBackupInfo_ != null) {
+        if (continuousBackupInfo_ == null) {
+          ContinuousBackupInfo = new global::Google.Cloud.AlloyDb.V1.ContinuousBackupInfo();
+        }
+        ContinuousBackupInfo.MergeFrom(other.ContinuousBackupInfo);
+      }
       if (other.secondaryConfig_ != null) {
         if (secondaryConfig_ == null) {
           SecondaryConfig = new global::Google.Cloud.AlloyDb.V1.Cluster.Types.SecondaryConfig();
@@ -3974,6 +6017,37 @@ namespace Google.Cloud.AlloyDb.V1 {
         }
         PrimaryConfig.MergeFrom(other.PrimaryConfig);
       }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.pscConfig_ != null) {
+        if (pscConfig_ == null) {
+          PscConfig = new global::Google.Cloud.AlloyDb.V1.Cluster.Types.PscConfig();
+        }
+        PscConfig.MergeFrom(other.PscConfig);
+      }
+      if (other.maintenanceUpdatePolicy_ != null) {
+        if (maintenanceUpdatePolicy_ == null) {
+          MaintenanceUpdatePolicy = new global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy();
+        }
+        MaintenanceUpdatePolicy.MergeFrom(other.MaintenanceUpdatePolicy);
+      }
+      if (other.maintenanceSchedule_ != null) {
+        if (maintenanceSchedule_ == null) {
+          MaintenanceSchedule = new global::Google.Cloud.AlloyDb.V1.MaintenanceSchedule();
+        }
+        MaintenanceSchedule.MergeFrom(other.MaintenanceSchedule);
+      }
+      if (other.SubscriptionType != global::Google.Cloud.AlloyDb.V1.SubscriptionType.Unspecified) {
+        SubscriptionType = other.SubscriptionType;
+      }
+      if (other.trialMetadata_ != null) {
+        if (trialMetadata_ == null) {
+          TrialMetadata = new global::Google.Cloud.AlloyDb.V1.Cluster.Types.TrialMetadata();
+        }
+        TrialMetadata.MergeFrom(other.TrialMetadata);
+      }
+      tags_.MergeFrom(other.tags_);
       switch (other.SourceCase) {
         case SourceOneofCase.BackupSource:
           if (BackupSource == null) {
@@ -4136,6 +6210,67 @@ namespace Google.Cloud.AlloyDb.V1 {
             ClusterType = (global::Google.Cloud.AlloyDb.V1.Cluster.Types.ClusterType) input.ReadEnum();
             break;
           }
+          case 218: {
+            if (continuousBackupConfig_ == null) {
+              ContinuousBackupConfig = new global::Google.Cloud.AlloyDb.V1.ContinuousBackupConfig();
+            }
+            input.ReadMessage(ContinuousBackupConfig);
+            break;
+          }
+          case 226: {
+            if (continuousBackupInfo_ == null) {
+              ContinuousBackupInfo = new global::Google.Cloud.AlloyDb.V1.ContinuousBackupInfo();
+            }
+            input.ReadMessage(ContinuousBackupInfo);
+            break;
+          }
+          case 234: {
+            if (networkConfig_ == null) {
+              NetworkConfig = new global::Google.Cloud.AlloyDb.V1.Cluster.Types.NetworkConfig();
+            }
+            input.ReadMessage(NetworkConfig);
+            break;
+          }
+          case 240: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 250: {
+            if (pscConfig_ == null) {
+              PscConfig = new global::Google.Cloud.AlloyDb.V1.Cluster.Types.PscConfig();
+            }
+            input.ReadMessage(PscConfig);
+            break;
+          }
+          case 258: {
+            if (maintenanceUpdatePolicy_ == null) {
+              MaintenanceUpdatePolicy = new global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy();
+            }
+            input.ReadMessage(MaintenanceUpdatePolicy);
+            break;
+          }
+          case 298: {
+            if (maintenanceSchedule_ == null) {
+              MaintenanceSchedule = new global::Google.Cloud.AlloyDb.V1.MaintenanceSchedule();
+            }
+            input.ReadMessage(MaintenanceSchedule);
+            break;
+          }
+          case 304: {
+            SubscriptionType = (global::Google.Cloud.AlloyDb.V1.SubscriptionType) input.ReadEnum();
+            break;
+          }
+          case 314: {
+            if (trialMetadata_ == null) {
+              TrialMetadata = new global::Google.Cloud.AlloyDb.V1.Cluster.Types.TrialMetadata();
+            }
+            input.ReadMessage(TrialMetadata);
+            break;
+          }
+          case 330: {
+            tags_.AddEntriesFrom(input, _map_tags_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4283,6 +6418,67 @@ namespace Google.Cloud.AlloyDb.V1 {
             ClusterType = (global::Google.Cloud.AlloyDb.V1.Cluster.Types.ClusterType) input.ReadEnum();
             break;
           }
+          case 218: {
+            if (continuousBackupConfig_ == null) {
+              ContinuousBackupConfig = new global::Google.Cloud.AlloyDb.V1.ContinuousBackupConfig();
+            }
+            input.ReadMessage(ContinuousBackupConfig);
+            break;
+          }
+          case 226: {
+            if (continuousBackupInfo_ == null) {
+              ContinuousBackupInfo = new global::Google.Cloud.AlloyDb.V1.ContinuousBackupInfo();
+            }
+            input.ReadMessage(ContinuousBackupInfo);
+            break;
+          }
+          case 234: {
+            if (networkConfig_ == null) {
+              NetworkConfig = new global::Google.Cloud.AlloyDb.V1.Cluster.Types.NetworkConfig();
+            }
+            input.ReadMessage(NetworkConfig);
+            break;
+          }
+          case 240: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 250: {
+            if (pscConfig_ == null) {
+              PscConfig = new global::Google.Cloud.AlloyDb.V1.Cluster.Types.PscConfig();
+            }
+            input.ReadMessage(PscConfig);
+            break;
+          }
+          case 258: {
+            if (maintenanceUpdatePolicy_ == null) {
+              MaintenanceUpdatePolicy = new global::Google.Cloud.AlloyDb.V1.MaintenanceUpdatePolicy();
+            }
+            input.ReadMessage(MaintenanceUpdatePolicy);
+            break;
+          }
+          case 298: {
+            if (maintenanceSchedule_ == null) {
+              MaintenanceSchedule = new global::Google.Cloud.AlloyDb.V1.MaintenanceSchedule();
+            }
+            input.ReadMessage(MaintenanceSchedule);
+            break;
+          }
+          case 304: {
+            SubscriptionType = (global::Google.Cloud.AlloyDb.V1.SubscriptionType) input.ReadEnum();
+            break;
+          }
+          case 314: {
+            if (trialMetadata_ == null) {
+              TrialMetadata = new global::Google.Cloud.AlloyDb.V1.Cluster.Types.TrialMetadata();
+            }
+            input.ReadMessage(TrialMetadata);
+            break;
+          }
+          case 330: {
+            tags_.AddEntriesFrom(ref input, _map_tags_codec);
+            break;
+          }
         }
       }
     }
@@ -4367,9 +6563,257 @@ namespace Google.Cloud.AlloyDb.V1 {
       }
 
       /// <summary>
+      /// Metadata related to network configuration.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class NetworkConfig : pb::IMessage<NetworkConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<NetworkConfig> _parser = new pb::MessageParser<NetworkConfig>(() => new NetworkConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<NetworkConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AlloyDb.V1.Cluster.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NetworkConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NetworkConfig(NetworkConfig other) : this() {
+          network_ = other.network_;
+          allocatedIpRange_ = other.allocatedIpRange_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NetworkConfig Clone() {
+          return new NetworkConfig(this);
+        }
+
+        /// <summary>Field number for the "network" field.</summary>
+        public const int NetworkFieldNumber = 1;
+        private string network_ = "";
+        /// <summary>
+        /// Optional. The resource link for the VPC network in which cluster
+        /// resources are created and from which they are accessible via Private IP.
+        /// The network must belong to the same project as the cluster. It is
+        /// specified in the form:
+        /// `projects/{project_number}/global/networks/{network_id}`. This is
+        /// required to create a cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Network {
+          get { return network_; }
+          set {
+            network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "allocated_ip_range" field.</summary>
+        public const int AllocatedIpRangeFieldNumber = 2;
+        private string allocatedIpRange_ = "";
+        /// <summary>
+        /// Optional. Name of the allocated IP range for the private IP AlloyDB
+        /// cluster, for example: "google-managed-services-default". If set, the
+        /// instance IPs for this cluster will be created in the allocated range. The
+        /// range name must comply with RFC 1035. Specifically, the name must be 1-63
+        /// characters long and match the regular expression
+        /// `[a-z]([-a-z0-9]*[a-z0-9])?`.
+        /// Field name is intended to be consistent with Cloud SQL.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string AllocatedIpRange {
+          get { return allocatedIpRange_; }
+          set {
+            allocatedIpRange_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as NetworkConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(NetworkConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Network != other.Network) return false;
+          if (AllocatedIpRange != other.AllocatedIpRange) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Network.Length != 0) hash ^= Network.GetHashCode();
+          if (AllocatedIpRange.Length != 0) hash ^= AllocatedIpRange.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Network.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Network);
+          }
+          if (AllocatedIpRange.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(AllocatedIpRange);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Network.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Network);
+          }
+          if (AllocatedIpRange.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(AllocatedIpRange);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Network.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
+          }
+          if (AllocatedIpRange.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(AllocatedIpRange);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(NetworkConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Network.Length != 0) {
+            Network = other.Network;
+          }
+          if (other.AllocatedIpRange.Length != 0) {
+            AllocatedIpRange = other.AllocatedIpRange;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Network = input.ReadString();
+                break;
+              }
+              case 18: {
+                AllocatedIpRange = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Network = input.ReadString();
+                break;
+              }
+              case 18: {
+                AllocatedIpRange = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Configuration information for the secondary cluster. This should be set
       /// if and only if the cluster is of type SECONDARY.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SecondaryConfig : pb::IMessage<SecondaryConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4384,7 +6828,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AlloyDb.V1.Cluster.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.AlloyDb.V1.Cluster.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4568,6 +7012,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       /// replicating from this cluster. This should be set if and only if the
       /// cluster is of type PRIMARY.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PrimaryConfig : pb::IMessage<PrimaryConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4582,7 +7027,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AlloyDb.V1.Cluster.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.AlloyDb.V1.Cluster.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4750,6 +7195,555 @@ namespace Google.Cloud.AlloyDb.V1 {
 
       }
 
+      /// <summary>
+      /// PscConfig contains PSC related configuration at a cluster level.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PscConfig : pb::IMessage<PscConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PscConfig> _parser = new pb::MessageParser<PscConfig>(() => new PscConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PscConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AlloyDb.V1.Cluster.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PscConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PscConfig(PscConfig other) : this() {
+          pscEnabled_ = other.pscEnabled_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PscConfig Clone() {
+          return new PscConfig(this);
+        }
+
+        /// <summary>Field number for the "psc_enabled" field.</summary>
+        public const int PscEnabledFieldNumber = 1;
+        private bool pscEnabled_;
+        /// <summary>
+        /// Optional. Create an instance that allows connections from Private Service
+        /// Connect endpoints to the instance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool PscEnabled {
+          get { return pscEnabled_; }
+          set {
+            pscEnabled_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PscConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PscConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (PscEnabled != other.PscEnabled) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (PscEnabled != false) hash ^= PscEnabled.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (PscEnabled != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(PscEnabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (PscEnabled != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(PscEnabled);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (PscEnabled != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PscConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.PscEnabled != false) {
+            PscEnabled = other.PscEnabled;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                PscEnabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                PscEnabled = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Contains information and all metadata related to TRIAL clusters.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TrialMetadata : pb::IMessage<TrialMetadata>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TrialMetadata> _parser = new pb::MessageParser<TrialMetadata>(() => new TrialMetadata());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TrialMetadata> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AlloyDb.V1.Cluster.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TrialMetadata() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TrialMetadata(TrialMetadata other) : this() {
+          startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+          endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+          upgradeTime_ = other.upgradeTime_ != null ? other.upgradeTime_.Clone() : null;
+          graceEndTime_ = other.graceEndTime_ != null ? other.graceEndTime_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TrialMetadata Clone() {
+          return new TrialMetadata(this);
+        }
+
+        /// <summary>Field number for the "start_time" field.</summary>
+        public const int StartTimeFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+        /// <summary>
+        /// start time of the trial cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+          get { return startTime_; }
+          set {
+            startTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "end_time" field.</summary>
+        public const int EndTimeFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+        /// <summary>
+        /// End time of the trial cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+          get { return endTime_; }
+          set {
+            endTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "upgrade_time" field.</summary>
+        public const int UpgradeTimeFieldNumber = 3;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp upgradeTime_;
+        /// <summary>
+        /// Upgrade time of trial cluster to Standard cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp UpgradeTime {
+          get { return upgradeTime_; }
+          set {
+            upgradeTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "grace_end_time" field.</summary>
+        public const int GraceEndTimeFieldNumber = 4;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp graceEndTime_;
+        /// <summary>
+        /// grace end time of the cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp GraceEndTime {
+          get { return graceEndTime_; }
+          set {
+            graceEndTime_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TrialMetadata);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TrialMetadata other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(StartTime, other.StartTime)) return false;
+          if (!object.Equals(EndTime, other.EndTime)) return false;
+          if (!object.Equals(UpgradeTime, other.UpgradeTime)) return false;
+          if (!object.Equals(GraceEndTime, other.GraceEndTime)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (startTime_ != null) hash ^= StartTime.GetHashCode();
+          if (endTime_ != null) hash ^= EndTime.GetHashCode();
+          if (upgradeTime_ != null) hash ^= UpgradeTime.GetHashCode();
+          if (graceEndTime_ != null) hash ^= GraceEndTime.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (startTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StartTime);
+          }
+          if (endTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(EndTime);
+          }
+          if (upgradeTime_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(UpgradeTime);
+          }
+          if (graceEndTime_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(GraceEndTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (startTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StartTime);
+          }
+          if (endTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(EndTime);
+          }
+          if (upgradeTime_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(UpgradeTime);
+          }
+          if (graceEndTime_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(GraceEndTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (startTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+          }
+          if (endTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+          }
+          if (upgradeTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpgradeTime);
+          }
+          if (graceEndTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GraceEndTime);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TrialMetadata other) {
+          if (other == null) {
+            return;
+          }
+          if (other.startTime_ != null) {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            StartTime.MergeFrom(other.StartTime);
+          }
+          if (other.endTime_ != null) {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            EndTime.MergeFrom(other.EndTime);
+          }
+          if (other.upgradeTime_ != null) {
+            if (upgradeTime_ == null) {
+              UpgradeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            UpgradeTime.MergeFrom(other.UpgradeTime);
+          }
+          if (other.graceEndTime_ != null) {
+            if (graceEndTime_ == null) {
+              GraceEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            GraceEndTime.MergeFrom(other.GraceEndTime);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (startTime_ == null) {
+                  StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(StartTime);
+                break;
+              }
+              case 18: {
+                if (endTime_ == null) {
+                  EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(EndTime);
+                break;
+              }
+              case 26: {
+                if (upgradeTime_ == null) {
+                  UpgradeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(UpgradeTime);
+                break;
+              }
+              case 34: {
+                if (graceEndTime_ == null) {
+                  GraceEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(GraceEndTime);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (startTime_ == null) {
+                  StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(StartTime);
+                break;
+              }
+              case 18: {
+                if (endTime_ == null) {
+                  EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(EndTime);
+                break;
+              }
+              case 26: {
+                if (upgradeTime_ == null) {
+                  UpgradeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(UpgradeTime);
+                break;
+              }
+              case 34: {
+                if (graceEndTime_ == null) {
+                  GraceEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(GraceEndTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -4759,6 +7753,7 @@ namespace Google.Cloud.AlloyDb.V1 {
   /// An Instance is a computing unit that an end customer can connect to.
   /// It's the main unit of computing resources in AlloyDB.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4773,7 +7768,7 @@ namespace Google.Cloud.AlloyDb.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4811,9 +7806,15 @@ namespace Google.Cloud.AlloyDb.V1 {
       queryInsightsConfig_ = other.queryInsightsConfig_ != null ? other.queryInsightsConfig_.Clone() : null;
       readPoolConfig_ = other.readPoolConfig_ != null ? other.readPoolConfig_.Clone() : null;
       ipAddress_ = other.ipAddress_;
+      publicIpAddress_ = other.publicIpAddress_;
       reconciling_ = other.reconciling_;
       etag_ = other.etag_;
       annotations_ = other.annotations_.Clone();
+      clientConnectionConfig_ = other.clientConnectionConfig_ != null ? other.clientConnectionConfig_.Clone() : null;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      pscInstanceConfig_ = other.pscInstanceConfig_ != null ? other.pscInstanceConfig_.Clone() : null;
+      networkConfig_ = other.networkConfig_ != null ? other.networkConfig_.Clone() : null;
+      outboundPublicIpAddresses_ = other.outboundPublicIpAddresses_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4987,8 +7988,11 @@ namespace Google.Cloud.AlloyDb.V1 {
     private global::Google.Cloud.AlloyDb.V1.Instance.Types.AvailabilityType availabilityType_ = global::Google.Cloud.AlloyDb.V1.Instance.Types.AvailabilityType.Unspecified;
     /// <summary>
     /// Availability type of an Instance.
-    /// Defaults to REGIONAL for both primary and read instances.
-    /// Note that primary and read instances can have different availability types.
+    /// If empty, defaults to REGIONAL for primary instances.
+    /// For read pools, availability_type is always UNSPECIFIED. Instances in the
+    /// read pools are evenly distributed across available zones within the region
+    /// (i.e. read pools with more than one node will have a node in at
+    /// least two zones).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5095,7 +8099,8 @@ namespace Google.Cloud.AlloyDb.V1 {
     public const int ReadPoolConfigFieldNumber = 14;
     private global::Google.Cloud.AlloyDb.V1.Instance.Types.ReadPoolConfig readPoolConfig_;
     /// <summary>
-    /// Read pool specific config.
+    /// Read pool instance configuration.
+    /// This is required if the value of instanceType is READ_POOL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5119,6 +8124,23 @@ namespace Google.Cloud.AlloyDb.V1 {
       get { return ipAddress_; }
       set {
         ipAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "public_ip_address" field.</summary>
+    public const int PublicIpAddressFieldNumber = 27;
+    private string publicIpAddress_ = "";
+    /// <summary>
+    /// Output only. The public IP addresses for the Instance. This is available
+    /// ONLY when enable_public_ip is set. This is the connection endpoint for an
+    /// end-user application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PublicIpAddress {
+      get { return publicIpAddress_; }
+      set {
+        publicIpAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -5172,6 +8194,81 @@ namespace Google.Cloud.AlloyDb.V1 {
       get { return annotations_; }
     }
 
+    /// <summary>Field number for the "client_connection_config" field.</summary>
+    public const int ClientConnectionConfigFieldNumber = 23;
+    private global::Google.Cloud.AlloyDb.V1.Instance.Types.ClientConnectionConfig clientConnectionConfig_;
+    /// <summary>
+    /// Optional. Client connection specific configurations
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.Instance.Types.ClientConnectionConfig ClientConnectionConfig {
+      get { return clientConnectionConfig_; }
+      set {
+        clientConnectionConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 24;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "psc_instance_config" field.</summary>
+    public const int PscInstanceConfigFieldNumber = 28;
+    private global::Google.Cloud.AlloyDb.V1.Instance.Types.PscInstanceConfig pscInstanceConfig_;
+    /// <summary>
+    /// Optional. The configuration for Private Service Connect (PSC) for the
+    /// instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.Instance.Types.PscInstanceConfig PscInstanceConfig {
+      get { return pscInstanceConfig_; }
+      set {
+        pscInstanceConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "network_config" field.</summary>
+    public const int NetworkConfigFieldNumber = 29;
+    private global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig networkConfig_;
+    /// <summary>
+    /// Optional. Instance-level network configuration.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig NetworkConfig {
+      get { return networkConfig_; }
+      set {
+        networkConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "outbound_public_ip_addresses" field.</summary>
+    public const int OutboundPublicIpAddressesFieldNumber = 34;
+    private static readonly pb::FieldCodec<string> _repeated_outboundPublicIpAddresses_codec
+        = pb::FieldCodec.ForString(274);
+    private readonly pbc::RepeatedField<string> outboundPublicIpAddresses_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. All outbound public IP addresses configured for the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> OutboundPublicIpAddresses {
+      get { return outboundPublicIpAddresses_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5205,9 +8302,15 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (!object.Equals(QueryInsightsConfig, other.QueryInsightsConfig)) return false;
       if (!object.Equals(ReadPoolConfig, other.ReadPoolConfig)) return false;
       if (IpAddress != other.IpAddress) return false;
+      if (PublicIpAddress != other.PublicIpAddress) return false;
       if (Reconciling != other.Reconciling) return false;
       if (Etag != other.Etag) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
+      if (!object.Equals(ClientConnectionConfig, other.ClientConnectionConfig)) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (!object.Equals(PscInstanceConfig, other.PscInstanceConfig)) return false;
+      if (!object.Equals(NetworkConfig, other.NetworkConfig)) return false;
+      if(!outboundPublicIpAddresses_.Equals(other.outboundPublicIpAddresses_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5233,9 +8336,15 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (queryInsightsConfig_ != null) hash ^= QueryInsightsConfig.GetHashCode();
       if (readPoolConfig_ != null) hash ^= ReadPoolConfig.GetHashCode();
       if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
+      if (PublicIpAddress.Length != 0) hash ^= PublicIpAddress.GetHashCode();
       if (Reconciling != false) hash ^= Reconciling.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= Annotations.GetHashCode();
+      if (clientConnectionConfig_ != null) hash ^= ClientConnectionConfig.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (pscInstanceConfig_ != null) hash ^= PscInstanceConfig.GetHashCode();
+      if (networkConfig_ != null) hash ^= NetworkConfig.GetHashCode();
+      hash ^= outboundPublicIpAddresses_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5326,6 +8435,27 @@ namespace Google.Cloud.AlloyDb.V1 {
         output.WriteRawTag(170, 1);
         output.WriteMessage(QueryInsightsConfig);
       }
+      if (clientConnectionConfig_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(ClientConnectionConfig);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(192, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (PublicIpAddress.Length != 0) {
+        output.WriteRawTag(218, 1);
+        output.WriteString(PublicIpAddress);
+      }
+      if (pscInstanceConfig_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(PscInstanceConfig);
+      }
+      if (networkConfig_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(NetworkConfig);
+      }
+      outboundPublicIpAddresses_.WriteTo(output, _repeated_outboundPublicIpAddresses_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5408,6 +8538,27 @@ namespace Google.Cloud.AlloyDb.V1 {
         output.WriteRawTag(170, 1);
         output.WriteMessage(QueryInsightsConfig);
       }
+      if (clientConnectionConfig_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(ClientConnectionConfig);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(192, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (PublicIpAddress.Length != 0) {
+        output.WriteRawTag(218, 1);
+        output.WriteString(PublicIpAddress);
+      }
+      if (pscInstanceConfig_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(PscInstanceConfig);
+      }
+      if (networkConfig_ != null) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(NetworkConfig);
+      }
+      outboundPublicIpAddresses_.WriteTo(ref output, _repeated_outboundPublicIpAddresses_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5466,6 +8617,9 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (IpAddress.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddress);
       }
+      if (PublicIpAddress.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PublicIpAddress);
+      }
       if (Reconciling != false) {
         size += 2 + 1;
       }
@@ -5473,6 +8627,19 @@ namespace Google.Cloud.AlloyDb.V1 {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
       size += annotations_.CalculateSize(_map_annotations_codec);
+      if (clientConnectionConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ClientConnectionConfig);
+      }
+      if (SatisfiesPzs != false) {
+        size += 2 + 1;
+      }
+      if (pscInstanceConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PscInstanceConfig);
+      }
+      if (networkConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NetworkConfig);
+      }
+      size += outboundPublicIpAddresses_.CalculateSize(_repeated_outboundPublicIpAddresses_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5512,7 +8679,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         }
         DeleteTime.MergeFrom(other.DeleteTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.AlloyDb.V1.Instance.Types.State.Unspecified) {
         State = other.State;
       }
@@ -5531,7 +8698,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (other.GceZone.Length != 0) {
         GceZone = other.GceZone;
       }
-      databaseFlags_.Add(other.databaseFlags_);
+      databaseFlags_.MergeFrom(other.databaseFlags_);
       if (other.writableNode_ != null) {
         if (writableNode_ == null) {
           WritableNode = new global::Google.Cloud.AlloyDb.V1.Instance.Types.Node();
@@ -5554,13 +8721,38 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (other.IpAddress.Length != 0) {
         IpAddress = other.IpAddress;
       }
+      if (other.PublicIpAddress.Length != 0) {
+        PublicIpAddress = other.PublicIpAddress;
+      }
       if (other.Reconciling != false) {
         Reconciling = other.Reconciling;
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
+      if (other.clientConnectionConfig_ != null) {
+        if (clientConnectionConfig_ == null) {
+          ClientConnectionConfig = new global::Google.Cloud.AlloyDb.V1.Instance.Types.ClientConnectionConfig();
+        }
+        ClientConnectionConfig.MergeFrom(other.ClientConnectionConfig);
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.pscInstanceConfig_ != null) {
+        if (pscInstanceConfig_ == null) {
+          PscInstanceConfig = new global::Google.Cloud.AlloyDb.V1.Instance.Types.PscInstanceConfig();
+        }
+        PscInstanceConfig.MergeFrom(other.PscInstanceConfig);
+      }
+      if (other.networkConfig_ != null) {
+        if (networkConfig_ == null) {
+          NetworkConfig = new global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig();
+        }
+        NetworkConfig.MergeFrom(other.NetworkConfig);
+      }
+      outboundPublicIpAddresses_.Add(other.outboundPublicIpAddresses_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5679,6 +8871,39 @@ namespace Google.Cloud.AlloyDb.V1 {
               QueryInsightsConfig = new global::Google.Cloud.AlloyDb.V1.Instance.Types.QueryInsightsInstanceConfig();
             }
             input.ReadMessage(QueryInsightsConfig);
+            break;
+          }
+          case 186: {
+            if (clientConnectionConfig_ == null) {
+              ClientConnectionConfig = new global::Google.Cloud.AlloyDb.V1.Instance.Types.ClientConnectionConfig();
+            }
+            input.ReadMessage(ClientConnectionConfig);
+            break;
+          }
+          case 192: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 218: {
+            PublicIpAddress = input.ReadString();
+            break;
+          }
+          case 226: {
+            if (pscInstanceConfig_ == null) {
+              PscInstanceConfig = new global::Google.Cloud.AlloyDb.V1.Instance.Types.PscInstanceConfig();
+            }
+            input.ReadMessage(PscInstanceConfig);
+            break;
+          }
+          case 234: {
+            if (networkConfig_ == null) {
+              NetworkConfig = new global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig();
+            }
+            input.ReadMessage(NetworkConfig);
+            break;
+          }
+          case 274: {
+            outboundPublicIpAddresses_.AddEntriesFrom(input, _repeated_outboundPublicIpAddresses_codec);
             break;
           }
         }
@@ -5801,6 +9026,39 @@ namespace Google.Cloud.AlloyDb.V1 {
             input.ReadMessage(QueryInsightsConfig);
             break;
           }
+          case 186: {
+            if (clientConnectionConfig_ == null) {
+              ClientConnectionConfig = new global::Google.Cloud.AlloyDb.V1.Instance.Types.ClientConnectionConfig();
+            }
+            input.ReadMessage(ClientConnectionConfig);
+            break;
+          }
+          case 192: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 218: {
+            PublicIpAddress = input.ReadString();
+            break;
+          }
+          case 226: {
+            if (pscInstanceConfig_ == null) {
+              PscInstanceConfig = new global::Google.Cloud.AlloyDb.V1.Instance.Types.PscInstanceConfig();
+            }
+            input.ReadMessage(PscInstanceConfig);
+            break;
+          }
+          case 234: {
+            if (networkConfig_ == null) {
+              NetworkConfig = new global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig();
+            }
+            input.ReadMessage(NetworkConfig);
+            break;
+          }
+          case 274: {
+            outboundPublicIpAddresses_.AddEntriesFrom(ref input, _repeated_outboundPublicIpAddresses_codec);
+            break;
+          }
         }
       }
     }
@@ -5888,10 +9146,11 @@ namespace Google.Cloud.AlloyDb.V1 {
 
       /// <summary>
       /// The Availability type of an instance. Potential values:
+      ///
       /// - ZONAL: The instance serves data from only one zone. Outages in that
-      /// zone affect instance availability.
+      ///     zone affect instance availability.
       /// - REGIONAL: The instance can serve data from more than one zone in a
-      /// region (it is highly available).
+      ///     region (it is highly available).
       /// </summary>
       public enum AvailabilityType {
         /// <summary>
@@ -5911,6 +9170,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       /// <summary>
       /// MachineConfig describes the configuration of a machine.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MachineConfig : pb::IMessage<MachineConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6108,6 +9368,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       /// Nodes in an AlloyDB instance are ephemereal, they can change during
       /// update, failover, autohealing and resize operations.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Node : pb::IMessage<Node>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6426,6 +9687,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       /// <summary>
       /// QueryInsights Instance specific configuration.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class QueryInsightsInstanceConfig : pb::IMessage<QueryInsightsInstanceConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6477,6 +9739,8 @@ namespace Google.Cloud.AlloyDb.V1 {
 
         /// <summary>Field number for the "record_application_tags" field.</summary>
         public const int RecordApplicationTagsFieldNumber = 2;
+        private readonly static bool RecordApplicationTagsDefaultValue = false;
+
         private bool recordApplicationTags_;
         /// <summary>
         /// Record application tags for an instance.
@@ -6485,7 +9749,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool RecordApplicationTags {
-          get { if ((_hasBits0 & 1) != 0) { return recordApplicationTags_; } else { return false; } }
+          get { if ((_hasBits0 & 1) != 0) { return recordApplicationTags_; } else { return RecordApplicationTagsDefaultValue; } }
           set {
             _hasBits0 |= 1;
             recordApplicationTags_ = value;
@@ -6506,6 +9770,8 @@ namespace Google.Cloud.AlloyDb.V1 {
 
         /// <summary>Field number for the "record_client_address" field.</summary>
         public const int RecordClientAddressFieldNumber = 3;
+        private readonly static bool RecordClientAddressDefaultValue = false;
+
         private bool recordClientAddress_;
         /// <summary>
         /// Record client address for an instance. Client address is PII information.
@@ -6514,7 +9780,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool RecordClientAddress {
-          get { if ((_hasBits0 & 2) != 0) { return recordClientAddress_; } else { return false; } }
+          get { if ((_hasBits0 & 2) != 0) { return recordClientAddress_; } else { return RecordClientAddressDefaultValue; } }
           set {
             _hasBits0 |= 2;
             recordClientAddress_ = value;
@@ -6551,6 +9817,8 @@ namespace Google.Cloud.AlloyDb.V1 {
 
         /// <summary>Field number for the "query_plans_per_minute" field.</summary>
         public const int QueryPlansPerMinuteFieldNumber = 5;
+        private readonly static uint QueryPlansPerMinuteDefaultValue = 0;
+
         private uint queryPlansPerMinute_;
         /// <summary>
         /// Number of query execution plans captured by Insights per minute
@@ -6560,7 +9828,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public uint QueryPlansPerMinute {
-          get { if ((_hasBits0 & 4) != 0) { return queryPlansPerMinute_; } else { return 0; } }
+          get { if ((_hasBits0 & 4) != 0) { return queryPlansPerMinute_; } else { return QueryPlansPerMinuteDefaultValue; } }
           set {
             _hasBits0 |= 4;
             queryPlansPerMinute_ = value;
@@ -6787,6 +10055,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       /// <summary>
       /// Configuration for a read pool instance.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ReadPoolConfig : pb::IMessage<ReadPoolConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6979,14 +10248,1325 @@ namespace Google.Cloud.AlloyDb.V1 {
 
       }
 
+      /// <summary>
+      /// Client connection configuration
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ClientConnectionConfig : pb::IMessage<ClientConnectionConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ClientConnectionConfig> _parser = new pb::MessageParser<ClientConnectionConfig>(() => new ClientConnectionConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ClientConnectionConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AlloyDb.V1.Instance.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ClientConnectionConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ClientConnectionConfig(ClientConnectionConfig other) : this() {
+          requireConnectors_ = other.requireConnectors_;
+          sslConfig_ = other.sslConfig_ != null ? other.sslConfig_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ClientConnectionConfig Clone() {
+          return new ClientConnectionConfig(this);
+        }
+
+        /// <summary>Field number for the "require_connectors" field.</summary>
+        public const int RequireConnectorsFieldNumber = 1;
+        private bool requireConnectors_;
+        /// <summary>
+        /// Optional. Configuration to enforce connectors only (ex: AuthProxy)
+        /// connections to the database.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool RequireConnectors {
+          get { return requireConnectors_; }
+          set {
+            requireConnectors_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "ssl_config" field.</summary>
+        public const int SslConfigFieldNumber = 2;
+        private global::Google.Cloud.AlloyDb.V1.SslConfig sslConfig_;
+        /// <summary>
+        /// Optional. SSL configuration option for this instance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AlloyDb.V1.SslConfig SslConfig {
+          get { return sslConfig_; }
+          set {
+            sslConfig_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ClientConnectionConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ClientConnectionConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RequireConnectors != other.RequireConnectors) return false;
+          if (!object.Equals(SslConfig, other.SslConfig)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RequireConnectors != false) hash ^= RequireConnectors.GetHashCode();
+          if (sslConfig_ != null) hash ^= SslConfig.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RequireConnectors != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(RequireConnectors);
+          }
+          if (sslConfig_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(SslConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RequireConnectors != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(RequireConnectors);
+          }
+          if (sslConfig_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(SslConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RequireConnectors != false) {
+            size += 1 + 1;
+          }
+          if (sslConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(SslConfig);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ClientConnectionConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RequireConnectors != false) {
+            RequireConnectors = other.RequireConnectors;
+          }
+          if (other.sslConfig_ != null) {
+            if (sslConfig_ == null) {
+              SslConfig = new global::Google.Cloud.AlloyDb.V1.SslConfig();
+            }
+            SslConfig.MergeFrom(other.SslConfig);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                RequireConnectors = input.ReadBool();
+                break;
+              }
+              case 18: {
+                if (sslConfig_ == null) {
+                  SslConfig = new global::Google.Cloud.AlloyDb.V1.SslConfig();
+                }
+                input.ReadMessage(SslConfig);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                RequireConnectors = input.ReadBool();
+                break;
+              }
+              case 18: {
+                if (sslConfig_ == null) {
+                  SslConfig = new global::Google.Cloud.AlloyDb.V1.SslConfig();
+                }
+                input.ReadMessage(SslConfig);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// PscInstanceConfig contains PSC related configuration at an
+      /// instance level.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PscInstanceConfig : pb::IMessage<PscInstanceConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PscInstanceConfig> _parser = new pb::MessageParser<PscInstanceConfig>(() => new PscInstanceConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PscInstanceConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AlloyDb.V1.Instance.Descriptor.NestedTypes[5]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PscInstanceConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PscInstanceConfig(PscInstanceConfig other) : this() {
+          serviceAttachmentLink_ = other.serviceAttachmentLink_;
+          allowedConsumerProjects_ = other.allowedConsumerProjects_.Clone();
+          pscDnsName_ = other.pscDnsName_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PscInstanceConfig Clone() {
+          return new PscInstanceConfig(this);
+        }
+
+        /// <summary>Field number for the "service_attachment_link" field.</summary>
+        public const int ServiceAttachmentLinkFieldNumber = 1;
+        private string serviceAttachmentLink_ = "";
+        /// <summary>
+        /// Output only. The service attachment created when Private
+        /// Service Connect (PSC) is enabled for the instance.
+        /// The name of the resource will be in the format of
+        /// `projects/&lt;alloydb-tenant-project-number>/regions/&lt;region-name>/serviceAttachments/&lt;service-attachment-name>`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ServiceAttachmentLink {
+          get { return serviceAttachmentLink_; }
+          set {
+            serviceAttachmentLink_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "allowed_consumer_projects" field.</summary>
+        public const int AllowedConsumerProjectsFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_allowedConsumerProjects_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> allowedConsumerProjects_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. List of consumer projects that are allowed to create
+        /// PSC endpoints to service-attachments to this instance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> AllowedConsumerProjects {
+          get { return allowedConsumerProjects_; }
+        }
+
+        /// <summary>Field number for the "psc_dns_name" field.</summary>
+        public const int PscDnsNameFieldNumber = 7;
+        private string pscDnsName_ = "";
+        /// <summary>
+        /// Output only. The DNS name of the instance for PSC connectivity.
+        /// Name convention: &lt;uid>.&lt;uid>.&lt;region>.alloydb-psc.goog
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PscDnsName {
+          get { return pscDnsName_; }
+          set {
+            pscDnsName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PscInstanceConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PscInstanceConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ServiceAttachmentLink != other.ServiceAttachmentLink) return false;
+          if(!allowedConsumerProjects_.Equals(other.allowedConsumerProjects_)) return false;
+          if (PscDnsName != other.PscDnsName) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ServiceAttachmentLink.Length != 0) hash ^= ServiceAttachmentLink.GetHashCode();
+          hash ^= allowedConsumerProjects_.GetHashCode();
+          if (PscDnsName.Length != 0) hash ^= PscDnsName.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ServiceAttachmentLink.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ServiceAttachmentLink);
+          }
+          allowedConsumerProjects_.WriteTo(output, _repeated_allowedConsumerProjects_codec);
+          if (PscDnsName.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(PscDnsName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ServiceAttachmentLink.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ServiceAttachmentLink);
+          }
+          allowedConsumerProjects_.WriteTo(ref output, _repeated_allowedConsumerProjects_codec);
+          if (PscDnsName.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(PscDnsName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ServiceAttachmentLink.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAttachmentLink);
+          }
+          size += allowedConsumerProjects_.CalculateSize(_repeated_allowedConsumerProjects_codec);
+          if (PscDnsName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PscDnsName);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PscInstanceConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ServiceAttachmentLink.Length != 0) {
+            ServiceAttachmentLink = other.ServiceAttachmentLink;
+          }
+          allowedConsumerProjects_.Add(other.allowedConsumerProjects_);
+          if (other.PscDnsName.Length != 0) {
+            PscDnsName = other.PscDnsName;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ServiceAttachmentLink = input.ReadString();
+                break;
+              }
+              case 18: {
+                allowedConsumerProjects_.AddEntriesFrom(input, _repeated_allowedConsumerProjects_codec);
+                break;
+              }
+              case 58: {
+                PscDnsName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ServiceAttachmentLink = input.ReadString();
+                break;
+              }
+              case 18: {
+                allowedConsumerProjects_.AddEntriesFrom(ref input, _repeated_allowedConsumerProjects_codec);
+                break;
+              }
+              case 58: {
+                PscDnsName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Metadata related to instance-level network configuration.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class InstanceNetworkConfig : pb::IMessage<InstanceNetworkConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<InstanceNetworkConfig> _parser = new pb::MessageParser<InstanceNetworkConfig>(() => new InstanceNetworkConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<InstanceNetworkConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AlloyDb.V1.Instance.Descriptor.NestedTypes[6]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InstanceNetworkConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InstanceNetworkConfig(InstanceNetworkConfig other) : this() {
+          authorizedExternalNetworks_ = other.authorizedExternalNetworks_.Clone();
+          enablePublicIp_ = other.enablePublicIp_;
+          enableOutboundPublicIp_ = other.enableOutboundPublicIp_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InstanceNetworkConfig Clone() {
+          return new InstanceNetworkConfig(this);
+        }
+
+        /// <summary>Field number for the "authorized_external_networks" field.</summary>
+        public const int AuthorizedExternalNetworksFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig.Types.AuthorizedNetwork> _repeated_authorizedExternalNetworks_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig.Types.AuthorizedNetwork.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig.Types.AuthorizedNetwork> authorizedExternalNetworks_ = new pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig.Types.AuthorizedNetwork>();
+        /// <summary>
+        /// Optional. A list of external network authorized to access this instance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig.Types.AuthorizedNetwork> AuthorizedExternalNetworks {
+          get { return authorizedExternalNetworks_; }
+        }
+
+        /// <summary>Field number for the "enable_public_ip" field.</summary>
+        public const int EnablePublicIpFieldNumber = 2;
+        private bool enablePublicIp_;
+        /// <summary>
+        /// Optional. Enabling public ip for the instance.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnablePublicIp {
+          get { return enablePublicIp_; }
+          set {
+            enablePublicIp_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "enable_outbound_public_ip" field.</summary>
+        public const int EnableOutboundPublicIpFieldNumber = 3;
+        private bool enableOutboundPublicIp_;
+        /// <summary>
+        /// Optional. Enabling an outbound public IP address to support a database
+        /// server sending requests out into the internet.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnableOutboundPublicIp {
+          get { return enableOutboundPublicIp_; }
+          set {
+            enableOutboundPublicIp_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as InstanceNetworkConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(InstanceNetworkConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!authorizedExternalNetworks_.Equals(other.authorizedExternalNetworks_)) return false;
+          if (EnablePublicIp != other.EnablePublicIp) return false;
+          if (EnableOutboundPublicIp != other.EnableOutboundPublicIp) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= authorizedExternalNetworks_.GetHashCode();
+          if (EnablePublicIp != false) hash ^= EnablePublicIp.GetHashCode();
+          if (EnableOutboundPublicIp != false) hash ^= EnableOutboundPublicIp.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          authorizedExternalNetworks_.WriteTo(output, _repeated_authorizedExternalNetworks_codec);
+          if (EnablePublicIp != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(EnablePublicIp);
+          }
+          if (EnableOutboundPublicIp != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(EnableOutboundPublicIp);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          authorizedExternalNetworks_.WriteTo(ref output, _repeated_authorizedExternalNetworks_codec);
+          if (EnablePublicIp != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(EnablePublicIp);
+          }
+          if (EnableOutboundPublicIp != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(EnableOutboundPublicIp);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += authorizedExternalNetworks_.CalculateSize(_repeated_authorizedExternalNetworks_codec);
+          if (EnablePublicIp != false) {
+            size += 1 + 1;
+          }
+          if (EnableOutboundPublicIp != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(InstanceNetworkConfig other) {
+          if (other == null) {
+            return;
+          }
+          authorizedExternalNetworks_.Add(other.authorizedExternalNetworks_);
+          if (other.EnablePublicIp != false) {
+            EnablePublicIp = other.EnablePublicIp;
+          }
+          if (other.EnableOutboundPublicIp != false) {
+            EnableOutboundPublicIp = other.EnableOutboundPublicIp;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                authorizedExternalNetworks_.AddEntriesFrom(input, _repeated_authorizedExternalNetworks_codec);
+                break;
+              }
+              case 16: {
+                EnablePublicIp = input.ReadBool();
+                break;
+              }
+              case 24: {
+                EnableOutboundPublicIp = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                authorizedExternalNetworks_.AddEntriesFrom(ref input, _repeated_authorizedExternalNetworks_codec);
+                break;
+              }
+              case 16: {
+                EnablePublicIp = input.ReadBool();
+                break;
+              }
+              case 24: {
+                EnableOutboundPublicIp = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the InstanceNetworkConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// AuthorizedNetwork contains metadata for an authorized network.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class AuthorizedNetwork : pb::IMessage<AuthorizedNetwork>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<AuthorizedNetwork> _parser = new pb::MessageParser<AuthorizedNetwork>(() => new AuthorizedNetwork());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<AuthorizedNetwork> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AlloyDb.V1.Instance.Types.InstanceNetworkConfig.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AuthorizedNetwork() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AuthorizedNetwork(AuthorizedNetwork other) : this() {
+              cidrRange_ = other.cidrRange_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public AuthorizedNetwork Clone() {
+              return new AuthorizedNetwork(this);
+            }
+
+            /// <summary>Field number for the "cidr_range" field.</summary>
+            public const int CidrRangeFieldNumber = 1;
+            private string cidrRange_ = "";
+            /// <summary>
+            /// CIDR range for one authorzied network of the instance.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string CidrRange {
+              get { return cidrRange_; }
+              set {
+                cidrRange_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as AuthorizedNetwork);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(AuthorizedNetwork other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (CidrRange != other.CidrRange) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (CidrRange.Length != 0) hash ^= CidrRange.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (CidrRange.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(CidrRange);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (CidrRange.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(CidrRange);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (CidrRange.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(CidrRange);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(AuthorizedNetwork other) {
+              if (other == null) {
+                return;
+              }
+              if (other.CidrRange.Length != 0) {
+                CidrRange = other.CidrRange;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    CidrRange = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    CidrRange = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
     }
     #endregion
 
   }
 
   /// <summary>
+  /// ConnectionInfo singleton resource.
+  /// https://google.aip.dev/156
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ConnectionInfo : pb::IMessage<ConnectionInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ConnectionInfo> _parser = new pb::MessageParser<ConnectionInfo>(() => new ConnectionInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ConnectionInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConnectionInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConnectionInfo(ConnectionInfo other) : this() {
+      name_ = other.name_;
+      ipAddress_ = other.ipAddress_;
+      publicIpAddress_ = other.publicIpAddress_;
+      instanceUid_ = other.instanceUid_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConnectionInfo Clone() {
+      return new ConnectionInfo(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The name of the ConnectionInfo singleton resource, e.g.:
+    /// projects/{project}/locations/{location}/clusters/*/instances/*/connectionInfo
+    /// This field currently has no semantic meaning.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ip_address" field.</summary>
+    public const int IpAddressFieldNumber = 2;
+    private string ipAddress_ = "";
+    /// <summary>
+    /// Output only. The private network IP address for the Instance. This is the
+    /// default IP for the instance and is always created (even if enable_public_ip
+    /// is set). This is the connection endpoint for an end-user application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IpAddress {
+      get { return ipAddress_; }
+      set {
+        ipAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "public_ip_address" field.</summary>
+    public const int PublicIpAddressFieldNumber = 5;
+    private string publicIpAddress_ = "";
+    /// <summary>
+    /// Output only. The public IP addresses for the Instance. This is available
+    /// ONLY when enable_public_ip is set. This is the connection endpoint for an
+    /// end-user application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PublicIpAddress {
+      get { return publicIpAddress_; }
+      set {
+        publicIpAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "instance_uid" field.</summary>
+    public const int InstanceUidFieldNumber = 4;
+    private string instanceUid_ = "";
+    /// <summary>
+    /// Output only. The unique ID of the Instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InstanceUid {
+      get { return instanceUid_; }
+      set {
+        instanceUid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ConnectionInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ConnectionInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (IpAddress != other.IpAddress) return false;
+      if (PublicIpAddress != other.PublicIpAddress) return false;
+      if (InstanceUid != other.InstanceUid) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
+      if (PublicIpAddress.Length != 0) hash ^= PublicIpAddress.GetHashCode();
+      if (InstanceUid.Length != 0) hash ^= InstanceUid.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(IpAddress);
+      }
+      if (InstanceUid.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(InstanceUid);
+      }
+      if (PublicIpAddress.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PublicIpAddress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(IpAddress);
+      }
+      if (InstanceUid.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(InstanceUid);
+      }
+      if (PublicIpAddress.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PublicIpAddress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (IpAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddress);
+      }
+      if (PublicIpAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PublicIpAddress);
+      }
+      if (InstanceUid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InstanceUid);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ConnectionInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.IpAddress.Length != 0) {
+        IpAddress = other.IpAddress;
+      }
+      if (other.PublicIpAddress.Length != 0) {
+        PublicIpAddress = other.PublicIpAddress;
+      }
+      if (other.InstanceUid.Length != 0) {
+        InstanceUid = other.InstanceUid;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            IpAddress = input.ReadString();
+            break;
+          }
+          case 34: {
+            InstanceUid = input.ReadString();
+            break;
+          }
+          case 42: {
+            PublicIpAddress = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            IpAddress = input.ReadString();
+            break;
+          }
+          case 34: {
+            InstanceUid = input.ReadString();
+            break;
+          }
+          case 42: {
+            PublicIpAddress = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Message describing Backup object
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Backup : pb::IMessage<Backup>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7001,7 +11581,7 @@ namespace Google.Cloud.AlloyDb.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7040,6 +11620,10 @@ namespace Google.Cloud.AlloyDb.V1 {
       annotations_ = other.annotations_.Clone();
       sizeBytes_ = other.sizeBytes_;
       expiryTime_ = other.expiryTime_ != null ? other.expiryTime_.Clone() : null;
+      expiryQuantity_ = other.expiryQuantity_ != null ? other.expiryQuantity_.Clone() : null;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      databaseVersion_ = other.databaseVersion_;
+      tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7228,7 +11812,7 @@ namespace Google.Cloud.AlloyDb.V1 {
     private string clusterName_ = "";
     /// <summary>
     /// Required. The full resource name of the backup source cluster
-    /// (e.g., projects/&lt;project>/locations/&lt;location>/clusters/&lt;cluster_id>).
+    /// (e.g., projects/{project}/locations/{region}/clusters/{cluster_id}).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7353,6 +11937,74 @@ namespace Google.Cloud.AlloyDb.V1 {
       }
     }
 
+    /// <summary>Field number for the "expiry_quantity" field.</summary>
+    public const int ExpiryQuantityFieldNumber = 20;
+    private global::Google.Cloud.AlloyDb.V1.Backup.Types.QuantityBasedExpiry expiryQuantity_;
+    /// <summary>
+    /// Output only. The QuantityBasedExpiry of the backup, specified by the
+    /// backup's retention policy. Once the expiry quantity is over retention, the
+    /// backup is eligible to be garbage collected.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.Backup.Types.QuantityBasedExpiry ExpiryQuantity {
+      get { return expiryQuantity_; }
+      set {
+        expiryQuantity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 21;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "database_version" field.</summary>
+    public const int DatabaseVersionFieldNumber = 22;
+    private global::Google.Cloud.AlloyDb.V1.DatabaseVersion databaseVersion_ = global::Google.Cloud.AlloyDb.V1.DatabaseVersion.Unspecified;
+    /// <summary>
+    /// Output only. The database engine major version of the cluster this backup
+    /// was created from. Any restored cluster created from this backup will have
+    /// the same database version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.DatabaseVersion DatabaseVersion {
+      get { return databaseVersion_; }
+      set {
+        databaseVersion_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 25;
+    private static readonly pbc::MapField<string, string>.Codec _map_tags_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 202);
+    private readonly pbc::MapField<string, string> tags_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Input only. Immutable. Tag keys/values directly bound to this
+    /// resource. For example:
+    /// ```
+    /// "123/environment": "production",
+    /// "123/costCenter": "marketing"
+    /// ```
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Tags {
+      get { return tags_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7387,6 +12039,10 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (!Annotations.Equals(other.Annotations)) return false;
       if (SizeBytes != other.SizeBytes) return false;
       if (!object.Equals(ExpiryTime, other.ExpiryTime)) return false;
+      if (!object.Equals(ExpiryQuantity, other.ExpiryQuantity)) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (DatabaseVersion != other.DatabaseVersion) return false;
+      if (!Tags.Equals(other.Tags)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7413,6 +12069,10 @@ namespace Google.Cloud.AlloyDb.V1 {
       hash ^= Annotations.GetHashCode();
       if (SizeBytes != 0L) hash ^= SizeBytes.GetHashCode();
       if (expiryTime_ != null) hash ^= ExpiryTime.GetHashCode();
+      if (expiryQuantity_ != null) hash ^= ExpiryQuantity.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (DatabaseVersion != global::Google.Cloud.AlloyDb.V1.DatabaseVersion.Unspecified) hash ^= DatabaseVersion.GetHashCode();
+      hash ^= Tags.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7501,6 +12161,19 @@ namespace Google.Cloud.AlloyDb.V1 {
         output.WriteRawTag(154, 1);
         output.WriteMessage(ExpiryTime);
       }
+      if (expiryQuantity_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(ExpiryQuantity);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (DatabaseVersion != global::Google.Cloud.AlloyDb.V1.DatabaseVersion.Unspecified) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) DatabaseVersion);
+      }
+      tags_.WriteTo(output, _map_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7581,6 +12254,19 @@ namespace Google.Cloud.AlloyDb.V1 {
         output.WriteRawTag(154, 1);
         output.WriteMessage(ExpiryTime);
       }
+      if (expiryQuantity_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(ExpiryQuantity);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (DatabaseVersion != global::Google.Cloud.AlloyDb.V1.DatabaseVersion.Unspecified) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) DatabaseVersion);
+      }
+      tags_.WriteTo(ref output, _map_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7644,6 +12330,16 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (expiryTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ExpiryTime);
       }
+      if (expiryQuantity_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ExpiryQuantity);
+      }
+      if (SatisfiesPzs != false) {
+        size += 2 + 1;
+      }
+      if (DatabaseVersion != global::Google.Cloud.AlloyDb.V1.DatabaseVersion.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) DatabaseVersion);
+      }
+      size += tags_.CalculateSize(_map_tags_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -7683,7 +12379,7 @@ namespace Google.Cloud.AlloyDb.V1 {
         }
         DeleteTime.MergeFrom(other.DeleteTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.AlloyDb.V1.Backup.Types.State.Unspecified) {
         State = other.State;
       }
@@ -7717,7 +12413,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.SizeBytes != 0L) {
         SizeBytes = other.SizeBytes;
       }
@@ -7727,6 +12423,19 @@ namespace Google.Cloud.AlloyDb.V1 {
         }
         ExpiryTime.MergeFrom(other.ExpiryTime);
       }
+      if (other.expiryQuantity_ != null) {
+        if (expiryQuantity_ == null) {
+          ExpiryQuantity = new global::Google.Cloud.AlloyDb.V1.Backup.Types.QuantityBasedExpiry();
+        }
+        ExpiryQuantity.MergeFrom(other.ExpiryQuantity);
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.DatabaseVersion != global::Google.Cloud.AlloyDb.V1.DatabaseVersion.Unspecified) {
+        DatabaseVersion = other.DatabaseVersion;
+      }
+      tags_.MergeFrom(other.tags_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -7834,6 +12543,25 @@ namespace Google.Cloud.AlloyDb.V1 {
               ExpiryTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(ExpiryTime);
+            break;
+          }
+          case 162: {
+            if (expiryQuantity_ == null) {
+              ExpiryQuantity = new global::Google.Cloud.AlloyDb.V1.Backup.Types.QuantityBasedExpiry();
+            }
+            input.ReadMessage(ExpiryQuantity);
+            break;
+          }
+          case 168: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 176: {
+            DatabaseVersion = (global::Google.Cloud.AlloyDb.V1.DatabaseVersion) input.ReadEnum();
+            break;
+          }
+          case 202: {
+            tags_.AddEntriesFrom(input, _map_tags_codec);
             break;
           }
         }
@@ -7945,6 +12673,25 @@ namespace Google.Cloud.AlloyDb.V1 {
             input.ReadMessage(ExpiryTime);
             break;
           }
+          case 162: {
+            if (expiryQuantity_ == null) {
+              ExpiryQuantity = new global::Google.Cloud.AlloyDb.V1.Backup.Types.QuantityBasedExpiry();
+            }
+            input.ReadMessage(ExpiryQuantity);
+            break;
+          }
+          case 168: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 176: {
+            DatabaseVersion = (global::Google.Cloud.AlloyDb.V1.DatabaseVersion) input.ReadEnum();
+            break;
+          }
+          case 202: {
+            tags_.AddEntriesFrom(ref input, _map_tags_codec);
+            break;
+          }
         }
       }
     }
@@ -8006,6 +12753,256 @@ namespace Google.Cloud.AlloyDb.V1 {
         [pbr::OriginalName("CONTINUOUS")] Continuous = 3,
       }
 
+      /// <summary>
+      /// A backup's position in a quantity-based retention queue, of backups with
+      /// the same source cluster and type, with length, retention, specified by the
+      /// backup's retention policy.
+      /// Once the position is greater than the retention, the backup is eligible to
+      /// be garbage collected.
+      ///
+      /// Example: 5 backups from the same source cluster and type with a
+      /// quantity-based retention of 3 and denoted by backup_id (position,
+      /// retention).
+      ///
+      /// Safe: backup_5 (1, 3), backup_4, (2, 3), backup_3 (3, 3).
+      /// Awaiting garbage collection: backup_2 (4, 3), backup_1 (5, 3)
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class QuantityBasedExpiry : pb::IMessage<QuantityBasedExpiry>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<QuantityBasedExpiry> _parser = new pb::MessageParser<QuantityBasedExpiry>(() => new QuantityBasedExpiry());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<QuantityBasedExpiry> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AlloyDb.V1.Backup.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public QuantityBasedExpiry() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public QuantityBasedExpiry(QuantityBasedExpiry other) : this() {
+          retentionCount_ = other.retentionCount_;
+          totalRetentionCount_ = other.totalRetentionCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public QuantityBasedExpiry Clone() {
+          return new QuantityBasedExpiry(this);
+        }
+
+        /// <summary>Field number for the "retention_count" field.</summary>
+        public const int RetentionCountFieldNumber = 1;
+        private int retentionCount_;
+        /// <summary>
+        /// Output only. The backup's position among its backups with the same source
+        /// cluster and type, by descending chronological order create time(i.e.
+        /// newest first).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int RetentionCount {
+          get { return retentionCount_; }
+          set {
+            retentionCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "total_retention_count" field.</summary>
+        public const int TotalRetentionCountFieldNumber = 2;
+        private int totalRetentionCount_;
+        /// <summary>
+        /// Output only. The length of the quantity-based queue, specified by the
+        /// backup's retention policy.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int TotalRetentionCount {
+          get { return totalRetentionCount_; }
+          set {
+            totalRetentionCount_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as QuantityBasedExpiry);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(QuantityBasedExpiry other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RetentionCount != other.RetentionCount) return false;
+          if (TotalRetentionCount != other.TotalRetentionCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RetentionCount != 0) hash ^= RetentionCount.GetHashCode();
+          if (TotalRetentionCount != 0) hash ^= TotalRetentionCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RetentionCount != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(RetentionCount);
+          }
+          if (TotalRetentionCount != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(TotalRetentionCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RetentionCount != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(RetentionCount);
+          }
+          if (TotalRetentionCount != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(TotalRetentionCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RetentionCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(RetentionCount);
+          }
+          if (TotalRetentionCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalRetentionCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(QuantityBasedExpiry other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RetentionCount != 0) {
+            RetentionCount = other.RetentionCount;
+          }
+          if (other.TotalRetentionCount != 0) {
+            TotalRetentionCount = other.TotalRetentionCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                RetentionCount = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                TotalRetentionCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                RetentionCount = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                TotalRetentionCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -8018,6 +13015,7 @@ namespace Google.Cloud.AlloyDb.V1 {
   /// To set the Database flags on a particular Instance, a caller should modify
   /// the Instance.database_flags field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SupportedDatabaseFlag : pb::IMessage<SupportedDatabaseFlag>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8032,7 +13030,7 @@ namespace Google.Cloud.AlloyDb.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8578,6 +13576,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       /// <summary>
       /// Restrictions on STRING type values
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StringRestrictions : pb::IMessage<StringRestrictions>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8763,6 +13762,7 @@ namespace Google.Cloud.AlloyDb.V1 {
       /// <summary>
       /// Restrictions on INTEGER type values.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IntegerRestrictions : pb::IMessage<IntegerRestrictions>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9013,6 +14013,662 @@ namespace Google.Cloud.AlloyDb.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Message describing User object.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class User : pb::IMessage<User>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<User> _parser = new pb::MessageParser<User>(() => new User());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<User> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public User() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public User(User other) : this() {
+      name_ = other.name_;
+      password_ = other.password_;
+      databaseRoles_ = other.databaseRoles_.Clone();
+      userType_ = other.userType_;
+      keepExtraRoles_ = other.keepExtraRoles_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public User Clone() {
+      return new User(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Name of the resource in the form of
+    /// projects/{project}/locations/{location}/cluster/{cluster}/users/{user}.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "password" field.</summary>
+    public const int PasswordFieldNumber = 2;
+    private string password_ = "";
+    /// <summary>
+    /// Input only. Password for the user.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Password {
+      get { return password_; }
+      set {
+        password_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "database_roles" field.</summary>
+    public const int DatabaseRolesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_databaseRoles_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> databaseRoles_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. List of database roles this user has.
+    /// The database role strings are subject to the PostgreSQL naming conventions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DatabaseRoles {
+      get { return databaseRoles_; }
+    }
+
+    /// <summary>Field number for the "user_type" field.</summary>
+    public const int UserTypeFieldNumber = 5;
+    private global::Google.Cloud.AlloyDb.V1.User.Types.UserType userType_ = global::Google.Cloud.AlloyDb.V1.User.Types.UserType.Unspecified;
+    /// <summary>
+    /// Optional. Type of this user.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AlloyDb.V1.User.Types.UserType UserType {
+      get { return userType_; }
+      set {
+        userType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "keep_extra_roles" field.</summary>
+    public const int KeepExtraRolesFieldNumber = 6;
+    private bool keepExtraRoles_;
+    /// <summary>
+    /// Input only. If the user already exists and it has additional roles, keep
+    /// them granted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool KeepExtraRoles {
+      get { return keepExtraRoles_; }
+      set {
+        keepExtraRoles_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as User);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(User other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Password != other.Password) return false;
+      if(!databaseRoles_.Equals(other.databaseRoles_)) return false;
+      if (UserType != other.UserType) return false;
+      if (KeepExtraRoles != other.KeepExtraRoles) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Password.Length != 0) hash ^= Password.GetHashCode();
+      hash ^= databaseRoles_.GetHashCode();
+      if (UserType != global::Google.Cloud.AlloyDb.V1.User.Types.UserType.Unspecified) hash ^= UserType.GetHashCode();
+      if (KeepExtraRoles != false) hash ^= KeepExtraRoles.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Password.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Password);
+      }
+      databaseRoles_.WriteTo(output, _repeated_databaseRoles_codec);
+      if (UserType != global::Google.Cloud.AlloyDb.V1.User.Types.UserType.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) UserType);
+      }
+      if (KeepExtraRoles != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(KeepExtraRoles);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Password.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Password);
+      }
+      databaseRoles_.WriteTo(ref output, _repeated_databaseRoles_codec);
+      if (UserType != global::Google.Cloud.AlloyDb.V1.User.Types.UserType.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) UserType);
+      }
+      if (KeepExtraRoles != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(KeepExtraRoles);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Password.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
+      }
+      size += databaseRoles_.CalculateSize(_repeated_databaseRoles_codec);
+      if (UserType != global::Google.Cloud.AlloyDb.V1.User.Types.UserType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UserType);
+      }
+      if (KeepExtraRoles != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(User other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Password.Length != 0) {
+        Password = other.Password;
+      }
+      databaseRoles_.Add(other.databaseRoles_);
+      if (other.UserType != global::Google.Cloud.AlloyDb.V1.User.Types.UserType.Unspecified) {
+        UserType = other.UserType;
+      }
+      if (other.KeepExtraRoles != false) {
+        KeepExtraRoles = other.KeepExtraRoles;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Password = input.ReadString();
+            break;
+          }
+          case 34: {
+            databaseRoles_.AddEntriesFrom(input, _repeated_databaseRoles_codec);
+            break;
+          }
+          case 40: {
+            UserType = (global::Google.Cloud.AlloyDb.V1.User.Types.UserType) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            KeepExtraRoles = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Password = input.ReadString();
+            break;
+          }
+          case 34: {
+            databaseRoles_.AddEntriesFrom(ref input, _repeated_databaseRoles_codec);
+            break;
+          }
+          case 40: {
+            UserType = (global::Google.Cloud.AlloyDb.V1.User.Types.UserType) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            KeepExtraRoles = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the User message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Enum that details the user type.
+      /// </summary>
+      public enum UserType {
+        /// <summary>
+        /// Unspecified user type.
+        /// </summary>
+        [pbr::OriginalName("USER_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The default user type that authenticates via password-based
+        /// authentication.
+        /// </summary>
+        [pbr::OriginalName("ALLOYDB_BUILT_IN")] AlloydbBuiltIn = 1,
+        /// <summary>
+        /// Database user that can authenticate via IAM-Based authentication.
+        /// </summary>
+        [pbr::OriginalName("ALLOYDB_IAM_USER")] AlloydbIamUser = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Message describing Database object.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Database : pb::IMessage<Database>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Database> _parser = new pb::MessageParser<Database>(() => new Database());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Database> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AlloyDb.V1.ResourcesReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Database() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Database(Database other) : this() {
+      name_ = other.name_;
+      charset_ = other.charset_;
+      collation_ = other.collation_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Database Clone() {
+      return new Database(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Identifier. Name of the resource in the form of
+    /// `projects/{project}/locations/{location}/clusters/{cluster}/databases/{database}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "charset" field.</summary>
+    public const int CharsetFieldNumber = 2;
+    private string charset_ = "";
+    /// <summary>
+    /// Optional. Charset for the database.
+    /// This field can contain any PostgreSQL supported charset name.
+    /// Example values include "UTF8", "SQL_ASCII", etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Charset {
+      get { return charset_; }
+      set {
+        charset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "collation" field.</summary>
+    public const int CollationFieldNumber = 3;
+    private string collation_ = "";
+    /// <summary>
+    /// Optional. Collation for the database.
+    /// Name of the custom or native collation for postgres.
+    /// Example values include "C", "POSIX", etc
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Collation {
+      get { return collation_; }
+      set {
+        collation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Database);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Database other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Charset != other.Charset) return false;
+      if (Collation != other.Collation) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Charset.Length != 0) hash ^= Charset.GetHashCode();
+      if (Collation.Length != 0) hash ^= Collation.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Charset.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Charset);
+      }
+      if (Collation.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Collation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Charset.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Charset);
+      }
+      if (Collation.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Collation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Charset.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Charset);
+      }
+      if (Collation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Collation);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Database other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Charset.Length != 0) {
+        Charset = other.Charset;
+      }
+      if (other.Collation.Length != 0) {
+        Collation = other.Collation;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Charset = input.ReadString();
+            break;
+          }
+          case 26: {
+            Collation = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Charset = input.ReadString();
+            break;
+          }
+          case 26: {
+            Collation = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

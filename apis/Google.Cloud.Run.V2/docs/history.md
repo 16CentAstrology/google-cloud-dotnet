@@ -1,5 +1,130 @@
 # Version history
 
+## Version 2.12.0, released 2024-12-06
+
+### New features
+
+- Support manual instance count in Cloud Run for manual scaling feature ([commit aa9150c](https://github.com/googleapis/google-cloud-dotnet/commit/aa9150cacc8005f1c2923220561c9c0c9b9c58f9))
+
+## Version 2.11.0, released 2024-11-18
+
+### New features
+
+- Add EncryptionKeyRevocationAction and shutdown duration configuration to Services ([commit 6963dfd](https://github.com/googleapis/google-cloud-dotnet/commit/6963dfdb09d8947ff414d6cb15b33c5edc049a50))
+- Support advanced configurations options for cloud storage volumes by setting mount_options in the GCSVolumeSource configuration ([commit f8a46b8](https://github.com/googleapis/google-cloud-dotnet/commit/f8a46b8760b14817434b7da6734a3208c2751a0b))
+
+### Documentation improvements
+
+- Fixed formatting of some documentation ([commit 6963dfd](https://github.com/googleapis/google-cloud-dotnet/commit/6963dfdb09d8947ff414d6cb15b33c5edc049a50))
+- Update docs for field `value` in message `.google.cloud.run.v2.EnvVar` to reflect Cloud Run product capabilities ([commit f8a46b8](https://github.com/googleapis/google-cloud-dotnet/commit/f8a46b8760b14817434b7da6734a3208c2751a0b))
+- A comment for field `max_instance_request_concurrency` in message `.google.cloud.run.v2.RevisionTemplate` is changed ([commit f8a46b8](https://github.com/googleapis/google-cloud-dotnet/commit/f8a46b8760b14817434b7da6734a3208c2751a0b))
+- For field `invoker_iam_disabled` in message `.google.cloud.run.v2.Service`, clarify that feature is available by invitation only ([commit f8a46b8](https://github.com/googleapis/google-cloud-dotnet/commit/f8a46b8760b14817434b7da6734a3208c2751a0b))
+
+## Version 2.10.0, released 2024-10-07
+
+### New features
+
+- Add Builds API ([commit b72b1d8](https://github.com/googleapis/google-cloud-dotnet/commit/b72b1d8eae1298344189c98f441989119a1cd0e4))
+- Add Service Mesh configuration to Services ([commit b72b1d8](https://github.com/googleapis/google-cloud-dotnet/commit/b72b1d8eae1298344189c98f441989119a1cd0e4))
+- Add GPU configuration to Services ([commit b72b1d8](https://github.com/googleapis/google-cloud-dotnet/commit/b72b1d8eae1298344189c98f441989119a1cd0e4))
+- Add INGRESS_TRAFFIC_NONE to Services ([commit b72b1d8](https://github.com/googleapis/google-cloud-dotnet/commit/b72b1d8eae1298344189c98f441989119a1cd0e4))
+- Add ServiceScaling to Services ([commit b72b1d8](https://github.com/googleapis/google-cloud-dotnet/commit/b72b1d8eae1298344189c98f441989119a1cd0e4))
+
+### Documentation improvements
+
+- Fixed formatting of some documentation ([commit b72b1d8](https://github.com/googleapis/google-cloud-dotnet/commit/b72b1d8eae1298344189c98f441989119a1cd0e4))
+
+## Version 2.9.0, released 2024-07-22
+
+### New features
+
+- Support update_mask in Cloud Run UpdateService ([commit bb34cc0](https://github.com/googleapis/google-cloud-dotnet/commit/bb34cc0531c91e8f2468ad6833da92fcff735936))
+- Add Job start_execution_token and run_execution_token to execute jobs immediately on creation ([commit bb34cc0](https://github.com/googleapis/google-cloud-dotnet/commit/bb34cc0531c91e8f2468ad6833da92fcff735936))
+- Add Job ExecutionReference.completion_status to show status of the most recent execution ([commit bb34cc0](https://github.com/googleapis/google-cloud-dotnet/commit/bb34cc0531c91e8f2468ad6833da92fcff735936))
+
+### Documentation improvements
+
+- Clarify optional fields in Cloud Run requests ([commit bb34cc0](https://github.com/googleapis/google-cloud-dotnet/commit/bb34cc0531c91e8f2468ad6833da92fcff735936))
+
+## Version 2.8.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.7.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.6.0, released 2024-03-05
+
+### New features
+
+- Support mounting NFS and GCS volumes in Cloud Run Jobs and Services ([commit e85fcd7](https://github.com/googleapis/google-cloud-dotnet/commit/e85fcd750c48d20b360e2cb8a4cd9bbc2eb821b8))
+- Support specifying a per-Service min-instance-count ([commit e85fcd7](https://github.com/googleapis/google-cloud-dotnet/commit/e85fcd750c48d20b360e2cb8a4cd9bbc2eb821b8))
+- Support disabling waiting for health checks during Service deployment. ([commit e85fcd7](https://github.com/googleapis/google-cloud-dotnet/commit/e85fcd750c48d20b360e2cb8a4cd9bbc2eb821b8))
+- Allow disabling the default URL (run.app) for Cloud Run Services ([commit e85fcd7](https://github.com/googleapis/google-cloud-dotnet/commit/e85fcd750c48d20b360e2cb8a4cd9bbc2eb821b8))
+
+### Documentation improvements
+
+- Clarify some defaults and required or optional values ([commit e85fcd7](https://github.com/googleapis/google-cloud-dotnet/commit/e85fcd750c48d20b360e2cb8a4cd9bbc2eb821b8))
+
+## Version 2.5.0, released 2024-02-29
+
+No API surface changes; just dependency updates.
+
+## Version 2.4.0, released 2023-09-28
+
+BREAKING CHANGE: The removal of the TrafficTagsCleanupThreshold
+(introduced in 2.3.0 accidentally) is clearly a breaking change, but
+we hope we've released this update quickly enough to avoid any
+customers actually being affected. We believe that using a minor
+version is less disruptive to customers than using a major version
+bump in this particular case. We apologize for any inconvenience.
+
+### Bug fixes
+
+- Removes accidentally exposed field service.traffic_tags_cleanup_threshold in Cloud Run Service ([commit 6b18d1f](https://github.com/googleapis/google-cloud-dotnet/commit/6b18d1fdef57b8e2087a8a5e013e3a59bd4a7c94))
+
+### Documentation improvements
+
+- Minor comment fixes ([commit 6b18d1f](https://github.com/googleapis/google-cloud-dotnet/commit/6b18d1fdef57b8e2087a8a5e013e3a59bd4a7c94))
+
+## Version 2.3.0, released 2023-09-26
+
+### New features
+
+- Adds support for cancel Execution ([commit 887dc16](https://github.com/googleapis/google-cloud-dotnet/commit/887dc168d55116c4969e7e7b66c5df9063b8a19a))
+- Adds support for Execution overrides ([commit 887dc16](https://github.com/googleapis/google-cloud-dotnet/commit/887dc168d55116c4969e7e7b66c5df9063b8a19a))
+- Adds support for Direct VPC egress setting ([commit 887dc16](https://github.com/googleapis/google-cloud-dotnet/commit/887dc168d55116c4969e7e7b66c5df9063b8a19a))
+- New fields for multi-container ([commit 887dc16](https://github.com/googleapis/google-cloud-dotnet/commit/887dc168d55116c4969e7e7b66c5df9063b8a19a))
+- New field for Task's scheduled timestamp ([commit 887dc16](https://github.com/googleapis/google-cloud-dotnet/commit/887dc168d55116c4969e7e7b66c5df9063b8a19a))
+
+### Documentation improvements
+
+- General documentation fixes. ([commit 887dc16](https://github.com/googleapis/google-cloud-dotnet/commit/887dc168d55116c4969e7e7b66c5df9063b8a19a))
+
+## Version 2.2.0, released 2023-07-13
+
+### New features
+
+- Adds support for custom audiences ([commit 5233add](https://github.com/googleapis/google-cloud-dotnet/commit/5233add1e8fb5a8ab6bb5324ac830e4926373357))
+
+## Version 2.1.0, released 2023-05-03
+
+### New features
+
+- Adds support for Startup CPU Boost (GA) ([commit 32b5017](https://github.com/googleapis/google-cloud-dotnet/commit/32b5017e4f86393961797f15d84b0d5206e58daf))
+- Adds support for Session affinity in Service (GA) ([commit 32b5017](https://github.com/googleapis/google-cloud-dotnet/commit/32b5017e4f86393961797f15d84b0d5206e58daf))
+- New 'port' field for HttpGetAction probe type ([commit 32b5017](https://github.com/googleapis/google-cloud-dotnet/commit/32b5017e4f86393961797f15d84b0d5206e58daf))
+- New fields/enum values ([commit 32b5017](https://github.com/googleapis/google-cloud-dotnet/commit/32b5017e4f86393961797f15d84b0d5206e58daf))
+
+### Documentation improvements
+
+- General documentation fixes. ([commit 32b5017](https://github.com/googleapis/google-cloud-dotnet/commit/32b5017e4f86393961797f15d84b0d5206e58daf))
+
 ## Version 2.0.0, released 2023-03-27
 
 No API surface changes; just dependency updates and initial GA release.

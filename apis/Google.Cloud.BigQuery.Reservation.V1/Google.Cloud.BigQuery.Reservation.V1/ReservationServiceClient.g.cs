@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using linq = System.Linq;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.BigQuery.Reservation.V1
 {
@@ -53,6 +53,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             GetReservationSettings = existing.GetReservationSettings;
             DeleteReservationSettings = existing.DeleteReservationSettings;
             UpdateReservationSettings = existing.UpdateReservationSettings;
+            FailoverReservationSettings = existing.FailoverReservationSettings;
             CreateCapacityCommitmentSettings = existing.CreateCapacityCommitmentSettings;
             ListCapacityCommitmentsSettings = existing.ListCapacityCommitmentsSettings;
             GetCapacityCommitmentSettings = existing.GetCapacityCommitmentSettings;
@@ -163,6 +164,19 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateReservationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationServiceClient.FailoverReservation</c> and <c>ReservationServiceClient.FailoverReservationAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FailoverReservationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -472,14 +486,14 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ReservationServiceClient.Create(callInvoker, Settings, Logger);
+            return ReservationServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ReservationServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ReservationServiceClient.Create(callInvoker, Settings, Logger);
+            return ReservationServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -791,13 +805,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Reservation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReservationsResponse, Reservation> ListReservations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReservations(new ListReservationsRequest
+        public virtual gax::PagedEnumerable<ListReservationsResponse, Reservation> ListReservations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReservationsRequest request = new ListReservationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReservations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the reservations for the project in the specified location.
@@ -816,13 +839,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Reservation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReservationsResponse, Reservation> ListReservationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReservationsAsync(new ListReservationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReservationsResponse, Reservation> ListReservationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReservationsRequest request = new ListReservationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReservationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the reservations for the project in the specified location.
@@ -841,13 +873,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Reservation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListReservationsResponse, Reservation> ListReservations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReservations(new ListReservationsRequest
+        public virtual gax::PagedEnumerable<ListReservationsResponse, Reservation> ListReservations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReservationsRequest request = new ListReservationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReservations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the reservations for the project in the specified location.
@@ -866,13 +907,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Reservation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListReservationsResponse, Reservation> ListReservationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListReservationsAsync(new ListReservationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListReservationsResponse, Reservation> ListReservationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListReservationsRequest request = new ListReservationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListReservationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns information about the reservation.
@@ -1192,6 +1242,45 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             UpdateReservationAsync(reservation, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Fail over a reservation to the secondary location. The operation should be
+        /// done in the current secondary location, which will be promoted to the
+        /// new primary location for the reservation.
+        /// Attempting to failover a reservation in the current primary location will
+        /// fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Reservation FailoverReservation(FailoverReservationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fail over a reservation to the secondary location. The operation should be
+        /// done in the current secondary location, which will be promoted to the
+        /// new primary location for the reservation.
+        /// Attempting to failover a reservation in the current primary location will
+        /// fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Reservation> FailoverReservationAsync(FailoverReservationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fail over a reservation to the secondary location. The operation should be
+        /// done in the current secondary location, which will be promoted to the
+        /// new primary location for the reservation.
+        /// Attempting to failover a reservation in the current primary location will
+        /// fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Reservation> FailoverReservationAsync(FailoverReservationRequest request, st::CancellationToken cancellationToken) =>
+            FailoverReservationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a new capacity commitment resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1359,13 +1448,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CapacityCommitment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCapacityCommitmentsResponse, CapacityCommitment> ListCapacityCommitments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCapacityCommitments(new ListCapacityCommitmentsRequest
+        public virtual gax::PagedEnumerable<ListCapacityCommitmentsResponse, CapacityCommitment> ListCapacityCommitments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCapacityCommitmentsRequest request = new ListCapacityCommitmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCapacityCommitments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the capacity commitments for the admin project.
@@ -1384,13 +1482,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CapacityCommitment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCapacityCommitmentsResponse, CapacityCommitment> ListCapacityCommitmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCapacityCommitmentsAsync(new ListCapacityCommitmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCapacityCommitmentsResponse, CapacityCommitment> ListCapacityCommitmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCapacityCommitmentsRequest request = new ListCapacityCommitmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCapacityCommitmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the capacity commitments for the admin project.
@@ -1409,13 +1516,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CapacityCommitment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCapacityCommitmentsResponse, CapacityCommitment> ListCapacityCommitments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCapacityCommitments(new ListCapacityCommitmentsRequest
+        public virtual gax::PagedEnumerable<ListCapacityCommitmentsResponse, CapacityCommitment> ListCapacityCommitments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCapacityCommitmentsRequest request = new ListCapacityCommitmentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCapacityCommitments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the capacity commitments for the admin project.
@@ -1434,13 +1550,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CapacityCommitment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCapacityCommitmentsResponse, CapacityCommitment> ListCapacityCommitmentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCapacityCommitmentsAsync(new ListCapacityCommitmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCapacityCommitmentsResponse, CapacityCommitment> ListCapacityCommitmentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCapacityCommitmentsRequest request = new ListCapacityCommitmentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCapacityCommitmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns information about the capacity commitment.
@@ -2753,13 +2878,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAssignmentsResponse, Assignment> ListAssignments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssignments(new ListAssignmentsRequest
+        public virtual gax::PagedEnumerable<ListAssignmentsResponse, Assignment> ListAssignments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssignmentsRequest request = new ListAssignmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssignments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists assignments.
@@ -2803,13 +2937,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAssignmentsResponse, Assignment> ListAssignmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssignmentsAsync(new ListAssignmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAssignmentsResponse, Assignment> ListAssignmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssignmentsRequest request = new ListAssignmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssignmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists assignments.
@@ -2853,13 +2996,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAssignmentsResponse, Assignment> ListAssignments(ReservationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssignments(new ListAssignmentsRequest
+        public virtual gax::PagedEnumerable<ListAssignmentsResponse, Assignment> ListAssignments(ReservationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssignmentsRequest request = new ListAssignmentsRequest
             {
                 ParentAsReservationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssignments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists assignments.
@@ -2903,13 +3055,22 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAssignmentsResponse, Assignment> ListAssignmentsAsync(ReservationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAssignmentsAsync(new ListAssignmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAssignmentsResponse, Assignment> ListAssignmentsAsync(ReservationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAssignmentsRequest request = new ListAssignmentsRequest
             {
                 ParentAsReservationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAssignmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a assignment. No expansion will happen.
@@ -3262,14 +3423,23 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignments(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAssignments(new SearchAssignmentsRequest
+        public virtual gax::PagedEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignments(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAssignmentsRequest request = new SearchAssignmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAssignments(request, callSettings);
+        }
 
         /// <summary>
         /// Deprecated: Looks up assignments for a specified resource for a particular
@@ -3321,14 +3491,23 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedAsyncEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignmentsAsync(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAssignmentsAsync(new SearchAssignmentsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignmentsAsync(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAssignmentsRequest request = new SearchAssignmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAssignmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deprecated: Looks up assignments for a specified resource for a particular
@@ -3380,14 +3559,23 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignments(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAssignments(new SearchAssignmentsRequest
+        public virtual gax::PagedEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignments(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAssignmentsRequest request = new SearchAssignmentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAssignments(request, callSettings);
+        }
 
         /// <summary>
         /// Deprecated: Looks up assignments for a specified resource for a particular
@@ -3439,14 +3627,23 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
         [sys::ObsoleteAttribute]
-        public virtual gax::PagedAsyncEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignmentsAsync(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAssignmentsAsync(new SearchAssignmentsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignmentsAsync(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAssignmentsRequest request = new SearchAssignmentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAssignmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Looks up assignments for a specified resource for a particular region.
@@ -3550,14 +3747,23 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignments(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAllAssignments(new SearchAllAssignmentsRequest
+        public virtual gax::PagedEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignments(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAllAssignmentsRequest request = new SearchAllAssignmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAllAssignments(request, callSettings);
+        }
 
         /// <summary>
         /// Looks up assignments for a specified resource for a particular region.
@@ -3605,14 +3811,23 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignmentsAsync(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAllAssignmentsAsync(new SearchAllAssignmentsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignmentsAsync(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAllAssignmentsRequest request = new SearchAllAssignmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAllAssignmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Looks up assignments for a specified resource for a particular region.
@@ -3660,14 +3875,23 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignments(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAllAssignments(new SearchAllAssignmentsRequest
+        public virtual gax::PagedEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignments(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAllAssignmentsRequest request = new SearchAllAssignmentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAllAssignments(request, callSettings);
+        }
 
         /// <summary>
         /// Looks up assignments for a specified resource for a particular region.
@@ -3715,14 +3939,23 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignmentsAsync(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAllAssignmentsAsync(new SearchAllAssignmentsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignmentsAsync(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchAllAssignmentsRequest request = new SearchAllAssignmentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchAllAssignmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Moves an assignment under a new reservation.
@@ -4255,6 +4488,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         private readonly gaxgrpc::ApiCall<UpdateReservationRequest, Reservation> _callUpdateReservation;
 
+        private readonly gaxgrpc::ApiCall<FailoverReservationRequest, Reservation> _callFailoverReservation;
+
         private readonly gaxgrpc::ApiCall<CreateCapacityCommitmentRequest, CapacityCommitment> _callCreateCapacityCommitment;
 
         private readonly gaxgrpc::ApiCall<ListCapacityCommitmentsRequest, ListCapacityCommitmentsResponse> _callListCapacityCommitments;
@@ -4297,7 +4532,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         {
             GrpcClient = grpcClient;
             ReservationServiceSettings effectiveSettings = settings ?? ReservationServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callCreateReservation = clientHelper.BuildApiCall<CreateReservationRequest, Reservation>("CreateReservation", grpcClient.CreateReservationAsync, grpcClient.CreateReservation, effectiveSettings.CreateReservationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateReservation);
             Modify_CreateReservationApiCall(ref _callCreateReservation);
@@ -4313,6 +4552,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             _callUpdateReservation = clientHelper.BuildApiCall<UpdateReservationRequest, Reservation>("UpdateReservation", grpcClient.UpdateReservationAsync, grpcClient.UpdateReservation, effectiveSettings.UpdateReservationSettings).WithGoogleRequestParam("reservation.name", request => request.Reservation?.Name);
             Modify_ApiCall(ref _callUpdateReservation);
             Modify_UpdateReservationApiCall(ref _callUpdateReservation);
+            _callFailoverReservation = clientHelper.BuildApiCall<FailoverReservationRequest, Reservation>("FailoverReservation", grpcClient.FailoverReservationAsync, grpcClient.FailoverReservation, effectiveSettings.FailoverReservationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFailoverReservation);
+            Modify_FailoverReservationApiCall(ref _callFailoverReservation);
             _callCreateCapacityCommitment = clientHelper.BuildApiCall<CreateCapacityCommitmentRequest, CapacityCommitment>("CreateCapacityCommitment", grpcClient.CreateCapacityCommitmentAsync, grpcClient.CreateCapacityCommitment, effectiveSettings.CreateCapacityCommitmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCapacityCommitment);
             Modify_CreateCapacityCommitmentApiCall(ref _callCreateCapacityCommitment);
@@ -4378,6 +4620,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         partial void Modify_UpdateReservationApiCall(ref gaxgrpc::ApiCall<UpdateReservationRequest, Reservation> call);
 
+        partial void Modify_FailoverReservationApiCall(ref gaxgrpc::ApiCall<FailoverReservationRequest, Reservation> call);
+
         partial void Modify_CreateCapacityCommitmentApiCall(ref gaxgrpc::ApiCall<CreateCapacityCommitmentRequest, CapacityCommitment> call);
 
         partial void Modify_ListCapacityCommitmentsApiCall(ref gaxgrpc::ApiCall<ListCapacityCommitmentsRequest, ListCapacityCommitmentsResponse> call);
@@ -4424,6 +4668,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         partial void Modify_DeleteReservationRequest(ref DeleteReservationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateReservationRequest(ref UpdateReservationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FailoverReservationRequest(ref FailoverReservationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateCapacityCommitmentRequest(ref CreateCapacityCommitmentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4579,6 +4825,38 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         {
             Modify_UpdateReservationRequest(ref request, ref callSettings);
             return _callUpdateReservation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fail over a reservation to the secondary location. The operation should be
+        /// done in the current secondary location, which will be promoted to the
+        /// new primary location for the reservation.
+        /// Attempting to failover a reservation in the current primary location will
+        /// fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Reservation FailoverReservation(FailoverReservationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FailoverReservationRequest(ref request, ref callSettings);
+            return _callFailoverReservation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fail over a reservation to the secondary location. The operation should be
+        /// done in the current secondary location, which will be promoted to the
+        /// new primary location for the reservation.
+        /// Attempting to failover a reservation in the current primary location will
+        /// fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Reservation> FailoverReservationAsync(FailoverReservationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FailoverReservationRequest(ref request, ref callSettings);
+            return _callFailoverReservation.Async(request, callSettings);
         }
 
         /// <summary>

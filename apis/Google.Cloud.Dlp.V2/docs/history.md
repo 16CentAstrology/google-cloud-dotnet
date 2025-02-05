@@ -1,5 +1,113 @@
 # Version history
 
+## Version 4.15.0, released 2024-10-21
+
+### New features
+
+- Discovery of BigQuery snapshots ([commit 6a666e4](https://github.com/googleapis/google-cloud-dotnet/commit/6a666e46ee98a0ee20e57a334bee5d01c9f60e50))
+
+### Documentation improvements
+
+- Documentation revisions for data profiles ([commit 6a666e4](https://github.com/googleapis/google-cloud-dotnet/commit/6a666e46ee98a0ee20e57a334bee5d01c9f60e50))
+
+## Version 4.14.0, released 2024-09-26
+
+### New features
+
+- Action for publishing data profiles to SecOps (formelly known as Chronicle) ([commit d6641c2](https://github.com/googleapis/google-cloud-dotnet/commit/d6641c27d51c828d5c6d5930d93b30d79a6782e3))
+- Action for publishing data profiles to Security Command Center ([commit d6641c2](https://github.com/googleapis/google-cloud-dotnet/commit/d6641c27d51c828d5c6d5930d93b30d79a6782e3))
+- Discovery configs for AWS S3 buckets ([commit d6641c2](https://github.com/googleapis/google-cloud-dotnet/commit/d6641c27d51c828d5c6d5930d93b30d79a6782e3))
+
+### Documentation improvements
+
+- Small improvements and clarifications ([commit d6641c2](https://github.com/googleapis/google-cloud-dotnet/commit/d6641c27d51c828d5c6d5930d93b30d79a6782e3))
+
+## Version 4.13.0, released 2024-09-09
+
+### New features
+
+- Inspect template modified cadence discovery config for Cloud SQL ([commit 23f8df4](https://github.com/googleapis/google-cloud-dotnet/commit/23f8df41b49a13da263184e7723468f680120326))
+- File store data profiles can now be filtered by type and storage location ([commit 23f8df4](https://github.com/googleapis/google-cloud-dotnet/commit/23f8df41b49a13da263184e7723468f680120326))
+
+### Documentation improvements
+
+- Small improvements ([commit 23f8df4](https://github.com/googleapis/google-cloud-dotnet/commit/23f8df41b49a13da263184e7723468f680120326))
+
+## Version 4.12.0, released 2024-08-13
+
+### New features
+
+- Add the TagResources API ([commit 1be7ce3](https://github.com/googleapis/google-cloud-dotnet/commit/1be7ce396894cac23dc57f3bb33f7bdd4eb780fb))
+
+## Version 4.11.0, released 2024-08-05
+
+### New features
+
+- Org-level connection bindings ([commit 2268fa6](https://github.com/googleapis/google-cloud-dotnet/commit/2268fa61a7f338d380c9371defd3547d4df6d55c))
+- GRPC config for get, list, and delete FileStoreDataProfiles ([commit 2268fa6](https://github.com/googleapis/google-cloud-dotnet/commit/2268fa61a7f338d380c9371defd3547d4df6d55c))
+- Add refresh frequency for data profiling ([commit 2268fa6](https://github.com/googleapis/google-cloud-dotnet/commit/2268fa61a7f338d380c9371defd3547d4df6d55c))
+
+### Documentation improvements
+
+- Replace HTML tags with CommonMark notation ([commit 9eb36ce](https://github.com/googleapis/google-cloud-dotnet/commit/9eb36ce1f7e1a41f873983424d20af053c472c28))
+- Small improvements ([commit 2268fa6](https://github.com/googleapis/google-cloud-dotnet/commit/2268fa61a7f338d380c9371defd3547d4df6d55c))
+
+## Version 4.10.0, released 2024-07-22
+
+### New features
+
+- Add Cloud Storage discovery support ([commit e42223b](https://github.com/googleapis/google-cloud-dotnet/commit/e42223be9b17224ce05e282f5f03e7afacf58466))
+
+### Documentation improvements
+
+- Updated method documentation ([commit e42223b](https://github.com/googleapis/google-cloud-dotnet/commit/e42223be9b17224ce05e282f5f03e7afacf58466))
+
+## Version 4.9.0, released 2024-06-03
+
+### New features
+
+- Add secrets discovery support ([commit ec67558](https://github.com/googleapis/google-cloud-dotnet/commit/ec675587050d36090ce23ac6b618d551d2a0074b))
+- Add RPCs for deleting TableDataProfiles ([commit 4c44194](https://github.com/googleapis/google-cloud-dotnet/commit/4c44194c2aa30cb7ff16aae08d31225f297563dc))
+- Add RPCs for enabling discovery of Cloud SQL ([commit 4c44194](https://github.com/googleapis/google-cloud-dotnet/commit/4c44194c2aa30cb7ff16aae08d31225f297563dc))
+- Add field to InspectJobs num_rows_processed for BigQuery inspect jobs ([commit 4c44194](https://github.com/googleapis/google-cloud-dotnet/commit/4c44194c2aa30cb7ff16aae08d31225f297563dc))
+- Add new countries for supported detectors ([commit 4c44194](https://github.com/googleapis/google-cloud-dotnet/commit/4c44194c2aa30cb7ff16aae08d31225f297563dc))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+### Documentation improvements
+
+- Updated method documentation ([commit ec67558](https://github.com/googleapis/google-cloud-dotnet/commit/ec675587050d36090ce23ac6b618d551d2a0074b))
+- Updated method documentation ([commit 4c44194](https://github.com/googleapis/google-cloud-dotnet/commit/4c44194c2aa30cb7ff16aae08d31225f297563dc))
+
+### Notes
+
+This includes changes that were accidentally released in 2.15.0 and
+2.16.0 (now delisted), after version 4.8.0.
+
+## Version 4.8.0, released 2024-03-21
+
+### New features
+
+- Add RPCs for getting and listing project, table, and column data profiles ([commit 5dd8bca](https://github.com/googleapis/google-cloud-dotnet/commit/5dd8bca0b4def432d3c7714d21947a2632208431))
+
+### Documentation improvements
+
+- Update urls to reflect branding change to Sensitive Data Protection ([commit 5dd8bca](https://github.com/googleapis/google-cloud-dotnet/commit/5dd8bca0b4def432d3c7714d21947a2632208431))
+
+## Version 4.7.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 4.6.0, released 2023-10-30
+
+### New features
+
+- Introduce Discovery API protos and methods ([commit 89da231](https://github.com/googleapis/google-cloud-dotnet/commit/89da231f9973f8f481d10251f598e44b8c9e50cf))
+
+### Documentation improvements
+
+- Update comments for many messages. ([commit 89da231](https://github.com/googleapis/google-cloud-dotnet/commit/89da231f9973f8f481d10251f598e44b8c9e50cf))
+
 ## Version 4.5.0, released 2023-01-17
 
 ### New features

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,12 +14,14 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Cloud.Iam.V1;
+    using Google.Cloud.Spanner.Admin.Database.V1;
     using Google.Cloud.Spanner.Common.V1;
     using Google.LongRunning;
+    using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
@@ -319,6 +321,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 ExtraStatements = { "", },
                 EncryptionConfig = new EncryptionConfig(),
                 DatabaseDialect = DatabaseDialect.Unspecified,
+                ProtoDescriptors = ByteString.Empty,
             };
             // Make the request
             Operation<Database, CreateDatabaseMetadata> response = databaseAdminClient.CreateDatabase(request);
@@ -356,6 +359,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 ExtraStatements = { "", },
                 EncryptionConfig = new EncryptionConfig(),
                 DatabaseDialect = DatabaseDialect.Unspecified,
+                ProtoDescriptors = ByteString.Empty,
             };
             // Make the request
             Operation<Database, CreateDatabaseMetadata> response = await databaseAdminClient.CreateDatabaseAsync(request);
@@ -587,6 +591,134 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateDatabase</summary>
+        public void UpdateDatabaseRequestObject()
+        {
+            // Snippet: UpdateDatabase(UpdateDatabaseRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateDatabaseRequest request = new UpdateDatabaseRequest
+            {
+                Database = new Database(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<Database, UpdateDatabaseMetadata> response = databaseAdminClient.UpdateDatabase(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Database, UpdateDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Database, UpdateDatabaseMetadata> retrievedResponse = databaseAdminClient.PollOnceUpdateDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabaseAsync</summary>
+        public async Task UpdateDatabaseRequestObjectAsync()
+        {
+            // Snippet: UpdateDatabaseAsync(UpdateDatabaseRequest, CallSettings)
+            // Additional: UpdateDatabaseAsync(UpdateDatabaseRequest, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDatabaseRequest request = new UpdateDatabaseRequest
+            {
+                Database = new Database(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<Database, UpdateDatabaseMetadata> response = await databaseAdminClient.UpdateDatabaseAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Database, UpdateDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Database, UpdateDatabaseMetadata> retrievedResponse = await databaseAdminClient.PollOnceUpdateDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabase</summary>
+        public void UpdateDatabase()
+        {
+            // Snippet: UpdateDatabase(Database, FieldMask, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            Database database = new Database();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Database, UpdateDatabaseMetadata> response = databaseAdminClient.UpdateDatabase(database, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Database, UpdateDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Database, UpdateDatabaseMetadata> retrievedResponse = databaseAdminClient.PollOnceUpdateDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabaseAsync</summary>
+        public async Task UpdateDatabaseAsync()
+        {
+            // Snippet: UpdateDatabaseAsync(Database, FieldMask, CallSettings)
+            // Additional: UpdateDatabaseAsync(Database, FieldMask, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            Database database = new Database();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Database, UpdateDatabaseMetadata> response = await databaseAdminClient.UpdateDatabaseAsync(database, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Database, UpdateDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Database, UpdateDatabaseMetadata> retrievedResponse = await databaseAdminClient.PollOnceUpdateDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateDatabaseDdl</summary>
         public void UpdateDatabaseDdlRequestObject()
         {
@@ -599,6 +731,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Statements = { "", },
                 OperationId = "",
+                ProtoDescriptors = ByteString.Empty,
             };
             // Make the request
             Operation<Empty, UpdateDatabaseDdlMetadata> response = databaseAdminClient.UpdateDatabaseDdl(request);
@@ -634,6 +767,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Statements = { "", },
                 OperationId = "",
+                ProtoDescriptors = ByteString.Empty,
             };
             // Make the request
             Operation<Empty, UpdateDatabaseDdlMetadata> response = await databaseAdminClient.UpdateDatabaseDdlAsync(request);
@@ -3165,6 +3299,714 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (DatabaseRole item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddSplitPoints</summary>
+        public void AddSplitPointsRequestObject()
+        {
+            // Snippet: AddSplitPoints(AddSplitPointsRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            AddSplitPointsRequest request = new AddSplitPointsRequest
+            {
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SplitPoints = { new SplitPoints(), },
+                Initiator = "",
+            };
+            // Make the request
+            AddSplitPointsResponse response = databaseAdminClient.AddSplitPoints(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddSplitPointsAsync</summary>
+        public async Task AddSplitPointsRequestObjectAsync()
+        {
+            // Snippet: AddSplitPointsAsync(AddSplitPointsRequest, CallSettings)
+            // Additional: AddSplitPointsAsync(AddSplitPointsRequest, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            AddSplitPointsRequest request = new AddSplitPointsRequest
+            {
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SplitPoints = { new SplitPoints(), },
+                Initiator = "",
+            };
+            // Make the request
+            AddSplitPointsResponse response = await databaseAdminClient.AddSplitPointsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddSplitPoints</summary>
+        public void AddSplitPoints()
+        {
+            // Snippet: AddSplitPoints(string, IEnumerable<SplitPoints>, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            IEnumerable<SplitPoints> splitPoints = new SplitPoints[] { new SplitPoints(), };
+            // Make the request
+            AddSplitPointsResponse response = databaseAdminClient.AddSplitPoints(database, splitPoints);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddSplitPointsAsync</summary>
+        public async Task AddSplitPointsAsync()
+        {
+            // Snippet: AddSplitPointsAsync(string, IEnumerable<SplitPoints>, CallSettings)
+            // Additional: AddSplitPointsAsync(string, IEnumerable<SplitPoints>, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            IEnumerable<SplitPoints> splitPoints = new SplitPoints[] { new SplitPoints(), };
+            // Make the request
+            AddSplitPointsResponse response = await databaseAdminClient.AddSplitPointsAsync(database, splitPoints);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddSplitPoints</summary>
+        public void AddSplitPointsResourceNames()
+        {
+            // Snippet: AddSplitPoints(DatabaseName, IEnumerable<SplitPoints>, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            IEnumerable<SplitPoints> splitPoints = new SplitPoints[] { new SplitPoints(), };
+            // Make the request
+            AddSplitPointsResponse response = databaseAdminClient.AddSplitPoints(database, splitPoints);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddSplitPointsAsync</summary>
+        public async Task AddSplitPointsResourceNamesAsync()
+        {
+            // Snippet: AddSplitPointsAsync(DatabaseName, IEnumerable<SplitPoints>, CallSettings)
+            // Additional: AddSplitPointsAsync(DatabaseName, IEnumerable<SplitPoints>, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            IEnumerable<SplitPoints> splitPoints = new SplitPoints[] { new SplitPoints(), };
+            // Make the request
+            AddSplitPointsResponse response = await databaseAdminClient.AddSplitPointsAsync(database, splitPoints);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupSchedule</summary>
+        public void CreateBackupScheduleRequestObject()
+        {
+            // Snippet: CreateBackupSchedule(CreateBackupScheduleRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            CreateBackupScheduleRequest request = new CreateBackupScheduleRequest
+            {
+                ParentAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                BackupScheduleId = "",
+                BackupSchedule = new BackupSchedule(),
+            };
+            // Make the request
+            BackupSchedule response = databaseAdminClient.CreateBackupSchedule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupScheduleAsync</summary>
+        public async Task CreateBackupScheduleRequestObjectAsync()
+        {
+            // Snippet: CreateBackupScheduleAsync(CreateBackupScheduleRequest, CallSettings)
+            // Additional: CreateBackupScheduleAsync(CreateBackupScheduleRequest, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateBackupScheduleRequest request = new CreateBackupScheduleRequest
+            {
+                ParentAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                BackupScheduleId = "",
+                BackupSchedule = new BackupSchedule(),
+            };
+            // Make the request
+            BackupSchedule response = await databaseAdminClient.CreateBackupScheduleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupSchedule</summary>
+        public void CreateBackupSchedule()
+        {
+            // Snippet: CreateBackupSchedule(string, BackupSchedule, string, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            BackupSchedule backupSchedule = new BackupSchedule();
+            string backupScheduleId = "";
+            // Make the request
+            BackupSchedule response = databaseAdminClient.CreateBackupSchedule(parent, backupSchedule, backupScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupScheduleAsync</summary>
+        public async Task CreateBackupScheduleAsync()
+        {
+            // Snippet: CreateBackupScheduleAsync(string, BackupSchedule, string, CallSettings)
+            // Additional: CreateBackupScheduleAsync(string, BackupSchedule, string, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            BackupSchedule backupSchedule = new BackupSchedule();
+            string backupScheduleId = "";
+            // Make the request
+            BackupSchedule response = await databaseAdminClient.CreateBackupScheduleAsync(parent, backupSchedule, backupScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupSchedule</summary>
+        public void CreateBackupScheduleResourceNames()
+        {
+            // Snippet: CreateBackupSchedule(DatabaseName, BackupSchedule, string, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            DatabaseName parent = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            BackupSchedule backupSchedule = new BackupSchedule();
+            string backupScheduleId = "";
+            // Make the request
+            BackupSchedule response = databaseAdminClient.CreateBackupSchedule(parent, backupSchedule, backupScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBackupScheduleAsync</summary>
+        public async Task CreateBackupScheduleResourceNamesAsync()
+        {
+            // Snippet: CreateBackupScheduleAsync(DatabaseName, BackupSchedule, string, CallSettings)
+            // Additional: CreateBackupScheduleAsync(DatabaseName, BackupSchedule, string, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseName parent = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            BackupSchedule backupSchedule = new BackupSchedule();
+            string backupScheduleId = "";
+            // Make the request
+            BackupSchedule response = await databaseAdminClient.CreateBackupScheduleAsync(parent, backupSchedule, backupScheduleId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupSchedule</summary>
+        public void GetBackupScheduleRequestObject()
+        {
+            // Snippet: GetBackupSchedule(GetBackupScheduleRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            GetBackupScheduleRequest request = new GetBackupScheduleRequest
+            {
+                BackupScheduleName = BackupScheduleName.FromProjectInstanceDatabaseSchedule("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SCHEDULE]"),
+            };
+            // Make the request
+            BackupSchedule response = databaseAdminClient.GetBackupSchedule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupScheduleAsync</summary>
+        public async Task GetBackupScheduleRequestObjectAsync()
+        {
+            // Snippet: GetBackupScheduleAsync(GetBackupScheduleRequest, CallSettings)
+            // Additional: GetBackupScheduleAsync(GetBackupScheduleRequest, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetBackupScheduleRequest request = new GetBackupScheduleRequest
+            {
+                BackupScheduleName = BackupScheduleName.FromProjectInstanceDatabaseSchedule("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SCHEDULE]"),
+            };
+            // Make the request
+            BackupSchedule response = await databaseAdminClient.GetBackupScheduleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupSchedule</summary>
+        public void GetBackupSchedule()
+        {
+            // Snippet: GetBackupSchedule(string, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/backupSchedules/[SCHEDULE]";
+            // Make the request
+            BackupSchedule response = databaseAdminClient.GetBackupSchedule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupScheduleAsync</summary>
+        public async Task GetBackupScheduleAsync()
+        {
+            // Snippet: GetBackupScheduleAsync(string, CallSettings)
+            // Additional: GetBackupScheduleAsync(string, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/backupSchedules/[SCHEDULE]";
+            // Make the request
+            BackupSchedule response = await databaseAdminClient.GetBackupScheduleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupSchedule</summary>
+        public void GetBackupScheduleResourceNames()
+        {
+            // Snippet: GetBackupSchedule(BackupScheduleName, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            BackupScheduleName name = BackupScheduleName.FromProjectInstanceDatabaseSchedule("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SCHEDULE]");
+            // Make the request
+            BackupSchedule response = databaseAdminClient.GetBackupSchedule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetBackupScheduleAsync</summary>
+        public async Task GetBackupScheduleResourceNamesAsync()
+        {
+            // Snippet: GetBackupScheduleAsync(BackupScheduleName, CallSettings)
+            // Additional: GetBackupScheduleAsync(BackupScheduleName, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupScheduleName name = BackupScheduleName.FromProjectInstanceDatabaseSchedule("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SCHEDULE]");
+            // Make the request
+            BackupSchedule response = await databaseAdminClient.GetBackupScheduleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupSchedule</summary>
+        public void UpdateBackupScheduleRequestObject()
+        {
+            // Snippet: UpdateBackupSchedule(UpdateBackupScheduleRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateBackupScheduleRequest request = new UpdateBackupScheduleRequest
+            {
+                BackupSchedule = new BackupSchedule(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            BackupSchedule response = databaseAdminClient.UpdateBackupSchedule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupScheduleAsync</summary>
+        public async Task UpdateBackupScheduleRequestObjectAsync()
+        {
+            // Snippet: UpdateBackupScheduleAsync(UpdateBackupScheduleRequest, CallSettings)
+            // Additional: UpdateBackupScheduleAsync(UpdateBackupScheduleRequest, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateBackupScheduleRequest request = new UpdateBackupScheduleRequest
+            {
+                BackupSchedule = new BackupSchedule(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            BackupSchedule response = await databaseAdminClient.UpdateBackupScheduleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupSchedule</summary>
+        public void UpdateBackupSchedule()
+        {
+            // Snippet: UpdateBackupSchedule(BackupSchedule, FieldMask, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            BackupSchedule backupSchedule = new BackupSchedule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            BackupSchedule response = databaseAdminClient.UpdateBackupSchedule(backupSchedule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateBackupScheduleAsync</summary>
+        public async Task UpdateBackupScheduleAsync()
+        {
+            // Snippet: UpdateBackupScheduleAsync(BackupSchedule, FieldMask, CallSettings)
+            // Additional: UpdateBackupScheduleAsync(BackupSchedule, FieldMask, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupSchedule backupSchedule = new BackupSchedule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            BackupSchedule response = await databaseAdminClient.UpdateBackupScheduleAsync(backupSchedule, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupSchedule</summary>
+        public void DeleteBackupScheduleRequestObject()
+        {
+            // Snippet: DeleteBackupSchedule(DeleteBackupScheduleRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            DeleteBackupScheduleRequest request = new DeleteBackupScheduleRequest
+            {
+                BackupScheduleName = BackupScheduleName.FromProjectInstanceDatabaseSchedule("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SCHEDULE]"),
+            };
+            // Make the request
+            databaseAdminClient.DeleteBackupSchedule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupScheduleAsync</summary>
+        public async Task DeleteBackupScheduleRequestObjectAsync()
+        {
+            // Snippet: DeleteBackupScheduleAsync(DeleteBackupScheduleRequest, CallSettings)
+            // Additional: DeleteBackupScheduleAsync(DeleteBackupScheduleRequest, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBackupScheduleRequest request = new DeleteBackupScheduleRequest
+            {
+                BackupScheduleName = BackupScheduleName.FromProjectInstanceDatabaseSchedule("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SCHEDULE]"),
+            };
+            // Make the request
+            await databaseAdminClient.DeleteBackupScheduleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupSchedule</summary>
+        public void DeleteBackupSchedule()
+        {
+            // Snippet: DeleteBackupSchedule(string, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/backupSchedules/[SCHEDULE]";
+            // Make the request
+            databaseAdminClient.DeleteBackupSchedule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupScheduleAsync</summary>
+        public async Task DeleteBackupScheduleAsync()
+        {
+            // Snippet: DeleteBackupScheduleAsync(string, CallSettings)
+            // Additional: DeleteBackupScheduleAsync(string, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]/backupSchedules/[SCHEDULE]";
+            // Make the request
+            await databaseAdminClient.DeleteBackupScheduleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupSchedule</summary>
+        public void DeleteBackupScheduleResourceNames()
+        {
+            // Snippet: DeleteBackupSchedule(BackupScheduleName, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            BackupScheduleName name = BackupScheduleName.FromProjectInstanceDatabaseSchedule("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SCHEDULE]");
+            // Make the request
+            databaseAdminClient.DeleteBackupSchedule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBackupScheduleAsync</summary>
+        public async Task DeleteBackupScheduleResourceNamesAsync()
+        {
+            // Snippet: DeleteBackupScheduleAsync(BackupScheduleName, CallSettings)
+            // Additional: DeleteBackupScheduleAsync(BackupScheduleName, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            BackupScheduleName name = BackupScheduleName.FromProjectInstanceDatabaseSchedule("[PROJECT]", "[INSTANCE]", "[DATABASE]", "[SCHEDULE]");
+            // Make the request
+            await databaseAdminClient.DeleteBackupScheduleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupSchedules</summary>
+        public void ListBackupSchedulesRequestObject()
+        {
+            // Snippet: ListBackupSchedules(ListBackupSchedulesRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            ListBackupSchedulesRequest request = new ListBackupSchedulesRequest
+            {
+                ParentAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            // Make the request
+            PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> response = databaseAdminClient.ListBackupSchedules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupSchedule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupSchedulesAsync</summary>
+        public async Task ListBackupSchedulesRequestObjectAsync()
+        {
+            // Snippet: ListBackupSchedulesAsync(ListBackupSchedulesRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBackupSchedulesRequest request = new ListBackupSchedulesRequest
+            {
+                ParentAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> response = databaseAdminClient.ListBackupSchedulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupSchedule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupSchedulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupSchedule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupSchedules</summary>
+        public void ListBackupSchedules()
+        {
+            // Snippet: ListBackupSchedules(string, string, int?, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            // Make the request
+            PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> response = databaseAdminClient.ListBackupSchedules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupSchedule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupSchedulesAsync</summary>
+        public async Task ListBackupSchedulesAsync()
+        {
+            // Snippet: ListBackupSchedulesAsync(string, string, int?, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            // Make the request
+            PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> response = databaseAdminClient.ListBackupSchedulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupSchedule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupSchedulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupSchedule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupSchedules</summary>
+        public void ListBackupSchedulesResourceNames()
+        {
+            // Snippet: ListBackupSchedules(DatabaseName, string, int?, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            DatabaseName parent = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            // Make the request
+            PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> response = databaseAdminClient.ListBackupSchedules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackupSchedule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListBackupSchedulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupSchedule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupSchedule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBackupSchedulesAsync</summary>
+        public async Task ListBackupSchedulesResourceNamesAsync()
+        {
+            // Snippet: ListBackupSchedulesAsync(DatabaseName, string, int?, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseName parent = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            // Make the request
+            PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> response = databaseAdminClient.ListBackupSchedulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BackupSchedule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListBackupSchedulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackupSchedule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackupSchedule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackupSchedule item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);

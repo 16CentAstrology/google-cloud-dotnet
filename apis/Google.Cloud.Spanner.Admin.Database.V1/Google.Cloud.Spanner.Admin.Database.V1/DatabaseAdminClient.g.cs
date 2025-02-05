@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,18 +19,18 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
 using gcscv = Google.Cloud.Spanner.Common.V1;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Spanner.Admin.Database.V1
 {
@@ -53,6 +53,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CreateDatabaseSettings = existing.CreateDatabaseSettings;
             CreateDatabaseOperationsSettings = existing.CreateDatabaseOperationsSettings.Clone();
             GetDatabaseSettings = existing.GetDatabaseSettings;
+            UpdateDatabaseSettings = existing.UpdateDatabaseSettings;
+            UpdateDatabaseOperationsSettings = existing.UpdateDatabaseOperationsSettings.Clone();
             UpdateDatabaseDdlSettings = existing.UpdateDatabaseDdlSettings;
             UpdateDatabaseDdlOperationsSettings = existing.UpdateDatabaseDdlOperationsSettings.Clone();
             DropDatabaseSettings = existing.DropDatabaseSettings;
@@ -73,6 +75,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             ListDatabaseOperationsSettings = existing.ListDatabaseOperationsSettings;
             ListBackupOperationsSettings = existing.ListBackupOperationsSettings;
             ListDatabaseRolesSettings = existing.ListDatabaseRolesSettings;
+            AddSplitPointsSettings = existing.AddSplitPointsSettings;
+            CreateBackupScheduleSettings = existing.CreateBackupScheduleSettings;
+            GetBackupScheduleSettings = existing.GetBackupScheduleSettings;
+            UpdateBackupScheduleSettings = existing.UpdateBackupScheduleSettings;
+            DeleteBackupScheduleSettings = existing.DeleteBackupScheduleSettings;
+            ListBackupSchedulesSettings = existing.ListBackupSchedulesSettings;
             OnCopy(existing);
         }
 
@@ -149,6 +157,45 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetDatabaseSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.UpdateDatabase</c> and <c>DatabaseAdminClient.UpdateDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDatabaseSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatabaseAdminClient.UpdateDatabase</c> and
+        /// <c>DatabaseAdminClient.UpdateDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -514,6 +561,132 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </remarks>
         public gaxgrpc::CallSettings ListDatabaseRolesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.AddSplitPoints</c> and <c>DatabaseAdminClient.AddSplitPointsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddSplitPointsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.CreateBackupSchedule</c> and <c>DatabaseAdminClient.CreateBackupScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBackupScheduleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.GetBackupSchedule</c> and <c>DatabaseAdminClient.GetBackupScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupScheduleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.UpdateBackupSchedule</c> and <c>DatabaseAdminClient.UpdateBackupScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBackupScheduleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.DeleteBackupSchedule</c> and <c>DatabaseAdminClient.DeleteBackupScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBackupScheduleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.ListBackupSchedules</c> and <c>DatabaseAdminClient.ListBackupSchedulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupSchedulesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DatabaseAdminSettings"/> object.</returns>
         public DatabaseAdminSettings Clone() => new DatabaseAdminSettings(this);
@@ -557,14 +730,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DatabaseAdminClient.Create(callInvoker, Settings, Logger);
+            return DatabaseAdminClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<DatabaseAdminClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DatabaseAdminClient.Create(callInvoker, Settings, Logger);
+            return DatabaseAdminClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -578,7 +751,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     /// The Cloud Spanner Database Admin API can be used to:
     /// * create, drop, and list databases
     /// * update the schema of pre-existing databases
-    /// * create, delete and list backups for a database
+    /// * create, delete, copy and list backups for a database
     /// * restore a database from an existing backup
     /// </remarks>
     public abstract partial class DatabaseAdminClient
@@ -698,13 +871,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Database"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabases(new ListDatabasesRequest
+        public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabasesRequest request = new ListDatabasesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabases(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner databases.
@@ -723,13 +905,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Database"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabasesAsync(new ListDatabasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabasesRequest request = new ListDatabasesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner databases.
@@ -748,13 +939,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Database"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabases(new ListDatabasesRequest
+        public virtual gax::PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabasesRequest request = new ListDatabasesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabases(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner databases.
@@ -773,13 +973,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Database"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabasesAsync(new ListDatabasesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabasesRequest request = new ListDatabasesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabasesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
@@ -787,8 +996,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -803,8 +1012,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -819,8 +1028,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -861,8 +1070,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -891,8 +1100,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -921,8 +1130,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -947,8 +1156,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -977,8 +1186,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -1007,8 +1216,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="parent">
@@ -1139,13 +1348,336 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             GetDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, UpdateDatabaseMetadata> UpdateDatabase(UpdateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> UpdateDatabaseAsync(UpdateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> UpdateDatabaseAsync(UpdateDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateDatabase</c>.</summary>
+        public virtual lro::OperationsClient UpdateDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Database, UpdateDatabaseMetadata> PollOnceUpdateDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, UpdateDatabaseMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> PollOnceUpdateDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, UpdateDatabaseMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database to update.
+        /// The `name` field of the database is of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Currently, only
+        /// `enable_drop_protection` field can be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, UpdateDatabaseMetadata> UpdateDatabase(Database database, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDatabase(new UpdateDatabaseRequest
+            {
+                Database = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database to update.
+        /// The `name` field of the database is of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Currently, only
+        /// `enable_drop_protection` field can be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> UpdateDatabaseAsync(Database database, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDatabaseAsync(new UpdateDatabaseRequest
+            {
+                Database = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database to update.
+        /// The `name` field of the database is of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update. Currently, only
+        /// `enable_drop_protection` field can be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> UpdateDatabaseAsync(Database database, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDatabaseAsync(database, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1160,7 +1692,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1175,7 +1708,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1217,7 +1751,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1244,7 +1779,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1271,7 +1807,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1291,7 +1828,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1318,7 +1856,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -1345,7 +1884,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="database">
         /// Required. The database to update.
@@ -2264,12 +2804,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
-        /// There can be only one pending backup creation per database. Backup creation
-        /// of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the creation and delete the
+        /// backup. There can be only one pending backup creation per database. Backup
+        /// creation of different databases can run concurrently.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2284,12 +2824,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
-        /// There can be only one pending backup creation per database. Backup creation
-        /// of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the creation and delete the
+        /// backup. There can be only one pending backup creation per database. Backup
+        /// creation of different databases can run concurrently.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2304,12 +2844,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
-        /// There can be only one pending backup creation per database. Backup creation
-        /// of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the creation and delete the
+        /// backup. There can be only one pending backup creation per database. Backup
+        /// creation of different databases can run concurrently.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2350,12 +2890,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
-        /// There can be only one pending backup creation per database. Backup creation
-        /// of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the creation and delete the
+        /// backup. There can be only one pending backup creation per database. Backup
+        /// creation of different databases can run concurrently.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance in which the backup will be
@@ -2390,12 +2930,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
-        /// There can be only one pending backup creation per database. Backup creation
-        /// of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the creation and delete the
+        /// backup. There can be only one pending backup creation per database. Backup
+        /// creation of different databases can run concurrently.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance in which the backup will be
@@ -2430,12 +2970,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
-        /// There can be only one pending backup creation per database. Backup creation
-        /// of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the creation and delete the
+        /// backup. There can be only one pending backup creation per database. Backup
+        /// creation of different databases can run concurrently.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance in which the backup will be
@@ -2465,12 +3005,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
-        /// There can be only one pending backup creation per database. Backup creation
-        /// of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the creation and delete the
+        /// backup. There can be only one pending backup creation per database. Backup
+        /// creation of different databases can run concurrently.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance in which the backup will be
@@ -2505,12 +3045,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
-        /// There can be only one pending backup creation per database. Backup creation
-        /// of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the creation and delete the
+        /// backup. There can be only one pending backup creation per database. Backup
+        /// creation of different databases can run concurrently.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance in which the backup will be
@@ -2545,12 +3085,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
-        /// There can be only one pending backup creation per database. Backup creation
-        /// of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the creation and delete the
+        /// backup. There can be only one pending backup creation per database. Backup
+        /// creation of different databases can run concurrently.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance in which the backup will be
@@ -2583,9 +3123,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// copying and delete the backup.
-        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the copying and delete the
+        /// destination backup. Concurrent CopyBackup requests can run on the same
+        /// source backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2603,9 +3144,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// copying and delete the backup.
-        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the copying and delete the
+        /// destination backup. Concurrent CopyBackup requests can run on the same
+        /// source backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2623,9 +3165,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// copying and delete the backup.
-        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the copying and delete the
+        /// destination backup. Concurrent CopyBackup requests can run on the same
+        /// source backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2669,13 +3212,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// copying and delete the backup.
-        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the copying and delete the
+        /// destination backup. Concurrent CopyBackup requests can run on the same
+        /// source backup.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the destination instance that will contain the backup copy.
-        /// Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The name of the destination instance that will contain the backup
+        /// copy. Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backupId">
         /// Required. The id of the backup copy.
@@ -2718,13 +3262,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// copying and delete the backup.
-        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the copying and delete the
+        /// destination backup. Concurrent CopyBackup requests can run on the same
+        /// source backup.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the destination instance that will contain the backup copy.
-        /// Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The name of the destination instance that will contain the backup
+        /// copy. Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backupId">
         /// Required. The id of the backup copy.
@@ -2767,13 +3312,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// copying and delete the backup.
-        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the copying and delete the
+        /// destination backup. Concurrent CopyBackup requests can run on the same
+        /// source backup.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the destination instance that will contain the backup copy.
-        /// Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The name of the destination instance that will contain the backup
+        /// copy. Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backupId">
         /// Required. The id of the backup copy.
@@ -2810,13 +3356,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// copying and delete the backup.
-        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the copying and delete the
+        /// destination backup. Concurrent CopyBackup requests can run on the same
+        /// source backup.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the destination instance that will contain the backup copy.
-        /// Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The name of the destination instance that will contain the backup
+        /// copy. Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backupId">
         /// Required. The id of the backup copy.
@@ -2859,13 +3406,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// copying and delete the backup.
-        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the copying and delete the
+        /// destination backup. Concurrent CopyBackup requests can run on the same
+        /// source backup.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the destination instance that will contain the backup copy.
-        /// Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The name of the destination instance that will contain the backup
+        /// copy. Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backupId">
         /// Required. The id of the backup copy.
@@ -2908,13 +3456,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// copying and delete the backup.
-        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the copying and delete the
+        /// destination backup. Concurrent CopyBackup requests can run on the same
+        /// source backup.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the destination instance that will contain the backup copy.
-        /// Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// Required. The name of the destination instance that will contain the backup
+        /// copy. Values are of the form: `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="backupId">
         /// Required. The id of the backup copy.
@@ -2942,7 +3491,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CopyBackupAsync(parent, backupId, sourceBackup, expireTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2951,7 +3501,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2960,7 +3511,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2969,7 +3521,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup.
@@ -2985,7 +3538,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup.
@@ -3001,7 +3555,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup.
@@ -3014,7 +3569,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup.
@@ -3030,7 +3586,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup.
@@ -3046,7 +3603,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup.
@@ -3059,7 +3617,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3068,7 +3627,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3077,7 +3637,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3086,7 +3647,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             UpdateBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="backup">
         /// Required. The backup to update. `backup.name`, and the fields to be updated
@@ -3111,7 +3673,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="backup">
         /// Required. The backup to update. `backup.name`, and the fields to be updated
@@ -3136,7 +3699,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="backup">
         /// Required. The backup to update. `backup.name`, and the fields to be updated
@@ -3157,7 +3721,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             UpdateBackupAsync(backup, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3166,7 +3731,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3175,7 +3741,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3184,7 +3751,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             DeleteBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup to delete.
@@ -3200,7 +3768,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup to delete.
@@ -3216,7 +3785,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup to delete.
@@ -3229,7 +3799,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup to delete.
@@ -3245,7 +3816,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup to delete.
@@ -3261,7 +3833,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="name">
         /// Required. Name of the backup to delete.
@@ -3314,13 +3887,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists completed and pending backups.
@@ -3341,13 +3923,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists completed and pending backups.
@@ -3368,13 +3959,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists completed and pending backups.
@@ -3395,13 +3995,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Create a new database by restoring from a completed backup. The new
@@ -3826,13 +4435,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseOperations(new ListDatabaseOperationsRequest
+        public virtual gax::PagedEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseOperationsRequest request = new ListDatabaseOperationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseOperations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
@@ -3858,13 +4476,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseOperationsAsync(new ListDatabaseOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseOperationsRequest request = new ListDatabaseOperationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseOperationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
@@ -3890,13 +4517,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperations(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseOperations(new ListDatabaseOperationsRequest
+        public virtual gax::PagedEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperations(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseOperationsRequest request = new ListDatabaseOperationsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseOperations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists database [longrunning-operations][google.longrunning.Operation].
@@ -3922,13 +4558,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperationsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseOperationsAsync(new ListDatabaseOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseOperationsResponse, lro::Operation> ListDatabaseOperationsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseOperationsRequest request = new ListDatabaseOperationsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseOperationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
@@ -3992,13 +4637,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupOperations(new ListBackupOperationsRequest
+        public virtual gax::PagedEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupOperationsRequest request = new ListBackupOperationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupOperations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
@@ -4026,13 +4680,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupOperationsAsync(new ListBackupOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupOperationsRequest request = new ListBackupOperationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupOperationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
@@ -4060,13 +4723,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperations(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupOperations(new ListBackupOperationsRequest
+        public virtual gax::PagedEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperations(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupOperationsRequest request = new ListBackupOperationsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupOperations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the backup [long-running operations][google.longrunning.Operation] in
@@ -4094,13 +4766,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="lro::Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperationsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupOperationsAsync(new ListBackupOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupOperationsResponse, lro::Operation> ListBackupOperationsAsync(gcscv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupOperationsRequest request = new ListBackupOperationsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupOperationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner database roles.
@@ -4126,7 +4807,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="parent">
         /// Required. The database whose roles should be listed.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/databaseRoles`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4138,13 +4819,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DatabaseRole"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRoles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseRoles(new ListDatabaseRolesRequest
+        public virtual gax::PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRoles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseRolesRequest request = new ListDatabaseRolesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseRoles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner database roles.
@@ -4152,7 +4842,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="parent">
         /// Required. The database whose roles should be listed.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/databaseRoles`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4164,13 +4854,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DatabaseRole"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRolesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseRolesAsync(new ListDatabaseRolesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRolesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseRolesRequest request = new ListDatabaseRolesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseRolesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner database roles.
@@ -4178,7 +4877,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="parent">
         /// Required. The database whose roles should be listed.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/databaseRoles`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4190,13 +4889,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DatabaseRole"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRoles(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseRoles(new ListDatabaseRolesRequest
+        public virtual gax::PagedEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRoles(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseRolesRequest request = new ListDatabaseRolesRequest
             {
                 ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseRoles(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Spanner database roles.
@@ -4204,7 +4912,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <param name="parent">
         /// Required. The database whose roles should be listed.
         /// Values are of the form
-        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/databaseRoles`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4216,13 +4924,821 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DatabaseRole"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRolesAsync(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDatabaseRolesAsync(new ListDatabaseRolesRequest
+        public virtual gax::PagedAsyncEnumerable<ListDatabaseRolesResponse, DatabaseRole> ListDatabaseRolesAsync(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDatabaseRolesRequest request = new ListDatabaseRolesRequest
             {
                 ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDatabaseRolesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AddSplitPointsResponse AddSplitPoints(AddSplitPointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(AddSplitPointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(AddSplitPointsRequest request, st::CancellationToken cancellationToken) =>
+            AddSplitPointsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database on whose tables/indexes split points are to be
+        /// added. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="splitPoints">
+        /// Required. The split points to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AddSplitPointsResponse AddSplitPoints(string database, scg::IEnumerable<SplitPoints> splitPoints, gaxgrpc::CallSettings callSettings = null) =>
+            AddSplitPoints(new AddSplitPointsRequest
+            {
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                SplitPoints =
+                {
+                    gax::GaxPreconditions.CheckNotNull(splitPoints, nameof(splitPoints)),
+                },
             }, callSettings);
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database on whose tables/indexes split points are to be
+        /// added. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="splitPoints">
+        /// Required. The split points to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(string database, scg::IEnumerable<SplitPoints> splitPoints, gaxgrpc::CallSettings callSettings = null) =>
+            AddSplitPointsAsync(new AddSplitPointsRequest
+            {
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                SplitPoints =
+                {
+                    gax::GaxPreconditions.CheckNotNull(splitPoints, nameof(splitPoints)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database on whose tables/indexes split points are to be
+        /// added. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="splitPoints">
+        /// Required. The split points to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(string database, scg::IEnumerable<SplitPoints> splitPoints, st::CancellationToken cancellationToken) =>
+            AddSplitPointsAsync(database, splitPoints, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database on whose tables/indexes split points are to be
+        /// added. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="splitPoints">
+        /// Required. The split points to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AddSplitPointsResponse AddSplitPoints(gcscv::DatabaseName database, scg::IEnumerable<SplitPoints> splitPoints, gaxgrpc::CallSettings callSettings = null) =>
+            AddSplitPoints(new AddSplitPointsRequest
+            {
+                DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                SplitPoints =
+                {
+                    gax::GaxPreconditions.CheckNotNull(splitPoints, nameof(splitPoints)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database on whose tables/indexes split points are to be
+        /// added. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="splitPoints">
+        /// Required. The split points to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(gcscv::DatabaseName database, scg::IEnumerable<SplitPoints> splitPoints, gaxgrpc::CallSettings callSettings = null) =>
+            AddSplitPointsAsync(new AddSplitPointsRequest
+            {
+                DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                SplitPoints =
+                {
+                    gax::GaxPreconditions.CheckNotNull(splitPoints, nameof(splitPoints)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database on whose tables/indexes split points are to be
+        /// added. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="splitPoints">
+        /// Required. The split points to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(gcscv::DatabaseName database, scg::IEnumerable<SplitPoints> splitPoints, st::CancellationToken cancellationToken) =>
+            AddSplitPointsAsync(database, splitPoints, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule CreateBackupSchedule(CreateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(CreateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(CreateBackupScheduleRequest request, st::CancellationToken cancellationToken) =>
+            CreateBackupScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the database that this backup schedule applies to.
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="backupScheduleId">
+        /// Required. The Id to use for the backup schedule. The `backup_schedule_id`
+        /// appended to `parent` forms the full backup schedule name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule CreateBackupSchedule(string parent, BackupSchedule backupSchedule, string backupScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupSchedule(new CreateBackupScheduleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupScheduleId, nameof(backupScheduleId)),
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the database that this backup schedule applies to.
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="backupScheduleId">
+        /// Required. The Id to use for the backup schedule. The `backup_schedule_id`
+        /// appended to `parent` forms the full backup schedule name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(string parent, BackupSchedule backupSchedule, string backupScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupScheduleAsync(new CreateBackupScheduleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupScheduleId, nameof(backupScheduleId)),
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the database that this backup schedule applies to.
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="backupScheduleId">
+        /// Required. The Id to use for the backup schedule. The `backup_schedule_id`
+        /// appended to `parent` forms the full backup schedule name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(string parent, BackupSchedule backupSchedule, string backupScheduleId, st::CancellationToken cancellationToken) =>
+            CreateBackupScheduleAsync(parent, backupSchedule, backupScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the database that this backup schedule applies to.
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="backupScheduleId">
+        /// Required. The Id to use for the backup schedule. The `backup_schedule_id`
+        /// appended to `parent` forms the full backup schedule name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule CreateBackupSchedule(gcscv::DatabaseName parent, BackupSchedule backupSchedule, string backupScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupSchedule(new CreateBackupScheduleRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupScheduleId, nameof(backupScheduleId)),
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the database that this backup schedule applies to.
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="backupScheduleId">
+        /// Required. The Id to use for the backup schedule. The `backup_schedule_id`
+        /// appended to `parent` forms the full backup schedule name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(gcscv::DatabaseName parent, BackupSchedule backupSchedule, string backupScheduleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupScheduleAsync(new CreateBackupScheduleRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupScheduleId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupScheduleId, nameof(backupScheduleId)),
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the database that this backup schedule applies to.
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="backupScheduleId">
+        /// Required. The Id to use for the backup schedule. The `backup_schedule_id`
+        /// appended to `parent` forms the full backup schedule name of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(gcscv::DatabaseName parent, BackupSchedule backupSchedule, string backupScheduleId, st::CancellationToken cancellationToken) =>
+            CreateBackupScheduleAsync(parent, backupSchedule, backupScheduleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule GetBackupSchedule(GetBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(GetBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(GetBackupScheduleRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to retrieve.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule GetBackupSchedule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupSchedule(new GetBackupScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to retrieve.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupScheduleAsync(new GetBackupScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to retrieve.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to retrieve.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule GetBackupSchedule(BackupScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupSchedule(new GetBackupScheduleRequest
+            {
+                BackupScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to retrieve.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(BackupScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupScheduleAsync(new GetBackupScheduleRequest
+            {
+                BackupScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to retrieve.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(BackupScheduleName name, st::CancellationToken cancellationToken) =>
+            GetBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule UpdateBackupSchedule(UpdateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> UpdateBackupScheduleAsync(UpdateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> UpdateBackupScheduleAsync(UpdateBackupScheduleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBackupScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to update. `backup_schedule.name`, and the
+        /// fields to be updated as specified by `update_mask` are required. Other
+        /// fields are ignored.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. A mask specifying which fields in the BackupSchedule resource
+        /// should be updated. This mask is relative to the BackupSchedule resource,
+        /// not to the request message. The field mask must always be
+        /// specified; this prevents any future fields from being erased
+        /// accidentally.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule UpdateBackupSchedule(BackupSchedule backupSchedule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupSchedule(new UpdateBackupScheduleRequest
+            {
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to update. `backup_schedule.name`, and the
+        /// fields to be updated as specified by `update_mask` are required. Other
+        /// fields are ignored.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. A mask specifying which fields in the BackupSchedule resource
+        /// should be updated. This mask is relative to the BackupSchedule resource,
+        /// not to the request message. The field mask must always be
+        /// specified; this prevents any future fields from being erased
+        /// accidentally.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> UpdateBackupScheduleAsync(BackupSchedule backupSchedule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupScheduleAsync(new UpdateBackupScheduleRequest
+            {
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to update. `backup_schedule.name`, and the
+        /// fields to be updated as specified by `update_mask` are required. Other
+        /// fields are ignored.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. A mask specifying which fields in the BackupSchedule resource
+        /// should be updated. This mask is relative to the BackupSchedule resource,
+        /// not to the request message. The field mask must always be
+        /// specified; this prevents any future fields from being erased
+        /// accidentally.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> UpdateBackupScheduleAsync(BackupSchedule backupSchedule, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBackupScheduleAsync(backupSchedule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackupSchedule(DeleteBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(DeleteBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(DeleteBackupScheduleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBackupScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to delete.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackupSchedule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupSchedule(new DeleteBackupScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to delete.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupScheduleAsync(new DeleteBackupScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to delete.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to delete.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackupSchedule(BackupScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupSchedule(new DeleteBackupScheduleRequest
+            {
+                BackupScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to delete.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(BackupScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupScheduleAsync(new DeleteBackupScheduleRequest
+            {
+                BackupScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the schedule to delete.
+        /// Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/backupSchedules/&lt;backup_schedule_id&gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(BackupScheduleName name, st::CancellationToken cancellationToken) =>
+            DeleteBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedules(ListBackupSchedulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedulesAsync(ListBackupSchedulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Database is the parent resource whose backup schedules should be
+        /// listed. Values are of the form
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupSchedulesRequest request = new ListBackupSchedulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupSchedules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Database is the parent resource whose backup schedules should be
+        /// listed. Values are of the form
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupSchedulesRequest request = new ListBackupSchedulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupSchedulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Database is the parent resource whose backup schedules should be
+        /// listed. Values are of the form
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedules(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupSchedulesRequest request = new ListBackupSchedulesRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupSchedules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Database is the parent resource whose backup schedules should be
+        /// listed. Values are of the form
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedulesAsync(gcscv::DatabaseName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupSchedulesRequest request = new ListBackupSchedulesRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupSchedulesAsync(request, callSettings);
+        }
     }
 
     /// <summary>DatabaseAdmin client wrapper implementation, for convenient use.</summary>
@@ -4232,7 +5748,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     /// The Cloud Spanner Database Admin API can be used to:
     /// * create, drop, and list databases
     /// * update the schema of pre-existing databases
-    /// * create, delete and list backups for a database
+    /// * create, delete, copy and list backups for a database
     /// * restore a database from an existing backup
     /// </remarks>
     public sealed partial class DatabaseAdminClientImpl : DatabaseAdminClient
@@ -4242,6 +5758,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         private readonly gaxgrpc::ApiCall<CreateDatabaseRequest, lro::Operation> _callCreateDatabase;
 
         private readonly gaxgrpc::ApiCall<GetDatabaseRequest, Database> _callGetDatabase;
+
+        private readonly gaxgrpc::ApiCall<UpdateDatabaseRequest, lro::Operation> _callUpdateDatabase;
 
         private readonly gaxgrpc::ApiCall<UpdateDatabaseDdlRequest, lro::Operation> _callUpdateDatabaseDdl;
 
@@ -4275,6 +5793,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
 
         private readonly gaxgrpc::ApiCall<ListDatabaseRolesRequest, ListDatabaseRolesResponse> _callListDatabaseRoles;
 
+        private readonly gaxgrpc::ApiCall<AddSplitPointsRequest, AddSplitPointsResponse> _callAddSplitPoints;
+
+        private readonly gaxgrpc::ApiCall<CreateBackupScheduleRequest, BackupSchedule> _callCreateBackupSchedule;
+
+        private readonly gaxgrpc::ApiCall<GetBackupScheduleRequest, BackupSchedule> _callGetBackupSchedule;
+
+        private readonly gaxgrpc::ApiCall<UpdateBackupScheduleRequest, BackupSchedule> _callUpdateBackupSchedule;
+
+        private readonly gaxgrpc::ApiCall<DeleteBackupScheduleRequest, wkt::Empty> _callDeleteBackupSchedule;
+
+        private readonly gaxgrpc::ApiCall<ListBackupSchedulesRequest, ListBackupSchedulesResponse> _callListBackupSchedules;
+
         /// <summary>
         /// Constructs a client wrapper for the DatabaseAdmin service, with the specified gRPC client and settings.
         /// </summary>
@@ -4285,8 +5815,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             GrpcClient = grpcClient;
             DatabaseAdminSettings effectiveSettings = settings ?? DatabaseAdminSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatabaseOperationsSettings, logger);
+            UpdateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseOperationsSettings, logger);
             UpdateDatabaseDdlOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseDdlOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             CopyBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CopyBackupOperationsSettings, logger);
@@ -4300,6 +5835,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             _callGetDatabase = clientHelper.BuildApiCall<GetDatabaseRequest, Database>("GetDatabase", grpcClient.GetDatabaseAsync, grpcClient.GetDatabase, effectiveSettings.GetDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDatabase);
             Modify_GetDatabaseApiCall(ref _callGetDatabase);
+            _callUpdateDatabase = clientHelper.BuildApiCall<UpdateDatabaseRequest, lro::Operation>("UpdateDatabase", grpcClient.UpdateDatabaseAsync, grpcClient.UpdateDatabase, effectiveSettings.UpdateDatabaseSettings).WithGoogleRequestParam("database.name", request => request.Database?.Name);
+            Modify_ApiCall(ref _callUpdateDatabase);
+            Modify_UpdateDatabaseApiCall(ref _callUpdateDatabase);
             _callUpdateDatabaseDdl = clientHelper.BuildApiCall<UpdateDatabaseDdlRequest, lro::Operation>("UpdateDatabaseDdl", grpcClient.UpdateDatabaseDdlAsync, grpcClient.UpdateDatabaseDdl, effectiveSettings.UpdateDatabaseDdlSettings).WithGoogleRequestParam("database", request => request.Database);
             Modify_ApiCall(ref _callUpdateDatabaseDdl);
             Modify_UpdateDatabaseDdlApiCall(ref _callUpdateDatabaseDdl);
@@ -4348,6 +5886,24 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             _callListDatabaseRoles = clientHelper.BuildApiCall<ListDatabaseRolesRequest, ListDatabaseRolesResponse>("ListDatabaseRoles", grpcClient.ListDatabaseRolesAsync, grpcClient.ListDatabaseRoles, effectiveSettings.ListDatabaseRolesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDatabaseRoles);
             Modify_ListDatabaseRolesApiCall(ref _callListDatabaseRoles);
+            _callAddSplitPoints = clientHelper.BuildApiCall<AddSplitPointsRequest, AddSplitPointsResponse>("AddSplitPoints", grpcClient.AddSplitPointsAsync, grpcClient.AddSplitPoints, effectiveSettings.AddSplitPointsSettings).WithGoogleRequestParam("database", request => request.Database);
+            Modify_ApiCall(ref _callAddSplitPoints);
+            Modify_AddSplitPointsApiCall(ref _callAddSplitPoints);
+            _callCreateBackupSchedule = clientHelper.BuildApiCall<CreateBackupScheduleRequest, BackupSchedule>("CreateBackupSchedule", grpcClient.CreateBackupScheduleAsync, grpcClient.CreateBackupSchedule, effectiveSettings.CreateBackupScheduleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBackupSchedule);
+            Modify_CreateBackupScheduleApiCall(ref _callCreateBackupSchedule);
+            _callGetBackupSchedule = clientHelper.BuildApiCall<GetBackupScheduleRequest, BackupSchedule>("GetBackupSchedule", grpcClient.GetBackupScheduleAsync, grpcClient.GetBackupSchedule, effectiveSettings.GetBackupScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackupSchedule);
+            Modify_GetBackupScheduleApiCall(ref _callGetBackupSchedule);
+            _callUpdateBackupSchedule = clientHelper.BuildApiCall<UpdateBackupScheduleRequest, BackupSchedule>("UpdateBackupSchedule", grpcClient.UpdateBackupScheduleAsync, grpcClient.UpdateBackupSchedule, effectiveSettings.UpdateBackupScheduleSettings).WithGoogleRequestParam("backup_schedule.name", request => request.BackupSchedule?.Name);
+            Modify_ApiCall(ref _callUpdateBackupSchedule);
+            Modify_UpdateBackupScheduleApiCall(ref _callUpdateBackupSchedule);
+            _callDeleteBackupSchedule = clientHelper.BuildApiCall<DeleteBackupScheduleRequest, wkt::Empty>("DeleteBackupSchedule", grpcClient.DeleteBackupScheduleAsync, grpcClient.DeleteBackupSchedule, effectiveSettings.DeleteBackupScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBackupSchedule);
+            Modify_DeleteBackupScheduleApiCall(ref _callDeleteBackupSchedule);
+            _callListBackupSchedules = clientHelper.BuildApiCall<ListBackupSchedulesRequest, ListBackupSchedulesResponse>("ListBackupSchedules", grpcClient.ListBackupSchedulesAsync, grpcClient.ListBackupSchedules, effectiveSettings.ListBackupSchedulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackupSchedules);
+            Modify_ListBackupSchedulesApiCall(ref _callListBackupSchedules);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4358,6 +5914,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         partial void Modify_CreateDatabaseApiCall(ref gaxgrpc::ApiCall<CreateDatabaseRequest, lro::Operation> call);
 
         partial void Modify_GetDatabaseApiCall(ref gaxgrpc::ApiCall<GetDatabaseRequest, Database> call);
+
+        partial void Modify_UpdateDatabaseApiCall(ref gaxgrpc::ApiCall<UpdateDatabaseRequest, lro::Operation> call);
 
         partial void Modify_UpdateDatabaseDdlApiCall(ref gaxgrpc::ApiCall<UpdateDatabaseDdlRequest, lro::Operation> call);
 
@@ -4391,6 +5949,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
 
         partial void Modify_ListDatabaseRolesApiCall(ref gaxgrpc::ApiCall<ListDatabaseRolesRequest, ListDatabaseRolesResponse> call);
 
+        partial void Modify_AddSplitPointsApiCall(ref gaxgrpc::ApiCall<AddSplitPointsRequest, AddSplitPointsResponse> call);
+
+        partial void Modify_CreateBackupScheduleApiCall(ref gaxgrpc::ApiCall<CreateBackupScheduleRequest, BackupSchedule> call);
+
+        partial void Modify_GetBackupScheduleApiCall(ref gaxgrpc::ApiCall<GetBackupScheduleRequest, BackupSchedule> call);
+
+        partial void Modify_UpdateBackupScheduleApiCall(ref gaxgrpc::ApiCall<UpdateBackupScheduleRequest, BackupSchedule> call);
+
+        partial void Modify_DeleteBackupScheduleApiCall(ref gaxgrpc::ApiCall<DeleteBackupScheduleRequest, wkt::Empty> call);
+
+        partial void Modify_ListBackupSchedulesApiCall(ref gaxgrpc::ApiCall<ListBackupSchedulesRequest, ListBackupSchedulesResponse> call);
+
         partial void OnConstruction(DatabaseAdmin.DatabaseAdminClient grpcClient, DatabaseAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DatabaseAdmin client</summary>
@@ -4401,6 +5971,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         partial void Modify_CreateDatabaseRequest(ref CreateDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetDatabaseRequest(ref GetDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDatabaseRequest(ref UpdateDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateDatabaseDdlRequest(ref UpdateDatabaseDdlRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4433,6 +6005,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         partial void Modify_ListBackupOperationsRequest(ref ListBackupOperationsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDatabaseRolesRequest(ref ListDatabaseRolesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AddSplitPointsRequest(ref AddSplitPointsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateBackupScheduleRequest(ref CreateBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupScheduleRequest(ref GetBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBackupScheduleRequest(ref UpdateBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBackupScheduleRequest(ref DeleteBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupSchedulesRequest(ref ListBackupSchedulesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Cloud Spanner databases.
@@ -4467,8 +6051,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4486,8 +6070,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
+        /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
         /// [Database][google.spanner.admin.database.v1.Database], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4523,6 +6107,103 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             return _callGetDatabase.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateDatabase</c>.</summary>
+        public override lro::OperationsClient UpdateDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Database, UpdateDatabaseMetadata> UpdateDatabase(UpdateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, UpdateDatabaseMetadata>(_callUpdateDatabase.Sync(request, callSettings), UpdateDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a Cloud Spanner database. The returned
+        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// the progress of updating the database. If the named database does not
+        /// exist, returns `NOT_FOUND`.
+        /// 
+        /// While the operation is pending:
+        /// 
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field is set to true.
+        /// * Cancelling the operation is best-effort. If the cancellation succeeds,
+        /// the operation metadata's
+        /// [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+        /// is set, the updates are reverted, and the operation terminates with a
+        /// `CANCELLED` status.
+        /// * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+        /// until the pending operation is done (returns successfully or with
+        /// error).
+        /// * Reading the database via the API continues to give the pre-request
+        /// values.
+        /// 
+        /// Upon completion of the returned operation:
+        /// 
+        /// * The new values are in effect and readable via the API.
+        /// * The database's
+        /// [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+        /// field becomes false.
+        /// 
+        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// have a name of the format
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;/operations/&lt;operation_id&gt;`
+        /// and can be used to track the database modification. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Database][google.spanner.admin.database.v1.Database], if successful.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> UpdateDatabaseAsync(UpdateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, UpdateDatabaseMetadata>(await _callUpdateDatabase.Async(request, callSettings).ConfigureAwait(false), UpdateDatabaseOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>UpdateDatabaseDdl</c>.</summary>
         public override lro::OperationsClient UpdateDatabaseDdlOperationsClient { get; }
 
@@ -4533,7 +6214,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4551,7 +6233,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+        /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+        /// The operation has no response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4748,12 +6431,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
-        /// There can be only one pending backup creation per database. Backup creation
-        /// of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the creation and delete the
+        /// backup. There can be only one pending backup creation per database. Backup
+        /// creation of different databases can run concurrently.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4771,12 +6454,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/backups/&lt;backup&gt;/operations/&lt;operation_id&gt;`
         /// and can be used to track creation of the backup. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-        /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
-        /// There can be only one pending backup creation per database. Backup creation
-        /// of different databases can run concurrently.
+        /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+        /// The [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the creation and delete the
+        /// backup. There can be only one pending backup creation per database. Backup
+        /// creation of different databases can run concurrently.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4800,9 +6483,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// copying and delete the backup.
-        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the copying and delete the
+        /// destination backup. Concurrent CopyBackup requests can run on the same
+        /// source backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4823,9 +6507,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The [metadata][google.longrunning.Operation.metadata] field type is
         /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
         /// The [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-        /// copying and delete the backup.
-        /// Concurrent CopyBackup requests can run on the same source backup.
+        /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+        /// Cancelling the returned operation will stop the copying and delete the
+        /// destination backup. Concurrent CopyBackup requests can run on the same
+        /// source backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4837,7 +6522,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4849,7 +6535,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Gets metadata on a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4861,7 +6548,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4873,7 +6561,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Updates a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4885,7 +6574,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4897,7 +6587,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+        /// Deletes a pending or completed
+        /// [Backup][google.spanner.admin.database.v1.Backup].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5098,6 +6789,150 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             Modify_ListDatabaseRolesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDatabaseRolesRequest, ListDatabaseRolesResponse, DatabaseRole>(_callListDatabaseRoles, request, callSettings);
         }
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AddSplitPointsResponse AddSplitPoints(AddSplitPointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddSplitPointsRequest(ref request, ref callSettings);
+            return _callAddSplitPoints.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(AddSplitPointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddSplitPointsRequest(ref request, ref callSettings);
+            return _callAddSplitPoints.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupSchedule CreateBackupSchedule(CreateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupScheduleRequest(ref request, ref callSettings);
+            return _callCreateBackupSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupSchedule> CreateBackupScheduleAsync(CreateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupScheduleRequest(ref request, ref callSettings);
+            return _callCreateBackupSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupSchedule GetBackupSchedule(GetBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupScheduleRequest(ref request, ref callSettings);
+            return _callGetBackupSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets backup schedule for the input schedule name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupSchedule> GetBackupScheduleAsync(GetBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupScheduleRequest(ref request, ref callSettings);
+            return _callGetBackupSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupSchedule UpdateBackupSchedule(UpdateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupScheduleRequest(ref request, ref callSettings);
+            return _callUpdateBackupSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupSchedule> UpdateBackupScheduleAsync(UpdateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupScheduleRequest(ref request, ref callSettings);
+            return _callUpdateBackupSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteBackupSchedule(DeleteBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupScheduleRequest(ref request, ref callSettings);
+            _callDeleteBackupSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteBackupScheduleAsync(DeleteBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupScheduleRequest(ref request, ref callSettings);
+            return _callDeleteBackupSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedules(ListBackupSchedulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupSchedulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupSchedulesRequest, ListBackupSchedulesResponse, BackupSchedule>(_callListBackupSchedules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the backup schedules for the database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupSchedule"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupSchedulesResponse, BackupSchedule> ListBackupSchedulesAsync(ListBackupSchedulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupSchedulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupSchedulesRequest, ListBackupSchedulesResponse, BackupSchedule>(_callListBackupSchedules, request, callSettings);
+        }
     }
 
     public partial class ListDatabasesRequest : gaxgrpc::IPageRequest
@@ -5117,6 +6952,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     }
 
     public partial class ListDatabaseRolesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBackupSchedulesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5156,6 +6995,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DatabaseRole> GetEnumerator() => DatabaseRoles.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupSchedulesResponse : gaxgrpc::IPageResponse<BackupSchedule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackupSchedule> GetEnumerator() => BackupSchedules.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

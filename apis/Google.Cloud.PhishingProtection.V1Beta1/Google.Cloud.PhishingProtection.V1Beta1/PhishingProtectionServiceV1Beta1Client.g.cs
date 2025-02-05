@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,18 +15,18 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.PhishingProtection.V1Beta1
 {
@@ -109,14 +109,14 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PhishingProtectionServiceV1Beta1Client.Create(callInvoker, Settings, Logger);
+            return PhishingProtectionServiceV1Beta1Client.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<PhishingProtectionServiceV1Beta1Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PhishingProtectionServiceV1Beta1Client.Create(callInvoker, Settings, Logger);
+            return PhishingProtectionServiceV1Beta1Client.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -420,7 +420,11 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
         {
             GrpcClient = grpcClient;
             PhishingProtectionServiceV1Beta1Settings effectiveSettings = settings ?? PhishingProtectionServiceV1Beta1Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callReportPhishing = clientHelper.BuildApiCall<ReportPhishingRequest, ReportPhishingResponse>("ReportPhishing", grpcClient.ReportPhishingAsync, grpcClient.ReportPhishing, effectiveSettings.ReportPhishingSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callReportPhishing);
             Modify_ReportPhishingApiCall(ref _callReportPhishing);

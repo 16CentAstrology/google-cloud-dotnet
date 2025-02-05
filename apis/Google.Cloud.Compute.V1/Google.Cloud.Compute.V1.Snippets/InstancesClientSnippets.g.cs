@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,9 +16,10 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Compute.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Compute.V1;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -319,6 +320,7 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -371,6 +373,7 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -2214,6 +2217,140 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for PerformMaintenance</summary>
+        public void PerformMaintenanceRequestObject()
+        {
+            // Snippet: PerformMaintenance(PerformMaintenanceInstanceRequest, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            PerformMaintenanceInstanceRequest request = new PerformMaintenanceInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                RequestId = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = instancesClient.PerformMaintenance(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instancesClient.PollOncePerformMaintenance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenanceAsync</summary>
+        public async Task PerformMaintenanceRequestObjectAsync()
+        {
+            // Snippet: PerformMaintenanceAsync(PerformMaintenanceInstanceRequest, CallSettings)
+            // Additional: PerformMaintenanceAsync(PerformMaintenanceInstanceRequest, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            PerformMaintenanceInstanceRequest request = new PerformMaintenanceInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                RequestId = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await instancesClient.PerformMaintenanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOncePerformMaintenanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenance</summary>
+        public void PerformMaintenance()
+        {
+            // Snippet: PerformMaintenance(string, string, string, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = instancesClient.PerformMaintenance(project, zone, instance);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instancesClient.PollOncePerformMaintenance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenanceAsync</summary>
+        public async Task PerformMaintenanceAsync()
+        {
+            // Snippet: PerformMaintenanceAsync(string, string, string, CallSettings)
+            // Additional: PerformMaintenanceAsync(string, string, string, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await instancesClient.PerformMaintenanceAsync(project, zone, instance);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOncePerformMaintenanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for RemoveResourcePolicies</summary>
         public void RemoveResourcePoliciesRequestObject()
         {
@@ -4004,6 +4141,144 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetSecurityPolicy</summary>
+        public void SetSecurityPolicyRequestObject()
+        {
+            // Snippet: SetSecurityPolicy(SetSecurityPolicyInstanceRequest, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            SetSecurityPolicyInstanceRequest request = new SetSecurityPolicyInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                RequestId = "",
+                Project = "",
+                InstancesSetSecurityPolicyRequestResource = new InstancesSetSecurityPolicyRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = instancesClient.SetSecurityPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instancesClient.PollOnceSetSecurityPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicyAsync</summary>
+        public async Task SetSecurityPolicyRequestObjectAsync()
+        {
+            // Snippet: SetSecurityPolicyAsync(SetSecurityPolicyInstanceRequest, CallSettings)
+            // Additional: SetSecurityPolicyAsync(SetSecurityPolicyInstanceRequest, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            SetSecurityPolicyInstanceRequest request = new SetSecurityPolicyInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                RequestId = "",
+                Project = "",
+                InstancesSetSecurityPolicyRequestResource = new InstancesSetSecurityPolicyRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await instancesClient.SetSecurityPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOnceSetSecurityPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicy</summary>
+        public void SetSecurityPolicy()
+        {
+            // Snippet: SetSecurityPolicy(string, string, string, InstancesSetSecurityPolicyRequest, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            InstancesSetSecurityPolicyRequest instancesSetSecurityPolicyRequestResource = new InstancesSetSecurityPolicyRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = instancesClient.SetSecurityPolicy(project, zone, instance, instancesSetSecurityPolicyRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instancesClient.PollOnceSetSecurityPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetSecurityPolicyAsync</summary>
+        public async Task SetSecurityPolicyAsync()
+        {
+            // Snippet: SetSecurityPolicyAsync(string, string, string, InstancesSetSecurityPolicyRequest, CallSettings)
+            // Additional: SetSecurityPolicyAsync(string, string, string, InstancesSetSecurityPolicyRequest, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            InstancesSetSecurityPolicyRequest instancesSetSecurityPolicyRequestResource = new InstancesSetSecurityPolicyRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await instancesClient.SetSecurityPolicyAsync(project, zone, instance, instancesSetSecurityPolicyRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOnceSetSecurityPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for SetServiceAccount</summary>
         public void SetServiceAccountRequestObject()
         {
@@ -4429,7 +4704,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 Instance = "",
+                RequestId = "",
                 Project = "",
+                WithExtendedNotifications = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instancesClient.SimulateMaintenanceEvent(request);
@@ -4464,7 +4741,9 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 Zone = "",
                 Instance = "",
+                RequestId = "",
                 Project = "",
+                WithExtendedNotifications = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instancesClient.SimulateMaintenanceEventAsync(request);

@@ -1,5 +1,194 @@
 # Version history
 
+## Version 3.21.0, released 2025-02-03
+
+### New features
+
+- Add support for message transforms to Topic and Subscription ([commit 97502ea](https://github.com/googleapis/google-cloud-dotnet/commit/97502ea06aaea8de9b80ac62fb9f3f1635d3fc49))
+
+### Documentation improvements
+
+- Fix link for AnalyticsHubSubscriptionInfo ([commit 97502ea](https://github.com/googleapis/google-cloud-dotnet/commit/97502ea06aaea8de9b80ac62fb9f3f1635d3fc49))
+
+## Version 3.20.0, released 2025-01-13
+
+### New features
+
+- Add Kafka-based sources to IngestionDataSourceSettings proto and IngestionFailureEvent proto ([commit 9324e45](https://github.com/googleapis/google-cloud-dotnet/commit/9324e45437b5ac8b7e972edaaa183a366f7d4600))
+
+## Version 3.19.0, released 2024-10-24
+
+### Bug fixes
+
+- Do not throw if a subscriber is disposed before being started ([commit 04b8d8a](https://github.com/googleapis/google-cloud-dotnet/commit/04b8d8abe0da0c5dbd6a6d1ea8a81aa116d1114f))
+
+### New features
+
+- Add IngestionFailureEvent to the external proto ([commit a51bbfd](https://github.com/googleapis/google-cloud-dotnet/commit/a51bbfd7d3c5130b77d0e2a3007e1edb5c27955c))
+- Support connection sharing across gRPC channels ([commit 2e16e74](https://github.com/googleapis/google-cloud-dotnet/commit/2e16e743de7bf60afe462692bdbc444f4dcd9ee8))
+
+## Version 3.18.0, released 2024-09-26
+
+No API surface changes; just dependency updates.
+
+## Version 3.17.0, released 2024-09-26
+
+### New features
+
+- Add ingestion Cloud Storage fields and Platform Logging fields to Topic ([commit 5098b56](https://github.com/googleapis/google-cloud-dotnet/commit/5098b5604184c78fac6ba0161a7e081d530f8dd3))
+- Return listing information for subscriptions created via Analytics Hub ([commit ce5de77](https://github.com/googleapis/google-cloud-dotnet/commit/ce5de77b8f709c832d824bc739a68182183bec84))
+
+### Documentation improvements
+
+- Update documentation for 31 day subscription message retention ([commit 950f588](https://github.com/googleapis/google-cloud-dotnet/commit/950f5886f0486b86a899a7fe4aaa8b86979b2b89))
+
+## Version 3.16.0, released 2024-07-22
+
+### New features
+
+- Add max messages batching for Cloud Storage subscriptions ([commit 953eefe](https://github.com/googleapis/google-cloud-dotnet/commit/953eefe3499b9a380264d936678f2a073102aac2))
+
+## Version 3.15.0, released 2024-06-24
+
+### New features
+
+- Add use_topic_schema for Cloud Storage Subscriptions ([commit d557116](https://github.com/googleapis/google-cloud-dotnet/commit/d557116c5844dc4fdd4da4637d7713b325d7dfe7))
+
+## Version 3.14.0, released 2024-05-31
+
+### Bug fixes
+
+- Fix possible race condition when restarting the stream ([commit 4410bb1](https://github.com/googleapis/google-cloud-dotnet/commit/4410bb1052c4d03a27387dbcc0d15f140c74da87))
+
+### New features
+
+- Add service_account_email for export subscriptions ([commit f73410e](https://github.com/googleapis/google-cloud-dotnet/commit/f73410e22786bb596defd10d0df9a6ed0d76fe95))
+- Make StreamingPull fail after 100 consecutive failures ([commit d9d658b](https://github.com/googleapis/google-cloud-dotnet/commit/d9d658b61ed72dfbb6d37596763db1e44dc7ba34))
+- Improve Pub/Sub streaming pull retries ([commit 8537ed4](https://github.com/googleapis/google-cloud-dotnet/commit/8537ed42202121ed6e6108ded101c9d4f59324aa))
+
+The last two of these features can cause user-visible changes. In particular:
+
+- Persistently-failing streaming pulls will eventually cause a SubscriberClient to fail
+- Authentication-based failures (e.g. using an expired service account) will now cause a SubscriberClient to fail
+- SubscriberClient will retry immediately after a streaming pull stream is terminated server-side, if the pull was active for 45 seconds or more before being terminated. This should improve responsiveness in some situations.
+
+All of these changes should be "net positive", but if they cause any issues, please file a bug.
+
+## Version 3.13.0, released 2024-05-17
+
+### New features
+
+- Improve SubscriberClient logging ([commit a9896c9](https://github.com/googleapis/google-cloud-dotnet/commit/a9896c96a54649be3460025f64c962fb0ad8db93))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.12.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Add custom datetime format for Cloud Storage subscriptions ([commit cb33d77](https://github.com/googleapis/google-cloud-dotnet/commit/cb33d7762a0fb1dff89edfcaf751478119ae4801))
+
+## Version 3.11.0, released 2024-03-25
+
+### New features
+
+- Added TopicName and SubsciptionName resolution from container as an extension point. ([issue 12215](https://github.com/googleapis/google-cloud-dotnet/issues/12215)) ([commit 73c457d](https://github.com/googleapis/google-cloud-dotnet/commit/73c457d2f8f915656d9c14eaeb594c189072f4a7))
+
+## Version 3.10.1, released 2024-03-19
+
+### New features
+
+- Add initial logging to PublisherClient and SubscriberClient ([commit 931bd76](https://github.com/googleapis/google-cloud-dotnet/commit/931bd762983688864b5f7fb22bdda6c563435d46))
+
+## Version 3.10.0, released 2024-03-05
+
+### Documentation improvements
+
+- Small fix in Pub/Sub ingestion comments ([commit 663a29c](https://github.com/googleapis/google-cloud-dotnet/commit/663a29c5ad9fc8c8dc6942540e35b60c4d8c2f36))
+
+## Version 3.10.0-beta01, released 2024-02-09
+
+### New features
+
+- Add enforce_in_transit fields and optional annotations ([commit 43c6cd3](https://github.com/googleapis/google-cloud-dotnet/commit/43c6cd3d59c575deed21a1b9de81de66ed6eeee1))
+- Add `ingestion_data_source_settings` field to `Topic` ([commit 06f6c30](https://github.com/googleapis/google-cloud-dotnet/commit/06f6c303967d7c433041f7f8c659fe85285eaded))
+
+## Version 3.9.1, released 2024-01-03
+
+### Bug fixes
+
+- Use message ordering enabled property that comes with streaming pull responses so that messages are only delivered to the callback one at a time in order when ordering is actually enabled ([commit 3f8f8a2](https://github.com/googleapis/google-cloud-dotnet/commit/3f8f8a26587dd329cf2a90c6b9952a8ce5fff7f4))
+
+## Version 3.9.0, released 2023-12-04
+
+### New features
+
+- Add `use_table_schema` field to BigQueryConfig ([commit c489a15](https://github.com/googleapis/google-cloud-dotnet/commit/c489a154b2e51add4442b2f9ba9ec6198df0bcee))
+
+## Version 3.8.0, released 2023-11-03
+
+### Bug fixes
+
+- Set x-goog-request-params for streaming pull requests from SubscriberClient ([commit 7b6ec74](https://github.com/googleapis/google-cloud-dotnet/commit/7b6ec741956745af04950cd60a2eb83270f6136c))
+
+### Documentation improvements
+
+- Modified some descriptions ([commit 1dd516c](https://github.com/googleapis/google-cloud-dotnet/commit/1dd516c0c949db896d898808457a4b1e97013499))
+
+## Version 3.7.0, released 2023-09-06
+
+### Bug fixes
+
+- Make retry policy back off more aggressively for RPCs that retry RESOURCE_EXHAUSTD ([commit c5e2b5f](https://github.com/googleapis/google-cloud-dotnet/commit/c5e2b5f81844f6a126c9b5cbe90f8690fad6827f))
+
+### Documentation improvements
+
+- Clarified where ordering_key will be written if write_metadata is set ([commit 2436db1](https://github.com/googleapis/google-cloud-dotnet/commit/2436db17387e39b5e378188fa70c34480d2436b7))
+- Tightened requirements on cloud storage subscription filename suffixes ([commit f4d7887](https://github.com/googleapis/google-cloud-dotnet/commit/f4d78878946ab94b60197c245ecf2b34ccec735b))
+
+## Version 3.6.0, released 2023-06-12
+
+### Bug fixes
+
+- Correct the auto-extend lease interval for exactly-once delivery. ([commit c33999d](https://github.com/googleapis/google-cloud-dotnet/commit/c33999d4bed6d7777bd1d1e4bc019d67448ce844))
+- Dispose the pull stream. ([commit 3518402](https://github.com/googleapis/google-cloud-dotnet/commit/351840238416353db7a87431ac2f8687537c9352))
+
+### New features
+
+- Add push config wrapper fields ([commit 1cdef74](https://github.com/googleapis/google-cloud-dotnet/commit/1cdef749b46a406e6abea44001db68b9276c338d))
+- Add support for Publisher Compression. ([commit e684e05](https://github.com/googleapis/google-cloud-dotnet/commit/e684e05a21cd47042f05b4f4662611e13632bef9))
+
+### Documentation improvements
+
+- Clarify the use of FlowControlSettings in SusbcriberClient. ([commit 7081baf](https://github.com/googleapis/google-cloud-dotnet/commit/7081baf1a5b95aaaa09d513fe380208f8e039c57))
+
+## Version 3.6.0-beta01, released 2023-05-16
+
+Note that this is a beta release as the deadlock workaround for
+[issue](https://github.com/googleapis/google-cloud-dotnet/issues/10318) is far
+from ideal. We'll create a new GA release when Grpc.Net.Client has been fixed.
+
+### Bug fixes
+
+- Add missing field when creating a SubscriberClient.Settings from another. ([commit 204866c](https://github.com/googleapis/google-cloud-dotnet/commit/204866c229146f888644b30b08b3de150428e9e7))
+- Temporary patch for PubSub Subscriber deadlock issue. ([commit d965b93](https://github.com/googleapis/google-cloud-dotnet/commit/d965b9333d819ba3b764b5f62b2ea790504f6e4e))
+
+### New features
+
+- Add cloud storage subscription fields ([commit b3b6104](https://github.com/googleapis/google-cloud-dotnet/commit/b3b6104c8aa408c2df1e1dfe0ecbb06bd4761705))
+
+## Version 3.5.1, released 2023-05-05
+
+### Bug fixes
+
+- Dispose channel on PublisherClient/SubscriberClient shutdown. Fixes [#10304](https://github.com/googleapis/google-cloud-dotnet/issues/10304) ([commit d38ab04](https://github.com/googleapis/google-cloud-dotnet/commit/d38ab04a077662748b5d7725d80ab132899c2996))
+
+## Version 3.5.0, released 2023-04-19
+
+### New features
+
+- Reliability improvements in exactly-once delivery. ([commit 27b2430](https://github.com/googleapis/google-cloud-dotnet/commit/27b2430894ddd1f857ad49a5945282670760fa56))
+
 ## Version 3.4.0, released 2023-03-08
 
 ### Bug fixes
@@ -133,7 +322,7 @@ and are also sent to the Cloud Pub/Sub server but not enforced on
 the server side yet. Server side flow control is on track to be
 enabled by the 2nd week of December 2020. Users that face issues
 with server side flow control can disable it by setting
-`SubscriberClient.Settings.UseLegacyFlowControl`# to `true` which
+`SubscriberClient.Settings.UseLegacyFlowControl` to `true` which
 will result in the enforcement of client side flow control only.
 
 ## Version 2.1.0, released 2020-08-03

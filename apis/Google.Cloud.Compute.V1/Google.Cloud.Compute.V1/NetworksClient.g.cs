@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -405,14 +405,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return NetworksClient.Create(callInvoker, Settings, Logger);
+            return NetworksClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<NetworksClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return NetworksClient.Create(callInvoker, Settings, Logger);
+            return NetworksClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1013,13 +1013,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Network"/> resources.</returns>
-        public virtual gax::PagedEnumerable<NetworkList, Network> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListNetworksRequest
+        public virtual gax::PagedEnumerable<NetworkList, Network> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworksRequest request = new ListNetworksRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the list of networks available to the specified project.
@@ -1037,13 +1046,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Network"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<NetworkList, Network> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListNetworksRequest
+        public virtual gax::PagedAsyncEnumerable<NetworkList, Network> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworksRequest request = new ListNetworksRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the peering routes exchanged over peering connection.
@@ -1082,14 +1100,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ExchangedPeeringRoute"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> ListPeeringRoutes(string project, string network, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPeeringRoutes(new ListPeeringRoutesNetworksRequest
+        public virtual gax::PagedEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> ListPeeringRoutes(string project, string network, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPeeringRoutesNetworksRequest request = new ListPeeringRoutesNetworksRequest
             {
                 Network = gax::GaxPreconditions.CheckNotNullOrEmpty(network, nameof(network)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPeeringRoutes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the peering routes exchanged over peering connection.
@@ -1110,17 +1137,26 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ExchangedPeeringRoute"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> ListPeeringRoutesAsync(string project, string network, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPeeringRoutesAsync(new ListPeeringRoutesNetworksRequest
+        public virtual gax::PagedAsyncEnumerable<ExchangedPeeringRoutesList, ExchangedPeeringRoute> ListPeeringRoutesAsync(string project, string network, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPeeringRoutesNetworksRequest request = new ListPeeringRoutesNetworksRequest
             {
                 Network = gax::GaxPreconditions.CheckNotNullOrEmpty(network, nameof(network)),
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPeeringRoutesAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only the following fields can be modified: routingConfig.routingMode.
+        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1129,7 +1165,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only the following fields can be modified: routingConfig.routingMode.
+        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1138,7 +1174,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only the following fields can be modified: routingConfig.routingMode.
+        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1173,7 +1209,7 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only the following fields can be modified: routingConfig.routingMode.
+        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1195,7 +1231,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only the following fields can be modified: routingConfig.routingMode.
+        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1217,7 +1253,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only the following fields can be modified: routingConfig.routingMode.
+        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1604,7 +1640,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             NetworksSettings effectiveSettings = settings ?? NetworksSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             AddPeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddPeeringOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
@@ -1898,7 +1938,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only the following fields can be modified: routingConfig.routingMode.
+        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1913,7 +1953,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified network with the data included in the request. Only the following fields can be modified: routingConfig.routingMode.
+        /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

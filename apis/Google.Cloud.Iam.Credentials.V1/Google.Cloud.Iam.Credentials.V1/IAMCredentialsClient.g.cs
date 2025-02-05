@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using linq = System.Linq;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
-using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Iam.Credentials.V1
 {
@@ -182,14 +182,14 @@ namespace Google.Cloud.Iam.Credentials.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return IAMCredentialsClient.Create(callInvoker, Settings, Logger);
+            return IAMCredentialsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<IAMCredentialsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return IAMCredentialsClient.Create(callInvoker, Settings, Logger);
+            return IAMCredentialsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1357,7 +1357,11 @@ namespace Google.Cloud.Iam.Credentials.V1
         {
             GrpcClient = grpcClient;
             IAMCredentialsSettings effectiveSettings = settings ?? IAMCredentialsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGenerateAccessToken = clientHelper.BuildApiCall<GenerateAccessTokenRequest, GenerateAccessTokenResponse>("GenerateAccessToken", grpcClient.GenerateAccessTokenAsync, grpcClient.GenerateAccessToken, effectiveSettings.GenerateAccessTokenSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGenerateAccessToken);
             Modify_GenerateAccessTokenApiCall(ref _callGenerateAccessToken);

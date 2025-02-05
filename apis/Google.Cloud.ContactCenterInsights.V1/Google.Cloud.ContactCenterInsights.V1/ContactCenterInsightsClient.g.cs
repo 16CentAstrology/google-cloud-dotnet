@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
+using gciv = Google.Cloud.Iam.V1;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.ContactCenterInsights.V1
 {
@@ -64,6 +65,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
             DeleteAnalysisSettings = existing.DeleteAnalysisSettings;
             BulkAnalyzeConversationsSettings = existing.BulkAnalyzeConversationsSettings;
             BulkAnalyzeConversationsOperationsSettings = existing.BulkAnalyzeConversationsOperationsSettings.Clone();
+            BulkDeleteConversationsSettings = existing.BulkDeleteConversationsSettings;
+            BulkDeleteConversationsOperationsSettings = existing.BulkDeleteConversationsOperationsSettings.Clone();
             IngestConversationsSettings = existing.IngestConversationsSettings;
             IngestConversationsOperationsSettings = existing.IngestConversationsOperationsSettings.Clone();
             ExportInsightsDataSettings = existing.ExportInsightsDataSettings;
@@ -79,6 +82,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
             DeployIssueModelOperationsSettings = existing.DeployIssueModelOperationsSettings.Clone();
             UndeployIssueModelSettings = existing.UndeployIssueModelSettings;
             UndeployIssueModelOperationsSettings = existing.UndeployIssueModelOperationsSettings.Clone();
+            ExportIssueModelSettings = existing.ExportIssueModelSettings;
+            ExportIssueModelOperationsSettings = existing.ExportIssueModelOperationsSettings.Clone();
+            ImportIssueModelSettings = existing.ImportIssueModelSettings;
+            ImportIssueModelOperationsSettings = existing.ImportIssueModelOperationsSettings.Clone();
             GetIssueSettings = existing.GetIssueSettings;
             ListIssuesSettings = existing.ListIssuesSettings;
             UpdateIssueSettings = existing.UpdateIssueSettings;
@@ -92,11 +99,50 @@ namespace Google.Cloud.ContactCenterInsights.V1
             CalculateStatsSettings = existing.CalculateStatsSettings;
             GetSettingsSettings = existing.GetSettingsSettings;
             UpdateSettingsSettings = existing.UpdateSettingsSettings;
+            CreateAnalysisRuleSettings = existing.CreateAnalysisRuleSettings;
+            GetAnalysisRuleSettings = existing.GetAnalysisRuleSettings;
+            ListAnalysisRulesSettings = existing.ListAnalysisRulesSettings;
+            UpdateAnalysisRuleSettings = existing.UpdateAnalysisRuleSettings;
+            DeleteAnalysisRuleSettings = existing.DeleteAnalysisRuleSettings;
+            GetEncryptionSpecSettings = existing.GetEncryptionSpecSettings;
+            InitializeEncryptionSpecSettings = existing.InitializeEncryptionSpecSettings;
+            InitializeEncryptionSpecOperationsSettings = existing.InitializeEncryptionSpecOperationsSettings.Clone();
             CreateViewSettings = existing.CreateViewSettings;
             GetViewSettings = existing.GetViewSettings;
             ListViewsSettings = existing.ListViewsSettings;
             UpdateViewSettings = existing.UpdateViewSettings;
             DeleteViewSettings = existing.DeleteViewSettings;
+            QueryMetricsSettings = existing.QueryMetricsSettings;
+            QueryMetricsOperationsSettings = existing.QueryMetricsOperationsSettings.Clone();
+            CreateQaQuestionSettings = existing.CreateQaQuestionSettings;
+            GetQaQuestionSettings = existing.GetQaQuestionSettings;
+            UpdateQaQuestionSettings = existing.UpdateQaQuestionSettings;
+            DeleteQaQuestionSettings = existing.DeleteQaQuestionSettings;
+            ListQaQuestionsSettings = existing.ListQaQuestionsSettings;
+            CreateQaScorecardSettings = existing.CreateQaScorecardSettings;
+            GetQaScorecardSettings = existing.GetQaScorecardSettings;
+            UpdateQaScorecardSettings = existing.UpdateQaScorecardSettings;
+            DeleteQaScorecardSettings = existing.DeleteQaScorecardSettings;
+            ListQaScorecardsSettings = existing.ListQaScorecardsSettings;
+            CreateQaScorecardRevisionSettings = existing.CreateQaScorecardRevisionSettings;
+            GetQaScorecardRevisionSettings = existing.GetQaScorecardRevisionSettings;
+            TuneQaScorecardRevisionSettings = existing.TuneQaScorecardRevisionSettings;
+            TuneQaScorecardRevisionOperationsSettings = existing.TuneQaScorecardRevisionOperationsSettings.Clone();
+            DeployQaScorecardRevisionSettings = existing.DeployQaScorecardRevisionSettings;
+            UndeployQaScorecardRevisionSettings = existing.UndeployQaScorecardRevisionSettings;
+            DeleteQaScorecardRevisionSettings = existing.DeleteQaScorecardRevisionSettings;
+            ListQaScorecardRevisionsSettings = existing.ListQaScorecardRevisionsSettings;
+            CreateFeedbackLabelSettings = existing.CreateFeedbackLabelSettings;
+            ListFeedbackLabelsSettings = existing.ListFeedbackLabelsSettings;
+            GetFeedbackLabelSettings = existing.GetFeedbackLabelSettings;
+            UpdateFeedbackLabelSettings = existing.UpdateFeedbackLabelSettings;
+            DeleteFeedbackLabelSettings = existing.DeleteFeedbackLabelSettings;
+            ListAllFeedbackLabelsSettings = existing.ListAllFeedbackLabelsSettings;
+            BulkUploadFeedbackLabelsSettings = existing.BulkUploadFeedbackLabelsSettings;
+            BulkUploadFeedbackLabelsOperationsSettings = existing.BulkUploadFeedbackLabelsOperationsSettings.Clone();
+            BulkDownloadFeedbackLabelsSettings = existing.BulkDownloadFeedbackLabelsSettings;
+            BulkDownloadFeedbackLabelsOperationsSettings = existing.BulkDownloadFeedbackLabelsOperationsSettings.Clone();
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -359,6 +405,43 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings BulkAnalyzeConversationsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.BulkDeleteConversations</c> and
+        /// <c>ContactCenterInsightsClient.BulkDeleteConversationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BulkDeleteConversationsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.BulkDeleteConversations</c> and
+        /// <c>ContactCenterInsightsClient.BulkDeleteConversationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BulkDeleteConversationsOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -643,6 +726,80 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.ExportIssueModel</c> and <c>ContactCenterInsightsClient.ExportIssueModelAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportIssueModelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.ExportIssueModel</c> and
+        /// <c>ContactCenterInsightsClient.ExportIssueModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportIssueModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.ImportIssueModel</c> and <c>ContactCenterInsightsClient.ImportIssueModelAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportIssueModelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.ImportIssueModel</c> and
+        /// <c>ContactCenterInsightsClient.ImportIssueModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportIssueModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ContactCenterInsightsClient.GetIssue</c> and <c>ContactCenterInsightsClient.GetIssueAsync</c>.
         /// </summary>
         /// <remarks>
@@ -885,6 +1042,157 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.CreateAnalysisRule</c> and
+        /// <c>ContactCenterInsightsClient.CreateAnalysisRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAnalysisRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.GetAnalysisRule</c> and <c>ContactCenterInsightsClient.GetAnalysisRuleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAnalysisRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.ListAnalysisRules</c> and
+        /// <c>ContactCenterInsightsClient.ListAnalysisRulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAnalysisRulesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.UpdateAnalysisRule</c> and
+        /// <c>ContactCenterInsightsClient.UpdateAnalysisRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAnalysisRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.DeleteAnalysisRule</c> and
+        /// <c>ContactCenterInsightsClient.DeleteAnalysisRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAnalysisRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.GetEncryptionSpec</c> and
+        /// <c>ContactCenterInsightsClient.GetEncryptionSpecAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetEncryptionSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.InitializeEncryptionSpec</c> and
+        /// <c>ContactCenterInsightsClient.InitializeEncryptionSpecAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings InitializeEncryptionSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.InitializeEncryptionSpec</c> and
+        /// <c>ContactCenterInsightsClient.InitializeEncryptionSpecAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings InitializeEncryptionSpecOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ContactCenterInsightsClient.CreateView</c> and <c>ContactCenterInsightsClient.CreateViewAsync</c>.
         /// </summary>
         /// <remarks>
@@ -973,6 +1281,575 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </remarks>
         public gaxgrpc::CallSettings DeleteViewSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.QueryMetrics</c> and <c>ContactCenterInsightsClient.QueryMetricsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryMetricsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.QueryMetrics</c> and
+        /// <c>ContactCenterInsightsClient.QueryMetricsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings QueryMetricsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.CreateQaQuestion</c> and <c>ContactCenterInsightsClient.CreateQaQuestionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateQaQuestionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.GetQaQuestion</c> and <c>ContactCenterInsightsClient.GetQaQuestionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetQaQuestionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.UpdateQaQuestion</c> and <c>ContactCenterInsightsClient.UpdateQaQuestionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateQaQuestionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.DeleteQaQuestion</c> and <c>ContactCenterInsightsClient.DeleteQaQuestionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteQaQuestionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.ListQaQuestions</c> and <c>ContactCenterInsightsClient.ListQaQuestionsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListQaQuestionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.CreateQaScorecard</c> and
+        /// <c>ContactCenterInsightsClient.CreateQaScorecardAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateQaScorecardSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.GetQaScorecard</c> and <c>ContactCenterInsightsClient.GetQaScorecardAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetQaScorecardSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.UpdateQaScorecard</c> and
+        /// <c>ContactCenterInsightsClient.UpdateQaScorecardAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateQaScorecardSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.DeleteQaScorecard</c> and
+        /// <c>ContactCenterInsightsClient.DeleteQaScorecardAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteQaScorecardSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.ListQaScorecards</c> and <c>ContactCenterInsightsClient.ListQaScorecardsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListQaScorecardsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.CreateQaScorecardRevision</c> and
+        /// <c>ContactCenterInsightsClient.CreateQaScorecardRevisionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateQaScorecardRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.GetQaScorecardRevision</c> and
+        /// <c>ContactCenterInsightsClient.GetQaScorecardRevisionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetQaScorecardRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.TuneQaScorecardRevision</c> and
+        /// <c>ContactCenterInsightsClient.TuneQaScorecardRevisionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TuneQaScorecardRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.TuneQaScorecardRevision</c> and
+        /// <c>ContactCenterInsightsClient.TuneQaScorecardRevisionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings TuneQaScorecardRevisionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.DeployQaScorecardRevision</c> and
+        /// <c>ContactCenterInsightsClient.DeployQaScorecardRevisionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeployQaScorecardRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.UndeployQaScorecardRevision</c> and
+        /// <c>ContactCenterInsightsClient.UndeployQaScorecardRevisionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UndeployQaScorecardRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.DeleteQaScorecardRevision</c> and
+        /// <c>ContactCenterInsightsClient.DeleteQaScorecardRevisionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteQaScorecardRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.ListQaScorecardRevisions</c> and
+        /// <c>ContactCenterInsightsClient.ListQaScorecardRevisionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListQaScorecardRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.CreateFeedbackLabel</c> and
+        /// <c>ContactCenterInsightsClient.CreateFeedbackLabelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateFeedbackLabelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.ListFeedbackLabels</c> and
+        /// <c>ContactCenterInsightsClient.ListFeedbackLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListFeedbackLabelsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.GetFeedbackLabel</c> and <c>ContactCenterInsightsClient.GetFeedbackLabelAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetFeedbackLabelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.UpdateFeedbackLabel</c> and
+        /// <c>ContactCenterInsightsClient.UpdateFeedbackLabelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateFeedbackLabelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.DeleteFeedbackLabel</c> and
+        /// <c>ContactCenterInsightsClient.DeleteFeedbackLabelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteFeedbackLabelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.ListAllFeedbackLabels</c> and
+        /// <c>ContactCenterInsightsClient.ListAllFeedbackLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAllFeedbackLabelsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.BulkUploadFeedbackLabels</c> and
+        /// <c>ContactCenterInsightsClient.BulkUploadFeedbackLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BulkUploadFeedbackLabelsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.BulkUploadFeedbackLabels</c> and
+        /// <c>ContactCenterInsightsClient.BulkUploadFeedbackLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BulkUploadFeedbackLabelsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.BulkDownloadFeedbackLabels</c> and
+        /// <c>ContactCenterInsightsClient.BulkDownloadFeedbackLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BulkDownloadFeedbackLabelsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ContactCenterInsightsClient.BulkDownloadFeedbackLabels</c>
+        /// and <c>ContactCenterInsightsClient.BulkDownloadFeedbackLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BulkDownloadFeedbackLabelsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ContactCenterInsightsSettings"/> object.</returns>
         public ContactCenterInsightsSettings Clone() => new ContactCenterInsightsSettings(this);
@@ -1016,14 +1893,14 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ContactCenterInsightsClient.Create(callInvoker, Settings, Logger);
+            return ContactCenterInsightsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ContactCenterInsightsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ContactCenterInsightsClient.Create(callInvoker, Settings, Logger);
+            return ContactCenterInsightsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1117,8 +1994,13 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <summary>The underlying gRPC ContactCenterInsights client</summary>
         public virtual ContactCenterInsights.ContactCenterInsightsClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1128,6 +2010,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1137,6 +2021,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1146,6 +2032,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the conversation.
@@ -1173,6 +2061,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the conversation.
@@ -1200,6 +2090,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the conversation.
@@ -1222,6 +2114,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the conversation.
@@ -1249,6 +2143,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the conversation.
@@ -1276,6 +2172,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the conversation.
@@ -1297,8 +2195,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
             CreateConversationAsync(parent, conversation, conversationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a longrunning conversation upload operation. This method differs
-        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// Create a long-running conversation upload operation. This method differs
+        /// from `CreateConversation` by allowing audio transcription and optional DLP
         /// redaction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1308,8 +2206,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a longrunning conversation upload operation. This method differs
-        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// Create a long-running conversation upload operation. This method differs
+        /// from `CreateConversation` by allowing audio transcription and optional DLP
         /// redaction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1319,8 +2217,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a longrunning conversation upload operation. This method differs
-        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// Create a long-running conversation upload operation. This method differs
+        /// from `CreateConversation` by allowing audio transcription and optional DLP
         /// redaction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1390,7 +2288,20 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Required. The new values for the conversation.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated.
+        /// The list of fields to be updated. All possible fields can be updated by
+        /// passing `*`, or a subset of the following updateable fields can be
+        /// provided:
+        /// 
+        /// * `agent_id`
+        /// * `language_code`
+        /// * `labels`
+        /// * `metadata`
+        /// * `quality_metadata`
+        /// * `call_metadata`
+        /// * `start_time`
+        /// * `expire_time` or `ttl`
+        /// * `data_source.gcs_source.audio_uri` or
+        /// `data_source.dialogflow_source.audio_uri`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1408,7 +2319,20 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Required. The new values for the conversation.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated.
+        /// The list of fields to be updated. All possible fields can be updated by
+        /// passing `*`, or a subset of the following updateable fields can be
+        /// provided:
+        /// 
+        /// * `agent_id`
+        /// * `language_code`
+        /// * `labels`
+        /// * `metadata`
+        /// * `quality_metadata`
+        /// * `call_metadata`
+        /// * `start_time`
+        /// * `expire_time` or `ttl`
+        /// * `data_source.gcs_source.audio_uri` or
+        /// `data_source.dialogflow_source.audio_uri`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1426,7 +2350,20 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Required. The new values for the conversation.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated.
+        /// The list of fields to be updated. All possible fields can be updated by
+        /// passing `*`, or a subset of the following updateable fields can be
+        /// provided:
+        /// 
+        /// * `agent_id`
+        /// * `language_code`
+        /// * `labels`
+        /// * `metadata`
+        /// * `quality_metadata`
+        /// * `call_metadata`
+        /// * `start_time`
+        /// * `expire_time` or `ttl`
+        /// * `data_source.gcs_source.audio_uri` or
+        /// `data_source.dialogflow_source.audio_uri`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1572,13 +2509,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversations(new ListConversationsRequest
+        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists conversations.
@@ -1596,13 +2542,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationsAsync(new ListConversationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists conversations.
@@ -1620,13 +2575,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversations(new ListConversationsRequest
+        public virtual gax::PagedEnumerable<ListConversationsResponse, Conversation> ListConversations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists conversations.
@@ -1644,13 +2608,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Conversation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationsAsync(new ListConversationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationsResponse, Conversation> ListConversationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationsRequest request = new ListConversationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a conversation.
@@ -2058,13 +3031,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Analysis"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAnalysesResponse, Analysis> ListAnalyses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnalyses(new ListAnalysesRequest
+        public virtual gax::PagedEnumerable<ListAnalysesResponse, Analysis> ListAnalyses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnalysesRequest request = new ListAnalysesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnalyses(request, callSettings);
+        }
 
         /// <summary>
         /// Lists analyses.
@@ -2082,13 +3064,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Analysis"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAnalysesResponse, Analysis> ListAnalysesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnalysesAsync(new ListAnalysesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAnalysesResponse, Analysis> ListAnalysesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnalysesRequest request = new ListAnalysesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnalysesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists analyses.
@@ -2106,13 +3097,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Analysis"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAnalysesResponse, Analysis> ListAnalyses(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnalyses(new ListAnalysesRequest
+        public virtual gax::PagedEnumerable<ListAnalysesResponse, Analysis> ListAnalyses(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnalysesRequest request = new ListAnalysesRequest
             {
                 ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnalyses(request, callSettings);
+        }
 
         /// <summary>
         /// Lists analyses.
@@ -2130,13 +3130,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Analysis"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAnalysesResponse, Analysis> ListAnalysesAsync(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnalysesAsync(new ListAnalysesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAnalysesResponse, Analysis> ListAnalysesAsync(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnalysesRequest request = new ListAnalysesRequest
             {
                 ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnalysesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes an analysis.
@@ -2424,6 +3433,172 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>> BulkAnalyzeConversationsAsync(gagr::LocationName parent, string filter, float analysisPercentage, st::CancellationToken cancellationToken) =>
             BulkAnalyzeConversationsAsync(parent, filter, analysisPercentage, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> BulkDeleteConversations(BulkDeleteConversationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(BulkDeleteConversationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(BulkDeleteConversationsRequest request, st::CancellationToken cancellationToken) =>
+            BulkDeleteConversationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BulkDeleteConversations</c>.</summary>
+        public virtual lro::OperationsClient BulkDeleteConversationsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkDeleteConversations</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> PollOnceBulkDeleteConversations(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkDeleteConversationsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkDeleteConversations</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> PollOnceBulkDeleteConversationsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkDeleteConversationsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to delete conversations from.
+        /// Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="filter">
+        /// Filter used to select the subset of conversations to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> BulkDeleteConversations(string parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteConversations(new BulkDeleteConversationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = filter ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to delete conversations from.
+        /// Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="filter">
+        /// Filter used to select the subset of conversations to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(string parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteConversationsAsync(new BulkDeleteConversationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = filter ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to delete conversations from.
+        /// Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="filter">
+        /// Filter used to select the subset of conversations to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(string parent, string filter, st::CancellationToken cancellationToken) =>
+            BulkDeleteConversationsAsync(parent, filter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to delete conversations from.
+        /// Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="filter">
+        /// Filter used to select the subset of conversations to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> BulkDeleteConversations(gagr::LocationName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteConversations(new BulkDeleteConversationsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = filter ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to delete conversations from.
+        /// Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="filter">
+        /// Filter used to select the subset of conversations to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(gagr::LocationName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteConversationsAsync(new BulkDeleteConversationsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = filter ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource to delete conversations from.
+        /// Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="filter">
+        /// Filter used to select the subset of conversations to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(gagr::LocationName parent, string filter, st::CancellationToken cancellationToken) =>
+            BulkDeleteConversationsAsync(parent, filter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Imports conversations and processes them according to the user's
@@ -3551,6 +4726,268 @@ namespace Google.Cloud.ContactCenterInsights.V1
             UndeployIssueModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata> ExportIssueModel(ExportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(ExportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(ExportIssueModelRequest request, st::CancellationToken cancellationToken) =>
+            ExportIssueModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportIssueModel</c>.</summary>
+        public virtual lro::OperationsClient ExportIssueModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata> PollOnceExportIssueModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> PollOnceExportIssueModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to export.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata> ExportIssueModel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ExportIssueModel(new ExportIssueModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to export.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ExportIssueModelAsync(new ExportIssueModelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to export.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(string name, st::CancellationToken cancellationToken) =>
+            ExportIssueModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to export.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata> ExportIssueModel(IssueModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            ExportIssueModel(new ExportIssueModelRequest
+            {
+                IssueModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to export.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(IssueModelName name, gaxgrpc::CallSettings callSettings = null) =>
+            ExportIssueModelAsync(new ExportIssueModelRequest
+            {
+                IssueModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The issue model to export.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(IssueModelName name, st::CancellationToken cancellationToken) =>
+            ExportIssueModelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata> ImportIssueModel(ImportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(ImportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(ImportIssueModelRequest request, st::CancellationToken cancellationToken) =>
+            ImportIssueModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportIssueModel</c>.</summary>
+        public virtual lro::OperationsClient ImportIssueModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ImportIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata> PollOnceImportIssueModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportIssueModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> PollOnceImportIssueModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportIssueModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata> ImportIssueModel(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportIssueModel(new ImportIssueModelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportIssueModelAsync(new ImportIssueModelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(string parent, st::CancellationToken cancellationToken) =>
+            ImportIssueModelAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata> ImportIssueModel(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportIssueModel(new ImportIssueModelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ImportIssueModelAsync(new ImportIssueModelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the issue model.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(gagr::LocationName parent, st::CancellationToken cancellationToken) =>
+            ImportIssueModelAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets an issue.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4331,13 +5768,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PhraseMatcher"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseMatchers(new ListPhraseMatchersRequest
+        public virtual gax::PagedEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseMatchersRequest request = new ListPhraseMatchersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseMatchers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists phrase matchers.
@@ -4355,13 +5801,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PhraseMatcher"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseMatchersAsync(new ListPhraseMatchersRequest
+        public virtual gax::PagedAsyncEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseMatchersRequest request = new ListPhraseMatchersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseMatchersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists phrase matchers.
@@ -4379,13 +5834,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PhraseMatcher"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseMatchers(new ListPhraseMatchersRequest
+        public virtual gax::PagedEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchers(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseMatchersRequest request = new ListPhraseMatchersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseMatchers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists phrase matchers.
@@ -4403,13 +5867,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PhraseMatcher"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPhraseMatchersAsync(new ListPhraseMatchersRequest
+        public virtual gax::PagedAsyncEnumerable<ListPhraseMatchersResponse, PhraseMatcher> ListPhraseMatchersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPhraseMatchersRequest request = new ListPhraseMatchersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPhraseMatchersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a phrase matcher.
@@ -4881,6 +6354,825 @@ namespace Google.Cloud.ContactCenterInsights.V1
             UpdateSettingsAsync(settings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnalysisRule CreateAnalysisRule(CreateAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> CreateAnalysisRuleAsync(CreateAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> CreateAnalysisRuleAsync(CreateAnalysisRuleRequest request, st::CancellationToken cancellationToken) =>
+            CreateAnalysisRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a analysis rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the analysis rule. Required. The location
+        /// to create a analysis rule for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;` or `projects/&lt;Project
+        /// Number&gt;/locations/&lt;Location ID&gt;`
+        /// </param>
+        /// <param name="analysisRule">
+        /// Required. The analysis rule resource to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnalysisRule CreateAnalysisRule(string parent, AnalysisRule analysisRule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAnalysisRule(new CreateAnalysisRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AnalysisRule = gax::GaxPreconditions.CheckNotNull(analysisRule, nameof(analysisRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a analysis rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the analysis rule. Required. The location
+        /// to create a analysis rule for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;` or `projects/&lt;Project
+        /// Number&gt;/locations/&lt;Location ID&gt;`
+        /// </param>
+        /// <param name="analysisRule">
+        /// Required. The analysis rule resource to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> CreateAnalysisRuleAsync(string parent, AnalysisRule analysisRule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAnalysisRuleAsync(new CreateAnalysisRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AnalysisRule = gax::GaxPreconditions.CheckNotNull(analysisRule, nameof(analysisRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a analysis rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the analysis rule. Required. The location
+        /// to create a analysis rule for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;` or `projects/&lt;Project
+        /// Number&gt;/locations/&lt;Location ID&gt;`
+        /// </param>
+        /// <param name="analysisRule">
+        /// Required. The analysis rule resource to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> CreateAnalysisRuleAsync(string parent, AnalysisRule analysisRule, st::CancellationToken cancellationToken) =>
+            CreateAnalysisRuleAsync(parent, analysisRule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a analysis rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the analysis rule. Required. The location
+        /// to create a analysis rule for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;` or `projects/&lt;Project
+        /// Number&gt;/locations/&lt;Location ID&gt;`
+        /// </param>
+        /// <param name="analysisRule">
+        /// Required. The analysis rule resource to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnalysisRule CreateAnalysisRule(gagr::LocationName parent, AnalysisRule analysisRule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAnalysisRule(new CreateAnalysisRuleRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AnalysisRule = gax::GaxPreconditions.CheckNotNull(analysisRule, nameof(analysisRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a analysis rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the analysis rule. Required. The location
+        /// to create a analysis rule for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;` or `projects/&lt;Project
+        /// Number&gt;/locations/&lt;Location ID&gt;`
+        /// </param>
+        /// <param name="analysisRule">
+        /// Required. The analysis rule resource to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> CreateAnalysisRuleAsync(gagr::LocationName parent, AnalysisRule analysisRule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAnalysisRuleAsync(new CreateAnalysisRuleRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AnalysisRule = gax::GaxPreconditions.CheckNotNull(analysisRule, nameof(analysisRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a analysis rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the analysis rule. Required. The location
+        /// to create a analysis rule for. Format: `projects/&lt;Project
+        /// ID&gt;/locations/&lt;Location ID&gt;` or `projects/&lt;Project
+        /// Number&gt;/locations/&lt;Location ID&gt;`
+        /// </param>
+        /// <param name="analysisRule">
+        /// Required. The analysis rule resource to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> CreateAnalysisRuleAsync(gagr::LocationName parent, AnalysisRule analysisRule, st::CancellationToken cancellationToken) =>
+            CreateAnalysisRuleAsync(parent, analysisRule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnalysisRule GetAnalysisRule(GetAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> GetAnalysisRuleAsync(GetAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> GetAnalysisRuleAsync(GetAnalysisRuleRequest request, st::CancellationToken cancellationToken) =>
+            GetAnalysisRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a analysis rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AnalysisRule to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnalysisRule GetAnalysisRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAnalysisRule(new GetAnalysisRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a analysis rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AnalysisRule to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> GetAnalysisRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAnalysisRuleAsync(new GetAnalysisRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a analysis rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AnalysisRule to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> GetAnalysisRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAnalysisRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a analysis rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AnalysisRule to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnalysisRule GetAnalysisRule(AnalysisRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAnalysisRule(new GetAnalysisRuleRequest
+            {
+                AnalysisRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a analysis rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AnalysisRule to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> GetAnalysisRuleAsync(AnalysisRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAnalysisRuleAsync(new GetAnalysisRuleRequest
+            {
+                AnalysisRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a analysis rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the AnalysisRule to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> GetAnalysisRuleAsync(AnalysisRuleName name, st::CancellationToken cancellationToken) =>
+            GetAnalysisRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists analysis rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AnalysisRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAnalysisRulesResponse, AnalysisRule> ListAnalysisRules(ListAnalysisRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists analysis rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AnalysisRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAnalysisRulesResponse, AnalysisRule> ListAnalysisRulesAsync(ListAnalysisRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists analysis rules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the analysis rules.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AnalysisRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAnalysisRulesResponse, AnalysisRule> ListAnalysisRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnalysisRulesRequest request = new ListAnalysisRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnalysisRules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists analysis rules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the analysis rules.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AnalysisRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAnalysisRulesResponse, AnalysisRule> ListAnalysisRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnalysisRulesRequest request = new ListAnalysisRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnalysisRulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists analysis rules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the analysis rules.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AnalysisRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAnalysisRulesResponse, AnalysisRule> ListAnalysisRules(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnalysisRulesRequest request = new ListAnalysisRulesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnalysisRules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists analysis rules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the analysis rules.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AnalysisRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAnalysisRulesResponse, AnalysisRule> ListAnalysisRulesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnalysisRulesRequest request = new ListAnalysisRulesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnalysisRulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnalysisRule UpdateAnalysisRule(UpdateAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> UpdateAnalysisRuleAsync(UpdateAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> UpdateAnalysisRuleAsync(UpdateAnalysisRuleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAnalysisRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a analysis rule.
+        /// </summary>
+        /// <param name="analysisRule">
+        /// Required. The new analysis rule.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// If the update_mask is not provided, the update will be applied to all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnalysisRule UpdateAnalysisRule(AnalysisRule analysisRule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAnalysisRule(new UpdateAnalysisRuleRequest
+            {
+                AnalysisRule = gax::GaxPreconditions.CheckNotNull(analysisRule, nameof(analysisRule)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a analysis rule.
+        /// </summary>
+        /// <param name="analysisRule">
+        /// Required. The new analysis rule.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// If the update_mask is not provided, the update will be applied to all
+        /// fields.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> UpdateAnalysisRuleAsync(AnalysisRule analysisRule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAnalysisRuleAsync(new UpdateAnalysisRuleRequest
+            {
+                AnalysisRule = gax::GaxPreconditions.CheckNotNull(analysisRule, nameof(analysisRule)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a analysis rule.
+        /// </summary>
+        /// <param name="analysisRule">
+        /// Required. The new analysis rule.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// If the update_mask is not provided, the update will be applied to all
+        /// fields.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalysisRule> UpdateAnalysisRuleAsync(AnalysisRule analysisRule, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAnalysisRuleAsync(analysisRule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAnalysisRule(DeleteAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAnalysisRuleAsync(DeleteAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAnalysisRuleAsync(DeleteAnalysisRuleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAnalysisRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a analysis rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the analysis rule to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAnalysisRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAnalysisRule(new DeleteAnalysisRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a analysis rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the analysis rule to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAnalysisRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAnalysisRuleAsync(new DeleteAnalysisRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a analysis rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the analysis rule to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAnalysisRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAnalysisRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a analysis rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the analysis rule to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAnalysisRule(AnalysisRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAnalysisRule(new DeleteAnalysisRuleRequest
+            {
+                AnalysisRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a analysis rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the analysis rule to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAnalysisRuleAsync(AnalysisRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAnalysisRuleAsync(new DeleteAnalysisRuleRequest
+            {
+                AnalysisRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a analysis rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the analysis rule to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAnalysisRuleAsync(AnalysisRuleName name, st::CancellationToken cancellationToken) =>
+            DeleteAnalysisRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EncryptionSpec GetEncryptionSpec(GetEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EncryptionSpec> GetEncryptionSpecAsync(GetEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EncryptionSpec> GetEncryptionSpecAsync(GetEncryptionSpecRequest request, st::CancellationToken cancellationToken) =>
+            GetEncryptionSpecAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the encryption spec resource to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EncryptionSpec GetEncryptionSpec(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEncryptionSpec(new GetEncryptionSpecRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the encryption spec resource to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EncryptionSpec> GetEncryptionSpecAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEncryptionSpecAsync(new GetEncryptionSpecRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the encryption spec resource to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EncryptionSpec> GetEncryptionSpecAsync(string name, st::CancellationToken cancellationToken) =>
+            GetEncryptionSpecAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the encryption spec resource to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual EncryptionSpec GetEncryptionSpec(EncryptionSpecName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEncryptionSpec(new GetEncryptionSpecRequest
+            {
+                EncryptionSpecName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the encryption spec resource to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EncryptionSpec> GetEncryptionSpecAsync(EncryptionSpecName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetEncryptionSpecAsync(new GetEncryptionSpecRequest
+            {
+                EncryptionSpecName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the encryption spec resource to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<EncryptionSpec> GetEncryptionSpecAsync(EncryptionSpecName name, st::CancellationToken cancellationToken) =>
+            GetEncryptionSpecAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification. An error will
+        /// result if the location has resources already created before the
+        /// initialization. After the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> InitializeEncryptionSpec(InitializeEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification. An error will
+        /// result if the location has resources already created before the
+        /// initialization. After the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>> InitializeEncryptionSpecAsync(InitializeEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification. An error will
+        /// result if the location has resources already created before the
+        /// initialization. After the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>> InitializeEncryptionSpecAsync(InitializeEncryptionSpecRequest request, st::CancellationToken cancellationToken) =>
+            InitializeEncryptionSpecAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>InitializeEncryptionSpec</c>.</summary>
+        public virtual lro::OperationsClient InitializeEncryptionSpecOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>InitializeEncryptionSpec</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> PollOnceInitializeEncryptionSpec(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InitializeEncryptionSpecOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>InitializeEncryptionSpec</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>> PollOnceInitializeEncryptionSpecAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InitializeEncryptionSpecOperationsClient, callSettings);
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification. An error will
+        /// result if the location has resources already created before the
+        /// initialization. After the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="encryptionSpec">
+        /// Required. The encryption spec used for CMEK encryption. It is required that
+        /// the kms key is in the same region as the endpoint. The same key will be
+        /// used for all provisioned resources, if encryption is available. If the
+        /// `kms_key_name` field is left empty, no encryption will be enforced.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> InitializeEncryptionSpec(EncryptionSpec encryptionSpec, gaxgrpc::CallSettings callSettings = null) =>
+            InitializeEncryptionSpec(new InitializeEncryptionSpecRequest
+            {
+                EncryptionSpec = gax::GaxPreconditions.CheckNotNull(encryptionSpec, nameof(encryptionSpec)),
+            }, callSettings);
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification. An error will
+        /// result if the location has resources already created before the
+        /// initialization. After the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="encryptionSpec">
+        /// Required. The encryption spec used for CMEK encryption. It is required that
+        /// the kms key is in the same region as the endpoint. The same key will be
+        /// used for all provisioned resources, if encryption is available. If the
+        /// `kms_key_name` field is left empty, no encryption will be enforced.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>> InitializeEncryptionSpecAsync(EncryptionSpec encryptionSpec, gaxgrpc::CallSettings callSettings = null) =>
+            InitializeEncryptionSpecAsync(new InitializeEncryptionSpecRequest
+            {
+                EncryptionSpec = gax::GaxPreconditions.CheckNotNull(encryptionSpec, nameof(encryptionSpec)),
+            }, callSettings);
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification. An error will
+        /// result if the location has resources already created before the
+        /// initialization. After the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="encryptionSpec">
+        /// Required. The encryption spec used for CMEK encryption. It is required that
+        /// the kms key is in the same region as the endpoint. The same key will be
+        /// used for all provisioned resources, if encryption is available. If the
+        /// `kms_key_name` field is left empty, no encryption will be enforced.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>> InitializeEncryptionSpecAsync(EncryptionSpec encryptionSpec, st::CancellationToken cancellationToken) =>
+            InitializeEncryptionSpecAsync(encryptionSpec, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a view.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5164,13 +7456,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="View"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListViewsResponse, View> ListViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViews(new ListViewsRequest
+        public virtual gax::PagedEnumerable<ListViewsResponse, View> ListViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViewsRequest request = new ListViewsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViews(request, callSettings);
+        }
 
         /// <summary>
         /// Lists views.
@@ -5188,13 +7489,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="View"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListViewsResponse, View> ListViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViewsAsync(new ListViewsRequest
+        public virtual gax::PagedAsyncEnumerable<ListViewsResponse, View> ListViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViewsRequest request = new ListViewsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViewsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists views.
@@ -5212,13 +7522,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="View"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListViewsResponse, View> ListViews(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViews(new ListViewsRequest
+        public virtual gax::PagedEnumerable<ListViewsResponse, View> ListViews(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViewsRequest request = new ListViewsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViews(request, callSettings);
+        }
 
         /// <summary>
         /// Lists views.
@@ -5236,13 +7555,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="View"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListViewsResponse, View> ListViewsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViewsAsync(new ListViewsRequest
+        public virtual gax::PagedAsyncEnumerable<ListViewsResponse, View> ListViewsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViewsRequest request = new ListViewsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViewsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a view.
@@ -5425,6 +7753,3158 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteViewAsync(ViewName name, st::CancellationToken cancellationToken) =>
             DeleteViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Query metrics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<QueryMetricsResponse, QueryMetricsMetadata> QueryMetrics(QueryMetricsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Query metrics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QueryMetricsResponse, QueryMetricsMetadata>> QueryMetricsAsync(QueryMetricsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Query metrics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QueryMetricsResponse, QueryMetricsMetadata>> QueryMetricsAsync(QueryMetricsRequest request, st::CancellationToken cancellationToken) =>
+            QueryMetricsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>QueryMetrics</c>.</summary>
+        public virtual lro::OperationsClient QueryMetricsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>QueryMetrics</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<QueryMetricsResponse, QueryMetricsMetadata> PollOnceQueryMetrics(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<QueryMetricsResponse, QueryMetricsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), QueryMetricsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>QueryMetrics</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<QueryMetricsResponse, QueryMetricsMetadata>> PollOnceQueryMetricsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<QueryMetricsResponse, QueryMetricsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), QueryMetricsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaQuestion CreateQaQuestion(CreateQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> CreateQaQuestionAsync(CreateQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> CreateQaQuestionAsync(CreateQaQuestionRequest request, st::CancellationToken cancellationToken) =>
+            CreateQaQuestionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a QaQuestion.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaQuestion.
+        /// </param>
+        /// <param name="qaQuestion">
+        /// Required. The QaQuestion to create.
+        /// </param>
+        /// <param name="qaQuestionId">
+        /// Optional. A unique ID for the new question. This ID will become the final
+        /// component of the question's resource name. If no ID is specified, a
+        /// server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaQuestion CreateQaQuestion(string parent, QaQuestion qaQuestion, string qaQuestionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQaQuestion(new CreateQaQuestionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                QaQuestion = gax::GaxPreconditions.CheckNotNull(qaQuestion, nameof(qaQuestion)),
+                QaQuestionId = qaQuestionId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Create a QaQuestion.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaQuestion.
+        /// </param>
+        /// <param name="qaQuestion">
+        /// Required. The QaQuestion to create.
+        /// </param>
+        /// <param name="qaQuestionId">
+        /// Optional. A unique ID for the new question. This ID will become the final
+        /// component of the question's resource name. If no ID is specified, a
+        /// server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> CreateQaQuestionAsync(string parent, QaQuestion qaQuestion, string qaQuestionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQaQuestionAsync(new CreateQaQuestionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                QaQuestion = gax::GaxPreconditions.CheckNotNull(qaQuestion, nameof(qaQuestion)),
+                QaQuestionId = qaQuestionId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Create a QaQuestion.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaQuestion.
+        /// </param>
+        /// <param name="qaQuestion">
+        /// Required. The QaQuestion to create.
+        /// </param>
+        /// <param name="qaQuestionId">
+        /// Optional. A unique ID for the new question. This ID will become the final
+        /// component of the question's resource name. If no ID is specified, a
+        /// server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> CreateQaQuestionAsync(string parent, QaQuestion qaQuestion, string qaQuestionId, st::CancellationToken cancellationToken) =>
+            CreateQaQuestionAsync(parent, qaQuestion, qaQuestionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a QaQuestion.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaQuestion.
+        /// </param>
+        /// <param name="qaQuestion">
+        /// Required. The QaQuestion to create.
+        /// </param>
+        /// <param name="qaQuestionId">
+        /// Optional. A unique ID for the new question. This ID will become the final
+        /// component of the question's resource name. If no ID is specified, a
+        /// server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaQuestion CreateQaQuestion(QaScorecardRevisionName parent, QaQuestion qaQuestion, string qaQuestionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQaQuestion(new CreateQaQuestionRequest
+            {
+                ParentAsQaScorecardRevisionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                QaQuestion = gax::GaxPreconditions.CheckNotNull(qaQuestion, nameof(qaQuestion)),
+                QaQuestionId = qaQuestionId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Create a QaQuestion.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaQuestion.
+        /// </param>
+        /// <param name="qaQuestion">
+        /// Required. The QaQuestion to create.
+        /// </param>
+        /// <param name="qaQuestionId">
+        /// Optional. A unique ID for the new question. This ID will become the final
+        /// component of the question's resource name. If no ID is specified, a
+        /// server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> CreateQaQuestionAsync(QaScorecardRevisionName parent, QaQuestion qaQuestion, string qaQuestionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQaQuestionAsync(new CreateQaQuestionRequest
+            {
+                ParentAsQaScorecardRevisionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                QaQuestion = gax::GaxPreconditions.CheckNotNull(qaQuestion, nameof(qaQuestion)),
+                QaQuestionId = qaQuestionId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Create a QaQuestion.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaQuestion.
+        /// </param>
+        /// <param name="qaQuestion">
+        /// Required. The QaQuestion to create.
+        /// </param>
+        /// <param name="qaQuestionId">
+        /// Optional. A unique ID for the new question. This ID will become the final
+        /// component of the question's resource name. If no ID is specified, a
+        /// server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> CreateQaQuestionAsync(QaScorecardRevisionName parent, QaQuestion qaQuestion, string qaQuestionId, st::CancellationToken cancellationToken) =>
+            CreateQaQuestionAsync(parent, qaQuestion, qaQuestionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaQuestion GetQaQuestion(GetQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> GetQaQuestionAsync(GetQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> GetQaQuestionAsync(GetQaQuestionRequest request, st::CancellationToken cancellationToken) =>
+            GetQaQuestionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a QaQuestion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaQuestion to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaQuestion GetQaQuestion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQaQuestion(new GetQaQuestionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QaQuestion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaQuestion to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> GetQaQuestionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQaQuestionAsync(new GetQaQuestionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QaQuestion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaQuestion to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> GetQaQuestionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetQaQuestionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a QaQuestion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaQuestion to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaQuestion GetQaQuestion(QaQuestionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQaQuestion(new GetQaQuestionRequest
+            {
+                QaQuestionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QaQuestion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaQuestion to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> GetQaQuestionAsync(QaQuestionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQaQuestionAsync(new GetQaQuestionRequest
+            {
+                QaQuestionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QaQuestion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaQuestion to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> GetQaQuestionAsync(QaQuestionName name, st::CancellationToken cancellationToken) =>
+            GetQaQuestionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaQuestion UpdateQaQuestion(UpdateQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> UpdateQaQuestionAsync(UpdateQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> UpdateQaQuestionAsync(UpdateQaQuestionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateQaQuestionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a QaQuestion.
+        /// </summary>
+        /// <param name="qaQuestion">
+        /// Required. The QaQuestion to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. All possible fields can be
+        /// updated by passing `*`, or a subset of the following updateable fields can
+        /// be provided:
+        /// 
+        /// * `abbreviation`
+        /// * `answer_choices`
+        /// * `answer_instructions`
+        /// * `order`
+        /// * `question_body`
+        /// * `tags`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaQuestion UpdateQaQuestion(QaQuestion qaQuestion, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateQaQuestion(new UpdateQaQuestionRequest
+            {
+                QaQuestion = gax::GaxPreconditions.CheckNotNull(qaQuestion, nameof(qaQuestion)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a QaQuestion.
+        /// </summary>
+        /// <param name="qaQuestion">
+        /// Required. The QaQuestion to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. All possible fields can be
+        /// updated by passing `*`, or a subset of the following updateable fields can
+        /// be provided:
+        /// 
+        /// * `abbreviation`
+        /// * `answer_choices`
+        /// * `answer_instructions`
+        /// * `order`
+        /// * `question_body`
+        /// * `tags`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> UpdateQaQuestionAsync(QaQuestion qaQuestion, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateQaQuestionAsync(new UpdateQaQuestionRequest
+            {
+                QaQuestion = gax::GaxPreconditions.CheckNotNull(qaQuestion, nameof(qaQuestion)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a QaQuestion.
+        /// </summary>
+        /// <param name="qaQuestion">
+        /// Required. The QaQuestion to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. All possible fields can be
+        /// updated by passing `*`, or a subset of the following updateable fields can
+        /// be provided:
+        /// 
+        /// * `abbreviation`
+        /// * `answer_choices`
+        /// * `answer_instructions`
+        /// * `order`
+        /// * `question_body`
+        /// * `tags`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaQuestion> UpdateQaQuestionAsync(QaQuestion qaQuestion, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateQaQuestionAsync(qaQuestion, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteQaQuestion(DeleteQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaQuestionAsync(DeleteQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaQuestionAsync(DeleteQaQuestionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteQaQuestionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a QaQuestion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaQuestion to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteQaQuestion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQaQuestion(new DeleteQaQuestionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a QaQuestion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaQuestion to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaQuestionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQaQuestionAsync(new DeleteQaQuestionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a QaQuestion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaQuestion to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaQuestionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteQaQuestionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a QaQuestion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaQuestion to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteQaQuestion(QaQuestionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQaQuestion(new DeleteQaQuestionRequest
+            {
+                QaQuestionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a QaQuestion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaQuestion to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaQuestionAsync(QaQuestionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQaQuestionAsync(new DeleteQaQuestionRequest
+            {
+                QaQuestionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a QaQuestion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaQuestion to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaQuestionAsync(QaQuestionName name, st::CancellationToken cancellationToken) =>
+            DeleteQaQuestionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists QaQuestions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QaQuestion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQaQuestionsResponse, QaQuestion> ListQaQuestions(ListQaQuestionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists QaQuestions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QaQuestion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQaQuestionsResponse, QaQuestion> ListQaQuestionsAsync(ListQaQuestionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists QaQuestions.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the questions.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QaQuestion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQaQuestionsResponse, QaQuestion> ListQaQuestions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQaQuestionsRequest request = new ListQaQuestionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQaQuestions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists QaQuestions.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the questions.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QaQuestion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQaQuestionsResponse, QaQuestion> ListQaQuestionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQaQuestionsRequest request = new ListQaQuestionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQaQuestionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists QaQuestions.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the questions.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QaQuestion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQaQuestionsResponse, QaQuestion> ListQaQuestions(QaScorecardRevisionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQaQuestionsRequest request = new ListQaQuestionsRequest
+            {
+                ParentAsQaScorecardRevisionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQaQuestions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists QaQuestions.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the questions.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QaQuestion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQaQuestionsResponse, QaQuestion> ListQaQuestionsAsync(QaScorecardRevisionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQaQuestionsRequest request = new ListQaQuestionsRequest
+            {
+                ParentAsQaScorecardRevisionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQaQuestionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecard CreateQaScorecard(CreateQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> CreateQaScorecardAsync(CreateQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> CreateQaScorecardAsync(CreateQaScorecardRequest request, st::CancellationToken cancellationToken) =>
+            CreateQaScorecardAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a QaScorecard.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaScorecard.
+        /// </param>
+        /// <param name="qaScorecard">
+        /// Required. The QaScorecard to create.
+        /// </param>
+        /// <param name="qaScorecardId">
+        /// Optional. A unique ID for the new QaScorecard. This ID will become the
+        /// final component of the QaScorecard's resource name. If no ID is specified,
+        /// a server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecard CreateQaScorecard(string parent, QaScorecard qaScorecard, string qaScorecardId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQaScorecard(new CreateQaScorecardRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                QaScorecard = gax::GaxPreconditions.CheckNotNull(qaScorecard, nameof(qaScorecard)),
+                QaScorecardId = qaScorecardId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Create a QaScorecard.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaScorecard.
+        /// </param>
+        /// <param name="qaScorecard">
+        /// Required. The QaScorecard to create.
+        /// </param>
+        /// <param name="qaScorecardId">
+        /// Optional. A unique ID for the new QaScorecard. This ID will become the
+        /// final component of the QaScorecard's resource name. If no ID is specified,
+        /// a server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> CreateQaScorecardAsync(string parent, QaScorecard qaScorecard, string qaScorecardId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQaScorecardAsync(new CreateQaScorecardRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                QaScorecard = gax::GaxPreconditions.CheckNotNull(qaScorecard, nameof(qaScorecard)),
+                QaScorecardId = qaScorecardId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Create a QaScorecard.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaScorecard.
+        /// </param>
+        /// <param name="qaScorecard">
+        /// Required. The QaScorecard to create.
+        /// </param>
+        /// <param name="qaScorecardId">
+        /// Optional. A unique ID for the new QaScorecard. This ID will become the
+        /// final component of the QaScorecard's resource name. If no ID is specified,
+        /// a server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> CreateQaScorecardAsync(string parent, QaScorecard qaScorecard, string qaScorecardId, st::CancellationToken cancellationToken) =>
+            CreateQaScorecardAsync(parent, qaScorecard, qaScorecardId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a QaScorecard.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaScorecard.
+        /// </param>
+        /// <param name="qaScorecard">
+        /// Required. The QaScorecard to create.
+        /// </param>
+        /// <param name="qaScorecardId">
+        /// Optional. A unique ID for the new QaScorecard. This ID will become the
+        /// final component of the QaScorecard's resource name. If no ID is specified,
+        /// a server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecard CreateQaScorecard(gagr::LocationName parent, QaScorecard qaScorecard, string qaScorecardId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQaScorecard(new CreateQaScorecardRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                QaScorecard = gax::GaxPreconditions.CheckNotNull(qaScorecard, nameof(qaScorecard)),
+                QaScorecardId = qaScorecardId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Create a QaScorecard.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaScorecard.
+        /// </param>
+        /// <param name="qaScorecard">
+        /// Required. The QaScorecard to create.
+        /// </param>
+        /// <param name="qaScorecardId">
+        /// Optional. A unique ID for the new QaScorecard. This ID will become the
+        /// final component of the QaScorecard's resource name. If no ID is specified,
+        /// a server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> CreateQaScorecardAsync(gagr::LocationName parent, QaScorecard qaScorecard, string qaScorecardId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQaScorecardAsync(new CreateQaScorecardRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                QaScorecard = gax::GaxPreconditions.CheckNotNull(qaScorecard, nameof(qaScorecard)),
+                QaScorecardId = qaScorecardId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Create a QaScorecard.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaScorecard.
+        /// </param>
+        /// <param name="qaScorecard">
+        /// Required. The QaScorecard to create.
+        /// </param>
+        /// <param name="qaScorecardId">
+        /// Optional. A unique ID for the new QaScorecard. This ID will become the
+        /// final component of the QaScorecard's resource name. If no ID is specified,
+        /// a server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> CreateQaScorecardAsync(gagr::LocationName parent, QaScorecard qaScorecard, string qaScorecardId, st::CancellationToken cancellationToken) =>
+            CreateQaScorecardAsync(parent, qaScorecard, qaScorecardId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecard GetQaScorecard(GetQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> GetQaScorecardAsync(GetQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> GetQaScorecardAsync(GetQaScorecardRequest request, st::CancellationToken cancellationToken) =>
+            GetQaScorecardAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a QaScorecard.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecard to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecard GetQaScorecard(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQaScorecard(new GetQaScorecardRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QaScorecard.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecard to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> GetQaScorecardAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQaScorecardAsync(new GetQaScorecardRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QaScorecard.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecard to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> GetQaScorecardAsync(string name, st::CancellationToken cancellationToken) =>
+            GetQaScorecardAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a QaScorecard.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecard to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecard GetQaScorecard(QaScorecardName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQaScorecard(new GetQaScorecardRequest
+            {
+                QaScorecardName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QaScorecard.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecard to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> GetQaScorecardAsync(QaScorecardName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQaScorecardAsync(new GetQaScorecardRequest
+            {
+                QaScorecardName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QaScorecard.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecard to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> GetQaScorecardAsync(QaScorecardName name, st::CancellationToken cancellationToken) =>
+            GetQaScorecardAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecard UpdateQaScorecard(UpdateQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> UpdateQaScorecardAsync(UpdateQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> UpdateQaScorecardAsync(UpdateQaScorecardRequest request, st::CancellationToken cancellationToken) =>
+            UpdateQaScorecardAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a QaScorecard.
+        /// </summary>
+        /// <param name="qaScorecard">
+        /// Required. The QaScorecard to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. All possible fields can be
+        /// updated by passing `*`, or a subset of the following updateable fields can
+        /// be provided:
+        /// 
+        /// * `description`
+        /// * `display_name`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecard UpdateQaScorecard(QaScorecard qaScorecard, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateQaScorecard(new UpdateQaScorecardRequest
+            {
+                QaScorecard = gax::GaxPreconditions.CheckNotNull(qaScorecard, nameof(qaScorecard)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a QaScorecard.
+        /// </summary>
+        /// <param name="qaScorecard">
+        /// Required. The QaScorecard to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. All possible fields can be
+        /// updated by passing `*`, or a subset of the following updateable fields can
+        /// be provided:
+        /// 
+        /// * `description`
+        /// * `display_name`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> UpdateQaScorecardAsync(QaScorecard qaScorecard, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateQaScorecardAsync(new UpdateQaScorecardRequest
+            {
+                QaScorecard = gax::GaxPreconditions.CheckNotNull(qaScorecard, nameof(qaScorecard)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a QaScorecard.
+        /// </summary>
+        /// <param name="qaScorecard">
+        /// Required. The QaScorecard to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated. All possible fields can be
+        /// updated by passing `*`, or a subset of the following updateable fields can
+        /// be provided:
+        /// 
+        /// * `description`
+        /// * `display_name`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecard> UpdateQaScorecardAsync(QaScorecard qaScorecard, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateQaScorecardAsync(qaScorecard, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteQaScorecard(DeleteQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaScorecardAsync(DeleteQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaScorecardAsync(DeleteQaScorecardRequest request, st::CancellationToken cancellationToken) =>
+            DeleteQaScorecardAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a QaScorecard.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecard to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteQaScorecard(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQaScorecard(new DeleteQaScorecardRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a QaScorecard.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecard to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaScorecardAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQaScorecardAsync(new DeleteQaScorecardRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a QaScorecard.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecard to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaScorecardAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteQaScorecardAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a QaScorecard.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecard to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteQaScorecard(QaScorecardName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQaScorecard(new DeleteQaScorecardRequest
+            {
+                QaScorecardName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a QaScorecard.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecard to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaScorecardAsync(QaScorecardName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQaScorecardAsync(new DeleteQaScorecardRequest
+            {
+                QaScorecardName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a QaScorecard.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecard to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaScorecardAsync(QaScorecardName name, st::CancellationToken cancellationToken) =>
+            DeleteQaScorecardAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists QaScorecards.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QaScorecard"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQaScorecardsResponse, QaScorecard> ListQaScorecards(ListQaScorecardsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists QaScorecards.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QaScorecard"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQaScorecardsResponse, QaScorecard> ListQaScorecardsAsync(ListQaScorecardsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists QaScorecards.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the scorecards.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QaScorecard"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQaScorecardsResponse, QaScorecard> ListQaScorecards(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQaScorecardsRequest request = new ListQaScorecardsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQaScorecards(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists QaScorecards.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the scorecards.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QaScorecard"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQaScorecardsResponse, QaScorecard> ListQaScorecardsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQaScorecardsRequest request = new ListQaScorecardsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQaScorecardsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists QaScorecards.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the scorecards.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QaScorecard"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQaScorecardsResponse, QaScorecard> ListQaScorecards(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQaScorecardsRequest request = new ListQaScorecardsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQaScorecards(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists QaScorecards.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the scorecards.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QaScorecard"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQaScorecardsResponse, QaScorecard> ListQaScorecardsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQaScorecardsRequest request = new ListQaScorecardsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQaScorecardsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecardRevision CreateQaScorecardRevision(CreateQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> CreateQaScorecardRevisionAsync(CreateQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> CreateQaScorecardRevisionAsync(CreateQaScorecardRevisionRequest request, st::CancellationToken cancellationToken) =>
+            CreateQaScorecardRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a QaScorecardRevision.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaScorecardRevision.
+        /// </param>
+        /// <param name="qaScorecardRevision">
+        /// Required. The QaScorecardRevision to create.
+        /// </param>
+        /// <param name="qaScorecardRevisionId">
+        /// Optional. A unique ID for the new QaScorecardRevision. This ID will become
+        /// the final component of the QaScorecardRevision's resource name. If no ID is
+        /// specified, a server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecardRevision CreateQaScorecardRevision(string parent, QaScorecardRevision qaScorecardRevision, string qaScorecardRevisionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQaScorecardRevision(new CreateQaScorecardRevisionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                QaScorecardRevision = gax::GaxPreconditions.CheckNotNull(qaScorecardRevision, nameof(qaScorecardRevision)),
+                QaScorecardRevisionId = qaScorecardRevisionId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a QaScorecardRevision.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaScorecardRevision.
+        /// </param>
+        /// <param name="qaScorecardRevision">
+        /// Required. The QaScorecardRevision to create.
+        /// </param>
+        /// <param name="qaScorecardRevisionId">
+        /// Optional. A unique ID for the new QaScorecardRevision. This ID will become
+        /// the final component of the QaScorecardRevision's resource name. If no ID is
+        /// specified, a server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> CreateQaScorecardRevisionAsync(string parent, QaScorecardRevision qaScorecardRevision, string qaScorecardRevisionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQaScorecardRevisionAsync(new CreateQaScorecardRevisionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                QaScorecardRevision = gax::GaxPreconditions.CheckNotNull(qaScorecardRevision, nameof(qaScorecardRevision)),
+                QaScorecardRevisionId = qaScorecardRevisionId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a QaScorecardRevision.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaScorecardRevision.
+        /// </param>
+        /// <param name="qaScorecardRevision">
+        /// Required. The QaScorecardRevision to create.
+        /// </param>
+        /// <param name="qaScorecardRevisionId">
+        /// Optional. A unique ID for the new QaScorecardRevision. This ID will become
+        /// the final component of the QaScorecardRevision's resource name. If no ID is
+        /// specified, a server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> CreateQaScorecardRevisionAsync(string parent, QaScorecardRevision qaScorecardRevision, string qaScorecardRevisionId, st::CancellationToken cancellationToken) =>
+            CreateQaScorecardRevisionAsync(parent, qaScorecardRevision, qaScorecardRevisionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a QaScorecardRevision.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaScorecardRevision.
+        /// </param>
+        /// <param name="qaScorecardRevision">
+        /// Required. The QaScorecardRevision to create.
+        /// </param>
+        /// <param name="qaScorecardRevisionId">
+        /// Optional. A unique ID for the new QaScorecardRevision. This ID will become
+        /// the final component of the QaScorecardRevision's resource name. If no ID is
+        /// specified, a server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecardRevision CreateQaScorecardRevision(QaScorecardName parent, QaScorecardRevision qaScorecardRevision, string qaScorecardRevisionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQaScorecardRevision(new CreateQaScorecardRevisionRequest
+            {
+                ParentAsQaScorecardName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                QaScorecardRevision = gax::GaxPreconditions.CheckNotNull(qaScorecardRevision, nameof(qaScorecardRevision)),
+                QaScorecardRevisionId = qaScorecardRevisionId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a QaScorecardRevision.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaScorecardRevision.
+        /// </param>
+        /// <param name="qaScorecardRevision">
+        /// Required. The QaScorecardRevision to create.
+        /// </param>
+        /// <param name="qaScorecardRevisionId">
+        /// Optional. A unique ID for the new QaScorecardRevision. This ID will become
+        /// the final component of the QaScorecardRevision's resource name. If no ID is
+        /// specified, a server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> CreateQaScorecardRevisionAsync(QaScorecardName parent, QaScorecardRevision qaScorecardRevision, string qaScorecardRevisionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQaScorecardRevisionAsync(new CreateQaScorecardRevisionRequest
+            {
+                ParentAsQaScorecardName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                QaScorecardRevision = gax::GaxPreconditions.CheckNotNull(qaScorecardRevision, nameof(qaScorecardRevision)),
+                QaScorecardRevisionId = qaScorecardRevisionId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a QaScorecardRevision.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the QaScorecardRevision.
+        /// </param>
+        /// <param name="qaScorecardRevision">
+        /// Required. The QaScorecardRevision to create.
+        /// </param>
+        /// <param name="qaScorecardRevisionId">
+        /// Optional. A unique ID for the new QaScorecardRevision. This ID will become
+        /// the final component of the QaScorecardRevision's resource name. If no ID is
+        /// specified, a server-generated ID will be used.
+        /// 
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> CreateQaScorecardRevisionAsync(QaScorecardName parent, QaScorecardRevision qaScorecardRevision, string qaScorecardRevisionId, st::CancellationToken cancellationToken) =>
+            CreateQaScorecardRevisionAsync(parent, qaScorecardRevision, qaScorecardRevisionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecardRevision GetQaScorecardRevision(GetQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> GetQaScorecardRevisionAsync(GetQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> GetQaScorecardRevisionAsync(GetQaScorecardRevisionRequest request, st::CancellationToken cancellationToken) =>
+            GetQaScorecardRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a QaScorecardRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecardRevision to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecardRevision GetQaScorecardRevision(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQaScorecardRevision(new GetQaScorecardRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QaScorecardRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecardRevision to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> GetQaScorecardRevisionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQaScorecardRevisionAsync(new GetQaScorecardRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QaScorecardRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecardRevision to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> GetQaScorecardRevisionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetQaScorecardRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a QaScorecardRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecardRevision to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecardRevision GetQaScorecardRevision(QaScorecardRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQaScorecardRevision(new GetQaScorecardRevisionRequest
+            {
+                QaScorecardRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QaScorecardRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecardRevision to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> GetQaScorecardRevisionAsync(QaScorecardRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQaScorecardRevisionAsync(new GetQaScorecardRevisionRequest
+            {
+                QaScorecardRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a QaScorecardRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecardRevision to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> GetQaScorecardRevisionAsync(QaScorecardRevisionName name, st::CancellationToken cancellationToken) =>
+            GetQaScorecardRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fine tune one or more QaModels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> TuneQaScorecardRevision(TuneQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fine tune one or more QaModels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata>> TuneQaScorecardRevisionAsync(TuneQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fine tune one or more QaModels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata>> TuneQaScorecardRevisionAsync(TuneQaScorecardRevisionRequest request, st::CancellationToken cancellationToken) =>
+            TuneQaScorecardRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>TuneQaScorecardRevision</c>.</summary>
+        public virtual lro::OperationsClient TuneQaScorecardRevisionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>TuneQaScorecardRevision</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> PollOnceTuneQaScorecardRevision(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TuneQaScorecardRevisionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>TuneQaScorecardRevision</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata>> PollOnceTuneQaScorecardRevisionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TuneQaScorecardRevisionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Fine tune one or more QaModels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new fine tuning job instance.
+        /// </param>
+        /// <param name="filter">
+        /// Required. Filter for selecting the feedback labels that needs to be
+        /// used for training.
+        /// This filter can be used to limit the feedback labels used for tuning to a
+        /// feedback labels created or updated for a specific time-window etc.
+        /// </param>
+        /// <param name="validateOnly">
+        /// Optional. Run in validate only mode, no fine tuning will actually run.
+        /// Data quality validations like training data distributions will run.
+        /// Even when set to false, the data quality validations will still run but
+        /// once the validations complete we will proceed with the fine tune, if
+        /// applicable.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> TuneQaScorecardRevision(string parent, string filter, bool validateOnly, gaxgrpc::CallSettings callSettings = null) =>
+            TuneQaScorecardRevision(new TuneQaScorecardRevisionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                ValidateOnly = validateOnly,
+            }, callSettings);
+
+        /// <summary>
+        /// Fine tune one or more QaModels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new fine tuning job instance.
+        /// </param>
+        /// <param name="filter">
+        /// Required. Filter for selecting the feedback labels that needs to be
+        /// used for training.
+        /// This filter can be used to limit the feedback labels used for tuning to a
+        /// feedback labels created or updated for a specific time-window etc.
+        /// </param>
+        /// <param name="validateOnly">
+        /// Optional. Run in validate only mode, no fine tuning will actually run.
+        /// Data quality validations like training data distributions will run.
+        /// Even when set to false, the data quality validations will still run but
+        /// once the validations complete we will proceed with the fine tune, if
+        /// applicable.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata>> TuneQaScorecardRevisionAsync(string parent, string filter, bool validateOnly, gaxgrpc::CallSettings callSettings = null) =>
+            TuneQaScorecardRevisionAsync(new TuneQaScorecardRevisionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                ValidateOnly = validateOnly,
+            }, callSettings);
+
+        /// <summary>
+        /// Fine tune one or more QaModels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new fine tuning job instance.
+        /// </param>
+        /// <param name="filter">
+        /// Required. Filter for selecting the feedback labels that needs to be
+        /// used for training.
+        /// This filter can be used to limit the feedback labels used for tuning to a
+        /// feedback labels created or updated for a specific time-window etc.
+        /// </param>
+        /// <param name="validateOnly">
+        /// Optional. Run in validate only mode, no fine tuning will actually run.
+        /// Data quality validations like training data distributions will run.
+        /// Even when set to false, the data quality validations will still run but
+        /// once the validations complete we will proceed with the fine tune, if
+        /// applicable.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata>> TuneQaScorecardRevisionAsync(string parent, string filter, bool validateOnly, st::CancellationToken cancellationToken) =>
+            TuneQaScorecardRevisionAsync(parent, filter, validateOnly, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fine tune one or more QaModels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new fine tuning job instance.
+        /// </param>
+        /// <param name="filter">
+        /// Required. Filter for selecting the feedback labels that needs to be
+        /// used for training.
+        /// This filter can be used to limit the feedback labels used for tuning to a
+        /// feedback labels created or updated for a specific time-window etc.
+        /// </param>
+        /// <param name="validateOnly">
+        /// Optional. Run in validate only mode, no fine tuning will actually run.
+        /// Data quality validations like training data distributions will run.
+        /// Even when set to false, the data quality validations will still run but
+        /// once the validations complete we will proceed with the fine tune, if
+        /// applicable.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> TuneQaScorecardRevision(QaScorecardRevisionName parent, string filter, bool validateOnly, gaxgrpc::CallSettings callSettings = null) =>
+            TuneQaScorecardRevision(new TuneQaScorecardRevisionRequest
+            {
+                ParentAsQaScorecardRevisionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                ValidateOnly = validateOnly,
+            }, callSettings);
+
+        /// <summary>
+        /// Fine tune one or more QaModels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new fine tuning job instance.
+        /// </param>
+        /// <param name="filter">
+        /// Required. Filter for selecting the feedback labels that needs to be
+        /// used for training.
+        /// This filter can be used to limit the feedback labels used for tuning to a
+        /// feedback labels created or updated for a specific time-window etc.
+        /// </param>
+        /// <param name="validateOnly">
+        /// Optional. Run in validate only mode, no fine tuning will actually run.
+        /// Data quality validations like training data distributions will run.
+        /// Even when set to false, the data quality validations will still run but
+        /// once the validations complete we will proceed with the fine tune, if
+        /// applicable.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata>> TuneQaScorecardRevisionAsync(QaScorecardRevisionName parent, string filter, bool validateOnly, gaxgrpc::CallSettings callSettings = null) =>
+            TuneQaScorecardRevisionAsync(new TuneQaScorecardRevisionRequest
+            {
+                ParentAsQaScorecardRevisionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = gax::GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                ValidateOnly = validateOnly,
+            }, callSettings);
+
+        /// <summary>
+        /// Fine tune one or more QaModels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new fine tuning job instance.
+        /// </param>
+        /// <param name="filter">
+        /// Required. Filter for selecting the feedback labels that needs to be
+        /// used for training.
+        /// This filter can be used to limit the feedback labels used for tuning to a
+        /// feedback labels created or updated for a specific time-window etc.
+        /// </param>
+        /// <param name="validateOnly">
+        /// Optional. Run in validate only mode, no fine tuning will actually run.
+        /// Data quality validations like training data distributions will run.
+        /// Even when set to false, the data quality validations will still run but
+        /// once the validations complete we will proceed with the fine tune, if
+        /// applicable.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata>> TuneQaScorecardRevisionAsync(QaScorecardRevisionName parent, string filter, bool validateOnly, st::CancellationToken cancellationToken) =>
+            TuneQaScorecardRevisionAsync(parent, filter, validateOnly, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deploy a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecardRevision DeployQaScorecardRevision(DeployQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deploy a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> DeployQaScorecardRevisionAsync(DeployQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deploy a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> DeployQaScorecardRevisionAsync(DeployQaScorecardRevisionRequest request, st::CancellationToken cancellationToken) =>
+            DeployQaScorecardRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Undeploy a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QaScorecardRevision UndeployQaScorecardRevision(UndeployQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Undeploy a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> UndeployQaScorecardRevisionAsync(UndeployQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Undeploy a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QaScorecardRevision> UndeployQaScorecardRevisionAsync(UndeployQaScorecardRevisionRequest request, st::CancellationToken cancellationToken) =>
+            UndeployQaScorecardRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteQaScorecardRevision(DeleteQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaScorecardRevisionAsync(DeleteQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaScorecardRevisionAsync(DeleteQaScorecardRevisionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteQaScorecardRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a QaScorecardRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecardRevision to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteQaScorecardRevision(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQaScorecardRevision(new DeleteQaScorecardRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a QaScorecardRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecardRevision to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaScorecardRevisionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQaScorecardRevisionAsync(new DeleteQaScorecardRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a QaScorecardRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecardRevision to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaScorecardRevisionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteQaScorecardRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a QaScorecardRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecardRevision to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteQaScorecardRevision(QaScorecardRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQaScorecardRevision(new DeleteQaScorecardRevisionRequest
+            {
+                QaScorecardRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a QaScorecardRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecardRevision to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaScorecardRevisionAsync(QaScorecardRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQaScorecardRevisionAsync(new DeleteQaScorecardRevisionRequest
+            {
+                QaScorecardRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a QaScorecardRevision.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the QaScorecardRevision to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteQaScorecardRevisionAsync(QaScorecardRevisionName name, st::CancellationToken cancellationToken) =>
+            DeleteQaScorecardRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all revisions under the parent QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QaScorecardRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> ListQaScorecardRevisions(ListQaScorecardRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all revisions under the parent QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QaScorecardRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> ListQaScorecardRevisionsAsync(ListQaScorecardRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all revisions under the parent QaScorecard.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the scorecard revisions. To list all
+        /// revisions of all scorecards, substitute the QaScorecard ID with a '-'
+        /// character.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QaScorecardRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> ListQaScorecardRevisions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQaScorecardRevisionsRequest request = new ListQaScorecardRevisionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQaScorecardRevisions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all revisions under the parent QaScorecard.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the scorecard revisions. To list all
+        /// revisions of all scorecards, substitute the QaScorecard ID with a '-'
+        /// character.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QaScorecardRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> ListQaScorecardRevisionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQaScorecardRevisionsRequest request = new ListQaScorecardRevisionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQaScorecardRevisionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all revisions under the parent QaScorecard.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the scorecard revisions. To list all
+        /// revisions of all scorecards, substitute the QaScorecard ID with a '-'
+        /// character.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QaScorecardRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> ListQaScorecardRevisions(QaScorecardName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQaScorecardRevisionsRequest request = new ListQaScorecardRevisionsRequest
+            {
+                ParentAsQaScorecardName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQaScorecardRevisions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all revisions under the parent QaScorecard.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the scorecard revisions. To list all
+        /// revisions of all scorecards, substitute the QaScorecard ID with a '-'
+        /// character.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QaScorecardRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> ListQaScorecardRevisionsAsync(QaScorecardName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQaScorecardRevisionsRequest request = new ListQaScorecardRevisionsRequest
+            {
+                ParentAsQaScorecardName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQaScorecardRevisionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeedbackLabel CreateFeedbackLabel(CreateFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> CreateFeedbackLabelAsync(CreateFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> CreateFeedbackLabelAsync(CreateFeedbackLabelRequest request, st::CancellationToken cancellationToken) =>
+            CreateFeedbackLabelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create feedback label.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the feedback label.
+        /// </param>
+        /// <param name="feedbackLabel">
+        /// Required. The feedback label to create.
+        /// </param>
+        /// <param name="feedbackLabelId">
+        /// Optional. The ID of the feedback label to create.
+        /// If one is not specified it will be generated by the server.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeedbackLabel CreateFeedbackLabel(string parent, FeedbackLabel feedbackLabel, string feedbackLabelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeedbackLabel(new CreateFeedbackLabelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                FeedbackLabelId = feedbackLabelId ?? "",
+                FeedbackLabel = gax::GaxPreconditions.CheckNotNull(feedbackLabel, nameof(feedbackLabel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create feedback label.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the feedback label.
+        /// </param>
+        /// <param name="feedbackLabel">
+        /// Required. The feedback label to create.
+        /// </param>
+        /// <param name="feedbackLabelId">
+        /// Optional. The ID of the feedback label to create.
+        /// If one is not specified it will be generated by the server.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> CreateFeedbackLabelAsync(string parent, FeedbackLabel feedbackLabel, string feedbackLabelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeedbackLabelAsync(new CreateFeedbackLabelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                FeedbackLabelId = feedbackLabelId ?? "",
+                FeedbackLabel = gax::GaxPreconditions.CheckNotNull(feedbackLabel, nameof(feedbackLabel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create feedback label.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the feedback label.
+        /// </param>
+        /// <param name="feedbackLabel">
+        /// Required. The feedback label to create.
+        /// </param>
+        /// <param name="feedbackLabelId">
+        /// Optional. The ID of the feedback label to create.
+        /// If one is not specified it will be generated by the server.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> CreateFeedbackLabelAsync(string parent, FeedbackLabel feedbackLabel, string feedbackLabelId, st::CancellationToken cancellationToken) =>
+            CreateFeedbackLabelAsync(parent, feedbackLabel, feedbackLabelId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create feedback label.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the feedback label.
+        /// </param>
+        /// <param name="feedbackLabel">
+        /// Required. The feedback label to create.
+        /// </param>
+        /// <param name="feedbackLabelId">
+        /// Optional. The ID of the feedback label to create.
+        /// If one is not specified it will be generated by the server.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeedbackLabel CreateFeedbackLabel(ConversationName parent, FeedbackLabel feedbackLabel, string feedbackLabelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeedbackLabel(new CreateFeedbackLabelRequest
+            {
+                ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FeedbackLabelId = feedbackLabelId ?? "",
+                FeedbackLabel = gax::GaxPreconditions.CheckNotNull(feedbackLabel, nameof(feedbackLabel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create feedback label.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the feedback label.
+        /// </param>
+        /// <param name="feedbackLabel">
+        /// Required. The feedback label to create.
+        /// </param>
+        /// <param name="feedbackLabelId">
+        /// Optional. The ID of the feedback label to create.
+        /// If one is not specified it will be generated by the server.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> CreateFeedbackLabelAsync(ConversationName parent, FeedbackLabel feedbackLabel, string feedbackLabelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeedbackLabelAsync(new CreateFeedbackLabelRequest
+            {
+                ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                FeedbackLabelId = feedbackLabelId ?? "",
+                FeedbackLabel = gax::GaxPreconditions.CheckNotNull(feedbackLabel, nameof(feedbackLabel)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create feedback label.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the feedback label.
+        /// </param>
+        /// <param name="feedbackLabel">
+        /// Required. The feedback label to create.
+        /// </param>
+        /// <param name="feedbackLabelId">
+        /// Optional. The ID of the feedback label to create.
+        /// If one is not specified it will be generated by the server.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> CreateFeedbackLabelAsync(ConversationName parent, FeedbackLabel feedbackLabel, string feedbackLabelId, st::CancellationToken cancellationToken) =>
+            CreateFeedbackLabelAsync(parent, feedbackLabel, feedbackLabelId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List feedback labels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> ListFeedbackLabels(ListFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List feedback labels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> ListFeedbackLabelsAsync(ListFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List feedback labels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the feedback labels.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> ListFeedbackLabels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeedbackLabelsRequest request = new ListFeedbackLabelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeedbackLabels(request, callSettings);
+        }
+
+        /// <summary>
+        /// List feedback labels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the feedback labels.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> ListFeedbackLabelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeedbackLabelsRequest request = new ListFeedbackLabelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeedbackLabelsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List feedback labels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the feedback labels.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> ListFeedbackLabels(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeedbackLabelsRequest request = new ListFeedbackLabelsRequest
+            {
+                ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeedbackLabels(request, callSettings);
+        }
+
+        /// <summary>
+        /// List feedback labels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the feedback labels.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> ListFeedbackLabelsAsync(ConversationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFeedbackLabelsRequest request = new ListFeedbackLabelsRequest
+            {
+                ParentAsConversationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFeedbackLabelsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeedbackLabel GetFeedbackLabel(GetFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> GetFeedbackLabelAsync(GetFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> GetFeedbackLabelAsync(GetFeedbackLabelRequest request, st::CancellationToken cancellationToken) =>
+            GetFeedbackLabelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get feedback label.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feedback label to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeedbackLabel GetFeedbackLabel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeedbackLabel(new GetFeedbackLabelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get feedback label.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feedback label to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> GetFeedbackLabelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeedbackLabelAsync(new GetFeedbackLabelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get feedback label.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feedback label to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> GetFeedbackLabelAsync(string name, st::CancellationToken cancellationToken) =>
+            GetFeedbackLabelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get feedback label.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feedback label to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeedbackLabel GetFeedbackLabel(FeedbackLabelName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeedbackLabel(new GetFeedbackLabelRequest
+            {
+                FeedbackLabelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get feedback label.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feedback label to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> GetFeedbackLabelAsync(FeedbackLabelName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeedbackLabelAsync(new GetFeedbackLabelRequest
+            {
+                FeedbackLabelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get feedback label.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feedback label to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> GetFeedbackLabelAsync(FeedbackLabelName name, st::CancellationToken cancellationToken) =>
+            GetFeedbackLabelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeedbackLabel UpdateFeedbackLabel(UpdateFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> UpdateFeedbackLabelAsync(UpdateFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> UpdateFeedbackLabelAsync(UpdateFeedbackLabelRequest request, st::CancellationToken cancellationToken) =>
+            UpdateFeedbackLabelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update feedback label.
+        /// </summary>
+        /// <param name="feedbackLabel">
+        /// Required. The feedback label to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FeedbackLabel UpdateFeedbackLabel(FeedbackLabel feedbackLabel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFeedbackLabel(new UpdateFeedbackLabelRequest
+            {
+                FeedbackLabel = gax::GaxPreconditions.CheckNotNull(feedbackLabel, nameof(feedbackLabel)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update feedback label.
+        /// </summary>
+        /// <param name="feedbackLabel">
+        /// Required. The feedback label to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> UpdateFeedbackLabelAsync(FeedbackLabel feedbackLabel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFeedbackLabelAsync(new UpdateFeedbackLabelRequest
+            {
+                FeedbackLabel = gax::GaxPreconditions.CheckNotNull(feedbackLabel, nameof(feedbackLabel)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update feedback label.
+        /// </summary>
+        /// <param name="feedbackLabel">
+        /// Required. The feedback label to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FeedbackLabel> UpdateFeedbackLabelAsync(FeedbackLabel feedbackLabel, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateFeedbackLabelAsync(feedbackLabel, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteFeedbackLabel(DeleteFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFeedbackLabelAsync(DeleteFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFeedbackLabelAsync(DeleteFeedbackLabelRequest request, st::CancellationToken cancellationToken) =>
+            DeleteFeedbackLabelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete feedback label.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feedback label to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteFeedbackLabel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeedbackLabel(new DeleteFeedbackLabelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete feedback label.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feedback label to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFeedbackLabelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeedbackLabelAsync(new DeleteFeedbackLabelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete feedback label.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feedback label to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFeedbackLabelAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteFeedbackLabelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete feedback label.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feedback label to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteFeedbackLabel(FeedbackLabelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeedbackLabel(new DeleteFeedbackLabelRequest
+            {
+                FeedbackLabelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete feedback label.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feedback label to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFeedbackLabelAsync(FeedbackLabelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeedbackLabelAsync(new DeleteFeedbackLabelRequest
+            {
+                FeedbackLabelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete feedback label.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the feedback label to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteFeedbackLabelAsync(FeedbackLabelName name, st::CancellationToken cancellationToken) =>
+            DeleteFeedbackLabelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List all feedback labels by project number.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> ListAllFeedbackLabels(ListAllFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List all feedback labels by project number.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> ListAllFeedbackLabelsAsync(ListAllFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List all feedback labels by project number.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of all feedback labels per project.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> ListAllFeedbackLabels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAllFeedbackLabelsRequest request = new ListAllFeedbackLabelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAllFeedbackLabels(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all feedback labels by project number.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of all feedback labels per project.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> ListAllFeedbackLabelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAllFeedbackLabelsRequest request = new ListAllFeedbackLabelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAllFeedbackLabelsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all feedback labels by project number.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of all feedback labels per project.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> ListAllFeedbackLabels(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAllFeedbackLabelsRequest request = new ListAllFeedbackLabelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAllFeedbackLabels(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all feedback labels by project number.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of all feedback labels per project.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> ListAllFeedbackLabelsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAllFeedbackLabelsRequest request = new ListAllFeedbackLabelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAllFeedbackLabelsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Upload feedback labels in bulk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> BulkUploadFeedbackLabels(BulkUploadFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Upload feedback labels in bulk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata>> BulkUploadFeedbackLabelsAsync(BulkUploadFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Upload feedback labels in bulk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata>> BulkUploadFeedbackLabelsAsync(BulkUploadFeedbackLabelsRequest request, st::CancellationToken cancellationToken) =>
+            BulkUploadFeedbackLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BulkUploadFeedbackLabels</c>.</summary>
+        public virtual lro::OperationsClient BulkUploadFeedbackLabelsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkUploadFeedbackLabels</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> PollOnceBulkUploadFeedbackLabels(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkUploadFeedbackLabelsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkUploadFeedbackLabels</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata>> PollOnceBulkUploadFeedbackLabelsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkUploadFeedbackLabelsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Upload feedback labels in bulk.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new feedback labels.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> BulkUploadFeedbackLabels(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            BulkUploadFeedbackLabels(new BulkUploadFeedbackLabelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Upload feedback labels in bulk.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new feedback labels.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata>> BulkUploadFeedbackLabelsAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            BulkUploadFeedbackLabelsAsync(new BulkUploadFeedbackLabelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Upload feedback labels in bulk.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new feedback labels.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata>> BulkUploadFeedbackLabelsAsync(string parent, st::CancellationToken cancellationToken) =>
+            BulkUploadFeedbackLabelsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Upload feedback labels in bulk.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new feedback labels.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> BulkUploadFeedbackLabels(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            BulkUploadFeedbackLabels(new BulkUploadFeedbackLabelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Upload feedback labels in bulk.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new feedback labels.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata>> BulkUploadFeedbackLabelsAsync(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            BulkUploadFeedbackLabelsAsync(new BulkUploadFeedbackLabelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Upload feedback labels in bulk.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new feedback labels.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata>> BulkUploadFeedbackLabelsAsync(gagr::LocationName parent, st::CancellationToken cancellationToken) =>
+            BulkUploadFeedbackLabelsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Download feedback labels in bulk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> BulkDownloadFeedbackLabels(BulkDownloadFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Download feedback labels in bulk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata>> BulkDownloadFeedbackLabelsAsync(BulkDownloadFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Download feedback labels in bulk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata>> BulkDownloadFeedbackLabelsAsync(BulkDownloadFeedbackLabelsRequest request, st::CancellationToken cancellationToken) =>
+            BulkDownloadFeedbackLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BulkDownloadFeedbackLabels</c>.</summary>
+        public virtual lro::OperationsClient BulkDownloadFeedbackLabelsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkDownloadFeedbackLabels</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> PollOnceBulkDownloadFeedbackLabels(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkDownloadFeedbackLabelsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkDownloadFeedbackLabels</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata>> PollOnceBulkDownloadFeedbackLabelsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkDownloadFeedbackLabelsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Download feedback labels in bulk.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new feedback labels.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> BulkDownloadFeedbackLabels(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDownloadFeedbackLabels(new BulkDownloadFeedbackLabelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Download feedback labels in bulk.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new feedback labels.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata>> BulkDownloadFeedbackLabelsAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDownloadFeedbackLabelsAsync(new BulkDownloadFeedbackLabelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Download feedback labels in bulk.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new feedback labels.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata>> BulkDownloadFeedbackLabelsAsync(string parent, st::CancellationToken cancellationToken) =>
+            BulkDownloadFeedbackLabelsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Download feedback labels in bulk.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new feedback labels.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> BulkDownloadFeedbackLabels(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDownloadFeedbackLabels(new BulkDownloadFeedbackLabelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Download feedback labels in bulk.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new feedback labels.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata>> BulkDownloadFeedbackLabelsAsync(gagr::LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDownloadFeedbackLabelsAsync(new BulkDownloadFeedbackLabelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Download feedback labels in bulk.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource for new feedback labels.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata>> BulkDownloadFeedbackLabelsAsync(gagr::LocationName parent, st::CancellationToken cancellationToken) =>
+            BulkDownloadFeedbackLabelsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ContactCenterInsights client wrapper implementation, for convenient use.</summary>
@@ -5455,6 +10935,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         private readonly gaxgrpc::ApiCall<BulkAnalyzeConversationsRequest, lro::Operation> _callBulkAnalyzeConversations;
 
+        private readonly gaxgrpc::ApiCall<BulkDeleteConversationsRequest, lro::Operation> _callBulkDeleteConversations;
+
         private readonly gaxgrpc::ApiCall<IngestConversationsRequest, lro::Operation> _callIngestConversations;
 
         private readonly gaxgrpc::ApiCall<ExportInsightsDataRequest, lro::Operation> _callExportInsightsData;
@@ -5472,6 +10954,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         private readonly gaxgrpc::ApiCall<DeployIssueModelRequest, lro::Operation> _callDeployIssueModel;
 
         private readonly gaxgrpc::ApiCall<UndeployIssueModelRequest, lro::Operation> _callUndeployIssueModel;
+
+        private readonly gaxgrpc::ApiCall<ExportIssueModelRequest, lro::Operation> _callExportIssueModel;
+
+        private readonly gaxgrpc::ApiCall<ImportIssueModelRequest, lro::Operation> _callImportIssueModel;
 
         private readonly gaxgrpc::ApiCall<GetIssueRequest, Issue> _callGetIssue;
 
@@ -5499,6 +10985,20 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         private readonly gaxgrpc::ApiCall<UpdateSettingsRequest, Settings> _callUpdateSettings;
 
+        private readonly gaxgrpc::ApiCall<CreateAnalysisRuleRequest, AnalysisRule> _callCreateAnalysisRule;
+
+        private readonly gaxgrpc::ApiCall<GetAnalysisRuleRequest, AnalysisRule> _callGetAnalysisRule;
+
+        private readonly gaxgrpc::ApiCall<ListAnalysisRulesRequest, ListAnalysisRulesResponse> _callListAnalysisRules;
+
+        private readonly gaxgrpc::ApiCall<UpdateAnalysisRuleRequest, AnalysisRule> _callUpdateAnalysisRule;
+
+        private readonly gaxgrpc::ApiCall<DeleteAnalysisRuleRequest, wkt::Empty> _callDeleteAnalysisRule;
+
+        private readonly gaxgrpc::ApiCall<GetEncryptionSpecRequest, EncryptionSpec> _callGetEncryptionSpec;
+
+        private readonly gaxgrpc::ApiCall<InitializeEncryptionSpecRequest, lro::Operation> _callInitializeEncryptionSpec;
+
         private readonly gaxgrpc::ApiCall<CreateViewRequest, View> _callCreateView;
 
         private readonly gaxgrpc::ApiCall<GetViewRequest, View> _callGetView;
@@ -5508,6 +11008,58 @@ namespace Google.Cloud.ContactCenterInsights.V1
         private readonly gaxgrpc::ApiCall<UpdateViewRequest, View> _callUpdateView;
 
         private readonly gaxgrpc::ApiCall<DeleteViewRequest, wkt::Empty> _callDeleteView;
+
+        private readonly gaxgrpc::ApiCall<QueryMetricsRequest, lro::Operation> _callQueryMetrics;
+
+        private readonly gaxgrpc::ApiCall<CreateQaQuestionRequest, QaQuestion> _callCreateQaQuestion;
+
+        private readonly gaxgrpc::ApiCall<GetQaQuestionRequest, QaQuestion> _callGetQaQuestion;
+
+        private readonly gaxgrpc::ApiCall<UpdateQaQuestionRequest, QaQuestion> _callUpdateQaQuestion;
+
+        private readonly gaxgrpc::ApiCall<DeleteQaQuestionRequest, wkt::Empty> _callDeleteQaQuestion;
+
+        private readonly gaxgrpc::ApiCall<ListQaQuestionsRequest, ListQaQuestionsResponse> _callListQaQuestions;
+
+        private readonly gaxgrpc::ApiCall<CreateQaScorecardRequest, QaScorecard> _callCreateQaScorecard;
+
+        private readonly gaxgrpc::ApiCall<GetQaScorecardRequest, QaScorecard> _callGetQaScorecard;
+
+        private readonly gaxgrpc::ApiCall<UpdateQaScorecardRequest, QaScorecard> _callUpdateQaScorecard;
+
+        private readonly gaxgrpc::ApiCall<DeleteQaScorecardRequest, wkt::Empty> _callDeleteQaScorecard;
+
+        private readonly gaxgrpc::ApiCall<ListQaScorecardsRequest, ListQaScorecardsResponse> _callListQaScorecards;
+
+        private readonly gaxgrpc::ApiCall<CreateQaScorecardRevisionRequest, QaScorecardRevision> _callCreateQaScorecardRevision;
+
+        private readonly gaxgrpc::ApiCall<GetQaScorecardRevisionRequest, QaScorecardRevision> _callGetQaScorecardRevision;
+
+        private readonly gaxgrpc::ApiCall<TuneQaScorecardRevisionRequest, lro::Operation> _callTuneQaScorecardRevision;
+
+        private readonly gaxgrpc::ApiCall<DeployQaScorecardRevisionRequest, QaScorecardRevision> _callDeployQaScorecardRevision;
+
+        private readonly gaxgrpc::ApiCall<UndeployQaScorecardRevisionRequest, QaScorecardRevision> _callUndeployQaScorecardRevision;
+
+        private readonly gaxgrpc::ApiCall<DeleteQaScorecardRevisionRequest, wkt::Empty> _callDeleteQaScorecardRevision;
+
+        private readonly gaxgrpc::ApiCall<ListQaScorecardRevisionsRequest, ListQaScorecardRevisionsResponse> _callListQaScorecardRevisions;
+
+        private readonly gaxgrpc::ApiCall<CreateFeedbackLabelRequest, FeedbackLabel> _callCreateFeedbackLabel;
+
+        private readonly gaxgrpc::ApiCall<ListFeedbackLabelsRequest, ListFeedbackLabelsResponse> _callListFeedbackLabels;
+
+        private readonly gaxgrpc::ApiCall<GetFeedbackLabelRequest, FeedbackLabel> _callGetFeedbackLabel;
+
+        private readonly gaxgrpc::ApiCall<UpdateFeedbackLabelRequest, FeedbackLabel> _callUpdateFeedbackLabel;
+
+        private readonly gaxgrpc::ApiCall<DeleteFeedbackLabelRequest, wkt::Empty> _callDeleteFeedbackLabel;
+
+        private readonly gaxgrpc::ApiCall<ListAllFeedbackLabelsRequest, ListAllFeedbackLabelsResponse> _callListAllFeedbackLabels;
+
+        private readonly gaxgrpc::ApiCall<BulkUploadFeedbackLabelsRequest, lro::Operation> _callBulkUploadFeedbackLabels;
+
+        private readonly gaxgrpc::ApiCall<BulkDownloadFeedbackLabelsRequest, lro::Operation> _callBulkDownloadFeedbackLabels;
 
         /// <summary>
         /// Constructs a client wrapper for the ContactCenterInsights service, with the specified gRPC client and
@@ -5520,16 +11072,29 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             GrpcClient = grpcClient;
             ContactCenterInsightsSettings effectiveSettings = settings ?? ContactCenterInsightsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             UploadConversationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UploadConversationOperationsSettings, logger);
             CreateAnalysisOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAnalysisOperationsSettings, logger);
             BulkAnalyzeConversationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkAnalyzeConversationsOperationsSettings, logger);
+            BulkDeleteConversationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkDeleteConversationsOperationsSettings, logger);
             IngestConversationsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.IngestConversationsOperationsSettings, logger);
             ExportInsightsDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportInsightsDataOperationsSettings, logger);
             CreateIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIssueModelOperationsSettings, logger);
             DeleteIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIssueModelOperationsSettings, logger);
             DeployIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployIssueModelOperationsSettings, logger);
             UndeployIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployIssueModelOperationsSettings, logger);
+            ExportIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportIssueModelOperationsSettings, logger);
+            ImportIssueModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportIssueModelOperationsSettings, logger);
+            InitializeEncryptionSpecOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InitializeEncryptionSpecOperationsSettings, logger);
+            QueryMetricsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.QueryMetricsOperationsSettings, logger);
+            TuneQaScorecardRevisionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TuneQaScorecardRevisionOperationsSettings, logger);
+            BulkUploadFeedbackLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkUploadFeedbackLabelsOperationsSettings, logger);
+            BulkDownloadFeedbackLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkDownloadFeedbackLabelsOperationsSettings, logger);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateConversation = clientHelper.BuildApiCall<CreateConversationRequest, Conversation>("CreateConversation", grpcClient.CreateConversationAsync, grpcClient.CreateConversation, effectiveSettings.CreateConversationSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateConversation);
             Modify_CreateConversationApiCall(ref _callCreateConversation);
@@ -5563,6 +11128,9 @@ namespace Google.Cloud.ContactCenterInsights.V1
             _callBulkAnalyzeConversations = clientHelper.BuildApiCall<BulkAnalyzeConversationsRequest, lro::Operation>("BulkAnalyzeConversations", grpcClient.BulkAnalyzeConversationsAsync, grpcClient.BulkAnalyzeConversations, effectiveSettings.BulkAnalyzeConversationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBulkAnalyzeConversations);
             Modify_BulkAnalyzeConversationsApiCall(ref _callBulkAnalyzeConversations);
+            _callBulkDeleteConversations = clientHelper.BuildApiCall<BulkDeleteConversationsRequest, lro::Operation>("BulkDeleteConversations", grpcClient.BulkDeleteConversationsAsync, grpcClient.BulkDeleteConversations, effectiveSettings.BulkDeleteConversationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBulkDeleteConversations);
+            Modify_BulkDeleteConversationsApiCall(ref _callBulkDeleteConversations);
             _callIngestConversations = clientHelper.BuildApiCall<IngestConversationsRequest, lro::Operation>("IngestConversations", grpcClient.IngestConversationsAsync, grpcClient.IngestConversations, effectiveSettings.IngestConversationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callIngestConversations);
             Modify_IngestConversationsApiCall(ref _callIngestConversations);
@@ -5590,6 +11158,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
             _callUndeployIssueModel = clientHelper.BuildApiCall<UndeployIssueModelRequest, lro::Operation>("UndeployIssueModel", grpcClient.UndeployIssueModelAsync, grpcClient.UndeployIssueModel, effectiveSettings.UndeployIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUndeployIssueModel);
             Modify_UndeployIssueModelApiCall(ref _callUndeployIssueModel);
+            _callExportIssueModel = clientHelper.BuildApiCall<ExportIssueModelRequest, lro::Operation>("ExportIssueModel", grpcClient.ExportIssueModelAsync, grpcClient.ExportIssueModel, effectiveSettings.ExportIssueModelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExportIssueModel);
+            Modify_ExportIssueModelApiCall(ref _callExportIssueModel);
+            _callImportIssueModel = clientHelper.BuildApiCall<ImportIssueModelRequest, lro::Operation>("ImportIssueModel", grpcClient.ImportIssueModelAsync, grpcClient.ImportIssueModel, effectiveSettings.ImportIssueModelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportIssueModel);
+            Modify_ImportIssueModelApiCall(ref _callImportIssueModel);
             _callGetIssue = clientHelper.BuildApiCall<GetIssueRequest, Issue>("GetIssue", grpcClient.GetIssueAsync, grpcClient.GetIssue, effectiveSettings.GetIssueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIssue);
             Modify_GetIssueApiCall(ref _callGetIssue);
@@ -5629,6 +11203,27 @@ namespace Google.Cloud.ContactCenterInsights.V1
             _callUpdateSettings = clientHelper.BuildApiCall<UpdateSettingsRequest, Settings>("UpdateSettings", grpcClient.UpdateSettingsAsync, grpcClient.UpdateSettings, effectiveSettings.UpdateSettingsSettings).WithGoogleRequestParam("settings.name", request => request.Settings?.Name);
             Modify_ApiCall(ref _callUpdateSettings);
             Modify_UpdateSettingsApiCall(ref _callUpdateSettings);
+            _callCreateAnalysisRule = clientHelper.BuildApiCall<CreateAnalysisRuleRequest, AnalysisRule>("CreateAnalysisRule", grpcClient.CreateAnalysisRuleAsync, grpcClient.CreateAnalysisRule, effectiveSettings.CreateAnalysisRuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAnalysisRule);
+            Modify_CreateAnalysisRuleApiCall(ref _callCreateAnalysisRule);
+            _callGetAnalysisRule = clientHelper.BuildApiCall<GetAnalysisRuleRequest, AnalysisRule>("GetAnalysisRule", grpcClient.GetAnalysisRuleAsync, grpcClient.GetAnalysisRule, effectiveSettings.GetAnalysisRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAnalysisRule);
+            Modify_GetAnalysisRuleApiCall(ref _callGetAnalysisRule);
+            _callListAnalysisRules = clientHelper.BuildApiCall<ListAnalysisRulesRequest, ListAnalysisRulesResponse>("ListAnalysisRules", grpcClient.ListAnalysisRulesAsync, grpcClient.ListAnalysisRules, effectiveSettings.ListAnalysisRulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAnalysisRules);
+            Modify_ListAnalysisRulesApiCall(ref _callListAnalysisRules);
+            _callUpdateAnalysisRule = clientHelper.BuildApiCall<UpdateAnalysisRuleRequest, AnalysisRule>("UpdateAnalysisRule", grpcClient.UpdateAnalysisRuleAsync, grpcClient.UpdateAnalysisRule, effectiveSettings.UpdateAnalysisRuleSettings).WithGoogleRequestParam("analysis_rule.name", request => request.AnalysisRule?.Name);
+            Modify_ApiCall(ref _callUpdateAnalysisRule);
+            Modify_UpdateAnalysisRuleApiCall(ref _callUpdateAnalysisRule);
+            _callDeleteAnalysisRule = clientHelper.BuildApiCall<DeleteAnalysisRuleRequest, wkt::Empty>("DeleteAnalysisRule", grpcClient.DeleteAnalysisRuleAsync, grpcClient.DeleteAnalysisRule, effectiveSettings.DeleteAnalysisRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAnalysisRule);
+            Modify_DeleteAnalysisRuleApiCall(ref _callDeleteAnalysisRule);
+            _callGetEncryptionSpec = clientHelper.BuildApiCall<GetEncryptionSpecRequest, EncryptionSpec>("GetEncryptionSpec", grpcClient.GetEncryptionSpecAsync, grpcClient.GetEncryptionSpec, effectiveSettings.GetEncryptionSpecSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetEncryptionSpec);
+            Modify_GetEncryptionSpecApiCall(ref _callGetEncryptionSpec);
+            _callInitializeEncryptionSpec = clientHelper.BuildApiCall<InitializeEncryptionSpecRequest, lro::Operation>("InitializeEncryptionSpec", grpcClient.InitializeEncryptionSpecAsync, grpcClient.InitializeEncryptionSpec, effectiveSettings.InitializeEncryptionSpecSettings).WithGoogleRequestParam("encryption_spec.name", request => request.EncryptionSpec?.Name);
+            Modify_ApiCall(ref _callInitializeEncryptionSpec);
+            Modify_InitializeEncryptionSpecApiCall(ref _callInitializeEncryptionSpec);
             _callCreateView = clientHelper.BuildApiCall<CreateViewRequest, View>("CreateView", grpcClient.CreateViewAsync, grpcClient.CreateView, effectiveSettings.CreateViewSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateView);
             Modify_CreateViewApiCall(ref _callCreateView);
@@ -5644,6 +11239,84 @@ namespace Google.Cloud.ContactCenterInsights.V1
             _callDeleteView = clientHelper.BuildApiCall<DeleteViewRequest, wkt::Empty>("DeleteView", grpcClient.DeleteViewAsync, grpcClient.DeleteView, effectiveSettings.DeleteViewSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteView);
             Modify_DeleteViewApiCall(ref _callDeleteView);
+            _callQueryMetrics = clientHelper.BuildApiCall<QueryMetricsRequest, lro::Operation>("QueryMetrics", grpcClient.QueryMetricsAsync, grpcClient.QueryMetrics, effectiveSettings.QueryMetricsSettings).WithGoogleRequestParam("location", request => request.Location);
+            Modify_ApiCall(ref _callQueryMetrics);
+            Modify_QueryMetricsApiCall(ref _callQueryMetrics);
+            _callCreateQaQuestion = clientHelper.BuildApiCall<CreateQaQuestionRequest, QaQuestion>("CreateQaQuestion", grpcClient.CreateQaQuestionAsync, grpcClient.CreateQaQuestion, effectiveSettings.CreateQaQuestionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateQaQuestion);
+            Modify_CreateQaQuestionApiCall(ref _callCreateQaQuestion);
+            _callGetQaQuestion = clientHelper.BuildApiCall<GetQaQuestionRequest, QaQuestion>("GetQaQuestion", grpcClient.GetQaQuestionAsync, grpcClient.GetQaQuestion, effectiveSettings.GetQaQuestionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetQaQuestion);
+            Modify_GetQaQuestionApiCall(ref _callGetQaQuestion);
+            _callUpdateQaQuestion = clientHelper.BuildApiCall<UpdateQaQuestionRequest, QaQuestion>("UpdateQaQuestion", grpcClient.UpdateQaQuestionAsync, grpcClient.UpdateQaQuestion, effectiveSettings.UpdateQaQuestionSettings).WithGoogleRequestParam("qa_question.name", request => request.QaQuestion?.Name);
+            Modify_ApiCall(ref _callUpdateQaQuestion);
+            Modify_UpdateQaQuestionApiCall(ref _callUpdateQaQuestion);
+            _callDeleteQaQuestion = clientHelper.BuildApiCall<DeleteQaQuestionRequest, wkt::Empty>("DeleteQaQuestion", grpcClient.DeleteQaQuestionAsync, grpcClient.DeleteQaQuestion, effectiveSettings.DeleteQaQuestionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteQaQuestion);
+            Modify_DeleteQaQuestionApiCall(ref _callDeleteQaQuestion);
+            _callListQaQuestions = clientHelper.BuildApiCall<ListQaQuestionsRequest, ListQaQuestionsResponse>("ListQaQuestions", grpcClient.ListQaQuestionsAsync, grpcClient.ListQaQuestions, effectiveSettings.ListQaQuestionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListQaQuestions);
+            Modify_ListQaQuestionsApiCall(ref _callListQaQuestions);
+            _callCreateQaScorecard = clientHelper.BuildApiCall<CreateQaScorecardRequest, QaScorecard>("CreateQaScorecard", grpcClient.CreateQaScorecardAsync, grpcClient.CreateQaScorecard, effectiveSettings.CreateQaScorecardSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateQaScorecard);
+            Modify_CreateQaScorecardApiCall(ref _callCreateQaScorecard);
+            _callGetQaScorecard = clientHelper.BuildApiCall<GetQaScorecardRequest, QaScorecard>("GetQaScorecard", grpcClient.GetQaScorecardAsync, grpcClient.GetQaScorecard, effectiveSettings.GetQaScorecardSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetQaScorecard);
+            Modify_GetQaScorecardApiCall(ref _callGetQaScorecard);
+            _callUpdateQaScorecard = clientHelper.BuildApiCall<UpdateQaScorecardRequest, QaScorecard>("UpdateQaScorecard", grpcClient.UpdateQaScorecardAsync, grpcClient.UpdateQaScorecard, effectiveSettings.UpdateQaScorecardSettings).WithGoogleRequestParam("qa_scorecard.name", request => request.QaScorecard?.Name);
+            Modify_ApiCall(ref _callUpdateQaScorecard);
+            Modify_UpdateQaScorecardApiCall(ref _callUpdateQaScorecard);
+            _callDeleteQaScorecard = clientHelper.BuildApiCall<DeleteQaScorecardRequest, wkt::Empty>("DeleteQaScorecard", grpcClient.DeleteQaScorecardAsync, grpcClient.DeleteQaScorecard, effectiveSettings.DeleteQaScorecardSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteQaScorecard);
+            Modify_DeleteQaScorecardApiCall(ref _callDeleteQaScorecard);
+            _callListQaScorecards = clientHelper.BuildApiCall<ListQaScorecardsRequest, ListQaScorecardsResponse>("ListQaScorecards", grpcClient.ListQaScorecardsAsync, grpcClient.ListQaScorecards, effectiveSettings.ListQaScorecardsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListQaScorecards);
+            Modify_ListQaScorecardsApiCall(ref _callListQaScorecards);
+            _callCreateQaScorecardRevision = clientHelper.BuildApiCall<CreateQaScorecardRevisionRequest, QaScorecardRevision>("CreateQaScorecardRevision", grpcClient.CreateQaScorecardRevisionAsync, grpcClient.CreateQaScorecardRevision, effectiveSettings.CreateQaScorecardRevisionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateQaScorecardRevision);
+            Modify_CreateQaScorecardRevisionApiCall(ref _callCreateQaScorecardRevision);
+            _callGetQaScorecardRevision = clientHelper.BuildApiCall<GetQaScorecardRevisionRequest, QaScorecardRevision>("GetQaScorecardRevision", grpcClient.GetQaScorecardRevisionAsync, grpcClient.GetQaScorecardRevision, effectiveSettings.GetQaScorecardRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetQaScorecardRevision);
+            Modify_GetQaScorecardRevisionApiCall(ref _callGetQaScorecardRevision);
+            _callTuneQaScorecardRevision = clientHelper.BuildApiCall<TuneQaScorecardRevisionRequest, lro::Operation>("TuneQaScorecardRevision", grpcClient.TuneQaScorecardRevisionAsync, grpcClient.TuneQaScorecardRevision, effectiveSettings.TuneQaScorecardRevisionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callTuneQaScorecardRevision);
+            Modify_TuneQaScorecardRevisionApiCall(ref _callTuneQaScorecardRevision);
+            _callDeployQaScorecardRevision = clientHelper.BuildApiCall<DeployQaScorecardRevisionRequest, QaScorecardRevision>("DeployQaScorecardRevision", grpcClient.DeployQaScorecardRevisionAsync, grpcClient.DeployQaScorecardRevision, effectiveSettings.DeployQaScorecardRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeployQaScorecardRevision);
+            Modify_DeployQaScorecardRevisionApiCall(ref _callDeployQaScorecardRevision);
+            _callUndeployQaScorecardRevision = clientHelper.BuildApiCall<UndeployQaScorecardRevisionRequest, QaScorecardRevision>("UndeployQaScorecardRevision", grpcClient.UndeployQaScorecardRevisionAsync, grpcClient.UndeployQaScorecardRevision, effectiveSettings.UndeployQaScorecardRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUndeployQaScorecardRevision);
+            Modify_UndeployQaScorecardRevisionApiCall(ref _callUndeployQaScorecardRevision);
+            _callDeleteQaScorecardRevision = clientHelper.BuildApiCall<DeleteQaScorecardRevisionRequest, wkt::Empty>("DeleteQaScorecardRevision", grpcClient.DeleteQaScorecardRevisionAsync, grpcClient.DeleteQaScorecardRevision, effectiveSettings.DeleteQaScorecardRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteQaScorecardRevision);
+            Modify_DeleteQaScorecardRevisionApiCall(ref _callDeleteQaScorecardRevision);
+            _callListQaScorecardRevisions = clientHelper.BuildApiCall<ListQaScorecardRevisionsRequest, ListQaScorecardRevisionsResponse>("ListQaScorecardRevisions", grpcClient.ListQaScorecardRevisionsAsync, grpcClient.ListQaScorecardRevisions, effectiveSettings.ListQaScorecardRevisionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListQaScorecardRevisions);
+            Modify_ListQaScorecardRevisionsApiCall(ref _callListQaScorecardRevisions);
+            _callCreateFeedbackLabel = clientHelper.BuildApiCall<CreateFeedbackLabelRequest, FeedbackLabel>("CreateFeedbackLabel", grpcClient.CreateFeedbackLabelAsync, grpcClient.CreateFeedbackLabel, effectiveSettings.CreateFeedbackLabelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateFeedbackLabel);
+            Modify_CreateFeedbackLabelApiCall(ref _callCreateFeedbackLabel);
+            _callListFeedbackLabels = clientHelper.BuildApiCall<ListFeedbackLabelsRequest, ListFeedbackLabelsResponse>("ListFeedbackLabels", grpcClient.ListFeedbackLabelsAsync, grpcClient.ListFeedbackLabels, effectiveSettings.ListFeedbackLabelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListFeedbackLabels);
+            Modify_ListFeedbackLabelsApiCall(ref _callListFeedbackLabels);
+            _callGetFeedbackLabel = clientHelper.BuildApiCall<GetFeedbackLabelRequest, FeedbackLabel>("GetFeedbackLabel", grpcClient.GetFeedbackLabelAsync, grpcClient.GetFeedbackLabel, effectiveSettings.GetFeedbackLabelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetFeedbackLabel);
+            Modify_GetFeedbackLabelApiCall(ref _callGetFeedbackLabel);
+            _callUpdateFeedbackLabel = clientHelper.BuildApiCall<UpdateFeedbackLabelRequest, FeedbackLabel>("UpdateFeedbackLabel", grpcClient.UpdateFeedbackLabelAsync, grpcClient.UpdateFeedbackLabel, effectiveSettings.UpdateFeedbackLabelSettings).WithGoogleRequestParam("feedback_label.name", request => request.FeedbackLabel?.Name);
+            Modify_ApiCall(ref _callUpdateFeedbackLabel);
+            Modify_UpdateFeedbackLabelApiCall(ref _callUpdateFeedbackLabel);
+            _callDeleteFeedbackLabel = clientHelper.BuildApiCall<DeleteFeedbackLabelRequest, wkt::Empty>("DeleteFeedbackLabel", grpcClient.DeleteFeedbackLabelAsync, grpcClient.DeleteFeedbackLabel, effectiveSettings.DeleteFeedbackLabelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteFeedbackLabel);
+            Modify_DeleteFeedbackLabelApiCall(ref _callDeleteFeedbackLabel);
+            _callListAllFeedbackLabels = clientHelper.BuildApiCall<ListAllFeedbackLabelsRequest, ListAllFeedbackLabelsResponse>("ListAllFeedbackLabels", grpcClient.ListAllFeedbackLabelsAsync, grpcClient.ListAllFeedbackLabels, effectiveSettings.ListAllFeedbackLabelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAllFeedbackLabels);
+            Modify_ListAllFeedbackLabelsApiCall(ref _callListAllFeedbackLabels);
+            _callBulkUploadFeedbackLabels = clientHelper.BuildApiCall<BulkUploadFeedbackLabelsRequest, lro::Operation>("BulkUploadFeedbackLabels", grpcClient.BulkUploadFeedbackLabelsAsync, grpcClient.BulkUploadFeedbackLabels, effectiveSettings.BulkUploadFeedbackLabelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBulkUploadFeedbackLabels);
+            Modify_BulkUploadFeedbackLabelsApiCall(ref _callBulkUploadFeedbackLabels);
+            _callBulkDownloadFeedbackLabels = clientHelper.BuildApiCall<BulkDownloadFeedbackLabelsRequest, lro::Operation>("BulkDownloadFeedbackLabels", grpcClient.BulkDownloadFeedbackLabelsAsync, grpcClient.BulkDownloadFeedbackLabels, effectiveSettings.BulkDownloadFeedbackLabelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBulkDownloadFeedbackLabels);
+            Modify_BulkDownloadFeedbackLabelsApiCall(ref _callBulkDownloadFeedbackLabels);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5671,6 +11344,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_BulkAnalyzeConversationsApiCall(ref gaxgrpc::ApiCall<BulkAnalyzeConversationsRequest, lro::Operation> call);
 
+        partial void Modify_BulkDeleteConversationsApiCall(ref gaxgrpc::ApiCall<BulkDeleteConversationsRequest, lro::Operation> call);
+
         partial void Modify_IngestConversationsApiCall(ref gaxgrpc::ApiCall<IngestConversationsRequest, lro::Operation> call);
 
         partial void Modify_ExportInsightsDataApiCall(ref gaxgrpc::ApiCall<ExportInsightsDataRequest, lro::Operation> call);
@@ -5688,6 +11363,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         partial void Modify_DeployIssueModelApiCall(ref gaxgrpc::ApiCall<DeployIssueModelRequest, lro::Operation> call);
 
         partial void Modify_UndeployIssueModelApiCall(ref gaxgrpc::ApiCall<UndeployIssueModelRequest, lro::Operation> call);
+
+        partial void Modify_ExportIssueModelApiCall(ref gaxgrpc::ApiCall<ExportIssueModelRequest, lro::Operation> call);
+
+        partial void Modify_ImportIssueModelApiCall(ref gaxgrpc::ApiCall<ImportIssueModelRequest, lro::Operation> call);
 
         partial void Modify_GetIssueApiCall(ref gaxgrpc::ApiCall<GetIssueRequest, Issue> call);
 
@@ -5715,6 +11394,20 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_UpdateSettingsApiCall(ref gaxgrpc::ApiCall<UpdateSettingsRequest, Settings> call);
 
+        partial void Modify_CreateAnalysisRuleApiCall(ref gaxgrpc::ApiCall<CreateAnalysisRuleRequest, AnalysisRule> call);
+
+        partial void Modify_GetAnalysisRuleApiCall(ref gaxgrpc::ApiCall<GetAnalysisRuleRequest, AnalysisRule> call);
+
+        partial void Modify_ListAnalysisRulesApiCall(ref gaxgrpc::ApiCall<ListAnalysisRulesRequest, ListAnalysisRulesResponse> call);
+
+        partial void Modify_UpdateAnalysisRuleApiCall(ref gaxgrpc::ApiCall<UpdateAnalysisRuleRequest, AnalysisRule> call);
+
+        partial void Modify_DeleteAnalysisRuleApiCall(ref gaxgrpc::ApiCall<DeleteAnalysisRuleRequest, wkt::Empty> call);
+
+        partial void Modify_GetEncryptionSpecApiCall(ref gaxgrpc::ApiCall<GetEncryptionSpecRequest, EncryptionSpec> call);
+
+        partial void Modify_InitializeEncryptionSpecApiCall(ref gaxgrpc::ApiCall<InitializeEncryptionSpecRequest, lro::Operation> call);
+
         partial void Modify_CreateViewApiCall(ref gaxgrpc::ApiCall<CreateViewRequest, View> call);
 
         partial void Modify_GetViewApiCall(ref gaxgrpc::ApiCall<GetViewRequest, View> call);
@@ -5725,10 +11418,65 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_DeleteViewApiCall(ref gaxgrpc::ApiCall<DeleteViewRequest, wkt::Empty> call);
 
+        partial void Modify_QueryMetricsApiCall(ref gaxgrpc::ApiCall<QueryMetricsRequest, lro::Operation> call);
+
+        partial void Modify_CreateQaQuestionApiCall(ref gaxgrpc::ApiCall<CreateQaQuestionRequest, QaQuestion> call);
+
+        partial void Modify_GetQaQuestionApiCall(ref gaxgrpc::ApiCall<GetQaQuestionRequest, QaQuestion> call);
+
+        partial void Modify_UpdateQaQuestionApiCall(ref gaxgrpc::ApiCall<UpdateQaQuestionRequest, QaQuestion> call);
+
+        partial void Modify_DeleteQaQuestionApiCall(ref gaxgrpc::ApiCall<DeleteQaQuestionRequest, wkt::Empty> call);
+
+        partial void Modify_ListQaQuestionsApiCall(ref gaxgrpc::ApiCall<ListQaQuestionsRequest, ListQaQuestionsResponse> call);
+
+        partial void Modify_CreateQaScorecardApiCall(ref gaxgrpc::ApiCall<CreateQaScorecardRequest, QaScorecard> call);
+
+        partial void Modify_GetQaScorecardApiCall(ref gaxgrpc::ApiCall<GetQaScorecardRequest, QaScorecard> call);
+
+        partial void Modify_UpdateQaScorecardApiCall(ref gaxgrpc::ApiCall<UpdateQaScorecardRequest, QaScorecard> call);
+
+        partial void Modify_DeleteQaScorecardApiCall(ref gaxgrpc::ApiCall<DeleteQaScorecardRequest, wkt::Empty> call);
+
+        partial void Modify_ListQaScorecardsApiCall(ref gaxgrpc::ApiCall<ListQaScorecardsRequest, ListQaScorecardsResponse> call);
+
+        partial void Modify_CreateQaScorecardRevisionApiCall(ref gaxgrpc::ApiCall<CreateQaScorecardRevisionRequest, QaScorecardRevision> call);
+
+        partial void Modify_GetQaScorecardRevisionApiCall(ref gaxgrpc::ApiCall<GetQaScorecardRevisionRequest, QaScorecardRevision> call);
+
+        partial void Modify_TuneQaScorecardRevisionApiCall(ref gaxgrpc::ApiCall<TuneQaScorecardRevisionRequest, lro::Operation> call);
+
+        partial void Modify_DeployQaScorecardRevisionApiCall(ref gaxgrpc::ApiCall<DeployQaScorecardRevisionRequest, QaScorecardRevision> call);
+
+        partial void Modify_UndeployQaScorecardRevisionApiCall(ref gaxgrpc::ApiCall<UndeployQaScorecardRevisionRequest, QaScorecardRevision> call);
+
+        partial void Modify_DeleteQaScorecardRevisionApiCall(ref gaxgrpc::ApiCall<DeleteQaScorecardRevisionRequest, wkt::Empty> call);
+
+        partial void Modify_ListQaScorecardRevisionsApiCall(ref gaxgrpc::ApiCall<ListQaScorecardRevisionsRequest, ListQaScorecardRevisionsResponse> call);
+
+        partial void Modify_CreateFeedbackLabelApiCall(ref gaxgrpc::ApiCall<CreateFeedbackLabelRequest, FeedbackLabel> call);
+
+        partial void Modify_ListFeedbackLabelsApiCall(ref gaxgrpc::ApiCall<ListFeedbackLabelsRequest, ListFeedbackLabelsResponse> call);
+
+        partial void Modify_GetFeedbackLabelApiCall(ref gaxgrpc::ApiCall<GetFeedbackLabelRequest, FeedbackLabel> call);
+
+        partial void Modify_UpdateFeedbackLabelApiCall(ref gaxgrpc::ApiCall<UpdateFeedbackLabelRequest, FeedbackLabel> call);
+
+        partial void Modify_DeleteFeedbackLabelApiCall(ref gaxgrpc::ApiCall<DeleteFeedbackLabelRequest, wkt::Empty> call);
+
+        partial void Modify_ListAllFeedbackLabelsApiCall(ref gaxgrpc::ApiCall<ListAllFeedbackLabelsRequest, ListAllFeedbackLabelsResponse> call);
+
+        partial void Modify_BulkUploadFeedbackLabelsApiCall(ref gaxgrpc::ApiCall<BulkUploadFeedbackLabelsRequest, lro::Operation> call);
+
+        partial void Modify_BulkDownloadFeedbackLabelsApiCall(ref gaxgrpc::ApiCall<BulkDownloadFeedbackLabelsRequest, lro::Operation> call);
+
         partial void OnConstruction(ContactCenterInsights.ContactCenterInsightsClient grpcClient, ContactCenterInsightsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ContactCenterInsights client</summary>
         public override ContactCenterInsights.ContactCenterInsightsClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateConversationRequest(ref CreateConversationRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5752,6 +11500,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_BulkAnalyzeConversationsRequest(ref BulkAnalyzeConversationsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_BulkDeleteConversationsRequest(ref BulkDeleteConversationsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_IngestConversationsRequest(ref IngestConversationsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ExportInsightsDataRequest(ref ExportInsightsDataRequest request, ref gaxgrpc::CallSettings settings);
@@ -5769,6 +11519,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         partial void Modify_DeployIssueModelRequest(ref DeployIssueModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UndeployIssueModelRequest(ref UndeployIssueModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportIssueModelRequest(ref ExportIssueModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportIssueModelRequest(ref ImportIssueModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetIssueRequest(ref GetIssueRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5796,6 +11550,20 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_UpdateSettingsRequest(ref UpdateSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateAnalysisRuleRequest(ref CreateAnalysisRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAnalysisRuleRequest(ref GetAnalysisRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAnalysisRulesRequest(ref ListAnalysisRulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAnalysisRuleRequest(ref UpdateAnalysisRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAnalysisRuleRequest(ref DeleteAnalysisRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetEncryptionSpecRequest(ref GetEncryptionSpecRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_InitializeEncryptionSpecRequest(ref InitializeEncryptionSpecRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateViewRequest(ref CreateViewRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetViewRequest(ref GetViewRequest request, ref gaxgrpc::CallSettings settings);
@@ -5806,8 +11574,62 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_DeleteViewRequest(ref DeleteViewRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_QueryMetricsRequest(ref QueryMetricsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateQaQuestionRequest(ref CreateQaQuestionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetQaQuestionRequest(ref GetQaQuestionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateQaQuestionRequest(ref UpdateQaQuestionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteQaQuestionRequest(ref DeleteQaQuestionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListQaQuestionsRequest(ref ListQaQuestionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateQaScorecardRequest(ref CreateQaScorecardRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetQaScorecardRequest(ref GetQaScorecardRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateQaScorecardRequest(ref UpdateQaScorecardRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteQaScorecardRequest(ref DeleteQaScorecardRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListQaScorecardsRequest(ref ListQaScorecardsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateQaScorecardRevisionRequest(ref CreateQaScorecardRevisionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetQaScorecardRevisionRequest(ref GetQaScorecardRevisionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TuneQaScorecardRevisionRequest(ref TuneQaScorecardRevisionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeployQaScorecardRevisionRequest(ref DeployQaScorecardRevisionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UndeployQaScorecardRevisionRequest(ref UndeployQaScorecardRevisionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteQaScorecardRevisionRequest(ref DeleteQaScorecardRevisionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListQaScorecardRevisionsRequest(ref ListQaScorecardRevisionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateFeedbackLabelRequest(ref CreateFeedbackLabelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListFeedbackLabelsRequest(ref ListFeedbackLabelsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetFeedbackLabelRequest(ref GetFeedbackLabelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateFeedbackLabelRequest(ref UpdateFeedbackLabelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteFeedbackLabelRequest(ref DeleteFeedbackLabelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAllFeedbackLabelsRequest(ref ListAllFeedbackLabelsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BulkUploadFeedbackLabelsRequest(ref BulkUploadFeedbackLabelsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BulkDownloadFeedbackLabelsRequest(ref BulkDownloadFeedbackLabelsRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5820,6 +11642,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         /// <summary>
         /// Creates a conversation.
+        /// Note that this method does not support audio transcription or redaction.
+        /// Use `conversations.upload` instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5834,8 +11658,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         public override lro::OperationsClient UploadConversationOperationsClient { get; }
 
         /// <summary>
-        /// Create a longrunning conversation upload operation. This method differs
-        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// Create a long-running conversation upload operation. This method differs
+        /// from `CreateConversation` by allowing audio transcription and optional DLP
         /// redaction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5848,8 +11672,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         }
 
         /// <summary>
-        /// Create a longrunning conversation upload operation. This method differs
-        /// from CreateConversation by allowing audio transcription and optional DLP
+        /// Create a long-running conversation upload operation. This method differs
+        /// from `CreateConversation` by allowing audio transcription and optional DLP
         /// redaction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6083,6 +11907,33 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             Modify_BulkAnalyzeConversationsRequest(ref request, ref callSettings);
             return new lro::Operation<BulkAnalyzeConversationsResponse, BulkAnalyzeConversationsMetadata>(await _callBulkAnalyzeConversations.Async(request, callSettings).ConfigureAwait(false), BulkAnalyzeConversationsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>BulkDeleteConversations</c>.</summary>
+        public override lro::OperationsClient BulkDeleteConversationsOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata> BulkDeleteConversations(BulkDeleteConversationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkDeleteConversationsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>(_callBulkDeleteConversations.Sync(request, callSettings), BulkDeleteConversationsOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes multiple conversations in a single request.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>> BulkDeleteConversationsAsync(BulkDeleteConversationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkDeleteConversationsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkDeleteConversationsResponse, BulkDeleteConversationsMetadata>(await _callBulkDeleteConversations.Async(request, callSettings).ConfigureAwait(false), BulkDeleteConversationsOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>IngestConversations</c>.</summary>
@@ -6323,6 +12174,60 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             Modify_UndeployIssueModelRequest(ref request, ref callSettings);
             return new lro::Operation<UndeployIssueModelResponse, UndeployIssueModelMetadata>(await _callUndeployIssueModel.Async(request, callSettings).ConfigureAwait(false), UndeployIssueModelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ExportIssueModel</c>.</summary>
+        public override lro::OperationsClient ExportIssueModelOperationsClient { get; }
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata> ExportIssueModel(ExportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>(_callExportIssueModel.Sync(request, callSettings), ExportIssueModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports an issue model to the provided destination.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>> ExportIssueModelAsync(ExportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportIssueModelResponse, ExportIssueModelMetadata>(await _callExportIssueModel.Async(request, callSettings).ConfigureAwait(false), ExportIssueModelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ImportIssueModel</c>.</summary>
+        public override lro::OperationsClient ImportIssueModelOperationsClient { get; }
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata> ImportIssueModel(ImportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>(_callImportIssueModel.Sync(request, callSettings), ImportIssueModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports an issue model from a Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>> ImportIssueModelAsync(ImportIssueModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportIssueModelRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportIssueModelResponse, ImportIssueModelMetadata>(await _callImportIssueModel.Async(request, callSettings).ConfigureAwait(false), ImportIssueModelOperationsClient);
         }
 
         /// <summary>
@@ -6638,6 +12543,185 @@ namespace Google.Cloud.ContactCenterInsights.V1
         }
 
         /// <summary>
+        /// Creates a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AnalysisRule CreateAnalysisRule(CreateAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAnalysisRuleRequest(ref request, ref callSettings);
+            return _callCreateAnalysisRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AnalysisRule> CreateAnalysisRuleAsync(CreateAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAnalysisRuleRequest(ref request, ref callSettings);
+            return _callCreateAnalysisRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AnalysisRule GetAnalysisRule(GetAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAnalysisRuleRequest(ref request, ref callSettings);
+            return _callGetAnalysisRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AnalysisRule> GetAnalysisRuleAsync(GetAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAnalysisRuleRequest(ref request, ref callSettings);
+            return _callGetAnalysisRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists analysis rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AnalysisRule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAnalysisRulesResponse, AnalysisRule> ListAnalysisRules(ListAnalysisRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAnalysisRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAnalysisRulesRequest, ListAnalysisRulesResponse, AnalysisRule>(_callListAnalysisRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists analysis rules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AnalysisRule"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAnalysisRulesResponse, AnalysisRule> ListAnalysisRulesAsync(ListAnalysisRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAnalysisRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAnalysisRulesRequest, ListAnalysisRulesResponse, AnalysisRule>(_callListAnalysisRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AnalysisRule UpdateAnalysisRule(UpdateAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAnalysisRuleRequest(ref request, ref callSettings);
+            return _callUpdateAnalysisRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AnalysisRule> UpdateAnalysisRuleAsync(UpdateAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAnalysisRuleRequest(ref request, ref callSettings);
+            return _callUpdateAnalysisRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteAnalysisRule(DeleteAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAnalysisRuleRequest(ref request, ref callSettings);
+            _callDeleteAnalysisRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a analysis rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteAnalysisRuleAsync(DeleteAnalysisRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAnalysisRuleRequest(ref request, ref callSettings);
+            return _callDeleteAnalysisRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override EncryptionSpec GetEncryptionSpec(GetEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEncryptionSpecRequest(ref request, ref callSettings);
+            return _callGetEncryptionSpec.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets location-level encryption key specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<EncryptionSpec> GetEncryptionSpecAsync(GetEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetEncryptionSpecRequest(ref request, ref callSettings);
+            return _callGetEncryptionSpec.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>InitializeEncryptionSpec</c>.</summary>
+        public override lro::OperationsClient InitializeEncryptionSpecOperationsClient { get; }
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification. An error will
+        /// result if the location has resources already created before the
+        /// initialization. After the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata> InitializeEncryptionSpec(InitializeEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InitializeEncryptionSpecRequest(ref request, ref callSettings);
+            return new lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>(_callInitializeEncryptionSpec.Sync(request, callSettings), InitializeEncryptionSpecOperationsClient);
+        }
+
+        /// <summary>
+        /// Initializes a location-level encryption key specification. An error will
+        /// result if the location has resources already created before the
+        /// initialization. After the encryption specification is initialized at a
+        /// location, it is immutable and all newly created resources under the
+        /// location will be encrypted with the existing specification.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>> InitializeEncryptionSpecAsync(InitializeEncryptionSpecRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InitializeEncryptionSpecRequest(ref request, ref callSettings);
+            return new lro::Operation<InitializeEncryptionSpecResponse, InitializeEncryptionSpecMetadata>(await _callInitializeEncryptionSpec.Async(request, callSettings).ConfigureAwait(false), InitializeEncryptionSpecOperationsClient);
+        }
+
+        /// <summary>
         /// Creates a view.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6756,6 +12840,642 @@ namespace Google.Cloud.ContactCenterInsights.V1
             Modify_DeleteViewRequest(ref request, ref callSettings);
             return _callDeleteView.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>QueryMetrics</c>.</summary>
+        public override lro::OperationsClient QueryMetricsOperationsClient { get; }
+
+        /// <summary>
+        /// Query metrics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<QueryMetricsResponse, QueryMetricsMetadata> QueryMetrics(QueryMetricsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryMetricsRequest(ref request, ref callSettings);
+            return new lro::Operation<QueryMetricsResponse, QueryMetricsMetadata>(_callQueryMetrics.Sync(request, callSettings), QueryMetricsOperationsClient);
+        }
+
+        /// <summary>
+        /// Query metrics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<QueryMetricsResponse, QueryMetricsMetadata>> QueryMetricsAsync(QueryMetricsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryMetricsRequest(ref request, ref callSettings);
+            return new lro::Operation<QueryMetricsResponse, QueryMetricsMetadata>(await _callQueryMetrics.Async(request, callSettings).ConfigureAwait(false), QueryMetricsOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QaQuestion CreateQaQuestion(CreateQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateQaQuestionRequest(ref request, ref callSettings);
+            return _callCreateQaQuestion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QaQuestion> CreateQaQuestionAsync(CreateQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateQaQuestionRequest(ref request, ref callSettings);
+            return _callCreateQaQuestion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QaQuestion GetQaQuestion(GetQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetQaQuestionRequest(ref request, ref callSettings);
+            return _callGetQaQuestion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QaQuestion> GetQaQuestionAsync(GetQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetQaQuestionRequest(ref request, ref callSettings);
+            return _callGetQaQuestion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QaQuestion UpdateQaQuestion(UpdateQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateQaQuestionRequest(ref request, ref callSettings);
+            return _callUpdateQaQuestion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QaQuestion> UpdateQaQuestionAsync(UpdateQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateQaQuestionRequest(ref request, ref callSettings);
+            return _callUpdateQaQuestion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteQaQuestion(DeleteQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteQaQuestionRequest(ref request, ref callSettings);
+            _callDeleteQaQuestion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a QaQuestion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteQaQuestionAsync(DeleteQaQuestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteQaQuestionRequest(ref request, ref callSettings);
+            return _callDeleteQaQuestion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists QaQuestions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QaQuestion"/> resources.</returns>
+        public override gax::PagedEnumerable<ListQaQuestionsResponse, QaQuestion> ListQaQuestions(ListQaQuestionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListQaQuestionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListQaQuestionsRequest, ListQaQuestionsResponse, QaQuestion>(_callListQaQuestions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists QaQuestions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QaQuestion"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListQaQuestionsResponse, QaQuestion> ListQaQuestionsAsync(ListQaQuestionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListQaQuestionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListQaQuestionsRequest, ListQaQuestionsResponse, QaQuestion>(_callListQaQuestions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QaScorecard CreateQaScorecard(CreateQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateQaScorecardRequest(ref request, ref callSettings);
+            return _callCreateQaScorecard.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QaScorecard> CreateQaScorecardAsync(CreateQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateQaScorecardRequest(ref request, ref callSettings);
+            return _callCreateQaScorecard.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QaScorecard GetQaScorecard(GetQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetQaScorecardRequest(ref request, ref callSettings);
+            return _callGetQaScorecard.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QaScorecard> GetQaScorecardAsync(GetQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetQaScorecardRequest(ref request, ref callSettings);
+            return _callGetQaScorecard.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QaScorecard UpdateQaScorecard(UpdateQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateQaScorecardRequest(ref request, ref callSettings);
+            return _callUpdateQaScorecard.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QaScorecard> UpdateQaScorecardAsync(UpdateQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateQaScorecardRequest(ref request, ref callSettings);
+            return _callUpdateQaScorecard.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteQaScorecard(DeleteQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteQaScorecardRequest(ref request, ref callSettings);
+            _callDeleteQaScorecard.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteQaScorecardAsync(DeleteQaScorecardRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteQaScorecardRequest(ref request, ref callSettings);
+            return _callDeleteQaScorecard.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists QaScorecards.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QaScorecard"/> resources.</returns>
+        public override gax::PagedEnumerable<ListQaScorecardsResponse, QaScorecard> ListQaScorecards(ListQaScorecardsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListQaScorecardsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListQaScorecardsRequest, ListQaScorecardsResponse, QaScorecard>(_callListQaScorecards, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists QaScorecards.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QaScorecard"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListQaScorecardsResponse, QaScorecard> ListQaScorecardsAsync(ListQaScorecardsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListQaScorecardsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListQaScorecardsRequest, ListQaScorecardsResponse, QaScorecard>(_callListQaScorecards, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QaScorecardRevision CreateQaScorecardRevision(CreateQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateQaScorecardRevisionRequest(ref request, ref callSettings);
+            return _callCreateQaScorecardRevision.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QaScorecardRevision> CreateQaScorecardRevisionAsync(CreateQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateQaScorecardRevisionRequest(ref request, ref callSettings);
+            return _callCreateQaScorecardRevision.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QaScorecardRevision GetQaScorecardRevision(GetQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetQaScorecardRevisionRequest(ref request, ref callSettings);
+            return _callGetQaScorecardRevision.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QaScorecardRevision> GetQaScorecardRevisionAsync(GetQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetQaScorecardRevisionRequest(ref request, ref callSettings);
+            return _callGetQaScorecardRevision.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>TuneQaScorecardRevision</c>.</summary>
+        public override lro::OperationsClient TuneQaScorecardRevisionOperationsClient { get; }
+
+        /// <summary>
+        /// Fine tune one or more QaModels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata> TuneQaScorecardRevision(TuneQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TuneQaScorecardRevisionRequest(ref request, ref callSettings);
+            return new lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata>(_callTuneQaScorecardRevision.Sync(request, callSettings), TuneQaScorecardRevisionOperationsClient);
+        }
+
+        /// <summary>
+        /// Fine tune one or more QaModels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata>> TuneQaScorecardRevisionAsync(TuneQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TuneQaScorecardRevisionRequest(ref request, ref callSettings);
+            return new lro::Operation<TuneQaScorecardRevisionResponse, TuneQaScorecardRevisionMetadata>(await _callTuneQaScorecardRevision.Async(request, callSettings).ConfigureAwait(false), TuneQaScorecardRevisionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deploy a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QaScorecardRevision DeployQaScorecardRevision(DeployQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeployQaScorecardRevisionRequest(ref request, ref callSettings);
+            return _callDeployQaScorecardRevision.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deploy a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QaScorecardRevision> DeployQaScorecardRevisionAsync(DeployQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeployQaScorecardRevisionRequest(ref request, ref callSettings);
+            return _callDeployQaScorecardRevision.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Undeploy a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QaScorecardRevision UndeployQaScorecardRevision(UndeployQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UndeployQaScorecardRevisionRequest(ref request, ref callSettings);
+            return _callUndeployQaScorecardRevision.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Undeploy a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QaScorecardRevision> UndeployQaScorecardRevisionAsync(UndeployQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UndeployQaScorecardRevisionRequest(ref request, ref callSettings);
+            return _callUndeployQaScorecardRevision.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteQaScorecardRevision(DeleteQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteQaScorecardRevisionRequest(ref request, ref callSettings);
+            _callDeleteQaScorecardRevision.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a QaScorecardRevision.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteQaScorecardRevisionAsync(DeleteQaScorecardRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteQaScorecardRevisionRequest(ref request, ref callSettings);
+            return _callDeleteQaScorecardRevision.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all revisions under the parent QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QaScorecardRevision"/> resources.</returns>
+        public override gax::PagedEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> ListQaScorecardRevisions(ListQaScorecardRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListQaScorecardRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListQaScorecardRevisionsRequest, ListQaScorecardRevisionsResponse, QaScorecardRevision>(_callListQaScorecardRevisions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all revisions under the parent QaScorecard.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QaScorecardRevision"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListQaScorecardRevisionsResponse, QaScorecardRevision> ListQaScorecardRevisionsAsync(ListQaScorecardRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListQaScorecardRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListQaScorecardRevisionsRequest, ListQaScorecardRevisionsResponse, QaScorecardRevision>(_callListQaScorecardRevisions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Create feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FeedbackLabel CreateFeedbackLabel(CreateFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateFeedbackLabelRequest(ref request, ref callSettings);
+            return _callCreateFeedbackLabel.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FeedbackLabel> CreateFeedbackLabelAsync(CreateFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateFeedbackLabelRequest(ref request, ref callSettings);
+            return _callCreateFeedbackLabel.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List feedback labels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public override gax::PagedEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> ListFeedbackLabels(ListFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFeedbackLabelsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListFeedbackLabelsRequest, ListFeedbackLabelsResponse, FeedbackLabel>(_callListFeedbackLabels, request, callSettings);
+        }
+
+        /// <summary>
+        /// List feedback labels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListFeedbackLabelsResponse, FeedbackLabel> ListFeedbackLabelsAsync(ListFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListFeedbackLabelsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListFeedbackLabelsRequest, ListFeedbackLabelsResponse, FeedbackLabel>(_callListFeedbackLabels, request, callSettings);
+        }
+
+        /// <summary>
+        /// Get feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FeedbackLabel GetFeedbackLabel(GetFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFeedbackLabelRequest(ref request, ref callSettings);
+            return _callGetFeedbackLabel.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FeedbackLabel> GetFeedbackLabelAsync(GetFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFeedbackLabelRequest(ref request, ref callSettings);
+            return _callGetFeedbackLabel.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FeedbackLabel UpdateFeedbackLabel(UpdateFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFeedbackLabelRequest(ref request, ref callSettings);
+            return _callUpdateFeedbackLabel.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FeedbackLabel> UpdateFeedbackLabelAsync(UpdateFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFeedbackLabelRequest(ref request, ref callSettings);
+            return _callUpdateFeedbackLabel.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteFeedbackLabel(DeleteFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFeedbackLabelRequest(ref request, ref callSettings);
+            _callDeleteFeedbackLabel.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Delete feedback label.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteFeedbackLabelAsync(DeleteFeedbackLabelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFeedbackLabelRequest(ref request, ref callSettings);
+            return _callDeleteFeedbackLabel.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all feedback labels by project number.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> ListAllFeedbackLabels(ListAllFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAllFeedbackLabelsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAllFeedbackLabelsRequest, ListAllFeedbackLabelsResponse, FeedbackLabel>(_callListAllFeedbackLabels, request, callSettings);
+        }
+
+        /// <summary>
+        /// List all feedback labels by project number.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FeedbackLabel"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAllFeedbackLabelsResponse, FeedbackLabel> ListAllFeedbackLabelsAsync(ListAllFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAllFeedbackLabelsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAllFeedbackLabelsRequest, ListAllFeedbackLabelsResponse, FeedbackLabel>(_callListAllFeedbackLabels, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>BulkUploadFeedbackLabels</c>.</summary>
+        public override lro::OperationsClient BulkUploadFeedbackLabelsOperationsClient { get; }
+
+        /// <summary>
+        /// Upload feedback labels in bulk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata> BulkUploadFeedbackLabels(BulkUploadFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkUploadFeedbackLabelsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata>(_callBulkUploadFeedbackLabels.Sync(request, callSettings), BulkUploadFeedbackLabelsOperationsClient);
+        }
+
+        /// <summary>
+        /// Upload feedback labels in bulk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata>> BulkUploadFeedbackLabelsAsync(BulkUploadFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkUploadFeedbackLabelsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkUploadFeedbackLabelsResponse, BulkUploadFeedbackLabelsMetadata>(await _callBulkUploadFeedbackLabels.Async(request, callSettings).ConfigureAwait(false), BulkUploadFeedbackLabelsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>BulkDownloadFeedbackLabels</c>.</summary>
+        public override lro::OperationsClient BulkDownloadFeedbackLabelsOperationsClient { get; }
+
+        /// <summary>
+        /// Download feedback labels in bulk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata> BulkDownloadFeedbackLabels(BulkDownloadFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkDownloadFeedbackLabelsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata>(_callBulkDownloadFeedbackLabels.Sync(request, callSettings), BulkDownloadFeedbackLabelsOperationsClient);
+        }
+
+        /// <summary>
+        /// Download feedback labels in bulk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata>> BulkDownloadFeedbackLabelsAsync(BulkDownloadFeedbackLabelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkDownloadFeedbackLabelsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkDownloadFeedbackLabelsResponse, BulkDownloadFeedbackLabelsMetadata>(await _callBulkDownloadFeedbackLabels.Async(request, callSettings).ConfigureAwait(false), BulkDownloadFeedbackLabelsOperationsClient);
+        }
     }
 
     public partial class ListConversationsRequest : gaxgrpc::IPageRequest
@@ -6770,7 +13490,31 @@ namespace Google.Cloud.ContactCenterInsights.V1
     {
     }
 
+    public partial class ListAnalysisRulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListViewsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListQaQuestionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListQaScorecardsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListQaScorecardRevisionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListFeedbackLabelsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAllFeedbackLabelsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -6798,10 +13542,58 @@ namespace Google.Cloud.ContactCenterInsights.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class ListAnalysisRulesResponse : gaxgrpc::IPageResponse<AnalysisRule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AnalysisRule> GetEnumerator() => AnalysisRules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class ListViewsResponse : gaxgrpc::IPageResponse<View>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<View> GetEnumerator() => Views.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListQaQuestionsResponse : gaxgrpc::IPageResponse<QaQuestion>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<QaQuestion> GetEnumerator() => QaQuestions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListQaScorecardsResponse : gaxgrpc::IPageResponse<QaScorecard>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<QaScorecard> GetEnumerator() => QaScorecards.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListQaScorecardRevisionsResponse : gaxgrpc::IPageResponse<QaScorecardRevision>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<QaScorecardRevision> GetEnumerator() => QaScorecardRevisions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListFeedbackLabelsResponse : gaxgrpc::IPageResponse<FeedbackLabel>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<FeedbackLabel> GetEnumerator() => FeedbackLabels.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAllFeedbackLabelsResponse : gaxgrpc::IPageResponse<FeedbackLabel>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<FeedbackLabel> GetEnumerator() => FeedbackLabels.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
@@ -6817,6 +13609,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class ContactCenterInsights
+    {
+        public partial class ContactCenterInsightsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

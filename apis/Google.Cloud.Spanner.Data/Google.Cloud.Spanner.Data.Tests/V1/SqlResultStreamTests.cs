@@ -1,11 +1,11 @@
 // Copyright 2019 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -308,15 +308,19 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
         }
 
-        private static ResultStream CreateResultStream(
+        private ResultStream CreateResultStream(
             System.Type type,
             SpannerClient client,
             int maxBufferSize = 10,
             CallSettings callSettings = null,
             RetrySettings retrySettings = null)
-            => new ResultStream(client,
+            => new ResultStream(
+                client,
                 ReadOrQueryRequest.FromRequest(type == typeof(ExecuteSqlRequest) ? new ExecuteSqlRequest() : new ReadRequest() as IReadOrQueryRequest),
-                new Session(), callSettings ?? s_simpleCallSettings, maxBufferSize, retrySettings ?? s_retrySettings);
+                PooledSession.FromSessionName(new PooledSessionTests.FakeSessionPool(), SessionName.FromProjectInstanceDatabaseSession("projectId", "instanceId", "databaseId", "sessionId")),
+                callSettings ?? s_simpleCallSettings,
+                maxBufferSize,
+                retrySettings ?? s_retrySettings);
 
         private static List<PartialResultSet> CreateResultSets(params string[] resumeTokens) =>
             resumeTokens

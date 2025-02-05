@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START aiplatform_v1_generated_TensorboardService_BatchCreateTensorboardTimeSeries_async]
     using Google.Cloud.AIPlatform.V1;

@@ -1,11 +1,11 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
-// 
+// Copyright 2017 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System;
 using System.Collections.Generic;
 
 namespace Google.Cloud.BigQuery.V2
@@ -92,6 +93,14 @@ namespace Google.Cloud.BigQuery.V2
         public string NullMarker { get; set; }
 
         /// <summary>
+        /// The character encoding of the data. The default value is UTF-8. BigQuery decodes the data after the
+        /// raw, binary data has been split using the values of the <see cref="Quote"/> and <see cref="FieldDelimiter"/>
+        /// properties.
+        /// See https://cloud.google.com/bigquery/docs/reference/rest/v2/Job#JobConfigurationLoad.FIELDS.encoding for more details.
+        /// </summary>
+        public string Encoding { get; set; }
+
+        /// <summary>
         /// If sourceFormat is set to <see cref="FileFormat.DatastoreBackup"/>, indicates which entity properties
         /// to load into BigQuery from a Cloud Datastore backup. Property names are case
         /// sensitive and must be top-level properties. If no properties are specified,
@@ -116,7 +125,7 @@ namespace Google.Cloud.BigQuery.V2
         public EncryptionConfiguration DestinationEncryptionConfiguration { get; set; }
 
         /// <summary>
-        /// Allows the schema of the destination table to be updated as a side effect 
+        /// Allows the schema of the destination table to be updated as a side effect
         /// of the load job if a schema is autodetected or supplied in the job configuration.
         /// Schema update options are supported in two cases:
         /// when <see cref="WriteDisposition"/> is <see cref="WriteDisposition.WriteAppend"/>;
@@ -133,6 +142,20 @@ namespace Google.Cloud.BigQuery.V2
         /// (ie. INTEGER). If unset, the server default will be used.
         /// </summary>
         public bool? UseAvroLogicalTypes { get; set; }
+
+        /// <summary>
+        /// Optional action to perform after preparing the request. If this property is non-null,
+        /// the <see cref="JobConfigurationLoad"/> used for a request will be passed to the delegate
+        /// before the request is executed. This allows for fine-grained modifications which aren't
+        /// otherwise directly supported by the properties in this options type.
+        /// </summary>
+        /// <remarks>
+        /// Prefer the properties on this type over this modifier to prepare the request.
+        /// Only use this modifier to configure aspects for which there are no properties available.
+        /// This modifier is applied to the request after all properties on this type have been applied.
+        /// The delegate is only called once per operation, even if the request is automatically retried.
+        /// </remarks>
+        public Action<JobConfigurationLoad> ConfigurationModifier { get; set; }
 
         internal void ModifyRequest(JobConfigurationLoad load)
         {
@@ -204,6 +227,11 @@ namespace Google.Cloud.BigQuery.V2
             {
                 load.UseAvroLogicalTypes = UseAvroLogicalTypes;
             }
+            if (Encoding != null)
+            {
+                load.Encoding = Encoding;
+            }
+            ConfigurationModifier?.Invoke(load);
         }
     }
 }

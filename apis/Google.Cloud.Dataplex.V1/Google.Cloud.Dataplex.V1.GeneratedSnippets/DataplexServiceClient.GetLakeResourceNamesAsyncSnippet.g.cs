@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataplexService_GetLake_async_flattened_resourceNames]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetLakeResourceNamesAsync()
         {
             // Create client
-            DataplexServiceClient dataplexServiceClient = await DataplexServiceClient.CreateAsync();
+            gcdv::DataplexServiceClient dataplexServiceClient = await gcdv::DataplexServiceClient.CreateAsync();
             // Initialize request argument(s)
-            LakeName name = LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
+            gcdv::LakeName name = gcdv::LakeName.FromProjectLocationLake("[PROJECT]", "[LOCATION]", "[LAKE]");
             // Make the request
-            Lake response = await dataplexServiceClient.GetLakeAsync(name);
+            gcdv::Lake response = await dataplexServiceClient.GetLakeAsync(name);
         }
     }
     // [END dataplex_v1_generated_DataplexService_GetLake_async_flattened_resourceNames]

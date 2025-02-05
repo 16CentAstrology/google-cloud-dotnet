@@ -1,5 +1,50 @@
 # Version history
 
+## Version 2.9.0, released 2024-12-06
+
+### New features
+
+- Add Network Connectivity Center APIs for PSC connection propagation through NCC ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Add Network Connectivity Center APIs for star topology ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Add Network Connectivity Center APIs for producer VPC spokes ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Add Network Connectivity Center APIs for dynamic route exchange ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Add Network Connectivity Center APIs for include export filters ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Add Network Connectivity Center APIs for include import ranges on hybrid spokes ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+
+### Documentation improvements
+
+- Update comment for `ListRoutes` method in service `HubService` to clarify that it lists routes in a route table ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Update comment for `ListRouteTables` method in service `HubService` to clarify that it lists route tables in a hub ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+- Update comment for field `location` in message `.google.cloud.networkconnectivity.v1.Route` to clarify that it's the origin location ([commit 8c58bae](https://github.com/googleapis/google-cloud-dotnet/commit/8c58bae15c531aee2eca291d27e713d0dd92c58c))
+
+## Version 2.8.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.7.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.6.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.5.0, released 2023-10-02
+
+### New features
+
+- Add Network Connectivity Center APIs related to VPC spokes ([commit f99d9ad](https://github.com/googleapis/google-cloud-dotnet/commit/f99d9ad52e49ae453e8b0007d6b2a2f6f6b85b31))
+
+## Version 2.4.0, released 2023-09-18
+
+### New features
+
+- Add PolicyBasedRouting APIs ([commit 7d8d2b0](https://github.com/googleapis/google-cloud-dotnet/commit/7d8d2b0f58d91865588fd067a14e558e4db57b32))
+
 ## Version 2.3.0, released 2023-02-08
 
 ### Bug fixes

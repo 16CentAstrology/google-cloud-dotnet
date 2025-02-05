@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_ContentService_UpdateContent_async]
     using Google.Protobuf.WellKnownTypes;
@@ -36,16 +36,16 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task UpdateContentRequestObjectAsync()
         {
             // Create client
-            ContentServiceClient contentServiceClient = await ContentServiceClient.CreateAsync();
+            gcdv::ContentServiceClient contentServiceClient = await gcdv::ContentServiceClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateContentRequest request = new UpdateContentRequest
+            gcdv::UpdateContentRequest request = new gcdv::UpdateContentRequest
             {
                 UpdateMask = new FieldMask(),
-                Content = new Content(),
+                Content = new gcdv::Content(),
                 ValidateOnly = false,
             };
             // Make the request
-            Content response = await contentServiceClient.UpdateContentAsync(request);
+            gcdv::Content response = await contentServiceClient.UpdateContentAsync(request);
         }
     }
     // [END dataplex_v1_generated_ContentService_UpdateContent_async]

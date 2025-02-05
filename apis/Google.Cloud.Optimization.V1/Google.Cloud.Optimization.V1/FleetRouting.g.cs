@@ -36,29 +36,29 @@ namespace Google.Cloud.Optimization.V1 {
             "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SOgoFbW9kZWwYAyABKAsy",
             "Ky5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50TW9kZWwS",
             "VAoMc29sdmluZ19tb2RlGAQgASgOMj4uZ29vZ2xlLmNsb3VkLm9wdGltaXph",
-            "dGlvbi52MS5PcHRpbWl6ZVRvdXJzUmVxdWVzdC5Tb2x2aW5nTW9kZRIiChVt",
-            "YXhfdmFsaWRhdGlvbl9lcnJvcnMYBSABKAVIAIgBARJSCgtzZWFyY2hfbW9k",
-            "ZRgGIAEoDjI9Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuT3B0aW1p",
-            "emVUb3Vyc1JlcXVlc3QuU2VhcmNoTW9kZRJTCh5pbmplY3RlZF9maXJzdF9z",
-            "b2x1dGlvbl9yb3V0ZXMYByADKAsyKy5nb29nbGUuY2xvdWQub3B0aW1pemF0",
-            "aW9uLnYxLlNoaXBtZW50Um91dGUSXgocaW5qZWN0ZWRfc29sdXRpb25fY29u",
-            "c3RyYWludBgIIAEoCzI4Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEu",
-            "SW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQSSwoWcmVmcmVzaF9kZXRhaWxz",
-            "X3JvdXRlcxgJIAMoCzIrLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEu",
-            "U2hpcG1lbnRSb3V0ZRIxCilpbnRlcnByZXRfaW5qZWN0ZWRfc29sdXRpb25z",
-            "X3VzaW5nX2xhYmVscxgKIAEoCBIdChVjb25zaWRlcl9yb2FkX3RyYWZmaWMY",
-            "CyABKAgSGgoScG9wdWxhdGVfcG9seWxpbmVzGAwgASgIEiUKHXBvcHVsYXRl",
-            "X3RyYW5zaXRpb25fcG9seWxpbmVzGA0gASgIEjYKLmFsbG93X2xhcmdlX2Rl",
-            "YWRsaW5lX2Rlc3BpdGVfaW50ZXJydXB0aW9uX3Jpc2sYDiABKAgSHgoWdXNl",
-            "X2dlb2Rlc2ljX2Rpc3RhbmNlcxgPIAEoCBInChpnZW9kZXNpY19tZXRlcnNf",
-            "cGVyX3NlY29uZBgQIAEoAUgBiAEBEg0KBWxhYmVsGBEgASgJEioKHnBvcHVs",
+            "dGlvbi52MS5PcHRpbWl6ZVRvdXJzUmVxdWVzdC5Tb2x2aW5nTW9kZRJSCgtz",
+            "ZWFyY2hfbW9kZRgGIAEoDjI9Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24u",
+            "djEuT3B0aW1pemVUb3Vyc1JlcXVlc3QuU2VhcmNoTW9kZRJTCh5pbmplY3Rl",
+            "ZF9maXJzdF9zb2x1dGlvbl9yb3V0ZXMYByADKAsyKy5nb29nbGUuY2xvdWQu",
+            "b3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUSXgocaW5qZWN0ZWRfc29s",
+            "dXRpb25fY29uc3RyYWludBgIIAEoCzI4Lmdvb2dsZS5jbG91ZC5vcHRpbWl6",
+            "YXRpb24udjEuSW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQSSwoWcmVmcmVz",
+            "aF9kZXRhaWxzX3JvdXRlcxgJIAMoCzIrLmdvb2dsZS5jbG91ZC5vcHRpbWl6",
+            "YXRpb24udjEuU2hpcG1lbnRSb3V0ZRIxCilpbnRlcnByZXRfaW5qZWN0ZWRf",
+            "c29sdXRpb25zX3VzaW5nX2xhYmVscxgKIAEoCBIdChVjb25zaWRlcl9yb2Fk",
+            "X3RyYWZmaWMYCyABKAgSGgoScG9wdWxhdGVfcG9seWxpbmVzGAwgASgIEiUK",
+            "HXBvcHVsYXRlX3RyYW5zaXRpb25fcG9seWxpbmVzGA0gASgIEjYKLmFsbG93",
+            "X2xhcmdlX2RlYWRsaW5lX2Rlc3BpdGVfaW50ZXJydXB0aW9uX3Jpc2sYDiAB",
+            "KAgSHgoWdXNlX2dlb2Rlc2ljX2Rpc3RhbmNlcxgPIAEoCBInChpnZW9kZXNp",
+            "Y19tZXRlcnNfcGVyX3NlY29uZBgQIAEoAUgAiAEBEiIKFW1heF92YWxpZGF0",
+            "aW9uX2Vycm9ycxgFIAEoBUgBiAEBEg0KBWxhYmVsGBEgASgJEioKHnBvcHVs",
             "YXRlX3RyYXZlbF9zdGVwX3BvbHlsaW5lcxgUIAEoCEICGAEiWQoLU29sdmlu",
             "Z01vZGUSEQoNREVGQVVMVF9TT0xWRRAAEhEKDVZBTElEQVRFX09OTFkQARIk",
             "CiBERVRFQ1RfU09NRV9JTkZFQVNJQkxFX1NISVBNRU5UUxACIloKClNlYXJj",
             "aE1vZGUSGwoXU0VBUkNIX01PREVfVU5TUEVDSUZJRUQQABIPCgtSRVRVUk5f",
-            "RkFTVBABEh4KGkNPTlNVTUVfQUxMX0FWQUlMQUJMRV9USU1FEAJCGAoWX21h",
-            "eF92YWxpZGF0aW9uX2Vycm9yc0IdChtfZ2VvZGVzaWNfbWV0ZXJzX3Blcl9z",
-            "ZWNvbmQirgYKFU9wdGltaXplVG91cnNSZXNwb25zZRI7CgZyb3V0ZXMYASAD",
+            "RkFTVBABEh4KGkNPTlNVTUVfQUxMX0FWQUlMQUJMRV9USU1FEAJCHQobX2dl",
+            "b2Rlc2ljX21ldGVyc19wZXJfc2Vjb25kQhgKFl9tYXhfdmFsaWRhdGlvbl9l",
+            "cnJvcnMirgYKFU9wdGltaXplVG91cnNSZXNwb25zZRI7CgZyb3V0ZXMYASAD",
             "KAsyKy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91",
             "dGUSFQoNcmVxdWVzdF9sYWJlbBgDIAEoCRJIChFza2lwcGVkX3NoaXBtZW50",
             "cxgEIAMoCzItLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2tpcHBl",
@@ -177,246 +177,252 @@ namespace Google.Cloud.Optimization.V1 {
             "b2RlEiAKHFJFUVVJUkVNRU5UX01PREVfVU5TUEVDSUZJRUQQABIdChlQRVJG",
             "T1JNRURfQllfU0FNRV9WRUhJQ0xFEAESIgoeSU5fU0FNRV9WRUhJQ0xFX0FU",
             "X1BJQ0tVUF9USU1FEAISJAogSU5fU0FNRV9WRUhJQ0xFX0FUX0RFTElWRVJZ",
-            "X1RJTUUQAyLBFAoHVmVoaWNsZRJFCgt0cmF2ZWxfbW9kZRgBIAEoDjIwLmdv",
-            "b2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuVmVoaWNsZS5UcmF2ZWxNb2Rl",
-            "EisKDnN0YXJ0X2xvY2F0aW9uGAMgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5n",
-            "Ej4KDnN0YXJ0X3dheXBvaW50GAQgASgLMiYuZ29vZ2xlLmNsb3VkLm9wdGlt",
-            "aXphdGlvbi52MS5XYXlwb2ludBIpCgxlbmRfbG9jYXRpb24YBSABKAsyEy5n",
-            "b29nbGUudHlwZS5MYXRMbmcSPAoMZW5kX3dheXBvaW50GAYgASgLMiYuZ29v",
-            "Z2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5XYXlwb2ludBISCgpzdGFydF90",
-            "YWdzGAcgAygJEhAKCGVuZF90YWdzGAggAygJEkQKEnN0YXJ0X3RpbWVfd2lu",
-            "ZG93cxgJIAMoCzIoLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuVGlt",
-            "ZVdpbmRvdxJCChBlbmRfdGltZV93aW5kb3dzGAogAygLMiguZ29vZ2xlLmNs",
-            "b3VkLm9wdGltaXphdGlvbi52MS5UaW1lV2luZG93EiUKGHRyYXZlbF9kdXJh",
-            "dGlvbl9tdWx0aXBsZRgLIAEoAUgAiAEBEk8KEHVubG9hZGluZ19wb2xpY3kY",
-            "DCABKA4yNS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlZlaGljbGUu",
-            "VW5sb2FkaW5nUG9saWN5EkoKC2xvYWRfbGltaXRzGB4gAygLMjUuZ29vZ2xl",
-            "LmNsb3VkLm9wdGltaXphdGlvbi52MS5WZWhpY2xlLkxvYWRMaW1pdHNFbnRy",
-            "eRIVCg1jb3N0X3Blcl9ob3VyGBAgASgBEh4KFmNvc3RfcGVyX3RyYXZlbGVk",
-            "X2hvdXIYESABKAESGgoSY29zdF9wZXJfa2lsb21ldGVyGBIgASgBEhIKCmZp",
-            "eGVkX2Nvc3QYEyABKAESHgoWdXNlZF9pZl9yb3V0ZV9pc19lbXB0eRgUIAEo",
-            "CBJRChRyb3V0ZV9kdXJhdGlvbl9saW1pdBgVIAEoCzIzLmdvb2dsZS5jbG91",
-            "ZC5vcHRpbWl6YXRpb24udjEuVmVoaWNsZS5EdXJhdGlvbkxpbWl0ElIKFXRy",
-            "YXZlbF9kdXJhdGlvbl9saW1pdBgWIAEoCzIzLmdvb2dsZS5jbG91ZC5vcHRp",
-            "bWl6YXRpb24udjEuVmVoaWNsZS5EdXJhdGlvbkxpbWl0EkkKFHJvdXRlX2Rp",
-            "c3RhbmNlX2xpbWl0GBcgASgLMisuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlv",
-            "bi52MS5EaXN0YW5jZUxpbWl0EnYKI2V4dHJhX3Zpc2l0X2R1cmF0aW9uX2Zv",
-            "cl92aXNpdF90eXBlGBggAygLMkkuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlv",
-            "bi52MS5WZWhpY2xlLkV4dHJhVmlzaXREdXJhdGlvbkZvclZpc2l0VHlwZUVu",
-            "dHJ5EjsKCmJyZWFrX3J1bGUYGSABKAsyJy5nb29nbGUuY2xvdWQub3B0aW1p",
-            "emF0aW9uLnYxLkJyZWFrUnVsZRINCgVsYWJlbBgbIAEoCRIOCgZpZ25vcmUY",
-            "HCABKAgSHgoSYnJlYWtfcnVsZV9pbmRpY2VzGB0gAygFQgIYARJGCgpjYXBh",
-            "Y2l0aWVzGA0gAygLMi4uZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5D",
-            "YXBhY2l0eVF1YW50aXR5QgIYARJYChRzdGFydF9sb2FkX2ludGVydmFscxgO",
-            "IAMoCzI2Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuQ2FwYWNpdHlR",
-            "dWFudGl0eUludGVydmFsQgIYARJWChJlbmRfbG9hZF9pbnRlcnZhbHMYDyAD",
-            "KAsyNi5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkNhcGFjaXR5UXVh",
-            "bnRpdHlJbnRlcnZhbEICGAEaywIKCUxvYWRMaW1pdBIVCghtYXhfbG9hZBgB",
-            "IAEoA0gAiAEBEhUKDXNvZnRfbWF4X2xvYWQYAiABKAMSJAocY29zdF9wZXJf",
-            "dW5pdF9hYm92ZV9zb2Z0X21heBgDIAEoARJVChNzdGFydF9sb2FkX2ludGVy",
-            "dmFsGAQgASgLMjguZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5WZWhp",
-            "Y2xlLkxvYWRMaW1pdC5JbnRlcnZhbBJTChFlbmRfbG9hZF9pbnRlcnZhbBgF",
-            "IAEoCzI4Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuVmVoaWNsZS5M",
-            "b2FkTGltaXQuSW50ZXJ2YWwaMQoISW50ZXJ2YWwSCwoDbWluGAEgASgDEhAK",
-            "A21heBgCIAEoA0gAiAEBQgYKBF9tYXhCCwoJX21heF9sb2FkGvACCg1EdXJh",
-            "dGlvbkxpbWl0Ei8KDG1heF9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbhI0ChFzb2Z0X21heF9kdXJhdGlvbhgCIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIpChxjb3N0X3Blcl9ob3VyX2FmdGVy",
-            "X3NvZnRfbWF4GAMgASgBSACIAQESPgobcXVhZHJhdGljX3NvZnRfbWF4X2R1",
-            "cmF0aW9uGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjoKLWNv",
-            "c3RfcGVyX3NxdWFyZV9ob3VyX2FmdGVyX3F1YWRyYXRpY19zb2Z0X21heBgF",
-            "IAEoAUgBiAEBQh8KHV9jb3N0X3Blcl9ob3VyX2FmdGVyX3NvZnRfbWF4QjAK",
-            "Ll9jb3N0X3Blcl9zcXVhcmVfaG91cl9hZnRlcl9xdWFkcmF0aWNfc29mdF9t",
-            "YXgaYgoPTG9hZExpbWl0c0VudHJ5EgsKA2tleRgBIAEoCRI+CgV2YWx1ZRgC",
-            "IAEoCzIvLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuVmVoaWNsZS5M",
-            "b2FkTGltaXQ6AjgBGmAKI0V4dHJhVmlzaXREdXJhdGlvbkZvclZpc2l0VHlw",
-            "ZUVudHJ5EgsKA2tleRgBIAEoCRIoCgV2YWx1ZRgCIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbjoCOAEiNgoKVHJhdmVsTW9kZRIbChdUUkFWRUxf",
-            "TU9ERV9VTlNQRUNJRklFRBAAEgsKB0RSSVZJTkcQASJiCg9VbmxvYWRpbmdQ",
-            "b2xpY3kSIAocVU5MT0FESU5HX1BPTElDWV9VTlNQRUNJRklFRBAAEhUKEUxB",
-            "U1RfSU5fRklSU1RfT1VUEAESFgoSRklSU1RfSU5fRklSU1RfT1VUEAJCGwoZ",
-            "X3RyYXZlbF9kdXJhdGlvbl9tdWx0aXBsZSKEAwoKVGltZVdpbmRvdxIuCgpz",
-            "dGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIs",
-            "CghlbmRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "MwoPc29mdF9zdGFydF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBIxCg1zb2Z0X2VuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBIxCiRjb3N0X3Blcl9ob3VyX2JlZm9yZV9zb2Z0X3N0",
-            "YXJ0X3RpbWUYBSABKAFIAIgBARIuCiFjb3N0X3Blcl9ob3VyX2FmdGVyX3Nv",
-            "ZnRfZW5kX3RpbWUYBiABKAFIAYgBAUInCiVfY29zdF9wZXJfaG91cl9iZWZv",
-            "cmVfc29mdF9zdGFydF90aW1lQiQKIl9jb3N0X3Blcl9ob3VyX2FmdGVyX3Nv",
-            "ZnRfZW5kX3RpbWUiMwoQQ2FwYWNpdHlRdWFudGl0eRIMCgR0eXBlGAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgDOgIYASJ4ChhDYXBhY2l0eVF1YW50aXR5SW50ZXJ2",
-            "YWwSDAoEdHlwZRgBIAEoCRIWCgltaW5fdmFsdWUYAiABKANIAIgBARIWCglt",
-            "YXhfdmFsdWUYAyABKANIAYgBAToCGAFCDAoKX21pbl92YWx1ZUIMCgpfbWF4",
-            "X3ZhbHVlIr8BCg1EaXN0YW5jZUxpbWl0EhcKCm1heF9tZXRlcnMYASABKANI",
-            "AIgBARIcCg9zb2Z0X21heF9tZXRlcnMYAiABKANIAYgBARIuCiFjb3N0X3Bl",
-            "cl9raWxvbWV0ZXJfYWJvdmVfc29mdF9tYXgYAyABKAFIAogBAUINCgtfbWF4",
-            "X21ldGVyc0ISChBfc29mdF9tYXhfbWV0ZXJzQiQKIl9jb3N0X3Blcl9raWxv",
-            "bWV0ZXJfYWJvdmVfc29mdF9tYXgihQIKFFRyYW5zaXRpb25BdHRyaWJ1dGVz",
-            "Eg8KB3NyY190YWcYASABKAkSGAoQZXhjbHVkZWRfc3JjX3RhZxgCIAEoCRIP",
-            "Cgdkc3RfdGFnGAMgASgJEhgKEGV4Y2x1ZGVkX2RzdF90YWcYBCABKAkSDAoE",
-            "Y29zdBgFIAEoARIaChJjb3N0X3Blcl9raWxvbWV0ZXIYBiABKAESQwoOZGlz",
-            "dGFuY2VfbGltaXQYByABKAsyKy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9u",
-            "LnYxLkRpc3RhbmNlTGltaXQSKAoFZGVsYXkYCCABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb24igQEKCFdheXBvaW50EjoKCGxvY2F0aW9uGAEgASgL",
-            "MiYuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5Mb2NhdGlvbkgAEhIK",
-            "CHBsYWNlX2lkGAIgASgJSAASFAoMc2lkZV9vZl9yb2FkGAMgASgIQg8KDWxv",
-            "Y2F0aW9uX3R5cGUiUgoITG9jYXRpb24SJAoHbGF0X2xuZxgBIAEoCzITLmdv",
-            "b2dsZS50eXBlLkxhdExuZxIUCgdoZWFkaW5nGAIgASgFSACIAQFCCgoIX2hl",
-            "YWRpbmcijAQKCUJyZWFrUnVsZRJMCg5icmVha19yZXF1ZXN0cxgBIAMoCzI0",
-            "Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuQnJlYWtSdWxlLkJyZWFr",
-            "UmVxdWVzdBJaChVmcmVxdWVuY3lfY29uc3RyYWludHMYAiADKAsyOy5nb29n",
-            "bGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkJyZWFrUnVsZS5GcmVxdWVuY3lD",
-            "b25zdHJhaW50Gr4BCgxCcmVha1JlcXVlc3QSPAoTZWFybGllc3Rfc3RhcnRf",
-            "dGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhI6",
-            "ChFsYXRlc3Rfc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAhI0CgxtaW5fZHVyYXRpb24YAyABKAsyGS5nb29nbGUu",
-            "cHJvdG9idWYuRHVyYXRpb25CA+BBAhqTAQoTRnJlcXVlbmN5Q29uc3RyYWlu",
-            "dBI6ChJtaW5fYnJlYWtfZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9i",
-            "dWYuRHVyYXRpb25CA+BBAhJAChhtYXhfaW50ZXJfYnJlYWtfZHVyYXRpb24Y",
-            "AiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAiLDFgoNU2hp",
-            "cG1lbnRSb3V0ZRIVCg12ZWhpY2xlX2luZGV4GAEgASgFEhUKDXZlaGljbGVf",
-            "bGFiZWwYAiABKAkSNgoSdmVoaWNsZV9zdGFydF90aW1lGAUgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChB2ZWhpY2xlX2VuZF90aW1lGAYg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJBCgZ2aXNpdHMYByAD",
-            "KAsyMS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91",
-            "dGUuVmlzaXQSSwoLdHJhbnNpdGlvbnMYCCADKAsyNi5nb29nbGUuY2xvdWQu",
-            "b3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUuVHJhbnNpdGlvbhIjChto",
-            "YXNfdHJhZmZpY19pbmZlYXNpYmlsaXRpZXMYCSABKAgSUwoOcm91dGVfcG9s",
-            "eWxpbmUYCiABKAsyOy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNo",
-            "aXBtZW50Um91dGUuRW5jb2RlZFBvbHlsaW5lEkEKBmJyZWFrcxgLIAMoCzIx",
-            "Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5C",
-            "cmVhaxJACgdtZXRyaWNzGAwgASgLMi8uZ29vZ2xlLmNsb3VkLm9wdGltaXph",
-            "dGlvbi52MS5BZ2dyZWdhdGVkTWV0cmljcxJQCgtyb3V0ZV9jb3N0cxgRIAMo",
-            "CzI7Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0",
-            "ZS5Sb3V0ZUNvc3RzRW50cnkSGAoQcm91dGVfdG90YWxfY29zdBgSIAEoARJF",
-            "CgllbmRfbG9hZHMYDSADKAsyLi5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9u",
-            "LnYxLkNhcGFjaXR5UXVhbnRpdHlCAhgBElAKDHRyYXZlbF9zdGVwcxgOIAMo",
-            "CzI2Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0",
-            "ZS5UcmF2ZWxTdGVwQgIYARI1Cg52ZWhpY2xlX2RldG91chgPIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbkICGAESVwoYZGVsYXlfYmVmb3JlX3Zl",
-            "aGljbGVfZW5kGBAgASgLMjEuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52",
-            "MS5TaGlwbWVudFJvdXRlLkRlbGF5QgIYARpoCgVEZWxheRIuCgpzdGFydF90",
-            "aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCghkdXJh",
-            "dGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbjoCGAEa9QQK",
-            "BVZpc2l0EhYKDnNoaXBtZW50X2luZGV4GAEgASgFEhEKCWlzX3BpY2t1cBgC",
-            "IAEoCBIbChN2aXNpdF9yZXF1ZXN0X2luZGV4GAMgASgFEi4KCnN0YXJ0X3Rp",
-            "bWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wElgKDGxvYWRf",
-            "ZGVtYW5kcxgLIAMoCzJCLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEu",
-            "U2hpcG1lbnRSb3V0ZS5WaXNpdC5Mb2FkRGVtYW5kc0VudHJ5EikKBmRldG91",
-            "chgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIWCg5zaGlwbWVu",
-            "dF9sYWJlbBgHIAEoCRITCgt2aXNpdF9sYWJlbBgIIAEoCRJJCg1hcnJpdmFs",
-            "X2xvYWRzGAkgAygLMi4uZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5D",
-            "YXBhY2l0eVF1YW50aXR5QgIYARJRChJkZWxheV9iZWZvcmVfc3RhcnQYCiAB",
-            "KAsyMS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91",
-            "dGUuRGVsYXlCAhgBEkMKB2RlbWFuZHMYBSADKAsyLi5nb29nbGUuY2xvdWQu",
-            "b3B0aW1pemF0aW9uLnYxLkNhcGFjaXR5UXVhbnRpdHlCAhgBGl8KEExvYWRE",
-            "ZW1hbmRzRW50cnkSCwoDa2V5GAEgASgJEjoKBXZhbHVlGAIgASgLMisuZ29v",
-            "Z2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5TaGlwbWVudC5Mb2FkOgI4ARrk",
-            "BQoKVHJhbnNpdGlvbhIyCg90cmF2ZWxfZHVyYXRpb24YASABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb24SHgoWdHJhdmVsX2Rpc3RhbmNlX21ldGVy",
-            "cxgCIAEoARIgChh0cmFmZmljX2luZm9fdW5hdmFpbGFibGUYAyABKAgSMQoO",
-            "ZGVsYXlfZHVyYXRpb24YBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b24SMQoOYnJlYWtfZHVyYXRpb24YBSABKAsyGS5nb29nbGUucHJvdG9idWYu",
-            "RHVyYXRpb24SMAoNd2FpdF9kdXJhdGlvbhgGIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbhIxCg50b3RhbF9kdXJhdGlvbhgHIAEoCzIZLmdvb2ds",
-            "ZS5wcm90b2J1Zi5EdXJhdGlvbhIuCgpzdGFydF90aW1lGAggASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBJTCg5yb3V0ZV9wb2x5bGluZRgJIAEo",
-            "CzI7Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0",
-            "ZS5FbmNvZGVkUG9seWxpbmUSXwoNdmVoaWNsZV9sb2FkcxgLIAMoCzJILmdv",
-            "b2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5UcmFu",
-            "c2l0aW9uLlZlaGljbGVMb2Fkc0VudHJ5EkEKBWxvYWRzGAogAygLMi4uZ29v",
-            "Z2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5DYXBhY2l0eVF1YW50aXR5QgIY",
-            "ARpsChFWZWhpY2xlTG9hZHNFbnRyeRILCgNrZXkYASABKAkSRgoFdmFsdWUY",
-            "AiABKAsyNy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50",
-            "Um91dGUuVmVoaWNsZUxvYWQ6AjgBGh0KC1ZlaGljbGVMb2FkEg4KBmFtb3Vu",
-            "dBgBIAEoAxohCg9FbmNvZGVkUG9seWxpbmUSDgoGcG9pbnRzGAEgASgJGmQK",
-            "BUJyZWFrEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEisKCGR1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uGs0BCgpUcmF2ZWxTdGVwEisKCGR1cmF0aW9uGAEgASgLMhku",
-            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhcKD2Rpc3RhbmNlX21ldGVycxgC",
-            "IAEoARIgChh0cmFmZmljX2luZm9fdW5hdmFpbGFibGUYAyABKAgSUwoOcm91",
-            "dGVfcG9seWxpbmUYBCABKAsyOy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9u",
-            "LnYxLlNoaXBtZW50Um91dGUuRW5jb2RlZFBvbHlsaW5lOgIYARoxCg9Sb3V0",
-            "ZUNvc3RzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgBOgI4ASL+",
-            "BAoPU2tpcHBlZFNoaXBtZW50Eg0KBWluZGV4GAEgASgFEg0KBWxhYmVsGAIg",
-            "ASgJEkUKB3JlYXNvbnMYAyADKAsyNC5nb29nbGUuY2xvdWQub3B0aW1pemF0",
-            "aW9uLnYxLlNraXBwZWRTaGlwbWVudC5SZWFzb24ahQQKBlJlYXNvbhJHCgRj",
-            "b2RlGAEgASgOMjkuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5Ta2lw",
-            "cGVkU2hpcG1lbnQuUmVhc29uLkNvZGUSIgoVZXhhbXBsZV92ZWhpY2xlX2lu",
-            "ZGV4GAIgASgFSACIAQESJgoeZXhhbXBsZV9leGNlZWRlZF9jYXBhY2l0eV90",
-            "eXBlGAMgASgJIssCCgRDb2RlEhQKEENPREVfVU5TUEVDSUZJRUQQABIOCgpO",
-            "T19WRUhJQ0xFEAESIwofREVNQU5EX0VYQ0VFRFNfVkVISUNMRV9DQVBBQ0lU",
-            "WRACEjUKMUNBTk5PVF9CRV9QRVJGT1JNRURfV0lUSElOX1ZFSElDTEVfRElT",
-            "VEFOQ0VfTElNSVQQAxI1CjFDQU5OT1RfQkVfUEVSRk9STUVEX1dJVEhJTl9W",
-            "RUhJQ0xFX0RVUkFUSU9OX0xJTUlUEAQSPAo4Q0FOTk9UX0JFX1BFUkZPUk1F",
-            "RF9XSVRISU5fVkVISUNMRV9UUkFWRUxfRFVSQVRJT05fTElNSVQQBRIzCi9D",
-            "QU5OT1RfQkVfUEVSRk9STUVEX1dJVEhJTl9WRUhJQ0xFX1RJTUVfV0lORE9X",
-            "UxAGEhcKE1ZFSElDTEVfTk9UX0FMTE9XRUQQB0IYChZfZXhhbXBsZV92ZWhp",
-            "Y2xlX2luZGV4ItgFChFBZ2dyZWdhdGVkTWV0cmljcxIgChhwZXJmb3JtZWRf",
-            "c2hpcG1lbnRfY291bnQYASABKAUSMgoPdHJhdmVsX2R1cmF0aW9uGAIgASgL",
-            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjAKDXdhaXRfZHVyYXRpb24Y",
-            "AyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMQoOZGVsYXlfZHVy",
-            "YXRpb24YBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMQoOYnJl",
-            "YWtfZHVyYXRpb24YBSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24S",
-            "MQoOdmlzaXRfZHVyYXRpb24YBiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
-            "YXRpb24SMQoOdG90YWxfZHVyYXRpb24YByABKAsyGS5nb29nbGUucHJvdG9i",
-            "dWYuRHVyYXRpb24SHgoWdHJhdmVsX2Rpc3RhbmNlX21ldGVycxgIIAEoARJQ",
-            "CgltYXhfbG9hZHMYCSADKAsyPS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9u",
-            "LnYxLkFnZ3JlZ2F0ZWRNZXRyaWNzLk1heExvYWRzRW50cnkSTQoFY29zdHMY",
-            "CiADKAsyOi5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkFnZ3JlZ2F0",
-            "ZWRNZXRyaWNzLkNvc3RzRW50cnlCAhgBEhYKCnRvdGFsX2Nvc3QYCyABKAFC",
-            "AhgBGmgKDU1heExvYWRzRW50cnkSCwoDa2V5GAEgASgJEkYKBXZhbHVlGAIg",
-            "ASgLMjcuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5TaGlwbWVudFJv",
-            "dXRlLlZlaGljbGVMb2FkOgI4ARosCgpDb3N0c0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoAToCOAEinwYKGkluamVjdGVkU29sdXRpb25Db25z",
-            "dHJhaW50EjsKBnJvdXRlcxgBIAMoCzIrLmdvb2dsZS5jbG91ZC5vcHRpbWl6",
-            "YXRpb24udjEuU2hpcG1lbnRSb3V0ZRJIChFza2lwcGVkX3NoaXBtZW50cxgC",
-            "IAMoCzItLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2tpcHBlZFNo",
-            "aXBtZW50Em0KFmNvbnN0cmFpbnRfcmVsYXhhdGlvbnMYAyADKAsyTS5nb29n",
-            "bGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkluamVjdGVkU29sdXRpb25Db25z",
-            "dHJhaW50LkNvbnN0cmFpbnRSZWxheGF0aW9uGooEChRDb25zdHJhaW50UmVs",
-            "YXhhdGlvbhJtCgtyZWxheGF0aW9ucxgBIAMoCzJYLmdvb2dsZS5jbG91ZC5v",
-            "cHRpbWl6YXRpb24udjEuSW5qZWN0ZWRTb2x1dGlvbkNvbnN0cmFpbnQuQ29u",
-            "c3RyYWludFJlbGF4YXRpb24uUmVsYXhhdGlvbhIXCg92ZWhpY2xlX2luZGlj",
-            "ZXMYAiADKAUa6QIKClJlbGF4YXRpb24SbQoFbGV2ZWwYASABKA4yXi5nb29n",
-            "bGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkluamVjdGVkU29sdXRpb25Db25z",
-            "dHJhaW50LkNvbnN0cmFpbnRSZWxheGF0aW9uLlJlbGF4YXRpb24uTGV2ZWwS",
-            "MgoOdGhyZXNob2xkX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEh0KFXRocmVzaG9sZF92aXNpdF9jb3VudBgDIAEoBSKYAQoFTGV2",
-            "ZWwSFQoRTEVWRUxfVU5TUEVDSUZJRUQQABIlCiFSRUxBWF9WSVNJVF9USU1F",
-            "U19BRlRFUl9USFJFU0hPTEQQARIyCi5SRUxBWF9WSVNJVF9USU1FU19BTkRf",
-            "U0VRVUVOQ0VfQUZURVJfVEhSRVNIT0xEEAISHQoZUkVMQVhfQUxMX0FGVEVS",
-            "X1RIUkVTSE9MRBADIv0CChxPcHRpbWl6ZVRvdXJzVmFsaWRhdGlvbkVycm9y",
-            "EgwKBGNvZGUYASABKAUSFAoMZGlzcGxheV9uYW1lGAIgASgJElkKBmZpZWxk",
-            "cxgDIAMoCzJJLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuT3B0aW1p",
-            "emVUb3Vyc1ZhbGlkYXRpb25FcnJvci5GaWVsZFJlZmVyZW5jZRIVCg1lcnJv",
-            "cl9tZXNzYWdlGAQgASgJEhgKEG9mZmVuZGluZ192YWx1ZXMYBSABKAkarAEK",
-            "DkZpZWxkUmVmZXJlbmNlEgwKBG5hbWUYASABKAkSDwoFaW5kZXgYAiABKAVI",
-            "ABINCgNrZXkYBCABKAlIABJcCglzdWJfZmllbGQYAyABKAsySS5nb29nbGUu",
-            "Y2xvdWQub3B0aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNWYWxpZGF0aW9u",
-            "RXJyb3IuRmllbGRSZWZlcmVuY2VCDgoMaW5kZXhfb3Jfa2V5MuAECgxGbGVl",
-            "dFJvdXRpbmcS4gEKDU9wdGltaXplVG91cnMSMi5nb29nbGUuY2xvdWQub3B0",
-            "aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNSZXF1ZXN0GjMuZ29vZ2xlLmNs",
-            "b3VkLm9wdGltaXphdGlvbi52MS5PcHRpbWl6ZVRvdXJzUmVzcG9uc2UiaILT",
-            "5JMCYiIxL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn06b3B0",
-            "aW1pemVUb3VyczoBKloqIiUvdjEve3BhcmVudD1wcm9qZWN0cy8qfTpvcHRp",
-            "bWl6ZVRvdXJzOgEqEpQCChJCYXRjaE9wdGltaXplVG91cnMSNy5nb29nbGUu",
-            "Y2xvdWQub3B0aW1pemF0aW9uLnYxLkJhdGNoT3B0aW1pemVUb3Vyc1JlcXVl",
-            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqUBgtPkkwJsIjYv",
-            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpiYXRjaE9wdGlt",
-            "aXplVG91cnM6ASpaLyIqL3YxL3twYXJlbnQ9cHJvamVjdHMvKn06YmF0Y2hP",
-            "cHRpbWl6ZVRvdXJzOgEqykEwChpCYXRjaE9wdGltaXplVG91cnNSZXNwb25z",
-            "ZRISQXN5bmNNb2RlbE1ldGFkYXRhGlTKQSBjbG91ZG9wdGltaXphdGlvbi5n",
-            "b29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvY2xvdWQtcGxhdGZvcm1CfQogY29tLmdvb2dsZS5jbG91ZC5vcHRpbWl6",
-            "YXRpb24udjFCEUZsZWV0Um91dGluZ1Byb3RvUAFaRGNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vb3B0aW1pemF0aW9uL2FwaXYxL29wdGltaXphdGlvbnBiO29wdGlt",
-            "aXphdGlvbnBiYgZwcm90bzM="));
+            "X1RJTUUQAyJvCg5Sb3V0ZU1vZGlmaWVycxITCgthdm9pZF90b2xscxgCIAEo",
+            "CBIWCg5hdm9pZF9oaWdod2F5cxgDIAEoCBIVCg1hdm9pZF9mZXJyaWVzGAQg",
+            "ASgIEhkKDGF2b2lkX2luZG9vchgFIAEoCEID4EEBIpoVCgdWZWhpY2xlEkUK",
+            "C3RyYXZlbF9tb2RlGAEgASgOMjAuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlv",
+            "bi52MS5WZWhpY2xlLlRyYXZlbE1vZGUSSgoPcm91dGVfbW9kaWZpZXJzGAIg",
+            "ASgLMiwuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5Sb3V0ZU1vZGlm",
+            "aWVyc0ID4EEBEisKDnN0YXJ0X2xvY2F0aW9uGAMgASgLMhMuZ29vZ2xlLnR5",
+            "cGUuTGF0TG5nEj4KDnN0YXJ0X3dheXBvaW50GAQgASgLMiYuZ29vZ2xlLmNs",
+            "b3VkLm9wdGltaXphdGlvbi52MS5XYXlwb2ludBIpCgxlbmRfbG9jYXRpb24Y",
+            "BSABKAsyEy5nb29nbGUudHlwZS5MYXRMbmcSPAoMZW5kX3dheXBvaW50GAYg",
+            "ASgLMiYuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5XYXlwb2ludBIS",
+            "CgpzdGFydF90YWdzGAcgAygJEhAKCGVuZF90YWdzGAggAygJEkQKEnN0YXJ0",
+            "X3RpbWVfd2luZG93cxgJIAMoCzIoLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRp",
+            "b24udjEuVGltZVdpbmRvdxJCChBlbmRfdGltZV93aW5kb3dzGAogAygLMigu",
+            "Z29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5UaW1lV2luZG93EiUKGHRy",
+            "YXZlbF9kdXJhdGlvbl9tdWx0aXBsZRgLIAEoAUgAiAEBEk8KEHVubG9hZGlu",
+            "Z19wb2xpY3kYDCABKA4yNS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYx",
+            "LlZlaGljbGUuVW5sb2FkaW5nUG9saWN5EkoKC2xvYWRfbGltaXRzGB4gAygL",
+            "MjUuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5WZWhpY2xlLkxvYWRM",
+            "aW1pdHNFbnRyeRIVCg1jb3N0X3Blcl9ob3VyGBAgASgBEh4KFmNvc3RfcGVy",
+            "X3RyYXZlbGVkX2hvdXIYESABKAESGgoSY29zdF9wZXJfa2lsb21ldGVyGBIg",
+            "ASgBEhIKCmZpeGVkX2Nvc3QYEyABKAESHgoWdXNlZF9pZl9yb3V0ZV9pc19l",
+            "bXB0eRgUIAEoCBJRChRyb3V0ZV9kdXJhdGlvbl9saW1pdBgVIAEoCzIzLmdv",
+            "b2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuVmVoaWNsZS5EdXJhdGlvbkxp",
+            "bWl0ElIKFXRyYXZlbF9kdXJhdGlvbl9saW1pdBgWIAEoCzIzLmdvb2dsZS5j",
+            "bG91ZC5vcHRpbWl6YXRpb24udjEuVmVoaWNsZS5EdXJhdGlvbkxpbWl0EkkK",
+            "FHJvdXRlX2Rpc3RhbmNlX2xpbWl0GBcgASgLMisuZ29vZ2xlLmNsb3VkLm9w",
+            "dGltaXphdGlvbi52MS5EaXN0YW5jZUxpbWl0EnYKI2V4dHJhX3Zpc2l0X2R1",
+            "cmF0aW9uX2Zvcl92aXNpdF90eXBlGBggAygLMkkuZ29vZ2xlLmNsb3VkLm9w",
+            "dGltaXphdGlvbi52MS5WZWhpY2xlLkV4dHJhVmlzaXREdXJhdGlvbkZvclZp",
+            "c2l0VHlwZUVudHJ5EjsKCmJyZWFrX3J1bGUYGSABKAsyJy5nb29nbGUuY2xv",
+            "dWQub3B0aW1pemF0aW9uLnYxLkJyZWFrUnVsZRINCgVsYWJlbBgbIAEoCRIO",
+            "CgZpZ25vcmUYHCABKAgSHgoSYnJlYWtfcnVsZV9pbmRpY2VzGB0gAygFQgIY",
+            "ARJGCgpjYXBhY2l0aWVzGA0gAygLMi4uZ29vZ2xlLmNsb3VkLm9wdGltaXph",
+            "dGlvbi52MS5DYXBhY2l0eVF1YW50aXR5QgIYARJYChRzdGFydF9sb2FkX2lu",
+            "dGVydmFscxgOIAMoCzI2Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEu",
+            "Q2FwYWNpdHlRdWFudGl0eUludGVydmFsQgIYARJWChJlbmRfbG9hZF9pbnRl",
+            "cnZhbHMYDyADKAsyNi5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkNh",
+            "cGFjaXR5UXVhbnRpdHlJbnRlcnZhbEICGAEaywIKCUxvYWRMaW1pdBIVCght",
+            "YXhfbG9hZBgBIAEoA0gAiAEBEhUKDXNvZnRfbWF4X2xvYWQYAiABKAMSJAoc",
+            "Y29zdF9wZXJfdW5pdF9hYm92ZV9zb2Z0X21heBgDIAEoARJVChNzdGFydF9s",
+            "b2FkX2ludGVydmFsGAQgASgLMjguZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlv",
+            "bi52MS5WZWhpY2xlLkxvYWRMaW1pdC5JbnRlcnZhbBJTChFlbmRfbG9hZF9p",
+            "bnRlcnZhbBgFIAEoCzI4Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEu",
+            "VmVoaWNsZS5Mb2FkTGltaXQuSW50ZXJ2YWwaMQoISW50ZXJ2YWwSCwoDbWlu",
+            "GAEgASgDEhAKA21heBgCIAEoA0gAiAEBQgYKBF9tYXhCCwoJX21heF9sb2Fk",
+            "GvACCg1EdXJhdGlvbkxpbWl0Ei8KDG1heF9kdXJhdGlvbhgBIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI0ChFzb2Z0X21heF9kdXJhdGlvbhgC",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIpChxjb3N0X3Blcl9o",
+            "b3VyX2FmdGVyX3NvZnRfbWF4GAMgASgBSACIAQESPgobcXVhZHJhdGljX3Nv",
+            "ZnRfbWF4X2R1cmF0aW9uGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
+            "aW9uEjoKLWNvc3RfcGVyX3NxdWFyZV9ob3VyX2FmdGVyX3F1YWRyYXRpY19z",
+            "b2Z0X21heBgFIAEoAUgBiAEBQh8KHV9jb3N0X3Blcl9ob3VyX2FmdGVyX3Nv",
+            "ZnRfbWF4QjAKLl9jb3N0X3Blcl9zcXVhcmVfaG91cl9hZnRlcl9xdWFkcmF0",
+            "aWNfc29mdF9tYXgaYgoPTG9hZExpbWl0c0VudHJ5EgsKA2tleRgBIAEoCRI+",
+            "CgV2YWx1ZRgCIAEoCzIvLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEu",
+            "VmVoaWNsZS5Mb2FkTGltaXQ6AjgBGmAKI0V4dHJhVmlzaXREdXJhdGlvbkZv",
+            "clZpc2l0VHlwZUVudHJ5EgsKA2tleRgBIAEoCRIoCgV2YWx1ZRgCIAEoCzIZ",
+            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbjoCOAEiQwoKVHJhdmVsTW9kZRIb",
+            "ChdUUkFWRUxfTU9ERV9VTlNQRUNJRklFRBAAEgsKB0RSSVZJTkcQARILCgdX",
+            "QUxLSU5HEAIiYgoPVW5sb2FkaW5nUG9saWN5EiAKHFVOTE9BRElOR19QT0xJ",
+            "Q1lfVU5TUEVDSUZJRUQQABIVChFMQVNUX0lOX0ZJUlNUX09VVBABEhYKEkZJ",
+            "UlNUX0lOX0ZJUlNUX09VVBACQhsKGV90cmF2ZWxfZHVyYXRpb25fbXVsdGlw",
+            "bGUihAMKClRpbWVXaW5kb3cSLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEjMKD3NvZnRfc3RhcnRfdGltZRgDIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNc29mdF9lbmRfdGlt",
+            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQokY29zdF9w",
+            "ZXJfaG91cl9iZWZvcmVfc29mdF9zdGFydF90aW1lGAUgASgBSACIAQESLgoh",
+            "Y29zdF9wZXJfaG91cl9hZnRlcl9zb2Z0X2VuZF90aW1lGAYgASgBSAGIAQFC",
+            "JwolX2Nvc3RfcGVyX2hvdXJfYmVmb3JlX3NvZnRfc3RhcnRfdGltZUIkCiJf",
+            "Y29zdF9wZXJfaG91cl9hZnRlcl9zb2Z0X2VuZF90aW1lIjMKEENhcGFjaXR5",
+            "UXVhbnRpdHkSDAoEdHlwZRgBIAEoCRINCgV2YWx1ZRgCIAEoAzoCGAEieAoY",
+            "Q2FwYWNpdHlRdWFudGl0eUludGVydmFsEgwKBHR5cGUYASABKAkSFgoJbWlu",
+            "X3ZhbHVlGAIgASgDSACIAQESFgoJbWF4X3ZhbHVlGAMgASgDSAGIAQE6AhgB",
+            "QgwKCl9taW5fdmFsdWVCDAoKX21heF92YWx1ZSKVAgoNRGlzdGFuY2VMaW1p",
+            "dBIXCgptYXhfbWV0ZXJzGAEgASgDSACIAQESHAoPc29mdF9tYXhfbWV0ZXJz",
+            "GAIgASgDSAGIAQESLgohY29zdF9wZXJfa2lsb21ldGVyX2JlbG93X3NvZnRf",
+            "bWF4GAQgASgBSAKIAQESLgohY29zdF9wZXJfa2lsb21ldGVyX2Fib3ZlX3Nv",
+            "ZnRfbWF4GAMgASgBSAOIAQFCDQoLX21heF9tZXRlcnNCEgoQX3NvZnRfbWF4",
+            "X21ldGVyc0IkCiJfY29zdF9wZXJfa2lsb21ldGVyX2JlbG93X3NvZnRfbWF4",
+            "QiQKIl9jb3N0X3Blcl9raWxvbWV0ZXJfYWJvdmVfc29mdF9tYXgihQIKFFRy",
+            "YW5zaXRpb25BdHRyaWJ1dGVzEg8KB3NyY190YWcYASABKAkSGAoQZXhjbHVk",
+            "ZWRfc3JjX3RhZxgCIAEoCRIPCgdkc3RfdGFnGAMgASgJEhgKEGV4Y2x1ZGVk",
+            "X2RzdF90YWcYBCABKAkSDAoEY29zdBgFIAEoARIaChJjb3N0X3Blcl9raWxv",
+            "bWV0ZXIYBiABKAESQwoOZGlzdGFuY2VfbGltaXQYByABKAsyKy5nb29nbGUu",
+            "Y2xvdWQub3B0aW1pemF0aW9uLnYxLkRpc3RhbmNlTGltaXQSKAoFZGVsYXkY",
+            "CCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24igQEKCFdheXBvaW50",
+            "EjoKCGxvY2F0aW9uGAEgASgLMiYuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlv",
+            "bi52MS5Mb2NhdGlvbkgAEhIKCHBsYWNlX2lkGAIgASgJSAASFAoMc2lkZV9v",
+            "Zl9yb2FkGAMgASgIQg8KDWxvY2F0aW9uX3R5cGUiUgoITG9jYXRpb24SJAoH",
+            "bGF0X2xuZxgBIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZxIUCgdoZWFkaW5n",
+            "GAIgASgFSACIAQFCCgoIX2hlYWRpbmcijAQKCUJyZWFrUnVsZRJMCg5icmVh",
+            "a19yZXF1ZXN0cxgBIAMoCzI0Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24u",
+            "djEuQnJlYWtSdWxlLkJyZWFrUmVxdWVzdBJaChVmcmVxdWVuY3lfY29uc3Ry",
+            "YWludHMYAiADKAsyOy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkJy",
+            "ZWFrUnVsZS5GcmVxdWVuY3lDb25zdHJhaW50Gr4BCgxCcmVha1JlcXVlc3QS",
+            "PAoTZWFybGllc3Rfc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAhI6ChFsYXRlc3Rfc3RhcnRfdGltZRgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhI0CgxtaW5fZHVyYXRp",
+            "b24YAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhqTAQoT",
+            "RnJlcXVlbmN5Q29uc3RyYWludBI6ChJtaW5fYnJlYWtfZHVyYXRpb24YASAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhJAChhtYXhfaW50",
+            "ZXJfYnJlYWtfZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
+            "YXRpb25CA+BBAiLDFgoNU2hpcG1lbnRSb3V0ZRIVCg12ZWhpY2xlX2luZGV4",
+            "GAEgASgFEhUKDXZlaGljbGVfbGFiZWwYAiABKAkSNgoSdmVoaWNsZV9zdGFy",
+            "dF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChB2",
+            "ZWhpY2xlX2VuZF90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBJBCgZ2aXNpdHMYByADKAsyMS5nb29nbGUuY2xvdWQub3B0aW1pemF0",
+            "aW9uLnYxLlNoaXBtZW50Um91dGUuVmlzaXQSSwoLdHJhbnNpdGlvbnMYCCAD",
+            "KAsyNi5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91",
+            "dGUuVHJhbnNpdGlvbhIjChtoYXNfdHJhZmZpY19pbmZlYXNpYmlsaXRpZXMY",
+            "CSABKAgSUwoOcm91dGVfcG9seWxpbmUYCiABKAsyOy5nb29nbGUuY2xvdWQu",
+            "b3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUuRW5jb2RlZFBvbHlsaW5l",
+            "EkEKBmJyZWFrcxgLIAMoCzIxLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24u",
+            "djEuU2hpcG1lbnRSb3V0ZS5CcmVhaxJACgdtZXRyaWNzGAwgASgLMi8uZ29v",
+            "Z2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5BZ2dyZWdhdGVkTWV0cmljcxJQ",
+            "Cgtyb3V0ZV9jb3N0cxgRIAMoCzI7Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRp",
+            "b24udjEuU2hpcG1lbnRSb3V0ZS5Sb3V0ZUNvc3RzRW50cnkSGAoQcm91dGVf",
+            "dG90YWxfY29zdBgSIAEoARJFCgllbmRfbG9hZHMYDSADKAsyLi5nb29nbGUu",
+            "Y2xvdWQub3B0aW1pemF0aW9uLnYxLkNhcGFjaXR5UXVhbnRpdHlCAhgBElAK",
+            "DHRyYXZlbF9zdGVwcxgOIAMoCzI2Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRp",
+            "b24udjEuU2hpcG1lbnRSb3V0ZS5UcmF2ZWxTdGVwQgIYARI1Cg52ZWhpY2xl",
+            "X2RldG91chgPIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkICGAES",
+            "VwoYZGVsYXlfYmVmb3JlX3ZlaGljbGVfZW5kGBAgASgLMjEuZ29vZ2xlLmNs",
+            "b3VkLm9wdGltaXphdGlvbi52MS5TaGlwbWVudFJvdXRlLkRlbGF5QgIYARpo",
+            "CgVEZWxheRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbjoCGAEa9QQKBVZpc2l0EhYKDnNoaXBtZW50X2luZGV4GAEg",
+            "ASgFEhEKCWlzX3BpY2t1cBgCIAEoCBIbChN2aXNpdF9yZXF1ZXN0X2luZGV4",
+            "GAMgASgFEi4KCnN0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wElgKDGxvYWRfZGVtYW5kcxgLIAMoCzJCLmdvb2dsZS5jbG91",
+            "ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZS5WaXNpdC5Mb2FkRGVt",
+            "YW5kc0VudHJ5EikKBmRldG91chgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5E",
+            "dXJhdGlvbhIWCg5zaGlwbWVudF9sYWJlbBgHIAEoCRITCgt2aXNpdF9sYWJl",
+            "bBgIIAEoCRJJCg1hcnJpdmFsX2xvYWRzGAkgAygLMi4uZ29vZ2xlLmNsb3Vk",
+            "Lm9wdGltaXphdGlvbi52MS5DYXBhY2l0eVF1YW50aXR5QgIYARJRChJkZWxh",
+            "eV9iZWZvcmVfc3RhcnQYCiABKAsyMS5nb29nbGUuY2xvdWQub3B0aW1pemF0",
+            "aW9uLnYxLlNoaXBtZW50Um91dGUuRGVsYXlCAhgBEkMKB2RlbWFuZHMYBSAD",
+            "KAsyLi5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkNhcGFjaXR5UXVh",
+            "bnRpdHlCAhgBGl8KEExvYWREZW1hbmRzRW50cnkSCwoDa2V5GAEgASgJEjoK",
+            "BXZhbHVlGAIgASgLMisuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5T",
+            "aGlwbWVudC5Mb2FkOgI4ARrkBQoKVHJhbnNpdGlvbhIyCg90cmF2ZWxfZHVy",
+            "YXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SHgoWdHJh",
+            "dmVsX2Rpc3RhbmNlX21ldGVycxgCIAEoARIgChh0cmFmZmljX2luZm9fdW5h",
+            "dmFpbGFibGUYAyABKAgSMQoOZGVsYXlfZHVyYXRpb24YBCABKAsyGS5nb29n",
+            "bGUucHJvdG9idWYuRHVyYXRpb24SMQoOYnJlYWtfZHVyYXRpb24YBSABKAsy",
+            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMAoNd2FpdF9kdXJhdGlvbhgG",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIxCg50b3RhbF9kdXJh",
+            "dGlvbhgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIuCgpzdGFy",
+            "dF90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJTCg5y",
+            "b3V0ZV9wb2x5bGluZRgJIAEoCzI7Lmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRp",
+            "b24udjEuU2hpcG1lbnRSb3V0ZS5FbmNvZGVkUG9seWxpbmUSXwoNdmVoaWNs",
+            "ZV9sb2FkcxgLIAMoCzJILmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEu",
+            "U2hpcG1lbnRSb3V0ZS5UcmFuc2l0aW9uLlZlaGljbGVMb2Fkc0VudHJ5EkEK",
+            "BWxvYWRzGAogAygLMi4uZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5D",
+            "YXBhY2l0eVF1YW50aXR5QgIYARpsChFWZWhpY2xlTG9hZHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSRgoFdmFsdWUYAiABKAsyNy5nb29nbGUuY2xvdWQub3B0aW1p",
+            "emF0aW9uLnYxLlNoaXBtZW50Um91dGUuVmVoaWNsZUxvYWQ6AjgBGh0KC1Zl",
+            "aGljbGVMb2FkEg4KBmFtb3VudBgBIAEoAxohCg9FbmNvZGVkUG9seWxpbmUS",
+            "DgoGcG9pbnRzGAEgASgJGmQKBUJyZWFrEi4KCnN0YXJ0X3RpbWUYASABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEisKCGR1cmF0aW9uGAIgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGs0BCgpUcmF2ZWxTdGVwEisK",
+            "CGR1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhcK",
+            "D2Rpc3RhbmNlX21ldGVycxgCIAEoARIgChh0cmFmZmljX2luZm9fdW5hdmFp",
+            "bGFibGUYAyABKAgSUwoOcm91dGVfcG9seWxpbmUYBCABKAsyOy5nb29nbGUu",
+            "Y2xvdWQub3B0aW1pemF0aW9uLnYxLlNoaXBtZW50Um91dGUuRW5jb2RlZFBv",
+            "bHlsaW5lOgIYARoxCg9Sb3V0ZUNvc3RzRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgBOgI4ASL+BAoPU2tpcHBlZFNoaXBtZW50Eg0KBWluZGV4",
+            "GAEgASgFEg0KBWxhYmVsGAIgASgJEkUKB3JlYXNvbnMYAyADKAsyNC5nb29n",
+            "bGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLlNraXBwZWRTaGlwbWVudC5SZWFz",
+            "b24ahQQKBlJlYXNvbhJHCgRjb2RlGAEgASgOMjkuZ29vZ2xlLmNsb3VkLm9w",
+            "dGltaXphdGlvbi52MS5Ta2lwcGVkU2hpcG1lbnQuUmVhc29uLkNvZGUSIgoV",
+            "ZXhhbXBsZV92ZWhpY2xlX2luZGV4GAIgASgFSACIAQESJgoeZXhhbXBsZV9l",
+            "eGNlZWRlZF9jYXBhY2l0eV90eXBlGAMgASgJIssCCgRDb2RlEhQKEENPREVf",
+            "VU5TUEVDSUZJRUQQABIOCgpOT19WRUhJQ0xFEAESIwofREVNQU5EX0VYQ0VF",
+            "RFNfVkVISUNMRV9DQVBBQ0lUWRACEjUKMUNBTk5PVF9CRV9QRVJGT1JNRURf",
+            "V0lUSElOX1ZFSElDTEVfRElTVEFOQ0VfTElNSVQQAxI1CjFDQU5OT1RfQkVf",
+            "UEVSRk9STUVEX1dJVEhJTl9WRUhJQ0xFX0RVUkFUSU9OX0xJTUlUEAQSPAo4",
+            "Q0FOTk9UX0JFX1BFUkZPUk1FRF9XSVRISU5fVkVISUNMRV9UUkFWRUxfRFVS",
+            "QVRJT05fTElNSVQQBRIzCi9DQU5OT1RfQkVfUEVSRk9STUVEX1dJVEhJTl9W",
+            "RUhJQ0xFX1RJTUVfV0lORE9XUxAGEhcKE1ZFSElDTEVfTk9UX0FMTE9XRUQQ",
+            "B0IYChZfZXhhbXBsZV92ZWhpY2xlX2luZGV4ItgFChFBZ2dyZWdhdGVkTWV0",
+            "cmljcxIgChhwZXJmb3JtZWRfc2hpcG1lbnRfY291bnQYASABKAUSMgoPdHJh",
+            "dmVsX2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "EjAKDXdhaXRfZHVyYXRpb24YAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
+            "YXRpb24SMQoOZGVsYXlfZHVyYXRpb24YBCABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb24SMQoOYnJlYWtfZHVyYXRpb24YBSABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24SMQoOdmlzaXRfZHVyYXRpb24YBiABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb24SMQoOdG90YWxfZHVyYXRpb24YByAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SHgoWdHJhdmVsX2Rpc3Rh",
+            "bmNlX21ldGVycxgIIAEoARJQCgltYXhfbG9hZHMYCSADKAsyPS5nb29nbGUu",
+            "Y2xvdWQub3B0aW1pemF0aW9uLnYxLkFnZ3JlZ2F0ZWRNZXRyaWNzLk1heExv",
+            "YWRzRW50cnkSTQoFY29zdHMYCiADKAsyOi5nb29nbGUuY2xvdWQub3B0aW1p",
+            "emF0aW9uLnYxLkFnZ3JlZ2F0ZWRNZXRyaWNzLkNvc3RzRW50cnlCAhgBEhYK",
+            "CnRvdGFsX2Nvc3QYCyABKAFCAhgBGmgKDU1heExvYWRzRW50cnkSCwoDa2V5",
+            "GAEgASgJEkYKBXZhbHVlGAIgASgLMjcuZ29vZ2xlLmNsb3VkLm9wdGltaXph",
+            "dGlvbi52MS5TaGlwbWVudFJvdXRlLlZlaGljbGVMb2FkOgI4ARosCgpDb3N0",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAToCOAEinwYKGklu",
+            "amVjdGVkU29sdXRpb25Db25zdHJhaW50EjsKBnJvdXRlcxgBIAMoCzIrLmdv",
+            "b2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuU2hpcG1lbnRSb3V0ZRJIChFz",
+            "a2lwcGVkX3NoaXBtZW50cxgCIAMoCzItLmdvb2dsZS5jbG91ZC5vcHRpbWl6",
+            "YXRpb24udjEuU2tpcHBlZFNoaXBtZW50Em0KFmNvbnN0cmFpbnRfcmVsYXhh",
+            "dGlvbnMYAyADKAsyTS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLklu",
+            "amVjdGVkU29sdXRpb25Db25zdHJhaW50LkNvbnN0cmFpbnRSZWxheGF0aW9u",
+            "GooEChRDb25zdHJhaW50UmVsYXhhdGlvbhJtCgtyZWxheGF0aW9ucxgBIAMo",
+            "CzJYLmdvb2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjEuSW5qZWN0ZWRTb2x1",
+            "dGlvbkNvbnN0cmFpbnQuQ29uc3RyYWludFJlbGF4YXRpb24uUmVsYXhhdGlv",
+            "bhIXCg92ZWhpY2xlX2luZGljZXMYAiADKAUa6QIKClJlbGF4YXRpb24SbQoF",
+            "bGV2ZWwYASABKA4yXi5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLklu",
+            "amVjdGVkU29sdXRpb25Db25zdHJhaW50LkNvbnN0cmFpbnRSZWxheGF0aW9u",
+            "LlJlbGF4YXRpb24uTGV2ZWwSMgoOdGhyZXNob2xkX3RpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEh0KFXRocmVzaG9sZF92aXNpdF9j",
+            "b3VudBgDIAEoBSKYAQoFTGV2ZWwSFQoRTEVWRUxfVU5TUEVDSUZJRUQQABIl",
+            "CiFSRUxBWF9WSVNJVF9USU1FU19BRlRFUl9USFJFU0hPTEQQARIyCi5SRUxB",
+            "WF9WSVNJVF9USU1FU19BTkRfU0VRVUVOQ0VfQUZURVJfVEhSRVNIT0xEEAIS",
+            "HQoZUkVMQVhfQUxMX0FGVEVSX1RIUkVTSE9MRBADIv0CChxPcHRpbWl6ZVRv",
+            "dXJzVmFsaWRhdGlvbkVycm9yEgwKBGNvZGUYASABKAUSFAoMZGlzcGxheV9u",
+            "YW1lGAIgASgJElkKBmZpZWxkcxgDIAMoCzJJLmdvb2dsZS5jbG91ZC5vcHRp",
+            "bWl6YXRpb24udjEuT3B0aW1pemVUb3Vyc1ZhbGlkYXRpb25FcnJvci5GaWVs",
+            "ZFJlZmVyZW5jZRIVCg1lcnJvcl9tZXNzYWdlGAQgASgJEhgKEG9mZmVuZGlu",
+            "Z192YWx1ZXMYBSABKAkarAEKDkZpZWxkUmVmZXJlbmNlEgwKBG5hbWUYASAB",
+            "KAkSDwoFaW5kZXgYAiABKAVIABINCgNrZXkYBCABKAlIABJcCglzdWJfZmll",
+            "bGQYAyABKAsySS5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLk9wdGlt",
+            "aXplVG91cnNWYWxpZGF0aW9uRXJyb3IuRmllbGRSZWZlcmVuY2VCDgoMaW5k",
+            "ZXhfb3Jfa2V5MuAECgxGbGVldFJvdXRpbmcS4gEKDU9wdGltaXplVG91cnMS",
+            "Mi5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLk9wdGltaXplVG91cnNS",
+            "ZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLm9wdGltaXphdGlvbi52MS5PcHRpbWl6",
+            "ZVRvdXJzUmVzcG9uc2UiaILT5JMCYiIxL3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKn06b3B0aW1pemVUb3VyczoBKloqIiUvdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qfTpvcHRpbWl6ZVRvdXJzOgEqEpQCChJCYXRjaE9wdGlt",
+            "aXplVG91cnMSNy5nb29nbGUuY2xvdWQub3B0aW1pemF0aW9uLnYxLkJhdGNo",
+            "T3B0aW1pemVUb3Vyc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uIqUBykEwChpCYXRjaE9wdGltaXplVG91cnNSZXNwb25zZRISQXN5",
+            "bmNNb2RlbE1ldGFkYXRhgtPkkwJsIjYvdjEve3BhcmVudD1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qfTpiYXRjaE9wdGltaXplVG91cnM6ASpaLyIqL3YxL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKn06YmF0Y2hPcHRpbWl6ZVRvdXJzOgEqGlTKQSBj",
+            "bG91ZG9wdGltaXphdGlvbi5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
+            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CfQogY29tLmdv",
+            "b2dsZS5jbG91ZC5vcHRpbWl6YXRpb24udjFCEUZsZWV0Um91dGluZ1Byb3Rv",
+            "UAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vb3B0aW1pemF0aW9uL2FwaXYxL29w",
+            "dGltaXphdGlvbnBiO29wdGltaXphdGlvbnBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Optimization.V1.AsyncModelReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.OptimizeToursRequest), global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Parser, new[]{ "Parent", "Timeout", "Model", "SolvingMode", "MaxValidationErrors", "SearchMode", "InjectedFirstSolutionRoutes", "InjectedSolutionConstraint", "RefreshDetailsRoutes", "InterpretInjectedSolutionsUsingLabels", "ConsiderRoadTraffic", "PopulatePolylines", "PopulateTransitionPolylines", "AllowLargeDeadlineDespiteInterruptionRisk", "UseGeodesicDistances", "GeodesicMetersPerSecond", "Label", "PopulateTravelStepPolylines" }, new[]{ "MaxValidationErrors", "GeodesicMetersPerSecond" }, new[]{ typeof(global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SolvingMode), typeof(global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SearchMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.OptimizeToursRequest), global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Parser, new[]{ "Parent", "Timeout", "Model", "SolvingMode", "SearchMode", "InjectedFirstSolutionRoutes", "InjectedSolutionConstraint", "RefreshDetailsRoutes", "InterpretInjectedSolutionsUsingLabels", "ConsiderRoadTraffic", "PopulatePolylines", "PopulateTransitionPolylines", "AllowLargeDeadlineDespiteInterruptionRisk", "UseGeodesicDistances", "GeodesicMetersPerSecond", "MaxValidationErrors", "Label", "PopulateTravelStepPolylines" }, new[]{ "GeodesicMetersPerSecond", "MaxValidationErrors" }, new[]{ typeof(global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SolvingMode), typeof(global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SearchMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.OptimizeToursResponse), global::Google.Cloud.Optimization.V1.OptimizeToursResponse.Parser, new[]{ "Routes", "RequestLabel", "SkippedShipments", "ValidationErrors", "Metrics", "TotalCost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.OptimizeToursResponse.Types.Metrics), global::Google.Cloud.Optimization.V1.OptimizeToursResponse.Types.Metrics.Parser, new[]{ "AggregatedRouteMetrics", "SkippedMandatoryShipmentCount", "UsedVehicleCount", "EarliestVehicleStartTime", "LatestVehicleEndTime", "Costs", "TotalCost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.BatchOptimizeToursRequest), global::Google.Cloud.Optimization.V1.BatchOptimizeToursRequest.Parser, new[]{ "Parent", "ModelConfigs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.BatchOptimizeToursRequest.Types.AsyncModelConfig), global::Google.Cloud.Optimization.V1.BatchOptimizeToursRequest.Types.AsyncModelConfig.Parser, new[]{ "DisplayName", "InputConfig", "OutputConfig", "EnableCheckpoints" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.BatchOptimizeToursResponse), global::Google.Cloud.Optimization.V1.BatchOptimizeToursResponse.Parser, null, null, null, null, null),
@@ -429,13 +435,14 @@ namespace Google.Cloud.Optimization.V1 {
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.ShipmentTypeIncompatibility), global::Google.Cloud.Optimization.V1.ShipmentTypeIncompatibility.Parser, new[]{ "Types_", "IncompatibilityMode" }, null, new[]{ typeof(global::Google.Cloud.Optimization.V1.ShipmentTypeIncompatibility.Types.IncompatibilityMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.ShipmentTypeRequirement), global::Google.Cloud.Optimization.V1.ShipmentTypeRequirement.Parser, new[]{ "RequiredShipmentTypeAlternatives", "DependentShipmentTypes", "RequirementMode" }, null, new[]{ typeof(global::Google.Cloud.Optimization.V1.ShipmentTypeRequirement.Types.RequirementMode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.Vehicle), global::Google.Cloud.Optimization.V1.Vehicle.Parser, new[]{ "TravelMode", "StartLocation", "StartWaypoint", "EndLocation", "EndWaypoint", "StartTags", "EndTags", "StartTimeWindows", "EndTimeWindows", "TravelDurationMultiple", "UnloadingPolicy", "LoadLimits", "CostPerHour", "CostPerTraveledHour", "CostPerKilometer", "FixedCost", "UsedIfRouteIsEmpty", "RouteDurationLimit", "TravelDurationLimit", "RouteDistanceLimit", "ExtraVisitDurationForVisitType", "BreakRule", "Label", "Ignore", "BreakRuleIndices", "Capacities", "StartLoadIntervals", "EndLoadIntervals" }, new[]{ "TravelDurationMultiple" }, new[]{ typeof(global::Google.Cloud.Optimization.V1.Vehicle.Types.TravelMode), typeof(global::Google.Cloud.Optimization.V1.Vehicle.Types.UnloadingPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.Vehicle.Types.LoadLimit), global::Google.Cloud.Optimization.V1.Vehicle.Types.LoadLimit.Parser, new[]{ "MaxLoad", "SoftMaxLoad", "CostPerUnitAboveSoftMax", "StartLoadInterval", "EndLoadInterval" }, new[]{ "MaxLoad" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.Vehicle.Types.LoadLimit.Types.Interval), global::Google.Cloud.Optimization.V1.Vehicle.Types.LoadLimit.Types.Interval.Parser, new[]{ "Min", "Max" }, new[]{ "Max" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.RouteModifiers), global::Google.Cloud.Optimization.V1.RouteModifiers.Parser, new[]{ "AvoidTolls", "AvoidHighways", "AvoidFerries", "AvoidIndoor" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.Vehicle), global::Google.Cloud.Optimization.V1.Vehicle.Parser, new[]{ "TravelMode", "RouteModifiers", "StartLocation", "StartWaypoint", "EndLocation", "EndWaypoint", "StartTags", "EndTags", "StartTimeWindows", "EndTimeWindows", "TravelDurationMultiple", "UnloadingPolicy", "LoadLimits", "CostPerHour", "CostPerTraveledHour", "CostPerKilometer", "FixedCost", "UsedIfRouteIsEmpty", "RouteDurationLimit", "TravelDurationLimit", "RouteDistanceLimit", "ExtraVisitDurationForVisitType", "BreakRule", "Label", "Ignore", "BreakRuleIndices", "Capacities", "StartLoadIntervals", "EndLoadIntervals" }, new[]{ "TravelDurationMultiple" }, new[]{ typeof(global::Google.Cloud.Optimization.V1.Vehicle.Types.TravelMode), typeof(global::Google.Cloud.Optimization.V1.Vehicle.Types.UnloadingPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.Vehicle.Types.LoadLimit), global::Google.Cloud.Optimization.V1.Vehicle.Types.LoadLimit.Parser, new[]{ "MaxLoad", "SoftMaxLoad", "CostPerUnitAboveSoftMax", "StartLoadInterval", "EndLoadInterval" }, new[]{ "MaxLoad" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.Vehicle.Types.LoadLimit.Types.Interval), global::Google.Cloud.Optimization.V1.Vehicle.Types.LoadLimit.Types.Interval.Parser, new[]{ "Min", "Max" }, new[]{ "Max" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.Vehicle.Types.DurationLimit), global::Google.Cloud.Optimization.V1.Vehicle.Types.DurationLimit.Parser, new[]{ "MaxDuration", "SoftMaxDuration", "CostPerHourAfterSoftMax", "QuadraticSoftMaxDuration", "CostPerSquareHourAfterQuadraticSoftMax" }, new[]{ "CostPerHourAfterSoftMax", "CostPerSquareHourAfterQuadraticSoftMax" }, null, null, null),
             null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.TimeWindow), global::Google.Cloud.Optimization.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime", "SoftStartTime", "SoftEndTime", "CostPerHourBeforeSoftStartTime", "CostPerHourAfterSoftEndTime" }, new[]{ "CostPerHourBeforeSoftStartTime", "CostPerHourAfterSoftEndTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.CapacityQuantity), global::Google.Cloud.Optimization.V1.CapacityQuantity.Parser, new[]{ "Type", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.CapacityQuantityInterval), global::Google.Cloud.Optimization.V1.CapacityQuantityInterval.Parser, new[]{ "Type", "MinValue", "MaxValue" }, new[]{ "MinValue", "MaxValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.DistanceLimit), global::Google.Cloud.Optimization.V1.DistanceLimit.Parser, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerAboveSoftMax" }, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerAboveSoftMax" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.DistanceLimit), global::Google.Cloud.Optimization.V1.DistanceLimit.Parser, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerBelowSoftMax", "CostPerKilometerAboveSoftMax" }, new[]{ "MaxMeters", "SoftMaxMeters", "CostPerKilometerBelowSoftMax", "CostPerKilometerAboveSoftMax" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.TransitionAttributes), global::Google.Cloud.Optimization.V1.TransitionAttributes.Parser, new[]{ "SrcTag", "ExcludedSrcTag", "DstTag", "ExcludedDstTag", "Cost", "CostPerKilometer", "DistanceLimit", "Delay" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.Waypoint), global::Google.Cloud.Optimization.V1.Waypoint.Parser, new[]{ "Location", "PlaceId", "SideOfRoad" }, new[]{ "LocationType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Optimization.V1.Location), global::Google.Cloud.Optimization.V1.Location.Parser, new[]{ "LatLng", "Heading" }, new[]{ "Heading" }, null, null, null),
@@ -463,6 +470,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// Request to be given to a tour optimization solver which defines the
   /// shipment model to solve as well as optimization parameters.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OptimizeToursRequest : pb::IMessage<OptimizeToursRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -503,7 +511,6 @@ namespace Google.Cloud.Optimization.V1 {
       timeout_ = other.timeout_ != null ? other.timeout_.Clone() : null;
       model_ = other.model_ != null ? other.model_.Clone() : null;
       solvingMode_ = other.solvingMode_;
-      maxValidationErrors_ = other.maxValidationErrors_;
       searchMode_ = other.searchMode_;
       injectedFirstSolutionRoutes_ = other.injectedFirstSolutionRoutes_.Clone();
       injectedSolutionConstraint_ = other.injectedSolutionConstraint_ != null ? other.injectedSolutionConstraint_.Clone() : null;
@@ -515,6 +522,7 @@ namespace Google.Cloud.Optimization.V1 {
       allowLargeDeadlineDespiteInterruptionRisk_ = other.allowLargeDeadlineDespiteInterruptionRisk_;
       useGeodesicDistances_ = other.useGeodesicDistances_;
       geodesicMetersPerSecond_ = other.geodesicMetersPerSecond_;
+      maxValidationErrors_ = other.maxValidationErrors_;
       label_ = other.label_;
       populateTravelStepPolylines_ = other.populateTravelStepPolylines_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -593,40 +601,6 @@ namespace Google.Cloud.Optimization.V1 {
       set {
         solvingMode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "max_validation_errors" field.</summary>
-    public const int MaxValidationErrorsFieldNumber = 5;
-    private int maxValidationErrors_;
-    /// <summary>
-    /// Truncates the number of validation errors returned. These errors are
-    /// typically attached to an INVALID_ARGUMENT error payload as a BadRequest
-    /// error detail (https://cloud.google.com/apis/design/errors#error_details),
-    /// unless solving_mode=VALIDATE_ONLY: see the
-    /// [OptimizeToursResponse.validation_errors][google.cloud.optimization.v1.OptimizeToursResponse.validation_errors]
-    /// field.
-    /// This defaults to 100 and is capped at 10,000.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int MaxValidationErrors {
-      get { if ((_hasBits0 & 1) != 0) { return maxValidationErrors_; } else { return 0; } }
-      set {
-        _hasBits0 |= 1;
-        maxValidationErrors_ = value;
-      }
-    }
-    /// <summary>Gets whether the "max_validation_errors" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasMaxValidationErrors {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "max_validation_errors" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearMaxValidationErrors() {
-      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "search_mode" field.</summary>
@@ -909,6 +883,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "geodesic_meters_per_second" field.</summary>
     public const int GeodesicMetersPerSecondFieldNumber = 16;
+    private readonly static double GeodesicMetersPerSecondDefaultValue = 0D;
+
     private double geodesicMetersPerSecond_;
     /// <summary>
     /// When `use_geodesic_distances` is true, this field must be set and defines
@@ -918,7 +894,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double GeodesicMetersPerSecond {
-      get { if ((_hasBits0 & 2) != 0) { return geodesicMetersPerSecond_; } else { return 0D; } }
+      get { if ((_hasBits0 & 2) != 0) { return geodesicMetersPerSecond_; } else { return GeodesicMetersPerSecondDefaultValue; } }
       set {
         _hasBits0 |= 2;
         geodesicMetersPerSecond_ = value;
@@ -935,6 +911,42 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearGeodesicMetersPerSecond() {
       _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "max_validation_errors" field.</summary>
+    public const int MaxValidationErrorsFieldNumber = 5;
+    private readonly static int MaxValidationErrorsDefaultValue = 0;
+
+    private int maxValidationErrors_;
+    /// <summary>
+    /// Truncates the number of validation errors returned. These errors are
+    /// typically attached to an INVALID_ARGUMENT error payload as a BadRequest
+    /// error detail (https://cloud.google.com/apis/design/errors#error_details),
+    /// unless solving_mode=VALIDATE_ONLY: see the
+    /// [OptimizeToursResponse.validation_errors][google.cloud.optimization.v1.OptimizeToursResponse.validation_errors]
+    /// field.
+    /// This defaults to 100 and is capped at 10,000.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxValidationErrors {
+      get { if ((_hasBits0 & 1) != 0) { return maxValidationErrors_; } else { return MaxValidationErrorsDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        maxValidationErrors_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_validation_errors" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxValidationErrors {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "max_validation_errors" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxValidationErrors() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "label" field.</summary>
@@ -993,7 +1005,6 @@ namespace Google.Cloud.Optimization.V1 {
       if (!object.Equals(Timeout, other.Timeout)) return false;
       if (!object.Equals(Model, other.Model)) return false;
       if (SolvingMode != other.SolvingMode) return false;
-      if (MaxValidationErrors != other.MaxValidationErrors) return false;
       if (SearchMode != other.SearchMode) return false;
       if(!injectedFirstSolutionRoutes_.Equals(other.injectedFirstSolutionRoutes_)) return false;
       if (!object.Equals(InjectedSolutionConstraint, other.InjectedSolutionConstraint)) return false;
@@ -1005,6 +1016,7 @@ namespace Google.Cloud.Optimization.V1 {
       if (AllowLargeDeadlineDespiteInterruptionRisk != other.AllowLargeDeadlineDespiteInterruptionRisk) return false;
       if (UseGeodesicDistances != other.UseGeodesicDistances) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(GeodesicMetersPerSecond, other.GeodesicMetersPerSecond)) return false;
+      if (MaxValidationErrors != other.MaxValidationErrors) return false;
       if (Label != other.Label) return false;
       if (PopulateTravelStepPolylines != other.PopulateTravelStepPolylines) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1018,7 +1030,6 @@ namespace Google.Cloud.Optimization.V1 {
       if (timeout_ != null) hash ^= Timeout.GetHashCode();
       if (model_ != null) hash ^= Model.GetHashCode();
       if (SolvingMode != global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SolvingMode.DefaultSolve) hash ^= SolvingMode.GetHashCode();
-      if (HasMaxValidationErrors) hash ^= MaxValidationErrors.GetHashCode();
       if (SearchMode != global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SearchMode.Unspecified) hash ^= SearchMode.GetHashCode();
       hash ^= injectedFirstSolutionRoutes_.GetHashCode();
       if (injectedSolutionConstraint_ != null) hash ^= InjectedSolutionConstraint.GetHashCode();
@@ -1030,6 +1041,7 @@ namespace Google.Cloud.Optimization.V1 {
       if (AllowLargeDeadlineDespiteInterruptionRisk != false) hash ^= AllowLargeDeadlineDespiteInterruptionRisk.GetHashCode();
       if (UseGeodesicDistances != false) hash ^= UseGeodesicDistances.GetHashCode();
       if (HasGeodesicMetersPerSecond) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(GeodesicMetersPerSecond);
+      if (HasMaxValidationErrors) hash ^= MaxValidationErrors.GetHashCode();
       if (Label.Length != 0) hash ^= Label.GetHashCode();
       if (PopulateTravelStepPolylines != false) hash ^= PopulateTravelStepPolylines.GetHashCode();
       if (_unknownFields != null) {
@@ -1214,9 +1226,6 @@ namespace Google.Cloud.Optimization.V1 {
       if (SolvingMode != global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SolvingMode.DefaultSolve) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SolvingMode);
       }
-      if (HasMaxValidationErrors) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxValidationErrors);
-      }
       if (SearchMode != global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SearchMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SearchMode);
       }
@@ -1245,6 +1254,9 @@ namespace Google.Cloud.Optimization.V1 {
       }
       if (HasGeodesicMetersPerSecond) {
         size += 2 + 8;
+      }
+      if (HasMaxValidationErrors) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxValidationErrors);
       }
       if (Label.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Label);
@@ -1282,9 +1294,6 @@ namespace Google.Cloud.Optimization.V1 {
       if (other.SolvingMode != global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SolvingMode.DefaultSolve) {
         SolvingMode = other.SolvingMode;
       }
-      if (other.HasMaxValidationErrors) {
-        MaxValidationErrors = other.MaxValidationErrors;
-      }
       if (other.SearchMode != global::Google.Cloud.Optimization.V1.OptimizeToursRequest.Types.SearchMode.Unspecified) {
         SearchMode = other.SearchMode;
       }
@@ -1316,6 +1325,9 @@ namespace Google.Cloud.Optimization.V1 {
       }
       if (other.HasGeodesicMetersPerSecond) {
         GeodesicMetersPerSecond = other.GeodesicMetersPerSecond;
+      }
+      if (other.HasMaxValidationErrors) {
+        MaxValidationErrors = other.MaxValidationErrors;
       }
       if (other.Label.Length != 0) {
         Label = other.Label;
@@ -1545,12 +1557,20 @@ namespace Google.Cloud.Optimization.V1 {
         [pbr::OriginalName("VALIDATE_ONLY")] ValidateOnly = 1,
         /// <summary>
         /// Only populates
+        /// [OptimizeToursResponse.validation_errors][google.cloud.optimization.v1.OptimizeToursResponse.validation_errors]
+        /// or
         /// [OptimizeToursResponse.skipped_shipments][google.cloud.optimization.v1.OptimizeToursResponse.skipped_shipments],
         /// and doesn't actually solve the rest of the request (`status` and `routes`
         /// are unset in the response).
+        /// If infeasibilities in `injected_solution_constraint` routes are detected
+        /// they are populated in the
+        /// [OptimizeToursResponse.validation_errors][google.cloud.optimization.v1.OptimizeToursResponse.validation_errors]
+        /// field and
+        /// [OptimizeToursResponse.skipped_shipments][google.cloud.optimization.v1.OptimizeToursResponse.skipped_shipments]
+        /// is left empty.
         ///
         /// *IMPORTANT*: not all infeasible shipments are returned here, but only the
-        /// ones that are detected as infeasible as a preprocessing.
+        /// ones that are detected as infeasible during preprocessing.
         /// </summary>
         [pbr::OriginalName("DETECT_SOME_INFEASIBLE_SHIPMENTS")] DetectSomeInfeasibleShipments = 2,
       }
@@ -1584,6 +1604,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// followed by each vehicle, the shipments which have been skipped and the
   /// overall cost of the solution.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OptimizeToursResponse : pb::IMessage<OptimizeToursResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1969,6 +1990,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// <summary>
       /// Overall metrics, aggregated over all routes.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Metrics : pb::IMessage<Metrics>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2319,7 +2341,7 @@ namespace Google.Cloud.Optimization.V1 {
             }
             LatestVehicleEndTime.MergeFrom(other.LatestVehicleEndTime);
           }
-          costs_.Add(other.costs_);
+          costs_.MergeFrom(other.costs_);
           if (other.TotalCost != 0D) {
             TotalCost = other.TotalCost;
           }
@@ -2446,6 +2468,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// information to read/write and parse the files. All the input and output files
   /// should be under the same project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchOptimizeToursRequest : pb::IMessage<BatchOptimizeToursRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2678,6 +2701,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// <summary>
       /// Information for solving one optimization model asynchronously.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AsyncModelConfig : pb::IMessage<AsyncModelConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3025,6 +3049,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// Response to a `BatchOptimizeToursRequest`. This is returned in
   /// the LRO Operation after the operation is complete.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchOptimizeToursResponse : pb::IMessage<BatchOptimizeToursResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3186,6 +3211,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// * the unperformed shipment penalties.
   /// * the cost of the global duration of the shipments
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ShipmentModel : pb::IMessage<ShipmentModel>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3275,6 +3301,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "max_active_vehicles" field.</summary>
     public const int MaxActiveVehiclesFieldNumber = 4;
+    private readonly static int MaxActiveVehiclesDefaultValue = 0;
+
     private int maxActiveVehicles_;
     /// <summary>
     /// Constrains the maximum number of active vehicles. A vehicle is active if
@@ -3287,7 +3315,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxActiveVehicles {
-      get { if ((_hasBits0 & 1) != 0) { return maxActiveVehicles_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return maxActiveVehicles_; } else { return MaxActiveVehiclesDefaultValue; } }
       set {
         _hasBits0 |= 1;
         maxActiveVehicles_ = value;
@@ -3965,6 +3993,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// Specifies a duration and distance matrix from visit and vehicle start
       /// locations to visit and vehicle end locations.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DurationDistanceMatrix : pb::IMessage<DurationDistanceMatrix>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4202,6 +4231,7 @@ namespace Google.Cloud.Optimization.V1 {
           /// <summary>
           /// Specifies a row of the duration and distance matrix.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Row : pb::IMessage<Row>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -4434,6 +4464,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// Furthermore, precedences only apply when both shipments are performed and
       /// are otherwise ignored.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PrecedenceRule : pb::IMessage<PrecedenceRule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4486,6 +4517,8 @@ namespace Google.Cloud.Optimization.V1 {
 
         /// <summary>Field number for the "first_index" field.</summary>
         public const int FirstIndexFieldNumber = 1;
+        private readonly static int FirstIndexDefaultValue = 0;
+
         private int firstIndex_;
         /// <summary>
         /// Shipment index of the "first" event. This field must be specified.
@@ -4493,7 +4526,7 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int FirstIndex {
-          get { if ((_hasBits0 & 1) != 0) { return firstIndex_; } else { return 0; } }
+          get { if ((_hasBits0 & 1) != 0) { return firstIndex_; } else { return FirstIndexDefaultValue; } }
           set {
             _hasBits0 |= 1;
             firstIndex_ = value;
@@ -4529,6 +4562,8 @@ namespace Google.Cloud.Optimization.V1 {
 
         /// <summary>Field number for the "second_index" field.</summary>
         public const int SecondIndexFieldNumber = 2;
+        private readonly static int SecondIndexDefaultValue = 0;
+
         private int secondIndex_;
         /// <summary>
         /// Shipment index of the "second" event. This field must be specified.
@@ -4536,7 +4571,7 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int SecondIndex {
-          get { if ((_hasBits0 & 2) != 0) { return secondIndex_; } else { return 0; } }
+          get { if ((_hasBits0 & 2) != 0) { return secondIndex_; } else { return SecondIndexDefaultValue; } }
           set {
             _hasBits0 |= 2;
             secondIndex_ = value;
@@ -4839,6 +4874,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// * after the vehicle end (ditto, with the vehicle end time).
       /// </summary>
       [global::System.ObsoleteAttribute]
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BreakRule : pb::IMessage<BreakRule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5060,6 +5096,7 @@ namespace Google.Cloud.Optimization.V1 {
           /// (`earliest_start_time` / `latest_start_time`) may overlap, but they must
           /// be compatible with the order (this is checked).
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class BreakRequest : pb::IMessage<BreakRequest>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -5394,6 +5431,7 @@ namespace Google.Cloud.Optimization.V1 {
           ///   23:59 vehicle end
           /// ```
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class FrequencyConstraint : pb::IMessage<FrequencyConstraint>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -5664,6 +5702,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// accordingly), then visit one of its delivery locations later on (and
   /// therefore re-increase its spare capacities accordingly).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Shipment : pb::IMessage<Shipment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5774,6 +5813,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "penalty_cost" field.</summary>
     public const int PenaltyCostFieldNumber = 4;
+    private readonly static double PenaltyCostDefaultValue = 0D;
+
     private double penaltyCost_;
     /// <summary>
     /// If the shipment is not completed, this penalty is added to the overall
@@ -5788,7 +5829,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double PenaltyCost {
-      get { if ((_hasBits0 & 1) != 0) { return penaltyCost_; } else { return 0D; } }
+      get { if ((_hasBits0 & 1) != 0) { return penaltyCost_; } else { return PenaltyCostDefaultValue; } }
       set {
         _hasBits0 |= 1;
         penaltyCost_ = value;
@@ -5866,6 +5907,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "pickup_to_delivery_relative_detour_limit" field.</summary>
     public const int PickupToDeliveryRelativeDetourLimitFieldNumber = 8;
+    private readonly static double PickupToDeliveryRelativeDetourLimitDefaultValue = 0D;
+
     private double pickupToDeliveryRelativeDetourLimit_;
     /// <summary>
     /// Specifies the maximum relative detour time compared to the shortest path
@@ -5889,7 +5932,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double PickupToDeliveryRelativeDetourLimit {
-      get { if ((_hasBits0 & 2) != 0) { return pickupToDeliveryRelativeDetourLimit_; } else { return 0D; } }
+      get { if ((_hasBits0 & 2) != 0) { return pickupToDeliveryRelativeDetourLimit_; } else { return PickupToDeliveryRelativeDetourLimitDefaultValue; } }
       set {
         _hasBits0 |= 2;
         pickupToDeliveryRelativeDetourLimit_ = value;
@@ -6238,7 +6281,7 @@ namespace Google.Cloud.Optimization.V1 {
       }
       pickups_.Add(other.pickups_);
       deliveries_.Add(other.deliveries_);
-      loadDemands_.Add(other.loadDemands_);
+      loadDemands_.MergeFrom(other.loadDemands_);
       if (other.HasPenaltyCost) {
         PenaltyCost = other.PenaltyCost;
       }
@@ -6446,6 +6489,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// and a service duration time (time spent by the vehicle once it has arrived
       /// to pickup or drop off goods).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class VisitRequest : pb::IMessage<VisitRequest>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6943,7 +6987,7 @@ namespace Google.Cloud.Optimization.V1 {
           if (other.Cost != 0D) {
             Cost = other.Cost;
           }
-          loadDemands_.Add(other.loadDemands_);
+          loadDemands_.MergeFrom(other.loadDemands_);
           visitTypes_.Add(other.visitTypes_);
           if (other.Label.Length != 0) {
             Label = other.Label;
@@ -7118,6 +7162,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// defines such amount. See
       /// [load_demands][google.cloud.optimization.v1.Shipment.load_demands].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Load : pb::IMessage<Load>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -7322,6 +7367,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// shipment_type. The appearance of incompatible shipments on the same route is
   /// restricted based on the incompatibility mode.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ShipmentTypeIncompatibility : pb::IMessage<ShipmentTypeIncompatibility>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7583,6 +7629,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// Specifies requirements between shipments based on their shipment_type.
   /// The specifics of the requirement are defined by the requirement mode.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ShipmentTypeRequirement : pb::IMessage<ShipmentTypeRequirement>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7881,10 +7928,338 @@ namespace Google.Cloud.Optimization.V1 {
   }
 
   /// <summary>
+  /// Encapsulates a set of optional conditions to satisfy when calculating
+  /// vehicle routes. This is similar to `RouteModifiers` in the Google Maps
+  /// Platform API; see:
+  /// https://developers.google.com/maps/documentation/routes/reference/rest/v2/RouteModifiers.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RouteModifiers : pb::IMessage<RouteModifiers>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RouteModifiers> _parser = new pb::MessageParser<RouteModifiers>(() => new RouteModifiers());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RouteModifiers> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RouteModifiers() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RouteModifiers(RouteModifiers other) : this() {
+      avoidTolls_ = other.avoidTolls_;
+      avoidHighways_ = other.avoidHighways_;
+      avoidFerries_ = other.avoidFerries_;
+      avoidIndoor_ = other.avoidIndoor_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RouteModifiers Clone() {
+      return new RouteModifiers(this);
+    }
+
+    /// <summary>Field number for the "avoid_tolls" field.</summary>
+    public const int AvoidTollsFieldNumber = 2;
+    private bool avoidTolls_;
+    /// <summary>
+    /// Specifies whether to avoid toll roads where reasonable. Preference will be
+    /// given to routes not containing toll roads. Applies only to motorized travel
+    /// modes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AvoidTolls {
+      get { return avoidTolls_; }
+      set {
+        avoidTolls_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avoid_highways" field.</summary>
+    public const int AvoidHighwaysFieldNumber = 3;
+    private bool avoidHighways_;
+    /// <summary>
+    /// Specifies whether to avoid highways where reasonable. Preference will be
+    /// given to routes not containing highways. Applies only to motorized travel
+    /// modes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AvoidHighways {
+      get { return avoidHighways_; }
+      set {
+        avoidHighways_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avoid_ferries" field.</summary>
+    public const int AvoidFerriesFieldNumber = 4;
+    private bool avoidFerries_;
+    /// <summary>
+    /// Specifies whether to avoid ferries where reasonable. Preference will be
+    /// given to routes not containing travel by ferries. Applies only to motorized
+    /// travel modes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AvoidFerries {
+      get { return avoidFerries_; }
+      set {
+        avoidFerries_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avoid_indoor" field.</summary>
+    public const int AvoidIndoorFieldNumber = 5;
+    private bool avoidIndoor_;
+    /// <summary>
+    /// Optional. Specifies whether to avoid navigating indoors where reasonable.
+    /// Preference will be given to routes not containing indoor navigation.
+    /// Applies only to the `WALKING` travel mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AvoidIndoor {
+      get { return avoidIndoor_; }
+      set {
+        avoidIndoor_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RouteModifiers);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RouteModifiers other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AvoidTolls != other.AvoidTolls) return false;
+      if (AvoidHighways != other.AvoidHighways) return false;
+      if (AvoidFerries != other.AvoidFerries) return false;
+      if (AvoidIndoor != other.AvoidIndoor) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AvoidTolls != false) hash ^= AvoidTolls.GetHashCode();
+      if (AvoidHighways != false) hash ^= AvoidHighways.GetHashCode();
+      if (AvoidFerries != false) hash ^= AvoidFerries.GetHashCode();
+      if (AvoidIndoor != false) hash ^= AvoidIndoor.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AvoidTolls != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AvoidTolls);
+      }
+      if (AvoidHighways != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(AvoidHighways);
+      }
+      if (AvoidFerries != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(AvoidFerries);
+      }
+      if (AvoidIndoor != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AvoidIndoor);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AvoidTolls != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AvoidTolls);
+      }
+      if (AvoidHighways != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(AvoidHighways);
+      }
+      if (AvoidFerries != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(AvoidFerries);
+      }
+      if (AvoidIndoor != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(AvoidIndoor);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AvoidTolls != false) {
+        size += 1 + 1;
+      }
+      if (AvoidHighways != false) {
+        size += 1 + 1;
+      }
+      if (AvoidFerries != false) {
+        size += 1 + 1;
+      }
+      if (AvoidIndoor != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RouteModifiers other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AvoidTolls != false) {
+        AvoidTolls = other.AvoidTolls;
+      }
+      if (other.AvoidHighways != false) {
+        AvoidHighways = other.AvoidHighways;
+      }
+      if (other.AvoidFerries != false) {
+        AvoidFerries = other.AvoidFerries;
+      }
+      if (other.AvoidIndoor != false) {
+        AvoidIndoor = other.AvoidIndoor;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 16: {
+            AvoidTolls = input.ReadBool();
+            break;
+          }
+          case 24: {
+            AvoidHighways = input.ReadBool();
+            break;
+          }
+          case 32: {
+            AvoidFerries = input.ReadBool();
+            break;
+          }
+          case 40: {
+            AvoidIndoor = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 16: {
+            AvoidTolls = input.ReadBool();
+            break;
+          }
+          case 24: {
+            AvoidHighways = input.ReadBool();
+            break;
+          }
+          case 32: {
+            AvoidFerries = input.ReadBool();
+            break;
+          }
+          case 40: {
+            AvoidIndoor = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Models a vehicle in a shipment problem. Solving a shipment problem will
   /// build a route starting from `start_location` and ending at `end_location`
   /// for this vehicle. A route is a sequence of visits (see `ShipmentRoute`).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Vehicle : pb::IMessage<Vehicle>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7900,7 +8275,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7922,6 +8297,7 @@ namespace Google.Cloud.Optimization.V1 {
     public Vehicle(Vehicle other) : this() {
       _hasBits0 = other._hasBits0;
       travelMode_ = other.travelMode_;
+      routeModifiers_ = other.routeModifiers_ != null ? other.routeModifiers_.Clone() : null;
       startLocation_ = other.startLocation_ != null ? other.startLocation_.Clone() : null;
       startWaypoint_ = other.startWaypoint_ != null ? other.startWaypoint_.Clone() : null;
       endLocation_ = other.endLocation_ != null ? other.endLocation_.Clone() : null;
@@ -7971,6 +8347,22 @@ namespace Google.Cloud.Optimization.V1 {
       get { return travelMode_; }
       set {
         travelMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "route_modifiers" field.</summary>
+    public const int RouteModifiersFieldNumber = 2;
+    private global::Google.Cloud.Optimization.V1.RouteModifiers routeModifiers_;
+    /// <summary>
+    /// Optional. A set of conditions to satisfy that affect the way routes are
+    /// calculated for the given vehicle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Optimization.V1.RouteModifiers RouteModifiers {
+      get { return routeModifiers_; }
+      set {
+        routeModifiers_ = value;
       }
     }
 
@@ -8134,6 +8526,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "travel_duration_multiple" field.</summary>
     public const int TravelDurationMultipleFieldNumber = 11;
+    private readonly static double TravelDurationMultipleDefaultValue = 0D;
+
     private double travelDurationMultiple_;
     /// <summary>
     /// Specifies a multiplicative factor that can be used to increase or decrease
@@ -8153,7 +8547,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double TravelDurationMultiple {
-      get { if ((_hasBits0 & 1) != 0) { return travelDurationMultiple_; } else { return 0D; } }
+      get { if ((_hasBits0 & 1) != 0) { return travelDurationMultiple_; } else { return TravelDurationMultipleDefaultValue; } }
       set {
         _hasBits0 |= 1;
         travelDurationMultiple_ = value;
@@ -8525,6 +8919,7 @@ namespace Google.Cloud.Optimization.V1 {
         return true;
       }
       if (TravelMode != other.TravelMode) return false;
+      if (!object.Equals(RouteModifiers, other.RouteModifiers)) return false;
       if (!object.Equals(StartLocation, other.StartLocation)) return false;
       if (!object.Equals(StartWaypoint, other.StartWaypoint)) return false;
       if (!object.Equals(EndLocation, other.EndLocation)) return false;
@@ -8560,6 +8955,7 @@ namespace Google.Cloud.Optimization.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (TravelMode != global::Google.Cloud.Optimization.V1.Vehicle.Types.TravelMode.Unspecified) hash ^= TravelMode.GetHashCode();
+      if (routeModifiers_ != null) hash ^= RouteModifiers.GetHashCode();
       if (startLocation_ != null) hash ^= StartLocation.GetHashCode();
       if (startWaypoint_ != null) hash ^= StartWaypoint.GetHashCode();
       if (endLocation_ != null) hash ^= EndLocation.GetHashCode();
@@ -8608,6 +9004,10 @@ namespace Google.Cloud.Optimization.V1 {
       if (TravelMode != global::Google.Cloud.Optimization.V1.Vehicle.Types.TravelMode.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TravelMode);
+      }
+      if (routeModifiers_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RouteModifiers);
       }
       if (startLocation_ != null) {
         output.WriteRawTag(26);
@@ -8701,6 +9101,10 @@ namespace Google.Cloud.Optimization.V1 {
         output.WriteRawTag(8);
         output.WriteEnum((int) TravelMode);
       }
+      if (routeModifiers_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RouteModifiers);
+      }
       if (startLocation_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(StartLocation);
@@ -8792,6 +9196,9 @@ namespace Google.Cloud.Optimization.V1 {
       if (TravelMode != global::Google.Cloud.Optimization.V1.Vehicle.Types.TravelMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TravelMode);
       }
+      if (routeModifiers_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RouteModifiers);
+      }
       if (startLocation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartLocation);
       }
@@ -8868,6 +9275,12 @@ namespace Google.Cloud.Optimization.V1 {
       if (other.TravelMode != global::Google.Cloud.Optimization.V1.Vehicle.Types.TravelMode.Unspecified) {
         TravelMode = other.TravelMode;
       }
+      if (other.routeModifiers_ != null) {
+        if (routeModifiers_ == null) {
+          RouteModifiers = new global::Google.Cloud.Optimization.V1.RouteModifiers();
+        }
+        RouteModifiers.MergeFrom(other.RouteModifiers);
+      }
       if (other.startLocation_ != null) {
         if (startLocation_ == null) {
           StartLocation = new global::Google.Type.LatLng();
@@ -8902,7 +9315,7 @@ namespace Google.Cloud.Optimization.V1 {
       if (other.UnloadingPolicy != global::Google.Cloud.Optimization.V1.Vehicle.Types.UnloadingPolicy.Unspecified) {
         UnloadingPolicy = other.UnloadingPolicy;
       }
-      loadLimits_.Add(other.loadLimits_);
+      loadLimits_.MergeFrom(other.loadLimits_);
       if (other.CostPerHour != 0D) {
         CostPerHour = other.CostPerHour;
       }
@@ -8936,7 +9349,7 @@ namespace Google.Cloud.Optimization.V1 {
         }
         RouteDistanceLimit.MergeFrom(other.RouteDistanceLimit);
       }
-      extraVisitDurationForVisitType_.Add(other.extraVisitDurationForVisitType_);
+      extraVisitDurationForVisitType_.MergeFrom(other.extraVisitDurationForVisitType_);
       if (other.breakRule_ != null) {
         if (breakRule_ == null) {
           BreakRule = new global::Google.Cloud.Optimization.V1.BreakRule();
@@ -8970,6 +9383,13 @@ namespace Google.Cloud.Optimization.V1 {
             break;
           case 8: {
             TravelMode = (global::Google.Cloud.Optimization.V1.Vehicle.Types.TravelMode) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (routeModifiers_ == null) {
+              RouteModifiers = new global::Google.Cloud.Optimization.V1.RouteModifiers();
+            }
+            input.ReadMessage(RouteModifiers);
             break;
           }
           case 26: {
@@ -9122,6 +9542,13 @@ namespace Google.Cloud.Optimization.V1 {
             break;
           case 8: {
             TravelMode = (global::Google.Cloud.Optimization.V1.Vehicle.Types.TravelMode) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (routeModifiers_ == null) {
+              RouteModifiers = new global::Google.Cloud.Optimization.V1.RouteModifiers();
+            }
+            input.ReadMessage(RouteModifiers);
             break;
           }
           case 26: {
@@ -9283,6 +9710,10 @@ namespace Google.Cloud.Optimization.V1 {
         /// Travel mode corresponding to driving directions (car, ...).
         /// </summary>
         [pbr::OriginalName("DRIVING")] Driving = 1,
+        /// <summary>
+        /// Travel mode corresponding to walking directions.
+        /// </summary>
+        [pbr::OriginalName("WALKING")] Walking = 2,
       }
 
       /// <summary>
@@ -9313,6 +9744,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// carry up to 3500 kg". See
       /// [load_limits][google.cloud.optimization.v1.Vehicle.load_limits].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class LoadLimit : pb::IMessage<LoadLimit>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9365,6 +9797,8 @@ namespace Google.Cloud.Optimization.V1 {
 
         /// <summary>Field number for the "max_load" field.</summary>
         public const int MaxLoadFieldNumber = 1;
+        private readonly static long MaxLoadDefaultValue = 0L;
+
         private long maxLoad_;
         /// <summary>
         /// The maximum acceptable amount of load.
@@ -9372,7 +9806,7 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long MaxLoad {
-          get { if ((_hasBits0 & 1) != 0) { return maxLoad_; } else { return 0L; } }
+          get { if ((_hasBits0 & 1) != 0) { return maxLoad_; } else { return MaxLoadDefaultValue; } }
           set {
             _hasBits0 |= 1;
             maxLoad_ = value;
@@ -9712,6 +10146,7 @@ namespace Google.Cloud.Optimization.V1 {
           /// <summary>
           /// Interval of acceptable load amounts.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Interval : pb::IMessage<Interval>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -9780,6 +10215,8 @@ namespace Google.Cloud.Optimization.V1 {
 
             /// <summary>Field number for the "max" field.</summary>
             public const int MaxFieldNumber = 2;
+            private readonly static long MaxDefaultValue = 0L;
+
             private long max_;
             /// <summary>
             /// A maximum acceptable load. Must be ≥ 0. If unspecified, the maximum
@@ -9792,7 +10229,7 @@ namespace Google.Cloud.Optimization.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public long Max {
-              get { if ((_hasBits0 & 1) != 0) { return max_; } else { return 0L; } }
+              get { if ((_hasBits0 & 1) != 0) { return max_; } else { return MaxDefaultValue; } }
               set {
                 _hasBits0 |= 1;
                 max_ = value;
@@ -9980,6 +10417,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// When a soft limit field is defined, both the soft max threshold and its
       /// associated cost must be defined together.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DurationLimit : pb::IMessage<DurationLimit>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -10067,6 +10505,8 @@ namespace Google.Cloud.Optimization.V1 {
 
         /// <summary>Field number for the "cost_per_hour_after_soft_max" field.</summary>
         public const int CostPerHourAfterSoftMaxFieldNumber = 3;
+        private readonly static double CostPerHourAfterSoftMaxDefaultValue = 0D;
+
         private double costPerHourAfterSoftMax_;
         /// <summary>
         /// Cost per hour incurred if the `soft_max_duration` threshold is violated.
@@ -10080,7 +10520,7 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double CostPerHourAfterSoftMax {
-          get { if ((_hasBits0 & 1) != 0) { return costPerHourAfterSoftMax_; } else { return 0D; } }
+          get { if ((_hasBits0 & 1) != 0) { return costPerHourAfterSoftMax_; } else { return CostPerHourAfterSoftMaxDefaultValue; } }
           set {
             _hasBits0 |= 1;
             costPerHourAfterSoftMax_ = value;
@@ -10125,6 +10565,8 @@ namespace Google.Cloud.Optimization.V1 {
 
         /// <summary>Field number for the "cost_per_square_hour_after_quadratic_soft_max" field.</summary>
         public const int CostPerSquareHourAfterQuadraticSoftMaxFieldNumber = 5;
+        private readonly static double CostPerSquareHourAfterQuadraticSoftMaxDefaultValue = 0D;
+
         private double costPerSquareHourAfterQuadraticSoftMax_;
         /// <summary>
         /// Cost per square hour incurred if the
@@ -10143,7 +10585,7 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double CostPerSquareHourAfterQuadraticSoftMax {
-          get { if ((_hasBits0 & 2) != 0) { return costPerSquareHourAfterQuadraticSoftMax_; } else { return 0D; } }
+          get { if ((_hasBits0 & 2) != 0) { return costPerSquareHourAfterQuadraticSoftMax_; } else { return CostPerSquareHourAfterQuadraticSoftMaxDefaultValue; } }
           set {
             _hasBits0 |= 2;
             costPerSquareHourAfterQuadraticSoftMax_ = value;
@@ -10446,6 +10888,7 @@ namespace Google.Cloud.Optimization.V1 {
   ///   0 &lt;= `start_time` &lt;= `soft_end_time` &lt;= `end_time`.
   /// ```
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeWindow : pb::IMessage<TimeWindow>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10461,7 +10904,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10561,6 +11004,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "cost_per_hour_before_soft_start_time" field.</summary>
     public const int CostPerHourBeforeSoftStartTimeFieldNumber = 5;
+    private readonly static double CostPerHourBeforeSoftStartTimeDefaultValue = 0D;
+
     private double costPerHourBeforeSoftStartTime_;
     /// <summary>
     /// A cost per hour added to other costs in the model if the event occurs
@@ -10578,7 +11023,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double CostPerHourBeforeSoftStartTime {
-      get { if ((_hasBits0 & 1) != 0) { return costPerHourBeforeSoftStartTime_; } else { return 0D; } }
+      get { if ((_hasBits0 & 1) != 0) { return costPerHourBeforeSoftStartTime_; } else { return CostPerHourBeforeSoftStartTimeDefaultValue; } }
       set {
         _hasBits0 |= 1;
         costPerHourBeforeSoftStartTime_ = value;
@@ -10599,6 +11044,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "cost_per_hour_after_soft_end_time" field.</summary>
     public const int CostPerHourAfterSoftEndTimeFieldNumber = 6;
+    private readonly static double CostPerHourAfterSoftEndTimeDefaultValue = 0D;
+
     private double costPerHourAfterSoftEndTime_;
     /// <summary>
     /// A cost per hour added to other costs in the model if the event occurs after
@@ -10616,7 +11063,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double CostPerHourAfterSoftEndTime {
-      get { if ((_hasBits0 & 2) != 0) { return costPerHourAfterSoftEndTime_; } else { return 0D; } }
+      get { if ((_hasBits0 & 2) != 0) { return costPerHourAfterSoftEndTime_; } else { return CostPerHourAfterSoftEndTimeDefaultValue; } }
       set {
         _hasBits0 |= 2;
         costPerHourAfterSoftEndTime_ = value;
@@ -10930,6 +11377,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// instead.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CapacityQuantity : pb::IMessage<CapacityQuantity>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10944,7 +11392,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11162,6 +11610,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// instead.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CapacityQuantityInterval : pb::IMessage<CapacityQuantityInterval>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11177,7 +11626,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11224,11 +11673,13 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "min_value" field.</summary>
     public const int MinValueFieldNumber = 2;
+    private readonly static long MinValueDefaultValue = 0L;
+
     private long minValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long MinValue {
-      get { if ((_hasBits0 & 1) != 0) { return minValue_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return minValue_; } else { return MinValueDefaultValue; } }
       set {
         _hasBits0 |= 1;
         minValue_ = value;
@@ -11249,11 +11700,13 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "max_value" field.</summary>
     public const int MaxValueFieldNumber = 3;
+    private readonly static long MaxValueDefaultValue = 0L;
+
     private long maxValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long MaxValue {
-      get { if ((_hasBits0 & 2) != 0) { return maxValue_; } else { return 0L; } }
+      get { if ((_hasBits0 & 2) != 0) { return maxValue_; } else { return MaxValueDefaultValue; } }
       set {
         _hasBits0 |= 2;
         maxValue_ = value;
@@ -11460,6 +11913,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// If a soft limit is defined, both `soft_max_meters` and
   /// `cost_per_kilometer_above_soft_max` must be defined and be nonnegative.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DistanceLimit : pb::IMessage<DistanceLimit>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11475,7 +11929,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11498,6 +11952,7 @@ namespace Google.Cloud.Optimization.V1 {
       _hasBits0 = other._hasBits0;
       maxMeters_ = other.maxMeters_;
       softMaxMeters_ = other.softMaxMeters_;
+      costPerKilometerBelowSoftMax_ = other.costPerKilometerBelowSoftMax_;
       costPerKilometerAboveSoftMax_ = other.costPerKilometerAboveSoftMax_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -11510,6 +11965,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "max_meters" field.</summary>
     public const int MaxMetersFieldNumber = 1;
+    private readonly static long MaxMetersDefaultValue = 0L;
+
     private long maxMeters_;
     /// <summary>
     /// A hard limit constraining the distance to be at most max_meters. The limit
@@ -11518,7 +11975,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long MaxMeters {
-      get { if ((_hasBits0 & 1) != 0) { return maxMeters_; } else { return 0L; } }
+      get { if ((_hasBits0 & 1) != 0) { return maxMeters_; } else { return MaxMetersDefaultValue; } }
       set {
         _hasBits0 |= 1;
         maxMeters_ = value;
@@ -11539,6 +11996,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "soft_max_meters" field.</summary>
     public const int SoftMaxMetersFieldNumber = 2;
+    private readonly static long SoftMaxMetersDefaultValue = 0L;
+
     private long softMaxMeters_;
     /// <summary>
     /// A soft limit not enforcing a maximum distance limit, but when violated
@@ -11551,7 +12010,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long SoftMaxMeters {
-      get { if ((_hasBits0 & 2) != 0) { return softMaxMeters_; } else { return 0L; } }
+      get { if ((_hasBits0 & 2) != 0) { return softMaxMeters_; } else { return SoftMaxMetersDefaultValue; } }
       set {
         _hasBits0 |= 2;
         softMaxMeters_ = value;
@@ -11570,8 +12029,46 @@ namespace Google.Cloud.Optimization.V1 {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "cost_per_kilometer_below_soft_max" field.</summary>
+    public const int CostPerKilometerBelowSoftMaxFieldNumber = 4;
+    private readonly static double CostPerKilometerBelowSoftMaxDefaultValue = 0D;
+
+    private double costPerKilometerBelowSoftMax_;
+    /// <summary>
+    /// Cost per kilometer incurred, increasing up to `soft_max_meters`, with
+    /// formula:
+    /// ```
+    ///   min(distance_meters, soft_max_meters) / 1000.0 *
+    ///   cost_per_kilometer_below_soft_max.
+    /// ```
+    /// This cost is not supported in `route_distance_limit`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double CostPerKilometerBelowSoftMax {
+      get { if ((_hasBits0 & 8) != 0) { return costPerKilometerBelowSoftMax_; } else { return CostPerKilometerBelowSoftMaxDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        costPerKilometerBelowSoftMax_ = value;
+      }
+    }
+    /// <summary>Gets whether the "cost_per_kilometer_below_soft_max" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCostPerKilometerBelowSoftMax {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "cost_per_kilometer_below_soft_max" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCostPerKilometerBelowSoftMax() {
+      _hasBits0 &= ~8;
+    }
+
     /// <summary>Field number for the "cost_per_kilometer_above_soft_max" field.</summary>
     public const int CostPerKilometerAboveSoftMaxFieldNumber = 3;
+    private readonly static double CostPerKilometerAboveSoftMaxDefaultValue = 0D;
+
     private double costPerKilometerAboveSoftMax_;
     /// <summary>
     /// Cost per kilometer incurred if distance is above `soft_max_meters` limit.
@@ -11586,7 +12083,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double CostPerKilometerAboveSoftMax {
-      get { if ((_hasBits0 & 4) != 0) { return costPerKilometerAboveSoftMax_; } else { return 0D; } }
+      get { if ((_hasBits0 & 4) != 0) { return costPerKilometerAboveSoftMax_; } else { return CostPerKilometerAboveSoftMaxDefaultValue; } }
       set {
         _hasBits0 |= 4;
         costPerKilometerAboveSoftMax_ = value;
@@ -11622,6 +12119,7 @@ namespace Google.Cloud.Optimization.V1 {
       }
       if (MaxMeters != other.MaxMeters) return false;
       if (SoftMaxMeters != other.SoftMaxMeters) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CostPerKilometerBelowSoftMax, other.CostPerKilometerBelowSoftMax)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CostPerKilometerAboveSoftMax, other.CostPerKilometerAboveSoftMax)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -11632,6 +12130,7 @@ namespace Google.Cloud.Optimization.V1 {
       int hash = 1;
       if (HasMaxMeters) hash ^= MaxMeters.GetHashCode();
       if (HasSoftMaxMeters) hash ^= SoftMaxMeters.GetHashCode();
+      if (HasCostPerKilometerBelowSoftMax) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CostPerKilometerBelowSoftMax);
       if (HasCostPerKilometerAboveSoftMax) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CostPerKilometerAboveSoftMax);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -11663,6 +12162,10 @@ namespace Google.Cloud.Optimization.V1 {
         output.WriteRawTag(25);
         output.WriteDouble(CostPerKilometerAboveSoftMax);
       }
+      if (HasCostPerKilometerBelowSoftMax) {
+        output.WriteRawTag(33);
+        output.WriteDouble(CostPerKilometerBelowSoftMax);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11685,6 +12188,10 @@ namespace Google.Cloud.Optimization.V1 {
         output.WriteRawTag(25);
         output.WriteDouble(CostPerKilometerAboveSoftMax);
       }
+      if (HasCostPerKilometerBelowSoftMax) {
+        output.WriteRawTag(33);
+        output.WriteDouble(CostPerKilometerBelowSoftMax);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -11700,6 +12207,9 @@ namespace Google.Cloud.Optimization.V1 {
       }
       if (HasSoftMaxMeters) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(SoftMaxMeters);
+      }
+      if (HasCostPerKilometerBelowSoftMax) {
+        size += 1 + 8;
       }
       if (HasCostPerKilometerAboveSoftMax) {
         size += 1 + 8;
@@ -11721,6 +12231,9 @@ namespace Google.Cloud.Optimization.V1 {
       }
       if (other.HasSoftMaxMeters) {
         SoftMaxMeters = other.SoftMaxMeters;
+      }
+      if (other.HasCostPerKilometerBelowSoftMax) {
+        CostPerKilometerBelowSoftMax = other.CostPerKilometerBelowSoftMax;
       }
       if (other.HasCostPerKilometerAboveSoftMax) {
         CostPerKilometerAboveSoftMax = other.CostPerKilometerAboveSoftMax;
@@ -11752,6 +12265,10 @@ namespace Google.Cloud.Optimization.V1 {
             CostPerKilometerAboveSoftMax = input.ReadDouble();
             break;
           }
+          case 33: {
+            CostPerKilometerBelowSoftMax = input.ReadDouble();
+            break;
+          }
         }
       }
     #endif
@@ -11779,6 +12296,10 @@ namespace Google.Cloud.Optimization.V1 {
             CostPerKilometerAboveSoftMax = input.ReadDouble();
             break;
           }
+          case 33: {
+            CostPerKilometerBelowSoftMax = input.ReadDouble();
+            break;
+          }
         }
       }
     }
@@ -11792,6 +12313,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// that case, all extra costs add up and the strictest constraint or limit
   /// applies (following natural "AND" semantics).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransitionAttributes : pb::IMessage<TransitionAttributes>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11806,7 +12328,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12309,6 +12831,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// Encapsulates a waypoint. Waypoints mark arrival and departure locations of
   /// VisitRequests, and start and end locations of Vehicles.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Waypoint : pb::IMessage<Waypoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12323,7 +12846,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12386,10 +12909,24 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PlaceId {
-      get { return locationTypeCase_ == LocationTypeOneofCase.PlaceId ? (string) locationType_ : ""; }
+      get { return HasPlaceId ? (string) locationType_ : ""; }
       set {
         locationType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         locationTypeCase_ = LocationTypeOneofCase.PlaceId;
+      }
+    }
+    /// <summary>Gets whether the "place_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPlaceId {
+      get { return locationTypeCase_ == LocationTypeOneofCase.PlaceId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "place_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPlaceId() {
+      if (HasPlaceId) {
+        ClearLocationType();
       }
     }
 
@@ -12461,7 +12998,7 @@ namespace Google.Cloud.Optimization.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (locationTypeCase_ == LocationTypeOneofCase.Location) hash ^= Location.GetHashCode();
-      if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) hash ^= PlaceId.GetHashCode();
+      if (HasPlaceId) hash ^= PlaceId.GetHashCode();
       if (SideOfRoad != false) hash ^= SideOfRoad.GetHashCode();
       hash ^= (int) locationTypeCase_;
       if (_unknownFields != null) {
@@ -12486,7 +13023,7 @@ namespace Google.Cloud.Optimization.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Location);
       }
-      if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) {
+      if (HasPlaceId) {
         output.WriteRawTag(18);
         output.WriteString(PlaceId);
       }
@@ -12508,7 +13045,7 @@ namespace Google.Cloud.Optimization.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(Location);
       }
-      if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) {
+      if (HasPlaceId) {
         output.WriteRawTag(18);
         output.WriteString(PlaceId);
       }
@@ -12529,7 +13066,7 @@ namespace Google.Cloud.Optimization.V1 {
       if (locationTypeCase_ == LocationTypeOneofCase.Location) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Location);
       }
-      if (locationTypeCase_ == LocationTypeOneofCase.PlaceId) {
+      if (HasPlaceId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlaceId);
       }
       if (SideOfRoad != false) {
@@ -12636,6 +13173,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// <summary>
   /// Encapsulates a location (a geographic point, and an optional heading).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Location : pb::IMessage<Location>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12651,7 +13189,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12700,6 +13238,8 @@ namespace Google.Cloud.Optimization.V1 {
 
     /// <summary>Field number for the "heading" field.</summary>
     public const int HeadingFieldNumber = 2;
+    private readonly static int HeadingDefaultValue = 0;
+
     private int heading_;
     /// <summary>
     /// The compass heading associated with the direction of the flow of traffic.
@@ -12710,7 +13250,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Heading {
-      get { if ((_hasBits0 & 1) != 0) { return heading_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return heading_; } else { return HeadingDefaultValue; } }
       set {
         _hasBits0 |= 1;
         heading_ = value;
@@ -12907,6 +13447,7 @@ namespace Google.Cloud.Optimization.V1 {
   ///   a break), in which case it does not affect the vehicle start time.
   /// * or after the vehicle end (ditto, with the vehicle end time).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BreakRule : pb::IMessage<BreakRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12921,7 +13462,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13128,6 +13669,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// (`earliest_start_time` / `latest_start_time`) may overlap, but they must
       /// be compatible with the order (this is checked).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BreakRequest : pb::IMessage<BreakRequest>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -13462,6 +14004,7 @@ namespace Google.Cloud.Optimization.V1 {
       ///   23:59 vehicle end
       /// ```
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FrequencyConstraint : pb::IMessage<FrequencyConstraint>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -13806,6 +14349,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// --++-----------------------------------------------------------------++-->
   /// ```
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ShipmentRoute : pb::IMessage<ShipmentRoute>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -13820,7 +14364,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14429,7 +14973,7 @@ namespace Google.Cloud.Optimization.V1 {
         }
         Metrics.MergeFrom(other.Metrics);
       }
-      routeCosts_.Add(other.routeCosts_);
+      routeCosts_.MergeFrom(other.routeCosts_);
       if (other.RouteTotalCost != 0D) {
         RouteTotalCost = other.RouteTotalCost;
       }
@@ -14658,6 +15202,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// [TransitionAttributes.delay][google.cloud.optimization.v1.TransitionAttributes.delay].
       /// </summary>
       [global::System.ObsoleteAttribute]
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Delay : pb::IMessage<Delay>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -14912,6 +15457,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// A visit performed during a route. This visit corresponds to a pickup or a
       /// delivery of a `Shipment`.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Visit : pb::IMessage<Visit>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -15375,7 +15921,7 @@ namespace Google.Cloud.Optimization.V1 {
             }
             StartTime.MergeFrom(other.StartTime);
           }
-          loadDemands_.Add(other.loadDemands_);
+          loadDemands_.MergeFrom(other.loadDemands_);
           if (other.detour_ != null) {
             if (detour_ == null) {
               Detour = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -15546,6 +16092,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// If the vehicle does not have a `start_location` and/or `end_location`, the
       /// corresponding travel metrics are 0.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Transition : pb::IMessage<Transition>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -16046,7 +16593,7 @@ namespace Google.Cloud.Optimization.V1 {
             }
             RoutePolyline.MergeFrom(other.RoutePolyline);
           }
-          vehicleLoads_.Add(other.vehicleLoads_);
+          vehicleLoads_.MergeFrom(other.vehicleLoads_);
           loads_.Add(other.loads_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -16220,6 +16767,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// for a given type (see
       /// [Transition.vehicle_loads][google.cloud.optimization.v1.ShipmentRoute.Transition.vehicle_loads]).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class VehicleLoad : pb::IMessage<VehicleLoad>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -16420,6 +16968,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// https://developers.google.com/maps/documentation/utilities/polylinealgorithm
       /// https://developers.google.com/maps/documentation/javascript/reference/geometry#encoding.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EncodedPolyline : pb::IMessage<EncodedPolyline>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -16615,6 +17164,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// <summary>
       /// Data representing the execution of a break.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Break : pb::IMessage<Break>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -16882,6 +17432,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// corresponding travel metrics are 0 and/or empty.
       /// </summary>
       [global::System.ObsoleteAttribute]
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TravelStep : pb::IMessage<TravelStep>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -17231,6 +17782,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// and/or if we are able to identify the cause for skipping, we report the
   /// reason here.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SkippedShipment : pb::IMessage<SkippedShipment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -17245,7 +17797,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17527,6 +18079,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// "Pears" capacity would be exceeded (including vehicle 3) and at least one
       /// vehicle's distance limit would be exceeded (including vehicle 1).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Reason : pb::IMessage<Reason>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -17592,6 +18145,8 @@ namespace Google.Cloud.Optimization.V1 {
 
         /// <summary>Field number for the "example_vehicle_index" field.</summary>
         public const int ExampleVehicleIndexFieldNumber = 2;
+        private readonly static int ExampleVehicleIndexDefaultValue = 0;
+
         private int exampleVehicleIndex_;
         /// <summary>
         /// If the reason is related to a shipment-vehicle incompatibility, this
@@ -17600,7 +18155,7 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int ExampleVehicleIndex {
-          get { if ((_hasBits0 & 1) != 0) { return exampleVehicleIndex_; } else { return 0; } }
+          get { if ((_hasBits0 & 1) != 0) { return exampleVehicleIndex_; } else { return ExampleVehicleIndexDefaultValue; } }
           set {
             _hasBits0 |= 1;
             exampleVehicleIndex_ = value;
@@ -17894,6 +18449,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// and/or [Visit][google.cloud.optimization.v1.ShipmentRoute.Visit] (resp. over
   /// all [ShipmentRoute][google.cloud.optimization.v1.ShipmentRoute]) elements.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AggregatedMetrics : pb::IMessage<AggregatedMetrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -17908,7 +18464,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18044,10 +18600,10 @@ namespace Google.Cloud.Optimization.V1 {
     private global::Google.Protobuf.WellKnownTypes.Duration totalDuration_;
     /// <summary>
     /// The total duration should be equal to the sum of all durations above.
-    /// For routes, it also corresponds to
+    /// For routes, it also corresponds to:
     /// [ShipmentRoute.vehicle_end_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_end_time]
-    /// -
-    /// [ShipmentRoute.vehicle_start_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_start_time].
+    /// `-`
+    /// [ShipmentRoute.vehicle_start_time][google.cloud.optimization.v1.ShipmentRoute.vehicle_start_time]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -18372,8 +18928,8 @@ namespace Google.Cloud.Optimization.V1 {
       if (other.TravelDistanceMeters != 0D) {
         TravelDistanceMeters = other.TravelDistanceMeters;
       }
-      maxLoads_.Add(other.maxLoads_);
-      costs_.Add(other.costs_);
+      maxLoads_.MergeFrom(other.maxLoads_);
+      costs_.MergeFrom(other.costs_);
       if (other.TotalCost != 0D) {
         TotalCost = other.TotalCost;
       }
@@ -18542,6 +19098,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// Solution injected in the request including information about which visits
   /// must be constrained and how they must be constrained.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InjectedSolutionConstraint : pb::IMessage<InjectedSolutionConstraint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -18556,7 +19113,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18795,6 +19352,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// the `skipped_shipment` field are constrained to be skipped; i.e., they
       /// cannot be performed.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConstraintRelaxation : pb::IMessage<ConstraintRelaxation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -19059,6 +19617,7 @@ namespace Google.Cloud.Optimization.V1 {
           /// vehicle start or end does not satisfy the conditions of any
           /// relaxation the time is fixed, unless the vehicle is empty.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Relaxation : pb::IMessage<Relaxation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -19375,7 +19934,8 @@ namespace Google.Cloud.Optimization.V1 {
                 [pbr::OriginalName("RELAX_VISIT_TIMES_AFTER_THRESHOLD")] RelaxVisitTimesAfterThreshold = 1,
                 /// <summary>
                 /// Same as `RELAX_VISIT_TIMES_AFTER_THRESHOLD`, but the visit sequence
-                /// is also relaxed: visits remain simply bound to their vehicle.
+                /// is also relaxed: visits can only be performed by this vehicle, but
+                /// can potentially become unperformed.
                 /// </summary>
                 [pbr::OriginalName("RELAX_VISIT_TIMES_AND_SEQUENCE_AFTER_THRESHOLD")] RelaxVisitTimesAndSequenceAfterThreshold = 2,
                 /// <summary>
@@ -19404,6 +19964,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// <summary>
   /// Describes an error encountered when validating an `OptimizeToursRequest`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OptimizeToursValidationError : pb::IMessage<OptimizeToursValidationError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -19418,7 +19979,7 @@ namespace Google.Cloud.Optimization.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Optimization.V1.FleetRoutingReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19506,6 +20067,7 @@ namespace Google.Cloud.Optimization.V1 {
     ///     * INJECTED_SOLUTION_CONCURRENT_SOLUTION_TYPES = 2005;
     ///     * INJECTED_SOLUTION_MORE_THAN_ONE_PER_TYPE = 2006;
     ///     * INJECTED_SOLUTION_REFRESH_WITHOUT_POPULATE = 2008;
+    ///     * INJECTED_SOLUTION_CONSTRAINED_ROUTE_PORTION_INFEASIBLE = 2010;
     /// * SHIPMENT_MODEL_ERROR = 22;
     ///     * SHIPMENT_MODEL_TOO_LARGE = 2200;
     ///     * SHIPMENT_MODEL_TOO_MANY_CAPACITY_TYPES = 2201;
@@ -19647,6 +20209,13 @@ namespace Google.Cloud.Optimization.V1 {
     ///     * VISIT_REQUEST_DURATION_NEGATIVE_OR_NAN = 4404;
     ///     * VISIT_REQUEST_DURATION_EXCEEDS_GLOBAL_DURATION = 4405;
     /// * PRECEDENCE_ERROR = 46;
+    ///     * PRECEDENCE_RULE_MISSING_FIRST_INDEX = 4600;
+    ///     * PRECEDENCE_RULE_MISSING_SECOND_INDEX = 4601;
+    ///     * PRECEDENCE_RULE_FIRST_INDEX_OUT_OF_BOUNDS = 4602;
+    ///     * PRECEDENCE_RULE_SECOND_INDEX_OUT_OF_BOUNDS = 4603;
+    ///     * PRECEDENCE_RULE_DUPLICATE_INDEX = 4604;
+    ///     * PRECEDENCE_RULE_INEXISTENT_FIRST_VISIT_REQUEST = 4605;
+    ///     * PRECEDENCE_RULE_INEXISTENT_SECOND_VISIT_REQUEST = 4606;
     /// * BREAK_ERROR = 48;
     ///     * BREAK_RULE_EMPTY = 4800;
     ///     * BREAK_REQUEST_UNSPECIFIED_DURATION = 4801;
@@ -20009,6 +20578,7 @@ namespace Google.Cloud.Optimization.V1 {
       /// We however omit top-level entities such as `OptimizeToursRequest` or
       /// `ShipmentModel` to avoid crowding the message.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FieldReference : pb::IMessage<FieldReference>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -20086,10 +20656,24 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int Index {
-          get { return indexOrKeyCase_ == IndexOrKeyOneofCase.Index ? (int) indexOrKey_ : 0; }
+          get { return HasIndex ? (int) indexOrKey_ : 0; }
           set {
             indexOrKey_ = value;
             indexOrKeyCase_ = IndexOrKeyOneofCase.Index;
+          }
+        }
+        /// <summary>Gets whether the "index" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasIndex {
+          get { return indexOrKeyCase_ == IndexOrKeyOneofCase.Index; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "index" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearIndex() {
+          if (HasIndex) {
+            ClearIndexOrKey();
           }
         }
 
@@ -20101,10 +20685,24 @@ namespace Google.Cloud.Optimization.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Key {
-          get { return indexOrKeyCase_ == IndexOrKeyOneofCase.Key ? (string) indexOrKey_ : ""; }
+          get { return HasKey ? (string) indexOrKey_ : ""; }
           set {
             indexOrKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             indexOrKeyCase_ = IndexOrKeyOneofCase.Key;
+          }
+        }
+        /// <summary>Gets whether the "key" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasKey {
+          get { return indexOrKeyCase_ == IndexOrKeyOneofCase.Key; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "key" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearKey() {
+          if (HasKey) {
+            ClearIndexOrKey();
           }
         }
 
@@ -20172,8 +20770,8 @@ namespace Google.Cloud.Optimization.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (Name.Length != 0) hash ^= Name.GetHashCode();
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Index) hash ^= Index.GetHashCode();
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Key) hash ^= Key.GetHashCode();
+          if (HasIndex) hash ^= Index.GetHashCode();
+          if (HasKey) hash ^= Key.GetHashCode();
           if (subField_ != null) hash ^= SubField.GetHashCode();
           hash ^= (int) indexOrKeyCase_;
           if (_unknownFields != null) {
@@ -20198,7 +20796,7 @@ namespace Google.Cloud.Optimization.V1 {
             output.WriteRawTag(10);
             output.WriteString(Name);
           }
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Index) {
+          if (HasIndex) {
             output.WriteRawTag(16);
             output.WriteInt32(Index);
           }
@@ -20206,7 +20804,7 @@ namespace Google.Cloud.Optimization.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(SubField);
           }
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Key) {
+          if (HasKey) {
             output.WriteRawTag(34);
             output.WriteString(Key);
           }
@@ -20224,7 +20822,7 @@ namespace Google.Cloud.Optimization.V1 {
             output.WriteRawTag(10);
             output.WriteString(Name);
           }
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Index) {
+          if (HasIndex) {
             output.WriteRawTag(16);
             output.WriteInt32(Index);
           }
@@ -20232,7 +20830,7 @@ namespace Google.Cloud.Optimization.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(SubField);
           }
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Key) {
+          if (HasKey) {
             output.WriteRawTag(34);
             output.WriteString(Key);
           }
@@ -20249,10 +20847,10 @@ namespace Google.Cloud.Optimization.V1 {
           if (Name.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
           }
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Index) {
+          if (HasIndex) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
           }
-          if (indexOrKeyCase_ == IndexOrKeyOneofCase.Key) {
+          if (HasKey) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
           }
           if (subField_ != null) {

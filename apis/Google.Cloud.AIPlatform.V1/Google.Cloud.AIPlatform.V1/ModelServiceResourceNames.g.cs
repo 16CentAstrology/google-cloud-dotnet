@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -75,6 +75,28 @@ namespace Google.Cloud.AIPlatform.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcav::ModelName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListModelVersionCheckpointsRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ModelName ModelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ModelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UpdateExplanationDatasetRequest
+    {
+        /// <summary><see cref="ModelName"/>-typed view over the <see cref="Model"/> resource name property.</summary>
+        public ModelName ModelAsModelName
+        {
+            get => string.IsNullOrEmpty(Model) ? null : ModelName.Parse(Model, allowUnparsed: true);
+            set => Model = value?.ToString() ?? "";
         }
     }
 

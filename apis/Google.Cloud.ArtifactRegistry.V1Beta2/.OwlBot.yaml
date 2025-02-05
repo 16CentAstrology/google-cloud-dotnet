@@ -1,5 +1,5 @@
 
-# Copyright 2023 Google LLC
+# Copyright 2025 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/devtools/artifactregistry/v1beta2/.*-csharp/Google.Cloud.ArtifactRegistry.V1Beta2
       dest: /owl-bot-staging/Google.Cloud.ArtifactRegistry.V1Beta2/Google.Cloud.ArtifactRegistry.V1Beta2
-    - source: /google/devtools/artifactregistry/v1beta2/.*-csharp/Google.Cloud.ArtifactRegistry.V1Beta2.Tests
-      dest: /owl-bot-staging/Google.Cloud.ArtifactRegistry.V1Beta2/Google.Cloud.ArtifactRegistry.V1Beta2.Tests
     - source: /google/devtools/artifactregistry/v1beta2/.*-csharp/Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
       dest: /owl-bot-staging/Google.Cloud.ArtifactRegistry.V1Beta2/Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
     - source: /google/devtools/artifactregistry/v1beta2/.*-csharp/Google.Cloud.ArtifactRegistry.V1Beta2.GeneratedSnippets

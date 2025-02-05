@@ -169,59 +169,69 @@ namespace Google.Cloud.Language.V1 {
             "ZGVsX29wdGlvbnMYAyABKAsyNC5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEu",
             "Q2xhc3NpZmljYXRpb25Nb2RlbE9wdGlvbnMiXAoUQ2xhc3NpZnlUZXh0UmVz",
             "cG9uc2USRAoKY2F0ZWdvcmllcxgBIAMoCzIwLmdvb2dsZS5jbG91ZC5sYW5n",
-            "dWFnZS52MS5DbGFzc2lmaWNhdGlvbkNhdGVnb3J5ItYDChNBbm5vdGF0ZVRl",
-            "eHRSZXF1ZXN0EjkKCGRvY3VtZW50GAEgASgLMiIuZ29vZ2xlLmNsb3VkLmxh",
-            "bmd1YWdlLnYxLkRvY3VtZW50QgPgQQISTQoIZmVhdHVyZXMYAiABKAsyNi5n",
-            "b29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQW5ub3RhdGVUZXh0UmVxdWVzdC5G",
-            "ZWF0dXJlc0ID4EECEj0KDWVuY29kaW5nX3R5cGUYAyABKA4yJi5nb29nbGUu",
-            "Y2xvdWQubGFuZ3VhZ2UudjEuRW5jb2RpbmdUeXBlGvUBCghGZWF0dXJlcxIW",
-            "Cg5leHRyYWN0X3N5bnRheBgBIAEoCBIYChBleHRyYWN0X2VudGl0aWVzGAIg",
-            "ASgIEiIKGmV4dHJhY3RfZG9jdW1lbnRfc2VudGltZW50GAMgASgIEiAKGGV4",
-            "dHJhY3RfZW50aXR5X3NlbnRpbWVudBgEIAEoCBIVCg1jbGFzc2lmeV90ZXh0",
-            "GAYgASgIEloKHGNsYXNzaWZpY2F0aW9uX21vZGVsX29wdGlvbnMYCiABKAsy",
-            "NC5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQ2xhc3NpZmljYXRpb25Nb2Rl",
-            "bE9wdGlvbnMiywIKFEFubm90YXRlVGV4dFJlc3BvbnNlEjUKCXNlbnRlbmNl",
-            "cxgBIAMoCzIiLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5TZW50ZW5jZRIv",
-            "CgZ0b2tlbnMYAiADKAsyHy5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuVG9r",
-            "ZW4SMgoIZW50aXRpZXMYAyADKAsyIC5nb29nbGUuY2xvdWQubGFuZ3VhZ2Uu",
-            "djEuRW50aXR5Ej8KEmRvY3VtZW50X3NlbnRpbWVudBgEIAEoCzIjLmdvb2ds",
-            "ZS5jbG91ZC5sYW5ndWFnZS52MS5TZW50aW1lbnQSEAoIbGFuZ3VhZ2UYBSAB",
-            "KAkSRAoKY2F0ZWdvcmllcxgGIAMoCzIwLmdvb2dsZS5jbG91ZC5sYW5ndWFn",
-            "ZS52MS5DbGFzc2lmaWNhdGlvbkNhdGVnb3J5KjgKDEVuY29kaW5nVHlwZRII",
-            "CgROT05FEAASCAoEVVRGOBABEgkKBVVURjE2EAISCQoFVVRGMzIQAzKwCgoP",
-            "TGFuZ3VhZ2VTZXJ2aWNlEsgBChBBbmFseXplU2VudGltZW50EjEuZ29vZ2xl",
-            "LmNsb3VkLmxhbmd1YWdlLnYxLkFuYWx5emVTZW50aW1lbnRSZXF1ZXN0GjIu",
-            "Z29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkFuYWx5emVTZW50aW1lbnRSZXNw",
-            "b25zZSJNgtPkkwIjIh4vdjEvZG9jdW1lbnRzOmFuYWx5emVTZW50aW1lbnQ6",
-            "ASraQRZkb2N1bWVudCxlbmNvZGluZ190eXBl2kEIZG9jdW1lbnQSxAEKD0Fu",
-            "YWx5emVFbnRpdGllcxIwLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5BbmFs",
-            "eXplRW50aXRpZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYx",
-            "LkFuYWx5emVFbnRpdGllc1Jlc3BvbnNlIkyC0+STAiIiHS92MS9kb2N1bWVu",
-            "dHM6YW5hbHl6ZUVudGl0aWVzOgEq2kEWZG9jdW1lbnQsZW5jb2RpbmdfdHlw",
-            "ZdpBCGRvY3VtZW50EuABChZBbmFseXplRW50aXR5U2VudGltZW50EjcuZ29v",
-            "Z2xlLmNsb3VkLmxhbmd1YWdlLnYxLkFuYWx5emVFbnRpdHlTZW50aW1lbnRS",
-            "ZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkFuYWx5emVFbnRp",
-            "dHlTZW50aW1lbnRSZXNwb25zZSJTgtPkkwIpIiQvdjEvZG9jdW1lbnRzOmFu",
-            "YWx5emVFbnRpdHlTZW50aW1lbnQ6ASraQRZkb2N1bWVudCxlbmNvZGluZ190",
-            "eXBl2kEIZG9jdW1lbnQSvAEKDUFuYWx5emVTeW50YXgSLi5nb29nbGUuY2xv",
-            "dWQubGFuZ3VhZ2UudjEuQW5hbHl6ZVN5bnRheFJlcXVlc3QaLy5nb29nbGUu",
-            "Y2xvdWQubGFuZ3VhZ2UudjEuQW5hbHl6ZVN5bnRheFJlc3BvbnNlIkqC0+ST",
-            "AiAiGy92MS9kb2N1bWVudHM6YW5hbHl6ZVN5bnRheDoBKtpBFmRvY3VtZW50",
-            "LGVuY29kaW5nX3R5cGXaQQhkb2N1bWVudBKfAQoMQ2xhc3NpZnlUZXh0Ei0u",
-            "Z29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkNsYXNzaWZ5VGV4dFJlcXVlc3Qa",
-            "Li5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQ2xhc3NpZnlUZXh0UmVzcG9u",
-            "c2UiMILT5JMCHyIaL3YxL2RvY3VtZW50czpjbGFzc2lmeVRleHQ6ASraQQhk",
-            "b2N1bWVudBLKAQoMQW5ub3RhdGVUZXh0Ei0uZ29vZ2xlLmNsb3VkLmxhbmd1",
-            "YWdlLnYxLkFubm90YXRlVGV4dFJlcXVlc3QaLi5nb29nbGUuY2xvdWQubGFu",
-            "Z3VhZ2UudjEuQW5ub3RhdGVUZXh0UmVzcG9uc2UiW4LT5JMCHyIaL3YxL2Rv",
-            "Y3VtZW50czphbm5vdGF0ZVRleHQ6ASraQR9kb2N1bWVudCxmZWF0dXJlcyxl",
-            "bmNvZGluZ190eXBl2kERZG9jdW1lbnQsZmVhdHVyZXMaespBF2xhbmd1YWdl",
-            "Lmdvb2dsZWFwaXMuY29t0kFdaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9jbG91ZC1sYW5ndWFnZSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQnAKHGNvbS5nb29nbGUuY2xvdWQubGFu",
-            "Z3VhZ2UudjFCFExhbmd1YWdlU2VydmljZVByb3RvUAFaOGNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vbGFuZ3VhZ2UvYXBpdjEvbGFuZ3VhZ2VwYjtsYW5ndWFnZXBi",
-            "YgZwcm90bzM="));
+            "dWFnZS52MS5DbGFzc2lmaWNhdGlvbkNhdGVnb3J5IlAKE01vZGVyYXRlVGV4",
+            "dFJlcXVlc3QSOQoIZG9jdW1lbnQYASABKAsyIi5nb29nbGUuY2xvdWQubGFu",
+            "Z3VhZ2UudjEuRG9jdW1lbnRCA+BBAiJnChRNb2RlcmF0ZVRleHRSZXNwb25z",
+            "ZRJPChVtb2RlcmF0aW9uX2NhdGVnb3JpZXMYASADKAsyMC5nb29nbGUuY2xv",
+            "dWQubGFuZ3VhZ2UudjEuQ2xhc3NpZmljYXRpb25DYXRlZ29yeSLtAwoTQW5u",
+            "b3RhdGVUZXh0UmVxdWVzdBI5Cghkb2N1bWVudBgBIAEoCzIiLmdvb2dsZS5j",
+            "bG91ZC5sYW5ndWFnZS52MS5Eb2N1bWVudEID4EECEk0KCGZlYXR1cmVzGAIg",
+            "ASgLMjYuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkFubm90YXRlVGV4dFJl",
+            "cXVlc3QuRmVhdHVyZXNCA+BBAhI9Cg1lbmNvZGluZ190eXBlGAMgASgOMiYu",
+            "Z29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkVuY29kaW5nVHlwZRqMAgoIRmVh",
+            "dHVyZXMSFgoOZXh0cmFjdF9zeW50YXgYASABKAgSGAoQZXh0cmFjdF9lbnRp",
+            "dGllcxgCIAEoCBIiChpleHRyYWN0X2RvY3VtZW50X3NlbnRpbWVudBgDIAEo",
+            "CBIgChhleHRyYWN0X2VudGl0eV9zZW50aW1lbnQYBCABKAgSFQoNY2xhc3Np",
+            "ZnlfdGV4dBgGIAEoCBIVCg1tb2RlcmF0ZV90ZXh0GAsgASgIEloKHGNsYXNz",
+            "aWZpY2F0aW9uX21vZGVsX29wdGlvbnMYCiABKAsyNC5nb29nbGUuY2xvdWQu",
+            "bGFuZ3VhZ2UudjEuQ2xhc3NpZmljYXRpb25Nb2RlbE9wdGlvbnMinAMKFEFu",
+            "bm90YXRlVGV4dFJlc3BvbnNlEjUKCXNlbnRlbmNlcxgBIAMoCzIiLmdvb2ds",
+            "ZS5jbG91ZC5sYW5ndWFnZS52MS5TZW50ZW5jZRIvCgZ0b2tlbnMYAiADKAsy",
+            "Hy5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuVG9rZW4SMgoIZW50aXRpZXMY",
+            "AyADKAsyIC5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuRW50aXR5Ej8KEmRv",
+            "Y3VtZW50X3NlbnRpbWVudBgEIAEoCzIjLmdvb2dsZS5jbG91ZC5sYW5ndWFn",
+            "ZS52MS5TZW50aW1lbnQSEAoIbGFuZ3VhZ2UYBSABKAkSRAoKY2F0ZWdvcmll",
+            "cxgGIAMoCzIwLmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5DbGFzc2lmaWNh",
+            "dGlvbkNhdGVnb3J5Ek8KFW1vZGVyYXRpb25fY2F0ZWdvcmllcxgHIAMoCzIw",
+            "Lmdvb2dsZS5jbG91ZC5sYW5ndWFnZS52MS5DbGFzc2lmaWNhdGlvbkNhdGVn",
+            "b3J5KjgKDEVuY29kaW5nVHlwZRIICgROT05FEAASCAoEVVRGOBABEgkKBVVU",
+            "RjE2EAISCQoFVVRGMzIQAzLSCwoPTGFuZ3VhZ2VTZXJ2aWNlEsgBChBBbmFs",
+            "eXplU2VudGltZW50EjEuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkFuYWx5",
+            "emVTZW50aW1lbnRSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYx",
+            "LkFuYWx5emVTZW50aW1lbnRSZXNwb25zZSJN2kEWZG9jdW1lbnQsZW5jb2Rp",
+            "bmdfdHlwZdpBCGRvY3VtZW50gtPkkwIjIh4vdjEvZG9jdW1lbnRzOmFuYWx5",
+            "emVTZW50aW1lbnQ6ASoSxAEKD0FuYWx5emVFbnRpdGllcxIwLmdvb2dsZS5j",
+            "bG91ZC5sYW5ndWFnZS52MS5BbmFseXplRW50aXRpZXNSZXF1ZXN0GjEuZ29v",
+            "Z2xlLmNsb3VkLmxhbmd1YWdlLnYxLkFuYWx5emVFbnRpdGllc1Jlc3BvbnNl",
+            "IkzaQRZkb2N1bWVudCxlbmNvZGluZ190eXBl2kEIZG9jdW1lbnSC0+STAiIi",
+            "HS92MS9kb2N1bWVudHM6YW5hbHl6ZUVudGl0aWVzOgEqEuABChZBbmFseXpl",
+            "RW50aXR5U2VudGltZW50EjcuZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLkFu",
+            "YWx5emVFbnRpdHlTZW50aW1lbnRSZXF1ZXN0GjguZ29vZ2xlLmNsb3VkLmxh",
+            "bmd1YWdlLnYxLkFuYWx5emVFbnRpdHlTZW50aW1lbnRSZXNwb25zZSJT2kEW",
+            "ZG9jdW1lbnQsZW5jb2RpbmdfdHlwZdpBCGRvY3VtZW50gtPkkwIpIiQvdjEv",
+            "ZG9jdW1lbnRzOmFuYWx5emVFbnRpdHlTZW50aW1lbnQ6ASoSvAEKDUFuYWx5",
+            "emVTeW50YXgSLi5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQW5hbHl6ZVN5",
+            "bnRheFJlcXVlc3QaLy5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuQW5hbHl6",
+            "ZVN5bnRheFJlc3BvbnNlIkraQRZkb2N1bWVudCxlbmNvZGluZ190eXBl2kEI",
+            "ZG9jdW1lbnSC0+STAiAiGy92MS9kb2N1bWVudHM6YW5hbHl6ZVN5bnRheDoB",
+            "KhKfAQoMQ2xhc3NpZnlUZXh0Ei0uZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYx",
+            "LkNsYXNzaWZ5VGV4dFJlcXVlc3QaLi5nb29nbGUuY2xvdWQubGFuZ3VhZ2Uu",
+            "djEuQ2xhc3NpZnlUZXh0UmVzcG9uc2UiMNpBCGRvY3VtZW50gtPkkwIfIhov",
+            "djEvZG9jdW1lbnRzOmNsYXNzaWZ5VGV4dDoBKhKfAQoMTW9kZXJhdGVUZXh0",
+            "Ei0uZ29vZ2xlLmNsb3VkLmxhbmd1YWdlLnYxLk1vZGVyYXRlVGV4dFJlcXVl",
+            "c3QaLi5nb29nbGUuY2xvdWQubGFuZ3VhZ2UudjEuTW9kZXJhdGVUZXh0UmVz",
+            "cG9uc2UiMNpBCGRvY3VtZW50gtPkkwIfIhovdjEvZG9jdW1lbnRzOm1vZGVy",
+            "YXRlVGV4dDoBKhLKAQoMQW5ub3RhdGVUZXh0Ei0uZ29vZ2xlLmNsb3VkLmxh",
+            "bmd1YWdlLnYxLkFubm90YXRlVGV4dFJlcXVlc3QaLi5nb29nbGUuY2xvdWQu",
+            "bGFuZ3VhZ2UudjEuQW5ub3RhdGVUZXh0UmVzcG9uc2UiW9pBH2RvY3VtZW50",
+            "LGZlYXR1cmVzLGVuY29kaW5nX3R5cGXaQRFkb2N1bWVudCxmZWF0dXJlc4LT",
+            "5JMCHyIaL3YxL2RvY3VtZW50czphbm5vdGF0ZVRleHQ6ASoaespBF2xhbmd1",
+            "YWdlLmdvb2dsZWFwaXMuY29t0kFdaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9jbG91ZC1sYW5ndWFnZSxodHRwczovL3d3dy5nb29nbGVhcGlz",
+            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQnAKHGNvbS5nb29nbGUuY2xvdWQu",
+            "bGFuZ3VhZ2UudjFCFExhbmd1YWdlU2VydmljZVByb3RvUAFaOGNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vbGFuZ3VhZ2UvYXBpdjEvbGFuZ3VhZ2VwYjtsYW5ndWFn",
+            "ZXBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Language.V1.EncodingType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -247,8 +257,10 @@ namespace Google.Cloud.Language.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse), global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse.Parser, new[]{ "Sentences", "Tokens", "Language" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassifyTextRequest), global::Google.Cloud.Language.V1.ClassifyTextRequest.Parser, new[]{ "Document", "ClassificationModelOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ClassifyTextResponse), global::Google.Cloud.Language.V1.ClassifyTextResponse.Parser, new[]{ "Categories" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest), global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser, new[]{ "Document", "Features", "EncodingType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features), global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features.Parser, new[]{ "ExtractSyntax", "ExtractEntities", "ExtractDocumentSentiment", "ExtractEntitySentiment", "ClassifyText", "ClassificationModelOptions" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextResponse), global::Google.Cloud.Language.V1.AnnotateTextResponse.Parser, new[]{ "Sentences", "Tokens", "Entities", "DocumentSentiment", "Language", "Categories" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ModerateTextRequest), global::Google.Cloud.Language.V1.ModerateTextRequest.Parser, new[]{ "Document" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.ModerateTextResponse), global::Google.Cloud.Language.V1.ModerateTextResponse.Parser, new[]{ "ModerationCategories" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest), global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser, new[]{ "Document", "Features", "EncodingType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features), global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features.Parser, new[]{ "ExtractSyntax", "ExtractEntities", "ExtractDocumentSentiment", "ExtractEntitySentiment", "ClassifyText", "ModerateText", "ClassificationModelOptions" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Language.V1.AnnotateTextResponse), global::Google.Cloud.Language.V1.AnnotateTextResponse.Parser, new[]{ "Sentences", "Tokens", "Entities", "DocumentSentiment", "Language", "Categories", "ModerationCategories" }, null, null, null, null)
           }));
     }
     #endregion
@@ -294,6 +306,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// Represents the input to API methods.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Document : pb::IMessage<Document>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -373,10 +386,24 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Content {
-      get { return sourceCase_ == SourceOneofCase.Content ? (string) source_ : ""; }
+      get { return HasContent ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Content;
+      }
+    }
+    /// <summary>Gets whether the "content" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContent {
+      get { return sourceCase_ == SourceOneofCase.Content; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContent() {
+      if (HasContent) {
+        ClearSource();
       }
     }
 
@@ -391,10 +418,24 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsContentUri {
-      get { return sourceCase_ == SourceOneofCase.GcsContentUri ? (string) source_ : ""; }
+      get { return HasGcsContentUri ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.GcsContentUri;
+      }
+    }
+    /// <summary>Gets whether the "gcs_content_uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsContentUri {
+      get { return sourceCase_ == SourceOneofCase.GcsContentUri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_content_uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsContentUri() {
+      if (HasGcsContentUri) {
+        ClearSource();
       }
     }
 
@@ -469,8 +510,8 @@ namespace Google.Cloud.Language.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Type != global::Google.Cloud.Language.V1.Document.Types.Type.Unspecified) hash ^= Type.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.Content) hash ^= Content.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.GcsContentUri) hash ^= GcsContentUri.GetHashCode();
+      if (HasContent) hash ^= Content.GetHashCode();
+      if (HasGcsContentUri) hash ^= GcsContentUri.GetHashCode();
       if (Language.Length != 0) hash ^= Language.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
@@ -495,11 +536,11 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(18);
         output.WriteString(Content);
       }
-      if (sourceCase_ == SourceOneofCase.GcsContentUri) {
+      if (HasGcsContentUri) {
         output.WriteRawTag(26);
         output.WriteString(GcsContentUri);
       }
@@ -521,11 +562,11 @@ namespace Google.Cloud.Language.V1 {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         output.WriteRawTag(18);
         output.WriteString(Content);
       }
-      if (sourceCase_ == SourceOneofCase.GcsContentUri) {
+      if (HasGcsContentUri) {
         output.WriteRawTag(26);
         output.WriteString(GcsContentUri);
       }
@@ -546,10 +587,10 @@ namespace Google.Cloud.Language.V1 {
       if (Type != global::Google.Cloud.Language.V1.Document.Types.Type.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (sourceCase_ == SourceOneofCase.Content) {
+      if (HasContent) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
       }
-      if (sourceCase_ == SourceOneofCase.GcsContentUri) {
+      if (HasGcsContentUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsContentUri);
       }
       if (Language.Length != 0) {
@@ -680,6 +721,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// Represents a sentence in the input document.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Sentence : pb::IMessage<Sentence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -745,8 +787,8 @@ namespace Google.Cloud.Language.V1 {
     private global::Google.Cloud.Language.V1.Sentiment sentiment_;
     /// <summary>
     /// For calls to [AnalyzeSentiment][] or if
-    /// [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-    /// true, this field will contain the sentiment for the sentence.
+    /// [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment]
+    /// is set to true, this field will contain the sentiment for the sentence.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -937,6 +979,7 @@ namespace Google.Cloud.Language.V1 {
   /// a person, an organization, or location. The API associates information, such
   /// as salience and mentions, with entities.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Entity : pb::IMessage<Entity>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1074,9 +1117,9 @@ namespace Google.Cloud.Language.V1 {
     private global::Google.Cloud.Language.V1.Sentiment sentiment_;
     /// <summary>
     /// For calls to [AnalyzeEntitySentiment][] or if
-    /// [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-    /// true, this field will contain the aggregate sentiment expressed for this
-    /// entity in the provided document.
+    /// [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment]
+    /// is set to true, this field will contain the aggregate sentiment expressed
+    /// for this entity in the provided document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1227,7 +1270,7 @@ namespace Google.Cloud.Language.V1 {
       if (other.Type != global::Google.Cloud.Language.V1.Entity.Types.Type.Unknown) {
         Type = other.Type;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.Salience != 0F) {
         Salience = other.Salience;
       }
@@ -1435,6 +1478,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// Represents the smallest syntactic building block of the text.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Token : pb::IMessage<Token>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1778,6 +1822,7 @@ namespace Google.Cloud.Language.V1 {
   /// Represents the feeling associated with the entire text or entities in
   /// the text.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Sentiment : pb::IMessage<Sentiment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2018,6 +2063,7 @@ namespace Google.Cloud.Language.V1 {
   /// are as defined in
   /// http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PartOfSpeech : pb::IMessage<PartOfSpeech>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3070,6 +3116,7 @@ namespace Google.Cloud.Language.V1 {
   /// information on dependency labels, see
   /// http://www.aclweb.org/anthology/P13-2017
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DependencyEdge : pb::IMessage<DependencyEdge>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3656,6 +3703,7 @@ namespace Google.Cloud.Language.V1 {
   /// Represents a mention for an entity in the text. Currently, proper noun
   /// mentions are supported.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityMention : pb::IMessage<EntityMention>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3737,9 +3785,9 @@ namespace Google.Cloud.Language.V1 {
     private global::Google.Cloud.Language.V1.Sentiment sentiment_;
     /// <summary>
     /// For calls to [AnalyzeEntitySentiment][] or if
-    /// [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment] is set to
-    /// true, this field will contain the sentiment expressed for this mention of
-    /// the entity in the provided document.
+    /// [AnnotateTextRequest.Features.extract_entity_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entity_sentiment]
+    /// is set to true, this field will contain the sentiment expressed for this
+    /// mention of the entity in the provided document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3978,6 +4026,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// Represents an output piece of text.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextSpan : pb::IMessage<TextSpan>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4043,7 +4092,9 @@ namespace Google.Cloud.Language.V1 {
     private int beginOffset_;
     /// <summary>
     /// The API calculates the beginning offset of the content in the original
-    /// document according to the [EncodingType][google.cloud.language.v1.EncodingType] specified in the API request.
+    /// document according to the
+    /// [EncodingType][google.cloud.language.v1.EncodingType] specified in the API
+    /// request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4214,6 +4265,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// Represents a category returned from the text classifier.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClassificationCategory : pb::IMessage<ClassificationCategory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4263,8 +4315,7 @@ namespace Google.Cloud.Language.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The name of the category representing the document, from the [predefined
-    /// taxonomy](https://cloud.google.com/natural-language/docs/categories).
+    /// The name of the category representing the document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4451,6 +4502,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// Model options available for classification requests.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClassificationModelOptions : pb::IMessage<ClassificationModelOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4751,6 +4803,7 @@ namespace Google.Cloud.Language.V1 {
       /// <summary>
       /// Options for the V1 model.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class V1Model : pb::IMessage<V1Model>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4906,6 +4959,7 @@ namespace Google.Cloud.Language.V1 {
       /// <summary>
       /// Options for the V2 model.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class V2Model : pb::IMessage<V2Model>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5133,6 +5187,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// The sentiment analysis request message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeSentimentRequest : pb::IMessage<AnalyzeSentimentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5377,6 +5432,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// The sentiment analysis response message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeSentimentResponse : pb::IMessage<AnalyzeSentimentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5444,7 +5500,8 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5652,6 +5709,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// The entity-level sentiment analysis request message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeEntitySentimentRequest : pb::IMessage<AnalyzeEntitySentimentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5896,6 +5954,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// The entity-level sentiment analysis response message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeEntitySentimentResponse : pb::IMessage<AnalyzeEntitySentimentResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5961,7 +6020,8 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6122,6 +6182,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// The entity analysis request message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeEntitiesRequest : pb::IMessage<AnalyzeEntitiesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6366,6 +6427,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// The entity analysis response message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeEntitiesResponse : pb::IMessage<AnalyzeEntitiesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6431,7 +6493,8 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6592,6 +6655,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// The syntax analysis request message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeSyntaxRequest : pb::IMessage<AnalyzeSyntaxRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6836,6 +6900,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// The syntax analysis response message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeSyntaxResponse : pb::IMessage<AnalyzeSyntaxResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6916,7 +6981,8 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7091,6 +7157,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// The document classification request message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClassifyTextRequest : pb::IMessage<ClassifyTextRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7345,6 +7412,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// The document classification response message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ClassifyTextResponse : pb::IMessage<ClassifyTextResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7527,9 +7595,400 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
+  /// The document moderation request message.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ModerateTextRequest : pb::IMessage<ModerateTextRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ModerateTextRequest> _parser = new pb::MessageParser<ModerateTextRequest>(() => new ModerateTextRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ModerateTextRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModerateTextRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModerateTextRequest(ModerateTextRequest other) : this() {
+      document_ = other.document_ != null ? other.document_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModerateTextRequest Clone() {
+      return new ModerateTextRequest(this);
+    }
+
+    /// <summary>Field number for the "document" field.</summary>
+    public const int DocumentFieldNumber = 1;
+    private global::Google.Cloud.Language.V1.Document document_;
+    /// <summary>
+    /// Required. Input document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Language.V1.Document Document {
+      get { return document_; }
+      set {
+        document_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ModerateTextRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ModerateTextRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Document, other.Document)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (document_ != null) hash ^= Document.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (document_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Document);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (document_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Document);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (document_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ModerateTextRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.document_ != null) {
+        if (document_ == null) {
+          Document = new global::Google.Cloud.Language.V1.Document();
+        }
+        Document.MergeFrom(other.Document);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (document_ == null) {
+              Document = new global::Google.Cloud.Language.V1.Document();
+            }
+            input.ReadMessage(Document);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (document_ == null) {
+              Document = new global::Google.Cloud.Language.V1.Document();
+            }
+            input.ReadMessage(Document);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The document moderation response message.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ModerateTextResponse : pb::IMessage<ModerateTextResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ModerateTextResponse> _parser = new pb::MessageParser<ModerateTextResponse>(() => new ModerateTextResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ModerateTextResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModerateTextResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModerateTextResponse(ModerateTextResponse other) : this() {
+      moderationCategories_ = other.moderationCategories_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ModerateTextResponse Clone() {
+      return new ModerateTextResponse(this);
+    }
+
+    /// <summary>Field number for the "moderation_categories" field.</summary>
+    public const int ModerationCategoriesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Language.V1.ClassificationCategory> _repeated_moderationCategories_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Language.V1.ClassificationCategory.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Language.V1.ClassificationCategory> moderationCategories_ = new pbc::RepeatedField<global::Google.Cloud.Language.V1.ClassificationCategory>();
+    /// <summary>
+    /// Harmful and sensitive categories representing the input document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Language.V1.ClassificationCategory> ModerationCategories {
+      get { return moderationCategories_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ModerateTextResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ModerateTextResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!moderationCategories_.Equals(other.moderationCategories_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= moderationCategories_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      moderationCategories_.WriteTo(output, _repeated_moderationCategories_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      moderationCategories_.WriteTo(ref output, _repeated_moderationCategories_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += moderationCategories_.CalculateSize(_repeated_moderationCategories_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ModerateTextResponse other) {
+      if (other == null) {
+        return;
+      }
+      moderationCategories_.Add(other.moderationCategories_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            moderationCategories_.AddEntriesFrom(input, _repeated_moderationCategories_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            moderationCategories_.AddEntriesFrom(ref input, _repeated_moderationCategories_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The request message for the text annotation API, which can perform multiple
   /// analysis types (sentiment, entities, and syntax) in one call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateTextRequest : pb::IMessage<AnnotateTextRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7544,7 +8003,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7827,6 +8286,7 @@ namespace Google.Cloud.Language.V1 {
       /// All available features for sentiment, syntax, and semantic analysis.
       /// Setting each one to true will enable that specific analysis for the input.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Features : pb::IMessage<Features>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -7866,6 +8326,7 @@ namespace Google.Cloud.Language.V1 {
           extractDocumentSentiment_ = other.extractDocumentSentiment_;
           extractEntitySentiment_ = other.extractEntitySentiment_;
           classifyText_ = other.classifyText_;
+          moderateText_ = other.moderateText_;
           classificationModelOptions_ = other.classificationModelOptions_ != null ? other.classificationModelOptions_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -7951,6 +8412,21 @@ namespace Google.Cloud.Language.V1 {
           }
         }
 
+        /// <summary>Field number for the "moderate_text" field.</summary>
+        public const int ModerateTextFieldNumber = 11;
+        private bool moderateText_;
+        /// <summary>
+        /// Moderate the document for harmful and sensitive categories.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool ModerateText {
+          get { return moderateText_; }
+          set {
+            moderateText_ = value;
+          }
+        }
+
         /// <summary>Field number for the "classification_model_options" field.</summary>
         public const int ClassificationModelOptionsFieldNumber = 10;
         private global::Google.Cloud.Language.V1.ClassificationModelOptions classificationModelOptions_;
@@ -7987,6 +8463,7 @@ namespace Google.Cloud.Language.V1 {
           if (ExtractDocumentSentiment != other.ExtractDocumentSentiment) return false;
           if (ExtractEntitySentiment != other.ExtractEntitySentiment) return false;
           if (ClassifyText != other.ClassifyText) return false;
+          if (ModerateText != other.ModerateText) return false;
           if (!object.Equals(ClassificationModelOptions, other.ClassificationModelOptions)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -8000,6 +8477,7 @@ namespace Google.Cloud.Language.V1 {
           if (ExtractDocumentSentiment != false) hash ^= ExtractDocumentSentiment.GetHashCode();
           if (ExtractEntitySentiment != false) hash ^= ExtractEntitySentiment.GetHashCode();
           if (ClassifyText != false) hash ^= ClassifyText.GetHashCode();
+          if (ModerateText != false) hash ^= ModerateText.GetHashCode();
           if (classificationModelOptions_ != null) hash ^= ClassificationModelOptions.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -8043,6 +8521,10 @@ namespace Google.Cloud.Language.V1 {
             output.WriteRawTag(82);
             output.WriteMessage(ClassificationModelOptions);
           }
+          if (ModerateText != false) {
+            output.WriteRawTag(88);
+            output.WriteBool(ModerateText);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -8077,6 +8559,10 @@ namespace Google.Cloud.Language.V1 {
             output.WriteRawTag(82);
             output.WriteMessage(ClassificationModelOptions);
           }
+          if (ModerateText != false) {
+            output.WriteRawTag(88);
+            output.WriteBool(ModerateText);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -8100,6 +8586,9 @@ namespace Google.Cloud.Language.V1 {
             size += 1 + 1;
           }
           if (ClassifyText != false) {
+            size += 1 + 1;
+          }
+          if (ModerateText != false) {
             size += 1 + 1;
           }
           if (classificationModelOptions_ != null) {
@@ -8131,6 +8620,9 @@ namespace Google.Cloud.Language.V1 {
           }
           if (other.ClassifyText != false) {
             ClassifyText = other.ClassifyText;
+          }
+          if (other.ModerateText != false) {
+            ModerateText = other.ModerateText;
           }
           if (other.classificationModelOptions_ != null) {
             if (classificationModelOptions_ == null) {
@@ -8180,6 +8672,10 @@ namespace Google.Cloud.Language.V1 {
                 input.ReadMessage(ClassificationModelOptions);
                 break;
               }
+              case 88: {
+                ModerateText = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -8222,6 +8718,10 @@ namespace Google.Cloud.Language.V1 {
                 input.ReadMessage(ClassificationModelOptions);
                 break;
               }
+              case 88: {
+                ModerateText = input.ReadBool();
+                break;
+              }
             }
           }
         }
@@ -8237,6 +8737,7 @@ namespace Google.Cloud.Language.V1 {
   /// <summary>
   /// The text annotations response message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateTextResponse : pb::IMessage<AnnotateTextResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8251,7 +8752,7 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Language.V1.LanguageServiceReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8277,6 +8778,7 @@ namespace Google.Cloud.Language.V1 {
       documentSentiment_ = other.documentSentiment_ != null ? other.documentSentiment_.Clone() : null;
       language_ = other.language_;
       categories_ = other.categories_.Clone();
+      moderationCategories_ = other.moderationCategories_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8355,7 +8857,8 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     /// The language of the text, which will be the same as the language specified
     /// in the request or, if not specified, the automatically-detected language.
-    /// See [Document.language][google.cloud.language.v1.Document.language] field for more details.
+    /// See [Document.language][google.cloud.language.v1.Document.language] field
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8380,6 +8883,20 @@ namespace Google.Cloud.Language.V1 {
       get { return categories_; }
     }
 
+    /// <summary>Field number for the "moderation_categories" field.</summary>
+    public const int ModerationCategoriesFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Language.V1.ClassificationCategory> _repeated_moderationCategories_codec
+        = pb::FieldCodec.ForMessage(58, global::Google.Cloud.Language.V1.ClassificationCategory.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Language.V1.ClassificationCategory> moderationCategories_ = new pbc::RepeatedField<global::Google.Cloud.Language.V1.ClassificationCategory>();
+    /// <summary>
+    /// Harmful and sensitive categories identified in the input document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Language.V1.ClassificationCategory> ModerationCategories {
+      get { return moderationCategories_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8401,6 +8918,7 @@ namespace Google.Cloud.Language.V1 {
       if (!object.Equals(DocumentSentiment, other.DocumentSentiment)) return false;
       if (Language != other.Language) return false;
       if(!categories_.Equals(other.categories_)) return false;
+      if(!moderationCategories_.Equals(other.moderationCategories_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8414,6 +8932,7 @@ namespace Google.Cloud.Language.V1 {
       if (documentSentiment_ != null) hash ^= DocumentSentiment.GetHashCode();
       if (Language.Length != 0) hash ^= Language.GetHashCode();
       hash ^= categories_.GetHashCode();
+      hash ^= moderationCategories_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8444,6 +8963,7 @@ namespace Google.Cloud.Language.V1 {
         output.WriteString(Language);
       }
       categories_.WriteTo(output, _repeated_categories_codec);
+      moderationCategories_.WriteTo(output, _repeated_moderationCategories_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8466,6 +8986,7 @@ namespace Google.Cloud.Language.V1 {
         output.WriteString(Language);
       }
       categories_.WriteTo(ref output, _repeated_categories_codec);
+      moderationCategories_.WriteTo(ref output, _repeated_moderationCategories_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8486,6 +9007,7 @@ namespace Google.Cloud.Language.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Language);
       }
       size += categories_.CalculateSize(_repeated_categories_codec);
+      size += moderationCategories_.CalculateSize(_repeated_moderationCategories_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -8511,6 +9033,7 @@ namespace Google.Cloud.Language.V1 {
         Language = other.Language;
       }
       categories_.Add(other.categories_);
+      moderationCategories_.Add(other.moderationCategories_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8553,6 +9076,10 @@ namespace Google.Cloud.Language.V1 {
             categories_.AddEntriesFrom(input, _repeated_categories_codec);
             break;
           }
+          case 58: {
+            moderationCategories_.AddEntriesFrom(input, _repeated_moderationCategories_codec);
+            break;
+          }
         }
       }
     #endif
@@ -8593,6 +9120,10 @@ namespace Google.Cloud.Language.V1 {
           }
           case 50: {
             categories_.AddEntriesFrom(ref input, _repeated_categories_codec);
+            break;
+          }
+          case 58: {
+            moderationCategories_.AddEntriesFrom(ref input, _repeated_moderationCategories_codec);
             break;
           }
         }

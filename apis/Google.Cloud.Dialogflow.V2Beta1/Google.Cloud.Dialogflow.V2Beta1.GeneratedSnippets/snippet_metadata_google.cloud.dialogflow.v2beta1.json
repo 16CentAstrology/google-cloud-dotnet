@@ -8681,6 +8681,10 @@
             "name": "parent"
           },
           {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Dialogflow.V2Beta1.CreateMessageRequest>",
+            "name": "requests"
+          },
+          {
             "type": "Google.Api.Gax.Grpc.CallSettings",
             "name": "callSettings"
           }
@@ -8703,12 +8707,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 41,
+          "end": 46,
           "type": "FULL"
         },
         {
-          "start": 34,
-          "end": 39,
+          "start": 35,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -8729,6 +8733,10 @@
             "name": "parent"
           },
           {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Dialogflow.V2Beta1.CreateMessageRequest>",
+            "name": "requests"
+          },
+          {
             "type": "Google.Api.Gax.Grpc.CallSettings",
             "name": "callSettings"
           }
@@ -8751,12 +8759,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 42,
+          "end": 47,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 40,
+          "start": 36,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -8774,6 +8782,10 @@
           {
             "type": "Google.Cloud.Dialogflow.V2Beta1.ConversationName",
             "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Dialogflow.V2Beta1.CreateMessageRequest>",
+            "name": "requests"
           },
           {
             "type": "Google.Api.Gax.Grpc.CallSettings",
@@ -8798,12 +8810,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 41,
+          "end": 46,
           "type": "FULL"
         },
         {
-          "start": 34,
-          "end": 39,
+          "start": 35,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -8822,6 +8834,10 @@
           {
             "type": "Google.Cloud.Dialogflow.V2Beta1.ConversationName",
             "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Dialogflow.V2Beta1.CreateMessageRequest>",
+            "name": "requests"
           },
           {
             "type": "Google.Api.Gax.Grpc.CallSettings",
@@ -8846,12 +8862,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 42,
+          "end": 47,
           "type": "FULL"
         },
         {
-          "start": 35,
-          "end": 40,
+          "start": 36,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -9458,6 +9474,297 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_GenerateStatelessSummary_sync",
+      "title": "GenerateStatelessSummaryRequestObject",
+      "description": "Snippet for GenerateStatelessSummary",
+      "file": "ConversationsClient.GenerateStatelessSummaryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateStatelessSummary",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.GenerateStatelessSummary",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "GenerateStatelessSummary",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.GenerateStatelessSummary",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_GenerateStatelessSummary_async",
+      "title": "GenerateStatelessSummaryRequestObjectAsync",
+      "description": "Snippet for GenerateStatelessSummaryAsync",
+      "file": "ConversationsClient.GenerateStatelessSummaryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateStatelessSummaryAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.GenerateStatelessSummaryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSummaryResponse>",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "GenerateStatelessSummary",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.GenerateStatelessSummary",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_GenerateStatelessSuggestion_sync",
+      "title": "GenerateStatelessSuggestionRequestObject",
+      "description": "Snippet for GenerateStatelessSuggestion",
+      "file": "ConversationsClient.GenerateStatelessSuggestionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateStatelessSuggestion",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.GenerateStatelessSuggestion",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSuggestionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSuggestionResponse",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "GenerateStatelessSuggestion",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.GenerateStatelessSuggestion",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_GenerateStatelessSuggestion_async",
+      "title": "GenerateStatelessSuggestionRequestObjectAsync",
+      "description": "Snippet for GenerateStatelessSuggestionAsync",
+      "file": "ConversationsClient.GenerateStatelessSuggestionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateStatelessSuggestionAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.GenerateStatelessSuggestionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSuggestionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.GenerateStatelessSuggestionResponse>",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "GenerateStatelessSuggestion",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.GenerateStatelessSuggestion",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_SearchKnowledge_sync",
+      "title": "SearchKnowledgeRequestObject",
+      "description": "Snippet for SearchKnowledge",
+      "file": "ConversationsClient.SearchKnowledgeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchKnowledge",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.SearchKnowledge",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SearchKnowledgeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SearchKnowledgeResponse",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "SearchKnowledge",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.SearchKnowledge",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 52,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Conversations_SearchKnowledge_async",
+      "title": "SearchKnowledgeRequestObjectAsync",
+      "description": "Snippet for SearchKnowledgeAsync",
+      "file": "ConversationsClient.SearchKnowledgeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchKnowledgeAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient.SearchKnowledgeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SearchKnowledgeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SearchKnowledgeResponse>",
+        "client": {
+          "shortName": "ConversationsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ConversationsClient"
+        },
+        "method": {
+          "shortName": "SearchKnowledge",
+          "fullName": "google.cloud.dialogflow.v2beta1.Conversations.SearchKnowledge",
+          "service": {
+            "shortName": "Conversations",
+            "fullName": "google.cloud.dialogflow.v2beta1.Conversations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 55,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 53,
           "type": "SHORT"
         }
       ]
@@ -11349,6 +11656,485 @@
         {
           "start": 36,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_EncryptionSpecService_GetEncryptionSpec_sync",
+      "title": "GetEncryptionSpecRequestObject",
+      "description": "Snippet for GetEncryptionSpec",
+      "file": "EncryptionSpecServiceClient.GetEncryptionSpecRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionSpec",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient.GetEncryptionSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GetEncryptionSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpec",
+        "client": {
+          "shortName": "EncryptionSpecServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionSpec",
+          "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService.GetEncryptionSpec",
+          "service": {
+            "shortName": "EncryptionSpecService",
+            "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_EncryptionSpecService_GetEncryptionSpec_async",
+      "title": "GetEncryptionSpecRequestObjectAsync",
+      "description": "Snippet for GetEncryptionSpecAsync",
+      "file": "EncryptionSpecServiceClient.GetEncryptionSpecRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionSpecAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient.GetEncryptionSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GetEncryptionSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.EncryptionSpec>",
+        "client": {
+          "shortName": "EncryptionSpecServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionSpec",
+          "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService.GetEncryptionSpec",
+          "service": {
+            "shortName": "EncryptionSpecService",
+            "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_EncryptionSpecService_GetEncryptionSpec_sync_flattened",
+      "title": "GetEncryptionSpec",
+      "description": "Snippet for GetEncryptionSpec",
+      "file": "EncryptionSpecServiceClient.GetEncryptionSpecSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionSpec",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient.GetEncryptionSpec",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpec",
+        "client": {
+          "shortName": "EncryptionSpecServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionSpec",
+          "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService.GetEncryptionSpec",
+          "service": {
+            "shortName": "EncryptionSpecService",
+            "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_EncryptionSpecService_GetEncryptionSpec_async_flattened",
+      "title": "GetEncryptionSpecAsync",
+      "description": "Snippet for GetEncryptionSpecAsync",
+      "file": "EncryptionSpecServiceClient.GetEncryptionSpecAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionSpecAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient.GetEncryptionSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.EncryptionSpec>",
+        "client": {
+          "shortName": "EncryptionSpecServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionSpec",
+          "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService.GetEncryptionSpec",
+          "service": {
+            "shortName": "EncryptionSpecService",
+            "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_EncryptionSpecService_GetEncryptionSpec_sync_flattened_resourceNames",
+      "title": "GetEncryptionSpecResourceNames",
+      "description": "Snippet for GetEncryptionSpec",
+      "file": "EncryptionSpecServiceClient.GetEncryptionSpecResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionSpec",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient.GetEncryptionSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpec",
+        "client": {
+          "shortName": "EncryptionSpecServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionSpec",
+          "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService.GetEncryptionSpec",
+          "service": {
+            "shortName": "EncryptionSpecService",
+            "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_EncryptionSpecService_GetEncryptionSpec_async_flattened_resourceNames",
+      "title": "GetEncryptionSpecResourceNamesAsync",
+      "description": "Snippet for GetEncryptionSpecAsync",
+      "file": "EncryptionSpecServiceClient.GetEncryptionSpecResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionSpecAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient.GetEncryptionSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.EncryptionSpec>",
+        "client": {
+          "shortName": "EncryptionSpecServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionSpec",
+          "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService.GetEncryptionSpec",
+          "service": {
+            "shortName": "EncryptionSpecService",
+            "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_EncryptionSpecService_InitializeEncryptionSpec_sync",
+      "title": "InitializeEncryptionSpecRequestObject",
+      "description": "Snippet for InitializeEncryptionSpec",
+      "file": "EncryptionSpecServiceClient.InitializeEncryptionSpecRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitializeEncryptionSpec",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient.InitializeEncryptionSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.InitializeEncryptionSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2Beta1.InitializeEncryptionSpecResponse, Google.Cloud.Dialogflow.V2Beta1.InitializeEncryptionSpecMetadata>",
+        "client": {
+          "shortName": "EncryptionSpecServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient"
+        },
+        "method": {
+          "shortName": "InitializeEncryptionSpec",
+          "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService.InitializeEncryptionSpec",
+          "service": {
+            "shortName": "EncryptionSpecService",
+            "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_EncryptionSpecService_InitializeEncryptionSpec_async",
+      "title": "InitializeEncryptionSpecRequestObjectAsync",
+      "description": "Snippet for InitializeEncryptionSpecAsync",
+      "file": "EncryptionSpecServiceClient.InitializeEncryptionSpecRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitializeEncryptionSpecAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient.InitializeEncryptionSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.InitializeEncryptionSpecRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2Beta1.InitializeEncryptionSpecResponse, Google.Cloud.Dialogflow.V2Beta1.InitializeEncryptionSpecMetadata>>",
+        "client": {
+          "shortName": "EncryptionSpecServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient"
+        },
+        "method": {
+          "shortName": "InitializeEncryptionSpec",
+          "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService.InitializeEncryptionSpec",
+          "service": {
+            "shortName": "EncryptionSpecService",
+            "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_EncryptionSpecService_InitializeEncryptionSpec_sync_flattened",
+      "title": "InitializeEncryptionSpec",
+      "description": "Snippet for InitializeEncryptionSpec",
+      "file": "EncryptionSpecServiceClient.InitializeEncryptionSpecSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitializeEncryptionSpec",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient.InitializeEncryptionSpec",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpec",
+            "name": "encryptionSpec"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2Beta1.InitializeEncryptionSpecResponse, Google.Cloud.Dialogflow.V2Beta1.InitializeEncryptionSpecMetadata>",
+        "client": {
+          "shortName": "EncryptionSpecServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient"
+        },
+        "method": {
+          "shortName": "InitializeEncryptionSpec",
+          "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService.InitializeEncryptionSpec",
+          "service": {
+            "shortName": "EncryptionSpecService",
+            "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_EncryptionSpecService_InitializeEncryptionSpec_async_flattened",
+      "title": "InitializeEncryptionSpecAsync",
+      "description": "Snippet for InitializeEncryptionSpecAsync",
+      "file": "EncryptionSpecServiceClient.InitializeEncryptionSpecAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitializeEncryptionSpecAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient.InitializeEncryptionSpecAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpec",
+            "name": "encryptionSpec"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.V2Beta1.InitializeEncryptionSpecResponse, Google.Cloud.Dialogflow.V2Beta1.InitializeEncryptionSpecMetadata>>",
+        "client": {
+          "shortName": "EncryptionSpecServiceClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.EncryptionSpecServiceClient"
+        },
+        "method": {
+          "shortName": "InitializeEncryptionSpec",
+          "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService.InitializeEncryptionSpec",
+          "service": {
+            "shortName": "EncryptionSpecService",
+            "fullName": "google.cloud.dialogflow.v2beta1.EncryptionSpecService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
           "type": "SHORT"
         }
       ]
@@ -16866,6 +17652,1415 @@
           "service": {
             "shortName": "Fulfillments",
             "fullName": "google.cloud.dialogflow.v2beta1.Fulfillments"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_CreateGenerator_sync",
+      "title": "CreateGeneratorRequestObject",
+      "description": "Snippet for CreateGenerator",
+      "file": "GeneratorsClient.CreateGeneratorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGenerator",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.CreateGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.CreateGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "CreateGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.CreateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_CreateGenerator_async",
+      "title": "CreateGeneratorRequestObjectAsync",
+      "description": "Snippet for CreateGeneratorAsync",
+      "file": "GeneratorsClient.CreateGeneratorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.CreateGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.CreateGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "CreateGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.CreateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_CreateGenerator_sync_flattened",
+      "title": "CreateGenerator",
+      "description": "Snippet for CreateGenerator",
+      "file": "GeneratorsClient.CreateGeneratorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGenerator",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.CreateGenerator",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+            "name": "generator"
+          },
+          {
+            "type": "System.String",
+            "name": "generatorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "CreateGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.CreateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_CreateGenerator_async_flattened",
+      "title": "CreateGeneratorAsync",
+      "description": "Snippet for CreateGeneratorAsync",
+      "file": "GeneratorsClient.CreateGeneratorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.CreateGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+            "name": "generator"
+          },
+          {
+            "type": "System.String",
+            "name": "generatorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "CreateGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.CreateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_CreateGenerator_sync_flattened_resourceNames",
+      "title": "CreateGeneratorResourceNames",
+      "description": "Snippet for CreateGenerator",
+      "file": "GeneratorsClient.CreateGeneratorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGenerator",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.CreateGenerator",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+            "name": "generator"
+          },
+          {
+            "type": "System.String",
+            "name": "generatorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "CreateGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.CreateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_CreateGenerator_async_flattened_resourceNames",
+      "title": "CreateGeneratorResourceNamesAsync",
+      "description": "Snippet for CreateGeneratorAsync",
+      "file": "GeneratorsClient.CreateGeneratorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.CreateGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+            "name": "generator"
+          },
+          {
+            "type": "System.String",
+            "name": "generatorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "CreateGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.CreateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_GetGenerator_sync",
+      "title": "GetGeneratorRequestObject",
+      "description": "Snippet for GetGenerator",
+      "file": "GeneratorsClient.GetGeneratorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerator",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.GetGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GetGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "GetGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.GetGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_GetGenerator_async",
+      "title": "GetGeneratorRequestObjectAsync",
+      "description": "Snippet for GetGeneratorAsync",
+      "file": "GeneratorsClient.GetGeneratorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.GetGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GetGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "GetGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.GetGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_GetGenerator_sync_flattened",
+      "title": "GetGenerator",
+      "description": "Snippet for GetGenerator",
+      "file": "GeneratorsClient.GetGeneratorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerator",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.GetGenerator",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "GetGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.GetGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_GetGenerator_async_flattened",
+      "title": "GetGeneratorAsync",
+      "description": "Snippet for GetGeneratorAsync",
+      "file": "GeneratorsClient.GetGeneratorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.GetGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "GetGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.GetGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_GetGenerator_sync_flattened_resourceNames",
+      "title": "GetGeneratorResourceNames",
+      "description": "Snippet for GetGenerator",
+      "file": "GeneratorsClient.GetGeneratorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerator",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.GetGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "GetGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.GetGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_GetGenerator_async_flattened_resourceNames",
+      "title": "GetGeneratorResourceNamesAsync",
+      "description": "Snippet for GetGeneratorAsync",
+      "file": "GeneratorsClient.GetGeneratorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.GetGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "GetGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.GetGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_ListGenerators_sync",
+      "title": "ListGeneratorsRequestObject",
+      "description": "Snippet for ListGenerators",
+      "file": "GeneratorsClient.ListGeneratorsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGenerators",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.ListGenerators",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ListGeneratorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListGeneratorsResponse, Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "ListGenerators",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.ListGenerators",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_ListGenerators_async",
+      "title": "ListGeneratorsRequestObjectAsync",
+      "description": "Snippet for ListGeneratorsAsync",
+      "file": "GeneratorsClient.ListGeneratorsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGeneratorsAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.ListGeneratorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ListGeneratorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListGeneratorsResponse, Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "ListGenerators",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.ListGenerators",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_ListGenerators_sync_flattened",
+      "title": "ListGenerators",
+      "description": "Snippet for ListGenerators",
+      "file": "GeneratorsClient.ListGeneratorsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGenerators",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.ListGenerators",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListGeneratorsResponse, Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "ListGenerators",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.ListGenerators",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_ListGenerators_async_flattened",
+      "title": "ListGeneratorsAsync",
+      "description": "Snippet for ListGeneratorsAsync",
+      "file": "GeneratorsClient.ListGeneratorsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGeneratorsAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.ListGeneratorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListGeneratorsResponse, Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "ListGenerators",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.ListGenerators",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_ListGenerators_sync_flattened_resourceNames",
+      "title": "ListGeneratorsResourceNames",
+      "description": "Snippet for ListGenerators",
+      "file": "GeneratorsClient.ListGeneratorsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGenerators",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.ListGenerators",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListGeneratorsResponse, Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "ListGenerators",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.ListGenerators",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_ListGenerators_async_flattened_resourceNames",
+      "title": "ListGeneratorsResourceNamesAsync",
+      "description": "Snippet for ListGeneratorsAsync",
+      "file": "GeneratorsClient.ListGeneratorsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGeneratorsAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.ListGeneratorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListGeneratorsResponse, Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "ListGenerators",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.ListGenerators",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_DeleteGenerator_sync",
+      "title": "DeleteGeneratorRequestObject",
+      "description": "Snippet for DeleteGenerator",
+      "file": "GeneratorsClient.DeleteGeneratorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGenerator",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.DeleteGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.DeleteGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "DeleteGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.DeleteGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_DeleteGenerator_async",
+      "title": "DeleteGeneratorRequestObjectAsync",
+      "description": "Snippet for DeleteGeneratorAsync",
+      "file": "GeneratorsClient.DeleteGeneratorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.DeleteGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.DeleteGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "DeleteGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.DeleteGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_DeleteGenerator_sync_flattened",
+      "title": "DeleteGenerator",
+      "description": "Snippet for DeleteGenerator",
+      "file": "GeneratorsClient.DeleteGeneratorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGenerator",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.DeleteGenerator",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "DeleteGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.DeleteGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_DeleteGenerator_async_flattened",
+      "title": "DeleteGeneratorAsync",
+      "description": "Snippet for DeleteGeneratorAsync",
+      "file": "GeneratorsClient.DeleteGeneratorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.DeleteGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "DeleteGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.DeleteGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_DeleteGenerator_sync_flattened_resourceNames",
+      "title": "DeleteGeneratorResourceNames",
+      "description": "Snippet for DeleteGenerator",
+      "file": "GeneratorsClient.DeleteGeneratorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGenerator",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.DeleteGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "DeleteGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.DeleteGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_DeleteGenerator_async_flattened_resourceNames",
+      "title": "DeleteGeneratorResourceNamesAsync",
+      "description": "Snippet for DeleteGeneratorAsync",
+      "file": "GeneratorsClient.DeleteGeneratorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.DeleteGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GeneratorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "DeleteGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.DeleteGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_UpdateGenerator_sync",
+      "title": "UpdateGeneratorRequestObject",
+      "description": "Snippet for UpdateGenerator",
+      "file": "GeneratorsClient.UpdateGeneratorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerator",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.UpdateGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.UpdateGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.UpdateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_UpdateGenerator_async",
+      "title": "UpdateGeneratorRequestObjectAsync",
+      "description": "Snippet for UpdateGeneratorAsync",
+      "file": "GeneratorsClient.UpdateGeneratorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.UpdateGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.UpdateGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.UpdateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_UpdateGenerator_sync_flattened",
+      "title": "UpdateGenerator",
+      "description": "Snippet for UpdateGenerator",
+      "file": "GeneratorsClient.UpdateGeneratorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerator",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.UpdateGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+            "name": "generator"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.UpdateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Generators_UpdateGenerator_async_flattened",
+      "title": "UpdateGeneratorAsync",
+      "description": "Snippet for UpdateGeneratorAsync",
+      "file": "GeneratorsClient.UpdateGeneratorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient.UpdateGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.Generator",
+            "name": "generator"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerator",
+          "fullName": "google.cloud.dialogflow.v2beta1.Generators.UpdateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.v2beta1.Generators"
           }
         }
       },
@@ -23627,12 +25822,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 87,
+          "end": 89,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 85,
+          "end": 87,
           "type": "SHORT"
         }
       ]
@@ -24494,6 +26689,103 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Participants_SuggestKnowledgeAssist_sync",
+      "title": "SuggestKnowledgeAssistRequestObject",
+      "description": "Snippet for SuggestKnowledgeAssist",
+      "file": "ParticipantsClient.SuggestKnowledgeAssistRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuggestKnowledgeAssist",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ParticipantsClient.SuggestKnowledgeAssist",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistResponse",
+        "client": {
+          "shortName": "ParticipantsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ParticipantsClient"
+        },
+        "method": {
+          "shortName": "SuggestKnowledgeAssist",
+          "fullName": "google.cloud.dialogflow.v2beta1.Participants.SuggestKnowledgeAssist",
+          "service": {
+            "shortName": "Participants",
+            "fullName": "google.cloud.dialogflow.v2beta1.Participants"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_Participants_SuggestKnowledgeAssist_async",
+      "title": "SuggestKnowledgeAssistRequestObjectAsync",
+      "description": "Snippet for SuggestKnowledgeAssistAsync",
+      "file": "ParticipantsClient.SuggestKnowledgeAssistRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SuggestKnowledgeAssistAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.ParticipantsClient.SuggestKnowledgeAssistAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SuggestKnowledgeAssistResponse>",
+        "client": {
+          "shortName": "ParticipantsClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.ParticipantsClient"
+        },
+        "method": {
+          "shortName": "SuggestKnowledgeAssist",
+          "fullName": "google.cloud.dialogflow.v2beta1.Participants.SuggestKnowledgeAssist",
+          "service": {
+            "shortName": "Participants",
+            "fullName": "google.cloud.dialogflow.v2beta1.Participants"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
           "type": "SHORT"
         }
       ]
@@ -26521,12 +28813,1405 @@
       "segments": [
         {
           "start": 20,
-          "end": 84,
+          "end": 85,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 82,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_CreateSipTrunk_sync",
+      "title": "CreateSipTrunkRequestObject",
+      "description": "Snippet for CreateSipTrunk",
+      "file": "SipTrunksClient.CreateSipTrunkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSipTrunk",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.CreateSipTrunk",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.CreateSipTrunkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "CreateSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.CreateSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_CreateSipTrunk_async",
+      "title": "CreateSipTrunkRequestObjectAsync",
+      "description": "Snippet for CreateSipTrunkAsync",
+      "file": "SipTrunksClient.CreateSipTrunkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSipTrunkAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.CreateSipTrunkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.CreateSipTrunkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "CreateSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.CreateSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_CreateSipTrunk_sync_flattened",
+      "title": "CreateSipTrunk",
+      "description": "Snippet for CreateSipTrunk",
+      "file": "SipTrunksClient.CreateSipTrunkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSipTrunk",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.CreateSipTrunk",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+            "name": "sipTrunk"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "CreateSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.CreateSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_CreateSipTrunk_async_flattened",
+      "title": "CreateSipTrunkAsync",
+      "description": "Snippet for CreateSipTrunkAsync",
+      "file": "SipTrunksClient.CreateSipTrunkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSipTrunkAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.CreateSipTrunkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+            "name": "sipTrunk"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "CreateSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.CreateSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_CreateSipTrunk_sync_flattened_resourceNames",
+      "title": "CreateSipTrunkResourceNames",
+      "description": "Snippet for CreateSipTrunk",
+      "file": "SipTrunksClient.CreateSipTrunkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSipTrunk",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.CreateSipTrunk",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+            "name": "sipTrunk"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "CreateSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.CreateSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_CreateSipTrunk_async_flattened_resourceNames",
+      "title": "CreateSipTrunkResourceNamesAsync",
+      "description": "Snippet for CreateSipTrunkAsync",
+      "file": "SipTrunksClient.CreateSipTrunkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSipTrunkAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.CreateSipTrunkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+            "name": "sipTrunk"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "CreateSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.CreateSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_DeleteSipTrunk_sync",
+      "title": "DeleteSipTrunkRequestObject",
+      "description": "Snippet for DeleteSipTrunk",
+      "file": "SipTrunksClient.DeleteSipTrunkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSipTrunk",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.DeleteSipTrunk",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.DeleteSipTrunkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "DeleteSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.DeleteSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_DeleteSipTrunk_async",
+      "title": "DeleteSipTrunkRequestObjectAsync",
+      "description": "Snippet for DeleteSipTrunkAsync",
+      "file": "SipTrunksClient.DeleteSipTrunkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSipTrunkAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.DeleteSipTrunkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.DeleteSipTrunkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "DeleteSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.DeleteSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_DeleteSipTrunk_sync_flattened",
+      "title": "DeleteSipTrunk",
+      "description": "Snippet for DeleteSipTrunk",
+      "file": "SipTrunksClient.DeleteSipTrunkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSipTrunk",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.DeleteSipTrunk",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "DeleteSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.DeleteSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_DeleteSipTrunk_async_flattened",
+      "title": "DeleteSipTrunkAsync",
+      "description": "Snippet for DeleteSipTrunkAsync",
+      "file": "SipTrunksClient.DeleteSipTrunkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSipTrunkAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.DeleteSipTrunkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "DeleteSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.DeleteSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_DeleteSipTrunk_sync_flattened_resourceNames",
+      "title": "DeleteSipTrunkResourceNames",
+      "description": "Snippet for DeleteSipTrunk",
+      "file": "SipTrunksClient.DeleteSipTrunkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSipTrunk",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.DeleteSipTrunk",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SipTrunkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "DeleteSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.DeleteSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_DeleteSipTrunk_async_flattened_resourceNames",
+      "title": "DeleteSipTrunkResourceNamesAsync",
+      "description": "Snippet for DeleteSipTrunkAsync",
+      "file": "SipTrunksClient.DeleteSipTrunkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSipTrunkAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.DeleteSipTrunkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SipTrunkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "DeleteSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.DeleteSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_ListSipTrunks_sync",
+      "title": "ListSipTrunksRequestObject",
+      "description": "Snippet for ListSipTrunks",
+      "file": "SipTrunksClient.ListSipTrunksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSipTrunks",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.ListSipTrunks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ListSipTrunksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListSipTrunksResponse, Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "ListSipTrunks",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.ListSipTrunks",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_ListSipTrunks_async",
+      "title": "ListSipTrunksRequestObjectAsync",
+      "description": "Snippet for ListSipTrunksAsync",
+      "file": "SipTrunksClient.ListSipTrunksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSipTrunksAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.ListSipTrunksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ListSipTrunksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListSipTrunksResponse, Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "ListSipTrunks",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.ListSipTrunks",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_ListSipTrunks_sync_flattened",
+      "title": "ListSipTrunks",
+      "description": "Snippet for ListSipTrunks",
+      "file": "SipTrunksClient.ListSipTrunksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSipTrunks",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.ListSipTrunks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListSipTrunksResponse, Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "ListSipTrunks",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.ListSipTrunks",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_ListSipTrunks_async_flattened",
+      "title": "ListSipTrunksAsync",
+      "description": "Snippet for ListSipTrunksAsync",
+      "file": "SipTrunksClient.ListSipTrunksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSipTrunksAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.ListSipTrunksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListSipTrunksResponse, Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "ListSipTrunks",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.ListSipTrunks",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_ListSipTrunks_sync_flattened_resourceNames",
+      "title": "ListSipTrunksResourceNames",
+      "description": "Snippet for ListSipTrunks",
+      "file": "SipTrunksClient.ListSipTrunksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSipTrunks",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.ListSipTrunks",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListSipTrunksResponse, Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "ListSipTrunks",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.ListSipTrunks",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_ListSipTrunks_async_flattened_resourceNames",
+      "title": "ListSipTrunksResourceNamesAsync",
+      "description": "Snippet for ListSipTrunksAsync",
+      "file": "SipTrunksClient.ListSipTrunksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSipTrunksAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.ListSipTrunksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListSipTrunksResponse, Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "ListSipTrunks",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.ListSipTrunks",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_GetSipTrunk_sync",
+      "title": "GetSipTrunkRequestObject",
+      "description": "Snippet for GetSipTrunk",
+      "file": "SipTrunksClient.GetSipTrunkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSipTrunk",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.GetSipTrunk",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GetSipTrunkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "GetSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.GetSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_GetSipTrunk_async",
+      "title": "GetSipTrunkRequestObjectAsync",
+      "description": "Snippet for GetSipTrunkAsync",
+      "file": "SipTrunksClient.GetSipTrunkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSipTrunkAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.GetSipTrunkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.GetSipTrunkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "GetSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.GetSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_GetSipTrunk_sync_flattened",
+      "title": "GetSipTrunk",
+      "description": "Snippet for GetSipTrunk",
+      "file": "SipTrunksClient.GetSipTrunkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSipTrunk",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.GetSipTrunk",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "GetSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.GetSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_GetSipTrunk_async_flattened",
+      "title": "GetSipTrunkAsync",
+      "description": "Snippet for GetSipTrunkAsync",
+      "file": "SipTrunksClient.GetSipTrunkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSipTrunkAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.GetSipTrunkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "GetSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.GetSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_GetSipTrunk_sync_flattened_resourceNames",
+      "title": "GetSipTrunkResourceNames",
+      "description": "Snippet for GetSipTrunk",
+      "file": "SipTrunksClient.GetSipTrunkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSipTrunk",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.GetSipTrunk",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SipTrunkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "GetSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.GetSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_GetSipTrunk_async_flattened_resourceNames",
+      "title": "GetSipTrunkResourceNamesAsync",
+      "description": "Snippet for GetSipTrunkAsync",
+      "file": "SipTrunksClient.GetSipTrunkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSipTrunkAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.GetSipTrunkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SipTrunkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "GetSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.GetSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_UpdateSipTrunk_sync",
+      "title": "UpdateSipTrunkRequestObject",
+      "description": "Snippet for UpdateSipTrunk",
+      "file": "SipTrunksClient.UpdateSipTrunkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSipTrunk",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.UpdateSipTrunk",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.UpdateSipTrunkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "UpdateSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.UpdateSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_UpdateSipTrunk_async",
+      "title": "UpdateSipTrunkRequestObjectAsync",
+      "description": "Snippet for UpdateSipTrunkAsync",
+      "file": "SipTrunksClient.UpdateSipTrunkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSipTrunkAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.UpdateSipTrunkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.UpdateSipTrunkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "UpdateSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.UpdateSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_UpdateSipTrunk_sync_flattened",
+      "title": "UpdateSipTrunk",
+      "description": "Snippet for UpdateSipTrunk",
+      "file": "SipTrunksClient.UpdateSipTrunkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSipTrunk",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.UpdateSipTrunk",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+            "name": "sipTrunk"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "UpdateSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.UpdateSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_SipTrunks_UpdateSipTrunk_async_flattened",
+      "title": "UpdateSipTrunkAsync",
+      "description": "Snippet for UpdateSipTrunkAsync",
+      "file": "SipTrunksClient.UpdateSipTrunkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSipTrunkAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient.UpdateSipTrunkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.SipTrunk",
+            "name": "sipTrunk"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.SipTrunk>",
+        "client": {
+          "shortName": "SipTrunksClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.SipTrunksClient"
+        },
+        "method": {
+          "shortName": "UpdateSipTrunk",
+          "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks.UpdateSipTrunk",
+          "service": {
+            "shortName": "SipTrunks",
+            "fullName": "google.cloud.dialogflow.v2beta1.SipTrunks"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
           "type": "SHORT"
         }
       ]

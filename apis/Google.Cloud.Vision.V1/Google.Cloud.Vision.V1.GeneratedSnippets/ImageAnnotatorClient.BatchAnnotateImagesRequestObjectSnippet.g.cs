@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Vision.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START vision_v1_generated_ImageAnnotator_BatchAnnotateImages_sync]
     using Google.Cloud.Vision.V1;
@@ -41,6 +41,7 @@ namespace Google.Cloud.Vision.V1.Snippets
                     new AnnotateImageRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(request);

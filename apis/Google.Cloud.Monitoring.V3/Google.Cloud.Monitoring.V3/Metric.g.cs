@@ -30,48 +30,48 @@ namespace Google.Cloud.Monitoring.V3 {
             "Y2UucHJvdG8aIWdvb2dsZS9tb25pdG9yaW5nL3YzL2NvbW1vbi5wcm90byJu",
             "CgVQb2ludBI0CghpbnRlcnZhbBgBIAEoCzIiLmdvb2dsZS5tb25pdG9yaW5n",
             "LnYzLlRpbWVJbnRlcnZhbBIvCgV2YWx1ZRgCIAEoCzIgLmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLlR5cGVkVmFsdWUizwIKClRpbWVTZXJpZXMSIgoGbWV0cmlj",
+            "dG9yaW5nLnYzLlR5cGVkVmFsdWUi5AIKClRpbWVTZXJpZXMSIgoGbWV0cmlj",
             "GAEgASgLMhIuZ29vZ2xlLmFwaS5NZXRyaWMSLwoIcmVzb3VyY2UYAiABKAsy",
             "HS5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291cmNlEjcKCG1ldGFkYXRhGAcg",
             "ASgLMiUuZ29vZ2xlLmFwaS5Nb25pdG9yZWRSZXNvdXJjZU1ldGFkYXRhEjwK",
             "C21ldHJpY19raW5kGAMgASgOMicuZ29vZ2xlLmFwaS5NZXRyaWNEZXNjcmlw",
             "dG9yLk1ldHJpY0tpbmQSOgoKdmFsdWVfdHlwZRgEIAEoDjImLmdvb2dsZS5h",
             "cGkuTWV0cmljRGVzY3JpcHRvci5WYWx1ZVR5cGUSKwoGcG9pbnRzGAUgAygL",
-            "MhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuUG9pbnQSDAoEdW5pdBgIIAEoCSLO",
-            "AgoUVGltZVNlcmllc0Rlc2NyaXB0b3ISNgoRbGFiZWxfZGVzY3JpcHRvcnMY",
-            "ASADKAsyGy5nb29nbGUuYXBpLkxhYmVsRGVzY3JpcHRvchJVChFwb2ludF9k",
-            "ZXNjcmlwdG9ycxgFIAMoCzI6Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVT",
-            "ZXJpZXNEZXNjcmlwdG9yLlZhbHVlRGVzY3JpcHRvchqmAQoPVmFsdWVEZXNj",
-            "cmlwdG9yEgsKA2tleRgBIAEoCRI6Cgp2YWx1ZV90eXBlGAIgASgOMiYuZ29v",
-            "Z2xlLmFwaS5NZXRyaWNEZXNjcmlwdG9yLlZhbHVlVHlwZRI8CgttZXRyaWNf",
-            "a2luZBgDIAEoDjInLmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvci5NZXRy",
-            "aWNLaW5kEgwKBHVuaXQYBCABKAkihgIKDlRpbWVTZXJpZXNEYXRhEjYKDGxh",
-            "YmVsX3ZhbHVlcxgBIAMoCzIgLmdvb2dsZS5tb25pdG9yaW5nLnYzLkxhYmVs",
-            "VmFsdWUSQgoKcG9pbnRfZGF0YRgCIAMoCzIuLmdvb2dsZS5tb25pdG9yaW5n",
-            "LnYzLlRpbWVTZXJpZXNEYXRhLlBvaW50RGF0YRp4CglQb2ludERhdGESMAoG",
-            "dmFsdWVzGAEgAygLMiAuZ29vZ2xlLm1vbml0b3JpbmcudjMuVHlwZWRWYWx1",
-            "ZRI5Cg10aW1lX2ludGVydmFsGAIgASgLMiIuZ29vZ2xlLm1vbml0b3Jpbmcu",
-            "djMuVGltZUludGVydmFsIloKCkxhYmVsVmFsdWUSFAoKYm9vbF92YWx1ZRgB",
-            "IAEoCEgAEhUKC2ludDY0X3ZhbHVlGAIgASgDSAASFgoMc3RyaW5nX3ZhbHVl",
-            "GAMgASgJSABCBwoFdmFsdWUiUQoKUXVlcnlFcnJvchIyCgdsb2NhdG9yGAEg",
-            "ASgLMiEuZ29vZ2xlLm1vbml0b3JpbmcudjMuVGV4dExvY2F0b3ISDwoHbWVz",
-            "c2FnZRgCIAEoCSKgAgoLVGV4dExvY2F0b3ISDgoGc291cmNlGAEgASgJEkIK",
-            "DnN0YXJ0X3Bvc2l0aW9uGAIgASgLMiouZ29vZ2xlLm1vbml0b3JpbmcudjMu",
-            "VGV4dExvY2F0b3IuUG9zaXRpb24SQAoMZW5kX3Bvc2l0aW9uGAMgASgLMiou",
-            "Z29vZ2xlLm1vbml0b3JpbmcudjMuVGV4dExvY2F0b3IuUG9zaXRpb24SOQoO",
-            "bmVzdGVkX2xvY2F0b3IYBCABKAsyIS5nb29nbGUubW9uaXRvcmluZy52My5U",
-            "ZXh0TG9jYXRvchIWCg5uZXN0aW5nX3JlYXNvbhgFIAEoCRooCghQb3NpdGlv",
-            "bhIMCgRsaW5lGAEgASgFEg4KBmNvbHVtbhgCIAEoBULDAQoYY29tLmdvb2ds",
-            "ZS5tb25pdG9yaW5nLnYzQgtNZXRyaWNQcm90b1ABWj5nb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21vbml0b3JpbmcvdjM7bW9uaXRv",
-            "cmluZ6oCGkdvb2dsZS5DbG91ZC5Nb25pdG9yaW5nLlYzygIaR29vZ2xlXENs",
-            "b3VkXE1vbml0b3JpbmdcVjPqAh1Hb29nbGU6OkNsb3VkOjpNb25pdG9yaW5n",
-            "OjpWM2IGcHJvdG8z"));
+            "MhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuUG9pbnQSDAoEdW5pdBgIIAEoCRIT",
+            "CgtkZXNjcmlwdGlvbhgJIAEoCSLOAgoUVGltZVNlcmllc0Rlc2NyaXB0b3IS",
+            "NgoRbGFiZWxfZGVzY3JpcHRvcnMYASADKAsyGy5nb29nbGUuYXBpLkxhYmVs",
+            "RGVzY3JpcHRvchJVChFwb2ludF9kZXNjcmlwdG9ycxgFIAMoCzI6Lmdvb2ds",
+            "ZS5tb25pdG9yaW5nLnYzLlRpbWVTZXJpZXNEZXNjcmlwdG9yLlZhbHVlRGVz",
+            "Y3JpcHRvchqmAQoPVmFsdWVEZXNjcmlwdG9yEgsKA2tleRgBIAEoCRI6Cgp2",
+            "YWx1ZV90eXBlGAIgASgOMiYuZ29vZ2xlLmFwaS5NZXRyaWNEZXNjcmlwdG9y",
+            "LlZhbHVlVHlwZRI8CgttZXRyaWNfa2luZBgDIAEoDjInLmdvb2dsZS5hcGku",
+            "TWV0cmljRGVzY3JpcHRvci5NZXRyaWNLaW5kEgwKBHVuaXQYBCABKAkihgIK",
+            "DlRpbWVTZXJpZXNEYXRhEjYKDGxhYmVsX3ZhbHVlcxgBIAMoCzIgLmdvb2ds",
+            "ZS5tb25pdG9yaW5nLnYzLkxhYmVsVmFsdWUSQgoKcG9pbnRfZGF0YRgCIAMo",
+            "CzIuLmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVTZXJpZXNEYXRhLlBvaW50",
+            "RGF0YRp4CglQb2ludERhdGESMAoGdmFsdWVzGAEgAygLMiAuZ29vZ2xlLm1v",
+            "bml0b3JpbmcudjMuVHlwZWRWYWx1ZRI5Cg10aW1lX2ludGVydmFsGAIgASgL",
+            "MiIuZ29vZ2xlLm1vbml0b3JpbmcudjMuVGltZUludGVydmFsIloKCkxhYmVs",
+            "VmFsdWUSFAoKYm9vbF92YWx1ZRgBIAEoCEgAEhUKC2ludDY0X3ZhbHVlGAIg",
+            "ASgDSAASFgoMc3RyaW5nX3ZhbHVlGAMgASgJSABCBwoFdmFsdWUiUQoKUXVl",
+            "cnlFcnJvchIyCgdsb2NhdG9yGAEgASgLMiEuZ29vZ2xlLm1vbml0b3Jpbmcu",
+            "djMuVGV4dExvY2F0b3ISDwoHbWVzc2FnZRgCIAEoCSKgAgoLVGV4dExvY2F0",
+            "b3ISDgoGc291cmNlGAEgASgJEkIKDnN0YXJ0X3Bvc2l0aW9uGAIgASgLMiou",
+            "Z29vZ2xlLm1vbml0b3JpbmcudjMuVGV4dExvY2F0b3IuUG9zaXRpb24SQAoM",
+            "ZW5kX3Bvc2l0aW9uGAMgASgLMiouZ29vZ2xlLm1vbml0b3JpbmcudjMuVGV4",
+            "dExvY2F0b3IuUG9zaXRpb24SOQoObmVzdGVkX2xvY2F0b3IYBCABKAsyIS5n",
+            "b29nbGUubW9uaXRvcmluZy52My5UZXh0TG9jYXRvchIWCg5uZXN0aW5nX3Jl",
+            "YXNvbhgFIAEoCRooCghQb3NpdGlvbhIMCgRsaW5lGAEgASgFEg4KBmNvbHVt",
+            "bhgCIAEoBULGAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQgtNZXRyaWNQ",
+            "cm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL21vbml0b3JpbmcvYXBpdjMv",
+            "djIvbW9uaXRvcmluZ3BiO21vbml0b3JpbmdwYqoCGkdvb2dsZS5DbG91ZC5N",
+            "b25pdG9yaW5nLlYzygIaR29vZ2xlXENsb3VkXE1vbml0b3JpbmdcVjPqAh1H",
+            "b29nbGU6OkNsb3VkOjpNb25pdG9yaW5nOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.LabelReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Point), global::Google.Cloud.Monitoring.V3.Point.Parser, new[]{ "Interval", "Value" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "Metadata", "MetricKind", "ValueType", "Points", "Unit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "Metadata", "MetricKind", "ValueType", "Points", "Unit", "Description" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor), global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Parser, new[]{ "LabelDescriptors", "PointDescriptors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor), global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor.Parser, new[]{ "Key", "ValueType", "MetricKind", "Unit" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesData), global::Google.Cloud.Monitoring.V3.TimeSeriesData.Parser, new[]{ "LabelValues", "PointData" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeriesData.Types.PointData), global::Google.Cloud.Monitoring.V3.TimeSeriesData.Types.PointData.Parser, new[]{ "Values", "TimeInterval" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.LabelValue), global::Google.Cloud.Monitoring.V3.LabelValue.Parser, new[]{ "BoolValue", "Int64Value", "StringValue" }, new[]{ "Value" }, null, null, null),
@@ -86,6 +86,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// A single data point in a time series.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Point : pb::IMessage<Point>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -350,6 +351,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// fully-specified monitored resource and a fully-specified metric.
   /// This type is used for both listing and creating time series.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeSeries : pb::IMessage<TimeSeries>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -391,6 +393,7 @@ namespace Google.Cloud.Monitoring.V3 {
       valueType_ = other.valueType_;
       points_ = other.points_.Clone();
       unit_ = other.unit_;
+      description_ = other.description_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -521,7 +524,8 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// The units in which the metric value is reported. It is only applicable
     /// if the `value_type` is `INT64`, `DOUBLE`, or `DISTRIBUTION`. The `unit`
-    /// defines the representation of the stored metric values.
+    /// defines the representation of the stored metric values. This field can only
+    /// be changed through CreateTimeSeries when it is empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -529,6 +533,24 @@ namespace Google.Cloud.Monitoring.V3 {
       get { return unit_; }
       set {
         unit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 9;
+    private string description_ = "";
+    /// <summary>
+    /// Input only. A detailed description of the time series that will be
+    /// associated with the
+    /// [google.api.MetricDescriptor][google.api.MetricDescriptor] for the metric.
+    /// Once set, this field cannot be changed through CreateTimeSeries.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -554,6 +576,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (ValueType != other.ValueType) return false;
       if(!points_.Equals(other.points_)) return false;
       if (Unit != other.Unit) return false;
+      if (Description != other.Description) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -568,6 +591,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (ValueType != global::Google.Api.MetricDescriptor.Types.ValueType.Unspecified) hash ^= ValueType.GetHashCode();
       hash ^= points_.GetHashCode();
       if (Unit.Length != 0) hash ^= Unit.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -611,6 +635,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(66);
         output.WriteString(Unit);
       }
+      if (Description.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Description);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -646,6 +674,10 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(66);
         output.WriteString(Unit);
       }
+      if (Description.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Description);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -674,6 +706,9 @@ namespace Google.Cloud.Monitoring.V3 {
       size += points_.CalculateSize(_repeated_points_codec);
       if (Unit.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Unit);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -714,6 +749,9 @@ namespace Google.Cloud.Monitoring.V3 {
       points_.Add(other.points_);
       if (other.Unit.Length != 0) {
         Unit = other.Unit;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -765,6 +803,10 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 66: {
             Unit = input.ReadString();
+            break;
+          }
+          case 74: {
+            Description = input.ReadString();
             break;
           }
         }
@@ -819,6 +861,10 @@ namespace Google.Cloud.Monitoring.V3 {
             Unit = input.ReadString();
             break;
           }
+          case 74: {
+            Description = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -829,6 +875,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// A descriptor for the labels and points in a time series.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeSeriesDescriptor : pb::IMessage<TimeSeriesDescriptor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1045,6 +1092,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// A descriptor for the value columns in a data point.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ValueDescriptor : pb::IMessage<ValueDescriptor>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1369,6 +1417,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// Represents the values of a time series associated with a
   /// TimeSeriesDescriptor.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeSeriesData : pb::IMessage<TimeSeriesData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1590,6 +1639,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// point values corresponding to the entries in `point_descriptors` field in
       /// the TimeSeriesDescriptor associated with this object.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PointData : pb::IMessage<PointData>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1828,6 +1878,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// A label value.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelValue : pb::IMessage<LabelValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1891,10 +1942,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BoolValue {
-      get { return valueCase_ == ValueOneofCase.BoolValue ? (bool) value_ : false; }
+      get { return HasBoolValue ? (bool) value_ : false; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.BoolValue;
+      }
+    }
+    /// <summary>Gets whether the "bool_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBoolValue {
+      get { return valueCase_ == ValueOneofCase.BoolValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "bool_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBoolValue() {
+      if (HasBoolValue) {
+        ClearValue();
       }
     }
 
@@ -1906,10 +1971,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Int64Value {
-      get { return valueCase_ == ValueOneofCase.Int64Value ? (long) value_ : 0L; }
+      get { return HasInt64Value ? (long) value_ : 0L; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.Int64Value;
+      }
+    }
+    /// <summary>Gets whether the "int64_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInt64Value {
+      get { return valueCase_ == ValueOneofCase.Int64Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "int64_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInt64Value() {
+      if (HasInt64Value) {
+        ClearValue();
       }
     }
 
@@ -1921,10 +2000,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StringValue {
-      get { return valueCase_ == ValueOneofCase.StringValue ? (string) value_ : ""; }
+      get { return HasStringValue ? (string) value_ : ""; }
       set {
         value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueCase_ = ValueOneofCase.StringValue;
+      }
+    }
+    /// <summary>Gets whether the "string_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStringValue {
+      get { return valueCase_ == ValueOneofCase.StringValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStringValue() {
+      if (HasStringValue) {
+        ClearValue();
       }
     }
 
@@ -1976,9 +2069,9 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (valueCase_ == ValueOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
-      if (valueCase_ == ValueOneofCase.Int64Value) hash ^= Int64Value.GetHashCode();
-      if (valueCase_ == ValueOneofCase.StringValue) hash ^= StringValue.GetHashCode();
+      if (HasBoolValue) hash ^= BoolValue.GetHashCode();
+      if (HasInt64Value) hash ^= Int64Value.GetHashCode();
+      if (HasStringValue) hash ^= StringValue.GetHashCode();
       hash ^= (int) valueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1998,15 +2091,15 @@ namespace Google.Cloud.Monitoring.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(8);
         output.WriteBool(BoolValue);
       }
-      if (valueCase_ == ValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(16);
         output.WriteInt64(Int64Value);
       }
-      if (valueCase_ == ValueOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(26);
         output.WriteString(StringValue);
       }
@@ -2020,15 +2113,15 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(8);
         output.WriteBool(BoolValue);
       }
-      if (valueCase_ == ValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(16);
         output.WriteInt64(Int64Value);
       }
-      if (valueCase_ == ValueOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(26);
         output.WriteString(StringValue);
       }
@@ -2042,13 +2135,13 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         size += 1 + 1;
       }
-      if (valueCase_ == ValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Int64Value);
       }
-      if (valueCase_ == ValueOneofCase.StringValue) {
+      if (HasStringValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
       }
       if (_unknownFields != null) {
@@ -2139,6 +2232,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// An error associated with a query in the time series query language format.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryError : pb::IMessage<QueryError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2403,6 +2497,7 @@ namespace Google.Cloud.Monitoring.V3 {
   ///
   /// refers to the part of the text: "fox".
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextLocator : pb::IMessage<TextLocator>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2802,6 +2897,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <summary>
       /// The position of a byte within the text.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Position : pb::IMessage<Position>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

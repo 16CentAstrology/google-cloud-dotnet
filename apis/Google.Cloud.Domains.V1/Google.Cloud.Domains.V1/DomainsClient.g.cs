@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
-using gt = Google.Type;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using gt = Google.Type;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Domains.V1
 {
@@ -443,14 +443,14 @@ namespace Google.Cloud.Domains.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DomainsClient.Create(callInvoker, Settings, Logger);
+            return DomainsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<DomainsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DomainsClient.Create(callInvoker, Settings, Logger);
+            return DomainsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1784,13 +1784,22 @@ namespace Google.Cloud.Domains.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Registration"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRegistrationsResponse, Registration> ListRegistrations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRegistrations(new ListRegistrationsRequest
+        public virtual gax::PagedEnumerable<ListRegistrationsResponse, Registration> ListRegistrations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegistrationsRequest request = new ListRegistrationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRegistrations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the `Registration` resources in a project.
@@ -1809,13 +1818,22 @@ namespace Google.Cloud.Domains.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Registration"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRegistrationsResponse, Registration> ListRegistrationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRegistrationsAsync(new ListRegistrationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRegistrationsResponse, Registration> ListRegistrationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegistrationsRequest request = new ListRegistrationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRegistrationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the `Registration` resources in a project.
@@ -1834,13 +1852,22 @@ namespace Google.Cloud.Domains.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Registration"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRegistrationsResponse, Registration> ListRegistrations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRegistrations(new ListRegistrationsRequest
+        public virtual gax::PagedEnumerable<ListRegistrationsResponse, Registration> ListRegistrations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegistrationsRequest request = new ListRegistrationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRegistrations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the `Registration` resources in a project.
@@ -1859,13 +1886,22 @@ namespace Google.Cloud.Domains.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Registration"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRegistrationsResponse, Registration> ListRegistrationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRegistrationsAsync(new ListRegistrationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListRegistrationsResponse, Registration> ListRegistrationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRegistrationsRequest request = new ListRegistrationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRegistrationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a `Registration` resource.
@@ -3587,7 +3623,11 @@ namespace Google.Cloud.Domains.V1
         {
             GrpcClient = grpcClient;
             DomainsSettings effectiveSettings = settings ?? DomainsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             RegisterDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RegisterDomainOperationsSettings, logger);
             TransferDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TransferDomainOperationsSettings, logger);
             UpdateRegistrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRegistrationOperationsSettings, logger);

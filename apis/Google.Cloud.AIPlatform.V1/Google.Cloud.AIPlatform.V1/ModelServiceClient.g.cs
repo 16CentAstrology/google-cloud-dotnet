@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.AIPlatform.V1
 {
@@ -55,7 +55,10 @@ namespace Google.Cloud.AIPlatform.V1
             GetModelSettings = existing.GetModelSettings;
             ListModelsSettings = existing.ListModelsSettings;
             ListModelVersionsSettings = existing.ListModelVersionsSettings;
+            ListModelVersionCheckpointsSettings = existing.ListModelVersionCheckpointsSettings;
             UpdateModelSettings = existing.UpdateModelSettings;
+            UpdateExplanationDatasetSettings = existing.UpdateExplanationDatasetSettings;
+            UpdateExplanationDatasetOperationsSettings = existing.UpdateExplanationDatasetOperationsSettings.Clone();
             DeleteModelSettings = existing.DeleteModelSettings;
             DeleteModelOperationsSettings = existing.DeleteModelOperationsSettings.Clone();
             DeleteModelVersionSettings = existing.DeleteModelVersionSettings;
@@ -147,6 +150,19 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelServiceClient.ListModelVersionCheckpoints</c> and
+        /// <c>ModelServiceClient.ListModelVersionCheckpointsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListModelVersionCheckpointsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ModelServiceClient.UpdateModel</c> and <c>ModelServiceClient.UpdateModelAsync</c>.
         /// </summary>
         /// <remarks>
@@ -156,6 +172,37 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelServiceClient.UpdateExplanationDataset</c> and <c>ModelServiceClient.UpdateExplanationDatasetAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateExplanationDatasetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ModelServiceClient.UpdateExplanationDataset</c> and
+        /// <c>ModelServiceClient.UpdateExplanationDatasetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateExplanationDatasetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -429,14 +476,14 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ModelServiceClient.Create(callInvoker, Settings, Logger);
+            return ModelServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ModelServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ModelServiceClient.Create(callInvoker, Settings, Logger);
+            return ModelServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -468,7 +515,7 @@ namespace Google.Cloud.AIPlatform.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ModelService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ModelService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -898,13 +945,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Model"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListModelsResponse, Model> ListModels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModels(new ListModelsRequest
+        public virtual gax::PagedEnumerable<ListModelsResponse, Model> ListModels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelsRequest request = new ListModelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Models in a Location.
@@ -923,13 +979,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListModelsResponse, Model> ListModelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelsAsync(new ListModelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListModelsResponse, Model> ListModelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelsRequest request = new ListModelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Models in a Location.
@@ -948,13 +1013,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Model"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListModelsResponse, Model> ListModels(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModels(new ListModelsRequest
+        public virtual gax::PagedEnumerable<ListModelsResponse, Model> ListModels(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelsRequest request = new ListModelsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Models in a Location.
@@ -973,13 +1047,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListModelsResponse, Model> ListModelsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelsAsync(new ListModelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListModelsResponse, Model> ListModelsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelsRequest request = new ListModelsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists versions of the specified model.
@@ -1015,13 +1098,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Model"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListModelVersionsResponse, Model> ListModelVersions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelVersions(new ListModelVersionsRequest
+        public virtual gax::PagedEnumerable<ListModelVersionsResponse, Model> ListModelVersions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelVersionsRequest request = new ListModelVersionsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists versions of the specified model.
@@ -1039,13 +1131,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListModelVersionsResponse, Model> ListModelVersionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelVersionsAsync(new ListModelVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListModelVersionsResponse, Model> ListModelVersionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelVersionsRequest request = new ListModelVersionsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists versions of the specified model.
@@ -1063,13 +1164,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Model"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListModelVersionsResponse, Model> ListModelVersions(ModelName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelVersions(new ListModelVersionsRequest
+        public virtual gax::PagedEnumerable<ListModelVersionsResponse, Model> ListModelVersions(ModelName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelVersionsRequest request = new ListModelVersionsRequest
             {
                 ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists versions of the specified model.
@@ -1087,13 +1197,196 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Model"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListModelVersionsResponse, Model> ListModelVersionsAsync(ModelName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelVersionsAsync(new ListModelVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListModelVersionsResponse, Model> ListModelVersionsAsync(ModelName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelVersionsRequest request = new ListModelVersionsRequest
             {
                 ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelVersionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpoints(ListModelVersionCheckpointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpointsAsync(ListModelVersionCheckpointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to list checkpoints for.
+        /// `projects/{project}/locations/{location}/models/{model}@{version}`
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the latest version will be
+        /// used.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpoints(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelVersionCheckpointsRequest request = new ListModelVersionCheckpointsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelVersionCheckpoints(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to list checkpoints for.
+        /// `projects/{project}/locations/{location}/models/{model}@{version}`
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the latest version will be
+        /// used.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpointsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelVersionCheckpointsRequest request = new ListModelVersionCheckpointsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelVersionCheckpointsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to list checkpoints for.
+        /// `projects/{project}/locations/{location}/models/{model}@{version}`
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the latest version will be
+        /// used.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpoints(ModelName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelVersionCheckpointsRequest request = new ListModelVersionCheckpointsRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelVersionCheckpoints(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to list checkpoints for.
+        /// `projects/{project}/locations/{location}/models/{model}@{version}`
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the latest version will be
+        /// used.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpointsAsync(ModelName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelVersionCheckpointsRequest request = new ListModelVersionCheckpointsRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelVersionCheckpointsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a Model.
@@ -1228,6 +1521,144 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Model> UpdateModelAsync(Model model, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateModelAsync(model, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> UpdateExplanationDataset(UpdateExplanationDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(UpdateExplanationDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(UpdateExplanationDatasetRequest request, st::CancellationToken cancellationToken) =>
+            UpdateExplanationDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateExplanationDataset</c>.</summary>
+        public virtual lro::OperationsClient UpdateExplanationDatasetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateExplanationDataset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> PollOnceUpdateExplanationDataset(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateExplanationDatasetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateExplanationDataset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> PollOnceUpdateExplanationDatasetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateExplanationDatasetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The resource name of the Model to update.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> UpdateExplanationDataset(string model, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExplanationDataset(new UpdateExplanationDatasetRequest
+            {
+                Model = gax::GaxPreconditions.CheckNotNullOrEmpty(model, nameof(model)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The resource name of the Model to update.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(string model, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExplanationDatasetAsync(new UpdateExplanationDatasetRequest
+            {
+                Model = gax::GaxPreconditions.CheckNotNullOrEmpty(model, nameof(model)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The resource name of the Model to update.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(string model, st::CancellationToken cancellationToken) =>
+            UpdateExplanationDatasetAsync(model, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The resource name of the Model to update.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> UpdateExplanationDataset(ModelName model, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExplanationDataset(new UpdateExplanationDatasetRequest
+            {
+                ModelAsModelName = gax::GaxPreconditions.CheckNotNull(model, nameof(model)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The resource name of the Model to update.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(ModelName model, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExplanationDatasetAsync(new UpdateExplanationDatasetRequest
+            {
+                ModelAsModelName = gax::GaxPreconditions.CheckNotNull(model, nameof(model)),
+            }, callSettings);
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="model">
+        /// Required. The resource name of the Model to update.
+        /// Format: `projects/{project}/locations/{location}/models/{model}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(ModelName model, st::CancellationToken cancellationToken) =>
+            UpdateExplanationDatasetAsync(model, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a Model.
@@ -2851,13 +3282,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ModelEvaluation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelEvaluations(new ListModelEvaluationsRequest
+        public virtual gax::PagedEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelEvaluationsRequest request = new ListModelEvaluationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelEvaluations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ModelEvaluations in a Model.
@@ -2876,13 +3316,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ModelEvaluation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelEvaluationsAsync(new ListModelEvaluationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelEvaluationsRequest request = new ListModelEvaluationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelEvaluationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ModelEvaluations in a Model.
@@ -2901,13 +3350,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ModelEvaluation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluations(ModelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelEvaluations(new ListModelEvaluationsRequest
+        public virtual gax::PagedEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluations(ModelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelEvaluationsRequest request = new ListModelEvaluationsRequest
             {
                 ParentAsModelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelEvaluations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ModelEvaluations in a Model.
@@ -2926,13 +3384,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ModelEvaluation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluationsAsync(ModelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelEvaluationsAsync(new ListModelEvaluationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListModelEvaluationsResponse, ModelEvaluation> ListModelEvaluationsAsync(ModelName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelEvaluationsRequest request = new ListModelEvaluationsRequest
             {
                 ParentAsModelName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelEvaluationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a ModelEvaluationSlice.
@@ -3087,13 +3554,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ModelEvaluationSlice"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListModelEvaluationSlicesResponse, ModelEvaluationSlice> ListModelEvaluationSlices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelEvaluationSlices(new ListModelEvaluationSlicesRequest
+        public virtual gax::PagedEnumerable<ListModelEvaluationSlicesResponse, ModelEvaluationSlice> ListModelEvaluationSlices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelEvaluationSlicesRequest request = new ListModelEvaluationSlicesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelEvaluationSlices(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ModelEvaluationSlices in a ModelEvaluation.
@@ -3113,13 +3589,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ModelEvaluationSlice"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListModelEvaluationSlicesResponse, ModelEvaluationSlice> ListModelEvaluationSlicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelEvaluationSlicesAsync(new ListModelEvaluationSlicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListModelEvaluationSlicesResponse, ModelEvaluationSlice> ListModelEvaluationSlicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelEvaluationSlicesRequest request = new ListModelEvaluationSlicesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelEvaluationSlicesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ModelEvaluationSlices in a ModelEvaluation.
@@ -3139,13 +3624,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ModelEvaluationSlice"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListModelEvaluationSlicesResponse, ModelEvaluationSlice> ListModelEvaluationSlices(ModelEvaluationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelEvaluationSlices(new ListModelEvaluationSlicesRequest
+        public virtual gax::PagedEnumerable<ListModelEvaluationSlicesResponse, ModelEvaluationSlice> ListModelEvaluationSlices(ModelEvaluationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelEvaluationSlicesRequest request = new ListModelEvaluationSlicesRequest
             {
                 ParentAsModelEvaluationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelEvaluationSlices(request, callSettings);
+        }
 
         /// <summary>
         /// Lists ModelEvaluationSlices in a ModelEvaluation.
@@ -3165,13 +3659,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ModelEvaluationSlice"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListModelEvaluationSlicesResponse, ModelEvaluationSlice> ListModelEvaluationSlicesAsync(ModelEvaluationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListModelEvaluationSlicesAsync(new ListModelEvaluationSlicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListModelEvaluationSlicesResponse, ModelEvaluationSlice> ListModelEvaluationSlicesAsync(ModelEvaluationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelEvaluationSlicesRequest request = new ListModelEvaluationSlicesRequest
             {
                 ParentAsModelEvaluationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelEvaluationSlicesAsync(request, callSettings);
+        }
     }
 
     /// <summary>ModelService client wrapper implementation, for convenient use.</summary>
@@ -3188,7 +3691,11 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<ListModelVersionsRequest, ListModelVersionsResponse> _callListModelVersions;
 
+        private readonly gaxgrpc::ApiCall<ListModelVersionCheckpointsRequest, ListModelVersionCheckpointsResponse> _callListModelVersionCheckpoints;
+
         private readonly gaxgrpc::ApiCall<UpdateModelRequest, Model> _callUpdateModel;
+
+        private readonly gaxgrpc::ApiCall<UpdateExplanationDatasetRequest, lro::Operation> _callUpdateExplanationDataset;
 
         private readonly gaxgrpc::ApiCall<DeleteModelRequest, lro::Operation> _callDeleteModel;
 
@@ -3224,8 +3731,13 @@ namespace Google.Cloud.AIPlatform.V1
         {
             GrpcClient = grpcClient;
             ModelServiceSettings effectiveSettings = settings ?? ModelServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             UploadModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UploadModelOperationsSettings, logger);
+            UpdateExplanationDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateExplanationDatasetOperationsSettings, logger);
             DeleteModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelOperationsSettings, logger);
             DeleteModelVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelVersionOperationsSettings, logger);
             ExportModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportModelOperationsSettings, logger);
@@ -3244,9 +3756,15 @@ namespace Google.Cloud.AIPlatform.V1
             _callListModelVersions = clientHelper.BuildApiCall<ListModelVersionsRequest, ListModelVersionsResponse>("ListModelVersions", grpcClient.ListModelVersionsAsync, grpcClient.ListModelVersions, effectiveSettings.ListModelVersionsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListModelVersions);
             Modify_ListModelVersionsApiCall(ref _callListModelVersions);
+            _callListModelVersionCheckpoints = clientHelper.BuildApiCall<ListModelVersionCheckpointsRequest, ListModelVersionCheckpointsResponse>("ListModelVersionCheckpoints", grpcClient.ListModelVersionCheckpointsAsync, grpcClient.ListModelVersionCheckpoints, effectiveSettings.ListModelVersionCheckpointsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callListModelVersionCheckpoints);
+            Modify_ListModelVersionCheckpointsApiCall(ref _callListModelVersionCheckpoints);
             _callUpdateModel = clientHelper.BuildApiCall<UpdateModelRequest, Model>("UpdateModel", grpcClient.UpdateModelAsync, grpcClient.UpdateModel, effectiveSettings.UpdateModelSettings).WithGoogleRequestParam("model.name", request => request.Model?.Name);
             Modify_ApiCall(ref _callUpdateModel);
             Modify_UpdateModelApiCall(ref _callUpdateModel);
+            _callUpdateExplanationDataset = clientHelper.BuildApiCall<UpdateExplanationDatasetRequest, lro::Operation>("UpdateExplanationDataset", grpcClient.UpdateExplanationDatasetAsync, grpcClient.UpdateExplanationDataset, effectiveSettings.UpdateExplanationDatasetSettings).WithGoogleRequestParam("model", request => request.Model);
+            Modify_ApiCall(ref _callUpdateExplanationDataset);
+            Modify_UpdateExplanationDatasetApiCall(ref _callUpdateExplanationDataset);
             _callDeleteModel = clientHelper.BuildApiCall<DeleteModelRequest, lro::Operation>("DeleteModel", grpcClient.DeleteModelAsync, grpcClient.DeleteModel, effectiveSettings.DeleteModelSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteModel);
             Modify_DeleteModelApiCall(ref _callDeleteModel);
@@ -3296,7 +3814,11 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_ListModelVersionsApiCall(ref gaxgrpc::ApiCall<ListModelVersionsRequest, ListModelVersionsResponse> call);
 
+        partial void Modify_ListModelVersionCheckpointsApiCall(ref gaxgrpc::ApiCall<ListModelVersionCheckpointsRequest, ListModelVersionCheckpointsResponse> call);
+
         partial void Modify_UpdateModelApiCall(ref gaxgrpc::ApiCall<UpdateModelRequest, Model> call);
+
+        partial void Modify_UpdateExplanationDatasetApiCall(ref gaxgrpc::ApiCall<UpdateExplanationDatasetRequest, lro::Operation> call);
 
         partial void Modify_DeleteModelApiCall(ref gaxgrpc::ApiCall<DeleteModelRequest, lro::Operation> call);
 
@@ -3341,7 +3863,11 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_ListModelVersionsRequest(ref ListModelVersionsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListModelVersionCheckpointsRequest(ref ListModelVersionCheckpointsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_UpdateModelRequest(ref UpdateModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateExplanationDatasetRequest(ref UpdateExplanationDatasetRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteModelRequest(ref DeleteModelRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3467,6 +3993,30 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public override gax::PagedEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpoints(ListModelVersionCheckpointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListModelVersionCheckpointsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListModelVersionCheckpointsRequest, ListModelVersionCheckpointsResponse, ModelVersionCheckpoint>(_callListModelVersionCheckpoints, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpointsAsync(ListModelVersionCheckpointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListModelVersionCheckpointsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListModelVersionCheckpointsRequest, ListModelVersionCheckpointsResponse, ModelVersionCheckpoint>(_callListModelVersionCheckpoints, request, callSettings);
+        }
+
+        /// <summary>
         /// Updates a Model.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3488,6 +4038,33 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_UpdateModelRequest(ref request, ref callSettings);
             return _callUpdateModel.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateExplanationDataset</c>.</summary>
+        public override lro::OperationsClient UpdateExplanationDatasetOperationsClient { get; }
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata> UpdateExplanationDataset(UpdateExplanationDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExplanationDatasetRequest(ref request, ref callSettings);
+            return new lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>(_callUpdateExplanationDataset.Sync(request, callSettings), UpdateExplanationDatasetOperationsClient);
+        }
+
+        /// <summary>
+        /// Incrementally update the dataset used for an examples model.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>> UpdateExplanationDatasetAsync(UpdateExplanationDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExplanationDatasetRequest(ref request, ref callSettings);
+            return new lro::Operation<UpdateExplanationDatasetResponse, UpdateExplanationDatasetOperationMetadata>(await _callUpdateExplanationDataset.Async(request, callSettings).ConfigureAwait(false), UpdateExplanationDatasetOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteModel</c>.</summary>
@@ -3841,6 +4418,10 @@ namespace Google.Cloud.AIPlatform.V1
     {
     }
 
+    public partial class ListModelVersionCheckpointsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListModelEvaluationsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -3861,6 +4442,14 @@ namespace Google.Cloud.AIPlatform.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Model> GetEnumerator() => Models.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListModelVersionCheckpointsResponse : gaxgrpc::IPageResponse<ModelVersionCheckpoint>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ModelVersionCheckpoint> GetEnumerator() => Checkpoints.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

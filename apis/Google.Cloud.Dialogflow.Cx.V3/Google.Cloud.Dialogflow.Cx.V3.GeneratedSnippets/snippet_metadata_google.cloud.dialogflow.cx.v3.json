@@ -1441,12 +1441,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 67,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 63,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -1490,12 +1490,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 66,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 64,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -1977,6 +1977,509 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_GetGenerativeSettings_sync",
+      "title": "GetGenerativeSettingsRequestObject",
+      "description": "Snippet for GetGenerativeSettings",
+      "file": "AgentsClient.GetGenerativeSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeSettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.GetGenerativeSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.GetGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_GetGenerativeSettings_async",
+      "title": "GetGenerativeSettingsRequestObjectAsync",
+      "description": "Snippet for GetGenerativeSettingsAsync",
+      "file": "AgentsClient.GetGenerativeSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeSettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.GetGenerativeSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GetGenerativeSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.GetGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_GetGenerativeSettings_sync_flattened",
+      "title": "GetGenerativeSettings",
+      "description": "Snippet for GetGenerativeSettings",
+      "file": "AgentsClient.GetGenerativeSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeSettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.GetGenerativeSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "languageCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.GetGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_GetGenerativeSettings_async_flattened",
+      "title": "GetGenerativeSettingsAsync",
+      "description": "Snippet for GetGenerativeSettingsAsync",
+      "file": "AgentsClient.GetGenerativeSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeSettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.GetGenerativeSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "languageCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.GetGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_GetGenerativeSettings_sync_flattened_resourceNames",
+      "title": "GetGenerativeSettingsResourceNames",
+      "description": "Snippet for GetGenerativeSettings",
+      "file": "AgentsClient.GetGenerativeSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeSettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.GetGenerativeSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentGenerativeSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "languageCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.GetGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_GetGenerativeSettings_async_flattened_resourceNames",
+      "title": "GetGenerativeSettingsResourceNamesAsync",
+      "description": "Snippet for GetGenerativeSettingsAsync",
+      "file": "AgentsClient.GetGenerativeSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerativeSettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.GetGenerativeSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentGenerativeSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "languageCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "GetGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.GetGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_UpdateGenerativeSettings_sync",
+      "title": "UpdateGenerativeSettingsRequestObject",
+      "description": "Snippet for UpdateGenerativeSettings",
+      "file": "AgentsClient.UpdateGenerativeSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeSettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.UpdateGenerativeSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.UpdateGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_UpdateGenerativeSettings_async",
+      "title": "UpdateGenerativeSettingsRequestObjectAsync",
+      "description": "Snippet for UpdateGenerativeSettingsAsync",
+      "file": "AgentsClient.UpdateGenerativeSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeSettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.UpdateGenerativeSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.UpdateGenerativeSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.UpdateGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_UpdateGenerativeSettings_sync_flattened",
+      "title": "UpdateGenerativeSettings",
+      "description": "Snippet for UpdateGenerativeSettings",
+      "file": "AgentsClient.UpdateGenerativeSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeSettings",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.UpdateGenerativeSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+            "name": "generativeSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.UpdateGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Agents_UpdateGenerativeSettings_async_flattened",
+      "title": "UpdateGenerativeSettingsAsync",
+      "description": "Snippet for UpdateGenerativeSettingsAsync",
+      "file": "AgentsClient.UpdateGenerativeSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerativeSettingsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient.UpdateGenerativeSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings",
+            "name": "generativeSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.GenerativeSettings>",
+        "client": {
+          "shortName": "AgentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.AgentsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerativeSettings",
+          "fullName": "google.cloud.dialogflow.cx.v3.Agents.UpdateGenerativeSettings",
+          "service": {
+            "shortName": "Agents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Agents"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
           "type": "SHORT"
         }
       ]
@@ -3194,325 +3697,6 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v3_generated_EntityTypes_ListEntityTypes_sync",
-      "title": "ListEntityTypesRequestObject",
-      "description": "Snippet for ListEntityTypes",
-      "file": "EntityTypesClient.ListEntityTypesRequestObjectSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListEntityTypes",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ListEntityTypes",
-        "parameters": [
-          {
-            "type": "Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.EntityType>",
-        "client": {
-          "shortName": "EntityTypesClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
-        },
-        "method": {
-          "shortName": "ListEntityTypes",
-          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes",
-          "service": {
-            "shortName": "EntityTypes",
-            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 79,
-          "type": "FULL"
-        },
-        {
-          "start": 36,
-          "end": 77,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_EntityTypes_ListEntityTypes_async",
-      "title": "ListEntityTypesRequestObjectAsync",
-      "description": "Snippet for ListEntityTypesAsync",
-      "file": "EntityTypesClient.ListEntityTypesRequestObjectAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListEntityTypesAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ListEntityTypesAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest",
-            "name": "request"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.EntityType>",
-        "client": {
-          "shortName": "EntityTypesClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
-        },
-        "method": {
-          "shortName": "ListEntityTypes",
-          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes",
-          "service": {
-            "shortName": "EntityTypes",
-            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
-          }
-        }
-      },
-      "canonical": true,
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 81,
-          "type": "FULL"
-        },
-        {
-          "start": 38,
-          "end": 79,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_EntityTypes_ListEntityTypes_sync_flattened",
-      "title": "ListEntityTypes",
-      "description": "Snippet for ListEntityTypes",
-      "file": "EntityTypesClient.ListEntityTypesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListEntityTypes",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ListEntityTypes",
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "parent"
-          },
-          {
-            "type": "System.String",
-            "name": "pageToken"
-          },
-          {
-            "type": "System.Nullable[System.Int32]",
-            "name": "pageSize"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.EntityType>",
-        "client": {
-          "shortName": "EntityTypesClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
-        },
-        "method": {
-          "shortName": "ListEntityTypes",
-          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes",
-          "service": {
-            "shortName": "EntityTypes",
-            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 75,
-          "type": "FULL"
-        },
-        {
-          "start": 36,
-          "end": 73,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_EntityTypes_ListEntityTypes_async_flattened",
-      "title": "ListEntityTypesAsync",
-      "description": "Snippet for ListEntityTypesAsync",
-      "file": "EntityTypesClient.ListEntityTypesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListEntityTypesAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ListEntityTypesAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "System.String",
-            "name": "parent"
-          },
-          {
-            "type": "System.String",
-            "name": "pageToken"
-          },
-          {
-            "type": "System.Nullable[System.Int32]",
-            "name": "pageSize"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.EntityType>",
-        "client": {
-          "shortName": "EntityTypesClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
-        },
-        "method": {
-          "shortName": "ListEntityTypes",
-          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes",
-          "service": {
-            "shortName": "EntityTypes",
-            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 77,
-          "type": "FULL"
-        },
-        {
-          "start": 38,
-          "end": 75,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_EntityTypes_ListEntityTypes_sync_flattened_resourceNames",
-      "title": "ListEntityTypesResourceNames",
-      "description": "Snippet for ListEntityTypes",
-      "file": "EntityTypesClient.ListEntityTypesResourceNamesSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListEntityTypes",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ListEntityTypes",
-        "parameters": [
-          {
-            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
-            "name": "parent"
-          },
-          {
-            "type": "System.String",
-            "name": "pageToken"
-          },
-          {
-            "type": "System.Nullable[System.Int32]",
-            "name": "pageSize"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.EntityType>",
-        "client": {
-          "shortName": "EntityTypesClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
-        },
-        "method": {
-          "shortName": "ListEntityTypes",
-          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes",
-          "service": {
-            "shortName": "EntityTypes",
-            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 75,
-          "type": "FULL"
-        },
-        {
-          "start": 36,
-          "end": 73,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
-      "regionTag": "dialogflow_v3_generated_EntityTypes_ListEntityTypes_async_flattened_resourceNames",
-      "title": "ListEntityTypesResourceNamesAsync",
-      "description": "Snippet for ListEntityTypesAsync",
-      "file": "EntityTypesClient.ListEntityTypesResourceNamesAsyncSnippet.g.cs",
-      "language": "C_SHARP",
-      "clientMethod": {
-        "shortName": "ListEntityTypesAsync",
-        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ListEntityTypesAsync",
-        "async": true,
-        "parameters": [
-          {
-            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
-            "name": "parent"
-          },
-          {
-            "type": "System.String",
-            "name": "pageToken"
-          },
-          {
-            "type": "System.Nullable[System.Int32]",
-            "name": "pageSize"
-          },
-          {
-            "type": "Google.Api.Gax.Grpc.CallSettings",
-            "name": "callSettings"
-          }
-        ],
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.EntityType>",
-        "client": {
-          "shortName": "EntityTypesClient",
-          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
-        },
-        "method": {
-          "shortName": "ListEntityTypes",
-          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes",
-          "service": {
-            "shortName": "EntityTypes",
-            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
-          }
-        }
-      },
-      "origin": "API_DEFINITION",
-      "segments": [
-        {
-          "start": 20,
-          "end": 77,
-          "type": "FULL"
-        },
-        {
-          "start": 38,
-          "end": 75,
-          "type": "SHORT"
-        }
-      ]
-    },
-    {
       "regionTag": "dialogflow_v3_generated_EntityTypes_GetEntityType_sync",
       "title": "GetEntityTypeRequestObject",
       "description": "Snippet for GetEntityType",
@@ -4582,6 +4766,519 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ListEntityTypes_sync",
+      "title": "ListEntityTypesRequestObject",
+      "description": "Snippet for ListEntityTypes",
+      "file": "EntityTypesClient.ListEntityTypesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntityTypes",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ListEntityTypes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.EntityType>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ListEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ListEntityTypes_async",
+      "title": "ListEntityTypesRequestObjectAsync",
+      "description": "Snippet for ListEntityTypesAsync",
+      "file": "EntityTypesClient.ListEntityTypesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntityTypesAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ListEntityTypesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.EntityType>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ListEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ListEntityTypes_sync_flattened",
+      "title": "ListEntityTypes",
+      "description": "Snippet for ListEntityTypes",
+      "file": "EntityTypesClient.ListEntityTypesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntityTypes",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ListEntityTypes",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.EntityType>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ListEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ListEntityTypes_async_flattened",
+      "title": "ListEntityTypesAsync",
+      "description": "Snippet for ListEntityTypesAsync",
+      "file": "EntityTypesClient.ListEntityTypesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntityTypesAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ListEntityTypesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.EntityType>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ListEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ListEntityTypes_sync_flattened_resourceNames",
+      "title": "ListEntityTypesResourceNames",
+      "description": "Snippet for ListEntityTypes",
+      "file": "EntityTypesClient.ListEntityTypesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntityTypes",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ListEntityTypes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.EntityType>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ListEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ListEntityTypes_async_flattened_resourceNames",
+      "title": "ListEntityTypesResourceNamesAsync",
+      "description": "Snippet for ListEntityTypesAsync",
+      "file": "EntityTypesClient.ListEntityTypesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEntityTypesAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ListEntityTypesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.EntityType>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ListEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ListEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ExportEntityTypes_sync",
+      "title": "ExportEntityTypesRequestObject",
+      "description": "Snippet for ExportEntityTypes",
+      "file": "EntityTypesClient.ExportEntityTypesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEntityTypes",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ExportEntityTypes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesMetadata>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ExportEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ExportEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ExportEntityTypes_async",
+      "title": "ExportEntityTypesRequestObjectAsync",
+      "description": "Snippet for ExportEntityTypesAsync",
+      "file": "EntityTypesClient.ExportEntityTypesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEntityTypesAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ExportEntityTypesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.ExportEntityTypesMetadata>>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ExportEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ExportEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ImportEntityTypes_sync",
+      "title": "ImportEntityTypesRequestObject",
+      "description": "Snippet for ImportEntityTypes",
+      "file": "EntityTypesClient.ImportEntityTypesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportEntityTypes",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ImportEntityTypes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesMetadata>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ImportEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ImportEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_EntityTypes_ImportEntityTypes_async",
+      "title": "ImportEntityTypesRequestObjectAsync",
+      "description": "Snippet for ImportEntityTypesAsync",
+      "file": "EntityTypesClient.ImportEntityTypesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportEntityTypesAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient.ImportEntityTypesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesResponse, Google.Cloud.Dialogflow.Cx.V3.ImportEntityTypesMetadata>>",
+        "client": {
+          "shortName": "EntityTypesClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.EntityTypesClient"
+        },
+        "method": {
+          "shortName": "ImportEntityTypes",
+          "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes.ImportEntityTypes",
+          "service": {
+            "shortName": "EntityTypes",
+            "fullName": "google.cloud.dialogflow.cx.v3.EntityTypes"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -10880,12 +11577,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 62,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -10929,12 +11626,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 63,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -11032,6 +11729,1399 @@
         {
           "start": 37,
           "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_ListGenerators_sync",
+      "title": "ListGeneratorsRequestObject",
+      "description": "Snippet for ListGenerators",
+      "file": "GeneratorsClient.ListGeneratorsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGenerators",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.ListGenerators",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ListGeneratorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListGeneratorsResponse, Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "ListGenerators",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.ListGenerators",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_ListGenerators_async",
+      "title": "ListGeneratorsRequestObjectAsync",
+      "description": "Snippet for ListGeneratorsAsync",
+      "file": "GeneratorsClient.ListGeneratorsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGeneratorsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.ListGeneratorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ListGeneratorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListGeneratorsResponse, Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "ListGenerators",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.ListGenerators",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_ListGenerators_sync_flattened",
+      "title": "ListGenerators",
+      "description": "Snippet for ListGenerators",
+      "file": "GeneratorsClient.ListGeneratorsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGenerators",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.ListGenerators",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListGeneratorsResponse, Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "ListGenerators",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.ListGenerators",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_ListGenerators_async_flattened",
+      "title": "ListGeneratorsAsync",
+      "description": "Snippet for ListGeneratorsAsync",
+      "file": "GeneratorsClient.ListGeneratorsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGeneratorsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.ListGeneratorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListGeneratorsResponse, Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "ListGenerators",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.ListGenerators",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_ListGenerators_sync_flattened_resourceNames",
+      "title": "ListGeneratorsResourceNames",
+      "description": "Snippet for ListGenerators",
+      "file": "GeneratorsClient.ListGeneratorsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGenerators",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.ListGenerators",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListGeneratorsResponse, Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "ListGenerators",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.ListGenerators",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_ListGenerators_async_flattened_resourceNames",
+      "title": "ListGeneratorsResourceNamesAsync",
+      "description": "Snippet for ListGeneratorsAsync",
+      "file": "GeneratorsClient.ListGeneratorsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGeneratorsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.ListGeneratorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListGeneratorsResponse, Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "ListGenerators",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.ListGenerators",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_GetGenerator_sync",
+      "title": "GetGeneratorRequestObject",
+      "description": "Snippet for GetGenerator",
+      "file": "GeneratorsClient.GetGeneratorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerator",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.GetGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GetGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "GetGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.GetGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_GetGenerator_async",
+      "title": "GetGeneratorRequestObjectAsync",
+      "description": "Snippet for GetGeneratorAsync",
+      "file": "GeneratorsClient.GetGeneratorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.GetGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GetGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "GetGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.GetGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_GetGenerator_sync_flattened",
+      "title": "GetGenerator",
+      "description": "Snippet for GetGenerator",
+      "file": "GeneratorsClient.GetGeneratorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerator",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.GetGenerator",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "GetGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.GetGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_GetGenerator_async_flattened",
+      "title": "GetGeneratorAsync",
+      "description": "Snippet for GetGeneratorAsync",
+      "file": "GeneratorsClient.GetGeneratorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.GetGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "GetGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.GetGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_GetGenerator_sync_flattened_resourceNames",
+      "title": "GetGeneratorResourceNames",
+      "description": "Snippet for GetGenerator",
+      "file": "GeneratorsClient.GetGeneratorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGenerator",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.GetGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GeneratorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "GetGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.GetGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_GetGenerator_async_flattened_resourceNames",
+      "title": "GetGeneratorResourceNamesAsync",
+      "description": "Snippet for GetGeneratorAsync",
+      "file": "GeneratorsClient.GetGeneratorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.GetGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GeneratorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "GetGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.GetGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_CreateGenerator_sync",
+      "title": "CreateGeneratorRequestObject",
+      "description": "Snippet for CreateGenerator",
+      "file": "GeneratorsClient.CreateGeneratorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGenerator",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.CreateGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.CreateGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "CreateGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.CreateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_CreateGenerator_async",
+      "title": "CreateGeneratorRequestObjectAsync",
+      "description": "Snippet for CreateGeneratorAsync",
+      "file": "GeneratorsClient.CreateGeneratorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.CreateGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.CreateGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "CreateGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.CreateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_CreateGenerator_sync_flattened",
+      "title": "CreateGenerator",
+      "description": "Snippet for CreateGenerator",
+      "file": "GeneratorsClient.CreateGeneratorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGenerator",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.CreateGenerator",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+            "name": "generator"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "CreateGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.CreateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_CreateGenerator_async_flattened",
+      "title": "CreateGeneratorAsync",
+      "description": "Snippet for CreateGeneratorAsync",
+      "file": "GeneratorsClient.CreateGeneratorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.CreateGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+            "name": "generator"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "CreateGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.CreateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_CreateGenerator_sync_flattened_resourceNames",
+      "title": "CreateGeneratorResourceNames",
+      "description": "Snippet for CreateGenerator",
+      "file": "GeneratorsClient.CreateGeneratorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGenerator",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.CreateGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+            "name": "generator"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "CreateGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.CreateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_CreateGenerator_async_flattened_resourceNames",
+      "title": "CreateGeneratorResourceNamesAsync",
+      "description": "Snippet for CreateGeneratorAsync",
+      "file": "GeneratorsClient.CreateGeneratorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.CreateGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+            "name": "generator"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "CreateGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.CreateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_UpdateGenerator_sync",
+      "title": "UpdateGeneratorRequestObject",
+      "description": "Snippet for UpdateGenerator",
+      "file": "GeneratorsClient.UpdateGeneratorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerator",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.UpdateGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.UpdateGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.UpdateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_UpdateGenerator_async",
+      "title": "UpdateGeneratorRequestObjectAsync",
+      "description": "Snippet for UpdateGeneratorAsync",
+      "file": "GeneratorsClient.UpdateGeneratorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.UpdateGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.UpdateGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.UpdateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_UpdateGenerator_sync_flattened",
+      "title": "UpdateGenerator",
+      "description": "Snippet for UpdateGenerator",
+      "file": "GeneratorsClient.UpdateGeneratorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGenerator",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.UpdateGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+            "name": "generator"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.UpdateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_UpdateGenerator_async_flattened",
+      "title": "UpdateGeneratorAsync",
+      "description": "Snippet for UpdateGeneratorAsync",
+      "file": "GeneratorsClient.UpdateGeneratorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.UpdateGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.Generator",
+            "name": "generator"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.Generator>",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "UpdateGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.UpdateGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_DeleteGenerator_sync",
+      "title": "DeleteGeneratorRequestObject",
+      "description": "Snippet for DeleteGenerator",
+      "file": "GeneratorsClient.DeleteGeneratorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGenerator",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.DeleteGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.DeleteGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "DeleteGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.DeleteGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_DeleteGenerator_async",
+      "title": "DeleteGeneratorRequestObjectAsync",
+      "description": "Snippet for DeleteGeneratorAsync",
+      "file": "GeneratorsClient.DeleteGeneratorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.DeleteGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.DeleteGeneratorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "DeleteGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.DeleteGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_DeleteGenerator_sync_flattened",
+      "title": "DeleteGenerator",
+      "description": "Snippet for DeleteGenerator",
+      "file": "GeneratorsClient.DeleteGeneratorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGenerator",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.DeleteGenerator",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "DeleteGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.DeleteGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_DeleteGenerator_async_flattened",
+      "title": "DeleteGeneratorAsync",
+      "description": "Snippet for DeleteGeneratorAsync",
+      "file": "GeneratorsClient.DeleteGeneratorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.DeleteGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "DeleteGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.DeleteGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_DeleteGenerator_sync_flattened_resourceNames",
+      "title": "DeleteGeneratorResourceNames",
+      "description": "Snippet for DeleteGenerator",
+      "file": "GeneratorsClient.DeleteGeneratorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGenerator",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.DeleteGenerator",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GeneratorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "DeleteGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.DeleteGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Generators_DeleteGenerator_async_flattened_resourceNames",
+      "title": "DeleteGeneratorResourceNamesAsync",
+      "description": "Snippet for DeleteGeneratorAsync",
+      "file": "GeneratorsClient.DeleteGeneratorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGeneratorAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient.DeleteGeneratorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.GeneratorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "GeneratorsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.GeneratorsClient"
+        },
+        "method": {
+          "shortName": "DeleteGenerator",
+          "fullName": "google.cloud.dialogflow.cx.v3.Generators.DeleteGenerator",
+          "service": {
+            "shortName": "Generators",
+            "fullName": "google.cloud.dialogflow.cx.v3.Generators"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
@@ -12425,6 +14515,200 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Intents_ImportIntents_sync",
+      "title": "ImportIntentsRequestObject",
+      "description": "Snippet for ImportIntents",
+      "file": "IntentsClient.ImportIntentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIntents",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient.ImportIntents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ImportIntentsResponse, Google.Cloud.Dialogflow.Cx.V3.ImportIntentsMetadata>",
+        "client": {
+          "shortName": "IntentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient"
+        },
+        "method": {
+          "shortName": "ImportIntents",
+          "fullName": "google.cloud.dialogflow.cx.v3.Intents.ImportIntents",
+          "service": {
+            "shortName": "Intents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Intents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Intents_ImportIntents_async",
+      "title": "ImportIntentsRequestObjectAsync",
+      "description": "Snippet for ImportIntentsAsync",
+      "file": "IntentsClient.ImportIntentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportIntentsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient.ImportIntentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ImportIntentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ImportIntentsResponse, Google.Cloud.Dialogflow.Cx.V3.ImportIntentsMetadata>>",
+        "client": {
+          "shortName": "IntentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient"
+        },
+        "method": {
+          "shortName": "ImportIntents",
+          "fullName": "google.cloud.dialogflow.cx.v3.Intents.ImportIntents",
+          "service": {
+            "shortName": "Intents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Intents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Intents_ExportIntents_sync",
+      "title": "ExportIntentsRequestObject",
+      "description": "Snippet for ExportIntents",
+      "file": "IntentsClient.ExportIntentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportIntents",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient.ExportIntents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ExportIntentsResponse, Google.Cloud.Dialogflow.Cx.V3.ExportIntentsMetadata>",
+        "client": {
+          "shortName": "IntentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient"
+        },
+        "method": {
+          "shortName": "ExportIntents",
+          "fullName": "google.cloud.dialogflow.cx.v3.Intents.ExportIntents",
+          "service": {
+            "shortName": "Intents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Intents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Intents_ExportIntents_async",
+      "title": "ExportIntentsRequestObjectAsync",
+      "description": "Snippet for ExportIntentsAsync",
+      "file": "IntentsClient.ExportIntentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportIntentsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient.ExportIntentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.ExportIntentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dialogflow.Cx.V3.ExportIntentsResponse, Google.Cloud.Dialogflow.Cx.V3.ExportIntentsMetadata>>",
+        "client": {
+          "shortName": "IntentsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.IntentsClient"
+        },
+        "method": {
+          "shortName": "ExportIntents",
+          "fullName": "google.cloud.dialogflow.cx.v3.Intents.ExportIntents",
+          "service": {
+            "shortName": "Intents",
+            "fullName": "google.cloud.dialogflow.cx.v3.Intents"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -16706,6 +18990,54 @@
       ]
     },
     {
+      "regionTag": "dialogflow_v3_generated_Sessions_ServerStreamingDetectIntent_sync",
+      "title": "ServerStreamingDetectIntentRequestObject",
+      "description": "Snippet for ServerStreamingDetectIntent",
+      "file": "SessionsClient.ServerStreamingDetectIntentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ServerStreamingDetectIntent",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SessionsClient.ServerStreamingDetectIntent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.SessionsClient+ServerStreamingDetectIntentStream",
+        "client": {
+          "shortName": "SessionsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SessionsClient"
+        },
+        "method": {
+          "shortName": "ServerStreamingDetectIntent",
+          "fullName": "google.cloud.dialogflow.cx.v3.Sessions.ServerStreamingDetectIntent",
+          "service": {
+            "shortName": "Sessions",
+            "fullName": "google.cloud.dialogflow.cx.v3.Sessions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dialogflow_v3_generated_Sessions_StreamingDetectIntent_sync",
       "title": "StreamingDetectIntent",
       "description": "Snippet for StreamingDetectIntent",
@@ -16743,12 +19075,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 79,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -16943,6 +19275,103 @@
         {
           "start": 35,
           "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Sessions_SubmitAnswerFeedback_sync",
+      "title": "SubmitAnswerFeedbackRequestObject",
+      "description": "Snippet for SubmitAnswerFeedback",
+      "file": "SessionsClient.SubmitAnswerFeedbackRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitAnswerFeedback",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SessionsClient.SubmitAnswerFeedback",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.SubmitAnswerFeedbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.AnswerFeedback",
+        "client": {
+          "shortName": "SessionsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SessionsClient"
+        },
+        "method": {
+          "shortName": "SubmitAnswerFeedback",
+          "fullName": "google.cloud.dialogflow.cx.v3.Sessions.SubmitAnswerFeedback",
+          "service": {
+            "shortName": "Sessions",
+            "fullName": "google.cloud.dialogflow.cx.v3.Sessions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_Sessions_SubmitAnswerFeedback_async",
+      "title": "SubmitAnswerFeedbackRequestObjectAsync",
+      "description": "Snippet for SubmitAnswerFeedbackAsync",
+      "file": "SessionsClient.SubmitAnswerFeedbackRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SubmitAnswerFeedbackAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.SessionsClient.SubmitAnswerFeedbackAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.SubmitAnswerFeedbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.AnswerFeedback>",
+        "client": {
+          "shortName": "SessionsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.SessionsClient"
+        },
+        "method": {
+          "shortName": "SubmitAnswerFeedback",
+          "fullName": "google.cloud.dialogflow.cx.v3.Sessions.SubmitAnswerFeedback",
+          "service": {
+            "shortName": "Sessions",
+            "fullName": "google.cloud.dialogflow.cx.v3.Sessions"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
           "type": "SHORT"
         }
       ]
@@ -19640,10 +22069,10 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_sync_flattened_resourceNames",
-      "title": "ListTransitionRouteGroupsResourceNames",
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_sync_flattened_resourceNames1",
+      "title": "ListTransitionRouteGroupsResourceNames1",
       "description": "Snippet for ListTransitionRouteGroups",
-      "file": "TransitionRouteGroupsClient.ListTransitionRouteGroupsResourceNamesSnippet.g.cs",
+      "file": "TransitionRouteGroupsClient.ListTransitionRouteGroupsResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListTransitionRouteGroups",
@@ -19695,10 +22124,10 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_async_flattened_resourceNames",
-      "title": "ListTransitionRouteGroupsResourceNamesAsync",
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_async_flattened_resourceNames1",
+      "title": "ListTransitionRouteGroupsResourceNames1Async",
       "description": "Snippet for ListTransitionRouteGroupsAsync",
-      "file": "TransitionRouteGroupsClient.ListTransitionRouteGroupsResourceNamesAsyncSnippet.g.cs",
+      "file": "TransitionRouteGroupsClient.ListTransitionRouteGroupsResourceNames1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "ListTransitionRouteGroupsAsync",
@@ -19707,6 +22136,117 @@
         "parameters": [
           {
             "type": "Google.Cloud.Dialogflow.Cx.V3.FlowName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsResponse, Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup>",
+        "client": {
+          "shortName": "TransitionRouteGroupsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient"
+        },
+        "method": {
+          "shortName": "ListTransitionRouteGroups",
+          "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups.ListTransitionRouteGroups",
+          "service": {
+            "shortName": "TransitionRouteGroups",
+            "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_sync_flattened_resourceNames2",
+      "title": "ListTransitionRouteGroupsResourceNames2",
+      "description": "Snippet for ListTransitionRouteGroups",
+      "file": "TransitionRouteGroupsClient.ListTransitionRouteGroupsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTransitionRouteGroups",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient.ListTransitionRouteGroups",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.Cx.V3.ListTransitionRouteGroupsResponse, Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup>",
+        "client": {
+          "shortName": "TransitionRouteGroupsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient"
+        },
+        "method": {
+          "shortName": "ListTransitionRouteGroups",
+          "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups.ListTransitionRouteGroups",
+          "service": {
+            "shortName": "TransitionRouteGroups",
+            "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_ListTransitionRouteGroups_async_flattened_resourceNames2",
+      "title": "ListTransitionRouteGroupsResourceNames2Async",
+      "description": "Snippet for ListTransitionRouteGroupsAsync",
+      "file": "TransitionRouteGroupsClient.ListTransitionRouteGroupsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTransitionRouteGroupsAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient.ListTransitionRouteGroupsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
             "name": "parent"
           },
           {
@@ -20238,10 +22778,10 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_sync_flattened_resourceNames",
-      "title": "CreateTransitionRouteGroupResourceNames",
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_sync_flattened_resourceNames1",
+      "title": "CreateTransitionRouteGroupResourceNames1",
       "description": "Snippet for CreateTransitionRouteGroup",
-      "file": "TransitionRouteGroupsClient.CreateTransitionRouteGroupResourceNamesSnippet.g.cs",
+      "file": "TransitionRouteGroupsClient.CreateTransitionRouteGroupResourceNames1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateTransitionRouteGroup",
@@ -20289,10 +22829,10 @@
       ]
     },
     {
-      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_async_flattened_resourceNames",
-      "title": "CreateTransitionRouteGroupResourceNamesAsync",
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_async_flattened_resourceNames1",
+      "title": "CreateTransitionRouteGroupResourceNames1Async",
       "description": "Snippet for CreateTransitionRouteGroupAsync",
-      "file": "TransitionRouteGroupsClient.CreateTransitionRouteGroupResourceNamesAsyncSnippet.g.cs",
+      "file": "TransitionRouteGroupsClient.CreateTransitionRouteGroupResourceNames1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "CreateTransitionRouteGroupAsync",
@@ -20301,6 +22841,109 @@
         "parameters": [
           {
             "type": "Google.Cloud.Dialogflow.Cx.V3.FlowName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup",
+            "name": "transitionRouteGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup>",
+        "client": {
+          "shortName": "TransitionRouteGroupsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient"
+        },
+        "method": {
+          "shortName": "CreateTransitionRouteGroup",
+          "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups.CreateTransitionRouteGroup",
+          "service": {
+            "shortName": "TransitionRouteGroups",
+            "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_sync_flattened_resourceNames2",
+      "title": "CreateTransitionRouteGroupResourceNames2",
+      "description": "Snippet for CreateTransitionRouteGroup",
+      "file": "TransitionRouteGroupsClient.CreateTransitionRouteGroupResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTransitionRouteGroup",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient.CreateTransitionRouteGroup",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup",
+            "name": "transitionRouteGroup"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroup",
+        "client": {
+          "shortName": "TransitionRouteGroupsClient",
+          "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient"
+        },
+        "method": {
+          "shortName": "CreateTransitionRouteGroup",
+          "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups.CreateTransitionRouteGroup",
+          "service": {
+            "shortName": "TransitionRouteGroups",
+            "fullName": "google.cloud.dialogflow.cx.v3.TransitionRouteGroups"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v3_generated_TransitionRouteGroups_CreateTransitionRouteGroup_async_flattened_resourceNames2",
+      "title": "CreateTransitionRouteGroupResourceNames2Async",
+      "description": "Snippet for CreateTransitionRouteGroupAsync",
+      "file": "TransitionRouteGroupsClient.CreateTransitionRouteGroupResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTransitionRouteGroupAsync",
+        "fullName": "Google.Cloud.Dialogflow.Cx.V3.TransitionRouteGroupsClient.CreateTransitionRouteGroupAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.Cx.V3.AgentName",
             "name": "parent"
           },
           {

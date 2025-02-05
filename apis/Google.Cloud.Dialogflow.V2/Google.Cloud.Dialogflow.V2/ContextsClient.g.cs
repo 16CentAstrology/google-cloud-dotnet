@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dialogflow.V2
 {
@@ -214,14 +214,14 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ContextsClient.Create(callInvoker, Settings, Logger);
+            return ContextsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ContextsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ContextsClient.Create(callInvoker, Settings, Logger);
+            return ContextsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -356,13 +356,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Context"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContextsResponse, Context> ListContexts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContexts(new ListContextsRequest
+        public virtual gax::PagedEnumerable<ListContextsResponse, Context> ListContexts(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContextsRequest request = new ListContextsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContexts(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all contexts in the specified session.
@@ -385,13 +394,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Context"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContextsResponse, Context> ListContextsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContextsAsync(new ListContextsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContextsResponse, Context> ListContextsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContextsRequest request = new ListContextsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContextsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all contexts in the specified session.
@@ -414,13 +432,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Context"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContextsResponse, Context> ListContexts(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContexts(new ListContextsRequest
+        public virtual gax::PagedEnumerable<ListContextsResponse, Context> ListContexts(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContextsRequest request = new ListContextsRequest
             {
                 ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContexts(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all contexts in the specified session.
@@ -443,13 +470,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Context"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContextsResponse, Context> ListContextsAsync(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContextsAsync(new ListContextsRequest
+        public virtual gax::PagedAsyncEnumerable<ListContextsResponse, Context> ListContextsAsync(SessionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContextsRequest request = new ListContextsRequest
             {
                 ParentAsSessionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContextsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified context.
@@ -1137,7 +1173,11 @@ namespace Google.Cloud.Dialogflow.V2
         {
             GrpcClient = grpcClient;
             ContextsSettings effectiveSettings = settings ?? ContextsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListContexts = clientHelper.BuildApiCall<ListContextsRequest, ListContextsResponse>("ListContexts", grpcClient.ListContextsAsync, grpcClient.ListContexts, effectiveSettings.ListContextsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListContexts);

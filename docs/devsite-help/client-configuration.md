@@ -23,6 +23,12 @@ and `Google.Cloud.Translation.V2` libraries support builders as well, but with f
 
 ## Specifying credentials
 
+**Important**: If you accept a credential configuration (credential JSON/File/Stream) from an external source
+for authentication to Google Cloud, you must validate it before providing it to any Google API or library.
+Providing an unvalidated credential configuration to Google APIs can compromise the security of your systems and data.
+For more information, refer to
+[Validate credential configurations from external sources](https://cloud.google.com/docs/authentication/external/externally-sourced-credentials).
+
 The following properties are used for specifying and configuring which credentials a client
 uses to authenticate and authorize requests. When no properties are set,
 [application default credentials](https://cloud.google.com/docs/authentication/production#automatically) are used.
@@ -54,15 +60,17 @@ properties, and are rarely as useful as the ones above.
 
 ### API Keys
 
-Most Cloud APIs do not support API keys, instead requiring full credentials as described above. For this
-reason, the client libraries do not have *direct* support for API keys, but API keys can still be used
-for those APIs which support them. The API key should be specified in the `X-Goog-Api-Key` header on
-every request, and the gRPC channel should be built using `ChannelCredentials.SecureSsl`. For example,
-to create a client for the Language API using an API key, you could use the following code:
+Only some Cloud APIs support API keys; others require full credentials as described above.
+In order to support those APIs which *do* support API keys, the client builder
+exposes an `ApiKey` property which can be set, leaving all other
+credential-related properties unset. For example, you can create a
+client for the Language API using an API key like this:
 
-[!code-cs[](../examples/help.Configuration.txt#ApiKey)]
+[!code-cs[](../examples/help.Configuration.txt#ApiKey_Simple)]
 
-After building the client, it can be used like any other client.
+After building the client, it can be used like any other client. If you set an API key
+for a Cloud API which doesn't support API keys, all requests will be rejected with a
+suitable server-side authentication error.
 
 ## gRPC configuration
 
@@ -87,7 +95,8 @@ used at all. This is rarely used outside low-level testing.
 
 ### Endpoint
 
-This is used to configure which server to send requests to. This is primarily used for APIs that support regional endpoints.
+This is used to configure which server to send requests to. For instance, it may be used for APIs that support regional endpoints
+or for [Private Service Connect](https://cloud.google.com/vpc/docs/configure-private-service-connect-apis#configure-p-dns).
 For example, in the [Google.Cloud.AIPlatform.V1 API](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.AIPlatform.V1/latest)
 you might configure a client like this:
 

@@ -6,6 +6,9 @@ always a possibility). The problems we see being reported usually fall into a
 few different buckets, described below. Additionally, the
 [troubleshooting page](troubleshooting.md) has guides for logging and debugging.
 
+The Google Cloud Libraries for .NET follow the [Google Open Source .NET Support Policy]
+(https://opensource.google/documentation/policies/dotnet-support).
+
 ## Authentication issues
 
 Authentication is a complex topic. We would advise reading the general
@@ -32,7 +35,7 @@ work in some situations, we cannot offer help if you run into problems.
 If a problem looks like it *may* be network-related, it's worth attempting to
 reproduce the issue in a different network environment. For example, if you're
 seeing a problem when running behind a corporate firewall, try to reproduce it
-when running on a different network or within a Google Cloud Platform VM or
+when running on a different network or within a Google Cloud VM or
 container. ([Google Cloud Functions](https://cloud.google.com/functions) are
 very simple to create and deploy, as a quick way of performing a single API
 call as a test.)

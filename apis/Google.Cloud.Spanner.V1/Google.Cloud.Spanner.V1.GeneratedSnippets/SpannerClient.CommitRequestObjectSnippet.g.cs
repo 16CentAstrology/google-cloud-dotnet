@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,11 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Spanner.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START spanner_v1_generated_Spanner_Commit_sync]
     using Google.Cloud.Spanner.V1;
     using Google.Protobuf;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedSpannerClientSnippets
     {
@@ -42,6 +43,8 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 Mutations = { new Mutation(), },
                 ReturnCommitStats = false,
                 RequestOptions = new RequestOptions(),
+                MaxCommitDelay = new Duration(),
+                PrecommitToken = new MultiplexedSessionPrecommitToken(),
             };
             // Make the request
             CommitResponse response = spannerClient.Commit(request);

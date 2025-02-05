@@ -44,10 +44,10 @@ namespace Google.Cloud.Vision.V1 {
             "aW9uLnYxLldlYkRldGVjdGlvbi5XZWJJbWFnZRJOChdwYXJ0aWFsX21hdGNo",
             "aW5nX2ltYWdlcxgFIAMoCzItLmdvb2dsZS5jbG91ZC52aXNpb24udjEuV2Vi",
             "RGV0ZWN0aW9uLldlYkltYWdlGjAKCFdlYkxhYmVsEg0KBWxhYmVsGAEgASgJ",
-            "EhUKDWxhbmd1YWdlX2NvZGUYAiABKAlCbwoaY29tLmdvb2dsZS5jbG91ZC52",
-            "aXNpb24udjFCEVdlYkRldGVjdGlvblByb3RvUAFaMmNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vdmlzaW9uL2FwaXYxL3Zpc2lvbnBiO3Zpc2lvbnBi+AEBogIER0NW",
-            "TmIGcHJvdG8z"));
+            "EhUKDWxhbmd1YWdlX2NvZGUYAiABKAlCcgoaY29tLmdvb2dsZS5jbG91ZC52",
+            "aXNpb24udjFCEVdlYkRldGVjdGlvblByb3RvUAFaNWNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vdmlzaW9uL3YyL2FwaXYxL3Zpc2lvbnBiO3Zpc2lvbnBi+AEBogIE",
+            "R0NWTmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -64,6 +64,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Relevant information for the image from the Internet.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WebDetection : pb::IMessage<WebDetection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -400,6 +401,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Entity deduced from similar images on the Internet.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WebEntity : pb::IMessage<WebEntity>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -676,6 +678,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Metadata for online images.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WebImage : pb::IMessage<WebImage>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -911,6 +914,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Metadata for web pages.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WebPage : pb::IMessage<WebPage>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1248,6 +1252,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Label to provide extra metadata for the web detection.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WebLabel : pb::IMessage<WebLabel>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

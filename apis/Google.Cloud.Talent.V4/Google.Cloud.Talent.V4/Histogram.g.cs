@@ -47,6 +47,7 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// The histogram request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HistogramQuery : pb::IMessage<HistogramQuery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -249,6 +250,7 @@ namespace Google.Cloud.Talent.V4 {
   /// [HistogramQuery][google.cloud.talent.v4.HistogramQuery] specified in
   /// searches.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HistogramQueryResult : pb::IMessage<HistogramQueryResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -425,7 +427,7 @@ namespace Google.Cloud.Talent.V4 {
       if (other.HistogramQuery.Length != 0) {
         HistogramQuery = other.HistogramQuery;
       }
-      histogram_.Add(other.histogram_);
+      histogram_.MergeFrom(other.histogram_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

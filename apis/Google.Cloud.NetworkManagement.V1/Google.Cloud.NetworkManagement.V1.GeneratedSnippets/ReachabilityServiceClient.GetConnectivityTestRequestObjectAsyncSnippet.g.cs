@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.NetworkManagement.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_async]
     using Google.Cloud.NetworkManagement.V1;
@@ -35,7 +35,10 @@ namespace Google.Cloud.NetworkManagement.V1.Snippets
             // Create client
             ReachabilityServiceClient reachabilityServiceClient = await ReachabilityServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetConnectivityTestRequest request = new GetConnectivityTestRequest { Name = "", };
+            GetConnectivityTestRequest request = new GetConnectivityTestRequest
+            {
+                ConnectivityTestName = ConnectivityTestName.FromProjectTest("[PROJECT]", "[TEST]"),
+            };
             // Make the request
             ConnectivityTest response = await reachabilityServiceClient.GetConnectivityTestAsync(request);
         }

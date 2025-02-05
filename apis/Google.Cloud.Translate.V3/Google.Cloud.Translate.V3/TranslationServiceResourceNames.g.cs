@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gctv = Google.Cloud.Translate.V3;
 using sys = System;
 
@@ -253,14 +253,38 @@ namespace Google.Cloud.Translate.V3
         /// <inheritdoc/>
         public bool Equals(GlossaryName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(GlossaryName a, GlossaryName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(GlossaryName a, GlossaryName b) => !(a == b);
     }
 
     public partial class TranslateTextRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RomanizeTextRequest
     {
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
@@ -368,6 +392,54 @@ namespace Google.Cloud.Translate.V3
         }
     }
 
+    public partial class GetGlossaryEntryRequest
+    {
+        /// <summary>
+        /// <see cref="gctv::GlossaryEntryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gctv::GlossaryEntryName GlossaryEntryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gctv::GlossaryEntryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteGlossaryEntryRequest
+    {
+        /// <summary>
+        /// <see cref="gctv::GlossaryEntryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gctv::GlossaryEntryName GlossaryEntryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gctv::GlossaryEntryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListGlossaryEntriesRequest
+    {
+        /// <summary>
+        /// <see cref="GlossaryName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public GlossaryName ParentAsGlossaryName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : GlossaryName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateGlossaryEntryRequest
+    {
+        /// <summary>
+        /// <see cref="GlossaryName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public GlossaryName ParentAsGlossaryName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : GlossaryName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class BatchTranslateDocumentRequest
     {
         /// <summary>
@@ -377,6 +449,18 @@ namespace Google.Cloud.Translate.V3
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class TranslateTextGlossaryConfig
+    {
+        /// <summary>
+        /// <see cref="GlossaryName"/>-typed view over the <see cref="Glossary"/> resource name property.
+        /// </summary>
+        public GlossaryName GlossaryAsGlossaryName
+        {
+            get => string.IsNullOrEmpty(Glossary) ? null : GlossaryName.Parse(Glossary, allowUnparsed: true);
+            set => Glossary = value?.ToString() ?? "";
         }
     }
 }

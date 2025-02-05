@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,20 +15,20 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.ResourceManager.V3
 {
@@ -172,14 +172,14 @@ namespace Google.Cloud.ResourceManager.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return OrganizationsClient.Create(callInvoker, Settings, Logger);
+            return OrganizationsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<OrganizationsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return OrganizationsClient.Create(callInvoker, Settings, Logger);
+            return OrganizationsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -303,9 +303,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Fetches an organization resource identified by the specified resource name.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Organization to fetch. This is the organization's
-        /// relative path in the API, formatted as "organizations/[organizationId]".
-        /// For example, "organizations/1234".
+        /// Required. The resource name of the Organization to fetch. This is the
+        /// organization's relative path in the API, formatted as
+        /// "organizations/[organizationId]". For example, "organizations/1234".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -319,9 +319,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Fetches an organization resource identified by the specified resource name.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Organization to fetch. This is the organization's
-        /// relative path in the API, formatted as "organizations/[organizationId]".
-        /// For example, "organizations/1234".
+        /// Required. The resource name of the Organization to fetch. This is the
+        /// organization's relative path in the API, formatted as
+        /// "organizations/[organizationId]". For example, "organizations/1234".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -335,9 +335,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Fetches an organization resource identified by the specified resource name.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Organization to fetch. This is the organization's
-        /// relative path in the API, formatted as "organizations/[organizationId]".
-        /// For example, "organizations/1234".
+        /// Required. The resource name of the Organization to fetch. This is the
+        /// organization's relative path in the API, formatted as
+        /// "organizations/[organizationId]". For example, "organizations/1234".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -348,9 +348,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Fetches an organization resource identified by the specified resource name.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Organization to fetch. This is the organization's
-        /// relative path in the API, formatted as "organizations/[organizationId]".
-        /// For example, "organizations/1234".
+        /// Required. The resource name of the Organization to fetch. This is the
+        /// organization's relative path in the API, formatted as
+        /// "organizations/[organizationId]". For example, "organizations/1234".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -364,9 +364,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Fetches an organization resource identified by the specified resource name.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Organization to fetch. This is the organization's
-        /// relative path in the API, formatted as "organizations/[organizationId]".
-        /// For example, "organizations/1234".
+        /// Required. The resource name of the Organization to fetch. This is the
+        /// organization's relative path in the API, formatted as
+        /// "organizations/[organizationId]". For example, "organizations/1234".
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -380,9 +380,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Fetches an organization resource identified by the specified resource name.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the Organization to fetch. This is the organization's
-        /// relative path in the API, formatted as "organizations/[organizationId]".
-        /// For example, "organizations/1234".
+        /// Required. The resource name of the Organization to fetch. This is the
+        /// organization's relative path in the API, formatted as
+        /// "organizations/[organizationId]". For example, "organizations/1234".
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -429,8 +429,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// `resourcemanager.organizations.get`
         /// </summary>
         /// <param name="query">
-        /// Optional. An optional query string used to filter the Organizations to return in
-        /// the response. Query rules are case-insensitive.
+        /// Optional. An optional query string used to filter the Organizations to
+        /// return in the response. Query rules are case-insensitive.
+        /// 
         /// 
         /// ```
         /// | Field            | Description                                |
@@ -458,13 +459,19 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Organization"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchOrganizationsResponse, Organization> SearchOrganizations(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchOrganizations(new SearchOrganizationsRequest
+        public virtual gax::PagedEnumerable<SearchOrganizationsResponse, Organization> SearchOrganizations(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchOrganizationsRequest request = new SearchOrganizationsRequest { Query = query ?? "", };
+            if (pageToken != null)
             {
-                Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchOrganizations(request, callSettings);
+        }
 
         /// <summary>
         /// Searches organization resources that are visible to the user and satisfy
@@ -476,8 +483,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// `resourcemanager.organizations.get`
         /// </summary>
         /// <param name="query">
-        /// Optional. An optional query string used to filter the Organizations to return in
-        /// the response. Query rules are case-insensitive.
+        /// Optional. An optional query string used to filter the Organizations to
+        /// return in the response. Query rules are case-insensitive.
+        /// 
         /// 
         /// ```
         /// | Field            | Description                                |
@@ -505,13 +513,19 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Organization"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchOrganizationsResponse, Organization> SearchOrganizationsAsync(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchOrganizationsAsync(new SearchOrganizationsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchOrganizationsResponse, Organization> SearchOrganizationsAsync(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchOrganizationsRequest request = new SearchOrganizationsRequest { Query = query ?? "", };
+            if (pageToken != null)
             {
-                Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchOrganizationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the access control policy for an organization resource. The policy may
@@ -1051,7 +1065,11 @@ namespace Google.Cloud.ResourceManager.V3
         {
             GrpcClient = grpcClient;
             OrganizationsSettings effectiveSettings = settings ?? OrganizationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetOrganization = clientHelper.BuildApiCall<GetOrganizationRequest, Organization>("GetOrganization", grpcClient.GetOrganizationAsync, grpcClient.GetOrganization, effectiveSettings.GetOrganizationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetOrganization);
             Modify_GetOrganizationApiCall(ref _callGetOrganization);

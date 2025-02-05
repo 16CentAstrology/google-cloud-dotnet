@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DataCatalog.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.DataCatalog.V1;
     using Google.Cloud.Iam.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
@@ -40,6 +41,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
                 Query = "",
                 OrderBy = "",
                 Scope = new SearchCatalogRequest.Types.Scope(),
+                AdminSearch = false,
             };
             // Make the request
             PagedEnumerable<SearchCatalogResponse, SearchCatalogResult> response = dataCatalogClient.SearchCatalog(request);
@@ -90,6 +92,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
                 Query = "",
                 OrderBy = "",
                 Scope = new SearchCatalogRequest.Types.Scope(),
+                AdminSearch = false,
             };
             // Make the request
             PagedAsyncEnumerable<SearchCatalogResponse, SearchCatalogResult> response = dataCatalogClient.SearchCatalogAsync(request);
@@ -1293,7 +1296,12 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
             // Initialize request argument(s)
-            LookupEntryRequest request = new LookupEntryRequest { LinkedResource = "", };
+            LookupEntryRequest request = new LookupEntryRequest
+            {
+                LinkedResource = "",
+                Project = "",
+                Location = "",
+            };
             // Make the request
             Entry response = dataCatalogClient.LookupEntry(request);
             // End snippet
@@ -1307,7 +1315,12 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // Create client
             DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
             // Initialize request argument(s)
-            LookupEntryRequest request = new LookupEntryRequest { LinkedResource = "", };
+            LookupEntryRequest request = new LookupEntryRequest
+            {
+                LinkedResource = "",
+                Project = "",
+                Location = "",
+            };
             // Make the request
             Entry response = await dataCatalogClient.LookupEntryAsync(request);
             // End snippet
@@ -3588,6 +3601,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             {
                 ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
                 GcsBucketPath = "",
+                JobId = "",
             };
             // Make the request
             Operation<ImportEntriesResponse, ImportEntriesMetadata> response = dataCatalogClient.ImportEntries(request);
@@ -3622,6 +3636,7 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             {
                 ParentAsEntryGroupName = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]"),
                 GcsBucketPath = "",
+                JobId = "",
             };
             // Make the request
             Operation<ImportEntriesResponse, ImportEntriesMetadata> response = await dataCatalogClient.ImportEntriesAsync(request);
@@ -3641,6 +3656,95 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
                 // If it has completed, then access the result
                 ImportEntriesResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetConfig</summary>
+        public void SetConfigRequestObject()
+        {
+            // Snippet: SetConfig(SetConfigRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            SetConfigRequest request = new SetConfigRequest
+            {
+                Name = "",
+                TagTemplateMigration = TagTemplateMigration.Unspecified,
+            };
+            // Make the request
+            MigrationConfig response = dataCatalogClient.SetConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetConfigAsync</summary>
+        public async Task SetConfigRequestObjectAsync()
+        {
+            // Snippet: SetConfigAsync(SetConfigRequest, CallSettings)
+            // Additional: SetConfigAsync(SetConfigRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            SetConfigRequest request = new SetConfigRequest
+            {
+                Name = "",
+                TagTemplateMigration = TagTemplateMigration.Unspecified,
+            };
+            // Make the request
+            MigrationConfig response = await dataCatalogClient.SetConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveConfig</summary>
+        public void RetrieveConfigRequestObject()
+        {
+            // Snippet: RetrieveConfig(RetrieveConfigRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            RetrieveConfigRequest request = new RetrieveConfigRequest { Name = "", };
+            // Make the request
+            OrganizationConfig response = dataCatalogClient.RetrieveConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveConfigAsync</summary>
+        public async Task RetrieveConfigRequestObjectAsync()
+        {
+            // Snippet: RetrieveConfigAsync(RetrieveConfigRequest, CallSettings)
+            // Additional: RetrieveConfigAsync(RetrieveConfigRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            RetrieveConfigRequest request = new RetrieveConfigRequest { Name = "", };
+            // Make the request
+            OrganizationConfig response = await dataCatalogClient.RetrieveConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveEffectiveConfig</summary>
+        public void RetrieveEffectiveConfigRequestObject()
+        {
+            // Snippet: RetrieveEffectiveConfig(RetrieveEffectiveConfigRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            RetrieveEffectiveConfigRequest request = new RetrieveEffectiveConfigRequest { Name = "", };
+            // Make the request
+            MigrationConfig response = dataCatalogClient.RetrieveEffectiveConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveEffectiveConfigAsync</summary>
+        public async Task RetrieveEffectiveConfigRequestObjectAsync()
+        {
+            // Snippet: RetrieveEffectiveConfigAsync(RetrieveEffectiveConfigRequest, CallSettings)
+            // Additional: RetrieveEffectiveConfigAsync(RetrieveEffectiveConfigRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            RetrieveEffectiveConfigRequest request = new RetrieveEffectiveConfigRequest { Name = "", };
+            // Make the request
+            MigrationConfig response = await dataCatalogClient.RetrieveEffectiveConfigAsync(request);
             // End snippet
         }
     }

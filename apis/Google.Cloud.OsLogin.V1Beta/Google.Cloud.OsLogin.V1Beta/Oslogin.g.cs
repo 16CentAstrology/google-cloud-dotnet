@@ -51,68 +51,79 @@ namespace Google.Cloud.OsLogin.V1Beta {
             "CRIRCglzeXN0ZW1faWQYAyABKAkSOwoEdmlldxgEIAEoDjItLmdvb2dsZS5j",
             "bG91ZC5vc2xvZ2luLnYxYmV0YS5Mb2dpblByb2ZpbGVWaWV3IlMKFkdldFNz",
             "aFB1YmxpY0tleVJlcXVlc3QSOQoEbmFtZRgBIAEoCUIr4EEC+kElCiNvc2xv",
-            "Z2luLmdvb2dsZWFwaXMuY29tL1NzaFB1YmxpY0tleSLuAQoZSW1wb3J0U3No",
+            "Z2luLmdvb2dsZWFwaXMuY29tL1NzaFB1YmxpY0tleSKEAgoZSW1wb3J0U3No",
             "UHVibGljS2V5UmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKPpBJRIjb3Nsb2dp",
             "bi5nb29nbGVhcGlzLmNvbS9Tc2hQdWJsaWNLZXkSRgoOc3NoX3B1YmxpY19r",
             "ZXkYAiABKAsyKS5nb29nbGUuY2xvdWQub3Nsb2dpbi5jb21tb24uU3NoUHVi",
             "bGljS2V5QgPgQQISEgoKcHJvamVjdF9pZBgDIAEoCRI7CgR2aWV3GAQgASgO",
             "Mi0uZ29vZ2xlLmNsb3VkLm9zbG9naW4udjFiZXRhLkxvZ2luUHJvZmlsZVZp",
-            "ZXcibwoaSW1wb3J0U3NoUHVibGljS2V5UmVzcG9uc2USQAoNbG9naW5fcHJv",
-            "ZmlsZRgBIAEoCzIpLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxYmV0YS5Mb2dp",
-            "blByb2ZpbGUSDwoHZGV0YWlscxgCIAEoCSLPAQoZVXBkYXRlU3NoUHVibGlj",
-            "S2V5UmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUKI29zbG9naW4uZ29v",
-            "Z2xlYXBpcy5jb20vU3NoUHVibGljS2V5EkYKDnNzaF9wdWJsaWNfa2V5GAIg",
-            "ASgLMikuZ29vZ2xlLmNsb3VkLm9zbG9naW4uY29tbW9uLlNzaFB1YmxpY0tl",
-            "eUID4EECEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LkZpZWxkTWFzayLUAQoLU2VjdXJpdHlLZXkSEgoKcHVibGljX2tleRgBIAEo",
-            "CRITCgtwcml2YXRlX2tleRgCIAEoCRJPChR1bml2ZXJzYWxfdHdvX2ZhY3Rv",
-            "chgDIAEoCzIvLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxYmV0YS5Vbml2ZXJz",
-            "YWxUd29GYWN0b3JIABI6Cgl3ZWJfYXV0aG4YBCABKAsyJS5nb29nbGUuY2xv",
-            "dWQub3Nsb2dpbi52MWJldGEuV2ViQXV0aG5IAEIPCg1wcm90b2NvbF90eXBl",
-            "IiQKElVuaXZlcnNhbFR3b0ZhY3RvchIOCgZhcHBfaWQYASABKAkiGQoIV2Vi",
-            "QXV0aG4SDQoFcnBfaWQYASABKAkqUwoQTG9naW5Qcm9maWxlVmlldxIiCh5M",
-            "T0dJTl9QUk9GSUxFX1ZJRVdfVU5TUEVDSUZJRUQQABIJCgVCQVNJQxABEhAK",
-            "DFNFQ1VSSVRZX0tFWRACMsYMCg5Pc0xvZ2luU2VydmljZRLPAQoSQ3JlYXRl",
-            "U3NoUHVibGljS2V5EjYuZ29vZ2xlLmNsb3VkLm9zbG9naW4udjFiZXRhLkNy",
-            "ZWF0ZVNzaFB1YmxpY0tleVJlcXVlc3QaKS5nb29nbGUuY2xvdWQub3Nsb2dp",
-            "bi5jb21tb24uU3NoUHVibGljS2V5IlaC0+STAjgiJi92MWJldGEve3BhcmVu",
-            "dD11c2Vycy8qfS9zc2hQdWJsaWNLZXlzOg5zc2hfcHVibGljX2tledpBFXBh",
-            "cmVudCxzc2hfcHVibGljX2tleRKWAQoSRGVsZXRlUG9zaXhBY2NvdW50EjYu",
-            "Z29vZ2xlLmNsb3VkLm9zbG9naW4udjFiZXRhLkRlbGV0ZVBvc2l4QWNjb3Vu",
-            "dFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiMILT5JMCIyohL3Yx",
-            "YmV0YS97bmFtZT11c2Vycy8qL3Byb2plY3RzLyp92kEEbmFtZRKbAQoSRGVs",
-            "ZXRlU3NoUHVibGljS2V5EjYuZ29vZ2xlLmNsb3VkLm9zbG9naW4udjFiZXRh",
-            "LkRlbGV0ZVNzaFB1YmxpY0tleVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
-            "RW1wdHkiNYLT5JMCKComL3YxYmV0YS97bmFtZT11c2Vycy8qL3NzaFB1Ymxp",
-            "Y0tleXMvKn3aQQRuYW1lEqUBCg9HZXRMb2dpblByb2ZpbGUSMy5nb29nbGUu",
-            "Y2xvdWQub3Nsb2dpbi52MWJldGEuR2V0TG9naW5Qcm9maWxlUmVxdWVzdBop",
-            "Lmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxYmV0YS5Mb2dpblByb2ZpbGUiMoLT",
-            "5JMCJRIjL3YxYmV0YS97bmFtZT11c2Vycy8qfS9sb2dpblByb2ZpbGXaQQRu",
-            "YW1lEqgBCg9HZXRTc2hQdWJsaWNLZXkSMy5nb29nbGUuY2xvdWQub3Nsb2dp",
-            "bi52MWJldGEuR2V0U3NoUHVibGljS2V5UmVxdWVzdBopLmdvb2dsZS5jbG91",
-            "ZC5vc2xvZ2luLmNvbW1vbi5Tc2hQdWJsaWNLZXkiNYLT5JMCKBImL3YxYmV0",
-            "YS97bmFtZT11c2Vycy8qL3NzaFB1YmxpY0tleXMvKn3aQQRuYW1lEoUCChJJ",
-            "bXBvcnRTc2hQdWJsaWNLZXkSNi5nb29nbGUuY2xvdWQub3Nsb2dpbi52MWJl",
-            "dGEuSW1wb3J0U3NoUHVibGljS2V5UmVxdWVzdBo3Lmdvb2dsZS5jbG91ZC5v",
-            "c2xvZ2luLnYxYmV0YS5JbXBvcnRTc2hQdWJsaWNLZXlSZXNwb25zZSJ+gtPk",
-            "kwI9IisvdjFiZXRhL3twYXJlbnQ9dXNlcnMvKn06aW1wb3J0U3NoUHVibGlj",
-            "S2V5Og5zc2hfcHVibGljX2tledpBFXBhcmVudCxzc2hfcHVibGljX2tledpB",
-            "IHBhcmVudCxzc2hfcHVibGljX2tleSxwcm9qZWN0X2lkEu8BChJVcGRhdGVT",
-            "c2hQdWJsaWNLZXkSNi5nb29nbGUuY2xvdWQub3Nsb2dpbi52MWJldGEuVXBk",
-            "YXRlU3NoUHVibGljS2V5UmVxdWVzdBopLmdvb2dsZS5jbG91ZC5vc2xvZ2lu",
-            "LmNvbW1vbi5Tc2hQdWJsaWNLZXkidoLT5JMCODImL3YxYmV0YS97bmFtZT11",
-            "c2Vycy8qL3NzaFB1YmxpY0tleXMvKn06DnNzaF9wdWJsaWNfa2V52kETbmFt",
-            "ZSxzc2hfcHVibGljX2tledpBH25hbWUsc3NoX3B1YmxpY19rZXksdXBkYXRl",
-            "X21hc2sa3QHKQRZvc2xvZ2luLmdvb2dsZWFwaXMuY29t0kHAAWh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybS5yZWFk",
-            "LW9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRl",
-            "LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29tcHV0ZS5yZWFk",
-            "b25seULJAQofY29tLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxYmV0YUIMT3NM",
-            "b2dpblByb3RvUAFaOWNsb3VkLmdvb2dsZS5jb20vZ28vb3Nsb2dpbi9hcGl2",
-            "MWJldGEvb3Nsb2dpbnBiO29zbG9naW5wYqoCG0dvb2dsZS5DbG91ZC5Pc0xv",
-            "Z2luLlYxQmV0YcoCG0dvb2dsZVxDbG91ZFxPc0xvZ2luXFYxYmV0YeoCHkdv",
-            "b2dsZTo6Q2xvdWQ6Ok9zTG9naW46OlYxYmV0YWIGcHJvdG8z"));
+            "ZXcSFAoHcmVnaW9ucxgFIAMoCUID4EEBIm8KGkltcG9ydFNzaFB1YmxpY0tl",
+            "eVJlc3BvbnNlEkAKDWxvZ2luX3Byb2ZpbGUYASABKAsyKS5nb29nbGUuY2xv",
+            "dWQub3Nsb2dpbi52MWJldGEuTG9naW5Qcm9maWxlEg8KB2RldGFpbHMYAiAB",
+            "KAkizwEKGVVwZGF0ZVNzaFB1YmxpY0tleVJlcXVlc3QSOQoEbmFtZRgBIAEo",
+            "CUIr4EEC+kElCiNvc2xvZ2luLmdvb2dsZWFwaXMuY29tL1NzaFB1YmxpY0tl",
+            "eRJGCg5zc2hfcHVibGljX2tleRgCIAEoCzIpLmdvb2dsZS5jbG91ZC5vc2xv",
+            "Z2luLmNvbW1vbi5Tc2hQdWJsaWNLZXlCA+BBAhIvCgt1cGRhdGVfbWFzaxgD",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sihgIKC1NlY3VyaXR5",
+            "S2V5EhIKCnB1YmxpY19rZXkYASABKAkSEwoLcHJpdmF0ZV9rZXkYAiABKAkS",
+            "TwoUdW5pdmVyc2FsX3R3b19mYWN0b3IYAyABKAsyLy5nb29nbGUuY2xvdWQu",
+            "b3Nsb2dpbi52MWJldGEuVW5pdmVyc2FsVHdvRmFjdG9ySAASOgoJd2ViX2F1",
+            "dGhuGAQgASgLMiUuZ29vZ2xlLmNsb3VkLm9zbG9naW4udjFiZXRhLldlYkF1",
+            "dGhuSAASHAoPZGV2aWNlX25pY2tuYW1lGAUgASgJSAGIAQFCDwoNcHJvdG9j",
+            "b2xfdHlwZUISChBfZGV2aWNlX25pY2tuYW1lIiQKElVuaXZlcnNhbFR3b0Zh",
+            "Y3RvchIOCgZhcHBfaWQYASABKAkiGQoIV2ViQXV0aG4SDQoFcnBfaWQYASAB",
+            "KAkiQQoXU2lnblNzaFB1YmxpY0tleVJlcXVlc3QSFgoOc3NoX3B1YmxpY19r",
+            "ZXkYASABKAkSDgoGcGFyZW50GAIgASgJIjkKGFNpZ25Tc2hQdWJsaWNLZXlS",
+            "ZXNwb25zZRIdChVzaWduZWRfc3NoX3B1YmxpY19rZXkYASABKAkqUwoQTG9n",
+            "aW5Qcm9maWxlVmlldxIiCh5MT0dJTl9QUk9GSUxFX1ZJRVdfVU5TUEVDSUZJ",
+            "RUQQABIJCgVCQVNJQxABEhAKDFNFQ1VSSVRZX0tFWRACMvIOCg5Pc0xvZ2lu",
+            "U2VydmljZRLPAQoSQ3JlYXRlU3NoUHVibGljS2V5EjYuZ29vZ2xlLmNsb3Vk",
+            "Lm9zbG9naW4udjFiZXRhLkNyZWF0ZVNzaFB1YmxpY0tleVJlcXVlc3QaKS5n",
+            "b29nbGUuY2xvdWQub3Nsb2dpbi5jb21tb24uU3NoUHVibGljS2V5IlbaQRVw",
+            "YXJlbnQsc3NoX3B1YmxpY19rZXmC0+STAjgiJi92MWJldGEve3BhcmVudD11",
+            "c2Vycy8qfS9zc2hQdWJsaWNLZXlzOg5zc2hfcHVibGljX2tleRKWAQoSRGVs",
+            "ZXRlUG9zaXhBY2NvdW50EjYuZ29vZ2xlLmNsb3VkLm9zbG9naW4udjFiZXRh",
+            "LkRlbGV0ZVBvc2l4QWNjb3VudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
+            "RW1wdHkiMNpBBG5hbWWC0+STAiMqIS92MWJldGEve25hbWU9dXNlcnMvKi9w",
+            "cm9qZWN0cy8qfRKbAQoSRGVsZXRlU3NoUHVibGljS2V5EjYuZ29vZ2xlLmNs",
+            "b3VkLm9zbG9naW4udjFiZXRhLkRlbGV0ZVNzaFB1YmxpY0tleVJlcXVlc3Qa",
+            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiNdpBBG5hbWWC0+STAigqJi92MWJl",
+            "dGEve25hbWU9dXNlcnMvKi9zc2hQdWJsaWNLZXlzLyp9EqUBCg9HZXRMb2dp",
+            "blByb2ZpbGUSMy5nb29nbGUuY2xvdWQub3Nsb2dpbi52MWJldGEuR2V0TG9n",
+            "aW5Qcm9maWxlUmVxdWVzdBopLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxYmV0",
+            "YS5Mb2dpblByb2ZpbGUiMtpBBG5hbWWC0+STAiUSIy92MWJldGEve25hbWU9",
+            "dXNlcnMvKn0vbG9naW5Qcm9maWxlEqgBCg9HZXRTc2hQdWJsaWNLZXkSMy5n",
+            "b29nbGUuY2xvdWQub3Nsb2dpbi52MWJldGEuR2V0U3NoUHVibGljS2V5UmVx",
+            "dWVzdBopLmdvb2dsZS5jbG91ZC5vc2xvZ2luLmNvbW1vbi5Tc2hQdWJsaWNL",
+            "ZXkiNdpBBG5hbWWC0+STAigSJi92MWJldGEve25hbWU9dXNlcnMvKi9zc2hQ",
+            "dWJsaWNLZXlzLyp9EoUCChJJbXBvcnRTc2hQdWJsaWNLZXkSNi5nb29nbGUu",
+            "Y2xvdWQub3Nsb2dpbi52MWJldGEuSW1wb3J0U3NoUHVibGljS2V5UmVxdWVz",
+            "dBo3Lmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxYmV0YS5JbXBvcnRTc2hQdWJs",
+            "aWNLZXlSZXNwb25zZSJ+2kEVcGFyZW50LHNzaF9wdWJsaWNfa2V52kEgcGFy",
+            "ZW50LHNzaF9wdWJsaWNfa2V5LHByb2plY3RfaWSC0+STAj0iKy92MWJldGEv",
+            "e3BhcmVudD11c2Vycy8qfTppbXBvcnRTc2hQdWJsaWNLZXk6DnNzaF9wdWJs",
+            "aWNfa2V5Eu8BChJVcGRhdGVTc2hQdWJsaWNLZXkSNi5nb29nbGUuY2xvdWQu",
+            "b3Nsb2dpbi52MWJldGEuVXBkYXRlU3NoUHVibGljS2V5UmVxdWVzdBopLmdv",
+            "b2dsZS5jbG91ZC5vc2xvZ2luLmNvbW1vbi5Tc2hQdWJsaWNLZXkidtpBE25h",
+            "bWUsc3NoX3B1YmxpY19rZXnaQR9uYW1lLHNzaF9wdWJsaWNfa2V5LHVwZGF0",
+            "ZV9tYXNrgtPkkwI4MiYvdjFiZXRhL3tuYW1lPXVzZXJzLyovc3NoUHVibGlj",
+            "S2V5cy8qfToOc3NoX3B1YmxpY19rZXkSqQIKEFNpZ25Tc2hQdWJsaWNLZXkS",
+            "NC5nb29nbGUuY2xvdWQub3Nsb2dpbi52MWJldGEuU2lnblNzaFB1YmxpY0tl",
+            "eVJlcXVlc3QaNS5nb29nbGUuY2xvdWQub3Nsb2dpbi52MWJldGEuU2lnblNz",
+            "aFB1YmxpY0tleVJlc3BvbnNlIqcB2kEVcGFyZW50LHNzaF9wdWJsaWNfa2V5",
+            "gtPkkwKIASI8L3YxYmV0YS97cGFyZW50PXVzZXJzLyovcHJvamVjdHMvKi96",
+            "b25lcy8qfTpzaWduU3NoUHVibGljS2V5OgEqWkUiQC92MWJldGEve3BhcmVu",
+            "dD11c2Vycy8qL3Byb2plY3RzLyovbG9jYXRpb25zLyp9OnNpZ25Tc2hQdWJs",
+            "aWNLZXk6ASoa3QHKQRZvc2xvZ2luLmdvb2dsZWFwaXMuY29t0kHAAWh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybS5y",
+            "ZWFkLW9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21w",
+            "dXRlLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29tcHV0ZS5y",
+            "ZWFkb25seULJAQofY29tLmdvb2dsZS5jbG91ZC5vc2xvZ2luLnYxYmV0YUIM",
+            "T3NMb2dpblByb3RvUAFaOWNsb3VkLmdvb2dsZS5jb20vZ28vb3Nsb2dpbi9h",
+            "cGl2MWJldGEvb3Nsb2dpbnBiO29zbG9naW5wYqoCG0dvb2dsZS5DbG91ZC5P",
+            "c0xvZ2luLlYxQmV0YcoCG0dvb2dsZVxDbG91ZFxPc0xvZ2luXFYxYmV0YeoC",
+            "Hkdvb2dsZTo6Q2xvdWQ6Ok9zTG9naW46OlYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OsLogin.Common.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.OsLogin.V1Beta.LoginProfileView), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -122,12 +133,14 @@ namespace Google.Cloud.OsLogin.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.DeleteSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1Beta.DeleteSshPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.GetLoginProfileRequest), global::Google.Cloud.OsLogin.V1Beta.GetLoginProfileRequest.Parser, new[]{ "Name", "ProjectId", "SystemId", "View" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.GetSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1Beta.GetSshPublicKeyRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest.Parser, new[]{ "Parent", "SshPublicKey", "ProjectId", "View" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyRequest.Parser, new[]{ "Parent", "SshPublicKey", "ProjectId", "View", "Regions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse), global::Google.Cloud.OsLogin.V1Beta.ImportSshPublicKeyResponse.Parser, new[]{ "LoginProfile", "Details" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1Beta.UpdateSshPublicKeyRequest.Parser, new[]{ "Name", "SshPublicKey", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.SecurityKey), global::Google.Cloud.OsLogin.V1Beta.SecurityKey.Parser, new[]{ "PublicKey", "PrivateKey", "UniversalTwoFactor", "WebAuthn" }, new[]{ "ProtocolType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.SecurityKey), global::Google.Cloud.OsLogin.V1Beta.SecurityKey.Parser, new[]{ "PublicKey", "PrivateKey", "UniversalTwoFactor", "WebAuthn", "DeviceNickname" }, new[]{ "ProtocolType", "DeviceNickname" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.UniversalTwoFactor), global::Google.Cloud.OsLogin.V1Beta.UniversalTwoFactor.Parser, new[]{ "AppId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.WebAuthn), global::Google.Cloud.OsLogin.V1Beta.WebAuthn.Parser, new[]{ "RpId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.WebAuthn), global::Google.Cloud.OsLogin.V1Beta.WebAuthn.Parser, new[]{ "RpId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest), global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyRequest.Parser, new[]{ "SshPublicKey", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse), global::Google.Cloud.OsLogin.V1Beta.SignSshPublicKeyResponse.Parser, new[]{ "SignedSshPublicKey" }, null, null, null, null)
           }));
     }
     #endregion
@@ -159,6 +172,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
   /// The user profile information used for logging in to a virtual machine on
   /// Google Compute Engine.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LoginProfile : pb::IMessage<LoginProfile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -367,7 +381,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
         Name = other.Name;
       }
       posixAccounts_.Add(other.posixAccounts_);
-      sshPublicKeys_.Add(other.sshPublicKeys_);
+      sshPublicKeys_.MergeFrom(other.sshPublicKeys_);
       securityKeys_.Add(other.securityKeys_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -441,6 +455,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
   /// <summary>
   /// A request message for creating an SSH public key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSshPublicKeyRequest : pb::IMessage<CreateSshPublicKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -685,6 +700,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
   /// <summary>
   /// A request message for deleting a POSIX account entry.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeletePosixAccountRequest : pb::IMessage<DeletePosixAccountRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -882,6 +898,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
   /// <summary>
   /// A request message for deleting an SSH public key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSshPublicKeyRequest : pb::IMessage<DeleteSshPublicKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1079,6 +1096,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
   /// <summary>
   /// A request message for retrieving the login profile information for a user.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetLoginProfileRequest : pb::IMessage<GetLoginProfileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1394,6 +1412,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
   /// <summary>
   /// A request message for retrieving an SSH public key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSshPublicKeyRequest : pb::IMessage<GetSshPublicKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1591,6 +1610,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
   /// <summary>
   /// A request message for importing an SSH public key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportSshPublicKeyRequest : pb::IMessage<ImportSshPublicKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1629,6 +1649,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
       sshPublicKey_ = other.sshPublicKey_ != null ? other.sshPublicKey_.Clone() : null;
       projectId_ = other.projectId_;
       view_ = other.view_;
+      regions_ = other.regions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1698,6 +1719,22 @@ namespace Google.Cloud.OsLogin.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "regions" field.</summary>
+    public const int RegionsFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_regions_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> regions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The regions to which to assert that the key was written.
+    /// If unspecified, defaults to all regions.
+    /// Regions are listed at https://cloud.google.com/about/locations#region.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Regions {
+      get { return regions_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1717,6 +1754,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
       if (!object.Equals(SshPublicKey, other.SshPublicKey)) return false;
       if (ProjectId != other.ProjectId) return false;
       if (View != other.View) return false;
+      if(!regions_.Equals(other.regions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1728,6 +1766,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
       if (sshPublicKey_ != null) hash ^= SshPublicKey.GetHashCode();
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (View != global::Google.Cloud.OsLogin.V1Beta.LoginProfileView.Unspecified) hash ^= View.GetHashCode();
+      hash ^= regions_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1762,6 +1801,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
         output.WriteRawTag(32);
         output.WriteEnum((int) View);
       }
+      regions_.WriteTo(output, _repeated_regions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1788,6 +1828,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
         output.WriteRawTag(32);
         output.WriteEnum((int) View);
       }
+      regions_.WriteTo(ref output, _repeated_regions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1810,6 +1851,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
       if (View != global::Google.Cloud.OsLogin.V1Beta.LoginProfileView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
+      size += regions_.CalculateSize(_repeated_regions_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1837,6 +1879,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
       if (other.View != global::Google.Cloud.OsLogin.V1Beta.LoginProfileView.Unspecified) {
         View = other.View;
       }
+      regions_.Add(other.regions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1869,6 +1912,10 @@ namespace Google.Cloud.OsLogin.V1Beta {
           }
           case 32: {
             View = (global::Google.Cloud.OsLogin.V1Beta.LoginProfileView) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            regions_.AddEntriesFrom(input, _repeated_regions_codec);
             break;
           }
         }
@@ -1905,6 +1952,10 @@ namespace Google.Cloud.OsLogin.V1Beta {
             View = (global::Google.Cloud.OsLogin.V1Beta.LoginProfileView) input.ReadEnum();
             break;
           }
+          case 42: {
+            regions_.AddEntriesFrom(ref input, _repeated_regions_codec);
+            break;
+          }
         }
       }
     }
@@ -1915,6 +1966,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
   /// <summary>
   /// A response message for importing an SSH public key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportSshPublicKeyResponse : pb::IMessage<ImportSshPublicKeyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2159,6 +2211,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
   /// <summary>
   /// A request message for updating an SSH public key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateSshPublicKeyRequest : pb::IMessage<UpdateSshPublicKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2454,6 +2507,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
   /// <summary>
   /// The credential information for a Google registered security key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SecurityKey : pb::IMessage<SecurityKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2490,6 +2544,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
     public SecurityKey(SecurityKey other) : this() {
       publicKey_ = other.publicKey_;
       privateKey_ = other.privateKey_;
+      deviceNickname_ = other.deviceNickname_;
       switch (other.ProtocolTypeCase) {
         case ProtocolTypeOneofCase.UniversalTwoFactor:
           UniversalTwoFactor = other.UniversalTwoFactor.Clone();
@@ -2569,6 +2624,35 @@ namespace Google.Cloud.OsLogin.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "device_nickname" field.</summary>
+    public const int DeviceNicknameFieldNumber = 5;
+    private readonly static string DeviceNicknameDefaultValue = "";
+
+    private string deviceNickname_;
+    /// <summary>
+    /// The security key nickname explicitly set by the user.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DeviceNickname {
+      get { return deviceNickname_ ?? DeviceNicknameDefaultValue; }
+      set {
+        deviceNickname_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "device_nickname" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDeviceNickname {
+      get { return deviceNickname_ != null; }
+    }
+    /// <summary>Clears the value of the "device_nickname" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeviceNickname() {
+      deviceNickname_ = null;
+    }
+
     private object protocolType_;
     /// <summary>Enum of possible cases for the "protocol_type" oneof.</summary>
     public enum ProtocolTypeOneofCase {
@@ -2609,6 +2693,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
       if (PrivateKey != other.PrivateKey) return false;
       if (!object.Equals(UniversalTwoFactor, other.UniversalTwoFactor)) return false;
       if (!object.Equals(WebAuthn, other.WebAuthn)) return false;
+      if (DeviceNickname != other.DeviceNickname) return false;
       if (ProtocolTypeCase != other.ProtocolTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2621,6 +2706,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
       if (PrivateKey.Length != 0) hash ^= PrivateKey.GetHashCode();
       if (protocolTypeCase_ == ProtocolTypeOneofCase.UniversalTwoFactor) hash ^= UniversalTwoFactor.GetHashCode();
       if (protocolTypeCase_ == ProtocolTypeOneofCase.WebAuthn) hash ^= WebAuthn.GetHashCode();
+      if (HasDeviceNickname) hash ^= DeviceNickname.GetHashCode();
       hash ^= (int) protocolTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2656,6 +2742,10 @@ namespace Google.Cloud.OsLogin.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(WebAuthn);
       }
+      if (HasDeviceNickname) {
+        output.WriteRawTag(42);
+        output.WriteString(DeviceNickname);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2682,6 +2772,10 @@ namespace Google.Cloud.OsLogin.V1Beta {
         output.WriteRawTag(34);
         output.WriteMessage(WebAuthn);
       }
+      if (HasDeviceNickname) {
+        output.WriteRawTag(42);
+        output.WriteString(DeviceNickname);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2704,6 +2798,9 @@ namespace Google.Cloud.OsLogin.V1Beta {
       if (protocolTypeCase_ == ProtocolTypeOneofCase.WebAuthn) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(WebAuthn);
       }
+      if (HasDeviceNickname) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceNickname);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2721,6 +2818,9 @@ namespace Google.Cloud.OsLogin.V1Beta {
       }
       if (other.PrivateKey.Length != 0) {
         PrivateKey = other.PrivateKey;
+      }
+      if (other.HasDeviceNickname) {
+        DeviceNickname = other.DeviceNickname;
       }
       switch (other.ProtocolTypeCase) {
         case ProtocolTypeOneofCase.UniversalTwoFactor:
@@ -2778,6 +2878,10 @@ namespace Google.Cloud.OsLogin.V1Beta {
             WebAuthn = subBuilder;
             break;
           }
+          case 42: {
+            DeviceNickname = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2819,6 +2923,10 @@ namespace Google.Cloud.OsLogin.V1Beta {
             WebAuthn = subBuilder;
             break;
           }
+          case 42: {
+            DeviceNickname = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2829,6 +2937,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
   /// <summary>
   /// Security key information specific to the U2F protocol.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UniversalTwoFactor : pb::IMessage<UniversalTwoFactor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3024,6 +3133,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
   /// <summary>
   /// Security key information specific to the Web Authentication protocol.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WebAuthn : pb::IMessage<WebAuthn>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3207,6 +3317,432 @@ namespace Google.Cloud.OsLogin.V1Beta {
             break;
           case 10: {
             RpId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SignSshPublicKeyRequest : pb::IMessage<SignSshPublicKeyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SignSshPublicKeyRequest> _parser = new pb::MessageParser<SignSshPublicKeyRequest>(() => new SignSshPublicKeyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SignSshPublicKeyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OsLogin.V1Beta.OsloginReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SignSshPublicKeyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SignSshPublicKeyRequest(SignSshPublicKeyRequest other) : this() {
+      sshPublicKey_ = other.sshPublicKey_;
+      parent_ = other.parent_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SignSshPublicKeyRequest Clone() {
+      return new SignSshPublicKeyRequest(this);
+    }
+
+    /// <summary>Field number for the "ssh_public_key" field.</summary>
+    public const int SshPublicKeyFieldNumber = 1;
+    private string sshPublicKey_ = "";
+    /// <summary>
+    /// The SSH public key to sign.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SshPublicKey {
+      get { return sshPublicKey_; }
+      set {
+        sshPublicKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 2;
+    private string parent_ = "";
+    /// <summary>
+    /// The parent project and region for the signing request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SignSshPublicKeyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SignSshPublicKeyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SshPublicKey != other.SshPublicKey) return false;
+      if (Parent != other.Parent) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SshPublicKey.Length != 0) hash ^= SshPublicKey.GetHashCode();
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SshPublicKey.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SshPublicKey);
+      }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Parent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SshPublicKey.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SshPublicKey);
+      }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Parent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (SshPublicKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SshPublicKey);
+      }
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SignSshPublicKeyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SshPublicKey.Length != 0) {
+        SshPublicKey = other.SshPublicKey;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            SshPublicKey = input.ReadString();
+            break;
+          }
+          case 18: {
+            Parent = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SshPublicKey = input.ReadString();
+            break;
+          }
+          case 18: {
+            Parent = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SignSshPublicKeyResponse : pb::IMessage<SignSshPublicKeyResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SignSshPublicKeyResponse> _parser = new pb::MessageParser<SignSshPublicKeyResponse>(() => new SignSshPublicKeyResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SignSshPublicKeyResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OsLogin.V1Beta.OsloginReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SignSshPublicKeyResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SignSshPublicKeyResponse(SignSshPublicKeyResponse other) : this() {
+      signedSshPublicKey_ = other.signedSshPublicKey_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SignSshPublicKeyResponse Clone() {
+      return new SignSshPublicKeyResponse(this);
+    }
+
+    /// <summary>Field number for the "signed_ssh_public_key" field.</summary>
+    public const int SignedSshPublicKeyFieldNumber = 1;
+    private string signedSshPublicKey_ = "";
+    /// <summary>
+    /// The signed SSH public key to use in the SSH handshake.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SignedSshPublicKey {
+      get { return signedSshPublicKey_; }
+      set {
+        signedSshPublicKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SignSshPublicKeyResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SignSshPublicKeyResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SignedSshPublicKey != other.SignedSshPublicKey) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SignedSshPublicKey.Length != 0) hash ^= SignedSshPublicKey.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SignedSshPublicKey.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SignedSshPublicKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SignedSshPublicKey.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SignedSshPublicKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (SignedSshPublicKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SignedSshPublicKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SignSshPublicKeyResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SignedSshPublicKey.Length != 0) {
+        SignedSshPublicKey = other.SignedSshPublicKey;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            SignedSshPublicKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SignedSshPublicKey = input.ReadString();
             break;
           }
         }

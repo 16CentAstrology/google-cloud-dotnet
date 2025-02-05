@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.ResourceManager.V3
 {
@@ -352,14 +352,14 @@ namespace Google.Cloud.ResourceManager.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ProjectsClient.Create(callInvoker, Settings, Logger);
+            return ProjectsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ProjectsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ProjectsClient.Create(callInvoker, Settings, Logger);
+            return ProjectsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -630,10 +630,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// permission on the identified parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource to list projects under.
+        /// Required. The name of the parent resource whose projects are being listed.
+        /// Only children of this parent resource are listed; descendants are not
+        /// listed.
         /// 
-        /// For example, setting this field to 'folders/1234' would list all projects
-        /// directly under that folder.
+        /// If the parent is a folder, use the value `folders/{folder_id}`. If the
+        /// parent is an organization, use the value `organizations/{org_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -645,13 +647,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProjectsResponse, Project> ListProjects(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjects(new ListProjectsRequest
+        public virtual gax::PagedEnumerable<ListProjectsResponse, Project> ListProjects(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectsRequest request = new ListProjectsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjects(request, callSettings);
+        }
 
         /// <summary>
         /// Lists projects that are direct children of the specified folder or
@@ -662,10 +673,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// permission on the identified parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource to list projects under.
+        /// Required. The name of the parent resource whose projects are being listed.
+        /// Only children of this parent resource are listed; descendants are not
+        /// listed.
         /// 
-        /// For example, setting this field to 'folders/1234' would list all projects
-        /// directly under that folder.
+        /// If the parent is a folder, use the value `folders/{folder_id}`. If the
+        /// parent is an organization, use the value `organizations/{org_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -677,13 +690,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProjectsResponse, Project> ListProjectsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectsAsync(new ListProjectsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProjectsResponse, Project> ListProjectsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectsRequest request = new ListProjectsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists projects that are direct children of the specified folder or
@@ -694,10 +716,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// permission on the identified parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource to list projects under.
+        /// Required. The name of the parent resource whose projects are being listed.
+        /// Only children of this parent resource are listed; descendants are not
+        /// listed.
         /// 
-        /// For example, setting this field to 'folders/1234' would list all projects
-        /// directly under that folder.
+        /// If the parent is a folder, use the value `folders/{folder_id}`. If the
+        /// parent is an organization, use the value `organizations/{org_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -709,13 +733,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListProjectsResponse, Project> ListProjects(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjects(new ListProjectsRequest
+        public virtual gax::PagedEnumerable<ListProjectsResponse, Project> ListProjects(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectsRequest request = new ListProjectsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjects(request, callSettings);
+        }
 
         /// <summary>
         /// Lists projects that are direct children of the specified folder or
@@ -726,10 +759,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// permission on the identified parent.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the parent resource to list projects under.
+        /// Required. The name of the parent resource whose projects are being listed.
+        /// Only children of this parent resource are listed; descendants are not
+        /// listed.
         /// 
-        /// For example, setting this field to 'folders/1234' would list all projects
-        /// directly under that folder.
+        /// If the parent is a folder, use the value `folders/{folder_id}`. If the
+        /// parent is an organization, use the value `organizations/{org_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -741,13 +776,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListProjectsResponse, Project> ListProjectsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListProjectsAsync(new ListProjectsRequest
+        public virtual gax::PagedAsyncEnumerable<ListProjectsResponse, Project> ListProjectsAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListProjectsRequest request = new ListProjectsRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListProjectsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Search for projects that the caller has both `resourcemanager.projects.get`
@@ -800,40 +844,34 @@ namespace Google.Cloud.ResourceManager.V3
         /// <param name="query">
         /// Optional. A query string for searching for projects that the caller has
         /// `resourcemanager.projects.get` permission to. If multiple fields are
-        /// included in the query, the it will return results that match any of the
+        /// included in the query, then it will return results that match any of the
         /// fields. Some eligible fields are:
         /// 
-        /// ```
-        /// | Field                   | Description                                  |
-        /// |-------------------------|----------------------------------------------|
-        /// | displayName, name       | Filters by displayName.                      |
-        /// | parent                  | Project's parent. (for example: folders/123,
-        /// organizations/*) Prefer parent field over parent.type and parent.id. |
-        /// | parent.type             | Parent's type: `folder` or `organization`.   |
-        /// | parent.id               | Parent's id number (for example: 123)        |
-        /// | id, projectId           | Filters by projectId.                        |
-        /// | state, lifecycleState   | Filters by state.                            |
-        /// | labels                  | Filters by label name or value.              |
-        /// | labels.&lt;key&gt; (where *key* is the name of a label) | Filters by label
-        /// name. |
-        /// ```
+        /// - **`displayName`, `name`**: Filters by displayName.
+        /// - **`parent`**: Project's parent (for example: `folders/123`,
+        /// `organizations/*`). Prefer `parent` field over `parent.type` and
+        /// `parent.id`.
+        /// - **`parent.type`**: Parent's type: `folder` or `organization`.
+        /// - **`parent.id`**: Parent's id number (for example: `123`).
+        /// - **`id`, `projectId`**: Filters by projectId.
+        /// - **`state`, `lifecycleState`**: Filters by state.
+        /// - **`labels`**: Filters by label name or value.
+        /// - **`labels.&lt;key&gt;` (where `&lt;key&gt;` is the name of a label)**: Filters by label
+        /// name.
         /// 
         /// Search expressions are case insensitive.
         /// 
         /// Some examples queries:
         /// 
-        /// ```
-        /// | Query            | Description                                         |
-        /// |------------------|-----------------------------------------------------|
-        /// | name:how*        | The project's name starts with "how".               |
-        /// | name:Howl        | The project's name is `Howl` or `howl`.             |
-        /// | name:HOWL        | Equivalent to above.                                |
-        /// | NAME:howl        | Equivalent to above.                                |
-        /// | labels.color:*   | The project has the label `color`.                  |
-        /// | labels.color:red | The project's label `color` has the value `red`.    |
-        /// | labels.color:red&amp;nbsp;labels.size:big | The project's label `color` has
-        /// the value `red` and its label `size` has the value `big`.                |
-        /// ```
+        /// 
+        /// - **`name:how*`**: The project's name starts with "how".
+        /// - **`name:Howl`**: The project's name is `Howl` or `howl`.
+        /// - **`name:HOWL`**: Equivalent to above.
+        /// - **`NAME:howl`**: Equivalent to above.
+        /// - **`labels.color:*`**: The project has the label `color`.
+        /// - **`labels.color:red`**:  The project's label `color` has the value `red`.
+        /// - **`labels.color:red labels.size:big`**: The project's label `color` has
+        /// the value `red` or its label `size` has the value `big`.
         /// 
         /// If no query is specified, the call will return projects for which the user
         /// has the `resourcemanager.projects.get` permission.
@@ -848,13 +886,19 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedEnumerable<SearchProjectsResponse, Project> SearchProjects(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchProjects(new SearchProjectsRequest
+        public virtual gax::PagedEnumerable<SearchProjectsResponse, Project> SearchProjects(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchProjectsRequest request = new SearchProjectsRequest { Query = query ?? "", };
+            if (pageToken != null)
             {
-                Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchProjects(request, callSettings);
+        }
 
         /// <summary>
         /// Search for projects that the caller has both `resourcemanager.projects.get`
@@ -871,40 +915,34 @@ namespace Google.Cloud.ResourceManager.V3
         /// <param name="query">
         /// Optional. A query string for searching for projects that the caller has
         /// `resourcemanager.projects.get` permission to. If multiple fields are
-        /// included in the query, the it will return results that match any of the
+        /// included in the query, then it will return results that match any of the
         /// fields. Some eligible fields are:
         /// 
-        /// ```
-        /// | Field                   | Description                                  |
-        /// |-------------------------|----------------------------------------------|
-        /// | displayName, name       | Filters by displayName.                      |
-        /// | parent                  | Project's parent. (for example: folders/123,
-        /// organizations/*) Prefer parent field over parent.type and parent.id. |
-        /// | parent.type             | Parent's type: `folder` or `organization`.   |
-        /// | parent.id               | Parent's id number (for example: 123)        |
-        /// | id, projectId           | Filters by projectId.                        |
-        /// | state, lifecycleState   | Filters by state.                            |
-        /// | labels                  | Filters by label name or value.              |
-        /// | labels.&lt;key&gt; (where *key* is the name of a label) | Filters by label
-        /// name. |
-        /// ```
+        /// - **`displayName`, `name`**: Filters by displayName.
+        /// - **`parent`**: Project's parent (for example: `folders/123`,
+        /// `organizations/*`). Prefer `parent` field over `parent.type` and
+        /// `parent.id`.
+        /// - **`parent.type`**: Parent's type: `folder` or `organization`.
+        /// - **`parent.id`**: Parent's id number (for example: `123`).
+        /// - **`id`, `projectId`**: Filters by projectId.
+        /// - **`state`, `lifecycleState`**: Filters by state.
+        /// - **`labels`**: Filters by label name or value.
+        /// - **`labels.&lt;key&gt;` (where `&lt;key&gt;` is the name of a label)**: Filters by label
+        /// name.
         /// 
         /// Search expressions are case insensitive.
         /// 
         /// Some examples queries:
         /// 
-        /// ```
-        /// | Query            | Description                                         |
-        /// |------------------|-----------------------------------------------------|
-        /// | name:how*        | The project's name starts with "how".               |
-        /// | name:Howl        | The project's name is `Howl` or `howl`.             |
-        /// | name:HOWL        | Equivalent to above.                                |
-        /// | NAME:howl        | Equivalent to above.                                |
-        /// | labels.color:*   | The project has the label `color`.                  |
-        /// | labels.color:red | The project's label `color` has the value `red`.    |
-        /// | labels.color:red&amp;nbsp;labels.size:big | The project's label `color` has
-        /// the value `red` and its label `size` has the value `big`.                |
-        /// ```
+        /// 
+        /// - **`name:how*`**: The project's name starts with "how".
+        /// - **`name:Howl`**: The project's name is `Howl` or `howl`.
+        /// - **`name:HOWL`**: Equivalent to above.
+        /// - **`NAME:howl`**: Equivalent to above.
+        /// - **`labels.color:*`**: The project has the label `color`.
+        /// - **`labels.color:red`**:  The project's label `color` has the value `red`.
+        /// - **`labels.color:red labels.size:big`**: The project's label `color` has
+        /// the value `red` or its label `size` has the value `big`.
         /// 
         /// If no query is specified, the call will return projects for which the user
         /// has the `resourcemanager.projects.get` permission.
@@ -919,13 +957,19 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Project"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchProjectsResponse, Project> SearchProjectsAsync(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchProjectsAsync(new SearchProjectsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchProjectsResponse, Project> SearchProjectsAsync(string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SearchProjectsRequest request = new SearchProjectsRequest { Query = query ?? "", };
+            if (pageToken != null)
             {
-                Query = query ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SearchProjectsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Request that a new project be created. The result is an `Operation` which
@@ -1007,7 +1051,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// If the `parent` field is set, the `resourcemanager.projects.create`
         /// permission is checked on the parent resource. If no parent is set and
-        /// the authorization credentials belong to an Organziation, the parent
+        /// the authorization credentials belong to an Organization, the parent
         /// will be set to that Organization.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1033,7 +1077,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// If the `parent` field is set, the `resourcemanager.projects.create`
         /// permission is checked on the parent resource. If no parent is set and
-        /// the authorization credentials belong to an Organziation, the parent
+        /// the authorization credentials belong to an Organization, the parent
         /// will be set to that Organization.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1059,7 +1103,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// If the `parent` field is set, the `resourcemanager.projects.create`
         /// permission is checked on the parent resource. If no parent is set and
-        /// the authorization credentials belong to an Organziation, the parent
+        /// the authorization credentials belong to an Organization, the parent
         /// will be set to that Organization.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1209,9 +1253,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// Upon success, the `Operation.response` field will be populated with the
         /// moved project.
         /// 
-        /// The caller must have `resourcemanager.projects.update` permission on the
-        /// project and have `resourcemanager.projects.move` permission on the
-        /// project's current and proposed new parent.
+        /// The caller must have `resourcemanager.projects.move` permission on the
+        /// project, on the project's current and proposed new parent.
+        /// 
+        /// If project has no current parent, or it currently does not have an
+        /// associated organization resource, you will also need the
+        /// `resourcemanager.projects.setIamPolicy` permission in the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1228,9 +1275,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// Upon success, the `Operation.response` field will be populated with the
         /// moved project.
         /// 
-        /// The caller must have `resourcemanager.projects.update` permission on the
-        /// project and have `resourcemanager.projects.move` permission on the
-        /// project's current and proposed new parent.
+        /// The caller must have `resourcemanager.projects.move` permission on the
+        /// project, on the project's current and proposed new parent.
+        /// 
+        /// If project has no current parent, or it currently does not have an
+        /// associated organization resource, you will also need the
+        /// `resourcemanager.projects.setIamPolicy` permission in the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1247,9 +1297,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// Upon success, the `Operation.response` field will be populated with the
         /// moved project.
         /// 
-        /// The caller must have `resourcemanager.projects.update` permission on the
-        /// project and have `resourcemanager.projects.move` permission on the
-        /// project's current and proposed new parent.
+        /// The caller must have `resourcemanager.projects.move` permission on the
+        /// project, on the project's current and proposed new parent.
+        /// 
+        /// If project has no current parent, or it currently does not have an
+        /// associated organization resource, you will also need the
+        /// `resourcemanager.projects.setIamPolicy` permission in the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1292,9 +1345,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// Upon success, the `Operation.response` field will be populated with the
         /// moved project.
         /// 
-        /// The caller must have `resourcemanager.projects.update` permission on the
-        /// project and have `resourcemanager.projects.move` permission on the
-        /// project's current and proposed new parent.
+        /// The caller must have `resourcemanager.projects.move` permission on the
+        /// project, on the project's current and proposed new parent.
+        /// 
+        /// If project has no current parent, or it currently does not have an
+        /// associated organization resource, you will also need the
+        /// `resourcemanager.projects.setIamPolicy` permission in the project.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the project to move.
@@ -1320,9 +1376,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// Upon success, the `Operation.response` field will be populated with the
         /// moved project.
         /// 
-        /// The caller must have `resourcemanager.projects.update` permission on the
-        /// project and have `resourcemanager.projects.move` permission on the
-        /// project's current and proposed new parent.
+        /// The caller must have `resourcemanager.projects.move` permission on the
+        /// project, on the project's current and proposed new parent.
+        /// 
+        /// If project has no current parent, or it currently does not have an
+        /// associated organization resource, you will also need the
+        /// `resourcemanager.projects.setIamPolicy` permission in the project.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the project to move.
@@ -1348,9 +1407,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// Upon success, the `Operation.response` field will be populated with the
         /// moved project.
         /// 
-        /// The caller must have `resourcemanager.projects.update` permission on the
-        /// project and have `resourcemanager.projects.move` permission on the
-        /// project's current and proposed new parent.
+        /// The caller must have `resourcemanager.projects.move` permission on the
+        /// project, on the project's current and proposed new parent.
+        /// 
+        /// If project has no current parent, or it currently does not have an
+        /// associated organization resource, you will also need the
+        /// `resourcemanager.projects.setIamPolicy` permission in the project.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the project to move.
@@ -1372,9 +1434,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// Upon success, the `Operation.response` field will be populated with the
         /// moved project.
         /// 
-        /// The caller must have `resourcemanager.projects.update` permission on the
-        /// project and have `resourcemanager.projects.move` permission on the
-        /// project's current and proposed new parent.
+        /// The caller must have `resourcemanager.projects.move` permission on the
+        /// project, on the project's current and proposed new parent.
+        /// 
+        /// If project has no current parent, or it currently does not have an
+        /// associated organization resource, you will also need the
+        /// `resourcemanager.projects.setIamPolicy` permission in the project.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the project to move.
@@ -1400,9 +1465,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// Upon success, the `Operation.response` field will be populated with the
         /// moved project.
         /// 
-        /// The caller must have `resourcemanager.projects.update` permission on the
-        /// project and have `resourcemanager.projects.move` permission on the
-        /// project's current and proposed new parent.
+        /// The caller must have `resourcemanager.projects.move` permission on the
+        /// project, on the project's current and proposed new parent.
+        /// 
+        /// If project has no current parent, or it currently does not have an
+        /// associated organization resource, you will also need the
+        /// `resourcemanager.projects.setIamPolicy` permission in the project.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the project to move.
@@ -1428,9 +1496,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// Upon success, the `Operation.response` field will be populated with the
         /// moved project.
         /// 
-        /// The caller must have `resourcemanager.projects.update` permission on the
-        /// project and have `resourcemanager.projects.move` permission on the
-        /// project's current and proposed new parent.
+        /// The caller must have `resourcemanager.projects.move` permission on the
+        /// project, on the project's current and proposed new parent.
+        /// 
+        /// If project has no current parent, or it currently does not have an
+        /// associated organization resource, you will also need the
+        /// `resourcemanager.projects.setIamPolicy` permission in the project.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the project to move.
@@ -1452,7 +1523,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// This method changes the Project's lifecycle state from
         /// [ACTIVE][google.cloud.resourcemanager.v3.Project.State.ACTIVE]
-        /// to [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
+        /// to
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
         /// The deletion starts at an unspecified time,
         /// at which point the Project is no longer accessible.
         /// 
@@ -1492,7 +1564,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// This method changes the Project's lifecycle state from
         /// [ACTIVE][google.cloud.resourcemanager.v3.Project.State.ACTIVE]
-        /// to [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
+        /// to
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
         /// The deletion starts at an unspecified time,
         /// at which point the Project is no longer accessible.
         /// 
@@ -1532,7 +1605,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// This method changes the Project's lifecycle state from
         /// [ACTIVE][google.cloud.resourcemanager.v3.Project.State.ACTIVE]
-        /// to [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
+        /// to
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
         /// The deletion starts at an unspecified time,
         /// at which point the Project is no longer accessible.
         /// 
@@ -1598,7 +1672,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// This method changes the Project's lifecycle state from
         /// [ACTIVE][google.cloud.resourcemanager.v3.Project.State.ACTIVE]
-        /// to [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
+        /// to
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
         /// The deletion starts at an unspecified time,
         /// at which point the Project is no longer accessible.
         /// 
@@ -1643,7 +1718,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// This method changes the Project's lifecycle state from
         /// [ACTIVE][google.cloud.resourcemanager.v3.Project.State.ACTIVE]
-        /// to [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
+        /// to
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
         /// The deletion starts at an unspecified time,
         /// at which point the Project is no longer accessible.
         /// 
@@ -1688,7 +1764,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// This method changes the Project's lifecycle state from
         /// [ACTIVE][google.cloud.resourcemanager.v3.Project.State.ACTIVE]
-        /// to [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
+        /// to
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
         /// The deletion starts at an unspecified time,
         /// at which point the Project is no longer accessible.
         /// 
@@ -1730,7 +1807,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// This method changes the Project's lifecycle state from
         /// [ACTIVE][google.cloud.resourcemanager.v3.Project.State.ACTIVE]
-        /// to [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
+        /// to
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
         /// The deletion starts at an unspecified time,
         /// at which point the Project is no longer accessible.
         /// 
@@ -1775,7 +1853,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// This method changes the Project's lifecycle state from
         /// [ACTIVE][google.cloud.resourcemanager.v3.Project.State.ACTIVE]
-        /// to [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
+        /// to
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
         /// The deletion starts at an unspecified time,
         /// at which point the Project is no longer accessible.
         /// 
@@ -1820,7 +1899,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// This method changes the Project's lifecycle state from
         /// [ACTIVE][google.cloud.resourcemanager.v3.Project.State.ACTIVE]
-        /// to [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
+        /// to
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
         /// The deletion starts at an unspecified time,
         /// at which point the Project is no longer accessible.
         /// 
@@ -2069,7 +2149,8 @@ namespace Google.Cloud.ResourceManager.V3
             UndeleteProjectAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the IAM access control policy for the specified project.
+        /// Returns the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// Permission is denied if the policy or the resource do not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2079,7 +2160,8 @@ namespace Google.Cloud.ResourceManager.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the IAM access control policy for the specified project.
+        /// Returns the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// Permission is denied if the policy or the resource do not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2089,7 +2171,8 @@ namespace Google.Cloud.ResourceManager.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the IAM access control policy for the specified project.
+        /// Returns the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// Permission is denied if the policy or the resource do not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2099,7 +2182,8 @@ namespace Google.Cloud.ResourceManager.V3
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the IAM access control policy for the specified project.
+        /// Returns the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// Permission is denied if the policy or the resource do not exist.
         /// </summary>
         /// <param name="resource">
@@ -2115,7 +2199,8 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the IAM access control policy for the specified project.
+        /// Returns the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// Permission is denied if the policy or the resource do not exist.
         /// </summary>
         /// <param name="resource">
@@ -2131,7 +2216,8 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the IAM access control policy for the specified project.
+        /// Returns the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// Permission is denied if the policy or the resource do not exist.
         /// </summary>
         /// <param name="resource">
@@ -2144,7 +2230,8 @@ namespace Google.Cloud.ResourceManager.V3
             GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the IAM access control policy for the specified project.
+        /// Returns the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// Permission is denied if the policy or the resource do not exist.
         /// </summary>
         /// <param name="resource">
@@ -2160,7 +2247,8 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the IAM access control policy for the specified project.
+        /// Returns the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// Permission is denied if the policy or the resource do not exist.
         /// </summary>
         /// <param name="resource">
@@ -2176,7 +2264,8 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the IAM access control policy for the specified project.
+        /// Returns the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// Permission is denied if the policy or the resource do not exist.
         /// </summary>
         /// <param name="resource">
@@ -2189,7 +2278,8 @@ namespace Google.Cloud.ResourceManager.V3
             GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the IAM access control policy for the specified project.
+        /// Sets the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// 
         /// CAUTION: This method will replace the existing policy, and cannot be used
         /// to append additional IAM settings.
@@ -2221,18 +2311,14 @@ namespace Google.Cloud.ResourceManager.V3
         /// `setIamPolicy()`;
         /// they must be sent only using the Cloud Platform Console.
         /// 
-        /// + Membership changes that leave the project without any owners that have
-        /// accepted the Terms of Service (ToS) will be rejected.
-        /// 
         /// + If the project is not part of an organization, there must be at least
         /// one owner who has accepted the Terms of Service (ToS) agreement in the
         /// policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
         /// from the policy will fail. This restriction also applies to legacy
         /// projects that no longer have owners who have accepted the ToS. Edits to
         /// IAM policies will be rejected until the lack of a ToS-accepting owner is
-        /// rectified.
-        /// 
-        /// + Calling this method requires enabling the App Engine Admin API.
+        /// rectified. If the project is part of an organization, you can remove all
+        /// owners, potentially making the organization inaccessible.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2241,7 +2327,8 @@ namespace Google.Cloud.ResourceManager.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the IAM access control policy for the specified project.
+        /// Sets the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// 
         /// CAUTION: This method will replace the existing policy, and cannot be used
         /// to append additional IAM settings.
@@ -2273,18 +2360,14 @@ namespace Google.Cloud.ResourceManager.V3
         /// `setIamPolicy()`;
         /// they must be sent only using the Cloud Platform Console.
         /// 
-        /// + Membership changes that leave the project without any owners that have
-        /// accepted the Terms of Service (ToS) will be rejected.
-        /// 
         /// + If the project is not part of an organization, there must be at least
         /// one owner who has accepted the Terms of Service (ToS) agreement in the
         /// policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
         /// from the policy will fail. This restriction also applies to legacy
         /// projects that no longer have owners who have accepted the ToS. Edits to
         /// IAM policies will be rejected until the lack of a ToS-accepting owner is
-        /// rectified.
-        /// 
-        /// + Calling this method requires enabling the App Engine Admin API.
+        /// rectified. If the project is part of an organization, you can remove all
+        /// owners, potentially making the organization inaccessible.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2293,7 +2376,8 @@ namespace Google.Cloud.ResourceManager.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the IAM access control policy for the specified project.
+        /// Sets the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// 
         /// CAUTION: This method will replace the existing policy, and cannot be used
         /// to append additional IAM settings.
@@ -2325,18 +2409,14 @@ namespace Google.Cloud.ResourceManager.V3
         /// `setIamPolicy()`;
         /// they must be sent only using the Cloud Platform Console.
         /// 
-        /// + Membership changes that leave the project without any owners that have
-        /// accepted the Terms of Service (ToS) will be rejected.
-        /// 
         /// + If the project is not part of an organization, there must be at least
         /// one owner who has accepted the Terms of Service (ToS) agreement in the
         /// policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
         /// from the policy will fail. This restriction also applies to legacy
         /// projects that no longer have owners who have accepted the ToS. Edits to
         /// IAM policies will be rejected until the lack of a ToS-accepting owner is
-        /// rectified.
-        /// 
-        /// + Calling this method requires enabling the App Engine Admin API.
+        /// rectified. If the project is part of an organization, you can remove all
+        /// owners, potentially making the organization inaccessible.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2345,7 +2425,8 @@ namespace Google.Cloud.ResourceManager.V3
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the IAM access control policy for the specified project.
+        /// Sets the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// 
         /// CAUTION: This method will replace the existing policy, and cannot be used
         /// to append additional IAM settings.
@@ -2377,18 +2458,14 @@ namespace Google.Cloud.ResourceManager.V3
         /// `setIamPolicy()`;
         /// they must be sent only using the Cloud Platform Console.
         /// 
-        /// + Membership changes that leave the project without any owners that have
-        /// accepted the Terms of Service (ToS) will be rejected.
-        /// 
         /// + If the project is not part of an organization, there must be at least
         /// one owner who has accepted the Terms of Service (ToS) agreement in the
         /// policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
         /// from the policy will fail. This restriction also applies to legacy
         /// projects that no longer have owners who have accepted the ToS. Edits to
         /// IAM policies will be rejected until the lack of a ToS-accepting owner is
-        /// rectified.
-        /// 
-        /// + Calling this method requires enabling the App Engine Admin API.
+        /// rectified. If the project is part of an organization, you can remove all
+        /// owners, potentially making the organization inaccessible.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2410,7 +2487,8 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Sets the IAM access control policy for the specified project.
+        /// Sets the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// 
         /// CAUTION: This method will replace the existing policy, and cannot be used
         /// to append additional IAM settings.
@@ -2442,18 +2520,14 @@ namespace Google.Cloud.ResourceManager.V3
         /// `setIamPolicy()`;
         /// they must be sent only using the Cloud Platform Console.
         /// 
-        /// + Membership changes that leave the project without any owners that have
-        /// accepted the Terms of Service (ToS) will be rejected.
-        /// 
         /// + If the project is not part of an organization, there must be at least
         /// one owner who has accepted the Terms of Service (ToS) agreement in the
         /// policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
         /// from the policy will fail. This restriction also applies to legacy
         /// projects that no longer have owners who have accepted the ToS. Edits to
         /// IAM policies will be rejected until the lack of a ToS-accepting owner is
-        /// rectified.
-        /// 
-        /// + Calling this method requires enabling the App Engine Admin API.
+        /// rectified. If the project is part of an organization, you can remove all
+        /// owners, potentially making the organization inaccessible.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2475,7 +2549,8 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Sets the IAM access control policy for the specified project.
+        /// Sets the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// 
         /// CAUTION: This method will replace the existing policy, and cannot be used
         /// to append additional IAM settings.
@@ -2507,18 +2582,14 @@ namespace Google.Cloud.ResourceManager.V3
         /// `setIamPolicy()`;
         /// they must be sent only using the Cloud Platform Console.
         /// 
-        /// + Membership changes that leave the project without any owners that have
-        /// accepted the Terms of Service (ToS) will be rejected.
-        /// 
         /// + If the project is not part of an organization, there must be at least
         /// one owner who has accepted the Terms of Service (ToS) agreement in the
         /// policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
         /// from the policy will fail. This restriction also applies to legacy
         /// projects that no longer have owners who have accepted the ToS. Edits to
         /// IAM policies will be rejected until the lack of a ToS-accepting owner is
-        /// rectified.
-        /// 
-        /// + Calling this method requires enabling the App Engine Admin API.
+        /// rectified. If the project is part of an organization, you can remove all
+        /// owners, potentially making the organization inaccessible.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2536,7 +2607,8 @@ namespace Google.Cloud.ResourceManager.V3
             SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the IAM access control policy for the specified project.
+        /// Sets the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// 
         /// CAUTION: This method will replace the existing policy, and cannot be used
         /// to append additional IAM settings.
@@ -2568,18 +2640,14 @@ namespace Google.Cloud.ResourceManager.V3
         /// `setIamPolicy()`;
         /// they must be sent only using the Cloud Platform Console.
         /// 
-        /// + Membership changes that leave the project without any owners that have
-        /// accepted the Terms of Service (ToS) will be rejected.
-        /// 
         /// + If the project is not part of an organization, there must be at least
         /// one owner who has accepted the Terms of Service (ToS) agreement in the
         /// policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
         /// from the policy will fail. This restriction also applies to legacy
         /// projects that no longer have owners who have accepted the ToS. Edits to
         /// IAM policies will be rejected until the lack of a ToS-accepting owner is
-        /// rectified.
-        /// 
-        /// + Calling this method requires enabling the App Engine Admin API.
+        /// rectified. If the project is part of an organization, you can remove all
+        /// owners, potentially making the organization inaccessible.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2601,7 +2669,8 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Sets the IAM access control policy for the specified project.
+        /// Sets the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// 
         /// CAUTION: This method will replace the existing policy, and cannot be used
         /// to append additional IAM settings.
@@ -2633,18 +2702,14 @@ namespace Google.Cloud.ResourceManager.V3
         /// `setIamPolicy()`;
         /// they must be sent only using the Cloud Platform Console.
         /// 
-        /// + Membership changes that leave the project without any owners that have
-        /// accepted the Terms of Service (ToS) will be rejected.
-        /// 
         /// + If the project is not part of an organization, there must be at least
         /// one owner who has accepted the Terms of Service (ToS) agreement in the
         /// policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
         /// from the policy will fail. This restriction also applies to legacy
         /// projects that no longer have owners who have accepted the ToS. Edits to
         /// IAM policies will be rejected until the lack of a ToS-accepting owner is
-        /// rectified.
-        /// 
-        /// + Calling this method requires enabling the App Engine Admin API.
+        /// rectified. If the project is part of an organization, you can remove all
+        /// owners, potentially making the organization inaccessible.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2666,7 +2731,8 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Sets the IAM access control policy for the specified project.
+        /// Sets the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// 
         /// CAUTION: This method will replace the existing policy, and cannot be used
         /// to append additional IAM settings.
@@ -2698,18 +2764,14 @@ namespace Google.Cloud.ResourceManager.V3
         /// `setIamPolicy()`;
         /// they must be sent only using the Cloud Platform Console.
         /// 
-        /// + Membership changes that leave the project without any owners that have
-        /// accepted the Terms of Service (ToS) will be rejected.
-        /// 
         /// + If the project is not part of an organization, there must be at least
         /// one owner who has accepted the Terms of Service (ToS) agreement in the
         /// policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
         /// from the policy will fail. This restriction also applies to legacy
         /// projects that no longer have owners who have accepted the ToS. Edits to
         /// IAM policies will be rejected until the lack of a ToS-accepting owner is
-        /// rectified.
-        /// 
-        /// + Calling this method requires enabling the App Engine Admin API.
+        /// rectified. If the project is part of an organization, you can remove all
+        /// owners, potentially making the organization inaccessible.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -2727,7 +2789,8 @@ namespace Google.Cloud.ResourceManager.V3
             SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified project.
+        /// Returns permissions that a caller has on the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123..
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2736,7 +2799,8 @@ namespace Google.Cloud.ResourceManager.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified project.
+        /// Returns permissions that a caller has on the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123..
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2745,7 +2809,8 @@ namespace Google.Cloud.ResourceManager.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified project.
+        /// Returns permissions that a caller has on the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123..
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2754,7 +2819,8 @@ namespace Google.Cloud.ResourceManager.V3
             TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified project.
+        /// Returns permissions that a caller has on the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123..
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2779,7 +2845,8 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified project.
+        /// Returns permissions that a caller has on the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123..
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2804,7 +2871,8 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified project.
+        /// Returns permissions that a caller has on the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123..
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2822,7 +2890,8 @@ namespace Google.Cloud.ResourceManager.V3
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified project.
+        /// Returns permissions that a caller has on the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123..
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2847,7 +2916,8 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified project.
+        /// Returns permissions that a caller has on the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123..
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2872,7 +2942,8 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified project.
+        /// Returns permissions that a caller has on the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123..
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2928,7 +2999,11 @@ namespace Google.Cloud.ResourceManager.V3
         {
             GrpcClient = grpcClient;
             ProjectsSettings effectiveSettings = settings ?? ProjectsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateProjectOperationsSettings, logger);
             UpdateProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateProjectOperationsSettings, logger);
             MoveProjectOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveProjectOperationsSettings, logger);
@@ -3213,9 +3288,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// Upon success, the `Operation.response` field will be populated with the
         /// moved project.
         /// 
-        /// The caller must have `resourcemanager.projects.update` permission on the
-        /// project and have `resourcemanager.projects.move` permission on the
-        /// project's current and proposed new parent.
+        /// The caller must have `resourcemanager.projects.move` permission on the
+        /// project, on the project's current and proposed new parent.
+        /// 
+        /// If project has no current parent, or it currently does not have an
+        /// associated organization resource, you will also need the
+        /// `resourcemanager.projects.setIamPolicy` permission in the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3235,9 +3313,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// Upon success, the `Operation.response` field will be populated with the
         /// moved project.
         /// 
-        /// The caller must have `resourcemanager.projects.update` permission on the
-        /// project and have `resourcemanager.projects.move` permission on the
-        /// project's current and proposed new parent.
+        /// The caller must have `resourcemanager.projects.move` permission on the
+        /// project, on the project's current and proposed new parent.
+        /// 
+        /// If project has no current parent, or it currently does not have an
+        /// associated organization resource, you will also need the
+        /// `resourcemanager.projects.setIamPolicy` permission in the project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3260,7 +3341,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// This method changes the Project's lifecycle state from
         /// [ACTIVE][google.cloud.resourcemanager.v3.Project.State.ACTIVE]
-        /// to [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
+        /// to
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
         /// The deletion starts at an unspecified time,
         /// at which point the Project is no longer accessible.
         /// 
@@ -3303,7 +3385,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// 
         /// This method changes the Project's lifecycle state from
         /// [ACTIVE][google.cloud.resourcemanager.v3.Project.State.ACTIVE]
-        /// to [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
+        /// to
+        /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Project.State.DELETE_REQUESTED].
         /// The deletion starts at an unspecified time,
         /// at which point the Project is no longer accessible.
         /// 
@@ -3381,7 +3464,8 @@ namespace Google.Cloud.ResourceManager.V3
         }
 
         /// <summary>
-        /// Returns the IAM access control policy for the specified project.
+        /// Returns the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// Permission is denied if the policy or the resource do not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3394,7 +3478,8 @@ namespace Google.Cloud.ResourceManager.V3
         }
 
         /// <summary>
-        /// Returns the IAM access control policy for the specified project.
+        /// Returns the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// Permission is denied if the policy or the resource do not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3407,7 +3492,8 @@ namespace Google.Cloud.ResourceManager.V3
         }
 
         /// <summary>
-        /// Sets the IAM access control policy for the specified project.
+        /// Sets the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// 
         /// CAUTION: This method will replace the existing policy, and cannot be used
         /// to append additional IAM settings.
@@ -3439,18 +3525,14 @@ namespace Google.Cloud.ResourceManager.V3
         /// `setIamPolicy()`;
         /// they must be sent only using the Cloud Platform Console.
         /// 
-        /// + Membership changes that leave the project without any owners that have
-        /// accepted the Terms of Service (ToS) will be rejected.
-        /// 
         /// + If the project is not part of an organization, there must be at least
         /// one owner who has accepted the Terms of Service (ToS) agreement in the
         /// policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
         /// from the policy will fail. This restriction also applies to legacy
         /// projects that no longer have owners who have accepted the ToS. Edits to
         /// IAM policies will be rejected until the lack of a ToS-accepting owner is
-        /// rectified.
-        /// 
-        /// + Calling this method requires enabling the App Engine Admin API.
+        /// rectified. If the project is part of an organization, you can remove all
+        /// owners, potentially making the organization inaccessible.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3462,7 +3544,8 @@ namespace Google.Cloud.ResourceManager.V3
         }
 
         /// <summary>
-        /// Sets the IAM access control policy for the specified project.
+        /// Sets the IAM access control policy for the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123.
         /// 
         /// CAUTION: This method will replace the existing policy, and cannot be used
         /// to append additional IAM settings.
@@ -3494,18 +3577,14 @@ namespace Google.Cloud.ResourceManager.V3
         /// `setIamPolicy()`;
         /// they must be sent only using the Cloud Platform Console.
         /// 
-        /// + Membership changes that leave the project without any owners that have
-        /// accepted the Terms of Service (ToS) will be rejected.
-        /// 
         /// + If the project is not part of an organization, there must be at least
         /// one owner who has accepted the Terms of Service (ToS) agreement in the
         /// policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
         /// from the policy will fail. This restriction also applies to legacy
         /// projects that no longer have owners who have accepted the ToS. Edits to
         /// IAM policies will be rejected until the lack of a ToS-accepting owner is
-        /// rectified.
-        /// 
-        /// + Calling this method requires enabling the App Engine Admin API.
+        /// rectified. If the project is part of an organization, you can remove all
+        /// owners, potentially making the organization inaccessible.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3517,7 +3596,8 @@ namespace Google.Cloud.ResourceManager.V3
         }
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified project.
+        /// Returns permissions that a caller has on the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123..
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3529,7 +3609,8 @@ namespace Google.Cloud.ResourceManager.V3
         }
 
         /// <summary>
-        /// Returns permissions that a caller has on the specified project.
+        /// Returns permissions that a caller has on the specified project, in the
+        /// format `projects/{ProjectIdOrNumber}` e.g. projects/123..
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

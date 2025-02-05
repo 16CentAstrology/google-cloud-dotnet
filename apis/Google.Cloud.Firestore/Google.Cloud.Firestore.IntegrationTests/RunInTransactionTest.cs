@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,9 +15,11 @@
 using Google.Cloud.Firestore.IntegrationTests.Models;
 using Grpc.Core;
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Firestore.AggregateField;
 using static Google.Cloud.Firestore.IntegrationTests.FirestoreAssert;
 
 namespace Google.Cloud.Firestore.IntegrationTests
@@ -133,7 +135,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
         }
 
         [Fact]
-        public async Task TransactionWithCountAggregation()
+        public async Task TransactionWithCount()
         {
             var collection = _fixture.HighScoreCollection;
             await _fixture.FirestoreDb.RunTransactionAsync(async txn =>
@@ -141,6 +143,20 @@ namespace Google.Cloud.Firestore.IntegrationTests
                 var aggQuery = collection.Count();
                 var snapshot = await txn.GetSnapshotAsync(aggQuery);
                 Assert.Equal(HighScore.Data.Length, snapshot.Count);
+            });
+        }
+
+        [Fact]
+        public async Task TransactionWithAggregation()
+        {
+            var collection = _fixture.HighScoreCollection;
+            await _fixture.FirestoreDb.RunTransactionAsync(async txn =>
+            {
+                var aggQuery = collection.Aggregate(Sum("Score","SumOfScores"), Average("Score"), Count());
+                var snapshot = await txn.GetSnapshotAsync(aggQuery);
+                Assert.Equal(HighScore.Data.Sum(c => c.Score), snapshot.GetValue<long>("SumOfScores"));
+                Assert.Equal(HighScore.Data.Average(c => c.Score), snapshot.GetValue<double>("Avg_Score"));
+                Assert.Equal(HighScore.Data.Length, snapshot.GetValue<long>("Count"));
             });
         }
     }

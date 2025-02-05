@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "SecurityCenterClient",
           "rpcs": {
+            "BatchCreateResourceValueConfigs": {
+              "methods": [
+                "BatchCreateResourceValueConfigs",
+                "BatchCreateResourceValueConfigsAsync"
+              ]
+            },
             "BulkMuteFindings": {
               "methods": [
                 "BulkMuteFindings",
@@ -20,6 +26,12 @@
               "methods": [
                 "CreateBigQueryExport",
                 "CreateBigQueryExportAsync"
+              ]
+            },
+            "CreateEventThreatDetectionCustomModule": {
+              "methods": [
+                "CreateEventThreatDetectionCustomModule",
+                "CreateEventThreatDetectionCustomModuleAsync"
               ]
             },
             "CreateFinding": {
@@ -40,6 +52,12 @@
                 "CreateNotificationConfigAsync"
               ]
             },
+            "CreateSecurityHealthAnalyticsCustomModule": {
+              "methods": [
+                "CreateSecurityHealthAnalyticsCustomModule",
+                "CreateSecurityHealthAnalyticsCustomModuleAsync"
+              ]
+            },
             "CreateSource": {
               "methods": [
                 "CreateSource",
@@ -50,6 +68,12 @@
               "methods": [
                 "DeleteBigQueryExport",
                 "DeleteBigQueryExportAsync"
+              ]
+            },
+            "DeleteEventThreatDetectionCustomModule": {
+              "methods": [
+                "DeleteEventThreatDetectionCustomModule",
+                "DeleteEventThreatDetectionCustomModuleAsync"
               ]
             },
             "DeleteMuteConfig": {
@@ -64,10 +88,40 @@
                 "DeleteNotificationConfigAsync"
               ]
             },
+            "DeleteResourceValueConfig": {
+              "methods": [
+                "DeleteResourceValueConfig",
+                "DeleteResourceValueConfigAsync"
+              ]
+            },
+            "DeleteSecurityHealthAnalyticsCustomModule": {
+              "methods": [
+                "DeleteSecurityHealthAnalyticsCustomModule",
+                "DeleteSecurityHealthAnalyticsCustomModuleAsync"
+              ]
+            },
             "GetBigQueryExport": {
               "methods": [
                 "GetBigQueryExport",
                 "GetBigQueryExportAsync"
+              ]
+            },
+            "GetEffectiveEventThreatDetectionCustomModule": {
+              "methods": [
+                "GetEffectiveEventThreatDetectionCustomModule",
+                "GetEffectiveEventThreatDetectionCustomModuleAsync"
+              ]
+            },
+            "GetEffectiveSecurityHealthAnalyticsCustomModule": {
+              "methods": [
+                "GetEffectiveSecurityHealthAnalyticsCustomModule",
+                "GetEffectiveSecurityHealthAnalyticsCustomModuleAsync"
+              ]
+            },
+            "GetEventThreatDetectionCustomModule": {
+              "methods": [
+                "GetEventThreatDetectionCustomModule",
+                "GetEventThreatDetectionCustomModuleAsync"
               ]
             },
             "GetIamPolicy": {
@@ -94,10 +148,34 @@
                 "GetOrganizationSettingsAsync"
               ]
             },
+            "GetResourceValueConfig": {
+              "methods": [
+                "GetResourceValueConfig",
+                "GetResourceValueConfigAsync"
+              ]
+            },
+            "GetSecurityHealthAnalyticsCustomModule": {
+              "methods": [
+                "GetSecurityHealthAnalyticsCustomModule",
+                "GetSecurityHealthAnalyticsCustomModuleAsync"
+              ]
+            },
+            "GetSimulation": {
+              "methods": [
+                "GetSimulation",
+                "GetSimulationAsync"
+              ]
+            },
             "GetSource": {
               "methods": [
                 "GetSource",
                 "GetSourceAsync"
+              ]
+            },
+            "GetValuedResource": {
+              "methods": [
+                "GetValuedResource",
+                "GetValuedResourceAsync"
               ]
             },
             "GroupAssets": {
@@ -118,10 +196,46 @@
                 "ListAssetsAsync"
               ]
             },
+            "ListAttackPaths": {
+              "methods": [
+                "ListAttackPaths",
+                "ListAttackPathsAsync"
+              ]
+            },
             "ListBigQueryExports": {
               "methods": [
                 "ListBigQueryExports",
                 "ListBigQueryExportsAsync"
+              ]
+            },
+            "ListDescendantEventThreatDetectionCustomModules": {
+              "methods": [
+                "ListDescendantEventThreatDetectionCustomModules",
+                "ListDescendantEventThreatDetectionCustomModulesAsync"
+              ]
+            },
+            "ListDescendantSecurityHealthAnalyticsCustomModules": {
+              "methods": [
+                "ListDescendantSecurityHealthAnalyticsCustomModules",
+                "ListDescendantSecurityHealthAnalyticsCustomModulesAsync"
+              ]
+            },
+            "ListEffectiveEventThreatDetectionCustomModules": {
+              "methods": [
+                "ListEffectiveEventThreatDetectionCustomModules",
+                "ListEffectiveEventThreatDetectionCustomModulesAsync"
+              ]
+            },
+            "ListEffectiveSecurityHealthAnalyticsCustomModules": {
+              "methods": [
+                "ListEffectiveSecurityHealthAnalyticsCustomModules",
+                "ListEffectiveSecurityHealthAnalyticsCustomModulesAsync"
+              ]
+            },
+            "ListEventThreatDetectionCustomModules": {
+              "methods": [
+                "ListEventThreatDetectionCustomModules",
+                "ListEventThreatDetectionCustomModulesAsync"
               ]
             },
             "ListFindings": {
@@ -142,10 +256,28 @@
                 "ListNotificationConfigsAsync"
               ]
             },
+            "ListResourceValueConfigs": {
+              "methods": [
+                "ListResourceValueConfigs",
+                "ListResourceValueConfigsAsync"
+              ]
+            },
+            "ListSecurityHealthAnalyticsCustomModules": {
+              "methods": [
+                "ListSecurityHealthAnalyticsCustomModules",
+                "ListSecurityHealthAnalyticsCustomModulesAsync"
+              ]
+            },
             "ListSources": {
               "methods": [
                 "ListSources",
                 "ListSourcesAsync"
+              ]
+            },
+            "ListValuedResources": {
+              "methods": [
+                "ListValuedResources",
+                "ListValuedResourcesAsync"
               ]
             },
             "RunAssetDiscovery": {
@@ -172,6 +304,12 @@
                 "SetMuteAsync"
               ]
             },
+            "SimulateSecurityHealthAnalyticsCustomModule": {
+              "methods": [
+                "SimulateSecurityHealthAnalyticsCustomModule",
+                "SimulateSecurityHealthAnalyticsCustomModuleAsync"
+              ]
+            },
             "TestIamPermissions": {
               "methods": [
                 "TestIamPermissions",
@@ -182,6 +320,12 @@
               "methods": [
                 "UpdateBigQueryExport",
                 "UpdateBigQueryExportAsync"
+              ]
+            },
+            "UpdateEventThreatDetectionCustomModule": {
+              "methods": [
+                "UpdateEventThreatDetectionCustomModule",
+                "UpdateEventThreatDetectionCustomModuleAsync"
               ]
             },
             "UpdateExternalSystem": {
@@ -214,6 +358,18 @@
                 "UpdateOrganizationSettingsAsync"
               ]
             },
+            "UpdateResourceValueConfig": {
+              "methods": [
+                "UpdateResourceValueConfig",
+                "UpdateResourceValueConfigAsync"
+              ]
+            },
+            "UpdateSecurityHealthAnalyticsCustomModule": {
+              "methods": [
+                "UpdateSecurityHealthAnalyticsCustomModule",
+                "UpdateSecurityHealthAnalyticsCustomModuleAsync"
+              ]
+            },
             "UpdateSecurityMarks": {
               "methods": [
                 "UpdateSecurityMarks",
@@ -224,6 +380,12 @@
               "methods": [
                 "UpdateSource",
                 "UpdateSourceAsync"
+              ]
+            },
+            "ValidateEventThreatDetectionCustomModule": {
+              "methods": [
+                "ValidateEventThreatDetectionCustomModule",
+                "ValidateEventThreatDetectionCustomModuleAsync"
               ]
             }
           }

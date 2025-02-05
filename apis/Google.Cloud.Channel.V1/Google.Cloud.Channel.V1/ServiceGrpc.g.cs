@@ -3,7 +3,7 @@
 //     source: google/cloud/channel/v1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -185,6 +185,14 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest> __Marshaller_google_cloud_channel_v1_DeleteChannelPartnerRepricingConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSkuGroupsRequest> __Marshaller_google_cloud_channel_v1_ListSkuGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSkuGroupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSkuGroupsResponse> __Marshaller_google_cloud_channel_v1_ListSkuGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSkuGroupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest> __Marshaller_google_cloud_channel_v1_ListSkuGroupBillableSkusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse> __Marshaller_google_cloud_channel_v1_ListSkuGroupBillableSkusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.LookupOfferRequest> __Marshaller_google_cloud_channel_v1_LookupOfferRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.LookupOfferRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.Offer> __Marshaller_google_cloud_channel_v1_Offer = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.Offer.Parser));
@@ -208,6 +216,10 @@ namespace Google.Cloud.Channel.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest> __Marshaller_google_cloud_channel_v1_ListPurchasableOffersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse> __Marshaller_google_cloud_channel_v1_ListPurchasableOffersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsRequest> __Marshaller_google_cloud_channel_v1_QueryEligibleBillingAccountsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsResponse> __Marshaller_google_cloud_channel_v1_QueryEligibleBillingAccountsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.RegisterSubscriberRequest> __Marshaller_google_cloud_channel_v1_RegisterSubscriberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.RegisterSubscriberRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -514,6 +526,22 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListSkuGroupsRequest, global::Google.Cloud.Channel.V1.ListSkuGroupsResponse> __Method_ListSkuGroups = new grpc::Method<global::Google.Cloud.Channel.V1.ListSkuGroupsRequest, global::Google.Cloud.Channel.V1.ListSkuGroupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSkuGroups",
+        __Marshaller_google_cloud_channel_v1_ListSkuGroupsRequest,
+        __Marshaller_google_cloud_channel_v1_ListSkuGroupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest, global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse> __Method_ListSkuGroupBillableSkus = new grpc::Method<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest, global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSkuGroupBillableSkus",
+        __Marshaller_google_cloud_channel_v1_ListSkuGroupBillableSkusRequest,
+        __Marshaller_google_cloud_channel_v1_ListSkuGroupBillableSkusResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer> __Method_LookupOffer = new grpc::Method<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -560,6 +588,14 @@ namespace Google.Cloud.Channel.V1 {
         "ListPurchasableOffers",
         __Marshaller_google_cloud_channel_v1_ListPurchasableOffersRequest,
         __Marshaller_google_cloud_channel_v1_ListPurchasableOffersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsRequest, global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsResponse> __Method_QueryEligibleBillingAccounts = new grpc::Method<global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsRequest, global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "QueryEligibleBillingAccounts",
+        __Marshaller_google_cloud_channel_v1_QueryEligibleBillingAccountsRequest,
+        __Marshaller_google_cloud_channel_v1_QueryEligibleBillingAccountsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.RegisterSubscriberRequest, global::Google.Cloud.Channel.V1.RegisterSubscriberResponse> __Method_RegisterSubscriber = new grpc::Method<global::Google.Cloud.Channel.V1.RegisterSubscriberRequest, global::Google.Cloud.Channel.V1.RegisterSubscriberResponse>(
@@ -685,8 +721,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The reseller account making the request is different
-      /// from the reseller account in the API request.
+      /// * PERMISSION_DENIED:
+      ///     * The reseller account making the request is different from the
+      ///     reseller account in the API request.
+      ///     * You are not authorized to create a customer. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT:
       ///     * Required request parameters are missing or invalid.
       ///     * Domain field value doesn't match the primary email domain.
@@ -756,8 +795,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The reseller account making the request is different
-      /// from the reseller account in the API request.
+      /// * PERMISSION_DENIED:
+      ///     * The reseller account making the request is different from the
+      ///     reseller account in the API request.
+      ///     * You are not authorized to import the customer. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
       /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
       /// expired or invalid.
@@ -782,7 +824,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// *  PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// *  PERMISSION_DENIED:
+      ///      * The customer doesn't belong to the reseller.
+      ///      * You are not authorized to provision cloud identity id. See
+      ///      https://support.google.com/channelservices/answer/9759265
       /// *  INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// *  NOT_FOUND: The customer was not found.
       /// *  ALREADY_EXISTS: The customer's primary email already exists. Retry
@@ -876,6 +921,8 @@ namespace Google.Cloud.Channel.V1 {
       ///     auth token.
       ///     * The reseller account making the request is different
       ///     from the reseller account in the query.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
@@ -918,7 +965,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT:
       ///     * Required request parameters are missing or invalid.
       ///     * There is already a customer entitlement for a SKU from the same
@@ -1207,7 +1257,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: The customer or offer resource was not found.
       /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
@@ -1445,7 +1498,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * customer ID
+      ///
+      /// * Customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
@@ -1479,12 +1533,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * The new config will not modify exports used with other configs.
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any
-      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
-      /// or
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement],
+      /// for any
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       /// * The contained
       /// [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config]
-      /// vaule must be different from the value used in the current config for a
+      /// value must be different from the value used in the current config for a
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
       ///
       /// Possible Error Codes:
@@ -1632,7 +1686,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * channel partner ID
+      ///
+      /// * Channel Partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
       ///
@@ -1666,10 +1721,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * The new config will not modify exports used with other configs.
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any ChannelPartner or
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement],
+      /// for any
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       /// * The contained
       /// [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config]
-      /// vaule must be different from the value used in the current config for a
+      /// value must be different from the value used in the current config for a
       /// ChannelPartner.
       ///
       /// Possible Error Codes:
@@ -1771,6 +1828,66 @@ namespace Google.Cloud.Channel.V1 {
       }
 
       /// <summary>
+      /// Lists the Rebilling supported SKU groups the account is authorized to
+      /// sell.
+      /// Reference: https://cloud.google.com/skus/sku-groups
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different, or the account doesn't exist.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+      /// The data for each resource is displayed in the alphabetical order of SKU
+      /// group display name.
+      /// The data for each resource is displayed in the ascending order of
+      /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListSkuGroupsResponse> ListSkuGroups(global::Google.Cloud.Channel.V1.ListSkuGroupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the Billable SKUs in a given SKU group.
+      ///
+      /// Possible error codes:
+      /// PERMISSION_DENIED: If the account making the request and the account
+      /// being queried for are different, or the account doesn't exist.
+      /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// INTERNAL: Any non-user error related to technical issue in the
+      /// backend. In this case, contact cloud channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
+      ///
+      /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+      /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse> ListSkuGroupBillableSkus(global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
       ///
       /// Possible error codes:
@@ -1867,7 +1984,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1875,6 +1995,29 @@ namespace Google.Cloud.Channel.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse> ListPurchasableOffers(global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the billing accounts that are eligible to purchase particular SKUs
+      /// for a given customer.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      ///
+      /// Return value:
+      /// Based on the provided list of SKUs, returns a list of SKU groups that must
+      /// be purchased using the same billing account and the billing accounts
+      /// eligible to purchase each SKU group.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsResponse> QueryEligibleBillingAccounts(global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2334,8 +2477,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The reseller account making the request is different
-      /// from the reseller account in the API request.
+      /// * PERMISSION_DENIED:
+      ///     * The reseller account making the request is different from the
+      ///     reseller account in the API request.
+      ///     * You are not authorized to create a customer. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT:
       ///     * Required request parameters are missing or invalid.
       ///     * Domain field value doesn't match the primary email domain.
@@ -2359,8 +2505,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The reseller account making the request is different
-      /// from the reseller account in the API request.
+      /// * PERMISSION_DENIED:
+      ///     * The reseller account making the request is different from the
+      ///     reseller account in the API request.
+      ///     * You are not authorized to create a customer. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT:
       ///     * Required request parameters are missing or invalid.
       ///     * Domain field value doesn't match the primary email domain.
@@ -2382,8 +2531,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The reseller account making the request is different
-      /// from the reseller account in the API request.
+      /// * PERMISSION_DENIED:
+      ///     * The reseller account making the request is different from the
+      ///     reseller account in the API request.
+      ///     * You are not authorized to create a customer. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT:
       ///     * Required request parameters are missing or invalid.
       ///     * Domain field value doesn't match the primary email domain.
@@ -2407,8 +2559,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The reseller account making the request is different
-      /// from the reseller account in the API request.
+      /// * PERMISSION_DENIED:
+      ///     * The reseller account making the request is different from the
+      ///     reseller account in the API request.
+      ///     * You are not authorized to create a customer. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT:
       ///     * Required request parameters are missing or invalid.
       ///     * Domain field value doesn't match the primary email domain.
@@ -2612,8 +2767,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The reseller account making the request is different
-      /// from the reseller account in the API request.
+      /// * PERMISSION_DENIED:
+      ///     * The reseller account making the request is different from the
+      ///     reseller account in the API request.
+      ///     * You are not authorized to import the customer. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
       /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
       /// expired or invalid.
@@ -2641,8 +2799,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The reseller account making the request is different
-      /// from the reseller account in the API request.
+      /// * PERMISSION_DENIED:
+      ///     * The reseller account making the request is different from the
+      ///     reseller account in the API request.
+      ///     * You are not authorized to import the customer. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
       /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
       /// expired or invalid.
@@ -2668,8 +2829,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The reseller account making the request is different
-      /// from the reseller account in the API request.
+      /// * PERMISSION_DENIED:
+      ///     * The reseller account making the request is different from the
+      ///     reseller account in the API request.
+      ///     * You are not authorized to import the customer. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
       /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
       /// expired or invalid.
@@ -2697,8 +2861,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The reseller account making the request is different
-      /// from the reseller account in the API request.
+      /// * PERMISSION_DENIED:
+      ///     * The reseller account making the request is different from the
+      ///     reseller account in the API request.
+      ///     * You are not authorized to import the customer. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
       /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
       /// expired or invalid.
@@ -2722,7 +2889,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// *  PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// *  PERMISSION_DENIED:
+      ///      * The customer doesn't belong to the reseller.
+      ///      * You are not authorized to provision cloud identity id. See
+      ///      https://support.google.com/channelservices/answer/9759265
       /// *  INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// *  NOT_FOUND: The customer was not found.
       /// *  ALREADY_EXISTS: The customer's primary email already exists. Retry
@@ -2755,7 +2925,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// *  PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// *  PERMISSION_DENIED:
+      ///      * The customer doesn't belong to the reseller.
+      ///      * You are not authorized to provision cloud identity id. See
+      ///      https://support.google.com/channelservices/answer/9759265
       /// *  INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// *  NOT_FOUND: The customer was not found.
       /// *  ALREADY_EXISTS: The customer's primary email already exists. Retry
@@ -2786,7 +2959,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// *  PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// *  PERMISSION_DENIED:
+      ///      * The customer doesn't belong to the reseller.
+      ///      * You are not authorized to provision cloud identity id. See
+      ///      https://support.google.com/channelservices/answer/9759265
       /// *  INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// *  NOT_FOUND: The customer was not found.
       /// *  ALREADY_EXISTS: The customer's primary email already exists. Retry
@@ -2819,7 +2995,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// *  PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// *  PERMISSION_DENIED:
+      ///      * The customer doesn't belong to the reseller.
+      ///      * You are not authorized to provision cloud identity id. See
+      ///      https://support.google.com/channelservices/answer/9759265
       /// *  INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// *  NOT_FOUND: The customer was not found.
       /// *  ALREADY_EXISTS: The customer's primary email already exists. Retry
@@ -3068,6 +3247,8 @@ namespace Google.Cloud.Channel.V1 {
       ///     auth token.
       ///     * The reseller account making the request is different
       ///     from the reseller account in the query.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
@@ -3100,6 +3281,8 @@ namespace Google.Cloud.Channel.V1 {
       ///     auth token.
       ///     * The reseller account making the request is different
       ///     from the reseller account in the query.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
@@ -3130,6 +3313,8 @@ namespace Google.Cloud.Channel.V1 {
       ///     auth token.
       ///     * The reseller account making the request is different
       ///     from the reseller account in the query.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
@@ -3162,6 +3347,8 @@ namespace Google.Cloud.Channel.V1 {
       ///     auth token.
       ///     * The reseller account making the request is different
       ///     from the reseller account in the query.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       ///
       /// Return value:
@@ -3269,7 +3456,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT:
       ///     * Required request parameters are missing or invalid.
       ///     * There is already a customer entitlement for a SKU from the same
@@ -3317,7 +3507,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT:
       ///     * Required request parameters are missing or invalid.
       ///     * There is already a customer entitlement for a SKU from the same
@@ -3363,7 +3556,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT:
       ///     * Required request parameters are missing or invalid.
       ///     * There is already a customer entitlement for a SKU from the same
@@ -3411,7 +3607,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT:
       ///     * Required request parameters are missing or invalid.
       ///     * There is already a customer entitlement for a SKU from the same
@@ -4425,7 +4624,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: The customer or offer resource was not found.
       /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
@@ -4466,7 +4668,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: The customer or offer resource was not found.
       /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
@@ -4505,7 +4710,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: The customer or offer resource was not found.
       /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
@@ -4546,7 +4754,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller.
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// * NOT_FOUND: The customer or offer resource was not found.
       /// * ALREADY_EXISTS: The SKU was already transferred for the customer.
@@ -5335,7 +5546,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * customer ID
+      ///
+      /// * Customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
@@ -5371,7 +5583,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * customer ID
+      ///
+      /// * Customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
@@ -5405,7 +5618,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * customer ID
+      ///
+      /// * Customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
@@ -5441,7 +5655,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * customer ID
+      ///
+      /// * Customer ID
       /// * [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [CustomerRepricingConfig.update_time][google.cloud.channel.v1.CustomerRepricingConfig.update_time]
@@ -5474,12 +5689,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * The new config will not modify exports used with other configs.
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any
-      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
-      /// or
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement],
+      /// for any
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       /// * The contained
       /// [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config]
-      /// vaule must be different from the value used in the current config for a
+      /// value must be different from the value used in the current config for a
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
       ///
       /// Possible Error Codes:
@@ -5528,12 +5743,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * The new config will not modify exports used with other configs.
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any
-      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
-      /// or
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement],
+      /// for any
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       /// * The contained
       /// [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config]
-      /// vaule must be different from the value used in the current config for a
+      /// value must be different from the value used in the current config for a
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
       ///
       /// Possible Error Codes:
@@ -5580,12 +5795,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * The new config will not modify exports used with other configs.
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any
-      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
-      /// or
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement],
+      /// for any
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       /// * The contained
       /// [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config]
-      /// vaule must be different from the value used in the current config for a
+      /// value must be different from the value used in the current config for a
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
       ///
       /// Possible Error Codes:
@@ -5634,12 +5849,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * The new config will not modify exports used with other configs.
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any
-      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement]
-      /// or
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement],
+      /// for any
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       /// * The contained
       /// [CustomerRepricingConfig.repricing_config][google.cloud.channel.v1.CustomerRepricingConfig.repricing_config]
-      /// vaule must be different from the value used in the current config for a
+      /// value must be different from the value used in the current config for a
       /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
       ///
       /// Possible Error Codes:
@@ -6083,7 +6298,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * channel partner ID
+      ///
+      /// * Channel Partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
       ///
@@ -6118,7 +6334,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * channel partner ID
+      ///
+      /// * Channel Partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
       ///
@@ -6151,7 +6368,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * channel partner ID
+      ///
+      /// * Channel Partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
       ///
@@ -6186,7 +6404,8 @@ namespace Google.Cloud.Channel.V1 {
       /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
       /// resources. The data for each resource is displayed in the ascending order
       /// of:
-      /// * channel partner ID
+      ///
+      /// * Channel Partner ID
       /// * [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month]
       /// * [ChannelPartnerRepricingConfig.update_time][google.cloud.channel.v1.ChannelPartnerRepricingConfig.update_time]
       ///
@@ -6219,10 +6438,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * The new config will not modify exports used with other configs.
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any ChannelPartner or
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement],
+      /// for any
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       /// * The contained
       /// [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config]
-      /// vaule must be different from the value used in the current config for a
+      /// value must be different from the value used in the current config for a
       /// ChannelPartner.
       ///
       /// Possible Error Codes:
@@ -6272,10 +6493,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * The new config will not modify exports used with other configs.
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any ChannelPartner or
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement],
+      /// for any
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       /// * The contained
       /// [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config]
-      /// vaule must be different from the value used in the current config for a
+      /// value must be different from the value used in the current config for a
       /// ChannelPartner.
       ///
       /// Possible Error Codes:
@@ -6323,10 +6546,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * The new config will not modify exports used with other configs.
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any ChannelPartner or
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement],
+      /// for any
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       /// * The contained
       /// [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config]
-      /// vaule must be different from the value used in the current config for a
+      /// value must be different from the value used in the current config for a
       /// ChannelPartner.
       ///
       /// Possible Error Codes:
@@ -6376,10 +6601,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * The new config will not modify exports used with other configs.
       /// Changes to the config may be immediate, but may take up to 24 hours.
       /// * There is a limit of ten configs for any ChannelPartner or
+      /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement],
+      /// for any
       /// [RepricingConfig.effective_invoice_month][google.cloud.channel.v1.RepricingConfig.effective_invoice_month].
       /// * The contained
       /// [ChannelPartnerRepricingConfig.repricing_config][google.cloud.channel.v1.ChannelPartnerRepricingConfig.repricing_config]
-      /// vaule must be different from the value used in the current config for a
+      /// value must be different from the value used in the current config for a
       /// ChannelPartner.
       ///
       /// Possible Error Codes:
@@ -6691,6 +6918,246 @@ namespace Google.Cloud.Channel.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteChannelPartnerRepricingConfigAsync(global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteChannelPartnerRepricingConfig, null, options, request);
+      }
+      /// <summary>
+      /// Lists the Rebilling supported SKU groups the account is authorized to
+      /// sell.
+      /// Reference: https://cloud.google.com/skus/sku-groups
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different, or the account doesn't exist.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+      /// The data for each resource is displayed in the alphabetical order of SKU
+      /// group display name.
+      /// The data for each resource is displayed in the ascending order of
+      /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListSkuGroupsResponse ListSkuGroups(global::Google.Cloud.Channel.V1.ListSkuGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSkuGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the Rebilling supported SKU groups the account is authorized to
+      /// sell.
+      /// Reference: https://cloud.google.com/skus/sku-groups
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different, or the account doesn't exist.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+      /// The data for each resource is displayed in the alphabetical order of SKU
+      /// group display name.
+      /// The data for each resource is displayed in the ascending order of
+      /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListSkuGroupsResponse ListSkuGroups(global::Google.Cloud.Channel.V1.ListSkuGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSkuGroups, null, options, request);
+      }
+      /// <summary>
+      /// Lists the Rebilling supported SKU groups the account is authorized to
+      /// sell.
+      /// Reference: https://cloud.google.com/skus/sku-groups
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different, or the account doesn't exist.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+      /// The data for each resource is displayed in the alphabetical order of SKU
+      /// group display name.
+      /// The data for each resource is displayed in the ascending order of
+      /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSkuGroupsResponse> ListSkuGroupsAsync(global::Google.Cloud.Channel.V1.ListSkuGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSkuGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the Rebilling supported SKU groups the account is authorized to
+      /// sell.
+      /// Reference: https://cloud.google.com/skus/sku-groups
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the account making the request and the account
+      /// being queried are different, or the account doesn't exist.
+      /// * INTERNAL: Any non-user error related to technical issues in the
+      /// backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [SkuGroup][google.cloud.channel.v1.SkuGroup] resources.
+      /// The data for each resource is displayed in the alphabetical order of SKU
+      /// group display name.
+      /// The data for each resource is displayed in the ascending order of
+      /// [SkuGroup.display_name][google.cloud.channel.v1.SkuGroup.display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSkuGroupsResponse> ListSkuGroupsAsync(global::Google.Cloud.Channel.V1.ListSkuGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSkuGroups, null, options, request);
+      }
+      /// <summary>
+      /// Lists the Billable SKUs in a given SKU group.
+      ///
+      /// Possible error codes:
+      /// PERMISSION_DENIED: If the account making the request and the account
+      /// being queried for are different, or the account doesn't exist.
+      /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// INTERNAL: Any non-user error related to technical issue in the
+      /// backend. In this case, contact cloud channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
+      ///
+      /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+      /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse ListSkuGroupBillableSkus(global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSkuGroupBillableSkus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the Billable SKUs in a given SKU group.
+      ///
+      /// Possible error codes:
+      /// PERMISSION_DENIED: If the account making the request and the account
+      /// being queried for are different, or the account doesn't exist.
+      /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// INTERNAL: Any non-user error related to technical issue in the
+      /// backend. In this case, contact cloud channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
+      ///
+      /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+      /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse ListSkuGroupBillableSkus(global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSkuGroupBillableSkus, null, options, request);
+      }
+      /// <summary>
+      /// Lists the Billable SKUs in a given SKU group.
+      ///
+      /// Possible error codes:
+      /// PERMISSION_DENIED: If the account making the request and the account
+      /// being queried for are different, or the account doesn't exist.
+      /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// INTERNAL: Any non-user error related to technical issue in the
+      /// backend. In this case, contact cloud channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
+      ///
+      /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+      /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse> ListSkuGroupBillableSkusAsync(global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSkuGroupBillableSkusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the Billable SKUs in a given SKU group.
+      ///
+      /// Possible error codes:
+      /// PERMISSION_DENIED: If the account making the request and the account
+      /// being queried for are different, or the account doesn't exist.
+      /// INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// INTERNAL: Any non-user error related to technical issue in the
+      /// backend. In this case, contact cloud channel support.
+      ///
+      /// Return Value:
+      /// If successful, the [BillableSku][google.cloud.channel.v1.BillableSku]
+      /// resources. The data for each resource is displayed in the ascending order
+      /// of:
+      ///
+      /// * [BillableSku.service_display_name][google.cloud.channel.v1.BillableSku.service_display_name]
+      /// * [BillableSku.sku_display_name][google.cloud.channel.v1.BillableSku.sku_display_name]
+      ///
+      /// If unsuccessful, returns an error.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse> ListSkuGroupBillableSkusAsync(global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSkuGroupBillableSkus, null, options, request);
       }
       /// <summary>
       /// Returns the requested [Offer][google.cloud.channel.v1.Offer] resource.
@@ -7056,7 +7523,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -7077,7 +7547,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -7096,7 +7569,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -7117,7 +7593,10 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible error codes:
       ///
-      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller
+      /// * PERMISSION_DENIED:
+      ///     * The customer doesn't belong to the reseller
+      ///     * The reseller is not authorized to transact on this Product. See
+      ///     https://support.google.com/channelservices/answer/9759265
       /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -7127,6 +7606,98 @@ namespace Google.Cloud.Channel.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse> ListPurchasableOffersAsync(global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListPurchasableOffers, null, options, request);
+      }
+      /// <summary>
+      /// Lists the billing accounts that are eligible to purchase particular SKUs
+      /// for a given customer.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      ///
+      /// Return value:
+      /// Based on the provided list of SKUs, returns a list of SKU groups that must
+      /// be purchased using the same billing account and the billing accounts
+      /// eligible to purchase each SKU group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsResponse QueryEligibleBillingAccounts(global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryEligibleBillingAccounts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the billing accounts that are eligible to purchase particular SKUs
+      /// for a given customer.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      ///
+      /// Return value:
+      /// Based on the provided list of SKUs, returns a list of SKU groups that must
+      /// be purchased using the same billing account and the billing accounts
+      /// eligible to purchase each SKU group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsResponse QueryEligibleBillingAccounts(global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_QueryEligibleBillingAccounts, null, options, request);
+      }
+      /// <summary>
+      /// Lists the billing accounts that are eligible to purchase particular SKUs
+      /// for a given customer.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      ///
+      /// Return value:
+      /// Based on the provided list of SKUs, returns a list of SKU groups that must
+      /// be purchased using the same billing account and the billing accounts
+      /// eligible to purchase each SKU group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsResponse> QueryEligibleBillingAccountsAsync(global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return QueryEligibleBillingAccountsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the billing accounts that are eligible to purchase particular SKUs
+      /// for a given customer.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Required request parameters are missing or invalid.
+      ///
+      /// Return value:
+      /// Based on the provided list of SKUs, returns a list of SKU groups that must
+      /// be purchased using the same billing account and the billing accounts
+      /// eligible to purchase each SKU group.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsResponse> QueryEligibleBillingAccountsAsync(global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_QueryEligibleBillingAccounts, null, options, request);
       }
       /// <summary>
       /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
@@ -7642,12 +8213,15 @@ namespace Google.Cloud.Channel.V1 {
           .AddMethod(__Method_CreateChannelPartnerRepricingConfig, serviceImpl.CreateChannelPartnerRepricingConfig)
           .AddMethod(__Method_UpdateChannelPartnerRepricingConfig, serviceImpl.UpdateChannelPartnerRepricingConfig)
           .AddMethod(__Method_DeleteChannelPartnerRepricingConfig, serviceImpl.DeleteChannelPartnerRepricingConfig)
+          .AddMethod(__Method_ListSkuGroups, serviceImpl.ListSkuGroups)
+          .AddMethod(__Method_ListSkuGroupBillableSkus, serviceImpl.ListSkuGroupBillableSkus)
           .AddMethod(__Method_LookupOffer, serviceImpl.LookupOffer)
           .AddMethod(__Method_ListProducts, serviceImpl.ListProducts)
           .AddMethod(__Method_ListSkus, serviceImpl.ListSkus)
           .AddMethod(__Method_ListOffers, serviceImpl.ListOffers)
           .AddMethod(__Method_ListPurchasableSkus, serviceImpl.ListPurchasableSkus)
           .AddMethod(__Method_ListPurchasableOffers, serviceImpl.ListPurchasableOffers)
+          .AddMethod(__Method_QueryEligibleBillingAccounts, serviceImpl.QueryEligibleBillingAccounts)
           .AddMethod(__Method_RegisterSubscriber, serviceImpl.RegisterSubscriber)
           .AddMethod(__Method_UnregisterSubscriber, serviceImpl.UnregisterSubscriber)
           .AddMethod(__Method_ListSubscribers, serviceImpl.ListSubscribers)
@@ -7697,12 +8271,15 @@ namespace Google.Cloud.Channel.V1 {
       serviceBinder.AddMethod(__Method_CreateChannelPartnerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.CreateChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>(serviceImpl.CreateChannelPartnerRepricingConfig));
       serviceBinder.AddMethod(__Method_UpdateChannelPartnerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.UpdateChannelPartnerRepricingConfigRequest, global::Google.Cloud.Channel.V1.ChannelPartnerRepricingConfig>(serviceImpl.UpdateChannelPartnerRepricingConfig));
       serviceBinder.AddMethod(__Method_DeleteChannelPartnerRepricingConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.DeleteChannelPartnerRepricingConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteChannelPartnerRepricingConfig));
+      serviceBinder.AddMethod(__Method_ListSkuGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListSkuGroupsRequest, global::Google.Cloud.Channel.V1.ListSkuGroupsResponse>(serviceImpl.ListSkuGroups));
+      serviceBinder.AddMethod(__Method_ListSkuGroupBillableSkus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusRequest, global::Google.Cloud.Channel.V1.ListSkuGroupBillableSkusResponse>(serviceImpl.ListSkuGroupBillableSkus));
       serviceBinder.AddMethod(__Method_LookupOffer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer>(serviceImpl.LookupOffer));
       serviceBinder.AddMethod(__Method_ListProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListProductsRequest, global::Google.Cloud.Channel.V1.ListProductsResponse>(serviceImpl.ListProducts));
       serviceBinder.AddMethod(__Method_ListSkus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListSkusRequest, global::Google.Cloud.Channel.V1.ListSkusResponse>(serviceImpl.ListSkus));
       serviceBinder.AddMethod(__Method_ListOffers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListOffersRequest, global::Google.Cloud.Channel.V1.ListOffersResponse>(serviceImpl.ListOffers));
       serviceBinder.AddMethod(__Method_ListPurchasableSkus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListPurchasableSkusRequest, global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse>(serviceImpl.ListPurchasableSkus));
       serviceBinder.AddMethod(__Method_ListPurchasableOffers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest, global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse>(serviceImpl.ListPurchasableOffers));
+      serviceBinder.AddMethod(__Method_QueryEligibleBillingAccounts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsRequest, global::Google.Cloud.Channel.V1.QueryEligibleBillingAccountsResponse>(serviceImpl.QueryEligibleBillingAccounts));
       serviceBinder.AddMethod(__Method_RegisterSubscriber, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.RegisterSubscriberRequest, global::Google.Cloud.Channel.V1.RegisterSubscriberResponse>(serviceImpl.RegisterSubscriber));
       serviceBinder.AddMethod(__Method_UnregisterSubscriber, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest, global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse>(serviceImpl.UnregisterSubscriber));
       serviceBinder.AddMethod(__Method_ListSubscribers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListSubscribersRequest, global::Google.Cloud.Channel.V1.ListSubscribersResponse>(serviceImpl.ListSubscribers));

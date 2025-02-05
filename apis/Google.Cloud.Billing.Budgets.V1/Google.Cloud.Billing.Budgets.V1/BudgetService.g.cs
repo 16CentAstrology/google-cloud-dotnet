@@ -39,46 +39,47 @@ namespace Google.Cloud.Billing.Budgets.V1 {
             "QnVkZ2V0QgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
             "dG9idWYuRmllbGRNYXNrQgPgQQEiTgoQR2V0QnVkZ2V0UmVxdWVzdBI6CgRu",
             "YW1lGAEgASgJQizgQQL6QSYKJGJpbGxpbmdidWRnZXRzLmdvb2dsZWFwaXMu",
-            "Y29tL0J1ZGdldCKDAQoSTGlzdEJ1ZGdldHNSZXF1ZXN0EjwKBnBhcmVudBgB",
+            "Y29tL0J1ZGdldCKXAQoSTGlzdEJ1ZGdldHNSZXF1ZXN0EjwKBnBhcmVudBgB",
             "IAEoCUIs4EEC+kEmEiRiaWxsaW5nYnVkZ2V0cy5nb29nbGVhcGlzLmNvbS9C",
-            "dWRnZXQSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgD",
-            "IAEoCUID4EEBImgKE0xpc3RCdWRnZXRzUmVzcG9uc2USOAoHYnVkZ2V0cxgB",
-            "IAMoCzInLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjEuQnVkZ2V0",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJRChNEZWxldGVCdWRnZXRSZXF1",
-            "ZXN0EjoKBG5hbWUYASABKAlCLOBBAvpBJgokYmlsbGluZ2J1ZGdldHMuZ29v",
-            "Z2xlYXBpcy5jb20vQnVkZ2V0MvcHCg1CdWRnZXRTZXJ2aWNlErUBCgxDcmVh",
-            "dGVCdWRnZXQSNC5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxLkNy",
-            "ZWF0ZUJ1ZGdldFJlcXVlc3QaJy5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRn",
-            "ZXRzLnYxLkJ1ZGdldCJGgtPkkwIwIiYvdjEve3BhcmVudD1iaWxsaW5nQWNj",
-            "b3VudHMvKn0vYnVkZ2V0czoGYnVkZ2V02kENcGFyZW50LGJ1ZGdldBLBAQoM",
-            "VXBkYXRlQnVkZ2V0EjQuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52",
-            "MS5VcGRhdGVCdWRnZXRSZXF1ZXN0GicuZ29vZ2xlLmNsb3VkLmJpbGxpbmcu",
-            "YnVkZ2V0cy52MS5CdWRnZXQiUoLT5JMCNzItL3YxL3tidWRnZXQubmFtZT1i",
-            "aWxsaW5nQWNjb3VudHMvKi9idWRnZXRzLyp9OgZidWRnZXTaQRJidWRnZXQs",
-            "dXBkYXRlX21hc2sSngEKCUdldEJ1ZGdldBIxLmdvb2dsZS5jbG91ZC5iaWxs",
-            "aW5nLmJ1ZGdldHMudjEuR2V0QnVkZ2V0UmVxdWVzdBonLmdvb2dsZS5jbG91",
-            "ZC5iaWxsaW5nLmJ1ZGdldHMudjEuQnVkZ2V0IjWC0+STAigSJi92MS97bmFt",
-            "ZT1iaWxsaW5nQWNjb3VudHMvKi9idWRnZXRzLyp92kEEbmFtZRKxAQoLTGlz",
-            "dEJ1ZGdldHMSMy5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxLkxp",
-            "c3RCdWRnZXRzUmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdl",
-            "dHMudjEuTGlzdEJ1ZGdldHNSZXNwb25zZSI3gtPkkwIoEiYvdjEve3BhcmVu",
-            "dD1iaWxsaW5nQWNjb3VudHMvKn0vYnVkZ2V0c9pBBnBhcmVudBKTAQoMRGVs",
-            "ZXRlQnVkZ2V0EjQuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MS5E",
-            "ZWxldGVCdWRnZXRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjWC",
-            "0+STAigqJi92MS97bmFtZT1iaWxsaW5nQWNjb3VudHMvKi9idWRnZXRzLyp9",
-            "2kEEbmFtZRp/ykEdYmlsbGluZ2J1ZGdldHMuZ29vZ2xlYXBpcy5jb23SQVxo",
-            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLWJpbGxpbmcs",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
-            "bUJ6CiNjb20uZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MUISQnVk",
-            "Z2V0U2VydmljZVByb3RvUAFaPWNsb3VkLmdvb2dsZS5jb20vZ28vYmlsbGlu",
-            "Zy9idWRnZXRzL2FwaXYxL2J1ZGdldHNwYjtidWRnZXRzcGJiBnByb3RvMw=="));
+            "dWRnZXQSEgoFc2NvcGUYBCABKAlCA+BBARIWCglwYWdlX3NpemUYAiABKAVC",
+            "A+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQEiaAoTTGlzdEJ1ZGdldHNS",
+            "ZXNwb25zZRI4CgdidWRnZXRzGAEgAygLMicuZ29vZ2xlLmNsb3VkLmJpbGxp",
+            "bmcuYnVkZ2V0cy52MS5CdWRnZXQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
+            "IlEKE0RlbGV0ZUJ1ZGdldFJlcXVlc3QSOgoEbmFtZRgBIAEoCUIs4EEC+kEm",
+            "CiRiaWxsaW5nYnVkZ2V0cy5nb29nbGVhcGlzLmNvbS9CdWRnZXQy9wcKDUJ1",
+            "ZGdldFNlcnZpY2UStQEKDENyZWF0ZUJ1ZGdldBI0Lmdvb2dsZS5jbG91ZC5i",
+            "aWxsaW5nLmJ1ZGdldHMudjEuQ3JlYXRlQnVkZ2V0UmVxdWVzdBonLmdvb2ds",
+            "ZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjEuQnVkZ2V0IkbaQQ1wYXJlbnQs",
+            "YnVkZ2V0gtPkkwIwIiYvdjEve3BhcmVudD1iaWxsaW5nQWNjb3VudHMvKn0v",
+            "YnVkZ2V0czoGYnVkZ2V0EsEBCgxVcGRhdGVCdWRnZXQSNC5nb29nbGUuY2xv",
+            "dWQuYmlsbGluZy5idWRnZXRzLnYxLlVwZGF0ZUJ1ZGdldFJlcXVlc3QaJy5n",
+            "b29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxLkJ1ZGdldCJS2kESYnVk",
+            "Z2V0LHVwZGF0ZV9tYXNrgtPkkwI3Mi0vdjEve2J1ZGdldC5uYW1lPWJpbGxp",
+            "bmdBY2NvdW50cy8qL2J1ZGdldHMvKn06BmJ1ZGdldBKeAQoJR2V0QnVkZ2V0",
+            "EjEuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MS5HZXRCdWRnZXRS",
+            "ZXF1ZXN0GicuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MS5CdWRn",
+            "ZXQiNdpBBG5hbWWC0+STAigSJi92MS97bmFtZT1iaWxsaW5nQWNjb3VudHMv",
+            "Ki9idWRnZXRzLyp9ErEBCgtMaXN0QnVkZ2V0cxIzLmdvb2dsZS5jbG91ZC5i",
+            "aWxsaW5nLmJ1ZGdldHMudjEuTGlzdEJ1ZGdldHNSZXF1ZXN0GjQuZ29vZ2xl",
+            "LmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MS5MaXN0QnVkZ2V0c1Jlc3BvbnNl",
+            "IjfaQQZwYXJlbnSC0+STAigSJi92MS97cGFyZW50PWJpbGxpbmdBY2NvdW50",
+            "cy8qfS9idWRnZXRzEpMBCgxEZWxldGVCdWRnZXQSNC5nb29nbGUuY2xvdWQu",
+            "YmlsbGluZy5idWRnZXRzLnYxLkRlbGV0ZUJ1ZGdldFJlcXVlc3QaFi5nb29n",
+            "bGUucHJvdG9idWYuRW1wdHkiNdpBBG5hbWWC0+STAigqJi92MS97bmFtZT1i",
+            "aWxsaW5nQWNjb3VudHMvKi9idWRnZXRzLyp9Gn/KQR1iaWxsaW5nYnVkZ2V0",
+            "cy5nb29nbGVhcGlzLmNvbdJBXGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
+            "L2F1dGgvY2xvdWQtYmlsbGluZyxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtQnoKI2NvbS5nb29nbGUuY2xvdWQuYmls",
+            "bGluZy5idWRnZXRzLnYxQhJCdWRnZXRTZXJ2aWNlUHJvdG9QAVo9Y2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9iaWxsaW5nL2J1ZGdldHMvYXBpdjEvYnVkZ2V0c3Bi",
+            "O2J1ZGdldHNwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Billing.Budgets.V1.BudgetModelReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest), global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest.Parser, new[]{ "Parent", "Budget" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest), global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest.Parser, new[]{ "Budget", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest), global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest), global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest), global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest.Parser, new[]{ "Parent", "Scope", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse), global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse.Parser, new[]{ "Budgets", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest), global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
@@ -90,6 +91,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// <summary>
   /// Request for CreateBudget
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateBudgetRequest : pb::IMessage<CreateBudgetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -335,6 +337,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// <summary>
   /// Request for UpdateBudget
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateBudgetRequest : pb::IMessage<UpdateBudgetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -594,6 +597,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// <summary>
   /// Request for GetBudget
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetBudgetRequest : pb::IMessage<GetBudgetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -790,6 +794,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// <summary>
   /// Request for ListBudgets
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListBudgetsRequest : pb::IMessage<ListBudgetsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -825,6 +830,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBudgetsRequest(ListBudgetsRequest other) : this() {
       parent_ = other.parent_;
+      scope_ = other.scope_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -849,6 +855,26 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       get { return parent_; }
       set {
         parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "scope" field.</summary>
+    public const int ScopeFieldNumber = 4;
+    private string scope_ = "";
+    /// <summary>
+    /// Optional. Set the scope of the budgets to be returned, in the format of the
+    /// resource name. The scope of a budget is the cost that it tracks, such as
+    /// costs for a single project, or the costs for all projects in a folder. Only
+    /// project scope (in the format of "projects/project-id" or "projects/123") is
+    /// supported in this field. When this field is set to a project's resource
+    /// name, the budgets returned are tracking the costs for that project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Scope {
+      get { return scope_; }
+      set {
+        scope_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -901,6 +927,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         return true;
       }
       if (Parent != other.Parent) return false;
+      if (Scope != other.Scope) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -911,6 +938,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (Scope.Length != 0) hash ^= Scope.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (_unknownFields != null) {
@@ -943,6 +971,10 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (Scope.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Scope);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -965,6 +997,10 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (Scope.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Scope);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -977,6 +1013,9 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       int size = 0;
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (Scope.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Scope);
       }
       if (PageSize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
@@ -998,6 +1037,9 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       }
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
+      }
+      if (other.Scope.Length != 0) {
+        Scope = other.Scope;
       }
       if (other.PageSize != 0) {
         PageSize = other.PageSize;
@@ -1032,6 +1074,10 @@ namespace Google.Cloud.Billing.Budgets.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 34: {
+            Scope = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1059,6 +1105,10 @@ namespace Google.Cloud.Billing.Budgets.V1 {
             PageToken = input.ReadString();
             break;
           }
+          case 34: {
+            Scope = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1069,6 +1119,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// <summary>
   /// Response for ListBudgets
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListBudgetsResponse : pb::IMessage<ListBudgetsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1294,6 +1345,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   /// <summary>
   /// Request for DeleteBudget
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteBudgetRequest : pb::IMessage<DeleteBudgetRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -1,11 +1,11 @@
 // Copyright 2021 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -293,8 +293,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 Assert.Null(GoogleLoggerScope.Current);
             };
 
+#pragma warning disable xUnit1031 // Do not use blocking task operations in test method
             var t1 = Task.Run(() => op("parent-one", "child-one").Wait());
             var t2 = Task.Run(() => op("parent-two", "child-two").Wait());
+#pragma warning restore xUnit1031 // Do not use blocking task operations in test method
 
             using (GoogleLoggerScope.BeginScope("root"))
             {
@@ -338,8 +340,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Task t2;
             using (GoogleLoggerScope.BeginScope(rootScope))
             {
+#pragma warning disable xUnit1031 // Do not use blocking task operations in test method
                 t1 = Task.Run(() => op("parent-one", "child-one").Wait());
                 t2 = Task.Run(() => op("parent-two", "child-two").Wait());
+#pragma warning restore xUnit1031 // Do not use blocking task operations in test method
             }
 
             childThreadsReleased.Set();

@@ -93,23 +93,23 @@ namespace Google.Cloud.Datastore.Admin.V1 {
             "REVMRVRFX0lOREVYEAQyhAoKDkRhdGFzdG9yZUFkbWluEvYBCg5FeHBvcnRF",
             "bnRpdGllcxIwLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuRXhwb3J0RW50",
             "aXRpZXNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKS",
-            "AYLT5JMCJSIgL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfTpleHBvcnQ6ASra",
-            "QTFwcm9qZWN0X2lkLGxhYmVscyxlbnRpdHlfZmlsdGVyLG91dHB1dF91cmxf",
-            "cHJlZml4ykEwChZFeHBvcnRFbnRpdGllc1Jlc3BvbnNlEhZFeHBvcnRFbnRp",
-            "dGllc01ldGFkYXRhEu0BCg5JbXBvcnRFbnRpdGllcxIwLmdvb2dsZS5kYXRh",
+            "AcpBMAoWRXhwb3J0RW50aXRpZXNSZXNwb25zZRIWRXhwb3J0RW50aXRpZXNN",
+            "ZXRhZGF0YdpBMXByb2plY3RfaWQsbGFiZWxzLGVudGl0eV9maWx0ZXIsb3V0",
+            "cHV0X3VybF9wcmVmaXiC0+STAiUiIC92MS9wcm9qZWN0cy97cHJvamVjdF9p",
+            "ZH06ZXhwb3J0OgEqEu0BCg5JbXBvcnRFbnRpdGllcxIwLmdvb2dsZS5kYXRh",
             "c3RvcmUuYWRtaW4udjEuSW1wb3J0RW50aXRpZXNSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiKJAYLT5JMCJSIgL3YxL3Byb2plY3Rz",
-            "L3twcm9qZWN0X2lkfTppbXBvcnQ6ASraQSlwcm9qZWN0X2lkLGxhYmVscyxp",
-            "bnB1dF91cmwsZW50aXR5X2ZpbHRlcspBLwoVZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5EhZJbXBvcnRFbnRpdGllc01ldGFkYXRhEq8BCgtDcmVhdGVJbmRleBIt",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiKJAcpBLwoVZ29vZ2xlLnByb3RvYnVm",
+            "LkVtcHR5EhZJbXBvcnRFbnRpdGllc01ldGFkYXRh2kEpcHJvamVjdF9pZCxs",
+            "YWJlbHMsaW5wdXRfdXJsLGVudGl0eV9maWx0ZXKC0+STAiUiIC92MS9wcm9q",
+            "ZWN0cy97cHJvamVjdF9pZH06aW1wb3J0OgEqEq8BCgtDcmVhdGVJbmRleBIt",
             "Lmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuQ3JlYXRlSW5kZXhSZXF1ZXN0",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJSgtPkkwIqIiEvdjEv",
-            "cHJvamVjdHMve3Byb2plY3RfaWR9L2luZGV4ZXM6BWluZGV4ykEfCgVJbmRl",
-            "eBIWSW5kZXhPcGVyYXRpb25NZXRhZGF0YRKzAQoLRGVsZXRlSW5kZXgSLS5n",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJSykEfCgVJbmRleBIW",
+            "SW5kZXhPcGVyYXRpb25NZXRhZGF0YYLT5JMCKiIhL3YxL3Byb2plY3RzL3tw",
+            "cm9qZWN0X2lkfS9pbmRleGVzOgVpbmRleBKzAQoLRGVsZXRlSW5kZXgSLS5n",
             "b29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLkRlbGV0ZUluZGV4UmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iVoLT5JMCLiosL3YxL3By",
-            "b2plY3RzL3twcm9qZWN0X2lkfS9pbmRleGVzL3tpbmRleF9pZH3KQR8KBUlu",
-            "ZGV4EhZJbmRleE9wZXJhdGlvbk1ldGFkYXRhEo4BCghHZXRJbmRleBIqLmdv",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iVspBHwoFSW5kZXgSFklu",
+            "ZGV4T3BlcmF0aW9uTWV0YWRhdGGC0+STAi4qLC92MS9wcm9qZWN0cy97cHJv",
+            "amVjdF9pZH0vaW5kZXhlcy97aW5kZXhfaWR9Eo4BCghHZXRJbmRleBIqLmdv",
             "b2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuR2V0SW5kZXhSZXF1ZXN0GiAuZ29v",
             "Z2xlLmRhdGFzdG9yZS5hZG1pbi52MS5JbmRleCI0gtPkkwIuEiwvdjEvcHJv",
             "amVjdHMve3Byb2plY3RfaWR9L2luZGV4ZXMve2luZGV4X2lkfRKXAQoLTGlz",
@@ -181,6 +181,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// <summary>
   /// Metadata common to all Datastore Admin operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CommonMetadata : pb::IMessage<CommonMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -449,7 +450,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (other.OperationType != global::Google.Cloud.Datastore.Admin.V1.OperationType.Unspecified) {
         OperationType = other.OperationType;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.State != global::Google.Cloud.Datastore.Admin.V1.CommonMetadata.Types.State.Unspecified) {
         State = other.State;
       }
@@ -593,6 +594,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// <summary>
   /// Measures the progress of a particular metric.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Progress : pb::IMessage<Progress>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -831,6 +833,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The request for
   /// [google.datastore.admin.v1.DatastoreAdmin.ExportEntities][google.datastore.admin.v1.DatastoreAdmin.ExportEntities].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportEntitiesRequest : pb::IMessage<ExportEntitiesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -939,8 +942,8 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     ///
     /// The resulting files will be nested deeper than the specified URL prefix.
     /// The final output URL will be provided in the
-    /// [google.datastore.admin.v1.ExportEntitiesResponse.output_url][google.datastore.admin.v1.ExportEntitiesResponse.output_url] field. That
-    /// value should be used for subsequent ImportEntities operations.
+    /// [google.datastore.admin.v1.ExportEntitiesResponse.output_url][google.datastore.admin.v1.ExportEntitiesResponse.output_url]
+    /// field. That value should be used for subsequent ImportEntities operations.
     ///
     /// By nesting the data files deeper, the same Cloud Storage bucket can be used
     /// in multiple ExportEntities operations without conflict.
@@ -1073,7 +1076,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (other.ProjectId.Length != 0) {
         ProjectId = other.ProjectId;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.entityFilter_ != null) {
         if (entityFilter_ == null) {
           EntityFilter = new global::Google.Cloud.Datastore.Admin.V1.EntityFilter();
@@ -1162,6 +1165,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The request for
   /// [google.datastore.admin.v1.DatastoreAdmin.ImportEntities][google.datastore.admin.v1.DatastoreAdmin.ImportEntities].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportEntitiesRequest : pb::IMessage<ImportEntitiesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1242,8 +1246,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     public const int InputUrlFieldNumber = 3;
     private string inputUrl_ = "";
     /// <summary>
-    /// Required. The full resource URL of the external storage location. Currently, only
-    /// Google Cloud Storage is supported. So input_url should be of the form:
+    /// Required. The full resource URL of the external storage location.
+    /// Currently, only Google Cloud Storage is supported. So input_url should be
+    /// of the form:
     /// `gs://BUCKET_NAME[/NAMESPACE_PATH]/OVERALL_EXPORT_METADATA_FILE`, where
     /// `BUCKET_NAME` is the name of the Cloud Storage bucket, `NAMESPACE_PATH` is
     /// an optional Cloud Storage namespace path (this is not a Cloud Datastore
@@ -1402,7 +1407,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (other.ProjectId.Length != 0) {
         ProjectId = other.ProjectId;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.InputUrl.Length != 0) {
         InputUrl = other.InputUrl;
       }
@@ -1491,6 +1496,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The response for
   /// [google.datastore.admin.v1.DatastoreAdmin.ExportEntities][google.datastore.admin.v1.DatastoreAdmin.ExportEntities].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportEntitiesResponse : pb::IMessage<ExportEntitiesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1689,6 +1695,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// <summary>
   /// Metadata for ExportEntities operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportEntitiesMetadata : pb::IMessage<ExportEntitiesMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2084,6 +2091,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// <summary>
   /// Metadata for ImportEntities operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportEntitiesMetadata : pb::IMessage<ImportEntitiesMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2197,7 +2205,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     private string inputUrl_ = "";
     /// <summary>
     /// The location of the import metadata file. This will be the same value as
-    /// the [google.datastore.admin.v1.ExportEntitiesResponse.output_url][google.datastore.admin.v1.ExportEntitiesResponse.output_url] field.
+    /// the
+    /// [google.datastore.admin.v1.ExportEntitiesResponse.output_url][google.datastore.admin.v1.ExportEntitiesResponse.output_url]
+    /// field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2494,6 +2504,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The entire Baz namespace:
   ///   kinds=[], namespace_ids=['Baz']
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityFilter : pb::IMessage<EntityFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2714,6 +2725,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The request for
   /// [google.datastore.admin.v1.DatastoreAdmin.CreateIndex][google.datastore.admin.v1.DatastoreAdmin.CreateIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateIndexRequest : pb::IMessage<CreateIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2960,6 +2972,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The request for
   /// [google.datastore.admin.v1.DatastoreAdmin.DeleteIndex][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteIndexRequest : pb::IMessage<DeleteIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3193,8 +3206,10 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   }
 
   /// <summary>
-  /// The request for [google.datastore.admin.v1.DatastoreAdmin.GetIndex][google.datastore.admin.v1.DatastoreAdmin.GetIndex].
+  /// The request for
+  /// [google.datastore.admin.v1.DatastoreAdmin.GetIndex][google.datastore.admin.v1.DatastoreAdmin.GetIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetIndexRequest : pb::IMessage<GetIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3431,6 +3446,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The request for
   /// [google.datastore.admin.v1.DatastoreAdmin.ListIndexes][google.datastore.admin.v1.DatastoreAdmin.ListIndexes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListIndexesRequest : pb::IMessage<ListIndexesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3745,6 +3761,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The response for
   /// [google.datastore.admin.v1.DatastoreAdmin.ListIndexes][google.datastore.admin.v1.DatastoreAdmin.ListIndexes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListIndexesResponse : pb::IMessage<ListIndexesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3969,6 +3986,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// <summary>
   /// Metadata for Index operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IndexOperationMetadata : pb::IMessage<IndexOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4269,6 +4287,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// This singleton resource can be accessed at:
   /// "projects/{project_id}/operations/datastore-firestore-migration"
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatastoreFirestoreMigrationMetadata : pb::IMessage<DatastoreFirestoreMigrationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -85,6 +85,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// <summary>
   /// The desired input location information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InputConfig : pb::IMessage<InputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -364,6 +365,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// <summary>
   /// The desired output location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OutputConfig : pb::IMessage<OutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -642,6 +644,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// <summary>
   /// The Google Cloud Storage location where the input file will be read from.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -837,6 +840,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// <summary>
   /// The Google Cloud Storage location where the output file will be written to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDestination : pb::IMessage<GcsDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1032,6 +1036,7 @@ namespace Google.Cloud.Optimization.V1 {
   /// <summary>
   /// The long running operation metadata for async model related methods.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncModelMetadata : pb::IMessage<AsyncModelMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -62,62 +62,65 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
             "SUNZEAI6depBcgosYmlncXVlcnlkYXRhcG9saWN5Lmdvb2dsZWFwaXMuY29t",
             "L0RhdGFQb2xpY3kSQnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
             "Y2F0aW9ufS9kYXRhUG9saWNpZXMve2RhdGFfcG9saWN5fUIQCg5tYXRjaGlu",
-            "Z19sYWJlbEIICgZwb2xpY3kikAIKEURhdGFNYXNraW5nUG9saWN5Em4KFXBy",
+            "Z19sYWJlbEIICgZwb2xpY3ki/QIKEURhdGFNYXNraW5nUG9saWN5Em4KFXBy",
             "ZWRlZmluZWRfZXhwcmVzc2lvbhgBIAEoDjJNLmdvb2dsZS5jbG91ZC5iaWdx",
             "dWVyeS5kYXRhcG9saWNpZXMudjEuRGF0YU1hc2tpbmdQb2xpY3kuUHJlZGVm",
-            "aW5lZEV4cHJlc3Npb25IACJ1ChRQcmVkZWZpbmVkRXhwcmVzc2lvbhIlCiFQ",
-            "UkVERUZJTkVEX0VYUFJFU1NJT05fVU5TUEVDSUZJRUQQABIKCgZTSEEyNTYQ",
-            "AxIPCgtBTFdBWVNfTlVMTBAFEhkKFURFRkFVTFRfTUFTS0lOR19WQUxVRRAH",
-            "QhQKEm1hc2tpbmdfZXhwcmVzc2lvbjKQDwoRRGF0YVBvbGljeVNlcnZpY2US",
-            "4QEKEENyZWF0ZURhdGFQb2xpY3kSPi5nb29nbGUuY2xvdWQuYmlncXVlcnku",
-            "ZGF0YXBvbGljaWVzLnYxLkNyZWF0ZURhdGFQb2xpY3lSZXF1ZXN0GjEuZ29v",
-            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFwb2xpY2llcy52MS5EYXRhUG9saWN5",
-            "IlqC0+STAj8iMC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
-            "L2RhdGFQb2xpY2llczoLZGF0YV9wb2xpY3naQRJwYXJlbnQsZGF0YV9wb2xp",
-            "Y3kS8gEKEFVwZGF0ZURhdGFQb2xpY3kSPi5nb29nbGUuY2xvdWQuYmlncXVl",
-            "cnkuZGF0YXBvbGljaWVzLnYxLlVwZGF0ZURhdGFQb2xpY3lSZXF1ZXN0GjEu",
-            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFwb2xpY2llcy52MS5EYXRhUG9s",
-            "aWN5ImuC0+STAksyPC92MS97ZGF0YV9wb2xpY3kubmFtZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2RhdGFQb2xpY2llcy8qfToLZGF0YV9wb2xpY3naQRdk",
-            "YXRhX3BvbGljeSx1cGRhdGVfbWFzaxLjAQoQUmVuYW1lRGF0YVBvbGljeRI+",
-            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhcG9saWNpZXMudjEuUmVuYW1l",
-            "RGF0YVBvbGljeVJlcXVlc3QaMS5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0",
-            "YXBvbGljaWVzLnYxLkRhdGFQb2xpY3kiXILT5JMCPCI3L3YxL3tuYW1lPXBy",
+            "aW5lZEV4cHJlc3Npb25IABIRCgdyb3V0aW5lGAMgASgJSAAizgEKFFByZWRl",
+            "ZmluZWRFeHByZXNzaW9uEiUKIVBSRURFRklORURfRVhQUkVTU0lPTl9VTlNQ",
+            "RUNJRklFRBAAEgoKBlNIQTI1NhADEg8KC0FMV0FZU19OVUxMEAUSGQoVREVG",
+            "QVVMVF9NQVNLSU5HX1ZBTFVFEAcSGAoUTEFTVF9GT1VSX0NIQVJBQ1RFUlMQ",
+            "CRIZChVGSVJTVF9GT1VSX0NIQVJBQ1RFUlMQChIOCgpFTUFJTF9NQVNLEAwS",
+            "EgoOREFURV9ZRUFSX01BU0sQDUIUChJtYXNraW5nX2V4cHJlc3Npb24ykA8K",
+            "EURhdGFQb2xpY3lTZXJ2aWNlEuEBChBDcmVhdGVEYXRhUG9saWN5Ej4uZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFwb2xpY2llcy52MS5DcmVhdGVEYXRh",
+            "UG9saWN5UmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhcG9s",
+            "aWNpZXMudjEuRGF0YVBvbGljeSJa2kEScGFyZW50LGRhdGFfcG9saWN5gtPk",
+            "kwI/IjAvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9kYXRh",
+            "UG9saWNpZXM6C2RhdGFfcG9saWN5EvIBChBVcGRhdGVEYXRhUG9saWN5Ej4u",
+            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFwb2xpY2llcy52MS5VcGRhdGVE",
+            "YXRhUG9saWN5UmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRh",
+            "cG9saWNpZXMudjEuRGF0YVBvbGljeSJr2kEXZGF0YV9wb2xpY3ksdXBkYXRl",
+            "X21hc2uC0+STAksyPC92MS97ZGF0YV9wb2xpY3kubmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2RhdGFQb2xpY2llcy8qfToLZGF0YV9wb2xpY3kS4wEK",
+            "EFJlbmFtZURhdGFQb2xpY3kSPi5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0",
+            "YXBvbGljaWVzLnYxLlJlbmFtZURhdGFQb2xpY3lSZXF1ZXN0GjEuZ29vZ2xl",
+            "LmNsb3VkLmJpZ3F1ZXJ5LmRhdGFwb2xpY2llcy52MS5EYXRhUG9saWN5Ilza",
+            "QRduYW1lLG5ld19kYXRhX3BvbGljeV9pZILT5JMCPCI3L3YxL3tuYW1lPXBy",
             "b2plY3RzLyovbG9jYXRpb25zLyovZGF0YVBvbGljaWVzLyp9OnJlbmFtZToB",
-            "KtpBF25hbWUsbmV3X2RhdGFfcG9saWN5X2lkEqsBChBEZWxldGVEYXRhUG9s",
-            "aWN5Ej4uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFwb2xpY2llcy52MS5E",
-            "ZWxldGVEYXRhUG9saWN5UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSI/gtPkkwIyKjAvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9k",
-            "YXRhUG9saWNpZXMvKn3aQQRuYW1lEsABCg1HZXREYXRhUG9saWN5EjsuZ29v",
-            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFwb2xpY2llcy52MS5HZXREYXRhUG9s",
-            "aWN5UmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhcG9saWNp",
-            "ZXMudjEuRGF0YVBvbGljeSI/gtPkkwIyEjAvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9kYXRhUG9saWNpZXMvKn3aQQRuYW1lEtYBChBMaXN0",
-            "RGF0YVBvbGljaWVzEj4uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFwb2xp",
-            "Y2llcy52MS5MaXN0RGF0YVBvbGljaWVzUmVxdWVzdBo/Lmdvb2dsZS5jbG91",
+            "KhKrAQoQRGVsZXRlRGF0YVBvbGljeRI+Lmdvb2dsZS5jbG91ZC5iaWdxdWVy",
+            "eS5kYXRhcG9saWNpZXMudjEuRGVsZXRlRGF0YVBvbGljeVJlcXVlc3QaFi5n",
+            "b29nbGUucHJvdG9idWYuRW1wdHkiP9pBBG5hbWWC0+STAjIqMC92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFQb2xpY2llcy8qfRLAAQoN",
+            "R2V0RGF0YVBvbGljeRI7Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5kYXRhcG9s",
+            "aWNpZXMudjEuR2V0RGF0YVBvbGljeVJlcXVlc3QaMS5nb29nbGUuY2xvdWQu",
+            "YmlncXVlcnkuZGF0YXBvbGljaWVzLnYxLkRhdGFQb2xpY3kiP9pBBG5hbWWC",
+            "0+STAjISMC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFQ",
+            "b2xpY2llcy8qfRLWAQoQTGlzdERhdGFQb2xpY2llcxI+Lmdvb2dsZS5jbG91",
             "ZC5iaWdxdWVyeS5kYXRhcG9saWNpZXMudjEuTGlzdERhdGFQb2xpY2llc1Jl",
-            "c3BvbnNlIkGC0+STAjISMC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyp9L2RhdGFQb2xpY2llc9pBBnBhcmVudBKXAQoMR2V0SWFtUG9saWN5",
-            "EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xl",
-            "LmlhbS52MS5Qb2xpY3kiTILT5JMCRiJBL3YxL3tyZXNvdXJjZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2RhdGFQb2xpY2llcy8qfTpnZXRJYW1Qb2xpY3k6",
-            "ASoSlwEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuU2V0SWFtUG9s",
+            "cXVlc3QaPy5nb29nbGUuY2xvdWQuYmlncXVlcnkuZGF0YXBvbGljaWVzLnYx",
+            "Lkxpc3REYXRhUG9saWNpZXNSZXNwb25zZSJB2kEGcGFyZW50gtPkkwIyEjAv",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9kYXRhUG9saWNp",
+            "ZXMSlwEKDEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuR2V0SWFtUG9s",
             "aWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IkyC0+STAkYiQS92",
             "MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhUG9saWNp",
-            "ZXMvKn06c2V0SWFtUG9saWN5OgEqEr0BChJUZXN0SWFtUGVybWlzc2lvbnMS",
-            "KC5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9uc1JlcXVlc3QaKS5n",
-            "b29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9uc1Jlc3BvbnNlIlKC0+ST",
-            "AkwiRy92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRh",
-            "UG9saWNpZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqGn7KQSFiaWdxdWVy",
-            "eWRhdGFwb2xpY3kuZ29vZ2xlYXBpcy5jb23SQVdodHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2JpZ3F1ZXJ5LGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CiQIKKWNvbS5nb29nbGUuY2xv",
-            "dWQuYmlncXVlcnkuZGF0YXBvbGljaWVzLnYxQg9EYXRhUG9saWN5UHJvdG9Q",
-            "AVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9iaWdxdWVyeS9kYXRhcG9saWNpZXMv",
-            "YXBpdjEvZGF0YXBvbGljaWVzcGI7ZGF0YXBvbGljaWVzcGKqAiVHb29nbGUu",
-            "Q2xvdWQuQmlnUXVlcnkuRGF0YVBvbGljaWVzLlYxygIlR29vZ2xlXENsb3Vk",
-            "XEJpZ1F1ZXJ5XERhdGFQb2xpY2llc1xWMeoCKUdvb2dsZTo6Q2xvdWQ6OkJp",
-            "Z3F1ZXJ5OjpEYXRhUG9saWNpZXM6OlYxYgZwcm90bzM="));
+            "ZXMvKn06Z2V0SWFtUG9saWN5OgEqEpcBCgxTZXRJYW1Qb2xpY3kSIi5nb29n",
+            "bGUuaWFtLnYxLlNldElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYx",
+            "LlBvbGljeSJMgtPkkwJGIkEvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovZGF0YVBvbGljaWVzLyp9OnNldElhbVBvbGljeToBKhK9AQoS",
+            "VGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVy",
+            "bWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlz",
+            "c2lvbnNSZXNwb25zZSJSgtPkkwJMIkcvdjEve3Jlc291cmNlPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovZGF0YVBvbGljaWVzLyp9OnRlc3RJYW1QZXJtaXNz",
+            "aW9uczoBKhp+ykEhYmlncXVlcnlkYXRhcG9saWN5Lmdvb2dsZWFwaXMuY29t",
+            "0kFXaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9iaWdxdWVyeSxo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
+            "QokCCiljb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmRhdGFwb2xpY2llcy52",
+            "MUIPRGF0YVBvbGljeVByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vYmln",
+            "cXVlcnkvZGF0YXBvbGljaWVzL2FwaXYxL2RhdGFwb2xpY2llc3BiO2RhdGFw",
+            "b2xpY2llc3BiqgIlR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LkRhdGFQb2xpY2ll",
+            "cy5WMcoCJUdvb2dsZVxDbG91ZFxCaWdRdWVyeVxEYXRhUG9saWNpZXNcVjHq",
+            "AilHb29nbGU6OkNsb3VkOjpCaWdxdWVyeTo6RGF0YVBvbGljaWVzOjpWMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -129,7 +132,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataPolicies.V1.ListDataPoliciesRequest), global::Google.Cloud.BigQuery.DataPolicies.V1.ListDataPoliciesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataPolicies.V1.ListDataPoliciesResponse), global::Google.Cloud.BigQuery.DataPolicies.V1.ListDataPoliciesResponse.Parser, new[]{ "DataPolicies", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataPolicies.V1.DataPolicy), global::Google.Cloud.BigQuery.DataPolicies.V1.DataPolicy.Parser, new[]{ "PolicyTag", "DataMaskingPolicy", "Name", "DataPolicyType", "DataPolicyId" }, new[]{ "MatchingLabel", "Policy" }, new[]{ typeof(global::Google.Cloud.BigQuery.DataPolicies.V1.DataPolicy.Types.DataPolicyType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataPolicies.V1.DataMaskingPolicy), global::Google.Cloud.BigQuery.DataPolicies.V1.DataMaskingPolicy.Parser, new[]{ "PredefinedExpression" }, new[]{ "MaskingExpression" }, new[]{ typeof(global::Google.Cloud.BigQuery.DataPolicies.V1.DataMaskingPolicy.Types.PredefinedExpression) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.DataPolicies.V1.DataMaskingPolicy), global::Google.Cloud.BigQuery.DataPolicies.V1.DataMaskingPolicy.Parser, new[]{ "PredefinedExpression", "Routine" }, new[]{ "MaskingExpression" }, new[]{ typeof(global::Google.Cloud.BigQuery.DataPolicies.V1.DataMaskingPolicy.Types.PredefinedExpression) }, null, null)
           }));
     }
     #endregion
@@ -139,6 +142,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
   /// <summary>
   /// Request message for the CreateDataPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateDataPolicyRequest : pb::IMessage<CreateDataPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -385,6 +389,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
   /// <summary>
   /// Response message for the UpdateDataPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateDataPolicyRequest : pb::IMessage<UpdateDataPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -646,6 +651,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
   /// <summary>
   /// Request message for the RenameDataPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RenameDataPolicyRequest : pb::IMessage<RenameDataPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -882,6 +888,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
   /// <summary>
   /// Request message for the DeleteDataPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteDataPolicyRequest : pb::IMessage<DeleteDataPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1078,6 +1085,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
   /// <summary>
   /// Request message for the GetDataPolicy method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDataPolicyRequest : pb::IMessage<GetDataPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1274,6 +1282,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
   /// <summary>
   /// Request message for the ListDataPolicies method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDataPoliciesRequest : pb::IMessage<ListDataPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1378,9 +1387,10 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
     /// are associated with. Currently filter only supports
     /// "policy&lt;span>&lt;/span>_tag" based filtering and OR based predicates. Sample
     /// filter can be "policy&lt;span>&lt;/span>_tag:
-    /// `'projects/1/locations/us/taxonomies/2/policyTags/3'`". You may use
-    /// wildcard such as "policy&lt;span>&lt;/span>_tag:
-    /// `'projects/1/locations/us/taxonomies/2/*'`".
+    /// projects/1/locations/us/taxonomies/2/policyTags/3".
+    /// You may also use wildcard such as "policy&lt;span>&lt;/span>_tag:
+    /// projects/1/locations/us/taxonomies/2*". Please note that OR predicates
+    /// cannot be used with wildcard filters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1599,6 +1609,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
   /// <summary>
   /// Response message for the ListDataPolicies method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDataPoliciesResponse : pb::IMessage<ListDataPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1824,6 +1835,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
   /// <summary>
   /// Represents the label-policy binding.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataPolicy : pb::IMessage<DataPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1891,10 +1903,24 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PolicyTag {
-      get { return matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag ? (string) matchingLabel_ : ""; }
+      get { return HasPolicyTag ? (string) matchingLabel_ : ""; }
       set {
         matchingLabel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         matchingLabelCase_ = MatchingLabelOneofCase.PolicyTag;
+      }
+    }
+    /// <summary>Gets whether the "policy_tag" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPolicyTag {
+      get { return matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "policy_tag" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPolicyTag() {
+      if (HasPolicyTag) {
+        ClearMatchingLabel();
       }
     }
 
@@ -2030,7 +2056,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag) hash ^= PolicyTag.GetHashCode();
+      if (HasPolicyTag) hash ^= PolicyTag.GetHashCode();
       if (policyCase_ == PolicyOneofCase.DataMaskingPolicy) hash ^= DataMaskingPolicy.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DataPolicyType != global::Google.Cloud.BigQuery.DataPolicies.V1.DataPolicy.Types.DataPolicyType.Unspecified) hash ^= DataPolicyType.GetHashCode();
@@ -2067,7 +2093,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
         output.WriteRawTag(26);
         output.WriteString(DataPolicyId);
       }
-      if (matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag) {
+      if (HasPolicyTag) {
         output.WriteRawTag(34);
         output.WriteString(PolicyTag);
       }
@@ -2097,7 +2123,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
         output.WriteRawTag(26);
         output.WriteString(DataPolicyId);
       }
-      if (matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag) {
+      if (HasPolicyTag) {
         output.WriteRawTag(34);
         output.WriteString(PolicyTag);
       }
@@ -2115,7 +2141,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (matchingLabelCase_ == MatchingLabelOneofCase.PolicyTag) {
+      if (HasPolicyTag) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PolicyTag);
       }
       if (policyCase_ == PolicyOneofCase.DataMaskingPolicy) {
@@ -2283,6 +2309,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
   /// <summary>
   /// The data masking policy that is used to specify data masking rule.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataMaskingPolicy : pb::IMessage<DataMaskingPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2321,6 +2348,9 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
         case MaskingExpressionOneofCase.PredefinedExpression:
           PredefinedExpression = other.PredefinedExpression;
           break;
+        case MaskingExpressionOneofCase.Routine:
+          Routine = other.Routine;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2340,10 +2370,55 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.DataPolicies.V1.DataMaskingPolicy.Types.PredefinedExpression PredefinedExpression {
-      get { return maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression ? (global::Google.Cloud.BigQuery.DataPolicies.V1.DataMaskingPolicy.Types.PredefinedExpression) maskingExpression_ : global::Google.Cloud.BigQuery.DataPolicies.V1.DataMaskingPolicy.Types.PredefinedExpression.Unspecified; }
+      get { return HasPredefinedExpression ? (global::Google.Cloud.BigQuery.DataPolicies.V1.DataMaskingPolicy.Types.PredefinedExpression) maskingExpression_ : global::Google.Cloud.BigQuery.DataPolicies.V1.DataMaskingPolicy.Types.PredefinedExpression.Unspecified; }
       set {
         maskingExpression_ = value;
         maskingExpressionCase_ = MaskingExpressionOneofCase.PredefinedExpression;
+      }
+    }
+    /// <summary>Gets whether the "predefined_expression" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPredefinedExpression {
+      get { return maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "predefined_expression" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPredefinedExpression() {
+      if (HasPredefinedExpression) {
+        ClearMaskingExpression();
+      }
+    }
+
+    /// <summary>Field number for the "routine" field.</summary>
+    public const int RoutineFieldNumber = 3;
+    /// <summary>
+    /// The name of the BigQuery routine that contains the custom masking
+    /// routine, in the format of
+    /// `projects/{project_number}/datasets/{dataset_id}/routines/{routine_id}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Routine {
+      get { return HasRoutine ? (string) maskingExpression_ : ""; }
+      set {
+        maskingExpression_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        maskingExpressionCase_ = MaskingExpressionOneofCase.Routine;
+      }
+    }
+    /// <summary>Gets whether the "routine" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRoutine {
+      get { return maskingExpressionCase_ == MaskingExpressionOneofCase.Routine; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "routine" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRoutine() {
+      if (HasRoutine) {
+        ClearMaskingExpression();
       }
     }
 
@@ -2352,6 +2427,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
     public enum MaskingExpressionOneofCase {
       None = 0,
       PredefinedExpression = 1,
+      Routine = 3,
     }
     private MaskingExpressionOneofCase maskingExpressionCase_ = MaskingExpressionOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2383,6 +2459,7 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
         return true;
       }
       if (PredefinedExpression != other.PredefinedExpression) return false;
+      if (Routine != other.Routine) return false;
       if (MaskingExpressionCase != other.MaskingExpressionCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2391,7 +2468,8 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression) hash ^= PredefinedExpression.GetHashCode();
+      if (HasPredefinedExpression) hash ^= PredefinedExpression.GetHashCode();
+      if (HasRoutine) hash ^= Routine.GetHashCode();
       hash ^= (int) maskingExpressionCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2411,9 +2489,13 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression) {
+      if (HasPredefinedExpression) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PredefinedExpression);
+      }
+      if (HasRoutine) {
+        output.WriteRawTag(26);
+        output.WriteString(Routine);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2425,9 +2507,13 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression) {
+      if (HasPredefinedExpression) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PredefinedExpression);
+      }
+      if (HasRoutine) {
+        output.WriteRawTag(26);
+        output.WriteString(Routine);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2439,8 +2525,11 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (maskingExpressionCase_ == MaskingExpressionOneofCase.PredefinedExpression) {
+      if (HasPredefinedExpression) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PredefinedExpression);
+      }
+      if (HasRoutine) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Routine);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2457,6 +2546,9 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
       switch (other.MaskingExpressionCase) {
         case MaskingExpressionOneofCase.PredefinedExpression:
           PredefinedExpression = other.PredefinedExpression;
+          break;
+        case MaskingExpressionOneofCase.Routine:
+          Routine = other.Routine;
           break;
       }
 
@@ -2480,6 +2572,10 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
             maskingExpressionCase_ = MaskingExpressionOneofCase.PredefinedExpression;
             break;
           }
+          case 26: {
+            Routine = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2498,6 +2594,10 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
           case 8: {
             maskingExpression_ = input.ReadEnum();
             maskingExpressionCase_ = MaskingExpressionOneofCase.PredefinedExpression;
+            break;
+          }
+          case 26: {
+            Routine = input.ReadString();
             break;
           }
         }
@@ -2538,10 +2638,10 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
         /// * FLOAT: 0.0
         /// * NUMERIC: 0
         /// * BOOLEAN: FALSE
-        /// * TIMESTAMP: 0001-01-01 00:00:00 UTC
-        /// * DATE: 0001-01-01
+        /// * TIMESTAMP: 1970-01-01 00:00:00 UTC
+        /// * DATE: 1970-01-01
         /// * TIME: 00:00:00
-        /// * DATETIME: 0001-01-01T00:00:00
+        /// * DATETIME: 1970-01-01T00:00:00
         /// * GEOGRAPHY: POINT(0 0)
         /// * BIGNUMERIC: 0
         /// * ARRAY: []
@@ -2549,6 +2649,52 @@ namespace Google.Cloud.BigQuery.DataPolicies.V1 {
         /// * JSON: NULL
         /// </summary>
         [pbr::OriginalName("DEFAULT_MASKING_VALUE")] DefaultMaskingValue = 7,
+        /// <summary>
+        /// Masking expression shows the last four characters of text.
+        /// The masking behavior is as follows:
+        ///
+        /// * If text length > 4 characters: Replace text with XXXXX, append last
+        /// four characters of original text.
+        /// * If text length &lt;= 4 characters: Apply SHA-256 hash.
+        /// </summary>
+        [pbr::OriginalName("LAST_FOUR_CHARACTERS")] LastFourCharacters = 9,
+        /// <summary>
+        /// Masking expression shows the first four characters of text.
+        /// The masking behavior is as follows:
+        ///
+        /// * If text length > 4 characters: Replace text with XXXXX, prepend first
+        /// four characters of original text.
+        /// * If text length &lt;= 4 characters: Apply SHA-256 hash.
+        /// </summary>
+        [pbr::OriginalName("FIRST_FOUR_CHARACTERS")] FirstFourCharacters = 10,
+        /// <summary>
+        /// Masking expression for email addresses.
+        /// The masking behavior is as follows:
+        ///
+        /// * Syntax-valid email address: Replace username with XXXXX. For example,
+        /// cloudysanfrancisco@gmail.com becomes XXXXX@gmail.com.
+        /// * Syntax-invalid email address: Apply SHA-256 hash.
+        ///
+        /// For more information, see [Email
+        /// mask](https://cloud.google.com/bigquery/docs/column-data-masking-intro#masking_options).
+        /// </summary>
+        [pbr::OriginalName("EMAIL_MASK")] EmailMask = 12,
+        /// <summary>
+        /// Masking expression to only show the year of `Date`,
+        /// `DateTime` and `TimeStamp`. For example, with the
+        /// year 2076:
+        ///
+        /// * DATE         :  2076-01-01
+        /// * DATETIME     :  2076-01-01T00:00:00
+        /// * TIMESTAMP    :  2076-01-01 00:00:00 UTC
+        ///
+        /// Truncation occurs according to the UTC time zone. To change this, adjust
+        /// the default time zone using the `time_zone` system variable.
+        /// For more information, see the &lt;a
+        /// href="https://cloud.google.com/bigquery/docs/reference/system-variables">System
+        /// variables reference&lt;/a>.
+        /// </summary>
+        [pbr::OriginalName("DATE_YEAR_MASK")] DateYearMask = 13,
       }
 
     }

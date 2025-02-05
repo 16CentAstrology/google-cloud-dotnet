@@ -67,6 +67,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Dataset metadata that is specific to image classification.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageClassificationDatasetMetadata : pb::IMessage<ImageClassificationDatasetMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -262,6 +263,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Dataset metadata specific to image object detection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageObjectDetectionDatasetMetadata : pb::IMessage<ImageObjectDetectionDatasetMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -417,6 +419,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Model metadata for image classification.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageClassificationModelMetadata : pb::IMessage<ImageClassificationModelMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -907,6 +910,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Model metadata specific to image object detection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageObjectDetectionModelMetadata : pb::IMessage<ImageObjectDetectionModelMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1344,6 +1348,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Model deployment metadata specific to Image Classification.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageClassificationModelDeploymentMetadata : pb::IMessage<ImageClassificationModelDeploymentMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1543,6 +1548,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Model deployment metadata specific to Image Object Detection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageObjectDetectionModelDeploymentMetadata : pb::IMessage<ImageObjectDetectionModelDeploymentMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

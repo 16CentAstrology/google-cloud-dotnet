@@ -167,63 +167,63 @@ namespace Google.Cloud.Redis.V1Beta1 {
             "AxIYChBzaGExX2ZpbmdlcnByaW50GAUgASgJMqgVCgpDbG91ZFJlZGlzErkB",
             "Cg1MaXN0SW5zdGFuY2VzEjAuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEu",
             "TGlzdEluc3RhbmNlc1JlcXVlc3QaMS5nb29nbGUuY2xvdWQucmVkaXMudjFi",
-            "ZXRhMS5MaXN0SW5zdGFuY2VzUmVzcG9uc2UiQ4LT5JMCNBIyL3YxYmV0YTEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9pbnN0YW5jZXPaQQZw",
-            "YXJlbnQSpgEKC0dldEluc3RhbmNlEi4uZ29vZ2xlLmNsb3VkLnJlZGlzLnYx",
+            "ZXRhMS5MaXN0SW5zdGFuY2VzUmVzcG9uc2UiQ9pBBnBhcmVudILT5JMCNBIy",
+            "L3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9pbnN0",
+            "YW5jZXMSpgEKC0dldEluc3RhbmNlEi4uZ29vZ2xlLmNsb3VkLnJlZGlzLnYx",
             "YmV0YTEuR2V0SW5zdGFuY2VSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLnJlZGlz",
-            "LnYxYmV0YTEuSW5zdGFuY2UiQYLT5JMCNBIyL3YxYmV0YTEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn3aQQRuYW1lEs8BChVH",
+            "LnYxYmV0YTEuSW5zdGFuY2UiQdpBBG5hbWWC0+STAjQSMi92MWJldGExL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9Es8BChVH",
             "ZXRJbnN0YW5jZUF1dGhTdHJpbmcSOC5nb29nbGUuY2xvdWQucmVkaXMudjFi",
             "ZXRhMS5HZXRJbnN0YW5jZUF1dGhTdHJpbmdSZXF1ZXN0Gi4uZ29vZ2xlLmNs",
-            "b3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2VBdXRoU3RyaW5nIkyC0+STAj8S",
-            "PS92MWJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFu",
-            "Y2VzLyp9L2F1dGhTdHJpbmfaQQRuYW1lEoQCCg5DcmVhdGVJbnN0YW5jZRIx",
+            "b3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2VBdXRoU3RyaW5nIkzaQQRuYW1l",
+            "gtPkkwI/Ej0vdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2luc3RhbmNlcy8qfS9hdXRoU3RyaW5nEoQCCg5DcmVhdGVJbnN0YW5jZRIx",
             "Lmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkNyZWF0ZUluc3RhbmNlUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24inwGC0+STAj4i",
-            "Mi92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW5z",
-            "dGFuY2VzOghpbnN0YW5jZdpBG3BhcmVudCxpbnN0YW5jZV9pZCxpbnN0YW5j",
-            "ZcpBOgojZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2USE2dv",
-            "b2dsZS5wcm90b2J1Zi5BbnkShgIKDlVwZGF0ZUluc3RhbmNlEjEuZ29vZ2xl",
+            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24inwHKQToKI2dv",
+            "b2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkluc3RhbmNlEhNnb29nbGUucHJv",
+            "dG9idWYuQW552kEbcGFyZW50LGluc3RhbmNlX2lkLGluc3RhbmNlgtPkkwI+",
+            "IjIvdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2lu",
+            "c3RhbmNlczoIaW5zdGFuY2UShgIKDlVwZGF0ZUluc3RhbmNlEjEuZ29vZ2xl",
             "LmNsb3VkLnJlZGlzLnYxYmV0YTEuVXBkYXRlSW5zdGFuY2VSZXF1ZXN0Gh0u",
-            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKhAYLT5JMCRzI7L3YxYmV0",
-            "YTEve2luc3RhbmNlLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0",
-            "YW5jZXMvKn06CGluc3RhbmNl2kEUdXBkYXRlX21hc2ssaW5zdGFuY2XKQToK",
-            "I2dvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkluc3RhbmNlEhNnb29nbGUu",
-            "cHJvdG9idWYuQW55Ev4BCg9VcGdyYWRlSW5zdGFuY2USMi5nb29nbGUuY2xv",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKhAcpBOgojZ29vZ2xlLmNs",
+            "b3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2USE2dvb2dsZS5wcm90b2J1Zi5B",
+            "bnnaQRR1cGRhdGVfbWFzayxpbnN0YW5jZYLT5JMCRzI7L3YxYmV0YTEve2lu",
+            "c3RhbmNlLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMv",
+            "Kn06CGluc3RhbmNlEv4BCg9VcGdyYWRlSW5zdGFuY2USMi5nb29nbGUuY2xv",
             "dWQucmVkaXMudjFiZXRhMS5VcGdyYWRlSW5zdGFuY2VSZXF1ZXN0Gh0uZ29v",
-            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKXAYLT5JMCPyI6L3YxYmV0YTEv",
-            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06dXBn",
-            "cmFkZToBKtpBEm5hbWUscmVkaXNfdmVyc2lvbspBOgojZ29vZ2xlLmNsb3Vk",
-            "LnJlZGlzLnYxYmV0YTEuSW5zdGFuY2USE2dvb2dsZS5wcm90b2J1Zi5BbnkS",
+            "Z2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKXAcpBOgojZ29vZ2xlLmNsb3Vk",
+            "LnJlZGlzLnYxYmV0YTEuSW5zdGFuY2USE2dvb2dsZS5wcm90b2J1Zi5Bbnna",
+            "QRJuYW1lLHJlZGlzX3ZlcnNpb26C0+STAj8iOi92MWJldGExL3tuYW1lPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OnVwZ3JhZGU6ASoS",
             "+gEKDkltcG9ydEluc3RhbmNlEjEuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0",
             "YTEuSW1wb3J0SW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
-            "Lk9wZXJhdGlvbiKVAYLT5JMCPiI5L3YxYmV0YTEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06aW1wb3J0OgEq2kERbmFtZSxp",
-            "bnB1dF9jb25maWfKQToKI2dvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLklu",
-            "c3RhbmNlEhNnb29nbGUucHJvdG9idWYuQW55EvsBCg5FeHBvcnRJbnN0YW5j",
+            "Lk9wZXJhdGlvbiKVAcpBOgojZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEu",
+            "SW5zdGFuY2USE2dvb2dsZS5wcm90b2J1Zi5BbnnaQRFuYW1lLGlucHV0X2Nv",
+            "bmZpZ4LT5JMCPiI5L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9pbnN0YW5jZXMvKn06aW1wb3J0OgEqEvsBCg5FeHBvcnRJbnN0YW5j",
             "ZRIxLmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkV4cG9ydEluc3RhbmNl",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ilgGC0+ST",
-            "Aj4iOS92MWJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5z",
-            "dGFuY2VzLyp9OmV4cG9ydDoBKtpBEm5hbWUsb3V0cHV0X2NvbmZpZ8pBOgoj",
-            "Z29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2USE2dvb2dsZS5w",
-            "cm90b2J1Zi5BbnkSiAIKEEZhaWxvdmVySW5zdGFuY2USMy5nb29nbGUuY2xv",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ilgHKQToK",
+            "I2dvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkluc3RhbmNlEhNnb29nbGUu",
+            "cHJvdG9idWYuQW552kESbmFtZSxvdXRwdXRfY29uZmlngtPkkwI+IjkvdjFi",
+            "ZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8q",
+            "fTpleHBvcnQ6ASoSiAIKEEZhaWxvdmVySW5zdGFuY2USMy5nb29nbGUuY2xv",
             "dWQucmVkaXMudjFiZXRhMS5GYWlsb3Zlckluc3RhbmNlUmVxdWVzdBodLmdv",
-            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24inwGC0+STAkAiOy92MWJldGEx",
-            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OmZh",
-            "aWxvdmVyOgEq2kEZbmFtZSxkYXRhX3Byb3RlY3Rpb25fbW9kZcpBOgojZ29v",
-            "Z2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2USE2dvb2dsZS5wcm90",
-            "b2J1Zi5BbnkS1AEKDkRlbGV0ZUluc3RhbmNlEjEuZ29vZ2xlLmNsb3VkLnJl",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24inwHKQToKI2dvb2dsZS5jbG91",
+            "ZC5yZWRpcy52MWJldGExLkluc3RhbmNlEhNnb29nbGUucHJvdG9idWYuQW55",
+            "2kEZbmFtZSxkYXRhX3Byb3RlY3Rpb25fbW9kZYLT5JMCQCI7L3YxYmV0YTEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06ZmFp",
+            "bG92ZXI6ASoS1AEKDkRlbGV0ZUluc3RhbmNlEjEuZ29vZ2xlLmNsb3VkLnJl",
             "ZGlzLnYxYmV0YTEuRGVsZXRlSW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiJwgtPkkwI0KjIvdjFiZXRhMS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfdpBBG5hbWXKQSwK",
-            "FWdvb2dsZS5wcm90b2J1Zi5FbXB0eRITZ29vZ2xlLnByb3RvYnVmLkFueRKq",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiJwykEsChVnb29nbGUucHJvdG9idWYuRW1w",
+            "dHkSE2dvb2dsZS5wcm90b2J1Zi5BbnnaQQRuYW1lgtPkkwI0KjIvdjFiZXRh",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfRKq",
             "AgoVUmVzY2hlZHVsZU1haW50ZW5hbmNlEjguZ29vZ2xlLmNsb3VkLnJlZGlz",
             "LnYxYmV0YTEuUmVzY2hlZHVsZU1haW50ZW5hbmNlUmVxdWVzdBodLmdvb2ds",
-            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24itwGC0+STAk0iSC92MWJldGExL3tu",
-            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OnJlc2No",
-            "ZWR1bGVNYWludGVuYW5jZToBKtpBJG5hbWUsIHJlc2NoZWR1bGVfdHlwZSwg",
-            "c2NoZWR1bGVfdGltZcpBOgojZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEu",
-            "SW5zdGFuY2USE2dvb2dsZS5wcm90b2J1Zi5BbnkaSMpBFHJlZGlzLmdvb2ds",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24itwHKQToKI2dvb2dsZS5jbG91ZC5y",
+            "ZWRpcy52MWJldGExLkluc3RhbmNlEhNnb29nbGUucHJvdG9idWYuQW552kEk",
+            "bmFtZSwgcmVzY2hlZHVsZV90eXBlLCBzY2hlZHVsZV90aW1lgtPkkwJNIkgv",
+            "djFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNl",
+            "cy8qfTpyZXNjaGVkdWxlTWFpbnRlbmFuY2U6ASoaSMpBFHJlZGlzLmdvb2ds",
             "ZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
             "bG91ZC1wbGF0Zm9ybUJ0Ch5jb20uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0",
             "YTFCGkNsb3VkUmVkaXNTZXJ2aWNlQmV0YVByb3RvUAFaNGNsb3VkLmdvb2ds",
@@ -267,6 +267,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Node specific properties.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NodeInfo : pb::IMessage<NodeInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -502,6 +503,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// A Memorystore for Redis instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1564,7 +1566,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.LocationId.Length != 0) {
         LocationId = other.LocationId;
       }
@@ -1601,7 +1603,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (other.StatusMessage.Length != 0) {
         StatusMessage = other.StatusMessage;
       }
-      redisConfigs_.Add(other.redisConfigs_);
+      redisConfigs_.MergeFrom(other.redisConfigs_);
       if (other.Tier != global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier.Unspecified) {
         Tier = other.Tier;
       }
@@ -2096,6 +2098,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Configuration of the persistence functionality.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PersistenceConfig : pb::IMessage<PersistenceConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2490,6 +2493,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Request for [RescheduleMaintenance][google.cloud.redis.v1beta1.CloudRedis.RescheduleMaintenance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RescheduleMaintenanceRequest : pb::IMessage<RescheduleMaintenanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2809,6 +2813,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Maintenance policy for an instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MaintenancePolicy : pb::IMessage<MaintenancePolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3135,6 +3140,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// Time window in which disruptive maintenance updates occur. Non-disruptive
   /// updates can occur inside or outside this window.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WeeklyMaintenanceWindow : pb::IMessage<WeeklyMaintenanceWindow>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3429,6 +3435,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// Upcoming maintenance schedule. If no maintenance is scheduled, fields are not
   /// populated.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MaintenanceSchedule : pb::IMessage<MaintenanceSchedule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3773,6 +3780,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Request for [ListInstances][google.cloud.redis.v1beta1.CloudRedis.ListInstances].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesRequest : pb::IMessage<ListInstancesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4057,6 +4065,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Response for [ListInstances][google.cloud.redis.v1beta1.CloudRedis.ListInstances].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstancesResponse : pb::IMessage<ListInstancesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4321,6 +4330,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Request for [GetInstance][google.cloud.redis.v1beta1.CloudRedis.GetInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceRequest : pb::IMessage<GetInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4518,6 +4528,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Request for [GetInstanceAuthString][google.cloud.redis.v1beta1.CloudRedis.GetInstanceAuthString].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceAuthStringRequest : pb::IMessage<GetInstanceAuthStringRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4715,6 +4726,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Instance AUTH string details.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InstanceAuthString : pb::IMessage<InstanceAuthString>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4910,6 +4922,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Request for [CreateInstance][google.cloud.redis.v1beta1.CloudRedis.CreateInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateInstanceRequest : pb::IMessage<CreateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5203,6 +5216,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Request for [UpdateInstance][google.cloud.redis.v1beta1.CloudRedis.UpdateInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateInstanceRequest : pb::IMessage<UpdateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5465,6 +5479,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Request for [UpgradeInstance][google.cloud.redis.v1beta1.CloudRedis.UpgradeInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpgradeInstanceRequest : pb::IMessage<UpgradeInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5702,6 +5717,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Request for [DeleteInstance][google.cloud.redis.v1beta1.CloudRedis.DeleteInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteInstanceRequest : pb::IMessage<DeleteInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5899,6 +5915,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// The Cloud Storage location for the input content
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6094,6 +6111,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// The input content
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InputConfig : pb::IMessage<InputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6332,6 +6350,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Request for [Import][google.cloud.redis.v1beta1.CloudRedis.ImportInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportInstanceRequest : pb::IMessage<ImportInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6578,6 +6597,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// The Cloud Storage location for the output content
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDestination : pb::IMessage<GcsDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6774,6 +6794,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// The output content
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OutputConfig : pb::IMessage<OutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7012,6 +7033,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Request for [Export][google.cloud.redis.v1beta1.CloudRedis.ExportInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportInstanceRequest : pb::IMessage<ExportInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7258,6 +7280,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// Request for [Failover][google.cloud.redis.v1beta1.CloudRedis.FailoverInstance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FailoverInstanceRequest : pb::IMessage<FailoverInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7529,6 +7552,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// only. It is returned as content of the
   /// `google.cloud.location.Location.metadata` field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocationMetadata : pb::IMessage<LocationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7667,7 +7691,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (other == null) {
         return;
       }
-      availableZones_.Add(other.availableZones_);
+      availableZones_.MergeFrom(other.availableZones_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -7717,6 +7741,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// Defines specific information for a particular zone. Currently empty and
   /// reserved for future use only.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ZoneMetadata : pb::IMessage<ZoneMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7872,6 +7897,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// <summary>
   /// TlsCertificate Resource
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TlsCertificate : pb::IMessage<TlsCertificate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

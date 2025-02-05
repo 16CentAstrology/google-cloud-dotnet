@@ -206,247 +206,256 @@ namespace Google.Cloud.Asset.V1 {
             "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNhdmVkUXVlcnlCA+BBAhI0Cgt1cGRh",
             "dGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BB",
             "AiJVChdEZWxldGVTYXZlZFF1ZXJ5UmVxdWVzdBI6CgRuYW1lGAEgASgJQizg",
-            "QQL6QSYKJGNsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb20vU2F2ZWRRdWVyeSLW",
-            "AQoSQW5hbHl6ZU1vdmVSZXF1ZXN0EhUKCHJlc291cmNlGAEgASgJQgPgQQIS",
-            "HwoSZGVzdGluYXRpb25fcGFyZW50GAIgASgJQgPgQQISRAoEdmlldxgDIAEo",
-            "DjI2Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplTW92ZVJlcXVlc3Qu",
-            "QW5hbHlzaXNWaWV3IkIKDEFuYWx5c2lzVmlldxIdChlBTkFMWVNJU19WSUVX",
-            "X1VOU1BFQ0lGSUVEEAASCAoERlVMTBABEgkKBUJBU0lDEAIiUQoTQW5hbHl6",
-            "ZU1vdmVSZXNwb25zZRI6Cg1tb3ZlX2FuYWx5c2lzGAEgAygLMiMuZ29vZ2xl",
-            "LmNsb3VkLmFzc2V0LnYxLk1vdmVBbmFseXNpcyKSAQoMTW92ZUFuYWx5c2lz",
-            "EhQKDGRpc3BsYXlfbmFtZRgBIAEoCRI9CghhbmFseXNpcxgCIAEoCzIpLmdv",
-            "b2dsZS5jbG91ZC5hc3NldC52MS5Nb3ZlQW5hbHlzaXNSZXN1bHRIABIjCgVl",
-            "cnJvchgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzSABCCAoGcmVzdWx0In4K",
-            "Ek1vdmVBbmFseXNpc1Jlc3VsdBIzCghibG9ja2VycxgBIAMoCzIhLmdvb2ds",
-            "ZS5jbG91ZC5hc3NldC52MS5Nb3ZlSW1wYWN0EjMKCHdhcm5pbmdzGAIgAygL",
-            "MiEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLk1vdmVJbXBhY3QiHAoKTW92ZUlt",
-            "cGFjdBIOCgZkZXRhaWwYASABKAki1wEKF1F1ZXJ5QXNzZXRzT3V0cHV0Q29u",
-            "ZmlnEmAKFGJpZ3F1ZXJ5X2Rlc3RpbmF0aW9uGAEgASgLMkIuZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLlF1ZXJ5QXNzZXRzT3V0cHV0Q29uZmlnLkJpZ1F1ZXJ5",
-            "RGVzdGluYXRpb24aWgoTQmlnUXVlcnlEZXN0aW5hdGlvbhIUCgdkYXRhc2V0",
-            "GAEgASgJQgPgQQISEgoFdGFibGUYAiABKAlCA+BBAhIZChF3cml0ZV9kaXNw",
-            "b3NpdGlvbhgDIAEoCSK+AwoSUXVlcnlBc3NldHNSZXF1ZXN0EjcKBnBhcmVu",
-            "dBgBIAEoCUIn4EEC+kEhEh9jbG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29tL0Fz",
-            "c2V0EhgKCXN0YXRlbWVudBgCIAEoCUID4EEBSAASHAoNam9iX3JlZmVyZW5j",
-            "ZRgDIAEoCUID4EEBSAASFgoJcGFnZV9zaXplGAQgASgFQgPgQQESFwoKcGFn",
-            "ZV90b2tlbhgFIAEoCUID4EEBEi8KB3RpbWVvdXQYBiABKAsyGS5nb29nbGUu",
-            "cHJvdG9idWYuRHVyYXRpb25CA+BBARJCChByZWFkX3RpbWVfd2luZG93GAcg",
-            "ASgLMiEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlRpbWVXaW5kb3dCA+BBAUgB",
-            "EjQKCXJlYWRfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAUgBEkoKDW91dHB1dF9jb25maWcYCSABKAsyLi5nb29nbGUuY2xv",
-            "dWQuYXNzZXQudjEuUXVlcnlBc3NldHNPdXRwdXRDb25maWdCA+BBAUIHCgVx",
-            "dWVyeUIGCgR0aW1lIvABChNRdWVyeUFzc2V0c1Jlc3BvbnNlEhUKDWpvYl9y",
-            "ZWZlcmVuY2UYASABKAkSDAoEZG9uZRgCIAEoCBIjCgVlcnJvchgDIAEoCzIS",
-            "Lmdvb2dsZS5ycGMuU3RhdHVzSAASOgoMcXVlcnlfcmVzdWx0GAQgASgLMiIu",
-            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLlF1ZXJ5UmVzdWx0SAASRwoNb3V0cHV0",
-            "X2NvbmZpZxgFIAEoCzIuLmdvb2dsZS5jbG91ZC5hc3NldC52MS5RdWVyeUFz",
-            "c2V0c091dHB1dENvbmZpZ0gAQgoKCHJlc3BvbnNlIpUBCgtRdWVyeVJlc3Vs",
-            "dBIlCgRyb3dzGAEgAygLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBIyCgZz",
-            "Y2hlbWEYAiABKAsyIi5nb29nbGUuY2xvdWQuYXNzZXQudjEuVGFibGVTY2hl",
-            "bWESFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJEhIKCnRvdGFsX3Jvd3MYBCAB",
-            "KAMiRgoLVGFibGVTY2hlbWESNwoGZmllbGRzGAEgAygLMicuZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLlRhYmxlRmllbGRTY2hlbWEidgoQVGFibGVGaWVsZFNj",
-            "aGVtYRINCgVmaWVsZBgBIAEoCRIMCgR0eXBlGAIgASgJEgwKBG1vZGUYAyAB",
-            "KAkSNwoGZmllbGRzGAQgAygLMicuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlRh",
-            "YmxlRmllbGRTY2hlbWEiWQojQmF0Y2hHZXRFZmZlY3RpdmVJYW1Qb2xpY2ll",
-            "c1JlcXVlc3QSGAoFc2NvcGUYASABKAlCCeBBAvpBAxIBKhIYCgVuYW1lcxgD",
-            "IAMoCUIJ4EEC+kEDCgEqIv4CCiRCYXRjaEdldEVmZmVjdGl2ZUlhbVBvbGlj",
-            "aWVzUmVzcG9uc2USZgoOcG9saWN5X3Jlc3VsdHMYAiADKAsyTi5nb29nbGUu",
-            "Y2xvdWQuYXNzZXQudjEuQmF0Y2hHZXRFZmZlY3RpdmVJYW1Qb2xpY2llc1Jl",
-            "c3BvbnNlLkVmZmVjdGl2ZUlhbVBvbGljeRrtAQoSRWZmZWN0aXZlSWFtUG9s",
-            "aWN5EhoKEmZ1bGxfcmVzb3VyY2VfbmFtZRgBIAEoCRJrCghwb2xpY2llcxgC",
-            "IAMoCzJZLmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRjaEdldEVmZmVjdGl2",
-            "ZUlhbVBvbGljaWVzUmVzcG9uc2UuRWZmZWN0aXZlSWFtUG9saWN5LlBvbGlj",
-            "eUluZm8aTgoKUG9saWN5SW5mbxIZChFhdHRhY2hlZF9yZXNvdXJjZRgBIAEo",
-            "CRIlCgZwb2xpY3kYAiABKAsyFS5nb29nbGUuaWFtLnYxLlBvbGljeSKyAwoR",
-            "QW5hbHl6ZXJPcmdQb2xpY3kSGQoRYXR0YWNoZWRfcmVzb3VyY2UYASABKAkS",
-            "GAoQYXBwbGllZF9yZXNvdXJjZRgFIAEoCRI8CgVydWxlcxgCIAMoCzItLmdv",
-            "b2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGljeS5SdWxlEhsK",
-            "E2luaGVyaXRfZnJvbV9wYXJlbnQYAyABKAgSDQoFcmVzZXQYBCABKAga/QEK",
-            "BFJ1bGUSTAoGdmFsdWVzGAMgASgLMjouZ29vZ2xlLmNsb3VkLmFzc2V0LnYx",
-            "LkFuYWx5emVyT3JnUG9saWN5LlJ1bGUuU3RyaW5nVmFsdWVzSAASEwoJYWxs",
-            "b3dfYWxsGAQgASgISAASEgoIZGVueV9hbGwYBSABKAhIABIRCgdlbmZvcmNl",
-            "GAYgASgISAASJAoJY29uZGl0aW9uGAcgASgLMhEuZ29vZ2xlLnR5cGUuRXhw",
-            "cho9CgxTdHJpbmdWYWx1ZXMSFgoOYWxsb3dlZF92YWx1ZXMYASADKAkSFQoN",
-            "ZGVuaWVkX3ZhbHVlcxgCIAMoCUIGCgRraW5kIpEKChtBbmFseXplck9yZ1Bv",
-            "bGljeUNvbnN0cmFpbnQSYgoZZ29vZ2xlX2RlZmluZWRfY29uc3RyYWludBgB",
-            "IAEoCzI9Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGlj",
-            "eUNvbnN0cmFpbnQuQ29uc3RyYWludEgAEmAKEWN1c3RvbV9jb25zdHJhaW50",
-            "GAIgASgLMkMuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVyT3JnUG9s",
-            "aWN5Q29uc3RyYWludC5DdXN0b21Db25zdHJhaW50SAAavwQKCkNvbnN0cmFp",
-            "bnQSDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkSEwoLZGVz",
-            "Y3JpcHRpb24YAyABKAkSawoSY29uc3RyYWludF9kZWZhdWx0GAQgASgOMk8u",
+            "QQL6QSYKJGNsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb20vU2F2ZWRRdWVyeSKM",
+            "AgoSQW5hbHl6ZU1vdmVSZXF1ZXN0EkUKCHJlc291cmNlGAEgASgJQjPgQQL6",
+            "QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2pl",
+            "Y3QSJQoSZGVzdGluYXRpb25fcGFyZW50GAIgASgJQgngQQL6QQMKASoSRAoE",
+            "dmlldxgDIAEoDjI2Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplTW92",
+            "ZVJlcXVlc3QuQW5hbHlzaXNWaWV3IkIKDEFuYWx5c2lzVmlldxIdChlBTkFM",
+            "WVNJU19WSUVXX1VOU1BFQ0lGSUVEEAASCAoERlVMTBABEgkKBUJBU0lDEAIi",
+            "UQoTQW5hbHl6ZU1vdmVSZXNwb25zZRI6Cg1tb3ZlX2FuYWx5c2lzGAEgAygL",
+            "MiMuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLk1vdmVBbmFseXNpcyKSAQoMTW92",
+            "ZUFuYWx5c2lzEhQKDGRpc3BsYXlfbmFtZRgBIAEoCRI9CghhbmFseXNpcxgC",
+            "IAEoCzIpLmdvb2dsZS5jbG91ZC5hc3NldC52MS5Nb3ZlQW5hbHlzaXNSZXN1",
+            "bHRIABIjCgVlcnJvchgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzSABCCAoG",
+            "cmVzdWx0In4KEk1vdmVBbmFseXNpc1Jlc3VsdBIzCghibG9ja2VycxgBIAMo",
+            "CzIhLmdvb2dsZS5jbG91ZC5hc3NldC52MS5Nb3ZlSW1wYWN0EjMKCHdhcm5p",
+            "bmdzGAIgAygLMiEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLk1vdmVJbXBhY3Qi",
+            "HAoKTW92ZUltcGFjdBIOCgZkZXRhaWwYASABKAki1wEKF1F1ZXJ5QXNzZXRz",
+            "T3V0cHV0Q29uZmlnEmAKFGJpZ3F1ZXJ5X2Rlc3RpbmF0aW9uGAEgASgLMkIu",
+            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLlF1ZXJ5QXNzZXRzT3V0cHV0Q29uZmln",
+            "LkJpZ1F1ZXJ5RGVzdGluYXRpb24aWgoTQmlnUXVlcnlEZXN0aW5hdGlvbhIU",
+            "CgdkYXRhc2V0GAEgASgJQgPgQQISEgoFdGFibGUYAiABKAlCA+BBAhIZChF3",
+            "cml0ZV9kaXNwb3NpdGlvbhgDIAEoCSK+AwoSUXVlcnlBc3NldHNSZXF1ZXN0",
+            "EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhEh9jbG91ZGFzc2V0Lmdvb2dsZWFw",
+            "aXMuY29tL0Fzc2V0EhgKCXN0YXRlbWVudBgCIAEoCUID4EEBSAASHAoNam9i",
+            "X3JlZmVyZW5jZRgDIAEoCUID4EEBSAASFgoJcGFnZV9zaXplGAQgASgFQgPg",
+            "QQESFwoKcGFnZV90b2tlbhgFIAEoCUID4EEBEi8KB3RpbWVvdXQYBiABKAsy",
+            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBARJCChByZWFkX3RpbWVf",
+            "d2luZG93GAcgASgLMiEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlRpbWVXaW5k",
+            "b3dCA+BBAUgBEjQKCXJlYWRfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAUgBEkoKDW91dHB1dF9jb25maWcYCSABKAsyLi5n",
+            "b29nbGUuY2xvdWQuYXNzZXQudjEuUXVlcnlBc3NldHNPdXRwdXRDb25maWdC",
+            "A+BBAUIHCgVxdWVyeUIGCgR0aW1lIvABChNRdWVyeUFzc2V0c1Jlc3BvbnNl",
+            "EhUKDWpvYl9yZWZlcmVuY2UYASABKAkSDAoEZG9uZRgCIAEoCBIjCgVlcnJv",
+            "chgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzSAASOgoMcXVlcnlfcmVzdWx0",
+            "GAQgASgLMiIuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlF1ZXJ5UmVzdWx0SAAS",
+            "RwoNb3V0cHV0X2NvbmZpZxgFIAEoCzIuLmdvb2dsZS5jbG91ZC5hc3NldC52",
+            "MS5RdWVyeUFzc2V0c091dHB1dENvbmZpZ0gAQgoKCHJlc3BvbnNlIpUBCgtR",
+            "dWVyeVJlc3VsdBIlCgRyb3dzGAEgAygLMhcuZ29vZ2xlLnByb3RvYnVmLlN0",
+            "cnVjdBIyCgZzY2hlbWEYAiABKAsyIi5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
+            "VGFibGVTY2hlbWESFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJEhIKCnRvdGFs",
+            "X3Jvd3MYBCABKAMiRgoLVGFibGVTY2hlbWESNwoGZmllbGRzGAEgAygLMicu",
+            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLlRhYmxlRmllbGRTY2hlbWEidgoQVGFi",
+            "bGVGaWVsZFNjaGVtYRINCgVmaWVsZBgBIAEoCRIMCgR0eXBlGAIgASgJEgwK",
+            "BG1vZGUYAyABKAkSNwoGZmllbGRzGAQgAygLMicuZ29vZ2xlLmNsb3VkLmFz",
+            "c2V0LnYxLlRhYmxlRmllbGRTY2hlbWEiWQojQmF0Y2hHZXRFZmZlY3RpdmVJ",
+            "YW1Qb2xpY2llc1JlcXVlc3QSGAoFc2NvcGUYASABKAlCCeBBAvpBAxIBKhIY",
+            "CgVuYW1lcxgDIAMoCUIJ4EEC+kEDCgEqIv4CCiRCYXRjaEdldEVmZmVjdGl2",
+            "ZUlhbVBvbGljaWVzUmVzcG9uc2USZgoOcG9saWN5X3Jlc3VsdHMYAiADKAsy",
+            "Ti5nb29nbGUuY2xvdWQuYXNzZXQudjEuQmF0Y2hHZXRFZmZlY3RpdmVJYW1Q",
+            "b2xpY2llc1Jlc3BvbnNlLkVmZmVjdGl2ZUlhbVBvbGljeRrtAQoSRWZmZWN0",
+            "aXZlSWFtUG9saWN5EhoKEmZ1bGxfcmVzb3VyY2VfbmFtZRgBIAEoCRJrCghw",
+            "b2xpY2llcxgCIAMoCzJZLmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRjaEdl",
+            "dEVmZmVjdGl2ZUlhbVBvbGljaWVzUmVzcG9uc2UuRWZmZWN0aXZlSWFtUG9s",
+            "aWN5LlBvbGljeUluZm8aTgoKUG9saWN5SW5mbxIZChFhdHRhY2hlZF9yZXNv",
+            "dXJjZRgBIAEoCRIlCgZwb2xpY3kYAiABKAsyFS5nb29nbGUuaWFtLnYxLlBv",
+            "bGljeSL8AwoRQW5hbHl6ZXJPcmdQb2xpY3kSGQoRYXR0YWNoZWRfcmVzb3Vy",
+            "Y2UYASABKAkSGAoQYXBwbGllZF9yZXNvdXJjZRgFIAEoCRI8CgVydWxlcxgC",
+            "IAMoCzItLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGlj",
+            "eS5SdWxlEhsKE2luaGVyaXRfZnJvbV9wYXJlbnQYAyABKAgSDQoFcmVzZXQY",
+            "BCABKAgaxwIKBFJ1bGUSTAoGdmFsdWVzGAMgASgLMjouZ29vZ2xlLmNsb3Vk",
+            "LmFzc2V0LnYxLkFuYWx5emVyT3JnUG9saWN5LlJ1bGUuU3RyaW5nVmFsdWVz",
+            "SAASEwoJYWxsb3dfYWxsGAQgASgISAASEgoIZGVueV9hbGwYBSABKAhIABIR",
+            "CgdlbmZvcmNlGAYgASgISAASJAoJY29uZGl0aW9uGAcgASgLMhEuZ29vZ2xl",
+            "LnR5cGUuRXhwchJIChRjb25kaXRpb25fZXZhbHVhdGlvbhgIIAEoCzIqLmdv",
+            "b2dsZS5jbG91ZC5hc3NldC52MS5Db25kaXRpb25FdmFsdWF0aW9uGj0KDFN0",
+            "cmluZ1ZhbHVlcxIWCg5hbGxvd2VkX3ZhbHVlcxgBIAMoCRIVCg1kZW5pZWRf",
+            "dmFsdWVzGAIgAygJQgYKBGtpbmQikQoKG0FuYWx5emVyT3JnUG9saWN5Q29u",
+            "c3RyYWludBJiChlnb29nbGVfZGVmaW5lZF9jb25zdHJhaW50GAEgASgLMj0u",
             "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVyT3JnUG9saWN5Q29uc3Ry",
-            "YWludC5Db25zdHJhaW50LkNvbnN0cmFpbnREZWZhdWx0EmcKD2xpc3RfY29u",
-            "c3RyYWludBgFIAEoCzJMLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXpl",
-            "ck9yZ1BvbGljeUNvbnN0cmFpbnQuQ29uc3RyYWludC5MaXN0Q29uc3RyYWlu",
-            "dEgAEm0KEmJvb2xlYW5fY29uc3RyYWludBgGIAEoCzJPLmdvb2dsZS5jbG91",
-            "ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGljeUNvbnN0cmFpbnQuQ29uc3Ry",
-            "YWludC5Cb29sZWFuQ29uc3RyYWludEgAGj0KDkxpc3RDb25zdHJhaW50EhMK",
-            "C3N1cHBvcnRzX2luGAEgASgIEhYKDnN1cHBvcnRzX3VuZGVyGAIgASgIGhMK",
-            "EUJvb2xlYW5Db25zdHJhaW50IkwKEUNvbnN0cmFpbnREZWZhdWx0EiIKHkNP",
-            "TlNUUkFJTlRfREVGQVVMVF9VTlNQRUNJRklFRBAAEgkKBUFMTE9XEAESCAoE",
-            "REVOWRACQhEKD2NvbnN0cmFpbnRfdHlwZRrQAwoQQ3VzdG9tQ29uc3RyYWlu",
-            "dBIMCgRuYW1lGAEgASgJEhYKDnJlc291cmNlX3R5cGVzGAIgAygJEmQKDG1l",
-            "dGhvZF90eXBlcxgDIAMoDjJOLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFs",
-            "eXplck9yZ1BvbGljeUNvbnN0cmFpbnQuQ3VzdG9tQ29uc3RyYWludC5NZXRo",
-            "b2RUeXBlEhEKCWNvbmRpdGlvbhgEIAEoCRJjCgthY3Rpb25fdHlwZRgFIAEo",
-            "DjJOLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGljeUNv",
-            "bnN0cmFpbnQuQ3VzdG9tQ29uc3RyYWludC5BY3Rpb25UeXBlEhQKDGRpc3Bs",
-            "YXlfbmFtZRgGIAEoCRITCgtkZXNjcmlwdGlvbhgHIAEoCSJNCgpNZXRob2RU",
-            "eXBlEhsKF01FVEhPRF9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGQ1JFQVRFEAES",
-            "CgoGVVBEQVRFEAISCgoGREVMRVRFEAMiPgoKQWN0aW9uVHlwZRIbChdBQ1RJ",
-            "T05fVFlQRV9VTlNQRUNJRklFRBAAEgkKBUFMTE9XEAESCAoEREVOWRACQhcK",
-            "FWNvbnN0cmFpbnRfZGVmaW5pdGlvbiKSAQoZQW5hbHl6ZU9yZ1BvbGljaWVz",
-            "UmVxdWVzdBISCgVzY29wZRgBIAEoCUID4EECEhcKCmNvbnN0cmFpbnQYAiAB",
-            "KAlCA+BBAhIOCgZmaWx0ZXIYAyABKAkSFgoJcGFnZV9zaXplGAQgASgFSACI",
-            "AQESEgoKcGFnZV90b2tlbhgFIAEoCUIMCgpfcGFnZV9zaXplIvgCChpBbmFs",
-            "eXplT3JnUG9saWNpZXNSZXNwb25zZRJdChJvcmdfcG9saWN5X3Jlc3VsdHMY",
-            "ASADKAsyQS5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZU9yZ1BvbGlj",
-            "aWVzUmVzcG9uc2UuT3JnUG9saWN5UmVzdWx0EkYKCmNvbnN0cmFpbnQYAiAB",
-            "KAsyMi5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZXJPcmdQb2xpY3lD",
-            "b25zdHJhaW50EhcKD25leHRfcGFnZV90b2tlbhgDIAEoCRqZAQoPT3JnUG9s",
-            "aWN5UmVzdWx0EkUKE2NvbnNvbGlkYXRlZF9wb2xpY3kYASABKAsyKC5nb29n",
-            "bGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZXJPcmdQb2xpY3kSPwoNcG9saWN5",
-            "X2J1bmRsZRgCIAMoCzIoLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXpl",
-            "ck9yZ1BvbGljeSKiAQopQW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQ29udGFp",
-            "bmVyc1JlcXVlc3QSEgoFc2NvcGUYASABKAlCA+BBAhIXCgpjb25zdHJhaW50",
-            "GAIgASgJQgPgQQISDgoGZmlsdGVyGAMgASgJEhYKCXBhZ2Vfc2l6ZRgEIAEo",
-            "BUgAiAEBEhIKCnBhZ2VfdG9rZW4YBSABKAlCDAoKX3BhZ2Vfc2l6ZSLJAwoq",
-            "QW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQ29udGFpbmVyc1Jlc3BvbnNlEnAK",
-            "E2dvdmVybmVkX2NvbnRhaW5lcnMYASADKAsyUy5nb29nbGUuY2xvdWQuYXNz",
-            "ZXQudjEuQW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQ29udGFpbmVyc1Jlc3Bv",
-            "bnNlLkdvdmVybmVkQ29udGFpbmVyEkYKCmNvbnN0cmFpbnQYAiABKAsyMi5n",
-            "b29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZXJPcmdQb2xpY3lDb25zdHJh",
-            "aW50EhcKD25leHRfcGFnZV90b2tlbhgDIAEoCRrHAQoRR292ZXJuZWRDb250",
-            "YWluZXISGgoSZnVsbF9yZXNvdXJjZV9uYW1lGAEgASgJEg4KBnBhcmVudBgC",
-            "IAEoCRJFChNjb25zb2xpZGF0ZWRfcG9saWN5GAMgASgLMiguZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLkFuYWx5emVyT3JnUG9saWN5Ej8KDXBvbGljeV9idW5k",
-            "bGUYBCADKAsyKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZXJPcmdQ",
-            "b2xpY3kingEKJUFuYWx5emVPcmdQb2xpY3lHb3Zlcm5lZEFzc2V0c1JlcXVl",
-            "c3QSEgoFc2NvcGUYASABKAlCA+BBAhIXCgpjb25zdHJhaW50GAIgASgJQgPg",
-            "QQISDgoGZmlsdGVyGAMgASgJEhYKCXBhZ2Vfc2l6ZRgEIAEoBUgAiAEBEhIK",
-            "CnBhZ2VfdG9rZW4YBSABKAlCDAoKX3BhZ2Vfc2l6ZSKABwomQW5hbHl6ZU9y",
-            "Z1BvbGljeUdvdmVybmVkQXNzZXRzUmVzcG9uc2USZAoPZ292ZXJuZWRfYXNz",
-            "ZXRzGAEgAygLMksuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVPcmdQ",
-            "b2xpY3lHb3Zlcm5lZEFzc2V0c1Jlc3BvbnNlLkdvdmVybmVkQXNzZXQSRgoK",
-            "Y29uc3RyYWludBgCIAEoCzIyLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFs",
-            "eXplck9yZ1BvbGljeUNvbnN0cmFpbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAMg",
-            "ASgJGnYKEEdvdmVybmVkUmVzb3VyY2USGgoSZnVsbF9yZXNvdXJjZV9uYW1l",
-            "GAEgASgJEg4KBnBhcmVudBgCIAEoCRIPCgdwcm9qZWN0GAUgASgJEg8KB2Zv",
-            "bGRlcnMYBiADKAkSFAoMb3JnYW5pemF0aW9uGAcgASgJGo0BChFHb3Zlcm5l",
-            "ZElhbVBvbGljeRIZChFhdHRhY2hlZF9yZXNvdXJjZRgBIAEoCRIlCgZwb2xp",
-            "Y3kYAiABKAsyFS5nb29nbGUuaWFtLnYxLlBvbGljeRIPCgdwcm9qZWN0GAUg",
-            "ASgJEg8KB2ZvbGRlcnMYBiADKAkSFAoMb3JnYW5pemF0aW9uGAcgASgJGoYD",
-            "Cg1Hb3Zlcm5lZEFzc2V0EmsKEWdvdmVybmVkX3Jlc291cmNlGAEgASgLMk4u",
-            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVPcmdQb2xpY3lHb3Zlcm5l",
-            "ZEFzc2V0c1Jlc3BvbnNlLkdvdmVybmVkUmVzb3VyY2VIABJuChNnb3Zlcm5l",
-            "ZF9pYW1fcG9saWN5GAIgASgLMk8uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFu",
-            "YWx5emVPcmdQb2xpY3lHb3Zlcm5lZEFzc2V0c1Jlc3BvbnNlLkdvdmVybmVk",
-            "SWFtUG9saWN5SAASRQoTY29uc29saWRhdGVkX3BvbGljeRgDIAEoCzIoLmdv",
-            "b2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGljeRI/Cg1wb2xp",
-            "Y3lfYnVuZGxlGAQgAygLMiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5",
-            "emVyT3JnUG9saWN5QhAKDmdvdmVybmVkX2Fzc2V0KpABCgtDb250ZW50VHlw",
-            "ZRIcChhDT05URU5UX1RZUEVfVU5TUEVDSUZJRUQQABIMCghSRVNPVVJDRRAB",
-            "Eg4KCklBTV9QT0xJQ1kQAhIOCgpPUkdfUE9MSUNZEAQSEQoNQUNDRVNTX1BP",
-            "TElDWRAFEhAKDE9TX0lOVkVOVE9SWRAGEhAKDFJFTEFUSU9OU0hJUBAHMtEg",
-            "CgxBc3NldFNlcnZpY2US3gEKDEV4cG9ydEFzc2V0cxIqLmdvb2dsZS5jbG91",
-            "ZC5hc3NldC52MS5FeHBvcnRBc3NldHNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiKCAYLT5JMCIiIdL3YxL3twYXJlbnQ9Ki8qfTpl",
-            "eHBvcnRBc3NldHM6ASrKQVcKKmdvb2dsZS5jbG91ZC5hc3NldC52MS5FeHBv",
-            "cnRBc3NldHNSZXNwb25zZRIpZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkV4cG9y",
-            "dEFzc2V0c1JlcXVlc3QSiwEKCkxpc3RBc3NldHMSKC5nb29nbGUuY2xvdWQu",
-            "YXNzZXQudjEuTGlzdEFzc2V0c1JlcXVlc3QaKS5nb29nbGUuY2xvdWQuYXNz",
-            "ZXQudjEuTGlzdEFzc2V0c1Jlc3BvbnNlIiiC0+STAhkSFy92MS97cGFyZW50",
-            "PSovKn0vYXNzZXRz2kEGcGFyZW50ErIBChVCYXRjaEdldEFzc2V0c0hpc3Rv",
-            "cnkSMy5nb29nbGUuY2xvdWQuYXNzZXQudjEuQmF0Y2hHZXRBc3NldHNIaXN0",
-            "b3J5UmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRjaEdldEFz",
-            "c2V0c0hpc3RvcnlSZXNwb25zZSIugtPkkwIoEiYvdjEve3BhcmVudD0qLyp9",
-            "OmJhdGNoR2V0QXNzZXRzSGlzdG9yeRJ/CgpDcmVhdGVGZWVkEiguZ29vZ2xl",
-            "LmNsb3VkLmFzc2V0LnYxLkNyZWF0ZUZlZWRSZXF1ZXN0GhsuZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLkZlZWQiKoLT5JMCGyIWL3YxL3twYXJlbnQ9Ki8qfS9m",
-            "ZWVkczoBKtpBBnBhcmVudBJ0CgdHZXRGZWVkEiUuZ29vZ2xlLmNsb3VkLmFz",
-            "c2V0LnYxLkdldEZlZWRSZXF1ZXN0GhsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYx",
-            "LkZlZWQiJYLT5JMCGBIWL3YxL3tuYW1lPSovKi9mZWVkcy8qfdpBBG5hbWUS",
-            "hwEKCUxpc3RGZWVkcxInLmdvb2dsZS5jbG91ZC5hc3NldC52MS5MaXN0RmVl",
-            "ZHNSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkxpc3RGZWVkc1Jl",
-            "c3BvbnNlIieC0+STAhgSFi92MS97cGFyZW50PSovKn0vZmVlZHPaQQZwYXJl",
-            "bnQSggEKClVwZGF0ZUZlZWQSKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuVXBk",
-            "YXRlRmVlZFJlcXVlc3QaGy5nb29nbGUuY2xvdWQuYXNzZXQudjEuRmVlZCIt",
-            "gtPkkwIgMhsvdjEve2ZlZWQubmFtZT0qLyovZmVlZHMvKn06ASraQQRmZWVk",
-            "EnUKCkRlbGV0ZUZlZWQSKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuRGVsZXRl",
-            "RmVlZFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiJYLT5JMCGCoW",
-            "L3YxL3tuYW1lPSovKi9mZWVkcy8qfdpBBG5hbWUSvwEKElNlYXJjaEFsbFJl",
-            "c291cmNlcxIwLmdvb2dsZS5jbG91ZC5hc3NldC52MS5TZWFyY2hBbGxSZXNv",
-            "dXJjZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNlYXJjaEFs",
-            "bFJlc291cmNlc1Jlc3BvbnNlIkSC0+STAiQSIi92MS97c2NvcGU9Ki8qfTpz",
-            "ZWFyY2hBbGxSZXNvdXJjZXPaQRdzY29wZSxxdWVyeSxhc3NldF90eXBlcxK7",
-            "AQoUU2VhcmNoQWxsSWFtUG9saWNpZXMSMi5nb29nbGUuY2xvdWQuYXNzZXQu",
-            "djEuU2VhcmNoQWxsSWFtUG9saWNpZXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3Vk",
-            "LmFzc2V0LnYxLlNlYXJjaEFsbElhbVBvbGljaWVzUmVzcG9uc2UiOoLT5JMC",
-            "JhIkL3YxL3tzY29wZT0qLyp9OnNlYXJjaEFsbElhbVBvbGljaWVz2kELc2Nv",
-            "cGUscXVlcnkSrAEKEEFuYWx5emVJYW1Qb2xpY3kSLi5nb29nbGUuY2xvdWQu",
-            "YXNzZXQudjEuQW5hbHl6ZUlhbVBvbGljeVJlcXVlc3QaLy5nb29nbGUuY2xv",
-            "dWQuYXNzZXQudjEuQW5hbHl6ZUlhbVBvbGljeVJlc3BvbnNlIjeC0+STAjES",
-            "Ly92MS97YW5hbHlzaXNfcXVlcnkuc2NvcGU9Ki8qfTphbmFseXplSWFtUG9s",
-            "aWN5ErgCChtBbmFseXplSWFtUG9saWN5TG9uZ3J1bm5pbmcSOS5nb29nbGUu",
-            "Y2xvdWQuYXNzZXQudjEuQW5hbHl6ZUlhbVBvbGljeUxvbmdydW5uaW5nUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ivgGC0+STAj8i",
-            "Oi92MS97YW5hbHlzaXNfcXVlcnkuc2NvcGU9Ki8qfTphbmFseXplSWFtUG9s",
-            "aWN5TG9uZ3J1bm5pbmc6ASrKQXYKOWdvb2dsZS5jbG91ZC5hc3NldC52MS5B",
-            "bmFseXplSWFtUG9saWN5TG9uZ3J1bm5pbmdSZXNwb25zZRI5Z29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLkFuYWx5emVJYW1Qb2xpY3lMb25ncnVubmluZ01ldGFk",
-            "YXRhEowBCgtBbmFseXplTW92ZRIpLmdvb2dsZS5jbG91ZC5hc3NldC52MS5B",
-            "bmFseXplTW92ZVJlcXVlc3QaKi5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5h",
-            "bHl6ZU1vdmVSZXNwb25zZSImgtPkkwIgEh4vdjEve3Jlc291cmNlPSovKn06",
-            "YW5hbHl6ZU1vdmUSjQEKC1F1ZXJ5QXNzZXRzEikuZ29vZ2xlLmNsb3VkLmFz",
-            "c2V0LnYxLlF1ZXJ5QXNzZXRzUmVxdWVzdBoqLmdvb2dsZS5jbG91ZC5hc3Nl",
-            "dC52MS5RdWVyeUFzc2V0c1Jlc3BvbnNlIieC0+STAiEiHC92MS97cGFyZW50",
-            "PSovKn06cXVlcnlBc3NldHM6ASoSvQEKEENyZWF0ZVNhdmVkUXVlcnkSLi5n",
-            "b29nbGUuY2xvdWQuYXNzZXQudjEuQ3JlYXRlU2F2ZWRRdWVyeVJlcXVlc3Qa",
-            "IS5nb29nbGUuY2xvdWQuYXNzZXQudjEuU2F2ZWRRdWVyeSJWgtPkkwIsIh0v",
-            "djEve3BhcmVudD0qLyp9L3NhdmVkUXVlcmllczoLc2F2ZWRfcXVlcnnaQSFw",
-            "YXJlbnQsc2F2ZWRfcXVlcnksc2F2ZWRfcXVlcnlfaWQSjQEKDUdldFNhdmVk",
-            "UXVlcnkSKy5nb29nbGUuY2xvdWQuYXNzZXQudjEuR2V0U2F2ZWRRdWVyeVJl",
-            "cXVlc3QaIS5nb29nbGUuY2xvdWQuYXNzZXQudjEuU2F2ZWRRdWVyeSIsgtPk",
-            "kwIfEh0vdjEve25hbWU9Ki8qL3NhdmVkUXVlcmllcy8qfdpBBG5hbWUSowEK",
-            "EExpc3RTYXZlZFF1ZXJpZXMSLi5nb29nbGUuY2xvdWQuYXNzZXQudjEuTGlz",
-            "dFNhdmVkUXVlcmllc1JlcXVlc3QaLy5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
-            "TGlzdFNhdmVkUXVlcmllc1Jlc3BvbnNlIi6C0+STAh8SHS92MS97cGFyZW50",
-            "PSovKn0vc2F2ZWRRdWVyaWVz2kEGcGFyZW50Er8BChBVcGRhdGVTYXZlZFF1",
-            "ZXJ5Ei4uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlVwZGF0ZVNhdmVkUXVlcnlS",
-            "ZXF1ZXN0GiEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNhdmVkUXVlcnkiWILT",
-            "5JMCODIpL3YxL3tzYXZlZF9xdWVyeS5uYW1lPSovKi9zYXZlZFF1ZXJpZXMv",
-            "Kn06C3NhdmVkX3F1ZXJ52kEXc2F2ZWRfcXVlcnksdXBkYXRlX21hc2sSiAEK",
-            "EERlbGV0ZVNhdmVkUXVlcnkSLi5nb29nbGUuY2xvdWQuYXNzZXQudjEuRGVs",
-            "ZXRlU2F2ZWRRdWVyeVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
-            "LILT5JMCHyodL3YxL3tuYW1lPSovKi9zYXZlZFF1ZXJpZXMvKn3aQQRuYW1l",
-            "Es4BChxCYXRjaEdldEVmZmVjdGl2ZUlhbVBvbGljaWVzEjouZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLkJhdGNoR2V0RWZmZWN0aXZlSWFtUG9saWNpZXNSZXF1",
-            "ZXN0GjsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkJhdGNoR2V0RWZmZWN0aXZl",
-            "SWFtUG9saWNpZXNSZXNwb25zZSI1gtPkkwIvEi0vdjEve3Njb3BlPSovKn0v",
-            "ZWZmZWN0aXZlSWFtUG9saWNpZXM6YmF0Y2hHZXQSvwEKEkFuYWx5emVPcmdQ",
-            "b2xpY2llcxIwLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplT3JnUG9s",
-            "aWNpZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVP",
-            "cmdQb2xpY2llc1Jlc3BvbnNlIkSC0+STAiQSIi92MS97c2NvcGU9Ki8qfTph",
-            "bmFseXplT3JnUG9saWNpZXPaQRdzY29wZSxjb25zdHJhaW50LGZpbHRlchL/",
-            "AQoiQW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQ29udGFpbmVycxJALmdvb2ds",
-            "ZS5jbG91ZC5hc3NldC52MS5BbmFseXplT3JnUG9saWN5R292ZXJuZWRDb250",
-            "YWluZXJzUmVxdWVzdBpBLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXpl",
-            "T3JnUG9saWN5R292ZXJuZWRDb250YWluZXJzUmVzcG9uc2UiVILT5JMCNBIy",
-            "L3YxL3tzY29wZT0qLyp9OmFuYWx5emVPcmdQb2xpY3lHb3Zlcm5lZENvbnRh",
-            "aW5lcnPaQRdzY29wZSxjb25zdHJhaW50LGZpbHRlchLvAQoeQW5hbHl6ZU9y",
-            "Z1BvbGljeUdvdmVybmVkQXNzZXRzEjwuZ29vZ2xlLmNsb3VkLmFzc2V0LnYx",
-            "LkFuYWx5emVPcmdQb2xpY3lHb3Zlcm5lZEFzc2V0c1JlcXVlc3QaPS5nb29n",
-            "bGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQXNz",
-            "ZXRzUmVzcG9uc2UiUILT5JMCMBIuL3YxL3tzY29wZT0qLyp9OmFuYWx5emVP",
-            "cmdQb2xpY3lHb3Zlcm5lZEFzc2V0c9pBF3Njb3BlLGNvbnN0cmFpbnQsZmls",
-            "dGVyGk3KQRljbG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKRAQoZY29t",
-            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MUIRQXNzZXRTZXJ2aWNlUHJvdG9QAVov",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9hc3NldC9hcGl2MS9hc3NldHBiO2Fzc2V0",
-            "cGKqAhVHb29nbGUuQ2xvdWQuQXNzZXQuVjHKAhVHb29nbGVcQ2xvdWRcQXNz",
-            "ZXRcVjFiBnByb3RvMw=="));
+            "YWludC5Db25zdHJhaW50SAASYAoRY3VzdG9tX2NvbnN0cmFpbnQYAiABKAsy",
+            "Qy5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZXJPcmdQb2xpY3lDb25z",
+            "dHJhaW50LkN1c3RvbUNvbnN0cmFpbnRIABq/BAoKQ29uc3RyYWludBIMCgRu",
+            "YW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlv",
+            "bhgDIAEoCRJrChJjb25zdHJhaW50X2RlZmF1bHQYBCABKA4yTy5nb29nbGUu",
+            "Y2xvdWQuYXNzZXQudjEuQW5hbHl6ZXJPcmdQb2xpY3lDb25zdHJhaW50LkNv",
+            "bnN0cmFpbnQuQ29uc3RyYWludERlZmF1bHQSZwoPbGlzdF9jb25zdHJhaW50",
+            "GAUgASgLMkwuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVyT3JnUG9s",
+            "aWN5Q29uc3RyYWludC5Db25zdHJhaW50Lkxpc3RDb25zdHJhaW50SAASbQoS",
+            "Ym9vbGVhbl9jb25zdHJhaW50GAYgASgLMk8uZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxLkFuYWx5emVyT3JnUG9saWN5Q29uc3RyYWludC5Db25zdHJhaW50LkJv",
+            "b2xlYW5Db25zdHJhaW50SAAaPQoOTGlzdENvbnN0cmFpbnQSEwoLc3VwcG9y",
+            "dHNfaW4YASABKAgSFgoOc3VwcG9ydHNfdW5kZXIYAiABKAgaEwoRQm9vbGVh",
+            "bkNvbnN0cmFpbnQiTAoRQ29uc3RyYWludERlZmF1bHQSIgoeQ09OU1RSQUlO",
+            "VF9ERUZBVUxUX1VOU1BFQ0lGSUVEEAASCQoFQUxMT1cQARIICgRERU5ZEAJC",
+            "EQoPY29uc3RyYWludF90eXBlGtADChBDdXN0b21Db25zdHJhaW50EgwKBG5h",
+            "bWUYASABKAkSFgoOcmVzb3VyY2VfdHlwZXMYAiADKAkSZAoMbWV0aG9kX3R5",
+            "cGVzGAMgAygOMk4uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVyT3Jn",
+            "UG9saWN5Q29uc3RyYWludC5DdXN0b21Db25zdHJhaW50Lk1ldGhvZFR5cGUS",
+            "EQoJY29uZGl0aW9uGAQgASgJEmMKC2FjdGlvbl90eXBlGAUgASgOMk4uZ29v",
+            "Z2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVyT3JnUG9saWN5Q29uc3RyYWlu",
+            "dC5DdXN0b21Db25zdHJhaW50LkFjdGlvblR5cGUSFAoMZGlzcGxheV9uYW1l",
+            "GAYgASgJEhMKC2Rlc2NyaXB0aW9uGAcgASgJIk0KCk1ldGhvZFR5cGUSGwoX",
+            "TUVUSE9EX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZDUkVBVEUQARIKCgZVUERB",
+            "VEUQAhIKCgZERUxFVEUQAyI+CgpBY3Rpb25UeXBlEhsKF0FDVElPTl9UWVBF",
+            "X1VOU1BFQ0lGSUVEEAASCQoFQUxMT1cQARIICgRERU5ZEAJCFwoVY29uc3Ry",
+            "YWludF9kZWZpbml0aW9uIpIBChlBbmFseXplT3JnUG9saWNpZXNSZXF1ZXN0",
+            "EhIKBXNjb3BlGAEgASgJQgPgQQISFwoKY29uc3RyYWludBgCIAEoCUID4EEC",
+            "Eg4KBmZpbHRlchgDIAEoCRIWCglwYWdlX3NpemUYBCABKAVIAIgBARISCgpw",
+            "YWdlX3Rva2VuGAUgASgJQgwKCl9wYWdlX3NpemUisAMKGkFuYWx5emVPcmdQ",
+            "b2xpY2llc1Jlc3BvbnNlEl0KEm9yZ19wb2xpY3lfcmVzdWx0cxgBIAMoCzJB",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplT3JnUG9saWNpZXNSZXNw",
+            "b25zZS5PcmdQb2xpY3lSZXN1bHQSRgoKY29uc3RyYWludBgCIAEoCzIyLmdv",
+            "b2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGljeUNvbnN0cmFp",
+            "bnQSFwoPbmV4dF9wYWdlX3Rva2VuGAMgASgJGtEBCg9PcmdQb2xpY3lSZXN1",
+            "bHQSRQoTY29uc29saWRhdGVkX3BvbGljeRgBIAEoCzIoLmdvb2dsZS5jbG91",
+            "ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGljeRI/Cg1wb2xpY3lfYnVuZGxl",
+            "GAIgAygLMiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVyT3JnUG9s",
+            "aWN5Eg8KB3Byb2plY3QYAyABKAkSDwoHZm9sZGVycxgEIAMoCRIUCgxvcmdh",
+            "bml6YXRpb24YBSABKAkiogEKKUFuYWx5emVPcmdQb2xpY3lHb3Zlcm5lZENv",
+            "bnRhaW5lcnNSZXF1ZXN0EhIKBXNjb3BlGAEgASgJQgPgQQISFwoKY29uc3Ry",
+            "YWludBgCIAEoCUID4EECEg4KBmZpbHRlchgDIAEoCRIWCglwYWdlX3NpemUY",
+            "BCABKAVIAIgBARISCgpwYWdlX3Rva2VuGAUgASgJQgwKCl9wYWdlX3NpemUi",
+            "xQQKKkFuYWx5emVPcmdQb2xpY3lHb3Zlcm5lZENvbnRhaW5lcnNSZXNwb25z",
+            "ZRJwChNnb3Zlcm5lZF9jb250YWluZXJzGAEgAygLMlMuZ29vZ2xlLmNsb3Vk",
+            "LmFzc2V0LnYxLkFuYWx5emVPcmdQb2xpY3lHb3Zlcm5lZENvbnRhaW5lcnNS",
+            "ZXNwb25zZS5Hb3Zlcm5lZENvbnRhaW5lchJGCgpjb25zdHJhaW50GAIgASgL",
+            "MjIuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVyT3JnUG9saWN5Q29u",
+            "c3RyYWludBIXCg9uZXh0X3BhZ2VfdG9rZW4YAyABKAkawwIKEUdvdmVybmVk",
+            "Q29udGFpbmVyEhoKEmZ1bGxfcmVzb3VyY2VfbmFtZRgBIAEoCRIOCgZwYXJl",
+            "bnQYAiABKAkSRQoTY29uc29saWRhdGVkX3BvbGljeRgDIAEoCzIoLmdvb2ds",
+            "ZS5jbG91ZC5hc3NldC52MS5BbmFseXplck9yZ1BvbGljeRI/Cg1wb2xpY3lf",
+            "YnVuZGxlGAQgAygLMiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVy",
+            "T3JnUG9saWN5Eg8KB3Byb2plY3QYBSABKAkSDwoHZm9sZGVycxgGIAMoCRIU",
+            "Cgxvcmdhbml6YXRpb24YByABKAkSQgoOZWZmZWN0aXZlX3RhZ3MYCCADKAsy",
+            "Ki5nb29nbGUuY2xvdWQuYXNzZXQudjEuRWZmZWN0aXZlVGFnRGV0YWlscyKe",
+            "AQolQW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQXNzZXRzUmVxdWVzdBISCgVz",
+            "Y29wZRgBIAEoCUID4EECEhcKCmNvbnN0cmFpbnQYAiABKAlCA+BBAhIOCgZm",
+            "aWx0ZXIYAyABKAkSFgoJcGFnZV9zaXplGAQgASgFSACIAQESEgoKcGFnZV90",
+            "b2tlbhgFIAEoCUIMCgpfcGFnZV9zaXplIu0HCiZBbmFseXplT3JnUG9saWN5",
+            "R292ZXJuZWRBc3NldHNSZXNwb25zZRJkCg9nb3Zlcm5lZF9hc3NldHMYASAD",
+            "KAsySy5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZU9yZ1BvbGljeUdv",
+            "dmVybmVkQXNzZXRzUmVzcG9uc2UuR292ZXJuZWRBc3NldBJGCgpjb25zdHJh",
+            "aW50GAIgASgLMjIuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVyT3Jn",
+            "UG9saWN5Q29uc3RyYWludBIXCg9uZXh0X3BhZ2VfdG9rZW4YAyABKAkazgEK",
+            "EEdvdmVybmVkUmVzb3VyY2USGgoSZnVsbF9yZXNvdXJjZV9uYW1lGAEgASgJ",
+            "Eg4KBnBhcmVudBgCIAEoCRIPCgdwcm9qZWN0GAUgASgJEg8KB2ZvbGRlcnMY",
+            "BiADKAkSFAoMb3JnYW5pemF0aW9uGAcgASgJEhIKCmFzc2V0X3R5cGUYCCAB",
+            "KAkSQgoOZWZmZWN0aXZlX3RhZ3MYCSADKAsyKi5nb29nbGUuY2xvdWQuYXNz",
+            "ZXQudjEuRWZmZWN0aXZlVGFnRGV0YWlscxqhAQoRR292ZXJuZWRJYW1Qb2xp",
+            "Y3kSGQoRYXR0YWNoZWRfcmVzb3VyY2UYASABKAkSJQoGcG9saWN5GAIgASgL",
+            "MhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kSDwoHcHJvamVjdBgFIAEoCRIPCgdm",
+            "b2xkZXJzGAYgAygJEhQKDG9yZ2FuaXphdGlvbhgHIAEoCRISCgphc3NldF90",
+            "eXBlGAggASgJGoYDCg1Hb3Zlcm5lZEFzc2V0EmsKEWdvdmVybmVkX3Jlc291",
+            "cmNlGAEgASgLMk4uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkFuYWx5emVPcmdQ",
+            "b2xpY3lHb3Zlcm5lZEFzc2V0c1Jlc3BvbnNlLkdvdmVybmVkUmVzb3VyY2VI",
+            "ABJuChNnb3Zlcm5lZF9pYW1fcG9saWN5GAIgASgLMk8uZ29vZ2xlLmNsb3Vk",
+            "LmFzc2V0LnYxLkFuYWx5emVPcmdQb2xpY3lHb3Zlcm5lZEFzc2V0c1Jlc3Bv",
+            "bnNlLkdvdmVybmVkSWFtUG9saWN5SAASRQoTY29uc29saWRhdGVkX3BvbGlj",
+            "eRgDIAEoCzIoLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplck9yZ1Bv",
+            "bGljeRI/Cg1wb2xpY3lfYnVuZGxlGAQgAygLMiguZ29vZ2xlLmNsb3VkLmFz",
+            "c2V0LnYxLkFuYWx5emVyT3JnUG9saWN5QhAKDmdvdmVybmVkX2Fzc2V0KpAB",
+            "CgtDb250ZW50VHlwZRIcChhDT05URU5UX1RZUEVfVU5TUEVDSUZJRUQQABIM",
+            "CghSRVNPVVJDRRABEg4KCklBTV9QT0xJQ1kQAhIOCgpPUkdfUE9MSUNZEAQS",
+            "EQoNQUNDRVNTX1BPTElDWRAFEhAKDE9TX0lOVkVOVE9SWRAGEhAKDFJFTEFU",
+            "SU9OU0hJUBAHMtEgCgxBc3NldFNlcnZpY2US3gEKDEV4cG9ydEFzc2V0cxIq",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5FeHBvcnRBc3NldHNSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKCAcpBVwoqZ29vZ2xlLmNs",
+            "b3VkLmFzc2V0LnYxLkV4cG9ydEFzc2V0c1Jlc3BvbnNlEilnb29nbGUuY2xv",
+            "dWQuYXNzZXQudjEuRXhwb3J0QXNzZXRzUmVxdWVzdILT5JMCIiIdL3YxL3tw",
+            "YXJlbnQ9Ki8qfTpleHBvcnRBc3NldHM6ASoSiwEKCkxpc3RBc3NldHMSKC5n",
+            "b29nbGUuY2xvdWQuYXNzZXQudjEuTGlzdEFzc2V0c1JlcXVlc3QaKS5nb29n",
+            "bGUuY2xvdWQuYXNzZXQudjEuTGlzdEFzc2V0c1Jlc3BvbnNlIijaQQZwYXJl",
+            "bnSC0+STAhkSFy92MS97cGFyZW50PSovKn0vYXNzZXRzErIBChVCYXRjaEdl",
+            "dEFzc2V0c0hpc3RvcnkSMy5nb29nbGUuY2xvdWQuYXNzZXQudjEuQmF0Y2hH",
+            "ZXRBc3NldHNIaXN0b3J5UmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5hc3NldC52",
+            "MS5CYXRjaEdldEFzc2V0c0hpc3RvcnlSZXNwb25zZSIugtPkkwIoEiYvdjEv",
+            "e3BhcmVudD0qLyp9OmJhdGNoR2V0QXNzZXRzSGlzdG9yeRJ/CgpDcmVhdGVG",
+            "ZWVkEiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkNyZWF0ZUZlZWRSZXF1ZXN0",
+            "GhsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkZlZWQiKtpBBnBhcmVudILT5JMC",
+            "GyIWL3YxL3twYXJlbnQ9Ki8qfS9mZWVkczoBKhJ0CgdHZXRGZWVkEiUuZ29v",
+            "Z2xlLmNsb3VkLmFzc2V0LnYxLkdldEZlZWRSZXF1ZXN0GhsuZ29vZ2xlLmNs",
+            "b3VkLmFzc2V0LnYxLkZlZWQiJdpBBG5hbWWC0+STAhgSFi92MS97bmFtZT0q",
+            "LyovZmVlZHMvKn0ShwEKCUxpc3RGZWVkcxInLmdvb2dsZS5jbG91ZC5hc3Nl",
+            "dC52MS5MaXN0RmVlZHNSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYx",
+            "Lkxpc3RGZWVkc1Jlc3BvbnNlIifaQQZwYXJlbnSC0+STAhgSFi92MS97cGFy",
+            "ZW50PSovKn0vZmVlZHMSggEKClVwZGF0ZUZlZWQSKC5nb29nbGUuY2xvdWQu",
+            "YXNzZXQudjEuVXBkYXRlRmVlZFJlcXVlc3QaGy5nb29nbGUuY2xvdWQuYXNz",
+            "ZXQudjEuRmVlZCIt2kEEZmVlZILT5JMCIDIbL3YxL3tmZWVkLm5hbWU9Ki8q",
+            "L2ZlZWRzLyp9OgEqEnUKCkRlbGV0ZUZlZWQSKC5nb29nbGUuY2xvdWQuYXNz",
+            "ZXQudjEuRGVsZXRlRmVlZFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkiJdpBBG5hbWWC0+STAhgqFi92MS97bmFtZT0qLyovZmVlZHMvKn0SvwEK",
+            "ElNlYXJjaEFsbFJlc291cmNlcxIwLmdvb2dsZS5jbG91ZC5hc3NldC52MS5T",
+            "ZWFyY2hBbGxSZXNvdXJjZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxLlNlYXJjaEFsbFJlc291cmNlc1Jlc3BvbnNlIkTaQRdzY29wZSxxdWVy",
+            "eSxhc3NldF90eXBlc4LT5JMCJBIiL3YxL3tzY29wZT0qLyp9OnNlYXJjaEFs",
+            "bFJlc291cmNlcxK7AQoUU2VhcmNoQWxsSWFtUG9saWNpZXMSMi5nb29nbGUu",
+            "Y2xvdWQuYXNzZXQudjEuU2VhcmNoQWxsSWFtUG9saWNpZXNSZXF1ZXN0GjMu",
+            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNlYXJjaEFsbElhbVBvbGljaWVzUmVz",
+            "cG9uc2UiOtpBC3Njb3BlLHF1ZXJ5gtPkkwImEiQvdjEve3Njb3BlPSovKn06",
+            "c2VhcmNoQWxsSWFtUG9saWNpZXMSrAEKEEFuYWx5emVJYW1Qb2xpY3kSLi5n",
+            "b29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZUlhbVBvbGljeVJlcXVlc3Qa",
+            "Ly5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZUlhbVBvbGljeVJlc3Bv",
+            "bnNlIjeC0+STAjESLy92MS97YW5hbHlzaXNfcXVlcnkuc2NvcGU9Ki8qfTph",
+            "bmFseXplSWFtUG9saWN5ErgCChtBbmFseXplSWFtUG9saWN5TG9uZ3J1bm5p",
+            "bmcSOS5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZUlhbVBvbGljeUxv",
+            "bmdydW5uaW5nUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24ivgHKQXYKOWdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplSWFtUG9s",
+            "aWN5TG9uZ3J1bm5pbmdSZXNwb25zZRI5Z29vZ2xlLmNsb3VkLmFzc2V0LnYx",
+            "LkFuYWx5emVJYW1Qb2xpY3lMb25ncnVubmluZ01ldGFkYXRhgtPkkwI/Ijov",
+            "djEve2FuYWx5c2lzX3F1ZXJ5LnNjb3BlPSovKn06YW5hbHl6ZUlhbVBvbGlj",
+            "eUxvbmdydW5uaW5nOgEqEowBCgtBbmFseXplTW92ZRIpLmdvb2dsZS5jbG91",
+            "ZC5hc3NldC52MS5BbmFseXplTW92ZVJlcXVlc3QaKi5nb29nbGUuY2xvdWQu",
+            "YXNzZXQudjEuQW5hbHl6ZU1vdmVSZXNwb25zZSImgtPkkwIgEh4vdjEve3Jl",
+            "c291cmNlPSovKn06YW5hbHl6ZU1vdmUSjQEKC1F1ZXJ5QXNzZXRzEikuZ29v",
+            "Z2xlLmNsb3VkLmFzc2V0LnYxLlF1ZXJ5QXNzZXRzUmVxdWVzdBoqLmdvb2ds",
+            "ZS5jbG91ZC5hc3NldC52MS5RdWVyeUFzc2V0c1Jlc3BvbnNlIieC0+STAiEi",
+            "HC92MS97cGFyZW50PSovKn06cXVlcnlBc3NldHM6ASoSvQEKEENyZWF0ZVNh",
+            "dmVkUXVlcnkSLi5nb29nbGUuY2xvdWQuYXNzZXQudjEuQ3JlYXRlU2F2ZWRR",
+            "dWVyeVJlcXVlc3QaIS5nb29nbGUuY2xvdWQuYXNzZXQudjEuU2F2ZWRRdWVy",
+            "eSJW2kEhcGFyZW50LHNhdmVkX3F1ZXJ5LHNhdmVkX3F1ZXJ5X2lkgtPkkwIs",
+            "Ih0vdjEve3BhcmVudD0qLyp9L3NhdmVkUXVlcmllczoLc2F2ZWRfcXVlcnkS",
+            "jQEKDUdldFNhdmVkUXVlcnkSKy5nb29nbGUuY2xvdWQuYXNzZXQudjEuR2V0",
+            "U2F2ZWRRdWVyeVJlcXVlc3QaIS5nb29nbGUuY2xvdWQuYXNzZXQudjEuU2F2",
+            "ZWRRdWVyeSIs2kEEbmFtZYLT5JMCHxIdL3YxL3tuYW1lPSovKi9zYXZlZFF1",
+            "ZXJpZXMvKn0SowEKEExpc3RTYXZlZFF1ZXJpZXMSLi5nb29nbGUuY2xvdWQu",
+            "YXNzZXQudjEuTGlzdFNhdmVkUXVlcmllc1JlcXVlc3QaLy5nb29nbGUuY2xv",
+            "dWQuYXNzZXQudjEuTGlzdFNhdmVkUXVlcmllc1Jlc3BvbnNlIi7aQQZwYXJl",
+            "bnSC0+STAh8SHS92MS97cGFyZW50PSovKn0vc2F2ZWRRdWVyaWVzEr8BChBV",
+            "cGRhdGVTYXZlZFF1ZXJ5Ei4uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlVwZGF0",
+            "ZVNhdmVkUXVlcnlSZXF1ZXN0GiEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNh",
+            "dmVkUXVlcnkiWNpBF3NhdmVkX3F1ZXJ5LHVwZGF0ZV9tYXNrgtPkkwI4Mikv",
+            "djEve3NhdmVkX3F1ZXJ5Lm5hbWU9Ki8qL3NhdmVkUXVlcmllcy8qfToLc2F2",
+            "ZWRfcXVlcnkSiAEKEERlbGV0ZVNhdmVkUXVlcnkSLi5nb29nbGUuY2xvdWQu",
+            "YXNzZXQudjEuRGVsZXRlU2F2ZWRRdWVyeVJlcXVlc3QaFi5nb29nbGUucHJv",
+            "dG9idWYuRW1wdHkiLNpBBG5hbWWC0+STAh8qHS92MS97bmFtZT0qLyovc2F2",
+            "ZWRRdWVyaWVzLyp9Es4BChxCYXRjaEdldEVmZmVjdGl2ZUlhbVBvbGljaWVz",
+            "EjouZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkJhdGNoR2V0RWZmZWN0aXZlSWFt",
+            "UG9saWNpZXNSZXF1ZXN0GjsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkJhdGNo",
+            "R2V0RWZmZWN0aXZlSWFtUG9saWNpZXNSZXNwb25zZSI1gtPkkwIvEi0vdjEv",
+            "e3Njb3BlPSovKn0vZWZmZWN0aXZlSWFtUG9saWNpZXM6YmF0Y2hHZXQSvwEK",
+            "EkFuYWx5emVPcmdQb2xpY2llcxIwLmdvb2dsZS5jbG91ZC5hc3NldC52MS5B",
+            "bmFseXplT3JnUG9saWNpZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxLkFuYWx5emVPcmdQb2xpY2llc1Jlc3BvbnNlIkTaQRdzY29wZSxjb25z",
+            "dHJhaW50LGZpbHRlcoLT5JMCJBIiL3YxL3tzY29wZT0qLyp9OmFuYWx5emVP",
+            "cmdQb2xpY2llcxL/AQoiQW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQ29udGFp",
+            "bmVycxJALmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplT3JnUG9saWN5",
+            "R292ZXJuZWRDb250YWluZXJzUmVxdWVzdBpBLmdvb2dsZS5jbG91ZC5hc3Nl",
+            "dC52MS5BbmFseXplT3JnUG9saWN5R292ZXJuZWRDb250YWluZXJzUmVzcG9u",
+            "c2UiVNpBF3Njb3BlLGNvbnN0cmFpbnQsZmlsdGVygtPkkwI0EjIvdjEve3Nj",
+            "b3BlPSovKn06YW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQ29udGFpbmVycxLv",
+            "AQoeQW5hbHl6ZU9yZ1BvbGljeUdvdmVybmVkQXNzZXRzEjwuZ29vZ2xlLmNs",
+            "b3VkLmFzc2V0LnYxLkFuYWx5emVPcmdQb2xpY3lHb3Zlcm5lZEFzc2V0c1Jl",
+            "cXVlc3QaPS5nb29nbGUuY2xvdWQuYXNzZXQudjEuQW5hbHl6ZU9yZ1BvbGlj",
+            "eUdvdmVybmVkQXNzZXRzUmVzcG9uc2UiUNpBF3Njb3BlLGNvbnN0cmFpbnQs",
+            "ZmlsdGVygtPkkwIwEi4vdjEve3Njb3BlPSovKn06YW5hbHl6ZU9yZ1BvbGlj",
+            "eUdvdmVybmVkQXNzZXRzGk3KQRljbG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29t",
+            "0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
+            "Zm9ybUKRAQoZY29tLmdvb2dsZS5jbG91ZC5hc3NldC52MUIRQXNzZXRTZXJ2",
+            "aWNlUHJvdG9QAVovY2xvdWQuZ29vZ2xlLmNvbS9nby9hc3NldC9hcGl2MS9h",
+            "c3NldHBiO2Fzc2V0cGKqAhVHb29nbGUuQ2xvdWQuQXNzZXQuVjHKAhVHb29n",
+            "bGVcQ2xvdWRcQXNzZXRcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1.ContentType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -508,17 +517,17 @@ namespace Google.Cloud.Asset.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TableFieldSchema), global::Google.Cloud.Asset.V1.TableFieldSchema.Parser, new[]{ "Field", "Type", "Mode", "Fields" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest), global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesRequest.Parser, new[]{ "Scope", "Names" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse), global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Parser, new[]{ "PolicyResults" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy), global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Parser, new[]{ "FullResourceName", "Policies" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Types.PolicyInfo), global::Google.Cloud.Asset.V1.BatchGetEffectiveIamPoliciesResponse.Types.EffectiveIamPolicy.Types.PolicyInfo.Parser, new[]{ "AttachedResource", "Policy" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Parser, new[]{ "AttachedResource", "AppliedResource", "Rules", "InheritFromParent", "Reset" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Parser, new[]{ "Values", "AllowAll", "DenyAll", "Enforce", "Condition" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues.Parser, new[]{ "AllowedValues", "DeniedValues" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Parser, new[]{ "AttachedResource", "AppliedResource", "Rules", "InheritFromParent", "Reset" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Parser, new[]{ "Values", "AllowAll", "DenyAll", "Enforce", "Condition", "ConditionEvaluation" }, new[]{ "Kind" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicy.Types.Rule.Types.StringValues.Parser, new[]{ "AllowedValues", "DeniedValues" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Parser, new[]{ "GoogleDefinedConstraint", "CustomConstraint" }, new[]{ "ConstraintDefinition" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Parser, new[]{ "Name", "DisplayName", "Description", "ConstraintDefault", "ListConstraint", "BooleanConstraint" }, new[]{ "ConstraintType" }, new[]{ typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ConstraintDefault) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ListConstraint), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.ListConstraint.Parser, new[]{ "SupportsIn", "SupportsUnder" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.BooleanConstraint), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.Constraint.Types.BooleanConstraint.Parser, null, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint), global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Parser, new[]{ "Name", "ResourceTypes", "MethodTypes", "Condition", "ActionType", "DisplayName", "Description" }, null, new[]{ typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.MethodType), typeof(global::Google.Cloud.Asset.V1.AnalyzerOrgPolicyConstraint.Types.CustomConstraint.Types.ActionType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest), global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesRequest.Parser, new[]{ "Scope", "Constraint", "Filter", "PageSize", "PageToken" }, new[]{ "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse), global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Parser, new[]{ "OrgPolicyResults", "Constraint", "NextPageToken" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult), global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult.Parser, new[]{ "ConsolidatedPolicy", "PolicyBundle" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse), global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Parser, new[]{ "OrgPolicyResults", "Constraint", "NextPageToken" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult), global::Google.Cloud.Asset.V1.AnalyzeOrgPoliciesResponse.Types.OrgPolicyResult.Parser, new[]{ "ConsolidatedPolicy", "PolicyBundle", "Project", "Folders", "Organization" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersRequest.Parser, new[]{ "Scope", "Constraint", "Filter", "PageSize", "PageToken" }, new[]{ "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Parser, new[]{ "GovernedContainers", "Constraint", "NextPageToken" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer.Parser, new[]{ "FullResourceName", "Parent", "ConsolidatedPolicy", "PolicyBundle" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Parser, new[]{ "GovernedContainers", "Constraint", "NextPageToken" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedContainersResponse.Types.GovernedContainer.Parser, new[]{ "FullResourceName", "Parent", "ConsolidatedPolicy", "PolicyBundle", "Project", "Folders", "Organization", "EffectiveTags" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsRequest.Parser, new[]{ "Scope", "Constraint", "Filter", "PageSize", "PageToken" }, new[]{ "PageSize" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Parser, new[]{ "GovernedAssets", "Constraint", "NextPageToken" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource.Parser, new[]{ "FullResourceName", "Parent", "Project", "Folders", "Organization" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy.Parser, new[]{ "AttachedResource", "Policy", "Project", "Folders", "Organization" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Parser, new[]{ "GovernedAssets", "Constraint", "NextPageToken" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedResource.Parser, new[]{ "FullResourceName", "Parent", "Project", "Folders", "Organization", "AssetType", "EffectiveTags" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedIamPolicy.Parser, new[]{ "AttachedResource", "Policy", "Project", "Folders", "Organization", "AssetType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset), global::Google.Cloud.Asset.V1.AnalyzeOrgPolicyGovernedAssetsResponse.Types.GovernedAsset.Parser, new[]{ "GovernedResource", "GovernedIamPolicy", "ConsolidatedPolicy", "PolicyBundle" }, new[]{ "GovernedAsset" }, null, null, null)})
           }));
     }
@@ -567,6 +576,7 @@ namespace Google.Cloud.Asset.V1 {
   /// Represents the metadata of the longrunning operation for the
   /// AnalyzeIamPolicyLongrunning RPC.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeIamPolicyLongrunningMetadata : pb::IMessage<AnalyzeIamPolicyLongrunningMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -771,6 +781,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Export asset request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportAssetsRequest : pb::IMessage<ExportAssetsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1206,6 +1217,7 @@ namespace Google.Cloud.Asset.V1 {
   /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
   /// field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportAssetsResponse : pb::IMessage<ExportAssetsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1512,6 +1524,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// ListAssets request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAssetsRequest : pb::IMessage<ListAssetsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1977,6 +1990,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// ListAssets response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAssetsResponse : pb::IMessage<ListAssetsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2252,6 +2266,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Batch get assets history request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchGetAssetsHistoryRequest : pb::IMessage<BatchGetAssetsHistoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2623,6 +2638,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Batch get assets history response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchGetAssetsHistoryResponse : pb::IMessage<BatchGetAssetsHistoryResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2807,6 +2823,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Create asset feed request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFeedRequest : pb::IMessage<CreateFeedRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3099,6 +3116,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Get asset feed request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFeedRequest : pb::IMessage<GetFeedRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3297,6 +3315,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// List asset feeds request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFeedsRequest : pb::IMessage<ListFeedsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3491,6 +3510,7 @@ namespace Google.Cloud.Asset.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFeedsResponse : pb::IMessage<ListFeedsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3675,6 +3695,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Update asset feed request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateFeedRequest : pb::IMessage<UpdateFeedRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3931,6 +3952,7 @@ namespace Google.Cloud.Asset.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFeedRequest : pb::IMessage<DeleteFeedRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4129,6 +4151,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Output configuration for export assets destination.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OutputConfig : pb::IMessage<OutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4424,6 +4447,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Output result of export assets.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OutputResult : pb::IMessage<OutputResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4662,6 +4686,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// A Cloud Storage output result.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsOutputResult : pb::IMessage<GcsOutputResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4847,6 +4872,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// A Cloud Storage location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDestination : pb::IMessage<GcsDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4915,10 +4941,24 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
-      get { return objectUriCase_ == ObjectUriOneofCase.Uri ? (string) objectUri_ : ""; }
+      get { return HasUri ? (string) objectUri_ : ""; }
       set {
         objectUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         objectUriCase_ = ObjectUriOneofCase.Uri;
+      }
+    }
+    /// <summary>Gets whether the "uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUri {
+      get { return objectUriCase_ == ObjectUriOneofCase.Uri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUri() {
+      if (HasUri) {
+        ClearObjectUri();
       }
     }
 
@@ -4938,10 +4978,24 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UriPrefix {
-      get { return objectUriCase_ == ObjectUriOneofCase.UriPrefix ? (string) objectUri_ : ""; }
+      get { return HasUriPrefix ? (string) objectUri_ : ""; }
       set {
         objectUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         objectUriCase_ = ObjectUriOneofCase.UriPrefix;
+      }
+    }
+    /// <summary>Gets whether the "uri_prefix" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUriPrefix {
+      get { return objectUriCase_ == ObjectUriOneofCase.UriPrefix; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uri_prefix" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUriPrefix() {
+      if (HasUriPrefix) {
+        ClearObjectUri();
       }
     }
 
@@ -4991,8 +5045,8 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (objectUriCase_ == ObjectUriOneofCase.Uri) hash ^= Uri.GetHashCode();
-      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) hash ^= UriPrefix.GetHashCode();
+      if (HasUri) hash ^= Uri.GetHashCode();
+      if (HasUriPrefix) hash ^= UriPrefix.GetHashCode();
       hash ^= (int) objectUriCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5012,11 +5066,11 @@ namespace Google.Cloud.Asset.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (objectUriCase_ == ObjectUriOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
-      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) {
+      if (HasUriPrefix) {
         output.WriteRawTag(18);
         output.WriteString(UriPrefix);
       }
@@ -5030,11 +5084,11 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (objectUriCase_ == ObjectUriOneofCase.Uri) {
+      if (HasUri) {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
-      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) {
+      if (HasUriPrefix) {
         output.WriteRawTag(18);
         output.WriteString(UriPrefix);
       }
@@ -5048,10 +5102,10 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (objectUriCase_ == ObjectUriOneofCase.Uri) {
+      if (HasUri) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
-      if (objectUriCase_ == ObjectUriOneofCase.UriPrefix) {
+      if (HasUriPrefix) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UriPrefix);
       }
       if (_unknownFields != null) {
@@ -5131,6 +5185,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// A BigQuery destination for exporting assets to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryDestination : pb::IMessage<BigQueryDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5549,6 +5604,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Specifications of BigQuery partitioned table as export destination.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PartitionSpec : pb::IMessage<PartitionSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5781,6 +5837,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// A Pub/Sub destination.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PubsubDestination : pb::IMessage<PubsubDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5977,6 +6034,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Output configuration for asset feed destination.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeedOutputConfig : pb::IMessage<FeedOutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6219,6 +6277,7 @@ namespace Google.Cloud.Asset.V1 {
   /// folder. Supported destinations are:
   /// Pub/Sub topics.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Feed : pb::IMessage<Feed>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6685,6 +6744,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Search all resources request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchAllResourcesRequest : pb::IMessage<SearchAllResourcesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6773,49 +6833,77 @@ namespace Google.Cloud.Asset.V1 {
     /// Examples:
     ///
     /// * `name:Important` to find Google Cloud resources whose name contains
-    ///   "Important" as a word.
+    ///   `Important` as a word.
     /// * `name=Important` to find the Google Cloud resource whose name is exactly
-    ///   "Important".
+    ///   `Important`.
     /// * `displayName:Impor*` to find Google Cloud resources whose display name
-    ///   contains "Impor" as a prefix of any word in the field.
+    ///   contains `Impor` as a prefix of any word in the field.
     /// * `location:us-west*` to find Google Cloud resources whose location
-    ///   contains both "us" and "west" as prefixes.
-    /// * `labels:prod` to find Google Cloud resources whose labels contain "prod"
+    ///   contains both `us` and `west` as prefixes.
+    /// * `labels:prod` to find Google Cloud resources whose labels contain `prod`
     ///   as a key or value.
-    /// * `labels.env:prod` to find Google Cloud resources that have a label "env"
-    ///   and its value is "prod".
-    /// * `labels.env:*` to find Google Cloud resources that have a label "env".
+    /// * `labels.env:prod` to find Google Cloud resources that have a label `env`
+    ///   and its value is `prod`.
+    /// * `labels.env:*` to find Google Cloud resources that have a label `env`.
+    /// * `tagKeys:env` to find Google Cloud resources that have directly
+    ///   attached tags where the
+    ///   [`TagKey.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys#resource:-tagkey)
+    ///   contains `env`.
+    /// * `tagValues:prod*` to find Google Cloud resources that have directly
+    ///   attached tags where the
+    ///   [`TagValue.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+    ///   contains a word prefixed by `prod`.
+    /// * `tagValueIds=tagValues/123` to find Google Cloud resources that have
+    ///   directly attached tags where the
+    ///   [`TagValue.name`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+    ///   is exactly `tagValues/123`.
+    /// * `effectiveTagKeys:env` to find Google Cloud resources that have
+    ///   directly attached or inherited tags where the
+    ///   [`TagKey.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagKeys#resource:-tagkey)
+    ///   contains `env`.
+    /// * `effectiveTagValues:prod*` to find Google Cloud resources that have
+    ///   directly attached or inherited tags where the
+    ///   [`TagValue.namespacedName`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+    ///   contains a word prefixed by `prod`.
+    /// * `effectiveTagValueIds=tagValues/123` to find Google Cloud resources that
+    ///    have directly attached or inherited tags where the
+    ///   [`TagValue.name`](https://cloud.google.com/resource-manager/reference/rest/v3/tagValues#resource:-tagvalue)
+    ///   is exactly `tagValues/123`.
     /// * `kmsKey:key` to find Google Cloud resources encrypted with a
-    ///   customer-managed encryption key whose name contains "key" as a word. This
-    ///   field is deprecated. Please use the `kmsKeys` field to retrieve Cloud KMS
+    ///   customer-managed encryption key whose name contains `key` as a word. This
+    ///   field is deprecated. Use the `kmsKeys` field to retrieve Cloud KMS
     ///   key information.
     /// * `kmsKeys:key` to find Google Cloud resources encrypted with
-    ///   customer-managed encryption keys whose name contains the word "key".
+    ///   customer-managed encryption keys whose name contains the word `key`.
     /// * `relationships:instance-group-1` to find Google Cloud resources that have
-    ///   relationships with "instance-group-1" in the related resource name.
+    ///   relationships with `instance-group-1` in the related resource name.
     /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find Compute Engine
-    ///   instances that have relationships of type "INSTANCE_TO_INSTANCEGROUP".
+    ///   instances that have relationships of type `INSTANCE_TO_INSTANCEGROUP`.
     /// * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find
-    ///   Compute Engine instances that have relationships with "instance-group-1"
+    ///   Compute Engine instances that have relationships with `instance-group-1`
     ///   in the Compute Engine instance group resource name, for relationship type
-    ///   "INSTANCE_TO_INSTANCEGROUP".
+    ///   `INSTANCE_TO_INSTANCEGROUP`.
+    /// * `sccSecurityMarks.key=value` to find Cloud resources that are attached
+    ///   with security marks whose key is `key` and value is `value`.
+    /// * `sccSecurityMarks.key:*` to find Cloud resources that are attached with
+    ///   security marks whose key is `key`.
     /// * `state:ACTIVE` to find Google Cloud resources whose state contains
-    ///   "ACTIVE" as a word.
+    ///   `ACTIVE` as a word.
     /// * `NOT state:ACTIVE` to find Google Cloud resources whose state doesn't
-    ///   contain "ACTIVE" as a word.
+    ///   contain `ACTIVE` as a word.
     /// * `createTime&lt;1609459200` to find Google Cloud resources that were created
-    ///   before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
-    ///   "2021-01-01 00:00:00 UTC" in seconds.
+    ///   before `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch timestamp of
+    ///   `2021-01-01 00:00:00 UTC` in seconds.
     /// * `updateTime>1609459200` to find Google Cloud resources that were updated
-    ///   after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
-    ///   "2021-01-01 00:00:00 UTC" in seconds.
-    /// * `Important` to find Google Cloud resources that contain "Important" as a
+    ///   after `2021-01-01 00:00:00 UTC`. `1609459200` is the epoch timestamp of
+    ///   `2021-01-01 00:00:00 UTC` in seconds.
+    /// * `Important` to find Google Cloud resources that contain `Important` as a
     ///   word in any of the searchable fields.
-    /// * `Impor*` to find Google Cloud resources that contain "Impor" as a prefix
+    /// * `Impor*` to find Google Cloud resources that contain `Impor` as a prefix
     ///   of any word in any of the searchable fields.
     /// * `Important location:(us-west1 OR global)` to find Google Cloud
-    ///   resources that contain "Important" as a word in any of the searchable
-    ///   fields and are also located in the "us-west1" region or the "global"
+    ///   resources that contain `Important` as a word in any of the searchable
+    ///   fields and are also located in the `us-west1` region or the `global`
     ///   location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6834,8 +6922,8 @@ namespace Google.Cloud.Asset.V1 {
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. A list of asset types that this request searches for. If empty,
-    /// it will search all the [searchable asset
-    /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
+    /// it will search all the asset types [supported by search
+    /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
     ///
     /// Regular expressions are also supported. For example:
     ///
@@ -6859,10 +6947,10 @@ namespace Google.Cloud.Asset.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. The page size for search result pagination. Page size is capped
-    /// at 500 even if a larger value is given. If set to zero, server will pick an
-    /// appropriate default. Returned results may be fewer than requested. When
-    /// this happens, there could be more results as long as `next_page_token` is
-    /// returned.
+    /// at 500 even if a larger value is given. If set to zero or a negative value,
+    /// server will pick an appropriate default. Returned results may be fewer than
+    /// requested. When this happens, there could be more results as long as
+    /// `next_page_token` is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6899,7 +6987,7 @@ namespace Google.Cloud.Asset.V1 {
     /// the results. The default order is ascending. Add " DESC" after the field
     /// name to indicate descending order. Redundant space characters are ignored.
     /// Example: "location DESC, name".
-    /// Only singular primitive fields in the response are sortable:
+    /// Only the following fields in the response are sortable:
     ///
     ///   * name
     ///   * assetType
@@ -6912,10 +7000,6 @@ namespace Google.Cloud.Asset.V1 {
     ///   * state
     ///   * parentFullResourceName
     ///   * parentAssetType
-    ///
-    /// All the other fields such as repeated fields (e.g., `networkTags`,
-    /// `kmsKeys`), map fields (e.g., `labels`) and struct fields (e.g.,
-    /// `additionalAttributes`) are not supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6930,38 +7014,36 @@ namespace Google.Cloud.Asset.V1 {
     public const int ReadMaskFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.FieldMask readMask_;
     /// <summary>
-    /// Optional. A comma-separated list of fields specifying which fields to be
-    /// returned in ResourceSearchResult. Only '*' or combination of top level
-    /// fields can be specified. Field names of both snake_case and camelCase are
-    /// supported. Examples: `"*"`, `"name,location"`, `"name,versionedResources"`.
+    /// Optional. A comma-separated list of fields that you want returned in the
+    /// results. The following fields are returned by default if not specified:
     ///
-    /// The read_mask paths must be valid field paths listed but not limited to
-    /// (both snake_case and camelCase are supported):
+    ///   * `name`
+    ///   * `assetType`
+    ///   * `project`
+    ///   * `folders`
+    ///   * `organization`
+    ///   * `displayName`
+    ///   * `description`
+    ///   * `location`
+    ///   * `labels`
+    ///   * `tags`
+    ///   * `effectiveTags`
+    ///   * `networkTags`
+    ///   * `kmsKeys`
+    ///   * `createTime`
+    ///   * `updateTime`
+    ///   * `state`
+    ///   * `additionalAttributes`
+    ///   * `parentFullResourceName`
+    ///   * `parentAssetType`
     ///
-    ///   * name
-    ///   * assetType
-    ///   * project
-    ///   * displayName
-    ///   * description
-    ///   * location
-    ///   * tagKeys
-    ///   * tagValues
-    ///   * tagValueIds
-    ///   * labels
-    ///   * networkTags
-    ///   * kmsKey (This field is deprecated. Please use the `kmsKeys` field to
-    ///     retrieve Cloud KMS key information.)
-    ///   * kmsKeys
-    ///   * createTime
-    ///   * updateTime
-    ///   * state
-    ///   * additionalAttributes
-    ///   * versionedResources
-    ///
-    /// If read_mask is not specified, all fields except versionedResources will
-    /// be returned.
-    /// If only '*' is specified, all fields including versionedResources will be
-    /// returned.
+    /// Some fields of large size, such as `versionedResources`,
+    /// `attachedResources`, `effectiveTags` etc., are not returned by default, but
+    /// you can specify them in the `read_mask` parameter if you want to include
+    /// them. If `"*"` is specified, all [available
+    /// fields](https://cloud.google.com/asset-inventory/docs/reference/rest/v1/TopLevel/searchAllResources#resourcesearchresult)
+    /// are returned.
+    /// Examples: `"name,location"`, `"name,versionedResources"`, `"*"`.
     /// Any invalid field path will trigger INVALID_ARGUMENT error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7252,6 +7334,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Search all resources response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchAllResourcesResponse : pb::IMessage<SearchAllResourcesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7479,6 +7562,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Search all IAM policies request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchAllIamPoliciesRequest : pb::IMessage<SearchAllIamPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7615,10 +7699,10 @@ namespace Google.Cloud.Asset.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. The page size for search result pagination. Page size is capped
-    /// at 500 even if a larger value is given. If set to zero, server will pick an
-    /// appropriate default. Returned results may be fewer than requested. When
-    /// this happens, there could be more results as long as `next_page_token` is
-    /// returned.
+    /// at 500 even if a larger value is given. If set to zero or a negative value,
+    /// server will pick an appropriate default. Returned results may be fewer than
+    /// requested. When this happens, there could be more results as long as
+    /// `next_page_token` is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7654,9 +7738,9 @@ namespace Google.Cloud.Asset.V1 {
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. A list of asset types that the IAM policies are attached to. If
-    /// empty, it will search the IAM policies that are attached to all the
-    /// [searchable asset
-    /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
+    /// empty, it will search the IAM policies that are attached to all the asset
+    /// types [supported by search
+    /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
     ///
     /// Regular expressions are also supported. For example:
     ///
@@ -7947,6 +8031,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Search all IAM policies response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchAllIamPoliciesResponse : pb::IMessage<SearchAllIamPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8174,6 +8259,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// IAM policy analysis query message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IamPolicyAnalysisQuery : pb::IMessage<IamPolicyAnalysisQuery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8234,10 +8320,10 @@ namespace Google.Cloud.Asset.V1 {
     /// folder number (such as "folders/123"), a project ID (such as
     /// "projects/my-project-id"), or a project number (such as "projects/12345").
     ///
-    /// To know how to get organization id, visit [here
+    /// To know how to get organization ID, visit [here
     /// ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
     ///
-    /// To know how to get folder or project id, visit [here
+    /// To know how to get folder or project ID, visit [here
     /// ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8630,6 +8716,7 @@ namespace Google.Cloud.Asset.V1 {
       /// directly on the resource, or on ancestors such as organizations, folders or
       /// projects.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ResourceSelector : pb::IMessage<ResourceSelector>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8830,6 +8917,7 @@ namespace Google.Cloud.Asset.V1 {
       /// roles assigned either directly to them or to the groups they belong to,
       /// directly or indirectly.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IdentitySelector : pb::IMessage<IdentitySelector>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9040,6 +9128,7 @@ namespace Google.Cloud.Asset.V1 {
       /// any of them. The total number of roles and permissions should be equal or
       /// less than 10.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AccessSelector : pb::IMessage<AccessSelector>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9253,6 +9342,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// Contains query options.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Options : pb::IMessage<Options>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9730,6 +9820,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// The IAM conditions context.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConditionContext : pb::IMessage<ConditionContext>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9976,6 +10067,7 @@ namespace Google.Cloud.Asset.V1 {
   /// A request message for
   /// [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeIamPolicyRequest : pb::IMessage<AnalyzeIamPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10050,7 +10142,7 @@ namespace Google.Cloud.Asset.V1 {
     /// If both `analysis_query` and `saved_analysis_query` are provided, they
     /// will be merged together with the `saved_analysis_query` as base and
     /// the `analysis_query` as overrides. For more details of the merge behavior,
-    /// please refer to the
+    /// refer to the
     /// [MergeFrom](https://developers.google.com/protocol-buffers/docs/reference/cpp/google.protobuf.message#Message.MergeFrom.details)
     /// page.
     ///
@@ -10295,6 +10387,7 @@ namespace Google.Cloud.Asset.V1 {
   /// A response message for
   /// [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeIamPolicyResponse : pb::IMessage<AnalyzeIamPolicyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10577,6 +10670,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// An analysis message to group the query and results.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IamPolicyAnalysis : pb::IMessage<IamPolicyAnalysis>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -10888,6 +10982,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Output configuration for export IAM policy analysis destination.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IamPolicyAnalysisOutputConfig : pb::IMessage<IamPolicyAnalysisOutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11185,6 +11280,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// A Cloud Storage location.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GcsDestination : pb::IMessage<GcsDestination>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -11388,6 +11484,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// A BigQuery destination.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BigQueryDestination : pb::IMessage<BigQueryDestination>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -11759,6 +11856,7 @@ namespace Google.Cloud.Asset.V1 {
   /// A request message for
   /// [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeIamPolicyLongrunningRequest : pb::IMessage<AnalyzeIamPolicyLongrunningRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11833,7 +11931,7 @@ namespace Google.Cloud.Asset.V1 {
     /// If both `analysis_query` and `saved_analysis_query` are provided, they
     /// will be merged together with the `saved_analysis_query` as base and
     /// the `analysis_query` as overrides. For more details of the merge behavior,
-    /// please refer to the
+    /// refer to the
     /// [MergeFrom](https://developers.google.com/protocol-buffers/docs/reference/cpp/google.protobuf.message#Message.MergeFrom.details)
     /// doc.
     ///
@@ -12069,6 +12167,7 @@ namespace Google.Cloud.Asset.V1 {
   /// A response message for
   /// [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeIamPolicyLongrunningResponse : pb::IMessage<AnalyzeIamPolicyLongrunningResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12224,6 +12323,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// A saved query which can be shared with others or used later.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SavedQuery : pb::IMessage<SavedQuery>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12594,7 +12694,7 @@ namespace Google.Cloud.Asset.V1 {
       if (other.LastUpdater.Length != 0) {
         LastUpdater = other.LastUpdater;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.content_ != null) {
         if (content_ == null) {
           Content = new global::Google.Cloud.Asset.V1.SavedQuery.Types.QueryContent();
@@ -12726,6 +12826,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// The query content.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class QueryContent : pb::IMessage<QueryContent>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -12974,6 +13075,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Request to create a saved query.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSavedQueryRequest : pb::IMessage<CreateSavedQueryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -13271,6 +13373,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Request to get a saved query.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSavedQueryRequest : pb::IMessage<GetSavedQueryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -13470,6 +13573,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Request to list saved queries.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSavedQueriesRequest : pb::IMessage<ListSavedQueriesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -13800,6 +13904,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Response of listing saved queries.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSavedQueriesResponse : pb::IMessage<ListSavedQueriesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -14025,6 +14130,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Request to update a saved query.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateSavedQueryRequest : pb::IMessage<UpdateSavedQueryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -14285,6 +14391,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Request to delete a saved query.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSavedQueryRequest : pb::IMessage<DeleteSavedQueryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -14485,6 +14592,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// The request message for performing resource move analysis.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeMoveRequest : pb::IMessage<AnalyzeMoveRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -14797,6 +14905,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// The response message for resource move analysis.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeMoveResponse : pb::IMessage<AnalyzeMoveResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -14982,6 +15091,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// A message to group the analysis information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MoveAnalysis : pb::IMessage<MoveAnalysis>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -15317,6 +15427,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// An analysis result including blockers and warnings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MoveAnalysisResult : pb::IMessage<MoveAnalysisResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -15533,6 +15644,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// A message to group impacts of moving the target resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MoveImpact : pb::IMessage<MoveImpact>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -15728,6 +15840,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// Output configuration query assets.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryAssetsOutputConfig : pb::IMessage<QueryAssetsOutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -15935,6 +16048,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// BigQuery destination.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BigQueryDestination : pb::IMessage<BigQueryDestination>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -16228,6 +16342,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// QueryAssets request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryAssetsRequest : pb::IMessage<QueryAssetsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -16317,16 +16432,30 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>Field number for the "statement" field.</summary>
     public const int StatementFieldNumber = 2;
     /// <summary>
-    /// Optional. A SQL statement that's compatible with [BigQuery Standard
-    /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
+    /// Optional. A SQL statement that's compatible with [BigQuery
+    /// SQL](https://cloud.google.com/bigquery/docs/introduction-sql).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Statement {
-      get { return queryCase_ == QueryOneofCase.Statement ? (string) query_ : ""; }
+      get { return HasStatement ? (string) query_ : ""; }
       set {
         query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queryCase_ = QueryOneofCase.Statement;
+      }
+    }
+    /// <summary>Gets whether the "statement" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatement {
+      get { return queryCase_ == QueryOneofCase.Statement; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "statement" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatement() {
+      if (HasStatement) {
+        ClearQuery();
       }
     }
 
@@ -16339,10 +16468,24 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string JobReference {
-      get { return queryCase_ == QueryOneofCase.JobReference ? (string) query_ : ""; }
+      get { return HasJobReference ? (string) query_ : ""; }
       set {
         query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         queryCase_ = QueryOneofCase.JobReference;
+      }
+    }
+    /// <summary>Gets whether the "job_reference" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasJobReference {
+      get { return queryCase_ == QueryOneofCase.JobReference; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "job_reference" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearJobReference() {
+      if (HasJobReference) {
+        ClearQuery();
       }
     }
 
@@ -16543,8 +16686,8 @@ namespace Google.Cloud.Asset.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (queryCase_ == QueryOneofCase.Statement) hash ^= Statement.GetHashCode();
-      if (queryCase_ == QueryOneofCase.JobReference) hash ^= JobReference.GetHashCode();
+      if (HasStatement) hash ^= Statement.GetHashCode();
+      if (HasJobReference) hash ^= JobReference.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (timeout_ != null) hash ^= Timeout.GetHashCode();
@@ -16575,11 +16718,11 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (queryCase_ == QueryOneofCase.Statement) {
+      if (HasStatement) {
         output.WriteRawTag(18);
         output.WriteString(Statement);
       }
-      if (queryCase_ == QueryOneofCase.JobReference) {
+      if (HasJobReference) {
         output.WriteRawTag(26);
         output.WriteString(JobReference);
       }
@@ -16621,11 +16764,11 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (queryCase_ == QueryOneofCase.Statement) {
+      if (HasStatement) {
         output.WriteRawTag(18);
         output.WriteString(Statement);
       }
-      if (queryCase_ == QueryOneofCase.JobReference) {
+      if (HasJobReference) {
         output.WriteRawTag(26);
         output.WriteString(JobReference);
       }
@@ -16666,10 +16809,10 @@ namespace Google.Cloud.Asset.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (queryCase_ == QueryOneofCase.Statement) {
+      if (HasStatement) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Statement);
       }
-      if (queryCase_ == QueryOneofCase.JobReference) {
+      if (HasJobReference) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(JobReference);
       }
       if (PageSize != 0) {
@@ -16891,6 +17034,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// QueryAssets response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryAssetsResponse : pb::IMessage<QueryAssetsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -16969,10 +17113,12 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// The query response, which can be either an `error` or a valid `response`.
     ///
-    /// If `done` == `false` and the query result is being saved in a output, the
+    /// If `done` == `false` and the query result is being saved in an output, the
     /// output_config field will be set.
     /// If `done` == `true`, exactly one of
     /// `error`, `query_result` or `output_config` will be set.
+    /// [done] is unset unless the [QueryAssetsResponse] contains a
+    /// [QueryAssetsResponse.job_reference].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17016,8 +17162,9 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>Field number for the "output_config" field.</summary>
     public const int OutputConfigFieldNumber = 5;
     /// <summary>
-    /// Output configuration which indicates instead of being returned in API
-    /// response on the fly, the query result will be saved in a specific output.
+    /// Output configuration, which indicates that instead of being returned in
+    /// an API response on the fly, the query result will be saved in a specific
+    /// output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17331,6 +17478,7 @@ namespace Google.Cloud.Asset.V1 {
   /// When pagination is necessary, it will contains the page token to retrieve
   /// the results of following pages.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QueryResult : pb::IMessage<QueryResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -17644,6 +17792,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// BigQuery Compatible table schema.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableSchema : pb::IMessage<TableSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -17828,6 +17977,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// A field in TableSchema.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableFieldSchema : pb::IMessage<TableFieldSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -18151,6 +18301,7 @@ namespace Google.Cloud.Asset.V1 {
   /// A request message for
   /// [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchGetEffectiveIamPoliciesRequest : pb::IMessage<BatchGetEffectiveIamPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -18206,10 +18357,10 @@ namespace Google.Cloud.Asset.V1 {
     /// folder number (such as "folders/123"), a project ID (such as
     /// "projects/my-project-id"), or a project number (such as "projects/12345").
     ///
-    /// To know how to get organization id, visit [here
+    /// To know how to get organization ID, visit [here
     /// ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
     ///
-    /// To know how to get folder or project id, visit [here
+    /// To know how to get folder or project ID, visit [here
     /// ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18229,8 +18380,8 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// Required. The names refer to the [full_resource_names]
     /// (https://cloud.google.com/asset-inventory/docs/resource-name-format)
-    /// of [searchable asset
-    /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
+    /// of the asset types [supported by search
+    /// APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types).
     /// A maximum of 20 resources' effective policies can be retrieved in a batch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18390,6 +18541,7 @@ namespace Google.Cloud.Asset.V1 {
   /// A response message for
   /// [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchGetEffectiveIamPoliciesResponse : pb::IMessage<BatchGetEffectiveIamPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -18582,6 +18734,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// The effective IAM policies on one resource.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EffectiveIamPolicy : pb::IMessage<EffectiveIamPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -18834,6 +18987,7 @@ namespace Google.Cloud.Asset.V1 {
           /// <summary>
           /// The IAM policy and its attached resource.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class PolicyInfo : pb::IMessage<PolicyInfo>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -19094,6 +19248,7 @@ namespace Google.Cloud.Asset.V1 {
   /// in the original organization policy with some new fields for analysis
   /// purpose.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzerOrgPolicy : pb::IMessage<AnalyzerOrgPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -19459,8 +19614,12 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Represents a rule defined in an organization policy
+      /// This rule message is a customized version of the one defined in the
+      /// Organization Policy system. In addition to the fields defined in the
+      /// original organization policy, it contains additional field(s) under
+      /// specific circumstances to support analysis results.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Rule : pb::IMessage<Rule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -19496,6 +19655,7 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Rule(Rule other) : this() {
           condition_ = other.condition_ != null ? other.condition_.Clone() : null;
+          conditionEvaluation_ = other.conditionEvaluation_ != null ? other.conditionEvaluation_.Clone() : null;
           switch (other.KindCase) {
             case KindOneofCase.Values:
               Values = other.Values.Clone();
@@ -19523,8 +19683,8 @@ namespace Google.Cloud.Asset.V1 {
         /// <summary>Field number for the "values" field.</summary>
         public const int ValuesFieldNumber = 3;
         /// <summary>
-        /// List of values to be used for this PolicyRule. This field can be set
-        /// only in Policies for list constraints.
+        /// List of values to be used for this policy rule. This field can be set
+        /// only in policies for list constraints.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -19545,10 +19705,24 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool AllowAll {
-          get { return kindCase_ == KindOneofCase.AllowAll ? (bool) kind_ : false; }
+          get { return HasAllowAll ? (bool) kind_ : false; }
           set {
             kind_ = value;
             kindCase_ = KindOneofCase.AllowAll;
+          }
+        }
+        /// <summary>Gets whether the "allow_all" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAllowAll {
+          get { return kindCase_ == KindOneofCase.AllowAll; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "allow_all" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAllowAll() {
+          if (HasAllowAll) {
+            ClearKind();
           }
         }
 
@@ -19561,10 +19735,24 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool DenyAll {
-          get { return kindCase_ == KindOneofCase.DenyAll ? (bool) kind_ : false; }
+          get { return HasDenyAll ? (bool) kind_ : false; }
           set {
             kind_ = value;
             kindCase_ = KindOneofCase.DenyAll;
+          }
+        }
+        /// <summary>Gets whether the "deny_all" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDenyAll {
+          get { return kindCase_ == KindOneofCase.DenyAll; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "deny_all" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDenyAll() {
+          if (HasDenyAll) {
+            ClearKind();
           }
         }
 
@@ -19578,10 +19766,24 @@ namespace Google.Cloud.Asset.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Enforce {
-          get { return kindCase_ == KindOneofCase.Enforce ? (bool) kind_ : false; }
+          get { return HasEnforce ? (bool) kind_ : false; }
           set {
             kind_ = value;
             kindCase_ = KindOneofCase.Enforce;
+          }
+        }
+        /// <summary>Gets whether the "enforce" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasEnforce {
+          get { return kindCase_ == KindOneofCase.Enforce; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "enforce" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearEnforce() {
+          if (HasEnforce) {
+            ClearKind();
           }
         }
 
@@ -19597,6 +19799,34 @@ namespace Google.Cloud.Asset.V1 {
           get { return condition_; }
           set {
             condition_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "condition_evaluation" field.</summary>
+        public const int ConditionEvaluationFieldNumber = 8;
+        private global::Google.Cloud.Asset.V1.ConditionEvaluation conditionEvaluation_;
+        /// <summary>
+        /// The condition evaluation result for this rule.
+        /// Only populated if it meets all the following criteria:
+        ///
+        /// * There is a
+        /// [condition][google.cloud.asset.v1.AnalyzerOrgPolicy.Rule.condition]
+        /// defined for this rule.
+        /// * This rule is within
+        ///   [AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer.consolidated_policy][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersResponse.GovernedContainer.consolidated_policy],
+        ///   or
+        ///   [AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.consolidated_policy][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.consolidated_policy]
+        ///   when the
+        ///   [AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset]
+        ///   has
+        ///   [AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.governed_resource][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedAsset.governed_resource].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Asset.V1.ConditionEvaluation ConditionEvaluation {
+          get { return conditionEvaluation_; }
+          set {
+            conditionEvaluation_ = value;
           }
         }
 
@@ -19643,6 +19873,7 @@ namespace Google.Cloud.Asset.V1 {
           if (DenyAll != other.DenyAll) return false;
           if (Enforce != other.Enforce) return false;
           if (!object.Equals(Condition, other.Condition)) return false;
+          if (!object.Equals(ConditionEvaluation, other.ConditionEvaluation)) return false;
           if (KindCase != other.KindCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -19652,10 +19883,11 @@ namespace Google.Cloud.Asset.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (kindCase_ == KindOneofCase.Values) hash ^= Values.GetHashCode();
-          if (kindCase_ == KindOneofCase.AllowAll) hash ^= AllowAll.GetHashCode();
-          if (kindCase_ == KindOneofCase.DenyAll) hash ^= DenyAll.GetHashCode();
-          if (kindCase_ == KindOneofCase.Enforce) hash ^= Enforce.GetHashCode();
+          if (HasAllowAll) hash ^= AllowAll.GetHashCode();
+          if (HasDenyAll) hash ^= DenyAll.GetHashCode();
+          if (HasEnforce) hash ^= Enforce.GetHashCode();
           if (condition_ != null) hash ^= Condition.GetHashCode();
+          if (conditionEvaluation_ != null) hash ^= ConditionEvaluation.GetHashCode();
           hash ^= (int) kindCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -19679,21 +19911,25 @@ namespace Google.Cloud.Asset.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(Values);
           }
-          if (kindCase_ == KindOneofCase.AllowAll) {
+          if (HasAllowAll) {
             output.WriteRawTag(32);
             output.WriteBool(AllowAll);
           }
-          if (kindCase_ == KindOneofCase.DenyAll) {
+          if (HasDenyAll) {
             output.WriteRawTag(40);
             output.WriteBool(DenyAll);
           }
-          if (kindCase_ == KindOneofCase.Enforce) {
+          if (HasEnforce) {
             output.WriteRawTag(48);
             output.WriteBool(Enforce);
           }
           if (condition_ != null) {
             output.WriteRawTag(58);
             output.WriteMessage(Condition);
+          }
+          if (conditionEvaluation_ != null) {
+            output.WriteRawTag(66);
+            output.WriteMessage(ConditionEvaluation);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -19709,21 +19945,25 @@ namespace Google.Cloud.Asset.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(Values);
           }
-          if (kindCase_ == KindOneofCase.AllowAll) {
+          if (HasAllowAll) {
             output.WriteRawTag(32);
             output.WriteBool(AllowAll);
           }
-          if (kindCase_ == KindOneofCase.DenyAll) {
+          if (HasDenyAll) {
             output.WriteRawTag(40);
             output.WriteBool(DenyAll);
           }
-          if (kindCase_ == KindOneofCase.Enforce) {
+          if (HasEnforce) {
             output.WriteRawTag(48);
             output.WriteBool(Enforce);
           }
           if (condition_ != null) {
             output.WriteRawTag(58);
             output.WriteMessage(Condition);
+          }
+          if (conditionEvaluation_ != null) {
+            output.WriteRawTag(66);
+            output.WriteMessage(ConditionEvaluation);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -19738,17 +19978,20 @@ namespace Google.Cloud.Asset.V1 {
           if (kindCase_ == KindOneofCase.Values) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Values);
           }
-          if (kindCase_ == KindOneofCase.AllowAll) {
+          if (HasAllowAll) {
             size += 1 + 1;
           }
-          if (kindCase_ == KindOneofCase.DenyAll) {
+          if (HasDenyAll) {
             size += 1 + 1;
           }
-          if (kindCase_ == KindOneofCase.Enforce) {
+          if (HasEnforce) {
             size += 1 + 1;
           }
           if (condition_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Condition);
+          }
+          if (conditionEvaluation_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConditionEvaluation);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -19767,6 +20010,12 @@ namespace Google.Cloud.Asset.V1 {
               Condition = new global::Google.Type.Expr();
             }
             Condition.MergeFrom(other.Condition);
+          }
+          if (other.conditionEvaluation_ != null) {
+            if (conditionEvaluation_ == null) {
+              ConditionEvaluation = new global::Google.Cloud.Asset.V1.ConditionEvaluation();
+            }
+            ConditionEvaluation.MergeFrom(other.ConditionEvaluation);
           }
           switch (other.KindCase) {
             case KindOneofCase.Values:
@@ -19829,6 +20078,13 @@ namespace Google.Cloud.Asset.V1 {
                 input.ReadMessage(Condition);
                 break;
               }
+              case 66: {
+                if (conditionEvaluation_ == null) {
+                  ConditionEvaluation = new global::Google.Cloud.Asset.V1.ConditionEvaluation();
+                }
+                input.ReadMessage(ConditionEvaluation);
+                break;
+              }
             }
           }
         #endif
@@ -19872,6 +20128,13 @@ namespace Google.Cloud.Asset.V1 {
                 input.ReadMessage(Condition);
                 break;
               }
+              case 66: {
+                if (conditionEvaluation_ == null) {
+                  ConditionEvaluation = new global::Google.Cloud.Asset.V1.ConditionEvaluation();
+                }
+                input.ReadMessage(ConditionEvaluation);
+                break;
+              }
             }
           }
         }
@@ -19885,6 +20148,7 @@ namespace Google.Cloud.Asset.V1 {
           /// <summary>
           /// The string values for the list constraints.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class StringValues : pb::IMessage<StringValues>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -20108,6 +20372,7 @@ namespace Google.Cloud.Asset.V1 {
   /// <summary>
   /// The organization policy constraint definition.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzerOrgPolicyConstraint : pb::IMessage<AnalyzerOrgPolicyConstraint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -20405,6 +20670,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// The definition of a constraint.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Constraint : pb::IMessage<Constraint>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -20889,6 +21155,7 @@ namespace Google.Cloud.Asset.V1 {
           /// A `Constraint` that allows or disallows a list of string values, which
           /// are configured by an organization's policy administrator with a `Policy`.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ListConstraint : pb::IMessage<ListConstraint>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -21133,6 +21400,7 @@ namespace Google.Cloud.Asset.V1 {
           /// If it is enforced on a VM instance, serial port connections will not be
           /// opened to that instance.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class BooleanConstraint : pb::IMessage<BooleanConstraint>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -21293,6 +21561,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// The definition of a custom constraint.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CustomConstraint : pb::IMessage<CustomConstraint>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -21774,6 +22043,7 @@ namespace Google.Cloud.Asset.V1 {
   /// A request message for
   /// [AssetService.AnalyzeOrgPolicies][google.cloud.asset.v1.AssetService.AnalyzeOrgPolicies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeOrgPoliciesRequest : pb::IMessage<AnalyzeOrgPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -21865,12 +22135,15 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// The expression to filter
     /// [AnalyzeOrgPoliciesResponse.org_policy_results][google.cloud.asset.v1.AnalyzeOrgPoliciesResponse.org_policy_results].
-    /// The only supported field is `consolidated_policy.attached_resource`, and
-    /// the only supported operator is `=`.
+    /// Filtering is currently available for bare literal values and the following
+    /// fields:
+    /// * consolidated_policy.attached_resource
+    /// * consolidated_policy.rules.enforce
     ///
-    /// Example:
+    /// When filtering by a specific field, the only supported operator is `=`.
+    /// For example, filtering by
     /// consolidated_policy.attached_resource="//cloudresourcemanager.googleapis.com/folders/001"
-    /// will return the org policy results of"folders/001".
+    /// will return all the Organization Policy results attached to "folders/001".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -21883,6 +22156,8 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Field number for the "page_size" field.</summary>
     public const int PageSizeFieldNumber = 4;
+    private readonly static int PageSizeDefaultValue = 0;
+
     private int pageSize_;
     /// <summary>
     /// The maximum number of items to return per page. If unspecified,
@@ -21892,7 +22167,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
-      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return PageSizeDefaultValue; } }
       set {
         _hasBits0 |= 1;
         pageSize_ = value;
@@ -22159,6 +22434,7 @@ namespace Google.Cloud.Asset.V1 {
   /// The response message for
   /// [AssetService.AnalyzeOrgPolicies][google.cloud.asset.v1.AssetService.AnalyzeOrgPolicies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeOrgPoliciesResponse : pb::IMessage<AnalyzeOrgPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -22439,6 +22715,7 @@ namespace Google.Cloud.Asset.V1 {
       /// <summary>
       /// The organization policy result to the query.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OrgPolicyResult : pb::IMessage<OrgPolicyResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -22475,6 +22752,9 @@ namespace Google.Cloud.Asset.V1 {
         public OrgPolicyResult(OrgPolicyResult other) : this() {
           consolidatedPolicy_ = other.consolidatedPolicy_ != null ? other.consolidatedPolicy_.Clone() : null;
           policyBundle_ = other.policyBundle_.Clone();
+          project_ = other.project_;
+          folders_ = other.folders_.Clone();
+          organization_ = other.organization_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -22522,6 +22802,56 @@ namespace Google.Cloud.Asset.V1 {
           get { return policyBundle_; }
         }
 
+        /// <summary>Field number for the "project" field.</summary>
+        public const int ProjectFieldNumber = 3;
+        private string project_ = "";
+        /// <summary>
+        /// The project that this consolidated policy belongs to, in the format of
+        /// projects/{PROJECT_NUMBER}. This field is available when the consolidated
+        /// policy belongs to a project.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Project {
+          get { return project_; }
+          set {
+            project_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "folders" field.</summary>
+        public const int FoldersFieldNumber = 4;
+        private static readonly pb::FieldCodec<string> _repeated_folders_codec
+            = pb::FieldCodec.ForString(34);
+        private readonly pbc::RepeatedField<string> folders_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The folder(s) that this consolidated policy belongs to, in the format of
+        /// folders/{FOLDER_NUMBER}. This field is available when the consolidated
+        /// policy belongs (directly or cascadingly) to one or more folders.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> Folders {
+          get { return folders_; }
+        }
+
+        /// <summary>Field number for the "organization" field.</summary>
+        public const int OrganizationFieldNumber = 5;
+        private string organization_ = "";
+        /// <summary>
+        /// The organization that this consolidated policy belongs to, in the format
+        /// of organizations/{ORGANIZATION_NUMBER}. This field is available when the
+        /// consolidated policy belongs (directly or cascadingly) to an organization.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Organization {
+          get { return organization_; }
+          set {
+            organization_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -22539,6 +22869,9 @@ namespace Google.Cloud.Asset.V1 {
           }
           if (!object.Equals(ConsolidatedPolicy, other.ConsolidatedPolicy)) return false;
           if(!policyBundle_.Equals(other.policyBundle_)) return false;
+          if (Project != other.Project) return false;
+          if(!folders_.Equals(other.folders_)) return false;
+          if (Organization != other.Organization) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -22548,6 +22881,9 @@ namespace Google.Cloud.Asset.V1 {
           int hash = 1;
           if (consolidatedPolicy_ != null) hash ^= ConsolidatedPolicy.GetHashCode();
           hash ^= policyBundle_.GetHashCode();
+          if (Project.Length != 0) hash ^= Project.GetHashCode();
+          hash ^= folders_.GetHashCode();
+          if (Organization.Length != 0) hash ^= Organization.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -22571,6 +22907,15 @@ namespace Google.Cloud.Asset.V1 {
             output.WriteMessage(ConsolidatedPolicy);
           }
           policyBundle_.WriteTo(output, _repeated_policyBundle_codec);
+          if (Project.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Project);
+          }
+          folders_.WriteTo(output, _repeated_folders_codec);
+          if (Organization.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(Organization);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -22586,6 +22931,15 @@ namespace Google.Cloud.Asset.V1 {
             output.WriteMessage(ConsolidatedPolicy);
           }
           policyBundle_.WriteTo(ref output, _repeated_policyBundle_codec);
+          if (Project.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Project);
+          }
+          folders_.WriteTo(ref output, _repeated_folders_codec);
+          if (Organization.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(Organization);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -22600,6 +22954,13 @@ namespace Google.Cloud.Asset.V1 {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConsolidatedPolicy);
           }
           size += policyBundle_.CalculateSize(_repeated_policyBundle_codec);
+          if (Project.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
+          }
+          size += folders_.CalculateSize(_repeated_folders_codec);
+          if (Organization.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Organization);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -22619,6 +22980,13 @@ namespace Google.Cloud.Asset.V1 {
             ConsolidatedPolicy.MergeFrom(other.ConsolidatedPolicy);
           }
           policyBundle_.Add(other.policyBundle_);
+          if (other.Project.Length != 0) {
+            Project = other.Project;
+          }
+          folders_.Add(other.folders_);
+          if (other.Organization.Length != 0) {
+            Organization = other.Organization;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -22643,6 +23011,18 @@ namespace Google.Cloud.Asset.V1 {
               }
               case 18: {
                 policyBundle_.AddEntriesFrom(input, _repeated_policyBundle_codec);
+                break;
+              }
+              case 26: {
+                Project = input.ReadString();
+                break;
+              }
+              case 34: {
+                folders_.AddEntriesFrom(input, _repeated_folders_codec);
+                break;
+              }
+              case 42: {
+                Organization = input.ReadString();
                 break;
               }
             }
@@ -22671,6 +23051,18 @@ namespace Google.Cloud.Asset.V1 {
                 policyBundle_.AddEntriesFrom(ref input, _repeated_policyBundle_codec);
                 break;
               }
+              case 26: {
+                Project = input.ReadString();
+                break;
+              }
+              case 34: {
+                folders_.AddEntriesFrom(ref input, _repeated_folders_codec);
+                break;
+              }
+              case 42: {
+                Organization = input.ReadString();
+                break;
+              }
             }
           }
         }
@@ -22687,6 +23079,7 @@ namespace Google.Cloud.Asset.V1 {
   /// A request message for
   /// [AssetService.AnalyzeOrgPolicyGovernedContainers][google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedContainers].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeOrgPolicyGovernedContainersRequest : pb::IMessage<AnalyzeOrgPolicyGovernedContainersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -22778,13 +23171,17 @@ namespace Google.Cloud.Asset.V1 {
     public const int FilterFieldNumber = 3;
     private string filter_ = "";
     /// <summary>
-    /// The expression to filter the governed containers in result.
-    /// The only supported field is `parent`, and the only supported operator is
-    /// `=`.
+    /// The expression to filter
+    /// [AnalyzeOrgPolicyGovernedContainersResponse.governed_containers][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersResponse.governed_containers].
+    /// Filtering is currently available for bare literal values and the following
+    /// fields:
+    /// * parent
+    /// * consolidated_policy.rules.enforce
     ///
-    /// Example:
-    /// parent="//cloudresourcemanager.googleapis.com/folders/001" will return all
-    /// containers under "folders/001".
+    /// When filtering by a specific field, the only supported operator is `=`.
+    /// For example, filtering by
+    /// parent="//cloudresourcemanager.googleapis.com/folders/001"
+    /// will return all the containers under "folders/001".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -22797,6 +23194,8 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Field number for the "page_size" field.</summary>
     public const int PageSizeFieldNumber = 4;
+    private readonly static int PageSizeDefaultValue = 0;
+
     private int pageSize_;
     /// <summary>
     /// The maximum number of items to return per page. If unspecified,
@@ -22806,7 +23205,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
-      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return PageSizeDefaultValue; } }
       set {
         _hasBits0 |= 1;
         pageSize_ = value;
@@ -23073,6 +23472,7 @@ namespace Google.Cloud.Asset.V1 {
   /// The response message for
   /// [AssetService.AnalyzeOrgPolicyGovernedContainers][google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedContainers].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeOrgPolicyGovernedContainersResponse : pb::IMessage<AnalyzeOrgPolicyGovernedContainersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -23352,6 +23752,7 @@ namespace Google.Cloud.Asset.V1 {
       /// of
       /// [AnalyzeOrgPolicyGovernedContainersRequest.constraint][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedContainersRequest.constraint].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GovernedContainer : pb::IMessage<GovernedContainer>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -23390,6 +23791,10 @@ namespace Google.Cloud.Asset.V1 {
           parent_ = other.parent_;
           consolidatedPolicy_ = other.consolidatedPolicy_ != null ? other.consolidatedPolicy_.Clone() : null;
           policyBundle_ = other.policyBundle_.Clone();
+          project_ = other.project_;
+          folders_ = other.folders_.Clone();
+          organization_ = other.organization_;
+          effectiveTags_ = other.effectiveTags_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -23472,6 +23877,70 @@ namespace Google.Cloud.Asset.V1 {
           get { return policyBundle_; }
         }
 
+        /// <summary>Field number for the "project" field.</summary>
+        public const int ProjectFieldNumber = 5;
+        private string project_ = "";
+        /// <summary>
+        /// The project that this resource belongs to, in the format of
+        /// projects/{PROJECT_NUMBER}. This field is available when the resource
+        /// belongs to a project.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Project {
+          get { return project_; }
+          set {
+            project_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "folders" field.</summary>
+        public const int FoldersFieldNumber = 6;
+        private static readonly pb::FieldCodec<string> _repeated_folders_codec
+            = pb::FieldCodec.ForString(50);
+        private readonly pbc::RepeatedField<string> folders_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// The folder(s) that this resource belongs to, in the format of
+        /// folders/{FOLDER_NUMBER}. This field is available when the resource
+        /// belongs (directly or cascadingly) to one or more folders.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> Folders {
+          get { return folders_; }
+        }
+
+        /// <summary>Field number for the "organization" field.</summary>
+        public const int OrganizationFieldNumber = 7;
+        private string organization_ = "";
+        /// <summary>
+        /// The organization that this resource belongs to, in the format of
+        /// organizations/{ORGANIZATION_NUMBER}. This field is available when the
+        /// resource belongs (directly or cascadingly) to an organization.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Organization {
+          get { return organization_; }
+          set {
+            organization_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "effective_tags" field.</summary>
+        public const int EffectiveTagsFieldNumber = 8;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.EffectiveTagDetails> _repeated_effectiveTags_codec
+            = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Asset.V1.EffectiveTagDetails.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.EffectiveTagDetails> effectiveTags_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.EffectiveTagDetails>();
+        /// <summary>
+        /// The effective tags on this resource.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Asset.V1.EffectiveTagDetails> EffectiveTags {
+          get { return effectiveTags_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -23491,6 +23960,10 @@ namespace Google.Cloud.Asset.V1 {
           if (Parent != other.Parent) return false;
           if (!object.Equals(ConsolidatedPolicy, other.ConsolidatedPolicy)) return false;
           if(!policyBundle_.Equals(other.policyBundle_)) return false;
+          if (Project != other.Project) return false;
+          if(!folders_.Equals(other.folders_)) return false;
+          if (Organization != other.Organization) return false;
+          if(!effectiveTags_.Equals(other.effectiveTags_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -23502,6 +23975,10 @@ namespace Google.Cloud.Asset.V1 {
           if (Parent.Length != 0) hash ^= Parent.GetHashCode();
           if (consolidatedPolicy_ != null) hash ^= ConsolidatedPolicy.GetHashCode();
           hash ^= policyBundle_.GetHashCode();
+          if (Project.Length != 0) hash ^= Project.GetHashCode();
+          hash ^= folders_.GetHashCode();
+          if (Organization.Length != 0) hash ^= Organization.GetHashCode();
+          hash ^= effectiveTags_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -23533,6 +24010,16 @@ namespace Google.Cloud.Asset.V1 {
             output.WriteMessage(ConsolidatedPolicy);
           }
           policyBundle_.WriteTo(output, _repeated_policyBundle_codec);
+          if (Project.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(Project);
+          }
+          folders_.WriteTo(output, _repeated_folders_codec);
+          if (Organization.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Organization);
+          }
+          effectiveTags_.WriteTo(output, _repeated_effectiveTags_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -23556,6 +24043,16 @@ namespace Google.Cloud.Asset.V1 {
             output.WriteMessage(ConsolidatedPolicy);
           }
           policyBundle_.WriteTo(ref output, _repeated_policyBundle_codec);
+          if (Project.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(Project);
+          }
+          folders_.WriteTo(ref output, _repeated_folders_codec);
+          if (Organization.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Organization);
+          }
+          effectiveTags_.WriteTo(ref output, _repeated_effectiveTags_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -23576,6 +24073,14 @@ namespace Google.Cloud.Asset.V1 {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConsolidatedPolicy);
           }
           size += policyBundle_.CalculateSize(_repeated_policyBundle_codec);
+          if (Project.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
+          }
+          size += folders_.CalculateSize(_repeated_folders_codec);
+          if (Organization.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Organization);
+          }
+          size += effectiveTags_.CalculateSize(_repeated_effectiveTags_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -23601,6 +24106,14 @@ namespace Google.Cloud.Asset.V1 {
             ConsolidatedPolicy.MergeFrom(other.ConsolidatedPolicy);
           }
           policyBundle_.Add(other.policyBundle_);
+          if (other.Project.Length != 0) {
+            Project = other.Project;
+          }
+          folders_.Add(other.folders_);
+          if (other.Organization.Length != 0) {
+            Organization = other.Organization;
+          }
+          effectiveTags_.Add(other.effectiveTags_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -23633,6 +24146,22 @@ namespace Google.Cloud.Asset.V1 {
               }
               case 34: {
                 policyBundle_.AddEntriesFrom(input, _repeated_policyBundle_codec);
+                break;
+              }
+              case 42: {
+                Project = input.ReadString();
+                break;
+              }
+              case 50: {
+                folders_.AddEntriesFrom(input, _repeated_folders_codec);
+                break;
+              }
+              case 58: {
+                Organization = input.ReadString();
+                break;
+              }
+              case 66: {
+                effectiveTags_.AddEntriesFrom(input, _repeated_effectiveTags_codec);
                 break;
               }
             }
@@ -23669,6 +24198,22 @@ namespace Google.Cloud.Asset.V1 {
                 policyBundle_.AddEntriesFrom(ref input, _repeated_policyBundle_codec);
                 break;
               }
+              case 42: {
+                Project = input.ReadString();
+                break;
+              }
+              case 50: {
+                folders_.AddEntriesFrom(ref input, _repeated_folders_codec);
+                break;
+              }
+              case 58: {
+                Organization = input.ReadString();
+                break;
+              }
+              case 66: {
+                effectiveTags_.AddEntriesFrom(ref input, _repeated_effectiveTags_codec);
+                break;
+              }
             }
           }
         }
@@ -23685,6 +24230,7 @@ namespace Google.Cloud.Asset.V1 {
   /// A request message for
   /// [AssetService.AnalyzeOrgPolicyGovernedAssets][google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedAssets].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeOrgPolicyGovernedAssetsRequest : pb::IMessage<AnalyzeOrgPolicyGovernedAssetsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -23776,18 +24322,33 @@ namespace Google.Cloud.Asset.V1 {
     public const int FilterFieldNumber = 3;
     private string filter_ = "";
     /// <summary>
-    /// The expression to filter the governed assets in result. The only supported
-    /// fields for governed resources are `governed_resource.project` and
-    /// `governed_resource.folders`. The only supported fields for governed iam
-    /// policies are `governed_iam_policy.project` and
-    /// `governed_iam_policy.folders`. The only supported operator is `=`.
+    /// The expression to filter
+    /// [AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets].
     ///
-    /// Example 1: governed_resource.project="projects/12345678" filter will return
-    /// all governed resources under projects/12345678 including the project
-    /// ifself, if applicable.
+    /// For governed resources, filtering is currently available for bare literal
+    /// values and the following fields:
+    /// * governed_resource.project
+    /// * governed_resource.folders
+    /// * consolidated_policy.rules.enforce
+    /// When filtering by `governed_resource.project` or
+    /// `consolidated_policy.rules.enforce`, the only supported operator is `=`.
+    /// When filtering by `governed_resource.folders`, the supported operators
+    /// are `=` and `:`.
+    /// For example, filtering by `governed_resource.project="projects/12345678"`
+    /// will return all the governed resources under "projects/12345678",
+    /// including the project itself if applicable.
     ///
-    /// Example 2: governed_iam_policy.folders="folders/12345678" filter will
-    /// return all governed iam policies under folders/12345678, if applicable.
+    /// For governed IAM policies, filtering is currently available for bare
+    /// literal values and the following fields:
+    /// * governed_iam_policy.project
+    /// * governed_iam_policy.folders
+    /// * consolidated_policy.rules.enforce
+    /// When filtering by `governed_iam_policy.project` or
+    /// `consolidated_policy.rules.enforce`, the only supported operator is `=`.
+    /// When filtering by `governed_iam_policy.folders`, the supported operators
+    /// are `=` and `:`.
+    /// For example, filtering by `governed_iam_policy.folders:"folders/12345678"`
+    /// will return all the governed IAM policies under "folders/001".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -23800,6 +24361,8 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Field number for the "page_size" field.</summary>
     public const int PageSizeFieldNumber = 4;
+    private readonly static int PageSizeDefaultValue = 0;
+
     private int pageSize_;
     /// <summary>
     /// The maximum number of items to return per page. If unspecified,
@@ -23809,7 +24372,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
-      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return pageSize_; } else { return PageSizeDefaultValue; } }
       set {
         _hasBits0 |= 1;
         pageSize_ = value;
@@ -24076,6 +24639,7 @@ namespace Google.Cloud.Asset.V1 {
   /// The response message for
   /// [AssetService.AnalyzeOrgPolicyGovernedAssets][google.cloud.asset.v1.AssetService.AnalyzeOrgPolicyGovernedAssets].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnalyzeOrgPolicyGovernedAssetsResponse : pb::IMessage<AnalyzeOrgPolicyGovernedAssetsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -24354,6 +24918,7 @@ namespace Google.Cloud.Asset.V1 {
       /// The Google Cloud resources governed by the organization policies of the
       /// [AnalyzeOrgPolicyGovernedAssetsRequest.constraint][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsRequest.constraint].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GovernedResource : pb::IMessage<GovernedResource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -24393,6 +24958,8 @@ namespace Google.Cloud.Asset.V1 {
           project_ = other.project_;
           folders_ = other.folders_.Clone();
           organization_ = other.organization_;
+          assetType_ = other.assetType_;
+          effectiveTags_ = other.effectiveTags_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -24487,6 +25054,41 @@ namespace Google.Cloud.Asset.V1 {
           }
         }
 
+        /// <summary>Field number for the "asset_type" field.</summary>
+        public const int AssetTypeFieldNumber = 8;
+        private string assetType_ = "";
+        /// <summary>
+        /// The asset type of the
+        /// [AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource.full_resource_name][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource.full_resource_name]
+        /// Example:
+        /// `cloudresourcemanager.googleapis.com/Project`
+        /// See [Cloud Asset Inventory Supported Asset
+        /// Types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
+        /// for all supported asset types.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string AssetType {
+          get { return assetType_; }
+          set {
+            assetType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "effective_tags" field.</summary>
+        public const int EffectiveTagsFieldNumber = 9;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.EffectiveTagDetails> _repeated_effectiveTags_codec
+            = pb::FieldCodec.ForMessage(74, global::Google.Cloud.Asset.V1.EffectiveTagDetails.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.EffectiveTagDetails> effectiveTags_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.EffectiveTagDetails>();
+        /// <summary>
+        /// The effective tags on this resource.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Asset.V1.EffectiveTagDetails> EffectiveTags {
+          get { return effectiveTags_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -24507,6 +25109,8 @@ namespace Google.Cloud.Asset.V1 {
           if (Project != other.Project) return false;
           if(!folders_.Equals(other.folders_)) return false;
           if (Organization != other.Organization) return false;
+          if (AssetType != other.AssetType) return false;
+          if(!effectiveTags_.Equals(other.effectiveTags_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -24519,6 +25123,8 @@ namespace Google.Cloud.Asset.V1 {
           if (Project.Length != 0) hash ^= Project.GetHashCode();
           hash ^= folders_.GetHashCode();
           if (Organization.Length != 0) hash ^= Organization.GetHashCode();
+          if (AssetType.Length != 0) hash ^= AssetType.GetHashCode();
+          hash ^= effectiveTags_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -24554,6 +25160,11 @@ namespace Google.Cloud.Asset.V1 {
             output.WriteRawTag(58);
             output.WriteString(Organization);
           }
+          if (AssetType.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(AssetType);
+          }
+          effectiveTags_.WriteTo(output, _repeated_effectiveTags_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -24581,6 +25192,11 @@ namespace Google.Cloud.Asset.V1 {
             output.WriteRawTag(58);
             output.WriteString(Organization);
           }
+          if (AssetType.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(AssetType);
+          }
+          effectiveTags_.WriteTo(ref output, _repeated_effectiveTags_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -24604,6 +25220,10 @@ namespace Google.Cloud.Asset.V1 {
           if (Organization.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Organization);
           }
+          if (AssetType.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(AssetType);
+          }
+          size += effectiveTags_.CalculateSize(_repeated_effectiveTags_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -24629,6 +25249,10 @@ namespace Google.Cloud.Asset.V1 {
           if (other.Organization.Length != 0) {
             Organization = other.Organization;
           }
+          if (other.AssetType.Length != 0) {
+            AssetType = other.AssetType;
+          }
+          effectiveTags_.Add(other.effectiveTags_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -24662,6 +25286,14 @@ namespace Google.Cloud.Asset.V1 {
               }
               case 58: {
                 Organization = input.ReadString();
+                break;
+              }
+              case 66: {
+                AssetType = input.ReadString();
+                break;
+              }
+              case 74: {
+                effectiveTags_.AddEntriesFrom(input, _repeated_effectiveTags_codec);
                 break;
               }
             }
@@ -24699,6 +25331,14 @@ namespace Google.Cloud.Asset.V1 {
                 Organization = input.ReadString();
                 break;
               }
+              case 66: {
+                AssetType = input.ReadString();
+                break;
+              }
+              case 74: {
+                effectiveTags_.AddEntriesFrom(ref input, _repeated_effectiveTags_codec);
+                break;
+              }
             }
           }
         }
@@ -24710,6 +25350,7 @@ namespace Google.Cloud.Asset.V1 {
       /// The IAM policies governed by the organization policies of the
       /// [AnalyzeOrgPolicyGovernedAssetsRequest.constraint][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsRequest.constraint].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GovernedIamPolicy : pb::IMessage<GovernedIamPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -24749,6 +25390,7 @@ namespace Google.Cloud.Asset.V1 {
           project_ = other.project_;
           folders_ = other.folders_.Clone();
           organization_ = other.organization_;
+          assetType_ = other.assetType_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -24762,7 +25404,7 @@ namespace Google.Cloud.Asset.V1 {
         public const int AttachedResourceFieldNumber = 1;
         private string attachedResource_ = "";
         /// <summary>
-        /// The full resource name of the resource associated with this IAM policy.
+        /// The full resource name of the resource on which this IAM policy is set.
         /// Example:
         /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
         /// See [Cloud Asset Inventory Resource Name
@@ -24843,6 +25485,27 @@ namespace Google.Cloud.Asset.V1 {
           }
         }
 
+        /// <summary>Field number for the "asset_type" field.</summary>
+        public const int AssetTypeFieldNumber = 8;
+        private string assetType_ = "";
+        /// <summary>
+        /// The asset type of the
+        /// [AnalyzeOrgPolicyGovernedAssetsResponse.GovernedIamPolicy.attached_resource][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsResponse.GovernedIamPolicy.attached_resource].
+        /// Example:
+        /// `cloudresourcemanager.googleapis.com/Project`
+        /// See [Cloud Asset Inventory Supported Asset
+        /// Types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
+        /// for all supported asset types.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string AssetType {
+          get { return assetType_; }
+          set {
+            assetType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -24863,6 +25526,7 @@ namespace Google.Cloud.Asset.V1 {
           if (Project != other.Project) return false;
           if(!folders_.Equals(other.folders_)) return false;
           if (Organization != other.Organization) return false;
+          if (AssetType != other.AssetType) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -24875,6 +25539,7 @@ namespace Google.Cloud.Asset.V1 {
           if (Project.Length != 0) hash ^= Project.GetHashCode();
           hash ^= folders_.GetHashCode();
           if (Organization.Length != 0) hash ^= Organization.GetHashCode();
+          if (AssetType.Length != 0) hash ^= AssetType.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -24910,6 +25575,10 @@ namespace Google.Cloud.Asset.V1 {
             output.WriteRawTag(58);
             output.WriteString(Organization);
           }
+          if (AssetType.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(AssetType);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -24937,6 +25606,10 @@ namespace Google.Cloud.Asset.V1 {
             output.WriteRawTag(58);
             output.WriteString(Organization);
           }
+          if (AssetType.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(AssetType);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -24959,6 +25632,9 @@ namespace Google.Cloud.Asset.V1 {
           size += folders_.CalculateSize(_repeated_folders_codec);
           if (Organization.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Organization);
+          }
+          if (AssetType.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(AssetType);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -24987,6 +25663,9 @@ namespace Google.Cloud.Asset.V1 {
           folders_.Add(other.folders_);
           if (other.Organization.Length != 0) {
             Organization = other.Organization;
+          }
+          if (other.AssetType.Length != 0) {
+            AssetType = other.AssetType;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -25024,6 +25703,10 @@ namespace Google.Cloud.Asset.V1 {
               }
               case 58: {
                 Organization = input.ReadString();
+                break;
+              }
+              case 66: {
+                AssetType = input.ReadString();
                 break;
               }
             }
@@ -25064,6 +25747,10 @@ namespace Google.Cloud.Asset.V1 {
                 Organization = input.ReadString();
                 break;
               }
+              case 66: {
+                AssetType = input.ReadString();
+                break;
+              }
             }
           }
         }
@@ -25076,6 +25763,7 @@ namespace Google.Cloud.Asset.V1 {
       /// organization policies of the
       /// [AnalyzeOrgPolicyGovernedAssetsRequest.constraint][google.cloud.asset.v1.AnalyzeOrgPolicyGovernedAssetsRequest.constraint].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GovernedAsset : pb::IMessage<GovernedAsset>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

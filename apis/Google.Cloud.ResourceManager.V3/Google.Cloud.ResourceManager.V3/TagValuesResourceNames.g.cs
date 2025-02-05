@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -208,10 +208,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// <inheritdoc/>
         public bool Equals(TagValueName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(TagValueName a, TagValueName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(TagValueName a, TagValueName b) => !(a == b);
     }
 
@@ -240,6 +252,18 @@ namespace Google.Cloud.ResourceManager.V3
     }
 
     public partial class GetTagValueRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::TagValueName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::TagValueName TagValueName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::TagValueName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetNamespacedTagValueRequest
     {
         /// <summary>
         /// <see cref="gcrv::TagValueName"/>-typed view over the <see cref="Name"/> resource name property.

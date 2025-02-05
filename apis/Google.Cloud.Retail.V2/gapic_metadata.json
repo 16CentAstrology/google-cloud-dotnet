@@ -5,6 +5,21 @@
   "protoPackage": "google.cloud.retail.v2",
   "libraryPackage": "Google.Cloud.Retail.V2",
   "services": {
+    "AnalyticsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AnalyticsServiceClient",
+          "rpcs": {
+            "ExportAnalyticsMetrics": {
+              "methods": [
+                "ExportAnalyticsMetrics",
+                "ExportAnalyticsMetricsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "CatalogService": {
       "clients": {
         "grpc": {
@@ -140,6 +155,45 @@
         }
       }
     },
+    "GenerativeQuestionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GenerativeQuestionServiceClient",
+          "rpcs": {
+            "BatchUpdateGenerativeQuestionConfigs": {
+              "methods": [
+                "BatchUpdateGenerativeQuestionConfigs",
+                "BatchUpdateGenerativeQuestionConfigsAsync"
+              ]
+            },
+            "GetGenerativeQuestionsFeatureConfig": {
+              "methods": [
+                "GetGenerativeQuestionsFeatureConfig",
+                "GetGenerativeQuestionsFeatureConfigAsync"
+              ]
+            },
+            "ListGenerativeQuestionConfigs": {
+              "methods": [
+                "ListGenerativeQuestionConfigs",
+                "ListGenerativeQuestionConfigsAsync"
+              ]
+            },
+            "UpdateGenerativeQuestionConfig": {
+              "methods": [
+                "UpdateGenerativeQuestionConfig",
+                "UpdateGenerativeQuestionConfigAsync"
+              ]
+            },
+            "UpdateGenerativeQuestionsFeatureConfig": {
+              "methods": [
+                "UpdateGenerativeQuestionsFeatureConfig",
+                "UpdateGenerativeQuestionsFeatureConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ModelService": {
       "clients": {
         "grpc": {
@@ -257,6 +311,12 @@
               "methods": [
                 "ListProducts",
                 "ListProductsAsync"
+              ]
+            },
+            "PurgeProducts": {
+              "methods": [
+                "PurgeProducts",
+                "PurgeProductsAsync"
               ]
             },
             "RemoveFulfillmentPlaces": {

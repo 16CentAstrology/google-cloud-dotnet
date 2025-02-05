@@ -3,7 +3,7 @@
 //     source: google/analytics/admin/v1alpha/analytics_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2023 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,14 +17,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
 
 namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
-  /// Service Interface for the Analytics Admin API (GA4).
+  /// Service Interface for the Google Analytics Admin API.
   /// </summary>
   public static partial class AnalyticsAdminService
   {
@@ -100,38 +100,6 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdatePropertyRequest> __Marshaller_google_analytics_admin_v1alpha_UpdatePropertyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdatePropertyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetUserLinkRequest> __Marshaller_google_analytics_admin_v1alpha_GetUserLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetUserLinkRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UserLink> __Marshaller_google_analytics_admin_v1alpha_UserLink = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UserLink.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest> __Marshaller_google_analytics_admin_v1alpha_BatchGetUserLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse> __Marshaller_google_analytics_admin_v1alpha_BatchGetUserLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListUserLinksRequest> __Marshaller_google_analytics_admin_v1alpha_ListUserLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListUserLinksRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListUserLinksResponse> __Marshaller_google_analytics_admin_v1alpha_ListUserLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListUserLinksResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.AuditUserLinksRequest> __Marshaller_google_analytics_admin_v1alpha_AuditUserLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.AuditUserLinksRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.AuditUserLinksResponse> __Marshaller_google_analytics_admin_v1alpha_AuditUserLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.AuditUserLinksResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateUserLinkRequest> __Marshaller_google_analytics_admin_v1alpha_CreateUserLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateUserLinkRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksRequest> __Marshaller_google_analytics_admin_v1alpha_BatchCreateUserLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksResponse> __Marshaller_google_analytics_admin_v1alpha_BatchCreateUserLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateUserLinkRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateUserLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateUserLinkRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksRequest> __Marshaller_google_analytics_admin_v1alpha_BatchUpdateUserLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksResponse> __Marshaller_google_analytics_admin_v1alpha_BatchUpdateUserLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteUserLinkRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteUserLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteUserLinkRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BatchDeleteUserLinksRequest> __Marshaller_google_analytics_admin_v1alpha_BatchDeleteUserLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BatchDeleteUserLinksRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest> __Marshaller_google_analytics_admin_v1alpha_CreateFirebaseLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.FirebaseLink> __Marshaller_google_analytics_admin_v1alpha_FirebaseLink = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.FirebaseLink.Parser));
@@ -180,6 +148,20 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse> __Marshaller_google_analytics_admin_v1alpha_AcknowledgeUserDataCollectionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest> __Marshaller_google_analytics_admin_v1alpha_GetSKAdNetworkConversionValueSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> __Marshaller_google_analytics_admin_v1alpha_SKAdNetworkConversionValueSchema = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest> __Marshaller_google_analytics_admin_v1alpha_CreateSKAdNetworkConversionValueSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteSKAdNetworkConversionValueSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateSKAdNetworkConversionValueSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest> __Marshaller_google_analytics_admin_v1alpha_ListSKAdNetworkConversionValueSchemasRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse> __Marshaller_google_analytics_admin_v1alpha_ListSKAdNetworkConversionValueSchemasResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest> __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse.Parser));
@@ -194,6 +176,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> __Marshaller_google_analytics_admin_v1alpha_ConversionEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest> __Marshaller_google_analytics_admin_v1alpha_GetConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest.Parser));
@@ -201,6 +185,20 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest> __Marshaller_google_analytics_admin_v1alpha_ListConversionEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse> __Marshaller_google_analytics_admin_v1alpha_ListConversionEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateKeyEventRequest> __Marshaller_google_analytics_admin_v1alpha_CreateKeyEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateKeyEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.KeyEvent> __Marshaller_google_analytics_admin_v1alpha_KeyEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.KeyEvent.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateKeyEventRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateKeyEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateKeyEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetKeyEventRequest> __Marshaller_google_analytics_admin_v1alpha_GetKeyEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetKeyEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteKeyEventRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteKeyEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteKeyEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListKeyEventsRequest> __Marshaller_google_analytics_admin_v1alpha_ListKeyEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListKeyEventsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListKeyEventsResponse> __Marshaller_google_analytics_admin_v1alpha_ListKeyEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListKeyEventsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest> __Marshaller_google_analytics_admin_v1alpha_GetDisplayVideo360AdvertiserLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -362,6 +360,20 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteExpandedDataSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest> __Marshaller_google_analytics_admin_v1alpha_GetChannelGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> __Marshaller_google_analytics_admin_v1alpha_ChannelGroup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ChannelGroup.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest> __Marshaller_google_analytics_admin_v1alpha_ListChannelGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse> __Marshaller_google_analytics_admin_v1alpha_ListChannelGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest> __Marshaller_google_analytics_admin_v1alpha_CreateChannelGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateChannelGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteChannelGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest> __Marshaller_google_analytics_admin_v1alpha_SetAutomatedGa4ConfigurationOptOutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse> __Marshaller_google_analytics_admin_v1alpha_SetAutomatedGa4ConfigurationOptOutResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse.Parser));
@@ -370,13 +382,19 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse> __Marshaller_google_analytics_admin_v1alpha_FetchAutomatedGa4ConfigurationOptOutResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest> __Marshaller_google_analytics_admin_v1alpha_GetBigQueryLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateBigQueryLinkRequest> __Marshaller_google_analytics_admin_v1alpha_CreateBigQueryLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateBigQueryLinkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.BigQueryLink> __Marshaller_google_analytics_admin_v1alpha_BigQueryLink = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.BigQueryLink.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest> __Marshaller_google_analytics_admin_v1alpha_GetBigQueryLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest> __Marshaller_google_analytics_admin_v1alpha_ListBigQueryLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse> __Marshaller_google_analytics_admin_v1alpha_ListBigQueryLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteBigQueryLinkRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteBigQueryLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteBigQueryLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateBigQueryLinkRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateBigQueryLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateBigQueryLinkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetEnhancedMeasurementSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -393,6 +411,106 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest> __Marshaller_google_analytics_admin_v1alpha_ListConnectedSiteTagsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse> __Marshaller_google_analytics_admin_v1alpha_ListConnectedSiteTagsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest> __Marshaller_google_analytics_admin_v1alpha_FetchConnectedGa4PropertyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse> __Marshaller_google_analytics_admin_v1alpha_FetchConnectedGa4PropertyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetAdSenseLinkRequest> __Marshaller_google_analytics_admin_v1alpha_GetAdSenseLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetAdSenseLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.AdSenseLink> __Marshaller_google_analytics_admin_v1alpha_AdSenseLink = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.AdSenseLink.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateAdSenseLinkRequest> __Marshaller_google_analytics_admin_v1alpha_CreateAdSenseLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateAdSenseLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteAdSenseLinkRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteAdSenseLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteAdSenseLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksRequest> __Marshaller_google_analytics_admin_v1alpha_ListAdSenseLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse> __Marshaller_google_analytics_admin_v1alpha_ListAdSenseLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetEventCreateRuleRequest> __Marshaller_google_analytics_admin_v1alpha_GetEventCreateRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetEventCreateRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.EventCreateRule> __Marshaller_google_analytics_admin_v1alpha_EventCreateRule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.EventCreateRule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesRequest> __Marshaller_google_analytics_admin_v1alpha_ListEventCreateRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse> __Marshaller_google_analytics_admin_v1alpha_ListEventCreateRulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateEventCreateRuleRequest> __Marshaller_google_analytics_admin_v1alpha_CreateEventCreateRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateEventCreateRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateEventCreateRuleRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateEventCreateRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateEventCreateRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteEventCreateRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetEventEditRuleRequest> __Marshaller_google_analytics_admin_v1alpha_GetEventEditRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetEventEditRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.EventEditRule> __Marshaller_google_analytics_admin_v1alpha_EventEditRule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.EventEditRule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesRequest> __Marshaller_google_analytics_admin_v1alpha_ListEventEditRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesResponse> __Marshaller_google_analytics_admin_v1alpha_ListEventEditRulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateEventEditRuleRequest> __Marshaller_google_analytics_admin_v1alpha_CreateEventEditRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateEventEditRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateEventEditRuleRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateEventEditRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateEventEditRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteEventEditRuleRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteEventEditRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteEventEditRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ReorderEventEditRulesRequest> __Marshaller_google_analytics_admin_v1alpha_ReorderEventEditRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ReorderEventEditRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateDataRedactionSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings> __Marshaller_google_analytics_admin_v1alpha_DataRedactionSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetDataRedactionSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest> __Marshaller_google_analytics_admin_v1alpha_GetCalculatedMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> __Marshaller_google_analytics_admin_v1alpha_CalculatedMetric = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest> __Marshaller_google_analytics_admin_v1alpha_CreateCalculatedMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest> __Marshaller_google_analytics_admin_v1alpha_ListCalculatedMetricsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse> __Marshaller_google_analytics_admin_v1alpha_ListCalculatedMetricsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateCalculatedMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteCalculatedMetricRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest> __Marshaller_google_analytics_admin_v1alpha_CreateRollupPropertyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse> __Marshaller_google_analytics_admin_v1alpha_CreateRollupPropertyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest> __Marshaller_google_analytics_admin_v1alpha_GetRollupPropertySourceLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink> __Marshaller_google_analytics_admin_v1alpha_RollupPropertySourceLink = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest> __Marshaller_google_analytics_admin_v1alpha_ListRollupPropertySourceLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse> __Marshaller_google_analytics_admin_v1alpha_ListRollupPropertySourceLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest> __Marshaller_google_analytics_admin_v1alpha_CreateRollupPropertySourceLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteRollupPropertySourceLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyRequest> __Marshaller_google_analytics_admin_v1alpha_ProvisionSubpropertyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyResponse> __Marshaller_google_analytics_admin_v1alpha_ProvisionSubpropertyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest> __Marshaller_google_analytics_admin_v1alpha_CreateSubpropertyEventFilterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> __Marshaller_google_analytics_admin_v1alpha_SubpropertyEventFilter = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest> __Marshaller_google_analytics_admin_v1alpha_GetSubpropertyEventFilterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest> __Marshaller_google_analytics_admin_v1alpha_ListSubpropertyEventFiltersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse> __Marshaller_google_analytics_admin_v1alpha_ListSubpropertyEventFiltersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateSubpropertyEventFilterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteSubpropertyEventFilterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
@@ -481,86 +599,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         "UpdateProperty",
         __Marshaller_google_analytics_admin_v1alpha_UpdatePropertyRequest,
         __Marshaller_google_analytics_admin_v1alpha_Property);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetUserLinkRequest, global::Google.Analytics.Admin.V1Alpha.UserLink> __Method_GetUserLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetUserLinkRequest, global::Google.Analytics.Admin.V1Alpha.UserLink>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetUserLink",
-        __Marshaller_google_analytics_admin_v1alpha_GetUserLinkRequest,
-        __Marshaller_google_analytics_admin_v1alpha_UserLink);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse> __Method_BatchGetUserLinks = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "BatchGetUserLinks",
-        __Marshaller_google_analytics_admin_v1alpha_BatchGetUserLinksRequest,
-        __Marshaller_google_analytics_admin_v1alpha_BatchGetUserLinksResponse);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListUserLinksResponse> __Method_ListUserLinks = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListUserLinksResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "ListUserLinks",
-        __Marshaller_google_analytics_admin_v1alpha_ListUserLinksRequest,
-        __Marshaller_google_analytics_admin_v1alpha_ListUserLinksResponse);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.AuditUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.AuditUserLinksResponse> __Method_AuditUserLinks = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.AuditUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.AuditUserLinksResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "AuditUserLinks",
-        __Marshaller_google_analytics_admin_v1alpha_AuditUserLinksRequest,
-        __Marshaller_google_analytics_admin_v1alpha_AuditUserLinksResponse);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateUserLinkRequest, global::Google.Analytics.Admin.V1Alpha.UserLink> __Method_CreateUserLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateUserLinkRequest, global::Google.Analytics.Admin.V1Alpha.UserLink>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "CreateUserLink",
-        __Marshaller_google_analytics_admin_v1alpha_CreateUserLinkRequest,
-        __Marshaller_google_analytics_admin_v1alpha_UserLink);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksResponse> __Method_BatchCreateUserLinks = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "BatchCreateUserLinks",
-        __Marshaller_google_analytics_admin_v1alpha_BatchCreateUserLinksRequest,
-        __Marshaller_google_analytics_admin_v1alpha_BatchCreateUserLinksResponse);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateUserLinkRequest, global::Google.Analytics.Admin.V1Alpha.UserLink> __Method_UpdateUserLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateUserLinkRequest, global::Google.Analytics.Admin.V1Alpha.UserLink>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "UpdateUserLink",
-        __Marshaller_google_analytics_admin_v1alpha_UpdateUserLinkRequest,
-        __Marshaller_google_analytics_admin_v1alpha_UserLink);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksResponse> __Method_BatchUpdateUserLinks = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "BatchUpdateUserLinks",
-        __Marshaller_google_analytics_admin_v1alpha_BatchUpdateUserLinksRequest,
-        __Marshaller_google_analytics_admin_v1alpha_BatchUpdateUserLinksResponse);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteUserLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteUserLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteUserLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "DeleteUserLink",
-        __Marshaller_google_analytics_admin_v1alpha_DeleteUserLinkRequest,
-        __Marshaller_google_protobuf_Empty);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchDeleteUserLinksRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_BatchDeleteUserLinks = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.BatchDeleteUserLinksRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "BatchDeleteUserLinks",
-        __Marshaller_google_analytics_admin_v1alpha_BatchDeleteUserLinksRequest,
-        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest, global::Google.Analytics.Admin.V1Alpha.FirebaseLink> __Method_CreateFirebaseLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest, global::Google.Analytics.Admin.V1Alpha.FirebaseLink>(
@@ -683,6 +721,46 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_analytics_admin_v1alpha_AcknowledgeUserDataCollectionResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> __Method_GetSKAdNetworkConversionValueSchema = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSKAdNetworkConversionValueSchema",
+        __Marshaller_google_analytics_admin_v1alpha_GetSKAdNetworkConversionValueSchemaRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SKAdNetworkConversionValueSchema);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> __Method_CreateSKAdNetworkConversionValueSchema = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSKAdNetworkConversionValueSchema",
+        __Marshaller_google_analytics_admin_v1alpha_CreateSKAdNetworkConversionValueSchemaRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SKAdNetworkConversionValueSchema);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSKAdNetworkConversionValueSchema = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSKAdNetworkConversionValueSchema",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteSKAdNetworkConversionValueSchemaRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> __Method_UpdateSKAdNetworkConversionValueSchema = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSKAdNetworkConversionValueSchema",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateSKAdNetworkConversionValueSchemaRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SKAdNetworkConversionValueSchema);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest, global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse> __Method_ListSKAdNetworkConversionValueSchemas = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest, global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSKAdNetworkConversionValueSchemas",
+        __Marshaller_google_analytics_admin_v1alpha_ListSKAdNetworkConversionValueSchemasRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListSKAdNetworkConversionValueSchemasResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> __Method_SearchChangeHistoryEvents = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -715,6 +793,14 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_analytics_admin_v1alpha_ConversionEvent);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent> __Method_UpdateConversionEvent = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateConversionEvent",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateConversionEventRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ConversionEvent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent> __Method_GetConversionEvent = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -737,6 +823,46 @@ namespace Google.Analytics.Admin.V1Alpha {
         "ListConversionEvents",
         __Marshaller_google_analytics_admin_v1alpha_ListConversionEventsRequest,
         __Marshaller_google_analytics_admin_v1alpha_ListConversionEventsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateKeyEventRequest, global::Google.Analytics.Admin.V1Alpha.KeyEvent> __Method_CreateKeyEvent = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateKeyEventRequest, global::Google.Analytics.Admin.V1Alpha.KeyEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateKeyEvent",
+        __Marshaller_google_analytics_admin_v1alpha_CreateKeyEventRequest,
+        __Marshaller_google_analytics_admin_v1alpha_KeyEvent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateKeyEventRequest, global::Google.Analytics.Admin.V1Alpha.KeyEvent> __Method_UpdateKeyEvent = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateKeyEventRequest, global::Google.Analytics.Admin.V1Alpha.KeyEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateKeyEvent",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateKeyEventRequest,
+        __Marshaller_google_analytics_admin_v1alpha_KeyEvent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetKeyEventRequest, global::Google.Analytics.Admin.V1Alpha.KeyEvent> __Method_GetKeyEvent = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetKeyEventRequest, global::Google.Analytics.Admin.V1Alpha.KeyEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetKeyEvent",
+        __Marshaller_google_analytics_admin_v1alpha_GetKeyEventRequest,
+        __Marshaller_google_analytics_admin_v1alpha_KeyEvent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteKeyEventRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteKeyEvent = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteKeyEventRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteKeyEvent",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteKeyEventRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListKeyEventsRequest, global::Google.Analytics.Admin.V1Alpha.ListKeyEventsResponse> __Method_ListKeyEvents = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListKeyEventsRequest, global::Google.Analytics.Admin.V1Alpha.ListKeyEventsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListKeyEvents",
+        __Marshaller_google_analytics_admin_v1alpha_ListKeyEventsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListKeyEventsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink> __Method_GetDisplayVideo360AdvertiserLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink>(
@@ -1179,6 +1305,46 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup> __Method_GetChannelGroup = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetChannelGroup",
+        __Marshaller_google_analytics_admin_v1alpha_GetChannelGroupRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ChannelGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest, global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse> __Method_ListChannelGroups = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest, global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListChannelGroups",
+        __Marshaller_google_analytics_admin_v1alpha_ListChannelGroupsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListChannelGroupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup> __Method_CreateChannelGroup = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateChannelGroup",
+        __Marshaller_google_analytics_admin_v1alpha_CreateChannelGroupRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ChannelGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup> __Method_UpdateChannelGroup = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateChannelGroup",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateChannelGroupRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ChannelGroup);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteChannelGroup = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteChannelGroup",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteChannelGroupRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse> __Method_SetAutomatedGa4ConfigurationOptOut = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1195,6 +1361,14 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_analytics_admin_v1alpha_FetchAutomatedGa4ConfigurationOptOutResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink> __Method_CreateBigQueryLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateBigQueryLink",
+        __Marshaller_google_analytics_admin_v1alpha_CreateBigQueryLinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_BigQueryLink);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink> __Method_GetBigQueryLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1209,6 +1383,22 @@ namespace Google.Analytics.Admin.V1Alpha {
         "ListBigQueryLinks",
         __Marshaller_google_analytics_admin_v1alpha_ListBigQueryLinksRequest,
         __Marshaller_google_analytics_admin_v1alpha_ListBigQueryLinksResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteBigQueryLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBigQueryLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteBigQueryLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBigQueryLink",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteBigQueryLinkRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink> __Method_UpdateBigQueryLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBigQueryLink",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateBigQueryLinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_BigQueryLink);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> __Method_GetEnhancedMeasurementSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(
@@ -1250,6 +1440,278 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_analytics_admin_v1alpha_ListConnectedSiteTagsRequest,
         __Marshaller_google_analytics_admin_v1alpha_ListConnectedSiteTagsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest, global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse> __Method_FetchConnectedGa4Property = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest, global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchConnectedGa4Property",
+        __Marshaller_google_analytics_admin_v1alpha_FetchConnectedGa4PropertyRequest,
+        __Marshaller_google_analytics_admin_v1alpha_FetchConnectedGa4PropertyResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAdSenseLinkRequest, global::Google.Analytics.Admin.V1Alpha.AdSenseLink> __Method_GetAdSenseLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAdSenseLinkRequest, global::Google.Analytics.Admin.V1Alpha.AdSenseLink>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAdSenseLink",
+        __Marshaller_google_analytics_admin_v1alpha_GetAdSenseLinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_AdSenseLink);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateAdSenseLinkRequest, global::Google.Analytics.Admin.V1Alpha.AdSenseLink> __Method_CreateAdSenseLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateAdSenseLinkRequest, global::Google.Analytics.Admin.V1Alpha.AdSenseLink>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAdSenseLink",
+        __Marshaller_google_analytics_admin_v1alpha_CreateAdSenseLinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_AdSenseLink);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteAdSenseLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAdSenseLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteAdSenseLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAdSenseLink",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteAdSenseLinkRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse> __Method_ListAdSenseLinks = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAdSenseLinks",
+        __Marshaller_google_analytics_admin_v1alpha_ListAdSenseLinksRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListAdSenseLinksResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetEventCreateRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventCreateRule> __Method_GetEventCreateRule = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetEventCreateRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventCreateRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetEventCreateRule",
+        __Marshaller_google_analytics_admin_v1alpha_GetEventCreateRuleRequest,
+        __Marshaller_google_analytics_admin_v1alpha_EventCreateRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesRequest, global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse> __Method_ListEventCreateRules = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesRequest, global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListEventCreateRules",
+        __Marshaller_google_analytics_admin_v1alpha_ListEventCreateRulesRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListEventCreateRulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateEventCreateRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventCreateRule> __Method_CreateEventCreateRule = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateEventCreateRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventCreateRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateEventCreateRule",
+        __Marshaller_google_analytics_admin_v1alpha_CreateEventCreateRuleRequest,
+        __Marshaller_google_analytics_admin_v1alpha_EventCreateRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateEventCreateRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventCreateRule> __Method_UpdateEventCreateRule = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateEventCreateRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventCreateRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateEventCreateRule",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateEventCreateRuleRequest,
+        __Marshaller_google_analytics_admin_v1alpha_EventCreateRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteEventCreateRule = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteEventCreateRule",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteEventCreateRuleRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetEventEditRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventEditRule> __Method_GetEventEditRule = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetEventEditRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventEditRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetEventEditRule",
+        __Marshaller_google_analytics_admin_v1alpha_GetEventEditRuleRequest,
+        __Marshaller_google_analytics_admin_v1alpha_EventEditRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesRequest, global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesResponse> __Method_ListEventEditRules = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesRequest, global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListEventEditRules",
+        __Marshaller_google_analytics_admin_v1alpha_ListEventEditRulesRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListEventEditRulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateEventEditRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventEditRule> __Method_CreateEventEditRule = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateEventEditRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventEditRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateEventEditRule",
+        __Marshaller_google_analytics_admin_v1alpha_CreateEventEditRuleRequest,
+        __Marshaller_google_analytics_admin_v1alpha_EventEditRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateEventEditRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventEditRule> __Method_UpdateEventEditRule = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateEventEditRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventEditRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateEventEditRule",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateEventEditRuleRequest,
+        __Marshaller_google_analytics_admin_v1alpha_EventEditRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteEventEditRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteEventEditRule = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteEventEditRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteEventEditRule",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteEventEditRuleRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ReorderEventEditRulesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ReorderEventEditRules = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ReorderEventEditRulesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ReorderEventEditRules",
+        __Marshaller_google_analytics_admin_v1alpha_ReorderEventEditRulesRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings> __Method_UpdateDataRedactionSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDataRedactionSettings",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateDataRedactionSettingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DataRedactionSettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings> __Method_GetDataRedactionSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDataRedactionSettings",
+        __Marshaller_google_analytics_admin_v1alpha_GetDataRedactionSettingsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DataRedactionSettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> __Method_GetCalculatedMetric = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCalculatedMetric",
+        __Marshaller_google_analytics_admin_v1alpha_GetCalculatedMetricRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CalculatedMetric);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> __Method_CreateCalculatedMetric = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCalculatedMetric",
+        __Marshaller_google_analytics_admin_v1alpha_CreateCalculatedMetricRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CalculatedMetric);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest, global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse> __Method_ListCalculatedMetrics = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest, global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListCalculatedMetrics",
+        __Marshaller_google_analytics_admin_v1alpha_ListCalculatedMetricsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListCalculatedMetricsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> __Method_UpdateCalculatedMetric = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCalculatedMetric",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateCalculatedMetricRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CalculatedMetric);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCalculatedMetric = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteCalculatedMetric",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteCalculatedMetricRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest, global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse> __Method_CreateRollupProperty = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest, global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateRollupProperty",
+        __Marshaller_google_analytics_admin_v1alpha_CreateRollupPropertyRequest,
+        __Marshaller_google_analytics_admin_v1alpha_CreateRollupPropertyResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest, global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink> __Method_GetRollupPropertySourceLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest, global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRollupPropertySourceLink",
+        __Marshaller_google_analytics_admin_v1alpha_GetRollupPropertySourceLinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_RollupPropertySourceLink);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse> __Method_ListRollupPropertySourceLinks = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRollupPropertySourceLinks",
+        __Marshaller_google_analytics_admin_v1alpha_ListRollupPropertySourceLinksRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListRollupPropertySourceLinksResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest, global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink> __Method_CreateRollupPropertySourceLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest, global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateRollupPropertySourceLink",
+        __Marshaller_google_analytics_admin_v1alpha_CreateRollupPropertySourceLinkRequest,
+        __Marshaller_google_analytics_admin_v1alpha_RollupPropertySourceLink);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteRollupPropertySourceLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteRollupPropertySourceLink",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteRollupPropertySourceLinkRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyRequest, global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyResponse> __Method_ProvisionSubproperty = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyRequest, global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ProvisionSubproperty",
+        __Marshaller_google_analytics_admin_v1alpha_ProvisionSubpropertyRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ProvisionSubpropertyResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> __Method_CreateSubpropertyEventFilter = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSubpropertyEventFilter",
+        __Marshaller_google_analytics_admin_v1alpha_CreateSubpropertyEventFilterRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SubpropertyEventFilter);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> __Method_GetSubpropertyEventFilter = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSubpropertyEventFilter",
+        __Marshaller_google_analytics_admin_v1alpha_GetSubpropertyEventFilterRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SubpropertyEventFilter);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest, global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse> __Method_ListSubpropertyEventFilters = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest, global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSubpropertyEventFilters",
+        __Marshaller_google_analytics_admin_v1alpha_ListSubpropertyEventFiltersRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListSubpropertyEventFiltersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> __Method_UpdateSubpropertyEventFilter = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSubpropertyEventFilter",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateSubpropertyEventFilterRequest,
+        __Marshaller_google_analytics_admin_v1alpha_SubpropertyEventFilter);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSubpropertyEventFilter = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSubpropertyEventFilter",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteSubpropertyEventFilterRequest,
+        __Marshaller_google_protobuf_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -1275,7 +1737,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -1296,7 +1758,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       ///
       /// If the accounts are not restored before the expiration time, the account
       /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-      /// UserLinks) will be permanently purged.
+      /// AccessBindings) will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
       /// Returns an error if the target is not found.
@@ -1347,7 +1809,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1361,7 +1823,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -1376,7 +1837,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1394,11 +1856,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// However, they can be restored using the Trash Can UI.
       ///
       /// If the properties are not restored before the expiration time, the Property
-      /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+      /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1417,141 +1879,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.Property> UpdateProperty(global::Google.Analytics.Admin.V1Alpha.UpdatePropertyRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Gets information about a user's link to an account or property.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.UserLink> GetUserLink(global::Google.Analytics.Admin.V1Alpha.GetUserLinkRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Gets information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse> BatchGetUserLinks(global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Lists all user links on an account or property.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListUserLinksResponse> ListUserLinks(global::Google.Analytics.Admin.V1Alpha.ListUserLinksRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Lists all user links on an account or property, including implicit ones
-      /// that come from effective permissions granted by groups or organization
-      /// admin roles.
-      ///
-      /// If a returned user link does not have direct permissions, they cannot
-      /// be removed from the account or property directly with the DeleteUserLink
-      /// command. They have to be removed from the group/etc that gives them
-      /// permissions, which is currently only usable/discoverable in the GA or GMP
-      /// UIs.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.AuditUserLinksResponse> AuditUserLinks(global::Google.Analytics.Admin.V1Alpha.AuditUserLinksRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Creates a user link on an account or property.
-      ///
-      /// If the user with the specified email already has permissions on the
-      /// account or property, then the user's existing permissions will be unioned
-      /// with the permissions specified in the new UserLink.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.UserLink> CreateUserLink(global::Google.Analytics.Admin.V1Alpha.CreateUserLinkRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Creates information about multiple users' links to an account or property.
-      ///
-      /// This method is transactional. If any UserLink cannot be created, none of
-      /// the UserLinks will be created.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksResponse> BatchCreateUserLinks(global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Updates a user link on an account or property.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.UserLink> UpdateUserLink(global::Google.Analytics.Admin.V1Alpha.UpdateUserLinkRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Updates information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksResponse> BatchUpdateUserLinks(global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Deletes a user link on an account or property.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserLink(global::Google.Analytics.Admin.V1Alpha.DeleteUserLinkRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Deletes information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteUserLinks(global::Google.Analytics.Admin.V1Alpha.BatchDeleteUserLinksRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1670,7 +1997,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1747,8 +2074,72 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
+      /// Looks up a single SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes target SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> UpdateSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists SKAdNetworkConversionValueSchema on a stream.
+      /// Properties can have at most one SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse> ListSKAdNetworkConversionValueSchemas(global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1784,11 +2175,13 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
+      /// Deprecated: Use `CreateKeyEvent` instead.
       /// Creates a conversion event with the specified attributes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> CreateConversionEvent(global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest request, grpc::ServerCallContext context)
       {
@@ -1796,11 +2189,27 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
+      /// Deprecated: Use `UpdateKeyEvent` instead.
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> UpdateConversionEvent(global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deprecated: Use `GetKeyEvent` instead.
       /// Retrieve a single conversion event.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> GetConversionEvent(global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest request, grpc::ServerCallContext context)
       {
@@ -1808,11 +2217,13 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
+      /// Deprecated: Use `DeleteKeyEvent` instead.
       /// Deletes a conversion event in a property.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversionEvent(global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest request, grpc::ServerCallContext context)
       {
@@ -1820,6 +2231,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
+      /// Deprecated: Use `ListKeyEvents` instead.
       /// Returns a list of conversion events in the specified parent property.
       ///
       /// Returns an empty list if no conversion events are found.
@@ -1827,8 +2239,70 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse> ListConversionEvents(global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Key Event.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.KeyEvent> CreateKeyEvent(global::Google.Analytics.Admin.V1Alpha.CreateKeyEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a Key Event.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.KeyEvent> UpdateKeyEvent(global::Google.Analytics.Admin.V1Alpha.UpdateKeyEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve a single Key Event.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.KeyEvent> GetKeyEvent(global::Google.Analytics.Admin.V1Alpha.GetKeyEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a Key Event.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteKeyEvent(global::Google.Analytics.Admin.V1Alpha.DeleteKeyEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of Key Events in the specified parent property.
+      /// Returns an empty list if no Key Events are found.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListKeyEventsResponse> ListKeyEvents(global::Google.Analytics.Admin.V1Alpha.ListKeyEventsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2333,15 +2807,22 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -2526,6 +3007,66 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
+      /// Lookup for a single ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> GetChannelGroup(global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists ChannelGroups on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse> ListChannelGroups(global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> CreateChannelGroup(global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> UpdateChannelGroup(global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a ChannelGroup on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteChannelGroup(global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Sets the opt out status for the automated GA4 setup process for a UA
       /// property.
       /// Note: this has no effect on GA4 property.
@@ -2554,6 +3095,18 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
+      /// Creates a BigQueryLink.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.BigQueryLink> CreateBigQueryLink(global::Google.Analytics.Admin.V1Alpha.CreateBigQueryLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lookup for a single BigQuery Link.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -2573,6 +3126,30 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse> ListBigQueryLinks(global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a BigQueryLink on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBigQueryLink(global::Google.Analytics.Admin.V1Alpha.DeleteBigQueryLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a BigQueryLink.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.BigQueryLink> UpdateBigQueryLink(global::Google.Analytics.Admin.V1Alpha.UpdateBigQueryLinkRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2642,6 +3219,424 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse> ListConnectedSiteTags(global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Given a specified UA property, looks up the GA4 property connected to it.
+      /// Note: this cannot be used with GA4 properties.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse> FetchConnectedGa4Property(global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Looks up a single AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.AdSenseLink> GetAdSenseLink(global::Google.Analytics.Admin.V1Alpha.GetAdSenseLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.AdSenseLink> CreateAdSenseLink(global::Google.Analytics.Admin.V1Alpha.CreateAdSenseLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAdSenseLink(global::Google.Analytics.Admin.V1Alpha.DeleteAdSenseLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists AdSenseLinks on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse> ListAdSenseLinks(global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.EventCreateRule> GetEventCreateRule(global::Google.Analytics.Admin.V1Alpha.GetEventCreateRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists EventCreateRules on a web data stream.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse> ListEventCreateRules(global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.EventCreateRule> CreateEventCreateRule(global::Google.Analytics.Admin.V1Alpha.CreateEventCreateRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.EventCreateRule> UpdateEventCreateRule(global::Google.Analytics.Admin.V1Alpha.UpdateEventCreateRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEventCreateRule(global::Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single EventEditRule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.EventEditRule> GetEventEditRule(global::Google.Analytics.Admin.V1Alpha.GetEventEditRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists EventEditRules on a web data stream.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesResponse> ListEventEditRules(global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.EventEditRule> CreateEventEditRule(global::Google.Analytics.Admin.V1Alpha.CreateEventEditRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.EventEditRule> UpdateEventEditRule(global::Google.Analytics.Admin.V1Alpha.UpdateEventEditRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEventEditRule(global::Google.Analytics.Admin.V1Alpha.DeleteEventEditRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Changes the processing order of event edit rules on the specified stream.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ReorderEventEditRules(global::Google.Analytics.Admin.V1Alpha.ReorderEventEditRulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a DataRedactionSettings on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings> UpdateDataRedactionSettings(global::Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single DataRedactionSettings.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings> GetDataRedactionSettings(global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> GetCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> CreateCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists CalculatedMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse> ListCalculatedMetrics(global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> UpdateCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create a roll-up property and all roll-up property source links.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse> CreateRollupProperty(global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single roll-up property source Link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink> GetRollupPropertySourceLink(global::Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists roll-up property source Links on a property.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse> ListRollupPropertySourceLinks(global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a roll-up property source link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink> CreateRollupPropertySourceLink(global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a roll-up property source link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRollupPropertySourceLink(global::Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create a subproperty and a subproperty event filter that applies to the
+      /// created subproperty.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyResponse> ProvisionSubproperty(global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> CreateSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> GetSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List all subproperty Event Filters on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse> ListSubpropertyEventFilters(global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> UpdateSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a subproperty event filter.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2726,7 +3721,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -2743,7 +3738,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -2758,7 +3753,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -2775,7 +3770,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -2795,7 +3790,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       ///
       /// If the accounts are not restored before the expiration time, the account
       /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-      /// UserLinks) will be permanently purged.
+      /// AccessBindings) will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
       /// Returns an error if the target is not found.
@@ -2818,7 +3813,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       ///
       /// If the accounts are not restored before the expiration time, the account
       /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-      /// UserLinks) will be permanently purged.
+      /// AccessBindings) will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
       /// Returns an error if the target is not found.
@@ -2839,7 +3834,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       ///
       /// If the accounts are not restored before the expiration time, the account
       /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-      /// UserLinks) will be permanently purged.
+      /// AccessBindings) will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
       /// Returns an error if the target is not found.
@@ -2862,7 +3857,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       ///
       /// If the accounts are not restored before the expiration time, the account
       /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-      /// UserLinks) will be permanently purged.
+      /// AccessBindings) will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
       /// Returns an error if the target is not found.
@@ -3020,7 +4015,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_ListAccountSummaries, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3033,7 +4028,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return GetProperty(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3044,7 +4039,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.BlockingUnaryCall(__Method_GetProperty, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3057,7 +4052,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return GetPropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3070,7 +4065,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -3088,7 +4082,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -3104,7 +4097,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -3122,7 +4114,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -3136,7 +4127,8 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_ListProperties, null, options, request);
       }
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3149,7 +4141,8 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CreateProperty(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3160,7 +4153,8 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.BlockingUnaryCall(__Method_CreateProperty, null, options, request);
       }
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3173,7 +4167,8 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CreatePropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3190,11 +4185,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// However, they can be restored using the Trash Can UI.
       ///
       /// If the properties are not restored before the expiration time, the Property
-      /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+      /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3213,11 +4208,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// However, they can be restored using the Trash Can UI.
       ///
       /// If the properties are not restored before the expiration time, the Property
-      /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+      /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3234,11 +4229,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// However, they can be restored using the Trash Can UI.
       ///
       /// If the properties are not restored before the expiration time, the Property
-      /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+      /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3257,11 +4252,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// However, they can be restored using the Trash Can UI.
       ///
       /// If the properties are not restored before the expiration time, the Property
-      /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+      /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3318,546 +4313,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.Property> UpdatePropertyAsync(global::Google.Analytics.Admin.V1Alpha.UpdatePropertyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateProperty, null, options, request);
-      }
-      /// <summary>
-      /// Gets information about a user's link to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.UserLink GetUserLink(global::Google.Analytics.Admin.V1Alpha.GetUserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetUserLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Gets information about a user's link to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.UserLink GetUserLink(global::Google.Analytics.Admin.V1Alpha.GetUserLinkRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetUserLink, null, options, request);
-      }
-      /// <summary>
-      /// Gets information about a user's link to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.UserLink> GetUserLinkAsync(global::Google.Analytics.Admin.V1Alpha.GetUserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetUserLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Gets information about a user's link to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.UserLink> GetUserLinkAsync(global::Google.Analytics.Admin.V1Alpha.GetUserLinkRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetUserLink, null, options, request);
-      }
-      /// <summary>
-      /// Gets information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse BatchGetUserLinks(global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return BatchGetUserLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Gets information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse BatchGetUserLinks(global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_BatchGetUserLinks, null, options, request);
-      }
-      /// <summary>
-      /// Gets information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse> BatchGetUserLinksAsync(global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return BatchGetUserLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Gets information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse> BatchGetUserLinksAsync(global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_BatchGetUserLinks, null, options, request);
-      }
-      /// <summary>
-      /// Lists all user links on an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.ListUserLinksResponse ListUserLinks(global::Google.Analytics.Admin.V1Alpha.ListUserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ListUserLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Lists all user links on an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.ListUserLinksResponse ListUserLinks(global::Google.Analytics.Admin.V1Alpha.ListUserLinksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_ListUserLinks, null, options, request);
-      }
-      /// <summary>
-      /// Lists all user links on an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListUserLinksResponse> ListUserLinksAsync(global::Google.Analytics.Admin.V1Alpha.ListUserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return ListUserLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Lists all user links on an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListUserLinksResponse> ListUserLinksAsync(global::Google.Analytics.Admin.V1Alpha.ListUserLinksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_ListUserLinks, null, options, request);
-      }
-      /// <summary>
-      /// Lists all user links on an account or property, including implicit ones
-      /// that come from effective permissions granted by groups or organization
-      /// admin roles.
-      ///
-      /// If a returned user link does not have direct permissions, they cannot
-      /// be removed from the account or property directly with the DeleteUserLink
-      /// command. They have to be removed from the group/etc that gives them
-      /// permissions, which is currently only usable/discoverable in the GA or GMP
-      /// UIs.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.AuditUserLinksResponse AuditUserLinks(global::Google.Analytics.Admin.V1Alpha.AuditUserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return AuditUserLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Lists all user links on an account or property, including implicit ones
-      /// that come from effective permissions granted by groups or organization
-      /// admin roles.
-      ///
-      /// If a returned user link does not have direct permissions, they cannot
-      /// be removed from the account or property directly with the DeleteUserLink
-      /// command. They have to be removed from the group/etc that gives them
-      /// permissions, which is currently only usable/discoverable in the GA or GMP
-      /// UIs.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.AuditUserLinksResponse AuditUserLinks(global::Google.Analytics.Admin.V1Alpha.AuditUserLinksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_AuditUserLinks, null, options, request);
-      }
-      /// <summary>
-      /// Lists all user links on an account or property, including implicit ones
-      /// that come from effective permissions granted by groups or organization
-      /// admin roles.
-      ///
-      /// If a returned user link does not have direct permissions, they cannot
-      /// be removed from the account or property directly with the DeleteUserLink
-      /// command. They have to be removed from the group/etc that gives them
-      /// permissions, which is currently only usable/discoverable in the GA or GMP
-      /// UIs.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AuditUserLinksResponse> AuditUserLinksAsync(global::Google.Analytics.Admin.V1Alpha.AuditUserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return AuditUserLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Lists all user links on an account or property, including implicit ones
-      /// that come from effective permissions granted by groups or organization
-      /// admin roles.
-      ///
-      /// If a returned user link does not have direct permissions, they cannot
-      /// be removed from the account or property directly with the DeleteUserLink
-      /// command. They have to be removed from the group/etc that gives them
-      /// permissions, which is currently only usable/discoverable in the GA or GMP
-      /// UIs.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AuditUserLinksResponse> AuditUserLinksAsync(global::Google.Analytics.Admin.V1Alpha.AuditUserLinksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_AuditUserLinks, null, options, request);
-      }
-      /// <summary>
-      /// Creates a user link on an account or property.
-      ///
-      /// If the user with the specified email already has permissions on the
-      /// account or property, then the user's existing permissions will be unioned
-      /// with the permissions specified in the new UserLink.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.UserLink CreateUserLink(global::Google.Analytics.Admin.V1Alpha.CreateUserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateUserLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates a user link on an account or property.
-      ///
-      /// If the user with the specified email already has permissions on the
-      /// account or property, then the user's existing permissions will be unioned
-      /// with the permissions specified in the new UserLink.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.UserLink CreateUserLink(global::Google.Analytics.Admin.V1Alpha.CreateUserLinkRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_CreateUserLink, null, options, request);
-      }
-      /// <summary>
-      /// Creates a user link on an account or property.
-      ///
-      /// If the user with the specified email already has permissions on the
-      /// account or property, then the user's existing permissions will be unioned
-      /// with the permissions specified in the new UserLink.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.UserLink> CreateUserLinkAsync(global::Google.Analytics.Admin.V1Alpha.CreateUserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateUserLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates a user link on an account or property.
-      ///
-      /// If the user with the specified email already has permissions on the
-      /// account or property, then the user's existing permissions will be unioned
-      /// with the permissions specified in the new UserLink.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.UserLink> CreateUserLinkAsync(global::Google.Analytics.Admin.V1Alpha.CreateUserLinkRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_CreateUserLink, null, options, request);
-      }
-      /// <summary>
-      /// Creates information about multiple users' links to an account or property.
-      ///
-      /// This method is transactional. If any UserLink cannot be created, none of
-      /// the UserLinks will be created.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksResponse BatchCreateUserLinks(global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return BatchCreateUserLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates information about multiple users' links to an account or property.
-      ///
-      /// This method is transactional. If any UserLink cannot be created, none of
-      /// the UserLinks will be created.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksResponse BatchCreateUserLinks(global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateUserLinks, null, options, request);
-      }
-      /// <summary>
-      /// Creates information about multiple users' links to an account or property.
-      ///
-      /// This method is transactional. If any UserLink cannot be created, none of
-      /// the UserLinks will be created.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksResponse> BatchCreateUserLinksAsync(global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return BatchCreateUserLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Creates information about multiple users' links to an account or property.
-      ///
-      /// This method is transactional. If any UserLink cannot be created, none of
-      /// the UserLinks will be created.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksResponse> BatchCreateUserLinksAsync(global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateUserLinks, null, options, request);
-      }
-      /// <summary>
-      /// Updates a user link on an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.UserLink UpdateUserLink(global::Google.Analytics.Admin.V1Alpha.UpdateUserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateUserLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates a user link on an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.UserLink UpdateUserLink(global::Google.Analytics.Admin.V1Alpha.UpdateUserLinkRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_UpdateUserLink, null, options, request);
-      }
-      /// <summary>
-      /// Updates a user link on an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.UserLink> UpdateUserLinkAsync(global::Google.Analytics.Admin.V1Alpha.UpdateUserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateUserLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates a user link on an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.UserLink> UpdateUserLinkAsync(global::Google.Analytics.Admin.V1Alpha.UpdateUserLinkRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_UpdateUserLink, null, options, request);
-      }
-      /// <summary>
-      /// Updates information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksResponse BatchUpdateUserLinks(global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return BatchUpdateUserLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksResponse BatchUpdateUserLinks(global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateUserLinks, null, options, request);
-      }
-      /// <summary>
-      /// Updates information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksResponse> BatchUpdateUserLinksAsync(global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return BatchUpdateUserLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksResponse> BatchUpdateUserLinksAsync(global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateUserLinks, null, options, request);
-      }
-      /// <summary>
-      /// Deletes a user link on an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUserLink(global::Google.Analytics.Admin.V1Alpha.DeleteUserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteUserLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deletes a user link on an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUserLink(global::Google.Analytics.Admin.V1Alpha.DeleteUserLinkRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_DeleteUserLink, null, options, request);
-      }
-      /// <summary>
-      /// Deletes a user link on an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserLinkAsync(global::Google.Analytics.Admin.V1Alpha.DeleteUserLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteUserLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deletes a user link on an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserLinkAsync(global::Google.Analytics.Admin.V1Alpha.DeleteUserLinkRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_DeleteUserLink, null, options, request);
-      }
-      /// <summary>
-      /// Deletes information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty BatchDeleteUserLinks(global::Google.Analytics.Admin.V1Alpha.BatchDeleteUserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return BatchDeleteUserLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deletes information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty BatchDeleteUserLinks(global::Google.Analytics.Admin.V1Alpha.BatchDeleteUserLinksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_BatchDeleteUserLinks, null, options, request);
-      }
-      /// <summary>
-      /// Deletes information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteUserLinksAsync(global::Google.Analytics.Admin.V1Alpha.BatchDeleteUserLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return BatchDeleteUserLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Deletes information about multiple users' links to an account or property.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteUserLinksAsync(global::Google.Analytics.Admin.V1Alpha.BatchDeleteUserLinksRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteUserLinks, null, options, request);
       }
       /// <summary>
       /// Creates a FirebaseLink.
@@ -4312,7 +4767,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataSharingSettings, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4325,7 +4780,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return GetMeasurementProtocolSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4336,7 +4791,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.BlockingUnaryCall(__Method_GetMeasurementProtocolSecret, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4349,7 +4804,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return GetMeasurementProtocolSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4620,8 +5075,255 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_AcknowledgeUserDataCollection, null, options, request);
       }
       /// <summary>
+      /// Looks up a single SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema GetSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSKAdNetworkConversionValueSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up a single SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema GetSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Looks up a single SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSKAdNetworkConversionValueSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up a single SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> GetSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Creates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema CreateSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSKAdNetworkConversionValueSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema CreateSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Creates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSKAdNetworkConversionValueSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> CreateSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Deletes target SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSKAdNetworkConversionValueSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes target SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Deletes target SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSKAdNetworkConversionValueSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes target SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Updates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema UpdateSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSKAdNetworkConversionValueSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema UpdateSKAdNetworkConversionValueSchema(global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Updates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> UpdateSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSKAdNetworkConversionValueSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema> UpdateSKAdNetworkConversionValueSchemaAsync(global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSKAdNetworkConversionValueSchema, null, options, request);
+      }
+      /// <summary>
+      /// Lists SKAdNetworkConversionValueSchema on a stream.
+      /// Properties can have at most one SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse ListSKAdNetworkConversionValueSchemas(global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSKAdNetworkConversionValueSchemas(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists SKAdNetworkConversionValueSchema on a stream.
+      /// Properties can have at most one SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse ListSKAdNetworkConversionValueSchemas(global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSKAdNetworkConversionValueSchemas, null, options, request);
+      }
+      /// <summary>
+      /// Lists SKAdNetworkConversionValueSchema on a stream.
+      /// Properties can have at most one SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse> ListSKAdNetworkConversionValueSchemasAsync(global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSKAdNetworkConversionValueSchemasAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists SKAdNetworkConversionValueSchema on a stream.
+      /// Properties can have at most one SKAdNetworkConversionValueSchema.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse> ListSKAdNetworkConversionValueSchemasAsync(global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSKAdNetworkConversionValueSchemas, null, options, request);
+      }
+      /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4636,6 +5338,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4648,6 +5353,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4662,6 +5370,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4768,6 +5479,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGoogleSignalsSettings, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `CreateKeyEvent` instead.
       /// Creates a conversion event with the specified attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4775,23 +5487,27 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Admin.V1Alpha.ConversionEvent CreateConversionEvent(global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateConversionEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `CreateKeyEvent` instead.
       /// Creates a conversion event with the specified attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Admin.V1Alpha.ConversionEvent CreateConversionEvent(global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateConversionEvent, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `CreateKeyEvent` instead.
       /// Creates a conversion event with the specified attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4799,23 +5515,83 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> CreateConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateConversionEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `CreateKeyEvent` instead.
       /// Creates a conversion event with the specified attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> CreateConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateConversionEvent, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `UpdateKeyEvent` instead.
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ConversionEvent UpdateConversionEvent(global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConversionEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deprecated: Use `UpdateKeyEvent` instead.
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ConversionEvent UpdateConversionEvent(global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateConversionEvent, null, options, request);
+      }
+      /// <summary>
+      /// Deprecated: Use `UpdateKeyEvent` instead.
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> UpdateConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConversionEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deprecated: Use `UpdateKeyEvent` instead.
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> UpdateConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateConversionEvent, null, options, request);
+      }
+      /// <summary>
+      /// Deprecated: Use `GetKeyEvent` instead.
       /// Retrieve a single conversion event.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4823,23 +5599,27 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Admin.V1Alpha.ConversionEvent GetConversionEvent(global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConversionEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `GetKeyEvent` instead.
       /// Retrieve a single conversion event.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Admin.V1Alpha.ConversionEvent GetConversionEvent(global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetConversionEvent, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `GetKeyEvent` instead.
       /// Retrieve a single conversion event.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4847,23 +5627,27 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> GetConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConversionEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `GetKeyEvent` instead.
       /// Retrieve a single conversion event.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ConversionEvent> GetConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetConversionEvent, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `DeleteKeyEvent` instead.
       /// Deletes a conversion event in a property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4871,23 +5655,27 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteConversionEvent(global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteConversionEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `DeleteKeyEvent` instead.
       /// Deletes a conversion event in a property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteConversionEvent(global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteConversionEvent, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `DeleteKeyEvent` instead.
       /// Deletes a conversion event in a property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4895,23 +5683,27 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteConversionEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `DeleteKeyEvent` instead.
       /// Deletes a conversion event in a property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversionEventAsync(global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteConversionEvent, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `ListKeyEvents` instead.
       /// Returns a list of conversion events in the specified parent property.
       ///
       /// Returns an empty list if no conversion events are found.
@@ -4921,12 +5713,14 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse ListConversionEvents(global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListConversionEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `ListKeyEvents` instead.
       /// Returns a list of conversion events in the specified parent property.
       ///
       /// Returns an empty list if no conversion events are found.
@@ -4934,12 +5728,14 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse ListConversionEvents(global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListConversionEvents, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `ListKeyEvents` instead.
       /// Returns a list of conversion events in the specified parent property.
       ///
       /// Returns an empty list if no conversion events are found.
@@ -4949,12 +5745,14 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse> ListConversionEventsAsync(global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListConversionEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `ListKeyEvents` instead.
       /// Returns a list of conversion events in the specified parent property.
       ///
       /// Returns an empty list if no conversion events are found.
@@ -4962,10 +5760,255 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse> ListConversionEventsAsync(global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListConversionEvents, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.KeyEvent CreateKeyEvent(global::Google.Analytics.Admin.V1Alpha.CreateKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateKeyEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.KeyEvent CreateKeyEvent(global::Google.Analytics.Admin.V1Alpha.CreateKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.KeyEvent> CreateKeyEventAsync(global::Google.Analytics.Admin.V1Alpha.CreateKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateKeyEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.KeyEvent> CreateKeyEventAsync(global::Google.Analytics.Admin.V1Alpha.CreateKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.KeyEvent UpdateKeyEvent(global::Google.Analytics.Admin.V1Alpha.UpdateKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateKeyEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.KeyEvent UpdateKeyEvent(global::Google.Analytics.Admin.V1Alpha.UpdateKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.KeyEvent> UpdateKeyEventAsync(global::Google.Analytics.Admin.V1Alpha.UpdateKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateKeyEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.KeyEvent> UpdateKeyEventAsync(global::Google.Analytics.Admin.V1Alpha.UpdateKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve a single Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.KeyEvent GetKeyEvent(global::Google.Analytics.Admin.V1Alpha.GetKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetKeyEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve a single Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.KeyEvent GetKeyEvent(global::Google.Analytics.Admin.V1Alpha.GetKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve a single Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.KeyEvent> GetKeyEventAsync(global::Google.Analytics.Admin.V1Alpha.GetKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetKeyEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve a single Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.KeyEvent> GetKeyEventAsync(global::Google.Analytics.Admin.V1Alpha.GetKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteKeyEvent(global::Google.Analytics.Admin.V1Alpha.DeleteKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteKeyEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteKeyEvent(global::Google.Analytics.Admin.V1Alpha.DeleteKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteKeyEventAsync(global::Google.Analytics.Admin.V1Alpha.DeleteKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteKeyEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteKeyEventAsync(global::Google.Analytics.Admin.V1Alpha.DeleteKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of Key Events in the specified parent property.
+      /// Returns an empty list if no Key Events are found.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListKeyEventsResponse ListKeyEvents(global::Google.Analytics.Admin.V1Alpha.ListKeyEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListKeyEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of Key Events in the specified parent property.
+      /// Returns an empty list if no Key Events are found.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListKeyEventsResponse ListKeyEvents(global::Google.Analytics.Admin.V1Alpha.ListKeyEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListKeyEvents, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of Key Events in the specified parent property.
+      /// Returns an empty list if no Key Events are found.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListKeyEventsResponse> ListKeyEventsAsync(global::Google.Analytics.Admin.V1Alpha.ListKeyEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListKeyEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of Key Events in the specified parent property.
+      /// Returns an empty list if no Key Events are found.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListKeyEventsResponse> ListKeyEventsAsync(global::Google.Analytics.Admin.V1Alpha.ListKeyEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListKeyEvents, null, options, request);
       }
       /// <summary>
       /// Look up a single DisplayVideo360AdvertiserLink
@@ -6952,15 +7995,22 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -6977,15 +8027,22 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -7000,15 +8057,22 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -7025,15 +8089,22 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -7736,6 +8807,246 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteExpandedDataSet, null, options, request);
       }
       /// <summary>
+      /// Lookup for a single ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ChannelGroup GetChannelGroup(global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetChannelGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ChannelGroup GetChannelGroup(global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> GetChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetChannelGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> GetChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Lists ChannelGroups on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse ListChannelGroups(global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListChannelGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ChannelGroups on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse ListChannelGroups(global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListChannelGroups, null, options, request);
+      }
+      /// <summary>
+      /// Lists ChannelGroups on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse> ListChannelGroupsAsync(global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListChannelGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ChannelGroups on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse> ListChannelGroupsAsync(global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListChannelGroups, null, options, request);
+      }
+      /// <summary>
+      /// Creates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ChannelGroup CreateChannelGroup(global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateChannelGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ChannelGroup CreateChannelGroup(global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Creates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> CreateChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateChannelGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> CreateChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ChannelGroup UpdateChannelGroup(global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateChannelGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ChannelGroup UpdateChannelGroup(global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Updates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> UpdateChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateChannelGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a ChannelGroup.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ChannelGroup> UpdateChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a ChannelGroup on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteChannelGroup(global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteChannelGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a ChannelGroup on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteChannelGroup(global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteChannelGroup, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a ChannelGroup on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteChannelGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a ChannelGroup on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteChannelGroupAsync(global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteChannelGroup, null, options, request);
+      }
+      /// <summary>
       /// Sets the opt out status for the automated GA4 setup process for a UA
       /// property.
       /// Note: this has no effect on GA4 property.
@@ -7848,6 +9159,54 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_FetchAutomatedGa4ConfigurationOptOut, null, options, request);
       }
       /// <summary>
+      /// Creates a BigQueryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.BigQueryLink CreateBigQueryLink(global::Google.Analytics.Admin.V1Alpha.CreateBigQueryLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBigQueryLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a BigQueryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.BigQueryLink CreateBigQueryLink(global::Google.Analytics.Admin.V1Alpha.CreateBigQueryLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBigQueryLink, null, options, request);
+      }
+      /// <summary>
+      /// Creates a BigQueryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BigQueryLink> CreateBigQueryLinkAsync(global::Google.Analytics.Admin.V1Alpha.CreateBigQueryLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBigQueryLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a BigQueryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BigQueryLink> CreateBigQueryLinkAsync(global::Google.Analytics.Admin.V1Alpha.CreateBigQueryLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBigQueryLink, null, options, request);
+      }
+      /// <summary>
       /// Lookup for a single BigQuery Link.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -7942,6 +9301,102 @@ namespace Google.Analytics.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse> ListBigQueryLinksAsync(global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListBigQueryLinks, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a BigQueryLink on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBigQueryLink(global::Google.Analytics.Admin.V1Alpha.DeleteBigQueryLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBigQueryLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a BigQueryLink on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBigQueryLink(global::Google.Analytics.Admin.V1Alpha.DeleteBigQueryLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBigQueryLink, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a BigQueryLink on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBigQueryLinkAsync(global::Google.Analytics.Admin.V1Alpha.DeleteBigQueryLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBigQueryLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a BigQueryLink on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBigQueryLinkAsync(global::Google.Analytics.Admin.V1Alpha.DeleteBigQueryLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBigQueryLink, null, options, request);
+      }
+      /// <summary>
+      /// Updates a BigQueryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.BigQueryLink UpdateBigQueryLink(global::Google.Analytics.Admin.V1Alpha.UpdateBigQueryLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBigQueryLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a BigQueryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.BigQueryLink UpdateBigQueryLink(global::Google.Analytics.Admin.V1Alpha.UpdateBigQueryLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBigQueryLink, null, options, request);
+      }
+      /// <summary>
+      /// Updates a BigQueryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BigQueryLink> UpdateBigQueryLinkAsync(global::Google.Analytics.Admin.V1Alpha.UpdateBigQueryLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBigQueryLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a BigQueryLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.BigQueryLink> UpdateBigQueryLinkAsync(global::Google.Analytics.Admin.V1Alpha.UpdateBigQueryLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBigQueryLink, null, options, request);
       }
       /// <summary>
       /// Returns the enhanced measurement settings for this data stream.
@@ -8219,6 +9674,1678 @@ namespace Google.Analytics.Admin.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListConnectedSiteTags, null, options, request);
       }
+      /// <summary>
+      /// Given a specified UA property, looks up the GA4 property connected to it.
+      /// Note: this cannot be used with GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse FetchConnectedGa4Property(global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchConnectedGa4Property(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Given a specified UA property, looks up the GA4 property connected to it.
+      /// Note: this cannot be used with GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse FetchConnectedGa4Property(global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchConnectedGa4Property, null, options, request);
+      }
+      /// <summary>
+      /// Given a specified UA property, looks up the GA4 property connected to it.
+      /// Note: this cannot be used with GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse> FetchConnectedGa4PropertyAsync(global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchConnectedGa4PropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Given a specified UA property, looks up the GA4 property connected to it.
+      /// Note: this cannot be used with GA4 properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse> FetchConnectedGa4PropertyAsync(global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchConnectedGa4Property, null, options, request);
+      }
+      /// <summary>
+      /// Looks up a single AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.AdSenseLink GetAdSenseLink(global::Google.Analytics.Admin.V1Alpha.GetAdSenseLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAdSenseLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up a single AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.AdSenseLink GetAdSenseLink(global::Google.Analytics.Admin.V1Alpha.GetAdSenseLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAdSenseLink, null, options, request);
+      }
+      /// <summary>
+      /// Looks up a single AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AdSenseLink> GetAdSenseLinkAsync(global::Google.Analytics.Admin.V1Alpha.GetAdSenseLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAdSenseLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up a single AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AdSenseLink> GetAdSenseLinkAsync(global::Google.Analytics.Admin.V1Alpha.GetAdSenseLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAdSenseLink, null, options, request);
+      }
+      /// <summary>
+      /// Creates an AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.AdSenseLink CreateAdSenseLink(global::Google.Analytics.Admin.V1Alpha.CreateAdSenseLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAdSenseLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.AdSenseLink CreateAdSenseLink(global::Google.Analytics.Admin.V1Alpha.CreateAdSenseLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAdSenseLink, null, options, request);
+      }
+      /// <summary>
+      /// Creates an AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AdSenseLink> CreateAdSenseLinkAsync(global::Google.Analytics.Admin.V1Alpha.CreateAdSenseLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAdSenseLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AdSenseLink> CreateAdSenseLinkAsync(global::Google.Analytics.Admin.V1Alpha.CreateAdSenseLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAdSenseLink, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAdSenseLink(global::Google.Analytics.Admin.V1Alpha.DeleteAdSenseLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAdSenseLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAdSenseLink(global::Google.Analytics.Admin.V1Alpha.DeleteAdSenseLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAdSenseLink, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAdSenseLinkAsync(global::Google.Analytics.Admin.V1Alpha.DeleteAdSenseLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAdSenseLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an AdSenseLink.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAdSenseLinkAsync(global::Google.Analytics.Admin.V1Alpha.DeleteAdSenseLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAdSenseLink, null, options, request);
+      }
+      /// <summary>
+      /// Lists AdSenseLinks on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse ListAdSenseLinks(global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAdSenseLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AdSenseLinks on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse ListAdSenseLinks(global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAdSenseLinks, null, options, request);
+      }
+      /// <summary>
+      /// Lists AdSenseLinks on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse> ListAdSenseLinksAsync(global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAdSenseLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AdSenseLinks on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse> ListAdSenseLinksAsync(global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAdSenseLinks, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EventCreateRule GetEventCreateRule(global::Google.Analytics.Admin.V1Alpha.GetEventCreateRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEventCreateRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EventCreateRule GetEventCreateRule(global::Google.Analytics.Admin.V1Alpha.GetEventCreateRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetEventCreateRule, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EventCreateRule> GetEventCreateRuleAsync(global::Google.Analytics.Admin.V1Alpha.GetEventCreateRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEventCreateRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EventCreateRule> GetEventCreateRuleAsync(global::Google.Analytics.Admin.V1Alpha.GetEventCreateRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetEventCreateRule, null, options, request);
+      }
+      /// <summary>
+      /// Lists EventCreateRules on a web data stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse ListEventCreateRules(global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEventCreateRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists EventCreateRules on a web data stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse ListEventCreateRules(global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListEventCreateRules, null, options, request);
+      }
+      /// <summary>
+      /// Lists EventCreateRules on a web data stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse> ListEventCreateRulesAsync(global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEventCreateRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists EventCreateRules on a web data stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse> ListEventCreateRulesAsync(global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListEventCreateRules, null, options, request);
+      }
+      /// <summary>
+      /// Creates an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EventCreateRule CreateEventCreateRule(global::Google.Analytics.Admin.V1Alpha.CreateEventCreateRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateEventCreateRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EventCreateRule CreateEventCreateRule(global::Google.Analytics.Admin.V1Alpha.CreateEventCreateRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateEventCreateRule, null, options, request);
+      }
+      /// <summary>
+      /// Creates an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EventCreateRule> CreateEventCreateRuleAsync(global::Google.Analytics.Admin.V1Alpha.CreateEventCreateRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateEventCreateRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EventCreateRule> CreateEventCreateRuleAsync(global::Google.Analytics.Admin.V1Alpha.CreateEventCreateRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateEventCreateRule, null, options, request);
+      }
+      /// <summary>
+      /// Updates an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EventCreateRule UpdateEventCreateRule(global::Google.Analytics.Admin.V1Alpha.UpdateEventCreateRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEventCreateRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EventCreateRule UpdateEventCreateRule(global::Google.Analytics.Admin.V1Alpha.UpdateEventCreateRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateEventCreateRule, null, options, request);
+      }
+      /// <summary>
+      /// Updates an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EventCreateRule> UpdateEventCreateRuleAsync(global::Google.Analytics.Admin.V1Alpha.UpdateEventCreateRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEventCreateRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EventCreateRule> UpdateEventCreateRuleAsync(global::Google.Analytics.Admin.V1Alpha.UpdateEventCreateRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateEventCreateRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEventCreateRule(global::Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteEventCreateRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEventCreateRule(global::Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteEventCreateRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEventCreateRuleAsync(global::Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteEventCreateRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an EventCreateRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEventCreateRuleAsync(global::Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteEventCreateRule, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EventEditRule GetEventEditRule(global::Google.Analytics.Admin.V1Alpha.GetEventEditRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEventEditRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EventEditRule GetEventEditRule(global::Google.Analytics.Admin.V1Alpha.GetEventEditRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetEventEditRule, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EventEditRule> GetEventEditRuleAsync(global::Google.Analytics.Admin.V1Alpha.GetEventEditRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEventEditRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EventEditRule> GetEventEditRuleAsync(global::Google.Analytics.Admin.V1Alpha.GetEventEditRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetEventEditRule, null, options, request);
+      }
+      /// <summary>
+      /// Lists EventEditRules on a web data stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesResponse ListEventEditRules(global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEventEditRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists EventEditRules on a web data stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesResponse ListEventEditRules(global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListEventEditRules, null, options, request);
+      }
+      /// <summary>
+      /// Lists EventEditRules on a web data stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesResponse> ListEventEditRulesAsync(global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListEventEditRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists EventEditRules on a web data stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesResponse> ListEventEditRulesAsync(global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListEventEditRules, null, options, request);
+      }
+      /// <summary>
+      /// Creates an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EventEditRule CreateEventEditRule(global::Google.Analytics.Admin.V1Alpha.CreateEventEditRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateEventEditRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EventEditRule CreateEventEditRule(global::Google.Analytics.Admin.V1Alpha.CreateEventEditRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateEventEditRule, null, options, request);
+      }
+      /// <summary>
+      /// Creates an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EventEditRule> CreateEventEditRuleAsync(global::Google.Analytics.Admin.V1Alpha.CreateEventEditRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateEventEditRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EventEditRule> CreateEventEditRuleAsync(global::Google.Analytics.Admin.V1Alpha.CreateEventEditRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateEventEditRule, null, options, request);
+      }
+      /// <summary>
+      /// Updates an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EventEditRule UpdateEventEditRule(global::Google.Analytics.Admin.V1Alpha.UpdateEventEditRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEventEditRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.EventEditRule UpdateEventEditRule(global::Google.Analytics.Admin.V1Alpha.UpdateEventEditRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateEventEditRule, null, options, request);
+      }
+      /// <summary>
+      /// Updates an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EventEditRule> UpdateEventEditRuleAsync(global::Google.Analytics.Admin.V1Alpha.UpdateEventEditRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateEventEditRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EventEditRule> UpdateEventEditRuleAsync(global::Google.Analytics.Admin.V1Alpha.UpdateEventEditRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateEventEditRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEventEditRule(global::Google.Analytics.Admin.V1Alpha.DeleteEventEditRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteEventEditRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEventEditRule(global::Google.Analytics.Admin.V1Alpha.DeleteEventEditRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteEventEditRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEventEditRuleAsync(global::Google.Analytics.Admin.V1Alpha.DeleteEventEditRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteEventEditRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an EventEditRule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEventEditRuleAsync(global::Google.Analytics.Admin.V1Alpha.DeleteEventEditRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteEventEditRule, null, options, request);
+      }
+      /// <summary>
+      /// Changes the processing order of event edit rules on the specified stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty ReorderEventEditRules(global::Google.Analytics.Admin.V1Alpha.ReorderEventEditRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReorderEventEditRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Changes the processing order of event edit rules on the specified stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty ReorderEventEditRules(global::Google.Analytics.Admin.V1Alpha.ReorderEventEditRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ReorderEventEditRules, null, options, request);
+      }
+      /// <summary>
+      /// Changes the processing order of event edit rules on the specified stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ReorderEventEditRulesAsync(global::Google.Analytics.Admin.V1Alpha.ReorderEventEditRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ReorderEventEditRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Changes the processing order of event edit rules on the specified stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ReorderEventEditRulesAsync(global::Google.Analytics.Admin.V1Alpha.ReorderEventEditRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ReorderEventEditRules, null, options, request);
+      }
+      /// <summary>
+      /// Updates a DataRedactionSettings on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings UpdateDataRedactionSettings(global::Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDataRedactionSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a DataRedactionSettings on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings UpdateDataRedactionSettings(global::Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDataRedactionSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates a DataRedactionSettings on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings> UpdateDataRedactionSettingsAsync(global::Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDataRedactionSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a DataRedactionSettings on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings> UpdateDataRedactionSettingsAsync(global::Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDataRedactionSettings, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single DataRedactionSettings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings GetDataRedactionSettings(global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDataRedactionSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single DataRedactionSettings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings GetDataRedactionSettings(global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDataRedactionSettings, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single DataRedactionSettings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings> GetDataRedactionSettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDataRedactionSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single DataRedactionSettings.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings> GetDataRedactionSettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDataRedactionSettings, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CalculatedMetric GetCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCalculatedMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CalculatedMetric GetCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> GetCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCalculatedMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> GetCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Creates a CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CalculatedMetric CreateCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCalculatedMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CalculatedMetric CreateCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Creates a CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> CreateCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCalculatedMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a CalculatedMetric.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> CreateCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Lists CalculatedMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse ListCalculatedMetrics(global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCalculatedMetrics(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists CalculatedMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse ListCalculatedMetrics(global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListCalculatedMetrics, null, options, request);
+      }
+      /// <summary>
+      /// Lists CalculatedMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse> ListCalculatedMetricsAsync(global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListCalculatedMetricsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists CalculatedMetrics on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse> ListCalculatedMetricsAsync(global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListCalculatedMetrics, null, options, request);
+      }
+      /// <summary>
+      /// Updates a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CalculatedMetric UpdateCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCalculatedMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CalculatedMetric UpdateCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Updates a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> UpdateCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCalculatedMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric> UpdateCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCalculatedMetric(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCalculatedMetric(global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteCalculatedMetricAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a CalculatedMetric on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCalculatedMetricAsync(global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteCalculatedMetric, null, options, request);
+      }
+      /// <summary>
+      /// Create a roll-up property and all roll-up property source links.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse CreateRollupProperty(global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRollupProperty(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a roll-up property and all roll-up property source links.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse CreateRollupProperty(global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateRollupProperty, null, options, request);
+      }
+      /// <summary>
+      /// Create a roll-up property and all roll-up property source links.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse> CreateRollupPropertyAsync(global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRollupPropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a roll-up property and all roll-up property source links.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse> CreateRollupPropertyAsync(global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateRollupProperty, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single roll-up property source Link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink GetRollupPropertySourceLink(global::Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRollupPropertySourceLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single roll-up property source Link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink GetRollupPropertySourceLink(global::Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRollupPropertySourceLink, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single roll-up property source Link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink> GetRollupPropertySourceLinkAsync(global::Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRollupPropertySourceLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single roll-up property source Link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink> GetRollupPropertySourceLinkAsync(global::Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRollupPropertySourceLink, null, options, request);
+      }
+      /// <summary>
+      /// Lists roll-up property source Links on a property.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse ListRollupPropertySourceLinks(global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRollupPropertySourceLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists roll-up property source Links on a property.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse ListRollupPropertySourceLinks(global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRollupPropertySourceLinks, null, options, request);
+      }
+      /// <summary>
+      /// Lists roll-up property source Links on a property.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse> ListRollupPropertySourceLinksAsync(global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRollupPropertySourceLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists roll-up property source Links on a property.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse> ListRollupPropertySourceLinksAsync(global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRollupPropertySourceLinks, null, options, request);
+      }
+      /// <summary>
+      /// Creates a roll-up property source link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink CreateRollupPropertySourceLink(global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRollupPropertySourceLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a roll-up property source link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink CreateRollupPropertySourceLink(global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateRollupPropertySourceLink, null, options, request);
+      }
+      /// <summary>
+      /// Creates a roll-up property source link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink> CreateRollupPropertySourceLinkAsync(global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRollupPropertySourceLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a roll-up property source link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink> CreateRollupPropertySourceLinkAsync(global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateRollupPropertySourceLink, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a roll-up property source link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteRollupPropertySourceLink(global::Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRollupPropertySourceLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a roll-up property source link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteRollupPropertySourceLink(global::Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteRollupPropertySourceLink, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a roll-up property source link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRollupPropertySourceLinkAsync(global::Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRollupPropertySourceLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a roll-up property source link.
+      /// Only roll-up properties can have source links, so this method will throw an
+      /// error if used on other types of properties.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRollupPropertySourceLinkAsync(global::Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteRollupPropertySourceLink, null, options, request);
+      }
+      /// <summary>
+      /// Create a subproperty and a subproperty event filter that applies to the
+      /// created subproperty.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyResponse ProvisionSubproperty(global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ProvisionSubproperty(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a subproperty and a subproperty event filter that applies to the
+      /// created subproperty.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyResponse ProvisionSubproperty(global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ProvisionSubproperty, null, options, request);
+      }
+      /// <summary>
+      /// Create a subproperty and a subproperty event filter that applies to the
+      /// created subproperty.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyResponse> ProvisionSubpropertyAsync(global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ProvisionSubpropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a subproperty and a subproperty event filter that applies to the
+      /// created subproperty.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyResponse> ProvisionSubpropertyAsync(global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ProvisionSubproperty, null, options, request);
+      }
+      /// <summary>
+      /// Creates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter CreateSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSubpropertyEventFilter(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter CreateSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// Creates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> CreateSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSubpropertyEventFilterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> CreateSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter GetSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSubpropertyEventFilter(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter GetSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> GetSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSubpropertyEventFilterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> GetSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// List all subproperty Event Filters on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse ListSubpropertyEventFilters(global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSubpropertyEventFilters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all subproperty Event Filters on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse ListSubpropertyEventFilters(global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSubpropertyEventFilters, null, options, request);
+      }
+      /// <summary>
+      /// List all subproperty Event Filters on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse> ListSubpropertyEventFiltersAsync(global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSubpropertyEventFiltersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all subproperty Event Filters on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse> ListSubpropertyEventFiltersAsync(global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSubpropertyEventFilters, null, options, request);
+      }
+      /// <summary>
+      /// Updates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter UpdateSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSubpropertyEventFilter(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter UpdateSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// Updates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> UpdateSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSubpropertyEventFilterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a subproperty Event Filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter> UpdateSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a subproperty event filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSubpropertyEventFilter(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a subproperty event filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSubpropertyEventFilter(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSubpropertyEventFilter, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a subproperty event filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSubpropertyEventFilterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a subproperty event filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubpropertyEventFilterAsync(global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSubpropertyEventFilter, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AnalyticsAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -8244,16 +11371,6 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_CreateProperty, serviceImpl.CreateProperty)
           .AddMethod(__Method_DeleteProperty, serviceImpl.DeleteProperty)
           .AddMethod(__Method_UpdateProperty, serviceImpl.UpdateProperty)
-          .AddMethod(__Method_GetUserLink, serviceImpl.GetUserLink)
-          .AddMethod(__Method_BatchGetUserLinks, serviceImpl.BatchGetUserLinks)
-          .AddMethod(__Method_ListUserLinks, serviceImpl.ListUserLinks)
-          .AddMethod(__Method_AuditUserLinks, serviceImpl.AuditUserLinks)
-          .AddMethod(__Method_CreateUserLink, serviceImpl.CreateUserLink)
-          .AddMethod(__Method_BatchCreateUserLinks, serviceImpl.BatchCreateUserLinks)
-          .AddMethod(__Method_UpdateUserLink, serviceImpl.UpdateUserLink)
-          .AddMethod(__Method_BatchUpdateUserLinks, serviceImpl.BatchUpdateUserLinks)
-          .AddMethod(__Method_DeleteUserLink, serviceImpl.DeleteUserLink)
-          .AddMethod(__Method_BatchDeleteUserLinks, serviceImpl.BatchDeleteUserLinks)
           .AddMethod(__Method_CreateFirebaseLink, serviceImpl.CreateFirebaseLink)
           .AddMethod(__Method_DeleteFirebaseLink, serviceImpl.DeleteFirebaseLink)
           .AddMethod(__Method_ListFirebaseLinks, serviceImpl.ListFirebaseLinks)
@@ -8269,13 +11386,24 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_DeleteMeasurementProtocolSecret, serviceImpl.DeleteMeasurementProtocolSecret)
           .AddMethod(__Method_UpdateMeasurementProtocolSecret, serviceImpl.UpdateMeasurementProtocolSecret)
           .AddMethod(__Method_AcknowledgeUserDataCollection, serviceImpl.AcknowledgeUserDataCollection)
+          .AddMethod(__Method_GetSKAdNetworkConversionValueSchema, serviceImpl.GetSKAdNetworkConversionValueSchema)
+          .AddMethod(__Method_CreateSKAdNetworkConversionValueSchema, serviceImpl.CreateSKAdNetworkConversionValueSchema)
+          .AddMethod(__Method_DeleteSKAdNetworkConversionValueSchema, serviceImpl.DeleteSKAdNetworkConversionValueSchema)
+          .AddMethod(__Method_UpdateSKAdNetworkConversionValueSchema, serviceImpl.UpdateSKAdNetworkConversionValueSchema)
+          .AddMethod(__Method_ListSKAdNetworkConversionValueSchemas, serviceImpl.ListSKAdNetworkConversionValueSchemas)
           .AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl.SearchChangeHistoryEvents)
           .AddMethod(__Method_GetGoogleSignalsSettings, serviceImpl.GetGoogleSignalsSettings)
           .AddMethod(__Method_UpdateGoogleSignalsSettings, serviceImpl.UpdateGoogleSignalsSettings)
           .AddMethod(__Method_CreateConversionEvent, serviceImpl.CreateConversionEvent)
+          .AddMethod(__Method_UpdateConversionEvent, serviceImpl.UpdateConversionEvent)
           .AddMethod(__Method_GetConversionEvent, serviceImpl.GetConversionEvent)
           .AddMethod(__Method_DeleteConversionEvent, serviceImpl.DeleteConversionEvent)
           .AddMethod(__Method_ListConversionEvents, serviceImpl.ListConversionEvents)
+          .AddMethod(__Method_CreateKeyEvent, serviceImpl.CreateKeyEvent)
+          .AddMethod(__Method_UpdateKeyEvent, serviceImpl.UpdateKeyEvent)
+          .AddMethod(__Method_GetKeyEvent, serviceImpl.GetKeyEvent)
+          .AddMethod(__Method_DeleteKeyEvent, serviceImpl.DeleteKeyEvent)
+          .AddMethod(__Method_ListKeyEvents, serviceImpl.ListKeyEvents)
           .AddMethod(__Method_GetDisplayVideo360AdvertiserLink, serviceImpl.GetDisplayVideo360AdvertiserLink)
           .AddMethod(__Method_ListDisplayVideo360AdvertiserLinks, serviceImpl.ListDisplayVideo360AdvertiserLinks)
           .AddMethod(__Method_CreateDisplayVideo360AdvertiserLink, serviceImpl.CreateDisplayVideo360AdvertiserLink)
@@ -8331,15 +11459,57 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_CreateExpandedDataSet, serviceImpl.CreateExpandedDataSet)
           .AddMethod(__Method_UpdateExpandedDataSet, serviceImpl.UpdateExpandedDataSet)
           .AddMethod(__Method_DeleteExpandedDataSet, serviceImpl.DeleteExpandedDataSet)
+          .AddMethod(__Method_GetChannelGroup, serviceImpl.GetChannelGroup)
+          .AddMethod(__Method_ListChannelGroups, serviceImpl.ListChannelGroups)
+          .AddMethod(__Method_CreateChannelGroup, serviceImpl.CreateChannelGroup)
+          .AddMethod(__Method_UpdateChannelGroup, serviceImpl.UpdateChannelGroup)
+          .AddMethod(__Method_DeleteChannelGroup, serviceImpl.DeleteChannelGroup)
           .AddMethod(__Method_SetAutomatedGa4ConfigurationOptOut, serviceImpl.SetAutomatedGa4ConfigurationOptOut)
           .AddMethod(__Method_FetchAutomatedGa4ConfigurationOptOut, serviceImpl.FetchAutomatedGa4ConfigurationOptOut)
+          .AddMethod(__Method_CreateBigQueryLink, serviceImpl.CreateBigQueryLink)
           .AddMethod(__Method_GetBigQueryLink, serviceImpl.GetBigQueryLink)
           .AddMethod(__Method_ListBigQueryLinks, serviceImpl.ListBigQueryLinks)
+          .AddMethod(__Method_DeleteBigQueryLink, serviceImpl.DeleteBigQueryLink)
+          .AddMethod(__Method_UpdateBigQueryLink, serviceImpl.UpdateBigQueryLink)
           .AddMethod(__Method_GetEnhancedMeasurementSettings, serviceImpl.GetEnhancedMeasurementSettings)
           .AddMethod(__Method_UpdateEnhancedMeasurementSettings, serviceImpl.UpdateEnhancedMeasurementSettings)
           .AddMethod(__Method_CreateConnectedSiteTag, serviceImpl.CreateConnectedSiteTag)
           .AddMethod(__Method_DeleteConnectedSiteTag, serviceImpl.DeleteConnectedSiteTag)
-          .AddMethod(__Method_ListConnectedSiteTags, serviceImpl.ListConnectedSiteTags).Build();
+          .AddMethod(__Method_ListConnectedSiteTags, serviceImpl.ListConnectedSiteTags)
+          .AddMethod(__Method_FetchConnectedGa4Property, serviceImpl.FetchConnectedGa4Property)
+          .AddMethod(__Method_GetAdSenseLink, serviceImpl.GetAdSenseLink)
+          .AddMethod(__Method_CreateAdSenseLink, serviceImpl.CreateAdSenseLink)
+          .AddMethod(__Method_DeleteAdSenseLink, serviceImpl.DeleteAdSenseLink)
+          .AddMethod(__Method_ListAdSenseLinks, serviceImpl.ListAdSenseLinks)
+          .AddMethod(__Method_GetEventCreateRule, serviceImpl.GetEventCreateRule)
+          .AddMethod(__Method_ListEventCreateRules, serviceImpl.ListEventCreateRules)
+          .AddMethod(__Method_CreateEventCreateRule, serviceImpl.CreateEventCreateRule)
+          .AddMethod(__Method_UpdateEventCreateRule, serviceImpl.UpdateEventCreateRule)
+          .AddMethod(__Method_DeleteEventCreateRule, serviceImpl.DeleteEventCreateRule)
+          .AddMethod(__Method_GetEventEditRule, serviceImpl.GetEventEditRule)
+          .AddMethod(__Method_ListEventEditRules, serviceImpl.ListEventEditRules)
+          .AddMethod(__Method_CreateEventEditRule, serviceImpl.CreateEventEditRule)
+          .AddMethod(__Method_UpdateEventEditRule, serviceImpl.UpdateEventEditRule)
+          .AddMethod(__Method_DeleteEventEditRule, serviceImpl.DeleteEventEditRule)
+          .AddMethod(__Method_ReorderEventEditRules, serviceImpl.ReorderEventEditRules)
+          .AddMethod(__Method_UpdateDataRedactionSettings, serviceImpl.UpdateDataRedactionSettings)
+          .AddMethod(__Method_GetDataRedactionSettings, serviceImpl.GetDataRedactionSettings)
+          .AddMethod(__Method_GetCalculatedMetric, serviceImpl.GetCalculatedMetric)
+          .AddMethod(__Method_CreateCalculatedMetric, serviceImpl.CreateCalculatedMetric)
+          .AddMethod(__Method_ListCalculatedMetrics, serviceImpl.ListCalculatedMetrics)
+          .AddMethod(__Method_UpdateCalculatedMetric, serviceImpl.UpdateCalculatedMetric)
+          .AddMethod(__Method_DeleteCalculatedMetric, serviceImpl.DeleteCalculatedMetric)
+          .AddMethod(__Method_CreateRollupProperty, serviceImpl.CreateRollupProperty)
+          .AddMethod(__Method_GetRollupPropertySourceLink, serviceImpl.GetRollupPropertySourceLink)
+          .AddMethod(__Method_ListRollupPropertySourceLinks, serviceImpl.ListRollupPropertySourceLinks)
+          .AddMethod(__Method_CreateRollupPropertySourceLink, serviceImpl.CreateRollupPropertySourceLink)
+          .AddMethod(__Method_DeleteRollupPropertySourceLink, serviceImpl.DeleteRollupPropertySourceLink)
+          .AddMethod(__Method_ProvisionSubproperty, serviceImpl.ProvisionSubproperty)
+          .AddMethod(__Method_CreateSubpropertyEventFilter, serviceImpl.CreateSubpropertyEventFilter)
+          .AddMethod(__Method_GetSubpropertyEventFilter, serviceImpl.GetSubpropertyEventFilter)
+          .AddMethod(__Method_ListSubpropertyEventFilters, serviceImpl.ListSubpropertyEventFilters)
+          .AddMethod(__Method_UpdateSubpropertyEventFilter, serviceImpl.UpdateSubpropertyEventFilter)
+          .AddMethod(__Method_DeleteSubpropertyEventFilter, serviceImpl.DeleteSubpropertyEventFilter).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -8360,16 +11530,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_CreateProperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreatePropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property>(serviceImpl.CreateProperty));
       serviceBinder.AddMethod(__Method_DeleteProperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeletePropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property>(serviceImpl.DeleteProperty));
       serviceBinder.AddMethod(__Method_UpdateProperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdatePropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property>(serviceImpl.UpdateProperty));
-      serviceBinder.AddMethod(__Method_GetUserLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetUserLinkRequest, global::Google.Analytics.Admin.V1Alpha.UserLink>(serviceImpl.GetUserLink));
-      serviceBinder.AddMethod(__Method_BatchGetUserLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.BatchGetUserLinksResponse>(serviceImpl.BatchGetUserLinks));
-      serviceBinder.AddMethod(__Method_ListUserLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListUserLinksResponse>(serviceImpl.ListUserLinks));
-      serviceBinder.AddMethod(__Method_AuditUserLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.AuditUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.AuditUserLinksResponse>(serviceImpl.AuditUserLinks));
-      serviceBinder.AddMethod(__Method_CreateUserLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateUserLinkRequest, global::Google.Analytics.Admin.V1Alpha.UserLink>(serviceImpl.CreateUserLink));
-      serviceBinder.AddMethod(__Method_BatchCreateUserLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.BatchCreateUserLinksResponse>(serviceImpl.BatchCreateUserLinks));
-      serviceBinder.AddMethod(__Method_UpdateUserLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateUserLinkRequest, global::Google.Analytics.Admin.V1Alpha.UserLink>(serviceImpl.UpdateUserLink));
-      serviceBinder.AddMethod(__Method_BatchUpdateUserLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksRequest, global::Google.Analytics.Admin.V1Alpha.BatchUpdateUserLinksResponse>(serviceImpl.BatchUpdateUserLinks));
-      serviceBinder.AddMethod(__Method_DeleteUserLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteUserLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteUserLink));
-      serviceBinder.AddMethod(__Method_BatchDeleteUserLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.BatchDeleteUserLinksRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.BatchDeleteUserLinks));
       serviceBinder.AddMethod(__Method_CreateFirebaseLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest, global::Google.Analytics.Admin.V1Alpha.FirebaseLink>(serviceImpl.CreateFirebaseLink));
       serviceBinder.AddMethod(__Method_DeleteFirebaseLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteFirebaseLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteFirebaseLink));
       serviceBinder.AddMethod(__Method_ListFirebaseLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListFirebaseLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListFirebaseLinksResponse>(serviceImpl.ListFirebaseLinks));
@@ -8385,13 +11545,24 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_DeleteMeasurementProtocolSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMeasurementProtocolSecret));
       serviceBinder.AddMethod(__Method_UpdateMeasurementProtocolSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret>(serviceImpl.UpdateMeasurementProtocolSecret));
       serviceBinder.AddMethod(__Method_AcknowledgeUserDataCollection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest, global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse>(serviceImpl.AcknowledgeUserDataCollection));
+      serviceBinder.AddMethod(__Method_GetSKAdNetworkConversionValueSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>(serviceImpl.GetSKAdNetworkConversionValueSchema));
+      serviceBinder.AddMethod(__Method_CreateSKAdNetworkConversionValueSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>(serviceImpl.CreateSKAdNetworkConversionValueSchema));
+      serviceBinder.AddMethod(__Method_DeleteSKAdNetworkConversionValueSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteSKAdNetworkConversionValueSchemaRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSKAdNetworkConversionValueSchema));
+      serviceBinder.AddMethod(__Method_UpdateSKAdNetworkConversionValueSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateSKAdNetworkConversionValueSchemaRequest, global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema>(serviceImpl.UpdateSKAdNetworkConversionValueSchema));
+      serviceBinder.AddMethod(__Method_ListSKAdNetworkConversionValueSchemas, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasRequest, global::Google.Analytics.Admin.V1Alpha.ListSKAdNetworkConversionValueSchemasResponse>(serviceImpl.ListSKAdNetworkConversionValueSchemas));
       serviceBinder.AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse>(serviceImpl.SearchChangeHistoryEvents));
       serviceBinder.AddMethod(__Method_GetGoogleSignalsSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings>(serviceImpl.GetGoogleSignalsSettings));
       serviceBinder.AddMethod(__Method_UpdateGoogleSignalsSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings>(serviceImpl.UpdateGoogleSignalsSettings));
       serviceBinder.AddMethod(__Method_CreateConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(serviceImpl.CreateConversionEvent));
+      serviceBinder.AddMethod(__Method_UpdateConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(serviceImpl.UpdateConversionEvent));
       serviceBinder.AddMethod(__Method_GetConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetConversionEventRequest, global::Google.Analytics.Admin.V1Alpha.ConversionEvent>(serviceImpl.GetConversionEvent));
       serviceBinder.AddMethod(__Method_DeleteConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteConversionEventRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteConversionEvent));
       serviceBinder.AddMethod(__Method_ListConversionEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListConversionEventsRequest, global::Google.Analytics.Admin.V1Alpha.ListConversionEventsResponse>(serviceImpl.ListConversionEvents));
+      serviceBinder.AddMethod(__Method_CreateKeyEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateKeyEventRequest, global::Google.Analytics.Admin.V1Alpha.KeyEvent>(serviceImpl.CreateKeyEvent));
+      serviceBinder.AddMethod(__Method_UpdateKeyEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateKeyEventRequest, global::Google.Analytics.Admin.V1Alpha.KeyEvent>(serviceImpl.UpdateKeyEvent));
+      serviceBinder.AddMethod(__Method_GetKeyEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetKeyEventRequest, global::Google.Analytics.Admin.V1Alpha.KeyEvent>(serviceImpl.GetKeyEvent));
+      serviceBinder.AddMethod(__Method_DeleteKeyEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteKeyEventRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteKeyEvent));
+      serviceBinder.AddMethod(__Method_ListKeyEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListKeyEventsRequest, global::Google.Analytics.Admin.V1Alpha.ListKeyEventsResponse>(serviceImpl.ListKeyEvents));
       serviceBinder.AddMethod(__Method_GetDisplayVideo360AdvertiserLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink>(serviceImpl.GetDisplayVideo360AdvertiserLink));
       serviceBinder.AddMethod(__Method_ListDisplayVideo360AdvertiserLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListDisplayVideo360AdvertiserLinksResponse>(serviceImpl.ListDisplayVideo360AdvertiserLinks));
       serviceBinder.AddMethod(__Method_CreateDisplayVideo360AdvertiserLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateDisplayVideo360AdvertiserLinkRequest, global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink>(serviceImpl.CreateDisplayVideo360AdvertiserLink));
@@ -8447,15 +11618,57 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_CreateExpandedDataSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet>(serviceImpl.CreateExpandedDataSet));
       serviceBinder.AddMethod(__Method_UpdateExpandedDataSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateExpandedDataSetRequest, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSet>(serviceImpl.UpdateExpandedDataSet));
       serviceBinder.AddMethod(__Method_DeleteExpandedDataSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteExpandedDataSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteExpandedDataSet));
+      serviceBinder.AddMethod(__Method_GetChannelGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup>(serviceImpl.GetChannelGroup));
+      serviceBinder.AddMethod(__Method_ListChannelGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsRequest, global::Google.Analytics.Admin.V1Alpha.ListChannelGroupsResponse>(serviceImpl.ListChannelGroups));
+      serviceBinder.AddMethod(__Method_CreateChannelGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup>(serviceImpl.CreateChannelGroup));
+      serviceBinder.AddMethod(__Method_UpdateChannelGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateChannelGroupRequest, global::Google.Analytics.Admin.V1Alpha.ChannelGroup>(serviceImpl.UpdateChannelGroup));
+      serviceBinder.AddMethod(__Method_DeleteChannelGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteChannelGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteChannelGroup));
       serviceBinder.AddMethod(__Method_SetAutomatedGa4ConfigurationOptOut, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.SetAutomatedGa4ConfigurationOptOutResponse>(serviceImpl.SetAutomatedGa4ConfigurationOptOut));
       serviceBinder.AddMethod(__Method_FetchAutomatedGa4ConfigurationOptOut, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutRequest, global::Google.Analytics.Admin.V1Alpha.FetchAutomatedGa4ConfigurationOptOutResponse>(serviceImpl.FetchAutomatedGa4ConfigurationOptOut));
+      serviceBinder.AddMethod(__Method_CreateBigQueryLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink>(serviceImpl.CreateBigQueryLink));
       serviceBinder.AddMethod(__Method_GetBigQueryLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink>(serviceImpl.GetBigQueryLink));
       serviceBinder.AddMethod(__Method_ListBigQueryLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListBigQueryLinksResponse>(serviceImpl.ListBigQueryLinks));
+      serviceBinder.AddMethod(__Method_DeleteBigQueryLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteBigQueryLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBigQueryLink));
+      serviceBinder.AddMethod(__Method_UpdateBigQueryLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateBigQueryLinkRequest, global::Google.Analytics.Admin.V1Alpha.BigQueryLink>(serviceImpl.UpdateBigQueryLink));
       serviceBinder.AddMethod(__Method_GetEnhancedMeasurementSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(serviceImpl.GetEnhancedMeasurementSettings));
       serviceBinder.AddMethod(__Method_UpdateEnhancedMeasurementSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(serviceImpl.UpdateEnhancedMeasurementSettings));
       serviceBinder.AddMethod(__Method_CreateConnectedSiteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagRequest, global::Google.Analytics.Admin.V1Alpha.CreateConnectedSiteTagResponse>(serviceImpl.CreateConnectedSiteTag));
       serviceBinder.AddMethod(__Method_DeleteConnectedSiteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteConnectedSiteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteConnectedSiteTag));
       serviceBinder.AddMethod(__Method_ListConnectedSiteTags, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsRequest, global::Google.Analytics.Admin.V1Alpha.ListConnectedSiteTagsResponse>(serviceImpl.ListConnectedSiteTags));
+      serviceBinder.AddMethod(__Method_FetchConnectedGa4Property, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyRequest, global::Google.Analytics.Admin.V1Alpha.FetchConnectedGa4PropertyResponse>(serviceImpl.FetchConnectedGa4Property));
+      serviceBinder.AddMethod(__Method_GetAdSenseLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetAdSenseLinkRequest, global::Google.Analytics.Admin.V1Alpha.AdSenseLink>(serviceImpl.GetAdSenseLink));
+      serviceBinder.AddMethod(__Method_CreateAdSenseLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateAdSenseLinkRequest, global::Google.Analytics.Admin.V1Alpha.AdSenseLink>(serviceImpl.CreateAdSenseLink));
+      serviceBinder.AddMethod(__Method_DeleteAdSenseLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteAdSenseLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAdSenseLink));
+      serviceBinder.AddMethod(__Method_ListAdSenseLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListAdSenseLinksResponse>(serviceImpl.ListAdSenseLinks));
+      serviceBinder.AddMethod(__Method_GetEventCreateRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetEventCreateRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventCreateRule>(serviceImpl.GetEventCreateRule));
+      serviceBinder.AddMethod(__Method_ListEventCreateRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesRequest, global::Google.Analytics.Admin.V1Alpha.ListEventCreateRulesResponse>(serviceImpl.ListEventCreateRules));
+      serviceBinder.AddMethod(__Method_CreateEventCreateRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateEventCreateRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventCreateRule>(serviceImpl.CreateEventCreateRule));
+      serviceBinder.AddMethod(__Method_UpdateEventCreateRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateEventCreateRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventCreateRule>(serviceImpl.UpdateEventCreateRule));
+      serviceBinder.AddMethod(__Method_DeleteEventCreateRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteEventCreateRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteEventCreateRule));
+      serviceBinder.AddMethod(__Method_GetEventEditRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetEventEditRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventEditRule>(serviceImpl.GetEventEditRule));
+      serviceBinder.AddMethod(__Method_ListEventEditRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesRequest, global::Google.Analytics.Admin.V1Alpha.ListEventEditRulesResponse>(serviceImpl.ListEventEditRules));
+      serviceBinder.AddMethod(__Method_CreateEventEditRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateEventEditRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventEditRule>(serviceImpl.CreateEventEditRule));
+      serviceBinder.AddMethod(__Method_UpdateEventEditRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateEventEditRuleRequest, global::Google.Analytics.Admin.V1Alpha.EventEditRule>(serviceImpl.UpdateEventEditRule));
+      serviceBinder.AddMethod(__Method_DeleteEventEditRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteEventEditRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteEventEditRule));
+      serviceBinder.AddMethod(__Method_ReorderEventEditRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ReorderEventEditRulesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.ReorderEventEditRules));
+      serviceBinder.AddMethod(__Method_UpdateDataRedactionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateDataRedactionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings>(serviceImpl.UpdateDataRedactionSettings));
+      serviceBinder.AddMethod(__Method_GetDataRedactionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetDataRedactionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings>(serviceImpl.GetDataRedactionSettings));
+      serviceBinder.AddMethod(__Method_GetCalculatedMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric>(serviceImpl.GetCalculatedMetric));
+      serviceBinder.AddMethod(__Method_CreateCalculatedMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric>(serviceImpl.CreateCalculatedMetric));
+      serviceBinder.AddMethod(__Method_ListCalculatedMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsRequest, global::Google.Analytics.Admin.V1Alpha.ListCalculatedMetricsResponse>(serviceImpl.ListCalculatedMetrics));
+      serviceBinder.AddMethod(__Method_UpdateCalculatedMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateCalculatedMetricRequest, global::Google.Analytics.Admin.V1Alpha.CalculatedMetric>(serviceImpl.UpdateCalculatedMetric));
+      serviceBinder.AddMethod(__Method_DeleteCalculatedMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteCalculatedMetricRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCalculatedMetric));
+      serviceBinder.AddMethod(__Method_CreateRollupProperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyRequest, global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertyResponse>(serviceImpl.CreateRollupProperty));
+      serviceBinder.AddMethod(__Method_GetRollupPropertySourceLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetRollupPropertySourceLinkRequest, global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>(serviceImpl.GetRollupPropertySourceLink));
+      serviceBinder.AddMethod(__Method_ListRollupPropertySourceLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListRollupPropertySourceLinksResponse>(serviceImpl.ListRollupPropertySourceLinks));
+      serviceBinder.AddMethod(__Method_CreateRollupPropertySourceLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateRollupPropertySourceLinkRequest, global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink>(serviceImpl.CreateRollupPropertySourceLink));
+      serviceBinder.AddMethod(__Method_DeleteRollupPropertySourceLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteRollupPropertySourceLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteRollupPropertySourceLink));
+      serviceBinder.AddMethod(__Method_ProvisionSubproperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyRequest, global::Google.Analytics.Admin.V1Alpha.ProvisionSubpropertyResponse>(serviceImpl.ProvisionSubproperty));
+      serviceBinder.AddMethod(__Method_CreateSubpropertyEventFilter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(serviceImpl.CreateSubpropertyEventFilter));
+      serviceBinder.AddMethod(__Method_GetSubpropertyEventFilter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(serviceImpl.GetSubpropertyEventFilter));
+      serviceBinder.AddMethod(__Method_ListSubpropertyEventFilters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersRequest, global::Google.Analytics.Admin.V1Alpha.ListSubpropertyEventFiltersResponse>(serviceImpl.ListSubpropertyEventFilters));
+      serviceBinder.AddMethod(__Method_UpdateSubpropertyEventFilter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateSubpropertyEventFilterRequest, global::Google.Analytics.Admin.V1Alpha.SubpropertyEventFilter>(serviceImpl.UpdateSubpropertyEventFilter));
+      serviceBinder.AddMethod(__Method_DeleteSubpropertyEventFilter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteSubpropertyEventFilterRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSubpropertyEventFilter));
     }
 
   }

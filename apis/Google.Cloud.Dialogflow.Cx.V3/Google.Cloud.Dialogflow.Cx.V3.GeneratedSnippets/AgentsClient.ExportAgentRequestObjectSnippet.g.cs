@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v3_generated_Agents_ExportAgent_sync]
     using Google.Cloud.Dialogflow.Cx.V3;
@@ -42,6 +42,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
                 AgentUri = "",
                 DataFormat = ExportAgentRequest.Types.DataFormat.Unspecified,
                 EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                GitDestination = new ExportAgentRequest.Types.GitDestination(),
+                IncludeBigqueryExportSettings = false,
             };
             // Make the request
             Operation<ExportAgentResponse, Struct> response = agentsClient.ExportAgent(request);

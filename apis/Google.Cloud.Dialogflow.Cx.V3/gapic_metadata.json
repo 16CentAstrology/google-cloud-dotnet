@@ -40,6 +40,12 @@
                 "GetAgentValidationResultAsync"
               ]
             },
+            "GetGenerativeSettings": {
+              "methods": [
+                "GetGenerativeSettings",
+                "GetGenerativeSettingsAsync"
+              ]
+            },
             "ListAgents": {
               "methods": [
                 "ListAgents",
@@ -56,6 +62,12 @@
               "methods": [
                 "UpdateAgent",
                 "UpdateAgentAsync"
+              ]
+            },
+            "UpdateGenerativeSettings": {
+              "methods": [
+                "UpdateGenerativeSettings",
+                "UpdateGenerativeSettingsAsync"
               ]
             },
             "ValidateAgent": {
@@ -127,10 +139,22 @@
                 "DeleteEntityTypeAsync"
               ]
             },
+            "ExportEntityTypes": {
+              "methods": [
+                "ExportEntityTypes",
+                "ExportEntityTypesAsync"
+              ]
+            },
             "GetEntityType": {
               "methods": [
                 "GetEntityType",
                 "GetEntityTypeAsync"
+              ]
+            },
+            "ImportEntityTypes": {
+              "methods": [
+                "ImportEntityTypes",
+                "ImportEntityTypesAsync"
               ]
             },
             "ListEntityTypes": {
@@ -332,6 +356,45 @@
         }
       }
     },
+    "Generators": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GeneratorsClient",
+          "rpcs": {
+            "CreateGenerator": {
+              "methods": [
+                "CreateGenerator",
+                "CreateGeneratorAsync"
+              ]
+            },
+            "DeleteGenerator": {
+              "methods": [
+                "DeleteGenerator",
+                "DeleteGeneratorAsync"
+              ]
+            },
+            "GetGenerator": {
+              "methods": [
+                "GetGenerator",
+                "GetGeneratorAsync"
+              ]
+            },
+            "ListGenerators": {
+              "methods": [
+                "ListGenerators",
+                "ListGeneratorsAsync"
+              ]
+            },
+            "UpdateGenerator": {
+              "methods": [
+                "UpdateGenerator",
+                "UpdateGeneratorAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Intents": {
       "clients": {
         "grpc": {
@@ -349,10 +412,22 @@
                 "DeleteIntentAsync"
               ]
             },
+            "ExportIntents": {
+              "methods": [
+                "ExportIntents",
+                "ExportIntentsAsync"
+              ]
+            },
             "GetIntent": {
               "methods": [
                 "GetIntent",
                 "GetIntentAsync"
+              ]
+            },
+            "ImportIntents": {
+              "methods": [
+                "ImportIntents",
+                "ImportIntentsAsync"
               ]
             },
             "ListIntents": {
@@ -511,10 +586,22 @@
                 "MatchIntentAsync"
               ]
             },
+            "ServerStreamingDetectIntent": {
+              "methods": [
+                "ServerStreamingDetectIntent",
+                "ServerStreamingDetectIntentAsync"
+              ]
+            },
             "StreamingDetectIntent": {
               "methods": [
                 "StreamingDetectIntent",
                 "StreamingDetectIntentAsync"
+              ]
+            },
+            "SubmitAnswerFeedback": {
+              "methods": [
+                "SubmitAnswerFeedback",
+                "SubmitAnswerFeedbackAsync"
               ]
             }
           }

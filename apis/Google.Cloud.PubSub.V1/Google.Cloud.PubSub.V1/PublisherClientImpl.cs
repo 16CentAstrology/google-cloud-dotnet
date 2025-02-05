@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.PubSub.V1.Tasks;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +36,11 @@ namespace Google.Cloud.PubSub.V1;
 /// </summary>
 public sealed class PublisherClientImpl : PublisherClient
 {
+    private const string CompressionHeaderKey = "grpc-internal-encoding-request";
+    private const string CompressionHeaderValue = "gzip";
+
+    private static readonly CallSettings s_compressionCallSettings = CallSettings.FromHeader(CompressionHeaderKey, CompressionHeaderValue);
+
     /// <summary>
     /// A batch of messages that all have the same ordering-key (or no ordering-key), and will be
     /// sent to the server in a single network call.
@@ -108,8 +114,6 @@ public sealed class PublisherClientImpl : PublisherClient
         public Batch Batch { get; }
     }
 
-    // TODO: Logging
-
     /// <summary>
     /// Instantiate a <see cref="PublisherClientImpl"/> associated with the specified <see cref="TopicName"/>.
     /// </summary>
@@ -133,6 +137,9 @@ public sealed class PublisherClientImpl : PublisherClient
         _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
         _enableMessageOrdering = settings.EnableMessageOrdering;
         _disposeTimeout = settings.DisposeTimeout ?? DefaultDisposeTimeout;
+        _enableCompression = settings.EnableCompression;
+        _compressionBytesThreshold = settings.CompressionBytesThreshold ?? DefaultCompressionBytesThreshold;
+        _logger = settings.Logger;
 
         // Initialise batching settings. Use ApiMax settings for components not given.
         var batchingSettings = settings.BatchingSettings ?? DefaultBatchingSettings;
@@ -156,6 +163,10 @@ public sealed class PublisherClientImpl : PublisherClient
     private readonly Func<Task> _shutdown;
     private readonly bool _enableMessageOrdering;
     private readonly TimeSpan _disposeTimeout;
+    private readonly bool _enableCompression;
+    private readonly long _compressionBytesThreshold;
+
+    private readonly ILogger _logger;
 
     // Batching settings
     private readonly long _batchElementCountThreshold;
@@ -257,7 +268,7 @@ public sealed class PublisherClientImpl : PublisherClient
         }
     }
 
-    /// <inheritdoc/>        
+    /// <inheritdoc/>
     public override ValueTask DisposeAsync() => new ValueTask(ShutdownAsync(_disposeTimeout));
 
     /// <inheritdoc/>
@@ -266,13 +277,13 @@ public sealed class PublisherClientImpl : PublisherClient
         lock (_lock)
         {
             // If we come here for a second or subsequent time, this condition would always be true.
-            // Note: If multiple shutdown requests are made, only the first cancellation token is observed. 
+            // Note: If multiple shutdown requests are made, only the first cancellation token is observed.
             if (_softStopCts.IsCancellationRequested)
             {
                 // No-op. We don't want to throw exceptions if DisposeAsync or ShutdownAsync is called a second time.
                 return _shutdownTcs.Task;
             }
-            
+
             _softStopCts.Cancel();
             foreach (var state in _keyedState.Values)
             {
@@ -446,8 +457,16 @@ public sealed class PublisherClientImpl : PublisherClient
 
         async Task Send()
         {
+            var callSettings = CallSettings.FromCancellationToken(_hardStopCts.Token);
+
+            // If compression is enabled, and the batch size is greater than or equal to the threshold, set the compression header.
+            if (_enableCompression && batch.ByteCount >= _compressionBytesThreshold)
+            {
+                callSettings = callSettings.MergedWith(s_compressionCallSettings);
+            }
+
             // Perform the RPC to server, catching exceptions.
-            var publishTask = client.PublishAsync(TopicName, batch.Messages, CallSettings.FromCancellationToken(_hardStopCts.Token));
+            var publishTask = client.PublishAsync(TopicName, batch.Messages, callSettings);
             var response = await _taskHelper.ConfigureAwaitHideErrors(() => publishTask, null);
             Action postLockAction;
             lock (_lock)
@@ -477,12 +496,14 @@ public sealed class PublisherClientImpl : PublisherClient
                         {
                             if (publishTask.Exception.As<RpcException>()?.IsRecoverable() ?? false)
                             {
+                                _logger?.LogWarning(publishTask.Exception, "Recoverable error when publishing; will retry this batch.");
                                 // Rebatch failed messages.
                                 batches.AddLast(batch);
                                 postLockAction = () => { };
                             }
                             else
                             {
+                                _logger?.LogWarning(publishTask.Exception, "Unrecoverable error when publishing. Failing all current batches with the same ordering key.");
                                 // Prepare to fail all batches, clear all batches, and mark ordering-key as in error state.
                                 var batchesToFail = new List<Batch>(batches) { batch };
                                 postLockAction = () =>
@@ -498,6 +519,7 @@ public sealed class PublisherClientImpl : PublisherClient
                         }
                         else
                         {
+                            _logger?.LogWarning(publishTask.Exception, "Unrecoverable error when publishing without ordering key. Failing the current batch.");
                             // No ordering-key, just fail the batch.
                             postLockAction = () => batch.BatchCompletion.SetException(publishTask.Exception.InnerExceptions);
                         }

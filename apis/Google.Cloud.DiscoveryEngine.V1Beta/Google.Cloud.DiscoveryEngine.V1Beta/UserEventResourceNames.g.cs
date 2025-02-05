@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,6 +19,25 @@ using gcdv = Google.Cloud.DiscoveryEngine.V1Beta;
 
 namespace Google.Cloud.DiscoveryEngine.V1Beta
 {
+    public partial class UserEvent
+    {
+        /// <summary><see cref="EngineName"/>-typed view over the <see cref="Engine"/> resource name property.</summary>
+        public EngineName EngineAsEngineName
+        {
+            get => string.IsNullOrEmpty(Engine) ? null : EngineName.Parse(Engine, allowUnparsed: true);
+            set => Engine = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="DataStoreName"/>-typed view over the <see cref="DataStore"/> resource name property.
+        /// </summary>
+        public DataStoreName DataStoreAsDataStoreName
+        {
+            get => string.IsNullOrEmpty(DataStore) ? null : DataStoreName.Parse(DataStore, allowUnparsed: true);
+            set => DataStore = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DocumentInfo
     {
         /// <summary>

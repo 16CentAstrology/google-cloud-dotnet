@@ -33,11 +33,11 @@ namespace Google.Maps.Routing.V2 {
             "RVJST1IQARIUChBMQVRFTkNZX0VYQ0VFREVEEAIqdgoTRmFsbGJhY2tSb3V0",
             "aW5nTW9kZRIlCiFGQUxMQkFDS19ST1VUSU5HX01PREVfVU5TUEVDSUZJRUQQ",
             "ABIcChhGQUxMQkFDS19UUkFGRklDX1VOQVdBUkUQARIaChZGQUxMQkFDS19U",
-            "UkFGRklDX0FXQVJFEAJCxgEKGmNvbS5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
+            "UkFGRklDX0FXQVJFEAJCwwEKGmNvbS5nb29nbGUubWFwcy5yb3V0aW5nLnYy",
             "QhFGYWxsYmFja0luZm9Qcm90b1ABWjpjbG91ZC5nb29nbGUuY29tL2dvL21h",
-            "cHMvcm91dGluZy9hcGl2Mi9yb3V0aW5ncGI7cm91dGluZ3Bi+AEBogIFR01S",
-            "VjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1hcHNcUm91",
-            "dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6VjJiBnByb3RvMw=="));
+            "cHMvcm91dGluZy9hcGl2Mi9yb3V0aW5ncGI7cm91dGluZ3BiogIFR01SVjKq",
+            "AhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1hcHNcUm91dGlu",
+            "Z1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Routing.V2.FallbackReason), typeof(global::Google.Maps.Routing.V2.FallbackRoutingMode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -79,13 +79,14 @@ namespace Google.Maps.Routing.V2 {
     /// </summary>
     [pbr::OriginalName("FALLBACK_ROUTING_MODE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Indicates the `TRAFFIC_UNAWARE` [google.maps.routing.v2.RoutingPreference]
-    /// was used to compute the response.
+    /// Indicates the `TRAFFIC_UNAWARE`
+    /// [`RoutingPreference`][google.maps.routing.v2.RoutingPreference] was used to
+    /// compute the response.
     /// </summary>
     [pbr::OriginalName("FALLBACK_TRAFFIC_UNAWARE")] FallbackTrafficUnaware = 1,
     /// <summary>
     /// Indicates the `TRAFFIC_AWARE`
-    /// [RoutingPreference][google.maps.routing.v2.RoutingPreference] was used to
+    /// [`RoutingPreference`][google.maps.routing.v2.RoutingPreference] was used to
     /// compute the response.
     /// </summary>
     [pbr::OriginalName("FALLBACK_TRAFFIC_AWARE")] FallbackTrafficAware = 2,
@@ -99,6 +100,7 @@ namespace Google.Maps.Routing.V2 {
   /// is set, then it means the server used a different routing mode from your
   /// preferred mode as fallback.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FallbackInfo : pb::IMessage<FallbackInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

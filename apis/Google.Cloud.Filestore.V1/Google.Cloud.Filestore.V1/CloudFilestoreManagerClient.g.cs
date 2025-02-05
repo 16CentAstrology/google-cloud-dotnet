@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcc = Google.Cloud.Common;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
+using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Filestore.V1
 {
@@ -59,6 +60,8 @@ namespace Google.Cloud.Filestore.V1
             UpdateInstanceOperationsSettings = existing.UpdateInstanceOperationsSettings.Clone();
             RestoreInstanceSettings = existing.RestoreInstanceSettings;
             RestoreInstanceOperationsSettings = existing.RestoreInstanceOperationsSettings.Clone();
+            RevertInstanceSettings = existing.RevertInstanceSettings;
+            RevertInstanceOperationsSettings = existing.RevertInstanceOperationsSettings.Clone();
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings.Clone();
             ListSnapshotsSettings = existing.ListSnapshotsSettings;
@@ -77,6 +80,7 @@ namespace Google.Cloud.Filestore.V1
             DeleteBackupOperationsSettings = existing.DeleteBackupOperationsSettings.Clone();
             UpdateBackupSettings = existing.UpdateBackupSettings;
             UpdateBackupOperationsSettings = existing.UpdateBackupOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -207,6 +211,37 @@ namespace Google.Cloud.Filestore.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings RestoreInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudFilestoreManagerClient.RevertInstance</c> and <c>CloudFilestoreManagerClient.RevertInstanceAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RevertInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudFilestoreManagerClient.RevertInstance</c> and
+        /// <c>CloudFilestoreManagerClient.RevertInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RevertInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -485,6 +520,11 @@ namespace Google.Cloud.Filestore.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudFilestoreManagerSettings"/> object.</returns>
         public CloudFilestoreManagerSettings Clone() => new CloudFilestoreManagerSettings(this);
@@ -528,14 +568,14 @@ namespace Google.Cloud.Filestore.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudFilestoreManagerClient.Create(callInvoker, Settings, Logger);
+            return CloudFilestoreManagerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<CloudFilestoreManagerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudFilestoreManagerClient.Create(callInvoker, Settings, Logger);
+            return CloudFilestoreManagerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -647,6 +687,9 @@ namespace Google.Cloud.Filestore.V1
         /// <summary>The underlying gRPC CloudFilestoreManager client</summary>
         public virtual CloudFilestoreManager.CloudFilestoreManagerClient GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Lists all instances in a project for either a specified location
         /// or for all locations.
@@ -689,13 +732,22 @@ namespace Google.Cloud.Filestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstances(new ListInstancesRequest
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRequest request = new ListInstancesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstances(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all instances in a project for either a specified location
@@ -719,13 +771,22 @@ namespace Google.Cloud.Filestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstancesAsync(new ListInstancesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRequest request = new ListInstancesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all instances in a project for either a specified location
@@ -749,13 +810,22 @@ namespace Google.Cloud.Filestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstances(new ListInstancesRequest
+        public virtual gax::PagedEnumerable<ListInstancesResponse, Instance> ListInstances(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRequest request = new ListInstancesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstances(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all instances in a project for either a specified location
@@ -779,13 +849,22 @@ namespace Google.Cloud.Filestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Instance"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListInstancesAsync(new ListInstancesRequest
+        public virtual gax::PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListInstancesRequest request = new ListInstancesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListInstancesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a specific instance.
@@ -1305,6 +1384,59 @@ namespace Google.Cloud.Filestore.V1
             lro::Operation<Instance, gcc::OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreInstanceOperationsClient, callSettings);
 
         /// <summary>
+        /// Revert an existing instance's file system to a specified snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, gcc::OperationMetadata> RevertInstance(RevertInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Revert an existing instance's file system to a specified snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, gcc::OperationMetadata>> RevertInstanceAsync(RevertInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Revert an existing instance's file system to a specified snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, gcc::OperationMetadata>> RevertInstanceAsync(RevertInstanceRequest request, st::CancellationToken cancellationToken) =>
+            RevertInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RevertInstance</c>.</summary>
+        public virtual lro::OperationsClient RevertInstanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RevertInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, gcc::OperationMetadata> PollOnceRevertInstance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, gcc::OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RevertInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RevertInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, gcc::OperationMetadata>> PollOnceRevertInstanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, gcc::OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RevertInstanceOperationsClient, callSettings);
+
+        /// <summary>
         /// Deletes an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1480,13 +1612,22 @@ namespace Google.Cloud.Filestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshots(new ListSnapshotsRequest
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshots(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all snapshots in a project for either a specified location
@@ -1507,13 +1648,22 @@ namespace Google.Cloud.Filestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshotsAsync(new ListSnapshotsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshotsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all snapshots in a project for either a specified location
@@ -1534,13 +1684,22 @@ namespace Google.Cloud.Filestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshots(new ListSnapshotsRequest
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshots(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all snapshots in a project for either a specified location
@@ -1561,13 +1720,22 @@ namespace Google.Cloud.Filestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshotsAsync(new ListSnapshotsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshotsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a specific snapshot.
@@ -2170,13 +2338,22 @@ namespace Google.Cloud.Filestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all backups in a project for either a specified location or for all
@@ -2200,13 +2377,22 @@ namespace Google.Cloud.Filestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all backups in a project for either a specified location or for all
@@ -2230,13 +2416,22 @@ namespace Google.Cloud.Filestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all backups in a project for either a specified location or for all
@@ -2260,13 +2455,22 @@ namespace Google.Cloud.Filestore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a specific backup.
@@ -2880,6 +3084,8 @@ namespace Google.Cloud.Filestore.V1
 
         private readonly gaxgrpc::ApiCall<RestoreInstanceRequest, lro::Operation> _callRestoreInstance;
 
+        private readonly gaxgrpc::ApiCall<RevertInstanceRequest, lro::Operation> _callRevertInstance;
+
         private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> _callDeleteInstance;
 
         private readonly gaxgrpc::ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> _callListSnapshots;
@@ -2913,10 +3119,15 @@ namespace Google.Cloud.Filestore.V1
         {
             GrpcClient = grpcClient;
             CloudFilestoreManagerSettings effectiveSettings = settings ?? CloudFilestoreManagerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings, logger);
             UpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceOperationsSettings, logger);
             RestoreInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreInstanceOperationsSettings, logger);
+            RevertInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RevertInstanceOperationsSettings, logger);
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings, logger);
             CreateSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateSnapshotOperationsSettings, logger);
             DeleteSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSnapshotOperationsSettings, logger);
@@ -2924,6 +3135,7 @@ namespace Google.Cloud.Filestore.V1
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
             UpdateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
@@ -2939,6 +3151,9 @@ namespace Google.Cloud.Filestore.V1
             _callRestoreInstance = clientHelper.BuildApiCall<RestoreInstanceRequest, lro::Operation>("RestoreInstance", grpcClient.RestoreInstanceAsync, grpcClient.RestoreInstance, effectiveSettings.RestoreInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRestoreInstance);
             Modify_RestoreInstanceApiCall(ref _callRestoreInstance);
+            _callRevertInstance = clientHelper.BuildApiCall<RevertInstanceRequest, lro::Operation>("RevertInstance", grpcClient.RevertInstanceAsync, grpcClient.RevertInstance, effectiveSettings.RevertInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRevertInstance);
+            Modify_RevertInstanceApiCall(ref _callRevertInstance);
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, lro::Operation>("DeleteInstance", grpcClient.DeleteInstanceAsync, grpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteInstance);
             Modify_DeleteInstanceApiCall(ref _callDeleteInstance);
@@ -2987,6 +3202,8 @@ namespace Google.Cloud.Filestore.V1
 
         partial void Modify_RestoreInstanceApiCall(ref gaxgrpc::ApiCall<RestoreInstanceRequest, lro::Operation> call);
 
+        partial void Modify_RevertInstanceApiCall(ref gaxgrpc::ApiCall<RevertInstanceRequest, lro::Operation> call);
+
         partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> call);
 
         partial void Modify_ListSnapshotsApiCall(ref gaxgrpc::ApiCall<ListSnapshotsRequest, ListSnapshotsResponse> call);
@@ -3014,6 +3231,9 @@ namespace Google.Cloud.Filestore.V1
         /// <summary>The underlying gRPC CloudFilestoreManager client</summary>
         public override CloudFilestoreManager.CloudFilestoreManagerClient GrpcClient { get; }
 
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
+
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref gaxgrpc::CallSettings settings);
@@ -3023,6 +3243,8 @@ namespace Google.Cloud.Filestore.V1
         partial void Modify_UpdateInstanceRequest(ref UpdateInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RestoreInstanceRequest(ref RestoreInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RevertInstanceRequest(ref RevertInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3189,6 +3411,33 @@ namespace Google.Cloud.Filestore.V1
         {
             Modify_RestoreInstanceRequest(ref request, ref callSettings);
             return new lro::Operation<Instance, gcc::OperationMetadata>(await _callRestoreInstance.Async(request, callSettings).ConfigureAwait(false), RestoreInstanceOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RevertInstance</c>.</summary>
+        public override lro::OperationsClient RevertInstanceOperationsClient { get; }
+
+        /// <summary>
+        /// Revert an existing instance's file system to a specified snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, gcc::OperationMetadata> RevertInstance(RevertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RevertInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, gcc::OperationMetadata>(_callRevertInstance.Sync(request, callSettings), RevertInstanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Revert an existing instance's file system to a specified snapshot.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, gcc::OperationMetadata>> RevertInstanceAsync(RevertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RevertInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, gcc::OperationMetadata>(await _callRevertInstance.Async(request, callSettings).ConfigureAwait(false), RevertInstanceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteInstance</c>.</summary>
@@ -3528,6 +3777,22 @@ namespace Google.Cloud.Filestore.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class CloudFilestoreManager
+    {
+        public partial class CloudFilestoreManagerClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

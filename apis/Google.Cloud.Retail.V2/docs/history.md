@@ -1,5 +1,72 @@
 # Version history
 
+## Version 2.12.0, released 2024-10-14
+
+### New features
+
+- Add conversational search ([commit df83180](https://github.com/googleapis/google-cloud-dotnet/commit/df83180ce586294c17b53889a19c1257acfaf310))
+- Add tile navigation ([commit df83180](https://github.com/googleapis/google-cloud-dotnet/commit/df83180ce586294c17b53889a19c1257acfaf310))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit df83180](https://github.com/googleapis/google-cloud-dotnet/commit/df83180ce586294c17b53889a19c1257acfaf310))
+
+## Version 2.11.0, released 2024-06-10
+
+### New features
+
+- Support merged facets ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+- Add product purge API ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+- Add page_categories to control condition ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+- Support attribute suggestion in autocomplete ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+- Support frequent bought together model config ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+- Allow to skip denylist postfiltering in recommendations ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 6bce4f1](https://github.com/googleapis/google-cloud-dotnet/commit/6bce4f1fa34ff5213b37719114859bf802efc20f))
+
+## Version 2.10.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 2.9.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.8.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.7.0, released 2024-03-13
+
+No API surface changes; just dependency updates.
+
+## Version 2.6.0, released 2024-02-09
+
+### New features
+
+- Add analytics service ([commit b0ce542](https://github.com/googleapis/google-cloud-dotnet/commit/b0ce542a6a76c172106f485baa007f2f514e5b04))
+
+## Version 2.5.0, released 2023-04-12
+
+### New features
+
+- Add model service ([commit a54f6b9](https://github.com/googleapis/google-cloud-dotnet/commit/a54f6b9df485ca95e3ca210e613f8792e69f4014))
+- Support per-entity search and autocomplete ([commit a54f6b9](https://github.com/googleapis/google-cloud-dotnet/commit/a54f6b9df485ca95e3ca210e613f8792e69f4014))
+- Support new filter syntax for recommendation ([commit a54f6b9](https://github.com/googleapis/google-cloud-dotnet/commit/a54f6b9df485ca95e3ca210e613f8792e69f4014))
+- Expose A/B experiment info in search response ([commit a54f6b9](https://github.com/googleapis/google-cloud-dotnet/commit/a54f6b9df485ca95e3ca210e613f8792e69f4014))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit a54f6b9](https://github.com/googleapis/google-cloud-dotnet/commit/a54f6b9df485ca95e3ca210e613f8792e69f4014))
+
 ## Version 2.4.0, released 2023-01-19
 
 ### New features

@@ -47,6 +47,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Represents a customer-managed encryption key spec that can be applied to
   /// a top-level resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EncryptionSpec : pb::IMessage<EncryptionSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

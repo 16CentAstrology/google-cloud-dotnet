@@ -25,360 +25,468 @@ namespace Google.Analytics.Admin.V1Alpha {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvYW5hbHl0aWNzL2FkbWluL3YxYWxwaGEvcmVzb3VyY2VzLnBy",
-            "b3RvEh5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEaNmdvb2dsZS9h",
-            "bmFseXRpY3MvYWRtaW4vdjFhbHBoYS9leHBhbmRlZF9kYXRhX3NldC5wcm90",
-            "bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2Fw",
-            "aS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
-            "cm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvIo4CCgdBY2Nv",
-            "dW50EhEKBG5hbWUYASABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGlt",
-            "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIZCgxk",
-            "aXNwbGF5X25hbWUYBCABKAlCA+BBAhITCgtyZWdpb25fY29kZRgFIAEoCRIU",
-            "CgdkZWxldGVkGAYgASgIQgPgQQM6PupBOwolYW5hbHl0aWNzYWRtaW4uZ29v",
-            "Z2xlYXBpcy5jb20vQWNjb3VudBISYWNjb3VudHMve2FjY291bnR9IrkFCghQ",
-            "cm9wZXJ0eRIRCgRuYW1lGAEgASgJQgPgQQMSSAoNcHJvcGVydHlfdHlwZRgO",
-            "IAEoDjIsLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Qcm9wZXJ0",
-            "eVR5cGVCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZwYXJlbnQYAiABKAlC",
-            "A+BBBRIZCgxkaXNwbGF5X25hbWUYBSABKAlCA+BBAhJLChFpbmR1c3RyeV9j",
-            "YXRlZ29yeRgGIAEoDjIwLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
-            "YS5JbmR1c3RyeUNhdGVnb3J5EhYKCXRpbWVfem9uZRgHIAEoCUID4EECEhUK",
-            "DWN1cnJlbmN5X2NvZGUYCCABKAkSSAoNc2VydmljZV9sZXZlbBgKIAEoDjIs",
-            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5TZXJ2aWNlTGV2ZWxC",
-            "A+BBAxI0CgtkZWxldGVfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAxI0CgtleHBpcmVfdGltZRgMIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI+CgdhY2NvdW50GA0gASgJQi3gQQX6",
-            "QScKJWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291bnQ6QupB",
-            "PwomYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vUHJvcGVydHkSFXBy",
-            "b3BlcnRpZXMve3Byb3BlcnR5fSL5BwoKRGF0YVN0cmVhbRJTCg93ZWJfc3Ry",
-            "ZWFtX2RhdGEYBiABKAsyOC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxw",
-            "aGEuRGF0YVN0cmVhbS5XZWJTdHJlYW1EYXRhSAASYgoXYW5kcm9pZF9hcHBf",
-            "c3RyZWFtX2RhdGEYByABKAsyPy5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYx",
-            "YWxwaGEuRGF0YVN0cmVhbS5BbmRyb2lkQXBwU3RyZWFtRGF0YUgAEloKE2lv",
-            "c19hcHBfc3RyZWFtX2RhdGEYCCABKAsyOy5nb29nbGUuYW5hbHl0aWNzLmFk",
-            "bWluLnYxYWxwaGEuRGF0YVN0cmVhbS5Jb3NBcHBTdHJlYW1EYXRhSAASEQoE",
-            "bmFtZRgBIAEoCUID4EEDEk8KBHR5cGUYAiABKA4yOS5nb29nbGUuYW5hbHl0",
-            "aWNzLmFkbWluLnYxYWxwaGEuRGF0YVN0cmVhbS5EYXRhU3RyZWFtVHlwZUIG",
-            "4EEF4EECEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRI0CgtjcmVhdGVfdGltZRgE",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRh",
-            "dGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxpkCg1XZWJTdHJlYW1EYXRhEhsKDm1lYXN1cmVtZW50X2lkGAEgASgJQgPg",
-            "QQMSHAoPZmlyZWJhc2VfYXBwX2lkGAIgASgJQgPgQQMSGAoLZGVmYXVsdF91",
-            "cmkYAyABKAlCA+BBBRpPChRBbmRyb2lkQXBwU3RyZWFtRGF0YRIcCg9maXJl",
-            "YmFzZV9hcHBfaWQYASABKAlCA+BBAxIZCgxwYWNrYWdlX25hbWUYAiABKAlC",
-            "A+BBBRpLChBJb3NBcHBTdHJlYW1EYXRhEhwKD2ZpcmViYXNlX2FwcF9pZBgB",
-            "IAEoCUID4EEDEhkKCWJ1bmRsZV9pZBgCIAEoCUIG4EEF4EECIn0KDkRhdGFT",
-            "dHJlYW1UeXBlEiAKHERBVEFfU1RSRUFNX1RZUEVfVU5TUEVDSUZJRUQQABIT",
-            "Cg9XRUJfREFUQV9TVFJFQU0QARIbChdBTkRST0lEX0FQUF9EQVRBX1NUUkVB",
-            "TRACEhcKE0lPU19BUFBfREFUQV9TVFJFQU0QAzpe6kFbCihhbmFseXRpY3Nh",
-            "ZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRhU3RyZWFtEi9wcm9wZXJ0aWVzL3tw",
-            "cm9wZXJ0eX0vZGF0YVN0cmVhbXMve2RhdGFfc3RyZWFtfUINCgtzdHJlYW1f",
-            "ZGF0YSLUAQoIVXNlckxpbmsSEQoEbmFtZRgBIAEoCUID4EEDEhoKDWVtYWls",
-            "X2FkZHJlc3MYAiABKAlCA+BBBRIUCgxkaXJlY3Rfcm9sZXMYAyADKAk6ggHq",
-            "QX8KJmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1VzZXJMaW5rEihh",
-            "Y2NvdW50cy97YWNjb3VudH0vdXNlckxpbmtzL3t1c2VyX2xpbmt9Eitwcm9w",
-            "ZXJ0aWVzL3twcm9wZXJ0eX0vdXNlckxpbmtzL3t1c2VyX2xpbmt9ImMKDUF1",
-            "ZGl0VXNlckxpbmsSDAoEbmFtZRgBIAEoCRIVCg1lbWFpbF9hZGRyZXNzGAIg",
-            "ASgJEhQKDGRpcmVjdF9yb2xlcxgDIAMoCRIXCg9lZmZlY3RpdmVfcm9sZXMY",
-            "BCADKAki0wEKDEZpcmViYXNlTGluaxIRCgRuYW1lGAEgASgJQgPgQQMSFAoH",
-            "cHJvamVjdBgCIAEoCUID4EEFEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDOmTqQWEKKmFuYWx5dGljc2Fk",
-            "bWluLmdvb2dsZWFwaXMuY29tL0ZpcmViYXNlTGluaxIzcHJvcGVydGllcy97",
-            "cHJvcGVydHl9L2ZpcmViYXNlTGlua3Mve2ZpcmViYXNlX2xpbmt9IqkBCg1H",
-            "bG9iYWxTaXRlVGFnEhEKBG5hbWUYASABKAlCA+BBAxIUCgdzbmlwcGV0GAIg",
-            "ASgJQgPgQQU6b+pBbAorYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
-            "R2xvYmFsU2l0ZVRhZxI9cHJvcGVydGllcy97cHJvcGVydHl9L2RhdGFTdHJl",
-            "YW1zL3tkYXRhX3N0cmVhbX0vZ2xvYmFsU2l0ZVRhZyKYAwoNR29vZ2xlQWRz",
-            "TGluaxIRCgRuYW1lGAEgASgJQgPgQQMSGAoLY3VzdG9tZXJfaWQYAyABKAlC",
-            "A+BBBRIfChJjYW5fbWFuYWdlX2NsaWVudHMYBCABKAhCA+BBAxI/ChthZHNf",
-            "cGVyc29uYWxpemF0aW9uX2VuYWJsZWQYBSABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuQm9vbFZhbHVlEjQKC2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAggASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEiIKFWNyZWF0b3JfZW1h",
-            "aWxfYWRkcmVzcxgJIAEoCUID4EEDOmjqQWUKK2FuYWx5dGljc2FkbWluLmdv",
-            "b2dsZWFwaXMuY29tL0dvb2dsZUFkc0xpbmsSNnByb3BlcnRpZXMve3Byb3Bl",
-            "cnR5fS9nb29nbGVBZHNMaW5rcy97Z29vZ2xlX2Fkc19saW5rfSLrAgoTRGF0",
-            "YVNoYXJpbmdTZXR0aW5ncxIRCgRuYW1lGAEgASgJQgPgQQMSKwojc2hhcmlu",
-            "Z193aXRoX2dvb2dsZV9zdXBwb3J0X2VuYWJsZWQYAiABKAgSMgoqc2hhcmlu",
-            "Z193aXRoX2dvb2dsZV9hc3NpZ25lZF9zYWxlc19lbmFibGVkGAMgASgIEi0K",
-            "JXNoYXJpbmdfd2l0aF9nb29nbGVfYW55X3NhbGVzX2VuYWJsZWQYBCABKAgS",
-            "LAokc2hhcmluZ193aXRoX2dvb2dsZV9wcm9kdWN0c19lbmFibGVkGAUgASgI",
-            "EiMKG3NoYXJpbmdfd2l0aF9vdGhlcnNfZW5hYmxlZBgGIAEoCDpe6kFbCjFh",
-            "bmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRhU2hhcmluZ1NldHRp",
-            "bmdzEiZhY2NvdW50cy97YWNjb3VudH0vZGF0YVNoYXJpbmdTZXR0aW5ncyKV",
-            "AgoOQWNjb3VudFN1bW1hcnkSDAoEbmFtZRgBIAEoCRI7CgdhY2NvdW50GAIg",
-            "ASgJQir6QScKJWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291",
-            "bnQSFAoMZGlzcGxheV9uYW1lGAMgASgJEksKEnByb3BlcnR5X3N1bW1hcmll",
-            "cxgEIAMoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Qcm9w",
-            "ZXJ0eVN1bW1hcnk6VepBUgosYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5j",
-            "b20vQWNjb3VudFN1bW1hcnkSImFjY291bnRTdW1tYXJpZXMve2FjY291bnRf",
-            "c3VtbWFyeX0iuwEKD1Byb3BlcnR5U3VtbWFyeRI9Cghwcm9wZXJ0eRgBIAEo",
-            "CUIr+kEoCiZhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Qcm9wZXJ0",
-            "eRIUCgxkaXNwbGF5X25hbWUYAiABKAkSQwoNcHJvcGVydHlfdHlwZRgDIAEo",
-            "DjIsLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Qcm9wZXJ0eVR5",
-            "cGUSDgoGcGFyZW50GAQgASgJIo4CChlNZWFzdXJlbWVudFByb3RvY29sU2Vj",
-            "cmV0EhEKBG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYAiABKAlC",
-            "A+BBAhIZCgxzZWNyZXRfdmFsdWUYAyABKAlCA+BBAzqnAepBowEKN2FuYWx5",
-            "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL01lYXN1cmVtZW50UHJvdG9jb2xT",
-            "ZWNyZXQSaHByb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhU3RyZWFtcy97ZGF0",
-            "YV9zdHJlYW19L21lYXN1cmVtZW50UHJvdG9jb2xTZWNyZXRzL3ttZWFzdXJl",
-            "bWVudF9wcm90b2NvbF9zZWNyZXR9IooCChJDaGFuZ2VIaXN0b3J5RXZlbnQS",
-            "CgoCaWQYASABKAkSLwoLY2hhbmdlX3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEj0KCmFjdG9yX3R5cGUYAyABKA4yKS5nb29nbGUu",
-            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQWN0b3JUeXBlEhgKEHVzZXJfYWN0",
-            "b3JfZW1haWwYBCABKAkSGAoQY2hhbmdlc19maWx0ZXJlZBgFIAEoCBJECgdj",
-            "aGFuZ2VzGAYgAygLMjMuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
-            "LkNoYW5nZUhpc3RvcnlDaGFuZ2UirQ4KE0NoYW5nZUhpc3RvcnlDaGFuZ2US",
-            "EAoIcmVzb3VyY2UYASABKAkSOgoGYWN0aW9uGAIgASgOMiouZ29vZ2xlLmFu",
-            "YWx5dGljcy5hZG1pbi52MWFscGhhLkFjdGlvblR5cGUSaQoWcmVzb3VyY2Vf",
-            "YmVmb3JlX2NoYW5nZRgDIAEoCzJJLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
-            "djFhbHBoYS5DaGFuZ2VIaXN0b3J5Q2hhbmdlLkNoYW5nZUhpc3RvcnlSZXNv",
-            "dXJjZRJoChVyZXNvdXJjZV9hZnRlcl9jaGFuZ2UYBCABKAsySS5nb29nbGUu",
-            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ2hhbmdlSGlzdG9yeUNoYW5nZS5D",
-            "aGFuZ2VIaXN0b3J5UmVzb3VyY2Ua8gsKFUNoYW5nZUhpc3RvcnlSZXNvdXJj",
-            "ZRI6CgdhY2NvdW50GAEgASgLMicuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
-            "MWFscGhhLkFjY291bnRIABI8Cghwcm9wZXJ0eRgCIAEoCzIoLmdvb2dsZS5h",
-            "bmFseXRpY3MuYWRtaW4udjFhbHBoYS5Qcm9wZXJ0eUgAEkUKDWZpcmViYXNl",
-            "X2xpbmsYBiABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEu",
-            "RmlyZWJhc2VMaW5rSAASSAoPZ29vZ2xlX2Fkc19saW5rGAcgASgLMi0uZ29v",
-            "Z2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkdvb2dsZUFkc0xpbmtIABJY",
-            "Chdnb29nbGVfc2lnbmFsc19zZXR0aW5ncxgIIAEoCzI1Lmdvb2dsZS5hbmFs",
-            "eXRpY3MuYWRtaW4udjFhbHBoYS5Hb29nbGVTaWduYWxzU2V0dGluZ3NIABJq",
-            "CiFkaXNwbGF5X3ZpZGVvXzM2MF9hZHZlcnRpc2VyX2xpbmsYCSABKAsyPS5n",
-            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGlzcGxheVZpZGVvMzYw",
-            "QWR2ZXJ0aXNlckxpbmtIABJ7CipkaXNwbGF5X3ZpZGVvXzM2MF9hZHZlcnRp",
-            "c2VyX2xpbmtfcHJvcG9zYWwYCiABKAsyRS5nb29nbGUuYW5hbHl0aWNzLmFk",
-            "bWluLnYxYWxwaGEuRGlzcGxheVZpZGVvMzYwQWR2ZXJ0aXNlckxpbmtQcm9w",
-            "b3NhbEgAEksKEGNvbnZlcnNpb25fZXZlbnQYCyABKAsyLy5nb29nbGUuYW5h",
-            "bHl0aWNzLmFkbWluLnYxYWxwaGEuQ29udmVyc2lvbkV2ZW50SAASYAobbWVh",
-            "c3VyZW1lbnRfcHJvdG9jb2xfc2VjcmV0GAwgASgLMjkuZ29vZ2xlLmFuYWx5",
-            "dGljcy5hZG1pbi52MWFscGhhLk1lYXN1cmVtZW50UHJvdG9jb2xTZWNyZXRI",
-            "ABJLChBjdXN0b21fZGltZW5zaW9uGA0gASgLMi8uZ29vZ2xlLmFuYWx5dGlj",
-            "cy5hZG1pbi52MWFscGhhLkN1c3RvbURpbWVuc2lvbkgAEkUKDWN1c3RvbV9t",
-            "ZXRyaWMYDiABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEu",
-            "Q3VzdG9tTWV0cmljSAASWAoXZGF0YV9yZXRlbnRpb25fc2V0dGluZ3MYDyAB",
-            "KAsyNS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGF0YVJldGVu",
-            "dGlvblNldHRpbmdzSAASTwoTc2VhcmNoX2Fkc18zNjBfbGluaxgQIAEoCzIw",
-            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5TZWFyY2hBZHMzNjBM",
-            "aW5rSAASQQoLZGF0YV9zdHJlYW0YEiABKAsyKi5nb29nbGUuYW5hbHl0aWNz",
-            "LmFkbWluLnYxYWxwaGEuRGF0YVN0cmVhbUgAElMKFGF0dHJpYnV0aW9uX3Nl",
-            "dHRpbmdzGBQgASgLMjMuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
-            "LkF0dHJpYnV0aW9uU2V0dGluZ3NIABJMChFleHBhbmRlZF9kYXRhX3NldBgV",
-            "IAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5FeHBhbmRl",
-            "ZERhdGFTZXRIABJFCg1iaWdxdWVyeV9saW5rGBcgASgLMiwuZ29vZ2xlLmFu",
-            "YWx5dGljcy5hZG1pbi52MWFscGhhLkJpZ1F1ZXJ5TGlua0gAEmQKHWVuaGFu",
-            "Y2VkX21lYXN1cmVtZW50X3NldHRpbmdzGBggASgLMjsuZ29vZ2xlLmFuYWx5",
-            "dGljcy5hZG1pbi52MWFscGhhLkVuaGFuY2VkTWVhc3VyZW1lbnRTZXR0aW5n",
-            "c0gAQgoKCHJlc291cmNlIt8DCh1EaXNwbGF5VmlkZW8zNjBBZHZlcnRpc2Vy",
-            "TGluaxIRCgRuYW1lGAEgASgJQgPgQQMSGgoNYWR2ZXJ0aXNlcl9pZBgCIAEo",
-            "CUID4EEFEiQKF2FkdmVydGlzZXJfZGlzcGxheV9uYW1lGAMgASgJQgPgQQMS",
-            "PwobYWRzX3BlcnNvbmFsaXphdGlvbl9lbmFibGVkGAQgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLkJvb2xWYWx1ZRJGCh1jYW1wYWlnbl9kYXRhX3NoYXJpbmdf",
-            "ZW5hYmxlZBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCA+BB",
-            "BRJCChljb3N0X2RhdGFfc2hhcmluZ19lbmFibGVkGAYgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLkJvb2xWYWx1ZUID4EEFOpsB6kGXAQo7YW5hbHl0aWNzYWRt",
-            "aW4uZ29vZ2xlYXBpcy5jb20vRGlzcGxheVZpZGVvMzYwQWR2ZXJ0aXNlckxp",
-            "bmsSWHByb3BlcnRpZXMve3Byb3BlcnR5fS9kaXNwbGF5VmlkZW8zNjBBZHZl",
-            "cnRpc2VyTGlua3Mve2Rpc3BsYXlfdmlkZW9fMzYwX2FkdmVydGlzZXJfbGlu",
-            "a30iigUKJURpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWwS",
-            "EQoEbmFtZRgBIAEoCUID4EEDEhoKDWFkdmVydGlzZXJfaWQYAiABKAlCA+BB",
-            "BRJkChxsaW5rX3Byb3Bvc2FsX3N0YXR1c19kZXRhaWxzGAMgASgLMjkuZ29v",
-            "Z2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkxpbmtQcm9wb3NhbFN0YXR1",
-            "c0RldGFpbHNCA+BBAxIkChdhZHZlcnRpc2VyX2Rpc3BsYXlfbmFtZRgEIAEo",
-            "CUID4EEDEh0KEHZhbGlkYXRpb25fZW1haWwYBSABKAlCA+BBBBJEChthZHNf",
-            "cGVyc29uYWxpemF0aW9uX2VuYWJsZWQYBiABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuQm9vbFZhbHVlQgPgQQUSRgodY2FtcGFpZ25fZGF0YV9zaGFyaW5nX2Vu",
-            "YWJsZWQYByABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlQgPgQQUS",
-            "QgoZY29zdF9kYXRhX3NoYXJpbmdfZW5hYmxlZBgIIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5Cb29sVmFsdWVCA+BBBTq0AepBsAEKQ2FuYWx5dGljc2FkbWlu",
-            "Lmdvb2dsZWFwaXMuY29tL0Rpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5r",
-            "UHJvcG9zYWwSaXByb3BlcnRpZXMve3Byb3BlcnR5fS9kaXNwbGF5VmlkZW8z",
-            "NjBBZHZlcnRpc2VyTGlua1Byb3Bvc2Fscy97ZGlzcGxheV92aWRlb18zNjBf",
-            "YWR2ZXJ0aXNlcl9saW5rX3Byb3Bvc2FsfSLoAwoQU2VhcmNoQWRzMzYwTGlu",
-            "axIRCgRuYW1lGAEgASgJQgPgQQMSGgoNYWR2ZXJ0aXNlcl9pZBgCIAEoCUID",
-            "4EEFEkYKHWNhbXBhaWduX2RhdGFfc2hhcmluZ19lbmFibGVkGAMgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZUID4EEFEkIKGWNvc3RfZGF0YV9z",
-            "aGFyaW5nX2VuYWJsZWQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZh",
-            "bHVlQgPgQQUSJAoXYWR2ZXJ0aXNlcl9kaXNwbGF5X25hbWUYBSABKAlCA+BB",
-            "AxI/ChthZHNfcGVyc29uYWxpemF0aW9uX2VuYWJsZWQYBiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuQm9vbFZhbHVlEj4KGnNpdGVfc3RhdHNfc2hhcmluZ19l",
-            "bmFibGVkGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZTpy6kFv",
-            "Ci5hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9TZWFyY2hBZHMzNjBM",
-            "aW5rEj1wcm9wZXJ0aWVzL3twcm9wZXJ0eX0vc2VhcmNoQWRzMzYwTGlua3Mv",
-            "e3NlYXJjaF9hZHNfMzYwX2xpbmt9IvwBChlMaW5rUHJvcG9zYWxTdGF0dXNE",
-            "ZXRhaWxzEmwKIGxpbmtfcHJvcG9zYWxfaW5pdGlhdGluZ19wcm9kdWN0GAEg",
-            "ASgOMj0uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkxpbmtQcm9w",
-            "b3NhbEluaXRpYXRpbmdQcm9kdWN0QgPgQQMSHAoPcmVxdWVzdG9yX2VtYWls",
-            "GAIgASgJQgPgQQMSUwoTbGlua19wcm9wb3NhbF9zdGF0ZRgDIAEoDjIxLmdv",
-            "b2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5MaW5rUHJvcG9zYWxTdGF0",
-            "ZUID4EEDIo8CCg9Db252ZXJzaW9uRXZlbnQSEQoEbmFtZRgBIAEoCUID4EED",
-            "EhcKCmV2ZW50X25hbWUYAiABKAlCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIWCglkZWxldGFi",
-            "bGUYBCABKAhCA+BBAxITCgZjdXN0b20YBSABKAhCA+BBAzpt6kFqCi1hbmFs",
-            "eXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Db252ZXJzaW9uRXZlbnQSOXBy",
-            "b3BlcnRpZXMve3Byb3BlcnR5fS9jb252ZXJzaW9uRXZlbnRzL3tjb252ZXJz",
-            "aW9uX2V2ZW50fSKgAgoVR29vZ2xlU2lnbmFsc1NldHRpbmdzEhEKBG5hbWUY",
-            "ASABKAlCA+BBAxJBCgVzdGF0ZRgDIAEoDjIyLmdvb2dsZS5hbmFseXRpY3Mu",
-            "YWRtaW4udjFhbHBoYS5Hb29nbGVTaWduYWxzU3RhdGUSSgoHY29uc2VudBgE",
-            "IAEoDjI0Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Hb29nbGVT",
-            "aWduYWxzQ29uc2VudEID4EEDOmXqQWIKM2FuYWx5dGljc2FkbWluLmdvb2ds",
-            "ZWFwaXMuY29tL0dvb2dsZVNpZ25hbHNTZXR0aW5ncxIrcHJvcGVydGllcy97",
-            "cHJvcGVydHl9L2dvb2dsZVNpZ25hbHNTZXR0aW5ncyKyAwoPQ3VzdG9tRGlt",
-            "ZW5zaW9uEhEKBG5hbWUYASABKAlCA+BBAxIeCg5wYXJhbWV0ZXJfbmFtZRgC",
-            "IAEoCUIG4EEC4EEFEhkKDGRpc3BsYXlfbmFtZRgDIAEoCUID4EECEhgKC2Rl",
-            "c2NyaXB0aW9uGAQgASgJQgPgQQESVQoFc2NvcGUYBSABKA4yPi5nb29nbGUu",
-            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ3VzdG9tRGltZW5zaW9uLkRpbWVu",
-            "c2lvblNjb3BlQgbgQQLgQQUSKQocZGlzYWxsb3dfYWRzX3BlcnNvbmFsaXph",
-            "dGlvbhgGIAEoCEID4EEBIkYKDkRpbWVuc2lvblNjb3BlEh8KG0RJTUVOU0lP",
-            "Tl9TQ09QRV9VTlNQRUNJRklFRBAAEgkKBUVWRU5UEAESCAoEVVNFUhACOm3q",
-            "QWoKLWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0N1c3RvbURpbWVu",
-            "c2lvbhI5cHJvcGVydGllcy97cHJvcGVydHl9L2N1c3RvbURpbWVuc2lvbnMv",
-            "e2N1c3RvbV9kaW1lbnNpb259IsUGCgxDdXN0b21NZXRyaWMSEQoEbmFtZRgB",
-            "IAEoCUID4EEDEh4KDnBhcmFtZXRlcl9uYW1lGAIgASgJQgbgQQLgQQUSGQoM",
-            "ZGlzcGxheV9uYW1lGAMgASgJQgPgQQISGAoLZGVzY3JpcHRpb24YBCABKAlC",
-            "A+BBARJbChBtZWFzdXJlbWVudF91bml0GAUgASgOMjwuZ29vZ2xlLmFuYWx5",
-            "dGljcy5hZG1pbi52MWFscGhhLkN1c3RvbU1ldHJpYy5NZWFzdXJlbWVudFVu",
-            "aXRCA+BBAhJPCgVzY29wZRgGIAEoDjI4Lmdvb2dsZS5hbmFseXRpY3MuYWRt",
-            "aW4udjFhbHBoYS5DdXN0b21NZXRyaWMuTWV0cmljU2NvcGVCBuBBAuBBBRJm",
-            "ChZyZXN0cmljdGVkX21ldHJpY190eXBlGAggAygOMkEuZ29vZ2xlLmFuYWx5",
-            "dGljcy5hZG1pbi52MWFscGhhLkN1c3RvbU1ldHJpYy5SZXN0cmljdGVkTWV0",
-            "cmljVHlwZUID4EEBIrcBCg9NZWFzdXJlbWVudFVuaXQSIAocTUVBU1VSRU1F",
-            "TlRfVU5JVF9VTlNQRUNJRklFRBAAEgwKCFNUQU5EQVJEEAESDAoIQ1VSUkVO",
-            "Q1kQAhIICgRGRUVUEAMSCgoGTUVURVJTEAQSDgoKS0lMT01FVEVSUxAFEgkK",
-            "BU1JTEVTEAYSEAoMTUlMTElTRUNPTkRTEAcSCwoHU0VDT05EUxAIEgsKB01J",
-            "TlVURVMQCRIJCgVIT1VSUxAKIjYKC01ldHJpY1Njb3BlEhwKGE1FVFJJQ19T",
-            "Q09QRV9VTlNQRUNJRklFRBAAEgkKBUVWRU5UEAEiXwoUUmVzdHJpY3RlZE1l",
-            "dHJpY1R5cGUSJgoiUkVTVFJJQ1RFRF9NRVRSSUNfVFlQRV9VTlNQRUNJRklF",
-            "RBAAEg0KCUNPU1RfREFUQRABEhAKDFJFVkVOVUVfREFUQRACOmTqQWEKKmFu",
-            "YWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0N1c3RvbU1ldHJpYxIzcHJv",
-            "cGVydGllcy97cHJvcGVydHl9L2N1c3RvbU1ldHJpY3Mve2N1c3RvbV9tZXRy",
-            "aWN9IsIDChVEYXRhUmV0ZW50aW9uU2V0dGluZ3MSEQoEbmFtZRgBIAEoCUID",
-            "4EEDEmUKFGV2ZW50X2RhdGFfcmV0ZW50aW9uGAIgASgOMkcuZ29vZ2xlLmFu",
-            "YWx5dGljcy5hZG1pbi52MWFscGhhLkRhdGFSZXRlbnRpb25TZXR0aW5ncy5S",
-            "ZXRlbnRpb25EdXJhdGlvbhInCh9yZXNldF91c2VyX2RhdGFfb25fbmV3X2Fj",
-            "dGl2aXR5GAMgASgIIp4BChFSZXRlbnRpb25EdXJhdGlvbhIiCh5SRVRFTlRJ",
-            "T05fRFVSQVRJT05fVU5TUEVDSUZJRUQQABIOCgpUV09fTU9OVEhTEAESEwoP",
-            "Rk9VUlRFRU5fTU9OVEhTEAMSFQoRVFdFTlRZX1NJWF9NT05USFMQBBIXChNU",
-            "SElSVFlfRUlHSFRfTU9OVEhTEAUSEAoMRklGVFlfTU9OVEhTEAY6ZepBYgoz",
-            "YW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRGF0YVJldGVudGlvblNl",
-            "dHRpbmdzEitwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZGF0YVJldGVudGlvblNl",
-            "dHRpbmdzIqQKChNBdHRyaWJ1dGlvblNldHRpbmdzEhEKBG5hbWUYASABKAlC",
-            "A+BBAxKXAQosYWNxdWlzaXRpb25fY29udmVyc2lvbl9ldmVudF9sb29rYmFj",
-            "a193aW5kb3cYAiABKA4yXC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxw",
-            "aGEuQXR0cmlidXRpb25TZXR0aW5ncy5BY3F1aXNpdGlvbkNvbnZlcnNpb25F",
-            "dmVudExvb2tiYWNrV2luZG93QgPgQQISiwEKJm90aGVyX2NvbnZlcnNpb25f",
-            "ZXZlbnRfbG9va2JhY2tfd2luZG93GAMgASgOMlYuZ29vZ2xlLmFuYWx5dGlj",
-            "cy5hZG1pbi52MWFscGhhLkF0dHJpYnV0aW9uU2V0dGluZ3MuT3RoZXJDb252",
-            "ZXJzaW9uRXZlbnRMb29rYmFja1dpbmRvd0ID4EECEncKG3JlcG9ydGluZ19h",
-            "dHRyaWJ1dGlvbl9tb2RlbBgEIAEoDjJNLmdvb2dsZS5hbmFseXRpY3MuYWRt",
-            "aW4udjFhbHBoYS5BdHRyaWJ1dGlvblNldHRpbmdzLlJlcG9ydGluZ0F0dHJp",
-            "YnV0aW9uTW9kZWxCA+BBAiLbAQooQWNxdWlzaXRpb25Db252ZXJzaW9uRXZl",
-            "bnRMb29rYmFja1dpbmRvdxI8CjhBQ1FVSVNJVElPTl9DT05WRVJTSU9OX0VW",
-            "RU5UX0xPT0tCQUNLX1dJTkRPV19VTlNQRUNJRklFRBAAEjcKM0FDUVVJU0lU",
-            "SU9OX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JBQ0tfV0lORE9XXzdfREFZUxAB",
-            "EjgKNEFDUVVJU0lUSU9OX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JBQ0tfV0lO",
-            "RE9XXzMwX0RBWVMQAiL4AQoiT3RoZXJDb252ZXJzaW9uRXZlbnRMb29rYmFj",
-            "a1dpbmRvdxI2CjJPVEhFUl9DT05WRVJTSU9OX0VWRU5UX0xPT0tCQUNLX1dJ",
-            "TkRPV19VTlNQRUNJRklFRBAAEjIKLk9USEVSX0NPTlZFUlNJT05fRVZFTlRf",
-            "TE9PS0JBQ0tfV0lORE9XXzMwX0RBWVMQARIyCi5PVEhFUl9DT05WRVJTSU9O",
-            "X0VWRU5UX0xPT0tCQUNLX1dJTkRPV182MF9EQVlTEAISMgouT1RIRVJfQ09O",
-            "VkVSU0lPTl9FVkVOVF9MT09LQkFDS19XSU5ET1dfOTBfREFZUxADIpwCChlS",
-            "ZXBvcnRpbmdBdHRyaWJ1dGlvbk1vZGVsEisKJ1JFUE9SVElOR19BVFRSSUJV",
-            "VElPTl9NT0RFTF9VTlNQRUNJRklFRBAAEh0KGUNST1NTX0NIQU5ORUxfREFU",
-            "QV9EUklWRU4QARIcChhDUk9TU19DSEFOTkVMX0xBU1RfQ0xJQ0sQAhIdChlD",
-            "Uk9TU19DSEFOTkVMX0ZJUlNUX0NMSUNLEAMSGAoUQ1JPU1NfQ0hBTk5FTF9M",
-            "SU5FQVIQBBIgChxDUk9TU19DSEFOTkVMX1BPU0lUSU9OX0JBU0VEEAUSHAoY",
-            "Q1JPU1NfQ0hBTk5FTF9USU1FX0RFQ0FZEAYSHAoYQURTX1BSRUZFUlJFRF9M",
-            "QVNUX0NMSUNLEAc6YepBXgoxYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5j",
-            "b20vQXR0cmlidXRpb25TZXR0aW5ncxIpcHJvcGVydGllcy97cHJvcGVydHl9",
-            "L2F0dHJpYnV0aW9uU2V0dGluZ3Mi8QEKDUFjY2Vzc0JpbmRpbmcSDgoEdXNl",
-            "chgCIAEoCUgAEhEKBG5hbWUYASABKAlCA+BBAxINCgVyb2xlcxgDIAMoCTqc",
-            "AepBmAEKK2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY2Vzc0Jp",
-            "bmRpbmcSMmFjY291bnRzL3thY2NvdW50fS9hY2Nlc3NCaW5kaW5ncy97YWNj",
-            "ZXNzX2JpbmRpbmd9EjVwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vYWNjZXNzQmlu",
-            "ZGluZ3Mve2FjY2Vzc19iaW5kaW5nfUIPCg1hY2Nlc3NfdGFyZ2V0IoUDCgxC",
-            "aWdRdWVyeUxpbmsSEQoEbmFtZRgBIAEoCUID4EEDEhQKB3Byb2plY3QYAiAB",
-            "KAlCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxIcChRkYWlseV9leHBvcnRfZW5hYmxlZBgEIAEo",
-            "CBIgChhzdHJlYW1pbmdfZXhwb3J0X2VuYWJsZWQYBSABKAgSHwoXaW50cmFk",
-            "YXlfZXhwb3J0X2VuYWJsZWQYCSABKAgSHgoWaW5jbHVkZV9hZHZlcnRpc2lu",
-            "Z19pZBgGIAEoCBIWCg5leHBvcnRfc3RyZWFtcxgHIAMoCRIXCg9leGNsdWRl",
-            "ZF9ldmVudHMYCCADKAk6ZOpBYQoqYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBp",
-            "cy5jb20vQmlnUXVlcnlMaW5rEjNwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vYmln",
-            "UXVlcnlMaW5rcy97YmlncXVlcnlfbGlua30i8wMKG0VuaGFuY2VkTWVhc3Vy",
-            "ZW1lbnRTZXR0aW5ncxIRCgRuYW1lGAEgASgJQgPgQQMSFgoOc3RyZWFtX2Vu",
-            "YWJsZWQYAiABKAgSFwoPc2Nyb2xsc19lbmFibGVkGAMgASgIEh8KF291dGJv",
-            "dW5kX2NsaWNrc19lbmFibGVkGAQgASgIEhsKE3NpdGVfc2VhcmNoX2VuYWJs",
-            "ZWQYBSABKAgSIAoYdmlkZW9fZW5nYWdlbWVudF9lbmFibGVkGAYgASgIEh4K",
-            "FmZpbGVfZG93bmxvYWRzX2VuYWJsZWQYByABKAgSHAoUcGFnZV9jaGFuZ2Vz",
-            "X2VuYWJsZWQYCCABKAgSIQoZZm9ybV9pbnRlcmFjdGlvbnNfZW5hYmxlZBgJ",
-            "IAEoCBIjChZzZWFyY2hfcXVlcnlfcGFyYW1ldGVyGAogASgJQgPgQQISGwoT",
-            "dXJpX3F1ZXJ5X3BhcmFtZXRlchgLIAEoCTqMAepBiAEKOWFuYWx5dGljc2Fk",
-            "bWluLmdvb2dsZWFwaXMuY29tL0VuaGFuY2VkTWVhc3VyZW1lbnRTZXR0aW5n",
-            "cxJLcHJvcGVydGllcy97cHJvcGVydHl9L2RhdGFTdHJlYW1zL3tkYXRhX3N0",
-            "cmVhbX0vZW5oYW5jZWRNZWFzdXJlbWVudFNldHRpbmdzIkIKEENvbm5lY3Rl",
-            "ZFNpdGVUYWcSGQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQISEwoGdGFnX2lk",
-            "GAIgASgJQgPgQQIqqgQKEEluZHVzdHJ5Q2F0ZWdvcnkSIQodSU5EVVNUUllf",
-            "Q0FURUdPUllfVU5TUEVDSUZJRUQQABIOCgpBVVRPTU9USVZFEAESIwofQlVT",
-            "SU5FU1NfQU5EX0lORFVTVFJJQUxfTUFSS0VUUxACEgsKB0ZJTkFOQ0UQAxIO",
-            "CgpIRUFMVEhDQVJFEAQSDgoKVEVDSE5PTE9HWRAFEgoKBlRSQVZFTBAGEgkK",
-            "BU9USEVSEAcSGgoWQVJUU19BTkRfRU5URVJUQUlOTUVOVBAIEhYKEkJFQVVU",
-            "WV9BTkRfRklUTkVTUxAJEhgKFEJPT0tTX0FORF9MSVRFUkFUVVJFEAoSEgoO",
-            "Rk9PRF9BTkRfRFJJTksQCxIJCgVHQU1FUxAMEhcKE0hPQkJJRVNfQU5EX0xF",
-            "SVNVUkUQDRITCg9IT01FX0FORF9HQVJERU4QDhIYChRJTlRFUk5FVF9BTkRf",
-            "VEVMRUNPTRAPEhYKEkxBV19BTkRfR09WRVJOTUVOVBAQEggKBE5FV1MQERIW",
-            "ChJPTkxJTkVfQ09NTVVOSVRJRVMQEhIWChJQRU9QTEVfQU5EX1NPQ0lFVFkQ",
-            "ExIUChBQRVRTX0FORF9BTklNQUxTEBQSDwoLUkVBTF9FU1RBVEUQFRINCglS",
-            "RUZFUkVOQ0UQFhILCgdTQ0lFTkNFEBcSCgoGU1BPUlRTEBgSFgoSSk9CU19B",
-            "TkRfRURVQ0FUSU9OEBkSDAoIU0hPUFBJTkcQGipmCgxTZXJ2aWNlTGV2ZWwS",
-            "HQoZU0VSVklDRV9MRVZFTF9VTlNQRUNJRklFRBAAEh0KGUdPT0dMRV9BTkFM",
-            "WVRJQ1NfU1RBTkRBUkQQARIYChRHT09HTEVfQU5BTFlUSUNTXzM2MBACKkoK",
-            "CUFjdG9yVHlwZRIaChZBQ1RPUl9UWVBFX1VOU1BFQ0lGSUVEEAASCAoEVVNF",
-            "UhABEgoKBlNZU1RFTRACEgsKB1NVUFBPUlQQAypQCgpBY3Rpb25UeXBlEhsK",
-            "F0FDVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHQ1JFQVRFRBABEgsKB1VQ",
-            "REFURUQQAhILCgdERUxFVEVEEAMqjgQKGUNoYW5nZUhpc3RvcnlSZXNvdXJj",
-            "ZVR5cGUSLAooQ0hBTkdFX0hJU1RPUllfUkVTT1VSQ0VfVFlQRV9VTlNQRUNJ",
-            "RklFRBAAEgsKB0FDQ09VTlQQARIMCghQUk9QRVJUWRACEhEKDUZJUkVCQVNF",
-            "X0xJTksQBhITCg9HT09HTEVfQURTX0xJTksQBxIbChdHT09HTEVfU0lHTkFM",
-            "U19TRVRUSU5HUxAIEhQKEENPTlZFUlNJT05fRVZFTlQQCRIfChtNRUFTVVJF",
-            "TUVOVF9QUk9UT0NPTF9TRUNSRVQQChIUChBDVVNUT01fRElNRU5TSU9OEAsS",
-            "EQoNQ1VTVE9NX01FVFJJQxAMEhsKF0RBVEFfUkVURU5USU9OX1NFVFRJTkdT",
-            "EA0SJQohRElTUExBWV9WSURFT18zNjBfQURWRVJUSVNFUl9MSU5LEA4SLgoq",
-            "RElTUExBWV9WSURFT18zNjBfQURWRVJUSVNFUl9MSU5LX1BST1BPU0FMEA8S",
-            "FwoTU0VBUkNIX0FEU18zNjBfTElOSxAQEg8KC0RBVEFfU1RSRUFNEBISGAoU",
-            "QVRUUklCVVRJT05fU0VUVElOR1MQFBIVChFFWFBBTkRFRF9EQVRBX1NFVBAV",
-            "EhEKDUNIQU5ORUxfR1JPVVAQFhIhCh1FTkhBTkNFRF9NRUFTVVJFTUVOVF9T",
-            "RVRUSU5HUxAYKnMKEkdvb2dsZVNpZ25hbHNTdGF0ZRIkCiBHT09HTEVfU0lH",
-            "TkFMU19TVEFURV9VTlNQRUNJRklFRBAAEhoKFkdPT0dMRV9TSUdOQUxTX0VO",
-            "QUJMRUQQARIbChdHT09HTEVfU0lHTkFMU19ESVNBQkxFRBACKo4BChRHb29n",
-            "bGVTaWduYWxzQ29uc2VudBImCiJHT09HTEVfU0lHTkFMU19DT05TRU5UX1VO",
-            "U1BFQ0lGSUVEEAASJAogR09PR0xFX1NJR05BTFNfQ09OU0VOVF9DT05TRU5U",
-            "RUQQAhIoCiRHT09HTEVfU0lHTkFMU19DT05TRU5UX05PVF9DT05TRU5URUQQ",
-            "ASp7Ch1MaW5rUHJvcG9zYWxJbml0aWF0aW5nUHJvZHVjdBIwCixMSU5LX1BS",
-            "T1BPU0FMX0lOSVRJQVRJTkdfUFJPRFVDVF9VTlNQRUNJRklFRBAAEhQKEEdP",
-            "T0dMRV9BTkFMWVRJQ1MQARISCg5MSU5LRURfUFJPRFVDVBACKsQBChFMaW5r",
-            "UHJvcG9zYWxTdGF0ZRIjCh9MSU5LX1BST1BPU0FMX1NUQVRFX1VOU1BFQ0lG",
-            "SUVEEAASKQolQVdBSVRJTkdfUkVWSUVXX0ZST01fR09PR0xFX0FOQUxZVElD",
-            "UxABEicKI0FXQUlUSU5HX1JFVklFV19GUk9NX0xJTktFRF9QUk9EVUNUEAIS",
-            "DQoJV0lUSERSQVdOEAMSDAoIREVDTElORUQQBBILCgdFWFBJUkVEEAUSDAoI",
-            "T0JTT0xFVEUQBiqCAQoMUHJvcGVydHlUeXBlEh0KGVBST1BFUlRZX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABIaChZQUk9QRVJUWV9UWVBFX09SRElOQVJZEAESHQoZ",
-            "UFJPUEVSVFlfVFlQRV9TVUJQUk9QRVJUWRACEhgKFFBST1BFUlRZX1RZUEVf",
-            "Uk9MTFVQEANCdgoiY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
-            "YUIOUmVzb3VyY2VzUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9hbmFs",
-            "eXRpY3MvYWRtaW4vYXBpdjFhbHBoYS9hZG1pbnBiO2FkbWlucGJiBnByb3Rv",
-            "Mw=="));
+            "b3RvEh5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEaLWdvb2dsZS9h",
+            "bmFseXRpY3MvYWRtaW4vdjFhbHBoYS9hdWRpZW5jZS5wcm90bxoyZ29vZ2xl",
+            "L2FuYWx5dGljcy9hZG1pbi92MWFscGhhL2NoYW5uZWxfZ3JvdXAucHJvdG8a",
+            "Omdvb2dsZS9hbmFseXRpY3MvYWRtaW4vdjFhbHBoYS9ldmVudF9jcmVhdGVf",
+            "YW5kX2VkaXQucHJvdG8aNmdvb2dsZS9hbmFseXRpY3MvYWRtaW4vdjFhbHBo",
+            "YS9leHBhbmRlZF9kYXRhX3NldC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9i",
+            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29v",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVm",
+            "L3dyYXBwZXJzLnByb3RvIuQCCgdBY2NvdW50EhEKBG5hbWUYASABKAlCA+BB",
+            "AxI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIZCgxkaXNwbGF5X25hbWUYBCABKAlCA+BB",
+            "AhITCgtyZWdpb25fY29kZRgFIAEoCRIUCgdkZWxldGVkGAYgASgIQgPgQQMS",
+            "VAoQZ21wX29yZ2FuaXphdGlvbhgHIAEoCUI64EED+kE0CjJtYXJrZXRpbmdw",
+            "bGF0Zm9ybWFkbWluLmdvb2dsZWFwaXMuY29tL09yZ2FuaXphdGlvbjo+6kE7",
+            "CiVhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhJhY2Nv",
+            "dW50cy97YWNjb3VudH0iuQUKCFByb3BlcnR5EhEKBG5hbWUYASABKAlCA+BB",
+            "AxJICg1wcm9wZXJ0eV90eXBlGA4gASgOMiwuZ29vZ2xlLmFuYWx5dGljcy5h",
+            "ZG1pbi52MWFscGhhLlByb3BlcnR5VHlwZUID4EEFEjQKC2NyZWF0ZV90aW1l",
+            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3Vw",
+            "ZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEhMKBnBhcmVudBgCIAEoCUID4EEFEhkKDGRpc3BsYXlfbmFtZRgFIAEo",
+            "CUID4EECEksKEWluZHVzdHJ5X2NhdGVnb3J5GAYgASgOMjAuZ29vZ2xlLmFu",
+            "YWx5dGljcy5hZG1pbi52MWFscGhhLkluZHVzdHJ5Q2F0ZWdvcnkSFgoJdGlt",
+            "ZV96b25lGAcgASgJQgPgQQISFQoNY3VycmVuY3lfY29kZRgIIAEoCRJICg1z",
+            "ZXJ2aWNlX2xldmVsGAogASgOMiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
+            "MWFscGhhLlNlcnZpY2VMZXZlbEID4EEDEjQKC2RlbGV0ZV90aW1lGAsgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC2V4cGlyZV90",
+            "aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEj4K",
+            "B2FjY291bnQYDSABKAlCLeBBBfpBJwolYW5hbHl0aWNzYWRtaW4uZ29vZ2xl",
+            "YXBpcy5jb20vQWNjb3VudDpC6kE/CiZhbmFseXRpY3NhZG1pbi5nb29nbGVh",
+            "cGlzLmNvbS9Qcm9wZXJ0eRIVcHJvcGVydGllcy97cHJvcGVydHl9IvQHCgpE",
+            "YXRhU3RyZWFtElMKD3dlYl9zdHJlYW1fZGF0YRgGIAEoCzI4Lmdvb2dsZS5h",
+            "bmFseXRpY3MuYWRtaW4udjFhbHBoYS5EYXRhU3RyZWFtLldlYlN0cmVhbURh",
+            "dGFIABJiChdhbmRyb2lkX2FwcF9zdHJlYW1fZGF0YRgHIAEoCzI/Lmdvb2ds",
+            "ZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5EYXRhU3RyZWFtLkFuZHJvaWRB",
+            "cHBTdHJlYW1EYXRhSAASWgoTaW9zX2FwcF9zdHJlYW1fZGF0YRgIIAEoCzI7",
+            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5EYXRhU3RyZWFtLklv",
+            "c0FwcFN0cmVhbURhdGFIABIRCgRuYW1lGAEgASgJQgPgQQMSTwoEdHlwZRgC",
+            "IAEoDjI5Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5EYXRhU3Ry",
+            "ZWFtLkRhdGFTdHJlYW1UeXBlQgbgQQXgQQISFAoMZGlzcGxheV9uYW1lGAMg",
+            "ASgJEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDGl8KDVdlYlN0cmVhbURhdGESGwoObWVh",
+            "c3VyZW1lbnRfaWQYASABKAlCA+BBAxIcCg9maXJlYmFzZV9hcHBfaWQYAiAB",
+            "KAlCA+BBAxITCgtkZWZhdWx0X3VyaRgDIAEoCRpPChRBbmRyb2lkQXBwU3Ry",
+            "ZWFtRGF0YRIcCg9maXJlYmFzZV9hcHBfaWQYASABKAlCA+BBAxIZCgxwYWNr",
+            "YWdlX25hbWUYAiABKAlCA+BBBRpLChBJb3NBcHBTdHJlYW1EYXRhEhwKD2Zp",
+            "cmViYXNlX2FwcF9pZBgBIAEoCUID4EEDEhkKCWJ1bmRsZV9pZBgCIAEoCUIG",
+            "4EEF4EECIn0KDkRhdGFTdHJlYW1UeXBlEiAKHERBVEFfU1RSRUFNX1RZUEVf",
+            "VU5TUEVDSUZJRUQQABITCg9XRUJfREFUQV9TVFJFQU0QARIbChdBTkRST0lE",
+            "X0FQUF9EQVRBX1NUUkVBTRACEhcKE0lPU19BUFBfREFUQV9TVFJFQU0QAzpe",
+            "6kFbCihhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRhU3RyZWFt",
+            "Ei9wcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZGF0YVN0cmVhbXMve2RhdGFfc3Ry",
+            "ZWFtfUINCgtzdHJlYW1fZGF0YSLTAQoMRmlyZWJhc2VMaW5rEhEKBG5hbWUY",
+            "ASABKAlCA+BBAxIUCgdwcm9qZWN0GAIgASgJQgPgQQUSNAoLY3JlYXRlX3Rp",
+            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQM6ZOpB",
+            "YQoqYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRmlyZWJhc2VMaW5r",
+            "EjNwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZmlyZWJhc2VMaW5rcy97ZmlyZWJh",
+            "c2VfbGlua30iqQEKDUdsb2JhbFNpdGVUYWcSEQoEbmFtZRgBIAEoCUID4EED",
+            "EhQKB3NuaXBwZXQYAiABKAlCA+BBBTpv6kFsCithbmFseXRpY3NhZG1pbi5n",
+            "b29nbGVhcGlzLmNvbS9HbG9iYWxTaXRlVGFnEj1wcm9wZXJ0aWVzL3twcm9w",
+            "ZXJ0eX0vZGF0YVN0cmVhbXMve2RhdGFfc3RyZWFtfS9nbG9iYWxTaXRlVGFn",
+            "IpgDCg1Hb29nbGVBZHNMaW5rEhEKBG5hbWUYASABKAlCA+BBAxIYCgtjdXN0",
+            "b21lcl9pZBgDIAEoCUID4EEFEh8KEmNhbl9tYW5hZ2VfY2xpZW50cxgEIAEo",
+            "CEID4EEDEj8KG2Fkc19wZXJzb25hbGl6YXRpb25fZW5hYmxlZBgFIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUSNAoLY3JlYXRlX3RpbWUYByAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRl",
+            "X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "IgoVY3JlYXRvcl9lbWFpbF9hZGRyZXNzGAkgASgJQgPgQQM6aOpBZQorYW5h",
+            "bHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vR29vZ2xlQWRzTGluaxI2cHJv",
+            "cGVydGllcy97cHJvcGVydHl9L2dvb2dsZUFkc0xpbmtzL3tnb29nbGVfYWRz",
+            "X2xpbmt9IusCChNEYXRhU2hhcmluZ1NldHRpbmdzEhEKBG5hbWUYASABKAlC",
+            "A+BBAxIrCiNzaGFyaW5nX3dpdGhfZ29vZ2xlX3N1cHBvcnRfZW5hYmxlZBgC",
+            "IAEoCBIyCipzaGFyaW5nX3dpdGhfZ29vZ2xlX2Fzc2lnbmVkX3NhbGVzX2Vu",
+            "YWJsZWQYAyABKAgSLQolc2hhcmluZ193aXRoX2dvb2dsZV9hbnlfc2FsZXNf",
+            "ZW5hYmxlZBgEIAEoCBIsCiRzaGFyaW5nX3dpdGhfZ29vZ2xlX3Byb2R1Y3Rz",
+            "X2VuYWJsZWQYBSABKAgSIwobc2hhcmluZ193aXRoX290aGVyc19lbmFibGVk",
+            "GAYgASgIOl7qQVsKMWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0Rh",
+            "dGFTaGFyaW5nU2V0dGluZ3MSJmFjY291bnRzL3thY2NvdW50fS9kYXRhU2hh",
+            "cmluZ1NldHRpbmdzIpUCCg5BY2NvdW50U3VtbWFyeRIMCgRuYW1lGAEgASgJ",
+            "EjsKB2FjY291bnQYAiABKAlCKvpBJwolYW5hbHl0aWNzYWRtaW4uZ29vZ2xl",
+            "YXBpcy5jb20vQWNjb3VudBIUCgxkaXNwbGF5X25hbWUYAyABKAkSSwoScHJv",
+            "cGVydHlfc3VtbWFyaWVzGAQgAygLMi8uZ29vZ2xlLmFuYWx5dGljcy5hZG1p",
+            "bi52MWFscGhhLlByb3BlcnR5U3VtbWFyeTpV6kFSCixhbmFseXRpY3NhZG1p",
+            "bi5nb29nbGVhcGlzLmNvbS9BY2NvdW50U3VtbWFyeRIiYWNjb3VudFN1bW1h",
+            "cmllcy97YWNjb3VudF9zdW1tYXJ5fSK7AQoPUHJvcGVydHlTdW1tYXJ5Ej0K",
+            "CHByb3BlcnR5GAEgASgJQiv6QSgKJmFuYWx5dGljc2FkbWluLmdvb2dsZWFw",
+            "aXMuY29tL1Byb3BlcnR5EhQKDGRpc3BsYXlfbmFtZRgCIAEoCRJDCg1wcm9w",
+            "ZXJ0eV90eXBlGAMgASgOMiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFs",
+            "cGhhLlByb3BlcnR5VHlwZRIOCgZwYXJlbnQYBCABKAkijgIKGU1lYXN1cmVt",
+            "ZW50UHJvdG9jb2xTZWNyZXQSEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRpc3Bs",
+            "YXlfbmFtZRgCIAEoCUID4EECEhkKDHNlY3JldF92YWx1ZRgDIAEoCUID4EED",
+            "OqcB6kGjAQo3YW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vTWVhc3Vy",
+            "ZW1lbnRQcm90b2NvbFNlY3JldBJocHJvcGVydGllcy97cHJvcGVydHl9L2Rh",
+            "dGFTdHJlYW1zL3tkYXRhX3N0cmVhbX0vbWVhc3VyZW1lbnRQcm90b2NvbFNl",
+            "Y3JldHMve21lYXN1cmVtZW50X3Byb3RvY29sX3NlY3JldH0igwQKIFNLQWRO",
+            "ZXR3b3JrQ29udmVyc2lvblZhbHVlU2NoZW1hEhEKBG5hbWUYASABKAlCA+BB",
+            "AxJQChNwb3N0YmFja193aW5kb3dfb25lGAIgASgLMi4uZ29vZ2xlLmFuYWx5",
+            "dGljcy5hZG1pbi52MWFscGhhLlBvc3RiYWNrV2luZG93QgPgQQISSwoTcG9z",
+            "dGJhY2tfd2luZG93X3R3bxgDIAEoCzIuLmdvb2dsZS5hbmFseXRpY3MuYWRt",
+            "aW4udjFhbHBoYS5Qb3N0YmFja1dpbmRvdxJNChVwb3N0YmFja193aW5kb3df",
+            "dGhyZWUYBCABKAsyLi5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEu",
+            "UG9zdGJhY2tXaW5kb3cSHwoXYXBwbHlfY29udmVyc2lvbl92YWx1ZXMYBSAB",
+            "KAg6vAHqQbgBCj5hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9TS0Fk",
+            "TmV0d29ya0NvbnZlcnNpb25WYWx1ZVNjaGVtYRJ2cHJvcGVydGllcy97cHJv",
+            "cGVydHl9L2RhdGFTdHJlYW1zL3tkYXRhX3N0cmVhbX0vc0tBZE5ldHdvcmtD",
+            "b252ZXJzaW9uVmFsdWVTY2hlbWEve3NrYWRuZXR3b3JrX2NvbnZlcnNpb25f",
+            "dmFsdWVfc2NoZW1hfSKHAQoOUG9zdGJhY2tXaW5kb3cSSwoRY29udmVyc2lv",
+            "bl92YWx1ZXMYASADKAsyMC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxw",
+            "aGEuQ29udmVyc2lvblZhbHVlcxIoCiBwb3N0YmFja193aW5kb3dfc2V0dGlu",
+            "Z3NfZW5hYmxlZBgCIAEoCCL0AQoQQ29udmVyc2lvblZhbHVlcxIUCgxkaXNw",
+            "bGF5X25hbWUYASABKAkSFwoKZmluZV92YWx1ZRgCIAEoBUgAiAEBEkYKDGNv",
+            "YXJzZV92YWx1ZRgDIAEoDjIrLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFh",
+            "bHBoYS5Db2Fyc2VWYWx1ZUID4EECEkQKDmV2ZW50X21hcHBpbmdzGAQgAygL",
+            "MiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkV2ZW50TWFwcGlu",
+            "ZxIUCgxsb2NrX2VuYWJsZWQYBSABKAhCDQoLX2ZpbmVfdmFsdWUi7wEKDEV2",
+            "ZW50TWFwcGluZxIXCgpldmVudF9uYW1lGAEgASgJQgPgQQISHAoPbWluX2V2",
+            "ZW50X2NvdW50GAIgASgDSACIAQESHAoPbWF4X2V2ZW50X2NvdW50GAMgASgD",
+            "SAGIAQESHAoPbWluX2V2ZW50X3ZhbHVlGAQgASgBSAKIAQESHAoPbWF4X2V2",
+            "ZW50X3ZhbHVlGAUgASgBSAOIAQFCEgoQX21pbl9ldmVudF9jb3VudEISChBf",
+            "bWF4X2V2ZW50X2NvdW50QhIKEF9taW5fZXZlbnRfdmFsdWVCEgoQX21heF9l",
+            "dmVudF92YWx1ZSKKAgoSQ2hhbmdlSGlzdG9yeUV2ZW50EgoKAmlkGAEgASgJ",
+            "Ei8KC2NoYW5nZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBI9CgphY3Rvcl90eXBlGAMgASgOMikuZ29vZ2xlLmFuYWx5dGljcy5h",
+            "ZG1pbi52MWFscGhhLkFjdG9yVHlwZRIYChB1c2VyX2FjdG9yX2VtYWlsGAQg",
+            "ASgJEhgKEGNoYW5nZXNfZmlsdGVyZWQYBSABKAgSRAoHY2hhbmdlcxgGIAMo",
+            "CzIzLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5DaGFuZ2VIaXN0",
+            "b3J5Q2hhbmdlIt8SChNDaGFuZ2VIaXN0b3J5Q2hhbmdlEhAKCHJlc291cmNl",
+            "GAEgASgJEjoKBmFjdGlvbhgCIAEoDjIqLmdvb2dsZS5hbmFseXRpY3MuYWRt",
+            "aW4udjFhbHBoYS5BY3Rpb25UeXBlEmkKFnJlc291cmNlX2JlZm9yZV9jaGFu",
+            "Z2UYAyABKAsySS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ2hh",
+            "bmdlSGlzdG9yeUNoYW5nZS5DaGFuZ2VIaXN0b3J5UmVzb3VyY2USaAoVcmVz",
+            "b3VyY2VfYWZ0ZXJfY2hhbmdlGAQgASgLMkkuZ29vZ2xlLmFuYWx5dGljcy5h",
+            "ZG1pbi52MWFscGhhLkNoYW5nZUhpc3RvcnlDaGFuZ2UuQ2hhbmdlSGlzdG9y",
+            "eVJlc291cmNlGqQQChVDaGFuZ2VIaXN0b3J5UmVzb3VyY2USOgoHYWNjb3Vu",
+            "dBgBIAEoCzInLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BY2Nv",
+            "dW50SAASPAoIcHJvcGVydHkYAiABKAsyKC5nb29nbGUuYW5hbHl0aWNzLmFk",
+            "bWluLnYxYWxwaGEuUHJvcGVydHlIABJFCg1maXJlYmFzZV9saW5rGAYgASgL",
+            "MiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkZpcmViYXNlTGlu",
+            "a0gAEkgKD2dvb2dsZV9hZHNfbGluaxgHIAEoCzItLmdvb2dsZS5hbmFseXRp",
+            "Y3MuYWRtaW4udjFhbHBoYS5Hb29nbGVBZHNMaW5rSAASWAoXZ29vZ2xlX3Np",
+            "Z25hbHNfc2V0dGluZ3MYCCABKAsyNS5nb29nbGUuYW5hbHl0aWNzLmFkbWlu",
+            "LnYxYWxwaGEuR29vZ2xlU2lnbmFsc1NldHRpbmdzSAASagohZGlzcGxheV92",
+            "aWRlb18zNjBfYWR2ZXJ0aXNlcl9saW5rGAkgASgLMj0uZ29vZ2xlLmFuYWx5",
+            "dGljcy5hZG1pbi52MWFscGhhLkRpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJM",
+            "aW5rSAASewoqZGlzcGxheV92aWRlb18zNjBfYWR2ZXJ0aXNlcl9saW5rX3By",
+            "b3Bvc2FsGAogASgLMkUuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LkRpc3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWxIABJLChBj",
+            "b252ZXJzaW9uX2V2ZW50GAsgASgLMi8uZ29vZ2xlLmFuYWx5dGljcy5hZG1p",
+            "bi52MWFscGhhLkNvbnZlcnNpb25FdmVudEgAEmAKG21lYXN1cmVtZW50X3By",
+            "b3RvY29sX3NlY3JldBgMIAEoCzI5Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
+            "djFhbHBoYS5NZWFzdXJlbWVudFByb3RvY29sU2VjcmV0SAASSwoQY3VzdG9t",
+            "X2RpbWVuc2lvbhgNIAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFh",
+            "bHBoYS5DdXN0b21EaW1lbnNpb25IABJFCg1jdXN0b21fbWV0cmljGA4gASgL",
+            "MiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkN1c3RvbU1ldHJp",
+            "Y0gAElgKF2RhdGFfcmV0ZW50aW9uX3NldHRpbmdzGA8gASgLMjUuZ29vZ2xl",
+            "LmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkRhdGFSZXRlbnRpb25TZXR0aW5n",
+            "c0gAEk8KE3NlYXJjaF9hZHNfMzYwX2xpbmsYECABKAsyMC5nb29nbGUuYW5h",
+            "bHl0aWNzLmFkbWluLnYxYWxwaGEuU2VhcmNoQWRzMzYwTGlua0gAEkEKC2Rh",
+            "dGFfc3RyZWFtGBIgASgLMiouZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFs",
+            "cGhhLkRhdGFTdHJlYW1IABJTChRhdHRyaWJ1dGlvbl9zZXR0aW5ncxgUIAEo",
+            "CzIzLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdHRyaWJ1dGlv",
+            "blNldHRpbmdzSAASTAoRZXhwYW5kZWRfZGF0YV9zZXQYFSABKAsyLy5nb29n",
+            "bGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRXhwYW5kZWREYXRhU2V0SAAS",
+            "RQoNY2hhbm5lbF9ncm91cBgWIAEoCzIsLmdvb2dsZS5hbmFseXRpY3MuYWRt",
+            "aW4udjFhbHBoYS5DaGFubmVsR3JvdXBIABJFCg1iaWdxdWVyeV9saW5rGBcg",
+            "ASgLMiwuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkJpZ1F1ZXJ5",
+            "TGlua0gAEmQKHWVuaGFuY2VkX21lYXN1cmVtZW50X3NldHRpbmdzGBggASgL",
+            "MjsuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkVuaGFuY2VkTWVh",
+            "c3VyZW1lbnRTZXR0aW5nc0gAElgKF2RhdGFfcmVkYWN0aW9uX3NldHRpbmdz",
+            "GBkgASgLMjUuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkRhdGFS",
+            "ZWRhY3Rpb25TZXR0aW5nc0gAEm8KI3NrYWRuZXR3b3JrX2NvbnZlcnNpb25f",
+            "dmFsdWVfc2NoZW1hGBogASgLMkAuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
+            "MWFscGhhLlNLQWROZXR3b3JrQ29udmVyc2lvblZhbHVlU2NoZW1hSAASQwoM",
+            "YWRzZW5zZV9saW5rGBsgASgLMisuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
+            "MWFscGhhLkFkU2Vuc2VMaW5rSAASPAoIYXVkaWVuY2UYHCABKAsyKC5nb29n",
+            "bGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXVkaWVuY2VIABJMChFldmVu",
+            "dF9jcmVhdGVfcnVsZRgdIAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
+            "djFhbHBoYS5FdmVudENyZWF0ZVJ1bGVIABJNChFjYWxjdWxhdGVkX21ldHJp",
+            "YxgfIAEoCzIwLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5DYWxj",
+            "dWxhdGVkTWV0cmljSABCCgoIcmVzb3VyY2Ui3wMKHURpc3BsYXlWaWRlbzM2",
+            "MEFkdmVydGlzZXJMaW5rEhEKBG5hbWUYASABKAlCA+BBAxIaCg1hZHZlcnRp",
+            "c2VyX2lkGAIgASgJQgPgQQUSJAoXYWR2ZXJ0aXNlcl9kaXNwbGF5X25hbWUY",
+            "AyABKAlCA+BBAxI/ChthZHNfcGVyc29uYWxpemF0aW9uX2VuYWJsZWQYBCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlEkYKHWNhbXBhaWduX2Rh",
+            "dGFfc2hhcmluZ19lbmFibGVkGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJv",
+            "b2xWYWx1ZUID4EEFEkIKGWNvc3RfZGF0YV9zaGFyaW5nX2VuYWJsZWQYBiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlQgPgQQU6mwHqQZcBCjth",
+            "bmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EaXNwbGF5VmlkZW8zNjBB",
+            "ZHZlcnRpc2VyTGluaxJYcHJvcGVydGllcy97cHJvcGVydHl9L2Rpc3BsYXlW",
+            "aWRlbzM2MEFkdmVydGlzZXJMaW5rcy97ZGlzcGxheV92aWRlb18zNjBfYWR2",
+            "ZXJ0aXNlcl9saW5rfSKKBQolRGlzcGxheVZpZGVvMzYwQWR2ZXJ0aXNlckxp",
+            "bmtQcm9wb3NhbBIRCgRuYW1lGAEgASgJQgPgQQMSGgoNYWR2ZXJ0aXNlcl9p",
+            "ZBgCIAEoCUID4EEFEmQKHGxpbmtfcHJvcG9zYWxfc3RhdHVzX2RldGFpbHMY",
+            "AyABKAsyOS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuTGlua1By",
+            "b3Bvc2FsU3RhdHVzRGV0YWlsc0ID4EEDEiQKF2FkdmVydGlzZXJfZGlzcGxh",
+            "eV9uYW1lGAQgASgJQgPgQQMSHQoQdmFsaWRhdGlvbl9lbWFpbBgFIAEoCUID",
+            "4EEEEkQKG2Fkc19wZXJzb25hbGl6YXRpb25fZW5hYmxlZBgGIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5Cb29sVmFsdWVCA+BBBRJGCh1jYW1wYWlnbl9kYXRh",
+            "X3NoYXJpbmdfZW5hYmxlZBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29s",
+            "VmFsdWVCA+BBBRJCChljb3N0X2RhdGFfc2hhcmluZ19lbmFibGVkGAggASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZUID4EEFOrQB6kGwAQpDYW5h",
+            "bHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRGlzcGxheVZpZGVvMzYwQWR2",
+            "ZXJ0aXNlckxpbmtQcm9wb3NhbBJpcHJvcGVydGllcy97cHJvcGVydHl9L2Rp",
+            "c3BsYXlWaWRlbzM2MEFkdmVydGlzZXJMaW5rUHJvcG9zYWxzL3tkaXNwbGF5",
+            "X3ZpZGVvXzM2MF9hZHZlcnRpc2VyX2xpbmtfcHJvcG9zYWx9IugDChBTZWFy",
+            "Y2hBZHMzNjBMaW5rEhEKBG5hbWUYASABKAlCA+BBAxIaCg1hZHZlcnRpc2Vy",
+            "X2lkGAIgASgJQgPgQQUSRgodY2FtcGFpZ25fZGF0YV9zaGFyaW5nX2VuYWJs",
+            "ZWQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuQm9vbFZhbHVlQgPgQQUSQgoZ",
+            "Y29zdF9kYXRhX3NoYXJpbmdfZW5hYmxlZBgEIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5Cb29sVmFsdWVCA+BBBRIkChdhZHZlcnRpc2VyX2Rpc3BsYXlfbmFt",
+            "ZRgFIAEoCUID4EEDEj8KG2Fkc19wZXJzb25hbGl6YXRpb25fZW5hYmxlZBgG",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUSPgoac2l0ZV9zdGF0",
+            "c19zaGFyaW5nX2VuYWJsZWQYByABKAsyGi5nb29nbGUucHJvdG9idWYuQm9v",
+            "bFZhbHVlOnLqQW8KLmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1Nl",
+            "YXJjaEFkczM2MExpbmsSPXByb3BlcnRpZXMve3Byb3BlcnR5fS9zZWFyY2hB",
+            "ZHMzNjBMaW5rcy97c2VhcmNoX2Fkc18zNjBfbGlua30i/AEKGUxpbmtQcm9w",
+            "b3NhbFN0YXR1c0RldGFpbHMSbAogbGlua19wcm9wb3NhbF9pbml0aWF0aW5n",
+            "X3Byb2R1Y3QYASABKA4yPS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxw",
+            "aGEuTGlua1Byb3Bvc2FsSW5pdGlhdGluZ1Byb2R1Y3RCA+BBAxIcCg9yZXF1",
+            "ZXN0b3JfZW1haWwYAiABKAlCA+BBAxJTChNsaW5rX3Byb3Bvc2FsX3N0YXRl",
+            "GAMgASgOMjEuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkxpbmtQ",
+            "cm9wb3NhbFN0YXRlQgPgQQMi4AUKD0NvbnZlcnNpb25FdmVudBIRCgRuYW1l",
+            "GAEgASgJQgPgQQMSFwoKZXZlbnRfbmFtZRgCIAEoCUID4EEFEjQKC2NyZWF0",
+            "ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EhYKCWRlbGV0YWJsZRgEIAEoCEID4EEDEhMKBmN1c3RvbRgFIAEoCEID4EED",
+            "EmYKD2NvdW50aW5nX21ldGhvZBgGIAEoDjJILmdvb2dsZS5hbmFseXRpY3Mu",
+            "YWRtaW4udjFhbHBoYS5Db252ZXJzaW9uRXZlbnQuQ29udmVyc2lvbkNvdW50",
+            "aW5nTWV0aG9kQgPgQQEScgoYZGVmYXVsdF9jb252ZXJzaW9uX3ZhbHVlGAcg",
+            "ASgLMkYuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkNvbnZlcnNp",
+            "b25FdmVudC5EZWZhdWx0Q29udmVyc2lvblZhbHVlQgPgQQFIAIgBARpkChZE",
+            "ZWZhdWx0Q29udmVyc2lvblZhbHVlEhIKBXZhbHVlGAEgASgBSACIAQESGgoN",
+            "Y3VycmVuY3lfY29kZRgCIAEoCUgBiAEBQggKBl92YWx1ZUIQCg5fY3VycmVu",
+            "Y3lfY29kZSJwChhDb252ZXJzaW9uQ291bnRpbmdNZXRob2QSKgomQ09OVkVS",
+            "U0lPTl9DT1VOVElOR19NRVRIT0RfVU5TUEVDSUZJRUQQABISCg5PTkNFX1BF",
+            "Ul9FVkVOVBABEhQKEE9OQ0VfUEVSX1NFU1NJT04QAjpt6kFqCi1hbmFseXRp",
+            "Y3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Db252ZXJzaW9uRXZlbnQSOXByb3Bl",
+            "cnRpZXMve3Byb3BlcnR5fS9jb252ZXJzaW9uRXZlbnRzL3tjb252ZXJzaW9u",
+            "X2V2ZW50fUIbChlfZGVmYXVsdF9jb252ZXJzaW9uX3ZhbHVlItcECghLZXlF",
+            "dmVudBIRCgRuYW1lGAEgASgJQgPgQQMSFwoKZXZlbnRfbmFtZRgCIAEoCUID",
+            "4EEFEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEhYKCWRlbGV0YWJsZRgEIAEoCEID4EEDEhMKBmN1c3Rv",
+            "bRgFIAEoCEID4EEDElUKD2NvdW50aW5nX21ldGhvZBgGIAEoDjI3Lmdvb2ds",
+            "ZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5LZXlFdmVudC5Db3VudGluZ01l",
+            "dGhvZEID4EECElEKDWRlZmF1bHRfdmFsdWUYByABKAsyNS5nb29nbGUuYW5h",
+            "bHl0aWNzLmFkbWluLnYxYWxwaGEuS2V5RXZlbnQuRGVmYXVsdFZhbHVlQgPg",
+            "QQEaRgoMRGVmYXVsdFZhbHVlEhoKDW51bWVyaWNfdmFsdWUYASABKAFCA+BB",
+            "AhIaCg1jdXJyZW5jeV9jb2RlGAIgASgJQgPgQQIiWwoOQ291bnRpbmdNZXRo",
+            "b2QSHwobQ09VTlRJTkdfTUVUSE9EX1VOU1BFQ0lGSUVEEAASEgoOT05DRV9Q",
+            "RVJfRVZFTlQQARIUChBPTkNFX1BFUl9TRVNTSU9OEAI6bepBagomYW5hbHl0",
+            "aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vS2V5RXZlbnQSK3Byb3BlcnRpZXMv",
+            "e3Byb3BlcnR5fS9rZXlFdmVudHMve2tleV9ldmVudH0qCWtleUV2ZW50czII",
+            "a2V5RXZlbnQioAIKFUdvb2dsZVNpZ25hbHNTZXR0aW5ncxIRCgRuYW1lGAEg",
+            "ASgJQgPgQQMSQQoFc3RhdGUYAyABKA4yMi5nb29nbGUuYW5hbHl0aWNzLmFk",
+            "bWluLnYxYWxwaGEuR29vZ2xlU2lnbmFsc1N0YXRlEkoKB2NvbnNlbnQYBCAB",
+            "KA4yNC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuR29vZ2xlU2ln",
+            "bmFsc0NvbnNlbnRCA+BBAzpl6kFiCjNhbmFseXRpY3NhZG1pbi5nb29nbGVh",
+            "cGlzLmNvbS9Hb29nbGVTaWduYWxzU2V0dGluZ3MSK3Byb3BlcnRpZXMve3By",
+            "b3BlcnR5fS9nb29nbGVTaWduYWxzU2V0dGluZ3MivAMKD0N1c3RvbURpbWVu",
+            "c2lvbhIRCgRuYW1lGAEgASgJQgPgQQMSHgoOcGFyYW1ldGVyX25hbWUYAiAB",
+            "KAlCBuBBAuBBBRIZCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAhIYCgtkZXNj",
+            "cmlwdGlvbhgEIAEoCUID4EEBElUKBXNjb3BlGAUgASgOMj4uZ29vZ2xlLmFu",
+            "YWx5dGljcy5hZG1pbi52MWFscGhhLkN1c3RvbURpbWVuc2lvbi5EaW1lbnNp",
+            "b25TY29wZUIG4EEC4EEFEikKHGRpc2FsbG93X2Fkc19wZXJzb25hbGl6YXRp",
+            "b24YBiABKAhCA+BBASJQCg5EaW1lbnNpb25TY29wZRIfChtESU1FTlNJT05f",
+            "U0NPUEVfVU5TUEVDSUZJRUQQABIJCgVFVkVOVBABEggKBFVTRVIQAhIICgRJ",
+            "VEVNEAM6bepBagotYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQ3Vz",
+            "dG9tRGltZW5zaW9uEjlwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vY3VzdG9tRGlt",
+            "ZW5zaW9ucy97Y3VzdG9tX2RpbWVuc2lvbn0ixQYKDEN1c3RvbU1ldHJpYxIR",
+            "CgRuYW1lGAEgASgJQgPgQQMSHgoOcGFyYW1ldGVyX25hbWUYAiABKAlCBuBB",
+            "AuBBBRIZCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAhIYCgtkZXNjcmlwdGlv",
+            "bhgEIAEoCUID4EEBElsKEG1lYXN1cmVtZW50X3VuaXQYBSABKA4yPC5nb29n",
+            "bGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ3VzdG9tTWV0cmljLk1lYXN1",
+            "cmVtZW50VW5pdEID4EECEk8KBXNjb3BlGAYgASgOMjguZ29vZ2xlLmFuYWx5",
+            "dGljcy5hZG1pbi52MWFscGhhLkN1c3RvbU1ldHJpYy5NZXRyaWNTY29wZUIG",
+            "4EEC4EEFEmYKFnJlc3RyaWN0ZWRfbWV0cmljX3R5cGUYCCADKA4yQS5nb29n",
+            "bGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQ3VzdG9tTWV0cmljLlJlc3Ry",
+            "aWN0ZWRNZXRyaWNUeXBlQgPgQQEitwEKD01lYXN1cmVtZW50VW5pdBIgChxN",
+            "RUFTVVJFTUVOVF9VTklUX1VOU1BFQ0lGSUVEEAASDAoIU1RBTkRBUkQQARIM",
+            "CghDVVJSRU5DWRACEggKBEZFRVQQAxIKCgZNRVRFUlMQBBIOCgpLSUxPTUVU",
+            "RVJTEAUSCQoFTUlMRVMQBhIQCgxNSUxMSVNFQ09ORFMQBxILCgdTRUNPTkRT",
+            "EAgSCwoHTUlOVVRFUxAJEgkKBUhPVVJTEAoiNgoLTWV0cmljU2NvcGUSHAoY",
+            "TUVUUklDX1NDT1BFX1VOU1BFQ0lGSUVEEAASCQoFRVZFTlQQASJfChRSZXN0",
+            "cmljdGVkTWV0cmljVHlwZRImCiJSRVNUUklDVEVEX01FVFJJQ19UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASDQoJQ09TVF9EQVRBEAESEAoMUkVWRU5VRV9EQVRBEAI6",
+            "ZOpBYQoqYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQ3VzdG9tTWV0",
+            "cmljEjNwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vY3VzdG9tTWV0cmljcy97Y3Vz",
+            "dG9tX21ldHJpY30ipwYKEENhbGN1bGF0ZWRNZXRyaWMSEQoEbmFtZRgBIAEo",
+            "CUID4EEDEhgKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQESGQoMZGlzcGxheV9u",
+            "YW1lGAMgASgJQgPgQQISIQoUY2FsY3VsYXRlZF9tZXRyaWNfaWQYBCABKAlC",
+            "A+BBAxJVCgttZXRyaWNfdW5pdBgFIAEoDjI7Lmdvb2dsZS5hbmFseXRpY3Mu",
+            "YWRtaW4udjFhbHBoYS5DYWxjdWxhdGVkTWV0cmljLk1ldHJpY1VuaXRCA+BB",
+            "AhJqChZyZXN0cmljdGVkX21ldHJpY190eXBlGAYgAygOMkUuZ29vZ2xlLmFu",
+            "YWx5dGljcy5hZG1pbi52MWFscGhhLkNhbGN1bGF0ZWRNZXRyaWMuUmVzdHJp",
+            "Y3RlZE1ldHJpY1R5cGVCA+BBAxIUCgdmb3JtdWxhGAcgASgJQgPgQQISJQoY",
+            "aW52YWxpZF9tZXRyaWNfcmVmZXJlbmNlGAkgASgIQgPgQQMirQEKCk1ldHJp",
+            "Y1VuaXQSGwoXTUVUUklDX1VOSVRfVU5TUEVDSUZJRUQQABIMCghTVEFOREFS",
+            "RBABEgwKCENVUlJFTkNZEAISCAoERkVFVBADEgkKBU1JTEVTEAQSCgoGTUVU",
+            "RVJTEAUSDgoKS0lMT01FVEVSUxAGEhAKDE1JTExJU0VDT05EUxAHEgsKB1NF",
+            "Q09ORFMQCBILCgdNSU5VVEVTEAkSCQoFSE9VUlMQCiJfChRSZXN0cmljdGVk",
+            "TWV0cmljVHlwZRImCiJSRVNUUklDVEVEX01FVFJJQ19UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASDQoJQ09TVF9EQVRBEAESEAoMUkVWRU5VRV9EQVRBEAI6lgHqQZIB",
+            "Ci5hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9DYWxjdWxhdGVkTWV0",
+            "cmljEjtwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vY2FsY3VsYXRlZE1ldHJpY3Mv",
+            "e2NhbGN1bGF0ZWRfbWV0cmljfSoRY2FsY3VsYXRlZE1ldHJpY3MyEGNhbGN1",
+            "bGF0ZWRNZXRyaWMisgQKFURhdGFSZXRlbnRpb25TZXR0aW5ncxIRCgRuYW1l",
+            "GAEgASgJQgPgQQMSagoUZXZlbnRfZGF0YV9yZXRlbnRpb24YAiABKA4yRy5n",
+            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGF0YVJldGVudGlvblNl",
+            "dHRpbmdzLlJldGVudGlvbkR1cmF0aW9uQgPgQQISaQoTdXNlcl9kYXRhX3Jl",
+            "dGVudGlvbhgEIAEoDjJHLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
+            "YS5EYXRhUmV0ZW50aW9uU2V0dGluZ3MuUmV0ZW50aW9uRHVyYXRpb25CA+BB",
+            "AhInCh9yZXNldF91c2VyX2RhdGFfb25fbmV3X2FjdGl2aXR5GAMgASgIIp4B",
+            "ChFSZXRlbnRpb25EdXJhdGlvbhIiCh5SRVRFTlRJT05fRFVSQVRJT05fVU5T",
+            "UEVDSUZJRUQQABIOCgpUV09fTU9OVEhTEAESEwoPRk9VUlRFRU5fTU9OVEhT",
+            "EAMSFQoRVFdFTlRZX1NJWF9NT05USFMQBBIXChNUSElSVFlfRUlHSFRfTU9O",
+            "VEhTEAUSEAoMRklGVFlfTU9OVEhTEAY6ZepBYgozYW5hbHl0aWNzYWRtaW4u",
+            "Z29vZ2xlYXBpcy5jb20vRGF0YVJldGVudGlvblNldHRpbmdzEitwcm9wZXJ0",
+            "aWVzL3twcm9wZXJ0eX0vZGF0YVJldGVudGlvblNldHRpbmdzIvwLChNBdHRy",
+            "aWJ1dGlvblNldHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxKXAQosYWNxdWlz",
+            "aXRpb25fY29udmVyc2lvbl9ldmVudF9sb29rYmFja193aW5kb3cYAiABKA4y",
+            "XC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXR0cmlidXRpb25T",
+            "ZXR0aW5ncy5BY3F1aXNpdGlvbkNvbnZlcnNpb25FdmVudExvb2tiYWNrV2lu",
+            "ZG93QgPgQQISiwEKJm90aGVyX2NvbnZlcnNpb25fZXZlbnRfbG9va2JhY2tf",
+            "d2luZG93GAMgASgOMlYuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LkF0dHJpYnV0aW9uU2V0dGluZ3MuT3RoZXJDb252ZXJzaW9uRXZlbnRMb29r",
+            "YmFja1dpbmRvd0ID4EECEncKG3JlcG9ydGluZ19hdHRyaWJ1dGlvbl9tb2Rl",
+            "bBgEIAEoDjJNLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdHRy",
+            "aWJ1dGlvblNldHRpbmdzLlJlcG9ydGluZ0F0dHJpYnV0aW9uTW9kZWxCA+BB",
+            "AhKGAQokYWRzX3dlYl9jb252ZXJzaW9uX2RhdGFfZXhwb3J0X3Njb3BlGAUg",
+            "ASgOMlMuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF0dHJpYnV0",
+            "aW9uU2V0dGluZ3MuQWRzV2ViQ29udmVyc2lvbkRhdGFFeHBvcnRTY29wZUID",
+            "4EECItsBCihBY3F1aXNpdGlvbkNvbnZlcnNpb25FdmVudExvb2tiYWNrV2lu",
+            "ZG93EjwKOEFDUVVJU0lUSU9OX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JBQ0tf",
+            "V0lORE9XX1VOU1BFQ0lGSUVEEAASNwozQUNRVUlTSVRJT05fQ09OVkVSU0lP",
+            "Tl9FVkVOVF9MT09LQkFDS19XSU5ET1dfN19EQVlTEAESOAo0QUNRVUlTSVRJ",
+            "T05fQ09OVkVSU0lPTl9FVkVOVF9MT09LQkFDS19XSU5ET1dfMzBfREFZUxAC",
+            "IvgBCiJPdGhlckNvbnZlcnNpb25FdmVudExvb2tiYWNrV2luZG93EjYKMk9U",
+            "SEVSX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JBQ0tfV0lORE9XX1VOU1BFQ0lG",
+            "SUVEEAASMgouT1RIRVJfQ09OVkVSU0lPTl9FVkVOVF9MT09LQkFDS19XSU5E",
+            "T1dfMzBfREFZUxABEjIKLk9USEVSX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JB",
+            "Q0tfV0lORE9XXzYwX0RBWVMQAhIyCi5PVEhFUl9DT05WRVJTSU9OX0VWRU5U",
+            "X0xPT0tCQUNLX1dJTkRPV185MF9EQVlTEAMiwgEKGVJlcG9ydGluZ0F0dHJp",
+            "YnV0aW9uTW9kZWwSKwonUkVQT1JUSU5HX0FUVFJJQlVUSU9OX01PREVMX1VO",
+            "U1BFQ0lGSUVEEAASKQolUEFJRF9BTkRfT1JHQU5JQ19DSEFOTkVMU19EQVRB",
+            "X0RSSVZFThABEigKJFBBSURfQU5EX09SR0FOSUNfQ0hBTk5FTFNfTEFTVF9D",
+            "TElDSxACEiMKH0dPT0dMRV9QQUlEX0NIQU5ORUxTX0xBU1RfQ0xJQ0sQByKm",
+            "AQofQWRzV2ViQ29udmVyc2lvbkRhdGFFeHBvcnRTY29wZRI0CjBBRFNfV0VC",
+            "X0NPTlZFUlNJT05fREFUQV9FWFBPUlRfU0NPUEVfVU5TUEVDSUZJRUQQABIU",
+            "ChBOT1RfU0VMRUNURURfWUVUEAESHQoZUEFJRF9BTkRfT1JHQU5JQ19DSEFO",
+            "TkVMUxACEhgKFEdPT0dMRV9QQUlEX0NIQU5ORUxTEAM6YepBXgoxYW5hbHl0",
+            "aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXR0cmlidXRpb25TZXR0aW5ncxIp",
+            "cHJvcGVydGllcy97cHJvcGVydHl9L2F0dHJpYnV0aW9uU2V0dGluZ3Mi8QEK",
+            "DUFjY2Vzc0JpbmRpbmcSDgoEdXNlchgCIAEoCUgAEhEKBG5hbWUYASABKAlC",
+            "A+BBAxINCgVyb2xlcxgDIAMoCTqcAepBmAEKK2FuYWx5dGljc2FkbWluLmdv",
+            "b2dsZWFwaXMuY29tL0FjY2Vzc0JpbmRpbmcSMmFjY291bnRzL3thY2NvdW50",
+            "fS9hY2Nlc3NCaW5kaW5ncy97YWNjZXNzX2JpbmRpbmd9EjVwcm9wZXJ0aWVz",
+            "L3twcm9wZXJ0eX0vYWNjZXNzQmluZGluZ3Mve2FjY2Vzc19iaW5kaW5nfUIP",
+            "Cg1hY2Nlc3NfdGFyZ2V0IqoDCgxCaWdRdWVyeUxpbmsSEQoEbmFtZRgBIAEo",
+            "CUID4EEDEhQKB3Byb2plY3QYAiABKAlCA+BBBRI0CgtjcmVhdGVfdGltZRgD",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIcChRkYWls",
+            "eV9leHBvcnRfZW5hYmxlZBgEIAEoCBIgChhzdHJlYW1pbmdfZXhwb3J0X2Vu",
+            "YWJsZWQYBSABKAgSIgoaZnJlc2hfZGFpbHlfZXhwb3J0X2VuYWJsZWQYCSAB",
+            "KAgSHgoWaW5jbHVkZV9hZHZlcnRpc2luZ19pZBgGIAEoCBIWCg5leHBvcnRf",
+            "c3RyZWFtcxgHIAMoCRIXCg9leGNsdWRlZF9ldmVudHMYCCADKAkSIAoQZGF0",
+            "YXNldF9sb2NhdGlvbhgKIAEoCUIG4EEF4EECOmTqQWEKKmFuYWx5dGljc2Fk",
+            "bWluLmdvb2dsZWFwaXMuY29tL0JpZ1F1ZXJ5TGluaxIzcHJvcGVydGllcy97",
+            "cHJvcGVydHl9L2JpZ1F1ZXJ5TGlua3Mve2JpZ3F1ZXJ5X2xpbmt9IvMDChtF",
+            "bmhhbmNlZE1lYXN1cmVtZW50U2V0dGluZ3MSEQoEbmFtZRgBIAEoCUID4EED",
+            "EhYKDnN0cmVhbV9lbmFibGVkGAIgASgIEhcKD3Njcm9sbHNfZW5hYmxlZBgD",
+            "IAEoCBIfChdvdXRib3VuZF9jbGlja3NfZW5hYmxlZBgEIAEoCBIbChNzaXRl",
+            "X3NlYXJjaF9lbmFibGVkGAUgASgIEiAKGHZpZGVvX2VuZ2FnZW1lbnRfZW5h",
+            "YmxlZBgGIAEoCBIeChZmaWxlX2Rvd25sb2Fkc19lbmFibGVkGAcgASgIEhwK",
+            "FHBhZ2VfY2hhbmdlc19lbmFibGVkGAggASgIEiEKGWZvcm1faW50ZXJhY3Rp",
+            "b25zX2VuYWJsZWQYCSABKAgSIwoWc2VhcmNoX3F1ZXJ5X3BhcmFtZXRlchgK",
+            "IAEoCUID4EECEhsKE3VyaV9xdWVyeV9wYXJhbWV0ZXIYCyABKAk6jAHqQYgB",
+            "CjlhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9FbmhhbmNlZE1lYXN1",
+            "cmVtZW50U2V0dGluZ3MSS3Byb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhU3Ry",
+            "ZWFtcy97ZGF0YV9zdHJlYW19L2VuaGFuY2VkTWVhc3VyZW1lbnRTZXR0aW5n",
+            "cyJCChBDb25uZWN0ZWRTaXRlVGFnEhkKDGRpc3BsYXlfbmFtZRgBIAEoCUID",
+            "4EECEhMKBnRhZ19pZBgCIAEoCUID4EECIpUCChVEYXRhUmVkYWN0aW9uU2V0",
+            "dGluZ3MSEQoEbmFtZRgBIAEoCUID4EEDEh8KF2VtYWlsX3JlZGFjdGlvbl9l",
+            "bmFibGVkGAIgASgIEikKIXF1ZXJ5X3BhcmFtZXRlcl9yZWRhY3Rpb25fZW5h",
+            "YmxlZBgDIAEoCBIcChRxdWVyeV9wYXJhbWV0ZXJfa2V5cxgEIAMoCTp/6kF8",
+            "CjNhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRhUmVkYWN0aW9u",
+            "U2V0dGluZ3MSRXByb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhU3RyZWFtcy97",
+            "ZGF0YV9zdHJlYW19L2RhdGFSZWRhY3Rpb25TZXR0aW5ncyKgAQoLQWRTZW5z",
+            "ZUxpbmsSEQoEbmFtZRgBIAEoCUID4EEDEhsKDmFkX2NsaWVudF9jb2RlGAIg",
+            "ASgJQgPgQQU6YepBXgopYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
+            "QWRTZW5zZUxpbmsSMXByb3BlcnRpZXMve3Byb3BlcnR5fS9hZFNlbnNlTGlu",
+            "a3Mve2Fkc2Vuc2VfbGlua30ijgIKGFJvbGx1cFByb3BlcnR5U291cmNlTGlu",
+            "axIRCgRuYW1lGAEgASgJQgPgQQMSHAoPc291cmNlX3Byb3BlcnR5GAIgASgJ",
+            "QgPgQQU6wAHqQbwBCjZhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9S",
+            "b2xsdXBQcm9wZXJ0eVNvdXJjZUxpbmsSTXByb3BlcnRpZXMve3Byb3BlcnR5",
+            "fS9yb2xsdXBQcm9wZXJ0eVNvdXJjZUxpbmtzL3tyb2xsdXBfcHJvcGVydHlf",
+            "c291cmNlX2xpbmt9Khlyb2xsdXBQcm9wZXJ0eVNvdXJjZUxpbmtzMhhyb2xs",
+            "dXBQcm9wZXJ0eVNvdXJjZUxpbmsqqgQKEEluZHVzdHJ5Q2F0ZWdvcnkSIQod",
+            "SU5EVVNUUllfQ0FURUdPUllfVU5TUEVDSUZJRUQQABIOCgpBVVRPTU9USVZF",
+            "EAESIwofQlVTSU5FU1NfQU5EX0lORFVTVFJJQUxfTUFSS0VUUxACEgsKB0ZJ",
+            "TkFOQ0UQAxIOCgpIRUFMVEhDQVJFEAQSDgoKVEVDSE5PTE9HWRAFEgoKBlRS",
+            "QVZFTBAGEgkKBU9USEVSEAcSGgoWQVJUU19BTkRfRU5URVJUQUlOTUVOVBAI",
+            "EhYKEkJFQVVUWV9BTkRfRklUTkVTUxAJEhgKFEJPT0tTX0FORF9MSVRFUkFU",
+            "VVJFEAoSEgoORk9PRF9BTkRfRFJJTksQCxIJCgVHQU1FUxAMEhcKE0hPQkJJ",
+            "RVNfQU5EX0xFSVNVUkUQDRITCg9IT01FX0FORF9HQVJERU4QDhIYChRJTlRF",
+            "Uk5FVF9BTkRfVEVMRUNPTRAPEhYKEkxBV19BTkRfR09WRVJOTUVOVBAQEggK",
+            "BE5FV1MQERIWChJPTkxJTkVfQ09NTVVOSVRJRVMQEhIWChJQRU9QTEVfQU5E",
+            "X1NPQ0lFVFkQExIUChBQRVRTX0FORF9BTklNQUxTEBQSDwoLUkVBTF9FU1RB",
+            "VEUQFRINCglSRUZFUkVOQ0UQFhILCgdTQ0lFTkNFEBcSCgoGU1BPUlRTEBgS",
+            "FgoSSk9CU19BTkRfRURVQ0FUSU9OEBkSDAoIU0hPUFBJTkcQGipmCgxTZXJ2",
+            "aWNlTGV2ZWwSHQoZU0VSVklDRV9MRVZFTF9VTlNQRUNJRklFRBAAEh0KGUdP",
+            "T0dMRV9BTkFMWVRJQ1NfU1RBTkRBUkQQARIYChRHT09HTEVfQU5BTFlUSUNT",
+            "XzM2MBACKkoKCUFjdG9yVHlwZRIaChZBQ1RPUl9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASCAoEVVNFUhABEgoKBlNZU1RFTRACEgsKB1NVUFBPUlQQAypQCgpBY3Rp",
+            "b25UeXBlEhsKF0FDVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHQ1JFQVRF",
+            "RBABEgsKB1VQREFURUQQAhILCgdERUxFVEVEEAMqtQUKGUNoYW5nZUhpc3Rv",
+            "cnlSZXNvdXJjZVR5cGUSLAooQ0hBTkdFX0hJU1RPUllfUkVTT1VSQ0VfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEgsKB0FDQ09VTlQQARIMCghQUk9QRVJUWRACEhEK",
+            "DUZJUkVCQVNFX0xJTksQBhITCg9HT09HTEVfQURTX0xJTksQBxIbChdHT09H",
+            "TEVfU0lHTkFMU19TRVRUSU5HUxAIEhQKEENPTlZFUlNJT05fRVZFTlQQCRIf",
+            "ChtNRUFTVVJFTUVOVF9QUk9UT0NPTF9TRUNSRVQQChIUChBDVVNUT01fRElN",
+            "RU5TSU9OEAsSEQoNQ1VTVE9NX01FVFJJQxAMEhsKF0RBVEFfUkVURU5USU9O",
+            "X1NFVFRJTkdTEA0SJQohRElTUExBWV9WSURFT18zNjBfQURWRVJUSVNFUl9M",
+            "SU5LEA4SLgoqRElTUExBWV9WSURFT18zNjBfQURWRVJUSVNFUl9MSU5LX1BS",
+            "T1BPU0FMEA8SFwoTU0VBUkNIX0FEU18zNjBfTElOSxAQEg8KC0RBVEFfU1RS",
+            "RUFNEBISGAoUQVRUUklCVVRJT05fU0VUVElOR1MQFBIVChFFWFBBTkRFRF9E",
+            "QVRBX1NFVBAVEhEKDUNIQU5ORUxfR1JPVVAQFhIRCg1CSUdRVUVSWV9MSU5L",
+            "EBcSIQodRU5IQU5DRURfTUVBU1VSRU1FTlRfU0VUVElOR1MQGBIbChdEQVRB",
+            "X1JFREFDVElPTl9TRVRUSU5HUxAZEicKI1NLQURORVRXT1JLX0NPTlZFUlNJ",
+            "T05fVkFMVUVfU0NIRU1BEBoSEAoMQURTRU5TRV9MSU5LEBsSDAoIQVVESUVO",
+            "Q0UQHBIVChFFVkVOVF9DUkVBVEVfUlVMRRAdEhUKEUNBTENVTEFURURfTUVU",
+            "UklDEB8qcwoSR29vZ2xlU2lnbmFsc1N0YXRlEiQKIEdPT0dMRV9TSUdOQUxT",
+            "X1NUQVRFX1VOU1BFQ0lGSUVEEAASGgoWR09PR0xFX1NJR05BTFNfRU5BQkxF",
+            "RBABEhsKF0dPT0dMRV9TSUdOQUxTX0RJU0FCTEVEEAIqjgEKFEdvb2dsZVNp",
+            "Z25hbHNDb25zZW50EiYKIkdPT0dMRV9TSUdOQUxTX0NPTlNFTlRfVU5TUEVD",
+            "SUZJRUQQABIkCiBHT09HTEVfU0lHTkFMU19DT05TRU5UX0NPTlNFTlRFRBAC",
+            "EigKJEdPT0dMRV9TSUdOQUxTX0NPTlNFTlRfTk9UX0NPTlNFTlRFRBABKnsK",
+            "HUxpbmtQcm9wb3NhbEluaXRpYXRpbmdQcm9kdWN0EjAKLExJTktfUFJPUE9T",
+            "QUxfSU5JVElBVElOR19QUk9EVUNUX1VOU1BFQ0lGSUVEEAASFAoQR09PR0xF",
+            "X0FOQUxZVElDUxABEhIKDkxJTktFRF9QUk9EVUNUEAIqxAEKEUxpbmtQcm9w",
+            "b3NhbFN0YXRlEiMKH0xJTktfUFJPUE9TQUxfU1RBVEVfVU5TUEVDSUZJRUQQ",
+            "ABIpCiVBV0FJVElOR19SRVZJRVdfRlJPTV9HT09HTEVfQU5BTFlUSUNTEAES",
+            "JwojQVdBSVRJTkdfUkVWSUVXX0ZST01fTElOS0VEX1BST0RVQ1QQAhINCglX",
+            "SVRIRFJBV04QAxIMCghERUNMSU5FRBAEEgsKB0VYUElSRUQQBRIMCghPQlNP",
+            "TEVURRAGKoIBCgxQcm9wZXJ0eVR5cGUSHQoZUFJPUEVSVFlfVFlQRV9VTlNQ",
+            "RUNJRklFRBAAEhoKFlBST1BFUlRZX1RZUEVfT1JESU5BUlkQARIdChlQUk9Q",
+            "RVJUWV9UWVBFX1NVQlBST1BFUlRZEAISGAoUUFJPUEVSVFlfVFlQRV9ST0xM",
+            "VVAQAypxCgtDb2Fyc2VWYWx1ZRIcChhDT0FSU0VfVkFMVUVfVU5TUEVDSUZJ",
+            "RUQQABIUChBDT0FSU0VfVkFMVUVfTE9XEAESFwoTQ09BUlNFX1ZBTFVFX01F",
+            "RElVTRACEhUKEUNPQVJTRV9WQUxVRV9ISUdIEANCywEKImNvbS5nb29nbGUu",
+            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGFCDlJlc291cmNlc1Byb3RvUAFaPmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vYW5hbHl0aWNzL2FkbWluL2FwaXYxYWxwaGEv",
+            "YWRtaW5wYjthZG1pbnBi6kFSCjJtYXJrZXRpbmdwbGF0Zm9ybWFkbWluLmdv",
+            "b2dsZWFwaXMuY29tL09yZ2FuaXphdGlvbhIcb3JnYW5pemF0aW9ucy97b3Jn",
+            "YW5pemF0aW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Analytics.Admin.V1Alpha.ExpandedDataSetReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.ServiceLevel), typeof(global::Google.Analytics.Admin.V1Alpha.ActorType), typeof(global::Google.Analytics.Admin.V1Alpha.ActionType), typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryResourceType), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsState), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsConsent), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalState), typeof(global::Google.Analytics.Admin.V1Alpha.PropertyType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Account), global::Google.Analytics.Admin.V1Alpha.Account.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DisplayName", "RegionCode", "Deleted" }, null, null, null, null),
+          new pbr::FileDescriptor[] { global::Google.Analytics.Admin.V1Alpha.AudienceReflection.Descriptor, global::Google.Analytics.Admin.V1Alpha.ChannelGroupReflection.Descriptor, global::Google.Analytics.Admin.V1Alpha.EventCreateAndEditReflection.Descriptor, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSetReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.ServiceLevel), typeof(global::Google.Analytics.Admin.V1Alpha.ActorType), typeof(global::Google.Analytics.Admin.V1Alpha.ActionType), typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryResourceType), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsState), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsConsent), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalState), typeof(global::Google.Analytics.Admin.V1Alpha.PropertyType), typeof(global::Google.Analytics.Admin.V1Alpha.CoarseValue), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Account), global::Google.Analytics.Admin.V1Alpha.Account.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DisplayName", "RegionCode", "Deleted", "GmpOrganization" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Property), global::Google.Analytics.Admin.V1Alpha.Property.Parser, new[]{ "Name", "PropertyType", "CreateTime", "UpdateTime", "Parent", "DisplayName", "IndustryCategory", "TimeZone", "CurrencyCode", "ServiceLevel", "DeleteTime", "ExpireTime", "Account" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataStream), global::Google.Analytics.Admin.V1Alpha.DataStream.Parser, new[]{ "WebStreamData", "AndroidAppStreamData", "IosAppStreamData", "Name", "Type", "DisplayName", "CreateTime", "UpdateTime" }, new[]{ "StreamData" }, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.DataStream.Types.DataStreamType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataStream.Types.WebStreamData), global::Google.Analytics.Admin.V1Alpha.DataStream.Types.WebStreamData.Parser, new[]{ "MeasurementId", "FirebaseAppId", "DefaultUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataStream.Types.AndroidAppStreamData), global::Google.Analytics.Admin.V1Alpha.DataStream.Types.AndroidAppStreamData.Parser, new[]{ "FirebaseAppId", "PackageName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataStream.Types.IosAppStreamData), global::Google.Analytics.Admin.V1Alpha.DataStream.Types.IosAppStreamData.Parser, new[]{ "FirebaseAppId", "BundleId" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.UserLink), global::Google.Analytics.Admin.V1Alpha.UserLink.Parser, new[]{ "Name", "EmailAddress", "DirectRoles" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AuditUserLink), global::Google.Analytics.Admin.V1Alpha.AuditUserLink.Parser, new[]{ "Name", "EmailAddress", "DirectRoles", "EffectiveRoles" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.FirebaseLink), global::Google.Analytics.Admin.V1Alpha.FirebaseLink.Parser, new[]{ "Name", "Project", "CreateTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GlobalSiteTag), global::Google.Analytics.Admin.V1Alpha.GlobalSiteTag.Parser, new[]{ "Name", "Snippet" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink), global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink.Parser, new[]{ "Name", "CustomerId", "CanManageClients", "AdsPersonalizationEnabled", "CreateTime", "UpdateTime", "CreatorEmailAddress" }, null, null, null, null),
@@ -386,22 +494,31 @@ namespace Google.Analytics.Admin.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccountSummary), global::Google.Analytics.Admin.V1Alpha.AccountSummary.Parser, new[]{ "Name", "Account", "DisplayName", "PropertySummaries" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.PropertySummary), global::Google.Analytics.Admin.V1Alpha.PropertySummary.Parser, new[]{ "Property", "DisplayName", "PropertyType", "Parent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret), global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret.Parser, new[]{ "Name", "DisplayName", "SecretValue" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema), global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema.Parser, new[]{ "Name", "PostbackWindowOne", "PostbackWindowTwo", "PostbackWindowThree", "ApplyConversionValues" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.PostbackWindow), global::Google.Analytics.Admin.V1Alpha.PostbackWindow.Parser, new[]{ "ConversionValues", "PostbackWindowSettingsEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ConversionValues), global::Google.Analytics.Admin.V1Alpha.ConversionValues.Parser, new[]{ "DisplayName", "FineValue", "CoarseValue", "EventMappings", "LockEnabled" }, new[]{ "FineValue" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.EventMapping), global::Google.Analytics.Admin.V1Alpha.EventMapping.Parser, new[]{ "EventName", "MinEventCount", "MaxEventCount", "MinEventValue", "MaxEventValue" }, new[]{ "MinEventCount", "MaxEventCount", "MinEventValue", "MaxEventValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryEvent), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryEvent.Parser, new[]{ "Id", "ChangeTime", "ActorType", "UserActorEmail", "ChangesFiltered", "Changes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Parser, new[]{ "Resource", "Action", "ResourceBeforeChange", "ResourceAfterChange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource.Parser, new[]{ "Account", "Property", "FirebaseLink", "GoogleAdsLink", "GoogleSignalsSettings", "DisplayVideo360AdvertiserLink", "DisplayVideo360AdvertiserLinkProposal", "ConversionEvent", "MeasurementProtocolSecret", "CustomDimension", "CustomMetric", "DataRetentionSettings", "SearchAds360Link", "DataStream", "AttributionSettings", "ExpandedDataSet", "BigqueryLink", "EnhancedMeasurementSettings" }, new[]{ "Resource" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Parser, new[]{ "Resource", "Action", "ResourceBeforeChange", "ResourceAfterChange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource), global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource.Parser, new[]{ "Account", "Property", "FirebaseLink", "GoogleAdsLink", "GoogleSignalsSettings", "DisplayVideo360AdvertiserLink", "DisplayVideo360AdvertiserLinkProposal", "ConversionEvent", "MeasurementProtocolSecret", "CustomDimension", "CustomMetric", "DataRetentionSettings", "SearchAds360Link", "DataStream", "AttributionSettings", "ExpandedDataSet", "ChannelGroup", "BigqueryLink", "EnhancedMeasurementSettings", "DataRedactionSettings", "SkadnetworkConversionValueSchema", "AdsenseLink", "Audience", "EventCreateRule", "CalculatedMetric" }, new[]{ "Resource" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink), global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink.Parser, new[]{ "Name", "AdvertiserId", "AdvertiserDisplayName", "AdsPersonalizationEnabled", "CampaignDataSharingEnabled", "CostDataSharingEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal), global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal.Parser, new[]{ "Name", "AdvertiserId", "LinkProposalStatusDetails", "AdvertiserDisplayName", "ValidationEmail", "AdsPersonalizationEnabled", "CampaignDataSharingEnabled", "CostDataSharingEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.SearchAds360Link), global::Google.Analytics.Admin.V1Alpha.SearchAds360Link.Parser, new[]{ "Name", "AdvertiserId", "CampaignDataSharingEnabled", "CostDataSharingEnabled", "AdvertiserDisplayName", "AdsPersonalizationEnabled", "SiteStatsSharingEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalStatusDetails), global::Google.Analytics.Admin.V1Alpha.LinkProposalStatusDetails.Parser, new[]{ "LinkProposalInitiatingProduct", "RequestorEmail", "LinkProposalState" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ConversionEvent), global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Parser, new[]{ "Name", "EventName", "CreateTime", "Deletable", "Custom" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ConversionEvent), global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Parser, new[]{ "Name", "EventName", "CreateTime", "Deletable", "Custom", "CountingMethod", "DefaultConversionValue" }, new[]{ "DefaultConversionValue" }, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.ConversionCountingMethod) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.DefaultConversionValue), global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.DefaultConversionValue.Parser, new[]{ "Value", "CurrencyCode" }, new[]{ "Value", "CurrencyCode" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.KeyEvent), global::Google.Analytics.Admin.V1Alpha.KeyEvent.Parser, new[]{ "Name", "EventName", "CreateTime", "Deletable", "Custom", "CountingMethod", "DefaultValue" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.CountingMethod) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.DefaultValue), global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.DefaultValue.Parser, new[]{ "NumericValue", "CurrencyCode" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings), global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings.Parser, new[]{ "Name", "State", "Consent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CustomDimension), global::Google.Analytics.Admin.V1Alpha.CustomDimension.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "Scope", "DisallowAdsPersonalization" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CustomDimension.Types.DimensionScope) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric), global::Google.Analytics.Admin.V1Alpha.CustomMetric.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "MeasurementUnit", "Scope", "RestrictedMetricType" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MeasurementUnit), typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MetricScope), typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings), global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Parser, new[]{ "Name", "EventDataRetention", "ResetUserDataOnNewActivity" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings), global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Parser, new[]{ "Name", "AcquisitionConversionEventLookbackWindow", "OtherConversionEventLookbackWindow", "ReportingAttributionModel" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CalculatedMetric), global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Parser, new[]{ "Name", "Description", "DisplayName", "CalculatedMetricId", "MetricUnit", "RestrictedMetricType", "Formula", "InvalidMetricReference" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.MetricUnit), typeof(global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.RestrictedMetricType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings), global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Parser, new[]{ "Name", "EventDataRetention", "UserDataRetention", "ResetUserDataOnNewActivity" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings), global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Parser, new[]{ "Name", "AcquisitionConversionEventLookbackWindow", "OtherConversionEventLookbackWindow", "ReportingAttributionModel", "AdsWebConversionDataExportScope" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AdsWebConversionDataExportScope) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccessBinding), global::Google.Analytics.Admin.V1Alpha.AccessBinding.Parser, new[]{ "User", "Name", "Roles" }, new[]{ "AccessTarget" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.BigQueryLink), global::Google.Analytics.Admin.V1Alpha.BigQueryLink.Parser, new[]{ "Name", "Project", "CreateTime", "DailyExportEnabled", "StreamingExportEnabled", "IntradayExportEnabled", "IncludeAdvertisingId", "ExportStreams", "ExcludedEvents" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.BigQueryLink), global::Google.Analytics.Admin.V1Alpha.BigQueryLink.Parser, new[]{ "Name", "Project", "CreateTime", "DailyExportEnabled", "StreamingExportEnabled", "FreshDailyExportEnabled", "IncludeAdvertisingId", "ExportStreams", "ExcludedEvents", "DatasetLocation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings), global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings.Parser, new[]{ "Name", "StreamEnabled", "ScrollsEnabled", "OutboundClicksEnabled", "SiteSearchEnabled", "VideoEngagementEnabled", "FileDownloadsEnabled", "PageChangesEnabled", "FormInteractionsEnabled", "SearchQueryParameter", "UriQueryParameter" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ConnectedSiteTag), global::Google.Analytics.Admin.V1Alpha.ConnectedSiteTag.Parser, new[]{ "DisplayName", "TagId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.ConnectedSiteTag), global::Google.Analytics.Admin.V1Alpha.ConnectedSiteTag.Parser, new[]{ "DisplayName", "TagId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings), global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings.Parser, new[]{ "Name", "EmailRedactionEnabled", "QueryParameterRedactionEnabled", "QueryParameterKeys" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AdSenseLink), global::Google.Analytics.Admin.V1Alpha.AdSenseLink.Parser, new[]{ "Name", "AdClientCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink), global::Google.Analytics.Admin.V1Alpha.RollupPropertySourceLink.Parser, new[]{ "Name", "SourceProperty" }, null, null, null, null)
           }));
     }
     #endregion
@@ -662,9 +779,37 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// </summary>
     [pbr::OriginalName("CHANNEL_GROUP")] ChannelGroup = 22,
     /// <summary>
+    /// BigQuery link resource
+    /// </summary>
+    [pbr::OriginalName("BIGQUERY_LINK")] BigqueryLink = 23,
+    /// <summary>
     /// EnhancedMeasurementSettings resource
     /// </summary>
     [pbr::OriginalName("ENHANCED_MEASUREMENT_SETTINGS")] EnhancedMeasurementSettings = 24,
+    /// <summary>
+    /// DataRedactionSettings resource
+    /// </summary>
+    [pbr::OriginalName("DATA_REDACTION_SETTINGS")] DataRedactionSettings = 25,
+    /// <summary>
+    /// SKAdNetworkConversionValueSchema resource
+    /// </summary>
+    [pbr::OriginalName("SKADNETWORK_CONVERSION_VALUE_SCHEMA")] SkadnetworkConversionValueSchema = 26,
+    /// <summary>
+    /// AdSenseLink resource
+    /// </summary>
+    [pbr::OriginalName("ADSENSE_LINK")] AdsenseLink = 27,
+    /// <summary>
+    /// Audience resource
+    /// </summary>
+    [pbr::OriginalName("AUDIENCE")] Audience = 28,
+    /// <summary>
+    /// EventCreateRule resource
+    /// </summary>
+    [pbr::OriginalName("EVENT_CREATE_RULE")] EventCreateRule = 29,
+    /// <summary>
+    /// CalculatedMetric resource
+    /// </summary>
+    [pbr::OriginalName("CALCULATED_METRIC")] CalculatedMetric = 31,
   }
 
   /// <summary>
@@ -768,7 +913,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// Types of Property resources.
+  /// Types of `Property` resources.
   /// </summary>
   public enum PropertyType {
     /// <summary>
@@ -776,17 +921,42 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Ordinary GA4 property
+    /// Ordinary Google Analytics property
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_ORDINARY")] Ordinary = 1,
     /// <summary>
-    /// GA4 subproperty
+    /// Google Analytics subproperty
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_SUBPROPERTY")] Subproperty = 2,
     /// <summary>
-    /// GA4 rollup property
+    /// Google Analytics rollup property
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_ROLLUP")] Rollup = 3,
+  }
+
+  /// <summary>
+  /// The coarse conversion value set on the updatePostbackConversionValue SDK call
+  /// when a ConversionValues.event_mappings conditions are satisfied. For
+  /// more information, see
+  /// [SKAdNetwork.CoarseConversionValue](https://developer.apple.com/documentation/storekit/skadnetwork/coarseconversionvalue).
+  /// </summary>
+  public enum CoarseValue {
+    /// <summary>
+    /// Coarse value not specified.
+    /// </summary>
+    [pbr::OriginalName("COARSE_VALUE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Coarse value of low.
+    /// </summary>
+    [pbr::OriginalName("COARSE_VALUE_LOW")] Low = 1,
+    /// <summary>
+    /// Coarse value of medium.
+    /// </summary>
+    [pbr::OriginalName("COARSE_VALUE_MEDIUM")] Medium = 2,
+    /// <summary>
+    /// Coarse value of high.
+    /// </summary>
+    [pbr::OriginalName("COARSE_VALUE_HIGH")] High = 3,
   }
 
   #endregion
@@ -795,6 +965,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A resource message representing a Google Analytics account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Account : pb::IMessage<Account>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -835,6 +1006,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       displayName_ = other.displayName_;
       regionCode_ = other.regionCode_;
       deleted_ = other.deleted_;
+      gmpOrganization_ = other.gmpOrganization_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -937,6 +1109,23 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "gmp_organization" field.</summary>
+    public const int GmpOrganizationFieldNumber = 7;
+    private string gmpOrganization_ = "";
+    /// <summary>
+    /// Output only. The URI for a Google Marketing Platform organization resource.
+    /// Only set when this account is connected to a GMP organization.
+    /// Format: marketingplatformadmin.googleapis.com/organizations/{org_id}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GmpOrganization {
+      get { return gmpOrganization_; }
+      set {
+        gmpOrganization_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -958,6 +1147,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (DisplayName != other.DisplayName) return false;
       if (RegionCode != other.RegionCode) return false;
       if (Deleted != other.Deleted) return false;
+      if (GmpOrganization != other.GmpOrganization) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -971,6 +1161,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
       if (Deleted != false) hash ^= Deleted.GetHashCode();
+      if (GmpOrganization.Length != 0) hash ^= GmpOrganization.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1013,6 +1204,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(48);
         output.WriteBool(Deleted);
       }
+      if (GmpOrganization.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(GmpOrganization);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1047,6 +1242,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(48);
         output.WriteBool(Deleted);
       }
+      if (GmpOrganization.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(GmpOrganization);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1074,6 +1273,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (Deleted != false) {
         size += 1 + 1;
+      }
+      if (GmpOrganization.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GmpOrganization);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1110,6 +1312,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (other.Deleted != false) {
         Deleted = other.Deleted;
+      }
+      if (other.GmpOrganization.Length != 0) {
+        GmpOrganization = other.GmpOrganization;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1154,6 +1359,10 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           case 48: {
             Deleted = input.ReadBool();
+            break;
+          }
+          case 58: {
+            GmpOrganization = input.ReadString();
             break;
           }
         }
@@ -1201,6 +1410,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             Deleted = input.ReadBool();
             break;
           }
+          case 58: {
+            GmpOrganization = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1209,8 +1422,9 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A resource message representing a Google Analytics GA4 property.
+  /// A resource message representing a Google Analytics property.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Property : pb::IMessage<Property>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1290,8 +1504,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// <summary>
     /// Immutable. The property type for this Property resource. When creating a
     /// property, if the type is "PROPERTY_TYPE_UNSPECIFIED", then
-    /// "ORDINARY_PROPERTY" will be implied. "SUBPROPERTY" and "ROLLUP_PROPERTY"
-    /// types cannot yet be created with the Google Analytics Admin API.
+    /// "ORDINARY_PROPERTY" will be implied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1951,6 +2164,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A resource message representing a data stream.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataStream : pb::IMessage<DataStream>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2553,6 +2767,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Data specific to web streams.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WebStreamData : pb::IMessage<WebStreamData>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2603,8 +2818,9 @@ namespace Google.Analytics.Admin.V1Alpha {
         public const int MeasurementIdFieldNumber = 1;
         private string measurementId_ = "";
         /// <summary>
-        /// Output only. Analytics "Measurement ID", without the "G-" prefix.
-        /// Example: "G-1A2BCD345E" would just be "1A2BCD345E"
+        /// Output only. Analytics Measurement ID.
+        ///
+        /// Example: "G-1A2BCD345E"
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2635,7 +2851,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         public const int DefaultUriFieldNumber = 3;
         private string defaultUri_ = "";
         /// <summary>
-        /// Immutable. Domain name of the web app being measured, or empty.
+        /// Domain name of the web app being measured, or empty.
         /// Example: "http://www.google.com", "https://www.google.com"
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2831,6 +3047,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Data specific to Android app streams.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AndroidAppStreamData : pb::IMessage<AndroidAppStreamData>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3068,6 +3285,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Data specific to iOS app streams.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IosAppStreamData : pb::IMessage<IosAppStreamData>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3308,588 +3526,9 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A resource message representing a user's permissions on an Account or
-  /// Property resource.
+  /// A link between a Google Analytics property and a Firebase project.
   /// </summary>
-  public sealed partial class UserLink : pb::IMessage<UserLink>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<UserLink> _parser = new pb::MessageParser<UserLink>(() => new UserLink());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<UserLink> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public UserLink() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public UserLink(UserLink other) : this() {
-      name_ = other.name_;
-      emailAddress_ = other.emailAddress_;
-      directRoles_ = other.directRoles_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public UserLink Clone() {
-      return new UserLink(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    /// <summary>
-    /// Output only. Example format: properties/1234/userLinks/5678
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "email_address" field.</summary>
-    public const int EmailAddressFieldNumber = 2;
-    private string emailAddress_ = "";
-    /// <summary>
-    /// Immutable. Email address of the user to link
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string EmailAddress {
-      get { return emailAddress_; }
-      set {
-        emailAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "direct_roles" field.</summary>
-    public const int DirectRolesFieldNumber = 3;
-    private static readonly pb::FieldCodec<string> _repeated_directRoles_codec
-        = pb::FieldCodec.ForString(26);
-    private readonly pbc::RepeatedField<string> directRoles_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Roles directly assigned to this user for this account or property.
-    ///
-    /// Valid values:
-    /// predefinedRoles/viewer
-    /// predefinedRoles/analyst
-    /// predefinedRoles/editor
-    /// predefinedRoles/admin
-    /// predefinedRoles/no-cost-data
-    /// predefinedRoles/no-revenue-data
-    ///
-    /// Excludes roles that are inherited from a higher-level entity, group,
-    /// or organization admin role.
-    ///
-    /// A UserLink that is updated to have an empty list of direct_roles will be
-    /// deleted.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> DirectRoles {
-      get { return directRoles_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as UserLink);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(UserLink other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Name != other.Name) return false;
-      if (EmailAddress != other.EmailAddress) return false;
-      if(!directRoles_.Equals(other.directRoles_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (EmailAddress.Length != 0) hash ^= EmailAddress.GetHashCode();
-      hash ^= directRoles_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (EmailAddress.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(EmailAddress);
-      }
-      directRoles_.WriteTo(output, _repeated_directRoles_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (EmailAddress.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(EmailAddress);
-      }
-      directRoles_.WriteTo(ref output, _repeated_directRoles_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (EmailAddress.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EmailAddress);
-      }
-      size += directRoles_.CalculateSize(_repeated_directRoles_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(UserLink other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.EmailAddress.Length != 0) {
-        EmailAddress = other.EmailAddress;
-      }
-      directRoles_.Add(other.directRoles_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            EmailAddress = input.ReadString();
-            break;
-          }
-          case 26: {
-            directRoles_.AddEntriesFrom(input, _repeated_directRoles_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            EmailAddress = input.ReadString();
-            break;
-          }
-          case 26: {
-            directRoles_.AddEntriesFrom(ref input, _repeated_directRoles_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Read-only resource used to summarize a principal's effective roles.
-  /// </summary>
-  public sealed partial class AuditUserLink : pb::IMessage<AuditUserLink>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<AuditUserLink> _parser = new pb::MessageParser<AuditUserLink>(() => new AuditUserLink());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<AuditUserLink> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AuditUserLink() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AuditUserLink(AuditUserLink other) : this() {
-      name_ = other.name_;
-      emailAddress_ = other.emailAddress_;
-      directRoles_ = other.directRoles_.Clone();
-      effectiveRoles_ = other.effectiveRoles_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AuditUserLink Clone() {
-      return new AuditUserLink(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    /// <summary>
-    /// Example format: properties/1234/userLinks/5678
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "email_address" field.</summary>
-    public const int EmailAddressFieldNumber = 2;
-    private string emailAddress_ = "";
-    /// <summary>
-    /// Email address of the linked user
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string EmailAddress {
-      get { return emailAddress_; }
-      set {
-        emailAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "direct_roles" field.</summary>
-    public const int DirectRolesFieldNumber = 3;
-    private static readonly pb::FieldCodec<string> _repeated_directRoles_codec
-        = pb::FieldCodec.ForString(26);
-    private readonly pbc::RepeatedField<string> directRoles_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Roles directly assigned to this user for this entity.
-    ///
-    /// Format: predefinedRoles/viewer
-    ///
-    /// Excludes roles that are inherited from an account (if this is for a
-    /// property), group, or organization admin role.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> DirectRoles {
-      get { return directRoles_; }
-    }
-
-    /// <summary>Field number for the "effective_roles" field.</summary>
-    public const int EffectiveRolesFieldNumber = 4;
-    private static readonly pb::FieldCodec<string> _repeated_effectiveRoles_codec
-        = pb::FieldCodec.ForString(34);
-    private readonly pbc::RepeatedField<string> effectiveRoles_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Union of all permissions a user has at this account or property (includes
-    /// direct permissions, group-inherited permissions, etc.).
-    ///
-    /// Format: predefinedRoles/viewer
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> EffectiveRoles {
-      get { return effectiveRoles_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as AuditUserLink);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(AuditUserLink other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Name != other.Name) return false;
-      if (EmailAddress != other.EmailAddress) return false;
-      if(!directRoles_.Equals(other.directRoles_)) return false;
-      if(!effectiveRoles_.Equals(other.effectiveRoles_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (EmailAddress.Length != 0) hash ^= EmailAddress.GetHashCode();
-      hash ^= directRoles_.GetHashCode();
-      hash ^= effectiveRoles_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (EmailAddress.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(EmailAddress);
-      }
-      directRoles_.WriteTo(output, _repeated_directRoles_codec);
-      effectiveRoles_.WriteTo(output, _repeated_effectiveRoles_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (EmailAddress.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(EmailAddress);
-      }
-      directRoles_.WriteTo(ref output, _repeated_directRoles_codec);
-      effectiveRoles_.WriteTo(ref output, _repeated_effectiveRoles_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (EmailAddress.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(EmailAddress);
-      }
-      size += directRoles_.CalculateSize(_repeated_directRoles_codec);
-      size += effectiveRoles_.CalculateSize(_repeated_effectiveRoles_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(AuditUserLink other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.EmailAddress.Length != 0) {
-        EmailAddress = other.EmailAddress;
-      }
-      directRoles_.Add(other.directRoles_);
-      effectiveRoles_.Add(other.effectiveRoles_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            EmailAddress = input.ReadString();
-            break;
-          }
-          case 26: {
-            directRoles_.AddEntriesFrom(input, _repeated_directRoles_codec);
-            break;
-          }
-          case 34: {
-            effectiveRoles_.AddEntriesFrom(input, _repeated_effectiveRoles_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            EmailAddress = input.ReadString();
-            break;
-          }
-          case 26: {
-            directRoles_.AddEntriesFrom(ref input, _repeated_directRoles_codec);
-            break;
-          }
-          case 34: {
-            effectiveRoles_.AddEntriesFrom(ref input, _repeated_effectiveRoles_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// A link between a GA4 property and a Firebase project.
-  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FirebaseLink : pb::IMessage<FirebaseLink>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3904,7 +3543,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4181,6 +3820,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// Read-only resource with the tag for sending data from a website to a
   /// DataStream. Only present for web DataStream resources.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GlobalSiteTag : pb::IMessage<GlobalSiteTag>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4195,7 +3835,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4417,8 +4057,9 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A link between a GA4 property and a Google Ads account.
+  /// A link between a Google Analytics property and a Google Ads account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GoogleAdsLink : pb::IMessage<GoogleAdsLink>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4433,7 +4074,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4888,6 +4529,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// A resource message representing data sharing settings of a Google Analytics
   /// account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataSharingSettings : pb::IMessage<DataSharingSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4902,7 +4544,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5288,8 +4930,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
   /// <summary>
   /// A virtual resource representing an overview of an account and
-  /// all its child GA4 properties.
+  /// all its child Google Analytics properties.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccountSummary : pb::IMessage<AccountSummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5304,7 +4947,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5596,8 +5239,9 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A virtual resource representing metadata for a GA4 property.
+  /// A virtual resource representing metadata for a Google Analytics property.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PropertySummary : pb::IMessage<PropertySummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5612,7 +5256,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5919,6 +5563,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A secret value used for sending hits to Measurement Protocol.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MeasurementProtocolSecret : pb::IMessage<MeasurementProtocolSecret>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5933,7 +5578,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6196,11 +5841,1454 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
+  /// SKAdNetwork conversion value schema of an iOS stream.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SKAdNetworkConversionValueSchema : pb::IMessage<SKAdNetworkConversionValueSchema>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SKAdNetworkConversionValueSchema> _parser = new pb::MessageParser<SKAdNetworkConversionValueSchema>(() => new SKAdNetworkConversionValueSchema());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SKAdNetworkConversionValueSchema> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SKAdNetworkConversionValueSchema() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SKAdNetworkConversionValueSchema(SKAdNetworkConversionValueSchema other) : this() {
+      name_ = other.name_;
+      postbackWindowOne_ = other.postbackWindowOne_ != null ? other.postbackWindowOne_.Clone() : null;
+      postbackWindowTwo_ = other.postbackWindowTwo_ != null ? other.postbackWindowTwo_.Clone() : null;
+      postbackWindowThree_ = other.postbackWindowThree_ != null ? other.postbackWindowThree_.Clone() : null;
+      applyConversionValues_ = other.applyConversionValues_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SKAdNetworkConversionValueSchema Clone() {
+      return new SKAdNetworkConversionValueSchema(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Resource name of the schema. This will be child of ONLY an iOS
+    /// stream, and there can be at most one such child under an iOS stream.
+    /// Format:
+    /// properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "postback_window_one" field.</summary>
+    public const int PostbackWindowOneFieldNumber = 2;
+    private global::Google.Analytics.Admin.V1Alpha.PostbackWindow postbackWindowOne_;
+    /// <summary>
+    /// Required. The conversion value settings for the first postback window.
+    /// These differ from values for postback window two and three in that they
+    /// contain a "Fine" grained conversion value (a numeric value).
+    ///
+    /// Conversion values for this postback window must be set.  The other windows
+    /// are optional and may inherit this window's settings if unset or disabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.PostbackWindow PostbackWindowOne {
+      get { return postbackWindowOne_; }
+      set {
+        postbackWindowOne_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "postback_window_two" field.</summary>
+    public const int PostbackWindowTwoFieldNumber = 3;
+    private global::Google.Analytics.Admin.V1Alpha.PostbackWindow postbackWindowTwo_;
+    /// <summary>
+    /// The conversion value settings for the second postback window.
+    ///
+    /// This field should only be configured if there is a need to define different
+    /// conversion values for this postback window.
+    ///
+    /// If enable_postback_window_settings is set to false for this postback
+    /// window, the values from postback_window_one will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.PostbackWindow PostbackWindowTwo {
+      get { return postbackWindowTwo_; }
+      set {
+        postbackWindowTwo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "postback_window_three" field.</summary>
+    public const int PostbackWindowThreeFieldNumber = 4;
+    private global::Google.Analytics.Admin.V1Alpha.PostbackWindow postbackWindowThree_;
+    /// <summary>
+    /// The conversion value settings for the third postback window.
+    ///
+    /// This field should only be set if the user chose to define different
+    /// conversion values for this postback window. It is allowed to configure
+    /// window 3 without setting window 2. In case window 1 &amp; 2 settings are set
+    /// and enable_postback_window_settings for this postback window is set to
+    /// false, the schema will inherit settings from postback_window_two.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.PostbackWindow PostbackWindowThree {
+      get { return postbackWindowThree_; }
+      set {
+        postbackWindowThree_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "apply_conversion_values" field.</summary>
+    public const int ApplyConversionValuesFieldNumber = 5;
+    private bool applyConversionValues_;
+    /// <summary>
+    /// If enabled, the GA SDK will set conversion values using this schema
+    /// definition, and schema will be exported to any Google Ads accounts linked
+    /// to this property. If disabled, the GA SDK will not automatically set
+    /// conversion values, and also the schema will not be exported to Ads.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ApplyConversionValues {
+      get { return applyConversionValues_; }
+      set {
+        applyConversionValues_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SKAdNetworkConversionValueSchema);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SKAdNetworkConversionValueSchema other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(PostbackWindowOne, other.PostbackWindowOne)) return false;
+      if (!object.Equals(PostbackWindowTwo, other.PostbackWindowTwo)) return false;
+      if (!object.Equals(PostbackWindowThree, other.PostbackWindowThree)) return false;
+      if (ApplyConversionValues != other.ApplyConversionValues) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (postbackWindowOne_ != null) hash ^= PostbackWindowOne.GetHashCode();
+      if (postbackWindowTwo_ != null) hash ^= PostbackWindowTwo.GetHashCode();
+      if (postbackWindowThree_ != null) hash ^= PostbackWindowThree.GetHashCode();
+      if (ApplyConversionValues != false) hash ^= ApplyConversionValues.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (postbackWindowOne_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PostbackWindowOne);
+      }
+      if (postbackWindowTwo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PostbackWindowTwo);
+      }
+      if (postbackWindowThree_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PostbackWindowThree);
+      }
+      if (ApplyConversionValues != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ApplyConversionValues);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (postbackWindowOne_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PostbackWindowOne);
+      }
+      if (postbackWindowTwo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PostbackWindowTwo);
+      }
+      if (postbackWindowThree_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PostbackWindowThree);
+      }
+      if (ApplyConversionValues != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ApplyConversionValues);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (postbackWindowOne_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PostbackWindowOne);
+      }
+      if (postbackWindowTwo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PostbackWindowTwo);
+      }
+      if (postbackWindowThree_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PostbackWindowThree);
+      }
+      if (ApplyConversionValues != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SKAdNetworkConversionValueSchema other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.postbackWindowOne_ != null) {
+        if (postbackWindowOne_ == null) {
+          PostbackWindowOne = new global::Google.Analytics.Admin.V1Alpha.PostbackWindow();
+        }
+        PostbackWindowOne.MergeFrom(other.PostbackWindowOne);
+      }
+      if (other.postbackWindowTwo_ != null) {
+        if (postbackWindowTwo_ == null) {
+          PostbackWindowTwo = new global::Google.Analytics.Admin.V1Alpha.PostbackWindow();
+        }
+        PostbackWindowTwo.MergeFrom(other.PostbackWindowTwo);
+      }
+      if (other.postbackWindowThree_ != null) {
+        if (postbackWindowThree_ == null) {
+          PostbackWindowThree = new global::Google.Analytics.Admin.V1Alpha.PostbackWindow();
+        }
+        PostbackWindowThree.MergeFrom(other.PostbackWindowThree);
+      }
+      if (other.ApplyConversionValues != false) {
+        ApplyConversionValues = other.ApplyConversionValues;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (postbackWindowOne_ == null) {
+              PostbackWindowOne = new global::Google.Analytics.Admin.V1Alpha.PostbackWindow();
+            }
+            input.ReadMessage(PostbackWindowOne);
+            break;
+          }
+          case 26: {
+            if (postbackWindowTwo_ == null) {
+              PostbackWindowTwo = new global::Google.Analytics.Admin.V1Alpha.PostbackWindow();
+            }
+            input.ReadMessage(PostbackWindowTwo);
+            break;
+          }
+          case 34: {
+            if (postbackWindowThree_ == null) {
+              PostbackWindowThree = new global::Google.Analytics.Admin.V1Alpha.PostbackWindow();
+            }
+            input.ReadMessage(PostbackWindowThree);
+            break;
+          }
+          case 40: {
+            ApplyConversionValues = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (postbackWindowOne_ == null) {
+              PostbackWindowOne = new global::Google.Analytics.Admin.V1Alpha.PostbackWindow();
+            }
+            input.ReadMessage(PostbackWindowOne);
+            break;
+          }
+          case 26: {
+            if (postbackWindowTwo_ == null) {
+              PostbackWindowTwo = new global::Google.Analytics.Admin.V1Alpha.PostbackWindow();
+            }
+            input.ReadMessage(PostbackWindowTwo);
+            break;
+          }
+          case 34: {
+            if (postbackWindowThree_ == null) {
+              PostbackWindowThree = new global::Google.Analytics.Admin.V1Alpha.PostbackWindow();
+            }
+            input.ReadMessage(PostbackWindowThree);
+            break;
+          }
+          case 40: {
+            ApplyConversionValues = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Settings for a SKAdNetwork conversion postback window.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PostbackWindow : pb::IMessage<PostbackWindow>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PostbackWindow> _parser = new pb::MessageParser<PostbackWindow>(() => new PostbackWindow());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PostbackWindow> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PostbackWindow() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PostbackWindow(PostbackWindow other) : this() {
+      conversionValues_ = other.conversionValues_.Clone();
+      postbackWindowSettingsEnabled_ = other.postbackWindowSettingsEnabled_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PostbackWindow Clone() {
+      return new PostbackWindow(this);
+    }
+
+    /// <summary>Field number for the "conversion_values" field.</summary>
+    public const int ConversionValuesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Admin.V1Alpha.ConversionValues> _repeated_conversionValues_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Analytics.Admin.V1Alpha.ConversionValues.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.ConversionValues> conversionValues_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.ConversionValues>();
+    /// <summary>
+    /// Ordering of the repeated field will be used to prioritize the conversion
+    /// value settings. Lower indexed entries are prioritized higher. The first
+    /// conversion value setting that evaluates to true will be selected. It must
+    /// have at least one entry if enable_postback_window_settings is set to
+    /// true. It can have maximum of 128 entries.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.ConversionValues> ConversionValues {
+      get { return conversionValues_; }
+    }
+
+    /// <summary>Field number for the "postback_window_settings_enabled" field.</summary>
+    public const int PostbackWindowSettingsEnabledFieldNumber = 2;
+    private bool postbackWindowSettingsEnabled_;
+    /// <summary>
+    /// If enable_postback_window_settings is true, conversion_values
+    /// must be populated and will be used for determining when and how to set the
+    /// Conversion Value on a client device and exporting schema to linked Ads
+    /// accounts. If false, the settings are not used, but are retained in case
+    /// they may be used in the future. This must always be true for
+    /// postback_window_one.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PostbackWindowSettingsEnabled {
+      get { return postbackWindowSettingsEnabled_; }
+      set {
+        postbackWindowSettingsEnabled_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PostbackWindow);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PostbackWindow other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!conversionValues_.Equals(other.conversionValues_)) return false;
+      if (PostbackWindowSettingsEnabled != other.PostbackWindowSettingsEnabled) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= conversionValues_.GetHashCode();
+      if (PostbackWindowSettingsEnabled != false) hash ^= PostbackWindowSettingsEnabled.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      conversionValues_.WriteTo(output, _repeated_conversionValues_codec);
+      if (PostbackWindowSettingsEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(PostbackWindowSettingsEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      conversionValues_.WriteTo(ref output, _repeated_conversionValues_codec);
+      if (PostbackWindowSettingsEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(PostbackWindowSettingsEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += conversionValues_.CalculateSize(_repeated_conversionValues_codec);
+      if (PostbackWindowSettingsEnabled != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PostbackWindow other) {
+      if (other == null) {
+        return;
+      }
+      conversionValues_.Add(other.conversionValues_);
+      if (other.PostbackWindowSettingsEnabled != false) {
+        PostbackWindowSettingsEnabled = other.PostbackWindowSettingsEnabled;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            conversionValues_.AddEntriesFrom(input, _repeated_conversionValues_codec);
+            break;
+          }
+          case 16: {
+            PostbackWindowSettingsEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            conversionValues_.AddEntriesFrom(ref input, _repeated_conversionValues_codec);
+            break;
+          }
+          case 16: {
+            PostbackWindowSettingsEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Conversion value settings for a postback window for SKAdNetwork conversion
+  /// value schema.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ConversionValues : pb::IMessage<ConversionValues>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ConversionValues> _parser = new pb::MessageParser<ConversionValues>(() => new ConversionValues());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ConversionValues> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConversionValues() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConversionValues(ConversionValues other) : this() {
+      _hasBits0 = other._hasBits0;
+      displayName_ = other.displayName_;
+      fineValue_ = other.fineValue_;
+      coarseValue_ = other.coarseValue_;
+      eventMappings_ = other.eventMappings_.Clone();
+      lockEnabled_ = other.lockEnabled_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConversionValues Clone() {
+      return new ConversionValues(this);
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 1;
+    private string displayName_ = "";
+    /// <summary>
+    /// Display name of the SKAdNetwork conversion value.
+    /// The max allowed display name length is 50 UTF-16 code units.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "fine_value" field.</summary>
+    public const int FineValueFieldNumber = 2;
+    private readonly static int FineValueDefaultValue = 0;
+
+    private int fineValue_;
+    /// <summary>
+    /// The fine-grained conversion value.  This is applicable only to the first
+    /// postback window. Its valid values are [0,63], both inclusive. It must be
+    /// set for postback window 1, and must not be set for postback window 2 &amp; 3.
+    /// This value is not guaranteed to be unique.
+    ///
+    /// If the configuration for the first postback window is re-used for second or
+    /// third postback windows this field has no effect.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int FineValue {
+      get { if ((_hasBits0 & 1) != 0) { return fineValue_; } else { return FineValueDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        fineValue_ = value;
+      }
+    }
+    /// <summary>Gets whether the "fine_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFineValue {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "fine_value" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFineValue() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "coarse_value" field.</summary>
+    public const int CoarseValueFieldNumber = 3;
+    private global::Google.Analytics.Admin.V1Alpha.CoarseValue coarseValue_ = global::Google.Analytics.Admin.V1Alpha.CoarseValue.Unspecified;
+    /// <summary>
+    /// Required. A coarse grained conversion value.
+    ///
+    /// This value is not guaranteed to be unique.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.CoarseValue CoarseValue {
+      get { return coarseValue_; }
+      set {
+        coarseValue_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "event_mappings" field.</summary>
+    public const int EventMappingsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Admin.V1Alpha.EventMapping> _repeated_eventMappings_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Analytics.Admin.V1Alpha.EventMapping.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.EventMapping> eventMappings_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.EventMapping>();
+    /// <summary>
+    /// Event conditions that must be met for this Conversion Value to be achieved.
+    /// The conditions in this list are ANDed together. It must have minimum of 1
+    /// entry and maximum of 3 entries, if the postback window is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.EventMapping> EventMappings {
+      get { return eventMappings_; }
+    }
+
+    /// <summary>Field number for the "lock_enabled" field.</summary>
+    public const int LockEnabledFieldNumber = 5;
+    private bool lockEnabled_;
+    /// <summary>
+    /// If true, the SDK should lock to this conversion value for the current
+    /// postback window.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool LockEnabled {
+      get { return lockEnabled_; }
+      set {
+        lockEnabled_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ConversionValues);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ConversionValues other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DisplayName != other.DisplayName) return false;
+      if (FineValue != other.FineValue) return false;
+      if (CoarseValue != other.CoarseValue) return false;
+      if(!eventMappings_.Equals(other.eventMappings_)) return false;
+      if (LockEnabled != other.LockEnabled) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (HasFineValue) hash ^= FineValue.GetHashCode();
+      if (CoarseValue != global::Google.Analytics.Admin.V1Alpha.CoarseValue.Unspecified) hash ^= CoarseValue.GetHashCode();
+      hash ^= eventMappings_.GetHashCode();
+      if (LockEnabled != false) hash ^= LockEnabled.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DisplayName);
+      }
+      if (HasFineValue) {
+        output.WriteRawTag(16);
+        output.WriteInt32(FineValue);
+      }
+      if (CoarseValue != global::Google.Analytics.Admin.V1Alpha.CoarseValue.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) CoarseValue);
+      }
+      eventMappings_.WriteTo(output, _repeated_eventMappings_codec);
+      if (LockEnabled != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(LockEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DisplayName);
+      }
+      if (HasFineValue) {
+        output.WriteRawTag(16);
+        output.WriteInt32(FineValue);
+      }
+      if (CoarseValue != global::Google.Analytics.Admin.V1Alpha.CoarseValue.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) CoarseValue);
+      }
+      eventMappings_.WriteTo(ref output, _repeated_eventMappings_codec);
+      if (LockEnabled != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(LockEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (HasFineValue) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FineValue);
+      }
+      if (CoarseValue != global::Google.Analytics.Admin.V1Alpha.CoarseValue.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CoarseValue);
+      }
+      size += eventMappings_.CalculateSize(_repeated_eventMappings_codec);
+      if (LockEnabled != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ConversionValues other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.HasFineValue) {
+        FineValue = other.FineValue;
+      }
+      if (other.CoarseValue != global::Google.Analytics.Admin.V1Alpha.CoarseValue.Unspecified) {
+        CoarseValue = other.CoarseValue;
+      }
+      eventMappings_.Add(other.eventMappings_);
+      if (other.LockEnabled != false) {
+        LockEnabled = other.LockEnabled;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 16: {
+            FineValue = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            CoarseValue = (global::Google.Analytics.Admin.V1Alpha.CoarseValue) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            eventMappings_.AddEntriesFrom(input, _repeated_eventMappings_codec);
+            break;
+          }
+          case 40: {
+            LockEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 16: {
+            FineValue = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            CoarseValue = (global::Google.Analytics.Admin.V1Alpha.CoarseValue) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            eventMappings_.AddEntriesFrom(ref input, _repeated_eventMappings_codec);
+            break;
+          }
+          case 40: {
+            LockEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Event setting conditions to match an event.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EventMapping : pb::IMessage<EventMapping>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EventMapping> _parser = new pb::MessageParser<EventMapping>(() => new EventMapping());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EventMapping> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventMapping() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventMapping(EventMapping other) : this() {
+      _hasBits0 = other._hasBits0;
+      eventName_ = other.eventName_;
+      minEventCount_ = other.minEventCount_;
+      maxEventCount_ = other.maxEventCount_;
+      minEventValue_ = other.minEventValue_;
+      maxEventValue_ = other.maxEventValue_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EventMapping Clone() {
+      return new EventMapping(this);
+    }
+
+    /// <summary>Field number for the "event_name" field.</summary>
+    public const int EventNameFieldNumber = 1;
+    private string eventName_ = "";
+    /// <summary>
+    /// Required. Name of the Google Analytics event. It must always be set.
+    /// The max allowed display name length is 40 UTF-16 code units.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EventName {
+      get { return eventName_; }
+      set {
+        eventName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "min_event_count" field.</summary>
+    public const int MinEventCountFieldNumber = 2;
+    private readonly static long MinEventCountDefaultValue = 0L;
+
+    private long minEventCount_;
+    /// <summary>
+    /// At least one of the following four min/max values must be set. The
+    /// values set will be ANDed together to qualify an event.
+    /// The minimum number of times the event occurred. If not set, minimum event
+    /// count won't be checked.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MinEventCount {
+      get { if ((_hasBits0 & 1) != 0) { return minEventCount_; } else { return MinEventCountDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        minEventCount_ = value;
+      }
+    }
+    /// <summary>Gets whether the "min_event_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMinEventCount {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "min_event_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMinEventCount() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "max_event_count" field.</summary>
+    public const int MaxEventCountFieldNumber = 3;
+    private readonly static long MaxEventCountDefaultValue = 0L;
+
+    private long maxEventCount_;
+    /// <summary>
+    /// The maximum number of times the event occurred. If not set, maximum event
+    /// count won't be checked.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MaxEventCount {
+      get { if ((_hasBits0 & 2) != 0) { return maxEventCount_; } else { return MaxEventCountDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        maxEventCount_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_event_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxEventCount {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "max_event_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxEventCount() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "min_event_value" field.</summary>
+    public const int MinEventValueFieldNumber = 4;
+    private readonly static double MinEventValueDefaultValue = 0D;
+
+    private double minEventValue_;
+    /// <summary>
+    /// The minimum revenue generated due to the event. Revenue currency will be
+    /// defined at the property level. If not set, minimum event value won't be
+    /// checked.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double MinEventValue {
+      get { if ((_hasBits0 & 4) != 0) { return minEventValue_; } else { return MinEventValueDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        minEventValue_ = value;
+      }
+    }
+    /// <summary>Gets whether the "min_event_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMinEventValue {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "min_event_value" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMinEventValue() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "max_event_value" field.</summary>
+    public const int MaxEventValueFieldNumber = 5;
+    private readonly static double MaxEventValueDefaultValue = 0D;
+
+    private double maxEventValue_;
+    /// <summary>
+    /// The maximum revenue generated due to the event. Revenue currency will be
+    /// defined at the property level. If not set, maximum event value won't be
+    /// checked.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double MaxEventValue {
+      get { if ((_hasBits0 & 8) != 0) { return maxEventValue_; } else { return MaxEventValueDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        maxEventValue_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_event_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxEventValue {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "max_event_value" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxEventValue() {
+      _hasBits0 &= ~8;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EventMapping);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EventMapping other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EventName != other.EventName) return false;
+      if (MinEventCount != other.MinEventCount) return false;
+      if (MaxEventCount != other.MaxEventCount) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(MinEventValue, other.MinEventValue)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(MaxEventValue, other.MaxEventValue)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EventName.Length != 0) hash ^= EventName.GetHashCode();
+      if (HasMinEventCount) hash ^= MinEventCount.GetHashCode();
+      if (HasMaxEventCount) hash ^= MaxEventCount.GetHashCode();
+      if (HasMinEventValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(MinEventValue);
+      if (HasMaxEventValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(MaxEventValue);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (EventName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(EventName);
+      }
+      if (HasMinEventCount) {
+        output.WriteRawTag(16);
+        output.WriteInt64(MinEventCount);
+      }
+      if (HasMaxEventCount) {
+        output.WriteRawTag(24);
+        output.WriteInt64(MaxEventCount);
+      }
+      if (HasMinEventValue) {
+        output.WriteRawTag(33);
+        output.WriteDouble(MinEventValue);
+      }
+      if (HasMaxEventValue) {
+        output.WriteRawTag(41);
+        output.WriteDouble(MaxEventValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EventName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(EventName);
+      }
+      if (HasMinEventCount) {
+        output.WriteRawTag(16);
+        output.WriteInt64(MinEventCount);
+      }
+      if (HasMaxEventCount) {
+        output.WriteRawTag(24);
+        output.WriteInt64(MaxEventCount);
+      }
+      if (HasMinEventValue) {
+        output.WriteRawTag(33);
+        output.WriteDouble(MinEventValue);
+      }
+      if (HasMaxEventValue) {
+        output.WriteRawTag(41);
+        output.WriteDouble(MaxEventValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (EventName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EventName);
+      }
+      if (HasMinEventCount) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinEventCount);
+      }
+      if (HasMaxEventCount) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxEventCount);
+      }
+      if (HasMinEventValue) {
+        size += 1 + 8;
+      }
+      if (HasMaxEventValue) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EventMapping other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EventName.Length != 0) {
+        EventName = other.EventName;
+      }
+      if (other.HasMinEventCount) {
+        MinEventCount = other.MinEventCount;
+      }
+      if (other.HasMaxEventCount) {
+        MaxEventCount = other.MaxEventCount;
+      }
+      if (other.HasMinEventValue) {
+        MinEventValue = other.MinEventValue;
+      }
+      if (other.HasMaxEventValue) {
+        MaxEventValue = other.MaxEventValue;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            EventName = input.ReadString();
+            break;
+          }
+          case 16: {
+            MinEventCount = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            MaxEventCount = input.ReadInt64();
+            break;
+          }
+          case 33: {
+            MinEventValue = input.ReadDouble();
+            break;
+          }
+          case 41: {
+            MaxEventValue = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            EventName = input.ReadString();
+            break;
+          }
+          case 16: {
+            MinEventCount = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            MaxEventCount = input.ReadInt64();
+            break;
+          }
+          case 33: {
+            MinEventValue = input.ReadDouble();
+            break;
+          }
+          case 41: {
+            MaxEventValue = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// A set of changes within a Google Analytics account or its child properties
   /// that resulted from the same cause. Common causes would be updates made in the
   /// Google Analytics UI, changes from customer support, or automatic Google
   /// Analytics system changes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChangeHistoryEvent : pb::IMessage<ChangeHistoryEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6215,7 +7303,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6598,6 +7686,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A description of a change to a single Google Analytics resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChangeHistoryChange : pb::IMessage<ChangeHistoryChange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6612,7 +7701,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6937,6 +8026,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// A snapshot of a resource as before or after the result of a change in
       /// change history.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ChangeHistoryResource : pb::IMessage<ChangeHistoryResource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -7020,11 +8110,32 @@ namespace Google.Analytics.Admin.V1Alpha {
             case ResourceOneofCase.ExpandedDataSet:
               ExpandedDataSet = other.ExpandedDataSet.Clone();
               break;
+            case ResourceOneofCase.ChannelGroup:
+              ChannelGroup = other.ChannelGroup.Clone();
+              break;
             case ResourceOneofCase.BigqueryLink:
               BigqueryLink = other.BigqueryLink.Clone();
               break;
             case ResourceOneofCase.EnhancedMeasurementSettings:
               EnhancedMeasurementSettings = other.EnhancedMeasurementSettings.Clone();
+              break;
+            case ResourceOneofCase.DataRedactionSettings:
+              DataRedactionSettings = other.DataRedactionSettings.Clone();
+              break;
+            case ResourceOneofCase.SkadnetworkConversionValueSchema:
+              SkadnetworkConversionValueSchema = other.SkadnetworkConversionValueSchema.Clone();
+              break;
+            case ResourceOneofCase.AdsenseLink:
+              AdsenseLink = other.AdsenseLink.Clone();
+              break;
+            case ResourceOneofCase.Audience:
+              Audience = other.Audience.Clone();
+              break;
+            case ResourceOneofCase.EventCreateRule:
+              EventCreateRule = other.EventCreateRule.Clone();
+              break;
+            case ResourceOneofCase.CalculatedMetric:
+              CalculatedMetric = other.CalculatedMetric.Clone();
               break;
           }
 
@@ -7279,6 +8390,21 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
 
+        /// <summary>Field number for the "channel_group" field.</summary>
+        public const int ChannelGroupFieldNumber = 22;
+        /// <summary>
+        /// A snapshot of a ChannelGroup resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.ChannelGroup ChannelGroup {
+          get { return resourceCase_ == ResourceOneofCase.ChannelGroup ? (global::Google.Analytics.Admin.V1Alpha.ChannelGroup) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.ChannelGroup;
+          }
+        }
+
         /// <summary>Field number for the "bigquery_link" field.</summary>
         public const int BigqueryLinkFieldNumber = 23;
         /// <summary>
@@ -7309,6 +8435,97 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
 
+        /// <summary>Field number for the "data_redaction_settings" field.</summary>
+        public const int DataRedactionSettingsFieldNumber = 25;
+        /// <summary>
+        /// A snapshot of DataRedactionSettings resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings DataRedactionSettings {
+          get { return resourceCase_ == ResourceOneofCase.DataRedactionSettings ? (global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.DataRedactionSettings;
+          }
+        }
+
+        /// <summary>Field number for the "skadnetwork_conversion_value_schema" field.</summary>
+        public const int SkadnetworkConversionValueSchemaFieldNumber = 26;
+        /// <summary>
+        /// A snapshot of SKAdNetworkConversionValueSchema resource in change
+        /// history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema SkadnetworkConversionValueSchema {
+          get { return resourceCase_ == ResourceOneofCase.SkadnetworkConversionValueSchema ? (global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.SkadnetworkConversionValueSchema;
+          }
+        }
+
+        /// <summary>Field number for the "adsense_link" field.</summary>
+        public const int AdsenseLinkFieldNumber = 27;
+        /// <summary>
+        /// A snapshot of an AdSenseLink resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.AdSenseLink AdsenseLink {
+          get { return resourceCase_ == ResourceOneofCase.AdsenseLink ? (global::Google.Analytics.Admin.V1Alpha.AdSenseLink) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.AdsenseLink;
+          }
+        }
+
+        /// <summary>Field number for the "audience" field.</summary>
+        public const int AudienceFieldNumber = 28;
+        /// <summary>
+        /// A snapshot of an Audience resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.Audience Audience {
+          get { return resourceCase_ == ResourceOneofCase.Audience ? (global::Google.Analytics.Admin.V1Alpha.Audience) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.Audience;
+          }
+        }
+
+        /// <summary>Field number for the "event_create_rule" field.</summary>
+        public const int EventCreateRuleFieldNumber = 29;
+        /// <summary>
+        /// A snapshot of an EventCreateRule resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.EventCreateRule EventCreateRule {
+          get { return resourceCase_ == ResourceOneofCase.EventCreateRule ? (global::Google.Analytics.Admin.V1Alpha.EventCreateRule) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.EventCreateRule;
+          }
+        }
+
+        /// <summary>Field number for the "calculated_metric" field.</summary>
+        public const int CalculatedMetricFieldNumber = 31;
+        /// <summary>
+        /// A snapshot of a CalculatedMetric resource in change history.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Analytics.Admin.V1Alpha.CalculatedMetric CalculatedMetric {
+          get { return resourceCase_ == ResourceOneofCase.CalculatedMetric ? (global::Google.Analytics.Admin.V1Alpha.CalculatedMetric) resource_ : null; }
+          set {
+            resource_ = value;
+            resourceCase_ = value == null ? ResourceOneofCase.None : ResourceOneofCase.CalculatedMetric;
+          }
+        }
+
         private object resource_;
         /// <summary>Enum of possible cases for the "resource" oneof.</summary>
         public enum ResourceOneofCase {
@@ -7329,8 +8546,15 @@ namespace Google.Analytics.Admin.V1Alpha {
           DataStream = 18,
           AttributionSettings = 20,
           ExpandedDataSet = 21,
+          ChannelGroup = 22,
           BigqueryLink = 23,
           EnhancedMeasurementSettings = 24,
+          DataRedactionSettings = 25,
+          SkadnetworkConversionValueSchema = 26,
+          AdsenseLink = 27,
+          Audience = 28,
+          EventCreateRule = 29,
+          CalculatedMetric = 31,
         }
         private ResourceOneofCase resourceCase_ = ResourceOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7377,8 +8601,15 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (!object.Equals(DataStream, other.DataStream)) return false;
           if (!object.Equals(AttributionSettings, other.AttributionSettings)) return false;
           if (!object.Equals(ExpandedDataSet, other.ExpandedDataSet)) return false;
+          if (!object.Equals(ChannelGroup, other.ChannelGroup)) return false;
           if (!object.Equals(BigqueryLink, other.BigqueryLink)) return false;
           if (!object.Equals(EnhancedMeasurementSettings, other.EnhancedMeasurementSettings)) return false;
+          if (!object.Equals(DataRedactionSettings, other.DataRedactionSettings)) return false;
+          if (!object.Equals(SkadnetworkConversionValueSchema, other.SkadnetworkConversionValueSchema)) return false;
+          if (!object.Equals(AdsenseLink, other.AdsenseLink)) return false;
+          if (!object.Equals(Audience, other.Audience)) return false;
+          if (!object.Equals(EventCreateRule, other.EventCreateRule)) return false;
+          if (!object.Equals(CalculatedMetric, other.CalculatedMetric)) return false;
           if (ResourceCase != other.ResourceCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -7403,8 +8634,15 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.DataStream) hash ^= DataStream.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.AttributionSettings) hash ^= AttributionSettings.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.ExpandedDataSet) hash ^= ExpandedDataSet.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.ChannelGroup) hash ^= ChannelGroup.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.BigqueryLink) hash ^= BigqueryLink.GetHashCode();
           if (resourceCase_ == ResourceOneofCase.EnhancedMeasurementSettings) hash ^= EnhancedMeasurementSettings.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.DataRedactionSettings) hash ^= DataRedactionSettings.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.SkadnetworkConversionValueSchema) hash ^= SkadnetworkConversionValueSchema.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.AdsenseLink) hash ^= AdsenseLink.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.Audience) hash ^= Audience.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.EventCreateRule) hash ^= EventCreateRule.GetHashCode();
+          if (resourceCase_ == ResourceOneofCase.CalculatedMetric) hash ^= CalculatedMetric.GetHashCode();
           hash ^= (int) resourceCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -7488,6 +8726,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             output.WriteRawTag(170, 1);
             output.WriteMessage(ExpandedDataSet);
           }
+          if (resourceCase_ == ResourceOneofCase.ChannelGroup) {
+            output.WriteRawTag(178, 1);
+            output.WriteMessage(ChannelGroup);
+          }
           if (resourceCase_ == ResourceOneofCase.BigqueryLink) {
             output.WriteRawTag(186, 1);
             output.WriteMessage(BigqueryLink);
@@ -7495,6 +8737,30 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.EnhancedMeasurementSettings) {
             output.WriteRawTag(194, 1);
             output.WriteMessage(EnhancedMeasurementSettings);
+          }
+          if (resourceCase_ == ResourceOneofCase.DataRedactionSettings) {
+            output.WriteRawTag(202, 1);
+            output.WriteMessage(DataRedactionSettings);
+          }
+          if (resourceCase_ == ResourceOneofCase.SkadnetworkConversionValueSchema) {
+            output.WriteRawTag(210, 1);
+            output.WriteMessage(SkadnetworkConversionValueSchema);
+          }
+          if (resourceCase_ == ResourceOneofCase.AdsenseLink) {
+            output.WriteRawTag(218, 1);
+            output.WriteMessage(AdsenseLink);
+          }
+          if (resourceCase_ == ResourceOneofCase.Audience) {
+            output.WriteRawTag(226, 1);
+            output.WriteMessage(Audience);
+          }
+          if (resourceCase_ == ResourceOneofCase.EventCreateRule) {
+            output.WriteRawTag(234, 1);
+            output.WriteMessage(EventCreateRule);
+          }
+          if (resourceCase_ == ResourceOneofCase.CalculatedMetric) {
+            output.WriteRawTag(250, 1);
+            output.WriteMessage(CalculatedMetric);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -7570,6 +8836,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             output.WriteRawTag(170, 1);
             output.WriteMessage(ExpandedDataSet);
           }
+          if (resourceCase_ == ResourceOneofCase.ChannelGroup) {
+            output.WriteRawTag(178, 1);
+            output.WriteMessage(ChannelGroup);
+          }
           if (resourceCase_ == ResourceOneofCase.BigqueryLink) {
             output.WriteRawTag(186, 1);
             output.WriteMessage(BigqueryLink);
@@ -7577,6 +8847,30 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.EnhancedMeasurementSettings) {
             output.WriteRawTag(194, 1);
             output.WriteMessage(EnhancedMeasurementSettings);
+          }
+          if (resourceCase_ == ResourceOneofCase.DataRedactionSettings) {
+            output.WriteRawTag(202, 1);
+            output.WriteMessage(DataRedactionSettings);
+          }
+          if (resourceCase_ == ResourceOneofCase.SkadnetworkConversionValueSchema) {
+            output.WriteRawTag(210, 1);
+            output.WriteMessage(SkadnetworkConversionValueSchema);
+          }
+          if (resourceCase_ == ResourceOneofCase.AdsenseLink) {
+            output.WriteRawTag(218, 1);
+            output.WriteMessage(AdsenseLink);
+          }
+          if (resourceCase_ == ResourceOneofCase.Audience) {
+            output.WriteRawTag(226, 1);
+            output.WriteMessage(Audience);
+          }
+          if (resourceCase_ == ResourceOneofCase.EventCreateRule) {
+            output.WriteRawTag(234, 1);
+            output.WriteMessage(EventCreateRule);
+          }
+          if (resourceCase_ == ResourceOneofCase.CalculatedMetric) {
+            output.WriteRawTag(250, 1);
+            output.WriteMessage(CalculatedMetric);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -7636,11 +8930,32 @@ namespace Google.Analytics.Admin.V1Alpha {
           if (resourceCase_ == ResourceOneofCase.ExpandedDataSet) {
             size += 2 + pb::CodedOutputStream.ComputeMessageSize(ExpandedDataSet);
           }
+          if (resourceCase_ == ResourceOneofCase.ChannelGroup) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(ChannelGroup);
+          }
           if (resourceCase_ == ResourceOneofCase.BigqueryLink) {
             size += 2 + pb::CodedOutputStream.ComputeMessageSize(BigqueryLink);
           }
           if (resourceCase_ == ResourceOneofCase.EnhancedMeasurementSettings) {
             size += 2 + pb::CodedOutputStream.ComputeMessageSize(EnhancedMeasurementSettings);
+          }
+          if (resourceCase_ == ResourceOneofCase.DataRedactionSettings) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(DataRedactionSettings);
+          }
+          if (resourceCase_ == ResourceOneofCase.SkadnetworkConversionValueSchema) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(SkadnetworkConversionValueSchema);
+          }
+          if (resourceCase_ == ResourceOneofCase.AdsenseLink) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(AdsenseLink);
+          }
+          if (resourceCase_ == ResourceOneofCase.Audience) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(Audience);
+          }
+          if (resourceCase_ == ResourceOneofCase.EventCreateRule) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(EventCreateRule);
+          }
+          if (resourceCase_ == ResourceOneofCase.CalculatedMetric) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(CalculatedMetric);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -7751,6 +9066,12 @@ namespace Google.Analytics.Admin.V1Alpha {
               }
               ExpandedDataSet.MergeFrom(other.ExpandedDataSet);
               break;
+            case ResourceOneofCase.ChannelGroup:
+              if (ChannelGroup == null) {
+                ChannelGroup = new global::Google.Analytics.Admin.V1Alpha.ChannelGroup();
+              }
+              ChannelGroup.MergeFrom(other.ChannelGroup);
+              break;
             case ResourceOneofCase.BigqueryLink:
               if (BigqueryLink == null) {
                 BigqueryLink = new global::Google.Analytics.Admin.V1Alpha.BigQueryLink();
@@ -7762,6 +9083,42 @@ namespace Google.Analytics.Admin.V1Alpha {
                 EnhancedMeasurementSettings = new global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings();
               }
               EnhancedMeasurementSettings.MergeFrom(other.EnhancedMeasurementSettings);
+              break;
+            case ResourceOneofCase.DataRedactionSettings:
+              if (DataRedactionSettings == null) {
+                DataRedactionSettings = new global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings();
+              }
+              DataRedactionSettings.MergeFrom(other.DataRedactionSettings);
+              break;
+            case ResourceOneofCase.SkadnetworkConversionValueSchema:
+              if (SkadnetworkConversionValueSchema == null) {
+                SkadnetworkConversionValueSchema = new global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema();
+              }
+              SkadnetworkConversionValueSchema.MergeFrom(other.SkadnetworkConversionValueSchema);
+              break;
+            case ResourceOneofCase.AdsenseLink:
+              if (AdsenseLink == null) {
+                AdsenseLink = new global::Google.Analytics.Admin.V1Alpha.AdSenseLink();
+              }
+              AdsenseLink.MergeFrom(other.AdsenseLink);
+              break;
+            case ResourceOneofCase.Audience:
+              if (Audience == null) {
+                Audience = new global::Google.Analytics.Admin.V1Alpha.Audience();
+              }
+              Audience.MergeFrom(other.Audience);
+              break;
+            case ResourceOneofCase.EventCreateRule:
+              if (EventCreateRule == null) {
+                EventCreateRule = new global::Google.Analytics.Admin.V1Alpha.EventCreateRule();
+              }
+              EventCreateRule.MergeFrom(other.EventCreateRule);
+              break;
+            case ResourceOneofCase.CalculatedMetric:
+              if (CalculatedMetric == null) {
+                CalculatedMetric = new global::Google.Analytics.Admin.V1Alpha.CalculatedMetric();
+              }
+              CalculatedMetric.MergeFrom(other.CalculatedMetric);
               break;
           }
 
@@ -7924,6 +9281,15 @@ namespace Google.Analytics.Admin.V1Alpha {
                 ExpandedDataSet = subBuilder;
                 break;
               }
+              case 178: {
+                global::Google.Analytics.Admin.V1Alpha.ChannelGroup subBuilder = new global::Google.Analytics.Admin.V1Alpha.ChannelGroup();
+                if (resourceCase_ == ResourceOneofCase.ChannelGroup) {
+                  subBuilder.MergeFrom(ChannelGroup);
+                }
+                input.ReadMessage(subBuilder);
+                ChannelGroup = subBuilder;
+                break;
+              }
               case 186: {
                 global::Google.Analytics.Admin.V1Alpha.BigQueryLink subBuilder = new global::Google.Analytics.Admin.V1Alpha.BigQueryLink();
                 if (resourceCase_ == ResourceOneofCase.BigqueryLink) {
@@ -7940,6 +9306,60 @@ namespace Google.Analytics.Admin.V1Alpha {
                 }
                 input.ReadMessage(subBuilder);
                 EnhancedMeasurementSettings = subBuilder;
+                break;
+              }
+              case 202: {
+                global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings subBuilder = new global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings();
+                if (resourceCase_ == ResourceOneofCase.DataRedactionSettings) {
+                  subBuilder.MergeFrom(DataRedactionSettings);
+                }
+                input.ReadMessage(subBuilder);
+                DataRedactionSettings = subBuilder;
+                break;
+              }
+              case 210: {
+                global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema subBuilder = new global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema();
+                if (resourceCase_ == ResourceOneofCase.SkadnetworkConversionValueSchema) {
+                  subBuilder.MergeFrom(SkadnetworkConversionValueSchema);
+                }
+                input.ReadMessage(subBuilder);
+                SkadnetworkConversionValueSchema = subBuilder;
+                break;
+              }
+              case 218: {
+                global::Google.Analytics.Admin.V1Alpha.AdSenseLink subBuilder = new global::Google.Analytics.Admin.V1Alpha.AdSenseLink();
+                if (resourceCase_ == ResourceOneofCase.AdsenseLink) {
+                  subBuilder.MergeFrom(AdsenseLink);
+                }
+                input.ReadMessage(subBuilder);
+                AdsenseLink = subBuilder;
+                break;
+              }
+              case 226: {
+                global::Google.Analytics.Admin.V1Alpha.Audience subBuilder = new global::Google.Analytics.Admin.V1Alpha.Audience();
+                if (resourceCase_ == ResourceOneofCase.Audience) {
+                  subBuilder.MergeFrom(Audience);
+                }
+                input.ReadMessage(subBuilder);
+                Audience = subBuilder;
+                break;
+              }
+              case 234: {
+                global::Google.Analytics.Admin.V1Alpha.EventCreateRule subBuilder = new global::Google.Analytics.Admin.V1Alpha.EventCreateRule();
+                if (resourceCase_ == ResourceOneofCase.EventCreateRule) {
+                  subBuilder.MergeFrom(EventCreateRule);
+                }
+                input.ReadMessage(subBuilder);
+                EventCreateRule = subBuilder;
+                break;
+              }
+              case 250: {
+                global::Google.Analytics.Admin.V1Alpha.CalculatedMetric subBuilder = new global::Google.Analytics.Admin.V1Alpha.CalculatedMetric();
+                if (resourceCase_ == ResourceOneofCase.CalculatedMetric) {
+                  subBuilder.MergeFrom(CalculatedMetric);
+                }
+                input.ReadMessage(subBuilder);
+                CalculatedMetric = subBuilder;
                 break;
               }
             }
@@ -8101,6 +9521,15 @@ namespace Google.Analytics.Admin.V1Alpha {
                 ExpandedDataSet = subBuilder;
                 break;
               }
+              case 178: {
+                global::Google.Analytics.Admin.V1Alpha.ChannelGroup subBuilder = new global::Google.Analytics.Admin.V1Alpha.ChannelGroup();
+                if (resourceCase_ == ResourceOneofCase.ChannelGroup) {
+                  subBuilder.MergeFrom(ChannelGroup);
+                }
+                input.ReadMessage(subBuilder);
+                ChannelGroup = subBuilder;
+                break;
+              }
               case 186: {
                 global::Google.Analytics.Admin.V1Alpha.BigQueryLink subBuilder = new global::Google.Analytics.Admin.V1Alpha.BigQueryLink();
                 if (resourceCase_ == ResourceOneofCase.BigqueryLink) {
@@ -8119,6 +9548,60 @@ namespace Google.Analytics.Admin.V1Alpha {
                 EnhancedMeasurementSettings = subBuilder;
                 break;
               }
+              case 202: {
+                global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings subBuilder = new global::Google.Analytics.Admin.V1Alpha.DataRedactionSettings();
+                if (resourceCase_ == ResourceOneofCase.DataRedactionSettings) {
+                  subBuilder.MergeFrom(DataRedactionSettings);
+                }
+                input.ReadMessage(subBuilder);
+                DataRedactionSettings = subBuilder;
+                break;
+              }
+              case 210: {
+                global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema subBuilder = new global::Google.Analytics.Admin.V1Alpha.SKAdNetworkConversionValueSchema();
+                if (resourceCase_ == ResourceOneofCase.SkadnetworkConversionValueSchema) {
+                  subBuilder.MergeFrom(SkadnetworkConversionValueSchema);
+                }
+                input.ReadMessage(subBuilder);
+                SkadnetworkConversionValueSchema = subBuilder;
+                break;
+              }
+              case 218: {
+                global::Google.Analytics.Admin.V1Alpha.AdSenseLink subBuilder = new global::Google.Analytics.Admin.V1Alpha.AdSenseLink();
+                if (resourceCase_ == ResourceOneofCase.AdsenseLink) {
+                  subBuilder.MergeFrom(AdsenseLink);
+                }
+                input.ReadMessage(subBuilder);
+                AdsenseLink = subBuilder;
+                break;
+              }
+              case 226: {
+                global::Google.Analytics.Admin.V1Alpha.Audience subBuilder = new global::Google.Analytics.Admin.V1Alpha.Audience();
+                if (resourceCase_ == ResourceOneofCase.Audience) {
+                  subBuilder.MergeFrom(Audience);
+                }
+                input.ReadMessage(subBuilder);
+                Audience = subBuilder;
+                break;
+              }
+              case 234: {
+                global::Google.Analytics.Admin.V1Alpha.EventCreateRule subBuilder = new global::Google.Analytics.Admin.V1Alpha.EventCreateRule();
+                if (resourceCase_ == ResourceOneofCase.EventCreateRule) {
+                  subBuilder.MergeFrom(EventCreateRule);
+                }
+                input.ReadMessage(subBuilder);
+                EventCreateRule = subBuilder;
+                break;
+              }
+              case 250: {
+                global::Google.Analytics.Admin.V1Alpha.CalculatedMetric subBuilder = new global::Google.Analytics.Admin.V1Alpha.CalculatedMetric();
+                if (resourceCase_ == ResourceOneofCase.CalculatedMetric) {
+                  subBuilder.MergeFrom(CalculatedMetric);
+                }
+                input.ReadMessage(subBuilder);
+                CalculatedMetric = subBuilder;
+                break;
+              }
             }
           }
         }
@@ -8132,8 +9615,10 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A link between a GA4 property and a Display &amp; Video 360 advertiser.
+  /// A link between a Google Analytics property and a Display &amp; Video 360
+  /// advertiser.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisplayVideo360AdvertiserLink : pb::IMessage<DisplayVideo360AdvertiserLink>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8148,7 +9633,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8256,9 +9741,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     private bool? campaignDataSharingEnabled_;
     /// <summary>
     /// Immutable. Enables the import of campaign data from Display &amp; Video 360
-    /// into the GA4 property. After link creation, this can only be updated from
-    /// the Display &amp; Video 360 product. If this field is not set on create, it
-    /// will be defaulted to true.
+    /// into the Google Analytics property. After link creation, this can only be
+    /// updated from the Display &amp; Video 360 product. If this field is not set on
+    /// create, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8276,10 +9761,10 @@ namespace Google.Analytics.Admin.V1Alpha {
     private bool? costDataSharingEnabled_;
     /// <summary>
     /// Immutable. Enables the import of cost data from Display &amp; Video 360 into
-    /// the GA4 property. This can only be enabled if campaign_data_sharing_enabled
-    /// is enabled. After link creation, this can only be updated from the Display
-    /// &amp; Video 360 product. If this field is not set on create, it will be
-    /// defaulted to true.
+    /// the Google Analytics property. This can only be enabled if
+    /// `campaign_data_sharing_enabled` is true. After link creation, this can
+    /// only be updated from the Display &amp; Video 360 product. If this field is not
+    /// set on create, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8563,13 +10048,14 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A proposal for a link between a GA4 property and a Display &amp; Video 360
-  /// advertiser.
+  /// A proposal for a link between a Google Analytics property and a Display &amp;
+  /// Video 360 advertiser.
   ///
   /// A proposal is converted to a DisplayVideo360AdvertiserLink once approved.
   /// Google Analytics admins approve inbound proposals while Display &amp; Video 360
   /// admins approve outbound proposals.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisplayVideo360AdvertiserLinkProposal : pb::IMessage<DisplayVideo360AdvertiserLinkProposal>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8584,7 +10070,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9090,8 +10576,9 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A link between a GA4 property and a Search Ads 360 entity.
+  /// A link between a Google Analytics property and a Search Ads 360 entity.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchAds360Link : pb::IMessage<SearchAds360Link>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9106,7 +10593,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9182,9 +10669,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     private bool? campaignDataSharingEnabled_;
     /// <summary>
     /// Immutable. Enables the import of campaign data from Search Ads 360 into the
-    /// GA4 property. After link creation, this can only be updated from the Search
-    /// Ads 360 product.
-    /// If this field is not set on create, it will be defaulted to true.
+    /// Google Analytics property. After link creation, this can only be updated
+    /// from the Search Ads 360 product. If this field is not set on create, it
+    /// will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9201,11 +10688,11 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::FieldCodec<bool?> _single_costDataSharingEnabled_codec = pb::FieldCodec.ForStructWrapper<bool>(34);
     private bool? costDataSharingEnabled_;
     /// <summary>
-    /// Immutable. Enables the import of cost data from Search Ads 360 to the GA4
-    /// property. This can only be enabled if campaign_data_sharing_enabled is
-    /// enabled. After link creation, this can only be updated from
-    /// the Search Ads 360 product.
-    /// If this field is not set on create, it will be defaulted to true.
+    /// Immutable. Enables the import of cost data from Search Ads 360 to the
+    /// Google Analytics property. This can only be enabled if
+    /// campaign_data_sharing_enabled is enabled. After link creation, this can
+    /// only be updated from the Search Ads 360 product. If this field is not set
+    /// on create, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9573,6 +11060,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// Status information for a link proposal.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LinkProposalStatusDetails : pb::IMessage<LinkProposalStatusDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9587,7 +11075,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9848,6 +11336,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A conversion event in a Google Analytics property.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConversionEvent : pb::IMessage<ConversionEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9862,7 +11351,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9887,6 +11376,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       deletable_ = other.deletable_;
       custom_ = other.custom_;
+      countingMethod_ = other.countingMethod_;
+      defaultConversionValue_ = other.defaultConversionValue_ != null ? other.defaultConversionValue_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9979,6 +11470,38 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "counting_method" field.</summary>
+    public const int CountingMethodFieldNumber = 6;
+    private global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.ConversionCountingMethod countingMethod_ = global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.ConversionCountingMethod.Unspecified;
+    /// <summary>
+    /// Optional. The method by which conversions will be counted across multiple
+    /// events within a session. If this value is not provided, it will be set to
+    /// `ONCE_PER_EVENT`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.ConversionCountingMethod CountingMethod {
+      get { return countingMethod_; }
+      set {
+        countingMethod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "default_conversion_value" field.</summary>
+    public const int DefaultConversionValueFieldNumber = 7;
+    private global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.DefaultConversionValue defaultConversionValue_;
+    /// <summary>
+    /// Optional. Defines a default value/currency for a conversion event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.DefaultConversionValue DefaultConversionValue {
+      get { return defaultConversionValue_; }
+      set {
+        defaultConversionValue_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9999,6 +11522,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (Deletable != other.Deletable) return false;
       if (Custom != other.Custom) return false;
+      if (CountingMethod != other.CountingMethod) return false;
+      if (!object.Equals(DefaultConversionValue, other.DefaultConversionValue)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10011,6 +11536,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (Deletable != false) hash ^= Deletable.GetHashCode();
       if (Custom != false) hash ^= Custom.GetHashCode();
+      if (CountingMethod != global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.ConversionCountingMethod.Unspecified) hash ^= CountingMethod.GetHashCode();
+      if (defaultConversionValue_ != null) hash ^= DefaultConversionValue.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10049,6 +11576,14 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(40);
         output.WriteBool(Custom);
       }
+      if (CountingMethod != global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.ConversionCountingMethod.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) CountingMethod);
+      }
+      if (defaultConversionValue_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DefaultConversionValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10079,6 +11614,14 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(40);
         output.WriteBool(Custom);
       }
+      if (CountingMethod != global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.ConversionCountingMethod.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) CountingMethod);
+      }
+      if (defaultConversionValue_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DefaultConversionValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10103,6 +11646,12 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (Custom != false) {
         size += 1 + 1;
+      }
+      if (CountingMethod != global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.ConversionCountingMethod.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CountingMethod);
+      }
+      if (defaultConversionValue_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultConversionValue);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -10133,6 +11682,15 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (other.Custom != false) {
         Custom = other.Custom;
+      }
+      if (other.CountingMethod != global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.ConversionCountingMethod.Unspecified) {
+        CountingMethod = other.CountingMethod;
+      }
+      if (other.defaultConversionValue_ != null) {
+        if (defaultConversionValue_ == null) {
+          DefaultConversionValue = new global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.DefaultConversionValue();
+        }
+        DefaultConversionValue.MergeFrom(other.DefaultConversionValue);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -10170,6 +11728,17 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           case 40: {
             Custom = input.ReadBool();
+            break;
+          }
+          case 48: {
+            CountingMethod = (global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.ConversionCountingMethod) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (defaultConversionValue_ == null) {
+              DefaultConversionValue = new global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.DefaultConversionValue();
+            }
+            input.ReadMessage(DefaultConversionValue);
             break;
           }
         }
@@ -10210,16 +11779,1060 @@ namespace Google.Analytics.Admin.V1Alpha {
             Custom = input.ReadBool();
             break;
           }
+          case 48: {
+            CountingMethod = (global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.ConversionCountingMethod) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (defaultConversionValue_ == null) {
+              DefaultConversionValue = new global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Types.DefaultConversionValue();
+            }
+            input.ReadMessage(DefaultConversionValue);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ConversionEvent message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The method by which conversions will be counted across multiple events
+      /// within a session.
+      /// </summary>
+      public enum ConversionCountingMethod {
+        /// <summary>
+        /// Counting method not specified.
+        /// </summary>
+        [pbr::OriginalName("CONVERSION_COUNTING_METHOD_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Each Event instance is considered a Conversion.
+        /// </summary>
+        [pbr::OriginalName("ONCE_PER_EVENT")] OncePerEvent = 1,
+        /// <summary>
+        /// An Event instance is considered a Conversion at most once per session per
+        /// user.
+        /// </summary>
+        [pbr::OriginalName("ONCE_PER_SESSION")] OncePerSession = 2,
+      }
+
+      /// <summary>
+      /// Defines a default value/currency for a conversion event. Both value and
+      /// currency must be provided.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DefaultConversionValue : pb::IMessage<DefaultConversionValue>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DefaultConversionValue> _parser = new pb::MessageParser<DefaultConversionValue>(() => new DefaultConversionValue());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DefaultConversionValue> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Analytics.Admin.V1Alpha.ConversionEvent.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DefaultConversionValue() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DefaultConversionValue(DefaultConversionValue other) : this() {
+          _hasBits0 = other._hasBits0;
+          value_ = other.value_;
+          currencyCode_ = other.currencyCode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DefaultConversionValue Clone() {
+          return new DefaultConversionValue(this);
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 1;
+        private readonly static double ValueDefaultValue = 0D;
+
+        private double value_;
+        /// <summary>
+        /// This value will be used to populate the value for all conversions
+        /// of the specified event_name where the event "value" parameter is unset.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Value {
+          get { if ((_hasBits0 & 1) != 0) { return value_; } else { return ValueDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            value_ = value;
+          }
+        }
+        /// <summary>Gets whether the "value" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValue {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "value" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValue() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "currency_code" field.</summary>
+        public const int CurrencyCodeFieldNumber = 2;
+        private readonly static string CurrencyCodeDefaultValue = "";
+
+        private string currencyCode_;
+        /// <summary>
+        /// When a conversion event for this event_name has no set currency,
+        /// this currency will be applied as the default. Must be in ISO 4217
+        /// currency code format. See https://en.wikipedia.org/wiki/ISO_4217 for
+        /// more information.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string CurrencyCode {
+          get { return currencyCode_ ?? CurrencyCodeDefaultValue; }
+          set {
+            currencyCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "currency_code" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasCurrencyCode {
+          get { return currencyCode_ != null; }
+        }
+        /// <summary>Clears the value of the "currency_code" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCurrencyCode() {
+          currencyCode_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DefaultConversionValue);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DefaultConversionValue other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Value, other.Value)) return false;
+          if (CurrencyCode != other.CurrencyCode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Value);
+          if (HasCurrencyCode) hash ^= CurrencyCode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasValue) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Value);
+          }
+          if (HasCurrencyCode) {
+            output.WriteRawTag(18);
+            output.WriteString(CurrencyCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasValue) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Value);
+          }
+          if (HasCurrencyCode) {
+            output.WriteRawTag(18);
+            output.WriteString(CurrencyCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasValue) {
+            size += 1 + 8;
+          }
+          if (HasCurrencyCode) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrencyCode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DefaultConversionValue other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasValue) {
+            Value = other.Value;
+          }
+          if (other.HasCurrencyCode) {
+            CurrencyCode = other.CurrencyCode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                Value = input.ReadDouble();
+                break;
+              }
+              case 18: {
+                CurrencyCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                Value = input.ReadDouble();
+                break;
+              }
+              case 18: {
+                CurrencyCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A key event in a Google Analytics property.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class KeyEvent : pb::IMessage<KeyEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<KeyEvent> _parser = new pb::MessageParser<KeyEvent>(() => new KeyEvent());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<KeyEvent> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KeyEvent() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KeyEvent(KeyEvent other) : this() {
+      name_ = other.name_;
+      eventName_ = other.eventName_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      deletable_ = other.deletable_;
+      custom_ = other.custom_;
+      countingMethod_ = other.countingMethod_;
+      defaultValue_ = other.defaultValue_ != null ? other.defaultValue_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KeyEvent Clone() {
+      return new KeyEvent(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Resource name of this key event.
+    /// Format: properties/{property}/keyEvents/{key_event}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "event_name" field.</summary>
+    public const int EventNameFieldNumber = 2;
+    private string eventName_ = "";
+    /// <summary>
+    /// Immutable. The event name for this key event.
+    /// Examples: 'click', 'purchase'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EventName {
+      get { return eventName_; }
+      set {
+        eventName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Time when this key event was created in the property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "deletable" field.</summary>
+    public const int DeletableFieldNumber = 4;
+    private bool deletable_;
+    /// <summary>
+    /// Output only. If set to true, this event can be deleted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Deletable {
+      get { return deletable_; }
+      set {
+        deletable_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "custom" field.</summary>
+    public const int CustomFieldNumber = 5;
+    private bool custom_;
+    /// <summary>
+    /// Output only. If set to true, this key event refers to a custom event.  If
+    /// set to false, this key event refers to a default event in GA. Default
+    /// events typically have special meaning in GA. Default events are usually
+    /// created for you by the GA system, but in some cases can be created by
+    /// property admins. Custom events count towards the maximum number of
+    /// custom key events that may be created per property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Custom {
+      get { return custom_; }
+      set {
+        custom_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "counting_method" field.</summary>
+    public const int CountingMethodFieldNumber = 6;
+    private global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.CountingMethod countingMethod_ = global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.CountingMethod.Unspecified;
+    /// <summary>
+    /// Required. The method by which Key Events will be counted across multiple
+    /// events within a session.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.CountingMethod CountingMethod {
+      get { return countingMethod_; }
+      set {
+        countingMethod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "default_value" field.</summary>
+    public const int DefaultValueFieldNumber = 7;
+    private global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.DefaultValue defaultValue_;
+    /// <summary>
+    /// Optional. Defines a default value/currency for a key event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.DefaultValue DefaultValue {
+      get { return defaultValue_; }
+      set {
+        defaultValue_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as KeyEvent);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(KeyEvent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (EventName != other.EventName) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (Deletable != other.Deletable) return false;
+      if (Custom != other.Custom) return false;
+      if (CountingMethod != other.CountingMethod) return false;
+      if (!object.Equals(DefaultValue, other.DefaultValue)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (EventName.Length != 0) hash ^= EventName.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (Deletable != false) hash ^= Deletable.GetHashCode();
+      if (Custom != false) hash ^= Custom.GetHashCode();
+      if (CountingMethod != global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.CountingMethod.Unspecified) hash ^= CountingMethod.GetHashCode();
+      if (defaultValue_ != null) hash ^= DefaultValue.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (EventName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EventName);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (Deletable != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Deletable);
+      }
+      if (Custom != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Custom);
+      }
+      if (CountingMethod != global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.CountingMethod.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) CountingMethod);
+      }
+      if (defaultValue_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DefaultValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (EventName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EventName);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (Deletable != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Deletable);
+      }
+      if (Custom != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Custom);
+      }
+      if (CountingMethod != global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.CountingMethod.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) CountingMethod);
+      }
+      if (defaultValue_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DefaultValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (EventName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EventName);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (Deletable != false) {
+        size += 1 + 1;
+      }
+      if (Custom != false) {
+        size += 1 + 1;
+      }
+      if (CountingMethod != global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.CountingMethod.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CountingMethod);
+      }
+      if (defaultValue_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultValue);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(KeyEvent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.EventName.Length != 0) {
+        EventName = other.EventName;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.Deletable != false) {
+        Deletable = other.Deletable;
+      }
+      if (other.Custom != false) {
+        Custom = other.Custom;
+      }
+      if (other.CountingMethod != global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.CountingMethod.Unspecified) {
+        CountingMethod = other.CountingMethod;
+      }
+      if (other.defaultValue_ != null) {
+        if (defaultValue_ == null) {
+          DefaultValue = new global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.DefaultValue();
+        }
+        DefaultValue.MergeFrom(other.DefaultValue);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            EventName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 32: {
+            Deletable = input.ReadBool();
+            break;
+          }
+          case 40: {
+            Custom = input.ReadBool();
+            break;
+          }
+          case 48: {
+            CountingMethod = (global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.CountingMethod) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (defaultValue_ == null) {
+              DefaultValue = new global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.DefaultValue();
+            }
+            input.ReadMessage(DefaultValue);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            EventName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 32: {
+            Deletable = input.ReadBool();
+            break;
+          }
+          case 40: {
+            Custom = input.ReadBool();
+            break;
+          }
+          case 48: {
+            CountingMethod = (global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.CountingMethod) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (defaultValue_ == null) {
+              DefaultValue = new global::Google.Analytics.Admin.V1Alpha.KeyEvent.Types.DefaultValue();
+            }
+            input.ReadMessage(DefaultValue);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the KeyEvent message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The method by which Key Events will be counted across multiple events
+      /// within a session.
+      /// </summary>
+      public enum CountingMethod {
+        /// <summary>
+        /// Counting method not specified.
+        /// </summary>
+        [pbr::OriginalName("COUNTING_METHOD_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Each Event instance is considered a Key Event.
+        /// </summary>
+        [pbr::OriginalName("ONCE_PER_EVENT")] OncePerEvent = 1,
+        /// <summary>
+        /// An Event instance is considered a Key Event at most once per session per
+        /// user.
+        /// </summary>
+        [pbr::OriginalName("ONCE_PER_SESSION")] OncePerSession = 2,
+      }
+
+      /// <summary>
+      /// Defines a default value/currency for a key event.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DefaultValue : pb::IMessage<DefaultValue>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DefaultValue> _parser = new pb::MessageParser<DefaultValue>(() => new DefaultValue());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DefaultValue> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Analytics.Admin.V1Alpha.KeyEvent.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DefaultValue() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DefaultValue(DefaultValue other) : this() {
+          numericValue_ = other.numericValue_;
+          currencyCode_ = other.currencyCode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DefaultValue Clone() {
+          return new DefaultValue(this);
+        }
+
+        /// <summary>Field number for the "numeric_value" field.</summary>
+        public const int NumericValueFieldNumber = 1;
+        private double numericValue_;
+        /// <summary>
+        /// Required. This will be used to populate the "value" parameter for all
+        /// occurrences of this Key Event (specified by event_name) where that
+        /// parameter is unset.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double NumericValue {
+          get { return numericValue_; }
+          set {
+            numericValue_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "currency_code" field.</summary>
+        public const int CurrencyCodeFieldNumber = 2;
+        private string currencyCode_ = "";
+        /// <summary>
+        /// Required. When an occurrence of this Key Event (specified by event_name)
+        /// has no set currency this currency will be applied as the default. Must be
+        /// in ISO 4217 currency code format.
+        ///
+        /// See https://en.wikipedia.org/wiki/ISO_4217 for more information.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string CurrencyCode {
+          get { return currencyCode_; }
+          set {
+            currencyCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DefaultValue);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DefaultValue other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(NumericValue, other.NumericValue)) return false;
+          if (CurrencyCode != other.CurrencyCode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (NumericValue != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(NumericValue);
+          if (CurrencyCode.Length != 0) hash ^= CurrencyCode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (NumericValue != 0D) {
+            output.WriteRawTag(9);
+            output.WriteDouble(NumericValue);
+          }
+          if (CurrencyCode.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CurrencyCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (NumericValue != 0D) {
+            output.WriteRawTag(9);
+            output.WriteDouble(NumericValue);
+          }
+          if (CurrencyCode.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CurrencyCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (NumericValue != 0D) {
+            size += 1 + 8;
+          }
+          if (CurrencyCode.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrencyCode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DefaultValue other) {
+          if (other == null) {
+            return;
+          }
+          if (other.NumericValue != 0D) {
+            NumericValue = other.NumericValue;
+          }
+          if (other.CurrencyCode.Length != 0) {
+            CurrencyCode = other.CurrencyCode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                NumericValue = input.ReadDouble();
+                break;
+              }
+              case 18: {
+                CurrencyCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                NumericValue = input.ReadDouble();
+                break;
+              }
+              case 18: {
+                CurrencyCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
   /// <summary>
   /// Settings values for Google Signals.  This is a singleton resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GoogleSignalsSettings : pb::IMessage<GoogleSignalsSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10234,7 +12847,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10497,6 +13110,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A definition for a CustomDimension.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomDimension : pb::IMessage<CustomDimension>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10511,7 +13125,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10571,6 +13185,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// If this is a user-scoped dimension, then this is the user property name.
     /// If this is an event-scoped dimension, then this is the event parameter
     /// name.
+    ///
+    /// If this is an item-scoped dimension, then this is the parameter
+    /// name found in the eCommerce items array.
     ///
     /// May only contain alphanumeric and underscore characters, starting with a
     /// letter. Max length of 24 characters for user-scoped dimensions, 40
@@ -10925,6 +13542,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// Dimension scoped to a user.
         /// </summary>
         [pbr::OriginalName("USER")] User = 2,
+        /// <summary>
+        /// Dimension scoped to eCommerce items
+        /// </summary>
+        [pbr::OriginalName("ITEM")] Item = 3,
       }
 
     }
@@ -10935,6 +13556,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A definition for a custom metric.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomMetric : pb::IMessage<CustomMetric>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10949,7 +13571,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11467,8 +14089,568 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
+  /// A definition for a calculated metric.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CalculatedMetric : pb::IMessage<CalculatedMetric>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CalculatedMetric> _parser = new pb::MessageParser<CalculatedMetric>(() => new CalculatedMetric());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CalculatedMetric> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CalculatedMetric() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CalculatedMetric(CalculatedMetric other) : this() {
+      name_ = other.name_;
+      description_ = other.description_;
+      displayName_ = other.displayName_;
+      calculatedMetricId_ = other.calculatedMetricId_;
+      metricUnit_ = other.metricUnit_;
+      restrictedMetricType_ = other.restrictedMetricType_.Clone();
+      formula_ = other.formula_;
+      invalidMetricReference_ = other.invalidMetricReference_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CalculatedMetric Clone() {
+      return new CalculatedMetric(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Resource name for this CalculatedMetric.
+    /// Format: 'properties/{property_id}/calculatedMetrics/{calculated_metric_id}'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 2;
+    private string description_ = "";
+    /// <summary>
+    /// Optional. Description for this calculated metric.
+    /// Max length of 4096 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 3;
+    private string displayName_ = "";
+    /// <summary>
+    /// Required. Display name for this calculated metric as shown in the
+    /// Google Analytics UI. Max length 82 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "calculated_metric_id" field.</summary>
+    public const int CalculatedMetricIdFieldNumber = 4;
+    private string calculatedMetricId_ = "";
+    /// <summary>
+    /// Output only. The ID to use for the calculated metric. In the UI, this is
+    /// referred to as the "API name."
+    ///
+    /// The calculated_metric_id is used when referencing this calculated metric
+    /// from external APIs. For example, "calcMetric:{calculated_metric_id}".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CalculatedMetricId {
+      get { return calculatedMetricId_; }
+      set {
+        calculatedMetricId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "metric_unit" field.</summary>
+    public const int MetricUnitFieldNumber = 5;
+    private global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.MetricUnit metricUnit_ = global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.MetricUnit.Unspecified;
+    /// <summary>
+    /// Required. The type for the calculated metric's value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.MetricUnit MetricUnit {
+      get { return metricUnit_; }
+      set {
+        metricUnit_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "restricted_metric_type" field.</summary>
+    public const int RestrictedMetricTypeFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.RestrictedMetricType> _repeated_restrictedMetricType_codec
+        = pb::FieldCodec.ForEnum(50, x => (int) x, x => (global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.RestrictedMetricType) x);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.RestrictedMetricType> restrictedMetricType_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.RestrictedMetricType>();
+    /// <summary>
+    /// Output only. Types of restricted data that this metric contains.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.RestrictedMetricType> RestrictedMetricType {
+      get { return restrictedMetricType_; }
+    }
+
+    /// <summary>Field number for the "formula" field.</summary>
+    public const int FormulaFieldNumber = 7;
+    private string formula_ = "";
+    /// <summary>
+    /// Required. The calculated metric's definition. Maximum number of unique
+    /// referenced custom metrics is 5. Formulas supports the following operations:
+    /// + (addition),  - (subtraction), - (negative),  * (multiplication), /
+    /// (division), () (parenthesis). Any valid real numbers are acceptable that
+    /// fit in a Long (64bit integer) or a Double (64 bit floating point number).
+    /// Example formula:
+    ///   "( customEvent:parameter_name + cartPurchaseQuantity ) / 2.0"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Formula {
+      get { return formula_; }
+      set {
+        formula_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "invalid_metric_reference" field.</summary>
+    public const int InvalidMetricReferenceFieldNumber = 9;
+    private bool invalidMetricReference_;
+    /// <summary>
+    /// Output only. If true, this calculated metric has a invalid metric
+    /// reference. Anything using a calculated metric with invalid_metric_reference
+    /// set to true may fail, produce warnings, or produce unexpected results.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool InvalidMetricReference {
+      get { return invalidMetricReference_; }
+      set {
+        invalidMetricReference_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CalculatedMetric);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CalculatedMetric other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Description != other.Description) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (CalculatedMetricId != other.CalculatedMetricId) return false;
+      if (MetricUnit != other.MetricUnit) return false;
+      if(!restrictedMetricType_.Equals(other.restrictedMetricType_)) return false;
+      if (Formula != other.Formula) return false;
+      if (InvalidMetricReference != other.InvalidMetricReference) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (CalculatedMetricId.Length != 0) hash ^= CalculatedMetricId.GetHashCode();
+      if (MetricUnit != global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.MetricUnit.Unspecified) hash ^= MetricUnit.GetHashCode();
+      hash ^= restrictedMetricType_.GetHashCode();
+      if (Formula.Length != 0) hash ^= Formula.GetHashCode();
+      if (InvalidMetricReference != false) hash ^= InvalidMetricReference.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (CalculatedMetricId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CalculatedMetricId);
+      }
+      if (MetricUnit != global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.MetricUnit.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) MetricUnit);
+      }
+      restrictedMetricType_.WriteTo(output, _repeated_restrictedMetricType_codec);
+      if (Formula.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Formula);
+      }
+      if (InvalidMetricReference != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(InvalidMetricReference);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (CalculatedMetricId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CalculatedMetricId);
+      }
+      if (MetricUnit != global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.MetricUnit.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) MetricUnit);
+      }
+      restrictedMetricType_.WriteTo(ref output, _repeated_restrictedMetricType_codec);
+      if (Formula.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Formula);
+      }
+      if (InvalidMetricReference != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(InvalidMetricReference);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (CalculatedMetricId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CalculatedMetricId);
+      }
+      if (MetricUnit != global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.MetricUnit.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MetricUnit);
+      }
+      size += restrictedMetricType_.CalculateSize(_repeated_restrictedMetricType_codec);
+      if (Formula.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Formula);
+      }
+      if (InvalidMetricReference != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CalculatedMetric other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.CalculatedMetricId.Length != 0) {
+        CalculatedMetricId = other.CalculatedMetricId;
+      }
+      if (other.MetricUnit != global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.MetricUnit.Unspecified) {
+        MetricUnit = other.MetricUnit;
+      }
+      restrictedMetricType_.Add(other.restrictedMetricType_);
+      if (other.Formula.Length != 0) {
+        Formula = other.Formula;
+      }
+      if (other.InvalidMetricReference != false) {
+        InvalidMetricReference = other.InvalidMetricReference;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            CalculatedMetricId = input.ReadString();
+            break;
+          }
+          case 40: {
+            MetricUnit = (global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.MetricUnit) input.ReadEnum();
+            break;
+          }
+          case 50:
+          case 48: {
+            restrictedMetricType_.AddEntriesFrom(input, _repeated_restrictedMetricType_codec);
+            break;
+          }
+          case 58: {
+            Formula = input.ReadString();
+            break;
+          }
+          case 72: {
+            InvalidMetricReference = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            CalculatedMetricId = input.ReadString();
+            break;
+          }
+          case 40: {
+            MetricUnit = (global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.MetricUnit) input.ReadEnum();
+            break;
+          }
+          case 50:
+          case 48: {
+            restrictedMetricType_.AddEntriesFrom(ref input, _repeated_restrictedMetricType_codec);
+            break;
+          }
+          case 58: {
+            Formula = input.ReadString();
+            break;
+          }
+          case 72: {
+            InvalidMetricReference = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CalculatedMetric message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Possible types of representing the calculated metric's value.
+      /// </summary>
+      public enum MetricUnit {
+        /// <summary>
+        /// MetricUnit unspecified or missing.
+        /// </summary>
+        [pbr::OriginalName("METRIC_UNIT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// This metric uses default units.
+        /// </summary>
+        [pbr::OriginalName("STANDARD")] Standard = 1,
+        /// <summary>
+        /// This metric measures a currency.
+        /// </summary>
+        [pbr::OriginalName("CURRENCY")] Currency = 2,
+        /// <summary>
+        /// This metric measures feet.
+        /// </summary>
+        [pbr::OriginalName("FEET")] Feet = 3,
+        /// <summary>
+        /// This metric measures miles.
+        /// </summary>
+        [pbr::OriginalName("MILES")] Miles = 4,
+        /// <summary>
+        /// This metric measures meters.
+        /// </summary>
+        [pbr::OriginalName("METERS")] Meters = 5,
+        /// <summary>
+        /// This metric measures kilometers.
+        /// </summary>
+        [pbr::OriginalName("KILOMETERS")] Kilometers = 6,
+        /// <summary>
+        /// This metric measures milliseconds.
+        /// </summary>
+        [pbr::OriginalName("MILLISECONDS")] Milliseconds = 7,
+        /// <summary>
+        /// This metric measures seconds.
+        /// </summary>
+        [pbr::OriginalName("SECONDS")] Seconds = 8,
+        /// <summary>
+        /// This metric measures minutes.
+        /// </summary>
+        [pbr::OriginalName("MINUTES")] Minutes = 9,
+        /// <summary>
+        /// This metric measures hours.
+        /// </summary>
+        [pbr::OriginalName("HOURS")] Hours = 10,
+      }
+
+      /// <summary>
+      /// Labels that mark the data in calculated metric used in conjunction with
+      /// user roles that restrict access to cost and/or revenue metrics.
+      /// </summary>
+      public enum RestrictedMetricType {
+        /// <summary>
+        /// Type unknown or unspecified.
+        /// </summary>
+        [pbr::OriginalName("RESTRICTED_METRIC_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Metric reports cost data.
+        /// </summary>
+        [pbr::OriginalName("COST_DATA")] CostData = 1,
+        /// <summary>
+        /// Metric reports revenue data.
+        /// </summary>
+        [pbr::OriginalName("REVENUE_DATA")] RevenueData = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Settings values for data retention. This is a singleton resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataRetentionSettings : pb::IMessage<DataRetentionSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11483,7 +14665,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11505,6 +14687,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     public DataRetentionSettings(DataRetentionSettings other) : this() {
       name_ = other.name_;
       eventDataRetention_ = other.eventDataRetention_;
+      userDataRetention_ = other.userDataRetention_;
       resetUserDataOnNewActivity_ = other.resetUserDataOnNewActivity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -11535,7 +14718,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int EventDataRetentionFieldNumber = 2;
     private global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration eventDataRetention_ = global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified;
     /// <summary>
-    /// The length of time that event-level data is retained.
+    /// Required. The length of time that event-level data is retained.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11543,6 +14726,21 @@ namespace Google.Analytics.Admin.V1Alpha {
       get { return eventDataRetention_; }
       set {
         eventDataRetention_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user_data_retention" field.</summary>
+    public const int UserDataRetentionFieldNumber = 4;
+    private global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration userDataRetention_ = global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified;
+    /// <summary>
+    /// Required. The length of time that user-level data is retained.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration UserDataRetention {
+      get { return userDataRetention_; }
+      set {
+        userDataRetention_ = value;
       }
     }
 
@@ -11579,6 +14777,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (Name != other.Name) return false;
       if (EventDataRetention != other.EventDataRetention) return false;
+      if (UserDataRetention != other.UserDataRetention) return false;
       if (ResetUserDataOnNewActivity != other.ResetUserDataOnNewActivity) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -11589,6 +14788,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (EventDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) hash ^= EventDataRetention.GetHashCode();
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) hash ^= UserDataRetention.GetHashCode();
       if (ResetUserDataOnNewActivity != false) hash ^= ResetUserDataOnNewActivity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -11620,6 +14820,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(24);
         output.WriteBool(ResetUserDataOnNewActivity);
       }
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) UserDataRetention);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11642,6 +14846,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(24);
         output.WriteBool(ResetUserDataOnNewActivity);
       }
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) UserDataRetention);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -11657,6 +14865,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (EventDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EventDataRetention);
+      }
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UserDataRetention);
       }
       if (ResetUserDataOnNewActivity != false) {
         size += 1 + 1;
@@ -11678,6 +14889,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (other.EventDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
         EventDataRetention = other.EventDataRetention;
+      }
+      if (other.UserDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        UserDataRetention = other.UserDataRetention;
       }
       if (other.ResetUserDataOnNewActivity != false) {
         ResetUserDataOnNewActivity = other.ResetUserDataOnNewActivity;
@@ -11709,6 +14923,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             ResetUserDataOnNewActivity = input.ReadBool();
             break;
           }
+          case 32: {
+            UserDataRetention = (global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -11734,6 +14952,10 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           case 24: {
             ResetUserDataOnNewActivity = input.ReadBool();
+            break;
+          }
+          case 32: {
+            UserDataRetention = (global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration) input.ReadEnum();
             break;
           }
         }
@@ -11764,17 +14986,17 @@ namespace Google.Analytics.Admin.V1Alpha {
         [pbr::OriginalName("FOURTEEN_MONTHS")] FourteenMonths = 3,
         /// <summary>
         /// The data retention time duration is 26 months.
-        /// Available to 360 properties only.
+        /// Available to 360 properties only. Available for event data only.
         /// </summary>
         [pbr::OriginalName("TWENTY_SIX_MONTHS")] TwentySixMonths = 4,
         /// <summary>
         /// The data retention time duration is 38 months.
-        /// Available to 360 properties only.
+        /// Available to 360 properties only. Available for event data only.
         /// </summary>
         [pbr::OriginalName("THIRTY_EIGHT_MONTHS")] ThirtyEightMonths = 5,
         /// <summary>
         /// The data retention time duration is 50 months.
-        /// Available to 360 properties only.
+        /// Available to 360 properties only. Available for event data only.
         /// </summary>
         [pbr::OriginalName("FIFTY_MONTHS")] FiftyMonths = 6,
       }
@@ -11788,6 +15010,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// The attribution settings used for a given property. This is a singleton
   /// resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AttributionSettings : pb::IMessage<AttributionSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11802,7 +15025,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11826,6 +15049,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       acquisitionConversionEventLookbackWindow_ = other.acquisitionConversionEventLookbackWindow_;
       otherConversionEventLookbackWindow_ = other.otherConversionEventLookbackWindow_;
       reportingAttributionModel_ = other.reportingAttributionModel_;
+      adsWebConversionDataExportScope_ = other.adsWebConversionDataExportScope_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -11904,6 +15128,22 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "ads_web_conversion_data_export_scope" field.</summary>
+    public const int AdsWebConversionDataExportScopeFieldNumber = 5;
+    private global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AdsWebConversionDataExportScope adsWebConversionDataExportScope_ = global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AdsWebConversionDataExportScope.Unspecified;
+    /// <summary>
+    /// Required. The Conversion Export Scope for data exported to linked Ads
+    /// Accounts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AdsWebConversionDataExportScope AdsWebConversionDataExportScope {
+      get { return adsWebConversionDataExportScope_; }
+      set {
+        adsWebConversionDataExportScope_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -11923,6 +15163,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (AcquisitionConversionEventLookbackWindow != other.AcquisitionConversionEventLookbackWindow) return false;
       if (OtherConversionEventLookbackWindow != other.OtherConversionEventLookbackWindow) return false;
       if (ReportingAttributionModel != other.ReportingAttributionModel) return false;
+      if (AdsWebConversionDataExportScope != other.AdsWebConversionDataExportScope) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -11934,6 +15175,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (AcquisitionConversionEventLookbackWindow != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow.Unspecified) hash ^= AcquisitionConversionEventLookbackWindow.GetHashCode();
       if (OtherConversionEventLookbackWindow != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow.Unspecified) hash ^= OtherConversionEventLookbackWindow.GetHashCode();
       if (ReportingAttributionModel != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel.Unspecified) hash ^= ReportingAttributionModel.GetHashCode();
+      if (AdsWebConversionDataExportScope != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AdsWebConversionDataExportScope.Unspecified) hash ^= AdsWebConversionDataExportScope.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -11968,6 +15210,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(32);
         output.WriteEnum((int) ReportingAttributionModel);
       }
+      if (AdsWebConversionDataExportScope != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AdsWebConversionDataExportScope.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) AdsWebConversionDataExportScope);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11994,6 +15240,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(32);
         output.WriteEnum((int) ReportingAttributionModel);
       }
+      if (AdsWebConversionDataExportScope != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AdsWebConversionDataExportScope.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) AdsWebConversionDataExportScope);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -12015,6 +15265,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (ReportingAttributionModel != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReportingAttributionModel);
+      }
+      if (AdsWebConversionDataExportScope != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AdsWebConversionDataExportScope.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AdsWebConversionDataExportScope);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -12039,6 +15292,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (other.ReportingAttributionModel != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel.Unspecified) {
         ReportingAttributionModel = other.ReportingAttributionModel;
+      }
+      if (other.AdsWebConversionDataExportScope != global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AdsWebConversionDataExportScope.Unspecified) {
+        AdsWebConversionDataExportScope = other.AdsWebConversionDataExportScope;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -12071,6 +15327,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             ReportingAttributionModel = (global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel) input.ReadEnum();
             break;
           }
+          case 40: {
+            AdsWebConversionDataExportScope = (global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AdsWebConversionDataExportScope) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -12100,6 +15360,10 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           case 32: {
             ReportingAttributionModel = (global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            AdsWebConversionDataExportScope = (global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AdsWebConversionDataExportScope) input.ReadEnum();
             break;
           }
         }
@@ -12169,40 +15433,50 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// Data-driven attribution distributes credit for the conversion based on
         /// data for each conversion event. Each Data-driven model is specific to
         /// each advertiser and each conversion event.
+        /// Previously CROSS_CHANNEL_DATA_DRIVEN
         /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL_DATA_DRIVEN")] CrossChannelDataDriven = 1,
+        [pbr::OriginalName("PAID_AND_ORGANIC_CHANNELS_DATA_DRIVEN")] PaidAndOrganicChannelsDataDriven = 1,
         /// <summary>
         /// Ignores direct traffic and attributes 100% of the conversion value to the
         /// last channel that the customer clicked through (or engaged view through
         /// for YouTube) before converting.
+        /// Previously CROSS_CHANNEL_LAST_CLICK
         /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL_LAST_CLICK")] CrossChannelLastClick = 2,
+        [pbr::OriginalName("PAID_AND_ORGANIC_CHANNELS_LAST_CLICK")] PaidAndOrganicChannelsLastClick = 2,
         /// <summary>
-        /// Gives all credit for the conversion to the first channel that a customer
-        /// clicked (or engaged view through for YouTube) before converting.
-        /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL_FIRST_CLICK")] CrossChannelFirstClick = 3,
-        /// <summary>
-        /// Distributes the credit for the conversion equally across all the channels
-        /// a customer clicked (or engaged view through for YouTube) before
-        /// converting.
-        /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL_LINEAR")] CrossChannelLinear = 4,
-        /// <summary>
-        /// Attributes 40% credit to the first and last interaction, and the
-        /// remaining 20% credit is distributed evenly to the middle interactions.
-        /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL_POSITION_BASED")] CrossChannelPositionBased = 5,
-        /// <summary>
-        /// Gives more credit to the touchpoints that happened closer in time to
-        /// the conversion.
-        /// </summary>
-        [pbr::OriginalName("CROSS_CHANNEL_TIME_DECAY")] CrossChannelTimeDecay = 6,
-        /// <summary>
-        /// Attributes 100% of the conversion value to the last Google Ads channel
+        /// Attributes 100% of the conversion value to the last Google Paid channel
         /// that the customer clicked through before converting.
+        /// Previously ADS_PREFERRED_LAST_CLICK
         /// </summary>
-        [pbr::OriginalName("ADS_PREFERRED_LAST_CLICK")] AdsPreferredLastClick = 7,
+        [pbr::OriginalName("GOOGLE_PAID_CHANNELS_LAST_CLICK")] GooglePaidChannelsLastClick = 7,
+      }
+
+      /// <summary>
+      /// The Conversion Export Scope for data exported to linked Ads Accounts.
+      /// </summary>
+      public enum AdsWebConversionDataExportScope {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("ADS_WEB_CONVERSION_DATA_EXPORT_SCOPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// No data export scope selected yet.
+        /// Export scope can never be changed back to this value.
+        /// </summary>
+        [pbr::OriginalName("NOT_SELECTED_YET")] NotSelectedYet = 1,
+        /// <summary>
+        /// Paid and organic channels are eligible to receive conversion credit, but
+        /// only credit assigned to Google Ads channels will appear in your Ads
+        /// accounts. To learn more, see [Paid and Organic
+        /// channels](https://support.google.com/analytics/answer/10632359).
+        /// </summary>
+        [pbr::OriginalName("PAID_AND_ORGANIC_CHANNELS")] PaidAndOrganicChannels = 2,
+        /// <summary>
+        /// Only Google Ads paid channels are eligible to receive conversion credit.
+        /// To learn more, see [Google Paid
+        /// channels](https://support.google.com/analytics/answer/10632359).
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_PAID_CHANNELS")] GooglePaidChannels = 3,
       }
 
     }
@@ -12213,6 +15487,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A binding of a user to a set of roles.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessBinding : pb::IMessage<AccessBinding>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12227,7 +15502,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12273,10 +15548,24 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string User {
-      get { return accessTargetCase_ == AccessTargetOneofCase.User ? (string) accessTarget_ : ""; }
+      get { return HasUser ? (string) accessTarget_ : ""; }
       set {
         accessTarget_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         accessTargetCase_ = AccessTargetOneofCase.User;
+      }
+    }
+    /// <summary>Gets whether the "user" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUser {
+      get { return accessTargetCase_ == AccessTargetOneofCase.User; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "user" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUser() {
+      if (HasUser) {
+        ClearAccessTarget();
       }
     }
 
@@ -12372,7 +15661,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (accessTargetCase_ == AccessTargetOneofCase.User) hash ^= User.GetHashCode();
+      if (HasUser) hash ^= User.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= roles_.GetHashCode();
       hash ^= (int) accessTargetCase_;
@@ -12398,7 +15687,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (accessTargetCase_ == AccessTargetOneofCase.User) {
+      if (HasUser) {
         output.WriteRawTag(18);
         output.WriteString(User);
       }
@@ -12417,7 +15706,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (accessTargetCase_ == AccessTargetOneofCase.User) {
+      if (HasUser) {
         output.WriteRawTag(18);
         output.WriteString(User);
       }
@@ -12432,7 +15721,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (accessTargetCase_ == AccessTargetOneofCase.User) {
+      if (HasUser) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(User);
       }
       if (Name.Length != 0) {
@@ -12523,8 +15812,9 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A link between a GA4 Property and BigQuery project.
+  /// A link between a Google Analytics property and BigQuery project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryLink : pb::IMessage<BigQueryLink>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12539,7 +15829,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12564,10 +15854,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       dailyExportEnabled_ = other.dailyExportEnabled_;
       streamingExportEnabled_ = other.streamingExportEnabled_;
-      intradayExportEnabled_ = other.intradayExportEnabled_;
+      freshDailyExportEnabled_ = other.freshDailyExportEnabled_;
       includeAdvertisingId_ = other.includeAdvertisingId_;
       exportStreams_ = other.exportStreams_.Clone();
       excludedEvents_ = other.excludedEvents_.Clone();
+      datasetLocation_ = other.datasetLocation_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -12659,18 +15950,18 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
-    /// <summary>Field number for the "intraday_export_enabled" field.</summary>
-    public const int IntradayExportEnabledFieldNumber = 9;
-    private bool intradayExportEnabled_;
+    /// <summary>Field number for the "fresh_daily_export_enabled" field.</summary>
+    public const int FreshDailyExportEnabledFieldNumber = 9;
+    private bool freshDailyExportEnabled_;
     /// <summary>
-    /// If set true, enables intraday export to the linked Google Cloud project.
+    /// If set true, enables fresh daily export to the linked Google Cloud project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IntradayExportEnabled {
-      get { return intradayExportEnabled_; }
+    public bool FreshDailyExportEnabled {
+      get { return freshDailyExportEnabled_; }
       set {
-        intradayExportEnabled_ = value;
+        freshDailyExportEnabled_ = value;
       }
     }
 
@@ -12721,6 +16012,23 @@ namespace Google.Analytics.Admin.V1Alpha {
       get { return excludedEvents_; }
     }
 
+    /// <summary>Field number for the "dataset_location" field.</summary>
+    public const int DatasetLocationFieldNumber = 10;
+    private string datasetLocation_ = "";
+    /// <summary>
+    /// Required. Immutable. The geographic location where the created BigQuery
+    /// dataset should reside. See https://cloud.google.com/bigquery/docs/locations
+    /// for supported locations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DatasetLocation {
+      get { return datasetLocation_; }
+      set {
+        datasetLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -12741,10 +16049,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (DailyExportEnabled != other.DailyExportEnabled) return false;
       if (StreamingExportEnabled != other.StreamingExportEnabled) return false;
-      if (IntradayExportEnabled != other.IntradayExportEnabled) return false;
+      if (FreshDailyExportEnabled != other.FreshDailyExportEnabled) return false;
       if (IncludeAdvertisingId != other.IncludeAdvertisingId) return false;
       if(!exportStreams_.Equals(other.exportStreams_)) return false;
       if(!excludedEvents_.Equals(other.excludedEvents_)) return false;
+      if (DatasetLocation != other.DatasetLocation) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -12757,10 +16066,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (DailyExportEnabled != false) hash ^= DailyExportEnabled.GetHashCode();
       if (StreamingExportEnabled != false) hash ^= StreamingExportEnabled.GetHashCode();
-      if (IntradayExportEnabled != false) hash ^= IntradayExportEnabled.GetHashCode();
+      if (FreshDailyExportEnabled != false) hash ^= FreshDailyExportEnabled.GetHashCode();
       if (IncludeAdvertisingId != false) hash ^= IncludeAdvertisingId.GetHashCode();
       hash ^= exportStreams_.GetHashCode();
       hash ^= excludedEvents_.GetHashCode();
+      if (DatasetLocation.Length != 0) hash ^= DatasetLocation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -12805,9 +16115,13 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       exportStreams_.WriteTo(output, _repeated_exportStreams_codec);
       excludedEvents_.WriteTo(output, _repeated_excludedEvents_codec);
-      if (IntradayExportEnabled != false) {
+      if (FreshDailyExportEnabled != false) {
         output.WriteRawTag(72);
-        output.WriteBool(IntradayExportEnabled);
+        output.WriteBool(FreshDailyExportEnabled);
+      }
+      if (DatasetLocation.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DatasetLocation);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -12845,9 +16159,13 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       exportStreams_.WriteTo(ref output, _repeated_exportStreams_codec);
       excludedEvents_.WriteTo(ref output, _repeated_excludedEvents_codec);
-      if (IntradayExportEnabled != false) {
+      if (FreshDailyExportEnabled != false) {
         output.WriteRawTag(72);
-        output.WriteBool(IntradayExportEnabled);
+        output.WriteBool(FreshDailyExportEnabled);
+      }
+      if (DatasetLocation.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DatasetLocation);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -12874,7 +16192,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (StreamingExportEnabled != false) {
         size += 1 + 1;
       }
-      if (IntradayExportEnabled != false) {
+      if (FreshDailyExportEnabled != false) {
         size += 1 + 1;
       }
       if (IncludeAdvertisingId != false) {
@@ -12882,6 +16200,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       size += exportStreams_.CalculateSize(_repeated_exportStreams_codec);
       size += excludedEvents_.CalculateSize(_repeated_excludedEvents_codec);
+      if (DatasetLocation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetLocation);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -12912,14 +16233,17 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (other.StreamingExportEnabled != false) {
         StreamingExportEnabled = other.StreamingExportEnabled;
       }
-      if (other.IntradayExportEnabled != false) {
-        IntradayExportEnabled = other.IntradayExportEnabled;
+      if (other.FreshDailyExportEnabled != false) {
+        FreshDailyExportEnabled = other.FreshDailyExportEnabled;
       }
       if (other.IncludeAdvertisingId != false) {
         IncludeAdvertisingId = other.IncludeAdvertisingId;
       }
       exportStreams_.Add(other.exportStreams_);
       excludedEvents_.Add(other.excludedEvents_);
+      if (other.DatasetLocation.Length != 0) {
+        DatasetLocation = other.DatasetLocation;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -12971,7 +16295,11 @@ namespace Google.Analytics.Admin.V1Alpha {
             break;
           }
           case 72: {
-            IntradayExportEnabled = input.ReadBool();
+            FreshDailyExportEnabled = input.ReadBool();
+            break;
+          }
+          case 82: {
+            DatasetLocation = input.ReadString();
             break;
           }
         }
@@ -13025,7 +16353,11 @@ namespace Google.Analytics.Admin.V1Alpha {
             break;
           }
           case 72: {
-            IntradayExportEnabled = input.ReadBool();
+            FreshDailyExportEnabled = input.ReadBool();
+            break;
+          }
+          case 82: {
+            DatasetLocation = input.ReadString();
             break;
           }
         }
@@ -13036,9 +16368,10 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// Singleton resource under a WebDataStream, configuring measurement of
+  /// Singleton resource under a web DataStream, configuring measurement of
   /// additional site interactions and content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnhancedMeasurementSettings : pb::IMessage<EnhancedMeasurementSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -13053,7 +16386,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13651,6 +16984,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// Configuration for a specific Connected Site Tag.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConnectedSiteTag : pb::IMessage<ConnectedSiteTag>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -13665,7 +16999,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13876,6 +17210,805 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           case 18: {
             TagId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Settings for client-side data redaction. Singleton resource under a Web
+  /// Stream.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DataRedactionSettings : pb::IMessage<DataRedactionSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DataRedactionSettings> _parser = new pb::MessageParser<DataRedactionSettings>(() => new DataRedactionSettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DataRedactionSettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[32]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DataRedactionSettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DataRedactionSettings(DataRedactionSettings other) : this() {
+      name_ = other.name_;
+      emailRedactionEnabled_ = other.emailRedactionEnabled_;
+      queryParameterRedactionEnabled_ = other.queryParameterRedactionEnabled_;
+      queryParameterKeys_ = other.queryParameterKeys_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DataRedactionSettings Clone() {
+      return new DataRedactionSettings(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Name of this Data Redaction Settings resource.
+    /// Format:
+    /// properties/{property_id}/dataStreams/{data_stream}/dataRedactionSettings
+    /// Example: "properties/1000/dataStreams/2000/dataRedactionSettings"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "email_redaction_enabled" field.</summary>
+    public const int EmailRedactionEnabledFieldNumber = 2;
+    private bool emailRedactionEnabled_;
+    /// <summary>
+    /// If enabled, any event parameter or user property values that look like an
+    /// email will be redacted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EmailRedactionEnabled {
+      get { return emailRedactionEnabled_; }
+      set {
+        emailRedactionEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "query_parameter_redaction_enabled" field.</summary>
+    public const int QueryParameterRedactionEnabledFieldNumber = 3;
+    private bool queryParameterRedactionEnabled_;
+    /// <summary>
+    /// Query Parameter redaction removes the key and value portions of a
+    /// query parameter if it is in the configured set of query parameters.
+    ///
+    /// If enabled, URL query replacement logic will be run for the Stream. Any
+    /// query parameters defined in query_parameter_keys will be redacted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool QueryParameterRedactionEnabled {
+      get { return queryParameterRedactionEnabled_; }
+      set {
+        queryParameterRedactionEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "query_parameter_keys" field.</summary>
+    public const int QueryParameterKeysFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_queryParameterKeys_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> queryParameterKeys_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The query parameter keys to apply redaction logic to if present in the URL.
+    /// Query parameter matching is case-insensitive.
+    ///
+    /// Must contain at least one element if query_parameter_replacement_enabled
+    /// is true. Keys cannot contain commas.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> QueryParameterKeys {
+      get { return queryParameterKeys_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DataRedactionSettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DataRedactionSettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (EmailRedactionEnabled != other.EmailRedactionEnabled) return false;
+      if (QueryParameterRedactionEnabled != other.QueryParameterRedactionEnabled) return false;
+      if(!queryParameterKeys_.Equals(other.queryParameterKeys_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (EmailRedactionEnabled != false) hash ^= EmailRedactionEnabled.GetHashCode();
+      if (QueryParameterRedactionEnabled != false) hash ^= QueryParameterRedactionEnabled.GetHashCode();
+      hash ^= queryParameterKeys_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (EmailRedactionEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EmailRedactionEnabled);
+      }
+      if (QueryParameterRedactionEnabled != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(QueryParameterRedactionEnabled);
+      }
+      queryParameterKeys_.WriteTo(output, _repeated_queryParameterKeys_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (EmailRedactionEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EmailRedactionEnabled);
+      }
+      if (QueryParameterRedactionEnabled != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(QueryParameterRedactionEnabled);
+      }
+      queryParameterKeys_.WriteTo(ref output, _repeated_queryParameterKeys_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (EmailRedactionEnabled != false) {
+        size += 1 + 1;
+      }
+      if (QueryParameterRedactionEnabled != false) {
+        size += 1 + 1;
+      }
+      size += queryParameterKeys_.CalculateSize(_repeated_queryParameterKeys_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DataRedactionSettings other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.EmailRedactionEnabled != false) {
+        EmailRedactionEnabled = other.EmailRedactionEnabled;
+      }
+      if (other.QueryParameterRedactionEnabled != false) {
+        QueryParameterRedactionEnabled = other.QueryParameterRedactionEnabled;
+      }
+      queryParameterKeys_.Add(other.queryParameterKeys_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            EmailRedactionEnabled = input.ReadBool();
+            break;
+          }
+          case 24: {
+            QueryParameterRedactionEnabled = input.ReadBool();
+            break;
+          }
+          case 34: {
+            queryParameterKeys_.AddEntriesFrom(input, _repeated_queryParameterKeys_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            EmailRedactionEnabled = input.ReadBool();
+            break;
+          }
+          case 24: {
+            QueryParameterRedactionEnabled = input.ReadBool();
+            break;
+          }
+          case 34: {
+            queryParameterKeys_.AddEntriesFrom(ref input, _repeated_queryParameterKeys_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A link between a Google Analytics property and an AdSense for Content ad
+  /// client.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AdSenseLink : pb::IMessage<AdSenseLink>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AdSenseLink> _parser = new pb::MessageParser<AdSenseLink>(() => new AdSenseLink());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AdSenseLink> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[33]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdSenseLink() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdSenseLink(AdSenseLink other) : this() {
+      name_ = other.name_;
+      adClientCode_ = other.adClientCode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdSenseLink Clone() {
+      return new AdSenseLink(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The resource name for this AdSense Link resource.
+    /// Format: properties/{propertyId}/adSenseLinks/{linkId}
+    /// Example: properties/1234/adSenseLinks/6789
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ad_client_code" field.</summary>
+    public const int AdClientCodeFieldNumber = 2;
+    private string adClientCode_ = "";
+    /// <summary>
+    /// Immutable. The AdSense ad client code that the Google Analytics property is
+    /// linked to. Example format: "ca-pub-1234567890"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AdClientCode {
+      get { return adClientCode_; }
+      set {
+        adClientCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AdSenseLink);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AdSenseLink other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (AdClientCode != other.AdClientCode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (AdClientCode.Length != 0) hash ^= AdClientCode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (AdClientCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AdClientCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (AdClientCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AdClientCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (AdClientCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AdClientCode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AdSenseLink other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.AdClientCode.Length != 0) {
+        AdClientCode = other.AdClientCode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            AdClientCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            AdClientCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A link that references a source property under the parent rollup property.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RollupPropertySourceLink : pb::IMessage<RollupPropertySourceLink>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RollupPropertySourceLink> _parser = new pb::MessageParser<RollupPropertySourceLink>(() => new RollupPropertySourceLink());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RollupPropertySourceLink> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[34]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RollupPropertySourceLink() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RollupPropertySourceLink(RollupPropertySourceLink other) : this() {
+      name_ = other.name_;
+      sourceProperty_ = other.sourceProperty_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RollupPropertySourceLink Clone() {
+      return new RollupPropertySourceLink(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Resource name of this RollupPropertySourceLink.
+    /// Format:
+    /// 'properties/{property_id}/rollupPropertySourceLinks/{rollup_property_source_link}'
+    /// Format: 'properties/123/rollupPropertySourceLinks/456'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_property" field.</summary>
+    public const int SourcePropertyFieldNumber = 2;
+    private string sourceProperty_ = "";
+    /// <summary>
+    /// Immutable. Resource name of the source property.
+    /// Format: properties/{property_id}
+    /// Example: "properties/789"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceProperty {
+      get { return sourceProperty_; }
+      set {
+        sourceProperty_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RollupPropertySourceLink);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RollupPropertySourceLink other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (SourceProperty != other.SourceProperty) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (SourceProperty.Length != 0) hash ^= SourceProperty.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (SourceProperty.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceProperty);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (SourceProperty.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceProperty);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (SourceProperty.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceProperty);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RollupPropertySourceLink other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.SourceProperty.Length != 0) {
+        SourceProperty = other.SourceProperty;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceProperty = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceProperty = input.ReadString();
             break;
           }
         }

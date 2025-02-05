@@ -1,5 +1,5 @@
 
-# Copyright 2023 Google LLC
+# Copyright 2025 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/maps/addressvalidation/v1/.*-csharp/Google.Maps.AddressValidation.V1
       dest: /owl-bot-staging/Google.Maps.AddressValidation.V1/Google.Maps.AddressValidation.V1
-    - source: /google/maps/addressvalidation/v1/.*-csharp/Google.Maps.AddressValidation.V1.Tests
-      dest: /owl-bot-staging/Google.Maps.AddressValidation.V1/Google.Maps.AddressValidation.V1.Tests
     - source: /google/maps/addressvalidation/v1/.*-csharp/Google.Maps.AddressValidation.V1.Snippets
       dest: /owl-bot-staging/Google.Maps.AddressValidation.V1/Google.Maps.AddressValidation.V1.Snippets
     - source: /google/maps/addressvalidation/v1/.*-csharp/Google.Maps.AddressValidation.V1.GeneratedSnippets

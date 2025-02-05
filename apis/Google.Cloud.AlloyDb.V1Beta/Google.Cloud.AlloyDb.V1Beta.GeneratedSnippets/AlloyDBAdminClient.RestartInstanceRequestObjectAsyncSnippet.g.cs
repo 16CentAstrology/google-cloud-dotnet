@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AlloyDb.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START alloydb_v1beta_generated_AlloyDBAdmin_RestartInstance_async]
     using Google.Cloud.AlloyDb.V1Beta;
@@ -41,6 +41,7 @@ namespace Google.Cloud.AlloyDb.V1Beta.Snippets
                 InstanceName = InstanceName.FromProjectLocationClusterInstance("[PROJECT]", "[LOCATION]", "[CLUSTER]", "[INSTANCE]"),
                 RequestId = "",
                 ValidateOnly = false,
+                NodeIds = { "", },
             };
             // Make the request
             Operation<Instance, OperationMetadata> response = await alloyDBAdminClient.RestartInstanceAsync(request);

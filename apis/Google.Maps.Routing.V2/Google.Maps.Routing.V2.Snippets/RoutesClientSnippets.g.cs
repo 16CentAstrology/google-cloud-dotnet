@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Maps.Routing.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.Grpc;
+    using Google.Maps.Routing.V2;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
@@ -44,6 +45,7 @@ namespace Google.Maps.Routing.V2.Snippets
                 LanguageCode = "",
                 Units = Units.Unspecified,
                 PolylineEncoding = PolylineEncoding.Unspecified,
+                OptimizeWaypointOrder = false,
                 RequestedReferenceRoutes =
                 {
                     ComputeRoutesRequest.Types.ReferenceRoute.Unspecified,
@@ -53,6 +55,9 @@ namespace Google.Maps.Routing.V2.Snippets
                     ComputeRoutesRequest.Types.ExtraComputation.Unspecified,
                 },
                 RegionCode = "",
+                TrafficModel = TrafficModel.Unspecified,
+                ArrivalTime = new Timestamp(),
+                TransitPreferences = new TransitPreferences(),
             };
             // Make the request
             ComputeRoutesResponse response = routesClient.ComputeRoutes(request);
@@ -81,6 +86,7 @@ namespace Google.Maps.Routing.V2.Snippets
                 LanguageCode = "",
                 Units = Units.Unspecified,
                 PolylineEncoding = PolylineEncoding.Unspecified,
+                OptimizeWaypointOrder = false,
                 RequestedReferenceRoutes =
                 {
                     ComputeRoutesRequest.Types.ReferenceRoute.Unspecified,
@@ -90,6 +96,9 @@ namespace Google.Maps.Routing.V2.Snippets
                     ComputeRoutesRequest.Types.ExtraComputation.Unspecified,
                 },
                 RegionCode = "",
+                TrafficModel = TrafficModel.Unspecified,
+                ArrivalTime = new Timestamp(),
+                TransitPreferences = new TransitPreferences(),
             };
             // Make the request
             ComputeRoutesResponse response = await routesClient.ComputeRoutesAsync(request);
@@ -117,14 +126,18 @@ namespace Google.Maps.Routing.V2.Snippets
                 RoutingPreference = RoutingPreference.Unspecified,
                 DepartureTime = new Timestamp(),
                 LanguageCode = "",
+                Units = Units.Unspecified,
                 ExtraComputations =
                 {
                     ComputeRouteMatrixRequest.Types.ExtraComputation.Unspecified,
                 },
                 RegionCode = "",
+                TrafficModel = TrafficModel.Unspecified,
+                ArrivalTime = new Timestamp(),
+                TransitPreferences = new TransitPreferences(),
             };
             // Make the request, returning a streaming response
-            RoutesClient.ComputeRouteMatrixStream response = routesClient.ComputeRouteMatrix(request);
+            using RoutesClient.ComputeRouteMatrixStream response = routesClient.ComputeRouteMatrix(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

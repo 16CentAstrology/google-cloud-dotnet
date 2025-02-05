@@ -1,11 +1,11 @@
 // Copyright 2018 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15,6 +15,8 @@
 using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Google.Protobuf.Reflection;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
 
@@ -69,8 +71,35 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
 
     protected override bool TryCreateDatabase()
     {
+        FileDescriptorSet fileDescriptorSet = new FileDescriptorSet
+        {
+            File =
+            {
+                Duration.Descriptor.File.ToProto(),
+                Rectangle.Descriptor.File.ToProto(),
+                ValueWrapper.Descriptor.File.ToProto(),
+            }
+        };
+
+        if (!SpannerClientCreationOptions.UsesEmulator)
+        {
+            // b/348716298
+            fileDescriptorSet.File.Add(Value.Descriptor.File.ToProto());
+            fileDescriptorSet.File.Add(Person.Descriptor.File.ToProto());
+        }
+
         using var connection = new SpannerConnection(NoDbConnectionString);
-        var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {SpannerDatabase}");
+        var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {SpannerDatabase}",protobufDescriptors: fileDescriptorSet,
+            $"CREATE PROTO BUNDLE (" +
+            $"{Point.Descriptor.FullName}" +
+            $", {Rectangle.Descriptor.FullName}" +
+            $", {Duration.Descriptor.FullName}" +
+            EmptyOnEmulator($", {Person.Descriptor.FullName}"/* b/348716298 */) +
+            EmptyOnEmulator($", {ValueWrapper.Descriptor.FullName}"/* b/348716298 */) +
+            EmptyOnEmulator($", {Value.Descriptor.FindFieldByNumber(Value.NullValueFieldNumber).EnumType.FullName}"/* b/348716298 */) +
+            EmptyOnEmulator($", {ListValue.Descriptor.FullName}"/* b/348716298 */) +
+            EmptyOnEmulator($", {Value.Descriptor.FullName}"/* b/348716298 */) +
+            $")");
         try
         {
             createCmd.ExecuteNonQuery();
@@ -82,4 +111,6 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
             return false;
         }
     }
+
+    private string EmptyOnEmulator(string text) => SpannerClientCreationOptions.UsesEmulator ? "" : text;
 }

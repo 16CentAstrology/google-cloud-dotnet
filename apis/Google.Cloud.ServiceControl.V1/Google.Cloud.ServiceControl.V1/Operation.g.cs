@@ -61,6 +61,7 @@ namespace Google.Cloud.ServiceControl.V1 {
   /// <summary>
   /// Represents information regarding an operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Operation : pb::IMessage<Operation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -498,7 +499,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
         EndTime.MergeFrom(other.EndTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       metricValueSets_.Add(other.metricValueSets_);
       logEntries_.Add(other.logEntries_);
       if (other.Importance != global::Google.Cloud.ServiceControl.V1.Operation.Types.Importance.Low) {

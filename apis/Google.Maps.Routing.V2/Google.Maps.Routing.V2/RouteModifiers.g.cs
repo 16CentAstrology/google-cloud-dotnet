@@ -32,12 +32,12 @@ namespace Google.Maps.Routing.V2 {
             "b2lkX2ZlcnJpZXMYAyABKAgSFAoMYXZvaWRfaW5kb29yGAQgASgIEjkKDHZl",
             "aGljbGVfaW5mbxgFIAEoCzIjLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuVmVo",
             "aWNsZUluZm8SNQoLdG9sbF9wYXNzZXMYBiADKA4yIC5nb29nbGUubWFwcy5y",
-            "b3V0aW5nLnYyLlRvbGxQYXNzQsgBChpjb20uZ29vZ2xlLm1hcHMucm91dGlu",
+            "b3V0aW5nLnYyLlRvbGxQYXNzQsUBChpjb20uZ29vZ2xlLm1hcHMucm91dGlu",
             "Zy52MkITUm91dGVNb2RpZmllcnNQcm90b1ABWjpjbG91ZC5nb29nbGUuY29t",
-            "L2dvL21hcHMvcm91dGluZy9hcGl2Mi9yb3V0aW5ncGI7cm91dGluZ3Bi+AEB",
-            "ogIFR01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1h",
-            "cHNcUm91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6VjJiBnBy",
-            "b3RvMw=="));
+            "L2dvL21hcHMvcm91dGluZy9hcGl2Mi9yb3V0aW5ncGI7cm91dGluZ3BiogIF",
+            "R01SVjKqAhZHb29nbGUuTWFwcy5Sb3V0aW5nLlYyygIWR29vZ2xlXE1hcHNc",
+            "Um91dGluZ1xWMuoCGUdvb2dsZTo6TWFwczo6Um91dGluZzo6VjJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Maps.Routing.V2.TollPassesReflection.Descriptor, global::Google.Maps.Routing.V2.VehicleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -52,6 +52,7 @@ namespace Google.Maps.Routing.V2 {
   /// Encapsulates a set of optional conditions to satisfy when calculating the
   /// routes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RouteModifiers : pb::IMessage<RouteModifiers>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -105,9 +106,9 @@ namespace Google.Maps.Routing.V2 {
     public const int AvoidTollsFieldNumber = 1;
     private bool avoidTolls_;
     /// <summary>
-    /// Specifies whether to avoid toll roads where reasonable. Preference will be
-    /// given to routes not containing toll roads. Applies only to the `DRIVE` and
-    /// `TWO_WHEELER` [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
+    /// When set to true, avoids toll roads where reasonable, giving preference to
+    /// routes not containing toll roads. Applies only to the `DRIVE` and
+    /// `TWO_WHEELER` [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,9 +123,9 @@ namespace Google.Maps.Routing.V2 {
     public const int AvoidHighwaysFieldNumber = 2;
     private bool avoidHighways_;
     /// <summary>
-    /// Specifies whether to avoid highways where reasonable. Preference will be
-    /// given to routes not containing highways. Applies only to the `DRIVE` and
-    /// `TWO_WHEELER` [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
+    /// When set to true, avoids highways where reasonable, giving preference to
+    /// routes not containing highways. Applies only to the `DRIVE` and
+    /// `TWO_WHEELER` [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,10 +140,9 @@ namespace Google.Maps.Routing.V2 {
     public const int AvoidFerriesFieldNumber = 3;
     private bool avoidFerries_;
     /// <summary>
-    /// Specifies whether to avoid ferries where reasonable. Preference will be
-    /// given to routes not containing travel by ferries.
-    /// Applies only to the `DRIVE` and`TWO_WHEELER`
-    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
+    /// When set to true, avoids ferries where reasonable, giving preference to
+    /// routes not containing ferries. Applies only to the `DRIVE` and`TWO_WHEELER`
+    /// [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,10 +157,9 @@ namespace Google.Maps.Routing.V2 {
     public const int AvoidIndoorFieldNumber = 4;
     private bool avoidIndoor_;
     /// <summary>
-    /// Specifies whether to avoid navigating indoors where reasonable. Preference
-    /// will be given to routes not containing indoor navigation.
-    /// Applies only to the `WALK`
-    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
+    /// When set to true, avoids navigating indoors where reasonable, giving
+    /// preference to routes not containing indoor navigation. Applies only to the
+    /// `WALK` [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -197,7 +196,7 @@ namespace Google.Maps.Routing.V2 {
     /// toll passes are not provided, the API treats the toll pass as unknown and
     /// tries to return the cash price.
     /// Applies only to the `DRIVE` and `TWO_WHEELER`
-    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
+    /// [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

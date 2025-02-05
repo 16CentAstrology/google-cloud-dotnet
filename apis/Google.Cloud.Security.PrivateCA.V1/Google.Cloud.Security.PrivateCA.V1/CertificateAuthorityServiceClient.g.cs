@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Security.PrivateCA.V1
 {
@@ -1049,14 +1049,14 @@ namespace Google.Cloud.Security.PrivateCA.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CertificateAuthorityServiceClient.Create(callInvoker, Settings, Logger);
+            return CertificateAuthorityServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<CertificateAuthorityServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CertificateAuthorityServiceClient.Create(callInvoker, Settings, Logger);
+            return CertificateAuthorityServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1526,13 +1526,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Certificate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificatesResponse, Certificate> ListCertificates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificates(new ListCertificatesRequest
+        public virtual gax::PagedEnumerable<ListCertificatesResponse, Certificate> ListCertificates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificatesRequest request = new ListCertificatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Certificates][google.cloud.security.privateca.v1.Certificate].
@@ -1552,13 +1561,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Certificate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificatesResponse, Certificate> ListCertificatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificatesAsync(new ListCertificatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificatesResponse, Certificate> ListCertificatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificatesRequest request = new ListCertificatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Certificates][google.cloud.security.privateca.v1.Certificate].
@@ -1578,13 +1596,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Certificate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificatesResponse, Certificate> ListCertificates(CaPoolName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificates(new ListCertificatesRequest
+        public virtual gax::PagedEnumerable<ListCertificatesResponse, Certificate> ListCertificates(CaPoolName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificatesRequest request = new ListCertificatesRequest
             {
                 ParentAsCaPoolName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Certificates][google.cloud.security.privateca.v1.Certificate].
@@ -1604,13 +1631,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Certificate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificatesResponse, Certificate> ListCertificatesAsync(CaPoolName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificatesAsync(new ListCertificatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificatesResponse, Certificate> ListCertificatesAsync(CaPoolName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificatesRequest request = new ListCertificatesRequest
             {
                 ParentAsCaPoolName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Revoke a [Certificate][google.cloud.security.privateca.v1.Certificate].
@@ -2961,13 +2997,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CertificateAuthority"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificateAuthoritiesResponse, CertificateAuthority> ListCertificateAuthorities(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateAuthorities(new ListCertificateAuthoritiesRequest
+        public virtual gax::PagedEnumerable<ListCertificateAuthoritiesResponse, CertificateAuthority> ListCertificateAuthorities(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateAuthoritiesRequest request = new ListCertificateAuthoritiesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateAuthorities(request, callSettings);
+        }
 
         /// <summary>
         /// Lists
@@ -2989,13 +3034,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CertificateAuthority"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificateAuthoritiesResponse, CertificateAuthority> ListCertificateAuthoritiesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateAuthoritiesAsync(new ListCertificateAuthoritiesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificateAuthoritiesResponse, CertificateAuthority> ListCertificateAuthoritiesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateAuthoritiesRequest request = new ListCertificateAuthoritiesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateAuthoritiesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists
@@ -3017,13 +3071,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CertificateAuthority"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificateAuthoritiesResponse, CertificateAuthority> ListCertificateAuthorities(CaPoolName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateAuthorities(new ListCertificateAuthoritiesRequest
+        public virtual gax::PagedEnumerable<ListCertificateAuthoritiesResponse, CertificateAuthority> ListCertificateAuthorities(CaPoolName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateAuthoritiesRequest request = new ListCertificateAuthoritiesRequest
             {
                 ParentAsCaPoolName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateAuthorities(request, callSettings);
+        }
 
         /// <summary>
         /// Lists
@@ -3045,13 +3108,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CertificateAuthority"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificateAuthoritiesResponse, CertificateAuthority> ListCertificateAuthoritiesAsync(CaPoolName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateAuthoritiesAsync(new ListCertificateAuthoritiesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificateAuthoritiesResponse, CertificateAuthority> ListCertificateAuthoritiesAsync(CaPoolName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateAuthoritiesRequest request = new ListCertificateAuthoritiesRequest
             {
                 ParentAsCaPoolName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateAuthoritiesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Undelete a
@@ -3936,13 +4008,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CaPool"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCaPoolsResponse, CaPool> ListCaPools(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCaPools(new ListCaPoolsRequest
+        public virtual gax::PagedEnumerable<ListCaPoolsResponse, CaPool> ListCaPools(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCaPoolsRequest request = new ListCaPoolsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCaPools(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [CaPools][google.cloud.security.privateca.v1.CaPool].
@@ -3962,13 +4043,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CaPool"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCaPoolsResponse, CaPool> ListCaPoolsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCaPoolsAsync(new ListCaPoolsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCaPoolsResponse, CaPool> ListCaPoolsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCaPoolsRequest request = new ListCaPoolsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCaPoolsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [CaPools][google.cloud.security.privateca.v1.CaPool].
@@ -3988,13 +4078,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CaPool"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCaPoolsResponse, CaPool> ListCaPools(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCaPools(new ListCaPoolsRequest
+        public virtual gax::PagedEnumerable<ListCaPoolsResponse, CaPool> ListCaPools(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCaPoolsRequest request = new ListCaPoolsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCaPools(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [CaPools][google.cloud.security.privateca.v1.CaPool].
@@ -4014,13 +4113,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CaPool"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCaPoolsResponse, CaPool> ListCaPoolsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCaPoolsAsync(new ListCaPoolsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCaPoolsResponse, CaPool> ListCaPoolsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCaPoolsRequest request = new ListCaPoolsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCaPoolsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Delete a [CaPool][google.cloud.security.privateca.v1.CaPool].
@@ -4168,9 +4276,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all certificate authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4181,9 +4288,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all certificate authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4194,9 +4300,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all certificate authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4207,9 +4312,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all certificate authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="caPool">
         /// Required. The resource name for the
@@ -4227,9 +4331,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all certificate authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="caPool">
         /// Required. The resource name for the
@@ -4247,9 +4350,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all certificate authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="caPool">
         /// Required. The resource name for the
@@ -4264,9 +4366,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all certificate authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="caPool">
         /// Required. The resource name for the
@@ -4284,9 +4385,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all certificate authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="caPool">
         /// Required. The resource name for the
@@ -4304,9 +4404,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all certificate authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="caPool">
         /// Required. The resource name for the
@@ -4495,13 +4594,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CertificateRevocationList"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificateRevocationListsResponse, CertificateRevocationList> ListCertificateRevocationLists(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateRevocationLists(new ListCertificateRevocationListsRequest
+        public virtual gax::PagedEnumerable<ListCertificateRevocationListsResponse, CertificateRevocationList> ListCertificateRevocationLists(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateRevocationListsRequest request = new ListCertificateRevocationListsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateRevocationLists(request, callSettings);
+        }
 
         /// <summary>
         /// Lists
@@ -4522,13 +4630,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CertificateRevocationList"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificateRevocationListsResponse, CertificateRevocationList> ListCertificateRevocationListsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateRevocationListsAsync(new ListCertificateRevocationListsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificateRevocationListsResponse, CertificateRevocationList> ListCertificateRevocationListsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateRevocationListsRequest request = new ListCertificateRevocationListsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateRevocationListsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists
@@ -4549,13 +4666,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CertificateRevocationList"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificateRevocationListsResponse, CertificateRevocationList> ListCertificateRevocationLists(CertificateAuthorityName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateRevocationLists(new ListCertificateRevocationListsRequest
+        public virtual gax::PagedEnumerable<ListCertificateRevocationListsResponse, CertificateRevocationList> ListCertificateRevocationLists(CertificateAuthorityName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateRevocationListsRequest request = new ListCertificateRevocationListsRequest
             {
                 ParentAsCertificateAuthorityName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateRevocationLists(request, callSettings);
+        }
 
         /// <summary>
         /// Lists
@@ -4576,13 +4702,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CertificateRevocationList"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificateRevocationListsResponse, CertificateRevocationList> ListCertificateRevocationListsAsync(CertificateAuthorityName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateRevocationListsAsync(new ListCertificateRevocationListsRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificateRevocationListsResponse, CertificateRevocationList> ListCertificateRevocationListsAsync(CertificateAuthorityName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateRevocationListsRequest request = new ListCertificateRevocationListsRequest
             {
                 ParentAsCertificateAuthorityName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateRevocationListsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Update a
@@ -5248,13 +5383,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CertificateTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificateTemplatesResponse, CertificateTemplate> ListCertificateTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateTemplates(new ListCertificateTemplatesRequest
+        public virtual gax::PagedEnumerable<ListCertificateTemplatesResponse, CertificateTemplate> ListCertificateTemplates(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateTemplatesRequest request = new ListCertificateTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists
@@ -5275,13 +5419,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CertificateTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificateTemplatesResponse, CertificateTemplate> ListCertificateTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateTemplatesAsync(new ListCertificateTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificateTemplatesResponse, CertificateTemplate> ListCertificateTemplatesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateTemplatesRequest request = new ListCertificateTemplatesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists
@@ -5302,13 +5455,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="CertificateTemplate"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCertificateTemplatesResponse, CertificateTemplate> ListCertificateTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateTemplates(new ListCertificateTemplatesRequest
+        public virtual gax::PagedEnumerable<ListCertificateTemplatesResponse, CertificateTemplate> ListCertificateTemplates(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateTemplatesRequest request = new ListCertificateTemplatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateTemplates(request, callSettings);
+        }
 
         /// <summary>
         /// Lists
@@ -5329,13 +5491,22 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="CertificateTemplate"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCertificateTemplatesResponse, CertificateTemplate> ListCertificateTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCertificateTemplatesAsync(new ListCertificateTemplatesRequest
+        public virtual gax::PagedAsyncEnumerable<ListCertificateTemplatesResponse, CertificateTemplate> ListCertificateTemplatesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListCertificateTemplatesRequest request = new ListCertificateTemplatesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListCertificateTemplatesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Update a
@@ -5533,7 +5704,11 @@ namespace Google.Cloud.Security.PrivateCA.V1
         {
             GrpcClient = grpcClient;
             CertificateAuthorityServiceSettings effectiveSettings = settings ?? CertificateAuthorityServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             ActivateCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ActivateCertificateAuthorityOperationsSettings, logger);
             CreateCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCertificateAuthorityOperationsSettings, logger);
             DisableCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DisableCertificateAuthorityOperationsSettings, logger);
@@ -6348,9 +6523,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all certificate authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6364,9 +6538,8 @@ namespace Google.Cloud.Security.PrivateCA.V1
         /// <summary>
         /// FetchCaCerts returns the current trust anchor for the
         /// [CaPool][google.cloud.security.privateca.v1.CaPool]. This will include CA
-        /// certificate chains for all ACTIVE
-        /// [CertificateAuthority][google.cloud.security.privateca.v1.CertificateAuthority]
-        /// resources in the [CaPool][google.cloud.security.privateca.v1.CaPool].
+        /// certificate chains for all certificate authorities in the ENABLED,
+        /// DISABLED, or STAGED states.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

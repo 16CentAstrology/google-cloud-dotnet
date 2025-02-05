@@ -3,7 +3,7 @@
 set -e
 source ../toolversions.sh
 
-install_docfx
+dotnet tool restore > /dev/null
 
 # Some versions of docfx fail if VSINSTALLDIR is set.
 export VSINSTALLDIR=
@@ -36,14 +36,14 @@ build_api_docs() {
   
   dotnet docfx metadata --logLevel Warning output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
+  # Remove references generated from SourceLink
+  sed -E -i '/^\s+href: https:\/\/github.com\//d' output/$api/obj/api/*.yml
 
   # Build metadata for devsite
   dotnet docfx metadata --logLevel Warning output/$api/docfx-devsite.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
-
-  # Unescape the metadata files for both devsite and googleapis.dev
-  dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.UnescapeDocfxMetadataXml -- output/$api/obj/api
-  dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.UnescapeDocfxMetadataXml -- output/$api/obj/bareapi
+  # Remove references generated from SourceLink
+  sed -E -i '/^\s+href: https:\/\/github.com\//d' output/$api/obj/bareapi/*.yml
 
   # Generate the snippet markdown
   dotnet run --no-build --no-restore --project ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api

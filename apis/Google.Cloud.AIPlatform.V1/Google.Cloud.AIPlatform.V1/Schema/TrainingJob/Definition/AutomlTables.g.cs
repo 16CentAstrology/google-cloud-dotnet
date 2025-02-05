@@ -117,6 +117,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
   /// <summary>
   /// A TrainingJob that trains and uploads an AutoML Tables Model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlTables : pb::IMessage<AutoMlTables>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -367,6 +368,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlTablesInputs : pb::IMessage<AutoMlTablesInputs>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -437,10 +439,24 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float OptimizationObjectiveRecallValue {
-      get { return additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue ? (float) additionalOptimizationObjectiveConfig_ : 0F; }
+      get { return HasOptimizationObjectiveRecallValue ? (float) additionalOptimizationObjectiveConfig_ : 0F; }
       set {
         additionalOptimizationObjectiveConfig_ = value;
         additionalOptimizationObjectiveConfigCase_ = AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue;
+      }
+    }
+    /// <summary>Gets whether the "optimization_objective_recall_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOptimizationObjectiveRecallValue {
+      get { return additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "optimization_objective_recall_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOptimizationObjectiveRecallValue() {
+      if (HasOptimizationObjectiveRecallValue) {
+        ClearAdditionalOptimizationObjectiveConfig();
       }
     }
 
@@ -453,10 +469,24 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float OptimizationObjectivePrecisionValue {
-      get { return additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue ? (float) additionalOptimizationObjectiveConfig_ : 0F; }
+      get { return HasOptimizationObjectivePrecisionValue ? (float) additionalOptimizationObjectiveConfig_ : 0F; }
       set {
         additionalOptimizationObjectiveConfig_ = value;
         additionalOptimizationObjectiveConfigCase_ = AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue;
+      }
+    }
+    /// <summary>Gets whether the "optimization_objective_precision_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOptimizationObjectivePrecisionValue {
+      get { return additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "optimization_objective_precision_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOptimizationObjectivePrecisionValue() {
+      if (HasOptimizationObjectivePrecisionValue) {
+        ClearAdditionalOptimizationObjectiveConfig();
       }
     }
 
@@ -701,8 +731,8 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(OptimizationObjectiveRecallValue);
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(OptimizationObjectivePrecisionValue);
+      if (HasOptimizationObjectiveRecallValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(OptimizationObjectiveRecallValue);
+      if (HasOptimizationObjectivePrecisionValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(OptimizationObjectivePrecisionValue);
       if (PredictionType.Length != 0) hash ^= PredictionType.GetHashCode();
       if (TargetColumn.Length != 0) hash ^= TargetColumn.GetHashCode();
       hash ^= transformations_.GetHashCode();
@@ -744,11 +774,11 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         output.WriteRawTag(34);
         output.WriteString(OptimizationObjective);
       }
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue) {
+      if (HasOptimizationObjectiveRecallValue) {
         output.WriteRawTag(45);
         output.WriteFloat(OptimizationObjectiveRecallValue);
       }
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue) {
+      if (HasOptimizationObjectivePrecisionValue) {
         output.WriteRawTag(53);
         output.WriteFloat(OptimizationObjectivePrecisionValue);
       }
@@ -792,11 +822,11 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         output.WriteRawTag(34);
         output.WriteString(OptimizationObjective);
       }
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue) {
+      if (HasOptimizationObjectiveRecallValue) {
         output.WriteRawTag(45);
         output.WriteFloat(OptimizationObjectiveRecallValue);
       }
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue) {
+      if (HasOptimizationObjectivePrecisionValue) {
         output.WriteRawTag(53);
         output.WriteFloat(OptimizationObjectivePrecisionValue);
       }
@@ -827,10 +857,10 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue) {
+      if (HasOptimizationObjectiveRecallValue) {
         size += 1 + 4;
       }
-      if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue) {
+      if (HasOptimizationObjectivePrecisionValue) {
         size += 1 + 4;
       }
       if (PredictionType.Length != 0) {
@@ -1037,6 +1067,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Transformation : pb::IMessage<Transformation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1647,6 +1678,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           /// Training pipeline will infer the proper transformation based on the
           /// statistic of dataset.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class AutoTransformation : pb::IMessage<AutoTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1848,6 +1880,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           ///    considered a missing value.
           /// *  A boolean value that indicates whether the value is valid.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class NumericTransformation : pb::IMessage<NumericTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2091,6 +2124,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           ///    treated as the "unknown" category. The "unknown" category gets its own
           ///    special lookup index and resulting embedding.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class CategoricalTransformation : pb::IMessage<CategoricalTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2289,6 +2323,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           ///    typical timestamp range, or are extreme values) receive no special
           ///    treatment and are not removed.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class TimestampTransformation : pb::IMessage<TimestampTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2584,6 +2619,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           /// *  Missing values get their own lookup index and resulting embedding.
           /// *  Stop-words receive no special treatment and are not removed.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class TextTransformation : pb::IMessage<TextTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2780,6 +2816,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           ///    all elements.
           /// *  The average of empty arrays is treated as zero.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class NumericArrayTransformation : pb::IMessage<NumericArrayTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3022,6 +3059,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           ///    the mean.
           /// *  Empty arrays treated as an embedding of zeroes.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class CategoricalArrayTransformation : pb::IMessage<CategoricalArrayTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3220,6 +3258,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
           ///    text value. Apply the transformations for Text columns.
           /// *  Empty arrays treated as an empty text.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class TextArrayTransformation : pb::IMessage<TextArrayTransformation>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3422,6 +3461,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
   /// <summary>
   /// Model metadata specific to AutoML Tables.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoMlTablesMetadata : pb::IMessage<AutoMlTablesMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

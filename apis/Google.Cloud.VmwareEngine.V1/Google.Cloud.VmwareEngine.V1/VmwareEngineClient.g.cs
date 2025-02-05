@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.VmwareEngine.V1
 {
@@ -68,7 +68,37 @@ namespace Google.Cloud.VmwareEngine.V1
             UpdateClusterOperationsSettings = existing.UpdateClusterOperationsSettings.Clone();
             DeleteClusterSettings = existing.DeleteClusterSettings;
             DeleteClusterOperationsSettings = existing.DeleteClusterOperationsSettings.Clone();
+            ListNodesSettings = existing.ListNodesSettings;
+            GetNodeSettings = existing.GetNodeSettings;
+            ListExternalAddressesSettings = existing.ListExternalAddressesSettings;
+            FetchNetworkPolicyExternalAddressesSettings = existing.FetchNetworkPolicyExternalAddressesSettings;
+            GetExternalAddressSettings = existing.GetExternalAddressSettings;
+            CreateExternalAddressSettings = existing.CreateExternalAddressSettings;
+            CreateExternalAddressOperationsSettings = existing.CreateExternalAddressOperationsSettings.Clone();
+            UpdateExternalAddressSettings = existing.UpdateExternalAddressSettings;
+            UpdateExternalAddressOperationsSettings = existing.UpdateExternalAddressOperationsSettings.Clone();
+            DeleteExternalAddressSettings = existing.DeleteExternalAddressSettings;
+            DeleteExternalAddressOperationsSettings = existing.DeleteExternalAddressOperationsSettings.Clone();
             ListSubnetsSettings = existing.ListSubnetsSettings;
+            GetSubnetSettings = existing.GetSubnetSettings;
+            UpdateSubnetSettings = existing.UpdateSubnetSettings;
+            UpdateSubnetOperationsSettings = existing.UpdateSubnetOperationsSettings.Clone();
+            ListExternalAccessRulesSettings = existing.ListExternalAccessRulesSettings;
+            GetExternalAccessRuleSettings = existing.GetExternalAccessRuleSettings;
+            CreateExternalAccessRuleSettings = existing.CreateExternalAccessRuleSettings;
+            CreateExternalAccessRuleOperationsSettings = existing.CreateExternalAccessRuleOperationsSettings.Clone();
+            UpdateExternalAccessRuleSettings = existing.UpdateExternalAccessRuleSettings;
+            UpdateExternalAccessRuleOperationsSettings = existing.UpdateExternalAccessRuleOperationsSettings.Clone();
+            DeleteExternalAccessRuleSettings = existing.DeleteExternalAccessRuleSettings;
+            DeleteExternalAccessRuleOperationsSettings = existing.DeleteExternalAccessRuleOperationsSettings.Clone();
+            ListLoggingServersSettings = existing.ListLoggingServersSettings;
+            GetLoggingServerSettings = existing.GetLoggingServerSettings;
+            CreateLoggingServerSettings = existing.CreateLoggingServerSettings;
+            CreateLoggingServerOperationsSettings = existing.CreateLoggingServerOperationsSettings.Clone();
+            UpdateLoggingServerSettings = existing.UpdateLoggingServerSettings;
+            UpdateLoggingServerOperationsSettings = existing.UpdateLoggingServerOperationsSettings.Clone();
+            DeleteLoggingServerSettings = existing.DeleteLoggingServerSettings;
+            DeleteLoggingServerOperationsSettings = existing.DeleteLoggingServerOperationsSettings.Clone();
             ListNodeTypesSettings = existing.ListNodeTypesSettings;
             GetNodeTypeSettings = existing.GetNodeTypeSettings;
             ShowNsxCredentialsSettings = existing.ShowNsxCredentialsSettings;
@@ -77,6 +107,18 @@ namespace Google.Cloud.VmwareEngine.V1
             ResetNsxCredentialsOperationsSettings = existing.ResetNsxCredentialsOperationsSettings.Clone();
             ResetVcenterCredentialsSettings = existing.ResetVcenterCredentialsSettings;
             ResetVcenterCredentialsOperationsSettings = existing.ResetVcenterCredentialsOperationsSettings.Clone();
+            GetDnsForwardingSettings = existing.GetDnsForwardingSettings;
+            UpdateDnsForwardingSettings = existing.UpdateDnsForwardingSettings;
+            UpdateDnsForwardingOperationsSettings = existing.UpdateDnsForwardingOperationsSettings.Clone();
+            GetNetworkPeeringSettings = existing.GetNetworkPeeringSettings;
+            ListNetworkPeeringsSettings = existing.ListNetworkPeeringsSettings;
+            CreateNetworkPeeringSettings = existing.CreateNetworkPeeringSettings;
+            CreateNetworkPeeringOperationsSettings = existing.CreateNetworkPeeringOperationsSettings.Clone();
+            DeleteNetworkPeeringSettings = existing.DeleteNetworkPeeringSettings;
+            DeleteNetworkPeeringOperationsSettings = existing.DeleteNetworkPeeringOperationsSettings.Clone();
+            UpdateNetworkPeeringSettings = existing.UpdateNetworkPeeringSettings;
+            UpdateNetworkPeeringOperationsSettings = existing.UpdateNetworkPeeringOperationsSettings.Clone();
+            ListPeeringRoutesSettings = existing.ListPeeringRoutesSettings;
             CreateHcxActivationKeySettings = existing.CreateHcxActivationKeySettings;
             CreateHcxActivationKeyOperationsSettings = existing.CreateHcxActivationKeyOperationsSettings.Clone();
             ListHcxActivationKeysSettings = existing.ListHcxActivationKeysSettings;
@@ -89,6 +131,16 @@ namespace Google.Cloud.VmwareEngine.V1
             UpdateNetworkPolicyOperationsSettings = existing.UpdateNetworkPolicyOperationsSettings.Clone();
             DeleteNetworkPolicySettings = existing.DeleteNetworkPolicySettings;
             DeleteNetworkPolicyOperationsSettings = existing.DeleteNetworkPolicyOperationsSettings.Clone();
+            ListManagementDnsZoneBindingsSettings = existing.ListManagementDnsZoneBindingsSettings;
+            GetManagementDnsZoneBindingSettings = existing.GetManagementDnsZoneBindingSettings;
+            CreateManagementDnsZoneBindingSettings = existing.CreateManagementDnsZoneBindingSettings;
+            CreateManagementDnsZoneBindingOperationsSettings = existing.CreateManagementDnsZoneBindingOperationsSettings.Clone();
+            UpdateManagementDnsZoneBindingSettings = existing.UpdateManagementDnsZoneBindingSettings;
+            UpdateManagementDnsZoneBindingOperationsSettings = existing.UpdateManagementDnsZoneBindingOperationsSettings.Clone();
+            DeleteManagementDnsZoneBindingSettings = existing.DeleteManagementDnsZoneBindingSettings;
+            DeleteManagementDnsZoneBindingOperationsSettings = existing.DeleteManagementDnsZoneBindingOperationsSettings.Clone();
+            RepairManagementDnsZoneBindingSettings = existing.RepairManagementDnsZoneBindingSettings;
+            RepairManagementDnsZoneBindingOperationsSettings = existing.RepairManagementDnsZoneBindingOperationsSettings.Clone();
             CreateVmwareEngineNetworkSettings = existing.CreateVmwareEngineNetworkSettings;
             CreateVmwareEngineNetworkOperationsSettings = existing.CreateVmwareEngineNetworkOperationsSettings.Clone();
             UpdateVmwareEngineNetworkSettings = existing.UpdateVmwareEngineNetworkSettings;
@@ -97,6 +149,20 @@ namespace Google.Cloud.VmwareEngine.V1
             DeleteVmwareEngineNetworkOperationsSettings = existing.DeleteVmwareEngineNetworkOperationsSettings.Clone();
             GetVmwareEngineNetworkSettings = existing.GetVmwareEngineNetworkSettings;
             ListVmwareEngineNetworksSettings = existing.ListVmwareEngineNetworksSettings;
+            CreatePrivateConnectionSettings = existing.CreatePrivateConnectionSettings;
+            CreatePrivateConnectionOperationsSettings = existing.CreatePrivateConnectionOperationsSettings.Clone();
+            GetPrivateConnectionSettings = existing.GetPrivateConnectionSettings;
+            ListPrivateConnectionsSettings = existing.ListPrivateConnectionsSettings;
+            UpdatePrivateConnectionSettings = existing.UpdatePrivateConnectionSettings;
+            UpdatePrivateConnectionOperationsSettings = existing.UpdatePrivateConnectionOperationsSettings.Clone();
+            DeletePrivateConnectionSettings = existing.DeletePrivateConnectionSettings;
+            DeletePrivateConnectionOperationsSettings = existing.DeletePrivateConnectionOperationsSettings.Clone();
+            ListPrivateConnectionPeeringRoutesSettings = existing.ListPrivateConnectionPeeringRoutesSettings;
+            GrantDnsBindPermissionSettings = existing.GrantDnsBindPermissionSettings;
+            GrantDnsBindPermissionOperationsSettings = existing.GrantDnsBindPermissionOperationsSettings.Clone();
+            GetDnsBindPermissionSettings = existing.GetDnsBindPermissionSettings;
+            RevokeDnsBindPermissionSettings = existing.RevokeDnsBindPermissionSettings;
+            RevokeDnsBindPermissionOperationsSettings = existing.RevokeDnsBindPermissionOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -388,6 +454,181 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.ListNodes</c> and <c>VmwareEngineClient.ListNodesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListNodesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>VmwareEngineClient.GetNode</c>
+        ///  and <c>VmwareEngineClient.GetNodeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetNodeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.ListExternalAddresses</c> and <c>VmwareEngineClient.ListExternalAddressesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListExternalAddressesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.FetchNetworkPolicyExternalAddresses</c> and
+        /// <c>VmwareEngineClient.FetchNetworkPolicyExternalAddressesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchNetworkPolicyExternalAddressesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.GetExternalAddress</c> and <c>VmwareEngineClient.GetExternalAddressAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetExternalAddressSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.CreateExternalAddress</c> and <c>VmwareEngineClient.CreateExternalAddressAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateExternalAddressSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.CreateExternalAddress</c> and
+        /// <c>VmwareEngineClient.CreateExternalAddressAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateExternalAddressOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.UpdateExternalAddress</c> and <c>VmwareEngineClient.UpdateExternalAddressAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateExternalAddressSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.UpdateExternalAddress</c> and
+        /// <c>VmwareEngineClient.UpdateExternalAddressAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateExternalAddressOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.DeleteExternalAddress</c> and <c>VmwareEngineClient.DeleteExternalAddressAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteExternalAddressSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.DeleteExternalAddress</c> and
+        /// <c>VmwareEngineClient.DeleteExternalAddressAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteExternalAddressOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>VmwareEngineClient.ListSubnets</c> and <c>VmwareEngineClient.ListSubnetsAsync</c>.
         /// </summary>
         /// <remarks>
@@ -403,6 +644,310 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSubnetsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.GetSubnet</c> and <c>VmwareEngineClient.GetSubnetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSubnetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.UpdateSubnet</c> and <c>VmwareEngineClient.UpdateSubnetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSubnetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.UpdateSubnet</c> and
+        /// <c>VmwareEngineClient.UpdateSubnetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateSubnetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.ListExternalAccessRules</c> and <c>VmwareEngineClient.ListExternalAccessRulesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListExternalAccessRulesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.GetExternalAccessRule</c> and <c>VmwareEngineClient.GetExternalAccessRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetExternalAccessRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.CreateExternalAccessRule</c> and <c>VmwareEngineClient.CreateExternalAccessRuleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateExternalAccessRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.CreateExternalAccessRule</c> and
+        /// <c>VmwareEngineClient.CreateExternalAccessRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateExternalAccessRuleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.UpdateExternalAccessRule</c> and <c>VmwareEngineClient.UpdateExternalAccessRuleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateExternalAccessRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.UpdateExternalAccessRule</c> and
+        /// <c>VmwareEngineClient.UpdateExternalAccessRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateExternalAccessRuleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.DeleteExternalAccessRule</c> and <c>VmwareEngineClient.DeleteExternalAccessRuleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteExternalAccessRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.DeleteExternalAccessRule</c> and
+        /// <c>VmwareEngineClient.DeleteExternalAccessRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteExternalAccessRuleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.ListLoggingServers</c> and <c>VmwareEngineClient.ListLoggingServersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListLoggingServersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.GetLoggingServer</c> and <c>VmwareEngineClient.GetLoggingServerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetLoggingServerSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.CreateLoggingServer</c> and <c>VmwareEngineClient.CreateLoggingServerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateLoggingServerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.CreateLoggingServer</c> and
+        /// <c>VmwareEngineClient.CreateLoggingServerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateLoggingServerOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.UpdateLoggingServer</c> and <c>VmwareEngineClient.UpdateLoggingServerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateLoggingServerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.UpdateLoggingServer</c> and
+        /// <c>VmwareEngineClient.UpdateLoggingServerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateLoggingServerOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.DeleteLoggingServer</c> and <c>VmwareEngineClient.DeleteLoggingServerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteLoggingServerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.DeleteLoggingServer</c> and
+        /// <c>VmwareEngineClient.DeleteLoggingServerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteLoggingServerOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -536,6 +1081,198 @@ namespace Google.Cloud.VmwareEngine.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.GetDnsForwarding</c> and <c>VmwareEngineClient.GetDnsForwardingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDnsForwardingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.UpdateDnsForwarding</c> and <c>VmwareEngineClient.UpdateDnsForwardingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateDnsForwardingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.UpdateDnsForwarding</c> and
+        /// <c>VmwareEngineClient.UpdateDnsForwardingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateDnsForwardingOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.GetNetworkPeering</c> and <c>VmwareEngineClient.GetNetworkPeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetNetworkPeeringSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.ListNetworkPeerings</c> and <c>VmwareEngineClient.ListNetworkPeeringsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListNetworkPeeringsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.CreateNetworkPeering</c> and <c>VmwareEngineClient.CreateNetworkPeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateNetworkPeeringSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.CreateNetworkPeering</c> and
+        /// <c>VmwareEngineClient.CreateNetworkPeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateNetworkPeeringOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.DeleteNetworkPeering</c> and <c>VmwareEngineClient.DeleteNetworkPeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteNetworkPeeringSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.DeleteNetworkPeering</c> and
+        /// <c>VmwareEngineClient.DeleteNetworkPeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteNetworkPeeringOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.UpdateNetworkPeering</c> and <c>VmwareEngineClient.UpdateNetworkPeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateNetworkPeeringSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.UpdateNetworkPeering</c> and
+        /// <c>VmwareEngineClient.UpdateNetworkPeeringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateNetworkPeeringOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.ListPeeringRoutes</c> and <c>VmwareEngineClient.ListPeeringRoutesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListPeeringRoutesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -731,6 +1468,168 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.ListManagementDnsZoneBindings</c> and
+        /// <c>VmwareEngineClient.ListManagementDnsZoneBindingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListManagementDnsZoneBindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.GetManagementDnsZoneBinding</c> and
+        /// <c>VmwareEngineClient.GetManagementDnsZoneBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetManagementDnsZoneBindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.CreateManagementDnsZoneBinding</c> and
+        /// <c>VmwareEngineClient.CreateManagementDnsZoneBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateManagementDnsZoneBindingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.CreateManagementDnsZoneBinding</c> and
+        /// <c>VmwareEngineClient.CreateManagementDnsZoneBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateManagementDnsZoneBindingOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.UpdateManagementDnsZoneBinding</c> and
+        /// <c>VmwareEngineClient.UpdateManagementDnsZoneBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateManagementDnsZoneBindingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.UpdateManagementDnsZoneBinding</c> and
+        /// <c>VmwareEngineClient.UpdateManagementDnsZoneBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateManagementDnsZoneBindingOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.DeleteManagementDnsZoneBinding</c> and
+        /// <c>VmwareEngineClient.DeleteManagementDnsZoneBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteManagementDnsZoneBindingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.DeleteManagementDnsZoneBinding</c> and
+        /// <c>VmwareEngineClient.DeleteManagementDnsZoneBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteManagementDnsZoneBindingOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.RepairManagementDnsZoneBinding</c> and
+        /// <c>VmwareEngineClient.RepairManagementDnsZoneBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RepairManagementDnsZoneBindingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.RepairManagementDnsZoneBinding</c> and
+        /// <c>VmwareEngineClient.RepairManagementDnsZoneBindingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RepairManagementDnsZoneBindingOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>VmwareEngineClient.CreateVmwareEngineNetwork</c> and <c>VmwareEngineClient.CreateVmwareEngineNetworkAsync</c>
         /// .
         /// </summary>
@@ -860,6 +1759,233 @@ namespace Google.Cloud.VmwareEngine.V1
         public gaxgrpc::CallSettings ListVmwareEngineNetworksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.CreatePrivateConnection</c> and <c>VmwareEngineClient.CreatePrivateConnectionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreatePrivateConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.CreatePrivateConnection</c> and
+        /// <c>VmwareEngineClient.CreatePrivateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreatePrivateConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.GetPrivateConnection</c> and <c>VmwareEngineClient.GetPrivateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPrivateConnectionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.ListPrivateConnections</c> and <c>VmwareEngineClient.ListPrivateConnectionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListPrivateConnectionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.UpdatePrivateConnection</c> and <c>VmwareEngineClient.UpdatePrivateConnectionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdatePrivateConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.UpdatePrivateConnection</c> and
+        /// <c>VmwareEngineClient.UpdatePrivateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdatePrivateConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.DeletePrivateConnection</c> and <c>VmwareEngineClient.DeletePrivateConnectionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeletePrivateConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.DeletePrivateConnection</c> and
+        /// <c>VmwareEngineClient.DeletePrivateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeletePrivateConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.ListPrivateConnectionPeeringRoutes</c> and
+        /// <c>VmwareEngineClient.ListPrivateConnectionPeeringRoutesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListPrivateConnectionPeeringRoutesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.GrantDnsBindPermission</c> and <c>VmwareEngineClient.GrantDnsBindPermissionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GrantDnsBindPermissionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.GrantDnsBindPermission</c> and
+        /// <c>VmwareEngineClient.GrantDnsBindPermissionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings GrantDnsBindPermissionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.GetDnsBindPermission</c> and <c>VmwareEngineClient.GetDnsBindPermissionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetDnsBindPermissionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VmwareEngineClient.RevokeDnsBindPermission</c> and <c>VmwareEngineClient.RevokeDnsBindPermissionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RevokeDnsBindPermissionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>VmwareEngineClient.RevokeDnsBindPermission</c> and
+        /// <c>VmwareEngineClient.RevokeDnsBindPermissionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RevokeDnsBindPermissionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -911,14 +2037,14 @@ namespace Google.Cloud.VmwareEngine.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return VmwareEngineClient.Create(callInvoker, Settings, Logger);
+            return VmwareEngineClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<VmwareEngineClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return VmwareEngineClient.Create(callInvoker, Settings, Logger);
+            return VmwareEngineClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1053,13 +2179,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PrivateCloud"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateClouds(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateClouds(new ListPrivateCloudsRequest
+        public virtual gax::PagedEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateClouds(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateCloudsRequest request = new ListPrivateCloudsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateClouds(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `PrivateCloud` resources in a given project and location.
@@ -1081,13 +2216,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PrivateCloud"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateCloudsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateCloudsAsync(new ListPrivateCloudsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateCloudsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateCloudsRequest request = new ListPrivateCloudsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateCloudsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `PrivateCloud` resources in a given project and location.
@@ -1109,13 +2253,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PrivateCloud"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateClouds(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateClouds(new ListPrivateCloudsRequest
+        public virtual gax::PagedEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateClouds(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateCloudsRequest request = new ListPrivateCloudsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateClouds(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `PrivateCloud` resources in a given project and location.
@@ -1137,13 +2290,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PrivateCloud"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateCloudsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListPrivateCloudsAsync(new ListPrivateCloudsRequest
+        public virtual gax::PagedAsyncEnumerable<ListPrivateCloudsResponse, PrivateCloud> ListPrivateCloudsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateCloudsRequest request = new ListPrivateCloudsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateCloudsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a `PrivateCloud` resource by its resource name.
@@ -1276,9 +2438,9 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// Creates a new `PrivateCloud` resource in a given project and location.
-        /// Private clouds can only be created in zones, regional private clouds are
-        /// not supported.
-        /// 
+        /// Private clouds of type `STANDARD` and
+        /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+        /// regional.
         /// Creating a private cloud also creates a [management
         /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
         /// for that private cloud.
@@ -1291,9 +2453,9 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// Creates a new `PrivateCloud` resource in a given project and location.
-        /// Private clouds can only be created in zones, regional private clouds are
-        /// not supported.
-        /// 
+        /// Private clouds of type `STANDARD` and
+        /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+        /// regional.
         /// Creating a private cloud also creates a [management
         /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
         /// for that private cloud.
@@ -1306,9 +2468,9 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// Creates a new `PrivateCloud` resource in a given project and location.
-        /// Private clouds can only be created in zones, regional private clouds are
-        /// not supported.
-        /// 
+        /// Private clouds of type `STANDARD` and
+        /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+        /// regional.
         /// Creating a private cloud also creates a [management
         /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
         /// for that private cloud.
@@ -1348,9 +2510,9 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// Creates a new `PrivateCloud` resource in a given project and location.
-        /// Private clouds can only be created in zones, regional private clouds are
-        /// not supported.
-        /// 
+        /// Private clouds of type `STANDARD` and
+        /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+        /// regional.
         /// Creating a private cloud also creates a [management
         /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
         /// for that private cloud.
@@ -1390,9 +2552,9 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// Creates a new `PrivateCloud` resource in a given project and location.
-        /// Private clouds can only be created in zones, regional private clouds are
-        /// not supported.
-        /// 
+        /// Private clouds of type `STANDARD` and
+        /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+        /// regional.
         /// Creating a private cloud also creates a [management
         /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
         /// for that private cloud.
@@ -1432,9 +2594,9 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// Creates a new `PrivateCloud` resource in a given project and location.
-        /// Private clouds can only be created in zones, regional private clouds are
-        /// not supported.
-        /// 
+        /// Private clouds of type `STANDARD` and
+        /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+        /// regional.
         /// Creating a private cloud also creates a [management
         /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
         /// for that private cloud.
@@ -1469,9 +2631,9 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// Creates a new `PrivateCloud` resource in a given project and location.
-        /// Private clouds can only be created in zones, regional private clouds are
-        /// not supported.
-        /// 
+        /// Private clouds of type `STANDARD` and
+        /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+        /// regional.
         /// Creating a private cloud also creates a [management
         /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
         /// for that private cloud.
@@ -1511,9 +2673,9 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// Creates a new `PrivateCloud` resource in a given project and location.
-        /// Private clouds can only be created in zones, regional private clouds are
-        /// not supported.
-        /// 
+        /// Private clouds of type `STANDARD` and
+        /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+        /// regional.
         /// Creating a private cloud also creates a [management
         /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
         /// for that private cloud.
@@ -1553,9 +2715,9 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// Creates a new `PrivateCloud` resource in a given project and location.
-        /// Private clouds can only be created in zones, regional private clouds are
-        /// not supported.
-        /// 
+        /// Private clouds of type `STANDARD` and
+        /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+        /// regional.
         /// Creating a private cloud also creates a [management
         /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
         /// for that private cloud.
@@ -2249,13 +3411,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Cluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListClustersResponse, Cluster> ListClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClusters(new ListClustersRequest
+        public virtual gax::PagedEnumerable<ListClustersResponse, Cluster> ListClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClustersRequest request = new ListClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `Cluster` resources in a given private cloud.
@@ -2277,13 +3448,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Cluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClustersAsync(new ListClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClustersRequest request = new ListClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `Cluster` resources in a given private cloud.
@@ -2305,13 +3485,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Cluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListClustersResponse, Cluster> ListClusters(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClusters(new ListClustersRequest
+        public virtual gax::PagedEnumerable<ListClustersResponse, Cluster> ListClusters(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClustersRequest request = new ListClustersRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `Cluster` resources in a given private cloud.
@@ -2333,13 +3522,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Cluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListClustersAsync(new ListClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListClustersResponse, Cluster> ListClustersAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListClustersRequest request = new ListClustersRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a `Cluster` resource by its resource name.
@@ -2757,8 +3955,7 @@ namespace Google.Cloud.VmwareEngine.V1
             CreateClusterAsync(parent, cluster, clusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Modifies a `Cluster` resource. Only the following fields can be updated:
-        /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+        /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
         /// applied.
         /// 
         /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -2773,8 +3970,7 @@ namespace Google.Cloud.VmwareEngine.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Modifies a `Cluster` resource. Only the following fields can be updated:
-        /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+        /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
         /// applied.
         /// 
         /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -2789,8 +3985,7 @@ namespace Google.Cloud.VmwareEngine.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Modifies a `Cluster` resource. Only the following fields can be updated:
-        /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+        /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
         /// applied.
         /// 
         /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -2831,8 +4026,7 @@ namespace Google.Cloud.VmwareEngine.V1
             lro::Operation<Cluster, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateClusterOperationsClient, callSettings);
 
         /// <summary>
-        /// Modifies a `Cluster` resource. Only the following fields can be updated:
-        /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+        /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
         /// applied.
         /// 
         /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -2860,8 +4054,7 @@ namespace Google.Cloud.VmwareEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Modifies a `Cluster` resource. Only the following fields can be updated:
-        /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+        /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
         /// applied.
         /// 
         /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -2889,8 +4082,7 @@ namespace Google.Cloud.VmwareEngine.V1
             }, callSettings);
 
         /// <summary>
-        /// Modifies a `Cluster` resource. Only the following fields can be updated:
-        /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+        /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
         /// applied.
         /// 
         /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -3096,6 +4288,1376 @@ namespace Google.Cloud.VmwareEngine.V1
             DeleteClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Lists nodes in a given cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Node"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(ListNodesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists nodes in a given cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Node"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(ListNodesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists nodes in a given cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the cluster to be queried for nodes.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Node"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists nodes in a given cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the cluster to be queried for nodes.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Node"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists nodes in a given cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the cluster to be queried for nodes.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Node"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists nodes in a given cluster.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the cluster to be queried for nodes.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Node"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single node.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Node GetNode(GetNodeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single node.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Node> GetNodeAsync(GetNodeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single node.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Node> GetNodeAsync(GetNodeRequest request, st::CancellationToken cancellationToken) =>
+            GetNodeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single node.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the node to retrieve.
+        /// For example:
+        /// `projects/{project}/locations/{location}/privateClouds/{private_cloud}/clusters/{cluster}/nodes/{node}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Node GetNode(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNode(new GetNodeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single node.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the node to retrieve.
+        /// For example:
+        /// `projects/{project}/locations/{location}/privateClouds/{private_cloud}/clusters/{cluster}/nodes/{node}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Node> GetNodeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNodeAsync(new GetNodeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single node.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the node to retrieve.
+        /// For example:
+        /// `projects/{project}/locations/{location}/privateClouds/{private_cloud}/clusters/{cluster}/nodes/{node}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Node> GetNodeAsync(string name, st::CancellationToken cancellationToken) =>
+            GetNodeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single node.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the node to retrieve.
+        /// For example:
+        /// `projects/{project}/locations/{location}/privateClouds/{private_cloud}/clusters/{cluster}/nodes/{node}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Node GetNode(NodeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNode(new GetNodeRequest
+            {
+                NodeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single node.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the node to retrieve.
+        /// For example:
+        /// `projects/{project}/locations/{location}/privateClouds/{private_cloud}/clusters/{cluster}/nodes/{node}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Node> GetNodeAsync(NodeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNodeAsync(new GetNodeRequest
+            {
+                NodeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single node.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the node to retrieve.
+        /// For example:
+        /// `projects/{project}/locations/{location}/privateClouds/{private_cloud}/clusters/{cluster}/nodes/{node}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Node> GetNodeAsync(NodeName name, st::CancellationToken cancellationToken) =>
+            GetNodeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs in a given
+        /// private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddresses(ListExternalAddressesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs in a given
+        /// private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddressesAsync(ListExternalAddressesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs in a given
+        /// private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud to be queried for
+        /// external IP addresses.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddresses(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAddressesRequest request = new ListExternalAddressesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAddresses(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs in a given
+        /// private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud to be queried for
+        /// external IP addresses.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddressesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAddressesRequest request = new ListExternalAddressesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAddressesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs in a given
+        /// private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud to be queried for
+        /// external IP addresses.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddresses(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAddressesRequest request = new ListExternalAddressesRequest
+            {
+                ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAddresses(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs in a given
+        /// private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud to be queried for
+        /// external IP addresses.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddressesAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAddressesRequest request = new ListExternalAddressesRequest
+            {
+                ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAddressesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs within the
+        /// scope of the given network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddresses(FetchNetworkPolicyExternalAddressesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs within the
+        /// scope of the given network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddressesAsync(FetchNetworkPolicyExternalAddressesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs within the
+        /// scope of the given network policy.
+        /// </summary>
+        /// <param name="networkPolicy">
+        /// Required. The resource name of the network policy to query for assigned
+        /// external IP addresses. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddresses(string networkPolicy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchNetworkPolicyExternalAddressesRequest request = new FetchNetworkPolicyExternalAddressesRequest
+            {
+                NetworkPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(networkPolicy, nameof(networkPolicy)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchNetworkPolicyExternalAddresses(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs within the
+        /// scope of the given network policy.
+        /// </summary>
+        /// <param name="networkPolicy">
+        /// Required. The resource name of the network policy to query for assigned
+        /// external IP addresses. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddressesAsync(string networkPolicy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchNetworkPolicyExternalAddressesRequest request = new FetchNetworkPolicyExternalAddressesRequest
+            {
+                NetworkPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(networkPolicy, nameof(networkPolicy)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchNetworkPolicyExternalAddressesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs within the
+        /// scope of the given network policy.
+        /// </summary>
+        /// <param name="networkPolicy">
+        /// Required. The resource name of the network policy to query for assigned
+        /// external IP addresses. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public virtual gax::PagedEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddresses(NetworkPolicyName networkPolicy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchNetworkPolicyExternalAddressesRequest request = new FetchNetworkPolicyExternalAddressesRequest
+            {
+                NetworkPolicyAsNetworkPolicyName = gax::GaxPreconditions.CheckNotNull(networkPolicy, nameof(networkPolicy)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchNetworkPolicyExternalAddresses(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs within the
+        /// scope of the given network policy.
+        /// </summary>
+        /// <param name="networkPolicy">
+        /// Required. The resource name of the network policy to query for assigned
+        /// external IP addresses. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddressesAsync(NetworkPolicyName networkPolicy, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            FetchNetworkPolicyExternalAddressesRequest request = new FetchNetworkPolicyExternalAddressesRequest
+            {
+                NetworkPolicyAsNetworkPolicyName = gax::GaxPreconditions.CheckNotNull(networkPolicy, nameof(networkPolicy)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return FetchNetworkPolicyExternalAddressesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single external IP address.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExternalAddress GetExternalAddress(GetExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single external IP address.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalAddress> GetExternalAddressAsync(GetExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single external IP address.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalAddress> GetExternalAddressAsync(GetExternalAddressRequest request, st::CancellationToken cancellationToken) =>
+            GetExternalAddressAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single external IP address.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external IP address to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-ip`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExternalAddress GetExternalAddress(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExternalAddress(new GetExternalAddressRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single external IP address.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external IP address to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-ip`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalAddress> GetExternalAddressAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExternalAddressAsync(new GetExternalAddressRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single external IP address.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external IP address to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-ip`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalAddress> GetExternalAddressAsync(string name, st::CancellationToken cancellationToken) =>
+            GetExternalAddressAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single external IP address.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external IP address to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-ip`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExternalAddress GetExternalAddress(ExternalAddressName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExternalAddress(new GetExternalAddressRequest
+            {
+                ExternalAddressName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single external IP address.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external IP address to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-ip`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalAddress> GetExternalAddressAsync(ExternalAddressName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExternalAddressAsync(new GetExternalAddressRequest
+            {
+                ExternalAddressName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single external IP address.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external IP address to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-ip`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalAddress> GetExternalAddressAsync(ExternalAddressName name, st::CancellationToken cancellationToken) =>
+            GetExternalAddressAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `ExternalAddress` resource in a given private cloud. The
+        /// network policy that corresponds to the private cloud must have the external
+        /// IP address network service enabled (`NetworkPolicy.external_ip`).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExternalAddress, OperationMetadata> CreateExternalAddress(CreateExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new `ExternalAddress` resource in a given private cloud. The
+        /// network policy that corresponds to the private cloud must have the external
+        /// IP address network service enabled (`NetworkPolicy.external_ip`).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> CreateExternalAddressAsync(CreateExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new `ExternalAddress` resource in a given private cloud. The
+        /// network policy that corresponds to the private cloud must have the external
+        /// IP address network service enabled (`NetworkPolicy.external_ip`).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> CreateExternalAddressAsync(CreateExternalAddressRequest request, st::CancellationToken cancellationToken) =>
+            CreateExternalAddressAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateExternalAddress</c>.</summary>
+        public virtual lro::OperationsClient CreateExternalAddressOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateExternalAddress</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExternalAddress, OperationMetadata> PollOnceCreateExternalAddress(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExternalAddress, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateExternalAddressOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateExternalAddress</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> PollOnceCreateExternalAddressAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExternalAddress, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateExternalAddressOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new `ExternalAddress` resource in a given private cloud. The
+        /// network policy that corresponds to the private cloud must have the external
+        /// IP address network service enabled (`NetworkPolicy.external_ip`).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new external IP address in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="externalAddress">
+        /// Required. The initial description of a new external IP address.
+        /// </param>
+        /// <param name="externalAddressId">
+        /// Required. The user-provided identifier of the `ExternalAddress` to be
+        /// created. This identifier must be unique among `ExternalAddress` resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExternalAddress, OperationMetadata> CreateExternalAddress(string parent, ExternalAddress externalAddress, string externalAddressId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateExternalAddress(new CreateExternalAddressRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ExternalAddress = gax::GaxPreconditions.CheckNotNull(externalAddress, nameof(externalAddress)),
+                ExternalAddressId = gax::GaxPreconditions.CheckNotNullOrEmpty(externalAddressId, nameof(externalAddressId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `ExternalAddress` resource in a given private cloud. The
+        /// network policy that corresponds to the private cloud must have the external
+        /// IP address network service enabled (`NetworkPolicy.external_ip`).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new external IP address in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="externalAddress">
+        /// Required. The initial description of a new external IP address.
+        /// </param>
+        /// <param name="externalAddressId">
+        /// Required. The user-provided identifier of the `ExternalAddress` to be
+        /// created. This identifier must be unique among `ExternalAddress` resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> CreateExternalAddressAsync(string parent, ExternalAddress externalAddress, string externalAddressId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateExternalAddressAsync(new CreateExternalAddressRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ExternalAddress = gax::GaxPreconditions.CheckNotNull(externalAddress, nameof(externalAddress)),
+                ExternalAddressId = gax::GaxPreconditions.CheckNotNullOrEmpty(externalAddressId, nameof(externalAddressId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `ExternalAddress` resource in a given private cloud. The
+        /// network policy that corresponds to the private cloud must have the external
+        /// IP address network service enabled (`NetworkPolicy.external_ip`).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new external IP address in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="externalAddress">
+        /// Required. The initial description of a new external IP address.
+        /// </param>
+        /// <param name="externalAddressId">
+        /// Required. The user-provided identifier of the `ExternalAddress` to be
+        /// created. This identifier must be unique among `ExternalAddress` resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> CreateExternalAddressAsync(string parent, ExternalAddress externalAddress, string externalAddressId, st::CancellationToken cancellationToken) =>
+            CreateExternalAddressAsync(parent, externalAddress, externalAddressId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `ExternalAddress` resource in a given private cloud. The
+        /// network policy that corresponds to the private cloud must have the external
+        /// IP address network service enabled (`NetworkPolicy.external_ip`).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new external IP address in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="externalAddress">
+        /// Required. The initial description of a new external IP address.
+        /// </param>
+        /// <param name="externalAddressId">
+        /// Required. The user-provided identifier of the `ExternalAddress` to be
+        /// created. This identifier must be unique among `ExternalAddress` resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExternalAddress, OperationMetadata> CreateExternalAddress(PrivateCloudName parent, ExternalAddress externalAddress, string externalAddressId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateExternalAddress(new CreateExternalAddressRequest
+            {
+                ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ExternalAddress = gax::GaxPreconditions.CheckNotNull(externalAddress, nameof(externalAddress)),
+                ExternalAddressId = gax::GaxPreconditions.CheckNotNullOrEmpty(externalAddressId, nameof(externalAddressId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `ExternalAddress` resource in a given private cloud. The
+        /// network policy that corresponds to the private cloud must have the external
+        /// IP address network service enabled (`NetworkPolicy.external_ip`).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new external IP address in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="externalAddress">
+        /// Required. The initial description of a new external IP address.
+        /// </param>
+        /// <param name="externalAddressId">
+        /// Required. The user-provided identifier of the `ExternalAddress` to be
+        /// created. This identifier must be unique among `ExternalAddress` resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> CreateExternalAddressAsync(PrivateCloudName parent, ExternalAddress externalAddress, string externalAddressId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateExternalAddressAsync(new CreateExternalAddressRequest
+            {
+                ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ExternalAddress = gax::GaxPreconditions.CheckNotNull(externalAddress, nameof(externalAddress)),
+                ExternalAddressId = gax::GaxPreconditions.CheckNotNullOrEmpty(externalAddressId, nameof(externalAddressId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `ExternalAddress` resource in a given private cloud. The
+        /// network policy that corresponds to the private cloud must have the external
+        /// IP address network service enabled (`NetworkPolicy.external_ip`).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new external IP address in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="externalAddress">
+        /// Required. The initial description of a new external IP address.
+        /// </param>
+        /// <param name="externalAddressId">
+        /// Required. The user-provided identifier of the `ExternalAddress` to be
+        /// created. This identifier must be unique among `ExternalAddress` resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> CreateExternalAddressAsync(PrivateCloudName parent, ExternalAddress externalAddress, string externalAddressId, st::CancellationToken cancellationToken) =>
+            CreateExternalAddressAsync(parent, externalAddress, externalAddressId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single external IP address.
+        /// Only fields specified in `update_mask` are applied.
+        /// 
+        /// During operation processing, the resource is temporarily in the `ACTIVE`
+        /// state before the operation fully completes. For that period of time, you
+        /// can't update the resource. Use the operation status to determine when the
+        /// processing fully completes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExternalAddress, OperationMetadata> UpdateExternalAddress(UpdateExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single external IP address.
+        /// Only fields specified in `update_mask` are applied.
+        /// 
+        /// During operation processing, the resource is temporarily in the `ACTIVE`
+        /// state before the operation fully completes. For that period of time, you
+        /// can't update the resource. Use the operation status to determine when the
+        /// processing fully completes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> UpdateExternalAddressAsync(UpdateExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single external IP address.
+        /// Only fields specified in `update_mask` are applied.
+        /// 
+        /// During operation processing, the resource is temporarily in the `ACTIVE`
+        /// state before the operation fully completes. For that period of time, you
+        /// can't update the resource. Use the operation status to determine when the
+        /// processing fully completes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> UpdateExternalAddressAsync(UpdateExternalAddressRequest request, st::CancellationToken cancellationToken) =>
+            UpdateExternalAddressAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateExternalAddress</c>.</summary>
+        public virtual lro::OperationsClient UpdateExternalAddressOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateExternalAddress</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExternalAddress, OperationMetadata> PollOnceUpdateExternalAddress(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExternalAddress, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateExternalAddressOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateExternalAddress</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> PollOnceUpdateExternalAddressAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExternalAddress, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateExternalAddressOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single external IP address.
+        /// Only fields specified in `update_mask` are applied.
+        /// 
+        /// During operation processing, the resource is temporarily in the `ACTIVE`
+        /// state before the operation fully completes. For that period of time, you
+        /// can't update the resource. Use the operation status to determine when the
+        /// processing fully completes.
+        /// </summary>
+        /// <param name="externalAddress">
+        /// Required. External IP address description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `ExternalAddress` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExternalAddress, OperationMetadata> UpdateExternalAddress(ExternalAddress externalAddress, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExternalAddress(new UpdateExternalAddressRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                ExternalAddress = gax::GaxPreconditions.CheckNotNull(externalAddress, nameof(externalAddress)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single external IP address.
+        /// Only fields specified in `update_mask` are applied.
+        /// 
+        /// During operation processing, the resource is temporarily in the `ACTIVE`
+        /// state before the operation fully completes. For that period of time, you
+        /// can't update the resource. Use the operation status to determine when the
+        /// processing fully completes.
+        /// </summary>
+        /// <param name="externalAddress">
+        /// Required. External IP address description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `ExternalAddress` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> UpdateExternalAddressAsync(ExternalAddress externalAddress, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExternalAddressAsync(new UpdateExternalAddressRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                ExternalAddress = gax::GaxPreconditions.CheckNotNull(externalAddress, nameof(externalAddress)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single external IP address.
+        /// Only fields specified in `update_mask` are applied.
+        /// 
+        /// During operation processing, the resource is temporarily in the `ACTIVE`
+        /// state before the operation fully completes. For that period of time, you
+        /// can't update the resource. Use the operation status to determine when the
+        /// processing fully completes.
+        /// </summary>
+        /// <param name="externalAddress">
+        /// Required. External IP address description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `ExternalAddress` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> UpdateExternalAddressAsync(ExternalAddress externalAddress, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateExternalAddressAsync(externalAddress, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single external IP address. When you delete an external IP
+        /// address, connectivity between the external IP address and the corresponding
+        /// internal IP address is lost.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteExternalAddress(DeleteExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single external IP address. When you delete an external IP
+        /// address, connectivity between the external IP address and the corresponding
+        /// internal IP address is lost.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAddressAsync(DeleteExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single external IP address. When you delete an external IP
+        /// address, connectivity between the external IP address and the corresponding
+        /// internal IP address is lost.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAddressAsync(DeleteExternalAddressRequest request, st::CancellationToken cancellationToken) =>
+            DeleteExternalAddressAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteExternalAddress</c>.</summary>
+        public virtual lro::OperationsClient DeleteExternalAddressOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteExternalAddress</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteExternalAddress(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteExternalAddressOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteExternalAddress</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteExternalAddressAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteExternalAddressOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single external IP address. When you delete an external IP
+        /// address, connectivity between the external IP address and the corresponding
+        /// internal IP address is lost.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external IP address to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-ip`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteExternalAddress(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteExternalAddress(new DeleteExternalAddressRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single external IP address. When you delete an external IP
+        /// address, connectivity between the external IP address and the corresponding
+        /// internal IP address is lost.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external IP address to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-ip`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAddressAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteExternalAddressAsync(new DeleteExternalAddressRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single external IP address. When you delete an external IP
+        /// address, connectivity between the external IP address and the corresponding
+        /// internal IP address is lost.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external IP address to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-ip`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAddressAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteExternalAddressAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single external IP address. When you delete an external IP
+        /// address, connectivity between the external IP address and the corresponding
+        /// internal IP address is lost.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external IP address to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-ip`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteExternalAddress(ExternalAddressName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteExternalAddress(new DeleteExternalAddressRequest
+            {
+                ExternalAddressName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single external IP address. When you delete an external IP
+        /// address, connectivity between the external IP address and the corresponding
+        /// internal IP address is lost.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external IP address to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-ip`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAddressAsync(ExternalAddressName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteExternalAddressAsync(new DeleteExternalAddressRequest
+            {
+                ExternalAddressName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single external IP address. When you delete an external IP
+        /// address, connectivity between the external IP address and the corresponding
+        /// internal IP address is lost.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external IP address to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-ip`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAddressAsync(ExternalAddressName name, st::CancellationToken cancellationToken) =>
+            DeleteExternalAddressAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists subnets in a given private cloud.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3134,13 +5696,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Subnet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSubnetsResponse, Subnet> ListSubnets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubnets(new ListSubnetsRequest
+        public virtual gax::PagedEnumerable<ListSubnetsResponse, Subnet> ListSubnets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubnetsRequest request = new ListSubnetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubnets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists subnets in a given private cloud.
@@ -3163,13 +5734,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Subnet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSubnetsResponse, Subnet> ListSubnetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubnetsAsync(new ListSubnetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSubnetsResponse, Subnet> ListSubnetsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubnetsRequest request = new ListSubnetsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubnetsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists subnets in a given private cloud.
@@ -3192,13 +5772,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Subnet"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSubnetsResponse, Subnet> ListSubnets(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubnets(new ListSubnetsRequest
+        public virtual gax::PagedEnumerable<ListSubnetsResponse, Subnet> ListSubnets(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubnetsRequest request = new ListSubnetsRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubnets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists subnets in a given private cloud.
@@ -3221,13 +5810,1984 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Subnet"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSubnetsResponse, Subnet> ListSubnetsAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSubnetsAsync(new ListSubnetsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSubnetsResponse, Subnet> ListSubnetsAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubnetsRequest request = new ListSubnetsRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubnetsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subnet GetSubnet(GetSubnetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subnet> GetSubnetAsync(GetSubnetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subnet> GetSubnetAsync(GetSubnetRequest request, st::CancellationToken cancellationToken) =>
+            GetSubnetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subnet to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subnet GetSubnet(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubnet(new GetSubnetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subnet to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subnet> GetSubnetAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubnetAsync(new GetSubnetRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subnet to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subnet> GetSubnetAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSubnetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subnet to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subnet GetSubnet(SubnetName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubnet(new GetSubnetRequest
+            {
+                SubnetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subnet to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subnet> GetSubnetAsync(SubnetName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSubnetAsync(new GetSubnetRequest
+            {
+                SubnetName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subnet to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/subnets/my-subnet`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subnet> GetSubnetAsync(SubnetName name, st::CancellationToken cancellationToken) =>
+            GetSubnetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Subnet, OperationMetadata> UpdateSubnet(UpdateSubnetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Subnet, OperationMetadata>> UpdateSubnetAsync(UpdateSubnetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Subnet, OperationMetadata>> UpdateSubnetAsync(UpdateSubnetRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSubnetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateSubnet</c>.</summary>
+        public virtual lro::OperationsClient UpdateSubnetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateSubnet</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Subnet, OperationMetadata> PollOnceUpdateSubnet(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Subnet, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateSubnetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateSubnet</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Subnet, OperationMetadata>> PollOnceUpdateSubnetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Subnet, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateSubnetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="subnet">
+        /// Required. Subnet description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `Subnet` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Subnet, OperationMetadata> UpdateSubnet(Subnet subnet, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSubnet(new UpdateSubnetRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Subnet = gax::GaxPreconditions.CheckNotNull(subnet, nameof(subnet)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="subnet">
+        /// Required. Subnet description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `Subnet` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Subnet, OperationMetadata>> UpdateSubnetAsync(Subnet subnet, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSubnetAsync(new UpdateSubnetRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Subnet = gax::GaxPreconditions.CheckNotNull(subnet, nameof(subnet)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="subnet">
+        /// Required. Subnet description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `Subnet` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Subnet, OperationMetadata>> UpdateSubnetAsync(Subnet subnet, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSubnetAsync(subnet, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists `ExternalAccessRule` resources in the specified network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExternalAccessRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRules(ListExternalAccessRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `ExternalAccessRule` resources in the specified network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExternalAccessRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRulesAsync(ListExternalAccessRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `ExternalAccessRule` resources in the specified network policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network policy to query for external
+        /// access firewall rules. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExternalAccessRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAccessRulesRequest request = new ListExternalAccessRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAccessRules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `ExternalAccessRule` resources in the specified network policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network policy to query for external
+        /// access firewall rules. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExternalAccessRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAccessRulesRequest request = new ListExternalAccessRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAccessRulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `ExternalAccessRule` resources in the specified network policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network policy to query for external
+        /// access firewall rules. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExternalAccessRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRules(NetworkPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAccessRulesRequest request = new ListExternalAccessRulesRequest
+            {
+                ParentAsNetworkPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAccessRules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `ExternalAccessRule` resources in the specified network policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network policy to query for external
+        /// access firewall rules. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExternalAccessRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRulesAsync(NetworkPolicyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExternalAccessRulesRequest request = new ListExternalAccessRulesRequest
+            {
+                ParentAsNetworkPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExternalAccessRulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single external access rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExternalAccessRule GetExternalAccessRule(GetExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single external access rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalAccessRule> GetExternalAccessRuleAsync(GetExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single external access rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalAccessRule> GetExternalAccessRuleAsync(GetExternalAccessRuleRequest request, st::CancellationToken cancellationToken) =>
+            GetExternalAccessRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single external access rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external access firewall rule to
+        /// retrieve. Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExternalAccessRule GetExternalAccessRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExternalAccessRule(new GetExternalAccessRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single external access rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external access firewall rule to
+        /// retrieve. Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalAccessRule> GetExternalAccessRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExternalAccessRuleAsync(new GetExternalAccessRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single external access rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external access firewall rule to
+        /// retrieve. Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalAccessRule> GetExternalAccessRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetExternalAccessRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single external access rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external access firewall rule to
+        /// retrieve. Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExternalAccessRule GetExternalAccessRule(ExternalAccessRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExternalAccessRule(new GetExternalAccessRuleRequest
+            {
+                ExternalAccessRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single external access rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external access firewall rule to
+        /// retrieve. Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalAccessRule> GetExternalAccessRuleAsync(ExternalAccessRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetExternalAccessRuleAsync(new GetExternalAccessRuleRequest
+            {
+                ExternalAccessRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single external access rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external access firewall rule to
+        /// retrieve. Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalAccessRule> GetExternalAccessRuleAsync(ExternalAccessRuleName name, st::CancellationToken cancellationToken) =>
+            GetExternalAccessRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new external access rule in a given network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExternalAccessRule, OperationMetadata> CreateExternalAccessRule(CreateExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new external access rule in a given network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> CreateExternalAccessRuleAsync(CreateExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new external access rule in a given network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> CreateExternalAccessRuleAsync(CreateExternalAccessRuleRequest request, st::CancellationToken cancellationToken) =>
+            CreateExternalAccessRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateExternalAccessRule</c>.</summary>
+        public virtual lro::OperationsClient CreateExternalAccessRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateExternalAccessRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExternalAccessRule, OperationMetadata> PollOnceCreateExternalAccessRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExternalAccessRule, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateExternalAccessRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateExternalAccessRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> PollOnceCreateExternalAccessRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExternalAccessRule, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateExternalAccessRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new external access rule in a given network policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network policy
+        /// to create a new external access firewall rule in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="externalAccessRule">
+        /// Required. The initial description of a new external access rule.
+        /// </param>
+        /// <param name="externalAccessRuleId">
+        /// Required. The user-provided identifier of the `ExternalAccessRule` to be
+        /// created. This identifier must be unique among `ExternalAccessRule`
+        /// resources within the parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExternalAccessRule, OperationMetadata> CreateExternalAccessRule(string parent, ExternalAccessRule externalAccessRule, string externalAccessRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateExternalAccessRule(new CreateExternalAccessRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ExternalAccessRule = gax::GaxPreconditions.CheckNotNull(externalAccessRule, nameof(externalAccessRule)),
+                ExternalAccessRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(externalAccessRuleId, nameof(externalAccessRuleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new external access rule in a given network policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network policy
+        /// to create a new external access firewall rule in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="externalAccessRule">
+        /// Required. The initial description of a new external access rule.
+        /// </param>
+        /// <param name="externalAccessRuleId">
+        /// Required. The user-provided identifier of the `ExternalAccessRule` to be
+        /// created. This identifier must be unique among `ExternalAccessRule`
+        /// resources within the parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> CreateExternalAccessRuleAsync(string parent, ExternalAccessRule externalAccessRule, string externalAccessRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateExternalAccessRuleAsync(new CreateExternalAccessRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ExternalAccessRule = gax::GaxPreconditions.CheckNotNull(externalAccessRule, nameof(externalAccessRule)),
+                ExternalAccessRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(externalAccessRuleId, nameof(externalAccessRuleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new external access rule in a given network policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network policy
+        /// to create a new external access firewall rule in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="externalAccessRule">
+        /// Required. The initial description of a new external access rule.
+        /// </param>
+        /// <param name="externalAccessRuleId">
+        /// Required. The user-provided identifier of the `ExternalAccessRule` to be
+        /// created. This identifier must be unique among `ExternalAccessRule`
+        /// resources within the parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> CreateExternalAccessRuleAsync(string parent, ExternalAccessRule externalAccessRule, string externalAccessRuleId, st::CancellationToken cancellationToken) =>
+            CreateExternalAccessRuleAsync(parent, externalAccessRule, externalAccessRuleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new external access rule in a given network policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network policy
+        /// to create a new external access firewall rule in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="externalAccessRule">
+        /// Required. The initial description of a new external access rule.
+        /// </param>
+        /// <param name="externalAccessRuleId">
+        /// Required. The user-provided identifier of the `ExternalAccessRule` to be
+        /// created. This identifier must be unique among `ExternalAccessRule`
+        /// resources within the parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExternalAccessRule, OperationMetadata> CreateExternalAccessRule(NetworkPolicyName parent, ExternalAccessRule externalAccessRule, string externalAccessRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateExternalAccessRule(new CreateExternalAccessRuleRequest
+            {
+                ParentAsNetworkPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ExternalAccessRule = gax::GaxPreconditions.CheckNotNull(externalAccessRule, nameof(externalAccessRule)),
+                ExternalAccessRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(externalAccessRuleId, nameof(externalAccessRuleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new external access rule in a given network policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network policy
+        /// to create a new external access firewall rule in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="externalAccessRule">
+        /// Required. The initial description of a new external access rule.
+        /// </param>
+        /// <param name="externalAccessRuleId">
+        /// Required. The user-provided identifier of the `ExternalAccessRule` to be
+        /// created. This identifier must be unique among `ExternalAccessRule`
+        /// resources within the parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> CreateExternalAccessRuleAsync(NetworkPolicyName parent, ExternalAccessRule externalAccessRule, string externalAccessRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateExternalAccessRuleAsync(new CreateExternalAccessRuleRequest
+            {
+                ParentAsNetworkPolicyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ExternalAccessRule = gax::GaxPreconditions.CheckNotNull(externalAccessRule, nameof(externalAccessRule)),
+                ExternalAccessRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(externalAccessRuleId, nameof(externalAccessRuleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new external access rule in a given network policy.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network policy
+        /// to create a new external access firewall rule in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy`
+        /// </param>
+        /// <param name="externalAccessRule">
+        /// Required. The initial description of a new external access rule.
+        /// </param>
+        /// <param name="externalAccessRuleId">
+        /// Required. The user-provided identifier of the `ExternalAccessRule` to be
+        /// created. This identifier must be unique among `ExternalAccessRule`
+        /// resources within the parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> CreateExternalAccessRuleAsync(NetworkPolicyName parent, ExternalAccessRule externalAccessRule, string externalAccessRuleId, st::CancellationToken cancellationToken) =>
+            CreateExternalAccessRuleAsync(parent, externalAccessRule, externalAccessRuleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single external access rule.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExternalAccessRule, OperationMetadata> UpdateExternalAccessRule(UpdateExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single external access rule.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> UpdateExternalAccessRuleAsync(UpdateExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single external access rule.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> UpdateExternalAccessRuleAsync(UpdateExternalAccessRuleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateExternalAccessRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateExternalAccessRule</c>.</summary>
+        public virtual lro::OperationsClient UpdateExternalAccessRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateExternalAccessRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExternalAccessRule, OperationMetadata> PollOnceUpdateExternalAccessRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExternalAccessRule, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateExternalAccessRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateExternalAccessRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> PollOnceUpdateExternalAccessRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExternalAccessRule, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateExternalAccessRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single external access rule.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="externalAccessRule">
+        /// Required. Description of the external access rule.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `ExternalAccessRule` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExternalAccessRule, OperationMetadata> UpdateExternalAccessRule(ExternalAccessRule externalAccessRule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExternalAccessRule(new UpdateExternalAccessRuleRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                ExternalAccessRule = gax::GaxPreconditions.CheckNotNull(externalAccessRule, nameof(externalAccessRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single external access rule.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="externalAccessRule">
+        /// Required. Description of the external access rule.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `ExternalAccessRule` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> UpdateExternalAccessRuleAsync(ExternalAccessRule externalAccessRule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExternalAccessRuleAsync(new UpdateExternalAccessRuleRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                ExternalAccessRule = gax::GaxPreconditions.CheckNotNull(externalAccessRule, nameof(externalAccessRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single external access rule.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="externalAccessRule">
+        /// Required. Description of the external access rule.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `ExternalAccessRule` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> UpdateExternalAccessRuleAsync(ExternalAccessRule externalAccessRule, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateExternalAccessRuleAsync(externalAccessRule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single external access rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteExternalAccessRule(DeleteExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single external access rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAccessRuleAsync(DeleteExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single external access rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAccessRuleAsync(DeleteExternalAccessRuleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteExternalAccessRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteExternalAccessRule</c>.</summary>
+        public virtual lro::OperationsClient DeleteExternalAccessRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteExternalAccessRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteExternalAccessRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteExternalAccessRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteExternalAccessRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteExternalAccessRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteExternalAccessRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single external access rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external access firewall rule to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteExternalAccessRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteExternalAccessRule(new DeleteExternalAccessRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single external access rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external access firewall rule to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAccessRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteExternalAccessRuleAsync(new DeleteExternalAccessRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single external access rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external access firewall rule to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAccessRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteExternalAccessRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single external access rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external access firewall rule to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteExternalAccessRule(ExternalAccessRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteExternalAccessRule(new DeleteExternalAccessRuleRequest
+            {
+                ExternalAccessRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single external access rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external access firewall rule to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAccessRuleAsync(ExternalAccessRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteExternalAccessRuleAsync(new DeleteExternalAccessRuleRequest
+            {
+                ExternalAccessRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single external access rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the external access firewall rule to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAccessRuleAsync(ExternalAccessRuleName name, st::CancellationToken cancellationToken) =>
+            DeleteExternalAccessRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists logging servers configured for a given private
+        /// cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LoggingServer"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServers(ListLoggingServersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists logging servers configured for a given private
+        /// cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LoggingServer"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServersAsync(ListLoggingServersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists logging servers configured for a given private
+        /// cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud to be queried for
+        /// logging servers.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LoggingServer"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLoggingServersRequest request = new ListLoggingServersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLoggingServers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists logging servers configured for a given private
+        /// cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud to be queried for
+        /// logging servers.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LoggingServer"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLoggingServersRequest request = new ListLoggingServersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLoggingServersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists logging servers configured for a given private
+        /// cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud to be queried for
+        /// logging servers.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LoggingServer"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServers(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLoggingServersRequest request = new ListLoggingServersRequest
+            {
+                ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLoggingServers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists logging servers configured for a given private
+        /// cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud to be queried for
+        /// logging servers.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LoggingServer"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServersAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLoggingServersRequest request = new ListLoggingServersRequest
+            {
+                ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLoggingServersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a logging server.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LoggingServer GetLoggingServer(GetLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a logging server.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LoggingServer> GetLoggingServerAsync(GetLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a logging server.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LoggingServer> GetLoggingServerAsync(GetLoggingServerRequest request, st::CancellationToken cancellationToken) =>
+            GetLoggingServerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a logging server.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Logging Server to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LoggingServer GetLoggingServer(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLoggingServer(new GetLoggingServerRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a logging server.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Logging Server to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LoggingServer> GetLoggingServerAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLoggingServerAsync(new GetLoggingServerRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a logging server.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Logging Server to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LoggingServer> GetLoggingServerAsync(string name, st::CancellationToken cancellationToken) =>
+            GetLoggingServerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a logging server.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Logging Server to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LoggingServer GetLoggingServer(LoggingServerName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLoggingServer(new GetLoggingServerRequest
+            {
+                LoggingServerName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a logging server.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Logging Server to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LoggingServer> GetLoggingServerAsync(LoggingServerName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLoggingServerAsync(new GetLoggingServerRequest
+            {
+                LoggingServerName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a logging server.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the Logging Server to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LoggingServer> GetLoggingServerAsync(LoggingServerName name, st::CancellationToken cancellationToken) =>
+            GetLoggingServerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a new logging server for a given private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LoggingServer, OperationMetadata> CreateLoggingServer(CreateLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new logging server for a given private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LoggingServer, OperationMetadata>> CreateLoggingServerAsync(CreateLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new logging server for a given private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LoggingServer, OperationMetadata>> CreateLoggingServerAsync(CreateLoggingServerRequest request, st::CancellationToken cancellationToken) =>
+            CreateLoggingServerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateLoggingServer</c>.</summary>
+        public virtual lro::OperationsClient CreateLoggingServerOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateLoggingServer</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<LoggingServer, OperationMetadata> PollOnceCreateLoggingServer(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LoggingServer, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateLoggingServerOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateLoggingServer</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<LoggingServer, OperationMetadata>> PollOnceCreateLoggingServerAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LoggingServer, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateLoggingServerOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create a new logging server for a given private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new Logging Server in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="loggingServer">
+        /// Required. The initial description of a new logging server.
+        /// </param>
+        /// <param name="loggingServerId">
+        /// Required. The user-provided identifier of the `LoggingServer` to be
+        /// created. This identifier must be unique among `LoggingServer` resources
+        /// within the parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LoggingServer, OperationMetadata> CreateLoggingServer(string parent, LoggingServer loggingServer, string loggingServerId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLoggingServer(new CreateLoggingServerRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                LoggingServer = gax::GaxPreconditions.CheckNotNull(loggingServer, nameof(loggingServer)),
+                LoggingServerId = gax::GaxPreconditions.CheckNotNullOrEmpty(loggingServerId, nameof(loggingServerId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new logging server for a given private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new Logging Server in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="loggingServer">
+        /// Required. The initial description of a new logging server.
+        /// </param>
+        /// <param name="loggingServerId">
+        /// Required. The user-provided identifier of the `LoggingServer` to be
+        /// created. This identifier must be unique among `LoggingServer` resources
+        /// within the parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LoggingServer, OperationMetadata>> CreateLoggingServerAsync(string parent, LoggingServer loggingServer, string loggingServerId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLoggingServerAsync(new CreateLoggingServerRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                LoggingServer = gax::GaxPreconditions.CheckNotNull(loggingServer, nameof(loggingServer)),
+                LoggingServerId = gax::GaxPreconditions.CheckNotNullOrEmpty(loggingServerId, nameof(loggingServerId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new logging server for a given private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new Logging Server in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="loggingServer">
+        /// Required. The initial description of a new logging server.
+        /// </param>
+        /// <param name="loggingServerId">
+        /// Required. The user-provided identifier of the `LoggingServer` to be
+        /// created. This identifier must be unique among `LoggingServer` resources
+        /// within the parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LoggingServer, OperationMetadata>> CreateLoggingServerAsync(string parent, LoggingServer loggingServer, string loggingServerId, st::CancellationToken cancellationToken) =>
+            CreateLoggingServerAsync(parent, loggingServer, loggingServerId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a new logging server for a given private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new Logging Server in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="loggingServer">
+        /// Required. The initial description of a new logging server.
+        /// </param>
+        /// <param name="loggingServerId">
+        /// Required. The user-provided identifier of the `LoggingServer` to be
+        /// created. This identifier must be unique among `LoggingServer` resources
+        /// within the parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LoggingServer, OperationMetadata> CreateLoggingServer(PrivateCloudName parent, LoggingServer loggingServer, string loggingServerId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLoggingServer(new CreateLoggingServerRequest
+            {
+                ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LoggingServer = gax::GaxPreconditions.CheckNotNull(loggingServer, nameof(loggingServer)),
+                LoggingServerId = gax::GaxPreconditions.CheckNotNullOrEmpty(loggingServerId, nameof(loggingServerId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new logging server for a given private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new Logging Server in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="loggingServer">
+        /// Required. The initial description of a new logging server.
+        /// </param>
+        /// <param name="loggingServerId">
+        /// Required. The user-provided identifier of the `LoggingServer` to be
+        /// created. This identifier must be unique among `LoggingServer` resources
+        /// within the parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LoggingServer, OperationMetadata>> CreateLoggingServerAsync(PrivateCloudName parent, LoggingServer loggingServer, string loggingServerId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLoggingServerAsync(new CreateLoggingServerRequest
+            {
+                ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LoggingServer = gax::GaxPreconditions.CheckNotNull(loggingServer, nameof(loggingServer)),
+                LoggingServerId = gax::GaxPreconditions.CheckNotNullOrEmpty(loggingServerId, nameof(loggingServerId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new logging server for a given private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new Logging Server in.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="loggingServer">
+        /// Required. The initial description of a new logging server.
+        /// </param>
+        /// <param name="loggingServerId">
+        /// Required. The user-provided identifier of the `LoggingServer` to be
+        /// created. This identifier must be unique among `LoggingServer` resources
+        /// within the parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LoggingServer, OperationMetadata>> CreateLoggingServerAsync(PrivateCloudName parent, LoggingServer loggingServer, string loggingServerId, st::CancellationToken cancellationToken) =>
+            CreateLoggingServerAsync(parent, loggingServer, loggingServerId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single logging server.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LoggingServer, OperationMetadata> UpdateLoggingServer(UpdateLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single logging server.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LoggingServer, OperationMetadata>> UpdateLoggingServerAsync(UpdateLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single logging server.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LoggingServer, OperationMetadata>> UpdateLoggingServerAsync(UpdateLoggingServerRequest request, st::CancellationToken cancellationToken) =>
+            UpdateLoggingServerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateLoggingServer</c>.</summary>
+        public virtual lro::OperationsClient UpdateLoggingServerOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateLoggingServer</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<LoggingServer, OperationMetadata> PollOnceUpdateLoggingServer(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LoggingServer, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateLoggingServerOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateLoggingServer</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<LoggingServer, OperationMetadata>> PollOnceUpdateLoggingServerAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LoggingServer, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateLoggingServerOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single logging server.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="loggingServer">
+        /// Required. Logging server description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `LoggingServer` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LoggingServer, OperationMetadata> UpdateLoggingServer(LoggingServer loggingServer, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateLoggingServer(new UpdateLoggingServerRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                LoggingServer = gax::GaxPreconditions.CheckNotNull(loggingServer, nameof(loggingServer)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single logging server.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="loggingServer">
+        /// Required. Logging server description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `LoggingServer` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LoggingServer, OperationMetadata>> UpdateLoggingServerAsync(LoggingServer loggingServer, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateLoggingServerAsync(new UpdateLoggingServerRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                LoggingServer = gax::GaxPreconditions.CheckNotNull(loggingServer, nameof(loggingServer)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single logging server.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="loggingServer">
+        /// Required. Logging server description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `LoggingServer` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LoggingServer, OperationMetadata>> UpdateLoggingServerAsync(LoggingServer loggingServer, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateLoggingServerAsync(loggingServer, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single logging server.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteLoggingServer(DeleteLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single logging server.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLoggingServerAsync(DeleteLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single logging server.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLoggingServerAsync(DeleteLoggingServerRequest request, st::CancellationToken cancellationToken) =>
+            DeleteLoggingServerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteLoggingServer</c>.</summary>
+        public virtual lro::OperationsClient DeleteLoggingServerOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteLoggingServer</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteLoggingServer(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteLoggingServerOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteLoggingServer</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteLoggingServerAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteLoggingServerOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single logging server.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the logging server to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteLoggingServer(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLoggingServer(new DeleteLoggingServerRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single logging server.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the logging server to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLoggingServerAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLoggingServerAsync(new DeleteLoggingServerRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single logging server.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the logging server to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLoggingServerAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteLoggingServerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single logging server.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the logging server to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteLoggingServer(LoggingServerName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLoggingServer(new DeleteLoggingServerRequest
+            {
+                LoggingServerName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single logging server.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the logging server to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLoggingServerAsync(LoggingServerName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLoggingServerAsync(new DeleteLoggingServerRequest
+            {
+                LoggingServerName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single logging server.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the logging server to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLoggingServerAsync(LoggingServerName name, st::CancellationToken cancellationToken) =>
+            DeleteLoggingServerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists node types
@@ -3267,13 +7827,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NodeType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodeTypes(new ListNodeTypesRequest
+        public virtual gax::PagedEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodeTypesRequest request = new ListNodeTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodeTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists node types
@@ -3295,13 +7864,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NodeType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodeTypesAsync(new ListNodeTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodeTypesRequest request = new ListNodeTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodeTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists node types
@@ -3323,13 +7901,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NodeType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodeTypes(new ListNodeTypesRequest
+        public virtual gax::PagedEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodeTypesRequest request = new ListNodeTypesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodeTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists node types
@@ -3351,13 +7938,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NodeType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodeTypesAsync(new ListNodeTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNodeTypesResponse, NodeType> ListNodeTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodeTypesRequest request = new ListNodeTypesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodeTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single `NodeType`.
@@ -4083,6 +8679,1338 @@ namespace Google.Cloud.VmwareEngine.V1
             ResetVcenterCredentialsAsync(privateCloud, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets details of the `DnsForwarding` config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DnsForwarding GetDnsForwarding(GetDnsForwardingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of the `DnsForwarding` config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DnsForwarding> GetDnsForwardingAsync(GetDnsForwardingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of the `DnsForwarding` config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DnsForwarding> GetDnsForwardingAsync(GetDnsForwardingRequest request, st::CancellationToken cancellationToken) =>
+            GetDnsForwardingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of the `DnsForwarding` config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of a `DnsForwarding` to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DnsForwarding GetDnsForwarding(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDnsForwarding(new GetDnsForwardingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the `DnsForwarding` config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of a `DnsForwarding` to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DnsForwarding> GetDnsForwardingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDnsForwardingAsync(new GetDnsForwardingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the `DnsForwarding` config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of a `DnsForwarding` to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DnsForwarding> GetDnsForwardingAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDnsForwardingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of the `DnsForwarding` config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of a `DnsForwarding` to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DnsForwarding GetDnsForwarding(DnsForwardingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDnsForwarding(new GetDnsForwardingRequest
+            {
+                DnsForwardingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the `DnsForwarding` config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of a `DnsForwarding` to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DnsForwarding> GetDnsForwardingAsync(DnsForwardingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDnsForwardingAsync(new GetDnsForwardingRequest
+            {
+                DnsForwardingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of the `DnsForwarding` config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of a `DnsForwarding` to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DnsForwarding> GetDnsForwardingAsync(DnsForwardingName name, st::CancellationToken cancellationToken) =>
+            GetDnsForwardingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of the `DnsForwarding` config, like associated
+        /// domains. Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DnsForwarding, OperationMetadata> UpdateDnsForwarding(UpdateDnsForwardingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of the `DnsForwarding` config, like associated
+        /// domains. Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsForwarding, OperationMetadata>> UpdateDnsForwardingAsync(UpdateDnsForwardingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of the `DnsForwarding` config, like associated
+        /// domains. Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsForwarding, OperationMetadata>> UpdateDnsForwardingAsync(UpdateDnsForwardingRequest request, st::CancellationToken cancellationToken) =>
+            UpdateDnsForwardingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateDnsForwarding</c>.</summary>
+        public virtual lro::OperationsClient UpdateDnsForwardingOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateDnsForwarding</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DnsForwarding, OperationMetadata> PollOnceUpdateDnsForwarding(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DnsForwarding, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDnsForwardingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDnsForwarding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DnsForwarding, OperationMetadata>> PollOnceUpdateDnsForwardingAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DnsForwarding, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDnsForwardingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of the `DnsForwarding` config, like associated
+        /// domains. Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="dnsForwarding">
+        /// Required. DnsForwarding config details.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `DnsForwarding` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DnsForwarding, OperationMetadata> UpdateDnsForwarding(DnsForwarding dnsForwarding, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDnsForwarding(new UpdateDnsForwardingRequest
+            {
+                DnsForwarding = gax::GaxPreconditions.CheckNotNull(dnsForwarding, nameof(dnsForwarding)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of the `DnsForwarding` config, like associated
+        /// domains. Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="dnsForwarding">
+        /// Required. DnsForwarding config details.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `DnsForwarding` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsForwarding, OperationMetadata>> UpdateDnsForwardingAsync(DnsForwarding dnsForwarding, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateDnsForwardingAsync(new UpdateDnsForwardingRequest
+            {
+                DnsForwarding = gax::GaxPreconditions.CheckNotNull(dnsForwarding, nameof(dnsForwarding)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of the `DnsForwarding` config, like associated
+        /// domains. Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="dnsForwarding">
+        /// Required. DnsForwarding config details.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `DnsForwarding` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsForwarding, OperationMetadata>> UpdateDnsForwardingAsync(DnsForwarding dnsForwarding, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateDnsForwardingAsync(dnsForwarding, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+        /// contains details of the network peering, such as peered
+        /// networks, import and export custom route configurations, and peering state.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NetworkPeering GetNetworkPeering(GetNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+        /// contains details of the network peering, such as peered
+        /// networks, import and export custom route configurations, and peering state.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NetworkPeering> GetNetworkPeeringAsync(GetNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+        /// contains details of the network peering, such as peered
+        /// networks, import and export custom route configurations, and peering state.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NetworkPeering> GetNetworkPeeringAsync(GetNetworkPeeringRequest request, st::CancellationToken cancellationToken) =>
+            GetNetworkPeeringAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+        /// contains details of the network peering, such as peered
+        /// networks, import and export custom route configurations, and peering state.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the network peering to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NetworkPeering GetNetworkPeering(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNetworkPeering(new GetNetworkPeeringRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+        /// contains details of the network peering, such as peered
+        /// networks, import and export custom route configurations, and peering state.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the network peering to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NetworkPeering> GetNetworkPeeringAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNetworkPeeringAsync(new GetNetworkPeeringRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+        /// contains details of the network peering, such as peered
+        /// networks, import and export custom route configurations, and peering state.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the network peering to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NetworkPeering> GetNetworkPeeringAsync(string name, st::CancellationToken cancellationToken) =>
+            GetNetworkPeeringAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+        /// contains details of the network peering, such as peered
+        /// networks, import and export custom route configurations, and peering state.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the network peering to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual NetworkPeering GetNetworkPeering(NetworkPeeringName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNetworkPeering(new GetNetworkPeeringRequest
+            {
+                NetworkPeeringName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+        /// contains details of the network peering, such as peered
+        /// networks, import and export custom route configurations, and peering state.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the network peering to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NetworkPeering> GetNetworkPeeringAsync(NetworkPeeringName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNetworkPeeringAsync(new GetNetworkPeeringRequest
+            {
+                NetworkPeeringName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+        /// contains details of the network peering, such as peered
+        /// networks, import and export custom route configurations, and peering state.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the network peering to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<NetworkPeering> GetNetworkPeeringAsync(NetworkPeeringName name, st::CancellationToken cancellationToken) =>
+            GetNetworkPeeringAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NetworkPeering"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeerings(ListNetworkPeeringsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NetworkPeering"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeeringsAsync(ListNetworkPeeringsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location (global) to query for
+        /// network peerings. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/global`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NetworkPeering"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeerings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPeeringsRequest request = new ListNetworkPeeringsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPeerings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location (global) to query for
+        /// network peerings. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/global`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NetworkPeering"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeeringsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPeeringsRequest request = new ListNetworkPeeringsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPeeringsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location (global) to query for
+        /// network peerings. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/global`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NetworkPeering"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeerings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPeeringsRequest request = new ListNetworkPeeringsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPeerings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location (global) to query for
+        /// network peerings. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/global`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NetworkPeering"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeeringsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPeeringsRequest request = new ListNetworkPeeringsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPeeringsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new network peering between the peer network and VMware Engine
+        /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<NetworkPeering, OperationMetadata> CreateNetworkPeering(CreateNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new network peering between the peer network and VMware Engine
+        /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> CreateNetworkPeeringAsync(CreateNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new network peering between the peer network and VMware Engine
+        /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> CreateNetworkPeeringAsync(CreateNetworkPeeringRequest request, st::CancellationToken cancellationToken) =>
+            CreateNetworkPeeringAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateNetworkPeering</c>.</summary>
+        public virtual lro::OperationsClient CreateNetworkPeeringOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateNetworkPeering</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<NetworkPeering, OperationMetadata> PollOnceCreateNetworkPeering(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<NetworkPeering, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateNetworkPeeringOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateNetworkPeering</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> PollOnceCreateNetworkPeeringAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<NetworkPeering, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateNetworkPeeringOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new network peering between the peer network and VMware Engine
+        /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new network
+        /// peering in. This value is always `global`, because `NetworkPeering` is a
+        /// global resource. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/global`
+        /// </param>
+        /// <param name="networkPeering">
+        /// Required. The initial description of the new network peering.
+        /// </param>
+        /// <param name="networkPeeringId">
+        /// Required. The user-provided identifier of the new `NetworkPeering`.
+        /// This identifier must be unique among `NetworkPeering` resources within the
+        /// parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<NetworkPeering, OperationMetadata> CreateNetworkPeering(string parent, NetworkPeering networkPeering, string networkPeeringId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNetworkPeering(new CreateNetworkPeeringRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                NetworkPeeringId = gax::GaxPreconditions.CheckNotNullOrEmpty(networkPeeringId, nameof(networkPeeringId)),
+                NetworkPeering = gax::GaxPreconditions.CheckNotNull(networkPeering, nameof(networkPeering)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new network peering between the peer network and VMware Engine
+        /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new network
+        /// peering in. This value is always `global`, because `NetworkPeering` is a
+        /// global resource. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/global`
+        /// </param>
+        /// <param name="networkPeering">
+        /// Required. The initial description of the new network peering.
+        /// </param>
+        /// <param name="networkPeeringId">
+        /// Required. The user-provided identifier of the new `NetworkPeering`.
+        /// This identifier must be unique among `NetworkPeering` resources within the
+        /// parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> CreateNetworkPeeringAsync(string parent, NetworkPeering networkPeering, string networkPeeringId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNetworkPeeringAsync(new CreateNetworkPeeringRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                NetworkPeeringId = gax::GaxPreconditions.CheckNotNullOrEmpty(networkPeeringId, nameof(networkPeeringId)),
+                NetworkPeering = gax::GaxPreconditions.CheckNotNull(networkPeering, nameof(networkPeering)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new network peering between the peer network and VMware Engine
+        /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new network
+        /// peering in. This value is always `global`, because `NetworkPeering` is a
+        /// global resource. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/global`
+        /// </param>
+        /// <param name="networkPeering">
+        /// Required. The initial description of the new network peering.
+        /// </param>
+        /// <param name="networkPeeringId">
+        /// Required. The user-provided identifier of the new `NetworkPeering`.
+        /// This identifier must be unique among `NetworkPeering` resources within the
+        /// parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> CreateNetworkPeeringAsync(string parent, NetworkPeering networkPeering, string networkPeeringId, st::CancellationToken cancellationToken) =>
+            CreateNetworkPeeringAsync(parent, networkPeering, networkPeeringId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new network peering between the peer network and VMware Engine
+        /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new network
+        /// peering in. This value is always `global`, because `NetworkPeering` is a
+        /// global resource. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/global`
+        /// </param>
+        /// <param name="networkPeering">
+        /// Required. The initial description of the new network peering.
+        /// </param>
+        /// <param name="networkPeeringId">
+        /// Required. The user-provided identifier of the new `NetworkPeering`.
+        /// This identifier must be unique among `NetworkPeering` resources within the
+        /// parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<NetworkPeering, OperationMetadata> CreateNetworkPeering(gagr::LocationName parent, NetworkPeering networkPeering, string networkPeeringId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNetworkPeering(new CreateNetworkPeeringRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NetworkPeeringId = gax::GaxPreconditions.CheckNotNullOrEmpty(networkPeeringId, nameof(networkPeeringId)),
+                NetworkPeering = gax::GaxPreconditions.CheckNotNull(networkPeering, nameof(networkPeering)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new network peering between the peer network and VMware Engine
+        /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new network
+        /// peering in. This value is always `global`, because `NetworkPeering` is a
+        /// global resource. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/global`
+        /// </param>
+        /// <param name="networkPeering">
+        /// Required. The initial description of the new network peering.
+        /// </param>
+        /// <param name="networkPeeringId">
+        /// Required. The user-provided identifier of the new `NetworkPeering`.
+        /// This identifier must be unique among `NetworkPeering` resources within the
+        /// parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> CreateNetworkPeeringAsync(gagr::LocationName parent, NetworkPeering networkPeering, string networkPeeringId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateNetworkPeeringAsync(new CreateNetworkPeeringRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                NetworkPeeringId = gax::GaxPreconditions.CheckNotNullOrEmpty(networkPeeringId, nameof(networkPeeringId)),
+                NetworkPeering = gax::GaxPreconditions.CheckNotNull(networkPeering, nameof(networkPeering)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new network peering between the peer network and VMware Engine
+        /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new network
+        /// peering in. This value is always `global`, because `NetworkPeering` is a
+        /// global resource. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/global`
+        /// </param>
+        /// <param name="networkPeering">
+        /// Required. The initial description of the new network peering.
+        /// </param>
+        /// <param name="networkPeeringId">
+        /// Required. The user-provided identifier of the new `NetworkPeering`.
+        /// This identifier must be unique among `NetworkPeering` resources within the
+        /// parent and becomes the final token in the name URI.
+        /// The identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> CreateNetworkPeeringAsync(gagr::LocationName parent, NetworkPeering networkPeering, string networkPeeringId, st::CancellationToken cancellationToken) =>
+            CreateNetworkPeeringAsync(parent, networkPeering, networkPeeringId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+        /// a VMware Engine network, the peer network becomes inaccessible to that
+        /// VMware Engine network. NetworkPeering is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteNetworkPeering(DeleteNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+        /// a VMware Engine network, the peer network becomes inaccessible to that
+        /// VMware Engine network. NetworkPeering is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteNetworkPeeringAsync(DeleteNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+        /// a VMware Engine network, the peer network becomes inaccessible to that
+        /// VMware Engine network. NetworkPeering is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteNetworkPeeringAsync(DeleteNetworkPeeringRequest request, st::CancellationToken cancellationToken) =>
+            DeleteNetworkPeeringAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteNetworkPeering</c>.</summary>
+        public virtual lro::OperationsClient DeleteNetworkPeeringOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteNetworkPeering</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteNetworkPeering(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteNetworkPeeringOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteNetworkPeering</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteNetworkPeeringAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteNetworkPeeringOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+        /// a VMware Engine network, the peer network becomes inaccessible to that
+        /// VMware Engine network. NetworkPeering is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the network peering to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteNetworkPeering(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNetworkPeering(new DeleteNetworkPeeringRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+        /// a VMware Engine network, the peer network becomes inaccessible to that
+        /// VMware Engine network. NetworkPeering is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the network peering to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteNetworkPeeringAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNetworkPeeringAsync(new DeleteNetworkPeeringRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+        /// a VMware Engine network, the peer network becomes inaccessible to that
+        /// VMware Engine network. NetworkPeering is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the network peering to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteNetworkPeeringAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteNetworkPeeringAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+        /// a VMware Engine network, the peer network becomes inaccessible to that
+        /// VMware Engine network. NetworkPeering is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the network peering to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteNetworkPeering(NetworkPeeringName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNetworkPeering(new DeleteNetworkPeeringRequest
+            {
+                NetworkPeeringName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+        /// a VMware Engine network, the peer network becomes inaccessible to that
+        /// VMware Engine network. NetworkPeering is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the network peering to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteNetworkPeeringAsync(NetworkPeeringName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNetworkPeeringAsync(new DeleteNetworkPeeringRequest
+            {
+                NetworkPeeringName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+        /// a VMware Engine network, the peer network becomes inaccessible to that
+        /// VMware Engine network. NetworkPeering is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the network peering to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteNetworkPeeringAsync(NetworkPeeringName name, st::CancellationToken cancellationToken) =>
+            DeleteNetworkPeeringAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+        /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+        /// is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<NetworkPeering, OperationMetadata> UpdateNetworkPeering(UpdateNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+        /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+        /// is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> UpdateNetworkPeeringAsync(UpdateNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+        /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+        /// is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> UpdateNetworkPeeringAsync(UpdateNetworkPeeringRequest request, st::CancellationToken cancellationToken) =>
+            UpdateNetworkPeeringAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateNetworkPeering</c>.</summary>
+        public virtual lro::OperationsClient UpdateNetworkPeeringOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateNetworkPeering</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<NetworkPeering, OperationMetadata> PollOnceUpdateNetworkPeering(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<NetworkPeering, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateNetworkPeeringOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateNetworkPeering</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> PollOnceUpdateNetworkPeeringAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<NetworkPeering, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateNetworkPeeringOperationsClient, callSettings);
+
+        /// <summary>
+        /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+        /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+        /// is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="networkPeering">
+        /// Required. Network peering description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `NetworkPeering` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<NetworkPeering, OperationMetadata> UpdateNetworkPeering(NetworkPeering networkPeering, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateNetworkPeering(new UpdateNetworkPeeringRequest
+            {
+                NetworkPeering = gax::GaxPreconditions.CheckNotNull(networkPeering, nameof(networkPeering)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+        /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+        /// is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="networkPeering">
+        /// Required. Network peering description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `NetworkPeering` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> UpdateNetworkPeeringAsync(NetworkPeering networkPeering, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateNetworkPeeringAsync(new UpdateNetworkPeeringRequest
+            {
+                NetworkPeering = gax::GaxPreconditions.CheckNotNull(networkPeering, nameof(networkPeering)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+        /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+        /// is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="networkPeering">
+        /// Required. Network peering description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `NetworkPeering` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> UpdateNetworkPeeringAsync(NetworkPeering networkPeering, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateNetworkPeeringAsync(networkPeering, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists the network peering routes exchanged over a peering connection.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutes(ListPeeringRoutesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the network peering routes exchanged over a peering connection.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutesAsync(ListPeeringRoutesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the network peering routes exchanged over a peering connection.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network peering to retrieve peering
+        /// routes from. Resource names are schemeless URIs that follow the conventions
+        /// in https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPeeringRoutesRequest request = new ListPeeringRoutesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPeeringRoutes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the network peering routes exchanged over a peering connection.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network peering to retrieve peering
+        /// routes from. Resource names are schemeless URIs that follow the conventions
+        /// in https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPeeringRoutesRequest request = new ListPeeringRoutesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPeeringRoutesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the network peering routes exchanged over a peering connection.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network peering to retrieve peering
+        /// routes from. Resource names are schemeless URIs that follow the conventions
+        /// in https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutes(NetworkPeeringName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPeeringRoutesRequest request = new ListPeeringRoutesRequest
+            {
+                ParentAsNetworkPeeringName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPeeringRoutes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the network peering routes exchanged over a peering connection.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the network peering to retrieve peering
+        /// routes from. Resource names are schemeless URIs that follow the conventions
+        /// in https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/networkPeerings/my-peering`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutesAsync(NetworkPeeringName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPeeringRoutesRequest request = new ListPeeringRoutesRequest
+            {
+                ParentAsNetworkPeeringName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPeeringRoutesAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Creates a new HCX activation key in a given private cloud.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4387,13 +10315,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HcxActivationKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHcxActivationKeys(new ListHcxActivationKeysRequest
+        public virtual gax::PagedEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHcxActivationKeysRequest request = new ListHcxActivationKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHcxActivationKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `HcxActivationKey` resources in a given private cloud.
@@ -4416,13 +10353,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HcxActivationKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHcxActivationKeysAsync(new ListHcxActivationKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHcxActivationKeysRequest request = new ListHcxActivationKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHcxActivationKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `HcxActivationKey` resources in a given private cloud.
@@ -4445,13 +10391,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="HcxActivationKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeys(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHcxActivationKeys(new ListHcxActivationKeysRequest
+        public virtual gax::PagedEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeys(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHcxActivationKeysRequest request = new ListHcxActivationKeysRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHcxActivationKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `HcxActivationKey` resources in a given private cloud.
@@ -4474,13 +10429,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="HcxActivationKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeysAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListHcxActivationKeysAsync(new ListHcxActivationKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListHcxActivationKeysResponse, HcxActivationKey> ListHcxActivationKeysAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListHcxActivationKeysRequest request = new ListHcxActivationKeysRequest
             {
                 ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListHcxActivationKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a `HcxActivationKey` resource by its resource name.
@@ -4777,13 +10741,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NetworkPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkPolicies(new ListNetworkPoliciesRequest
+        public virtual gax::PagedEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPolicies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPoliciesRequest request = new ListNetworkPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `NetworkPolicy` resources in a specified project and location.
@@ -4804,13 +10777,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NetworkPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkPoliciesAsync(new ListNetworkPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPoliciesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPoliciesRequest request = new ListNetworkPoliciesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `NetworkPolicy` resources in a specified project and location.
@@ -4831,13 +10813,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="NetworkPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkPolicies(new ListNetworkPoliciesRequest
+        public virtual gax::PagedEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPolicies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPoliciesRequest request = new ListNetworkPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPolicies(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `NetworkPolicy` resources in a specified project and location.
@@ -4858,13 +10849,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="NetworkPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNetworkPoliciesAsync(new ListNetworkPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNetworkPoliciesResponse, NetworkPolicy> ListNetworkPoliciesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkPoliciesRequest request = new ListNetworkPoliciesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNetworkPoliciesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new network policy in a given VMware Engine network of a
@@ -5511,6 +11511,1092 @@ namespace Google.Cloud.VmwareEngine.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteNetworkPolicyAsync(NetworkPolicyName name, st::CancellationToken cancellationToken) =>
             DeleteNetworkPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ManagementDnsZoneBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindings(ListManagementDnsZoneBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ManagementDnsZoneBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindingsAsync(ListManagementDnsZoneBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud to be queried for
+        /// management DNS zone bindings.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ManagementDnsZoneBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagementDnsZoneBindingsRequest request = new ListManagementDnsZoneBindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagementDnsZoneBindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud to be queried for
+        /// management DNS zone bindings.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ManagementDnsZoneBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagementDnsZoneBindingsRequest request = new ListManagementDnsZoneBindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagementDnsZoneBindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud to be queried for
+        /// management DNS zone bindings.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ManagementDnsZoneBinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindings(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagementDnsZoneBindingsRequest request = new ListManagementDnsZoneBindingsRequest
+            {
+                ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagementDnsZoneBindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud to be queried for
+        /// management DNS zone bindings.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ManagementDnsZoneBinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindingsAsync(PrivateCloudName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListManagementDnsZoneBindingsRequest request = new ListManagementDnsZoneBindingsRequest
+            {
+                ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListManagementDnsZoneBindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagementDnsZoneBinding GetManagementDnsZoneBinding(GetManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagementDnsZoneBinding> GetManagementDnsZoneBindingAsync(GetManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagementDnsZoneBinding> GetManagementDnsZoneBindingAsync(GetManagementDnsZoneBindingRequest request, st::CancellationToken cancellationToken) =>
+            GetManagementDnsZoneBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to
+        /// retrieve. Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagementDnsZoneBinding GetManagementDnsZoneBinding(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetManagementDnsZoneBinding(new GetManagementDnsZoneBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to
+        /// retrieve. Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagementDnsZoneBinding> GetManagementDnsZoneBindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetManagementDnsZoneBindingAsync(new GetManagementDnsZoneBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to
+        /// retrieve. Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagementDnsZoneBinding> GetManagementDnsZoneBindingAsync(string name, st::CancellationToken cancellationToken) =>
+            GetManagementDnsZoneBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to
+        /// retrieve. Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagementDnsZoneBinding GetManagementDnsZoneBinding(ManagementDnsZoneBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetManagementDnsZoneBinding(new GetManagementDnsZoneBindingRequest
+            {
+                ManagementDnsZoneBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to
+        /// retrieve. Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagementDnsZoneBinding> GetManagementDnsZoneBindingAsync(ManagementDnsZoneBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetManagementDnsZoneBindingAsync(new GetManagementDnsZoneBindingRequest
+            {
+                ManagementDnsZoneBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to
+        /// retrieve. Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagementDnsZoneBinding> GetManagementDnsZoneBindingAsync(ManagementDnsZoneBindingName name, st::CancellationToken cancellationToken) =>
+            GetManagementDnsZoneBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+        /// This RPC creates the DNS binding and the resource that represents the
+        /// DNS binding of the consumer VPC network to the management DNS zone. A
+        /// management DNS zone is the Cloud DNS cross-project binding zone that
+        /// VMware Engine creates for each private cloud. It contains FQDNs and
+        /// corresponding IP addresses for the private cloud's ESXi hosts and
+        /// management VM appliances like vCenter and NSX Manager.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ManagementDnsZoneBinding, OperationMetadata> CreateManagementDnsZoneBinding(CreateManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+        /// This RPC creates the DNS binding and the resource that represents the
+        /// DNS binding of the consumer VPC network to the management DNS zone. A
+        /// management DNS zone is the Cloud DNS cross-project binding zone that
+        /// VMware Engine creates for each private cloud. It contains FQDNs and
+        /// corresponding IP addresses for the private cloud's ESXi hosts and
+        /// management VM appliances like vCenter and NSX Manager.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> CreateManagementDnsZoneBindingAsync(CreateManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+        /// This RPC creates the DNS binding and the resource that represents the
+        /// DNS binding of the consumer VPC network to the management DNS zone. A
+        /// management DNS zone is the Cloud DNS cross-project binding zone that
+        /// VMware Engine creates for each private cloud. It contains FQDNs and
+        /// corresponding IP addresses for the private cloud's ESXi hosts and
+        /// management VM appliances like vCenter and NSX Manager.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> CreateManagementDnsZoneBindingAsync(CreateManagementDnsZoneBindingRequest request, st::CancellationToken cancellationToken) =>
+            CreateManagementDnsZoneBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateManagementDnsZoneBinding</c>.</summary>
+        public virtual lro::OperationsClient CreateManagementDnsZoneBindingOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateManagementDnsZoneBinding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ManagementDnsZoneBinding, OperationMetadata> PollOnceCreateManagementDnsZoneBinding(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ManagementDnsZoneBinding, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateManagementDnsZoneBindingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateManagementDnsZoneBinding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> PollOnceCreateManagementDnsZoneBindingAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ManagementDnsZoneBinding, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateManagementDnsZoneBindingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+        /// This RPC creates the DNS binding and the resource that represents the
+        /// DNS binding of the consumer VPC network to the management DNS zone. A
+        /// management DNS zone is the Cloud DNS cross-project binding zone that
+        /// VMware Engine creates for each private cloud. It contains FQDNs and
+        /// corresponding IP addresses for the private cloud's ESXi hosts and
+        /// management VM appliances like vCenter and NSX Manager.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new management DNS zone binding for.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="managementDnsZoneBinding">
+        /// Required. The initial values for a new management DNS zone binding.
+        /// </param>
+        /// <param name="managementDnsZoneBindingId">
+        /// Required. The user-provided identifier of the `ManagementDnsZoneBinding`
+        /// resource to be created. This identifier must be unique among
+        /// `ManagementDnsZoneBinding` resources within the parent and becomes the
+        /// final token in the name URI. The identifier must meet the following
+        /// requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ManagementDnsZoneBinding, OperationMetadata> CreateManagementDnsZoneBinding(string parent, ManagementDnsZoneBinding managementDnsZoneBinding, string managementDnsZoneBindingId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateManagementDnsZoneBinding(new CreateManagementDnsZoneBindingRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ManagementDnsZoneBinding = gax::GaxPreconditions.CheckNotNull(managementDnsZoneBinding, nameof(managementDnsZoneBinding)),
+                ManagementDnsZoneBindingId = gax::GaxPreconditions.CheckNotNullOrEmpty(managementDnsZoneBindingId, nameof(managementDnsZoneBindingId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+        /// This RPC creates the DNS binding and the resource that represents the
+        /// DNS binding of the consumer VPC network to the management DNS zone. A
+        /// management DNS zone is the Cloud DNS cross-project binding zone that
+        /// VMware Engine creates for each private cloud. It contains FQDNs and
+        /// corresponding IP addresses for the private cloud's ESXi hosts and
+        /// management VM appliances like vCenter and NSX Manager.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new management DNS zone binding for.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="managementDnsZoneBinding">
+        /// Required. The initial values for a new management DNS zone binding.
+        /// </param>
+        /// <param name="managementDnsZoneBindingId">
+        /// Required. The user-provided identifier of the `ManagementDnsZoneBinding`
+        /// resource to be created. This identifier must be unique among
+        /// `ManagementDnsZoneBinding` resources within the parent and becomes the
+        /// final token in the name URI. The identifier must meet the following
+        /// requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> CreateManagementDnsZoneBindingAsync(string parent, ManagementDnsZoneBinding managementDnsZoneBinding, string managementDnsZoneBindingId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateManagementDnsZoneBindingAsync(new CreateManagementDnsZoneBindingRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ManagementDnsZoneBinding = gax::GaxPreconditions.CheckNotNull(managementDnsZoneBinding, nameof(managementDnsZoneBinding)),
+                ManagementDnsZoneBindingId = gax::GaxPreconditions.CheckNotNullOrEmpty(managementDnsZoneBindingId, nameof(managementDnsZoneBindingId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+        /// This RPC creates the DNS binding and the resource that represents the
+        /// DNS binding of the consumer VPC network to the management DNS zone. A
+        /// management DNS zone is the Cloud DNS cross-project binding zone that
+        /// VMware Engine creates for each private cloud. It contains FQDNs and
+        /// corresponding IP addresses for the private cloud's ESXi hosts and
+        /// management VM appliances like vCenter and NSX Manager.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new management DNS zone binding for.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="managementDnsZoneBinding">
+        /// Required. The initial values for a new management DNS zone binding.
+        /// </param>
+        /// <param name="managementDnsZoneBindingId">
+        /// Required. The user-provided identifier of the `ManagementDnsZoneBinding`
+        /// resource to be created. This identifier must be unique among
+        /// `ManagementDnsZoneBinding` resources within the parent and becomes the
+        /// final token in the name URI. The identifier must meet the following
+        /// requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> CreateManagementDnsZoneBindingAsync(string parent, ManagementDnsZoneBinding managementDnsZoneBinding, string managementDnsZoneBindingId, st::CancellationToken cancellationToken) =>
+            CreateManagementDnsZoneBindingAsync(parent, managementDnsZoneBinding, managementDnsZoneBindingId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+        /// This RPC creates the DNS binding and the resource that represents the
+        /// DNS binding of the consumer VPC network to the management DNS zone. A
+        /// management DNS zone is the Cloud DNS cross-project binding zone that
+        /// VMware Engine creates for each private cloud. It contains FQDNs and
+        /// corresponding IP addresses for the private cloud's ESXi hosts and
+        /// management VM appliances like vCenter and NSX Manager.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new management DNS zone binding for.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="managementDnsZoneBinding">
+        /// Required. The initial values for a new management DNS zone binding.
+        /// </param>
+        /// <param name="managementDnsZoneBindingId">
+        /// Required. The user-provided identifier of the `ManagementDnsZoneBinding`
+        /// resource to be created. This identifier must be unique among
+        /// `ManagementDnsZoneBinding` resources within the parent and becomes the
+        /// final token in the name URI. The identifier must meet the following
+        /// requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ManagementDnsZoneBinding, OperationMetadata> CreateManagementDnsZoneBinding(PrivateCloudName parent, ManagementDnsZoneBinding managementDnsZoneBinding, string managementDnsZoneBindingId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateManagementDnsZoneBinding(new CreateManagementDnsZoneBindingRequest
+            {
+                ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ManagementDnsZoneBinding = gax::GaxPreconditions.CheckNotNull(managementDnsZoneBinding, nameof(managementDnsZoneBinding)),
+                ManagementDnsZoneBindingId = gax::GaxPreconditions.CheckNotNullOrEmpty(managementDnsZoneBindingId, nameof(managementDnsZoneBindingId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+        /// This RPC creates the DNS binding and the resource that represents the
+        /// DNS binding of the consumer VPC network to the management DNS zone. A
+        /// management DNS zone is the Cloud DNS cross-project binding zone that
+        /// VMware Engine creates for each private cloud. It contains FQDNs and
+        /// corresponding IP addresses for the private cloud's ESXi hosts and
+        /// management VM appliances like vCenter and NSX Manager.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new management DNS zone binding for.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="managementDnsZoneBinding">
+        /// Required. The initial values for a new management DNS zone binding.
+        /// </param>
+        /// <param name="managementDnsZoneBindingId">
+        /// Required. The user-provided identifier of the `ManagementDnsZoneBinding`
+        /// resource to be created. This identifier must be unique among
+        /// `ManagementDnsZoneBinding` resources within the parent and becomes the
+        /// final token in the name URI. The identifier must meet the following
+        /// requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> CreateManagementDnsZoneBindingAsync(PrivateCloudName parent, ManagementDnsZoneBinding managementDnsZoneBinding, string managementDnsZoneBindingId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateManagementDnsZoneBindingAsync(new CreateManagementDnsZoneBindingRequest
+            {
+                ParentAsPrivateCloudName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ManagementDnsZoneBinding = gax::GaxPreconditions.CheckNotNull(managementDnsZoneBinding, nameof(managementDnsZoneBinding)),
+                ManagementDnsZoneBindingId = gax::GaxPreconditions.CheckNotNullOrEmpty(managementDnsZoneBindingId, nameof(managementDnsZoneBindingId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+        /// This RPC creates the DNS binding and the resource that represents the
+        /// DNS binding of the consumer VPC network to the management DNS zone. A
+        /// management DNS zone is the Cloud DNS cross-project binding zone that
+        /// VMware Engine creates for each private cloud. It contains FQDNs and
+        /// corresponding IP addresses for the private cloud's ESXi hosts and
+        /// management VM appliances like vCenter and NSX Manager.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private cloud
+        /// to create a new management DNS zone binding for.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+        /// </param>
+        /// <param name="managementDnsZoneBinding">
+        /// Required. The initial values for a new management DNS zone binding.
+        /// </param>
+        /// <param name="managementDnsZoneBindingId">
+        /// Required. The user-provided identifier of the `ManagementDnsZoneBinding`
+        /// resource to be created. This identifier must be unique among
+        /// `ManagementDnsZoneBinding` resources within the parent and becomes the
+        /// final token in the name URI. The identifier must meet the following
+        /// requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> CreateManagementDnsZoneBindingAsync(PrivateCloudName parent, ManagementDnsZoneBinding managementDnsZoneBinding, string managementDnsZoneBindingId, st::CancellationToken cancellationToken) =>
+            CreateManagementDnsZoneBindingAsync(parent, managementDnsZoneBinding, managementDnsZoneBindingId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a `ManagementDnsZoneBinding` resource.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ManagementDnsZoneBinding, OperationMetadata> UpdateManagementDnsZoneBinding(UpdateManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a `ManagementDnsZoneBinding` resource.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> UpdateManagementDnsZoneBindingAsync(UpdateManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a `ManagementDnsZoneBinding` resource.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> UpdateManagementDnsZoneBindingAsync(UpdateManagementDnsZoneBindingRequest request, st::CancellationToken cancellationToken) =>
+            UpdateManagementDnsZoneBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateManagementDnsZoneBinding</c>.</summary>
+        public virtual lro::OperationsClient UpdateManagementDnsZoneBindingOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateManagementDnsZoneBinding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ManagementDnsZoneBinding, OperationMetadata> PollOnceUpdateManagementDnsZoneBinding(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ManagementDnsZoneBinding, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateManagementDnsZoneBindingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateManagementDnsZoneBinding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> PollOnceUpdateManagementDnsZoneBindingAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ManagementDnsZoneBinding, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateManagementDnsZoneBindingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a `ManagementDnsZoneBinding` resource.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="managementDnsZoneBinding">
+        /// Required. New values to update the management DNS zone binding with.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `ManagementDnsZoneBinding` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ManagementDnsZoneBinding, OperationMetadata> UpdateManagementDnsZoneBinding(ManagementDnsZoneBinding managementDnsZoneBinding, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateManagementDnsZoneBinding(new UpdateManagementDnsZoneBindingRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                ManagementDnsZoneBinding = gax::GaxPreconditions.CheckNotNull(managementDnsZoneBinding, nameof(managementDnsZoneBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `ManagementDnsZoneBinding` resource.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="managementDnsZoneBinding">
+        /// Required. New values to update the management DNS zone binding with.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `ManagementDnsZoneBinding` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> UpdateManagementDnsZoneBindingAsync(ManagementDnsZoneBinding managementDnsZoneBinding, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateManagementDnsZoneBindingAsync(new UpdateManagementDnsZoneBindingRequest
+            {
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                ManagementDnsZoneBinding = gax::GaxPreconditions.CheckNotNull(managementDnsZoneBinding, nameof(managementDnsZoneBinding)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `ManagementDnsZoneBinding` resource.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="managementDnsZoneBinding">
+        /// Required. New values to update the management DNS zone binding with.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `ManagementDnsZoneBinding` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> UpdateManagementDnsZoneBindingAsync(ManagementDnsZoneBinding managementDnsZoneBinding, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateManagementDnsZoneBindingAsync(managementDnsZoneBinding, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+        /// binding is deleted, the corresponding consumer VPC network is no longer
+        /// bound to the management DNS zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteManagementDnsZoneBinding(DeleteManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+        /// binding is deleted, the corresponding consumer VPC network is no longer
+        /// bound to the management DNS zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteManagementDnsZoneBindingAsync(DeleteManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+        /// binding is deleted, the corresponding consumer VPC network is no longer
+        /// bound to the management DNS zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteManagementDnsZoneBindingAsync(DeleteManagementDnsZoneBindingRequest request, st::CancellationToken cancellationToken) =>
+            DeleteManagementDnsZoneBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteManagementDnsZoneBinding</c>.</summary>
+        public virtual lro::OperationsClient DeleteManagementDnsZoneBindingOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteManagementDnsZoneBinding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteManagementDnsZoneBinding(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteManagementDnsZoneBindingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteManagementDnsZoneBinding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteManagementDnsZoneBindingAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteManagementDnsZoneBindingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+        /// binding is deleted, the corresponding consumer VPC network is no longer
+        /// bound to the management DNS zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteManagementDnsZoneBinding(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteManagementDnsZoneBinding(new DeleteManagementDnsZoneBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+        /// binding is deleted, the corresponding consumer VPC network is no longer
+        /// bound to the management DNS zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteManagementDnsZoneBindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteManagementDnsZoneBindingAsync(new DeleteManagementDnsZoneBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+        /// binding is deleted, the corresponding consumer VPC network is no longer
+        /// bound to the management DNS zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteManagementDnsZoneBindingAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteManagementDnsZoneBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+        /// binding is deleted, the corresponding consumer VPC network is no longer
+        /// bound to the management DNS zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteManagementDnsZoneBinding(ManagementDnsZoneBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteManagementDnsZoneBinding(new DeleteManagementDnsZoneBindingRequest
+            {
+                ManagementDnsZoneBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+        /// binding is deleted, the corresponding consumer VPC network is no longer
+        /// bound to the management DNS zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteManagementDnsZoneBindingAsync(ManagementDnsZoneBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteManagementDnsZoneBindingAsync(new DeleteManagementDnsZoneBindingRequest
+            {
+                ManagementDnsZoneBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+        /// binding is deleted, the corresponding consumer VPC network is no longer
+        /// bound to the management DNS zone.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to delete.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteManagementDnsZoneBindingAsync(ManagementDnsZoneBindingName name, st::CancellationToken cancellationToken) =>
+            DeleteManagementDnsZoneBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retries to create a `ManagementDnsZoneBinding` resource that is
+        /// in failed state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ManagementDnsZoneBinding, OperationMetadata> RepairManagementDnsZoneBinding(RepairManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retries to create a `ManagementDnsZoneBinding` resource that is
+        /// in failed state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> RepairManagementDnsZoneBindingAsync(RepairManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retries to create a `ManagementDnsZoneBinding` resource that is
+        /// in failed state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> RepairManagementDnsZoneBindingAsync(RepairManagementDnsZoneBindingRequest request, st::CancellationToken cancellationToken) =>
+            RepairManagementDnsZoneBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RepairManagementDnsZoneBinding</c>.</summary>
+        public virtual lro::OperationsClient RepairManagementDnsZoneBindingOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RepairManagementDnsZoneBinding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ManagementDnsZoneBinding, OperationMetadata> PollOnceRepairManagementDnsZoneBinding(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ManagementDnsZoneBinding, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RepairManagementDnsZoneBindingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RepairManagementDnsZoneBinding</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> PollOnceRepairManagementDnsZoneBindingAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ManagementDnsZoneBinding, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RepairManagementDnsZoneBindingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Retries to create a `ManagementDnsZoneBinding` resource that is
+        /// in failed state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to repair.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ManagementDnsZoneBinding, OperationMetadata> RepairManagementDnsZoneBinding(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RepairManagementDnsZoneBinding(new RepairManagementDnsZoneBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retries to create a `ManagementDnsZoneBinding` resource that is
+        /// in failed state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to repair.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> RepairManagementDnsZoneBindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RepairManagementDnsZoneBindingAsync(new RepairManagementDnsZoneBindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retries to create a `ManagementDnsZoneBinding` resource that is
+        /// in failed state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to repair.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> RepairManagementDnsZoneBindingAsync(string name, st::CancellationToken cancellationToken) =>
+            RepairManagementDnsZoneBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retries to create a `ManagementDnsZoneBinding` resource that is
+        /// in failed state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to repair.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ManagementDnsZoneBinding, OperationMetadata> RepairManagementDnsZoneBinding(ManagementDnsZoneBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            RepairManagementDnsZoneBinding(new RepairManagementDnsZoneBindingRequest
+            {
+                ManagementDnsZoneBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retries to create a `ManagementDnsZoneBinding` resource that is
+        /// in failed state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to repair.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> RepairManagementDnsZoneBindingAsync(ManagementDnsZoneBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            RepairManagementDnsZoneBindingAsync(new RepairManagementDnsZoneBindingRequest
+            {
+                ManagementDnsZoneBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retries to create a `ManagementDnsZoneBinding` resource that is
+        /// in failed state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the management DNS zone binding to repair.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> RepairManagementDnsZoneBindingAsync(ManagementDnsZoneBindingName name, st::CancellationToken cancellationToken) =>
+            RepairManagementDnsZoneBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a new VMware Engine network that can be used by a private cloud.
@@ -6309,13 +13395,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VmwareEngineNetwork"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVmwareEngineNetworks(new ListVmwareEngineNetworksRequest
+        public virtual gax::PagedEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVmwareEngineNetworksRequest request = new ListVmwareEngineNetworksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVmwareEngineNetworks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `VmwareEngineNetwork` resources in a given project and location.
@@ -6336,13 +13431,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VmwareEngineNetwork"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVmwareEngineNetworksAsync(new ListVmwareEngineNetworksRequest
+        public virtual gax::PagedAsyncEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVmwareEngineNetworksRequest request = new ListVmwareEngineNetworksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVmwareEngineNetworksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `VmwareEngineNetwork` resources in a given project and location.
@@ -6363,13 +13467,22 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="VmwareEngineNetwork"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworks(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVmwareEngineNetworks(new ListVmwareEngineNetworksRequest
+        public virtual gax::PagedEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworks(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVmwareEngineNetworksRequest request = new ListVmwareEngineNetworksRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVmwareEngineNetworks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `VmwareEngineNetwork` resources in a given project and location.
@@ -6390,13 +13503,1654 @@ namespace Google.Cloud.VmwareEngine.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="VmwareEngineNetwork"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworksAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListVmwareEngineNetworksAsync(new ListVmwareEngineNetworksRequest
+        public virtual gax::PagedAsyncEnumerable<ListVmwareEngineNetworksResponse, VmwareEngineNetwork> ListVmwareEngineNetworksAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListVmwareEngineNetworksRequest request = new ListVmwareEngineNetworksRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListVmwareEngineNetworksAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> CreatePrivateConnection(CreatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(CreatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(CreatePrivateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            CreatePrivateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreatePrivateConnection</c>.</summary>
+        public virtual lro::OperationsClient CreatePrivateConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreatePrivateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> PollOnceCreatePrivateConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PrivateConnection, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreatePrivateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreatePrivateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> PollOnceCreatePrivateConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PrivateConnection, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreatePrivateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new private
+        /// connection in. Private connection is a regional resource.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="privateConnection">
+        /// Required. The initial description of the new private connection.
+        /// </param>
+        /// <param name="privateConnectionId">
+        /// Required. The user-provided identifier of the new private connection.
+        /// This identifier must be unique among private connection resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> CreatePrivateConnection(string parent, PrivateConnection privateConnection, string privateConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePrivateConnection(new CreatePrivateConnectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PrivateConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)),
+                PrivateConnection = gax::GaxPreconditions.CheckNotNull(privateConnection, nameof(privateConnection)),
             }, callSettings);
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new private
+        /// connection in. Private connection is a regional resource.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="privateConnection">
+        /// Required. The initial description of the new private connection.
+        /// </param>
+        /// <param name="privateConnectionId">
+        /// Required. The user-provided identifier of the new private connection.
+        /// This identifier must be unique among private connection resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(string parent, PrivateConnection privateConnection, string privateConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePrivateConnectionAsync(new CreatePrivateConnectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PrivateConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)),
+                PrivateConnection = gax::GaxPreconditions.CheckNotNull(privateConnection, nameof(privateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new private
+        /// connection in. Private connection is a regional resource.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="privateConnection">
+        /// Required. The initial description of the new private connection.
+        /// </param>
+        /// <param name="privateConnectionId">
+        /// Required. The user-provided identifier of the new private connection.
+        /// This identifier must be unique among private connection resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(string parent, PrivateConnection privateConnection, string privateConnectionId, st::CancellationToken cancellationToken) =>
+            CreatePrivateConnectionAsync(parent, privateConnection, privateConnectionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new private
+        /// connection in. Private connection is a regional resource.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="privateConnection">
+        /// Required. The initial description of the new private connection.
+        /// </param>
+        /// <param name="privateConnectionId">
+        /// Required. The user-provided identifier of the new private connection.
+        /// This identifier must be unique among private connection resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> CreatePrivateConnection(gagr::LocationName parent, PrivateConnection privateConnection, string privateConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePrivateConnection(new CreatePrivateConnectionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PrivateConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)),
+                PrivateConnection = gax::GaxPreconditions.CheckNotNull(privateConnection, nameof(privateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new private
+        /// connection in. Private connection is a regional resource.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="privateConnection">
+        /// Required. The initial description of the new private connection.
+        /// </param>
+        /// <param name="privateConnectionId">
+        /// Required. The user-provided identifier of the new private connection.
+        /// This identifier must be unique among private connection resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(gagr::LocationName parent, PrivateConnection privateConnection, string privateConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreatePrivateConnectionAsync(new CreatePrivateConnectionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PrivateConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)),
+                PrivateConnection = gax::GaxPreconditions.CheckNotNull(privateConnection, nameof(privateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to create the new private
+        /// connection in. Private connection is a regional resource.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="privateConnection">
+        /// Required. The initial description of the new private connection.
+        /// </param>
+        /// <param name="privateConnectionId">
+        /// Required. The user-provided identifier of the new private connection.
+        /// This identifier must be unique among private connection resources
+        /// within the parent and becomes the final token in the name URI. The
+        /// identifier must meet the following requirements:
+        /// 
+        /// * Only contains 1-63 alphanumeric characters and hyphens
+        /// * Begins with an alphabetical character
+        /// * Ends with a non-hyphen character
+        /// * Not formatted as a UUID
+        /// * Complies with [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+        /// (section 3.5)
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(gagr::LocationName parent, PrivateConnection privateConnection, string privateConnectionId, st::CancellationToken cancellationToken) =>
+            CreatePrivateConnectionAsync(parent, privateConnection, privateConnectionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PrivateConnection GetPrivateConnection(GetPrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(GetPrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(GetPrivateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            GetPrivateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PrivateConnection GetPrivateConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPrivateConnection(new GetPrivateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPrivateConnectionAsync(new GetPrivateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPrivateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PrivateConnection GetPrivateConnection(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPrivateConnection(new GetPrivateConnectionRequest
+            {
+                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPrivateConnectionAsync(new GetPrivateConnectionRequest
+            {
+                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to retrieve.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrivateConnection> GetPrivateConnectionAsync(PrivateConnectionName name, st::CancellationToken cancellationToken) =>
+            GetPrivateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(ListPrivateConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(ListPrivateConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to query for
+        /// private connections. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to query for
+        /// private connections. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to query for
+        /// private connections. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the location to query for
+        /// private connections. Resource names are schemeless URIs that follow the
+        /// conventions in https://cloud.google.com/apis/design/resource_names. For
+        /// example: `projects/my-project/locations/us-central1`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionsRequest request = new ListPrivateConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> UpdatePrivateConnection(UpdatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> UpdatePrivateConnectionAsync(UpdatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> UpdatePrivateConnectionAsync(UpdatePrivateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            UpdatePrivateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdatePrivateConnection</c>.</summary>
+        public virtual lro::OperationsClient UpdatePrivateConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdatePrivateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> PollOnceUpdatePrivateConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PrivateConnection, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdatePrivateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdatePrivateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> PollOnceUpdatePrivateConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PrivateConnection, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdatePrivateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="privateConnection">
+        /// Required. Private connection description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `PrivateConnection` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PrivateConnection, OperationMetadata> UpdatePrivateConnection(PrivateConnection privateConnection, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePrivateConnection(new UpdatePrivateConnectionRequest
+            {
+                PrivateConnection = gax::GaxPreconditions.CheckNotNull(privateConnection, nameof(privateConnection)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="privateConnection">
+        /// Required. Private connection description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `PrivateConnection` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> UpdatePrivateConnectionAsync(PrivateConnection privateConnection, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePrivateConnectionAsync(new UpdatePrivateConnectionRequest
+            {
+                PrivateConnection = gax::GaxPreconditions.CheckNotNull(privateConnection, nameof(privateConnection)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="privateConnection">
+        /// Required. Private connection description.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// `PrivateConnection` resource by the update.
+        /// The fields specified in the `update_mask` are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> UpdatePrivateConnectionAsync(PrivateConnection privateConnection, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdatePrivateConnectionAsync(privateConnection, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeletePrivateConnection(DeletePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(DeletePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(DeletePrivateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            DeletePrivateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeletePrivateConnection</c>.</summary>
+        public virtual lro::OperationsClient DeletePrivateConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeletePrivateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeletePrivateConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeletePrivateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeletePrivateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeletePrivateConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeletePrivateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeletePrivateConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePrivateConnection(new DeletePrivateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePrivateConnectionAsync(new DeletePrivateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeletePrivateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeletePrivateConnection(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePrivateConnection(new DeletePrivateConnectionRequest
+            {
+                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(PrivateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeletePrivateConnectionAsync(new DeletePrivateConnectionRequest
+            {
+                PrivateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the private connection to be deleted.
+        /// Resource names are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names.
+        /// For example:
+        /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(PrivateConnectionName name, st::CancellationToken cancellationToken) =>
+            DeletePrivateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutes(ListPrivateConnectionPeeringRoutesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutesAsync(ListPrivateConnectionPeeringRoutesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private connection to retrieve peering
+        /// routes from. Resource names are schemeless URIs that follow the conventions
+        /// in https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-west1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionPeeringRoutesRequest request = new ListPrivateConnectionPeeringRoutesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionPeeringRoutes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private connection to retrieve peering
+        /// routes from. Resource names are schemeless URIs that follow the conventions
+        /// in https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-west1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionPeeringRoutesRequest request = new ListPrivateConnectionPeeringRoutesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionPeeringRoutesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private connection to retrieve peering
+        /// routes from. Resource names are schemeless URIs that follow the conventions
+        /// in https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-west1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutes(PrivateConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionPeeringRoutesRequest request = new ListPrivateConnectionPeeringRoutesRequest
+            {
+                ParentAsPrivateConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionPeeringRoutes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the private connection to retrieve peering
+        /// routes from. Resource names are schemeless URIs that follow the conventions
+        /// in https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/us-west1/privateConnections/my-connection`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutesAsync(PrivateConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPrivateConnectionPeeringRoutesRequest request = new ListPrivateConnectionPeeringRoutesRequest
+            {
+                ParentAsPrivateConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPrivateConnectionPeeringRoutesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Grants the bind permission to the customer provided principal(user /
+        /// service account) to bind their DNS zone with the intranet VPC associated
+        /// with the project. DnsBindPermission is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DnsBindPermission, OperationMetadata> GrantDnsBindPermission(GrantDnsBindPermissionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Grants the bind permission to the customer provided principal(user /
+        /// service account) to bind their DNS zone with the intranet VPC associated
+        /// with the project. DnsBindPermission is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> GrantDnsBindPermissionAsync(GrantDnsBindPermissionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Grants the bind permission to the customer provided principal(user /
+        /// service account) to bind their DNS zone with the intranet VPC associated
+        /// with the project. DnsBindPermission is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> GrantDnsBindPermissionAsync(GrantDnsBindPermissionRequest request, st::CancellationToken cancellationToken) =>
+            GrantDnsBindPermissionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>GrantDnsBindPermission</c>.</summary>
+        public virtual lro::OperationsClient GrantDnsBindPermissionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>GrantDnsBindPermission</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DnsBindPermission, OperationMetadata> PollOnceGrantDnsBindPermission(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DnsBindPermission, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), GrantDnsBindPermissionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>GrantDnsBindPermission</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> PollOnceGrantDnsBindPermissionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DnsBindPermission, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), GrantDnsBindPermissionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Grants the bind permission to the customer provided principal(user /
+        /// service account) to bind their DNS zone with the intranet VPC associated
+        /// with the project. DnsBindPermission is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="principal">
+        /// Required. The consumer provided user/service account which needs to be
+        /// granted permission to bind with the intranet VPC corresponding to the
+        /// consumer project.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DnsBindPermission, OperationMetadata> GrantDnsBindPermission(string name, Principal principal, gaxgrpc::CallSettings callSettings = null) =>
+            GrantDnsBindPermission(new GrantDnsBindPermissionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Principal = gax::GaxPreconditions.CheckNotNull(principal, nameof(principal)),
+            }, callSettings);
+
+        /// <summary>
+        /// Grants the bind permission to the customer provided principal(user /
+        /// service account) to bind their DNS zone with the intranet VPC associated
+        /// with the project. DnsBindPermission is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="principal">
+        /// Required. The consumer provided user/service account which needs to be
+        /// granted permission to bind with the intranet VPC corresponding to the
+        /// consumer project.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> GrantDnsBindPermissionAsync(string name, Principal principal, gaxgrpc::CallSettings callSettings = null) =>
+            GrantDnsBindPermissionAsync(new GrantDnsBindPermissionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Principal = gax::GaxPreconditions.CheckNotNull(principal, nameof(principal)),
+            }, callSettings);
+
+        /// <summary>
+        /// Grants the bind permission to the customer provided principal(user /
+        /// service account) to bind their DNS zone with the intranet VPC associated
+        /// with the project. DnsBindPermission is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="principal">
+        /// Required. The consumer provided user/service account which needs to be
+        /// granted permission to bind with the intranet VPC corresponding to the
+        /// consumer project.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> GrantDnsBindPermissionAsync(string name, Principal principal, st::CancellationToken cancellationToken) =>
+            GrantDnsBindPermissionAsync(name, principal, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Grants the bind permission to the customer provided principal(user /
+        /// service account) to bind their DNS zone with the intranet VPC associated
+        /// with the project. DnsBindPermission is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="principal">
+        /// Required. The consumer provided user/service account which needs to be
+        /// granted permission to bind with the intranet VPC corresponding to the
+        /// consumer project.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DnsBindPermission, OperationMetadata> GrantDnsBindPermission(DnsBindPermissionName name, Principal principal, gaxgrpc::CallSettings callSettings = null) =>
+            GrantDnsBindPermission(new GrantDnsBindPermissionRequest
+            {
+                DnsBindPermissionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Principal = gax::GaxPreconditions.CheckNotNull(principal, nameof(principal)),
+            }, callSettings);
+
+        /// <summary>
+        /// Grants the bind permission to the customer provided principal(user /
+        /// service account) to bind their DNS zone with the intranet VPC associated
+        /// with the project. DnsBindPermission is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="principal">
+        /// Required. The consumer provided user/service account which needs to be
+        /// granted permission to bind with the intranet VPC corresponding to the
+        /// consumer project.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> GrantDnsBindPermissionAsync(DnsBindPermissionName name, Principal principal, gaxgrpc::CallSettings callSettings = null) =>
+            GrantDnsBindPermissionAsync(new GrantDnsBindPermissionRequest
+            {
+                DnsBindPermissionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Principal = gax::GaxPreconditions.CheckNotNull(principal, nameof(principal)),
+            }, callSettings);
+
+        /// <summary>
+        /// Grants the bind permission to the customer provided principal(user /
+        /// service account) to bind their DNS zone with the intranet VPC associated
+        /// with the project. DnsBindPermission is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="principal">
+        /// Required. The consumer provided user/service account which needs to be
+        /// granted permission to bind with the intranet VPC corresponding to the
+        /// consumer project.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> GrantDnsBindPermissionAsync(DnsBindPermissionName name, Principal principal, st::CancellationToken cancellationToken) =>
+            GrantDnsBindPermissionAsync(name, principal, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets all the principals having bind permission on the intranet VPC
+        /// associated with the consumer project granted by the Grant API.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DnsBindPermission GetDnsBindPermission(GetDnsBindPermissionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets all the principals having bind permission on the intranet VPC
+        /// associated with the consumer project granted by the Grant API.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DnsBindPermission> GetDnsBindPermissionAsync(GetDnsBindPermissionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets all the principals having bind permission on the intranet VPC
+        /// associated with the consumer project granted by the Grant API.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DnsBindPermission> GetDnsBindPermissionAsync(GetDnsBindPermissionRequest request, st::CancellationToken cancellationToken) =>
+            GetDnsBindPermissionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets all the principals having bind permission on the intranet VPC
+        /// associated with the consumer project granted by the Grant API.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DnsBindPermission GetDnsBindPermission(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDnsBindPermission(new GetDnsBindPermissionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets all the principals having bind permission on the intranet VPC
+        /// associated with the consumer project granted by the Grant API.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DnsBindPermission> GetDnsBindPermissionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDnsBindPermissionAsync(new GetDnsBindPermissionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets all the principals having bind permission on the intranet VPC
+        /// associated with the consumer project granted by the Grant API.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DnsBindPermission> GetDnsBindPermissionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetDnsBindPermissionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets all the principals having bind permission on the intranet VPC
+        /// associated with the consumer project granted by the Grant API.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DnsBindPermission GetDnsBindPermission(DnsBindPermissionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDnsBindPermission(new GetDnsBindPermissionRequest
+            {
+                DnsBindPermissionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets all the principals having bind permission on the intranet VPC
+        /// associated with the consumer project granted by the Grant API.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DnsBindPermission> GetDnsBindPermissionAsync(DnsBindPermissionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetDnsBindPermissionAsync(new GetDnsBindPermissionRequest
+            {
+                DnsBindPermissionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets all the principals having bind permission on the intranet VPC
+        /// associated with the consumer project granted by the Grant API.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DnsBindPermission> GetDnsBindPermissionAsync(DnsBindPermissionName name, st::CancellationToken cancellationToken) =>
+            GetDnsBindPermissionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Revokes the bind permission from the customer provided principal(user /
+        /// service account) on the intranet VPC associated with the consumer project.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DnsBindPermission, OperationMetadata> RevokeDnsBindPermission(RevokeDnsBindPermissionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Revokes the bind permission from the customer provided principal(user /
+        /// service account) on the intranet VPC associated with the consumer project.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> RevokeDnsBindPermissionAsync(RevokeDnsBindPermissionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Revokes the bind permission from the customer provided principal(user /
+        /// service account) on the intranet VPC associated with the consumer project.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> RevokeDnsBindPermissionAsync(RevokeDnsBindPermissionRequest request, st::CancellationToken cancellationToken) =>
+            RevokeDnsBindPermissionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RevokeDnsBindPermission</c>.</summary>
+        public virtual lro::OperationsClient RevokeDnsBindPermissionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RevokeDnsBindPermission</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DnsBindPermission, OperationMetadata> PollOnceRevokeDnsBindPermission(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DnsBindPermission, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RevokeDnsBindPermissionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RevokeDnsBindPermission</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> PollOnceRevokeDnsBindPermissionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DnsBindPermission, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RevokeDnsBindPermissionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Revokes the bind permission from the customer provided principal(user /
+        /// service account) on the intranet VPC associated with the consumer project.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="principal">
+        /// Required. The consumer provided user/service account which needs to be
+        /// granted permission to bind with the intranet VPC corresponding to the
+        /// consumer project.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DnsBindPermission, OperationMetadata> RevokeDnsBindPermission(string name, Principal principal, gaxgrpc::CallSettings callSettings = null) =>
+            RevokeDnsBindPermission(new RevokeDnsBindPermissionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Principal = gax::GaxPreconditions.CheckNotNull(principal, nameof(principal)),
+            }, callSettings);
+
+        /// <summary>
+        /// Revokes the bind permission from the customer provided principal(user /
+        /// service account) on the intranet VPC associated with the consumer project.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="principal">
+        /// Required. The consumer provided user/service account which needs to be
+        /// granted permission to bind with the intranet VPC corresponding to the
+        /// consumer project.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> RevokeDnsBindPermissionAsync(string name, Principal principal, gaxgrpc::CallSettings callSettings = null) =>
+            RevokeDnsBindPermissionAsync(new RevokeDnsBindPermissionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Principal = gax::GaxPreconditions.CheckNotNull(principal, nameof(principal)),
+            }, callSettings);
+
+        /// <summary>
+        /// Revokes the bind permission from the customer provided principal(user /
+        /// service account) on the intranet VPC associated with the consumer project.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="principal">
+        /// Required. The consumer provided user/service account which needs to be
+        /// granted permission to bind with the intranet VPC corresponding to the
+        /// consumer project.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> RevokeDnsBindPermissionAsync(string name, Principal principal, st::CancellationToken cancellationToken) =>
+            RevokeDnsBindPermissionAsync(name, principal, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Revokes the bind permission from the customer provided principal(user /
+        /// service account) on the intranet VPC associated with the consumer project.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="principal">
+        /// Required. The consumer provided user/service account which needs to be
+        /// granted permission to bind with the intranet VPC corresponding to the
+        /// consumer project.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DnsBindPermission, OperationMetadata> RevokeDnsBindPermission(DnsBindPermissionName name, Principal principal, gaxgrpc::CallSettings callSettings = null) =>
+            RevokeDnsBindPermission(new RevokeDnsBindPermissionRequest
+            {
+                DnsBindPermissionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Principal = gax::GaxPreconditions.CheckNotNull(principal, nameof(principal)),
+            }, callSettings);
+
+        /// <summary>
+        /// Revokes the bind permission from the customer provided principal(user /
+        /// service account) on the intranet VPC associated with the consumer project.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="principal">
+        /// Required. The consumer provided user/service account which needs to be
+        /// granted permission to bind with the intranet VPC corresponding to the
+        /// consumer project.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> RevokeDnsBindPermissionAsync(DnsBindPermissionName name, Principal principal, gaxgrpc::CallSettings callSettings = null) =>
+            RevokeDnsBindPermissionAsync(new RevokeDnsBindPermissionRequest
+            {
+                DnsBindPermissionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Principal = gax::GaxPreconditions.CheckNotNull(principal, nameof(principal)),
+            }, callSettings);
+
+        /// <summary>
+        /// Revokes the bind permission from the customer provided principal(user /
+        /// service account) on the intranet VPC associated with the consumer project.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the resource which stores the users/service accounts
+        /// having the permission to bind to the corresponding intranet VPC of the
+        /// consumer project. DnsBindPermission is a global resource. Resource names
+        /// are schemeless URIs that follow the conventions in
+        /// https://cloud.google.com/apis/design/resource_names. For example:
+        /// `projects/my-project/locations/global/dnsBindPermission`
+        /// </param>
+        /// <param name="principal">
+        /// Required. The consumer provided user/service account which needs to be
+        /// granted permission to bind with the intranet VPC corresponding to the
+        /// consumer project.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> RevokeDnsBindPermissionAsync(DnsBindPermissionName name, Principal principal, st::CancellationToken cancellationToken) =>
+            RevokeDnsBindPermissionAsync(name, principal, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>VmwareEngine client wrapper implementation, for convenient use.</summary>
@@ -6427,7 +15181,47 @@ namespace Google.Cloud.VmwareEngine.V1
 
         private readonly gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> _callDeleteCluster;
 
+        private readonly gaxgrpc::ApiCall<ListNodesRequest, ListNodesResponse> _callListNodes;
+
+        private readonly gaxgrpc::ApiCall<GetNodeRequest, Node> _callGetNode;
+
+        private readonly gaxgrpc::ApiCall<ListExternalAddressesRequest, ListExternalAddressesResponse> _callListExternalAddresses;
+
+        private readonly gaxgrpc::ApiCall<FetchNetworkPolicyExternalAddressesRequest, FetchNetworkPolicyExternalAddressesResponse> _callFetchNetworkPolicyExternalAddresses;
+
+        private readonly gaxgrpc::ApiCall<GetExternalAddressRequest, ExternalAddress> _callGetExternalAddress;
+
+        private readonly gaxgrpc::ApiCall<CreateExternalAddressRequest, lro::Operation> _callCreateExternalAddress;
+
+        private readonly gaxgrpc::ApiCall<UpdateExternalAddressRequest, lro::Operation> _callUpdateExternalAddress;
+
+        private readonly gaxgrpc::ApiCall<DeleteExternalAddressRequest, lro::Operation> _callDeleteExternalAddress;
+
         private readonly gaxgrpc::ApiCall<ListSubnetsRequest, ListSubnetsResponse> _callListSubnets;
+
+        private readonly gaxgrpc::ApiCall<GetSubnetRequest, Subnet> _callGetSubnet;
+
+        private readonly gaxgrpc::ApiCall<UpdateSubnetRequest, lro::Operation> _callUpdateSubnet;
+
+        private readonly gaxgrpc::ApiCall<ListExternalAccessRulesRequest, ListExternalAccessRulesResponse> _callListExternalAccessRules;
+
+        private readonly gaxgrpc::ApiCall<GetExternalAccessRuleRequest, ExternalAccessRule> _callGetExternalAccessRule;
+
+        private readonly gaxgrpc::ApiCall<CreateExternalAccessRuleRequest, lro::Operation> _callCreateExternalAccessRule;
+
+        private readonly gaxgrpc::ApiCall<UpdateExternalAccessRuleRequest, lro::Operation> _callUpdateExternalAccessRule;
+
+        private readonly gaxgrpc::ApiCall<DeleteExternalAccessRuleRequest, lro::Operation> _callDeleteExternalAccessRule;
+
+        private readonly gaxgrpc::ApiCall<ListLoggingServersRequest, ListLoggingServersResponse> _callListLoggingServers;
+
+        private readonly gaxgrpc::ApiCall<GetLoggingServerRequest, LoggingServer> _callGetLoggingServer;
+
+        private readonly gaxgrpc::ApiCall<CreateLoggingServerRequest, lro::Operation> _callCreateLoggingServer;
+
+        private readonly gaxgrpc::ApiCall<UpdateLoggingServerRequest, lro::Operation> _callUpdateLoggingServer;
+
+        private readonly gaxgrpc::ApiCall<DeleteLoggingServerRequest, lro::Operation> _callDeleteLoggingServer;
 
         private readonly gaxgrpc::ApiCall<ListNodeTypesRequest, ListNodeTypesResponse> _callListNodeTypes;
 
@@ -6440,6 +15234,22 @@ namespace Google.Cloud.VmwareEngine.V1
         private readonly gaxgrpc::ApiCall<ResetNsxCredentialsRequest, lro::Operation> _callResetNsxCredentials;
 
         private readonly gaxgrpc::ApiCall<ResetVcenterCredentialsRequest, lro::Operation> _callResetVcenterCredentials;
+
+        private readonly gaxgrpc::ApiCall<GetDnsForwardingRequest, DnsForwarding> _callGetDnsForwarding;
+
+        private readonly gaxgrpc::ApiCall<UpdateDnsForwardingRequest, lro::Operation> _callUpdateDnsForwarding;
+
+        private readonly gaxgrpc::ApiCall<GetNetworkPeeringRequest, NetworkPeering> _callGetNetworkPeering;
+
+        private readonly gaxgrpc::ApiCall<ListNetworkPeeringsRequest, ListNetworkPeeringsResponse> _callListNetworkPeerings;
+
+        private readonly gaxgrpc::ApiCall<CreateNetworkPeeringRequest, lro::Operation> _callCreateNetworkPeering;
+
+        private readonly gaxgrpc::ApiCall<DeleteNetworkPeeringRequest, lro::Operation> _callDeleteNetworkPeering;
+
+        private readonly gaxgrpc::ApiCall<UpdateNetworkPeeringRequest, lro::Operation> _callUpdateNetworkPeering;
+
+        private readonly gaxgrpc::ApiCall<ListPeeringRoutesRequest, ListPeeringRoutesResponse> _callListPeeringRoutes;
 
         private readonly gaxgrpc::ApiCall<CreateHcxActivationKeyRequest, lro::Operation> _callCreateHcxActivationKey;
 
@@ -6457,6 +15267,18 @@ namespace Google.Cloud.VmwareEngine.V1
 
         private readonly gaxgrpc::ApiCall<DeleteNetworkPolicyRequest, lro::Operation> _callDeleteNetworkPolicy;
 
+        private readonly gaxgrpc::ApiCall<ListManagementDnsZoneBindingsRequest, ListManagementDnsZoneBindingsResponse> _callListManagementDnsZoneBindings;
+
+        private readonly gaxgrpc::ApiCall<GetManagementDnsZoneBindingRequest, ManagementDnsZoneBinding> _callGetManagementDnsZoneBinding;
+
+        private readonly gaxgrpc::ApiCall<CreateManagementDnsZoneBindingRequest, lro::Operation> _callCreateManagementDnsZoneBinding;
+
+        private readonly gaxgrpc::ApiCall<UpdateManagementDnsZoneBindingRequest, lro::Operation> _callUpdateManagementDnsZoneBinding;
+
+        private readonly gaxgrpc::ApiCall<DeleteManagementDnsZoneBindingRequest, lro::Operation> _callDeleteManagementDnsZoneBinding;
+
+        private readonly gaxgrpc::ApiCall<RepairManagementDnsZoneBindingRequest, lro::Operation> _callRepairManagementDnsZoneBinding;
+
         private readonly gaxgrpc::ApiCall<CreateVmwareEngineNetworkRequest, lro::Operation> _callCreateVmwareEngineNetwork;
 
         private readonly gaxgrpc::ApiCall<UpdateVmwareEngineNetworkRequest, lro::Operation> _callUpdateVmwareEngineNetwork;
@@ -6466,6 +15288,24 @@ namespace Google.Cloud.VmwareEngine.V1
         private readonly gaxgrpc::ApiCall<GetVmwareEngineNetworkRequest, VmwareEngineNetwork> _callGetVmwareEngineNetwork;
 
         private readonly gaxgrpc::ApiCall<ListVmwareEngineNetworksRequest, ListVmwareEngineNetworksResponse> _callListVmwareEngineNetworks;
+
+        private readonly gaxgrpc::ApiCall<CreatePrivateConnectionRequest, lro::Operation> _callCreatePrivateConnection;
+
+        private readonly gaxgrpc::ApiCall<GetPrivateConnectionRequest, PrivateConnection> _callGetPrivateConnection;
+
+        private readonly gaxgrpc::ApiCall<ListPrivateConnectionsRequest, ListPrivateConnectionsResponse> _callListPrivateConnections;
+
+        private readonly gaxgrpc::ApiCall<UpdatePrivateConnectionRequest, lro::Operation> _callUpdatePrivateConnection;
+
+        private readonly gaxgrpc::ApiCall<DeletePrivateConnectionRequest, lro::Operation> _callDeletePrivateConnection;
+
+        private readonly gaxgrpc::ApiCall<ListPrivateConnectionPeeringRoutesRequest, ListPrivateConnectionPeeringRoutesResponse> _callListPrivateConnectionPeeringRoutes;
+
+        private readonly gaxgrpc::ApiCall<GrantDnsBindPermissionRequest, lro::Operation> _callGrantDnsBindPermission;
+
+        private readonly gaxgrpc::ApiCall<GetDnsBindPermissionRequest, DnsBindPermission> _callGetDnsBindPermission;
+
+        private readonly gaxgrpc::ApiCall<RevokeDnsBindPermissionRequest, lro::Operation> _callRevokeDnsBindPermission;
 
         /// <summary>
         /// Constructs a client wrapper for the VmwareEngine service, with the specified gRPC client and settings.
@@ -6477,7 +15317,11 @@ namespace Google.Cloud.VmwareEngine.V1
         {
             GrpcClient = grpcClient;
             VmwareEngineSettings effectiveSettings = settings ?? VmwareEngineSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreatePrivateCloudOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreatePrivateCloudOperationsSettings, logger);
             UpdatePrivateCloudOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdatePrivateCloudOperationsSettings, logger);
             DeletePrivateCloudOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePrivateCloudOperationsSettings, logger);
@@ -6485,15 +15329,38 @@ namespace Google.Cloud.VmwareEngine.V1
             CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings, logger);
             UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings, logger);
             DeleteClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClusterOperationsSettings, logger);
+            CreateExternalAddressOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateExternalAddressOperationsSettings, logger);
+            UpdateExternalAddressOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateExternalAddressOperationsSettings, logger);
+            DeleteExternalAddressOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteExternalAddressOperationsSettings, logger);
+            UpdateSubnetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSubnetOperationsSettings, logger);
+            CreateExternalAccessRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateExternalAccessRuleOperationsSettings, logger);
+            UpdateExternalAccessRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateExternalAccessRuleOperationsSettings, logger);
+            DeleteExternalAccessRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteExternalAccessRuleOperationsSettings, logger);
+            CreateLoggingServerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateLoggingServerOperationsSettings, logger);
+            UpdateLoggingServerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateLoggingServerOperationsSettings, logger);
+            DeleteLoggingServerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteLoggingServerOperationsSettings, logger);
             ResetNsxCredentialsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResetNsxCredentialsOperationsSettings, logger);
             ResetVcenterCredentialsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResetVcenterCredentialsOperationsSettings, logger);
+            UpdateDnsForwardingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDnsForwardingOperationsSettings, logger);
+            CreateNetworkPeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateNetworkPeeringOperationsSettings, logger);
+            DeleteNetworkPeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteNetworkPeeringOperationsSettings, logger);
+            UpdateNetworkPeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateNetworkPeeringOperationsSettings, logger);
             CreateHcxActivationKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateHcxActivationKeyOperationsSettings, logger);
             CreateNetworkPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateNetworkPolicyOperationsSettings, logger);
             UpdateNetworkPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateNetworkPolicyOperationsSettings, logger);
             DeleteNetworkPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteNetworkPolicyOperationsSettings, logger);
+            CreateManagementDnsZoneBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateManagementDnsZoneBindingOperationsSettings, logger);
+            UpdateManagementDnsZoneBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateManagementDnsZoneBindingOperationsSettings, logger);
+            DeleteManagementDnsZoneBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteManagementDnsZoneBindingOperationsSettings, logger);
+            RepairManagementDnsZoneBindingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RepairManagementDnsZoneBindingOperationsSettings, logger);
             CreateVmwareEngineNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateVmwareEngineNetworkOperationsSettings, logger);
             UpdateVmwareEngineNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateVmwareEngineNetworkOperationsSettings, logger);
             DeleteVmwareEngineNetworkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteVmwareEngineNetworkOperationsSettings, logger);
+            CreatePrivateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreatePrivateConnectionOperationsSettings, logger);
+            UpdatePrivateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdatePrivateConnectionOperationsSettings, logger);
+            DeletePrivateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePrivateConnectionOperationsSettings, logger);
+            GrantDnsBindPermissionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.GrantDnsBindPermissionOperationsSettings, logger);
+            RevokeDnsBindPermissionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RevokeDnsBindPermissionOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListPrivateClouds = clientHelper.BuildApiCall<ListPrivateCloudsRequest, ListPrivateCloudsResponse>("ListPrivateClouds", grpcClient.ListPrivateCloudsAsync, grpcClient.ListPrivateClouds, effectiveSettings.ListPrivateCloudsSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -6529,9 +15396,69 @@ namespace Google.Cloud.VmwareEngine.V1
             _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, lro::Operation>("DeleteCluster", grpcClient.DeleteClusterAsync, grpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCluster);
             Modify_DeleteClusterApiCall(ref _callDeleteCluster);
+            _callListNodes = clientHelper.BuildApiCall<ListNodesRequest, ListNodesResponse>("ListNodes", grpcClient.ListNodesAsync, grpcClient.ListNodes, effectiveSettings.ListNodesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListNodes);
+            Modify_ListNodesApiCall(ref _callListNodes);
+            _callGetNode = clientHelper.BuildApiCall<GetNodeRequest, Node>("GetNode", grpcClient.GetNodeAsync, grpcClient.GetNode, effectiveSettings.GetNodeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetNode);
+            Modify_GetNodeApiCall(ref _callGetNode);
+            _callListExternalAddresses = clientHelper.BuildApiCall<ListExternalAddressesRequest, ListExternalAddressesResponse>("ListExternalAddresses", grpcClient.ListExternalAddressesAsync, grpcClient.ListExternalAddresses, effectiveSettings.ListExternalAddressesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListExternalAddresses);
+            Modify_ListExternalAddressesApiCall(ref _callListExternalAddresses);
+            _callFetchNetworkPolicyExternalAddresses = clientHelper.BuildApiCall<FetchNetworkPolicyExternalAddressesRequest, FetchNetworkPolicyExternalAddressesResponse>("FetchNetworkPolicyExternalAddresses", grpcClient.FetchNetworkPolicyExternalAddressesAsync, grpcClient.FetchNetworkPolicyExternalAddresses, effectiveSettings.FetchNetworkPolicyExternalAddressesSettings).WithGoogleRequestParam("network_policy", request => request.NetworkPolicy);
+            Modify_ApiCall(ref _callFetchNetworkPolicyExternalAddresses);
+            Modify_FetchNetworkPolicyExternalAddressesApiCall(ref _callFetchNetworkPolicyExternalAddresses);
+            _callGetExternalAddress = clientHelper.BuildApiCall<GetExternalAddressRequest, ExternalAddress>("GetExternalAddress", grpcClient.GetExternalAddressAsync, grpcClient.GetExternalAddress, effectiveSettings.GetExternalAddressSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetExternalAddress);
+            Modify_GetExternalAddressApiCall(ref _callGetExternalAddress);
+            _callCreateExternalAddress = clientHelper.BuildApiCall<CreateExternalAddressRequest, lro::Operation>("CreateExternalAddress", grpcClient.CreateExternalAddressAsync, grpcClient.CreateExternalAddress, effectiveSettings.CreateExternalAddressSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateExternalAddress);
+            Modify_CreateExternalAddressApiCall(ref _callCreateExternalAddress);
+            _callUpdateExternalAddress = clientHelper.BuildApiCall<UpdateExternalAddressRequest, lro::Operation>("UpdateExternalAddress", grpcClient.UpdateExternalAddressAsync, grpcClient.UpdateExternalAddress, effectiveSettings.UpdateExternalAddressSettings).WithGoogleRequestParam("external_address.name", request => request.ExternalAddress?.Name);
+            Modify_ApiCall(ref _callUpdateExternalAddress);
+            Modify_UpdateExternalAddressApiCall(ref _callUpdateExternalAddress);
+            _callDeleteExternalAddress = clientHelper.BuildApiCall<DeleteExternalAddressRequest, lro::Operation>("DeleteExternalAddress", grpcClient.DeleteExternalAddressAsync, grpcClient.DeleteExternalAddress, effectiveSettings.DeleteExternalAddressSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteExternalAddress);
+            Modify_DeleteExternalAddressApiCall(ref _callDeleteExternalAddress);
             _callListSubnets = clientHelper.BuildApiCall<ListSubnetsRequest, ListSubnetsResponse>("ListSubnets", grpcClient.ListSubnetsAsync, grpcClient.ListSubnets, effectiveSettings.ListSubnetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSubnets);
             Modify_ListSubnetsApiCall(ref _callListSubnets);
+            _callGetSubnet = clientHelper.BuildApiCall<GetSubnetRequest, Subnet>("GetSubnet", grpcClient.GetSubnetAsync, grpcClient.GetSubnet, effectiveSettings.GetSubnetSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSubnet);
+            Modify_GetSubnetApiCall(ref _callGetSubnet);
+            _callUpdateSubnet = clientHelper.BuildApiCall<UpdateSubnetRequest, lro::Operation>("UpdateSubnet", grpcClient.UpdateSubnetAsync, grpcClient.UpdateSubnet, effectiveSettings.UpdateSubnetSettings).WithGoogleRequestParam("subnet.name", request => request.Subnet?.Name);
+            Modify_ApiCall(ref _callUpdateSubnet);
+            Modify_UpdateSubnetApiCall(ref _callUpdateSubnet);
+            _callListExternalAccessRules = clientHelper.BuildApiCall<ListExternalAccessRulesRequest, ListExternalAccessRulesResponse>("ListExternalAccessRules", grpcClient.ListExternalAccessRulesAsync, grpcClient.ListExternalAccessRules, effectiveSettings.ListExternalAccessRulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListExternalAccessRules);
+            Modify_ListExternalAccessRulesApiCall(ref _callListExternalAccessRules);
+            _callGetExternalAccessRule = clientHelper.BuildApiCall<GetExternalAccessRuleRequest, ExternalAccessRule>("GetExternalAccessRule", grpcClient.GetExternalAccessRuleAsync, grpcClient.GetExternalAccessRule, effectiveSettings.GetExternalAccessRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetExternalAccessRule);
+            Modify_GetExternalAccessRuleApiCall(ref _callGetExternalAccessRule);
+            _callCreateExternalAccessRule = clientHelper.BuildApiCall<CreateExternalAccessRuleRequest, lro::Operation>("CreateExternalAccessRule", grpcClient.CreateExternalAccessRuleAsync, grpcClient.CreateExternalAccessRule, effectiveSettings.CreateExternalAccessRuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateExternalAccessRule);
+            Modify_CreateExternalAccessRuleApiCall(ref _callCreateExternalAccessRule);
+            _callUpdateExternalAccessRule = clientHelper.BuildApiCall<UpdateExternalAccessRuleRequest, lro::Operation>("UpdateExternalAccessRule", grpcClient.UpdateExternalAccessRuleAsync, grpcClient.UpdateExternalAccessRule, effectiveSettings.UpdateExternalAccessRuleSettings).WithGoogleRequestParam("external_access_rule.name", request => request.ExternalAccessRule?.Name);
+            Modify_ApiCall(ref _callUpdateExternalAccessRule);
+            Modify_UpdateExternalAccessRuleApiCall(ref _callUpdateExternalAccessRule);
+            _callDeleteExternalAccessRule = clientHelper.BuildApiCall<DeleteExternalAccessRuleRequest, lro::Operation>("DeleteExternalAccessRule", grpcClient.DeleteExternalAccessRuleAsync, grpcClient.DeleteExternalAccessRule, effectiveSettings.DeleteExternalAccessRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteExternalAccessRule);
+            Modify_DeleteExternalAccessRuleApiCall(ref _callDeleteExternalAccessRule);
+            _callListLoggingServers = clientHelper.BuildApiCall<ListLoggingServersRequest, ListLoggingServersResponse>("ListLoggingServers", grpcClient.ListLoggingServersAsync, grpcClient.ListLoggingServers, effectiveSettings.ListLoggingServersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListLoggingServers);
+            Modify_ListLoggingServersApiCall(ref _callListLoggingServers);
+            _callGetLoggingServer = clientHelper.BuildApiCall<GetLoggingServerRequest, LoggingServer>("GetLoggingServer", grpcClient.GetLoggingServerAsync, grpcClient.GetLoggingServer, effectiveSettings.GetLoggingServerSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetLoggingServer);
+            Modify_GetLoggingServerApiCall(ref _callGetLoggingServer);
+            _callCreateLoggingServer = clientHelper.BuildApiCall<CreateLoggingServerRequest, lro::Operation>("CreateLoggingServer", grpcClient.CreateLoggingServerAsync, grpcClient.CreateLoggingServer, effectiveSettings.CreateLoggingServerSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateLoggingServer);
+            Modify_CreateLoggingServerApiCall(ref _callCreateLoggingServer);
+            _callUpdateLoggingServer = clientHelper.BuildApiCall<UpdateLoggingServerRequest, lro::Operation>("UpdateLoggingServer", grpcClient.UpdateLoggingServerAsync, grpcClient.UpdateLoggingServer, effectiveSettings.UpdateLoggingServerSettings).WithGoogleRequestParam("logging_server.name", request => request.LoggingServer?.Name);
+            Modify_ApiCall(ref _callUpdateLoggingServer);
+            Modify_UpdateLoggingServerApiCall(ref _callUpdateLoggingServer);
+            _callDeleteLoggingServer = clientHelper.BuildApiCall<DeleteLoggingServerRequest, lro::Operation>("DeleteLoggingServer", grpcClient.DeleteLoggingServerAsync, grpcClient.DeleteLoggingServer, effectiveSettings.DeleteLoggingServerSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteLoggingServer);
+            Modify_DeleteLoggingServerApiCall(ref _callDeleteLoggingServer);
             _callListNodeTypes = clientHelper.BuildApiCall<ListNodeTypesRequest, ListNodeTypesResponse>("ListNodeTypes", grpcClient.ListNodeTypesAsync, grpcClient.ListNodeTypes, effectiveSettings.ListNodeTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListNodeTypes);
             Modify_ListNodeTypesApiCall(ref _callListNodeTypes);
@@ -6550,6 +15477,30 @@ namespace Google.Cloud.VmwareEngine.V1
             _callResetVcenterCredentials = clientHelper.BuildApiCall<ResetVcenterCredentialsRequest, lro::Operation>("ResetVcenterCredentials", grpcClient.ResetVcenterCredentialsAsync, grpcClient.ResetVcenterCredentials, effectiveSettings.ResetVcenterCredentialsSettings).WithGoogleRequestParam("private_cloud", request => request.PrivateCloud);
             Modify_ApiCall(ref _callResetVcenterCredentials);
             Modify_ResetVcenterCredentialsApiCall(ref _callResetVcenterCredentials);
+            _callGetDnsForwarding = clientHelper.BuildApiCall<GetDnsForwardingRequest, DnsForwarding>("GetDnsForwarding", grpcClient.GetDnsForwardingAsync, grpcClient.GetDnsForwarding, effectiveSettings.GetDnsForwardingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDnsForwarding);
+            Modify_GetDnsForwardingApiCall(ref _callGetDnsForwarding);
+            _callUpdateDnsForwarding = clientHelper.BuildApiCall<UpdateDnsForwardingRequest, lro::Operation>("UpdateDnsForwarding", grpcClient.UpdateDnsForwardingAsync, grpcClient.UpdateDnsForwarding, effectiveSettings.UpdateDnsForwardingSettings).WithGoogleRequestParam("dns_forwarding.name", request => request.DnsForwarding?.Name);
+            Modify_ApiCall(ref _callUpdateDnsForwarding);
+            Modify_UpdateDnsForwardingApiCall(ref _callUpdateDnsForwarding);
+            _callGetNetworkPeering = clientHelper.BuildApiCall<GetNetworkPeeringRequest, NetworkPeering>("GetNetworkPeering", grpcClient.GetNetworkPeeringAsync, grpcClient.GetNetworkPeering, effectiveSettings.GetNetworkPeeringSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetNetworkPeering);
+            Modify_GetNetworkPeeringApiCall(ref _callGetNetworkPeering);
+            _callListNetworkPeerings = clientHelper.BuildApiCall<ListNetworkPeeringsRequest, ListNetworkPeeringsResponse>("ListNetworkPeerings", grpcClient.ListNetworkPeeringsAsync, grpcClient.ListNetworkPeerings, effectiveSettings.ListNetworkPeeringsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListNetworkPeerings);
+            Modify_ListNetworkPeeringsApiCall(ref _callListNetworkPeerings);
+            _callCreateNetworkPeering = clientHelper.BuildApiCall<CreateNetworkPeeringRequest, lro::Operation>("CreateNetworkPeering", grpcClient.CreateNetworkPeeringAsync, grpcClient.CreateNetworkPeering, effectiveSettings.CreateNetworkPeeringSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateNetworkPeering);
+            Modify_CreateNetworkPeeringApiCall(ref _callCreateNetworkPeering);
+            _callDeleteNetworkPeering = clientHelper.BuildApiCall<DeleteNetworkPeeringRequest, lro::Operation>("DeleteNetworkPeering", grpcClient.DeleteNetworkPeeringAsync, grpcClient.DeleteNetworkPeering, effectiveSettings.DeleteNetworkPeeringSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteNetworkPeering);
+            Modify_DeleteNetworkPeeringApiCall(ref _callDeleteNetworkPeering);
+            _callUpdateNetworkPeering = clientHelper.BuildApiCall<UpdateNetworkPeeringRequest, lro::Operation>("UpdateNetworkPeering", grpcClient.UpdateNetworkPeeringAsync, grpcClient.UpdateNetworkPeering, effectiveSettings.UpdateNetworkPeeringSettings).WithGoogleRequestParam("network_peering.name", request => request.NetworkPeering?.Name);
+            Modify_ApiCall(ref _callUpdateNetworkPeering);
+            Modify_UpdateNetworkPeeringApiCall(ref _callUpdateNetworkPeering);
+            _callListPeeringRoutes = clientHelper.BuildApiCall<ListPeeringRoutesRequest, ListPeeringRoutesResponse>("ListPeeringRoutes", grpcClient.ListPeeringRoutesAsync, grpcClient.ListPeeringRoutes, effectiveSettings.ListPeeringRoutesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListPeeringRoutes);
+            Modify_ListPeeringRoutesApiCall(ref _callListPeeringRoutes);
             _callCreateHcxActivationKey = clientHelper.BuildApiCall<CreateHcxActivationKeyRequest, lro::Operation>("CreateHcxActivationKey", grpcClient.CreateHcxActivationKeyAsync, grpcClient.CreateHcxActivationKey, effectiveSettings.CreateHcxActivationKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateHcxActivationKey);
             Modify_CreateHcxActivationKeyApiCall(ref _callCreateHcxActivationKey);
@@ -6574,6 +15525,24 @@ namespace Google.Cloud.VmwareEngine.V1
             _callDeleteNetworkPolicy = clientHelper.BuildApiCall<DeleteNetworkPolicyRequest, lro::Operation>("DeleteNetworkPolicy", grpcClient.DeleteNetworkPolicyAsync, grpcClient.DeleteNetworkPolicy, effectiveSettings.DeleteNetworkPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteNetworkPolicy);
             Modify_DeleteNetworkPolicyApiCall(ref _callDeleteNetworkPolicy);
+            _callListManagementDnsZoneBindings = clientHelper.BuildApiCall<ListManagementDnsZoneBindingsRequest, ListManagementDnsZoneBindingsResponse>("ListManagementDnsZoneBindings", grpcClient.ListManagementDnsZoneBindingsAsync, grpcClient.ListManagementDnsZoneBindings, effectiveSettings.ListManagementDnsZoneBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListManagementDnsZoneBindings);
+            Modify_ListManagementDnsZoneBindingsApiCall(ref _callListManagementDnsZoneBindings);
+            _callGetManagementDnsZoneBinding = clientHelper.BuildApiCall<GetManagementDnsZoneBindingRequest, ManagementDnsZoneBinding>("GetManagementDnsZoneBinding", grpcClient.GetManagementDnsZoneBindingAsync, grpcClient.GetManagementDnsZoneBinding, effectiveSettings.GetManagementDnsZoneBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetManagementDnsZoneBinding);
+            Modify_GetManagementDnsZoneBindingApiCall(ref _callGetManagementDnsZoneBinding);
+            _callCreateManagementDnsZoneBinding = clientHelper.BuildApiCall<CreateManagementDnsZoneBindingRequest, lro::Operation>("CreateManagementDnsZoneBinding", grpcClient.CreateManagementDnsZoneBindingAsync, grpcClient.CreateManagementDnsZoneBinding, effectiveSettings.CreateManagementDnsZoneBindingSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateManagementDnsZoneBinding);
+            Modify_CreateManagementDnsZoneBindingApiCall(ref _callCreateManagementDnsZoneBinding);
+            _callUpdateManagementDnsZoneBinding = clientHelper.BuildApiCall<UpdateManagementDnsZoneBindingRequest, lro::Operation>("UpdateManagementDnsZoneBinding", grpcClient.UpdateManagementDnsZoneBindingAsync, grpcClient.UpdateManagementDnsZoneBinding, effectiveSettings.UpdateManagementDnsZoneBindingSettings).WithGoogleRequestParam("management_dns_zone_binding.name", request => request.ManagementDnsZoneBinding?.Name);
+            Modify_ApiCall(ref _callUpdateManagementDnsZoneBinding);
+            Modify_UpdateManagementDnsZoneBindingApiCall(ref _callUpdateManagementDnsZoneBinding);
+            _callDeleteManagementDnsZoneBinding = clientHelper.BuildApiCall<DeleteManagementDnsZoneBindingRequest, lro::Operation>("DeleteManagementDnsZoneBinding", grpcClient.DeleteManagementDnsZoneBindingAsync, grpcClient.DeleteManagementDnsZoneBinding, effectiveSettings.DeleteManagementDnsZoneBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteManagementDnsZoneBinding);
+            Modify_DeleteManagementDnsZoneBindingApiCall(ref _callDeleteManagementDnsZoneBinding);
+            _callRepairManagementDnsZoneBinding = clientHelper.BuildApiCall<RepairManagementDnsZoneBindingRequest, lro::Operation>("RepairManagementDnsZoneBinding", grpcClient.RepairManagementDnsZoneBindingAsync, grpcClient.RepairManagementDnsZoneBinding, effectiveSettings.RepairManagementDnsZoneBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRepairManagementDnsZoneBinding);
+            Modify_RepairManagementDnsZoneBindingApiCall(ref _callRepairManagementDnsZoneBinding);
             _callCreateVmwareEngineNetwork = clientHelper.BuildApiCall<CreateVmwareEngineNetworkRequest, lro::Operation>("CreateVmwareEngineNetwork", grpcClient.CreateVmwareEngineNetworkAsync, grpcClient.CreateVmwareEngineNetwork, effectiveSettings.CreateVmwareEngineNetworkSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateVmwareEngineNetwork);
             Modify_CreateVmwareEngineNetworkApiCall(ref _callCreateVmwareEngineNetwork);
@@ -6589,6 +15558,33 @@ namespace Google.Cloud.VmwareEngine.V1
             _callListVmwareEngineNetworks = clientHelper.BuildApiCall<ListVmwareEngineNetworksRequest, ListVmwareEngineNetworksResponse>("ListVmwareEngineNetworks", grpcClient.ListVmwareEngineNetworksAsync, grpcClient.ListVmwareEngineNetworks, effectiveSettings.ListVmwareEngineNetworksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListVmwareEngineNetworks);
             Modify_ListVmwareEngineNetworksApiCall(ref _callListVmwareEngineNetworks);
+            _callCreatePrivateConnection = clientHelper.BuildApiCall<CreatePrivateConnectionRequest, lro::Operation>("CreatePrivateConnection", grpcClient.CreatePrivateConnectionAsync, grpcClient.CreatePrivateConnection, effectiveSettings.CreatePrivateConnectionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreatePrivateConnection);
+            Modify_CreatePrivateConnectionApiCall(ref _callCreatePrivateConnection);
+            _callGetPrivateConnection = clientHelper.BuildApiCall<GetPrivateConnectionRequest, PrivateConnection>("GetPrivateConnection", grpcClient.GetPrivateConnectionAsync, grpcClient.GetPrivateConnection, effectiveSettings.GetPrivateConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetPrivateConnection);
+            Modify_GetPrivateConnectionApiCall(ref _callGetPrivateConnection);
+            _callListPrivateConnections = clientHelper.BuildApiCall<ListPrivateConnectionsRequest, ListPrivateConnectionsResponse>("ListPrivateConnections", grpcClient.ListPrivateConnectionsAsync, grpcClient.ListPrivateConnections, effectiveSettings.ListPrivateConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListPrivateConnections);
+            Modify_ListPrivateConnectionsApiCall(ref _callListPrivateConnections);
+            _callUpdatePrivateConnection = clientHelper.BuildApiCall<UpdatePrivateConnectionRequest, lro::Operation>("UpdatePrivateConnection", grpcClient.UpdatePrivateConnectionAsync, grpcClient.UpdatePrivateConnection, effectiveSettings.UpdatePrivateConnectionSettings).WithGoogleRequestParam("private_connection.name", request => request.PrivateConnection?.Name);
+            Modify_ApiCall(ref _callUpdatePrivateConnection);
+            Modify_UpdatePrivateConnectionApiCall(ref _callUpdatePrivateConnection);
+            _callDeletePrivateConnection = clientHelper.BuildApiCall<DeletePrivateConnectionRequest, lro::Operation>("DeletePrivateConnection", grpcClient.DeletePrivateConnectionAsync, grpcClient.DeletePrivateConnection, effectiveSettings.DeletePrivateConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeletePrivateConnection);
+            Modify_DeletePrivateConnectionApiCall(ref _callDeletePrivateConnection);
+            _callListPrivateConnectionPeeringRoutes = clientHelper.BuildApiCall<ListPrivateConnectionPeeringRoutesRequest, ListPrivateConnectionPeeringRoutesResponse>("ListPrivateConnectionPeeringRoutes", grpcClient.ListPrivateConnectionPeeringRoutesAsync, grpcClient.ListPrivateConnectionPeeringRoutes, effectiveSettings.ListPrivateConnectionPeeringRoutesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListPrivateConnectionPeeringRoutes);
+            Modify_ListPrivateConnectionPeeringRoutesApiCall(ref _callListPrivateConnectionPeeringRoutes);
+            _callGrantDnsBindPermission = clientHelper.BuildApiCall<GrantDnsBindPermissionRequest, lro::Operation>("GrantDnsBindPermission", grpcClient.GrantDnsBindPermissionAsync, grpcClient.GrantDnsBindPermission, effectiveSettings.GrantDnsBindPermissionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGrantDnsBindPermission);
+            Modify_GrantDnsBindPermissionApiCall(ref _callGrantDnsBindPermission);
+            _callGetDnsBindPermission = clientHelper.BuildApiCall<GetDnsBindPermissionRequest, DnsBindPermission>("GetDnsBindPermission", grpcClient.GetDnsBindPermissionAsync, grpcClient.GetDnsBindPermission, effectiveSettings.GetDnsBindPermissionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetDnsBindPermission);
+            Modify_GetDnsBindPermissionApiCall(ref _callGetDnsBindPermission);
+            _callRevokeDnsBindPermission = clientHelper.BuildApiCall<RevokeDnsBindPermissionRequest, lro::Operation>("RevokeDnsBindPermission", grpcClient.RevokeDnsBindPermissionAsync, grpcClient.RevokeDnsBindPermission, effectiveSettings.RevokeDnsBindPermissionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRevokeDnsBindPermission);
+            Modify_RevokeDnsBindPermissionApiCall(ref _callRevokeDnsBindPermission);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -6616,7 +15612,47 @@ namespace Google.Cloud.VmwareEngine.V1
 
         partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> call);
 
+        partial void Modify_ListNodesApiCall(ref gaxgrpc::ApiCall<ListNodesRequest, ListNodesResponse> call);
+
+        partial void Modify_GetNodeApiCall(ref gaxgrpc::ApiCall<GetNodeRequest, Node> call);
+
+        partial void Modify_ListExternalAddressesApiCall(ref gaxgrpc::ApiCall<ListExternalAddressesRequest, ListExternalAddressesResponse> call);
+
+        partial void Modify_FetchNetworkPolicyExternalAddressesApiCall(ref gaxgrpc::ApiCall<FetchNetworkPolicyExternalAddressesRequest, FetchNetworkPolicyExternalAddressesResponse> call);
+
+        partial void Modify_GetExternalAddressApiCall(ref gaxgrpc::ApiCall<GetExternalAddressRequest, ExternalAddress> call);
+
+        partial void Modify_CreateExternalAddressApiCall(ref gaxgrpc::ApiCall<CreateExternalAddressRequest, lro::Operation> call);
+
+        partial void Modify_UpdateExternalAddressApiCall(ref gaxgrpc::ApiCall<UpdateExternalAddressRequest, lro::Operation> call);
+
+        partial void Modify_DeleteExternalAddressApiCall(ref gaxgrpc::ApiCall<DeleteExternalAddressRequest, lro::Operation> call);
+
         partial void Modify_ListSubnetsApiCall(ref gaxgrpc::ApiCall<ListSubnetsRequest, ListSubnetsResponse> call);
+
+        partial void Modify_GetSubnetApiCall(ref gaxgrpc::ApiCall<GetSubnetRequest, Subnet> call);
+
+        partial void Modify_UpdateSubnetApiCall(ref gaxgrpc::ApiCall<UpdateSubnetRequest, lro::Operation> call);
+
+        partial void Modify_ListExternalAccessRulesApiCall(ref gaxgrpc::ApiCall<ListExternalAccessRulesRequest, ListExternalAccessRulesResponse> call);
+
+        partial void Modify_GetExternalAccessRuleApiCall(ref gaxgrpc::ApiCall<GetExternalAccessRuleRequest, ExternalAccessRule> call);
+
+        partial void Modify_CreateExternalAccessRuleApiCall(ref gaxgrpc::ApiCall<CreateExternalAccessRuleRequest, lro::Operation> call);
+
+        partial void Modify_UpdateExternalAccessRuleApiCall(ref gaxgrpc::ApiCall<UpdateExternalAccessRuleRequest, lro::Operation> call);
+
+        partial void Modify_DeleteExternalAccessRuleApiCall(ref gaxgrpc::ApiCall<DeleteExternalAccessRuleRequest, lro::Operation> call);
+
+        partial void Modify_ListLoggingServersApiCall(ref gaxgrpc::ApiCall<ListLoggingServersRequest, ListLoggingServersResponse> call);
+
+        partial void Modify_GetLoggingServerApiCall(ref gaxgrpc::ApiCall<GetLoggingServerRequest, LoggingServer> call);
+
+        partial void Modify_CreateLoggingServerApiCall(ref gaxgrpc::ApiCall<CreateLoggingServerRequest, lro::Operation> call);
+
+        partial void Modify_UpdateLoggingServerApiCall(ref gaxgrpc::ApiCall<UpdateLoggingServerRequest, lro::Operation> call);
+
+        partial void Modify_DeleteLoggingServerApiCall(ref gaxgrpc::ApiCall<DeleteLoggingServerRequest, lro::Operation> call);
 
         partial void Modify_ListNodeTypesApiCall(ref gaxgrpc::ApiCall<ListNodeTypesRequest, ListNodeTypesResponse> call);
 
@@ -6629,6 +15665,22 @@ namespace Google.Cloud.VmwareEngine.V1
         partial void Modify_ResetNsxCredentialsApiCall(ref gaxgrpc::ApiCall<ResetNsxCredentialsRequest, lro::Operation> call);
 
         partial void Modify_ResetVcenterCredentialsApiCall(ref gaxgrpc::ApiCall<ResetVcenterCredentialsRequest, lro::Operation> call);
+
+        partial void Modify_GetDnsForwardingApiCall(ref gaxgrpc::ApiCall<GetDnsForwardingRequest, DnsForwarding> call);
+
+        partial void Modify_UpdateDnsForwardingApiCall(ref gaxgrpc::ApiCall<UpdateDnsForwardingRequest, lro::Operation> call);
+
+        partial void Modify_GetNetworkPeeringApiCall(ref gaxgrpc::ApiCall<GetNetworkPeeringRequest, NetworkPeering> call);
+
+        partial void Modify_ListNetworkPeeringsApiCall(ref gaxgrpc::ApiCall<ListNetworkPeeringsRequest, ListNetworkPeeringsResponse> call);
+
+        partial void Modify_CreateNetworkPeeringApiCall(ref gaxgrpc::ApiCall<CreateNetworkPeeringRequest, lro::Operation> call);
+
+        partial void Modify_DeleteNetworkPeeringApiCall(ref gaxgrpc::ApiCall<DeleteNetworkPeeringRequest, lro::Operation> call);
+
+        partial void Modify_UpdateNetworkPeeringApiCall(ref gaxgrpc::ApiCall<UpdateNetworkPeeringRequest, lro::Operation> call);
+
+        partial void Modify_ListPeeringRoutesApiCall(ref gaxgrpc::ApiCall<ListPeeringRoutesRequest, ListPeeringRoutesResponse> call);
 
         partial void Modify_CreateHcxActivationKeyApiCall(ref gaxgrpc::ApiCall<CreateHcxActivationKeyRequest, lro::Operation> call);
 
@@ -6646,6 +15698,18 @@ namespace Google.Cloud.VmwareEngine.V1
 
         partial void Modify_DeleteNetworkPolicyApiCall(ref gaxgrpc::ApiCall<DeleteNetworkPolicyRequest, lro::Operation> call);
 
+        partial void Modify_ListManagementDnsZoneBindingsApiCall(ref gaxgrpc::ApiCall<ListManagementDnsZoneBindingsRequest, ListManagementDnsZoneBindingsResponse> call);
+
+        partial void Modify_GetManagementDnsZoneBindingApiCall(ref gaxgrpc::ApiCall<GetManagementDnsZoneBindingRequest, ManagementDnsZoneBinding> call);
+
+        partial void Modify_CreateManagementDnsZoneBindingApiCall(ref gaxgrpc::ApiCall<CreateManagementDnsZoneBindingRequest, lro::Operation> call);
+
+        partial void Modify_UpdateManagementDnsZoneBindingApiCall(ref gaxgrpc::ApiCall<UpdateManagementDnsZoneBindingRequest, lro::Operation> call);
+
+        partial void Modify_DeleteManagementDnsZoneBindingApiCall(ref gaxgrpc::ApiCall<DeleteManagementDnsZoneBindingRequest, lro::Operation> call);
+
+        partial void Modify_RepairManagementDnsZoneBindingApiCall(ref gaxgrpc::ApiCall<RepairManagementDnsZoneBindingRequest, lro::Operation> call);
+
         partial void Modify_CreateVmwareEngineNetworkApiCall(ref gaxgrpc::ApiCall<CreateVmwareEngineNetworkRequest, lro::Operation> call);
 
         partial void Modify_UpdateVmwareEngineNetworkApiCall(ref gaxgrpc::ApiCall<UpdateVmwareEngineNetworkRequest, lro::Operation> call);
@@ -6655,6 +15719,24 @@ namespace Google.Cloud.VmwareEngine.V1
         partial void Modify_GetVmwareEngineNetworkApiCall(ref gaxgrpc::ApiCall<GetVmwareEngineNetworkRequest, VmwareEngineNetwork> call);
 
         partial void Modify_ListVmwareEngineNetworksApiCall(ref gaxgrpc::ApiCall<ListVmwareEngineNetworksRequest, ListVmwareEngineNetworksResponse> call);
+
+        partial void Modify_CreatePrivateConnectionApiCall(ref gaxgrpc::ApiCall<CreatePrivateConnectionRequest, lro::Operation> call);
+
+        partial void Modify_GetPrivateConnectionApiCall(ref gaxgrpc::ApiCall<GetPrivateConnectionRequest, PrivateConnection> call);
+
+        partial void Modify_ListPrivateConnectionsApiCall(ref gaxgrpc::ApiCall<ListPrivateConnectionsRequest, ListPrivateConnectionsResponse> call);
+
+        partial void Modify_UpdatePrivateConnectionApiCall(ref gaxgrpc::ApiCall<UpdatePrivateConnectionRequest, lro::Operation> call);
+
+        partial void Modify_DeletePrivateConnectionApiCall(ref gaxgrpc::ApiCall<DeletePrivateConnectionRequest, lro::Operation> call);
+
+        partial void Modify_ListPrivateConnectionPeeringRoutesApiCall(ref gaxgrpc::ApiCall<ListPrivateConnectionPeeringRoutesRequest, ListPrivateConnectionPeeringRoutesResponse> call);
+
+        partial void Modify_GrantDnsBindPermissionApiCall(ref gaxgrpc::ApiCall<GrantDnsBindPermissionRequest, lro::Operation> call);
+
+        partial void Modify_GetDnsBindPermissionApiCall(ref gaxgrpc::ApiCall<GetDnsBindPermissionRequest, DnsBindPermission> call);
+
+        partial void Modify_RevokeDnsBindPermissionApiCall(ref gaxgrpc::ApiCall<RevokeDnsBindPermissionRequest, lro::Operation> call);
 
         partial void OnConstruction(VmwareEngine.VmwareEngineClient grpcClient, VmwareEngineSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -6689,7 +15771,47 @@ namespace Google.Cloud.VmwareEngine.V1
 
         partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListNodesRequest(ref ListNodesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetNodeRequest(ref GetNodeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListExternalAddressesRequest(ref ListExternalAddressesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchNetworkPolicyExternalAddressesRequest(ref FetchNetworkPolicyExternalAddressesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetExternalAddressRequest(ref GetExternalAddressRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateExternalAddressRequest(ref CreateExternalAddressRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateExternalAddressRequest(ref UpdateExternalAddressRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteExternalAddressRequest(ref DeleteExternalAddressRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListSubnetsRequest(ref ListSubnetsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSubnetRequest(ref GetSubnetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSubnetRequest(ref UpdateSubnetRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListExternalAccessRulesRequest(ref ListExternalAccessRulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetExternalAccessRuleRequest(ref GetExternalAccessRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateExternalAccessRuleRequest(ref CreateExternalAccessRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateExternalAccessRuleRequest(ref UpdateExternalAccessRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteExternalAccessRuleRequest(ref DeleteExternalAccessRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListLoggingServersRequest(ref ListLoggingServersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetLoggingServerRequest(ref GetLoggingServerRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateLoggingServerRequest(ref CreateLoggingServerRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateLoggingServerRequest(ref UpdateLoggingServerRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteLoggingServerRequest(ref DeleteLoggingServerRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListNodeTypesRequest(ref ListNodeTypesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6702,6 +15824,22 @@ namespace Google.Cloud.VmwareEngine.V1
         partial void Modify_ResetNsxCredentialsRequest(ref ResetNsxCredentialsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ResetVcenterCredentialsRequest(ref ResetVcenterCredentialsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDnsForwardingRequest(ref GetDnsForwardingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateDnsForwardingRequest(ref UpdateDnsForwardingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetNetworkPeeringRequest(ref GetNetworkPeeringRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListNetworkPeeringsRequest(ref ListNetworkPeeringsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateNetworkPeeringRequest(ref CreateNetworkPeeringRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteNetworkPeeringRequest(ref DeleteNetworkPeeringRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateNetworkPeeringRequest(ref UpdateNetworkPeeringRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListPeeringRoutesRequest(ref ListPeeringRoutesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateHcxActivationKeyRequest(ref CreateHcxActivationKeyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6719,6 +15857,18 @@ namespace Google.Cloud.VmwareEngine.V1
 
         partial void Modify_DeleteNetworkPolicyRequest(ref DeleteNetworkPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListManagementDnsZoneBindingsRequest(ref ListManagementDnsZoneBindingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetManagementDnsZoneBindingRequest(ref GetManagementDnsZoneBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateManagementDnsZoneBindingRequest(ref CreateManagementDnsZoneBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateManagementDnsZoneBindingRequest(ref UpdateManagementDnsZoneBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteManagementDnsZoneBindingRequest(ref DeleteManagementDnsZoneBindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RepairManagementDnsZoneBindingRequest(ref RepairManagementDnsZoneBindingRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_CreateVmwareEngineNetworkRequest(ref CreateVmwareEngineNetworkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateVmwareEngineNetworkRequest(ref UpdateVmwareEngineNetworkRequest request, ref gaxgrpc::CallSettings settings);
@@ -6728,6 +15878,24 @@ namespace Google.Cloud.VmwareEngine.V1
         partial void Modify_GetVmwareEngineNetworkRequest(ref GetVmwareEngineNetworkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListVmwareEngineNetworksRequest(ref ListVmwareEngineNetworksRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreatePrivateConnectionRequest(ref CreatePrivateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetPrivateConnectionRequest(ref GetPrivateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListPrivateConnectionsRequest(ref ListPrivateConnectionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdatePrivateConnectionRequest(ref UpdatePrivateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeletePrivateConnectionRequest(ref DeletePrivateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListPrivateConnectionPeeringRoutesRequest(ref ListPrivateConnectionPeeringRoutesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GrantDnsBindPermissionRequest(ref GrantDnsBindPermissionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetDnsBindPermissionRequest(ref GetDnsBindPermissionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RevokeDnsBindPermissionRequest(ref RevokeDnsBindPermissionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists `PrivateCloud` resources in a given project and location.
@@ -6782,9 +15950,9 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// Creates a new `PrivateCloud` resource in a given project and location.
-        /// Private clouds can only be created in zones, regional private clouds are
-        /// not supported.
-        /// 
+        /// Private clouds of type `STANDARD` and
+        /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+        /// regional.
         /// Creating a private cloud also creates a [management
         /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
         /// for that private cloud.
@@ -6800,9 +15968,9 @@ namespace Google.Cloud.VmwareEngine.V1
 
         /// <summary>
         /// Creates a new `PrivateCloud` resource in a given project and location.
-        /// Private clouds can only be created in zones, regional private clouds are
-        /// not supported.
-        /// 
+        /// Private clouds of type `STANDARD` and
+        /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+        /// regional.
         /// Creating a private cloud also creates a [management
         /// cluster](https://cloud.google.com/vmware-engine/docs/concepts-vmware-components)
         /// for that private cloud.
@@ -7030,8 +16198,7 @@ namespace Google.Cloud.VmwareEngine.V1
         public override lro::OperationsClient UpdateClusterOperationsClient { get; }
 
         /// <summary>
-        /// Modifies a `Cluster` resource. Only the following fields can be updated:
-        /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+        /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
         /// applied.
         /// 
         /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -7049,8 +16216,7 @@ namespace Google.Cloud.VmwareEngine.V1
         }
 
         /// <summary>
-        /// Modifies a `Cluster` resource. Only the following fields can be updated:
-        /// `node_type_configs.*.node_count`. Only fields specified in `updateMask` are
+        /// Modifies a `Cluster` resource. Only fields specified in `updateMask` are
         /// applied.
         /// 
         /// During operation processing, the resource is temporarily in the `ACTIVE`
@@ -7101,6 +16267,231 @@ namespace Google.Cloud.VmwareEngine.V1
         }
 
         /// <summary>
+        /// Lists nodes in a given cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Node"/> resources.</returns>
+        public override gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(ListNodesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNodesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNodesRequest, ListNodesResponse, Node>(_callListNodes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists nodes in a given cluster.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Node"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(ListNodesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNodesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNodesRequest, ListNodesResponse, Node>(_callListNodes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single node.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Node GetNode(GetNodeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNodeRequest(ref request, ref callSettings);
+            return _callGetNode.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single node.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Node> GetNodeAsync(GetNodeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNodeRequest(ref request, ref callSettings);
+            return _callGetNode.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs in a given
+        /// private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public override gax::PagedEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddresses(ListExternalAddressesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListExternalAddressesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListExternalAddressesRequest, ListExternalAddressesResponse, ExternalAddress>(_callListExternalAddresses, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs in a given
+        /// private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListExternalAddressesResponse, ExternalAddress> ListExternalAddressesAsync(ListExternalAddressesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListExternalAddressesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListExternalAddressesRequest, ListExternalAddressesResponse, ExternalAddress>(_callListExternalAddresses, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs within the
+        /// scope of the given network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public override gax::PagedEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddresses(FetchNetworkPolicyExternalAddressesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchNetworkPolicyExternalAddressesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<FetchNetworkPolicyExternalAddressesRequest, FetchNetworkPolicyExternalAddressesResponse, ExternalAddress>(_callFetchNetworkPolicyExternalAddresses, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists external IP addresses assigned to VMware workload VMs within the
+        /// scope of the given network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExternalAddress"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesResponse, ExternalAddress> FetchNetworkPolicyExternalAddressesAsync(FetchNetworkPolicyExternalAddressesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchNetworkPolicyExternalAddressesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchNetworkPolicyExternalAddressesRequest, FetchNetworkPolicyExternalAddressesResponse, ExternalAddress>(_callFetchNetworkPolicyExternalAddresses, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single external IP address.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExternalAddress GetExternalAddress(GetExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetExternalAddressRequest(ref request, ref callSettings);
+            return _callGetExternalAddress.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single external IP address.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExternalAddress> GetExternalAddressAsync(GetExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetExternalAddressRequest(ref request, ref callSettings);
+            return _callGetExternalAddress.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateExternalAddress</c>.</summary>
+        public override lro::OperationsClient CreateExternalAddressOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new `ExternalAddress` resource in a given private cloud. The
+        /// network policy that corresponds to the private cloud must have the external
+        /// IP address network service enabled (`NetworkPolicy.external_ip`).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExternalAddress, OperationMetadata> CreateExternalAddress(CreateExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateExternalAddressRequest(ref request, ref callSettings);
+            return new lro::Operation<ExternalAddress, OperationMetadata>(_callCreateExternalAddress.Sync(request, callSettings), CreateExternalAddressOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new `ExternalAddress` resource in a given private cloud. The
+        /// network policy that corresponds to the private cloud must have the external
+        /// IP address network service enabled (`NetworkPolicy.external_ip`).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> CreateExternalAddressAsync(CreateExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateExternalAddressRequest(ref request, ref callSettings);
+            return new lro::Operation<ExternalAddress, OperationMetadata>(await _callCreateExternalAddress.Async(request, callSettings).ConfigureAwait(false), CreateExternalAddressOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateExternalAddress</c>.</summary>
+        public override lro::OperationsClient UpdateExternalAddressOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single external IP address.
+        /// Only fields specified in `update_mask` are applied.
+        /// 
+        /// During operation processing, the resource is temporarily in the `ACTIVE`
+        /// state before the operation fully completes. For that period of time, you
+        /// can't update the resource. Use the operation status to determine when the
+        /// processing fully completes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExternalAddress, OperationMetadata> UpdateExternalAddress(UpdateExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExternalAddressRequest(ref request, ref callSettings);
+            return new lro::Operation<ExternalAddress, OperationMetadata>(_callUpdateExternalAddress.Sync(request, callSettings), UpdateExternalAddressOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single external IP address.
+        /// Only fields specified in `update_mask` are applied.
+        /// 
+        /// During operation processing, the resource is temporarily in the `ACTIVE`
+        /// state before the operation fully completes. For that period of time, you
+        /// can't update the resource. Use the operation status to determine when the
+        /// processing fully completes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExternalAddress, OperationMetadata>> UpdateExternalAddressAsync(UpdateExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExternalAddressRequest(ref request, ref callSettings);
+            return new lro::Operation<ExternalAddress, OperationMetadata>(await _callUpdateExternalAddress.Async(request, callSettings).ConfigureAwait(false), UpdateExternalAddressOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteExternalAddress</c>.</summary>
+        public override lro::OperationsClient DeleteExternalAddressOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single external IP address. When you delete an external IP
+        /// address, connectivity between the external IP address and the corresponding
+        /// internal IP address is lost.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteExternalAddress(DeleteExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteExternalAddressRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteExternalAddress.Sync(request, callSettings), DeleteExternalAddressOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single external IP address. When you delete an external IP
+        /// address, connectivity between the external IP address and the corresponding
+        /// internal IP address is lost.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAddressAsync(DeleteExternalAddressRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteExternalAddressRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteExternalAddress.Async(request, callSettings).ConfigureAwait(false), DeleteExternalAddressOperationsClient);
+        }
+
+        /// <summary>
         /// Lists subnets in a given private cloud.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -7122,6 +16513,331 @@ namespace Google.Cloud.VmwareEngine.V1
         {
             Modify_ListSubnetsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSubnetsRequest, ListSubnetsResponse, Subnet>(_callListSubnets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Subnet GetSubnet(GetSubnetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSubnetRequest(ref request, ref callSettings);
+            return _callGetSubnet.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single subnet.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Subnet> GetSubnetAsync(GetSubnetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSubnetRequest(ref request, ref callSettings);
+            return _callGetSubnet.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateSubnet</c>.</summary>
+        public override lro::OperationsClient UpdateSubnetOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Subnet, OperationMetadata> UpdateSubnet(UpdateSubnetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSubnetRequest(ref request, ref callSettings);
+            return new lro::Operation<Subnet, OperationMetadata>(_callUpdateSubnet.Sync(request, callSettings), UpdateSubnetOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single subnet. Only fields specified in
+        /// `update_mask` are applied.
+        /// 
+        /// *Note*: This API is synchronous and always returns a successful
+        /// `google.longrunning.Operation` (LRO). The returned LRO will only have
+        /// `done` and `response` fields.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Subnet, OperationMetadata>> UpdateSubnetAsync(UpdateSubnetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSubnetRequest(ref request, ref callSettings);
+            return new lro::Operation<Subnet, OperationMetadata>(await _callUpdateSubnet.Async(request, callSettings).ConfigureAwait(false), UpdateSubnetOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists `ExternalAccessRule` resources in the specified network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ExternalAccessRule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRules(ListExternalAccessRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListExternalAccessRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListExternalAccessRulesRequest, ListExternalAccessRulesResponse, ExternalAccessRule>(_callListExternalAccessRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `ExternalAccessRule` resources in the specified network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ExternalAccessRule"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListExternalAccessRulesResponse, ExternalAccessRule> ListExternalAccessRulesAsync(ListExternalAccessRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListExternalAccessRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListExternalAccessRulesRequest, ListExternalAccessRulesResponse, ExternalAccessRule>(_callListExternalAccessRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single external access rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExternalAccessRule GetExternalAccessRule(GetExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetExternalAccessRuleRequest(ref request, ref callSettings);
+            return _callGetExternalAccessRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single external access rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExternalAccessRule> GetExternalAccessRuleAsync(GetExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetExternalAccessRuleRequest(ref request, ref callSettings);
+            return _callGetExternalAccessRule.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateExternalAccessRule</c>.</summary>
+        public override lro::OperationsClient CreateExternalAccessRuleOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new external access rule in a given network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExternalAccessRule, OperationMetadata> CreateExternalAccessRule(CreateExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateExternalAccessRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<ExternalAccessRule, OperationMetadata>(_callCreateExternalAccessRule.Sync(request, callSettings), CreateExternalAccessRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new external access rule in a given network policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> CreateExternalAccessRuleAsync(CreateExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateExternalAccessRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<ExternalAccessRule, OperationMetadata>(await _callCreateExternalAccessRule.Async(request, callSettings).ConfigureAwait(false), CreateExternalAccessRuleOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateExternalAccessRule</c>.</summary>
+        public override lro::OperationsClient UpdateExternalAccessRuleOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single external access rule.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExternalAccessRule, OperationMetadata> UpdateExternalAccessRule(UpdateExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExternalAccessRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<ExternalAccessRule, OperationMetadata>(_callUpdateExternalAccessRule.Sync(request, callSettings), UpdateExternalAccessRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single external access rule.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExternalAccessRule, OperationMetadata>> UpdateExternalAccessRuleAsync(UpdateExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExternalAccessRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<ExternalAccessRule, OperationMetadata>(await _callUpdateExternalAccessRule.Async(request, callSettings).ConfigureAwait(false), UpdateExternalAccessRuleOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteExternalAccessRule</c>.</summary>
+        public override lro::OperationsClient DeleteExternalAccessRuleOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single external access rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteExternalAccessRule(DeleteExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteExternalAccessRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteExternalAccessRule.Sync(request, callSettings), DeleteExternalAccessRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single external access rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteExternalAccessRuleAsync(DeleteExternalAccessRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteExternalAccessRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteExternalAccessRule.Async(request, callSettings).ConfigureAwait(false), DeleteExternalAccessRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists logging servers configured for a given private
+        /// cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LoggingServer"/> resources.</returns>
+        public override gax::PagedEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServers(ListLoggingServersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLoggingServersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListLoggingServersRequest, ListLoggingServersResponse, LoggingServer>(_callListLoggingServers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists logging servers configured for a given private
+        /// cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LoggingServer"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListLoggingServersResponse, LoggingServer> ListLoggingServersAsync(ListLoggingServersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLoggingServersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListLoggingServersRequest, ListLoggingServersResponse, LoggingServer>(_callListLoggingServers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a logging server.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LoggingServer GetLoggingServer(GetLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetLoggingServerRequest(ref request, ref callSettings);
+            return _callGetLoggingServer.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a logging server.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LoggingServer> GetLoggingServerAsync(GetLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetLoggingServerRequest(ref request, ref callSettings);
+            return _callGetLoggingServer.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateLoggingServer</c>.</summary>
+        public override lro::OperationsClient CreateLoggingServerOperationsClient { get; }
+
+        /// <summary>
+        /// Create a new logging server for a given private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<LoggingServer, OperationMetadata> CreateLoggingServer(CreateLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateLoggingServerRequest(ref request, ref callSettings);
+            return new lro::Operation<LoggingServer, OperationMetadata>(_callCreateLoggingServer.Sync(request, callSettings), CreateLoggingServerOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a new logging server for a given private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<LoggingServer, OperationMetadata>> CreateLoggingServerAsync(CreateLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateLoggingServerRequest(ref request, ref callSettings);
+            return new lro::Operation<LoggingServer, OperationMetadata>(await _callCreateLoggingServer.Async(request, callSettings).ConfigureAwait(false), CreateLoggingServerOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateLoggingServer</c>.</summary>
+        public override lro::OperationsClient UpdateLoggingServerOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single logging server.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<LoggingServer, OperationMetadata> UpdateLoggingServer(UpdateLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateLoggingServerRequest(ref request, ref callSettings);
+            return new lro::Operation<LoggingServer, OperationMetadata>(_callUpdateLoggingServer.Sync(request, callSettings), UpdateLoggingServerOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single logging server.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<LoggingServer, OperationMetadata>> UpdateLoggingServerAsync(UpdateLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateLoggingServerRequest(ref request, ref callSettings);
+            return new lro::Operation<LoggingServer, OperationMetadata>(await _callUpdateLoggingServer.Async(request, callSettings).ConfigureAwait(false), UpdateLoggingServerOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteLoggingServer</c>.</summary>
+        public override lro::OperationsClient DeleteLoggingServerOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single logging server.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteLoggingServer(DeleteLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteLoggingServerRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteLoggingServer.Sync(request, callSettings), DeleteLoggingServerOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single logging server.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteLoggingServerAsync(DeleteLoggingServerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteLoggingServerRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteLoggingServer.Async(request, callSettings).ConfigureAwait(false), DeleteLoggingServerOperationsClient);
         }
 
         /// <summary>
@@ -7272,6 +16988,236 @@ namespace Google.Cloud.VmwareEngine.V1
         {
             Modify_ResetVcenterCredentialsRequest(ref request, ref callSettings);
             return new lro::Operation<PrivateCloud, OperationMetadata>(await _callResetVcenterCredentials.Async(request, callSettings).ConfigureAwait(false), ResetVcenterCredentialsOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details of the `DnsForwarding` config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DnsForwarding GetDnsForwarding(GetDnsForwardingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDnsForwardingRequest(ref request, ref callSettings);
+            return _callGetDnsForwarding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of the `DnsForwarding` config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DnsForwarding> GetDnsForwardingAsync(GetDnsForwardingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDnsForwardingRequest(ref request, ref callSettings);
+            return _callGetDnsForwarding.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateDnsForwarding</c>.</summary>
+        public override lro::OperationsClient UpdateDnsForwardingOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of the `DnsForwarding` config, like associated
+        /// domains. Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DnsForwarding, OperationMetadata> UpdateDnsForwarding(UpdateDnsForwardingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDnsForwardingRequest(ref request, ref callSettings);
+            return new lro::Operation<DnsForwarding, OperationMetadata>(_callUpdateDnsForwarding.Sync(request, callSettings), UpdateDnsForwardingOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of the `DnsForwarding` config, like associated
+        /// domains. Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DnsForwarding, OperationMetadata>> UpdateDnsForwardingAsync(UpdateDnsForwardingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateDnsForwardingRequest(ref request, ref callSettings);
+            return new lro::Operation<DnsForwarding, OperationMetadata>(await _callUpdateDnsForwarding.Async(request, callSettings).ConfigureAwait(false), UpdateDnsForwardingOperationsClient);
+        }
+
+        /// <summary>
+        /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+        /// contains details of the network peering, such as peered
+        /// networks, import and export custom route configurations, and peering state.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override NetworkPeering GetNetworkPeering(GetNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNetworkPeeringRequest(ref request, ref callSettings);
+            return _callGetNetworkPeering.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a `NetworkPeering` resource by its resource name. The resource
+        /// contains details of the network peering, such as peered
+        /// networks, import and export custom route configurations, and peering state.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<NetworkPeering> GetNetworkPeeringAsync(GetNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNetworkPeeringRequest(ref request, ref callSettings);
+            return _callGetNetworkPeering.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NetworkPeering"/> resources.</returns>
+        public override gax::PagedEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeerings(ListNetworkPeeringsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNetworkPeeringsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNetworkPeeringsRequest, ListNetworkPeeringsResponse, NetworkPeering>(_callListNetworkPeerings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `NetworkPeering` resources in a given project. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NetworkPeering"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListNetworkPeeringsResponse, NetworkPeering> ListNetworkPeeringsAsync(ListNetworkPeeringsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNetworkPeeringsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNetworkPeeringsRequest, ListNetworkPeeringsResponse, NetworkPeering>(_callListNetworkPeerings, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateNetworkPeering</c>.</summary>
+        public override lro::OperationsClient CreateNetworkPeeringOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new network peering between the peer network and VMware Engine
+        /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<NetworkPeering, OperationMetadata> CreateNetworkPeering(CreateNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateNetworkPeeringRequest(ref request, ref callSettings);
+            return new lro::Operation<NetworkPeering, OperationMetadata>(_callCreateNetworkPeering.Sync(request, callSettings), CreateNetworkPeeringOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new network peering between the peer network and VMware Engine
+        /// network provided in a `NetworkPeering` resource. NetworkPeering is a
+        /// global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> CreateNetworkPeeringAsync(CreateNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateNetworkPeeringRequest(ref request, ref callSettings);
+            return new lro::Operation<NetworkPeering, OperationMetadata>(await _callCreateNetworkPeering.Async(request, callSettings).ConfigureAwait(false), CreateNetworkPeeringOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteNetworkPeering</c>.</summary>
+        public override lro::OperationsClient DeleteNetworkPeeringOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+        /// a VMware Engine network, the peer network becomes inaccessible to that
+        /// VMware Engine network. NetworkPeering is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteNetworkPeering(DeleteNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteNetworkPeeringRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteNetworkPeering.Sync(request, callSettings), DeleteNetworkPeeringOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a `NetworkPeering` resource. When a network peering is deleted for
+        /// a VMware Engine network, the peer network becomes inaccessible to that
+        /// VMware Engine network. NetworkPeering is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteNetworkPeeringAsync(DeleteNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteNetworkPeeringRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteNetworkPeering.Async(request, callSettings).ConfigureAwait(false), DeleteNetworkPeeringOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateNetworkPeering</c>.</summary>
+        public override lro::OperationsClient UpdateNetworkPeeringOperationsClient { get; }
+
+        /// <summary>
+        /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+        /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+        /// is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<NetworkPeering, OperationMetadata> UpdateNetworkPeering(UpdateNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateNetworkPeeringRequest(ref request, ref callSettings);
+            return new lro::Operation<NetworkPeering, OperationMetadata>(_callUpdateNetworkPeering.Sync(request, callSettings), UpdateNetworkPeeringOperationsClient);
+        }
+
+        /// <summary>
+        /// Modifies a `NetworkPeering` resource. Only the `description` field can be
+        /// updated. Only fields specified in `updateMask` are applied. NetworkPeering
+        /// is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<NetworkPeering, OperationMetadata>> UpdateNetworkPeeringAsync(UpdateNetworkPeeringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateNetworkPeeringRequest(ref request, ref callSettings);
+            return new lro::Operation<NetworkPeering, OperationMetadata>(await _callUpdateNetworkPeering.Async(request, callSettings).ConfigureAwait(false), UpdateNetworkPeeringOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists the network peering routes exchanged over a peering connection.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public override gax::PagedEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutes(ListPeeringRoutesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPeeringRoutesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPeeringRoutesRequest, ListPeeringRoutesResponse, PeeringRoute>(_callListPeeringRoutes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the network peering routes exchanged over a peering connection.
+        /// NetworkPeering is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListPeeringRoutesResponse, PeeringRoute> ListPeeringRoutesAsync(ListPeeringRoutesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPeeringRoutesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPeeringRoutesRequest, ListPeeringRoutesResponse, PeeringRoute>(_callListPeeringRoutes, request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>CreateHcxActivationKey</c>.</summary>
@@ -7508,6 +17454,182 @@ namespace Google.Cloud.VmwareEngine.V1
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteNetworkPolicy.Async(request, callSettings).ConfigureAwait(false), DeleteNetworkPolicyOperationsClient);
         }
 
+        /// <summary>
+        /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ManagementDnsZoneBinding"/> resources.</returns>
+        public override gax::PagedEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindings(ListManagementDnsZoneBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListManagementDnsZoneBindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListManagementDnsZoneBindingsRequest, ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding>(_callListManagementDnsZoneBindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Consumer VPCs bound to Management DNS Zone of a given private cloud.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ManagementDnsZoneBinding"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding> ListManagementDnsZoneBindingsAsync(ListManagementDnsZoneBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListManagementDnsZoneBindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListManagementDnsZoneBindingsRequest, ListManagementDnsZoneBindingsResponse, ManagementDnsZoneBinding>(_callListManagementDnsZoneBindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ManagementDnsZoneBinding GetManagementDnsZoneBinding(GetManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetManagementDnsZoneBindingRequest(ref request, ref callSettings);
+            return _callGetManagementDnsZoneBinding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a 'ManagementDnsZoneBinding' resource by its resource name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ManagementDnsZoneBinding> GetManagementDnsZoneBindingAsync(GetManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetManagementDnsZoneBindingRequest(ref request, ref callSettings);
+            return _callGetManagementDnsZoneBinding.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateManagementDnsZoneBinding</c>.</summary>
+        public override lro::OperationsClient CreateManagementDnsZoneBindingOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+        /// This RPC creates the DNS binding and the resource that represents the
+        /// DNS binding of the consumer VPC network to the management DNS zone. A
+        /// management DNS zone is the Cloud DNS cross-project binding zone that
+        /// VMware Engine creates for each private cloud. It contains FQDNs and
+        /// corresponding IP addresses for the private cloud's ESXi hosts and
+        /// management VM appliances like vCenter and NSX Manager.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ManagementDnsZoneBinding, OperationMetadata> CreateManagementDnsZoneBinding(CreateManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateManagementDnsZoneBindingRequest(ref request, ref callSettings);
+            return new lro::Operation<ManagementDnsZoneBinding, OperationMetadata>(_callCreateManagementDnsZoneBinding.Sync(request, callSettings), CreateManagementDnsZoneBindingOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new `ManagementDnsZoneBinding` resource in a private cloud.
+        /// This RPC creates the DNS binding and the resource that represents the
+        /// DNS binding of the consumer VPC network to the management DNS zone. A
+        /// management DNS zone is the Cloud DNS cross-project binding zone that
+        /// VMware Engine creates for each private cloud. It contains FQDNs and
+        /// corresponding IP addresses for the private cloud's ESXi hosts and
+        /// management VM appliances like vCenter and NSX Manager.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> CreateManagementDnsZoneBindingAsync(CreateManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateManagementDnsZoneBindingRequest(ref request, ref callSettings);
+            return new lro::Operation<ManagementDnsZoneBinding, OperationMetadata>(await _callCreateManagementDnsZoneBinding.Async(request, callSettings).ConfigureAwait(false), CreateManagementDnsZoneBindingOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateManagementDnsZoneBinding</c>.</summary>
+        public override lro::OperationsClient UpdateManagementDnsZoneBindingOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a `ManagementDnsZoneBinding` resource.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ManagementDnsZoneBinding, OperationMetadata> UpdateManagementDnsZoneBinding(UpdateManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateManagementDnsZoneBindingRequest(ref request, ref callSettings);
+            return new lro::Operation<ManagementDnsZoneBinding, OperationMetadata>(_callUpdateManagementDnsZoneBinding.Sync(request, callSettings), UpdateManagementDnsZoneBindingOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a `ManagementDnsZoneBinding` resource.
+        /// Only fields specified in `update_mask` are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> UpdateManagementDnsZoneBindingAsync(UpdateManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateManagementDnsZoneBindingRequest(ref request, ref callSettings);
+            return new lro::Operation<ManagementDnsZoneBinding, OperationMetadata>(await _callUpdateManagementDnsZoneBinding.Async(request, callSettings).ConfigureAwait(false), UpdateManagementDnsZoneBindingOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteManagementDnsZoneBinding</c>.</summary>
+        public override lro::OperationsClient DeleteManagementDnsZoneBindingOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+        /// binding is deleted, the corresponding consumer VPC network is no longer
+        /// bound to the management DNS zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteManagementDnsZoneBinding(DeleteManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteManagementDnsZoneBindingRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteManagementDnsZoneBinding.Sync(request, callSettings), DeleteManagementDnsZoneBindingOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a `ManagementDnsZoneBinding` resource. When a management DNS zone
+        /// binding is deleted, the corresponding consumer VPC network is no longer
+        /// bound to the management DNS zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteManagementDnsZoneBindingAsync(DeleteManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteManagementDnsZoneBindingRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteManagementDnsZoneBinding.Async(request, callSettings).ConfigureAwait(false), DeleteManagementDnsZoneBindingOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RepairManagementDnsZoneBinding</c>.</summary>
+        public override lro::OperationsClient RepairManagementDnsZoneBindingOperationsClient { get; }
+
+        /// <summary>
+        /// Retries to create a `ManagementDnsZoneBinding` resource that is
+        /// in failed state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ManagementDnsZoneBinding, OperationMetadata> RepairManagementDnsZoneBinding(RepairManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RepairManagementDnsZoneBindingRequest(ref request, ref callSettings);
+            return new lro::Operation<ManagementDnsZoneBinding, OperationMetadata>(_callRepairManagementDnsZoneBinding.Sync(request, callSettings), RepairManagementDnsZoneBindingOperationsClient);
+        }
+
+        /// <summary>
+        /// Retries to create a `ManagementDnsZoneBinding` resource that is
+        /// in failed state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ManagementDnsZoneBinding, OperationMetadata>> RepairManagementDnsZoneBindingAsync(RepairManagementDnsZoneBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RepairManagementDnsZoneBindingRequest(ref request, ref callSettings);
+            return new lro::Operation<ManagementDnsZoneBinding, OperationMetadata>(await _callRepairManagementDnsZoneBinding.Async(request, callSettings).ConfigureAwait(false), RepairManagementDnsZoneBindingOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>CreateVmwareEngineNetwork</c>.</summary>
         public override lro::OperationsClient CreateVmwareEngineNetworkOperationsClient { get; }
 
@@ -7652,6 +17774,265 @@ namespace Google.Cloud.VmwareEngine.V1
             Modify_ListVmwareEngineNetworksRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListVmwareEngineNetworksRequest, ListVmwareEngineNetworksResponse, VmwareEngineNetwork>(_callListVmwareEngineNetworks, request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>CreatePrivateConnection</c>.</summary>
+        public override lro::OperationsClient CreatePrivateConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<PrivateConnection, OperationMetadata> CreatePrivateConnection(CreatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePrivateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<PrivateConnection, OperationMetadata>(_callCreatePrivateConnection.Sync(request, callSettings), CreatePrivateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new private connection that can be used for accessing private
+        /// Clouds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> CreatePrivateConnectionAsync(CreatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreatePrivateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<PrivateConnection, OperationMetadata>(await _callCreatePrivateConnection.Async(request, callSettings).ConfigureAwait(false), CreatePrivateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PrivateConnection GetPrivateConnection(GetPrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPrivateConnectionRequest(ref request, ref callSettings);
+            return _callGetPrivateConnection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a `PrivateConnection` resource by its resource name. The resource
+        /// contains details of the private connection, such as connected
+        /// network, routing mode and state.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PrivateConnection> GetPrivateConnectionAsync(GetPrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPrivateConnectionRequest(ref request, ref callSettings);
+            return _callGetPrivateConnection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public override gax::PagedEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnections(ListPrivateConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPrivateConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPrivateConnectionsRequest, ListPrivateConnectionsResponse, PrivateConnection>(_callListPrivateConnections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists `PrivateConnection` resources in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PrivateConnection"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListPrivateConnectionsResponse, PrivateConnection> ListPrivateConnectionsAsync(ListPrivateConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPrivateConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPrivateConnectionsRequest, ListPrivateConnectionsResponse, PrivateConnection>(_callListPrivateConnections, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdatePrivateConnection</c>.</summary>
+        public override lro::OperationsClient UpdatePrivateConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<PrivateConnection, OperationMetadata> UpdatePrivateConnection(UpdatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePrivateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<PrivateConnection, OperationMetadata>(_callUpdatePrivateConnection.Sync(request, callSettings), UpdatePrivateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Modifies a `PrivateConnection` resource. Only `description` and
+        /// `routing_mode` fields can be updated. Only fields specified in `updateMask`
+        /// are applied.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<PrivateConnection, OperationMetadata>> UpdatePrivateConnectionAsync(UpdatePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePrivateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<PrivateConnection, OperationMetadata>(await _callUpdatePrivateConnection.Async(request, callSettings).ConfigureAwait(false), UpdatePrivateConnectionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeletePrivateConnection</c>.</summary>
+        public override lro::OperationsClient DeletePrivateConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeletePrivateConnection(DeletePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeletePrivateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeletePrivateConnection.Sync(request, callSettings), DeletePrivateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a `PrivateConnection` resource. When a private connection is
+        /// deleted for a VMware Engine network, the connected network becomes
+        /// inaccessible to that VMware Engine network.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePrivateConnectionAsync(DeletePrivateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeletePrivateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeletePrivateConnection.Async(request, callSettings).ConfigureAwait(false), DeletePrivateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public override gax::PagedEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutes(ListPrivateConnectionPeeringRoutesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPrivateConnectionPeeringRoutesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPrivateConnectionPeeringRoutesRequest, ListPrivateConnectionPeeringRoutesResponse, PeeringRoute>(_callListPrivateConnectionPeeringRoutes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the private connection routes exchanged over a peering connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PeeringRoute"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesResponse, PeeringRoute> ListPrivateConnectionPeeringRoutesAsync(ListPrivateConnectionPeeringRoutesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPrivateConnectionPeeringRoutesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPrivateConnectionPeeringRoutesRequest, ListPrivateConnectionPeeringRoutesResponse, PeeringRoute>(_callListPrivateConnectionPeeringRoutes, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>GrantDnsBindPermission</c>.</summary>
+        public override lro::OperationsClient GrantDnsBindPermissionOperationsClient { get; }
+
+        /// <summary>
+        /// Grants the bind permission to the customer provided principal(user /
+        /// service account) to bind their DNS zone with the intranet VPC associated
+        /// with the project. DnsBindPermission is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DnsBindPermission, OperationMetadata> GrantDnsBindPermission(GrantDnsBindPermissionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GrantDnsBindPermissionRequest(ref request, ref callSettings);
+            return new lro::Operation<DnsBindPermission, OperationMetadata>(_callGrantDnsBindPermission.Sync(request, callSettings), GrantDnsBindPermissionOperationsClient);
+        }
+
+        /// <summary>
+        /// Grants the bind permission to the customer provided principal(user /
+        /// service account) to bind their DNS zone with the intranet VPC associated
+        /// with the project. DnsBindPermission is a global resource and location can
+        /// only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> GrantDnsBindPermissionAsync(GrantDnsBindPermissionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GrantDnsBindPermissionRequest(ref request, ref callSettings);
+            return new lro::Operation<DnsBindPermission, OperationMetadata>(await _callGrantDnsBindPermission.Async(request, callSettings).ConfigureAwait(false), GrantDnsBindPermissionOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets all the principals having bind permission on the intranet VPC
+        /// associated with the consumer project granted by the Grant API.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DnsBindPermission GetDnsBindPermission(GetDnsBindPermissionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDnsBindPermissionRequest(ref request, ref callSettings);
+            return _callGetDnsBindPermission.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets all the principals having bind permission on the intranet VPC
+        /// associated with the consumer project granted by the Grant API.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DnsBindPermission> GetDnsBindPermissionAsync(GetDnsBindPermissionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetDnsBindPermissionRequest(ref request, ref callSettings);
+            return _callGetDnsBindPermission.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>RevokeDnsBindPermission</c>.</summary>
+        public override lro::OperationsClient RevokeDnsBindPermissionOperationsClient { get; }
+
+        /// <summary>
+        /// Revokes the bind permission from the customer provided principal(user /
+        /// service account) on the intranet VPC associated with the consumer project.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DnsBindPermission, OperationMetadata> RevokeDnsBindPermission(RevokeDnsBindPermissionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RevokeDnsBindPermissionRequest(ref request, ref callSettings);
+            return new lro::Operation<DnsBindPermission, OperationMetadata>(_callRevokeDnsBindPermission.Sync(request, callSettings), RevokeDnsBindPermissionOperationsClient);
+        }
+
+        /// <summary>
+        /// Revokes the bind permission from the customer provided principal(user /
+        /// service account) on the intranet VPC associated with the consumer project.
+        /// DnsBindPermission is a global resource and location can only be global.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DnsBindPermission, OperationMetadata>> RevokeDnsBindPermissionAsync(RevokeDnsBindPermissionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RevokeDnsBindPermissionRequest(ref request, ref callSettings);
+            return new lro::Operation<DnsBindPermission, OperationMetadata>(await _callRevokeDnsBindPermission.Async(request, callSettings).ConfigureAwait(false), RevokeDnsBindPermissionOperationsClient);
+        }
     }
 
     public partial class ListPrivateCloudsRequest : gaxgrpc::IPageRequest
@@ -7662,11 +18043,39 @@ namespace Google.Cloud.VmwareEngine.V1
     {
     }
 
+    public partial class ListNodesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListExternalAddressesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class FetchNetworkPolicyExternalAddressesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListSubnetsRequest : gaxgrpc::IPageRequest
     {
     }
 
+    public partial class ListExternalAccessRulesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListLoggingServersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListNodeTypesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListNetworkPeeringsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListPeeringRoutesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -7678,7 +18087,19 @@ namespace Google.Cloud.VmwareEngine.V1
     {
     }
 
+    public partial class ListManagementDnsZoneBindingsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListVmwareEngineNetworksRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListPrivateConnectionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListPrivateConnectionPeeringRoutesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -7698,6 +18119,30 @@ namespace Google.Cloud.VmwareEngine.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class ListNodesResponse : gaxgrpc::IPageResponse<Node>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Node> GetEnumerator() => Nodes.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListExternalAddressesResponse : gaxgrpc::IPageResponse<ExternalAddress>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ExternalAddress> GetEnumerator() => ExternalAddresses.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class FetchNetworkPolicyExternalAddressesResponse : gaxgrpc::IPageResponse<ExternalAddress>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ExternalAddress> GetEnumerator() => ExternalAddresses.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class ListSubnetsResponse : gaxgrpc::IPageResponse<Subnet>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -7706,10 +18151,42 @@ namespace Google.Cloud.VmwareEngine.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class ListExternalAccessRulesResponse : gaxgrpc::IPageResponse<ExternalAccessRule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ExternalAccessRule> GetEnumerator() => ExternalAccessRules.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListLoggingServersResponse : gaxgrpc::IPageResponse<LoggingServer>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<LoggingServer> GetEnumerator() => LoggingServers.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class ListNodeTypesResponse : gaxgrpc::IPageResponse<NodeType>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<NodeType> GetEnumerator() => NodeTypes.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListNetworkPeeringsResponse : gaxgrpc::IPageResponse<NetworkPeering>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<NetworkPeering> GetEnumerator() => NetworkPeerings.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListPeeringRoutesResponse : gaxgrpc::IPageResponse<PeeringRoute>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PeeringRoute> GetEnumerator() => PeeringRoutes.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
@@ -7730,10 +18207,34 @@ namespace Google.Cloud.VmwareEngine.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class ListManagementDnsZoneBindingsResponse : gaxgrpc::IPageResponse<ManagementDnsZoneBinding>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ManagementDnsZoneBinding> GetEnumerator() => ManagementDnsZoneBindings.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class ListVmwareEngineNetworksResponse : gaxgrpc::IPageResponse<VmwareEngineNetwork>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<VmwareEngineNetwork> GetEnumerator() => VmwareEngineNetworks.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListPrivateConnectionsResponse : gaxgrpc::IPageResponse<PrivateConnection>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PrivateConnection> GetEnumerator() => PrivateConnections.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListPrivateConnectionPeeringRoutesResponse : gaxgrpc::IPageResponse<PeeringRoute>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PeeringRoute> GetEnumerator() => PeeringRoutes.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

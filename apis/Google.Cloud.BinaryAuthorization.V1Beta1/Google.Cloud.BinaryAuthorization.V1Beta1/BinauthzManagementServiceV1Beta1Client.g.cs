@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,20 +15,20 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.BinaryAuthorization.V1Beta1
 {
@@ -249,14 +249,14 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BinauthzManagementServiceV1Beta1Client.Create(callInvoker, Settings, Logger);
+            return BinauthzManagementServiceV1Beta1Client.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<BinauthzManagementServiceV1Beta1Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BinauthzManagementServiceV1Beta1Client.Create(callInvoker, Settings, Logger);
+            return BinauthzManagementServiceV1Beta1Client.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1042,13 +1042,22 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Attestor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAttestorsResponse, Attestor> ListAttestors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttestors(new ListAttestorsRequest
+        public virtual gax::PagedEnumerable<ListAttestorsResponse, Attestor> ListAttestors(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttestorsRequest request = new ListAttestorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttestors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [attestors][google.cloud.binaryauthorization.v1beta1.Attestor].
@@ -1068,13 +1077,22 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Attestor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAttestorsResponse, Attestor> ListAttestorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttestorsAsync(new ListAttestorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAttestorsResponse, Attestor> ListAttestorsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttestorsRequest request = new ListAttestorsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttestorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [attestors][google.cloud.binaryauthorization.v1beta1.Attestor].
@@ -1094,13 +1112,22 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Attestor"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAttestorsResponse, Attestor> ListAttestors(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttestors(new ListAttestorsRequest
+        public virtual gax::PagedEnumerable<ListAttestorsResponse, Attestor> ListAttestors(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttestorsRequest request = new ListAttestorsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttestors(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [attestors][google.cloud.binaryauthorization.v1beta1.Attestor].
@@ -1120,13 +1147,22 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Attestor"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAttestorsResponse, Attestor> ListAttestorsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttestorsAsync(new ListAttestorsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAttestorsResponse, Attestor> ListAttestorsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttestorsRequest request = new ListAttestorsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttestorsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes an [attestor][google.cloud.binaryauthorization.v1beta1.Attestor]. Returns NOT_FOUND if the
@@ -1288,7 +1324,11 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         {
             GrpcClient = grpcClient;
             BinauthzManagementServiceV1Beta1Settings effectiveSettings = settings ?? BinauthzManagementServiceV1Beta1Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetPolicy = clientHelper.BuildApiCall<GetPolicyRequest, Policy>("GetPolicy", grpcClient.GetPolicyAsync, grpcClient.GetPolicy, effectiveSettings.GetPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPolicy);
             Modify_GetPolicyApiCall(ref _callGetPolicy);

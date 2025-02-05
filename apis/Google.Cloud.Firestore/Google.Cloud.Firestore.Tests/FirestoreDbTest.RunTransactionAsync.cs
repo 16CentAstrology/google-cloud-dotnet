@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,11 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Testing;
 using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
 using Grpc.Core;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
@@ -53,10 +58,16 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         // In-depth testing is only performed for the main work method
-        [Fact]
-        public async Task RunTransactionAsync_RollbackAndRetry()
+        [Theory]
+        [InlineData(StatusCode.Aborted)]
+        [InlineData(StatusCode.Unknown)]
+        [InlineData(StatusCode.Internal)]
+        [InlineData(StatusCode.Unavailable)]
+        [InlineData(StatusCode.Unauthenticated)]
+        [InlineData(StatusCode.ResourceExhausted)]
+        public async Task RunTransactionAsync_RollbackAndRetry(StatusCode code)
         {
-            var client = new TransactionTestingClient(2, CreateRpcException(StatusCode.Aborted));
+            var client = new TransactionTestingClient(2, CreateRpcException(code));
             var db = FirestoreDb.Create("proj", "db", client);
             var result = await db.RunTransactionAsync(CreateCountingCallback());
             // Two failures were retries, so our callback executed 3 times.
@@ -77,6 +88,26 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(expectedRollbackRequests, client.RollbackRequests);
         }
 
+        // If the transaction becomes invalid, it doesn't make sense to roll back, but we still retry the whole transaction.
+        [Fact]
+        public async Task RunTransactionAsync_RetryWithoutRollback()
+        {
+            var client = new TransactionTestingClient(2, CreateRpcException(StatusCode.InvalidArgument, "The referenced transaction has expired or is no longer valid."));
+            var db = FirestoreDb.Create("proj", "db", client);
+            var result = await db.RunTransactionAsync(CreateCountingCallback());
+            // Two failures were retries, so our callback executed 3 times.
+            Assert.Equal(3, result);
+
+            var expectedCommitRequests = new[]
+            {
+                CreateCommitRequest("transaction 1"),
+                CreateCommitRequest("transaction 2; retrying transaction 1"),
+                CreateCommitRequest("transaction 3; retrying transaction 2")
+            };
+            Assert.Equal(expectedCommitRequests, client.CommitRequests);
+            Assert.Empty(client.RollbackRequests);
+        }
+
         [Theory]
         [InlineData(StatusCode.DeadlineExceeded)]
         [InlineData(StatusCode.Cancelled)]
@@ -91,11 +122,11 @@ namespace Google.Cloud.Firestore.Tests
 
         [Theory]
         [InlineData(StatusCode.FailedPrecondition)]
-        [InlineData(StatusCode.Internal)]
         [InlineData(StatusCode.PermissionDenied)]
-        public async Task RunTransactionAsync_NoRollbackOnCommitFailure(StatusCode code)
+        [InlineData(StatusCode.InvalidArgument, "Invalid commit reference")]
+        public async Task RunTransactionAsync_NoRollbackOnCommitFailure(StatusCode code, string message = null)
         {
-            var client = new TransactionTestingClient(1, CreateRpcException(code));
+            var client = new TransactionTestingClient(1, CreateRpcException(code, message));
             var db = FirestoreDb.Create("proj", "db", client);
             await Assert.ThrowsAsync<RpcException>(() => db.RunTransactionAsync(CreateCountingCallback()));
             Assert.Equal(new[] { CreateCommitRequest("transaction 1") }, client.CommitRequests);
@@ -136,6 +167,35 @@ namespace Google.Cloud.Firestore.Tests
             // We should have made as many attempts as we were allowed, and all should have been rolled back.
             Assert.Equal(actualAttempts, client.CommitRequests.Count);
             Assert.Equal(actualAttempts, client.RollbackRequests.Count);
+        }
+
+        [Fact]
+        public async Task RunTransactionAsync_CustomRetrySettings()
+        {
+            var start = new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+            var clock = new FakeClock(start);
+            var scheduler = new FakeScheduler(clock);
+
+            var settings = new FirestoreSettings
+            {
+                Scheduler = scheduler,
+                Clock = scheduler.Clock
+            };
+
+            // 6 failures, so 7 RPCs in total.
+            var client = new TransactionTestingClient(6, CreateRpcException(StatusCode.Aborted), settings);
+            var db = FirestoreDb.Create("proj", "db", client);
+
+            // Backoffs will be 1, 2, 4, 5, 5, 5.
+            // Timestamps will be 0, 1, 3, 7, 12, 17, 22.
+            var retrySettings = RetrySettings.FromExponentialBackoff(10, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(5), 2.0, ex => true, RetrySettings.NoJitter);
+            var options = TransactionOptions.ForRetrySettings(retrySettings);
+
+            var timestamps = await scheduler.RunAsync(() => db.RunTransactionAsync(CreateTimestampingCallback(scheduler.Clock), options));
+
+            var timestampSecondsSinceStart = timestamps.Select(ts => (ts - start).TotalSeconds).ToArray();
+            double[] expectedSecondsSinceStart = { 0.0, 1.0, 3.0, 7.0, 12.0, 17.0, 22.0 };
+            Assert.Equal(expectedSecondsSinceStart, timestampSecondsSinceStart);
         }
 
         /// <summary>
@@ -184,6 +244,19 @@ namespace Google.Cloud.Firestore.Tests
             };
         }
 
+        private Func<Transaction, Task<List<DateTime>>> CreateTimestampingCallback(IClock clock)
+        {
+            List<DateTime> ret = new();
+            return async transaction =>
+            {
+                var db = transaction.Database;
+                ret.Add(clock.GetCurrentDateTimeUtc());
+                await transaction.GetSnapshotAsync(db.Document("col/x"));
+                transaction.Create(db.Document("col/doc1"), new { Name = "Test" });
+                transaction.Delete(db.Document("col/doc2"));
+                return ret;
+            };
+        }
 
         private static RollbackRequest CreateRollbackRequest(string transactionId) =>
             new RollbackRequest
@@ -192,6 +265,7 @@ namespace Google.Cloud.Firestore.Tests
                 Transaction = ByteString.CopyFromUtf8(transactionId)
             };
 
-        private static RpcException CreateRpcException(StatusCode code) => new RpcException(new Status(code, "Bang"));
+        private static RpcException CreateRpcException(StatusCode code, string message = null) =>
+            new RpcException(new Status(code, message ?? "Bang"));
     }
 }

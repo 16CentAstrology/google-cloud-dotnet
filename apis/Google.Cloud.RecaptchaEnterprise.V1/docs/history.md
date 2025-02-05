@@ -1,5 +1,136 @@
 # Version history
 
+## Version 2.17.0, released 2024-11-18
+
+### New features
+
+- A new enum `Challenge` is added ([commit 3080dfc](https://github.com/googleapis/google-cloud-dotnet/commit/3080dfc1247a9714a9d5b4fbc1c4a4a3db0f444b))
+- A new field `challenge` is added to message `.google.cloud.recaptchaenterprise.v1.RiskAnalysis` ([commit 3080dfc](https://github.com/googleapis/google-cloud-dotnet/commit/3080dfc1247a9714a9d5b4fbc1c4a4a3db0f444b))
+
+## Version 2.16.0, released 2024-10-30
+
+### New features
+
+- Support for ListIpOverrides and RemoveIpOverride ([commit 0120a36](https://github.com/googleapis/google-cloud-dotnet/commit/0120a36ef7e21cbb5fbd835b81bdec60d660fcb8))
+- Enable Akamai web application firewall ([commit 0120a36](https://github.com/googleapis/google-cloud-dotnet/commit/0120a36ef7e21cbb5fbd835b81bdec60d660fcb8))
+
+### Documentation improvements
+
+- Minor updates to reference documentation ([commit 0120a36](https://github.com/googleapis/google-cloud-dotnet/commit/0120a36ef7e21cbb5fbd835b81bdec60d660fcb8))
+
+## Version 2.15.0, released 2024-09-09
+
+### New features
+
+- Add AssessmentEnvironment for CreateAssessement to explicitly describe the environment of the assessment ([commit 7b03dd8](https://github.com/googleapis/google-cloud-dotnet/commit/7b03dd893eba021c62dd623dcd41a61c553c8fe4))
+- Add AddIpOverride RPC ([commit 419e3a5](https://github.com/googleapis/google-cloud-dotnet/commit/419e3a561944b153250baf595773a5d34a4168ec))
+- Add `express_settings` to `Key` ([commit 419e3a5](https://github.com/googleapis/google-cloud-dotnet/commit/419e3a561944b153250baf595773a5d34a4168ec))
+
+### Documentation improvements
+
+- Minor doc fixes ([commit fa9d5b1](https://github.com/googleapis/google-cloud-dotnet/commit/fa9d5b197ff03ba1d05a8ded8d6a3e71c78e7f00))
+- Clarify `Event.express` field ([commit 419e3a5](https://github.com/googleapis/google-cloud-dotnet/commit/419e3a561944b153250baf595773a5d34a4168ec))
+- Fix billing, quota, and usecase links ([commit 419e3a5](https://github.com/googleapis/google-cloud-dotnet/commit/419e3a561944b153250baf595773a5d34a4168ec))
+
+## Version 2.14.0, released 2024-07-08
+
+### New features
+
+- Added SMS Toll Fraud assessment ([commit 89a58fd](https://github.com/googleapis/google-cloud-dotnet/commit/89a58fd74d772317a4e370946c14946a76965e18))
+
+## Version 2.13.0, released 2024-04-29
+
+### New features
+
+- Add Fraud Prevention settings field ([commit f66d168](https://github.com/googleapis/google-cloud-dotnet/commit/f66d168e4d553f2011b268484003cf54185beea0))
+
+### Documentation improvements
+
+- Fixed the description of ListFirewallPoliciesResponse ([commit 5098a28](https://github.com/googleapis/google-cloud-dotnet/commit/5098a28811d97d88a95b15de76c3a3b124b316e7))
+
+## Version 2.12.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.11.0, released 2024-03-25
+
+### Breaking changes
+
+The `SearchRelatedAccountGroupMemberships` method and related
+request now accept a ProjectName instead of a
+`RelatedAccountGroupName`. This is a bug fix; the server-side
+behavior has not changed. Although this is clearly a breaking change
+in the client library, no caller would have been able to use the
+previous functionality, so we are releasing this as a minor version
+rather than the normal new major version after a breaking change. We
+believe this will minimize customer disruption. Please file an issue
+if this change causes problems for you.
+
+### New features
+
+- Existing resource_reference option of the field name is removed from message `google.cloud.recaptchaenterprise.v1.RelatedAccountGroupMemberShip` ([commit db147ef](https://github.com/googleapis/google-cloud-dotnet/commit/db147ef47e26899c28bed40651fab1dffffb0213))
+- Existing resource_reference option of the field name is removed from message `google.cloud.recaptchaenterprise.v1.RelatedAccountGroup` ([commit db147ef](https://github.com/googleapis/google-cloud-dotnet/commit/db147ef47e26899c28bed40651fab1dffffb0213))
+- Add Cloudflare key creation support ([commit db147ef](https://github.com/googleapis/google-cloud-dotnet/commit/db147ef47e26899c28bed40651fab1dffffb0213))
+
+## Version 2.10.0, released 2024-03-13
+
+### New features
+
+- Add include_recaptcha_script for as a new action in firewall policies ([commit d9e61ce](https://github.com/googleapis/google-cloud-dotnet/commit/d9e61ceccc664f21973cc0e20833f9fabe1b20b3))
+
+## Version 2.9.0, released 2024-02-20
+
+### New features
+
+- Add an API method for reordering firewall policies ([commit 3a8650e](https://github.com/googleapis/google-cloud-dotnet/commit/3a8650eeeec900cc533908c62cb610336425b517))
+
+### Documentation improvements
+
+- Update comment for `AccountVerificationInfo.username` ([commit 7560af8](https://github.com/googleapis/google-cloud-dotnet/commit/7560af85aa6f677214b9a19d5eeeef15f30c7f64))
+
+## Version 2.8.0, released 2023-12-11
+
+### New features
+
+- Added stable account identifier to related group membership resources, and deprecated hashed identifier field ([commit 45bfaad](https://github.com/googleapis/google-cloud-dotnet/commit/45bfaad51e9d0a9564872844963f9398caffc8cc))
+
+### Documentation improvements
+
+- Noted applicable fields as resource identifiers ([commit 45bfaad](https://github.com/googleapis/google-cloud-dotnet/commit/45bfaad51e9d0a9564872844963f9398caffc8cc))
+
+## Version 2.7.0, released 2023-12-04
+
+### New features
+
+- Added AnnotateAssessmentRequest.account_id ([commit eff599a](https://github.com/googleapis/google-cloud-dotnet/commit/eff599a1f92c267a7c7285baf5ef6a88621dc964))
+- Added Event.user_info ([commit eff599a](https://github.com/googleapis/google-cloud-dotnet/commit/eff599a1f92c267a7c7285baf5ef6a88621dc964))
+
+### Documentation improvements
+
+- Updated comments ([commit eff599a](https://github.com/googleapis/google-cloud-dotnet/commit/eff599a1f92c267a7c7285baf5ef6a88621dc964))
+
+## Version 2.6.0, released 2023-11-13
+
+### Documentation improvements
+
+- Updated comments explaining if a field is optional or required ([commit 91d1b84](https://github.com/googleapis/google-cloud-dotnet/commit/91d1b8400e4200f791e33b65a1521a87bf13625d))
+
+## Version 2.5.0, released 2023-10-30
+
+### New features
+
+- FirewallPolicy CRUD API ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added Assessment.firewall_policy_assessment, fraud_signals ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added new fields to Event message ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added RiskAnalysis.extended_verdict_reasons ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added FraudPreventionAssessment.behavioral_trust_verdict ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added AndroidKeySettings.support_non_google_app_store_distribution ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added IOSKeySettings.apple_developer_id ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added WafFeature.EXPRESS enum value ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+- Added WafService.FASTLY enum value ([commit 0eea6bd](https://github.com/googleapis/google-cloud-dotnet/commit/0eea6bd16c906a211c836ec4b7b62e1a3a215d2b))
+
 ## Version 2.4.0, released 2023-03-20
 
 ### New features

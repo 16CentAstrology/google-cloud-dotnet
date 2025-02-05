@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Deploy.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Deploy.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -1200,6 +1201,121 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RollbackTarget</summary>
+        public void RollbackTargetRequestObject()
+        {
+            // Snippet: RollbackTarget(RollbackTargetRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            RollbackTargetRequest request = new RollbackTargetRequest
+            {
+                DeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
+                TargetId = "",
+                RolloutId = "",
+                ReleaseId = "",
+                RolloutToRollBack = "",
+                RollbackConfig = new RollbackTargetConfig(),
+                ValidateOnly = false,
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
+            };
+            // Make the request
+            RollbackTargetResponse response = cloudDeployClient.RollbackTarget(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackTargetAsync</summary>
+        public async Task RollbackTargetRequestObjectAsync()
+        {
+            // Snippet: RollbackTargetAsync(RollbackTargetRequest, CallSettings)
+            // Additional: RollbackTargetAsync(RollbackTargetRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            RollbackTargetRequest request = new RollbackTargetRequest
+            {
+                DeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
+                TargetId = "",
+                RolloutId = "",
+                ReleaseId = "",
+                RolloutToRollBack = "",
+                RollbackConfig = new RollbackTargetConfig(),
+                ValidateOnly = false,
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
+            };
+            // Make the request
+            RollbackTargetResponse response = await cloudDeployClient.RollbackTargetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackTarget</summary>
+        public void RollbackTarget()
+        {
+            // Snippet: RollbackTarget(string, string, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]";
+            string targetId = "";
+            string rolloutId = "";
+            // Make the request
+            RollbackTargetResponse response = cloudDeployClient.RollbackTarget(name, targetId, rolloutId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackTargetAsync</summary>
+        public async Task RollbackTargetAsync()
+        {
+            // Snippet: RollbackTargetAsync(string, string, string, CallSettings)
+            // Additional: RollbackTargetAsync(string, string, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]";
+            string targetId = "";
+            string rolloutId = "";
+            // Make the request
+            RollbackTargetResponse response = await cloudDeployClient.RollbackTargetAsync(name, targetId, rolloutId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackTarget</summary>
+        public void RollbackTargetResourceNames()
+        {
+            // Snippet: RollbackTarget(DeliveryPipelineName, string, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            DeliveryPipelineName name = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]");
+            string targetId = "";
+            string rolloutId = "";
+            // Make the request
+            RollbackTargetResponse response = cloudDeployClient.RollbackTarget(name, targetId, rolloutId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RollbackTargetAsync</summary>
+        public async Task RollbackTargetResourceNamesAsync()
+        {
+            // Snippet: RollbackTargetAsync(DeliveryPipelineName, string, string, CallSettings)
+            // Additional: RollbackTargetAsync(DeliveryPipelineName, string, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            DeliveryPipelineName name = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]");
+            string targetId = "";
+            string rolloutId = "";
+            // Make the request
+            RollbackTargetResponse response = await cloudDeployClient.RollbackTargetAsync(name, targetId, rolloutId);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetTarget</summary>
         public void GetTargetRequestObject()
         {
@@ -1811,6 +1927,897 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListCustomTargetTypes</summary>
+        public void ListCustomTargetTypesRequestObject()
+        {
+            // Snippet: ListCustomTargetTypes(ListCustomTargetTypesRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            ListCustomTargetTypesRequest request = new ListCustomTargetTypesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListCustomTargetTypesResponse, CustomTargetType> response = cloudDeployClient.ListCustomTargetTypes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CustomTargetType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCustomTargetTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomTargetType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomTargetType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomTargetType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomTargetTypesAsync</summary>
+        public async Task ListCustomTargetTypesRequestObjectAsync()
+        {
+            // Snippet: ListCustomTargetTypesAsync(ListCustomTargetTypesRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            ListCustomTargetTypesRequest request = new ListCustomTargetTypesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListCustomTargetTypesResponse, CustomTargetType> response = cloudDeployClient.ListCustomTargetTypesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CustomTargetType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCustomTargetTypesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomTargetType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomTargetType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomTargetType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomTargetTypes</summary>
+        public void ListCustomTargetTypes()
+        {
+            // Snippet: ListCustomTargetTypes(string, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListCustomTargetTypesResponse, CustomTargetType> response = cloudDeployClient.ListCustomTargetTypes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CustomTargetType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCustomTargetTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomTargetType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomTargetType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomTargetType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomTargetTypesAsync</summary>
+        public async Task ListCustomTargetTypesAsync()
+        {
+            // Snippet: ListCustomTargetTypesAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListCustomTargetTypesResponse, CustomTargetType> response = cloudDeployClient.ListCustomTargetTypesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CustomTargetType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCustomTargetTypesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomTargetType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomTargetType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomTargetType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomTargetTypes</summary>
+        public void ListCustomTargetTypesResourceNames()
+        {
+            // Snippet: ListCustomTargetTypes(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListCustomTargetTypesResponse, CustomTargetType> response = cloudDeployClient.ListCustomTargetTypes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (CustomTargetType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListCustomTargetTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomTargetType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomTargetType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomTargetType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListCustomTargetTypesAsync</summary>
+        public async Task ListCustomTargetTypesResourceNamesAsync()
+        {
+            // Snippet: ListCustomTargetTypesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListCustomTargetTypesResponse, CustomTargetType> response = cloudDeployClient.ListCustomTargetTypesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((CustomTargetType item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListCustomTargetTypesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (CustomTargetType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<CustomTargetType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (CustomTargetType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomTargetType</summary>
+        public void GetCustomTargetTypeRequestObject()
+        {
+            // Snippet: GetCustomTargetType(GetCustomTargetTypeRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            GetCustomTargetTypeRequest request = new GetCustomTargetTypeRequest
+            {
+                CustomTargetTypeName = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]"),
+            };
+            // Make the request
+            CustomTargetType response = cloudDeployClient.GetCustomTargetType(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomTargetTypeAsync</summary>
+        public async Task GetCustomTargetTypeRequestObjectAsync()
+        {
+            // Snippet: GetCustomTargetTypeAsync(GetCustomTargetTypeRequest, CallSettings)
+            // Additional: GetCustomTargetTypeAsync(GetCustomTargetTypeRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            GetCustomTargetTypeRequest request = new GetCustomTargetTypeRequest
+            {
+                CustomTargetTypeName = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]"),
+            };
+            // Make the request
+            CustomTargetType response = await cloudDeployClient.GetCustomTargetTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomTargetType</summary>
+        public void GetCustomTargetType()
+        {
+            // Snippet: GetCustomTargetType(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/customTargetTypes/[CUSTOM_TARGET_TYPE]";
+            // Make the request
+            CustomTargetType response = cloudDeployClient.GetCustomTargetType(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomTargetTypeAsync</summary>
+        public async Task GetCustomTargetTypeAsync()
+        {
+            // Snippet: GetCustomTargetTypeAsync(string, CallSettings)
+            // Additional: GetCustomTargetTypeAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/customTargetTypes/[CUSTOM_TARGET_TYPE]";
+            // Make the request
+            CustomTargetType response = await cloudDeployClient.GetCustomTargetTypeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomTargetType</summary>
+        public void GetCustomTargetTypeResourceNames()
+        {
+            // Snippet: GetCustomTargetType(CustomTargetTypeName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            CustomTargetTypeName name = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]");
+            // Make the request
+            CustomTargetType response = cloudDeployClient.GetCustomTargetType(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetCustomTargetTypeAsync</summary>
+        public async Task GetCustomTargetTypeResourceNamesAsync()
+        {
+            // Snippet: GetCustomTargetTypeAsync(CustomTargetTypeName, CallSettings)
+            // Additional: GetCustomTargetTypeAsync(CustomTargetTypeName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomTargetTypeName name = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]");
+            // Make the request
+            CustomTargetType response = await cloudDeployClient.GetCustomTargetTypeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomTargetType</summary>
+        public void CreateCustomTargetTypeRequestObject()
+        {
+            // Snippet: CreateCustomTargetType(CreateCustomTargetTypeRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            CreateCustomTargetTypeRequest request = new CreateCustomTargetTypeRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                CustomTargetTypeId = "",
+                CustomTargetType = new CustomTargetType(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = cloudDeployClient.CreateCustomTargetType(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomTargetTypeAsync</summary>
+        public async Task CreateCustomTargetTypeRequestObjectAsync()
+        {
+            // Snippet: CreateCustomTargetTypeAsync(CreateCustomTargetTypeRequest, CallSettings)
+            // Additional: CreateCustomTargetTypeAsync(CreateCustomTargetTypeRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateCustomTargetTypeRequest request = new CreateCustomTargetTypeRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                CustomTargetTypeId = "",
+                CustomTargetType = new CustomTargetType(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = await cloudDeployClient.CreateCustomTargetTypeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomTargetType</summary>
+        public void CreateCustomTargetType()
+        {
+            // Snippet: CreateCustomTargetType(string, CustomTargetType, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            CustomTargetType customTargetType = new CustomTargetType();
+            string customTargetTypeId = "";
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = cloudDeployClient.CreateCustomTargetType(parent, customTargetType, customTargetTypeId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomTargetTypeAsync</summary>
+        public async Task CreateCustomTargetTypeAsync()
+        {
+            // Snippet: CreateCustomTargetTypeAsync(string, CustomTargetType, string, CallSettings)
+            // Additional: CreateCustomTargetTypeAsync(string, CustomTargetType, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            CustomTargetType customTargetType = new CustomTargetType();
+            string customTargetTypeId = "";
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = await cloudDeployClient.CreateCustomTargetTypeAsync(parent, customTargetType, customTargetTypeId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomTargetType</summary>
+        public void CreateCustomTargetTypeResourceNames()
+        {
+            // Snippet: CreateCustomTargetType(LocationName, CustomTargetType, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            CustomTargetType customTargetType = new CustomTargetType();
+            string customTargetTypeId = "";
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = cloudDeployClient.CreateCustomTargetType(parent, customTargetType, customTargetTypeId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateCustomTargetTypeAsync</summary>
+        public async Task CreateCustomTargetTypeResourceNamesAsync()
+        {
+            // Snippet: CreateCustomTargetTypeAsync(LocationName, CustomTargetType, string, CallSettings)
+            // Additional: CreateCustomTargetTypeAsync(LocationName, CustomTargetType, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            CustomTargetType customTargetType = new CustomTargetType();
+            string customTargetTypeId = "";
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = await cloudDeployClient.CreateCustomTargetTypeAsync(parent, customTargetType, customTargetTypeId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomTargetType</summary>
+        public void UpdateCustomTargetTypeRequestObject()
+        {
+            // Snippet: UpdateCustomTargetType(UpdateCustomTargetTypeRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            UpdateCustomTargetTypeRequest request = new UpdateCustomTargetTypeRequest
+            {
+                UpdateMask = new FieldMask(),
+                CustomTargetType = new CustomTargetType(),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = cloudDeployClient.UpdateCustomTargetType(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceUpdateCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomTargetTypeAsync</summary>
+        public async Task UpdateCustomTargetTypeRequestObjectAsync()
+        {
+            // Snippet: UpdateCustomTargetTypeAsync(UpdateCustomTargetTypeRequest, CallSettings)
+            // Additional: UpdateCustomTargetTypeAsync(UpdateCustomTargetTypeRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCustomTargetTypeRequest request = new UpdateCustomTargetTypeRequest
+            {
+                UpdateMask = new FieldMask(),
+                CustomTargetType = new CustomTargetType(),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = await cloudDeployClient.UpdateCustomTargetTypeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceUpdateCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomTargetType</summary>
+        public void UpdateCustomTargetType()
+        {
+            // Snippet: UpdateCustomTargetType(CustomTargetType, FieldMask, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            CustomTargetType customTargetType = new CustomTargetType();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = cloudDeployClient.UpdateCustomTargetType(customTargetType, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceUpdateCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomTargetTypeAsync</summary>
+        public async Task UpdateCustomTargetTypeAsync()
+        {
+            // Snippet: UpdateCustomTargetTypeAsync(CustomTargetType, FieldMask, CallSettings)
+            // Additional: UpdateCustomTargetTypeAsync(CustomTargetType, FieldMask, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomTargetType customTargetType = new CustomTargetType();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<CustomTargetType, OperationMetadata> response = await cloudDeployClient.UpdateCustomTargetTypeAsync(customTargetType, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CustomTargetType, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CustomTargetType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CustomTargetType, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceUpdateCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CustomTargetType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomTargetType</summary>
+        public void DeleteCustomTargetTypeRequestObject()
+        {
+            // Snippet: DeleteCustomTargetType(DeleteCustomTargetTypeRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            DeleteCustomTargetTypeRequest request = new DeleteCustomTargetTypeRequest
+            {
+                CustomTargetTypeName = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]"),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteCustomTargetType(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomTargetTypeAsync</summary>
+        public async Task DeleteCustomTargetTypeRequestObjectAsync()
+        {
+            // Snippet: DeleteCustomTargetTypeAsync(DeleteCustomTargetTypeRequest, CallSettings)
+            // Additional: DeleteCustomTargetTypeAsync(DeleteCustomTargetTypeRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteCustomTargetTypeRequest request = new DeleteCustomTargetTypeRequest
+            {
+                CustomTargetTypeName = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]"),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudDeployClient.DeleteCustomTargetTypeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceDeleteCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomTargetType</summary>
+        public void DeleteCustomTargetType()
+        {
+            // Snippet: DeleteCustomTargetType(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/customTargetTypes/[CUSTOM_TARGET_TYPE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteCustomTargetType(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomTargetTypeAsync</summary>
+        public async Task DeleteCustomTargetTypeAsync()
+        {
+            // Snippet: DeleteCustomTargetTypeAsync(string, CallSettings)
+            // Additional: DeleteCustomTargetTypeAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/customTargetTypes/[CUSTOM_TARGET_TYPE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudDeployClient.DeleteCustomTargetTypeAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceDeleteCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomTargetType</summary>
+        public void DeleteCustomTargetTypeResourceNames()
+        {
+            // Snippet: DeleteCustomTargetType(CustomTargetTypeName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            CustomTargetTypeName name = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteCustomTargetType(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteCustomTargetType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteCustomTargetTypeAsync</summary>
+        public async Task DeleteCustomTargetTypeResourceNamesAsync()
+        {
+            // Snippet: DeleteCustomTargetTypeAsync(CustomTargetTypeName, CallSettings)
+            // Additional: DeleteCustomTargetTypeAsync(CustomTargetTypeName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomTargetTypeName name = CustomTargetTypeName.FromProjectLocationCustomTargetType("[PROJECT]", "[LOCATION]", "[CUSTOM_TARGET_TYPE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudDeployClient.DeleteCustomTargetTypeAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceDeleteCustomTargetTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListReleases</summary>
         public void ListReleasesRequestObject()
         {
@@ -2192,6 +3199,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 Release = new Release(),
                 RequestId = "",
                 ValidateOnly = false,
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             Operation<Release, OperationMetadata> response = cloudDeployClient.CreateRelease(request);
@@ -2229,6 +3240,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 Release = new Release(),
                 RequestId = "",
                 ValidateOnly = false,
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             Operation<Release, OperationMetadata> response = await cloudDeployClient.CreateReleaseAsync(request);
@@ -2464,6 +3479,897 @@ namespace Google.Cloud.Deploy.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateDeployPolicy</summary>
+        public void CreateDeployPolicyRequestObject()
+        {
+            // Snippet: CreateDeployPolicy(CreateDeployPolicyRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            CreateDeployPolicyRequest request = new CreateDeployPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DeployPolicyId = "",
+                DeployPolicy = new DeployPolicy(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<DeployPolicy, OperationMetadata> response = cloudDeployClient.CreateDeployPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeployPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployPolicy, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateDeployPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeployPolicyAsync</summary>
+        public async Task CreateDeployPolicyRequestObjectAsync()
+        {
+            // Snippet: CreateDeployPolicyAsync(CreateDeployPolicyRequest, CallSettings)
+            // Additional: CreateDeployPolicyAsync(CreateDeployPolicyRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDeployPolicyRequest request = new CreateDeployPolicyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                DeployPolicyId = "",
+                DeployPolicy = new DeployPolicy(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<DeployPolicy, OperationMetadata> response = await cloudDeployClient.CreateDeployPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeployPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployPolicy, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateDeployPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeployPolicy</summary>
+        public void CreateDeployPolicy()
+        {
+            // Snippet: CreateDeployPolicy(string, DeployPolicy, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            DeployPolicy deployPolicy = new DeployPolicy();
+            string deployPolicyId = "";
+            // Make the request
+            Operation<DeployPolicy, OperationMetadata> response = cloudDeployClient.CreateDeployPolicy(parent, deployPolicy, deployPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeployPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployPolicy, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateDeployPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeployPolicyAsync</summary>
+        public async Task CreateDeployPolicyAsync()
+        {
+            // Snippet: CreateDeployPolicyAsync(string, DeployPolicy, string, CallSettings)
+            // Additional: CreateDeployPolicyAsync(string, DeployPolicy, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            DeployPolicy deployPolicy = new DeployPolicy();
+            string deployPolicyId = "";
+            // Make the request
+            Operation<DeployPolicy, OperationMetadata> response = await cloudDeployClient.CreateDeployPolicyAsync(parent, deployPolicy, deployPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeployPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployPolicy, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateDeployPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeployPolicy</summary>
+        public void CreateDeployPolicyResourceNames()
+        {
+            // Snippet: CreateDeployPolicy(LocationName, DeployPolicy, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DeployPolicy deployPolicy = new DeployPolicy();
+            string deployPolicyId = "";
+            // Make the request
+            Operation<DeployPolicy, OperationMetadata> response = cloudDeployClient.CreateDeployPolicy(parent, deployPolicy, deployPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeployPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployPolicy, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateDeployPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDeployPolicyAsync</summary>
+        public async Task CreateDeployPolicyResourceNamesAsync()
+        {
+            // Snippet: CreateDeployPolicyAsync(LocationName, DeployPolicy, string, CallSettings)
+            // Additional: CreateDeployPolicyAsync(LocationName, DeployPolicy, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            DeployPolicy deployPolicy = new DeployPolicy();
+            string deployPolicyId = "";
+            // Make the request
+            Operation<DeployPolicy, OperationMetadata> response = await cloudDeployClient.CreateDeployPolicyAsync(parent, deployPolicy, deployPolicyId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeployPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployPolicy, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateDeployPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDeployPolicy</summary>
+        public void UpdateDeployPolicyRequestObject()
+        {
+            // Snippet: UpdateDeployPolicy(UpdateDeployPolicyRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            UpdateDeployPolicyRequest request = new UpdateDeployPolicyRequest
+            {
+                UpdateMask = new FieldMask(),
+                DeployPolicy = new DeployPolicy(),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<DeployPolicy, OperationMetadata> response = cloudDeployClient.UpdateDeployPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeployPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployPolicy, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceUpdateDeployPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDeployPolicyAsync</summary>
+        public async Task UpdateDeployPolicyRequestObjectAsync()
+        {
+            // Snippet: UpdateDeployPolicyAsync(UpdateDeployPolicyRequest, CallSettings)
+            // Additional: UpdateDeployPolicyAsync(UpdateDeployPolicyRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDeployPolicyRequest request = new UpdateDeployPolicyRequest
+            {
+                UpdateMask = new FieldMask(),
+                DeployPolicy = new DeployPolicy(),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<DeployPolicy, OperationMetadata> response = await cloudDeployClient.UpdateDeployPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeployPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployPolicy, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceUpdateDeployPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDeployPolicy</summary>
+        public void UpdateDeployPolicy()
+        {
+            // Snippet: UpdateDeployPolicy(DeployPolicy, FieldMask, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            DeployPolicy deployPolicy = new DeployPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DeployPolicy, OperationMetadata> response = cloudDeployClient.UpdateDeployPolicy(deployPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployPolicy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeployPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployPolicy, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceUpdateDeployPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDeployPolicyAsync</summary>
+        public async Task UpdateDeployPolicyAsync()
+        {
+            // Snippet: UpdateDeployPolicyAsync(DeployPolicy, FieldMask, CallSettings)
+            // Additional: UpdateDeployPolicyAsync(DeployPolicy, FieldMask, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            DeployPolicy deployPolicy = new DeployPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<DeployPolicy, OperationMetadata> response = await cloudDeployClient.UpdateDeployPolicyAsync(deployPolicy, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployPolicy, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeployPolicy result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployPolicy, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceUpdateDeployPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployPolicy retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeployPolicy</summary>
+        public void DeleteDeployPolicyRequestObject()
+        {
+            // Snippet: DeleteDeployPolicy(DeleteDeployPolicyRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            DeleteDeployPolicyRequest request = new DeleteDeployPolicyRequest
+            {
+                DeployPolicyName = DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteDeployPolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteDeployPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeployPolicyAsync</summary>
+        public async Task DeleteDeployPolicyRequestObjectAsync()
+        {
+            // Snippet: DeleteDeployPolicyAsync(DeleteDeployPolicyRequest, CallSettings)
+            // Additional: DeleteDeployPolicyAsync(DeleteDeployPolicyRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteDeployPolicyRequest request = new DeleteDeployPolicyRequest
+            {
+                DeployPolicyName = DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudDeployClient.DeleteDeployPolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceDeleteDeployPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeployPolicy</summary>
+        public void DeleteDeployPolicy()
+        {
+            // Snippet: DeleteDeployPolicy(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deployPolicies/[DEPLOY_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteDeployPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteDeployPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeployPolicyAsync</summary>
+        public async Task DeleteDeployPolicyAsync()
+        {
+            // Snippet: DeleteDeployPolicyAsync(string, CallSettings)
+            // Additional: DeleteDeployPolicyAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deployPolicies/[DEPLOY_POLICY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudDeployClient.DeleteDeployPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceDeleteDeployPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeployPolicy</summary>
+        public void DeleteDeployPolicyResourceNames()
+        {
+            // Snippet: DeleteDeployPolicy(DeployPolicyName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            DeployPolicyName name = DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteDeployPolicy(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteDeployPolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeployPolicyAsync</summary>
+        public async Task DeleteDeployPolicyResourceNamesAsync()
+        {
+            // Snippet: DeleteDeployPolicyAsync(DeployPolicyName, CallSettings)
+            // Additional: DeleteDeployPolicyAsync(DeployPolicyName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            DeployPolicyName name = DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudDeployClient.DeleteDeployPolicyAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceDeleteDeployPolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeployPolicies</summary>
+        public void ListDeployPoliciesRequestObject()
+        {
+            // Snippet: ListDeployPolicies(ListDeployPoliciesRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            ListDeployPoliciesRequest request = new ListDeployPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDeployPoliciesResponse, DeployPolicy> response = cloudDeployClient.ListDeployPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeployPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeployPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeployPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeployPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeployPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeployPoliciesAsync</summary>
+        public async Task ListDeployPoliciesRequestObjectAsync()
+        {
+            // Snippet: ListDeployPoliciesAsync(ListDeployPoliciesRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDeployPoliciesRequest request = new ListDeployPoliciesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDeployPoliciesResponse, DeployPolicy> response = cloudDeployClient.ListDeployPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DeployPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDeployPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeployPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeployPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeployPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeployPolicies</summary>
+        public void ListDeployPolicies()
+        {
+            // Snippet: ListDeployPolicies(string, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListDeployPoliciesResponse, DeployPolicy> response = cloudDeployClient.ListDeployPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeployPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeployPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeployPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeployPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeployPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeployPoliciesAsync</summary>
+        public async Task ListDeployPoliciesAsync()
+        {
+            // Snippet: ListDeployPoliciesAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListDeployPoliciesResponse, DeployPolicy> response = cloudDeployClient.ListDeployPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DeployPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDeployPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeployPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeployPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeployPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeployPolicies</summary>
+        public void ListDeployPoliciesResourceNames()
+        {
+            // Snippet: ListDeployPolicies(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDeployPoliciesResponse, DeployPolicy> response = cloudDeployClient.ListDeployPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DeployPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDeployPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeployPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeployPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeployPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDeployPoliciesAsync</summary>
+        public async Task ListDeployPoliciesResourceNamesAsync()
+        {
+            // Snippet: ListDeployPoliciesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListDeployPoliciesResponse, DeployPolicy> response = cloudDeployClient.ListDeployPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DeployPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDeployPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DeployPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DeployPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DeployPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeployPolicy</summary>
+        public void GetDeployPolicyRequestObject()
+        {
+            // Snippet: GetDeployPolicy(GetDeployPolicyRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            GetDeployPolicyRequest request = new GetDeployPolicyRequest
+            {
+                DeployPolicyName = DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+            };
+            // Make the request
+            DeployPolicy response = cloudDeployClient.GetDeployPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeployPolicyAsync</summary>
+        public async Task GetDeployPolicyRequestObjectAsync()
+        {
+            // Snippet: GetDeployPolicyAsync(GetDeployPolicyRequest, CallSettings)
+            // Additional: GetDeployPolicyAsync(GetDeployPolicyRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDeployPolicyRequest request = new GetDeployPolicyRequest
+            {
+                DeployPolicyName = DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+            };
+            // Make the request
+            DeployPolicy response = await cloudDeployClient.GetDeployPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeployPolicy</summary>
+        public void GetDeployPolicy()
+        {
+            // Snippet: GetDeployPolicy(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deployPolicies/[DEPLOY_POLICY]";
+            // Make the request
+            DeployPolicy response = cloudDeployClient.GetDeployPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeployPolicyAsync</summary>
+        public async Task GetDeployPolicyAsync()
+        {
+            // Snippet: GetDeployPolicyAsync(string, CallSettings)
+            // Additional: GetDeployPolicyAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deployPolicies/[DEPLOY_POLICY]";
+            // Make the request
+            DeployPolicy response = await cloudDeployClient.GetDeployPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeployPolicy</summary>
+        public void GetDeployPolicyResourceNames()
+        {
+            // Snippet: GetDeployPolicy(DeployPolicyName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            DeployPolicyName name = DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]");
+            // Make the request
+            DeployPolicy response = cloudDeployClient.GetDeployPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDeployPolicyAsync</summary>
+        public async Task GetDeployPolicyResourceNamesAsync()
+        {
+            // Snippet: GetDeployPolicyAsync(DeployPolicyName, CallSettings)
+            // Additional: GetDeployPolicyAsync(DeployPolicyName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            DeployPolicyName name = DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]");
+            // Make the request
+            DeployPolicy response = await cloudDeployClient.GetDeployPolicyAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for ApproveRollout</summary>
         public void ApproveRolloutRequestObject()
         {
@@ -2475,6 +4381,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
                 Approved = false,
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             ApproveRolloutResponse response = cloudDeployClient.ApproveRollout(request);
@@ -2493,6 +4403,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
                 Approved = false,
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             ApproveRolloutResponse response = await cloudDeployClient.ApproveRolloutAsync(request);
@@ -2564,6 +4478,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
                 PhaseId = "",
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             AdvanceRolloutResponse response = cloudDeployClient.AdvanceRollout(request);
@@ -2582,6 +4500,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
                 PhaseId = "",
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             AdvanceRolloutResponse response = await cloudDeployClient.AdvanceRolloutAsync(request);
@@ -2656,6 +4578,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
             CancelRolloutRequest request = new CancelRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             CancelRolloutResponse response = cloudDeployClient.CancelRollout(request);
@@ -2673,6 +4599,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
             CancelRolloutRequest request = new CancelRolloutRequest
             {
                 RolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             CancelRolloutResponse response = await cloudDeployClient.CancelRolloutAsync(request);
@@ -3114,6 +5044,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 Rollout = new Rollout(),
                 RequestId = "",
                 ValidateOnly = false,
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
                 StartingPhaseId = "",
             };
             // Make the request
@@ -3152,6 +5086,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 Rollout = new Rollout(),
                 RequestId = "",
                 ValidateOnly = false,
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
                 StartingPhaseId = "",
             };
             // Make the request
@@ -3313,6 +5251,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
                 PhaseId = "",
                 JobId = "",
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             IgnoreJobResponse response = cloudDeployClient.IgnoreJob(request);
@@ -3332,6 +5274,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
                 PhaseId = "",
                 JobId = "",
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             IgnoreJobResponse response = await cloudDeployClient.IgnoreJobAsync(request);
@@ -3412,6 +5358,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
                 PhaseId = "",
                 JobId = "",
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             RetryJobResponse response = cloudDeployClient.RetryJob(request);
@@ -3431,6 +5381,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
                 RolloutAsRolloutName = RolloutName.FromProjectLocationDeliveryPipelineReleaseRollout("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]"),
                 PhaseId = "",
                 JobId = "",
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             RetryJobResponse response = await cloudDeployClient.RetryJobAsync(request);
@@ -3876,6 +5830,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
             TerminateJobRunRequest request = new TerminateJobRunRequest
             {
                 JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             TerminateJobRunResponse response = cloudDeployClient.TerminateJobRun(request);
@@ -3893,6 +5851,10 @@ namespace Google.Cloud.Deploy.V1.Snippets
             TerminateJobRunRequest request = new TerminateJobRunRequest
             {
                 JobRunName = JobRunName.FromProjectLocationDeliveryPipelineReleaseRolloutJobRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[RELEASE]", "[ROLLOUT]", "[JOB_RUN]"),
+                OverrideDeployPolicyAsDeployPolicyNames =
+                {
+                    DeployPolicyName.FromProjectLocationDeployPolicy("[PROJECT]", "[LOCATION]", "[DEPLOY_POLICY]"),
+                },
             };
             // Make the request
             TerminateJobRunResponse response = await cloudDeployClient.TerminateJobRunAsync(request);
@@ -4037,6 +5999,1351 @@ namespace Google.Cloud.Deploy.V1.Snippets
             ConfigName name = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             Config response = await cloudDeployClient.GetConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutomation</summary>
+        public void CreateAutomationRequestObject()
+        {
+            // Snippet: CreateAutomation(CreateAutomationRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            CreateAutomationRequest request = new CreateAutomationRequest
+            {
+                ParentAsDeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
+                AutomationId = "",
+                Automation = new Automation(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Automation, OperationMetadata> response = cloudDeployClient.CreateAutomation(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Automation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Automation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Automation, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateAutomation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Automation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutomationAsync</summary>
+        public async Task CreateAutomationRequestObjectAsync()
+        {
+            // Snippet: CreateAutomationAsync(CreateAutomationRequest, CallSettings)
+            // Additional: CreateAutomationAsync(CreateAutomationRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAutomationRequest request = new CreateAutomationRequest
+            {
+                ParentAsDeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
+                AutomationId = "",
+                Automation = new Automation(),
+                RequestId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Automation, OperationMetadata> response = await cloudDeployClient.CreateAutomationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Automation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Automation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Automation, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateAutomationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Automation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutomation</summary>
+        public void CreateAutomation()
+        {
+            // Snippet: CreateAutomation(string, Automation, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]";
+            Automation automation = new Automation();
+            string automationId = "";
+            // Make the request
+            Operation<Automation, OperationMetadata> response = cloudDeployClient.CreateAutomation(parent, automation, automationId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Automation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Automation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Automation, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateAutomation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Automation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutomationAsync</summary>
+        public async Task CreateAutomationAsync()
+        {
+            // Snippet: CreateAutomationAsync(string, Automation, string, CallSettings)
+            // Additional: CreateAutomationAsync(string, Automation, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]";
+            Automation automation = new Automation();
+            string automationId = "";
+            // Make the request
+            Operation<Automation, OperationMetadata> response = await cloudDeployClient.CreateAutomationAsync(parent, automation, automationId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Automation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Automation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Automation, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateAutomationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Automation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutomation</summary>
+        public void CreateAutomationResourceNames()
+        {
+            // Snippet: CreateAutomation(DeliveryPipelineName, Automation, string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            DeliveryPipelineName parent = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]");
+            Automation automation = new Automation();
+            string automationId = "";
+            // Make the request
+            Operation<Automation, OperationMetadata> response = cloudDeployClient.CreateAutomation(parent, automation, automationId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Automation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Automation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Automation, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceCreateAutomation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Automation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAutomationAsync</summary>
+        public async Task CreateAutomationResourceNamesAsync()
+        {
+            // Snippet: CreateAutomationAsync(DeliveryPipelineName, Automation, string, CallSettings)
+            // Additional: CreateAutomationAsync(DeliveryPipelineName, Automation, string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            DeliveryPipelineName parent = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]");
+            Automation automation = new Automation();
+            string automationId = "";
+            // Make the request
+            Operation<Automation, OperationMetadata> response = await cloudDeployClient.CreateAutomationAsync(parent, automation, automationId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Automation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Automation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Automation, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceCreateAutomationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Automation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutomation</summary>
+        public void UpdateAutomationRequestObject()
+        {
+            // Snippet: UpdateAutomation(UpdateAutomationRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            UpdateAutomationRequest request = new UpdateAutomationRequest
+            {
+                UpdateMask = new FieldMask(),
+                Automation = new Automation(),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Automation, OperationMetadata> response = cloudDeployClient.UpdateAutomation(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Automation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Automation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Automation, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceUpdateAutomation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Automation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutomationAsync</summary>
+        public async Task UpdateAutomationRequestObjectAsync()
+        {
+            // Snippet: UpdateAutomationAsync(UpdateAutomationRequest, CallSettings)
+            // Additional: UpdateAutomationAsync(UpdateAutomationRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAutomationRequest request = new UpdateAutomationRequest
+            {
+                UpdateMask = new FieldMask(),
+                Automation = new Automation(),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Automation, OperationMetadata> response = await cloudDeployClient.UpdateAutomationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Automation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Automation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Automation, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceUpdateAutomationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Automation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutomation</summary>
+        public void UpdateAutomation()
+        {
+            // Snippet: UpdateAutomation(Automation, FieldMask, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            Automation automation = new Automation();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Automation, OperationMetadata> response = cloudDeployClient.UpdateAutomation(automation, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Automation, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Automation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Automation, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceUpdateAutomation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Automation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAutomationAsync</summary>
+        public async Task UpdateAutomationAsync()
+        {
+            // Snippet: UpdateAutomationAsync(Automation, FieldMask, CallSettings)
+            // Additional: UpdateAutomationAsync(Automation, FieldMask, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            Automation automation = new Automation();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Automation, OperationMetadata> response = await cloudDeployClient.UpdateAutomationAsync(automation, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Automation, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Automation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Automation, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceUpdateAutomationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Automation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutomation</summary>
+        public void DeleteAutomationRequestObject()
+        {
+            // Snippet: DeleteAutomation(DeleteAutomationRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            DeleteAutomationRequest request = new DeleteAutomationRequest
+            {
+                AutomationName = AutomationName.FromProjectLocationDeliveryPipelineAutomation("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION]"),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteAutomation(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteAutomation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutomationAsync</summary>
+        public async Task DeleteAutomationRequestObjectAsync()
+        {
+            // Snippet: DeleteAutomationAsync(DeleteAutomationRequest, CallSettings)
+            // Additional: DeleteAutomationAsync(DeleteAutomationRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAutomationRequest request = new DeleteAutomationRequest
+            {
+                AutomationName = AutomationName.FromProjectLocationDeliveryPipelineAutomation("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION]"),
+                RequestId = "",
+                AllowMissing = false,
+                ValidateOnly = false,
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudDeployClient.DeleteAutomationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceDeleteAutomationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutomation</summary>
+        public void DeleteAutomation()
+        {
+            // Snippet: DeleteAutomation(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/automations/[AUTOMATION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteAutomation(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteAutomation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutomationAsync</summary>
+        public async Task DeleteAutomationAsync()
+        {
+            // Snippet: DeleteAutomationAsync(string, CallSettings)
+            // Additional: DeleteAutomationAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/automations/[AUTOMATION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudDeployClient.DeleteAutomationAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceDeleteAutomationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutomation</summary>
+        public void DeleteAutomationResourceNames()
+        {
+            // Snippet: DeleteAutomation(AutomationName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            AutomationName name = AutomationName.FromProjectLocationDeliveryPipelineAutomation("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudDeployClient.DeleteAutomation(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudDeployClient.PollOnceDeleteAutomation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAutomationAsync</summary>
+        public async Task DeleteAutomationResourceNamesAsync()
+        {
+            // Snippet: DeleteAutomationAsync(AutomationName, CallSettings)
+            // Additional: DeleteAutomationAsync(AutomationName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            AutomationName name = AutomationName.FromProjectLocationDeliveryPipelineAutomation("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudDeployClient.DeleteAutomationAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudDeployClient.PollOnceDeleteAutomationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutomation</summary>
+        public void GetAutomationRequestObject()
+        {
+            // Snippet: GetAutomation(GetAutomationRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            GetAutomationRequest request = new GetAutomationRequest
+            {
+                AutomationName = AutomationName.FromProjectLocationDeliveryPipelineAutomation("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION]"),
+            };
+            // Make the request
+            Automation response = cloudDeployClient.GetAutomation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutomationAsync</summary>
+        public async Task GetAutomationRequestObjectAsync()
+        {
+            // Snippet: GetAutomationAsync(GetAutomationRequest, CallSettings)
+            // Additional: GetAutomationAsync(GetAutomationRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAutomationRequest request = new GetAutomationRequest
+            {
+                AutomationName = AutomationName.FromProjectLocationDeliveryPipelineAutomation("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION]"),
+            };
+            // Make the request
+            Automation response = await cloudDeployClient.GetAutomationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutomation</summary>
+        public void GetAutomation()
+        {
+            // Snippet: GetAutomation(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/automations/[AUTOMATION]";
+            // Make the request
+            Automation response = cloudDeployClient.GetAutomation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutomationAsync</summary>
+        public async Task GetAutomationAsync()
+        {
+            // Snippet: GetAutomationAsync(string, CallSettings)
+            // Additional: GetAutomationAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/automations/[AUTOMATION]";
+            // Make the request
+            Automation response = await cloudDeployClient.GetAutomationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutomation</summary>
+        public void GetAutomationResourceNames()
+        {
+            // Snippet: GetAutomation(AutomationName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            AutomationName name = AutomationName.FromProjectLocationDeliveryPipelineAutomation("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION]");
+            // Make the request
+            Automation response = cloudDeployClient.GetAutomation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutomationAsync</summary>
+        public async Task GetAutomationResourceNamesAsync()
+        {
+            // Snippet: GetAutomationAsync(AutomationName, CallSettings)
+            // Additional: GetAutomationAsync(AutomationName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            AutomationName name = AutomationName.FromProjectLocationDeliveryPipelineAutomation("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION]");
+            // Make the request
+            Automation response = await cloudDeployClient.GetAutomationAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutomations</summary>
+        public void ListAutomationsRequestObject()
+        {
+            // Snippet: ListAutomations(ListAutomationsRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            ListAutomationsRequest request = new ListAutomationsRequest
+            {
+                ParentAsDeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAutomationsResponse, Automation> response = cloudDeployClient.ListAutomations(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Automation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutomationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Automation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Automation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Automation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutomationsAsync</summary>
+        public async Task ListAutomationsRequestObjectAsync()
+        {
+            // Snippet: ListAutomationsAsync(ListAutomationsRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAutomationsRequest request = new ListAutomationsRequest
+            {
+                ParentAsDeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAutomationsResponse, Automation> response = cloudDeployClient.ListAutomationsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Automation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAutomationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Automation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Automation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Automation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutomations</summary>
+        public void ListAutomations()
+        {
+            // Snippet: ListAutomations(string, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]";
+            // Make the request
+            PagedEnumerable<ListAutomationsResponse, Automation> response = cloudDeployClient.ListAutomations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Automation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutomationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Automation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Automation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Automation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutomationsAsync</summary>
+        public async Task ListAutomationsAsync()
+        {
+            // Snippet: ListAutomationsAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]";
+            // Make the request
+            PagedAsyncEnumerable<ListAutomationsResponse, Automation> response = cloudDeployClient.ListAutomationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Automation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAutomationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Automation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Automation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Automation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutomations</summary>
+        public void ListAutomationsResourceNames()
+        {
+            // Snippet: ListAutomations(DeliveryPipelineName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            DeliveryPipelineName parent = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]");
+            // Make the request
+            PagedEnumerable<ListAutomationsResponse, Automation> response = cloudDeployClient.ListAutomations(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Automation item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutomationsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Automation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Automation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Automation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutomationsAsync</summary>
+        public async Task ListAutomationsResourceNamesAsync()
+        {
+            // Snippet: ListAutomationsAsync(DeliveryPipelineName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            DeliveryPipelineName parent = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]");
+            // Make the request
+            PagedAsyncEnumerable<ListAutomationsResponse, Automation> response = cloudDeployClient.ListAutomationsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Automation item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAutomationsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Automation item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Automation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Automation item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutomationRun</summary>
+        public void GetAutomationRunRequestObject()
+        {
+            // Snippet: GetAutomationRun(GetAutomationRunRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            GetAutomationRunRequest request = new GetAutomationRunRequest
+            {
+                AutomationRunName = AutomationRunName.FromProjectLocationDeliveryPipelineAutomationRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION_RUN]"),
+            };
+            // Make the request
+            AutomationRun response = cloudDeployClient.GetAutomationRun(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutomationRunAsync</summary>
+        public async Task GetAutomationRunRequestObjectAsync()
+        {
+            // Snippet: GetAutomationRunAsync(GetAutomationRunRequest, CallSettings)
+            // Additional: GetAutomationRunAsync(GetAutomationRunRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAutomationRunRequest request = new GetAutomationRunRequest
+            {
+                AutomationRunName = AutomationRunName.FromProjectLocationDeliveryPipelineAutomationRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION_RUN]"),
+            };
+            // Make the request
+            AutomationRun response = await cloudDeployClient.GetAutomationRunAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutomationRun</summary>
+        public void GetAutomationRun()
+        {
+            // Snippet: GetAutomationRun(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/automationRuns/[AUTOMATION_RUN]";
+            // Make the request
+            AutomationRun response = cloudDeployClient.GetAutomationRun(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutomationRunAsync</summary>
+        public async Task GetAutomationRunAsync()
+        {
+            // Snippet: GetAutomationRunAsync(string, CallSettings)
+            // Additional: GetAutomationRunAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/automationRuns/[AUTOMATION_RUN]";
+            // Make the request
+            AutomationRun response = await cloudDeployClient.GetAutomationRunAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutomationRun</summary>
+        public void GetAutomationRunResourceNames()
+        {
+            // Snippet: GetAutomationRun(AutomationRunName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            AutomationRunName name = AutomationRunName.FromProjectLocationDeliveryPipelineAutomationRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION_RUN]");
+            // Make the request
+            AutomationRun response = cloudDeployClient.GetAutomationRun(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAutomationRunAsync</summary>
+        public async Task GetAutomationRunResourceNamesAsync()
+        {
+            // Snippet: GetAutomationRunAsync(AutomationRunName, CallSettings)
+            // Additional: GetAutomationRunAsync(AutomationRunName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            AutomationRunName name = AutomationRunName.FromProjectLocationDeliveryPipelineAutomationRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION_RUN]");
+            // Make the request
+            AutomationRun response = await cloudDeployClient.GetAutomationRunAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutomationRuns</summary>
+        public void ListAutomationRunsRequestObject()
+        {
+            // Snippet: ListAutomationRuns(ListAutomationRunsRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            ListAutomationRunsRequest request = new ListAutomationRunsRequest
+            {
+                ParentAsDeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListAutomationRunsResponse, AutomationRun> response = cloudDeployClient.ListAutomationRuns(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutomationRun item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutomationRunsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutomationRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutomationRun> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutomationRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutomationRunsAsync</summary>
+        public async Task ListAutomationRunsRequestObjectAsync()
+        {
+            // Snippet: ListAutomationRunsAsync(ListAutomationRunsRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAutomationRunsRequest request = new ListAutomationRunsRequest
+            {
+                ParentAsDeliveryPipelineName = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAutomationRunsResponse, AutomationRun> response = cloudDeployClient.ListAutomationRunsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AutomationRun item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAutomationRunsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutomationRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutomationRun> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutomationRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutomationRuns</summary>
+        public void ListAutomationRuns()
+        {
+            // Snippet: ListAutomationRuns(string, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]";
+            // Make the request
+            PagedEnumerable<ListAutomationRunsResponse, AutomationRun> response = cloudDeployClient.ListAutomationRuns(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutomationRun item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutomationRunsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutomationRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutomationRun> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutomationRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutomationRunsAsync</summary>
+        public async Task ListAutomationRunsAsync()
+        {
+            // Snippet: ListAutomationRunsAsync(string, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]";
+            // Make the request
+            PagedAsyncEnumerable<ListAutomationRunsResponse, AutomationRun> response = cloudDeployClient.ListAutomationRunsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AutomationRun item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAutomationRunsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutomationRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutomationRun> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutomationRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutomationRuns</summary>
+        public void ListAutomationRunsResourceNames()
+        {
+            // Snippet: ListAutomationRuns(DeliveryPipelineName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            DeliveryPipelineName parent = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]");
+            // Make the request
+            PagedEnumerable<ListAutomationRunsResponse, AutomationRun> response = cloudDeployClient.ListAutomationRuns(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AutomationRun item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAutomationRunsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutomationRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutomationRun> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutomationRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAutomationRunsAsync</summary>
+        public async Task ListAutomationRunsResourceNamesAsync()
+        {
+            // Snippet: ListAutomationRunsAsync(DeliveryPipelineName, string, int?, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            DeliveryPipelineName parent = DeliveryPipelineName.FromProjectLocationDeliveryPipeline("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]");
+            // Make the request
+            PagedAsyncEnumerable<ListAutomationRunsResponse, AutomationRun> response = cloudDeployClient.ListAutomationRunsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((AutomationRun item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListAutomationRunsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AutomationRun item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AutomationRun> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AutomationRun item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelAutomationRun</summary>
+        public void CancelAutomationRunRequestObject()
+        {
+            // Snippet: CancelAutomationRun(CancelAutomationRunRequest, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            CancelAutomationRunRequest request = new CancelAutomationRunRequest
+            {
+                AutomationRunName = AutomationRunName.FromProjectLocationDeliveryPipelineAutomationRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION_RUN]"),
+            };
+            // Make the request
+            CancelAutomationRunResponse response = cloudDeployClient.CancelAutomationRun(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelAutomationRunAsync</summary>
+        public async Task CancelAutomationRunRequestObjectAsync()
+        {
+            // Snippet: CancelAutomationRunAsync(CancelAutomationRunRequest, CallSettings)
+            // Additional: CancelAutomationRunAsync(CancelAutomationRunRequest, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelAutomationRunRequest request = new CancelAutomationRunRequest
+            {
+                AutomationRunName = AutomationRunName.FromProjectLocationDeliveryPipelineAutomationRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION_RUN]"),
+            };
+            // Make the request
+            CancelAutomationRunResponse response = await cloudDeployClient.CancelAutomationRunAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelAutomationRun</summary>
+        public void CancelAutomationRun()
+        {
+            // Snippet: CancelAutomationRun(string, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/automationRuns/[AUTOMATION_RUN]";
+            // Make the request
+            CancelAutomationRunResponse response = cloudDeployClient.CancelAutomationRun(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelAutomationRunAsync</summary>
+        public async Task CancelAutomationRunAsync()
+        {
+            // Snippet: CancelAutomationRunAsync(string, CallSettings)
+            // Additional: CancelAutomationRunAsync(string, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/deliveryPipelines/[DELIVERY_PIPELINE]/automationRuns/[AUTOMATION_RUN]";
+            // Make the request
+            CancelAutomationRunResponse response = await cloudDeployClient.CancelAutomationRunAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelAutomationRun</summary>
+        public void CancelAutomationRunResourceNames()
+        {
+            // Snippet: CancelAutomationRun(AutomationRunName, CallSettings)
+            // Create client
+            CloudDeployClient cloudDeployClient = CloudDeployClient.Create();
+            // Initialize request argument(s)
+            AutomationRunName name = AutomationRunName.FromProjectLocationDeliveryPipelineAutomationRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION_RUN]");
+            // Make the request
+            CancelAutomationRunResponse response = cloudDeployClient.CancelAutomationRun(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelAutomationRunAsync</summary>
+        public async Task CancelAutomationRunResourceNamesAsync()
+        {
+            // Snippet: CancelAutomationRunAsync(AutomationRunName, CallSettings)
+            // Additional: CancelAutomationRunAsync(AutomationRunName, CancellationToken)
+            // Create client
+            CloudDeployClient cloudDeployClient = await CloudDeployClient.CreateAsync();
+            // Initialize request argument(s)
+            AutomationRunName name = AutomationRunName.FromProjectLocationDeliveryPipelineAutomationRun("[PROJECT]", "[LOCATION]", "[DELIVERY_PIPELINE]", "[AUTOMATION_RUN]");
+            // Make the request
+            CancelAutomationRunResponse response = await cloudDeployClient.CancelAutomationRunAsync(name);
             // End snippet
         }
     }

@@ -88,21 +88,25 @@ namespace Google.Cloud.AIPlatform.V1 {
             "aWcuRXhwbGFuYXRpb25Db25maWcuRXhwbGFuYXRpb25CYXNlbGluZS5QcmVk",
             "aWN0aW9uRm9ybWF0Ik4KEFByZWRpY3Rpb25Gb3JtYXQSIQodUFJFRElDVElP",
             "Tl9GT1JNQVRfVU5TUEVDSUZJRUQQABIJCgVKU09OTBACEgwKCEJJR1FVRVJZ",
-            "EANCDQoLZGVzdGluYXRpb24izQEKGk1vZGVsTW9uaXRvcmluZ0FsZXJ0Q29u",
+            "EANCDQoLZGVzdGluYXRpb24ioAIKGk1vZGVsTW9uaXRvcmluZ0FsZXJ0Q29u",
             "ZmlnEmUKEmVtYWlsX2FsZXJ0X2NvbmZpZxgBIAEoCzJHLmdvb2dsZS5jbG91",
             "ZC5haXBsYXRmb3JtLnYxLk1vZGVsTW9uaXRvcmluZ0FsZXJ0Q29uZmlnLkVt",
-            "YWlsQWxlcnRDb25maWdIABIWCg5lbmFibGVfbG9nZ2luZxgCIAEoCBonChBF",
-            "bWFpbEFsZXJ0Q29uZmlnEhMKC3VzZXJfZW1haWxzGAEgAygJQgcKBWFsZXJ0",
-            "Ii8KD1RocmVzaG9sZENvbmZpZxIPCgV2YWx1ZRgBIAEoAUgAQgsKCXRocmVz",
-            "aG9sZCKcAQoQU2FtcGxpbmdTdHJhdGVneRJdChRyYW5kb21fc2FtcGxlX2Nv",
-            "bmZpZxgBIAEoCzI/Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNhbXBs",
-            "aW5nU3RyYXRlZ3kuUmFuZG9tU2FtcGxlQ29uZmlnGikKElJhbmRvbVNhbXBs",
-            "ZUNvbmZpZxITCgtzYW1wbGVfcmF0ZRgBIAEoAULSAQoeY29tLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxQhRNb2RlbE1vbml0b3JpbmdQcm90b1ABWj5j",
-            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9y",
-            "bXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
-            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
-            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "YWlsQWxlcnRDb25maWdIABIWCg5lbmFibGVfbG9nZ2luZxgCIAEoCBJRChVu",
+            "b3RpZmljYXRpb25fY2hhbm5lbHMYAyADKAlCMvpBLwotbW9uaXRvcmluZy5n",
+            "b29nbGVhcGlzLmNvbS9Ob3RpZmljYXRpb25DaGFubmVsGicKEEVtYWlsQWxl",
+            "cnRDb25maWcSEwoLdXNlcl9lbWFpbHMYASADKAlCBwoFYWxlcnQiLwoPVGhy",
+            "ZXNob2xkQ29uZmlnEg8KBXZhbHVlGAEgASgBSABCCwoJdGhyZXNob2xkIpwB",
+            "ChBTYW1wbGluZ1N0cmF0ZWd5El0KFHJhbmRvbV9zYW1wbGVfY29uZmlnGAEg",
+            "ASgLMj8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU2FtcGxpbmdTdHJh",
+            "dGVneS5SYW5kb21TYW1wbGVDb25maWcaKQoSUmFuZG9tU2FtcGxlQ29uZmln",
+            "EhMKC3NhbXBsZV9yYXRlGAEgASgBQsQCCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFCFE1vZGVsTW9uaXRvcmluZ1Byb3RvUAFaPmNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlw",
+            "bGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29n",
+            "bGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
+            "dGZvcm06OlYx6kFvCi1tb25pdG9yaW5nLmdvb2dsZWFwaXMuY29tL05vdGlm",
+            "aWNhdGlvbkNoYW5uZWwSPnByb2plY3RzL3twcm9qZWN0fS9ub3RpZmljYXRp",
+            "b25DaGFubmVscy97bm90aWZpY2F0aW9uX2NoYW5uZWx9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -110,7 +114,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig.Parser, new[]{ "SkewThresholds", "AttributionScoreSkewThresholds", "DefaultSkewThreshold" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.PredictionDriftDetectionConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.PredictionDriftDetectionConfig.Parser, new[]{ "DriftThresholds", "AttributionScoreDriftThresholds", "DefaultDriftThreshold" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Parser, new[]{ "EnableFeatureAttributes", "ExplanationBaseline" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline.Parser, new[]{ "Gcs", "Bigquery", "PredictionFormat" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline.Types.PredictionFormat) }, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Parser, new[]{ "EmailAlertConfig", "EnableLogging" }, new[]{ "Alert" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig.Parser, new[]{ "UserEmails" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Parser, new[]{ "EmailAlertConfig", "EnableLogging", "NotificationChannels" }, new[]{ "Alert" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig.Parser, new[]{ "UserEmails" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ThresholdConfig), global::Google.Cloud.AIPlatform.V1.ThresholdConfig.Parser, new[]{ "Value" }, new[]{ "Threshold" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SamplingStrategy), global::Google.Cloud.AIPlatform.V1.SamplingStrategy.Parser, new[]{ "RandomSampleConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SamplingStrategy.Types.RandomSampleConfig), global::Google.Cloud.AIPlatform.V1.SamplingStrategy.Types.RandomSampleConfig.Parser, new[]{ "SampleRate" }, null, null, null, null)})
           }));
@@ -123,6 +127,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// The objective configuration for model monitoring, including the information
   /// needed to detect anomalies for one particular model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelMonitoringObjectiveConfig : pb::IMessage<ModelMonitoringObjectiveConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -478,6 +483,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Training Dataset information.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TrainingDataset : pb::IMessage<TrainingDataset>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -544,10 +550,24 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Dataset {
-          get { return dataSourceCase_ == DataSourceOneofCase.Dataset ? (string) dataSource_ : ""; }
+          get { return HasDataset ? (string) dataSource_ : ""; }
           set {
             dataSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             dataSourceCase_ = DataSourceOneofCase.Dataset;
+          }
+        }
+        /// <summary>Gets whether the "dataset" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDataset {
+          get { return dataSourceCase_ == DataSourceOneofCase.Dataset; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "dataset" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDataset() {
+          if (HasDataset) {
+            ClearDataSource();
           }
         }
 
@@ -692,7 +712,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (dataSourceCase_ == DataSourceOneofCase.Dataset) hash ^= Dataset.GetHashCode();
+          if (HasDataset) hash ^= Dataset.GetHashCode();
           if (dataSourceCase_ == DataSourceOneofCase.GcsSource) hash ^= GcsSource.GetHashCode();
           if (dataSourceCase_ == DataSourceOneofCase.BigquerySource) hash ^= BigquerySource.GetHashCode();
           if (DataFormat.Length != 0) hash ^= DataFormat.GetHashCode();
@@ -721,7 +741,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(18);
             output.WriteString(DataFormat);
           }
-          if (dataSourceCase_ == DataSourceOneofCase.Dataset) {
+          if (HasDataset) {
             output.WriteRawTag(26);
             output.WriteString(Dataset);
           }
@@ -755,7 +775,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(18);
             output.WriteString(DataFormat);
           }
-          if (dataSourceCase_ == DataSourceOneofCase.Dataset) {
+          if (HasDataset) {
             output.WriteRawTag(26);
             output.WriteString(Dataset);
           }
@@ -785,7 +805,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (dataSourceCase_ == DataSourceOneofCase.Dataset) {
+          if (HasDataset) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
           }
           if (dataSourceCase_ == DataSourceOneofCase.GcsSource) {
@@ -960,6 +980,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// The config for Training &amp; Prediction data skew detection. It specifies the
       /// training dataset sources and the skew detection parameters.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TrainingPredictionSkewDetectionConfig : pb::IMessage<TrainingPredictionSkewDetectionConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1151,8 +1172,8 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (other == null) {
             return;
           }
-          skewThresholds_.Add(other.skewThresholds_);
-          attributionScoreSkewThresholds_.Add(other.attributionScoreSkewThresholds_);
+          skewThresholds_.MergeFrom(other.skewThresholds_);
+          attributionScoreSkewThresholds_.MergeFrom(other.attributionScoreSkewThresholds_);
           if (other.defaultSkewThreshold_ != null) {
             if (defaultSkewThreshold_ == null) {
               DefaultSkewThreshold = new global::Google.Cloud.AIPlatform.V1.ThresholdConfig();
@@ -1229,6 +1250,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// The config for Prediction data drift detection.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PredictionDriftDetectionConfig : pb::IMessage<PredictionDriftDetectionConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1419,8 +1441,8 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (other == null) {
             return;
           }
-          driftThresholds_.Add(other.driftThresholds_);
-          attributionScoreDriftThresholds_.Add(other.attributionScoreDriftThresholds_);
+          driftThresholds_.MergeFrom(other.driftThresholds_);
+          attributionScoreDriftThresholds_.MergeFrom(other.attributionScoreDriftThresholds_);
           if (other.defaultDriftThreshold_ != null) {
             if (defaultDriftThreshold_ == null) {
               DefaultDriftThreshold = new global::Google.Cloud.AIPlatform.V1.ThresholdConfig();
@@ -1498,6 +1520,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// The config for integrating with Vertex Explainable AI. Only applicable if
       /// the Model has explanation_spec populated.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ExplanationConfig : pb::IMessage<ExplanationConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1750,6 +1773,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// Model Monitoring baseline dataset, which can be used to generate baseline
           /// attribution scores.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ExplanationBaseline : pb::IMessage<ExplanationBaseline>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2117,6 +2141,10 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   }
 
+  /// <summary>
+  /// The alert config for model monitoring.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelMonitoringAlertConfig : pb::IMessage<ModelMonitoringAlertConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2152,6 +2180,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelMonitoringAlertConfig(ModelMonitoringAlertConfig other) : this() {
       enableLogging_ = other.enableLogging_;
+      notificationChannels_ = other.notificationChannels_.Clone();
       switch (other.AlertCase) {
         case AlertOneofCase.EmailAlertConfig:
           EmailAlertConfig = other.EmailAlertConfig.Clone();
@@ -2188,9 +2217,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Dump the anomalies to Cloud Logging. The anomalies will be put to json
     /// payload encoded from proto
-    /// [google.cloud.aiplatform.logging.ModelMonitoringAnomaliesLogEntry][].
-    /// This can be further sinked to Pub/Sub or any other services supported
-    /// by Cloud Logging.
+    /// [ModelMonitoringStatsAnomalies][google.cloud.aiplatform.v1.ModelMonitoringStatsAnomalies].
+    /// This can be further synced to Pub/Sub or any other services supported by
+    /// Cloud Logging.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2199,6 +2228,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       set {
         enableLogging_ = value;
       }
+    }
+
+    /// <summary>Field number for the "notification_channels" field.</summary>
+    public const int NotificationChannelsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_notificationChannels_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> notificationChannels_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Resource names of the NotificationChannels to send alert.
+    /// Must be of the format
+    /// `projects/&lt;project_id_or_number>/notificationChannels/&lt;channel_id>`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> NotificationChannels {
+      get { return notificationChannels_; }
     }
 
     private object alert_;
@@ -2238,6 +2283,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (!object.Equals(EmailAlertConfig, other.EmailAlertConfig)) return false;
       if (EnableLogging != other.EnableLogging) return false;
+      if(!notificationChannels_.Equals(other.notificationChannels_)) return false;
       if (AlertCase != other.AlertCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2248,6 +2294,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (alertCase_ == AlertOneofCase.EmailAlertConfig) hash ^= EmailAlertConfig.GetHashCode();
       if (EnableLogging != false) hash ^= EnableLogging.GetHashCode();
+      hash ^= notificationChannels_.GetHashCode();
       hash ^= (int) alertCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2275,6 +2322,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(16);
         output.WriteBool(EnableLogging);
       }
+      notificationChannels_.WriteTo(output, _repeated_notificationChannels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2293,6 +2341,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(16);
         output.WriteBool(EnableLogging);
       }
+      notificationChannels_.WriteTo(ref output, _repeated_notificationChannels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2309,6 +2358,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (EnableLogging != false) {
         size += 1 + 1;
       }
+      size += notificationChannels_.CalculateSize(_repeated_notificationChannels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2324,6 +2374,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.EnableLogging != false) {
         EnableLogging = other.EnableLogging;
       }
+      notificationChannels_.Add(other.notificationChannels_);
       switch (other.AlertCase) {
         case AlertOneofCase.EmailAlertConfig:
           if (EmailAlertConfig == null) {
@@ -2361,6 +2412,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             EnableLogging = input.ReadBool();
             break;
           }
+          case 26: {
+            notificationChannels_.AddEntriesFrom(input, _repeated_notificationChannels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2389,6 +2444,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             EnableLogging = input.ReadBool();
             break;
           }
+          case 26: {
+            notificationChannels_.AddEntriesFrom(ref input, _repeated_notificationChannels_codec);
+            break;
+          }
         }
       }
     }
@@ -2402,6 +2461,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// The config for email alert.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EmailAlertConfig : pb::IMessage<EmailAlertConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2591,6 +2651,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// The config for feature monitoring threshold.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ThresholdConfig : pb::IMessage<ThresholdConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2655,10 +2716,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Value {
-      get { return thresholdCase_ == ThresholdOneofCase.Value ? (double) threshold_ : 0D; }
+      get { return HasValue ? (double) threshold_ : 0D; }
       set {
         threshold_ = value;
         thresholdCase_ = ThresholdOneofCase.Value;
+      }
+    }
+    /// <summary>Gets whether the "value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValue {
+      get { return thresholdCase_ == ThresholdOneofCase.Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValue() {
+      if (HasValue) {
+        ClearThreshold();
       }
     }
 
@@ -2706,7 +2781,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (thresholdCase_ == ThresholdOneofCase.Value) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Value);
+      if (HasValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Value);
       hash ^= (int) thresholdCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2726,7 +2801,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (thresholdCase_ == ThresholdOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(9);
         output.WriteDouble(Value);
       }
@@ -2740,7 +2815,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (thresholdCase_ == ThresholdOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(9);
         output.WriteDouble(Value);
       }
@@ -2754,7 +2829,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (thresholdCase_ == ThresholdOneofCase.Value) {
+      if (HasValue) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -2824,6 +2899,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Sampling Strategy for logging, can be for both training and prediction
   /// dataset.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SamplingStrategy : pb::IMessage<SamplingStrategy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3031,6 +3107,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Requests are randomly selected.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RandomSampleConfig : pb::IMessage<RandomSampleConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

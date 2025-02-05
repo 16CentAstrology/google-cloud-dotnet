@@ -58,18 +58,18 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
             "cy97bG9jYXRpb259L2luc3RhbmNlcy97aW5zdGFuY2V9MskFCgxQcm92aXNp",
             "b25pbmcS5QEKDkNyZWF0ZUluc3RhbmNlEjUuZ29vZ2xlLmNsb3VkLmFwaWdl",
             "ZXJlZ2lzdHJ5LnYxLkNyZWF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24ifYLT5JMCOSItL3YxL3twYXJlbnQ9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKn0vaW5zdGFuY2VzOghpbnN0YW5jZdpBG3Bh",
-            "cmVudCxpbnN0YW5jZSxpbnN0YW5jZV9pZMpBHQoISW5zdGFuY2USEU9wZXJh",
-            "dGlvbk1ldGFkYXRhEtEBCg5EZWxldGVJbnN0YW5jZRI1Lmdvb2dsZS5jbG91",
+            "b25ncnVubmluZy5PcGVyYXRpb24ifcpBHQoISW5zdGFuY2USEU9wZXJhdGlv",
+            "bk1ldGFkYXRh2kEbcGFyZW50LGluc3RhbmNlLGluc3RhbmNlX2lkgtPkkwI5",
+            "Ii0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9pbnN0YW5j",
+            "ZXM6CGluc3RhbmNlEtEBCg5EZWxldGVJbnN0YW5jZRI1Lmdvb2dsZS5jbG91",
             "ZC5hcGlnZWVyZWdpc3RyeS52MS5EZWxldGVJbnN0YW5jZVJlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImmC0+STAi8qLS92MS97bmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfdpBBG5hbWXK",
-            "QSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGES",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImnKQSoKFWdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1lgtPkkwIvKi0v",
+            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn0S",
             "qQEKC0dldEluc3RhbmNlEjIuZ29vZ2xlLmNsb3VkLmFwaWdlZXJlZ2lzdHJ5",
             "LnYxLkdldEluc3RhbmNlUmVxdWVzdBooLmdvb2dsZS5jbG91ZC5hcGlnZWVy",
-            "ZWdpc3RyeS52MS5JbnN0YW5jZSI8gtPkkwIvEi0vdjEve25hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn3aQQRuYW1lGlHKQR1hcGln",
+            "ZWdpc3RyeS52MS5JbnN0YW5jZSI82kEEbmFtZYLT5JMCLxItL3YxL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9GlHKQR1hcGln",
             "ZWVyZWdpc3RyeS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2ds",
             "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C8gEKImNvbS5nb29nbGUu",
             "Y2xvdWQuYXBpZ2VlcmVnaXN0cnkudjFCGFByb3Zpc2lvbmluZ1NlcnZpY2VQ",
@@ -95,6 +95,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
   /// <summary>
   /// Request message for CreateInstance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateInstanceRequest : pb::IMessage<CreateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -380,6 +381,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
   /// <summary>
   /// Request message for DeleteInstance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteInstanceRequest : pb::IMessage<DeleteInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -576,6 +578,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
   /// <summary>
   /// Request message for GetInstance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceRequest : pb::IMessage<GetInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -772,6 +775,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1229,6 +1233,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
   /// An Instance represents the instance resources of the Registry.
   /// Currently, only one instance is allowed for each project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1689,6 +1694,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       /// <summary>
       /// Available configurations to provision an Instance.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Config : pb::IMessage<Config>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

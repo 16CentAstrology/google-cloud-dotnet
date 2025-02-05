@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dialogflow.V2
 {
@@ -377,14 +377,14 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ConversationModelsClient.Create(callInvoker, Settings, Logger);
+            return ConversationModelsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ConversationModelsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ConversationModelsClient.Create(callInvoker, Settings, Logger);
+            return ConversationModelsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -748,13 +748,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversationModel"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationModelsResponse, ConversationModel> ListConversationModels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationModels(new ListConversationModelsRequest
+        public virtual gax::PagedEnumerable<ListConversationModelsResponse, ConversationModel> ListConversationModels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationModelsRequest request = new ListConversationModelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationModels(request, callSettings);
+        }
 
         /// <summary>
         /// Lists conversation models.
@@ -773,13 +782,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversationModel"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationModelsResponse, ConversationModel> ListConversationModelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationModelsAsync(new ListConversationModelsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationModelsResponse, ConversationModel> ListConversationModelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationModelsRequest request = new ListConversationModelsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationModelsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a model.
@@ -1218,13 +1236,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversationModelEvaluation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationModelEvaluationsResponse, ConversationModelEvaluation> ListConversationModelEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationModelEvaluations(new ListConversationModelEvaluationsRequest
+        public virtual gax::PagedEnumerable<ListConversationModelEvaluationsResponse, ConversationModelEvaluation> ListConversationModelEvaluations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationModelEvaluationsRequest request = new ListConversationModelEvaluationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationModelEvaluations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists evaluations of a conversation model.
@@ -1243,13 +1270,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversationModelEvaluation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationModelEvaluationsResponse, ConversationModelEvaluation> ListConversationModelEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationModelEvaluationsAsync(new ListConversationModelEvaluationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationModelEvaluationsResponse, ConversationModelEvaluation> ListConversationModelEvaluationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationModelEvaluationsRequest request = new ListConversationModelEvaluationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationModelEvaluationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates evaluation of a conversation model.
@@ -1452,7 +1488,11 @@ namespace Google.Cloud.Dialogflow.V2
         {
             GrpcClient = grpcClient;
             ConversationModelsSettings effectiveSettings = settings ?? ConversationModelsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateConversationModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConversationModelOperationsSettings, logger);
             DeleteConversationModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConversationModelOperationsSettings, logger);
             DeployConversationModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployConversationModelOperationsSettings, logger);

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.NetworkManagement.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_async]
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.NetworkManagement.V1;
     using System;
     using System.Linq;
@@ -40,7 +41,7 @@ namespace Google.Cloud.NetworkManagement.V1.Snippets
             // Initialize request argument(s)
             ListConnectivityTestsRequest request = new ListConnectivityTestsRequest
             {
-                Parent = "",
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
                 Filter = "",
                 OrderBy = "",
             };

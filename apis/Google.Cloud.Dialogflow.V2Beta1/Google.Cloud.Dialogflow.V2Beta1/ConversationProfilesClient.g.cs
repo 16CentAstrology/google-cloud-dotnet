@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dialogflow.V2Beta1
 {
@@ -281,14 +281,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ConversationProfilesClient.Create(callInvoker, Settings, Logger);
+            return ConversationProfilesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ConversationProfilesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ConversationProfilesClient.Create(callInvoker, Settings, Logger);
+            return ConversationProfilesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -423,13 +423,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversationProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationProfilesResponse, ConversationProfile> ListConversationProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationProfiles(new ListConversationProfilesRequest
+        public virtual gax::PagedEnumerable<ListConversationProfilesResponse, ConversationProfile> ListConversationProfiles(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationProfilesRequest request = new ListConversationProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversation profiles in the specified project.
@@ -448,13 +457,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversationProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationProfilesResponse, ConversationProfile> ListConversationProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationProfilesAsync(new ListConversationProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationProfilesResponse, ConversationProfile> ListConversationProfilesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationProfilesRequest request = new ListConversationProfilesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversation profiles in the specified project.
@@ -473,13 +491,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversationProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationProfilesResponse, ConversationProfile> ListConversationProfiles(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationProfiles(new ListConversationProfilesRequest
+        public virtual gax::PagedEnumerable<ListConversationProfilesResponse, ConversationProfile> ListConversationProfiles(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationProfilesRequest request = new ListConversationProfilesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversation profiles in the specified project.
@@ -498,13 +525,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversationProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationProfilesResponse, ConversationProfile> ListConversationProfilesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationProfilesAsync(new ListConversationProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationProfilesResponse, ConversationProfile> ListConversationProfilesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationProfilesRequest request = new ListConversationProfilesRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversation profiles in the specified project.
@@ -523,13 +559,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ConversationProfile"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConversationProfilesResponse, ConversationProfile> ListConversationProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationProfiles(new ListConversationProfilesRequest
+        public virtual gax::PagedEnumerable<ListConversationProfilesResponse, ConversationProfile> ListConversationProfiles(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationProfilesRequest request = new ListConversationProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationProfiles(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all conversation profiles in the specified project.
@@ -548,13 +593,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ConversationProfile"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConversationProfilesResponse, ConversationProfile> ListConversationProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConversationProfilesAsync(new ListConversationProfilesRequest
+        public virtual gax::PagedAsyncEnumerable<ListConversationProfilesResponse, ConversationProfile> ListConversationProfilesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConversationProfilesRequest request = new ListConversationProfilesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConversationProfilesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified conversation profile.
@@ -1757,7 +1811,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             GrpcClient = grpcClient;
             ConversationProfilesSettings effectiveSettings = settings ?? ConversationProfilesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             SetSuggestionFeatureConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetSuggestionFeatureConfigOperationsSettings, logger);
             ClearSuggestionFeatureConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ClearSuggestionFeatureConfigOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);

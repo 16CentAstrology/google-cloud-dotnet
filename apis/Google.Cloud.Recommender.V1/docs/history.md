@@ -1,5 +1,40 @@
 # Version history
 
+## Version 3.7.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.6.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.5.0, released 2024-02-29
+
+No API surface changes; just dependency updates.
+
+## Version 3.4.0, released 2024-01-08
+
+### New features
+
+- Support cost_in_local_currency field in the cost projection ([commit 0c726a4](https://github.com/googleapis/google-cloud-dotnet/commit/0c726a49180253efe4447dea6e07611962569fba))
+
+### Documentation improvements
+
+- Fix typo for the comment of reliability_projection ([commit 0c726a4](https://github.com/googleapis/google-cloud-dotnet/commit/0c726a49180253efe4447dea6e07611962569fba))
+- Add comment for targetResources ([commit 0c726a4](https://github.com/googleapis/google-cloud-dotnet/commit/0c726a49180253efe4447dea6e07611962569fba))
+
+## Version 3.3.0, released 2023-09-06
+
+### New features
+
+- Add MarkRecommendationDismissed method ([commit 3c1e0a6](https://github.com/googleapis/google-cloud-dotnet/commit/3c1e0a6f137f2ef7d2ac35b7cba98121848f17b7))
+- Billing account scoped Recommender/InsightType config ([commit 3c1e0a6](https://github.com/googleapis/google-cloud-dotnet/commit/3c1e0a6f137f2ef7d2ac35b7cba98121848f17b7))
+- Add Sustainability and Reliability impact ([commit 3c1e0a6](https://github.com/googleapis/google-cloud-dotnet/commit/3c1e0a6f137f2ef7d2ac35b7cba98121848f17b7))
+
 ## Version 3.2.0, released 2023-01-18
 
 ### New features

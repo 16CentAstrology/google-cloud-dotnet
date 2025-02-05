@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,15 +18,15 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.DataCatalog.V1
 {
@@ -143,14 +143,14 @@ namespace Google.Cloud.DataCatalog.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PolicyTagManagerSerializationClient.Create(callInvoker, Settings, Logger);
+            return PolicyTagManagerSerializationClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<PolicyTagManagerSerializationClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PolicyTagManagerSerializationClient.Create(callInvoker, Settings, Logger);
+            return PolicyTagManagerSerializationClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -433,7 +433,11 @@ namespace Google.Cloud.DataCatalog.V1
         {
             GrpcClient = grpcClient;
             PolicyTagManagerSerializationSettings effectiveSettings = settings ?? PolicyTagManagerSerializationSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callReplaceTaxonomy = clientHelper.BuildApiCall<ReplaceTaxonomyRequest, Taxonomy>("ReplaceTaxonomy", grpcClient.ReplaceTaxonomyAsync, grpcClient.ReplaceTaxonomy, effectiveSettings.ReplaceTaxonomySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callReplaceTaxonomy);

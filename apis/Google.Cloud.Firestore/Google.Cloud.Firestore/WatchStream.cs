@@ -1,4 +1,4 @@
-﻿// Copyright 2018, Google LLC
+// Copyright 2018, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -73,7 +73,11 @@ namespace Google.Cloud.Firestore
             _db = db;
             _callbackCancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
             _networkCancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(_callbackCancellationTokenSource.Token);
+
+#pragma warning disable CS0618 // Type or member is obsolete
+            // TODO(b/320595510): Use x-goog-request-params (which will be easier after a new GAX release)
             _listenCallSettings = CallSettings.FromHeader(FirestoreClientImpl.ResourcePrefixHeader, db.RootPath);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             // TODO: Make these configurable?
             _backoffSettings = RetrySettings.FromExponentialBackoff(
@@ -184,25 +188,30 @@ namespace Google.Cloud.Firestore
 
             async Task CloseStreamAsync()
             {
-                if (underlyingStream != null)
+                if (underlyingStream is null)
                 {
-                    try
-                    {
-                        var completeTask = underlyingStream.TryWriteCompleteAsync();
-                        if (completeTask != null)
-                        {
-                            await completeTask.ConfigureAwait(false);
-                        }
-                    }
-                    catch (RpcException)
-                    {
-                        // Swallow gRPC errors when trying to "complete" the stream. This may be in response to the network connection
-                        // being dropped, at which point completing the stream will fail; we don't want the listener to stop at that
-                        // point. Instead, it will reconnect.
-                    }
-                    underlyingStream.GrpcCall.Dispose();
+                    return;
                 }
-                underlyingStream = null;
+
+                try
+                {
+                    var completeTask = underlyingStream.TryWriteCompleteAsync();
+                    if (completeTask != null)
+                    {
+                        await completeTask.ConfigureAwait(false);
+                    }
+                }
+                catch (RpcException)
+                {
+                    // Swallow gRPC errors when trying to "complete" the stream. This may be in response to the network connection
+                    // being dropped, at which point completing the stream will fail; we don't want the listener to stop at that
+                    // point. Instead, it will reconnect.
+                }
+                finally
+                {
+                    underlyingStream.Dispose();
+                    underlyingStream = null;
+                }
             }
 
             // Create a new enumerator for the retry attempt sequence, starting with a backoff of zero.

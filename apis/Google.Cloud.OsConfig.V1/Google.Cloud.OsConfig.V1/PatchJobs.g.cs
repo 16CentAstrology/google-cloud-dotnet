@@ -193,6 +193,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// A request message to initiate patching across Compute Engine
   /// instances.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExecutePatchJobRequest : pb::IMessage<ExecutePatchJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -709,6 +710,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// Request to get an active or completed patch job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPatchJobRequest : pb::IMessage<GetPatchJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -904,6 +906,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// Request to list details for all instances that are part of a patch job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPatchJobInstanceDetailsRequest : pb::IMessage<ListPatchJobInstanceDetailsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1223,6 +1226,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// A response message for listing the instances details for a patch job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPatchJobInstanceDetailsResponse : pb::IMessage<ListPatchJobInstanceDetailsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1450,6 +1454,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// [Listing all VM instance details for a specific patch
   /// job](https://cloud.google.com/compute/docs/os-patch-management/manage-patch-jobs#list-instance-details).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PatchJobInstanceDetails : pb::IMessage<PatchJobInstanceDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1806,6 +1811,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// A request message for listing patch jobs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPatchJobsRequest : pb::IMessage<ListPatchJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2124,6 +2130,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// A response message for listing patch jobs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPatchJobsResponse : pb::IMessage<ListPatchJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2356,6 +2363,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// [Creating patch
   /// jobs](https://cloud.google.com/compute/docs/os-patch-management/create-patch-job).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PatchJob : pb::IMessage<PatchJob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3225,6 +3233,7 @@ namespace Google.Cloud.OsConfig.V1 {
       /// map to `InstancePatchState`. List patch job instance details to see the
       /// specific states of each instance.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InstanceDetailsSummary : pb::IMessage<InstanceDetailsSummary>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3988,6 +3997,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// Patch configuration specifications. Contains details on how to apply the
   /// patch(es) to a VM instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PatchConfig : pb::IMessage<PatchConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4603,6 +4613,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// Namespace for instance state enums.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4838,6 +4849,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// Message for canceling a patch job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CancelPatchJobRequest : pb::IMessage<CancelPatchJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5034,6 +5046,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// Apt patching is completed by executing `apt-get update &amp;&amp; apt-get
   /// upgrade`. Additional options can be set to control how this is executed.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AptSettings : pb::IMessage<AptSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5320,6 +5333,7 @@ namespace Google.Cloud.OsConfig.V1 {
   ///
   /// Note that not all settings are supported on all platforms.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class YumSettings : pb::IMessage<YumSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5618,6 +5632,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// Googet patching is performed by running `googet update`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GooSettings : pb::IMessage<GooSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5774,6 +5789,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// Zypper patching is performed by running `zypper patch`.
   /// See also https://en.opensuse.org/SDB:Zypper_manual.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ZypperSettings : pb::IMessage<ZypperSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6129,6 +6145,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// Windows patching is performed using the Windows Update Agent.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WindowsUpdateSettings : pb::IMessage<WindowsUpdateSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6449,6 +6466,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// A step that runs an executable for a PatchJob.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExecStep : pb::IMessage<ExecStep>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6702,6 +6720,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// Common configurations for an ExecStep.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExecStepConfig : pb::IMessage<ExecStepConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6764,10 +6783,24 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LocalPath {
-      get { return executableCase_ == ExecutableOneofCase.LocalPath ? (string) executable_ : ""; }
+      get { return HasLocalPath ? (string) executable_ : ""; }
       set {
         executable_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         executableCase_ = ExecutableOneofCase.LocalPath;
+      }
+    }
+    /// <summary>Gets whether the "local_path" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLocalPath {
+      get { return executableCase_ == ExecutableOneofCase.LocalPath; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "local_path" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLocalPath() {
+      if (HasLocalPath) {
+        ClearExecutable();
       }
     }
 
@@ -6867,7 +6900,7 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (executableCase_ == ExecutableOneofCase.LocalPath) hash ^= LocalPath.GetHashCode();
+      if (HasLocalPath) hash ^= LocalPath.GetHashCode();
       if (executableCase_ == ExecutableOneofCase.GcsObject) hash ^= GcsObject.GetHashCode();
       hash ^= allowedSuccessCodes_.GetHashCode();
       if (Interpreter != global::Google.Cloud.OsConfig.V1.ExecStepConfig.Types.Interpreter.Unspecified) hash ^= Interpreter.GetHashCode();
@@ -6890,7 +6923,7 @@ namespace Google.Cloud.OsConfig.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (executableCase_ == ExecutableOneofCase.LocalPath) {
+      if (HasLocalPath) {
         output.WriteRawTag(10);
         output.WriteString(LocalPath);
       }
@@ -6913,7 +6946,7 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (executableCase_ == ExecutableOneofCase.LocalPath) {
+      if (HasLocalPath) {
         output.WriteRawTag(10);
         output.WriteString(LocalPath);
       }
@@ -6936,7 +6969,7 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (executableCase_ == ExecutableOneofCase.LocalPath) {
+      if (HasLocalPath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LocalPath);
       }
       if (executableCase_ == ExecutableOneofCase.GcsObject) {
@@ -7088,6 +7121,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// Cloud Storage object representation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsObject : pb::IMessage<GcsObject>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7367,6 +7401,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// specified, the patch job targets only VMs with those labels and in those
   /// zones.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PatchInstanceFilter : pb::IMessage<PatchInstanceFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7696,6 +7731,7 @@ namespace Google.Cloud.OsConfig.V1 {
       /// `GroupLabel`: `{"env":"test", "app":"web"}`. This means that the patch job
       /// is applied to VMs that have both the labels `env=test` and `app=web`.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GroupLabel : pb::IMessage<GroupLabel>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -7832,7 +7868,7 @@ namespace Google.Cloud.OsConfig.V1 {
           if (other == null) {
             return;
           }
-          labels_.Add(other.labels_);
+          labels_.MergeFrom(other.labels_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -7887,6 +7923,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// Patch rollout configuration specifications. Contains details on the
   /// concurrency control when applying patch(es) to all targeted VMs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PatchRollout : pb::IMessage<PatchRollout>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

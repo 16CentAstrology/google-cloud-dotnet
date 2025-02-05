@@ -30,140 +30,169 @@ namespace Google.Cloud.Datastore.V1 {
             "YXZpb3IucHJvdG8aGGdvb2dsZS9hcGkvcm91dGluZy5wcm90bxosZ29vZ2xl",
             "L2RhdGFzdG9yZS92MS9hZ2dyZWdhdGlvbl9yZXN1bHQucHJvdG8aIGdvb2ds",
             "ZS9kYXRhc3RvcmUvdjEvZW50aXR5LnByb3RvGh9nb29nbGUvZGF0YXN0b3Jl",
-            "L3YxL3F1ZXJ5LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvIqIBCg1Mb29rdXBSZXF1ZXN0EhcKCnByb2plY3RfaWQYCCABKAlCA+BB",
-            "AhITCgtkYXRhYmFzZV9pZBgJIAEoCRI2CgxyZWFkX29wdGlvbnMYASABKAsy",
-            "IC5nb29nbGUuZGF0YXN0b3JlLnYxLlJlYWRPcHRpb25zEisKBGtleXMYAyAD",
-            "KAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleUID4EECIuYBCg5Mb29rdXBS",
-            "ZXNwb25zZRIwCgVmb3VuZBgBIAMoCzIhLmdvb2dsZS5kYXRhc3RvcmUudjEu",
-            "RW50aXR5UmVzdWx0EjIKB21pc3NpbmcYAiADKAsyIS5nb29nbGUuZGF0YXN0",
-            "b3JlLnYxLkVudGl0eVJlc3VsdBIqCghkZWZlcnJlZBgDIAMoCzIYLmdvb2ds",
-            "ZS5kYXRhc3RvcmUudjEuS2V5EhMKC3RyYW5zYWN0aW9uGAUgASgMEi0KCXJl",
-            "YWRfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAingIK",
-            "D1J1blF1ZXJ5UmVxdWVzdBIXCgpwcm9qZWN0X2lkGAggASgJQgPgQQISEwoL",
-            "ZGF0YWJhc2VfaWQYCSABKAkSNgoMcGFydGl0aW9uX2lkGAIgASgLMiAuZ29v",
-            "Z2xlLmRhdGFzdG9yZS52MS5QYXJ0aXRpb25JZBI2CgxyZWFkX29wdGlvbnMY",
-            "ASABKAsyIC5nb29nbGUuZGF0YXN0b3JlLnYxLlJlYWRPcHRpb25zEisKBXF1",
-            "ZXJ5GAMgASgLMhouZ29vZ2xlLmRhdGFzdG9yZS52MS5RdWVyeUgAEjIKCWdx",
-            "bF9xdWVyeRgHIAEoCzIdLmdvb2dsZS5kYXRhc3RvcmUudjEuR3FsUXVlcnlI",
-            "AEIMCgpxdWVyeV90eXBlIogBChBSdW5RdWVyeVJlc3BvbnNlEjQKBWJhdGNo",
-            "GAEgASgLMiUuZ29vZ2xlLmRhdGFzdG9yZS52MS5RdWVyeVJlc3VsdEJhdGNo",
-            "EikKBXF1ZXJ5GAIgASgLMhouZ29vZ2xlLmRhdGFzdG9yZS52MS5RdWVyeRIT",
-            "Cgt0cmFuc2FjdGlvbhgFIAEoDCLAAgoaUnVuQWdncmVnYXRpb25RdWVyeVJl",
-            "cXVlc3QSFwoKcHJvamVjdF9pZBgIIAEoCUID4EECEhMKC2RhdGFiYXNlX2lk",
-            "GAkgASgJEjYKDHBhcnRpdGlvbl9pZBgCIAEoCzIgLmdvb2dsZS5kYXRhc3Rv",
-            "cmUudjEuUGFydGl0aW9uSWQSNgoMcmVhZF9vcHRpb25zGAEgASgLMiAuZ29v",
-            "Z2xlLmRhdGFzdG9yZS52MS5SZWFkT3B0aW9ucxJCChFhZ2dyZWdhdGlvbl9x",
-            "dWVyeRgDIAEoCzIlLmdvb2dsZS5kYXRhc3RvcmUudjEuQWdncmVnYXRpb25R",
-            "dWVyeUgAEjIKCWdxbF9xdWVyeRgHIAEoCzIdLmdvb2dsZS5kYXRhc3RvcmUu",
-            "djEuR3FsUXVlcnlIAEIMCgpxdWVyeV90eXBlIqQBChtSdW5BZ2dyZWdhdGlv",
-            "blF1ZXJ5UmVzcG9uc2USOgoFYmF0Y2gYASABKAsyKy5nb29nbGUuZGF0YXN0",
-            "b3JlLnYxLkFnZ3JlZ2F0aW9uUmVzdWx0QmF0Y2gSNAoFcXVlcnkYAiABKAsy",
-            "JS5nb29nbGUuZGF0YXN0b3JlLnYxLkFnZ3JlZ2F0aW9uUXVlcnkSEwoLdHJh",
-            "bnNhY3Rpb24YBSABKAwijQEKF0JlZ2luVHJhbnNhY3Rpb25SZXF1ZXN0EhcK",
-            "CnByb2plY3RfaWQYCCABKAlCA+BBAhITCgtkYXRhYmFzZV9pZBgJIAEoCRJE",
-            "ChN0cmFuc2FjdGlvbl9vcHRpb25zGAogASgLMicuZ29vZ2xlLmRhdGFzdG9y",
-            "ZS52MS5UcmFuc2FjdGlvbk9wdGlvbnMiLwoYQmVnaW5UcmFuc2FjdGlvblJl",
-            "c3BvbnNlEhMKC3RyYW5zYWN0aW9uGAEgASgMIlkKD1JvbGxiYWNrUmVxdWVz",
-            "dBIXCgpwcm9qZWN0X2lkGAggASgJQgPgQQISEwoLZGF0YWJhc2VfaWQYCSAB",
-            "KAkSGAoLdHJhbnNhY3Rpb24YASABKAxCA+BBAiISChBSb2xsYmFja1Jlc3Bv",
-            "bnNlIugCCg1Db21taXRSZXF1ZXN0EhcKCnByb2plY3RfaWQYCCABKAlCA+BB",
-            "AhITCgtkYXRhYmFzZV9pZBgJIAEoCRI1CgRtb2RlGAUgASgOMicuZ29vZ2xl",
-            "LmRhdGFzdG9yZS52MS5Db21taXRSZXF1ZXN0Lk1vZGUSFQoLdHJhbnNhY3Rp",
-            "b24YASABKAxIABJJChZzaW5nbGVfdXNlX3RyYW5zYWN0aW9uGAogASgLMicu",
-            "Z29vZ2xlLmRhdGFzdG9yZS52MS5UcmFuc2FjdGlvbk9wdGlvbnNIABIwCglt",
-            "dXRhdGlvbnMYBiADKAsyHS5nb29nbGUuZGF0YXN0b3JlLnYxLk11dGF0aW9u",
-            "IkYKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEhEKDVRSQU5TQUNUSU9O",
-            "QUwQARIVChFOT05fVFJBTlNBQ1RJT05BTBACQhYKFHRyYW5zYWN0aW9uX3Nl",
-            "bGVjdG9yIpcBCg5Db21taXRSZXNwb25zZRI9ChBtdXRhdGlvbl9yZXN1bHRz",
-            "GAMgAygLMiMuZ29vZ2xlLmRhdGFzdG9yZS52MS5NdXRhdGlvblJlc3VsdBIV",
-            "Cg1pbmRleF91cGRhdGVzGAQgASgFEi8KC2NvbW1pdF90aW1lGAggASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJvChJBbGxvY2F0ZUlkc1JlcXVl",
-            "c3QSFwoKcHJvamVjdF9pZBgIIAEoCUID4EECEhMKC2RhdGFiYXNlX2lkGAkg",
-            "ASgJEisKBGtleXMYASADKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleUID",
-            "4EECIj0KE0FsbG9jYXRlSWRzUmVzcG9uc2USJgoEa2V5cxgBIAMoCzIYLmdv",
-            "b2dsZS5kYXRhc3RvcmUudjEuS2V5Im4KEVJlc2VydmVJZHNSZXF1ZXN0EhcK",
-            "CnByb2plY3RfaWQYCCABKAlCA+BBAhITCgtkYXRhYmFzZV9pZBgJIAEoCRIr",
-            "CgRrZXlzGAEgAygLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXlCA+BBAiIU",
-            "ChJSZXNlcnZlSWRzUmVzcG9uc2UiugIKCE11dGF0aW9uEi0KBmluc2VydBgE",
-            "IAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5SAASLQoGdXBkYXRl",
-            "GAUgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHlIABItCgZ1cHNl",
-            "cnQYBiABKAsyGy5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eUgAEioKBmRl",
-            "bGV0ZRgHIAEoCzIYLmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5SAASFgoMYmFz",
-            "ZV92ZXJzaW9uGAggASgDSAESMQoLdXBkYXRlX3RpbWUYCyABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wSAFCCwoJb3BlcmF0aW9uQh0KG2NvbmZs",
-            "aWN0X2RldGVjdGlvbl9zdHJhdGVneSLFAQoOTXV0YXRpb25SZXN1bHQSJQoD",
-            "a2V5GAMgASgLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXkSDwoHdmVyc2lv",
-            "bhgEIAEoAxIvCgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEhkKEWNvbmZsaWN0X2RldGVjdGVkGAUgASgIIsoC",
-            "CgtSZWFkT3B0aW9ucxJMChByZWFkX2NvbnNpc3RlbmN5GAEgASgOMjAuZ29v",
-            "Z2xlLmRhdGFzdG9yZS52MS5SZWFkT3B0aW9ucy5SZWFkQ29uc2lzdGVuY3lI",
-            "ABIVCgt0cmFuc2FjdGlvbhgCIAEoDEgAEkIKD25ld190cmFuc2FjdGlvbhgD",
-            "IAEoCzInLmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25z",
-            "SAASLwoJcmVhZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEgAIk0KD1JlYWRDb25zaXN0ZW5jeRIgChxSRUFEX0NPTlNJU1RFTkNZ",
-            "X1VOU1BFQ0lGSUVEEAASCgoGU1RST05HEAESDAoIRVZFTlRVQUwQAkISChBj",
-            "b25zaXN0ZW5jeV90eXBlIpICChJUcmFuc2FjdGlvbk9wdGlvbnMSRwoKcmVh",
-            "ZF93cml0ZRgBIAEoCzIxLmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rp",
-            "b25PcHRpb25zLlJlYWRXcml0ZUgAEkUKCXJlYWRfb25seRgCIAEoCzIwLmdv",
-            "b2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRPbmx5",
-            "SAAaKQoJUmVhZFdyaXRlEhwKFHByZXZpb3VzX3RyYW5zYWN0aW9uGAEgASgM",
-            "GjkKCFJlYWRPbmx5Ei0KCXJlYWRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCBgoEbW9kZTLhDQoJRGF0YXN0b3JlEsABCgZMb29r",
-            "dXASIi5nb29nbGUuZGF0YXN0b3JlLnYxLkxvb2t1cFJlcXVlc3QaIy5nb29n",
-            "bGUuZGF0YXN0b3JlLnYxLkxvb2t1cFJlc3BvbnNlIm2C0+STAiUiIC92MS9w",
-            "cm9qZWN0cy97cHJvamVjdF9pZH06bG9va3VwOgEqitPkkwIdEgwKCnByb2pl",
-            "Y3RfaWQSDQoLZGF0YWJhc2VfaWTaQRxwcm9qZWN0X2lkLHJlYWRfb3B0aW9u",
-            "cyxrZXlzEqkBCghSdW5RdWVyeRIkLmdvb2dsZS5kYXRhc3RvcmUudjEuUnVu",
-            "UXVlcnlSZXF1ZXN0GiUuZ29vZ2xlLmRhdGFzdG9yZS52MS5SdW5RdWVyeVJl",
-            "c3BvbnNlIlCC0+STAiciIi92MS9wcm9qZWN0cy97cHJvamVjdF9pZH06cnVu",
-            "UXVlcnk6ASqK0+STAh0SDAoKcHJvamVjdF9pZBINCgtkYXRhYmFzZV9pZBLV",
-            "AQoTUnVuQWdncmVnYXRpb25RdWVyeRIvLmdvb2dsZS5kYXRhc3RvcmUudjEu",
-            "UnVuQWdncmVnYXRpb25RdWVyeVJlcXVlc3QaMC5nb29nbGUuZGF0YXN0b3Jl",
-            "LnYxLlJ1bkFnZ3JlZ2F0aW9uUXVlcnlSZXNwb25zZSJbgtPkkwIyIi0vdjEv",
-            "cHJvamVjdHMve3Byb2plY3RfaWR9OnJ1bkFnZ3JlZ2F0aW9uUXVlcnk6ASqK",
-            "0+STAh0SDAoKcHJvamVjdF9pZBINCgtkYXRhYmFzZV9pZBLWAQoQQmVnaW5U",
-            "cmFuc2FjdGlvbhIsLmdvb2dsZS5kYXRhc3RvcmUudjEuQmVnaW5UcmFuc2Fj",
-            "dGlvblJlcXVlc3QaLS5nb29nbGUuZGF0YXN0b3JlLnYxLkJlZ2luVHJhbnNh",
-            "Y3Rpb25SZXNwb25zZSJlgtPkkwIvIiovdjEvcHJvamVjdHMve3Byb2plY3Rf",
-            "aWR9OmJlZ2luVHJhbnNhY3Rpb246ASqK0+STAh0SDAoKcHJvamVjdF9pZBIN",
-            "CgtkYXRhYmFzZV9pZNpBCnByb2plY3RfaWQS5gEKBkNvbW1pdBIiLmdvb2ds",
-            "ZS5kYXRhc3RvcmUudjEuQ29tbWl0UmVxdWVzdBojLmdvb2dsZS5kYXRhc3Rv",
-            "cmUudjEuQ29tbWl0UmVzcG9uc2UikgGC0+STAiUiIC92MS9wcm9qZWN0cy97",
-            "cHJvamVjdF9pZH06Y29tbWl0OgEqitPkkwIdEgwKCnByb2plY3RfaWQSDQoL",
-            "ZGF0YWJhc2VfaWTaQSVwcm9qZWN0X2lkLG1vZGUsdHJhbnNhY3Rpb24sbXV0",
-            "YXRpb25z2kEZcHJvamVjdF9pZCxtb2RlLG11dGF0aW9ucxLCAQoIUm9sbGJh",
-            "Y2sSJC5nb29nbGUuZGF0YXN0b3JlLnYxLlJvbGxiYWNrUmVxdWVzdBolLmdv",
-            "b2dsZS5kYXRhc3RvcmUudjEuUm9sbGJhY2tSZXNwb25zZSJpgtPkkwInIiIv",
-            "djEvcHJvamVjdHMve3Byb2plY3RfaWR9OnJvbGxiYWNrOgEqitPkkwIdEgwK",
-            "CnByb2plY3RfaWQSDQoLZGF0YWJhc2VfaWTaQRZwcm9qZWN0X2lkLHRyYW5z",
-            "YWN0aW9uEscBCgtBbGxvY2F0ZUlkcxInLmdvb2dsZS5kYXRhc3RvcmUudjEu",
-            "QWxsb2NhdGVJZHNSZXF1ZXN0GiguZ29vZ2xlLmRhdGFzdG9yZS52MS5BbGxv",
-            "Y2F0ZUlkc1Jlc3BvbnNlImWC0+STAioiJS92MS9wcm9qZWN0cy97cHJvamVj",
-            "dF9pZH06YWxsb2NhdGVJZHM6ASqK0+STAh0SDAoKcHJvamVjdF9pZBINCgtk",
-            "YXRhYmFzZV9pZNpBD3Byb2plY3RfaWQsa2V5cxLDAQoKUmVzZXJ2ZUlkcxIm",
-            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuUmVzZXJ2ZUlkc1JlcXVlc3QaJy5nb29n",
-            "bGUuZGF0YXN0b3JlLnYxLlJlc2VydmVJZHNSZXNwb25zZSJkgtPkkwIpIiQv",
-            "djEvcHJvamVjdHMve3Byb2plY3RfaWR9OnJlc2VydmVJZHM6ASqK0+STAh0S",
-            "DAoKcHJvamVjdF9pZBINCgtkYXRhYmFzZV9pZNpBD3Byb2plY3RfaWQsa2V5",
-            "cxp2ykEYZGF0YXN0b3JlLmdvb2dsZWFwaXMuY29t0kFYaHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RhdGFzdG9yZULAAQoXY29tLmdvb2ds",
-            "ZS5kYXRhc3RvcmUudjFCDkRhdGFzdG9yZVByb3RvUAFaPGdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGF0YXN0b3JlL3YxO2RhdGFz",
-            "dG9yZaoCGUdvb2dsZS5DbG91ZC5EYXRhc3RvcmUuVjHKAhlHb29nbGVcQ2xv",
-            "dWRcRGF0YXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RGF0YXN0b3JlOjpW",
-            "MWIGcHJvdG8z"));
+            "L3YxL3F1ZXJ5LnByb3RvGidnb29nbGUvZGF0YXN0b3JlL3YxL3F1ZXJ5X3By",
+            "b2ZpbGUucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
+            "3AEKDUxvb2t1cFJlcXVlc3QSFwoKcHJvamVjdF9pZBgIIAEoCUID4EECEhMK",
+            "C2RhdGFiYXNlX2lkGAkgASgJEjYKDHJlYWRfb3B0aW9ucxgBIAEoCzIgLmdv",
+            "b2dsZS5kYXRhc3RvcmUudjEuUmVhZE9wdGlvbnMSKwoEa2V5cxgDIAMoCzIY",
+            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5QgPgQQISOAoNcHJvcGVydHlfbWFz",
+            "axgFIAEoCzIhLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJvcGVydHlNYXNrIuYB",
+            "Cg5Mb29rdXBSZXNwb25zZRIwCgVmb3VuZBgBIAMoCzIhLmdvb2dsZS5kYXRh",
+            "c3RvcmUudjEuRW50aXR5UmVzdWx0EjIKB21pc3NpbmcYAiADKAsyIS5nb29n",
+            "bGUuZGF0YXN0b3JlLnYxLkVudGl0eVJlc3VsdBIqCghkZWZlcnJlZBgDIAMo",
+            "CzIYLmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5EhMKC3RyYW5zYWN0aW9uGAUg",
+            "ASgMEi0KCXJlYWRfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXAimwMKD1J1blF1ZXJ5UmVxdWVzdBIXCgpwcm9qZWN0X2lkGAggASgJ",
+            "QgPgQQISEwoLZGF0YWJhc2VfaWQYCSABKAkSNgoMcGFydGl0aW9uX2lkGAIg",
+            "ASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MS5QYXJ0aXRpb25JZBI2CgxyZWFk",
+            "X29wdGlvbnMYASABKAsyIC5nb29nbGUuZGF0YXN0b3JlLnYxLlJlYWRPcHRp",
+            "b25zEisKBXF1ZXJ5GAMgASgLMhouZ29vZ2xlLmRhdGFzdG9yZS52MS5RdWVy",
+            "eUgAEjIKCWdxbF9xdWVyeRgHIAEoCzIdLmdvb2dsZS5kYXRhc3RvcmUudjEu",
+            "R3FsUXVlcnlIABI4Cg1wcm9wZXJ0eV9tYXNrGAogASgLMiEuZ29vZ2xlLmRh",
+            "dGFzdG9yZS52MS5Qcm9wZXJ0eU1hc2sSQQoPZXhwbGFpbl9vcHRpb25zGAwg",
+            "ASgLMiMuZ29vZ2xlLmRhdGFzdG9yZS52MS5FeHBsYWluT3B0aW9uc0ID4EEB",
+            "QgwKCnF1ZXJ5X3R5cGUixgEKEFJ1blF1ZXJ5UmVzcG9uc2USNAoFYmF0Y2gY",
+            "ASABKAsyJS5nb29nbGUuZGF0YXN0b3JlLnYxLlF1ZXJ5UmVzdWx0QmF0Y2gS",
+            "KQoFcXVlcnkYAiABKAsyGi5nb29nbGUuZGF0YXN0b3JlLnYxLlF1ZXJ5EhMK",
+            "C3RyYW5zYWN0aW9uGAUgASgMEjwKD2V4cGxhaW5fbWV0cmljcxgJIAEoCzIj",
+            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuRXhwbGFpbk1ldHJpY3MigwMKGlJ1bkFn",
+            "Z3JlZ2F0aW9uUXVlcnlSZXF1ZXN0EhcKCnByb2plY3RfaWQYCCABKAlCA+BB",
+            "AhITCgtkYXRhYmFzZV9pZBgJIAEoCRI2CgxwYXJ0aXRpb25faWQYAiABKAsy",
+            "IC5nb29nbGUuZGF0YXN0b3JlLnYxLlBhcnRpdGlvbklkEjYKDHJlYWRfb3B0",
+            "aW9ucxgBIAEoCzIgLmdvb2dsZS5kYXRhc3RvcmUudjEuUmVhZE9wdGlvbnMS",
+            "QgoRYWdncmVnYXRpb25fcXVlcnkYAyABKAsyJS5nb29nbGUuZGF0YXN0b3Jl",
+            "LnYxLkFnZ3JlZ2F0aW9uUXVlcnlIABIyCglncWxfcXVlcnkYByABKAsyHS5n",
+            "b29nbGUuZGF0YXN0b3JlLnYxLkdxbFF1ZXJ5SAASQQoPZXhwbGFpbl9vcHRp",
+            "b25zGAsgASgLMiMuZ29vZ2xlLmRhdGFzdG9yZS52MS5FeHBsYWluT3B0aW9u",
+            "c0ID4EEBQgwKCnF1ZXJ5X3R5cGUi4gEKG1J1bkFnZ3JlZ2F0aW9uUXVlcnlS",
+            "ZXNwb25zZRI6CgViYXRjaBgBIAEoCzIrLmdvb2dsZS5kYXRhc3RvcmUudjEu",
+            "QWdncmVnYXRpb25SZXN1bHRCYXRjaBI0CgVxdWVyeRgCIAEoCzIlLmdvb2ds",
+            "ZS5kYXRhc3RvcmUudjEuQWdncmVnYXRpb25RdWVyeRITCgt0cmFuc2FjdGlv",
+            "bhgFIAEoDBI8Cg9leHBsYWluX21ldHJpY3MYCSABKAsyIy5nb29nbGUuZGF0",
+            "YXN0b3JlLnYxLkV4cGxhaW5NZXRyaWNzIo0BChdCZWdpblRyYW5zYWN0aW9u",
+            "UmVxdWVzdBIXCgpwcm9qZWN0X2lkGAggASgJQgPgQQISEwoLZGF0YWJhc2Vf",
+            "aWQYCSABKAkSRAoTdHJhbnNhY3Rpb25fb3B0aW9ucxgKIAEoCzInLmdvb2ds",
+            "ZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zIi8KGEJlZ2luVHJh",
+            "bnNhY3Rpb25SZXNwb25zZRITCgt0cmFuc2FjdGlvbhgBIAEoDCJZCg9Sb2xs",
+            "YmFja1JlcXVlc3QSFwoKcHJvamVjdF9pZBgIIAEoCUID4EECEhMKC2RhdGFi",
+            "YXNlX2lkGAkgASgJEhgKC3RyYW5zYWN0aW9uGAEgASgMQgPgQQIiEgoQUm9s",
+            "bGJhY2tSZXNwb25zZSLoAgoNQ29tbWl0UmVxdWVzdBIXCgpwcm9qZWN0X2lk",
+            "GAggASgJQgPgQQISEwoLZGF0YWJhc2VfaWQYCSABKAkSNQoEbW9kZRgFIAEo",
+            "DjInLmdvb2dsZS5kYXRhc3RvcmUudjEuQ29tbWl0UmVxdWVzdC5Nb2RlEhUK",
+            "C3RyYW5zYWN0aW9uGAEgASgMSAASSQoWc2luZ2xlX3VzZV90cmFuc2FjdGlv",
+            "bhgKIAEoCzInLmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRp",
+            "b25zSAASMAoJbXV0YXRpb25zGAYgAygLMh0uZ29vZ2xlLmRhdGFzdG9yZS52",
+            "MS5NdXRhdGlvbiJGCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIRCg1U",
+            "UkFOU0FDVElPTkFMEAESFQoRTk9OX1RSQU5TQUNUSU9OQUwQAkIWChR0cmFu",
+            "c2FjdGlvbl9zZWxlY3RvciKXAQoOQ29tbWl0UmVzcG9uc2USPQoQbXV0YXRp",
+            "b25fcmVzdWx0cxgDIAMoCzIjLmdvb2dsZS5kYXRhc3RvcmUudjEuTXV0YXRp",
+            "b25SZXN1bHQSFQoNaW5kZXhfdXBkYXRlcxgEIAEoBRIvCgtjb21taXRfdGlt",
+            "ZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAibwoSQWxsb2Nh",
+            "dGVJZHNSZXF1ZXN0EhcKCnByb2plY3RfaWQYCCABKAlCA+BBAhITCgtkYXRh",
+            "YmFzZV9pZBgJIAEoCRIrCgRrZXlzGAEgAygLMhguZ29vZ2xlLmRhdGFzdG9y",
+            "ZS52MS5LZXlCA+BBAiI9ChNBbGxvY2F0ZUlkc1Jlc3BvbnNlEiYKBGtleXMY",
+            "ASADKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktleSJuChFSZXNlcnZlSWRz",
+            "UmVxdWVzdBIXCgpwcm9qZWN0X2lkGAggASgJQgPgQQISEwoLZGF0YWJhc2Vf",
+            "aWQYCSABKAkSKwoEa2V5cxgBIAMoCzIYLmdvb2dsZS5kYXRhc3RvcmUudjEu",
+            "S2V5QgPgQQIiFAoSUmVzZXJ2ZUlkc1Jlc3BvbnNlIvIECghNdXRhdGlvbhIt",
+            "CgZpbnNlcnQYBCABKAsyGy5nb29nbGUuZGF0YXN0b3JlLnYxLkVudGl0eUgA",
+            "Ei0KBnVwZGF0ZRgFIAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5",
+            "SAASLQoGdXBzZXJ0GAYgASgLMhsuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRp",
+            "dHlIABIqCgZkZWxldGUYByABKAsyGC5nb29nbGUuZGF0YXN0b3JlLnYxLktl",
+            "eUgAEhYKDGJhc2VfdmVyc2lvbhgIIAEoA0gBEjEKC3VwZGF0ZV90aW1lGAsg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBEl4KHGNvbmZsaWN0",
+            "X3Jlc29sdXRpb25fc3RyYXRlZ3kYCiABKA4yOC5nb29nbGUuZGF0YXN0b3Jl",
+            "LnYxLk11dGF0aW9uLkNvbmZsaWN0UmVzb2x1dGlvblN0cmF0ZWd5EjgKDXBy",
+            "b3BlcnR5X21hc2sYCSABKAsyIS5nb29nbGUuZGF0YXN0b3JlLnYxLlByb3Bl",
+            "cnR5TWFzaxJIChNwcm9wZXJ0eV90cmFuc2Zvcm1zGAwgAygLMiYuZ29vZ2xl",
+            "LmRhdGFzdG9yZS52MS5Qcm9wZXJ0eVRyYW5zZm9ybUID4EEBIlIKGkNvbmZs",
+            "aWN0UmVzb2x1dGlvblN0cmF0ZWd5EhgKFFNUUkFURUdZX1VOU1BFQ0lGSUVE",
+            "EAASEAoMU0VSVkVSX1ZBTFVFEAESCAoERkFJTBADQgsKCW9wZXJhdGlvbkId",
+            "Chtjb25mbGljdF9kZXRlY3Rpb25fc3RyYXRlZ3ki4wMKEVByb3BlcnR5VHJh",
+            "bnNmb3JtEhUKCHByb3BlcnR5GAEgASgJQgPgQQESUQoTc2V0X3RvX3NlcnZl",
+            "cl92YWx1ZRgCIAEoDjIyLmdvb2dsZS5kYXRhc3RvcmUudjEuUHJvcGVydHlU",
+            "cmFuc2Zvcm0uU2VydmVyVmFsdWVIABIvCglpbmNyZW1lbnQYAyABKAsyGi5n",
+            "b29nbGUuZGF0YXN0b3JlLnYxLlZhbHVlSAASLQoHbWF4aW11bRgEIAEoCzIa",
+            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuVmFsdWVIABItCgdtaW5pbXVtGAUgASgL",
+            "MhouZ29vZ2xlLmRhdGFzdG9yZS52MS5WYWx1ZUgAEkIKF2FwcGVuZF9taXNz",
+            "aW5nX2VsZW1lbnRzGAYgASgLMh8uZ29vZ2xlLmRhdGFzdG9yZS52MS5BcnJh",
+            "eVZhbHVlSAASQAoVcmVtb3ZlX2FsbF9mcm9tX2FycmF5GAcgASgLMh8uZ29v",
+            "Z2xlLmRhdGFzdG9yZS52MS5BcnJheVZhbHVlSAAiPQoLU2VydmVyVmFsdWUS",
+            "HAoYU0VSVkVSX1ZBTFVFX1VOU1BFQ0lGSUVEEAASEAoMUkVRVUVTVF9USU1F",
+            "EAFCEAoOdHJhbnNmb3JtX3R5cGUi/AEKDk11dGF0aW9uUmVzdWx0EiUKA2tl",
+            "eRgDIAEoCzIYLmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5Eg8KB3ZlcnNpb24Y",
+            "BCABKAMSLwoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBIZChFjb25mbGljdF9kZXRlY3RlZBgFIAEoCBI1ChF0",
+            "cmFuc2Zvcm1fcmVzdWx0cxgIIAMoCzIaLmdvb2dsZS5kYXRhc3RvcmUudjEu",
+            "VmFsdWUiHQoMUHJvcGVydHlNYXNrEg0KBXBhdGhzGAEgAygJIsoCCgtSZWFk",
+            "T3B0aW9ucxJMChByZWFkX2NvbnNpc3RlbmN5GAEgASgOMjAuZ29vZ2xlLmRh",
+            "dGFzdG9yZS52MS5SZWFkT3B0aW9ucy5SZWFkQ29uc2lzdGVuY3lIABIVCgt0",
+            "cmFuc2FjdGlvbhgCIAEoDEgAEkIKD25ld190cmFuc2FjdGlvbhgDIAEoCzIn",
+            "Lmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zSAASLwoJ",
+            "cmVhZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgA",
+            "Ik0KD1JlYWRDb25zaXN0ZW5jeRIgChxSRUFEX0NPTlNJU1RFTkNZX1VOU1BF",
+            "Q0lGSUVEEAASCgoGU1RST05HEAESDAoIRVZFTlRVQUwQAkISChBjb25zaXN0",
+            "ZW5jeV90eXBlIpICChJUcmFuc2FjdGlvbk9wdGlvbnMSRwoKcmVhZF93cml0",
+            "ZRgBIAEoCzIxLmdvb2dsZS5kYXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRp",
+            "b25zLlJlYWRXcml0ZUgAEkUKCXJlYWRfb25seRgCIAEoCzIwLmdvb2dsZS5k",
+            "YXRhc3RvcmUudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRPbmx5SAAaKQoJ",
+            "UmVhZFdyaXRlEhwKFHByZXZpb3VzX3RyYW5zYWN0aW9uGAEgASgMGjkKCFJl",
+            "YWRPbmx5Ei0KCXJlYWRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCBgoEbW9kZTLhDQoJRGF0YXN0b3JlEsABCgZMb29rdXASIi5n",
+            "b29nbGUuZGF0YXN0b3JlLnYxLkxvb2t1cFJlcXVlc3QaIy5nb29nbGUuZGF0",
+            "YXN0b3JlLnYxLkxvb2t1cFJlc3BvbnNlIm3aQRxwcm9qZWN0X2lkLHJlYWRf",
+            "b3B0aW9ucyxrZXlzgtPkkwIlIiAvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9",
+            "Omxvb2t1cDoBKorT5JMCHRIMCgpwcm9qZWN0X2lkEg0KC2RhdGFiYXNlX2lk",
+            "EqkBCghSdW5RdWVyeRIkLmdvb2dsZS5kYXRhc3RvcmUudjEuUnVuUXVlcnlS",
+            "ZXF1ZXN0GiUuZ29vZ2xlLmRhdGFzdG9yZS52MS5SdW5RdWVyeVJlc3BvbnNl",
+            "IlCC0+STAiciIi92MS9wcm9qZWN0cy97cHJvamVjdF9pZH06cnVuUXVlcnk6",
+            "ASqK0+STAh0SDAoKcHJvamVjdF9pZBINCgtkYXRhYmFzZV9pZBLVAQoTUnVu",
+            "QWdncmVnYXRpb25RdWVyeRIvLmdvb2dsZS5kYXRhc3RvcmUudjEuUnVuQWdn",
+            "cmVnYXRpb25RdWVyeVJlcXVlc3QaMC5nb29nbGUuZGF0YXN0b3JlLnYxLlJ1",
+            "bkFnZ3JlZ2F0aW9uUXVlcnlSZXNwb25zZSJbgtPkkwIyIi0vdjEvcHJvamVj",
+            "dHMve3Byb2plY3RfaWR9OnJ1bkFnZ3JlZ2F0aW9uUXVlcnk6ASqK0+STAh0S",
+            "DAoKcHJvamVjdF9pZBINCgtkYXRhYmFzZV9pZBLWAQoQQmVnaW5UcmFuc2Fj",
+            "dGlvbhIsLmdvb2dsZS5kYXRhc3RvcmUudjEuQmVnaW5UcmFuc2FjdGlvblJl",
+            "cXVlc3QaLS5nb29nbGUuZGF0YXN0b3JlLnYxLkJlZ2luVHJhbnNhY3Rpb25S",
+            "ZXNwb25zZSJl2kEKcHJvamVjdF9pZILT5JMCLyIqL3YxL3Byb2plY3RzL3tw",
+            "cm9qZWN0X2lkfTpiZWdpblRyYW5zYWN0aW9uOgEqitPkkwIdEgwKCnByb2pl",
+            "Y3RfaWQSDQoLZGF0YWJhc2VfaWQS5gEKBkNvbW1pdBIiLmdvb2dsZS5kYXRh",
+            "c3RvcmUudjEuQ29tbWl0UmVxdWVzdBojLmdvb2dsZS5kYXRhc3RvcmUudjEu",
+            "Q29tbWl0UmVzcG9uc2UikgHaQSVwcm9qZWN0X2lkLG1vZGUsdHJhbnNhY3Rp",
+            "b24sbXV0YXRpb25z2kEZcHJvamVjdF9pZCxtb2RlLG11dGF0aW9uc4LT5JMC",
+            "JSIgL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfTpjb21taXQ6ASqK0+STAh0S",
+            "DAoKcHJvamVjdF9pZBINCgtkYXRhYmFzZV9pZBLCAQoIUm9sbGJhY2sSJC5n",
+            "b29nbGUuZGF0YXN0b3JlLnYxLlJvbGxiYWNrUmVxdWVzdBolLmdvb2dsZS5k",
+            "YXRhc3RvcmUudjEuUm9sbGJhY2tSZXNwb25zZSJp2kEWcHJvamVjdF9pZCx0",
+            "cmFuc2FjdGlvboLT5JMCJyIiL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfTpy",
+            "b2xsYmFjazoBKorT5JMCHRIMCgpwcm9qZWN0X2lkEg0KC2RhdGFiYXNlX2lk",
+            "EscBCgtBbGxvY2F0ZUlkcxInLmdvb2dsZS5kYXRhc3RvcmUudjEuQWxsb2Nh",
+            "dGVJZHNSZXF1ZXN0GiguZ29vZ2xlLmRhdGFzdG9yZS52MS5BbGxvY2F0ZUlk",
+            "c1Jlc3BvbnNlImXaQQ9wcm9qZWN0X2lkLGtleXOC0+STAioiJS92MS9wcm9q",
+            "ZWN0cy97cHJvamVjdF9pZH06YWxsb2NhdGVJZHM6ASqK0+STAh0SDAoKcHJv",
+            "amVjdF9pZBINCgtkYXRhYmFzZV9pZBLDAQoKUmVzZXJ2ZUlkcxImLmdvb2ds",
+            "ZS5kYXRhc3RvcmUudjEuUmVzZXJ2ZUlkc1JlcXVlc3QaJy5nb29nbGUuZGF0",
+            "YXN0b3JlLnYxLlJlc2VydmVJZHNSZXNwb25zZSJk2kEPcHJvamVjdF9pZCxr",
+            "ZXlzgtPkkwIpIiQvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9OnJlc2VydmVJ",
+            "ZHM6ASqK0+STAh0SDAoKcHJvamVjdF9pZBINCgtkYXRhYmFzZV9pZBp2ykEY",
+            "ZGF0YXN0b3JlLmdvb2dsZWFwaXMuY29t0kFYaHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2RhdGFzdG9yZUK/AQoXY29tLmdvb2dsZS5kYXRh",
+            "c3RvcmUudjFCDkRhdGFzdG9yZVByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20v",
+            "Z28vZGF0YXN0b3JlL2FwaXYxL2RhdGFzdG9yZXBiO2RhdGFzdG9yZXBiqgIZ",
+            "R29vZ2xlLkNsb3VkLkRhdGFzdG9yZS5WMcoCGUdvb2dsZVxDbG91ZFxEYXRh",
+            "c3RvcmVcVjHqAhxHb29nbGU6OkNsb3VkOjpEYXRhc3RvcmU6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Datastore.V1.AggregationResultReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Datastore.V1.AggregationResultReflection.Descriptor, global::Google.Cloud.Datastore.V1.EntityReflection.Descriptor, global::Google.Cloud.Datastore.V1.QueryReflection.Descriptor, global::Google.Cloud.Datastore.V1.QueryProfileReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupRequest), global::Google.Cloud.Datastore.V1.LookupRequest.Parser, new[]{ "ProjectId", "DatabaseId", "ReadOptions", "Keys" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupRequest), global::Google.Cloud.Datastore.V1.LookupRequest.Parser, new[]{ "ProjectId", "DatabaseId", "ReadOptions", "Keys", "PropertyMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.LookupResponse), global::Google.Cloud.Datastore.V1.LookupResponse.Parser, new[]{ "Found", "Missing", "Deferred", "Transaction", "ReadTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunQueryRequest), global::Google.Cloud.Datastore.V1.RunQueryRequest.Parser, new[]{ "ProjectId", "DatabaseId", "PartitionId", "ReadOptions", "Query", "GqlQuery" }, new[]{ "QueryType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunQueryResponse), global::Google.Cloud.Datastore.V1.RunQueryResponse.Parser, new[]{ "Batch", "Query", "Transaction" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest), global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest.Parser, new[]{ "ProjectId", "DatabaseId", "PartitionId", "ReadOptions", "AggregationQuery", "GqlQuery" }, new[]{ "QueryType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse), global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse.Parser, new[]{ "Batch", "Query", "Transaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunQueryRequest), global::Google.Cloud.Datastore.V1.RunQueryRequest.Parser, new[]{ "ProjectId", "DatabaseId", "PartitionId", "ReadOptions", "Query", "GqlQuery", "PropertyMask", "ExplainOptions" }, new[]{ "QueryType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunQueryResponse), global::Google.Cloud.Datastore.V1.RunQueryResponse.Parser, new[]{ "Batch", "Query", "Transaction", "ExplainMetrics" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest), global::Google.Cloud.Datastore.V1.RunAggregationQueryRequest.Parser, new[]{ "ProjectId", "DatabaseId", "PartitionId", "ReadOptions", "AggregationQuery", "GqlQuery", "ExplainOptions" }, new[]{ "QueryType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse), global::Google.Cloud.Datastore.V1.RunAggregationQueryResponse.Parser, new[]{ "Batch", "Query", "Transaction", "ExplainMetrics" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.BeginTransactionRequest), global::Google.Cloud.Datastore.V1.BeginTransactionRequest.Parser, new[]{ "ProjectId", "DatabaseId", "TransactionOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.BeginTransactionResponse), global::Google.Cloud.Datastore.V1.BeginTransactionResponse.Parser, new[]{ "Transaction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.RollbackRequest), global::Google.Cloud.Datastore.V1.RollbackRequest.Parser, new[]{ "ProjectId", "DatabaseId", "Transaction" }, null, null, null, null),
@@ -174,8 +203,10 @@ namespace Google.Cloud.Datastore.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.AllocateIdsResponse), global::Google.Cloud.Datastore.V1.AllocateIdsResponse.Parser, new[]{ "Keys" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReserveIdsRequest), global::Google.Cloud.Datastore.V1.ReserveIdsRequest.Parser, new[]{ "ProjectId", "DatabaseId", "Keys" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReserveIdsResponse), global::Google.Cloud.Datastore.V1.ReserveIdsResponse.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Mutation), global::Google.Cloud.Datastore.V1.Mutation.Parser, new[]{ "Insert", "Update", "Upsert", "Delete", "BaseVersion", "UpdateTime" }, new[]{ "Operation", "ConflictDetectionStrategy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.MutationResult), global::Google.Cloud.Datastore.V1.MutationResult.Parser, new[]{ "Key", "Version", "CreateTime", "UpdateTime", "ConflictDetected" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.Mutation), global::Google.Cloud.Datastore.V1.Mutation.Parser, new[]{ "Insert", "Update", "Upsert", "Delete", "BaseVersion", "UpdateTime", "ConflictResolutionStrategy", "PropertyMask", "PropertyTransforms" }, new[]{ "Operation", "ConflictDetectionStrategy" }, new[]{ typeof(global::Google.Cloud.Datastore.V1.Mutation.Types.ConflictResolutionStrategy) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PropertyTransform), global::Google.Cloud.Datastore.V1.PropertyTransform.Parser, new[]{ "Property", "SetToServerValue", "Increment", "Maximum", "Minimum", "AppendMissingElements", "RemoveAllFromArray" }, new[]{ "TransformType" }, new[]{ typeof(global::Google.Cloud.Datastore.V1.PropertyTransform.Types.ServerValue) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.MutationResult), global::Google.Cloud.Datastore.V1.MutationResult.Parser, new[]{ "Key", "Version", "CreateTime", "UpdateTime", "ConflictDetected", "TransformResults" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.PropertyMask), global::Google.Cloud.Datastore.V1.PropertyMask.Parser, new[]{ "Paths" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.ReadOptions), global::Google.Cloud.Datastore.V1.ReadOptions.Parser, new[]{ "ReadConsistency", "Transaction", "NewTransaction", "ReadTime" }, new[]{ "ConsistencyType" }, new[]{ typeof(global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions), global::Google.Cloud.Datastore.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "ReadOnly" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "PreviousTransaction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Datastore.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "ReadTime" }, null, null, null, null)})
@@ -188,6 +219,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// The request for [Datastore.Lookup][google.datastore.v1.Datastore.Lookup].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LookupRequest : pb::IMessage<LookupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -226,6 +258,7 @@ namespace Google.Cloud.Datastore.V1 {
       databaseId_ = other.databaseId_;
       readOptions_ = other.readOptions_ != null ? other.readOptions_.Clone() : null;
       keys_ = other.keys_.Clone();
+      propertyMask_ = other.propertyMask_ != null ? other.propertyMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -297,6 +330,26 @@ namespace Google.Cloud.Datastore.V1 {
       get { return keys_; }
     }
 
+    /// <summary>Field number for the "property_mask" field.</summary>
+    public const int PropertyMaskFieldNumber = 5;
+    private global::Google.Cloud.Datastore.V1.PropertyMask propertyMask_;
+    /// <summary>
+    /// The properties to return. Defaults to returning all properties.
+    ///
+    /// If this field is set and an entity has a property not referenced in the
+    /// mask, it will be absent from [LookupResponse.found.entity.properties][].
+    ///
+    /// The entity's key is always returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.PropertyMask PropertyMask {
+      get { return propertyMask_; }
+      set {
+        propertyMask_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -316,6 +369,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (DatabaseId != other.DatabaseId) return false;
       if (!object.Equals(ReadOptions, other.ReadOptions)) return false;
       if(!keys_.Equals(other.keys_)) return false;
+      if (!object.Equals(PropertyMask, other.PropertyMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -327,6 +381,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (DatabaseId.Length != 0) hash ^= DatabaseId.GetHashCode();
       if (readOptions_ != null) hash ^= ReadOptions.GetHashCode();
       hash ^= keys_.GetHashCode();
+      if (propertyMask_ != null) hash ^= PropertyMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -350,6 +405,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteMessage(ReadOptions);
       }
       keys_.WriteTo(output, _repeated_keys_codec);
+      if (propertyMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(PropertyMask);
+      }
       if (ProjectId.Length != 0) {
         output.WriteRawTag(66);
         output.WriteString(ProjectId);
@@ -373,6 +432,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteMessage(ReadOptions);
       }
       keys_.WriteTo(ref output, _repeated_keys_codec);
+      if (propertyMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(PropertyMask);
+      }
       if (ProjectId.Length != 0) {
         output.WriteRawTag(66);
         output.WriteString(ProjectId);
@@ -401,6 +464,9 @@ namespace Google.Cloud.Datastore.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReadOptions);
       }
       size += keys_.CalculateSize(_repeated_keys_codec);
+      if (propertyMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropertyMask);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -426,6 +492,12 @@ namespace Google.Cloud.Datastore.V1 {
         ReadOptions.MergeFrom(other.ReadOptions);
       }
       keys_.Add(other.keys_);
+      if (other.propertyMask_ != null) {
+        if (propertyMask_ == null) {
+          PropertyMask = new global::Google.Cloud.Datastore.V1.PropertyMask();
+        }
+        PropertyMask.MergeFrom(other.PropertyMask);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -450,6 +522,13 @@ namespace Google.Cloud.Datastore.V1 {
           }
           case 26: {
             keys_.AddEntriesFrom(input, _repeated_keys_codec);
+            break;
+          }
+          case 42: {
+            if (propertyMask_ == null) {
+              PropertyMask = new global::Google.Cloud.Datastore.V1.PropertyMask();
+            }
+            input.ReadMessage(PropertyMask);
             break;
           }
           case 66: {
@@ -486,6 +565,13 @@ namespace Google.Cloud.Datastore.V1 {
             keys_.AddEntriesFrom(ref input, _repeated_keys_codec);
             break;
           }
+          case 42: {
+            if (propertyMask_ == null) {
+              PropertyMask = new global::Google.Cloud.Datastore.V1.PropertyMask();
+            }
+            input.ReadMessage(PropertyMask);
+            break;
+          }
           case 66: {
             ProjectId = input.ReadString();
             break;
@@ -504,6 +590,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// The response for [Datastore.Lookup][google.datastore.v1.Datastore.Lookup].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LookupResponse : pb::IMessage<LookupResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -847,6 +934,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// The request for [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunQueryRequest : pb::IMessage<RunQueryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -885,6 +973,8 @@ namespace Google.Cloud.Datastore.V1 {
       databaseId_ = other.databaseId_;
       partitionId_ = other.partitionId_ != null ? other.partitionId_.Clone() : null;
       readOptions_ = other.readOptions_ != null ? other.readOptions_.Clone() : null;
+      propertyMask_ = other.propertyMask_ != null ? other.propertyMask_.Clone() : null;
+      explainOptions_ = other.explainOptions_ != null ? other.explainOptions_.Clone() : null;
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.Query:
           Query = other.Query.Clone();
@@ -999,6 +1089,41 @@ namespace Google.Cloud.Datastore.V1 {
       }
     }
 
+    /// <summary>Field number for the "property_mask" field.</summary>
+    public const int PropertyMaskFieldNumber = 10;
+    private global::Google.Cloud.Datastore.V1.PropertyMask propertyMask_;
+    /// <summary>
+    /// The properties to return.
+    /// This field must not be set for a projection query.
+    ///
+    /// See
+    /// [LookupRequest.property_mask][google.datastore.v1.LookupRequest.property_mask].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.PropertyMask PropertyMask {
+      get { return propertyMask_; }
+      set {
+        propertyMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "explain_options" field.</summary>
+    public const int ExplainOptionsFieldNumber = 12;
+    private global::Google.Cloud.Datastore.V1.ExplainOptions explainOptions_;
+    /// <summary>
+    /// Optional. Explain options for the query. If set, additional query
+    /// statistics will be returned. If not, only query results will be returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.ExplainOptions ExplainOptions {
+      get { return explainOptions_; }
+      set {
+        explainOptions_ = value;
+      }
+    }
+
     private object queryType_;
     /// <summary>Enum of possible cases for the "query_type" oneof.</summary>
     public enum QueryTypeOneofCase {
@@ -1041,6 +1166,8 @@ namespace Google.Cloud.Datastore.V1 {
       if (!object.Equals(ReadOptions, other.ReadOptions)) return false;
       if (!object.Equals(Query, other.Query)) return false;
       if (!object.Equals(GqlQuery, other.GqlQuery)) return false;
+      if (!object.Equals(PropertyMask, other.PropertyMask)) return false;
+      if (!object.Equals(ExplainOptions, other.ExplainOptions)) return false;
       if (QueryTypeCase != other.QueryTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1055,6 +1182,8 @@ namespace Google.Cloud.Datastore.V1 {
       if (readOptions_ != null) hash ^= ReadOptions.GetHashCode();
       if (queryTypeCase_ == QueryTypeOneofCase.Query) hash ^= Query.GetHashCode();
       if (queryTypeCase_ == QueryTypeOneofCase.GqlQuery) hash ^= GqlQuery.GetHashCode();
+      if (propertyMask_ != null) hash ^= PropertyMask.GetHashCode();
+      if (explainOptions_ != null) hash ^= ExplainOptions.GetHashCode();
       hash ^= (int) queryTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1098,6 +1227,14 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(74);
         output.WriteString(DatabaseId);
       }
+      if (propertyMask_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(PropertyMask);
+      }
+      if (explainOptions_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ExplainOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1132,6 +1269,14 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(74);
         output.WriteString(DatabaseId);
       }
+      if (propertyMask_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(PropertyMask);
+      }
+      if (explainOptions_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ExplainOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1159,6 +1304,12 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (queryTypeCase_ == QueryTypeOneofCase.GqlQuery) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GqlQuery);
+      }
+      if (propertyMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropertyMask);
+      }
+      if (explainOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExplainOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1189,6 +1340,18 @@ namespace Google.Cloud.Datastore.V1 {
           ReadOptions = new global::Google.Cloud.Datastore.V1.ReadOptions();
         }
         ReadOptions.MergeFrom(other.ReadOptions);
+      }
+      if (other.propertyMask_ != null) {
+        if (propertyMask_ == null) {
+          PropertyMask = new global::Google.Cloud.Datastore.V1.PropertyMask();
+        }
+        PropertyMask.MergeFrom(other.PropertyMask);
+      }
+      if (other.explainOptions_ != null) {
+        if (explainOptions_ == null) {
+          ExplainOptions = new global::Google.Cloud.Datastore.V1.ExplainOptions();
+        }
+        ExplainOptions.MergeFrom(other.ExplainOptions);
       }
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.Query:
@@ -1260,6 +1423,20 @@ namespace Google.Cloud.Datastore.V1 {
             DatabaseId = input.ReadString();
             break;
           }
+          case 82: {
+            if (propertyMask_ == null) {
+              PropertyMask = new global::Google.Cloud.Datastore.V1.PropertyMask();
+            }
+            input.ReadMessage(PropertyMask);
+            break;
+          }
+          case 98: {
+            if (explainOptions_ == null) {
+              ExplainOptions = new global::Google.Cloud.Datastore.V1.ExplainOptions();
+            }
+            input.ReadMessage(ExplainOptions);
+            break;
+          }
         }
       }
     #endif
@@ -1315,6 +1492,20 @@ namespace Google.Cloud.Datastore.V1 {
             DatabaseId = input.ReadString();
             break;
           }
+          case 82: {
+            if (propertyMask_ == null) {
+              PropertyMask = new global::Google.Cloud.Datastore.V1.PropertyMask();
+            }
+            input.ReadMessage(PropertyMask);
+            break;
+          }
+          case 98: {
+            if (explainOptions_ == null) {
+              ExplainOptions = new global::Google.Cloud.Datastore.V1.ExplainOptions();
+            }
+            input.ReadMessage(ExplainOptions);
+            break;
+          }
         }
       }
     }
@@ -1326,6 +1517,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// The response for
   /// [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunQueryResponse : pb::IMessage<RunQueryResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1363,6 +1555,7 @@ namespace Google.Cloud.Datastore.V1 {
       batch_ = other.batch_ != null ? other.batch_.Clone() : null;
       query_ = other.query_ != null ? other.query_.Clone() : null;
       transaction_ = other.transaction_;
+      explainMetrics_ = other.explainMetrics_ != null ? other.explainMetrics_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1423,6 +1616,23 @@ namespace Google.Cloud.Datastore.V1 {
       }
     }
 
+    /// <summary>Field number for the "explain_metrics" field.</summary>
+    public const int ExplainMetricsFieldNumber = 9;
+    private global::Google.Cloud.Datastore.V1.ExplainMetrics explainMetrics_;
+    /// <summary>
+    /// Query explain metrics. This is only present when the
+    /// [RunQueryRequest.explain_options][google.datastore.v1.RunQueryRequest.explain_options]
+    /// is provided, and it is sent only once with the last response in the stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.ExplainMetrics ExplainMetrics {
+      get { return explainMetrics_; }
+      set {
+        explainMetrics_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1441,6 +1651,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (!object.Equals(Batch, other.Batch)) return false;
       if (!object.Equals(Query, other.Query)) return false;
       if (Transaction != other.Transaction) return false;
+      if (!object.Equals(ExplainMetrics, other.ExplainMetrics)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1451,6 +1662,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (batch_ != null) hash ^= Batch.GetHashCode();
       if (query_ != null) hash ^= Query.GetHashCode();
       if (Transaction.Length != 0) hash ^= Transaction.GetHashCode();
+      if (explainMetrics_ != null) hash ^= ExplainMetrics.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1481,6 +1693,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(42);
         output.WriteBytes(Transaction);
       }
+      if (explainMetrics_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ExplainMetrics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1503,6 +1719,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(42);
         output.WriteBytes(Transaction);
       }
+      if (explainMetrics_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ExplainMetrics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1521,6 +1741,9 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (Transaction.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
+      }
+      if (explainMetrics_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExplainMetrics);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1548,6 +1771,12 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.Transaction.Length != 0) {
         Transaction = other.Transaction;
+      }
+      if (other.explainMetrics_ != null) {
+        if (explainMetrics_ == null) {
+          ExplainMetrics = new global::Google.Cloud.Datastore.V1.ExplainMetrics();
+        }
+        ExplainMetrics.MergeFrom(other.ExplainMetrics);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1580,6 +1809,13 @@ namespace Google.Cloud.Datastore.V1 {
           }
           case 42: {
             Transaction = input.ReadBytes();
+            break;
+          }
+          case 74: {
+            if (explainMetrics_ == null) {
+              ExplainMetrics = new global::Google.Cloud.Datastore.V1.ExplainMetrics();
+            }
+            input.ReadMessage(ExplainMetrics);
             break;
           }
         }
@@ -1615,6 +1851,13 @@ namespace Google.Cloud.Datastore.V1 {
             Transaction = input.ReadBytes();
             break;
           }
+          case 74: {
+            if (explainMetrics_ == null) {
+              ExplainMetrics = new global::Google.Cloud.Datastore.V1.ExplainMetrics();
+            }
+            input.ReadMessage(ExplainMetrics);
+            break;
+          }
         }
       }
     }
@@ -1626,6 +1869,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// The request for
   /// [Datastore.RunAggregationQuery][google.datastore.v1.Datastore.RunAggregationQuery].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunAggregationQueryRequest : pb::IMessage<RunAggregationQueryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1664,6 +1908,7 @@ namespace Google.Cloud.Datastore.V1 {
       databaseId_ = other.databaseId_;
       partitionId_ = other.partitionId_ != null ? other.partitionId_.Clone() : null;
       readOptions_ = other.readOptions_ != null ? other.readOptions_.Clone() : null;
+      explainOptions_ = other.explainOptions_ != null ? other.explainOptions_.Clone() : null;
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.AggregationQuery:
           AggregationQuery = other.AggregationQuery.Clone();
@@ -1778,6 +2023,22 @@ namespace Google.Cloud.Datastore.V1 {
       }
     }
 
+    /// <summary>Field number for the "explain_options" field.</summary>
+    public const int ExplainOptionsFieldNumber = 11;
+    private global::Google.Cloud.Datastore.V1.ExplainOptions explainOptions_;
+    /// <summary>
+    /// Optional. Explain options for the query. If set, additional query
+    /// statistics will be returned. If not, only query results will be returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.ExplainOptions ExplainOptions {
+      get { return explainOptions_; }
+      set {
+        explainOptions_ = value;
+      }
+    }
+
     private object queryType_;
     /// <summary>Enum of possible cases for the "query_type" oneof.</summary>
     public enum QueryTypeOneofCase {
@@ -1820,6 +2081,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (!object.Equals(ReadOptions, other.ReadOptions)) return false;
       if (!object.Equals(AggregationQuery, other.AggregationQuery)) return false;
       if (!object.Equals(GqlQuery, other.GqlQuery)) return false;
+      if (!object.Equals(ExplainOptions, other.ExplainOptions)) return false;
       if (QueryTypeCase != other.QueryTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1834,6 +2096,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (readOptions_ != null) hash ^= ReadOptions.GetHashCode();
       if (queryTypeCase_ == QueryTypeOneofCase.AggregationQuery) hash ^= AggregationQuery.GetHashCode();
       if (queryTypeCase_ == QueryTypeOneofCase.GqlQuery) hash ^= GqlQuery.GetHashCode();
+      if (explainOptions_ != null) hash ^= ExplainOptions.GetHashCode();
       hash ^= (int) queryTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1877,6 +2140,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(74);
         output.WriteString(DatabaseId);
       }
+      if (explainOptions_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ExplainOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1911,6 +2178,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(74);
         output.WriteString(DatabaseId);
       }
+      if (explainOptions_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ExplainOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1938,6 +2209,9 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (queryTypeCase_ == QueryTypeOneofCase.GqlQuery) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GqlQuery);
+      }
+      if (explainOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExplainOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1968,6 +2242,12 @@ namespace Google.Cloud.Datastore.V1 {
           ReadOptions = new global::Google.Cloud.Datastore.V1.ReadOptions();
         }
         ReadOptions.MergeFrom(other.ReadOptions);
+      }
+      if (other.explainOptions_ != null) {
+        if (explainOptions_ == null) {
+          ExplainOptions = new global::Google.Cloud.Datastore.V1.ExplainOptions();
+        }
+        ExplainOptions.MergeFrom(other.ExplainOptions);
       }
       switch (other.QueryTypeCase) {
         case QueryTypeOneofCase.AggregationQuery:
@@ -2039,6 +2319,13 @@ namespace Google.Cloud.Datastore.V1 {
             DatabaseId = input.ReadString();
             break;
           }
+          case 90: {
+            if (explainOptions_ == null) {
+              ExplainOptions = new global::Google.Cloud.Datastore.V1.ExplainOptions();
+            }
+            input.ReadMessage(ExplainOptions);
+            break;
+          }
         }
       }
     #endif
@@ -2094,6 +2381,13 @@ namespace Google.Cloud.Datastore.V1 {
             DatabaseId = input.ReadString();
             break;
           }
+          case 90: {
+            if (explainOptions_ == null) {
+              ExplainOptions = new global::Google.Cloud.Datastore.V1.ExplainOptions();
+            }
+            input.ReadMessage(ExplainOptions);
+            break;
+          }
         }
       }
     }
@@ -2105,6 +2399,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// The response for
   /// [Datastore.RunAggregationQuery][google.datastore.v1.Datastore.RunAggregationQuery].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunAggregationQueryResponse : pb::IMessage<RunAggregationQueryResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2142,6 +2437,7 @@ namespace Google.Cloud.Datastore.V1 {
       batch_ = other.batch_ != null ? other.batch_.Clone() : null;
       query_ = other.query_ != null ? other.query_.Clone() : null;
       transaction_ = other.transaction_;
+      explainMetrics_ = other.explainMetrics_ != null ? other.explainMetrics_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2202,6 +2498,23 @@ namespace Google.Cloud.Datastore.V1 {
       }
     }
 
+    /// <summary>Field number for the "explain_metrics" field.</summary>
+    public const int ExplainMetricsFieldNumber = 9;
+    private global::Google.Cloud.Datastore.V1.ExplainMetrics explainMetrics_;
+    /// <summary>
+    /// Query explain metrics. This is only present when the
+    /// [RunAggregationQueryRequest.explain_options][google.datastore.v1.RunAggregationQueryRequest.explain_options]
+    /// is provided, and it is sent only once with the last response in the stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.ExplainMetrics ExplainMetrics {
+      get { return explainMetrics_; }
+      set {
+        explainMetrics_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2220,6 +2533,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (!object.Equals(Batch, other.Batch)) return false;
       if (!object.Equals(Query, other.Query)) return false;
       if (Transaction != other.Transaction) return false;
+      if (!object.Equals(ExplainMetrics, other.ExplainMetrics)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2230,6 +2544,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (batch_ != null) hash ^= Batch.GetHashCode();
       if (query_ != null) hash ^= Query.GetHashCode();
       if (Transaction.Length != 0) hash ^= Transaction.GetHashCode();
+      if (explainMetrics_ != null) hash ^= ExplainMetrics.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2260,6 +2575,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(42);
         output.WriteBytes(Transaction);
       }
+      if (explainMetrics_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ExplainMetrics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2282,6 +2601,10 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(42);
         output.WriteBytes(Transaction);
       }
+      if (explainMetrics_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ExplainMetrics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2300,6 +2623,9 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (Transaction.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
+      }
+      if (explainMetrics_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExplainMetrics);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2327,6 +2653,12 @@ namespace Google.Cloud.Datastore.V1 {
       }
       if (other.Transaction.Length != 0) {
         Transaction = other.Transaction;
+      }
+      if (other.explainMetrics_ != null) {
+        if (explainMetrics_ == null) {
+          ExplainMetrics = new global::Google.Cloud.Datastore.V1.ExplainMetrics();
+        }
+        ExplainMetrics.MergeFrom(other.ExplainMetrics);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2359,6 +2691,13 @@ namespace Google.Cloud.Datastore.V1 {
           }
           case 42: {
             Transaction = input.ReadBytes();
+            break;
+          }
+          case 74: {
+            if (explainMetrics_ == null) {
+              ExplainMetrics = new global::Google.Cloud.Datastore.V1.ExplainMetrics();
+            }
+            input.ReadMessage(ExplainMetrics);
             break;
           }
         }
@@ -2394,6 +2733,13 @@ namespace Google.Cloud.Datastore.V1 {
             Transaction = input.ReadBytes();
             break;
           }
+          case 74: {
+            if (explainMetrics_ == null) {
+              ExplainMetrics = new global::Google.Cloud.Datastore.V1.ExplainMetrics();
+            }
+            input.ReadMessage(ExplainMetrics);
+            break;
+          }
         }
       }
     }
@@ -2405,6 +2751,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// The request for
   /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BeginTransactionRequest : pb::IMessage<BeginTransactionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2693,6 +3040,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// The response for
   /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BeginTransactionResponse : pb::IMessage<BeginTransactionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2888,6 +3236,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// The request for [Datastore.Rollback][google.datastore.v1.Datastore.Rollback].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RollbackRequest : pb::IMessage<RollbackRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3169,6 +3518,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// [Datastore.Rollback][google.datastore.v1.Datastore.Rollback]. (an empty
   /// message).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RollbackResponse : pb::IMessage<RollbackResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3324,6 +3674,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// The request for [Datastore.Commit][google.datastore.v1.Datastore.Commit].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CommitRequest : pb::IMessage<CommitRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3438,10 +3789,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Transaction {
-      get { return transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction ? (pb::ByteString) transactionSelector_ : pb::ByteString.Empty; }
+      get { return HasTransaction ? (pb::ByteString) transactionSelector_ : pb::ByteString.Empty; }
       set {
         transactionSelector_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         transactionSelectorCase_ = TransactionSelectorOneofCase.Transaction;
+      }
+    }
+    /// <summary>Gets whether the "transaction" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTransaction {
+      get { return transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "transaction" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTransaction() {
+      if (HasTransaction) {
+        ClearTransactionSelector();
       }
     }
 
@@ -3542,7 +3907,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (DatabaseId.Length != 0) hash ^= DatabaseId.GetHashCode();
       if (Mode != global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode.Unspecified) hash ^= Mode.GetHashCode();
-      if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) hash ^= Transaction.GetHashCode();
+      if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (transactionSelectorCase_ == TransactionSelectorOneofCase.SingleUseTransaction) hash ^= SingleUseTransaction.GetHashCode();
       hash ^= mutations_.GetHashCode();
       hash ^= (int) transactionSelectorCase_;
@@ -3564,7 +3929,7 @@ namespace Google.Cloud.Datastore.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(10);
         output.WriteBytes(Transaction);
       }
@@ -3595,7 +3960,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(10);
         output.WriteBytes(Transaction);
       }
@@ -3635,7 +4000,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (Mode != global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
       }
-      if (transactionSelectorCase_ == TransactionSelectorOneofCase.Transaction) {
+      if (HasTransaction) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
       }
       if (transactionSelectorCase_ == TransactionSelectorOneofCase.SingleUseTransaction) {
@@ -3802,6 +4167,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// The response for [Datastore.Commit][google.datastore.v1.Datastore.Commit].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CommitResponse : pb::IMessage<CommitResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4078,6 +4444,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// The request for
   /// [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AllocateIdsRequest : pb::IMessage<AllocateIdsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4347,6 +4714,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// The response for
   /// [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AllocateIdsResponse : pb::IMessage<AllocateIdsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4533,6 +4901,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// The request for
   /// [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReserveIdsRequest : pb::IMessage<ReserveIdsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4802,6 +5171,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// The response for
   /// [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReserveIdsResponse : pb::IMessage<ReserveIdsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4957,6 +5327,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// A mutation to apply to an entity.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Mutation : pb::IMessage<Mutation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4991,6 +5362,9 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Mutation(Mutation other) : this() {
+      conflictResolutionStrategy_ = other.conflictResolutionStrategy_;
+      propertyMask_ = other.propertyMask_ != null ? other.propertyMask_.Clone() : null;
+      propertyTransforms_ = other.propertyTransforms_.Clone();
       switch (other.OperationCase) {
         case OperationOneofCase.Insert:
           Insert = other.Insert.Clone();
@@ -5098,10 +5472,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BaseVersion {
-      get { return conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion ? (long) conflictDetectionStrategy_ : 0L; }
+      get { return HasBaseVersion ? (long) conflictDetectionStrategy_ : 0L; }
       set {
         conflictDetectionStrategy_ = value;
         conflictDetectionStrategyCase_ = ConflictDetectionStrategyOneofCase.BaseVersion;
+      }
+    }
+    /// <summary>Gets whether the "base_version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBaseVersion {
+      get { return conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "base_version" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBaseVersion() {
+      if (HasBaseVersion) {
+        ClearConflictDetectionStrategy();
       }
     }
 
@@ -5120,6 +5508,63 @@ namespace Google.Cloud.Datastore.V1 {
         conflictDetectionStrategy_ = value;
         conflictDetectionStrategyCase_ = value == null ? ConflictDetectionStrategyOneofCase.None : ConflictDetectionStrategyOneofCase.UpdateTime;
       }
+    }
+
+    /// <summary>Field number for the "conflict_resolution_strategy" field.</summary>
+    public const int ConflictResolutionStrategyFieldNumber = 10;
+    private global::Google.Cloud.Datastore.V1.Mutation.Types.ConflictResolutionStrategy conflictResolutionStrategy_ = global::Google.Cloud.Datastore.V1.Mutation.Types.ConflictResolutionStrategy.StrategyUnspecified;
+    /// <summary>
+    /// The strategy to use when a conflict is detected. Defaults to
+    /// `SERVER_VALUE`.
+    /// If this is set, then `conflict_detection_strategy` must also be set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.Mutation.Types.ConflictResolutionStrategy ConflictResolutionStrategy {
+      get { return conflictResolutionStrategy_; }
+      set {
+        conflictResolutionStrategy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "property_mask" field.</summary>
+    public const int PropertyMaskFieldNumber = 9;
+    private global::Google.Cloud.Datastore.V1.PropertyMask propertyMask_;
+    /// <summary>
+    /// The properties to write in this mutation.
+    /// None of the properties in the mask may have a reserved name, except for
+    /// `__key__`.
+    /// This field is ignored for `delete`.
+    ///
+    /// If the entity already exists, only properties referenced in the mask are
+    /// updated, others are left untouched.
+    /// Properties referenced in the mask but not in the entity are deleted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.PropertyMask PropertyMask {
+      get { return propertyMask_; }
+      set {
+        propertyMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "property_transforms" field.</summary>
+    public const int PropertyTransformsFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Datastore.V1.PropertyTransform> _repeated_propertyTransforms_codec
+        = pb::FieldCodec.ForMessage(98, global::Google.Cloud.Datastore.V1.PropertyTransform.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.PropertyTransform> propertyTransforms_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.PropertyTransform>();
+    /// <summary>
+    /// Optional. The transforms to perform on the entity.
+    ///
+    /// This field can be set only when the operation is `insert`, `update`,
+    /// or `upsert`. If present, the transforms are be applied to the entity
+    /// regardless of the property mask, in order, after the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.PropertyTransform> PropertyTransforms {
+      get { return propertyTransforms_; }
     }
 
     private object operation_;
@@ -5187,6 +5632,9 @@ namespace Google.Cloud.Datastore.V1 {
       if (!object.Equals(Delete, other.Delete)) return false;
       if (BaseVersion != other.BaseVersion) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (ConflictResolutionStrategy != other.ConflictResolutionStrategy) return false;
+      if (!object.Equals(PropertyMask, other.PropertyMask)) return false;
+      if(!propertyTransforms_.Equals(other.propertyTransforms_)) return false;
       if (OperationCase != other.OperationCase) return false;
       if (ConflictDetectionStrategyCase != other.ConflictDetectionStrategyCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -5200,8 +5648,11 @@ namespace Google.Cloud.Datastore.V1 {
       if (operationCase_ == OperationOneofCase.Update) hash ^= Update.GetHashCode();
       if (operationCase_ == OperationOneofCase.Upsert) hash ^= Upsert.GetHashCode();
       if (operationCase_ == OperationOneofCase.Delete) hash ^= Delete.GetHashCode();
-      if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion) hash ^= BaseVersion.GetHashCode();
+      if (HasBaseVersion) hash ^= BaseVersion.GetHashCode();
       if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) hash ^= UpdateTime.GetHashCode();
+      if (ConflictResolutionStrategy != global::Google.Cloud.Datastore.V1.Mutation.Types.ConflictResolutionStrategy.StrategyUnspecified) hash ^= ConflictResolutionStrategy.GetHashCode();
+      if (propertyMask_ != null) hash ^= PropertyMask.GetHashCode();
+      hash ^= propertyTransforms_.GetHashCode();
       hash ^= (int) operationCase_;
       hash ^= (int) conflictDetectionStrategyCase_;
       if (_unknownFields != null) {
@@ -5238,14 +5689,23 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(Delete);
       }
-      if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion) {
+      if (HasBaseVersion) {
         output.WriteRawTag(64);
         output.WriteInt64(BaseVersion);
+      }
+      if (propertyMask_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(PropertyMask);
+      }
+      if (ConflictResolutionStrategy != global::Google.Cloud.Datastore.V1.Mutation.Types.ConflictResolutionStrategy.StrategyUnspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) ConflictResolutionStrategy);
       }
       if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) {
         output.WriteRawTag(90);
         output.WriteMessage(UpdateTime);
       }
+      propertyTransforms_.WriteTo(output, _repeated_propertyTransforms_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5272,14 +5732,23 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(Delete);
       }
-      if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion) {
+      if (HasBaseVersion) {
         output.WriteRawTag(64);
         output.WriteInt64(BaseVersion);
+      }
+      if (propertyMask_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(PropertyMask);
+      }
+      if (ConflictResolutionStrategy != global::Google.Cloud.Datastore.V1.Mutation.Types.ConflictResolutionStrategy.StrategyUnspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) ConflictResolutionStrategy);
       }
       if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) {
         output.WriteRawTag(90);
         output.WriteMessage(UpdateTime);
       }
+      propertyTransforms_.WriteTo(ref output, _repeated_propertyTransforms_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5302,12 +5771,19 @@ namespace Google.Cloud.Datastore.V1 {
       if (operationCase_ == OperationOneofCase.Delete) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Delete);
       }
-      if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.BaseVersion) {
+      if (HasBaseVersion) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(BaseVersion);
       }
       if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
+      if (ConflictResolutionStrategy != global::Google.Cloud.Datastore.V1.Mutation.Types.ConflictResolutionStrategy.StrategyUnspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConflictResolutionStrategy);
+      }
+      if (propertyMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropertyMask);
+      }
+      size += propertyTransforms_.CalculateSize(_repeated_propertyTransforms_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5320,6 +5796,16 @@ namespace Google.Cloud.Datastore.V1 {
       if (other == null) {
         return;
       }
+      if (other.ConflictResolutionStrategy != global::Google.Cloud.Datastore.V1.Mutation.Types.ConflictResolutionStrategy.StrategyUnspecified) {
+        ConflictResolutionStrategy = other.ConflictResolutionStrategy;
+      }
+      if (other.propertyMask_ != null) {
+        if (propertyMask_ == null) {
+          PropertyMask = new global::Google.Cloud.Datastore.V1.PropertyMask();
+        }
+        PropertyMask.MergeFrom(other.PropertyMask);
+      }
+      propertyTransforms_.Add(other.propertyTransforms_);
       switch (other.OperationCase) {
         case OperationOneofCase.Insert:
           if (Insert == null) {
@@ -5414,6 +5900,17 @@ namespace Google.Cloud.Datastore.V1 {
             BaseVersion = input.ReadInt64();
             break;
           }
+          case 74: {
+            if (propertyMask_ == null) {
+              PropertyMask = new global::Google.Cloud.Datastore.V1.PropertyMask();
+            }
+            input.ReadMessage(PropertyMask);
+            break;
+          }
+          case 80: {
+            ConflictResolutionStrategy = (global::Google.Cloud.Datastore.V1.Mutation.Types.ConflictResolutionStrategy) input.ReadEnum();
+            break;
+          }
           case 90: {
             global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) {
@@ -5421,6 +5918,10 @@ namespace Google.Cloud.Datastore.V1 {
             }
             input.ReadMessage(subBuilder);
             UpdateTime = subBuilder;
+            break;
+          }
+          case 98: {
+            propertyTransforms_.AddEntriesFrom(input, _repeated_propertyTransforms_codec);
             break;
           }
         }
@@ -5478,6 +5979,17 @@ namespace Google.Cloud.Datastore.V1 {
             BaseVersion = input.ReadInt64();
             break;
           }
+          case 74: {
+            if (propertyMask_ == null) {
+              PropertyMask = new global::Google.Cloud.Datastore.V1.PropertyMask();
+            }
+            input.ReadMessage(PropertyMask);
+            break;
+          }
+          case 80: {
+            ConflictResolutionStrategy = (global::Google.Cloud.Datastore.V1.Mutation.Types.ConflictResolutionStrategy) input.ReadEnum();
+            break;
+          }
           case 90: {
             global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             if (conflictDetectionStrategyCase_ == ConflictDetectionStrategyOneofCase.UpdateTime) {
@@ -5487,16 +5999,693 @@ namespace Google.Cloud.Datastore.V1 {
             UpdateTime = subBuilder;
             break;
           }
+          case 98: {
+            propertyTransforms_.AddEntriesFrom(ref input, _repeated_propertyTransforms_codec);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Mutation message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The possible ways to resolve a conflict detected in a mutation.
+      /// </summary>
+      public enum ConflictResolutionStrategy {
+        /// <summary>
+        /// Unspecified. Defaults to `SERVER_VALUE`.
+        /// </summary>
+        [pbr::OriginalName("STRATEGY_UNSPECIFIED")] StrategyUnspecified = 0,
+        /// <summary>
+        /// The server entity is kept.
+        /// </summary>
+        [pbr::OriginalName("SERVER_VALUE")] ServerValue = 1,
+        /// <summary>
+        /// The whole commit request fails.
+        /// </summary>
+        [pbr::OriginalName("FAIL")] Fail = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A transformation of an entity property.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PropertyTransform : pb::IMessage<PropertyTransform>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PropertyTransform> _parser = new pb::MessageParser<PropertyTransform>(() => new PropertyTransform());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PropertyTransform> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PropertyTransform() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PropertyTransform(PropertyTransform other) : this() {
+      property_ = other.property_;
+      switch (other.TransformTypeCase) {
+        case TransformTypeOneofCase.SetToServerValue:
+          SetToServerValue = other.SetToServerValue;
+          break;
+        case TransformTypeOneofCase.Increment:
+          Increment = other.Increment.Clone();
+          break;
+        case TransformTypeOneofCase.Maximum:
+          Maximum = other.Maximum.Clone();
+          break;
+        case TransformTypeOneofCase.Minimum:
+          Minimum = other.Minimum.Clone();
+          break;
+        case TransformTypeOneofCase.AppendMissingElements:
+          AppendMissingElements = other.AppendMissingElements.Clone();
+          break;
+        case TransformTypeOneofCase.RemoveAllFromArray:
+          RemoveAllFromArray = other.RemoveAllFromArray.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PropertyTransform Clone() {
+      return new PropertyTransform(this);
+    }
+
+    /// <summary>Field number for the "property" field.</summary>
+    public const int PropertyFieldNumber = 1;
+    private string property_ = "";
+    /// <summary>
+    /// Optional. The name of the property.
+    ///
+    /// Property paths (a list of property names separated by dots (`.`)) may be
+    /// used to refer to properties inside entity values. For example `foo.bar`
+    /// means the property `bar` inside the entity property `foo`.
+    ///
+    /// If a property name contains a dot `.` or a backlslash `\`, then that name
+    /// must be escaped.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Property {
+      get { return property_; }
+      set {
+        property_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "set_to_server_value" field.</summary>
+    public const int SetToServerValueFieldNumber = 2;
+    /// <summary>
+    /// Sets the property to the given server value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.PropertyTransform.Types.ServerValue SetToServerValue {
+      get { return HasSetToServerValue ? (global::Google.Cloud.Datastore.V1.PropertyTransform.Types.ServerValue) transformType_ : global::Google.Cloud.Datastore.V1.PropertyTransform.Types.ServerValue.Unspecified; }
+      set {
+        transformType_ = value;
+        transformTypeCase_ = TransformTypeOneofCase.SetToServerValue;
+      }
+    }
+    /// <summary>Gets whether the "set_to_server_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSetToServerValue {
+      get { return transformTypeCase_ == TransformTypeOneofCase.SetToServerValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "set_to_server_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSetToServerValue() {
+      if (HasSetToServerValue) {
+        ClearTransformType();
+      }
+    }
+
+    /// <summary>Field number for the "increment" field.</summary>
+    public const int IncrementFieldNumber = 3;
+    /// <summary>
+    /// Adds the given value to the property's current value.
+    ///
+    /// This must be an integer or a double value.
+    /// If the property is not an integer or double, or if the property does not
+    /// yet exist, the transformation will set the property to the given value.
+    /// If either of the given value or the current property value are doubles,
+    /// both values will be interpreted as doubles. Double arithmetic and
+    /// representation of double values follows IEEE 754 semantics.
+    /// If there is positive/negative integer overflow, the property is resolved
+    /// to the largest magnitude positive/negative integer.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.Value Increment {
+      get { return transformTypeCase_ == TransformTypeOneofCase.Increment ? (global::Google.Cloud.Datastore.V1.Value) transformType_ : null; }
+      set {
+        transformType_ = value;
+        transformTypeCase_ = value == null ? TransformTypeOneofCase.None : TransformTypeOneofCase.Increment;
+      }
+    }
+
+    /// <summary>Field number for the "maximum" field.</summary>
+    public const int MaximumFieldNumber = 4;
+    /// <summary>
+    /// Sets the property to the maximum of its current value and the given
+    /// value.
+    ///
+    /// This must be an integer or a double value.
+    /// If the property is not an integer or double, or if the property does not
+    /// yet exist, the transformation will set the property to the given value.
+    /// If a maximum operation is applied where the property and the input value
+    /// are of mixed types (that is - one is an integer and one is a double)
+    /// the property takes on the type of the larger operand. If the operands are
+    /// equivalent (e.g. 3 and 3.0), the property does not change.
+    /// 0, 0.0, and -0.0 are all zero. The maximum of a zero stored value and
+    /// zero input value is always the stored value.
+    /// The maximum of any numeric value x and NaN is NaN.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.Value Maximum {
+      get { return transformTypeCase_ == TransformTypeOneofCase.Maximum ? (global::Google.Cloud.Datastore.V1.Value) transformType_ : null; }
+      set {
+        transformType_ = value;
+        transformTypeCase_ = value == null ? TransformTypeOneofCase.None : TransformTypeOneofCase.Maximum;
+      }
+    }
+
+    /// <summary>Field number for the "minimum" field.</summary>
+    public const int MinimumFieldNumber = 5;
+    /// <summary>
+    /// Sets the property to the minimum of its current value and the given
+    /// value.
+    ///
+    /// This must be an integer or a double value.
+    /// If the property is not an integer or double, or if the property does not
+    /// yet exist, the transformation will set the property to the input value.
+    /// If a minimum operation is applied where the property and the input value
+    /// are of mixed types (that is - one is an integer and one is a double)
+    /// the property takes on the type of the smaller operand. If the operands
+    /// are equivalent (e.g. 3 and 3.0), the property does not change. 0, 0.0,
+    /// and -0.0 are all zero. The minimum of a zero stored value and zero input
+    /// value is always the stored value. The minimum of any numeric value x and
+    /// NaN is NaN.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.Value Minimum {
+      get { return transformTypeCase_ == TransformTypeOneofCase.Minimum ? (global::Google.Cloud.Datastore.V1.Value) transformType_ : null; }
+      set {
+        transformType_ = value;
+        transformTypeCase_ = value == null ? TransformTypeOneofCase.None : TransformTypeOneofCase.Minimum;
+      }
+    }
+
+    /// <summary>Field number for the "append_missing_elements" field.</summary>
+    public const int AppendMissingElementsFieldNumber = 6;
+    /// <summary>
+    /// Appends the given elements in order if they are not already present in
+    /// the current property value.
+    /// If the property is not an array, or if the property does not yet exist,
+    /// it is first set to the empty array.
+    ///
+    /// Equivalent numbers of different types (e.g. 3L and 3.0) are
+    /// considered equal when checking if a value is missing.
+    /// NaN is equal to NaN, and the null value is equal to the null value.
+    /// If the input contains multiple equivalent values, only the first will
+    /// be considered.
+    ///
+    /// The corresponding transform result will be the null value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.ArrayValue AppendMissingElements {
+      get { return transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements ? (global::Google.Cloud.Datastore.V1.ArrayValue) transformType_ : null; }
+      set {
+        transformType_ = value;
+        transformTypeCase_ = value == null ? TransformTypeOneofCase.None : TransformTypeOneofCase.AppendMissingElements;
+      }
+    }
+
+    /// <summary>Field number for the "remove_all_from_array" field.</summary>
+    public const int RemoveAllFromArrayFieldNumber = 7;
+    /// <summary>
+    /// Removes all of the given elements from the array in the property.
+    /// If the property is not an array, or if the property does not yet exist,
+    /// it is set to the empty array.
+    ///
+    /// Equivalent numbers of different types (e.g. 3L and 3.0) are
+    /// considered equal when deciding whether an element should be removed.
+    /// NaN is equal to NaN, and the null value is equal to the null value.
+    /// This will remove all equivalent values if there are duplicates.
+    ///
+    /// The corresponding transform result will be the null value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Datastore.V1.ArrayValue RemoveAllFromArray {
+      get { return transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray ? (global::Google.Cloud.Datastore.V1.ArrayValue) transformType_ : null; }
+      set {
+        transformType_ = value;
+        transformTypeCase_ = value == null ? TransformTypeOneofCase.None : TransformTypeOneofCase.RemoveAllFromArray;
+      }
+    }
+
+    private object transformType_;
+    /// <summary>Enum of possible cases for the "transform_type" oneof.</summary>
+    public enum TransformTypeOneofCase {
+      None = 0,
+      SetToServerValue = 2,
+      Increment = 3,
+      Maximum = 4,
+      Minimum = 5,
+      AppendMissingElements = 6,
+      RemoveAllFromArray = 7,
+    }
+    private TransformTypeOneofCase transformTypeCase_ = TransformTypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TransformTypeOneofCase TransformTypeCase {
+      get { return transformTypeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTransformType() {
+      transformTypeCase_ = TransformTypeOneofCase.None;
+      transformType_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PropertyTransform);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PropertyTransform other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Property != other.Property) return false;
+      if (SetToServerValue != other.SetToServerValue) return false;
+      if (!object.Equals(Increment, other.Increment)) return false;
+      if (!object.Equals(Maximum, other.Maximum)) return false;
+      if (!object.Equals(Minimum, other.Minimum)) return false;
+      if (!object.Equals(AppendMissingElements, other.AppendMissingElements)) return false;
+      if (!object.Equals(RemoveAllFromArray, other.RemoveAllFromArray)) return false;
+      if (TransformTypeCase != other.TransformTypeCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Property.Length != 0) hash ^= Property.GetHashCode();
+      if (HasSetToServerValue) hash ^= SetToServerValue.GetHashCode();
+      if (transformTypeCase_ == TransformTypeOneofCase.Increment) hash ^= Increment.GetHashCode();
+      if (transformTypeCase_ == TransformTypeOneofCase.Maximum) hash ^= Maximum.GetHashCode();
+      if (transformTypeCase_ == TransformTypeOneofCase.Minimum) hash ^= Minimum.GetHashCode();
+      if (transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements) hash ^= AppendMissingElements.GetHashCode();
+      if (transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray) hash ^= RemoveAllFromArray.GetHashCode();
+      hash ^= (int) transformTypeCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Property.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Property);
+      }
+      if (HasSetToServerValue) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) SetToServerValue);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.Increment) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Increment);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.Maximum) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Maximum);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.Minimum) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Minimum);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AppendMissingElements);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray) {
+        output.WriteRawTag(58);
+        output.WriteMessage(RemoveAllFromArray);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Property.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Property);
+      }
+      if (HasSetToServerValue) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) SetToServerValue);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.Increment) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Increment);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.Maximum) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Maximum);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.Minimum) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Minimum);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AppendMissingElements);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray) {
+        output.WriteRawTag(58);
+        output.WriteMessage(RemoveAllFromArray);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Property.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Property);
+      }
+      if (HasSetToServerValue) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SetToServerValue);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.Increment) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Increment);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.Maximum) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Maximum);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.Minimum) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Minimum);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AppendMissingElements);
+      }
+      if (transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RemoveAllFromArray);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PropertyTransform other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Property.Length != 0) {
+        Property = other.Property;
+      }
+      switch (other.TransformTypeCase) {
+        case TransformTypeOneofCase.SetToServerValue:
+          SetToServerValue = other.SetToServerValue;
+          break;
+        case TransformTypeOneofCase.Increment:
+          if (Increment == null) {
+            Increment = new global::Google.Cloud.Datastore.V1.Value();
+          }
+          Increment.MergeFrom(other.Increment);
+          break;
+        case TransformTypeOneofCase.Maximum:
+          if (Maximum == null) {
+            Maximum = new global::Google.Cloud.Datastore.V1.Value();
+          }
+          Maximum.MergeFrom(other.Maximum);
+          break;
+        case TransformTypeOneofCase.Minimum:
+          if (Minimum == null) {
+            Minimum = new global::Google.Cloud.Datastore.V1.Value();
+          }
+          Minimum.MergeFrom(other.Minimum);
+          break;
+        case TransformTypeOneofCase.AppendMissingElements:
+          if (AppendMissingElements == null) {
+            AppendMissingElements = new global::Google.Cloud.Datastore.V1.ArrayValue();
+          }
+          AppendMissingElements.MergeFrom(other.AppendMissingElements);
+          break;
+        case TransformTypeOneofCase.RemoveAllFromArray:
+          if (RemoveAllFromArray == null) {
+            RemoveAllFromArray = new global::Google.Cloud.Datastore.V1.ArrayValue();
+          }
+          RemoveAllFromArray.MergeFrom(other.RemoveAllFromArray);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Property = input.ReadString();
+            break;
+          }
+          case 16: {
+            transformType_ = input.ReadEnum();
+            transformTypeCase_ = TransformTypeOneofCase.SetToServerValue;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Datastore.V1.Value subBuilder = new global::Google.Cloud.Datastore.V1.Value();
+            if (transformTypeCase_ == TransformTypeOneofCase.Increment) {
+              subBuilder.MergeFrom(Increment);
+            }
+            input.ReadMessage(subBuilder);
+            Increment = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Datastore.V1.Value subBuilder = new global::Google.Cloud.Datastore.V1.Value();
+            if (transformTypeCase_ == TransformTypeOneofCase.Maximum) {
+              subBuilder.MergeFrom(Maximum);
+            }
+            input.ReadMessage(subBuilder);
+            Maximum = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Datastore.V1.Value subBuilder = new global::Google.Cloud.Datastore.V1.Value();
+            if (transformTypeCase_ == TransformTypeOneofCase.Minimum) {
+              subBuilder.MergeFrom(Minimum);
+            }
+            input.ReadMessage(subBuilder);
+            Minimum = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Datastore.V1.ArrayValue subBuilder = new global::Google.Cloud.Datastore.V1.ArrayValue();
+            if (transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements) {
+              subBuilder.MergeFrom(AppendMissingElements);
+            }
+            input.ReadMessage(subBuilder);
+            AppendMissingElements = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Datastore.V1.ArrayValue subBuilder = new global::Google.Cloud.Datastore.V1.ArrayValue();
+            if (transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray) {
+              subBuilder.MergeFrom(RemoveAllFromArray);
+            }
+            input.ReadMessage(subBuilder);
+            RemoveAllFromArray = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Property = input.ReadString();
+            break;
+          }
+          case 16: {
+            transformType_ = input.ReadEnum();
+            transformTypeCase_ = TransformTypeOneofCase.SetToServerValue;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Datastore.V1.Value subBuilder = new global::Google.Cloud.Datastore.V1.Value();
+            if (transformTypeCase_ == TransformTypeOneofCase.Increment) {
+              subBuilder.MergeFrom(Increment);
+            }
+            input.ReadMessage(subBuilder);
+            Increment = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Datastore.V1.Value subBuilder = new global::Google.Cloud.Datastore.V1.Value();
+            if (transformTypeCase_ == TransformTypeOneofCase.Maximum) {
+              subBuilder.MergeFrom(Maximum);
+            }
+            input.ReadMessage(subBuilder);
+            Maximum = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Datastore.V1.Value subBuilder = new global::Google.Cloud.Datastore.V1.Value();
+            if (transformTypeCase_ == TransformTypeOneofCase.Minimum) {
+              subBuilder.MergeFrom(Minimum);
+            }
+            input.ReadMessage(subBuilder);
+            Minimum = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Datastore.V1.ArrayValue subBuilder = new global::Google.Cloud.Datastore.V1.ArrayValue();
+            if (transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements) {
+              subBuilder.MergeFrom(AppendMissingElements);
+            }
+            input.ReadMessage(subBuilder);
+            AppendMissingElements = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Datastore.V1.ArrayValue subBuilder = new global::Google.Cloud.Datastore.V1.ArrayValue();
+            if (transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray) {
+              subBuilder.MergeFrom(RemoveAllFromArray);
+            }
+            input.ReadMessage(subBuilder);
+            RemoveAllFromArray = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PropertyTransform message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A value that is calculated by the server.
+      /// </summary>
+      public enum ServerValue {
+        /// <summary>
+        /// Unspecified. This value must not be used.
+        /// </summary>
+        [pbr::OriginalName("SERVER_VALUE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The time at which the server processed the request, with millisecond
+        /// precision. If used on multiple properties (same or different entities)
+        /// in a transaction, all the properties will get the same server timestamp.
+        /// </summary>
+        [pbr::OriginalName("REQUEST_TIME")] RequestTime = 1,
+      }
+
+    }
+    #endregion
 
   }
 
   /// <summary>
   /// The result of applying a mutation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MutationResult : pb::IMessage<MutationResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5511,7 +6700,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5536,6 +6725,7 @@ namespace Google.Cloud.Datastore.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       conflictDetected_ = other.conflictDetected_;
+      transformResults_ = other.transformResults_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5629,6 +6819,22 @@ namespace Google.Cloud.Datastore.V1 {
       }
     }
 
+    /// <summary>Field number for the "transform_results" field.</summary>
+    public const int TransformResultsFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Datastore.V1.Value> _repeated_transformResults_codec
+        = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Datastore.V1.Value.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Value> transformResults_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Value>();
+    /// <summary>
+    /// The results of applying each
+    /// [PropertyTransform][google.datastore.v1.PropertyTransform], in the same
+    /// order of the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Value> TransformResults {
+      get { return transformResults_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5649,6 +6855,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (ConflictDetected != other.ConflictDetected) return false;
+      if(!transformResults_.Equals(other.transformResults_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5661,6 +6868,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (ConflictDetected != false) hash ^= ConflictDetected.GetHashCode();
+      hash ^= transformResults_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5699,6 +6907,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(CreateTime);
       }
+      transformResults_.WriteTo(output, _repeated_transformResults_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5729,6 +6938,7 @@ namespace Google.Cloud.Datastore.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(CreateTime);
       }
+      transformResults_.WriteTo(ref output, _repeated_transformResults_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5754,6 +6964,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (ConflictDetected != false) {
         size += 1 + 1;
       }
+      size += transformResults_.CalculateSize(_repeated_transformResults_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5790,6 +7001,7 @@ namespace Google.Cloud.Datastore.V1 {
       if (other.ConflictDetected != false) {
         ConflictDetected = other.ConflictDetected;
       }
+      transformResults_.Add(other.transformResults_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5832,6 +7044,10 @@ namespace Google.Cloud.Datastore.V1 {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreateTime);
+            break;
+          }
+          case 66: {
+            transformResults_.AddEntriesFrom(input, _repeated_transformResults_codec);
             break;
           }
         }
@@ -5878,6 +7094,206 @@ namespace Google.Cloud.Datastore.V1 {
             input.ReadMessage(CreateTime);
             break;
           }
+          case 66: {
+            transformResults_.AddEntriesFrom(ref input, _repeated_transformResults_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The set of arbitrarily nested property paths used to restrict an operation to
+  /// only a subset of properties in an entity.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PropertyMask : pb::IMessage<PropertyMask>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PropertyMask> _parser = new pb::MessageParser<PropertyMask>(() => new PropertyMask());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PropertyMask> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PropertyMask() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PropertyMask(PropertyMask other) : this() {
+      paths_ = other.paths_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PropertyMask Clone() {
+      return new PropertyMask(this);
+    }
+
+    /// <summary>Field number for the "paths" field.</summary>
+    public const int PathsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_paths_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> paths_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The paths to the properties covered by this mask.
+    ///
+    /// A path is a list of property names separated by dots (`.`), for example
+    /// `foo.bar` means the property `bar` inside the entity property `foo` inside
+    /// the entity associated with this path.
+    ///
+    /// If a property name contains a dot `.` or a backslash `\`, then that
+    /// name must be escaped.
+    ///
+    /// A path must not be empty, and may not reference a value inside an
+    /// [array value][google.datastore.v1.Value.array_value].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Paths {
+      get { return paths_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PropertyMask);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PropertyMask other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!paths_.Equals(other.paths_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= paths_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      paths_.WriteTo(output, _repeated_paths_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      paths_.WriteTo(ref output, _repeated_paths_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += paths_.CalculateSize(_repeated_paths_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PropertyMask other) {
+      if (other == null) {
+        return;
+      }
+      paths_.Add(other.paths_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            paths_.AddEntriesFrom(input, _repeated_paths_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            paths_.AddEntriesFrom(ref input, _repeated_paths_codec);
+            break;
+          }
         }
       }
     }
@@ -5888,6 +7304,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// <summary>
   /// The options shared by read requests.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReadOptions : pb::IMessage<ReadOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5902,7 +7319,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5954,10 +7371,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency ReadConsistency {
-      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency ? (global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) consistencyType_ : global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency.Unspecified; }
+      get { return HasReadConsistency ? (global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency) consistencyType_ : global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency.Unspecified; }
       set {
         consistencyType_ = value;
         consistencyTypeCase_ = ConsistencyTypeOneofCase.ReadConsistency;
+      }
+    }
+    /// <summary>Gets whether the "read_consistency" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReadConsistency {
+      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "read_consistency" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReadConsistency() {
+      if (HasReadConsistency) {
+        ClearConsistencyType();
       }
     }
 
@@ -5971,10 +7402,24 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Transaction {
-      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction ? (pb::ByteString) consistencyType_ : pb::ByteString.Empty; }
+      get { return HasTransaction ? (pb::ByteString) consistencyType_ : pb::ByteString.Empty; }
       set {
         consistencyType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         consistencyTypeCase_ = ConsistencyTypeOneofCase.Transaction;
+      }
+    }
+    /// <summary>Gets whether the "transaction" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTransaction {
+      get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "transaction" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTransaction() {
+      if (HasTransaction) {
+        ClearConsistencyType();
       }
     }
 
@@ -6002,9 +7447,12 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "read_time" field.</summary>
     public const int ReadTimeFieldNumber = 4;
     /// <summary>
-    /// Reads entities as they were at the given time. This may not be older
-    /// than 270 seconds.  This value is only supported for Cloud Firestore in
-    /// Datastore mode.
+    /// Reads entities as they were at the given time. This value is only
+    /// supported for Cloud Firestore in Datastore mode.
+    ///
+    /// This must be a microsecond precision timestamp within the past one hour,
+    /// or if Point-in-Time Recovery is enabled, can additionally be a whole
+    /// minute timestamp within the past 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6066,8 +7514,8 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) hash ^= ReadConsistency.GetHashCode();
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction) hash ^= Transaction.GetHashCode();
+      if (HasReadConsistency) hash ^= ReadConsistency.GetHashCode();
+      if (HasTransaction) hash ^= Transaction.GetHashCode();
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.NewTransaction) hash ^= NewTransaction.GetHashCode();
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadTime) hash ^= ReadTime.GetHashCode();
       hash ^= (int) consistencyTypeCase_;
@@ -6089,11 +7537,11 @@ namespace Google.Cloud.Datastore.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) {
+      if (HasReadConsistency) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ReadConsistency);
       }
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(18);
         output.WriteBytes(Transaction);
       }
@@ -6115,11 +7563,11 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) {
+      if (HasReadConsistency) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ReadConsistency);
       }
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction) {
+      if (HasTransaction) {
         output.WriteRawTag(18);
         output.WriteBytes(Transaction);
       }
@@ -6141,10 +7589,10 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) {
+      if (HasReadConsistency) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReadConsistency);
       }
-      if (consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction) {
+      if (HasTransaction) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Transaction);
       }
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.NewTransaction) {
@@ -6312,6 +7760,7 @@ namespace Google.Cloud.Datastore.V1 {
   /// [ReadOptions.new_transaction][google.datastore.v1.ReadOptions.new_transaction]
   /// in read requests.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransactionOptions : pb::IMessage<TransactionOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6326,7 +7775,7 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Datastore.V1.DatastoreReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6609,6 +8058,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <summary>
       /// Options specific to read / write transactions.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ReadWrite : pb::IMessage<ReadWrite>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6804,6 +8254,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <summary>
       /// Options specific to read-only transactions.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ReadOnly : pb::IMessage<ReadOnly>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6853,7 +8304,10 @@ namespace Google.Cloud.Datastore.V1 {
         private global::Google.Protobuf.WellKnownTypes.Timestamp readTime_;
         /// <summary>
         /// Reads entities at the given time.
-        /// This may not be older than 60 seconds.
+        ///
+        /// This must be a microsecond precision timestamp within the past one hour,
+        /// or if Point-in-Time Recovery is enabled, can additionally be a whole
+        /// minute timestamp within the past 7 days.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

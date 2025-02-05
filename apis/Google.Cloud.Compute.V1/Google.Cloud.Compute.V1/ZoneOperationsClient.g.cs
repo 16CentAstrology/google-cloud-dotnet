@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,16 +17,16 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -163,14 +163,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ZoneOperationsClient.Create(callInvoker, Settings, Logger);
+            return ZoneOperationsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ZoneOperationsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ZoneOperationsClient.Create(callInvoker, Settings, Logger);
+            return ZoneOperationsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -300,7 +300,7 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request.
         /// </param>
         /// <param name="operation">
-        /// Name of the Operations resource to delete.
+        /// Name of the Operations resource to delete, or its unique numeric identifier.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -322,7 +322,7 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request.
         /// </param>
         /// <param name="operation">
-        /// Name of the Operations resource to delete.
+        /// Name of the Operations resource to delete, or its unique numeric identifier.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -344,7 +344,7 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request.
         /// </param>
         /// <param name="operation">
-        /// Name of the Operations resource to delete.
+        /// Name of the Operations resource to delete, or its unique numeric identifier.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -388,7 +388,7 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request.
         /// </param>
         /// <param name="operation">
-        /// Name of the Operations resource to return.
+        /// Name of the Operations resource to return, or its unique numeric identifier.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -410,7 +410,7 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request.
         /// </param>
         /// <param name="operation">
-        /// Name of the Operations resource to return.
+        /// Name of the Operations resource to return, or its unique numeric identifier.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -432,7 +432,7 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request.
         /// </param>
         /// <param name="operation">
-        /// Name of the Operations resource to return.
+        /// Name of the Operations resource to return, or its unique numeric identifier.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -476,14 +476,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Operation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<OperationList, Operation> List(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListZoneOperationsRequest
+        public virtual gax::PagedEnumerable<OperationList, Operation> List(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListZoneOperationsRequest request = new ListZoneOperationsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of Operation resources contained within the specified zone.
@@ -504,14 +513,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Operation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<OperationList, Operation> ListAsync(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListZoneOperationsRequest
+        public virtual gax::PagedAsyncEnumerable<OperationList, Operation> ListAsync(string project, string zone, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListZoneOperationsRequest request = new ListZoneOperationsRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Waits for the specified Operation resource to return as `DONE` or for the request to approach the 2 minute deadline, and retrieves the specified Operation resource. This method waits for no more than the 2 minutes and then returns the current state of the operation, which might be `DONE` or still in progress. This method is called on a best-effort basis. Specifically: - In uncommon cases, when the server is overloaded, the request might return before the default deadline is reached, or might return after zero seconds. - If the default deadline is reached, there is no guarantee that the operation is actually done when the method returns. Be prepared to retry if the operation is not `DONE`.
@@ -550,7 +568,7 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request.
         /// </param>
         /// <param name="operation">
-        /// Name of the Operations resource to return.
+        /// Name of the Operations resource to return, or its unique numeric identifier.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -572,7 +590,7 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request.
         /// </param>
         /// <param name="operation">
-        /// Name of the Operations resource to return.
+        /// Name of the Operations resource to return, or its unique numeric identifier.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -594,7 +612,7 @@ namespace Google.Cloud.Compute.V1
         /// Name of the zone for this request.
         /// </param>
         /// <param name="operation">
-        /// Name of the Operations resource to return.
+        /// Name of the Operations resource to return, or its unique numeric identifier.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -626,7 +644,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             ZoneOperationsSettings effectiveSettings = settings ?? ZoneOperationsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callDelete = clientHelper.BuildApiCall<DeleteZoneOperationRequest, DeleteZoneOperationResponse>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("operation", request => request.Operation);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);

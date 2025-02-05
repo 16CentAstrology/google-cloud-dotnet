@@ -1,5 +1,103 @@
 # Version history
 
+## Version 3.15.0, released 2024-10-30
+
+### Documentation improvements
+
+- Improve comment formatting
+
+
+## Version 3.14.0, released 2024-09-26
+
+### Bug fixes
+
+- **BREAKING CHANGE** Pagination feature is introduced for method `ListKeyHandles` in service `Autokey` ([commit d036220](https://github.com/googleapis/google-cloud-dotnet/commit/d036220251afc1d36c2ee530197ad37a404c54f7))
+
+This breaking change is being introduced without a new major version
+as we believe customers are unlikely to be using the existing API
+surface, and that it's in the best interestes of most customers to
+keep to a minor release. (We completely acknowledge that this *is* a
+breaking change, and we apologize if you're affected by it. Please
+[raise an issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+with any concerns - we're keen to improve this balance where we can.)
+
+### New features
+
+- Adding a state field for AutokeyConfig ([commit d036220](https://github.com/googleapis/google-cloud-dotnet/commit/d036220251afc1d36c2ee530197ad37a404c54f7))
+
+### Documentation improvements
+
+- Field service_resolvers in message .google.cloud.kms.v1.EkmConnection is Explicitly is marked as to have field behavior of Optional ([commit d036220](https://github.com/googleapis/google-cloud-dotnet/commit/d036220251afc1d36c2ee530197ad37a404c54f7))
+- A comment for field `destroy_scheduled_duration` in message `.google.cloud.kms.v1.CryptoKey` is updated for the default duration ([commit d036220](https://github.com/googleapis/google-cloud-dotnet/commit/d036220251afc1d36c2ee530197ad37a404c54f7))
+
+## Version 3.13.0, released 2024-06-24
+
+### New features
+
+- Support Key Access Justifications policy configuration ([commit 801775b](https://github.com/googleapis/google-cloud-dotnet/commit/801775b978e387c2cc0bff81a1450fd002fdbf30))
+
+## Version 3.12.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 3.11.0, released 2024-05-08
+
+### New features
+
+- Add client library for KMS Autokey service, which enables automated KMS key provision and management ([commit 5ff96b3](https://github.com/googleapis/google-cloud-dotnet/commit/5ff96b3bb71b5732b4bc9d0a21f195440a7ac1d3))
+- Introduce Long-Running Operations (LRO) for KMS ([commit 3020530](https://github.com/googleapis/google-cloud-dotnet/commit/3020530fd4cac7f9c8185059b9e69091eb89afe6))
+- Support the ED25519 asymmetric signing algorithm ([commit 820f2ec](https://github.com/googleapis/google-cloud-dotnet/commit/820f2ec4dc8134c0a63434a93b930bb88e3788e1))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- In google.cloud.kms.v1.PublicKey, pem field is always populated ([commit 790ddc8](https://github.com/googleapis/google-cloud-dotnet/commit/790ddc8e9191b3652679ab54e7cf8c5f74518002))
+
+## Version 3.10.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.9.0, released 2024-03-13
+
+No API surface changes; just dependency updates.
+
+## Version 3.8.0, released 2024-02-09
+
+### Documentation improvements
+
+- Update comments ([commit 38d35cd](https://github.com/googleapis/google-cloud-dotnet/commit/38d35cd2bb934d9a58fe9ef72249477dc87fc610))
+- Minor formatting ([commit 5f3c5d6](https://github.com/googleapis/google-cloud-dotnet/commit/5f3c5d6339cf46a241e75cb83688161686ab3212))
+- Minor formatting ([commit 21481f5](https://github.com/googleapis/google-cloud-dotnet/commit/21481f59e36ab85882dfe30eb8c2c9d5549ae8dd))
+## Version 3.7.0, released 2023-08-04
+
+### New features
+
+- Add interoperable symmetric encryption system ([commit 0a36eb9](https://github.com/googleapis/google-cloud-dotnet/commit/0a36eb98bd94e46576c52d63e5c6b44910e41ba2))
+
+### Documentation improvements
+
+- Minor formatting ([commit 2d4d254](https://github.com/googleapis/google-cloud-dotnet/commit/2d4d254457a1bb700638f18409522f631be92300))
+
+## Version 3.6.0, released 2023-07-13
+
+### New features
+
+- Add interoperable symmetric encryption system ([commit 9ce4e96](https://github.com/googleapis/google-cloud-dotnet/commit/9ce4e965f7a88a2712bc0c64f14f64dd1a58d489))
+
+## Version 3.5.0, released 2023-05-26
+
+### New features
+
+- Added VerifyConnectivity RPC ([commit 6a49888](https://github.com/googleapis/google-cloud-dotnet/commit/6a4988813f39d14905cdcb84ddf93b452f062d86))
+
+### Documentation improvements
+
+- Improve descriptions of different hash functions/values for ECDSA signing ([issue 10118](https://github.com/googleapis/google-cloud-dotnet/issues/10118)) ([commit c41a931](https://github.com/googleapis/google-cloud-dotnet/commit/c41a9317d52a5d26eb47fd6fa9adf0f4af69e260))
+
 ## Version 3.4.0, released 2023-03-20
 
 ### New features

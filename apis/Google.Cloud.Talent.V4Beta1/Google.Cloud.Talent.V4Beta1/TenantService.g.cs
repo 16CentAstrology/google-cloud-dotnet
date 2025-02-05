@@ -50,22 +50,22 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "YWxlbnQudjRiZXRhMS5SZXNwb25zZU1ldGFkYXRhMqAHCg1UZW5hbnRTZXJ2",
             "aWNlEqYBCgxDcmVhdGVUZW5hbnQSMC5nb29nbGUuY2xvdWQudGFsZW50LnY0",
             "YmV0YTEuQ3JlYXRlVGVuYW50UmVxdWVzdBojLmdvb2dsZS5jbG91ZC50YWxl",
-            "bnQudjRiZXRhMS5UZW5hbnQiP4LT5JMCKSIkL3Y0YmV0YTEve3BhcmVudD1w",
-            "cm9qZWN0cy8qfS90ZW5hbnRzOgEq2kENcGFyZW50LHRlbmFudBKUAQoJR2V0",
+            "bnQudjRiZXRhMS5UZW5hbnQiP9pBDXBhcmVudCx0ZW5hbnSC0+STAikiJC92",
+            "NGJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vdGVuYW50czoBKhKUAQoJR2V0",
             "VGVuYW50Ei0uZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkdldFRlbmFu",
             "dFJlcXVlc3QaIy5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEuVGVuYW50",
-            "IjOC0+STAiYSJC92NGJldGExL3tuYW1lPXByb2plY3RzLyovdGVuYW50cy8q",
-            "fdpBBG5hbWUSpgEKDFVwZGF0ZVRlbmFudBIwLmdvb2dsZS5jbG91ZC50YWxl",
+            "IjPaQQRuYW1lgtPkkwImEiQvdjRiZXRhMS97bmFtZT1wcm9qZWN0cy8qL3Rl",
+            "bmFudHMvKn0SpgEKDFVwZGF0ZVRlbmFudBIwLmdvb2dsZS5jbG91ZC50YWxl",
             "bnQudjRiZXRhMS5VcGRhdGVUZW5hbnRSZXF1ZXN0GiMuZ29vZ2xlLmNsb3Vk",
-            "LnRhbGVudC52NGJldGExLlRlbmFudCI/gtPkkwIwMisvdjRiZXRhMS97dGVu",
-            "YW50Lm5hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyp9OgEq2kEGdGVuYW50Eo0B",
+            "LnRhbGVudC52NGJldGExLlRlbmFudCI/2kEGdGVuYW50gtPkkwIwMisvdjRi",
+            "ZXRhMS97dGVuYW50Lm5hbWU9cHJvamVjdHMvKi90ZW5hbnRzLyp9OgEqEo0B",
             "CgxEZWxldGVUZW5hbnQSMC5nb29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTEu",
             "RGVsZXRlVGVuYW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIz",
-            "gtPkkwImKiQvdjRiZXRhMS97bmFtZT1wcm9qZWN0cy8qL3RlbmFudHMvKn3a",
-            "QQRuYW1lEqcBCgtMaXN0VGVuYW50cxIvLmdvb2dsZS5jbG91ZC50YWxlbnQu",
+            "2kEEbmFtZYLT5JMCJiokL3Y0YmV0YTEve25hbWU9cHJvamVjdHMvKi90ZW5h",
+            "bnRzLyp9EqcBCgtMaXN0VGVuYW50cxIvLmdvb2dsZS5jbG91ZC50YWxlbnQu",
             "djRiZXRhMS5MaXN0VGVuYW50c1JlcXVlc3QaMC5nb29nbGUuY2xvdWQudGFs",
-            "ZW50LnY0YmV0YTEuTGlzdFRlbmFudHNSZXNwb25zZSI1gtPkkwImEiQvdjRi",
-            "ZXRhMS97cGFyZW50PXByb2plY3RzLyp9L3RlbmFudHPaQQZwYXJlbnQabMpB",
+            "ZW50LnY0YmV0YTEuTGlzdFRlbmFudHNSZXNwb25zZSI12kEGcGFyZW50gtPk",
+            "kwImEiQvdjRiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L3RlbmFudHMabMpB",
             "E2pvYnMuZ29vZ2xlYXBpcy5jb23SQVNodHRwczovL3d3dy5nb29nbGVhcGlz",
             "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
             "aXMuY29tL2F1dGgvam9ic0J2Ch9jb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52",
@@ -90,6 +90,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// The Request of the CreateTenant method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTenantRequest : pb::IMessage<CreateTenantRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -337,6 +338,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Request for getting a tenant by name.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTenantRequest : pb::IMessage<GetTenantRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -535,6 +537,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Request for updating a specified tenant.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateTenantRequest : pb::IMessage<UpdateTenantRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -799,6 +802,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Request to delete a tenant.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteTenantRequest : pb::IMessage<DeleteTenantRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -997,6 +1001,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// List tenants for which the client has ACL visibility.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTenantsRequest : pb::IMessage<ListTenantsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1276,6 +1281,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// The List tenants response object.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTenantsResponse : pb::IMessage<ListTenantsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

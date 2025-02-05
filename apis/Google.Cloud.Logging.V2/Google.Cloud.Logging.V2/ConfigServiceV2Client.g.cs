@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Logging.V2
 {
@@ -50,6 +50,10 @@ namespace Google.Cloud.Logging.V2
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListBucketsSettings = existing.ListBucketsSettings;
             GetBucketSettings = existing.GetBucketSettings;
+            CreateBucketLongRunningSettings = existing.CreateBucketLongRunningSettings;
+            CreateBucketLongRunningOperationsSettings = existing.CreateBucketLongRunningOperationsSettings.Clone();
+            UpdateBucketLongRunningSettings = existing.UpdateBucketLongRunningSettings;
+            UpdateBucketLongRunningOperationsSettings = existing.UpdateBucketLongRunningOperationsSettings.Clone();
             CreateBucketSettings = existing.CreateBucketSettings;
             UpdateBucketSettings = existing.UpdateBucketSettings;
             DeleteBucketSettings = existing.DeleteBucketSettings;
@@ -64,6 +68,12 @@ namespace Google.Cloud.Logging.V2
             CreateSinkSettings = existing.CreateSinkSettings;
             UpdateSinkSettings = existing.UpdateSinkSettings;
             DeleteSinkSettings = existing.DeleteSinkSettings;
+            CreateLinkSettings = existing.CreateLinkSettings;
+            CreateLinkOperationsSettings = existing.CreateLinkOperationsSettings.Clone();
+            DeleteLinkSettings = existing.DeleteLinkSettings;
+            DeleteLinkOperationsSettings = existing.DeleteLinkOperationsSettings.Clone();
+            ListLinksSettings = existing.ListLinksSettings;
+            GetLinkSettings = existing.GetLinkSettings;
             ListExclusionsSettings = existing.ListExclusionsSettings;
             GetExclusionSettings = existing.GetExclusionSettings;
             CreateExclusionSettings = existing.CreateExclusionSettings;
@@ -103,6 +113,68 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetBucketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.CreateBucketLongRunning</c> and
+        /// <c>ConfigServiceV2Client.CreateBucketLongRunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBucketLongRunningSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigServiceV2Client.CreateBucketLongRunning</c> and
+        /// <c>ConfigServiceV2Client.CreateBucketLongRunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateBucketLongRunningOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.UpdateBucketLongRunning</c> and
+        /// <c>ConfigServiceV2Client.UpdateBucketLongRunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBucketLongRunningSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigServiceV2Client.UpdateBucketLongRunning</c> and
+        /// <c>ConfigServiceV2Client.UpdateBucketLongRunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateBucketLongRunningOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -307,6 +379,90 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteSinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.CreateLink</c> and <c>ConfigServiceV2Client.CreateLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigServiceV2Client.CreateLink</c> and
+        /// <c>ConfigServiceV2Client.CreateLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateLinkOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.DeleteLink</c> and <c>ConfigServiceV2Client.DeleteLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ConfigServiceV2Client.DeleteLink</c> and
+        /// <c>ConfigServiceV2Client.DeleteLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteLinkOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.ListLinks</c> and <c>ConfigServiceV2Client.ListLinksAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.GetLink</c> and <c>ConfigServiceV2Client.GetLinkAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -516,14 +672,14 @@ namespace Google.Cloud.Logging.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ConfigServiceV2Client.Create(callInvoker, Settings, Logger);
+            return ConfigServiceV2Client.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ConfigServiceV2Client> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ConfigServiceV2Client.Create(callInvoker, Settings, Logger);
+            return ConfigServiceV2Client.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -663,13 +819,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogBucket"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBucketsResponse, LogBucket> ListBuckets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBuckets(new ListBucketsRequest
+        public virtual gax::PagedEnumerable<ListBucketsResponse, LogBucket> ListBuckets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBuckets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log buckets.
@@ -696,13 +861,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogBucket"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, LogBucket> ListBucketsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBucketsAsync(new ListBucketsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, LogBucket> ListBucketsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBucketsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log buckets.
@@ -729,13 +903,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogBucket"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBucketsResponse, LogBucket> ListBuckets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBuckets(new ListBucketsRequest
+        public virtual gax::PagedEnumerable<ListBucketsResponse, LogBucket> ListBuckets(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBuckets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log buckets.
@@ -762,13 +945,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogBucket"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, LogBucket> ListBucketsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBucketsAsync(new ListBucketsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, LogBucket> ListBucketsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBucketsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log buckets.
@@ -795,13 +987,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogBucket"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBucketsResponse, LogBucket> ListBuckets(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBuckets(new ListBucketsRequest
+        public virtual gax::PagedEnumerable<ListBucketsResponse, LogBucket> ListBuckets(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBuckets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log buckets.
@@ -828,13 +1029,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogBucket"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, LogBucket> ListBucketsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBucketsAsync(new ListBucketsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, LogBucket> ListBucketsAsync(OrganizationLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBucketsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log buckets.
@@ -861,13 +1071,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogBucket"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBucketsResponse, LogBucket> ListBuckets(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBuckets(new ListBucketsRequest
+        public virtual gax::PagedEnumerable<ListBucketsResponse, LogBucket> ListBuckets(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBuckets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log buckets.
@@ -894,13 +1113,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogBucket"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, LogBucket> ListBucketsAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBucketsAsync(new ListBucketsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, LogBucket> ListBucketsAsync(FolderLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 ParentAsFolderLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBucketsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log buckets.
@@ -927,13 +1155,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogBucket"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBucketsResponse, LogBucket> ListBuckets(BillingAccountLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBuckets(new ListBucketsRequest
+        public virtual gax::PagedEnumerable<ListBucketsResponse, LogBucket> ListBuckets(BillingAccountLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 ParentAsBillingAccountLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBuckets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists log buckets.
@@ -960,13 +1197,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogBucket"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, LogBucket> ListBucketsAsync(BillingAccountLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBucketsAsync(new ListBucketsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBucketsResponse, LogBucket> ListBucketsAsync(BillingAccountLocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBucketsRequest request = new ListBucketsRequest
             {
                 ParentAsBillingAccountLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBucketsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a log bucket.
@@ -994,6 +1240,135 @@ namespace Google.Cloud.Logging.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<LogBucket> GetBucketAsync(GetBucketRequest request, st::CancellationToken cancellationToken) =>
             GetBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a log bucket asynchronously that can be used to store log entries.
+        /// 
+        /// After a bucket has been created, the bucket's location cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LogBucket, BucketMetadata> CreateBucketLongRunning(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a log bucket asynchronously that can be used to store log entries.
+        /// 
+        /// After a bucket has been created, the bucket's location cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> CreateBucketLongRunningAsync(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a log bucket asynchronously that can be used to store log entries.
+        /// 
+        /// After a bucket has been created, the bucket's location cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> CreateBucketLongRunningAsync(CreateBucketRequest request, st::CancellationToken cancellationToken) =>
+            CreateBucketLongRunningAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateBucketLongRunning</c>.</summary>
+        public virtual lro::OperationsClient CreateBucketLongRunningOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateBucketLongRunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<LogBucket, BucketMetadata> PollOnceCreateBucketLongRunning(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LogBucket, BucketMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBucketLongRunningOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateBucketLongRunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> PollOnceCreateBucketLongRunningAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LogBucket, BucketMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBucketLongRunningOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a log bucket asynchronously.
+        /// 
+        /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+        /// `FAILED_PRECONDITION` will be returned.
+        /// 
+        /// After a bucket has been created, the bucket's location cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LogBucket, BucketMetadata> UpdateBucketLongRunning(UpdateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a log bucket asynchronously.
+        /// 
+        /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+        /// `FAILED_PRECONDITION` will be returned.
+        /// 
+        /// After a bucket has been created, the bucket's location cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> UpdateBucketLongRunningAsync(UpdateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a log bucket asynchronously.
+        /// 
+        /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+        /// `FAILED_PRECONDITION` will be returned.
+        /// 
+        /// After a bucket has been created, the bucket's location cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> UpdateBucketLongRunningAsync(UpdateBucketRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBucketLongRunningAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateBucketLongRunning</c>.</summary>
+        public virtual lro::OperationsClient UpdateBucketLongRunningOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBucketLongRunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<LogBucket, BucketMetadata> PollOnceUpdateBucketLongRunning(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LogBucket, BucketMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBucketLongRunningOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateBucketLongRunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<LogBucket, BucketMetadata>> PollOnceUpdateBucketLongRunningAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LogBucket, BucketMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateBucketLongRunningOperationsClient, callSettings);
 
         /// <summary>
         /// Creates a log bucket that can be used to store log entries. After a bucket
@@ -1026,11 +1401,7 @@ namespace Google.Cloud.Logging.V2
             CreateBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a log bucket. This method replaces the following fields in the
-        /// existing bucket with values from the new bucket: `retention_period`
-        /// 
-        /// If the retention period is decreased and the bucket is locked,
-        /// `FAILED_PRECONDITION` will be returned.
+        /// Updates a log bucket.
         /// 
         /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
         /// `FAILED_PRECONDITION` will be returned.
@@ -1044,11 +1415,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a log bucket. This method replaces the following fields in the
-        /// existing bucket with values from the new bucket: `retention_period`
-        /// 
-        /// If the retention period is decreased and the bucket is locked,
-        /// `FAILED_PRECONDITION` will be returned.
+        /// Updates a log bucket.
         /// 
         /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
         /// `FAILED_PRECONDITION` will be returned.
@@ -1062,11 +1429,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a log bucket. This method replaces the following fields in the
-        /// existing bucket with values from the new bucket: `retention_period`
-        /// 
-        /// If the retention period is decreased and the bucket is locked,
-        /// `FAILED_PRECONDITION` will be returned.
+        /// Updates a log bucket.
         /// 
         /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
         /// `FAILED_PRECONDITION` will be returned.
@@ -1184,13 +1547,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogView"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListViewsResponse, LogView> ListViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViews(new ListViewsRequest
+        public virtual gax::PagedEnumerable<ListViewsResponse, LogView> ListViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViewsRequest request = new ListViewsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViews(request, callSettings);
+        }
 
         /// <summary>
         /// Lists views on a log bucket.
@@ -1210,13 +1582,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogView"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListViewsResponse, LogView> ListViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListViewsAsync(new ListViewsRequest
+        public virtual gax::PagedAsyncEnumerable<ListViewsResponse, LogView> ListViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListViewsRequest request = new ListViewsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListViewsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a view on a log bucket..
@@ -1389,13 +1770,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogSink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSinks(new ListSinksRequest
+        public virtual gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSinksRequest request = new ListSinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists sinks.
@@ -1418,13 +1808,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogSink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSinksAsync(new ListSinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSinksRequest request = new ListSinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists sinks.
@@ -1447,13 +1846,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogSink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSinks(new ListSinksRequest
+        public virtual gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSinksRequest request = new ListSinksRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists sinks.
@@ -1476,13 +1884,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogSink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSinksAsync(new ListSinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSinksRequest request = new ListSinksRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists sinks.
@@ -1505,13 +1922,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogSink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSinks(new ListSinksRequest
+        public virtual gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSinksRequest request = new ListSinksRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists sinks.
@@ -1534,13 +1960,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogSink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSinksAsync(new ListSinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSinksRequest request = new ListSinksRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists sinks.
@@ -1563,13 +1998,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogSink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSinks(new ListSinksRequest
+        public virtual gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSinksRequest request = new ListSinksRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists sinks.
@@ -1592,13 +2036,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogSink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSinksAsync(new ListSinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSinksRequest request = new ListSinksRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists sinks.
@@ -1621,13 +2074,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogSink"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSinks(new ListSinksRequest
+        public virtual gax::PagedEnumerable<ListSinksResponse, LogSink> ListSinks(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSinksRequest request = new ListSinksRequest
             {
                 ParentAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSinks(request, callSettings);
+        }
 
         /// <summary>
         /// Lists sinks.
@@ -1650,13 +2112,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogSink"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSinksAsync(new ListSinksRequest
+        public virtual gax::PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSinksRequest request = new ListSinksRequest
             {
                 ParentAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSinksAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a sink.
@@ -2360,8 +2831,8 @@ namespace Google.Cloud.Logging.V2
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2373,8 +2844,8 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears as part
-        /// of `sink_name`.
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Field mask that specifies the fields in `sink` that need
@@ -2412,8 +2883,8 @@ namespace Google.Cloud.Logging.V2
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2425,8 +2896,8 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears as part
-        /// of `sink_name`.
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Field mask that specifies the fields in `sink` that need
@@ -2464,8 +2935,8 @@ namespace Google.Cloud.Logging.V2
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2477,8 +2948,8 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears as part
-        /// of `sink_name`.
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Field mask that specifies the fields in `sink` that need
@@ -2511,8 +2982,8 @@ namespace Google.Cloud.Logging.V2
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2524,8 +2995,8 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears as part
-        /// of `sink_name`.
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Field mask that specifies the fields in `sink` that need
@@ -2563,8 +3034,8 @@ namespace Google.Cloud.Logging.V2
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2576,8 +3047,8 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears as part
-        /// of `sink_name`.
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Field mask that specifies the fields in `sink` that need
@@ -2615,8 +3086,8 @@ namespace Google.Cloud.Logging.V2
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2628,8 +3099,8 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears as part
-        /// of `sink_name`.
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Field mask that specifies the fields in `sink` that need
@@ -2662,8 +3133,8 @@ namespace Google.Cloud.Logging.V2
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2675,8 +3146,8 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears as part
-        /// of `sink_name`.
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2695,8 +3166,8 @@ namespace Google.Cloud.Logging.V2
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2708,8 +3179,8 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears as part
-        /// of `sink_name`.
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2728,8 +3199,8 @@ namespace Google.Cloud.Logging.V2
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2741,8 +3212,8 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears as part
-        /// of `sink_name`.
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2757,8 +3228,8 @@ namespace Google.Cloud.Logging.V2
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2770,8 +3241,8 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears as part
-        /// of `sink_name`.
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2790,8 +3261,8 @@ namespace Google.Cloud.Logging.V2
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2803,8 +3274,8 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears as part
-        /// of `sink_name`.
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2823,8 +3294,8 @@ namespace Google.Cloud.Logging.V2
         /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2836,8 +3307,8 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/sinks/my-sink"`
         /// </param>
         /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears as part
-        /// of `sink_name`.
+        /// Required. The updated sink, whose name is the same identifier that appears
+        /// as part of `sink_name`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2879,8 +3350,8 @@ namespace Google.Cloud.Logging.V2
         /// service account is also deleted.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to delete, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to delete, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2904,8 +3375,8 @@ namespace Google.Cloud.Logging.V2
         /// service account is also deleted.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to delete, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to delete, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2929,8 +3400,8 @@ namespace Google.Cloud.Logging.V2
         /// service account is also deleted.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to delete, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to delete, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2951,8 +3422,8 @@ namespace Google.Cloud.Logging.V2
         /// service account is also deleted.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to delete, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to delete, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -2976,8 +3447,8 @@ namespace Google.Cloud.Logging.V2
         /// service account is also deleted.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to delete, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to delete, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -3001,8 +3472,8 @@ namespace Google.Cloud.Logging.V2
         /// service account is also deleted.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The full resource name of the sink to delete, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to delete, including the
+        /// parent resource and the sink identifier:
         /// 
         /// "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         /// "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -3017,6 +3488,716 @@ namespace Google.Cloud.Logging.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteSinkAsync(LogSinkName sinkName, st::CancellationToken cancellationToken) =>
             DeleteSinkAsync(sinkName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Asynchronously creates a linked dataset in BigQuery which makes it possible
+        /// to use BigQuery to read the logs stored in the log bucket. A log bucket may
+        /// currently only contain one link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Link, LinkMetadata> CreateLink(CreateLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Asynchronously creates a linked dataset in BigQuery which makes it possible
+        /// to use BigQuery to read the logs stored in the log bucket. A log bucket may
+        /// currently only contain one link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Link, LinkMetadata>> CreateLinkAsync(CreateLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Asynchronously creates a linked dataset in BigQuery which makes it possible
+        /// to use BigQuery to read the logs stored in the log bucket. A log bucket may
+        /// currently only contain one link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Link, LinkMetadata>> CreateLinkAsync(CreateLinkRequest request, st::CancellationToken cancellationToken) =>
+            CreateLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateLink</c>.</summary>
+        public virtual lro::OperationsClient CreateLinkOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateLink</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Link, LinkMetadata> PollOnceCreateLink(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Link, LinkMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateLinkOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateLink</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Link, LinkMetadata>> PollOnceCreateLinkAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Link, LinkMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateLinkOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously creates a linked dataset in BigQuery which makes it possible
+        /// to use BigQuery to read the logs stored in the log bucket. A log bucket may
+        /// currently only contain one link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The full resource name of the bucket to create a link for.
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// </param>
+        /// <param name="link">
+        /// Required. The new link.
+        /// </param>
+        /// <param name="linkId">
+        /// Required. The ID to use for the link. The link_id can have up to 100
+        /// characters. A valid link_id must only have alphanumeric characters and
+        /// underscores within it.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Link, LinkMetadata> CreateLink(string parent, Link link, string linkId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLink(new CreateLinkRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Link = gax::GaxPreconditions.CheckNotNull(link, nameof(link)),
+                LinkId = gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Asynchronously creates a linked dataset in BigQuery which makes it possible
+        /// to use BigQuery to read the logs stored in the log bucket. A log bucket may
+        /// currently only contain one link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The full resource name of the bucket to create a link for.
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// </param>
+        /// <param name="link">
+        /// Required. The new link.
+        /// </param>
+        /// <param name="linkId">
+        /// Required. The ID to use for the link. The link_id can have up to 100
+        /// characters. A valid link_id must only have alphanumeric characters and
+        /// underscores within it.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Link, LinkMetadata>> CreateLinkAsync(string parent, Link link, string linkId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLinkAsync(new CreateLinkRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Link = gax::GaxPreconditions.CheckNotNull(link, nameof(link)),
+                LinkId = gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Asynchronously creates a linked dataset in BigQuery which makes it possible
+        /// to use BigQuery to read the logs stored in the log bucket. A log bucket may
+        /// currently only contain one link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The full resource name of the bucket to create a link for.
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// </param>
+        /// <param name="link">
+        /// Required. The new link.
+        /// </param>
+        /// <param name="linkId">
+        /// Required. The ID to use for the link. The link_id can have up to 100
+        /// characters. A valid link_id must only have alphanumeric characters and
+        /// underscores within it.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Link, LinkMetadata>> CreateLinkAsync(string parent, Link link, string linkId, st::CancellationToken cancellationToken) =>
+            CreateLinkAsync(parent, link, linkId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Asynchronously creates a linked dataset in BigQuery which makes it possible
+        /// to use BigQuery to read the logs stored in the log bucket. A log bucket may
+        /// currently only contain one link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The full resource name of the bucket to create a link for.
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// </param>
+        /// <param name="link">
+        /// Required. The new link.
+        /// </param>
+        /// <param name="linkId">
+        /// Required. The ID to use for the link. The link_id can have up to 100
+        /// characters. A valid link_id must only have alphanumeric characters and
+        /// underscores within it.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Link, LinkMetadata> CreateLink(LogBucketName parent, Link link, string linkId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLink(new CreateLinkRequest
+            {
+                ParentAsLogBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Link = gax::GaxPreconditions.CheckNotNull(link, nameof(link)),
+                LinkId = gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Asynchronously creates a linked dataset in BigQuery which makes it possible
+        /// to use BigQuery to read the logs stored in the log bucket. A log bucket may
+        /// currently only contain one link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The full resource name of the bucket to create a link for.
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// </param>
+        /// <param name="link">
+        /// Required. The new link.
+        /// </param>
+        /// <param name="linkId">
+        /// Required. The ID to use for the link. The link_id can have up to 100
+        /// characters. A valid link_id must only have alphanumeric characters and
+        /// underscores within it.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Link, LinkMetadata>> CreateLinkAsync(LogBucketName parent, Link link, string linkId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLinkAsync(new CreateLinkRequest
+            {
+                ParentAsLogBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Link = gax::GaxPreconditions.CheckNotNull(link, nameof(link)),
+                LinkId = gax::GaxPreconditions.CheckNotNullOrEmpty(linkId, nameof(linkId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Asynchronously creates a linked dataset in BigQuery which makes it possible
+        /// to use BigQuery to read the logs stored in the log bucket. A log bucket may
+        /// currently only contain one link.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The full resource name of the bucket to create a link for.
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// </param>
+        /// <param name="link">
+        /// Required. The new link.
+        /// </param>
+        /// <param name="linkId">
+        /// Required. The ID to use for the link. The link_id can have up to 100
+        /// characters. A valid link_id must only have alphanumeric characters and
+        /// underscores within it.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Link, LinkMetadata>> CreateLinkAsync(LogBucketName parent, Link link, string linkId, st::CancellationToken cancellationToken) =>
+            CreateLinkAsync(parent, link, linkId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a link. This will also delete the corresponding BigQuery linked
+        /// dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, LinkMetadata> DeleteLink(DeleteLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a link. This will also delete the corresponding BigQuery linked
+        /// dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, LinkMetadata>> DeleteLinkAsync(DeleteLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a link. This will also delete the corresponding BigQuery linked
+        /// dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, LinkMetadata>> DeleteLinkAsync(DeleteLinkRequest request, st::CancellationToken cancellationToken) =>
+            DeleteLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteLink</c>.</summary>
+        public virtual lro::OperationsClient DeleteLinkOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteLink</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, LinkMetadata> PollOnceDeleteLink(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, LinkMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteLinkOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteLink</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, LinkMetadata>> PollOnceDeleteLinkAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, LinkMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteLinkOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a link. This will also delete the corresponding BigQuery linked
+        /// dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the link to delete.
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, LinkMetadata> DeleteLink(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLink(new DeleteLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a link. This will also delete the corresponding BigQuery linked
+        /// dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the link to delete.
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, LinkMetadata>> DeleteLinkAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLinkAsync(new DeleteLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a link. This will also delete the corresponding BigQuery linked
+        /// dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the link to delete.
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, LinkMetadata>> DeleteLinkAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a link. This will also delete the corresponding BigQuery linked
+        /// dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the link to delete.
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, LinkMetadata> DeleteLink(LinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLink(new DeleteLinkRequest
+            {
+                LinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a link. This will also delete the corresponding BigQuery linked
+        /// dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the link to delete.
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, LinkMetadata>> DeleteLinkAsync(LinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLinkAsync(new DeleteLinkRequest
+            {
+                LinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a link. This will also delete the corresponding BigQuery linked
+        /// dataset.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The full resource name of the link to delete.
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, LinkMetadata>> DeleteLinkAsync(LinkName name, st::CancellationToken cancellationToken) =>
+            DeleteLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists links.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Link"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLinksResponse, Link> ListLinks(ListLinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists links.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Link"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLinksResponse, Link> ListLinksAsync(ListLinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists links.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource whose links are to be listed:
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Link"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLinksResponse, Link> ListLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLinksRequest request = new ListLinksRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLinks(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists links.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource whose links are to be listed:
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Link"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLinksResponse, Link> ListLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLinksRequest request = new ListLinksRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLinksAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists links.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource whose links are to be listed:
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Link"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLinksResponse, Link> ListLinks(LogBucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLinksRequest request = new ListLinksRequest
+            {
+                ParentAsLogBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLinks(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists links.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource whose links are to be listed:
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Link"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLinksResponse, Link> ListLinksAsync(LogBucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLinksRequest request = new ListLinksRequest
+            {
+                ParentAsLogBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLinksAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Link GetLink(GetLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Link> GetLinkAsync(GetLinkRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Link> GetLinkAsync(GetLinkRequest request, st::CancellationToken cancellationToken) =>
+            GetLinkAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the link:
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Link GetLink(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLink(new GetLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the link:
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Link> GetLinkAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLinkAsync(new GetLinkRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the link:
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Link> GetLinkAsync(string name, st::CancellationToken cancellationToken) =>
+            GetLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the link:
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Link GetLink(LinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLink(new GetLinkRequest
+            {
+                LinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the link:
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Link> GetLinkAsync(LinkName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLinkAsync(new GetLinkRequest
+            {
+                LinkName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a link.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the link:
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]"
+        /// "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/links/[LINK_ID]
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Link> GetLinkAsync(LinkName name, st::CancellationToken cancellationToken) =>
+            GetLinkAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all the exclusions on the _Default sink in a parent resource.
@@ -3057,13 +4238,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogExclusion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExclusions(new ListExclusionsRequest
+        public virtual gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExclusionsRequest request = new ListExclusionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExclusions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the exclusions on the _Default sink in a parent resource.
@@ -3086,13 +4276,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogExclusion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExclusionsAsync(new ListExclusionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExclusionsRequest request = new ListExclusionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExclusionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the exclusions on the _Default sink in a parent resource.
@@ -3115,13 +4314,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogExclusion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExclusions(new ListExclusionsRequest
+        public virtual gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExclusionsRequest request = new ListExclusionsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExclusions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the exclusions on the _Default sink in a parent resource.
@@ -3144,13 +4352,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogExclusion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExclusionsAsync(new ListExclusionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExclusionsRequest request = new ListExclusionsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExclusionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the exclusions on the _Default sink in a parent resource.
@@ -3173,13 +4390,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogExclusion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExclusions(new ListExclusionsRequest
+        public virtual gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExclusionsRequest request = new ListExclusionsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExclusions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the exclusions on the _Default sink in a parent resource.
@@ -3202,13 +4428,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogExclusion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExclusionsAsync(new ListExclusionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExclusionsRequest request = new ListExclusionsRequest
             {
                 ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExclusionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the exclusions on the _Default sink in a parent resource.
@@ -3231,13 +4466,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogExclusion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExclusions(new ListExclusionsRequest
+        public virtual gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExclusionsRequest request = new ListExclusionsRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExclusions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the exclusions on the _Default sink in a parent resource.
@@ -3260,13 +4504,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogExclusion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExclusionsAsync(new ListExclusionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExclusionsRequest request = new ListExclusionsRequest
             {
                 ParentAsFolderName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExclusionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the exclusions on the _Default sink in a parent resource.
@@ -3289,13 +4542,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="LogExclusion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExclusions(new ListExclusionsRequest
+        public virtual gax::PagedEnumerable<ListExclusionsResponse, LogExclusion> ListExclusions(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExclusionsRequest request = new ListExclusionsRequest
             {
                 ParentAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExclusions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the exclusions on the _Default sink in a parent resource.
@@ -3318,13 +4580,22 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="LogExclusion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListExclusionsAsync(new ListExclusionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListExclusionsResponse, LogExclusion> ListExclusionsAsync(gagr::BillingAccountName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListExclusionsRequest request = new ListExclusionsRequest
             {
                 ParentAsBillingAccountName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListExclusionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the description of an exclusion in the _Default sink.
@@ -4010,14 +5281,15 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="exclusion">
-        /// Required. New values for the existing exclusion. Only the fields specified in
-        /// `update_mask` are relevant.
+        /// Required. New values for the existing exclusion. Only the fields specified
+        /// in `update_mask` are relevant.
         /// </param>
         /// <param name="updateMask">
-        /// Required. A non-empty list of fields to change in the existing exclusion. New values
-        /// for the fields are taken from the corresponding fields in the
-        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
-        /// `update_mask` are not changed and are ignored in the request.
+        /// Required. A non-empty list of fields to change in the existing exclusion.
+        /// New values for the fields are taken from the corresponding fields in the
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
+        /// Fields not mentioned in `update_mask` are not changed and are ignored in
+        /// the request.
         /// 
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
@@ -4049,14 +5321,15 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="exclusion">
-        /// Required. New values for the existing exclusion. Only the fields specified in
-        /// `update_mask` are relevant.
+        /// Required. New values for the existing exclusion. Only the fields specified
+        /// in `update_mask` are relevant.
         /// </param>
         /// <param name="updateMask">
-        /// Required. A non-empty list of fields to change in the existing exclusion. New values
-        /// for the fields are taken from the corresponding fields in the
-        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
-        /// `update_mask` are not changed and are ignored in the request.
+        /// Required. A non-empty list of fields to change in the existing exclusion.
+        /// New values for the fields are taken from the corresponding fields in the
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
+        /// Fields not mentioned in `update_mask` are not changed and are ignored in
+        /// the request.
         /// 
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
@@ -4088,14 +5361,15 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="exclusion">
-        /// Required. New values for the existing exclusion. Only the fields specified in
-        /// `update_mask` are relevant.
+        /// Required. New values for the existing exclusion. Only the fields specified
+        /// in `update_mask` are relevant.
         /// </param>
         /// <param name="updateMask">
-        /// Required. A non-empty list of fields to change in the existing exclusion. New values
-        /// for the fields are taken from the corresponding fields in the
-        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
-        /// `update_mask` are not changed and are ignored in the request.
+        /// Required. A non-empty list of fields to change in the existing exclusion.
+        /// New values for the fields are taken from the corresponding fields in the
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
+        /// Fields not mentioned in `update_mask` are not changed and are ignored in
+        /// the request.
         /// 
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
@@ -4122,14 +5396,15 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="exclusion">
-        /// Required. New values for the existing exclusion. Only the fields specified in
-        /// `update_mask` are relevant.
+        /// Required. New values for the existing exclusion. Only the fields specified
+        /// in `update_mask` are relevant.
         /// </param>
         /// <param name="updateMask">
-        /// Required. A non-empty list of fields to change in the existing exclusion. New values
-        /// for the fields are taken from the corresponding fields in the
-        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
-        /// `update_mask` are not changed and are ignored in the request.
+        /// Required. A non-empty list of fields to change in the existing exclusion.
+        /// New values for the fields are taken from the corresponding fields in the
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
+        /// Fields not mentioned in `update_mask` are not changed and are ignored in
+        /// the request.
         /// 
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
@@ -4161,14 +5436,15 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="exclusion">
-        /// Required. New values for the existing exclusion. Only the fields specified in
-        /// `update_mask` are relevant.
+        /// Required. New values for the existing exclusion. Only the fields specified
+        /// in `update_mask` are relevant.
         /// </param>
         /// <param name="updateMask">
-        /// Required. A non-empty list of fields to change in the existing exclusion. New values
-        /// for the fields are taken from the corresponding fields in the
-        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
-        /// `update_mask` are not changed and are ignored in the request.
+        /// Required. A non-empty list of fields to change in the existing exclusion.
+        /// New values for the fields are taken from the corresponding fields in the
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
+        /// Fields not mentioned in `update_mask` are not changed and are ignored in
+        /// the request.
         /// 
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
@@ -4200,14 +5476,15 @@ namespace Google.Cloud.Logging.V2
         /// `"projects/my-project/exclusions/my-exclusion"`
         /// </param>
         /// <param name="exclusion">
-        /// Required. New values for the existing exclusion. Only the fields specified in
-        /// `update_mask` are relevant.
+        /// Required. New values for the existing exclusion. Only the fields specified
+        /// in `update_mask` are relevant.
         /// </param>
         /// <param name="updateMask">
-        /// Required. A non-empty list of fields to change in the existing exclusion. New values
-        /// for the fields are taken from the corresponding fields in the
-        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request. Fields not mentioned in
-        /// `update_mask` are not changed and are ignored in the request.
+        /// Required. A non-empty list of fields to change in the existing exclusion.
+        /// New values for the fields are taken from the corresponding fields in the
+        /// [LogExclusion][google.logging.v2.LogExclusion] included in this request.
+        /// Fields not mentioned in `update_mask` are not changed and are ignored in
+        /// the request.
         /// 
         /// For example, to change the filter and description of an exclusion,
         /// specify an `update_mask` of `"filter,description"`.
@@ -5030,6 +6307,10 @@ namespace Google.Cloud.Logging.V2
 
         private readonly gaxgrpc::ApiCall<GetBucketRequest, LogBucket> _callGetBucket;
 
+        private readonly gaxgrpc::ApiCall<CreateBucketRequest, lro::Operation> _callCreateBucketLongRunning;
+
+        private readonly gaxgrpc::ApiCall<UpdateBucketRequest, lro::Operation> _callUpdateBucketLongRunning;
+
         private readonly gaxgrpc::ApiCall<CreateBucketRequest, LogBucket> _callCreateBucket;
 
         private readonly gaxgrpc::ApiCall<UpdateBucketRequest, LogBucket> _callUpdateBucket;
@@ -5057,6 +6338,14 @@ namespace Google.Cloud.Logging.V2
         private readonly gaxgrpc::ApiCall<UpdateSinkRequest, LogSink> _callUpdateSink;
 
         private readonly gaxgrpc::ApiCall<DeleteSinkRequest, wkt::Empty> _callDeleteSink;
+
+        private readonly gaxgrpc::ApiCall<CreateLinkRequest, lro::Operation> _callCreateLink;
+
+        private readonly gaxgrpc::ApiCall<DeleteLinkRequest, lro::Operation> _callDeleteLink;
+
+        private readonly gaxgrpc::ApiCall<ListLinksRequest, ListLinksResponse> _callListLinks;
+
+        private readonly gaxgrpc::ApiCall<GetLinkRequest, Link> _callGetLink;
 
         private readonly gaxgrpc::ApiCall<ListExclusionsRequest, ListExclusionsResponse> _callListExclusions;
 
@@ -5088,7 +6377,15 @@ namespace Google.Cloud.Logging.V2
         {
             GrpcClient = grpcClient;
             ConfigServiceV2Settings effectiveSettings = settings ?? ConfigServiceV2Settings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
+            CreateBucketLongRunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBucketLongRunningOperationsSettings, logger);
+            UpdateBucketLongRunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBucketLongRunningOperationsSettings, logger);
+            CreateLinkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateLinkOperationsSettings, logger);
+            DeleteLinkOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteLinkOperationsSettings, logger);
             CopyLogEntriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CopyLogEntriesOperationsSettings, logger);
             _callListBuckets = clientHelper.BuildApiCall<ListBucketsRequest, ListBucketsResponse>("ListBuckets", grpcClient.ListBucketsAsync, grpcClient.ListBuckets, effectiveSettings.ListBucketsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListBuckets);
@@ -5096,6 +6393,12 @@ namespace Google.Cloud.Logging.V2
             _callGetBucket = clientHelper.BuildApiCall<GetBucketRequest, LogBucket>("GetBucket", grpcClient.GetBucketAsync, grpcClient.GetBucket, effectiveSettings.GetBucketSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBucket);
             Modify_GetBucketApiCall(ref _callGetBucket);
+            _callCreateBucketLongRunning = clientHelper.BuildApiCall<CreateBucketRequest, lro::Operation>("CreateBucketLongRunning", grpcClient.CreateBucketLongRunningAsync, grpcClient.CreateBucketLongRunning, effectiveSettings.CreateBucketLongRunningSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBucketLongRunning);
+            Modify_CreateBucketLongRunningApiCall(ref _callCreateBucketLongRunning);
+            _callUpdateBucketLongRunning = clientHelper.BuildApiCall<UpdateBucketRequest, lro::Operation>("UpdateBucketLongRunning", grpcClient.UpdateBucketLongRunningAsync, grpcClient.UpdateBucketLongRunning, effectiveSettings.UpdateBucketLongRunningSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpdateBucketLongRunning);
+            Modify_UpdateBucketLongRunningApiCall(ref _callUpdateBucketLongRunning);
             _callCreateBucket = clientHelper.BuildApiCall<CreateBucketRequest, LogBucket>("CreateBucket", grpcClient.CreateBucketAsync, grpcClient.CreateBucket, effectiveSettings.CreateBucketSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBucket);
             Modify_CreateBucketApiCall(ref _callCreateBucket);
@@ -5138,6 +6441,18 @@ namespace Google.Cloud.Logging.V2
             _callDeleteSink = clientHelper.BuildApiCall<DeleteSinkRequest, wkt::Empty>("DeleteSink", grpcClient.DeleteSinkAsync, grpcClient.DeleteSink, effectiveSettings.DeleteSinkSettings).WithGoogleRequestParam("sink_name", request => request.SinkName);
             Modify_ApiCall(ref _callDeleteSink);
             Modify_DeleteSinkApiCall(ref _callDeleteSink);
+            _callCreateLink = clientHelper.BuildApiCall<CreateLinkRequest, lro::Operation>("CreateLink", grpcClient.CreateLinkAsync, grpcClient.CreateLink, effectiveSettings.CreateLinkSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateLink);
+            Modify_CreateLinkApiCall(ref _callCreateLink);
+            _callDeleteLink = clientHelper.BuildApiCall<DeleteLinkRequest, lro::Operation>("DeleteLink", grpcClient.DeleteLinkAsync, grpcClient.DeleteLink, effectiveSettings.DeleteLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteLink);
+            Modify_DeleteLinkApiCall(ref _callDeleteLink);
+            _callListLinks = clientHelper.BuildApiCall<ListLinksRequest, ListLinksResponse>("ListLinks", grpcClient.ListLinksAsync, grpcClient.ListLinks, effectiveSettings.ListLinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListLinks);
+            Modify_ListLinksApiCall(ref _callListLinks);
+            _callGetLink = clientHelper.BuildApiCall<GetLinkRequest, Link>("GetLink", grpcClient.GetLinkAsync, grpcClient.GetLink, effectiveSettings.GetLinkSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetLink);
+            Modify_GetLinkApiCall(ref _callGetLink);
             _callListExclusions = clientHelper.BuildApiCall<ListExclusionsRequest, ListExclusionsResponse>("ListExclusions", grpcClient.ListExclusionsAsync, grpcClient.ListExclusions, effectiveSettings.ListExclusionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListExclusions);
             Modify_ListExclusionsApiCall(ref _callListExclusions);
@@ -5177,6 +6492,10 @@ namespace Google.Cloud.Logging.V2
 
         partial void Modify_GetBucketApiCall(ref gaxgrpc::ApiCall<GetBucketRequest, LogBucket> call);
 
+        partial void Modify_CreateBucketLongRunningApiCall(ref gaxgrpc::ApiCall<CreateBucketRequest, lro::Operation> call);
+
+        partial void Modify_UpdateBucketLongRunningApiCall(ref gaxgrpc::ApiCall<UpdateBucketRequest, lro::Operation> call);
+
         partial void Modify_CreateBucketApiCall(ref gaxgrpc::ApiCall<CreateBucketRequest, LogBucket> call);
 
         partial void Modify_UpdateBucketApiCall(ref gaxgrpc::ApiCall<UpdateBucketRequest, LogBucket> call);
@@ -5204,6 +6523,14 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_UpdateSinkApiCall(ref gaxgrpc::ApiCall<UpdateSinkRequest, LogSink> call);
 
         partial void Modify_DeleteSinkApiCall(ref gaxgrpc::ApiCall<DeleteSinkRequest, wkt::Empty> call);
+
+        partial void Modify_CreateLinkApiCall(ref gaxgrpc::ApiCall<CreateLinkRequest, lro::Operation> call);
+
+        partial void Modify_DeleteLinkApiCall(ref gaxgrpc::ApiCall<DeleteLinkRequest, lro::Operation> call);
+
+        partial void Modify_ListLinksApiCall(ref gaxgrpc::ApiCall<ListLinksRequest, ListLinksResponse> call);
+
+        partial void Modify_GetLinkApiCall(ref gaxgrpc::ApiCall<GetLinkRequest, Link> call);
 
         partial void Modify_ListExclusionsApiCall(ref gaxgrpc::ApiCall<ListExclusionsRequest, ListExclusionsResponse> call);
 
@@ -5261,6 +6588,14 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_UpdateSinkRequest(ref UpdateSinkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteSinkRequest(ref DeleteSinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateLinkRequest(ref CreateLinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteLinkRequest(ref DeleteLinkRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListLinksRequest(ref ListLinksRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetLinkRequest(ref GetLinkRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListExclusionsRequest(ref ListExclusionsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5330,6 +6665,74 @@ namespace Google.Cloud.Logging.V2
             return _callGetBucket.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>CreateBucketLongRunning</c>.</summary>
+        public override lro::OperationsClient CreateBucketLongRunningOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a log bucket asynchronously that can be used to store log entries.
+        /// 
+        /// After a bucket has been created, the bucket's location cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<LogBucket, BucketMetadata> CreateBucketLongRunning(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBucketRequest(ref request, ref callSettings);
+            return new lro::Operation<LogBucket, BucketMetadata>(_callCreateBucketLongRunning.Sync(request, callSettings), CreateBucketLongRunningOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a log bucket asynchronously that can be used to store log entries.
+        /// 
+        /// After a bucket has been created, the bucket's location cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<LogBucket, BucketMetadata>> CreateBucketLongRunningAsync(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBucketRequest(ref request, ref callSettings);
+            return new lro::Operation<LogBucket, BucketMetadata>(await _callCreateBucketLongRunning.Async(request, callSettings).ConfigureAwait(false), CreateBucketLongRunningOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateBucketLongRunning</c>.</summary>
+        public override lro::OperationsClient UpdateBucketLongRunningOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a log bucket asynchronously.
+        /// 
+        /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+        /// `FAILED_PRECONDITION` will be returned.
+        /// 
+        /// After a bucket has been created, the bucket's location cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<LogBucket, BucketMetadata> UpdateBucketLongRunning(UpdateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBucketRequest(ref request, ref callSettings);
+            return new lro::Operation<LogBucket, BucketMetadata>(_callUpdateBucketLongRunning.Sync(request, callSettings), UpdateBucketLongRunningOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a log bucket asynchronously.
+        /// 
+        /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
+        /// `FAILED_PRECONDITION` will be returned.
+        /// 
+        /// After a bucket has been created, the bucket's location cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<LogBucket, BucketMetadata>> UpdateBucketLongRunningAsync(UpdateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBucketRequest(ref request, ref callSettings);
+            return new lro::Operation<LogBucket, BucketMetadata>(await _callUpdateBucketLongRunning.Async(request, callSettings).ConfigureAwait(false), UpdateBucketLongRunningOperationsClient);
+        }
+
         /// <summary>
         /// Creates a log bucket that can be used to store log entries. After a bucket
         /// has been created, the bucket's location cannot be changed.
@@ -5357,11 +6760,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a log bucket. This method replaces the following fields in the
-        /// existing bucket with values from the new bucket: `retention_period`
-        /// 
-        /// If the retention period is decreased and the bucket is locked,
-        /// `FAILED_PRECONDITION` will be returned.
+        /// Updates a log bucket.
         /// 
         /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
         /// `FAILED_PRECONDITION` will be returned.
@@ -5378,11 +6777,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates a log bucket. This method replaces the following fields in the
-        /// existing bucket with values from the new bucket: `retention_period`
-        /// 
-        /// If the retention period is decreased and the bucket is locked,
-        /// `FAILED_PRECONDITION` will be returned.
+        /// Updates a log bucket.
         /// 
         /// If the bucket has a `lifecycle_state` of `DELETE_REQUESTED`, then
         /// `FAILED_PRECONDITION` will be returned.
@@ -5726,6 +7121,114 @@ namespace Google.Cloud.Logging.V2
         {
             Modify_DeleteSinkRequest(ref request, ref callSettings);
             return _callDeleteSink.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateLink</c>.</summary>
+        public override lro::OperationsClient CreateLinkOperationsClient { get; }
+
+        /// <summary>
+        /// Asynchronously creates a linked dataset in BigQuery which makes it possible
+        /// to use BigQuery to read the logs stored in the log bucket. A log bucket may
+        /// currently only contain one link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Link, LinkMetadata> CreateLink(CreateLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateLinkRequest(ref request, ref callSettings);
+            return new lro::Operation<Link, LinkMetadata>(_callCreateLink.Sync(request, callSettings), CreateLinkOperationsClient);
+        }
+
+        /// <summary>
+        /// Asynchronously creates a linked dataset in BigQuery which makes it possible
+        /// to use BigQuery to read the logs stored in the log bucket. A log bucket may
+        /// currently only contain one link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Link, LinkMetadata>> CreateLinkAsync(CreateLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateLinkRequest(ref request, ref callSettings);
+            return new lro::Operation<Link, LinkMetadata>(await _callCreateLink.Async(request, callSettings).ConfigureAwait(false), CreateLinkOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteLink</c>.</summary>
+        public override lro::OperationsClient DeleteLinkOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a link. This will also delete the corresponding BigQuery linked
+        /// dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, LinkMetadata> DeleteLink(DeleteLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteLinkRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, LinkMetadata>(_callDeleteLink.Sync(request, callSettings), DeleteLinkOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a link. This will also delete the corresponding BigQuery linked
+        /// dataset.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, LinkMetadata>> DeleteLinkAsync(DeleteLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteLinkRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, LinkMetadata>(await _callDeleteLink.Async(request, callSettings).ConfigureAwait(false), DeleteLinkOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists links.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Link"/> resources.</returns>
+        public override gax::PagedEnumerable<ListLinksResponse, Link> ListLinks(ListLinksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLinksRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListLinksRequest, ListLinksResponse, Link>(_callListLinks, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists links.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Link"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListLinksResponse, Link> ListLinksAsync(ListLinksRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLinksRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListLinksRequest, ListLinksResponse, Link>(_callListLinks, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Link GetLink(GetLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetLinkRequest(ref request, ref callSettings);
+            return _callGetLink.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a link.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Link> GetLinkAsync(GetLinkRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetLinkRequest(ref request, ref callSettings);
+            return _callGetLink.Async(request, callSettings);
         }
 
         /// <summary>
@@ -6084,6 +7587,10 @@ namespace Google.Cloud.Logging.V2
     {
     }
 
+    public partial class ListLinksRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListExclusionsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -6108,6 +7615,14 @@ namespace Google.Cloud.Logging.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<LogSink> GetEnumerator() => Sinks.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListLinksResponse : gaxgrpc::IPageResponse<Link>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Link> GetEnumerator() => Links.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

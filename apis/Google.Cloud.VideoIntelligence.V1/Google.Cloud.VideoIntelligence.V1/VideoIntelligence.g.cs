@@ -226,10 +226,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             "QkxFEAMSCgoGTElLRUxZEAQSDwoLVkVSWV9MSUtFTFkQBTLAAgoYVmlkZW9J",
             "bnRlbGxpZ2VuY2VTZXJ2aWNlEs0BCg1Bbm5vdGF0ZVZpZGVvEjcuZ29vZ2xl",
             "LmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkFubm90YXRlVmlkZW9SZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJkgtPkkwIYIhMv",
-            "djEvdmlkZW9zOmFubm90YXRlOgEq2kESaW5wdXRfdXJpLGZlYXR1cmVzykEu",
-            "ChVBbm5vdGF0ZVZpZGVvUmVzcG9uc2USFUFubm90YXRlVmlkZW9Qcm9ncmVz",
-            "cxpUykEgdmlkZW9pbnRlbGxpZ2VuY2UuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJkykEuChVBbm5v",
+            "dGF0ZVZpZGVvUmVzcG9uc2USFUFubm90YXRlVmlkZW9Qcm9ncmVzc9pBEmlu",
+            "cHV0X3VyaSxmZWF0dXJlc4LT5JMCGCITL3YxL3ZpZGVvczphbm5vdGF0ZToB",
+            "KhpUykEgdmlkZW9pbnRlbGxpZ2VuY2UuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
             "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQowC",
             "CiVjb20uZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxQh1WaWRl",
             "b0ludGVsbGlnZW5jZVNlcnZpY2VQcm90b1ABWlNjbG91ZC5nb29nbGUuY29t",
@@ -394,6 +394,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Video annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateVideoRequest : pb::IMessage<AnnotateVideoRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -810,6 +811,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Video context and/or feature-specific parameters.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoContext : pb::IMessage<VideoContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1388,6 +1390,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Config for LABEL_DETECTION.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelDetectionConfig : pb::IMessage<LabelDetectionConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1759,6 +1762,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Config for SHOT_CHANGE_DETECTION.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ShotChangeDetectionConfig : pb::IMessage<ShotChangeDetectionConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1956,6 +1960,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Config for OBJECT_TRACKING.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ObjectTrackingConfig : pb::IMessage<ObjectTrackingConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2153,6 +2158,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Config for FACE_DETECTION.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FaceDetectionConfig : pb::IMessage<FaceDetectionConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2431,6 +2437,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Config for PERSON_DETECTION.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PersonDetectionConfig : pb::IMessage<PersonDetectionConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2711,6 +2718,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Config for EXPLICIT_CONTENT_DETECTION.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExplicitContentDetectionConfig : pb::IMessage<ExplicitContentDetectionConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2908,6 +2916,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Config for TEXT_DETECTION.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextDetectionConfig : pb::IMessage<TextDetectionConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3138,6 +3147,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Video segment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoSegment : pb::IMessage<VideoSegment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3393,6 +3403,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Video segment level annotation results for label detection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelSegment : pb::IMessage<LabelSegment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3637,6 +3648,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Video frame level annotation results for label detection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelFrame : pb::IMessage<LabelFrame>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3882,6 +3894,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Detected entity from video analysis.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Entity : pb::IMessage<Entity>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4159,6 +4172,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Label annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabelAnnotation : pb::IMessage<LabelAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4493,6 +4507,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Video frame level annotation results for explicit content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExplicitContentFrame : pb::IMessage<ExplicitContentFrame>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4740,6 +4755,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// If no explicit content has been detected in a frame, no annotations are
   /// present for that frame.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExplicitContentAnnotation : pb::IMessage<ExplicitContentAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4966,6 +4982,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// The normalized vertex coordinates are relative to the original image.
   /// Range: [0, 1].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NormalizedBoundingBox : pb::IMessage<NormalizedBoundingBox>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5281,6 +5298,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Face detection annotation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FaceDetectionAnnotation : pb::IMessage<FaceDetectionAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5545,6 +5563,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Person detection annotation per video.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PersonDetectionAnnotation : pb::IMessage<PersonDetectionAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5769,6 +5788,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Video segment level annotation results for face detection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FaceSegment : pb::IMessage<FaceSegment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5974,6 +5994,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// Deprecated. No effect.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FaceFrame : pb::IMessage<FaceFrame>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6211,6 +6232,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// Deprecated. No effect.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FaceAnnotation : pb::IMessage<FaceAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6467,6 +6489,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// An object at time_offset with attributes, and located with
   /// normalized_bounding_box.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimestampedObject : pb::IMessage<TimestampedObject>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6779,6 +6802,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// A track of an object instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Track : pb::IMessage<Track>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7081,6 +7105,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// A generic detected attribute represented by name in string format.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DetectedAttribute : pb::IMessage<DetectedAttribute>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7359,6 +7384,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// A generic detected landmark represented by name in string format and a 2D
   /// location.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DetectedLandmark : pb::IMessage<DetectedLandmark>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7644,6 +7670,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Annotation results for a single video.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoAnnotationResults : pb::IMessage<VideoAnnotationResults>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8382,6 +8409,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// field of the `Operation` returned by the `GetOperation`
   /// call of the `google::longrunning::Operations` service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateVideoResponse : pb::IMessage<AnnotateVideoResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8566,6 +8594,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Annotation progress for a single video.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VideoAnnotationProgress : pb::IMessage<VideoAnnotationProgress>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8994,6 +9023,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// field of the `Operation` returned by the `GetOperation`
   /// call of the `google::longrunning::Operations` service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateVideoProgress : pb::IMessage<AnnotateVideoProgress>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9178,6 +9208,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Config for SPEECH_TRANSCRIPTION.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpeechTranscriptionConfig : pb::IMessage<SpeechTranscriptionConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9701,6 +9732,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// Provides "hints" to the speech recognizer to favor specific words and phrases
   /// in the results.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpeechContext : pb::IMessage<SpeechContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9890,6 +9922,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// A speech recognition result corresponding to a portion of the audio.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpeechTranscription : pb::IMessage<SpeechTranscription>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10119,6 +10152,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Alternative hypotheses (a.k.a. n-best list).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpeechRecognitionAlternative : pb::IMessage<SpeechRecognitionAlternative>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10392,6 +10426,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// included in the response when certain request parameters are set, such
   /// as `enable_word_time_offsets`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WordInfo : pb::IMessage<WordInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10781,6 +10816,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// NOTE: the normalized vertex coordinates are relative to the original image
   /// and range from 0 to 1.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NormalizedVertex : pb::IMessage<NormalizedVertex>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11032,6 +11068,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// than 0, or greater than 1 due to trignometric calculations for location of
   /// the box.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NormalizedBoundingPoly : pb::IMessage<NormalizedBoundingPoly>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11216,6 +11253,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Video segment level annotation results for text detection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextSegment : pb::IMessage<TextSegment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11492,6 +11530,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// Contains information regarding timestamp and bounding box locations for the
   /// frames containing detected OCR text snippets.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextFrame : pb::IMessage<TextFrame>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11747,6 +11786,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// corresponding text, confidence value, and frame level information for each
   /// detection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextAnnotation : pb::IMessage<TextAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12012,6 +12052,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// Video frame level annotations for object detection and tracking. This field
   /// stores per frame location, time offset, and confidence.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ObjectTrackingFrame : pb::IMessage<ObjectTrackingFrame>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12265,6 +12306,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Annotations corresponding to one tracked object.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ObjectTrackingAnnotation : pb::IMessage<ObjectTrackingAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12350,10 +12392,24 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long TrackId {
-      get { return trackInfoCase_ == TrackInfoOneofCase.TrackId ? (long) trackInfo_ : 0L; }
+      get { return HasTrackId ? (long) trackInfo_ : 0L; }
       set {
         trackInfo_ = value;
         trackInfoCase_ = TrackInfoOneofCase.TrackId;
+      }
+    }
+    /// <summary>Gets whether the "track_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTrackId {
+      get { return trackInfoCase_ == TrackInfoOneofCase.TrackId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "track_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTrackId() {
+      if (HasTrackId) {
+        ClearTrackInfo();
       }
     }
 
@@ -12470,7 +12526,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (trackInfoCase_ == TrackInfoOneofCase.Segment) hash ^= Segment.GetHashCode();
-      if (trackInfoCase_ == TrackInfoOneofCase.TrackId) hash ^= TrackId.GetHashCode();
+      if (HasTrackId) hash ^= TrackId.GetHashCode();
       if (entity_ != null) hash ^= Entity.GetHashCode();
       if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
       hash ^= frames_.GetHashCode();
@@ -12507,7 +12563,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteRawTag(37);
         output.WriteFloat(Confidence);
       }
-      if (trackInfoCase_ == TrackInfoOneofCase.TrackId) {
+      if (HasTrackId) {
         output.WriteRawTag(40);
         output.WriteInt64(TrackId);
       }
@@ -12538,7 +12594,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteRawTag(37);
         output.WriteFloat(Confidence);
       }
-      if (trackInfoCase_ == TrackInfoOneofCase.TrackId) {
+      if (HasTrackId) {
         output.WriteRawTag(40);
         output.WriteInt64(TrackId);
       }
@@ -12559,7 +12615,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (trackInfoCase_ == TrackInfoOneofCase.Segment) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Segment);
       }
-      if (trackInfoCase_ == TrackInfoOneofCase.TrackId) {
+      if (HasTrackId) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(TrackId);
       }
       if (entity_ != null) {
@@ -12713,6 +12769,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Annotation corresponding to one detected, tracked and recognized logo class.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LogoRecognitionAnnotation : pb::IMessage<LogoRecognitionAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

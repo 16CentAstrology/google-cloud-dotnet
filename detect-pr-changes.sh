@@ -2,6 +2,12 @@
 
 set -e
 
+if [[ -d "owl-bot-staging" ]]
+then
+  echo "OwlBot post-processor has not run: failing diff."
+  exit 1
+fi
+
 ALLOW_BREAKING_CHANGES=
 if [[ $1 == "--allow-breaking-changes" ]]
 then
@@ -25,8 +31,8 @@ maybe_fail() {
   fi
 }
 
-# Find the APIs that have changed, excluding ServiceDirectory (which isn't a real API)
-apis=$(git diff main --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | grep -v '^ServiceDirectory$' | uniq)
+# Find the APIs that have changed
+apis=$(git diff main --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq)
 
 if [[ "$apis" == "" ]]
 then
@@ -36,55 +42,8 @@ fi
 
 git clone . tmpgit --no-local -q -b main --depth 1 --recursive
 
-mkdir tmpgit/old
-mkdir tmpgit/new
-
-# First build everything, so we can get straight to the good stuff at the end of the log.
-dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.CompareVersions
-dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.ReleaseManager
-
-for api in $apis
-do  
-  if [[ -d tmpgit/apis/$api/$api && -d apis/$api/$api ]]
-  then
-    # We expect almost all libraries to support netstandard2.1.
-    # When moving from GAX v3 to GAX v4 this will fail as we used to target
-    # netstandard2.0, but that's a single PR (which we expect to have breaking changes anyway).
-    targetVersion="netstandard2.1"
-    if [[ $api == "Google.Cloud.Diagnostics.AspNetCore3" ]]
-    then
-      targetVersion="netcoreapp3.1"
-    fi
-    log_header "Building $api"
-    apidir=apis/$api/$api
-    dotnet build -c Release -f $targetVersion -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false tmpgit/$apidir 
-    dotnet build -c Release -f $targetVersion -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $apidir
-    asm=apis/$api/$api/bin/Release/$targetVersion/$api.dll
-    cp tmpgit/$asm tmpgit/old
-    cp $asm tmpgit/new
-  fi
-done
-
-releasedApis=()
-for api in $apis
-do  
-  log_header "Detecting changes for $api"
-  
-  if [[ ! -d tmpgit/apis/$api/$api ]]
-  then
-    echo "$api is new"
-  elif [[ ! -d apis/$api/$api ]]
-  then
-    echo "$api was deleted"
-  else
-    releasedApis+=($api)
-    dotnet run --no-build --project tools/Google.Cloud.Tools.CompareVersions -- --file1=tmpgit/old/$api.dll --file2=tmpgit/new/$api.dll
-  fi
-done  
-
-log_header "Checking compatibility with previous releases"
-
 # Make sure all the tags are available for checking compatibility
 git fetch --tags -q
 
-dotnet run --no-build --project tools/Google.Cloud.Tools.ReleaseManager -- check-version-compatibility "${releasedApis[@]}" || maybe_fail
+# ReleaseManager does all the rest
+dotnet run --project tools/Google.Cloud.Tools.ReleaseManager detect-pr-changes tmpgit $apis || maybe_fail

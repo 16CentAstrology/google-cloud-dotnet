@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Tpu.V1
 {
@@ -337,14 +337,14 @@ namespace Google.Cloud.Tpu.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TpuClient.Create(callInvoker, Settings, Logger);
+            return TpuClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<TpuClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TpuClient.Create(callInvoker, Settings, Logger);
+            return TpuClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -473,13 +473,22 @@ namespace Google.Cloud.Tpu.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Node"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodes(new ListNodesRequest
+        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists nodes.
@@ -497,13 +506,22 @@ namespace Google.Cloud.Tpu.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Node"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodesAsync(new ListNodesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists nodes.
@@ -521,13 +539,22 @@ namespace Google.Cloud.Tpu.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Node"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodes(new ListNodesRequest
+        public virtual gax::PagedEnumerable<ListNodesResponse, Node> ListNodes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists nodes.
@@ -545,13 +572,22 @@ namespace Google.Cloud.Tpu.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Node"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListNodesAsync(new ListNodesRequest
+        public virtual gax::PagedAsyncEnumerable<ListNodesResponse, Node> ListNodesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNodesRequest request = new ListNodesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNodesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a node.
@@ -1157,13 +1193,22 @@ namespace Google.Cloud.Tpu.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TensorFlowVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTensorFlowVersionsResponse, TensorFlowVersion> ListTensorFlowVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorFlowVersions(new ListTensorFlowVersionsRequest
+        public virtual gax::PagedEnumerable<ListTensorFlowVersionsResponse, TensorFlowVersion> ListTensorFlowVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorFlowVersionsRequest request = new ListTensorFlowVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorFlowVersions(request, callSettings);
+        }
 
         /// <summary>
         /// List TensorFlow versions supported by this API.
@@ -1181,13 +1226,22 @@ namespace Google.Cloud.Tpu.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TensorFlowVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTensorFlowVersionsResponse, TensorFlowVersion> ListTensorFlowVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorFlowVersionsAsync(new ListTensorFlowVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTensorFlowVersionsResponse, TensorFlowVersion> ListTensorFlowVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorFlowVersionsRequest request = new ListTensorFlowVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorFlowVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List TensorFlow versions supported by this API.
@@ -1205,13 +1259,22 @@ namespace Google.Cloud.Tpu.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TensorFlowVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTensorFlowVersionsResponse, TensorFlowVersion> ListTensorFlowVersions(TensorFlowVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorFlowVersions(new ListTensorFlowVersionsRequest
+        public virtual gax::PagedEnumerable<ListTensorFlowVersionsResponse, TensorFlowVersion> ListTensorFlowVersions(TensorFlowVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorFlowVersionsRequest request = new ListTensorFlowVersionsRequest
             {
                 ParentAsTensorFlowVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorFlowVersions(request, callSettings);
+        }
 
         /// <summary>
         /// List TensorFlow versions supported by this API.
@@ -1229,13 +1292,22 @@ namespace Google.Cloud.Tpu.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TensorFlowVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTensorFlowVersionsResponse, TensorFlowVersion> ListTensorFlowVersionsAsync(TensorFlowVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorFlowVersionsAsync(new ListTensorFlowVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTensorFlowVersionsResponse, TensorFlowVersion> ListTensorFlowVersionsAsync(TensorFlowVersionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorFlowVersionsRequest request = new ListTensorFlowVersionsRequest
             {
                 ParentAsTensorFlowVersionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorFlowVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets TensorFlow Version.
@@ -1376,13 +1448,22 @@ namespace Google.Cloud.Tpu.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AcceleratorType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAcceleratorTypesResponse, AcceleratorType> ListAcceleratorTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAcceleratorTypes(new ListAcceleratorTypesRequest
+        public virtual gax::PagedEnumerable<ListAcceleratorTypesResponse, AcceleratorType> ListAcceleratorTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAcceleratorTypesRequest request = new ListAcceleratorTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAcceleratorTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists accelerator types supported by this API.
@@ -1400,13 +1481,22 @@ namespace Google.Cloud.Tpu.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AcceleratorType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAcceleratorTypesResponse, AcceleratorType> ListAcceleratorTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAcceleratorTypesAsync(new ListAcceleratorTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAcceleratorTypesResponse, AcceleratorType> ListAcceleratorTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAcceleratorTypesRequest request = new ListAcceleratorTypesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAcceleratorTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists accelerator types supported by this API.
@@ -1424,13 +1514,22 @@ namespace Google.Cloud.Tpu.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AcceleratorType"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAcceleratorTypesResponse, AcceleratorType> ListAcceleratorTypes(AcceleratorTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAcceleratorTypes(new ListAcceleratorTypesRequest
+        public virtual gax::PagedEnumerable<ListAcceleratorTypesResponse, AcceleratorType> ListAcceleratorTypes(AcceleratorTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAcceleratorTypesRequest request = new ListAcceleratorTypesRequest
             {
                 ParentAsAcceleratorTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAcceleratorTypes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists accelerator types supported by this API.
@@ -1448,13 +1547,22 @@ namespace Google.Cloud.Tpu.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AcceleratorType"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAcceleratorTypesResponse, AcceleratorType> ListAcceleratorTypesAsync(AcceleratorTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAcceleratorTypesAsync(new ListAcceleratorTypesRequest
+        public virtual gax::PagedAsyncEnumerable<ListAcceleratorTypesResponse, AcceleratorType> ListAcceleratorTypesAsync(AcceleratorTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAcceleratorTypesRequest request = new ListAcceleratorTypesRequest
             {
                 ParentAsAcceleratorTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAcceleratorTypesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets AcceleratorType.
@@ -1602,7 +1710,11 @@ namespace Google.Cloud.Tpu.V1
         {
             GrpcClient = grpcClient;
             TpuSettings effectiveSettings = settings ?? TpuSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateNodeOperationsSettings, logger);
             DeleteNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteNodeOperationsSettings, logger);
             ReimageNodeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReimageNodeOperationsSettings, logger);

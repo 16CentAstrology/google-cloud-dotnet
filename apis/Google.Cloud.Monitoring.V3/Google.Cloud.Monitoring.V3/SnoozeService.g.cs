@@ -44,27 +44,27 @@ namespace Google.Cloud.Monitoring.V3 {
             "My5Tbm9vemVCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5w",
             "cm90b2J1Zi5GaWVsZE1hc2tCA+BBAjKYBgoNU25vb3plU2VydmljZRKYAQoM",
             "Q3JlYXRlU25vb3plEikuZ29vZ2xlLm1vbml0b3JpbmcudjMuQ3JlYXRlU25v",
-            "b3plUmVxdWVzdBocLmdvb2dsZS5tb25pdG9yaW5nLnYzLlNub296ZSI/gtPk",
-            "kwIpIh8vdjMve3BhcmVudD1wcm9qZWN0cy8qfS9zbm9vemVzOgZzbm9vemXa",
-            "QQ1wYXJlbnQsc25vb3plEpQBCgtMaXN0U25vb3plcxIoLmdvb2dsZS5tb25p",
+            "b3plUmVxdWVzdBocLmdvb2dsZS5tb25pdG9yaW5nLnYzLlNub296ZSI/2kEN",
+            "cGFyZW50LHNub296ZYLT5JMCKSIfL3YzL3twYXJlbnQ9cHJvamVjdHMvKn0v",
+            "c25vb3plczoGc25vb3plEpQBCgtMaXN0U25vb3plcxIoLmdvb2dsZS5tb25p",
             "dG9yaW5nLnYzLkxpc3RTbm9vemVzUmVxdWVzdBopLmdvb2dsZS5tb25pdG9y",
-            "aW5nLnYzLkxpc3RTbm9vemVzUmVzcG9uc2UiMILT5JMCIRIfL3YzL3twYXJl",
-            "bnQ9cHJvamVjdHMvKn0vc25vb3plc9pBBnBhcmVudBKBAQoJR2V0U25vb3pl",
+            "aW5nLnYzLkxpc3RTbm9vemVzUmVzcG9uc2UiMNpBBnBhcmVudILT5JMCIRIf",
+            "L3YzL3twYXJlbnQ9cHJvamVjdHMvKn0vc25vb3plcxKBAQoJR2V0U25vb3pl",
             "EiYuZ29vZ2xlLm1vbml0b3JpbmcudjMuR2V0U25vb3plUmVxdWVzdBocLmdv",
-            "b2dsZS5tb25pdG9yaW5nLnYzLlNub296ZSIugtPkkwIhEh8vdjMve25hbWU9",
-            "cHJvamVjdHMvKi9zbm9vemVzLyp92kEEbmFtZRKkAQoMVXBkYXRlU25vb3pl",
+            "b2dsZS5tb25pdG9yaW5nLnYzLlNub296ZSIu2kEEbmFtZYLT5JMCIRIfL3Yz",
+            "L3tuYW1lPXByb2plY3RzLyovc25vb3plcy8qfRKkAQoMVXBkYXRlU25vb3pl",
             "EikuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXBkYXRlU25vb3plUmVxdWVzdBoc",
-            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlNub296ZSJLgtPkkwIwMiYvdjMve3Nu",
-            "b296ZS5uYW1lPXByb2plY3RzLyovc25vb3plcy8qfToGc25vb3pl2kESc25v",
-            "b3plLHVwZGF0ZV9tYXNrGqkBykEZbW9uaXRvcmluZy5nb29nbGVhcGlzLmNv",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlNub296ZSJL2kESc25vb3plLHVwZGF0",
+            "ZV9tYXNrgtPkkwIwMiYvdjMve3Nub296ZS5uYW1lPXByb2plY3RzLyovc25v",
+            "b3plcy8qfToGc25vb3plGqkBykEZbW9uaXRvcmluZy5nb29nbGVhcGlzLmNv",
             "bdJBiQFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
             "YXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbW9uaXRv",
             "cmluZyxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL21vbml0b3Jp",
-            "bmcucmVhZELKAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQhJTbm9vemVT",
-            "ZXJ2aWNlUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xv",
-            "dWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYz",
-            "6gIdR29vZ2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6VjNiBnByb3RvMw=="));
+            "bmcucmVhZELNAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQhJTbm9vemVT",
+            "ZXJ2aWNlUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9tb25pdG9yaW5n",
+            "L2FwaXYzL3YyL21vbml0b3JpbmdwYjttb25pdG9yaW5ncGKqAhpHb29nbGUu",
+            "Q2xvdWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5n",
+            "XFYz6gIdR29vZ2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.SnoozeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,6 +83,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// The message definition for creating a `Snooze`. Users must provide the body
   /// of the `Snooze` to be created but must omit the `Snooze` field, `name`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSnoozeRequest : pb::IMessage<CreateSnoozeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -333,6 +334,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// The message definition for listing `Snooze`s associated with the given
   /// `parent`, satisfying the optional `filter`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSnoozesRequest : pb::IMessage<ListSnoozesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -411,10 +413,8 @@ namespace Google.Cloud.Monitoring.V3 {
     ///
     /// For example:
     ///
-    ///     ```
     ///     interval.start_time > "2022-03-11T00:00:00-08:00" AND
     ///         interval.end_time &lt; "2022-03-12T00:00:00-08:00"
-    ///     ```
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -669,6 +669,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// The results of a successful `ListSnoozes` call, containing the matching
   /// `Snooze`s.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSnoozesResponse : pb::IMessage<ListSnoozesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -895,6 +896,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// The message definition for retrieving a `Snooze`. Users must specify the
   /// field, `name`, which identifies the `Snooze`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSnoozeRequest : pb::IMessage<GetSnoozeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1104,6 +1106,7 @@ namespace Google.Cloud.Monitoring.V3 {
   ///   * start time is in the future: `display_name`, `interval.start_time` and
   ///     `interval.end_time` can be updated.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateSnoozeRequest : pb::IMessage<UpdateSnoozeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

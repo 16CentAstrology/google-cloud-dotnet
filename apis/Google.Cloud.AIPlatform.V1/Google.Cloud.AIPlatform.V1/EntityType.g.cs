@@ -29,27 +29,29 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8a",
             "OGdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2ZlYXR1cmVzdG9yZV9tb25p",
             "dG9yaW5nLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "IpcECgpFbnRpdHlUeXBlEhEKBG5hbWUYASABKAlCA+BBBRIYCgtkZXNjcmlw",
+            "IvYECgpFbnRpdHlUeXBlEhEKBG5hbWUYASABKAlCA+BBBRIYCgtkZXNjcmlw",
             "dGlvbhgCIAEoCUID4EEBEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xl",
             "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgL",
             "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkcKBmxhYmVscxgG",
             "IAMoCzIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVudGl0eVR5cGUu",
             "TGFiZWxzRW50cnlCA+BBARIRCgRldGFnGAcgASgJQgPgQQESWAoRbW9uaXRv",
             "cmluZ19jb25maWcYCCABKAsyOC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5GZWF0dXJlc3RvcmVNb25pdG9yaW5nQ29uZmlnQgPgQQEaLQoLTGFiZWxz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqKAepBhgEK",
-            "JGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW50aXR5VHlwZRJecHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2ZlYXR1cmVzdG9y",
-            "ZXMve2ZlYXR1cmVzdG9yZX0vZW50aXR5VHlwZXMve2VudGl0eV90eXBlfULN",
-            "AQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQg9FbnRpdHlUeXBl",
-            "UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYx",
-            "L2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQ",
-            "bGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29v",
-            "Z2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "MS5GZWF0dXJlc3RvcmVNb25pdG9yaW5nQ29uZmlnQgPgQQESJQoYb2ZmbGlu",
+            "ZV9zdG9yYWdlX3R0bF9kYXlzGAogASgFQgPgQQESGgoNc2F0aXNmaWVzX3B6",
+            "cxgLIAEoCEID4EEDEhoKDXNhdGlzZmllc19wemkYDCABKAhCA+BBAxotCgtM",
+            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOooB",
+            "6kGGAQokYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9FbnRpdHlUeXBlEl5w",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZmVhdHVy",
+            "ZXN0b3Jlcy97ZmVhdHVyZXN0b3JlfS9lbnRpdHlUeXBlcy97ZW50aXR5X3R5",
+            "cGV9Qs0BCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCD0VudGl0",
+            "eVR5cGVQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0v",
+            "YXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91",
+            "ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHq",
+            "Ah1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeaturestoreMonitoringReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.EntityType), global::Google.Cloud.AIPlatform.V1.EntityType.Parser, new[]{ "Name", "Description", "CreateTime", "UpdateTime", "Labels", "Etag", "MonitoringConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.EntityType), global::Google.Cloud.AIPlatform.V1.EntityType.Parser, new[]{ "Name", "Description", "CreateTime", "UpdateTime", "Labels", "Etag", "MonitoringConfig", "OfflineStorageTtlDays", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -61,6 +63,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// have stored information about. For example, driver is an entity type, and
   /// driver0 is an instance of an entity type driver.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityType : pb::IMessage<EntityType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -102,6 +105,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       labels_ = other.labels_.Clone();
       etag_ = other.etag_;
       monitoringConfig_ = other.monitoringConfig_ != null ? other.monitoringConfig_.Clone() : null;
+      offlineStorageTtlDays_ = other.offlineStorageTtlDays_;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -242,6 +248,55 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "offline_storage_ttl_days" field.</summary>
+    public const int OfflineStorageTtlDaysFieldNumber = 10;
+    private int offlineStorageTtlDays_;
+    /// <summary>
+    /// Optional. Config for data retention policy in offline storage.
+    /// TTL in days for feature values that will be stored in offline storage.
+    /// The Feature Store offline storage periodically removes obsolete feature
+    /// values older than `offline_storage_ttl_days` since the feature generation
+    /// time. If unset (or explicitly set to 0), default to 4000 days TTL.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int OfflineStorageTtlDays {
+      get { return offlineStorageTtlDays_; }
+      set {
+        offlineStorageTtlDays_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 11;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 12;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -264,6 +319,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!Labels.Equals(other.Labels)) return false;
       if (Etag != other.Etag) return false;
       if (!object.Equals(MonitoringConfig, other.MonitoringConfig)) return false;
+      if (OfflineStorageTtlDays != other.OfflineStorageTtlDays) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -278,6 +336,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       hash ^= Labels.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (monitoringConfig_ != null) hash ^= MonitoringConfig.GetHashCode();
+      if (OfflineStorageTtlDays != 0) hash ^= OfflineStorageTtlDays.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -321,6 +382,18 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(MonitoringConfig);
       }
+      if (OfflineStorageTtlDays != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(OfflineStorageTtlDays);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -356,6 +429,18 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(MonitoringConfig);
       }
+      if (OfflineStorageTtlDays != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(OfflineStorageTtlDays);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -384,6 +469,15 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (monitoringConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MonitoringConfig);
+      }
+      if (OfflineStorageTtlDays != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(OfflineStorageTtlDays);
+      }
+      if (SatisfiesPzs != false) {
+        size += 1 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -415,7 +509,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -424,6 +518,15 @@ namespace Google.Cloud.AIPlatform.V1 {
           MonitoringConfig = new global::Google.Cloud.AIPlatform.V1.FeaturestoreMonitoringConfig();
         }
         MonitoringConfig.MergeFrom(other.MonitoringConfig);
+      }
+      if (other.OfflineStorageTtlDays != 0) {
+        OfflineStorageTtlDays = other.OfflineStorageTtlDays;
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -477,6 +580,18 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(MonitoringConfig);
             break;
           }
+          case 80: {
+            OfflineStorageTtlDays = input.ReadInt32();
+            break;
+          }
+          case 88: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 96: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -527,6 +642,18 @@ namespace Google.Cloud.AIPlatform.V1 {
               MonitoringConfig = new global::Google.Cloud.AIPlatform.V1.FeaturestoreMonitoringConfig();
             }
             input.ReadMessage(MonitoringConfig);
+            break;
+          }
+          case 80: {
+            OfflineStorageTtlDays = input.ReadInt32();
+            break;
+          }
+          case 88: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 96: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }

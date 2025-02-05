@@ -125,6 +125,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Google Cloud Storage location for input content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -381,6 +382,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// BigQuery source import data from.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQuerySource : pb::IMessage<BigQuerySource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -853,6 +855,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// The inline source for the input config for ImportProducts method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductInlineSource : pb::IMessage<ProductInlineSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1039,6 +1042,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// The inline source for the input config for ImportUserEvents method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserEventInlineSource : pb::IMessage<UserEventInlineSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1223,6 +1227,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Configuration of destination for Import related errors.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportErrorsConfig : pb::IMessage<ImportErrorsConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1283,10 +1288,24 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsPrefix {
-      get { return destinationCase_ == DestinationOneofCase.GcsPrefix ? (string) destination_ : ""; }
+      get { return HasGcsPrefix ? (string) destination_ : ""; }
       set {
         destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationCase_ = DestinationOneofCase.GcsPrefix;
+      }
+    }
+    /// <summary>Gets whether the "gcs_prefix" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsPrefix {
+      get { return destinationCase_ == DestinationOneofCase.GcsPrefix; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_prefix" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsPrefix() {
+      if (HasGcsPrefix) {
+        ClearDestination();
       }
     }
 
@@ -1334,7 +1353,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (destinationCase_ == DestinationOneofCase.GcsPrefix) hash ^= GcsPrefix.GetHashCode();
+      if (HasGcsPrefix) hash ^= GcsPrefix.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1354,7 +1373,7 @@ namespace Google.Cloud.Retail.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (destinationCase_ == DestinationOneofCase.GcsPrefix) {
+      if (HasGcsPrefix) {
         output.WriteRawTag(10);
         output.WriteString(GcsPrefix);
       }
@@ -1368,7 +1387,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (destinationCase_ == DestinationOneofCase.GcsPrefix) {
+      if (HasGcsPrefix) {
         output.WriteRawTag(10);
         output.WriteString(GcsPrefix);
       }
@@ -1382,7 +1401,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (destinationCase_ == DestinationOneofCase.GcsPrefix) {
+      if (HasGcsPrefix) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsPrefix);
       }
       if (_unknownFields != null) {
@@ -1451,6 +1470,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request message for Import methods.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportProductsRequest : pb::IMessage<ImportProductsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1571,7 +1591,8 @@ namespace Google.Cloud.Retail.V2 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Indicates which fields in the provided imported `products` to update. If
-    /// not set, all fields are updated.
+    /// not set, all fields are updated. If provided, only the existing product
+    /// fields are updated. Missing products will not be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1611,9 +1632,14 @@ namespace Google.Cloud.Retail.V2 {
     /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It has
     /// to be within the same project as
     /// [ImportProductsRequest.parent][google.cloud.retail.v2.ImportProductsRequest.parent].
-    /// Make sure that `service-&lt;project
-    /// number>@gcp-sa-retail.iam.gserviceaccount.com` has the
-    /// `pubsub.topics.publish` IAM permission on the topic.
+    /// Make sure that both
+    /// `cloud-retail-customer-data-access@system.gserviceaccount.com` and
+    /// `service-&lt;project number>@gcp-sa-retail.iam.gserviceaccount.com`
+    /// have the `pubsub.topics.publish` IAM permission on the topic.
+    ///
+    /// Only supported when
+    /// [ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode]
+    /// is set to `FULL`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1959,6 +1985,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request message for the ImportUserEvents request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportUserEventsRequest : pb::IMessage<ImportUserEventsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2253,6 +2280,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request message for ImportCompletionData methods.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportCompletionDataRequest : pb::IMessage<ImportCompletionDataRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2543,6 +2571,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// The input config source for products.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductInputConfig : pb::IMessage<ProductInputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2893,6 +2922,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// The input config source for user events.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserEventInputConfig : pb::IMessage<UserEventInputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3243,6 +3273,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// The input config source for completion data.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompletionDataInputConfig : pb::IMessage<CompletionDataInputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3486,6 +3517,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Metadata related to the progress of the Import operation. This is
   /// returned by the google.longrunning.Operation.metadata field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportMetadata : pb::IMessage<ImportMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3908,6 +3940,7 @@ namespace Google.Cloud.Retail.V2 {
   /// long running operation is done, then this message is returned by the
   /// google.longrunning.Operations.response field if the operation was successful.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportProductsResponse : pb::IMessage<ImportProductsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4143,6 +4176,7 @@ namespace Google.Cloud.Retail.V2 {
   /// operation was successful, then this message is returned by the
   /// google.longrunning.Operations.response field if the operation was successful.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportUserEventsResponse : pb::IMessage<ImportUserEventsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4427,6 +4461,7 @@ namespace Google.Cloud.Retail.V2 {
   /// A summary of import result. The UserEventImportSummary summarizes
   /// the import status for user events.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserEventImportSummary : pb::IMessage<UserEventImportSummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4666,6 +4701,7 @@ namespace Google.Cloud.Retail.V2 {
   /// If the long running operation is done, this message is returned by the
   /// google.longrunning.Operations.response field if the operation is successful.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportCompletionDataResponse : pb::IMessage<ImportCompletionDataResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

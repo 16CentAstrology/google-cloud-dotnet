@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.CloudBuild.V1
 {
@@ -525,14 +525,14 @@ namespace Google.Cloud.CloudBuild.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudBuildClient.Create(callInvoker, Settings, Logger);
+            return CloudBuildClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<CloudBuildClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudBuildClient.Create(callInvoker, Settings, Logger);
+            return CloudBuildClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -898,14 +898,23 @@ namespace Google.Cloud.CloudBuild.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Build"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBuildsResponse, Build> ListBuilds(string projectId, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBuilds(new ListBuildsRequest
+        public virtual gax::PagedEnumerable<ListBuildsResponse, Build> ListBuilds(string projectId, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBuildsRequest request = new ListBuildsRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBuilds(request, callSettings);
+        }
 
         /// <summary>
         /// Lists previously requested builds.
@@ -929,14 +938,23 @@ namespace Google.Cloud.CloudBuild.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Build"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBuildsResponse, Build> ListBuildsAsync(string projectId, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBuildsAsync(new ListBuildsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBuildsResponse, Build> ListBuildsAsync(string projectId, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBuildsRequest request = new ListBuildsRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBuildsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Cancels a build in progress.
@@ -1036,7 +1054,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// 
         /// For builds that specify `StorageSource`:
         /// 
-        /// * If the original build pulled source from Google Cloud Storage without
+        /// * If the original build pulled source from Cloud Storage without
         /// specifying the generation of the object, the new build will use the current
         /// object, which may be different from the original build source.
         /// * If the original build pulled source from Cloud Storage and specified the
@@ -1071,7 +1089,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// 
         /// For builds that specify `StorageSource`:
         /// 
-        /// * If the original build pulled source from Google Cloud Storage without
+        /// * If the original build pulled source from Cloud Storage without
         /// specifying the generation of the object, the new build will use the current
         /// object, which may be different from the original build source.
         /// * If the original build pulled source from Cloud Storage and specified the
@@ -1106,7 +1124,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// 
         /// For builds that specify `StorageSource`:
         /// 
-        /// * If the original build pulled source from Google Cloud Storage without
+        /// * If the original build pulled source from Cloud Storage without
         /// specifying the generation of the object, the new build will use the current
         /// object, which may be different from the original build source.
         /// * If the original build pulled source from Cloud Storage and specified the
@@ -1167,7 +1185,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// 
         /// For builds that specify `StorageSource`:
         /// 
-        /// * If the original build pulled source from Google Cloud Storage without
+        /// * If the original build pulled source from Cloud Storage without
         /// specifying the generation of the object, the new build will use the current
         /// object, which may be different from the original build source.
         /// * If the original build pulled source from Cloud Storage and specified the
@@ -1211,7 +1229,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// 
         /// For builds that specify `StorageSource`:
         /// 
-        /// * If the original build pulled source from Google Cloud Storage without
+        /// * If the original build pulled source from Cloud Storage without
         /// specifying the generation of the object, the new build will use the current
         /// object, which may be different from the original build source.
         /// * If the original build pulled source from Cloud Storage and specified the
@@ -1255,7 +1273,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// 
         /// For builds that specify `StorageSource`:
         /// 
-        /// * If the original build pulled source from Google Cloud Storage without
+        /// * If the original build pulled source from Cloud Storage without
         /// specifying the generation of the object, the new build will use the current
         /// object, which may be different from the original build source.
         /// * If the original build pulled source from Cloud Storage and specified the
@@ -1628,13 +1646,22 @@ namespace Google.Cloud.CloudBuild.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="BuildTrigger"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBuildTriggersResponse, BuildTrigger> ListBuildTriggers(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBuildTriggers(new ListBuildTriggersRequest
+        public virtual gax::PagedEnumerable<ListBuildTriggersResponse, BuildTrigger> ListBuildTriggers(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBuildTriggersRequest request = new ListBuildTriggersRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBuildTriggers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists existing `BuildTrigger`s.
@@ -1654,13 +1681,22 @@ namespace Google.Cloud.CloudBuild.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="BuildTrigger"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBuildTriggersResponse, BuildTrigger> ListBuildTriggersAsync(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBuildTriggersAsync(new ListBuildTriggersRequest
+        public virtual gax::PagedAsyncEnumerable<ListBuildTriggersResponse, BuildTrigger> ListBuildTriggersAsync(string projectId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBuildTriggersRequest request = new ListBuildTriggersRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBuildTriggersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a `BuildTrigger` by its project ID and trigger ID.
@@ -1853,6 +1889,12 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Runs a `BuildTrigger` at a particular source revision.
+        /// 
+        /// To run a regional or global trigger, use the POST request
+        /// that includes the location endpoint in the path (ex.
+        /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+        /// POST request that does not include the location endpoint in the path can
+        /// only be used when running global triggers.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1862,6 +1904,12 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Runs a `BuildTrigger` at a particular source revision.
+        /// 
+        /// To run a regional or global trigger, use the POST request
+        /// that includes the location endpoint in the path (ex.
+        /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+        /// POST request that does not include the location endpoint in the path can
+        /// only be used when running global triggers.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1871,6 +1919,12 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Runs a `BuildTrigger` at a particular source revision.
+        /// 
+        /// To run a regional or global trigger, use the POST request
+        /// that includes the location endpoint in the path (ex.
+        /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+        /// POST request that does not include the location endpoint in the path can
+        /// only be used when running global triggers.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1906,6 +1960,12 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Runs a `BuildTrigger` at a particular source revision.
+        /// 
+        /// To run a regional or global trigger, use the POST request
+        /// that includes the location endpoint in the path (ex.
+        /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+        /// POST request that does not include the location endpoint in the path can
+        /// only be used when running global triggers.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project.
@@ -1915,6 +1975,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// </param>
         /// <param name="source">
         /// Source to build against this trigger.
+        /// Branch and tag names cannot consist of regular expressions.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1928,6 +1989,12 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Runs a `BuildTrigger` at a particular source revision.
+        /// 
+        /// To run a regional or global trigger, use the POST request
+        /// that includes the location endpoint in the path (ex.
+        /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+        /// POST request that does not include the location endpoint in the path can
+        /// only be used when running global triggers.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project.
@@ -1937,6 +2004,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// </param>
         /// <param name="source">
         /// Source to build against this trigger.
+        /// Branch and tag names cannot consist of regular expressions.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1950,6 +2018,12 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Runs a `BuildTrigger` at a particular source revision.
+        /// 
+        /// To run a regional or global trigger, use the POST request
+        /// that includes the location endpoint in the path (ex.
+        /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+        /// POST request that does not include the location endpoint in the path can
+        /// only be used when running global triggers.
         /// </summary>
         /// <param name="projectId">
         /// Required. ID of the project.
@@ -1959,6 +2033,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// </param>
         /// <param name="source">
         /// Source to build against this trigger.
+        /// Branch and tag names cannot consist of regular expressions.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2370,7 +2445,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// <param name="name">
         /// Required. The name of the `WorkerPool` to delete.
         /// Format:
-        /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+        /// `projects/{project}/locations/{location}/workerPools/{workerPool}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2386,7 +2461,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// <param name="name">
         /// Required. The name of the `WorkerPool` to delete.
         /// Format:
-        /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+        /// `projects/{project}/locations/{location}/workerPools/{workerPool}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2402,7 +2477,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// <param name="name">
         /// Required. The name of the `WorkerPool` to delete.
         /// Format:
-        /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+        /// `projects/{project}/locations/{location}/workerPools/{workerPool}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2415,7 +2490,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// <param name="name">
         /// Required. The name of the `WorkerPool` to delete.
         /// Format:
-        /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+        /// `projects/{project}/locations/{location}/workerPools/{workerPool}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2431,7 +2506,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// <param name="name">
         /// Required. The name of the `WorkerPool` to delete.
         /// Format:
-        /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+        /// `projects/{project}/locations/{location}/workerPools/{workerPool}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2447,7 +2522,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// <param name="name">
         /// Required. The name of the `WorkerPool` to delete.
         /// Format:
-        /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
+        /// `projects/{project}/locations/{location}/workerPools/{workerPool}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2601,13 +2676,22 @@ namespace Google.Cloud.CloudBuild.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkerPool"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPools(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkerPools(new ListWorkerPoolsRequest
+        public virtual gax::PagedEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPools(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkerPoolsRequest request = new ListWorkerPoolsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkerPools(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `WorkerPool`s.
@@ -2626,13 +2710,22 @@ namespace Google.Cloud.CloudBuild.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkerPool"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPoolsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkerPoolsAsync(new ListWorkerPoolsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPoolsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkerPoolsRequest request = new ListWorkerPoolsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkerPoolsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `WorkerPool`s.
@@ -2651,13 +2744,22 @@ namespace Google.Cloud.CloudBuild.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="WorkerPool"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPools(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkerPools(new ListWorkerPoolsRequest
+        public virtual gax::PagedEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPools(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkerPoolsRequest request = new ListWorkerPoolsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkerPools(request, callSettings);
+        }
 
         /// <summary>
         /// Lists `WorkerPool`s.
@@ -2676,13 +2778,22 @@ namespace Google.Cloud.CloudBuild.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="WorkerPool"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPoolsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListWorkerPoolsAsync(new ListWorkerPoolsRequest
+        public virtual gax::PagedAsyncEnumerable<ListWorkerPoolsResponse, WorkerPool> ListWorkerPoolsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListWorkerPoolsRequest request = new ListWorkerPoolsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListWorkerPoolsAsync(request, callSettings);
+        }
     }
 
     /// <summary>CloudBuild client wrapper implementation, for convenient use.</summary>
@@ -2744,7 +2855,11 @@ namespace Google.Cloud.CloudBuild.V1
         {
             GrpcClient = grpcClient;
             CloudBuildSettings effectiveSettings = settings ?? CloudBuildSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBuildOperationsSettings, logger);
             RetryBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RetryBuildOperationsSettings, logger);
             ApproveBuildOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ApproveBuildOperationsSettings, logger);
@@ -2752,58 +2867,58 @@ namespace Google.Cloud.CloudBuild.V1
             CreateWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkerPoolOperationsSettings, logger);
             DeleteWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWorkerPoolOperationsSettings, logger);
             UpdateWorkerPoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateWorkerPoolOperationsSettings, logger);
-            _callCreateBuild = clientHelper.BuildApiCall<CreateBuildRequest, lro::Operation>("CreateBuild", grpcClient.CreateBuildAsync, grpcClient.CreateBuild, effectiveSettings.CreateBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callCreateBuild = clientHelper.BuildApiCall<CreateBuildRequest, lro::Operation>("CreateBuild", grpcClient.CreateBuildAsync, grpcClient.CreateBuild, effectiveSettings.CreateBuildSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CreateBuildRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callCreateBuild);
             Modify_CreateBuildApiCall(ref _callCreateBuild);
-            _callGetBuild = clientHelper.BuildApiCall<GetBuildRequest, Build>("GetBuild", grpcClient.GetBuildAsync, grpcClient.GetBuild, effectiveSettings.GetBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("id", request => request.Id);
+            _callGetBuild = clientHelper.BuildApiCall<GetBuildRequest, Build>("GetBuild", grpcClient.GetBuildAsync, grpcClient.GetBuild, effectiveSettings.GetBuildSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetBuildRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/builds/[^/]+/?$", request => request.Name));
             Modify_ApiCall(ref _callGetBuild);
             Modify_GetBuildApiCall(ref _callGetBuild);
-            _callListBuilds = clientHelper.BuildApiCall<ListBuildsRequest, ListBuildsResponse>("ListBuilds", grpcClient.ListBuildsAsync, grpcClient.ListBuilds, effectiveSettings.ListBuildsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callListBuilds = clientHelper.BuildApiCall<ListBuildsRequest, ListBuildsResponse>("ListBuilds", grpcClient.ListBuildsAsync, grpcClient.ListBuilds, effectiveSettings.ListBuildsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ListBuildsRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callListBuilds);
             Modify_ListBuildsApiCall(ref _callListBuilds);
-            _callCancelBuild = clientHelper.BuildApiCall<CancelBuildRequest, Build>("CancelBuild", grpcClient.CancelBuildAsync, grpcClient.CancelBuild, effectiveSettings.CancelBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("id", request => request.Id);
+            _callCancelBuild = clientHelper.BuildApiCall<CancelBuildRequest, Build>("CancelBuild", grpcClient.CancelBuildAsync, grpcClient.CancelBuild, effectiveSettings.CancelBuildSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CancelBuildRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/builds/[^/]+/?$", request => request.Name));
             Modify_ApiCall(ref _callCancelBuild);
             Modify_CancelBuildApiCall(ref _callCancelBuild);
-            _callRetryBuild = clientHelper.BuildApiCall<RetryBuildRequest, lro::Operation>("RetryBuild", grpcClient.RetryBuildAsync, grpcClient.RetryBuild, effectiveSettings.RetryBuildSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("id", request => request.Id);
+            _callRetryBuild = clientHelper.BuildApiCall<RetryBuildRequest, lro::Operation>("RetryBuild", grpcClient.RetryBuildAsync, grpcClient.RetryBuild, effectiveSettings.RetryBuildSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<RetryBuildRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/builds/[^/]+/?$", request => request.Name));
             Modify_ApiCall(ref _callRetryBuild);
             Modify_RetryBuildApiCall(ref _callRetryBuild);
-            _callApproveBuild = clientHelper.BuildApiCall<ApproveBuildRequest, lro::Operation>("ApproveBuild", grpcClient.ApproveBuildAsync, grpcClient.ApproveBuild, effectiveSettings.ApproveBuildSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callApproveBuild = clientHelper.BuildApiCall<ApproveBuildRequest, lro::Operation>("ApproveBuild", grpcClient.ApproveBuildAsync, grpcClient.ApproveBuild, effectiveSettings.ApproveBuildSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ApproveBuildRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/builds/[^/]+/?$", request => request.Name));
             Modify_ApiCall(ref _callApproveBuild);
             Modify_ApproveBuildApiCall(ref _callApproveBuild);
-            _callCreateBuildTrigger = clientHelper.BuildApiCall<CreateBuildTriggerRequest, BuildTrigger>("CreateBuildTrigger", grpcClient.CreateBuildTriggerAsync, grpcClient.CreateBuildTrigger, effectiveSettings.CreateBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callCreateBuildTrigger = clientHelper.BuildApiCall<CreateBuildTriggerRequest, BuildTrigger>("CreateBuildTrigger", grpcClient.CreateBuildTriggerAsync, grpcClient.CreateBuildTrigger, effectiveSettings.CreateBuildTriggerSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CreateBuildTriggerRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callCreateBuildTrigger);
             Modify_CreateBuildTriggerApiCall(ref _callCreateBuildTrigger);
-            _callGetBuildTrigger = clientHelper.BuildApiCall<GetBuildTriggerRequest, BuildTrigger>("GetBuildTrigger", grpcClient.GetBuildTriggerAsync, grpcClient.GetBuildTrigger, effectiveSettings.GetBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
+            _callGetBuildTrigger = clientHelper.BuildApiCall<GetBuildTriggerRequest, BuildTrigger>("GetBuildTrigger", grpcClient.GetBuildTriggerAsync, grpcClient.GetBuildTrigger, effectiveSettings.GetBuildTriggerSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetBuildTriggerRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/triggers/[^/]+/?$", request => request.Name));
             Modify_ApiCall(ref _callGetBuildTrigger);
             Modify_GetBuildTriggerApiCall(ref _callGetBuildTrigger);
-            _callListBuildTriggers = clientHelper.BuildApiCall<ListBuildTriggersRequest, ListBuildTriggersResponse>("ListBuildTriggers", grpcClient.ListBuildTriggersAsync, grpcClient.ListBuildTriggers, effectiveSettings.ListBuildTriggersSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            _callListBuildTriggers = clientHelper.BuildApiCall<ListBuildTriggersRequest, ListBuildTriggersResponse>("ListBuildTriggers", grpcClient.ListBuildTriggersAsync, grpcClient.ListBuildTriggers, effectiveSettings.ListBuildTriggersSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ListBuildTriggersRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callListBuildTriggers);
             Modify_ListBuildTriggersApiCall(ref _callListBuildTriggers);
-            _callDeleteBuildTrigger = clientHelper.BuildApiCall<DeleteBuildTriggerRequest, wkt::Empty>("DeleteBuildTrigger", grpcClient.DeleteBuildTriggerAsync, grpcClient.DeleteBuildTrigger, effectiveSettings.DeleteBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
+            _callDeleteBuildTrigger = clientHelper.BuildApiCall<DeleteBuildTriggerRequest, wkt::Empty>("DeleteBuildTrigger", grpcClient.DeleteBuildTriggerAsync, grpcClient.DeleteBuildTrigger, effectiveSettings.DeleteBuildTriggerSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DeleteBuildTriggerRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/triggers/[^/]+/?$", request => request.Name));
             Modify_ApiCall(ref _callDeleteBuildTrigger);
             Modify_DeleteBuildTriggerApiCall(ref _callDeleteBuildTrigger);
-            _callUpdateBuildTrigger = clientHelper.BuildApiCall<UpdateBuildTriggerRequest, BuildTrigger>("UpdateBuildTrigger", grpcClient.UpdateBuildTriggerAsync, grpcClient.UpdateBuildTrigger, effectiveSettings.UpdateBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
+            _callUpdateBuildTrigger = clientHelper.BuildApiCall<UpdateBuildTriggerRequest, BuildTrigger>("UpdateBuildTrigger", grpcClient.UpdateBuildTriggerAsync, grpcClient.UpdateBuildTrigger, effectiveSettings.UpdateBuildTriggerSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateBuildTriggerRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/triggers/[^/]+/?$", request => request.Trigger?.ResourceName));
             Modify_ApiCall(ref _callUpdateBuildTrigger);
             Modify_UpdateBuildTriggerApiCall(ref _callUpdateBuildTrigger);
-            _callRunBuildTrigger = clientHelper.BuildApiCall<RunBuildTriggerRequest, lro::Operation>("RunBuildTrigger", grpcClient.RunBuildTriggerAsync, grpcClient.RunBuildTrigger, effectiveSettings.RunBuildTriggerSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger_id", request => request.TriggerId);
+            _callRunBuildTrigger = clientHelper.BuildApiCall<RunBuildTriggerRequest, lro::Operation>("RunBuildTrigger", grpcClient.RunBuildTriggerAsync, grpcClient.RunBuildTrigger, effectiveSettings.RunBuildTriggerSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<RunBuildTriggerRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/triggers/[^/]+/?$", request => request.Name));
             Modify_ApiCall(ref _callRunBuildTrigger);
             Modify_RunBuildTriggerApiCall(ref _callRunBuildTrigger);
             _callReceiveTriggerWebhook = clientHelper.BuildApiCall<ReceiveTriggerWebhookRequest, ReceiveTriggerWebhookResponse>("ReceiveTriggerWebhook", grpcClient.ReceiveTriggerWebhookAsync, grpcClient.ReceiveTriggerWebhook, effectiveSettings.ReceiveTriggerWebhookSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("trigger", request => request.Trigger);
             Modify_ApiCall(ref _callReceiveTriggerWebhook);
             Modify_ReceiveTriggerWebhookApiCall(ref _callReceiveTriggerWebhook);
-            _callCreateWorkerPool = clientHelper.BuildApiCall<CreateWorkerPoolRequest, lro::Operation>("CreateWorkerPool", grpcClient.CreateWorkerPoolAsync, grpcClient.CreateWorkerPool, effectiveSettings.CreateWorkerPoolSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callCreateWorkerPool = clientHelper.BuildApiCall<CreateWorkerPoolRequest, lro::Operation>("CreateWorkerPool", grpcClient.CreateWorkerPoolAsync, grpcClient.CreateWorkerPool, effectiveSettings.CreateWorkerPoolSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<CreateWorkerPoolRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callCreateWorkerPool);
             Modify_CreateWorkerPoolApiCall(ref _callCreateWorkerPool);
-            _callGetWorkerPool = clientHelper.BuildApiCall<GetWorkerPoolRequest, WorkerPool>("GetWorkerPool", grpcClient.GetWorkerPoolAsync, grpcClient.GetWorkerPool, effectiveSettings.GetWorkerPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callGetWorkerPool = clientHelper.BuildApiCall<GetWorkerPoolRequest, WorkerPool>("GetWorkerPool", grpcClient.GetWorkerPoolAsync, grpcClient.GetWorkerPool, effectiveSettings.GetWorkerPoolSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetWorkerPoolRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/workerPools/[^/]+/?$", request => request.Name));
             Modify_ApiCall(ref _callGetWorkerPool);
             Modify_GetWorkerPoolApiCall(ref _callGetWorkerPool);
-            _callDeleteWorkerPool = clientHelper.BuildApiCall<DeleteWorkerPoolRequest, lro::Operation>("DeleteWorkerPool", grpcClient.DeleteWorkerPoolAsync, grpcClient.DeleteWorkerPool, effectiveSettings.DeleteWorkerPoolSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callDeleteWorkerPool = clientHelper.BuildApiCall<DeleteWorkerPoolRequest, lro::Operation>("DeleteWorkerPool", grpcClient.DeleteWorkerPoolAsync, grpcClient.DeleteWorkerPool, effectiveSettings.DeleteWorkerPoolSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DeleteWorkerPoolRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/workerPools/[^/]+/?$", request => request.Name));
             Modify_ApiCall(ref _callDeleteWorkerPool);
             Modify_DeleteWorkerPoolApiCall(ref _callDeleteWorkerPool);
-            _callUpdateWorkerPool = clientHelper.BuildApiCall<UpdateWorkerPoolRequest, lro::Operation>("UpdateWorkerPool", grpcClient.UpdateWorkerPoolAsync, grpcClient.UpdateWorkerPool, effectiveSettings.UpdateWorkerPoolSettings).WithGoogleRequestParam("worker_pool.name", request => request.WorkerPool?.Name);
+            _callUpdateWorkerPool = clientHelper.BuildApiCall<UpdateWorkerPoolRequest, lro::Operation>("UpdateWorkerPool", grpcClient.UpdateWorkerPoolAsync, grpcClient.UpdateWorkerPool, effectiveSettings.UpdateWorkerPoolSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateWorkerPoolRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/workerPools/[^/]+/?$", request => request.WorkerPool?.Name));
             Modify_ApiCall(ref _callUpdateWorkerPool);
             Modify_UpdateWorkerPoolApiCall(ref _callUpdateWorkerPool);
-            _callListWorkerPools = clientHelper.BuildApiCall<ListWorkerPoolsRequest, ListWorkerPoolsResponse>("ListWorkerPools", grpcClient.ListWorkerPoolsAsync, grpcClient.ListWorkerPools, effectiveSettings.ListWorkerPoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            _callListWorkerPools = clientHelper.BuildApiCall<ListWorkerPoolsRequest, ListWorkerPoolsResponse>("ListWorkerPools", grpcClient.ListWorkerPoolsAsync, grpcClient.ListWorkerPools, effectiveSettings.ListWorkerPoolsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ListWorkerPoolsRequest>().WithExtractedParameter("location", "^projects/[^/]+/locations/([^/]+)/?$", request => request.Parent));
             Modify_ApiCall(ref _callListWorkerPools);
             Modify_ListWorkerPoolsApiCall(ref _callListWorkerPools);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -3031,7 +3146,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// 
         /// For builds that specify `StorageSource`:
         /// 
-        /// * If the original build pulled source from Google Cloud Storage without
+        /// * If the original build pulled source from Cloud Storage without
         /// specifying the generation of the object, the new build will use the current
         /// object, which may be different from the original build source.
         /// * If the original build pulled source from Cloud Storage and specified the
@@ -3069,7 +3184,7 @@ namespace Google.Cloud.CloudBuild.V1
         /// 
         /// For builds that specify `StorageSource`:
         /// 
-        /// * If the original build pulled source from Google Cloud Storage without
+        /// * If the original build pulled source from Cloud Storage without
         /// specifying the generation of the object, the new build will use the current
         /// object, which may be different from the original build source.
         /// * If the original build pulled source from Cloud Storage and specified the
@@ -3268,6 +3383,12 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Runs a `BuildTrigger` at a particular source revision.
+        /// 
+        /// To run a regional or global trigger, use the POST request
+        /// that includes the location endpoint in the path (ex.
+        /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+        /// POST request that does not include the location endpoint in the path can
+        /// only be used when running global triggers.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3280,6 +3401,12 @@ namespace Google.Cloud.CloudBuild.V1
 
         /// <summary>
         /// Runs a `BuildTrigger` at a particular source revision.
+        /// 
+        /// To run a regional or global trigger, use the POST request
+        /// that includes the location endpoint in the path (ex.
+        /// v1/projects/{projectId}/locations/{region}/triggers/{triggerId}:run). The
+        /// POST request that does not include the location endpoint in the path can
+        /// only be used when running global triggers.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

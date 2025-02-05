@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Retail.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Retail.V2;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -55,6 +56,8 @@ namespace Google.Cloud.Retail.V2.Snippets
                 Labels = { { "", "" }, },
                 SpellCorrectionSpec = new SearchRequest.Types.SpellCorrectionSpec(),
                 Entity = "",
+                ConversationalSearchSpec = new SearchRequest.Types.ConversationalSearchSpec(),
+                TileNavigationSpec = new SearchRequest.Types.TileNavigationSpec(),
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);
@@ -124,6 +127,8 @@ namespace Google.Cloud.Retail.V2.Snippets
                 Labels = { { "", "" }, },
                 SpellCorrectionSpec = new SearchRequest.Types.SpellCorrectionSpec(),
                 Entity = "",
+                ConversationalSearchSpec = new SearchRequest.Types.ConversationalSearchSpec(),
+                TileNavigationSpec = new SearchRequest.Types.TileNavigationSpec(),
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);

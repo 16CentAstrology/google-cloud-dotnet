@@ -99,6 +99,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// collection of components, such as files and other data. This may correspond
   /// to a version in many package management schemes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Version : pb::IMessage<Version>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -517,6 +518,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// The request to list versions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListVersionsRequest : pb::IMessage<ListVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -872,6 +874,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// The response from listing versions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListVersionsResponse : pb::IMessage<ListVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1097,6 +1100,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// The request to retrieve a version.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetVersionRequest : pb::IMessage<GetVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1332,6 +1336,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
   /// <summary>
   /// The request to delete a version.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteVersionRequest : pb::IMessage<DeleteVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

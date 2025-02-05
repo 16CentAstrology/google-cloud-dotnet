@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Datastore.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datastore_v1_generated_Datastore_Lookup_async]
     using Google.Cloud.Datastore.V1;
@@ -39,6 +39,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 ReadOptions = new ReadOptions(),
                 Keys = { new Key(), },
+                PropertyMask = new PropertyMask(),
                 ProjectId = "",
                 DatabaseId = "",
             };

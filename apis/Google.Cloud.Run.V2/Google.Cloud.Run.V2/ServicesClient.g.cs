@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Run.V2
 {
@@ -275,14 +276,14 @@ namespace Google.Cloud.Run.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ServicesClient.Create(callInvoker, Settings, Logger);
+            return ServicesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ServicesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ServicesClient.Create(callInvoker, Settings, Logger);
+            return ServicesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -692,7 +693,7 @@ namespace Google.Cloud.Run.V2
             GetServiceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -701,7 +702,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -710,7 +711,7 @@ namespace Google.Cloud.Run.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
@@ -728,16 +729,25 @@ namespace Google.Cloud.Run.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
@@ -755,16 +765,25 @@ namespace Google.Cloud.Run.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
@@ -782,16 +801,25 @@ namespace Google.Cloud.Run.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="parent">
         /// Required. The location and project to list resources on.
@@ -809,13 +837,22 @@ namespace Google.Cloud.Run.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a Service.
@@ -908,6 +945,56 @@ namespace Google.Cloud.Run.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Service, Service>> UpdateServiceAsync(Service service, st::CancellationToken cancellationToken) =>
             UpdateServiceAsync(service, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a Service.
+        /// </summary>
+        /// <param name="service">
+        /// Required. The Service to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Service, Service> UpdateService(Service service, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateService(new UpdateServiceRequest
+            {
+                UpdateMask = updateMask,
+                Service = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Service.
+        /// </summary>
+        /// <param name="service">
+        /// Required. The Service to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Service, Service>> UpdateServiceAsync(Service service, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateServiceAsync(new UpdateServiceRequest
+            {
+                UpdateMask = updateMask,
+                Service = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a Service.
+        /// </summary>
+        /// <param name="service">
+        /// Required. The Service to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Service, Service>> UpdateServiceAsync(Service service, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateServiceAsync(service, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a Service.
@@ -1196,7 +1283,11 @@ namespace Google.Cloud.Run.V2
         {
             GrpcClient = grpcClient;
             ServicesSettings effectiveSettings = settings ?? ServicesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServiceOperationsSettings, logger);
             UpdateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateServiceOperationsSettings, logger);
             DeleteServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServiceOperationsSettings, logger);
@@ -1322,7 +1413,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1334,7 +1425,7 @@ namespace Google.Cloud.Run.V2
         }
 
         /// <summary>
-        /// Lists Services.
+        /// Lists Services. Results are sorted by creation time, descending.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

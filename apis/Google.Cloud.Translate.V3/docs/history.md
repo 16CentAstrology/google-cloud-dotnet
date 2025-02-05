@@ -1,5 +1,62 @@
 # Version history
 
+## Version 3.9.0, released 2024-11-18
+
+### New features
+
+- Adds Contextual Glossary support for Translation and AdaptiveMt ([commit 72051d3](https://github.com/googleapis/google-cloud-dotnet/commit/72051d33175df07abcda54e621712efe7d143afd))
+
+## Version 3.8.0, released 2024-08-13
+
+### New features
+
+- Add BigQuery Metastore Partition Service API version v1alpha ([commit 3bd0dfb](https://github.com/googleapis/google-cloud-dotnet/commit/3bd0dfb945087291bd84d226caf1d3dd93ddb033))
+- Adds AdaptiveMt HTML/Glossary support ([commit 06616a2](https://github.com/googleapis/google-cloud-dotnet/commit/06616a219e221491071eb0f4325182927088d748))
+- Adds protos for Custom Translation API (AutoML) ([commit 06616a2](https://github.com/googleapis/google-cloud-dotnet/commit/06616a219e221491071eb0f4325182927088d748))
+- Adds protos for Transliteration in V3 Advanced translate text ([commit 06616a2](https://github.com/googleapis/google-cloud-dotnet/commit/06616a219e221491071eb0f4325182927088d748))
+- Adds protos for Romanization APIs ([commit 06616a2](https://github.com/googleapis/google-cloud-dotnet/commit/06616a219e221491071eb0f4325182927088d748))
+
+### Documentation improvements
+
+- Fixes typos in docs ([commit 06616a2](https://github.com/googleapis/google-cloud-dotnet/commit/06616a219e221491071eb0f4325182927088d748))
+
+## Version 3.7.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.6.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.5.0, released 2024-02-29
+
+No API surface changes; just dependency updates.
+
+## Version 3.4.0, released 2024-01-08
+
+### New features
+
+- Add Adaptive MT API ([commit a8ac2b9](https://github.com/googleapis/google-cloud-dotnet/commit/a8ac2b9689c81a47561cdfe156dcd6547d922abf))
+
+### Documentation improvements
+
+- Fixes a typo in docs ([commit a8ac2b9](https://github.com/googleapis/google-cloud-dotnet/commit/a8ac2b9689c81a47561cdfe156dcd6547d922abf))
+
+## Version 3.3.0, released 2023-08-16
+
+### New features
+
+- Added shadow removal and rotation correction options to Document Translation and Batch Document Translation API ([commit 1f31c26](https://github.com/googleapis/google-cloud-dotnet/commit/1f31c266c47febf4713bc733cc76fbb7c33dbdba))
+
+### Documentation improvements
+
+- Minor formatting ([commit ccddac4](https://github.com/googleapis/google-cloud-dotnet/commit/ccddac405abc0401efa6337fa134abe6f3ae011e))
+- Minor formatting ([commit 1097b47](https://github.com/googleapis/google-cloud-dotnet/commit/1097b47fe89a2f7e1d42bee388f037a98e22080e))
+
 ## Version 3.2.0, released 2023-02-22
 
 ### New features

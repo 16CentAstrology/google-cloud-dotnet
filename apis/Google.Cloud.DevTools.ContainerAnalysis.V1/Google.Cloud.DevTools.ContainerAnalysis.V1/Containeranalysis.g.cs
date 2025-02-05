@@ -41,35 +41,35 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
             "dmVyaXR5GAIgASgOMhQuZ3JhZmVhcy52MS5TZXZlcml0eRIVCg1maXhhYmxl",
             "X2NvdW50GAMgASgDEhMKC3RvdGFsX2NvdW50GAQgASgDMqIIChFDb250YWlu",
             "ZXJBbmFseXNpcxLSAQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5T",
-            "ZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kihgGC",
-            "0+STAm4iLi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9ub3Rlcy8qfTpzZXRJ",
-            "YW1Qb2xpY3k6ASpaOSI0L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL29jY3Vy",
-            "cmVuY2VzLyp9OnNldElhbVBvbGljeToBKtpBD3Jlc291cmNlLHBvbGljeRLK",
+            "ZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kihgHa",
+            "QQ9yZXNvdXJjZSxwb2xpY3mC0+STAm4iLi92MS97cmVzb3VyY2U9cHJvamVj",
+            "dHMvKi9ub3Rlcy8qfTpzZXRJYW1Qb2xpY3k6ASpaOSI0L3YxL3tyZXNvdXJj",
+            "ZT1wcm9qZWN0cy8qL29jY3VycmVuY2VzLyp9OnNldElhbVBvbGljeToBKhLK",
             "AQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lS",
-            "ZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kif4LT5JMCbiIuL3YxL3ty",
-            "ZXNvdXJjZT1wcm9qZWN0cy8qL25vdGVzLyp9OmdldElhbVBvbGljeToBKlo5",
-            "IjQvdjEve3Jlc291cmNlPXByb2plY3RzLyovb2NjdXJyZW5jZXMvKn06Z2V0",
-            "SWFtUG9saWN5OgEq2kEIcmVzb3VyY2USgwIKElRlc3RJYW1QZXJtaXNzaW9u",
+            "ZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kif9pBCHJlc291cmNlgtPk",
+            "kwJuIi4vdjEve3Jlc291cmNlPXByb2plY3RzLyovbm90ZXMvKn06Z2V0SWFt",
+            "UG9saWN5OgEqWjkiNC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9vY2N1cnJl",
+            "bmNlcy8qfTpnZXRJYW1Qb2xpY3k6ASoSgwIKElRlc3RJYW1QZXJtaXNzaW9u",
             "cxIoLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVxdWVzdBop",
-            "Lmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9uc2UilwGC",
-            "0+STAnoiNC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9ub3Rlcy8qfTp0ZXN0",
-            "SWFtUGVybWlzc2lvbnM6ASpaPyI6L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8q",
-            "L29jY3VycmVuY2VzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKtpBFHJlc291",
-            "cmNlLHBlcm1pc3Npb25zEo4CCiJHZXRWdWxuZXJhYmlsaXR5T2NjdXJyZW5j",
+            "Lmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9uc2UilwHa",
+            "QRRyZXNvdXJjZSxwZXJtaXNzaW9uc4LT5JMCeiI0L3YxL3tyZXNvdXJjZT1w",
+            "cm9qZWN0cy8qL25vdGVzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlo/Ijov",
+            "djEve3Jlc291cmNlPXByb2plY3RzLyovb2NjdXJyZW5jZXMvKn06dGVzdElh",
+            "bVBlcm1pc3Npb25zOgEqEo4CCiJHZXRWdWxuZXJhYmlsaXR5T2NjdXJyZW5j",
             "ZXNTdW1tYXJ5Ek8uZ29vZ2xlLmRldnRvb2xzLmNvbnRhaW5lcmFuYWx5c2lz",
             "LnYxLkdldFZ1bG5lcmFiaWxpdHlPY2N1cnJlbmNlc1N1bW1hcnlSZXF1ZXN0",
             "GkUuZ29vZ2xlLmRldnRvb2xzLmNvbnRhaW5lcmFuYWx5c2lzLnYxLlZ1bG5l",
-            "cmFiaWxpdHlPY2N1cnJlbmNlc1N1bW1hcnkiUILT5JMCOhI4L3YxL3twYXJl",
-            "bnQ9cHJvamVjdHMvKn0vb2NjdXJyZW5jZXM6dnVsbmVyYWJpbGl0eVN1bW1h",
-            "cnnaQQ1wYXJlbnQsZmlsdGVyGlTKQSBjb250YWluZXJhbmFseXNpcy5nb29n",
+            "cmFiaWxpdHlPY2N1cnJlbmNlc1N1bW1hcnkiUNpBDXBhcmVudCxmaWx0ZXKC",
+            "0+STAjoSOC92MS97cGFyZW50PXByb2plY3RzLyp9L29jY3VycmVuY2VzOnZ1",
+            "bG5lcmFiaWxpdHlTdW1tYXJ5GlTKQSBjb250YWluZXJhbmFseXNpcy5nb29n",
             "bGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
-            "Y2xvdWQtcGxhdGZvcm1C+AEKH2NvbS5nb29nbGUuY29udGFpbmVyYW5hbHlz",
-            "aXMudjFQAVpVZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9kZXZ0b29scy9jb250YWluZXJhbmFseXNpcy92MTtjb250YWluZXJhbmFs",
-            "eXNpc6ICA0dDQaoCKkdvb2dsZS5DbG91ZC5EZXZUb29scy5Db250YWluZXJB",
-            "bmFseXNpcy5WMcoCIUdvb2dsZVxDbG91ZFxDb250YWluZXJBbmFseXNpc1xW",
-            "MeoCJEdvb2dsZTo6Q2xvdWQ6OkNvbnRhaW5lckFuYWx5c2lzOjpWMWIGcHJv",
-            "dG8z"));
+            "Y2xvdWQtcGxhdGZvcm1C9gEKH2NvbS5nb29nbGUuY29udGFpbmVyYW5hbHlz",
+            "aXMudjFQAVpTY2xvdWQuZ29vZ2xlLmNvbS9nby9jb250YWluZXJhbmFseXNp",
+            "cy9hcGl2MS9jb250YWluZXJhbmFseXNpc3BiO2NvbnRhaW5lcmFuYWx5c2lz",
+            "cGKiAgNHQ0GqAipHb29nbGUuQ2xvdWQuRGV2VG9vbHMuQ29udGFpbmVyQW5h",
+            "bHlzaXMuVjHKAiFHb29nbGVcQ2xvdWRcQ29udGFpbmVyQW5hbHlzaXNcVjHq",
+            "AiRHb29nbGU6OkNsb3VkOjpDb250YWluZXJBbmFseXNpczo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Grafeas.V1.SeverityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,6 +84,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
   /// <summary>
   /// Request to get a vulnerability summary for some set of occurrences.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetVulnerabilityOccurrencesSummaryRequest : pb::IMessage<GetVulnerabilityOccurrencesSummaryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -321,6 +322,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
   /// A summary of how many vulnerability occurrences there are per resource and
   /// severity type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VulnerabilityOccurrencesSummary : pb::IMessage<VulnerabilityOccurrencesSummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -508,6 +510,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
       /// <summary>
       /// Per resource and severity counts of fixable and total vulnerabilities.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FixableTotalByDigest : pb::IMessage<FixableTotalByDigest>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

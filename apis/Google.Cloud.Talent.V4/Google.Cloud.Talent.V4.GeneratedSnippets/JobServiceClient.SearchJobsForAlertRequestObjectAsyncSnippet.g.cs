@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Talent.V4.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START jobs_v4_generated_JobService_SearchJobsForAlert_async]
     using Google.Cloud.Talent.V4;
@@ -54,6 +54,7 @@ namespace Google.Cloud.Talent.V4.Snippets
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Unspecified,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
+                RelevanceThreshold = SearchJobsRequest.Types.RelevanceThreshold.Unspecified,
             };
             // Make the request
             SearchJobsResponse response = await jobServiceClient.SearchJobsForAlertAsync(request);

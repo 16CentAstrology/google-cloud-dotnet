@@ -1,5 +1,40 @@
 # Version history
 
+## Version 2.7.0, released 2025-01-06
+
+### New features
+
+- A new enum `RelevanceThreshold` is added ([commit 45971fe](https://github.com/googleapis/google-cloud-dotnet/commit/45971fe3f5dc4f09ebfa57ea979253085bd78d1a))
+- A new field `relevance_threshold` is added to message `.google.cloud.talent.v4.SearchJobsRequest` ([commit 45971fe](https://github.com/googleapis/google-cloud-dotnet/commit/45971fe3f5dc4f09ebfa57ea979253085bd78d1a))
+
+### Documentation improvements
+
+- Multiple fixes for links in documentation ([commit 45971fe](https://github.com/googleapis/google-cloud-dotnet/commit/45971fe3f5dc4f09ebfa57ea979253085bd78d1a))
+
+## Version 2.6.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.5.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.4.0, released 2024-02-29
+
+### Documentation improvements
+
+- Add three per company option to diversification levels ([commit fea4d59](https://github.com/googleapis/google-cloud-dotnet/commit/fea4d5922cf62babd58dddc1197ec7e93ef32476))
+
+## Version 2.3.0, released 2023-05-03
+
+### Bug fixes
+
+- Change timeout settings for SearchJobsForAlert ([commit 91e9f13](https://github.com/googleapis/google-cloud-dotnet/commit/91e9f1381ab8f9bdf5eab593b8df73c1d1021b94))
+
 ## Version 2.2.0, released 2023-01-20
 
 ### New features

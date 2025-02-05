@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
 using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.RecommendationEngine.V1Beta1
 {
@@ -243,14 +243,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return UserEventServiceClient.Create(callInvoker, Settings, Logger);
+            return UserEventServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<UserEventServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return UserEventServiceClient.Create(callInvoker, Settings, Logger);
+            return UserEventServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -786,14 +786,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UserEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUserEventsResponse, UserEvent> ListUserEvents(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserEvents(new ListUserEventsRequest
+        public virtual gax::PagedEnumerable<ListUserEventsResponse, UserEvent> ListUserEvents(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserEventsRequest request = new ListUserEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of user events within a time range, with potential filtering.
@@ -846,14 +855,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UserEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUserEventsResponse, UserEvent> ListUserEventsAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserEventsAsync(new ListUserEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUserEventsResponse, UserEvent> ListUserEventsAsync(string parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserEventsRequest request = new ListUserEventsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of user events within a time range, with potential filtering.
@@ -906,14 +924,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="UserEvent"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListUserEventsResponse, UserEvent> ListUserEvents(EventStoreName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserEvents(new ListUserEventsRequest
+        public virtual gax::PagedEnumerable<ListUserEventsResponse, UserEvent> ListUserEvents(EventStoreName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserEventsRequest request = new ListUserEventsRequest
             {
                 ParentAsEventStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserEvents(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a list of user events within a time range, with potential filtering.
@@ -966,14 +993,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="UserEvent"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListUserEventsResponse, UserEvent> ListUserEventsAsync(EventStoreName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListUserEventsAsync(new ListUserEventsRequest
+        public virtual gax::PagedAsyncEnumerable<ListUserEventsResponse, UserEvent> ListUserEventsAsync(EventStoreName parent, string filter, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUserEventsRequest request = new ListUserEventsRequest
             {
                 ParentAsEventStoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Filter = filter ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUserEventsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes permanently all user events specified by the filter provided.
@@ -1617,7 +1653,11 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1
         {
             GrpcClient = grpcClient;
             UserEventServiceSettings effectiveSettings = settings ?? UserEventServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             PurgeUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PurgeUserEventsOperationsSettings, logger);
             ImportUserEventsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportUserEventsOperationsSettings, logger);
             _callWriteUserEvent = clientHelper.BuildApiCall<WriteUserEventRequest, UserEvent>("WriteUserEvent", grpcClient.WriteUserEventAsync, grpcClient.WriteUserEvent, effectiveSettings.WriteUserEventSettings).WithGoogleRequestParam("parent", request => request.Parent);

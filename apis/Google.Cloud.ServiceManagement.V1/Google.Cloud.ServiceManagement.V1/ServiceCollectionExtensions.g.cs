@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,12 +16,13 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using gcsv = Google.Cloud.ServiceManagement.V1;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
-using sys = System;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -41,6 +42,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcsv::ServiceManagerClientBuilder builder = new gcsv::ServiceManagerClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcsv::ServiceManagerClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddServiceManagerClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcsv::ServiceManagerClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcsv::ServiceManagerClientBuilder builder = new gcsv::ServiceManagerClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -1231,6 +1232,996 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateDatasetVersion</summary>
+        public void CreateDatasetVersionRequestObject()
+        {
+            // Snippet: CreateDatasetVersion(CreateDatasetVersionRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            CreateDatasetVersionRequest request = new CreateDatasetVersionRequest
+            {
+                ParentAsDatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                DatasetVersion = new DatasetVersion(),
+            };
+            // Make the request
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> response = datasetServiceClient.CreateDatasetVersion(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatasetVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceCreateDatasetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetVersionAsync</summary>
+        public async Task CreateDatasetVersionRequestObjectAsync()
+        {
+            // Snippet: CreateDatasetVersionAsync(CreateDatasetVersionRequest, CallSettings)
+            // Additional: CreateDatasetVersionAsync(CreateDatasetVersionRequest, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateDatasetVersionRequest request = new CreateDatasetVersionRequest
+            {
+                ParentAsDatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                DatasetVersion = new DatasetVersion(),
+            };
+            // Make the request
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> response = await datasetServiceClient.CreateDatasetVersionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatasetVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceCreateDatasetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetVersion</summary>
+        public void CreateDatasetVersion()
+        {
+            // Snippet: CreateDatasetVersion(string, DatasetVersion, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]";
+            DatasetVersion datasetVersion = new DatasetVersion();
+            // Make the request
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> response = datasetServiceClient.CreateDatasetVersion(parent, datasetVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatasetVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceCreateDatasetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetVersionAsync</summary>
+        public async Task CreateDatasetVersionAsync()
+        {
+            // Snippet: CreateDatasetVersionAsync(string, DatasetVersion, CallSettings)
+            // Additional: CreateDatasetVersionAsync(string, DatasetVersion, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]";
+            DatasetVersion datasetVersion = new DatasetVersion();
+            // Make the request
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> response = await datasetServiceClient.CreateDatasetVersionAsync(parent, datasetVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatasetVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceCreateDatasetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetVersion</summary>
+        public void CreateDatasetVersionResourceNames()
+        {
+            // Snippet: CreateDatasetVersion(DatasetName, DatasetVersion, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetName parent = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            DatasetVersion datasetVersion = new DatasetVersion();
+            // Make the request
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> response = datasetServiceClient.CreateDatasetVersion(parent, datasetVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatasetVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceCreateDatasetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDatasetVersionAsync</summary>
+        public async Task CreateDatasetVersionResourceNamesAsync()
+        {
+            // Snippet: CreateDatasetVersionAsync(DatasetName, DatasetVersion, CallSettings)
+            // Additional: CreateDatasetVersionAsync(DatasetName, DatasetVersion, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetName parent = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            DatasetVersion datasetVersion = new DatasetVersion();
+            // Make the request
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> response = await datasetServiceClient.CreateDatasetVersionAsync(parent, datasetVersion);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatasetVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetVersion, CreateDatasetVersionOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceCreateDatasetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatasetVersion</summary>
+        public void UpdateDatasetVersionRequestObject()
+        {
+            // Snippet: UpdateDatasetVersion(UpdateDatasetVersionRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateDatasetVersionRequest request = new UpdateDatasetVersionRequest
+            {
+                DatasetVersion = new DatasetVersion(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            DatasetVersion response = datasetServiceClient.UpdateDatasetVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatasetVersionAsync</summary>
+        public async Task UpdateDatasetVersionRequestObjectAsync()
+        {
+            // Snippet: UpdateDatasetVersionAsync(UpdateDatasetVersionRequest, CallSettings)
+            // Additional: UpdateDatasetVersionAsync(UpdateDatasetVersionRequest, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDatasetVersionRequest request = new UpdateDatasetVersionRequest
+            {
+                DatasetVersion = new DatasetVersion(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            DatasetVersion response = await datasetServiceClient.UpdateDatasetVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatasetVersion</summary>
+        public void UpdateDatasetVersion()
+        {
+            // Snippet: UpdateDatasetVersion(DatasetVersion, FieldMask, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetVersion datasetVersion = new DatasetVersion();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DatasetVersion response = datasetServiceClient.UpdateDatasetVersion(datasetVersion, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatasetVersionAsync</summary>
+        public async Task UpdateDatasetVersionAsync()
+        {
+            // Snippet: UpdateDatasetVersionAsync(DatasetVersion, FieldMask, CallSettings)
+            // Additional: UpdateDatasetVersionAsync(DatasetVersion, FieldMask, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetVersion datasetVersion = new DatasetVersion();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            DatasetVersion response = await datasetServiceClient.UpdateDatasetVersionAsync(datasetVersion, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetVersion</summary>
+        public void DeleteDatasetVersionRequestObject()
+        {
+            // Snippet: DeleteDatasetVersion(DeleteDatasetVersionRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteDatasetVersionRequest request = new DeleteDatasetVersionRequest
+            {
+                DatasetVersionName = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = datasetServiceClient.DeleteDatasetVersion(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceDeleteDatasetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetVersionAsync</summary>
+        public async Task DeleteDatasetVersionRequestObjectAsync()
+        {
+            // Snippet: DeleteDatasetVersionAsync(DeleteDatasetVersionRequest, CallSettings)
+            // Additional: DeleteDatasetVersionAsync(DeleteDatasetVersionRequest, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteDatasetVersionRequest request = new DeleteDatasetVersionRequest
+            {
+                DatasetVersionName = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await datasetServiceClient.DeleteDatasetVersionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceDeleteDatasetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetVersion</summary>
+        public void DeleteDatasetVersion()
+        {
+            // Snippet: DeleteDatasetVersion(string, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]/datasetVersions/[DATASET_VERSION]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = datasetServiceClient.DeleteDatasetVersion(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceDeleteDatasetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetVersionAsync</summary>
+        public async Task DeleteDatasetVersionAsync()
+        {
+            // Snippet: DeleteDatasetVersionAsync(string, CallSettings)
+            // Additional: DeleteDatasetVersionAsync(string, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]/datasetVersions/[DATASET_VERSION]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await datasetServiceClient.DeleteDatasetVersionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceDeleteDatasetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetVersion</summary>
+        public void DeleteDatasetVersionResourceNames()
+        {
+            // Snippet: DeleteDatasetVersion(DatasetVersionName, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetVersionName name = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = datasetServiceClient.DeleteDatasetVersion(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceDeleteDatasetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDatasetVersionAsync</summary>
+        public async Task DeleteDatasetVersionResourceNamesAsync()
+        {
+            // Snippet: DeleteDatasetVersionAsync(DatasetVersionName, CallSettings)
+            // Additional: DeleteDatasetVersionAsync(DatasetVersionName, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetVersionName name = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await datasetServiceClient.DeleteDatasetVersionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceDeleteDatasetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetVersion</summary>
+        public void GetDatasetVersionRequestObject()
+        {
+            // Snippet: GetDatasetVersion(GetDatasetVersionRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            GetDatasetVersionRequest request = new GetDatasetVersionRequest
+            {
+                DatasetVersionName = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]"),
+                ReadMask = new FieldMask(),
+            };
+            // Make the request
+            DatasetVersion response = datasetServiceClient.GetDatasetVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetVersionAsync</summary>
+        public async Task GetDatasetVersionRequestObjectAsync()
+        {
+            // Snippet: GetDatasetVersionAsync(GetDatasetVersionRequest, CallSettings)
+            // Additional: GetDatasetVersionAsync(GetDatasetVersionRequest, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDatasetVersionRequest request = new GetDatasetVersionRequest
+            {
+                DatasetVersionName = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]"),
+                ReadMask = new FieldMask(),
+            };
+            // Make the request
+            DatasetVersion response = await datasetServiceClient.GetDatasetVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetVersion</summary>
+        public void GetDatasetVersion()
+        {
+            // Snippet: GetDatasetVersion(string, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]/datasetVersions/[DATASET_VERSION]";
+            // Make the request
+            DatasetVersion response = datasetServiceClient.GetDatasetVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetVersionAsync</summary>
+        public async Task GetDatasetVersionAsync()
+        {
+            // Snippet: GetDatasetVersionAsync(string, CallSettings)
+            // Additional: GetDatasetVersionAsync(string, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]/datasetVersions/[DATASET_VERSION]";
+            // Make the request
+            DatasetVersion response = await datasetServiceClient.GetDatasetVersionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetVersion</summary>
+        public void GetDatasetVersionResourceNames()
+        {
+            // Snippet: GetDatasetVersion(DatasetVersionName, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetVersionName name = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]");
+            // Make the request
+            DatasetVersion response = datasetServiceClient.GetDatasetVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatasetVersionAsync</summary>
+        public async Task GetDatasetVersionResourceNamesAsync()
+        {
+            // Snippet: GetDatasetVersionAsync(DatasetVersionName, CallSettings)
+            // Additional: GetDatasetVersionAsync(DatasetVersionName, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetVersionName name = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]");
+            // Make the request
+            DatasetVersion response = await datasetServiceClient.GetDatasetVersionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetVersions</summary>
+        public void ListDatasetVersionsRequestObject()
+        {
+            // Snippet: ListDatasetVersions(ListDatasetVersionsRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            ListDatasetVersionsRequest request = new ListDatasetVersionsRequest
+            {
+                ParentAsDatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                Filter = "",
+                ReadMask = new FieldMask(),
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListDatasetVersionsResponse, DatasetVersion> response = datasetServiceClient.ListDatasetVersions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatasetVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatasetVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatasetVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatasetVersion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatasetVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetVersionsAsync</summary>
+        public async Task ListDatasetVersionsRequestObjectAsync()
+        {
+            // Snippet: ListDatasetVersionsAsync(ListDatasetVersionsRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDatasetVersionsRequest request = new ListDatasetVersionsRequest
+            {
+                ParentAsDatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                Filter = "",
+                ReadMask = new FieldMask(),
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListDatasetVersionsResponse, DatasetVersion> response = datasetServiceClient.ListDatasetVersionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DatasetVersion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatasetVersionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatasetVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatasetVersion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatasetVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetVersions</summary>
+        public void ListDatasetVersions()
+        {
+            // Snippet: ListDatasetVersions(string, string, int?, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]";
+            // Make the request
+            PagedEnumerable<ListDatasetVersionsResponse, DatasetVersion> response = datasetServiceClient.ListDatasetVersions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatasetVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatasetVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatasetVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatasetVersion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatasetVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetVersionsAsync</summary>
+        public async Task ListDatasetVersionsAsync()
+        {
+            // Snippet: ListDatasetVersionsAsync(string, string, int?, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]";
+            // Make the request
+            PagedAsyncEnumerable<ListDatasetVersionsResponse, DatasetVersion> response = datasetServiceClient.ListDatasetVersionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DatasetVersion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatasetVersionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatasetVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatasetVersion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatasetVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetVersions</summary>
+        public void ListDatasetVersionsResourceNames()
+        {
+            // Snippet: ListDatasetVersions(DatasetName, string, int?, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetName parent = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            PagedEnumerable<ListDatasetVersionsResponse, DatasetVersion> response = datasetServiceClient.ListDatasetVersions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DatasetVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDatasetVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatasetVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatasetVersion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatasetVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatasetVersionsAsync</summary>
+        public async Task ListDatasetVersionsResourceNamesAsync()
+        {
+            // Snippet: ListDatasetVersionsAsync(DatasetName, string, int?, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetName parent = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]");
+            // Make the request
+            PagedAsyncEnumerable<ListDatasetVersionsResponse, DatasetVersion> response = datasetServiceClient.ListDatasetVersionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DatasetVersion item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDatasetVersionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DatasetVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DatasetVersion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DatasetVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreDatasetVersion</summary>
+        public void RestoreDatasetVersionRequestObject()
+        {
+            // Snippet: RestoreDatasetVersion(RestoreDatasetVersionRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            RestoreDatasetVersionRequest request = new RestoreDatasetVersionRequest
+            {
+                DatasetVersionName = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]"),
+            };
+            // Make the request
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> response = datasetServiceClient.RestoreDatasetVersion(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatasetVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceRestoreDatasetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreDatasetVersionAsync</summary>
+        public async Task RestoreDatasetVersionRequestObjectAsync()
+        {
+            // Snippet: RestoreDatasetVersionAsync(RestoreDatasetVersionRequest, CallSettings)
+            // Additional: RestoreDatasetVersionAsync(RestoreDatasetVersionRequest, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RestoreDatasetVersionRequest request = new RestoreDatasetVersionRequest
+            {
+                DatasetVersionName = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]"),
+            };
+            // Make the request
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> response = await datasetServiceClient.RestoreDatasetVersionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatasetVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceRestoreDatasetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreDatasetVersion</summary>
+        public void RestoreDatasetVersion()
+        {
+            // Snippet: RestoreDatasetVersion(string, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]/datasetVersions/[DATASET_VERSION]";
+            // Make the request
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> response = datasetServiceClient.RestoreDatasetVersion(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatasetVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceRestoreDatasetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreDatasetVersionAsync</summary>
+        public async Task RestoreDatasetVersionAsync()
+        {
+            // Snippet: RestoreDatasetVersionAsync(string, CallSettings)
+            // Additional: RestoreDatasetVersionAsync(string, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]/datasetVersions/[DATASET_VERSION]";
+            // Make the request
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> response = await datasetServiceClient.RestoreDatasetVersionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatasetVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceRestoreDatasetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreDatasetVersion</summary>
+        public void RestoreDatasetVersionResourceNames()
+        {
+            // Snippet: RestoreDatasetVersion(DatasetVersionName, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            DatasetVersionName name = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]");
+            // Make the request
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> response = datasetServiceClient.RestoreDatasetVersion(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DatasetVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceRestoreDatasetVersion(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RestoreDatasetVersionAsync</summary>
+        public async Task RestoreDatasetVersionResourceNamesAsync()
+        {
+            // Snippet: RestoreDatasetVersionAsync(DatasetVersionName, CallSettings)
+            // Additional: RestoreDatasetVersionAsync(DatasetVersionName, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DatasetVersionName name = DatasetVersionName.FromProjectLocationDatasetDatasetVersion("[PROJECT]", "[LOCATION]", "[DATASET]", "[DATASET_VERSION]");
+            // Make the request
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> response = await datasetServiceClient.RestoreDatasetVersionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DatasetVersion result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DatasetVersion, RestoreDatasetVersionOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceRestoreDatasetVersionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DatasetVersion retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListDataItems</summary>
         public void ListDataItemsRequestObject()
         {
@@ -1900,6 +2891,189 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQuery</summary>
+        public void DeleteSavedQueryRequestObject()
+        {
+            // Snippet: DeleteSavedQuery(DeleteSavedQueryRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteSavedQueryRequest request = new DeleteSavedQueryRequest
+            {
+                SavedQueryName = SavedQueryName.FromProjectLocationDatasetSavedQuery("[PROJECT]", "[LOCATION]", "[DATASET]", "[SAVED_QUERY]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = datasetServiceClient.DeleteSavedQuery(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceDeleteSavedQuery(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQueryAsync</summary>
+        public async Task DeleteSavedQueryRequestObjectAsync()
+        {
+            // Snippet: DeleteSavedQueryAsync(DeleteSavedQueryRequest, CallSettings)
+            // Additional: DeleteSavedQueryAsync(DeleteSavedQueryRequest, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSavedQueryRequest request = new DeleteSavedQueryRequest
+            {
+                SavedQueryName = SavedQueryName.FromProjectLocationDatasetSavedQuery("[PROJECT]", "[LOCATION]", "[DATASET]", "[SAVED_QUERY]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await datasetServiceClient.DeleteSavedQueryAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceDeleteSavedQueryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQuery</summary>
+        public void DeleteSavedQuery()
+        {
+            // Snippet: DeleteSavedQuery(string, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]/savedQueries/[SAVED_QUERY]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = datasetServiceClient.DeleteSavedQuery(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceDeleteSavedQuery(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQueryAsync</summary>
+        public async Task DeleteSavedQueryAsync()
+        {
+            // Snippet: DeleteSavedQueryAsync(string, CallSettings)
+            // Additional: DeleteSavedQueryAsync(string, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/datasets/[DATASET]/savedQueries/[SAVED_QUERY]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await datasetServiceClient.DeleteSavedQueryAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceDeleteSavedQueryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQuery</summary>
+        public void DeleteSavedQueryResourceNames()
+        {
+            // Snippet: DeleteSavedQuery(SavedQueryName, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            SavedQueryName name = SavedQueryName.FromProjectLocationDatasetSavedQuery("[PROJECT]", "[LOCATION]", "[DATASET]", "[SAVED_QUERY]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = datasetServiceClient.DeleteSavedQuery(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceDeleteSavedQuery(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSavedQueryAsync</summary>
+        public async Task DeleteSavedQueryResourceNamesAsync()
+        {
+            // Snippet: DeleteSavedQueryAsync(SavedQueryName, CallSettings)
+            // Additional: DeleteSavedQueryAsync(SavedQueryName, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SavedQueryName name = SavedQueryName.FromProjectLocationDatasetSavedQuery("[PROJECT]", "[LOCATION]", "[DATASET]", "[SAVED_QUERY]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await datasetServiceClient.DeleteSavedQueryAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceDeleteSavedQueryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

@@ -1,11 +1,11 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+// Copyright 2016 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -28,11 +28,20 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public string SelectedFields { get; set; }
 
+        /// <summary>
+        /// Specifies the view of the table to fetch.
+        /// </summary>
+        public TableView? View { get; set; }
+
         internal void ModifyRequest(GetRequest request)
         {
             if (SelectedFields != null)
             {
                 request.SelectedFields = SelectedFields;
+            }
+            if (View is TableView view)
+            {
+                request.View = (GetRequest.ViewEnum) view;
             }
         }
     }

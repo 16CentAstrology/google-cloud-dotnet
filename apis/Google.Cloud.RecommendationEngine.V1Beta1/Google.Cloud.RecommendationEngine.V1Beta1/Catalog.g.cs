@@ -85,6 +85,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// CatalogItem captures all metadata information of items to be recommended.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CatalogItem : pb::IMessage<CatalogItem>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -667,6 +668,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <summary>
       /// Category represents catalog item category hierarchy.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CategoryHierarchy : pb::IMessage<CategoryHierarchy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -860,6 +862,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// ProductCatalogItem captures item metadata specific to retail products.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductCatalogItem : pb::IMessage<ProductCatalogItem>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1228,7 +1231,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       if (other == null) {
         return;
       }
-      costs_.Add(other.costs_);
+      costs_.MergeFrom(other.costs_);
       if (other.CurrencyCode.Length != 0) {
         CurrencyCode = other.CurrencyCode;
       }
@@ -1411,6 +1414,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <summary>
       /// Exact product price.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ExactPrice : pb::IMessage<ExactPrice>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1648,6 +1652,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// Product price range when there are a range of prices for different
       /// variations of the same product.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PriceRange : pb::IMessage<PriceRange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1888,6 +1893,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Catalog item thumbnail/detail image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Image : pb::IMessage<Image>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

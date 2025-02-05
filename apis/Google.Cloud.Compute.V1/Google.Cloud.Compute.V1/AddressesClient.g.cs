@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -53,6 +53,8 @@ namespace Google.Cloud.Compute.V1
             InsertSettings = existing.InsertSettings;
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
+            MoveSettings = existing.MoveSettings;
+            MoveOperationsSettings = existing.MoveOperationsSettings.Clone();
             SetLabelsSettings = existing.SetLabelsSettings;
             SetLabelsOperationsSettings = existing.SetLabelsOperationsSettings.Clone();
             OnCopy(existing);
@@ -184,6 +186,36 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings ListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AddressesClient.Move</c>
+        /// and <c>AddressesClient.MoveAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MoveSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AddressesClient.Move</c> and <c>AddressesClient.MoveAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings MoveOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AddressesClient.SetLabels</c>
         ///  and <c>AddressesClient.SetLabelsAsync</c>.
         /// </summary>
@@ -255,14 +287,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AddressesClient.Create(callInvoker, Settings, Logger);
+            return AddressesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AddressesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AddressesClient.Create(callInvoker, Settings, Logger);
+            return AddressesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -356,7 +388,7 @@ namespace Google.Cloud.Compute.V1
         public virtual Addresses.AddressesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of addresses.
+        /// Retrieves an aggregated list of addresses. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -365,7 +397,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of addresses.
+        /// Retrieves an aggregated list of addresses. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -376,7 +408,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an aggregated list of addresses.
+        /// Retrieves an aggregated list of addresses. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -391,16 +423,25 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
-        public virtual gax::PagedEnumerable<AddressAggregatedList, scg::KeyValuePair<string, AddressesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedList(new AggregatedListAddressesRequest
+        public virtual gax::PagedEnumerable<AddressAggregatedList, scg::KeyValuePair<string, AddressesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListAddressesRequest request = new AggregatedListAddressesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedList(request, callSettings);
+        }
 
         /// <summary>
-        /// Retrieves an aggregated list of addresses.
+        /// Retrieves an aggregated list of addresses. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -417,13 +458,22 @@ namespace Google.Cloud.Compute.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<AddressAggregatedList, scg::KeyValuePair<string, AddressesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedListAsync(new AggregatedListAddressesRequest
+        public virtual gax::PagedAsyncEnumerable<AddressAggregatedList, scg::KeyValuePair<string, AddressesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListAddressesRequest request = new AggregatedListAddressesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified address resource.
@@ -778,14 +828,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Address"/> resources.</returns>
-        public virtual gax::PagedEnumerable<AddressList, Address> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListAddressesRequest
+        public virtual gax::PagedEnumerable<AddressList, Address> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAddressesRequest request = new ListAddressesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a list of addresses contained within the specified region.
@@ -806,14 +865,148 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Address"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<AddressList, Address> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListAddressesRequest
+        public virtual gax::PagedAsyncEnumerable<AddressList, Address> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAddressesRequest request = new ListAddressesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Moves the specified address resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Move(MoveAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moves the specified address resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> MoveAsync(MoveAddressRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moves the specified address resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> MoveAsync(MoveAddressRequest request, st::CancellationToken cancellationToken) =>
+            MoveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Move</c>.</summary>
+        public virtual lro::OperationsClient MoveOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Move</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceMove(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Move</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceMoveAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveOperationsClient, callSettings);
+
+        /// <summary>
+        /// Moves the specified address resource.
+        /// </summary>
+        /// <param name="project">
+        /// Source project ID which the Address is moved from.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="address">
+        /// Name of the address resource to move.
+        /// </param>
+        /// <param name="regionAddressesMoveRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Move(string project, string region, string address, RegionAddressesMoveRequest regionAddressesMoveRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            Move(new MoveAddressRequest
+            {
+                Address = gax::GaxPreconditions.CheckNotNullOrEmpty(address, nameof(address)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                RegionAddressesMoveRequestResource = gax::GaxPreconditions.CheckNotNull(regionAddressesMoveRequestResource, nameof(regionAddressesMoveRequestResource)),
             }, callSettings);
+
+        /// <summary>
+        /// Moves the specified address resource.
+        /// </summary>
+        /// <param name="project">
+        /// Source project ID which the Address is moved from.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="address">
+        /// Name of the address resource to move.
+        /// </param>
+        /// <param name="regionAddressesMoveRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> MoveAsync(string project, string region, string address, RegionAddressesMoveRequest regionAddressesMoveRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            MoveAsync(new MoveAddressRequest
+            {
+                Address = gax::GaxPreconditions.CheckNotNullOrEmpty(address, nameof(address)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                RegionAddressesMoveRequestResource = gax::GaxPreconditions.CheckNotNull(regionAddressesMoveRequestResource, nameof(regionAddressesMoveRequestResource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Moves the specified address resource.
+        /// </summary>
+        /// <param name="project">
+        /// Source project ID which the Address is moved from.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="address">
+        /// Name of the address resource to move.
+        /// </param>
+        /// <param name="regionAddressesMoveRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> MoveAsync(string project, string region, string address, RegionAddressesMoveRequest regionAddressesMoveRequestResource, st::CancellationToken cancellationToken) =>
+            MoveAsync(project, region, address, regionAddressesMoveRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets the labels on an Address. To learn more about labels, read the Labeling Resources documentation.
@@ -957,6 +1150,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<ListAddressesRequest, AddressList> _callList;
 
+        private readonly gaxgrpc::ApiCall<MoveAddressRequest, Operation> _callMove;
+
         private readonly gaxgrpc::ApiCall<SetLabelsAddressRequest, Operation> _callSetLabels;
 
         /// <summary>
@@ -969,9 +1164,14 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             AddressesSettings effectiveSettings = settings ?? AddressesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
+            MoveOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.MoveOperationsSettings, logger);
             SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetLabelsOperationsSettings, logger);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListAddressesRequest, AddressAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
@@ -988,6 +1188,9 @@ namespace Google.Cloud.Compute.V1
             _callList = clientHelper.BuildApiCall<ListAddressesRequest, AddressList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
+            _callMove = clientHelper.BuildApiCall<MoveAddressRequest, Operation>("Move", grpcClient.MoveAsync, grpcClient.Move, effectiveSettings.MoveSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("address", request => request.Address);
+            Modify_ApiCall(ref _callMove);
+            Modify_MoveApiCall(ref _callMove);
             _callSetLabels = clientHelper.BuildApiCall<SetLabelsAddressRequest, Operation>("SetLabels", grpcClient.SetLabelsAsync, grpcClient.SetLabels, effectiveSettings.SetLabelsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetLabels);
             Modify_SetLabelsApiCall(ref _callSetLabels);
@@ -1006,6 +1209,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListAddressesRequest, AddressList> call);
 
+        partial void Modify_MoveApiCall(ref gaxgrpc::ApiCall<MoveAddressRequest, Operation> call);
+
         partial void Modify_SetLabelsApiCall(ref gaxgrpc::ApiCall<SetLabelsAddressRequest, Operation> call);
 
         partial void OnConstruction(Addresses.AddressesClient grpcClient, AddressesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -1023,10 +1228,12 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListAddressesRequest(ref ListAddressesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_MoveAddressRequest(ref MoveAddressRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_SetLabelsAddressRequest(ref SetLabelsAddressRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Retrieves an aggregated list of addresses.
+        /// Retrieves an aggregated list of addresses. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1038,7 +1245,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves an aggregated list of addresses.
+        /// Retrieves an aggregated list of addresses. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1163,6 +1370,39 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_ListAddressesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAddressesRequest, AddressList, Address>(_callList, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>Move</c>.</summary>
+        public override lro::OperationsClient MoveOperationsClient { get; }
+
+        /// <summary>
+        /// Moves the specified address resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> Move(MoveAddressRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveAddressRequest(ref request, ref callSettings);
+            Operation response = _callMove.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), MoveOperationsClient);
+        }
+
+        /// <summary>
+        /// Moves the specified address resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> MoveAsync(MoveAddressRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveAddressRequest(ref request, ref callSettings);
+            Operation response = await _callMove.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), MoveOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetLabels</c>.</summary>

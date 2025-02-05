@@ -28,170 +28,181 @@ namespace Google.Cloud.Functions.V1 {
             "Z29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MRocZ29vZ2xlL2FwaS9hbm5vdGF0",
             "aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
-            "cHJvdG8aHmdvb2dsZS9pYW0vdjEvaWFtX3BvbGljeS5wcm90bxoaZ29vZ2xl",
-            "L2lhbS92MS9wb2xpY3kucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVy",
-            "YXRpb25zLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8a",
-            "IGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvIucRCg1DbG91ZEZ1bmN0aW9uEgwKBG5h",
-            "bWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSHAoSc291cmNlX2FyY2hp",
-            "dmVfdXJsGAMgASgJSAASSAoRc291cmNlX3JlcG9zaXRvcnkYBCABKAsyKy5n",
-            "b29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLlNvdXJjZVJlcG9zaXRvcnlIABIb",
-            "ChFzb3VyY2VfdXBsb2FkX3VybBgQIAEoCUgAEkAKDWh0dHBzX3RyaWdnZXIY",
-            "BSABKAsyJy5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkh0dHBzVHJpZ2dl",
-            "ckgBEkAKDWV2ZW50X3RyaWdnZXIYBiABKAsyJy5nb29nbGUuY2xvdWQuZnVu",
-            "Y3Rpb25zLnYxLkV2ZW50VHJpZ2dlckgBEkMKBnN0YXR1cxgHIAEoDjIuLmdv",
-            "b2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuQ2xvdWRGdW5jdGlvblN0YXR1c0ID",
-            "4EEDEhMKC2VudHJ5X3BvaW50GAggASgJEg8KB3J1bnRpbWUYEyABKAkSKgoH",
-            "dGltZW91dBgJIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIbChNh",
-            "dmFpbGFibGVfbWVtb3J5X21iGAogASgFEh0KFXNlcnZpY2VfYWNjb3VudF9l",
-            "bWFpbBgLIAEoCRI0Cgt1cGRhdGVfdGltZRgMIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIXCgp2ZXJzaW9uX2lkGA4gASgDQgPgQQMS",
-            "RAoGbGFiZWxzGA8gAygLMjQuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5D",
-            "bG91ZEZ1bmN0aW9uLkxhYmVsc0VudHJ5EmEKFWVudmlyb25tZW50X3Zhcmlh",
-            "YmxlcxgRIAMoCzJCLmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuQ2xvdWRG",
-            "dW5jdGlvbi5FbnZpcm9ubWVudFZhcmlhYmxlc0VudHJ5EmwKG2J1aWxkX2Vu",
-            "dmlyb25tZW50X3ZhcmlhYmxlcxgcIAMoCzJHLmdvb2dsZS5jbG91ZC5mdW5j",
-            "dGlvbnMudjEuQ2xvdWRGdW5jdGlvbi5CdWlsZEVudmlyb25tZW50VmFyaWFi",
-            "bGVzRW50cnkSDwoHbmV0d29yaxgSIAEoCRIVCg1tYXhfaW5zdGFuY2VzGBQg",
-            "ASgFEhUKDW1pbl9pbnN0YW5jZXMYICABKAUSFQoNdnBjX2Nvbm5lY3RvchgW",
-            "IAEoCRJqCh12cGNfY29ubmVjdG9yX2VncmVzc19zZXR0aW5ncxgXIAEoDjJD",
-            "Lmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuQ2xvdWRGdW5jdGlvbi5WcGND",
-            "b25uZWN0b3JFZ3Jlc3NTZXR0aW5ncxJSChBpbmdyZXNzX3NldHRpbmdzGBgg",
-            "ASgOMjguZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DbG91ZEZ1bmN0aW9u",
-            "LkluZ3Jlc3NTZXR0aW5ncxI8CgxrbXNfa2V5X25hbWUYGSABKAlCJvpBIwoh",
-            "Y2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5EhkKEWJ1aWxkX3dv",
-            "cmtlcl9wb29sGBogASgJEhUKCGJ1aWxkX2lkGBsgASgJQgPgQQMSFwoKYnVp",
-            "bGRfbmFtZRghIAEoCUID4EEDEk0KHHNlY3JldF9lbnZpcm9ubWVudF92YXJp",
-            "YWJsZXMYHSADKAsyJy5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLlNlY3Jl",
-            "dEVudlZhchI/Cg5zZWNyZXRfdm9sdW1lcxgeIAMoCzInLmdvb2dsZS5jbG91",
-            "ZC5mdW5jdGlvbnMudjEuU2VjcmV0Vm9sdW1lEhkKDHNvdXJjZV90b2tlbhgf",
-            "IAEoCUID4EEEEkoKEWRvY2tlcl9yZXBvc2l0b3J5GCIgASgJQi/6QSwKKmFy",
-            "dGlmYWN0cmVnaXN0cnkuZ29vZ2xlYXBpcy5jb20vUmVwb3NpdG9yeRJQCg9k",
-            "b2NrZXJfcmVnaXN0cnkYIyABKA4yNy5nb29nbGUuY2xvdWQuZnVuY3Rpb25z",
-            "LnYxLkNsb3VkRnVuY3Rpb24uRG9ja2VyUmVnaXN0cnkaLQoLTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARo7ChlFbnZpcm9u",
+            "cHJvdG8aKmdvb2dsZS9jbG91ZC9mdW5jdGlvbnMvdjEvb3BlcmF0aW9ucy5w",
+            "cm90bxoeZ29vZ2xlL2lhbS92MS9pYW1fcG9saWN5LnByb3RvGhpnb29nbGUv",
+            "aWFtL3YxL3BvbGljeS5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJh",
+            "dGlvbnMucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxob",
+            "Z29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJvdG9idWYv",
+            "ZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
+            "cm90byK3FAoNQ2xvdWRGdW5jdGlvbhIMCgRuYW1lGAEgASgJEhMKC2Rlc2Ny",
+            "aXB0aW9uGAIgASgJEhwKEnNvdXJjZV9hcmNoaXZlX3VybBgDIAEoCUgAEkgK",
+            "EXNvdXJjZV9yZXBvc2l0b3J5GAQgASgLMisuZ29vZ2xlLmNsb3VkLmZ1bmN0",
+            "aW9ucy52MS5Tb3VyY2VSZXBvc2l0b3J5SAASGwoRc291cmNlX3VwbG9hZF91",
+            "cmwYECABKAlIABJACg1odHRwc190cmlnZ2VyGAUgASgLMicuZ29vZ2xlLmNs",
+            "b3VkLmZ1bmN0aW9ucy52MS5IdHRwc1RyaWdnZXJIARJACg1ldmVudF90cmln",
+            "Z2VyGAYgASgLMicuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5FdmVudFRy",
+            "aWdnZXJIARJDCgZzdGF0dXMYByABKA4yLi5nb29nbGUuY2xvdWQuZnVuY3Rp",
+            "b25zLnYxLkNsb3VkRnVuY3Rpb25TdGF0dXNCA+BBAxITCgtlbnRyeV9wb2lu",
+            "dBgIIAEoCRIPCgdydW50aW1lGBMgASgJEioKB3RpbWVvdXQYCSABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb24SGwoTYXZhaWxhYmxlX21lbW9yeV9t",
+            "YhgKIAEoBRIdChVzZXJ2aWNlX2FjY291bnRfZW1haWwYCyABKAkSNAoLdXBk",
+            "YXRlX3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSFwoKdmVyc2lvbl9pZBgOIAEoA0ID4EEDEkQKBmxhYmVscxgPIAMoCzI0",
+            "Lmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuQ2xvdWRGdW5jdGlvbi5MYWJl",
+            "bHNFbnRyeRJhChVlbnZpcm9ubWVudF92YXJpYWJsZXMYESADKAsyQi5nb29n",
+            "bGUuY2xvdWQuZnVuY3Rpb25zLnYxLkNsb3VkRnVuY3Rpb24uRW52aXJvbm1l",
+            "bnRWYXJpYWJsZXNFbnRyeRJsChtidWlsZF9lbnZpcm9ubWVudF92YXJpYWJs",
+            "ZXMYHCADKAsyRy5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkNsb3VkRnVu",
+            "Y3Rpb24uQnVpbGRFbnZpcm9ubWVudFZhcmlhYmxlc0VudHJ5EhMKB25ldHdv",
+            "cmsYEiABKAlCAhgBEhUKDW1heF9pbnN0YW5jZXMYFCABKAUSFQoNbWluX2lu",
+            "c3RhbmNlcxggIAEoBRIVCg12cGNfY29ubmVjdG9yGBYgASgJEmoKHXZwY19j",
+            "b25uZWN0b3JfZWdyZXNzX3NldHRpbmdzGBcgASgOMkMuZ29vZ2xlLmNsb3Vk",
+            "LmZ1bmN0aW9ucy52MS5DbG91ZEZ1bmN0aW9uLlZwY0Nvbm5lY3RvckVncmVz",
+            "c1NldHRpbmdzElIKEGluZ3Jlc3Nfc2V0dGluZ3MYGCABKA4yOC5nb29nbGUu",
+            "Y2xvdWQuZnVuY3Rpb25zLnYxLkNsb3VkRnVuY3Rpb24uSW5ncmVzc1NldHRp",
+            "bmdzEjwKDGttc19rZXlfbmFtZRgZIAEoCUIm+kEjCiFjbG91ZGttcy5nb29n",
+            "bGVhcGlzLmNvbS9DcnlwdG9LZXkSGQoRYnVpbGRfd29ya2VyX3Bvb2wYGiAB",
+            "KAkSFQoIYnVpbGRfaWQYGyABKAlCA+BBAxIXCgpidWlsZF9uYW1lGCEgASgJ",
+            "QgPgQQMSTQocc2VjcmV0X2Vudmlyb25tZW50X3ZhcmlhYmxlcxgdIAMoCzIn",
+            "Lmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuU2VjcmV0RW52VmFyEj8KDnNl",
+            "Y3JldF92b2x1bWVzGB4gAygLMicuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52",
+            "MS5TZWNyZXRWb2x1bWUSGQoMc291cmNlX3Rva2VuGB8gASgJQgPgQQQSSgoR",
+            "ZG9ja2VyX3JlcG9zaXRvcnkYIiABKAlCL/pBLAoqYXJ0aWZhY3RyZWdpc3Ry",
+            "eS5nb29nbGVhcGlzLmNvbS9SZXBvc2l0b3J5ElAKD2RvY2tlcl9yZWdpc3Ry",
+            "eRgjIAEoDjI3Lmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuQ2xvdWRGdW5j",
+            "dGlvbi5Eb2NrZXJSZWdpc3RyeRJhChdhdXRvbWF0aWNfdXBkYXRlX3BvbGlj",
+            "eRgoIAEoCzI+Lmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuQ2xvdWRGdW5j",
+            "dGlvbi5BdXRvbWF0aWNVcGRhdGVQb2xpY3lIAhJgChdvbl9kZXBsb3lfdXBk",
+            "YXRlX3BvbGljeRgpIAEoCzI9Lmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEu",
+            "Q2xvdWRGdW5jdGlvbi5PbkRlcGxveVVwZGF0ZVBvbGljeUgCEh0KFWJ1aWxk",
+            "X3NlcnZpY2VfYWNjb3VudBgrIAEoCRoXChVBdXRvbWF0aWNVcGRhdGVQb2xp",
+            "Y3kaNAoUT25EZXBsb3lVcGRhdGVQb2xpY3kSHAoPcnVudGltZV92ZXJzaW9u",
+            "GAEgASgJQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
+            "bHVlGAIgASgJOgI4ARo7ChlFbnZpcm9ubWVudFZhcmlhYmxlc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaQAoeQnVpbGRFbnZpcm9u",
             "bWVudFZhcmlhYmxlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAEaQAoeQnVpbGRFbnZpcm9ubWVudFZhcmlhYmxlc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEidQoaVnBjQ29ubmVjdG9yRWdy",
-            "ZXNzU2V0dGluZ3MSLQopVlBDX0NPTk5FQ1RPUl9FR1JFU1NfU0VUVElOR1Nf",
-            "VU5TUEVDSUZJRUQQABIXChNQUklWQVRFX1JBTkdFU19PTkxZEAESDwoLQUxM",
-            "X1RSQUZGSUMQAiJ4Cg9JbmdyZXNzU2V0dGluZ3MSIAocSU5HUkVTU19TRVRU",
-            "SU5HU19VTlNQRUNJRklFRBAAEg0KCUFMTE9XX0FMTBABEhcKE0FMTE9XX0lO",
-            "VEVSTkFMX09OTFkQAhIbChdBTExPV19JTlRFUk5BTF9BTkRfR0NMQhADImAK",
-            "DkRvY2tlclJlZ2lzdHJ5Eh8KG0RPQ0tFUl9SRUdJU1RSWV9VTlNQRUNJRklF",
-            "RBAAEhYKEkNPTlRBSU5FUl9SRUdJU1RSWRABEhUKEUFSVElGQUNUX1JFR0lT",
-            "VFJZEAI6bupBaworY2xvdWRmdW5jdGlvbnMuZ29vZ2xlYXBpcy5jb20vQ2xv",
-            "dWRGdW5jdGlvbhI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L2Z1bmN0aW9ucy97ZnVuY3Rpb259Qg0KC3NvdXJjZV9jb2RlQgkK",
-            "B3RyaWdnZXIiOgoQU291cmNlUmVwb3NpdG9yeRILCgN1cmwYASABKAkSGQoM",
-            "ZGVwbG95ZWRfdXJsGAIgASgJQgPgQQMiyAEKDEh0dHBzVHJpZ2dlchIQCgN1",
-            "cmwYASABKAlCA+BBAxJNCg5zZWN1cml0eV9sZXZlbBgCIAEoDjI1Lmdvb2ds",
-            "ZS5jbG91ZC5mdW5jdGlvbnMudjEuSHR0cHNUcmlnZ2VyLlNlY3VyaXR5TGV2",
-            "ZWwiVwoNU2VjdXJpdHlMZXZlbBIeChpTRUNVUklUWV9MRVZFTF9VTlNQRUNJ",
-            "RklFRBAAEhEKDVNFQ1VSRV9BTFdBWVMQARITCg9TRUNVUkVfT1BUSU9OQUwQ",
-            "AiKHAQoMRXZlbnRUcmlnZ2VyEhIKCmV2ZW50X3R5cGUYASABKAkSEAoIcmVz",
-            "b3VyY2UYAiABKAkSDwoHc2VydmljZRgDIAEoCRJACg5mYWlsdXJlX3BvbGlj",
-            "eRgFIAEoCzIoLmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuRmFpbHVyZVBv",
-            "bGljeSJjCg1GYWlsdXJlUG9saWN5Ej8KBXJldHJ5GAEgASgLMi4uZ29vZ2xl",
-            "LmNsb3VkLmZ1bmN0aW9ucy52MS5GYWlsdXJlUG9saWN5LlJldHJ5SAAaBwoF",
-            "UmV0cnlCCAoGYWN0aW9uIlAKDFNlY3JldEVudlZhchILCgNrZXkYASABKAkS",
-            "EgoKcHJvamVjdF9pZBgCIAEoCRIOCgZzZWNyZXQYAyABKAkSDwoHdmVyc2lv",
-            "bhgEIAEoCSK/AQoMU2VjcmV0Vm9sdW1lEhIKCm1vdW50X3BhdGgYASABKAkS",
-            "EgoKcHJvamVjdF9pZBgCIAEoCRIOCgZzZWNyZXQYAyABKAkSRwoIdmVyc2lv",
-            "bnMYBCADKAsyNS5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLlNlY3JldFZv",
-            "bHVtZS5TZWNyZXRWZXJzaW9uGi4KDVNlY3JldFZlcnNpb24SDwoHdmVyc2lv",
-            "bhgBIAEoCRIMCgRwYXRoGAIgASgJIpUBChVDcmVhdGVGdW5jdGlvblJlcXVl",
-            "c3QSOwoIbG9jYXRpb24YASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2ds",
-            "ZWFwaXMuY29tL0xvY2F0aW9uEj8KCGZ1bmN0aW9uGAIgASgLMiguZ29vZ2xl",
-            "LmNsb3VkLmZ1bmN0aW9ucy52MS5DbG91ZEZ1bmN0aW9uQgPgQQIiiQEKFVVw",
-            "ZGF0ZUZ1bmN0aW9uUmVxdWVzdBI/CghmdW5jdGlvbhgBIAEoCzIoLmdvb2ds",
-            "ZS5jbG91ZC5mdW5jdGlvbnMudjEuQ2xvdWRGdW5jdGlvbkID4EECEi8KC3Vw",
-            "ZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJX",
-            "ChJHZXRGdW5jdGlvblJlcXVlc3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEtCitj",
-            "bG91ZGZ1bmN0aW9ucy5nb29nbGVhcGlzLmNvbS9DbG91ZEZ1bmN0aW9uInUK",
-            "FExpc3RGdW5jdGlvbnNSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm+kEjCiFs",
-            "b2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SEQoJcGFnZV9zaXpl",
-            "GAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiggEKFUxpc3RGdW5jdGlvbnNS",
-            "ZXNwb25zZRI7CglmdW5jdGlvbnMYASADKAsyKC5nb29nbGUuY2xvdWQuZnVu",
-            "Y3Rpb25zLnYxLkNsb3VkRnVuY3Rpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
-            "ASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIloKFURlbGV0ZUZ1bmN0aW9uUmVx",
-            "dWVzdBJBCgRuYW1lGAEgASgJQjPgQQL6QS0KK2Nsb3VkZnVuY3Rpb25zLmdv",
-            "b2dsZWFwaXMuY29tL0Nsb3VkRnVuY3Rpb24iawoTQ2FsbEZ1bmN0aW9uUmVx",
-            "dWVzdBJBCgRuYW1lGAEgASgJQjPgQQL6QS0KK2Nsb3VkZnVuY3Rpb25zLmdv",
-            "b2dsZWFwaXMuY29tL0Nsb3VkRnVuY3Rpb24SEQoEZGF0YRgCIAEoCUID4EEC",
-            "IksKFENhbGxGdW5jdGlvblJlc3BvbnNlEhQKDGV4ZWN1dGlvbl9pZBgBIAEo",
-            "CRIOCgZyZXN1bHQYAiABKAkSDQoFZXJyb3IYAyABKAkiaAoYR2VuZXJhdGVV",
-            "cGxvYWRVcmxSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRI8CgxrbXNfa2V5X25h",
-            "bWUYAiABKAlCJvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRv",
-            "S2V5Ii8KGUdlbmVyYXRlVXBsb2FkVXJsUmVzcG9uc2USEgoKdXBsb2FkX3Vy",
-            "bBgBIAEoCSI+ChpHZW5lcmF0ZURvd25sb2FkVXJsUmVxdWVzdBIMCgRuYW1l",
-            "GAEgASgJEhIKCnZlcnNpb25faWQYAiABKAQiMwobR2VuZXJhdGVEb3dubG9h",
-            "ZFVybFJlc3BvbnNlEhQKDGRvd25sb2FkX3VybBgBIAEoCSqSAQoTQ2xvdWRG",
-            "dW5jdGlvblN0YXR1cxIlCiFDTE9VRF9GVU5DVElPTl9TVEFUVVNfVU5TUEVD",
-            "SUZJRUQQABIKCgZBQ1RJVkUQARILCgdPRkZMSU5FEAISFgoSREVQTE9ZX0lO",
-            "X1BST0dSRVNTEAMSFgoSREVMRVRFX0lOX1BST0dSRVNTEAQSCwoHVU5LTk9X",
-            "ThAFMpcRChVDbG91ZEZ1bmN0aW9uc1NlcnZpY2USqQEKDUxpc3RGdW5jdGlv",
-            "bnMSLy5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkxpc3RGdW5jdGlvbnNS",
-            "ZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5MaXN0RnVuY3Rp",
-            "b25zUmVzcG9uc2UiNYLT5JMCLxItL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn0vZnVuY3Rpb25zEqQBCgtHZXRGdW5jdGlvbhItLmdvb2ds",
-            "ZS5jbG91ZC5mdW5jdGlvbnMudjEuR2V0RnVuY3Rpb25SZXF1ZXN0GiguZ29v",
-            "Z2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DbG91ZEZ1bmN0aW9uIjyC0+STAi8S",
-            "LS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Z1bmN0aW9ucy8q",
-            "fdpBBG5hbWUS3wEKDkNyZWF0ZUZ1bmN0aW9uEjAuZ29vZ2xlLmNsb3VkLmZ1",
-            "bmN0aW9ucy52MS5DcmVhdGVGdW5jdGlvblJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uInyC0+STAjsiLy92MS97bG9jYXRpb249cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKn0vZnVuY3Rpb25zOghmdW5jdGlvbtpBEWxv",
-            "Y2F0aW9uLGZ1bmN0aW9uykEkCg1DbG91ZEZ1bmN0aW9uEhNPcGVyYXRpb25N",
-            "ZXRhZGF0YVYxEt0BCg5VcGRhdGVGdW5jdGlvbhIwLmdvb2dsZS5jbG91ZC5m",
-            "dW5jdGlvbnMudjEuVXBkYXRlRnVuY3Rpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiJ6gtPkkwJCMjYvdjEve2Z1bmN0aW9uLm5h",
-            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mdW5jdGlvbnMvKn06CGZ1bmN0",
-            "aW9u2kEIZnVuY3Rpb27KQSQKDUNsb3VkRnVuY3Rpb24SE09wZXJhdGlvbk1l",
-            "dGFkYXRhVjESzgEKDkRlbGV0ZUZ1bmN0aW9uEjAuZ29vZ2xlLmNsb3VkLmZ1",
-            "bmN0aW9ucy52MS5EZWxldGVGdW5jdGlvblJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uImuC0+STAi8qLS92MS97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2Z1bmN0aW9ucy8qfdpBBG5hbWXKQSwKFWdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eRITT3BlcmF0aW9uTWV0YWRhdGFWMRK6AQoMQ2Fs",
-            "bEZ1bmN0aW9uEi4uZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DYWxsRnVu",
-            "Y3Rpb25SZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5DYWxs",
-            "RnVuY3Rpb25SZXNwb25zZSJJgtPkkwI3IjIvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9mdW5jdGlvbnMvKn06Y2FsbDoBKtpBCW5hbWUsZGF0",
-            "YRLKAQoRR2VuZXJhdGVVcGxvYWRVcmwSMy5nb29nbGUuY2xvdWQuZnVuY3Rp",
-            "b25zLnYxLkdlbmVyYXRlVXBsb2FkVXJsUmVxdWVzdBo0Lmdvb2dsZS5jbG91",
-            "ZC5mdW5jdGlvbnMudjEuR2VuZXJhdGVVcGxvYWRVcmxSZXNwb25zZSJKgtPk",
-            "kwJEIj8vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9mdW5j",
-            "dGlvbnM6Z2VuZXJhdGVVcGxvYWRVcmw6ASoS0gEKE0dlbmVyYXRlRG93bmxv",
-            "YWRVcmwSNS5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkdlbmVyYXRlRG93",
-            "bmxvYWRVcmxSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5H",
-            "ZW5lcmF0ZURvd25sb2FkVXJsUmVzcG9uc2UiTILT5JMCRiJBL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovZnVuY3Rpb25zLyp9OmdlbmVyYXRl",
-            "RG93bmxvYWRVcmw6ASoSlAEKDFNldElhbVBvbGljeRIiLmdvb2dsZS5pYW0u",
-            "djEuU2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5",
-            "IkmC0+STAkMiPi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9mdW5jdGlvbnMvKn06c2V0SWFtUG9saWN5OgEqEpEBCgxHZXRJYW1Qb2xp",
-            "Y3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5nb29n",
-            "bGUuaWFtLnYxLlBvbGljeSJGgtPkkwJAEj4vdjEve3Jlc291cmNlPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovZnVuY3Rpb25zLyp9OmdldElhbVBvbGljeRK6",
-            "AQoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFt",
-            "UGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVy",
-            "bWlzc2lvbnNSZXNwb25zZSJPgtPkkwJJIkQvdjEve3Jlc291cmNlPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovZnVuY3Rpb25zLyp9OnRlc3RJYW1QZXJtaXNz",
-            "aW9uczoBKhpRykEdY2xvdWRmdW5jdGlvbnMuZ29vZ2xlYXBpcy5jb23SQS5o",
-            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
-            "QuECCh1jb20uZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MUIORnVuY3Rpb25z",
-            "UHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9mdW5jdGlvbnMvYXBpdjEv",
-            "ZnVuY3Rpb25zcGI7ZnVuY3Rpb25zcGKiAgNHQ0bqQW8KKmFydGlmYWN0cmVn",
-            "aXN0cnkuZ29vZ2xlYXBpcy5jb20vUmVwb3NpdG9yeRJBcHJvamVjdHMve3By",
-            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3JlcG9zaXRvcmllcy97cmVw",
-            "b3NpdG9yeX3qQXgKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tl",
-            "eRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tl",
-            "eVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX1iBnBy",
-            "b3RvMw=="));
+            "CToCOAEidQoaVnBjQ29ubmVjdG9yRWdyZXNzU2V0dGluZ3MSLQopVlBDX0NP",
+            "Tk5FQ1RPUl9FR1JFU1NfU0VUVElOR1NfVU5TUEVDSUZJRUQQABIXChNQUklW",
+            "QVRFX1JBTkdFU19PTkxZEAESDwoLQUxMX1RSQUZGSUMQAiJ4Cg9JbmdyZXNz",
+            "U2V0dGluZ3MSIAocSU5HUkVTU19TRVRUSU5HU19VTlNQRUNJRklFRBAAEg0K",
+            "CUFMTE9XX0FMTBABEhcKE0FMTE9XX0lOVEVSTkFMX09OTFkQAhIbChdBTExP",
+            "V19JTlRFUk5BTF9BTkRfR0NMQhADImAKDkRvY2tlclJlZ2lzdHJ5Eh8KG0RP",
+            "Q0tFUl9SRUdJU1RSWV9VTlNQRUNJRklFRBAAEhYKEkNPTlRBSU5FUl9SRUdJ",
+            "U1RSWRABEhUKEUFSVElGQUNUX1JFR0lTVFJZEAI6bupBaworY2xvdWRmdW5j",
+            "dGlvbnMuZ29vZ2xlYXBpcy5jb20vQ2xvdWRGdW5jdGlvbhI8cHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Z1bmN0aW9ucy97ZnVu",
+            "Y3Rpb259Qg0KC3NvdXJjZV9jb2RlQgkKB3RyaWdnZXJCFwoVcnVudGltZV91",
+            "cGRhdGVfcG9saWN5IjoKEFNvdXJjZVJlcG9zaXRvcnkSCwoDdXJsGAEgASgJ",
+            "EhkKDGRlcGxveWVkX3VybBgCIAEoCUID4EEDIsgBCgxIdHRwc1RyaWdnZXIS",
+            "EAoDdXJsGAEgASgJQgPgQQMSTQoOc2VjdXJpdHlfbGV2ZWwYAiABKA4yNS5n",
+            "b29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkh0dHBzVHJpZ2dlci5TZWN1cml0",
+            "eUxldmVsIlcKDVNlY3VyaXR5TGV2ZWwSHgoaU0VDVVJJVFlfTEVWRUxfVU5T",
+            "UEVDSUZJRUQQABIRCg1TRUNVUkVfQUxXQVlTEAESEwoPU0VDVVJFX09QVElP",
+            "TkFMEAIihwEKDEV2ZW50VHJpZ2dlchISCgpldmVudF90eXBlGAEgASgJEhAK",
+            "CHJlc291cmNlGAIgASgJEg8KB3NlcnZpY2UYAyABKAkSQAoOZmFpbHVyZV9w",
+            "b2xpY3kYBSABKAsyKC5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkZhaWx1",
+            "cmVQb2xpY3kiYwoNRmFpbHVyZVBvbGljeRI/CgVyZXRyeRgBIAEoCzIuLmdv",
+            "b2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuRmFpbHVyZVBvbGljeS5SZXRyeUgA",
+            "GgcKBVJldHJ5QggKBmFjdGlvbiJQCgxTZWNyZXRFbnZWYXISCwoDa2V5GAEg",
+            "ASgJEhIKCnByb2plY3RfaWQYAiABKAkSDgoGc2VjcmV0GAMgASgJEg8KB3Zl",
+            "cnNpb24YBCABKAkivwEKDFNlY3JldFZvbHVtZRISCgptb3VudF9wYXRoGAEg",
+            "ASgJEhIKCnByb2plY3RfaWQYAiABKAkSDgoGc2VjcmV0GAMgASgJEkcKCHZl",
+            "cnNpb25zGAQgAygLMjUuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5TZWNy",
+            "ZXRWb2x1bWUuU2VjcmV0VmVyc2lvbhouCg1TZWNyZXRWZXJzaW9uEg8KB3Zl",
+            "cnNpb24YASABKAkSDAoEcGF0aBgCIAEoCSKVAQoVQ3JlYXRlRnVuY3Rpb25S",
+            "ZXF1ZXN0EjsKCGxvY2F0aW9uGAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5n",
+            "b29nbGVhcGlzLmNvbS9Mb2NhdGlvbhI/CghmdW5jdGlvbhgCIAEoCzIoLmdv",
+            "b2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuQ2xvdWRGdW5jdGlvbkID4EECIokB",
+            "ChVVcGRhdGVGdW5jdGlvblJlcXVlc3QSPwoIZnVuY3Rpb24YASABKAsyKC5n",
+            "b29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkNsb3VkRnVuY3Rpb25CA+BBAhIv",
+            "Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
+            "c2sicAoSR2V0RnVuY3Rpb25SZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BBAvpB",
+            "LQorY2xvdWRmdW5jdGlvbnMuZ29vZ2xlYXBpcy5jb20vQ2xvdWRGdW5jdGlv",
+            "bhIXCgp2ZXJzaW9uX2lkGAIgASgDQgPgQQEidQoUTGlzdEZ1bmN0aW9uc1Jl",
+            "cXVlc3QSNgoGcGFyZW50GAEgASgJQib6QSMKIWxvY2F0aW9ucy5nb29nbGVh",
+            "cGlzLmNvbS9Mb2NhdGlvbhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90",
+            "b2tlbhgDIAEoCSKCAQoVTGlzdEZ1bmN0aW9uc1Jlc3BvbnNlEjsKCWZ1bmN0",
+            "aW9ucxgBIAMoCzIoLmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuQ2xvdWRG",
+            "dW5jdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFi",
+            "bGUYAyADKAkiWgoVRGVsZXRlRnVuY3Rpb25SZXF1ZXN0EkEKBG5hbWUYASAB",
+            "KAlCM+BBAvpBLQorY2xvdWRmdW5jdGlvbnMuZ29vZ2xlYXBpcy5jb20vQ2xv",
+            "dWRGdW5jdGlvbiJrChNDYWxsRnVuY3Rpb25SZXF1ZXN0EkEKBG5hbWUYASAB",
+            "KAlCM+BBAvpBLQorY2xvdWRmdW5jdGlvbnMuZ29vZ2xlYXBpcy5jb20vQ2xv",
+            "dWRGdW5jdGlvbhIRCgRkYXRhGAIgASgJQgPgQQIiSwoUQ2FsbEZ1bmN0aW9u",
+            "UmVzcG9uc2USFAoMZXhlY3V0aW9uX2lkGAEgASgJEg4KBnJlc3VsdBgCIAEo",
+            "CRINCgVlcnJvchgDIAEoCSJoChhHZW5lcmF0ZVVwbG9hZFVybFJlcXVlc3QS",
+            "DgoGcGFyZW50GAEgASgJEjwKDGttc19rZXlfbmFtZRgCIAEoCUIm+kEjCiFj",
+            "bG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkiLwoZR2VuZXJhdGVV",
+            "cGxvYWRVcmxSZXNwb25zZRISCgp1cGxvYWRfdXJsGAEgASgJIj4KGkdlbmVy",
+            "YXRlRG93bmxvYWRVcmxSZXF1ZXN0EgwKBG5hbWUYASABKAkSEgoKdmVyc2lv",
+            "bl9pZBgCIAEoBCIzChtHZW5lcmF0ZURvd25sb2FkVXJsUmVzcG9uc2USFAoM",
+            "ZG93bmxvYWRfdXJsGAEgASgJKpIBChNDbG91ZEZ1bmN0aW9uU3RhdHVzEiUK",
+            "IUNMT1VEX0ZVTkNUSU9OX1NUQVRVU19VTlNQRUNJRklFRBAAEgoKBkFDVElW",
+            "RRABEgsKB09GRkxJTkUQAhIWChJERVBMT1lfSU5fUFJPR1JFU1MQAxIWChJE",
+            "RUxFVEVfSU5fUFJPR1JFU1MQBBILCgdVTktOT1dOEAUylxEKFUNsb3VkRnVu",
+            "Y3Rpb25zU2VydmljZRKpAQoNTGlzdEZ1bmN0aW9ucxIvLmdvb2dsZS5jbG91",
+            "ZC5mdW5jdGlvbnMudjEuTGlzdEZ1bmN0aW9uc1JlcXVlc3QaMC5nb29nbGUu",
+            "Y2xvdWQuZnVuY3Rpb25zLnYxLkxpc3RGdW5jdGlvbnNSZXNwb25zZSI1gtPk",
+            "kwIvEi0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9mdW5j",
+            "dGlvbnMSpAEKC0dldEZ1bmN0aW9uEi0uZ29vZ2xlLmNsb3VkLmZ1bmN0aW9u",
+            "cy52MS5HZXRGdW5jdGlvblJlcXVlc3QaKC5nb29nbGUuY2xvdWQuZnVuY3Rp",
+            "b25zLnYxLkNsb3VkRnVuY3Rpb24iPNpBBG5hbWWC0+STAi8SLS92MS97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Z1bmN0aW9ucy8qfRLfAQoOQ3Jl",
+            "YXRlRnVuY3Rpb24SMC5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkNyZWF0",
+            "ZUZ1bmN0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24ifMpBJAoNQ2xvdWRGdW5jdGlvbhITT3BlcmF0aW9uTWV0YWRhdGFWMdpB",
+            "EWxvY2F0aW9uLGZ1bmN0aW9ugtPkkwI7Ii8vdjEve2xvY2F0aW9uPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyp9L2Z1bmN0aW9uczoIZnVuY3Rpb24S3QEKDlVw",
+            "ZGF0ZUZ1bmN0aW9uEjAuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5VcGRh",
+            "dGVGdW5jdGlvblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
+            "aW9uInrKQSQKDUNsb3VkRnVuY3Rpb24SE09wZXJhdGlvbk1ldGFkYXRhVjHa",
+            "QQhmdW5jdGlvboLT5JMCQjI2L3YxL3tmdW5jdGlvbi5uYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovZnVuY3Rpb25zLyp9OghmdW5jdGlvbhLOAQoORGVs",
+            "ZXRlRnVuY3Rpb24SMC5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkRlbGV0",
+            "ZUZ1bmN0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24ia8pBLAoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhNPcGVyYXRpb25NZXRh",
+            "ZGF0YVYx2kEEbmFtZYLT5JMCLyotL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovZnVuY3Rpb25zLyp9EroBCgxDYWxsRnVuY3Rpb24SLi5nb29n",
+            "bGUuY2xvdWQuZnVuY3Rpb25zLnYxLkNhbGxGdW5jdGlvblJlcXVlc3QaLy5n",
+            "b29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkNhbGxGdW5jdGlvblJlc3BvbnNl",
+            "IknaQQluYW1lLGRhdGGC0+STAjciMi92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2Z1bmN0aW9ucy8qfTpjYWxsOgEqEsoBChFHZW5lcmF0ZVVw",
+            "bG9hZFVybBIzLmdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEuR2VuZXJhdGVV",
+            "cGxvYWRVcmxSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MS5H",
+            "ZW5lcmF0ZVVwbG9hZFVybFJlc3BvbnNlIkqC0+STAkQiPy92MS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Z1bmN0aW9uczpnZW5lcmF0ZVVw",
+            "bG9hZFVybDoBKhLSAQoTR2VuZXJhdGVEb3dubG9hZFVybBI1Lmdvb2dsZS5j",
+            "bG91ZC5mdW5jdGlvbnMudjEuR2VuZXJhdGVEb3dubG9hZFVybFJlcXVlc3Qa",
+            "Ni5nb29nbGUuY2xvdWQuZnVuY3Rpb25zLnYxLkdlbmVyYXRlRG93bmxvYWRV",
+            "cmxSZXNwb25zZSJMgtPkkwJGIkEvdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9mdW5jdGlvbnMvKn06Z2VuZXJhdGVEb3dubG9hZFVybDoBKhKU",
+            "AQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lS",
+            "ZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiSYLT5JMCQyI+L3YxL3ty",
+            "ZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Z1bmN0aW9ucy8qfTpz",
+            "ZXRJYW1Qb2xpY3k6ASoSkQEKDEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0u",
+            "djEuR2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5",
+            "IkaC0+STAkASPi92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9mdW5jdGlvbnMvKn06Z2V0SWFtUG9saWN5EroBChJUZXN0SWFtUGVybWlz",
+            "c2lvbnMSKC5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9uc1JlcXVl",
+            "c3QaKS5nb29nbGUuaWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9uc1Jlc3BvbnNl",
+            "Ik+C0+STAkkiRC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9mdW5jdGlvbnMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEqGlHKQR1jbG91",
+            "ZGZ1bmN0aW9ucy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C4QIKHWNvbS5nb29nbGUu",
+            "Y2xvdWQuZnVuY3Rpb25zLnYxQg5GdW5jdGlvbnNQcm90b1ABWjtjbG91ZC5n",
+            "b29nbGUuY29tL2dvL2Z1bmN0aW9ucy9hcGl2MS9mdW5jdGlvbnNwYjtmdW5j",
+            "dGlvbnNwYqICA0dDRupBbwoqYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlz",
+            "LmNvbS9SZXBvc2l0b3J5EkFwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vcmVwb3NpdG9yaWVzL3tyZXBvc2l0b3J5fepBeAohY2xv",
+            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5n",
+            "fS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Functions.V1.OperationsReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Functions.V1.CloudFunctionStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.CloudFunction), global::Google.Cloud.Functions.V1.CloudFunction.Parser, new[]{ "Name", "Description", "SourceArchiveUrl", "SourceRepository", "SourceUploadUrl", "HttpsTrigger", "EventTrigger", "Status", "EntryPoint", "Runtime", "Timeout", "AvailableMemoryMb", "ServiceAccountEmail", "UpdateTime", "VersionId", "Labels", "EnvironmentVariables", "BuildEnvironmentVariables", "Network", "MaxInstances", "MinInstances", "VpcConnector", "VpcConnectorEgressSettings", "IngressSettings", "KmsKeyName", "BuildWorkerPool", "BuildId", "BuildName", "SecretEnvironmentVariables", "SecretVolumes", "SourceToken", "DockerRepository", "DockerRegistry" }, new[]{ "SourceCode", "Trigger" }, new[]{ typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.VpcConnectorEgressSettings), typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.IngressSettings), typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.CloudFunction), global::Google.Cloud.Functions.V1.CloudFunction.Parser, new[]{ "Name", "Description", "SourceArchiveUrl", "SourceRepository", "SourceUploadUrl", "HttpsTrigger", "EventTrigger", "Status", "EntryPoint", "Runtime", "Timeout", "AvailableMemoryMb", "ServiceAccountEmail", "UpdateTime", "VersionId", "Labels", "EnvironmentVariables", "BuildEnvironmentVariables", "Network", "MaxInstances", "MinInstances", "VpcConnector", "VpcConnectorEgressSettings", "IngressSettings", "KmsKeyName", "BuildWorkerPool", "BuildId", "BuildName", "SecretEnvironmentVariables", "SecretVolumes", "SourceToken", "DockerRepository", "DockerRegistry", "AutomaticUpdatePolicy", "OnDeployUpdatePolicy", "BuildServiceAccount" }, new[]{ "SourceCode", "Trigger", "RuntimeUpdatePolicy" }, new[]{ typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.VpcConnectorEgressSettings), typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.IngressSettings), typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.AutomaticUpdatePolicy), global::Google.Cloud.Functions.V1.CloudFunction.Types.AutomaticUpdatePolicy.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.CloudFunction.Types.OnDeployUpdatePolicy), global::Google.Cloud.Functions.V1.CloudFunction.Types.OnDeployUpdatePolicy.Parser, new[]{ "RuntimeVersion" }, null, null, null, null),
+            null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.SourceRepository), global::Google.Cloud.Functions.V1.SourceRepository.Parser, new[]{ "Url", "DeployedUrl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.HttpsTrigger), global::Google.Cloud.Functions.V1.HttpsTrigger.Parser, new[]{ "Url", "SecurityLevel" }, null, new[]{ typeof(global::Google.Cloud.Functions.V1.HttpsTrigger.Types.SecurityLevel) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.EventTrigger), global::Google.Cloud.Functions.V1.EventTrigger.Parser, new[]{ "EventType", "Resource", "Service", "FailurePolicy" }, null, null, null, null),
@@ -200,7 +211,7 @@ namespace Google.Cloud.Functions.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.SecretVolume), global::Google.Cloud.Functions.V1.SecretVolume.Parser, new[]{ "MountPath", "ProjectId", "Secret", "Versions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.SecretVolume.Types.SecretVersion), global::Google.Cloud.Functions.V1.SecretVolume.Types.SecretVersion.Parser, new[]{ "Version", "Path" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.CreateFunctionRequest), global::Google.Cloud.Functions.V1.CreateFunctionRequest.Parser, new[]{ "Location", "Function" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.UpdateFunctionRequest), global::Google.Cloud.Functions.V1.UpdateFunctionRequest.Parser, new[]{ "Function", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.GetFunctionRequest), global::Google.Cloud.Functions.V1.GetFunctionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.GetFunctionRequest), global::Google.Cloud.Functions.V1.GetFunctionRequest.Parser, new[]{ "Name", "VersionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.ListFunctionsRequest), global::Google.Cloud.Functions.V1.ListFunctionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.ListFunctionsResponse), global::Google.Cloud.Functions.V1.ListFunctionsResponse.Parser, new[]{ "Functions", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.DeleteFunctionRequest), global::Google.Cloud.Functions.V1.DeleteFunctionRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -254,6 +265,7 @@ namespace Google.Cloud.Functions.V1 {
   /// Describes a Cloud Function that contains user computation executed in
   /// response to an event. It encapsulate function and triggers configurations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudFunction : pb::IMessage<CloudFunction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -316,6 +328,7 @@ namespace Google.Cloud.Functions.V1 {
       sourceToken_ = other.sourceToken_;
       dockerRepository_ = other.dockerRepository_;
       dockerRegistry_ = other.dockerRegistry_;
+      buildServiceAccount_ = other.buildServiceAccount_;
       switch (other.SourceCodeCase) {
         case SourceCodeOneofCase.SourceArchiveUrl:
           SourceArchiveUrl = other.SourceArchiveUrl;
@@ -334,6 +347,15 @@ namespace Google.Cloud.Functions.V1 {
           break;
         case TriggerOneofCase.EventTrigger:
           EventTrigger = other.EventTrigger.Clone();
+          break;
+      }
+
+      switch (other.RuntimeUpdatePolicyCase) {
+        case RuntimeUpdatePolicyOneofCase.AutomaticUpdatePolicy:
+          AutomaticUpdatePolicy = other.AutomaticUpdatePolicy.Clone();
+          break;
+        case RuntimeUpdatePolicyOneofCase.OnDeployUpdatePolicy:
+          OnDeployUpdatePolicy = other.OnDeployUpdatePolicy.Clone();
           break;
       }
 
@@ -386,10 +408,24 @@ namespace Google.Cloud.Functions.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceArchiveUrl {
-      get { return sourceCodeCase_ == SourceCodeOneofCase.SourceArchiveUrl ? (string) sourceCode_ : ""; }
+      get { return HasSourceArchiveUrl ? (string) sourceCode_ : ""; }
       set {
         sourceCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCodeCase_ = SourceCodeOneofCase.SourceArchiveUrl;
+      }
+    }
+    /// <summary>Gets whether the "source_archive_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSourceArchiveUrl {
+      get { return sourceCodeCase_ == SourceCodeOneofCase.SourceArchiveUrl; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source_archive_url" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceArchiveUrl() {
+      if (HasSourceArchiveUrl) {
+        ClearSourceCode();
       }
     }
 
@@ -423,10 +459,24 @@ namespace Google.Cloud.Functions.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceUploadUrl {
-      get { return sourceCodeCase_ == SourceCodeOneofCase.SourceUploadUrl ? (string) sourceCode_ : ""; }
+      get { return HasSourceUploadUrl ? (string) sourceCode_ : ""; }
       set {
         sourceCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCodeCase_ = SourceCodeOneofCase.SourceUploadUrl;
+      }
+    }
+    /// <summary>Gets whether the "source_upload_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSourceUploadUrl {
+      get { return sourceCodeCase_ == SourceCodeOneofCase.SourceUploadUrl; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source_upload_url" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceUploadUrl() {
+      if (HasSourceUploadUrl) {
+        ClearSourceCode();
       }
     }
 
@@ -480,11 +530,8 @@ namespace Google.Cloud.Functions.V1 {
     private string entryPoint_ = "";
     /// <summary>
     /// The name of the function (as defined in source code) that will be
-    /// executed. Defaults to the resource name suffix, if not specified. For
-    /// backward compatibility, if function with given name is not found, then the
-    /// system will try to use function named "function".
-    /// For Node.js this is name of a function exported by the module specified
-    /// in `source_location`.
+    /// executed. Defaults to the resource name suffix (ID of the function), if not
+    /// specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -582,8 +629,8 @@ namespace Google.Cloud.Functions.V1 {
     public const int VersionIdFieldNumber = 14;
     private long versionId_;
     /// <summary>
-    /// Output only. The version identifier of the Cloud Function. Each deployment attempt
-    /// results in a new version of a function being created.
+    /// Output only. The version identifier of the Cloud Function. Each deployment
+    /// attempt results in a new version of a function being created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -640,21 +687,9 @@ namespace Google.Cloud.Functions.V1 {
     public const int NetworkFieldNumber = 18;
     private string network_ = "";
     /// <summary>
-    /// The VPC Network that this cloud function can connect to. It can be
-    /// either the fully-qualified URI, or the short name of the network resource.
-    /// If the short network name is used, the network must belong to the same
-    /// project. Otherwise, it must belong to a project within the same
-    /// organization. The format of this field is either
-    /// `projects/{project}/global/networks/{network}` or `{network}`, where
-    /// `{project}` is a project id where the network is defined, and `{network}`
-    /// is the short name of the network.
-    ///
-    /// This field is mutually exclusive with `vpc_connector` and will be replaced
-    /// by it.
-    ///
-    /// See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for
-    /// more information on connecting Cloud projects.
+    /// Deprecated: use vpc_connector
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Network {
@@ -895,8 +930,8 @@ namespace Google.Cloud.Functions.V1 {
     public const int SourceTokenFieldNumber = 31;
     private string sourceToken_ = "";
     /// <summary>
-    /// Input only. An identifier for Firebase function sources. Disclaimer: This field is only
-    /// supported for Firebase function deployments.
+    /// Input only. An identifier for Firebase function sources. Disclaimer: This
+    /// field is only supported for Firebase function deployments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -911,12 +946,12 @@ namespace Google.Cloud.Functions.V1 {
     public const int DockerRepositoryFieldNumber = 34;
     private string dockerRepository_ = "";
     /// <summary>
-    /// User managed repository created in Artifact Registry optionally with a
-    /// customer managed encryption key. If specified, deployments will use
-    /// Artifact Registry. If unspecified and the deployment is eligible to use
-    /// Artifact Registry, GCF will create and use a repository named
-    /// 'gcf-artifacts' for every deployed region. This is the repository to which
-    /// the function docker image will be pushed after it is built by Cloud Build.
+    /// User-managed repository created in Artifact Registry to which the
+    /// function's Docker image will be pushed after it is built by Cloud Build.
+    /// May optionally be encrypted with a customer-managed encryption key (CMEK).
+    /// If unspecified and `docker_registry` is not explicitly set to
+    /// `CONTAINER_REGISTRY`, GCF will create and use a default Artifact Registry
+    /// repository named 'gcf-artifacts' in the region.
     ///
     /// It must match the pattern
     /// `projects/{project}/locations/{location}/repositories/{repository}`.
@@ -940,10 +975,9 @@ namespace Google.Cloud.Functions.V1 {
     /// <summary>
     /// Docker Registry to use for this deployment.
     ///
-    /// If `docker_repository` field is specified, this field will be automatically
-    /// set as `ARTIFACT_REGISTRY`.
-    /// If unspecified, it currently defaults to `CONTAINER_REGISTRY`.
-    /// This field may be overridden by the backend for eligible deployments.
+    /// If unspecified, it defaults to `ARTIFACT_REGISTRY`.
+    /// If `docker_repository` field is specified, this field should either be left
+    /// unspecified or set to `ARTIFACT_REGISTRY`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -951,6 +985,47 @@ namespace Google.Cloud.Functions.V1 {
       get { return dockerRegistry_; }
       set {
         dockerRegistry_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "automatic_update_policy" field.</summary>
+    public const int AutomaticUpdatePolicyFieldNumber = 40;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Functions.V1.CloudFunction.Types.AutomaticUpdatePolicy AutomaticUpdatePolicy {
+      get { return runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.AutomaticUpdatePolicy ? (global::Google.Cloud.Functions.V1.CloudFunction.Types.AutomaticUpdatePolicy) runtimeUpdatePolicy_ : null; }
+      set {
+        runtimeUpdatePolicy_ = value;
+        runtimeUpdatePolicyCase_ = value == null ? RuntimeUpdatePolicyOneofCase.None : RuntimeUpdatePolicyOneofCase.AutomaticUpdatePolicy;
+      }
+    }
+
+    /// <summary>Field number for the "on_deploy_update_policy" field.</summary>
+    public const int OnDeployUpdatePolicyFieldNumber = 41;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Functions.V1.CloudFunction.Types.OnDeployUpdatePolicy OnDeployUpdatePolicy {
+      get { return runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.OnDeployUpdatePolicy ? (global::Google.Cloud.Functions.V1.CloudFunction.Types.OnDeployUpdatePolicy) runtimeUpdatePolicy_ : null; }
+      set {
+        runtimeUpdatePolicy_ = value;
+        runtimeUpdatePolicyCase_ = value == null ? RuntimeUpdatePolicyOneofCase.None : RuntimeUpdatePolicyOneofCase.OnDeployUpdatePolicy;
+      }
+    }
+
+    /// <summary>Field number for the "build_service_account" field.</summary>
+    public const int BuildServiceAccountFieldNumber = 43;
+    private string buildServiceAccount_ = "";
+    /// <summary>
+    /// A service account the user provides for use with Cloud Build. The format of
+    /// this field is
+    /// `projects/{projectId}/serviceAccounts/{serviceAccountEmail}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BuildServiceAccount {
+      get { return buildServiceAccount_; }
+      set {
+        buildServiceAccount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -995,6 +1070,27 @@ namespace Google.Cloud.Functions.V1 {
     public void ClearTrigger() {
       triggerCase_ = TriggerOneofCase.None;
       trigger_ = null;
+    }
+
+    private object runtimeUpdatePolicy_;
+    /// <summary>Enum of possible cases for the "runtime_update_policy" oneof.</summary>
+    public enum RuntimeUpdatePolicyOneofCase {
+      None = 0,
+      AutomaticUpdatePolicy = 40,
+      OnDeployUpdatePolicy = 41,
+    }
+    private RuntimeUpdatePolicyOneofCase runtimeUpdatePolicyCase_ = RuntimeUpdatePolicyOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RuntimeUpdatePolicyOneofCase RuntimeUpdatePolicyCase {
+      get { return runtimeUpdatePolicyCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRuntimeUpdatePolicy() {
+      runtimeUpdatePolicyCase_ = RuntimeUpdatePolicyOneofCase.None;
+      runtimeUpdatePolicy_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1045,8 +1141,12 @@ namespace Google.Cloud.Functions.V1 {
       if (SourceToken != other.SourceToken) return false;
       if (DockerRepository != other.DockerRepository) return false;
       if (DockerRegistry != other.DockerRegistry) return false;
+      if (!object.Equals(AutomaticUpdatePolicy, other.AutomaticUpdatePolicy)) return false;
+      if (!object.Equals(OnDeployUpdatePolicy, other.OnDeployUpdatePolicy)) return false;
+      if (BuildServiceAccount != other.BuildServiceAccount) return false;
       if (SourceCodeCase != other.SourceCodeCase) return false;
       if (TriggerCase != other.TriggerCase) return false;
+      if (RuntimeUpdatePolicyCase != other.RuntimeUpdatePolicyCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1056,9 +1156,9 @@ namespace Google.Cloud.Functions.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceArchiveUrl) hash ^= SourceArchiveUrl.GetHashCode();
+      if (HasSourceArchiveUrl) hash ^= SourceArchiveUrl.GetHashCode();
       if (sourceCodeCase_ == SourceCodeOneofCase.SourceRepository) hash ^= SourceRepository.GetHashCode();
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceUploadUrl) hash ^= SourceUploadUrl.GetHashCode();
+      if (HasSourceUploadUrl) hash ^= SourceUploadUrl.GetHashCode();
       if (triggerCase_ == TriggerOneofCase.HttpsTrigger) hash ^= HttpsTrigger.GetHashCode();
       if (triggerCase_ == TriggerOneofCase.EventTrigger) hash ^= EventTrigger.GetHashCode();
       if (Status != global::Google.Cloud.Functions.V1.CloudFunctionStatus.Unspecified) hash ^= Status.GetHashCode();
@@ -1087,8 +1187,12 @@ namespace Google.Cloud.Functions.V1 {
       if (SourceToken.Length != 0) hash ^= SourceToken.GetHashCode();
       if (DockerRepository.Length != 0) hash ^= DockerRepository.GetHashCode();
       if (DockerRegistry != global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry.Unspecified) hash ^= DockerRegistry.GetHashCode();
+      if (runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.AutomaticUpdatePolicy) hash ^= AutomaticUpdatePolicy.GetHashCode();
+      if (runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.OnDeployUpdatePolicy) hash ^= OnDeployUpdatePolicy.GetHashCode();
+      if (BuildServiceAccount.Length != 0) hash ^= BuildServiceAccount.GetHashCode();
       hash ^= (int) sourceCodeCase_;
       hash ^= (int) triggerCase_;
+      hash ^= (int) runtimeUpdatePolicyCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1115,7 +1219,7 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(18);
         output.WriteString(Description);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceArchiveUrl) {
+      if (HasSourceArchiveUrl) {
         output.WriteRawTag(26);
         output.WriteString(SourceArchiveUrl);
       }
@@ -1160,7 +1264,7 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteInt64(VersionId);
       }
       labels_.WriteTo(output, _map_labels_codec);
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceUploadUrl) {
+      if (HasSourceUploadUrl) {
         output.WriteRawTag(130, 1);
         output.WriteString(SourceUploadUrl);
       }
@@ -1224,6 +1328,18 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(152, 2);
         output.WriteEnum((int) DockerRegistry);
       }
+      if (runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.AutomaticUpdatePolicy) {
+        output.WriteRawTag(194, 2);
+        output.WriteMessage(AutomaticUpdatePolicy);
+      }
+      if (runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.OnDeployUpdatePolicy) {
+        output.WriteRawTag(202, 2);
+        output.WriteMessage(OnDeployUpdatePolicy);
+      }
+      if (BuildServiceAccount.Length != 0) {
+        output.WriteRawTag(218, 2);
+        output.WriteString(BuildServiceAccount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1242,7 +1358,7 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(18);
         output.WriteString(Description);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceArchiveUrl) {
+      if (HasSourceArchiveUrl) {
         output.WriteRawTag(26);
         output.WriteString(SourceArchiveUrl);
       }
@@ -1287,7 +1403,7 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteInt64(VersionId);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceUploadUrl) {
+      if (HasSourceUploadUrl) {
         output.WriteRawTag(130, 1);
         output.WriteString(SourceUploadUrl);
       }
@@ -1351,6 +1467,18 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(152, 2);
         output.WriteEnum((int) DockerRegistry);
       }
+      if (runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.AutomaticUpdatePolicy) {
+        output.WriteRawTag(194, 2);
+        output.WriteMessage(AutomaticUpdatePolicy);
+      }
+      if (runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.OnDeployUpdatePolicy) {
+        output.WriteRawTag(202, 2);
+        output.WriteMessage(OnDeployUpdatePolicy);
+      }
+      if (BuildServiceAccount.Length != 0) {
+        output.WriteRawTag(218, 2);
+        output.WriteString(BuildServiceAccount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1367,13 +1495,13 @@ namespace Google.Cloud.Functions.V1 {
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceArchiveUrl) {
+      if (HasSourceArchiveUrl) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceArchiveUrl);
       }
       if (sourceCodeCase_ == SourceCodeOneofCase.SourceRepository) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SourceRepository);
       }
-      if (sourceCodeCase_ == SourceCodeOneofCase.SourceUploadUrl) {
+      if (HasSourceUploadUrl) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(SourceUploadUrl);
       }
       if (triggerCase_ == TriggerOneofCase.HttpsTrigger) {
@@ -1450,6 +1578,15 @@ namespace Google.Cloud.Functions.V1 {
       if (DockerRegistry != global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) DockerRegistry);
       }
+      if (runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.AutomaticUpdatePolicy) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AutomaticUpdatePolicy);
+      }
+      if (runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.OnDeployUpdatePolicy) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(OnDeployUpdatePolicy);
+      }
+      if (BuildServiceAccount.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(BuildServiceAccount);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1498,9 +1635,9 @@ namespace Google.Cloud.Functions.V1 {
       if (other.VersionId != 0L) {
         VersionId = other.VersionId;
       }
-      labels_.Add(other.labels_);
-      environmentVariables_.Add(other.environmentVariables_);
-      buildEnvironmentVariables_.Add(other.buildEnvironmentVariables_);
+      labels_.MergeFrom(other.labels_);
+      environmentVariables_.MergeFrom(other.environmentVariables_);
+      buildEnvironmentVariables_.MergeFrom(other.buildEnvironmentVariables_);
       if (other.Network.Length != 0) {
         Network = other.Network;
       }
@@ -1542,6 +1679,9 @@ namespace Google.Cloud.Functions.V1 {
       if (other.DockerRegistry != global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry.Unspecified) {
         DockerRegistry = other.DockerRegistry;
       }
+      if (other.BuildServiceAccount.Length != 0) {
+        BuildServiceAccount = other.BuildServiceAccount;
+      }
       switch (other.SourceCodeCase) {
         case SourceCodeOneofCase.SourceArchiveUrl:
           SourceArchiveUrl = other.SourceArchiveUrl;
@@ -1569,6 +1709,21 @@ namespace Google.Cloud.Functions.V1 {
             EventTrigger = new global::Google.Cloud.Functions.V1.EventTrigger();
           }
           EventTrigger.MergeFrom(other.EventTrigger);
+          break;
+      }
+
+      switch (other.RuntimeUpdatePolicyCase) {
+        case RuntimeUpdatePolicyOneofCase.AutomaticUpdatePolicy:
+          if (AutomaticUpdatePolicy == null) {
+            AutomaticUpdatePolicy = new global::Google.Cloud.Functions.V1.CloudFunction.Types.AutomaticUpdatePolicy();
+          }
+          AutomaticUpdatePolicy.MergeFrom(other.AutomaticUpdatePolicy);
+          break;
+        case RuntimeUpdatePolicyOneofCase.OnDeployUpdatePolicy:
+          if (OnDeployUpdatePolicy == null) {
+            OnDeployUpdatePolicy = new global::Google.Cloud.Functions.V1.CloudFunction.Types.OnDeployUpdatePolicy();
+          }
+          OnDeployUpdatePolicy.MergeFrom(other.OnDeployUpdatePolicy);
           break;
       }
 
@@ -1740,6 +1895,28 @@ namespace Google.Cloud.Functions.V1 {
             DockerRegistry = (global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry) input.ReadEnum();
             break;
           }
+          case 322: {
+            global::Google.Cloud.Functions.V1.CloudFunction.Types.AutomaticUpdatePolicy subBuilder = new global::Google.Cloud.Functions.V1.CloudFunction.Types.AutomaticUpdatePolicy();
+            if (runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.AutomaticUpdatePolicy) {
+              subBuilder.MergeFrom(AutomaticUpdatePolicy);
+            }
+            input.ReadMessage(subBuilder);
+            AutomaticUpdatePolicy = subBuilder;
+            break;
+          }
+          case 330: {
+            global::Google.Cloud.Functions.V1.CloudFunction.Types.OnDeployUpdatePolicy subBuilder = new global::Google.Cloud.Functions.V1.CloudFunction.Types.OnDeployUpdatePolicy();
+            if (runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.OnDeployUpdatePolicy) {
+              subBuilder.MergeFrom(OnDeployUpdatePolicy);
+            }
+            input.ReadMessage(subBuilder);
+            OnDeployUpdatePolicy = subBuilder;
+            break;
+          }
+          case 346: {
+            BuildServiceAccount = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1908,6 +2085,28 @@ namespace Google.Cloud.Functions.V1 {
             DockerRegistry = (global::Google.Cloud.Functions.V1.CloudFunction.Types.DockerRegistry) input.ReadEnum();
             break;
           }
+          case 322: {
+            global::Google.Cloud.Functions.V1.CloudFunction.Types.AutomaticUpdatePolicy subBuilder = new global::Google.Cloud.Functions.V1.CloudFunction.Types.AutomaticUpdatePolicy();
+            if (runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.AutomaticUpdatePolicy) {
+              subBuilder.MergeFrom(AutomaticUpdatePolicy);
+            }
+            input.ReadMessage(subBuilder);
+            AutomaticUpdatePolicy = subBuilder;
+            break;
+          }
+          case 330: {
+            global::Google.Cloud.Functions.V1.CloudFunction.Types.OnDeployUpdatePolicy subBuilder = new global::Google.Cloud.Functions.V1.CloudFunction.Types.OnDeployUpdatePolicy();
+            if (runtimeUpdatePolicyCase_ == RuntimeUpdatePolicyOneofCase.OnDeployUpdatePolicy) {
+              subBuilder.MergeFrom(OnDeployUpdatePolicy);
+            }
+            input.ReadMessage(subBuilder);
+            OnDeployUpdatePolicy = subBuilder;
+            break;
+          }
+          case 346: {
+            BuildServiceAccount = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1989,6 +2188,360 @@ namespace Google.Cloud.Functions.V1 {
         [pbr::OriginalName("ARTIFACT_REGISTRY")] ArtifactRegistry = 2,
       }
 
+      /// <summary>
+      /// Security patches are applied automatically to the runtime without requiring
+      /// the function to be redeployed.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AutomaticUpdatePolicy : pb::IMessage<AutomaticUpdatePolicy>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AutomaticUpdatePolicy> _parser = new pb::MessageParser<AutomaticUpdatePolicy>(() => new AutomaticUpdatePolicy());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AutomaticUpdatePolicy> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Functions.V1.CloudFunction.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutomaticUpdatePolicy() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutomaticUpdatePolicy(AutomaticUpdatePolicy other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutomaticUpdatePolicy Clone() {
+          return new AutomaticUpdatePolicy(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AutomaticUpdatePolicy);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AutomaticUpdatePolicy other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AutomaticUpdatePolicy other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Security patches are only applied when a function is redeployed.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class OnDeployUpdatePolicy : pb::IMessage<OnDeployUpdatePolicy>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<OnDeployUpdatePolicy> _parser = new pb::MessageParser<OnDeployUpdatePolicy>(() => new OnDeployUpdatePolicy());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<OnDeployUpdatePolicy> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Functions.V1.CloudFunction.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OnDeployUpdatePolicy() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OnDeployUpdatePolicy(OnDeployUpdatePolicy other) : this() {
+          runtimeVersion_ = other.runtimeVersion_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public OnDeployUpdatePolicy Clone() {
+          return new OnDeployUpdatePolicy(this);
+        }
+
+        /// <summary>Field number for the "runtime_version" field.</summary>
+        public const int RuntimeVersionFieldNumber = 1;
+        private string runtimeVersion_ = "";
+        /// <summary>
+        /// Output only. Contains the runtime version which was used during latest
+        /// function deployment.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string RuntimeVersion {
+          get { return runtimeVersion_; }
+          set {
+            runtimeVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as OnDeployUpdatePolicy);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(OnDeployUpdatePolicy other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RuntimeVersion != other.RuntimeVersion) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RuntimeVersion.Length != 0) hash ^= RuntimeVersion.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RuntimeVersion.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(RuntimeVersion);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RuntimeVersion.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(RuntimeVersion);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RuntimeVersion.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(RuntimeVersion);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(OnDeployUpdatePolicy other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RuntimeVersion.Length != 0) {
+            RuntimeVersion = other.RuntimeVersion;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                RuntimeVersion = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                RuntimeVersion = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -1998,6 +2551,7 @@ namespace Google.Cloud.Functions.V1 {
   /// Describes SourceRepository, used to represent parameters related to
   /// source repository where a function is hosted.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SourceRepository : pb::IMessage<SourceRepository>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2059,7 +2613,8 @@ namespace Google.Cloud.Functions.V1 {
     /// To refer to a specific fixed alias (tag):
     /// `https://source.developers.google.com/projects/*/repos/*/fixed-aliases/*/paths/*`
     ///
-    /// You may omit `paths/*` if you want to use the main directory.
+    /// You may omit `paths/*` if you want to use the main directory. The function
+    /// response may add an empty `/paths/` to the URL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2247,6 +2802,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Describes HttpsTrigger, could be used to connect web hooks to function.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HttpsTrigger : pb::IMessage<HttpsTrigger>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2517,6 +3073,7 @@ namespace Google.Cloud.Functions.V1 {
   /// Describes EventTrigger, used to request events be sent from another
   /// service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EventTrigger : pb::IMessage<EventTrigger>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2877,6 +3434,7 @@ namespace Google.Cloud.Functions.V1 {
   /// Describes the policy in case of function's execution failure.
   /// If empty, then defaults to ignoring failures (i.e. not retrying them).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FailurePolicy : pb::IMessage<FailurePolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3122,6 +3680,7 @@ namespace Google.Cloud.Functions.V1 {
       /// (capped at 10 seconds).
       /// Retried execution is charged as any other execution.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Retry : pb::IMessage<Retry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3284,6 +3843,7 @@ namespace Google.Cloud.Functions.V1 {
   /// necessary to fetch the secret value from secret manager and expose it as an
   /// environment variable.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SecretEnvVar : pb::IMessage<SecretEnvVar>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3608,6 +4168,7 @@ namespace Google.Cloud.Functions.V1 {
   /// a part of the configuration. Every filesystem read operation performs a
   /// lookup in secret manager to retrieve the secret value.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SecretVolume : pb::IMessage<SecretVolume>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3926,6 +4487,7 @@ namespace Google.Cloud.Functions.V1 {
       /// <summary>
       /// Configuration for a single version.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SecretVersion : pb::IMessage<SecretVersion>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3976,7 +4538,7 @@ namespace Google.Cloud.Functions.V1 {
         private string version_ = "";
         /// <summary>
         /// Version of the secret (version number or the string 'latest'). It is
-        /// preferrable to use `latest` version with secret volumes as secret value
+        /// preferable to use `latest` version with secret volumes as secret value
         /// changes are reflected immediately.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4171,6 +4733,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Request for the `CreateFunction` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFunctionRequest : pb::IMessage<CreateFunctionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4220,8 +4783,8 @@ namespace Google.Cloud.Functions.V1 {
     public const int LocationFieldNumber = 1;
     private string location_ = "";
     /// <summary>
-    /// Required. The project and location in which the function should be created, specified
-    /// in the format `projects/*/locations/*`
+    /// Required. The project and location in which the function should be created,
+    /// specified in the format `projects/*/locations/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4416,6 +4979,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Request for the `UpdateFunction` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateFunctionRequest : pb::IMessage<UpdateFunctionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4669,6 +5233,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Request for the `GetFunction` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFunctionRequest : pb::IMessage<GetFunctionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4704,6 +5269,7 @@ namespace Google.Cloud.Functions.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetFunctionRequest(GetFunctionRequest other) : this() {
       name_ = other.name_;
+      versionId_ = other.versionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4728,6 +5294,26 @@ namespace Google.Cloud.Functions.V1 {
       }
     }
 
+    /// <summary>Field number for the "version_id" field.</summary>
+    public const int VersionIdFieldNumber = 2;
+    private long versionId_;
+    /// <summary>
+    /// Optional. The optional version of the function whose details should be
+    /// obtained. The version of a 1st Gen function is an integer that starts from
+    /// 1 and gets incremented on redeployments. Each deployment creates a config
+    /// version of the underlying function. GCF may keep historical configs for old
+    /// versions. This field can be specified to fetch the historical configs.
+    /// Leave it blank or set to 0 to get the latest version of the function.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long VersionId {
+      get { return versionId_; }
+      set {
+        versionId_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4744,6 +5330,7 @@ namespace Google.Cloud.Functions.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (VersionId != other.VersionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4752,6 +5339,7 @@ namespace Google.Cloud.Functions.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (VersionId != 0L) hash ^= VersionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4774,6 +5362,10 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (VersionId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(VersionId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4788,6 +5380,10 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (VersionId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(VersionId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4800,6 +5396,9 @@ namespace Google.Cloud.Functions.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (VersionId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(VersionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4815,6 +5414,9 @@ namespace Google.Cloud.Functions.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.VersionId != 0L) {
+        VersionId = other.VersionId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4833,6 +5435,10 @@ namespace Google.Cloud.Functions.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            VersionId = input.ReadInt64();
             break;
           }
         }
@@ -4854,6 +5460,10 @@ namespace Google.Cloud.Functions.V1 {
             Name = input.ReadString();
             break;
           }
+          case 16: {
+            VersionId = input.ReadInt64();
+            break;
+          }
         }
       }
     }
@@ -4864,6 +5474,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Request for the `ListFunctions` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFunctionsRequest : pb::IMessage<ListFunctionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5147,6 +5758,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Response for the `ListFunctions` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFunctionsResponse : pb::IMessage<ListFunctionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5404,6 +6016,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Request for the `DeleteFunction` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFunctionRequest : pb::IMessage<DeleteFunctionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5599,6 +6212,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Request for the `CallFunction` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CallFunctionRequest : pb::IMessage<CallFunctionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5834,6 +6448,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Response of `CallFunction` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CallFunctionResponse : pb::IMessage<CallFunctionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6111,6 +6726,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Request of `GenerateSourceUploadUrl` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateUploadUrlRequest : pb::IMessage<GenerateUploadUrlRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6177,11 +6793,11 @@ namespace Google.Cloud.Functions.V1 {
     private string kmsKeyName_ = "";
     /// <summary>
     /// Resource name of a KMS crypto key (managed by the user) used to
-    /// encrypt/decrypt function source code objects in staging Cloud Storage
+    /// encrypt/decrypt function source code objects in intermediate Cloud Storage
     /// buckets. When you generate an upload url and upload your source code, it
-    /// gets copied to a staging Cloud Storage bucket in an internal regional
-    /// project. The source code is then copied to a versioned directory in the
-    /// sources bucket in the consumer project during the function deployment.
+    /// gets copied to an intermediate Cloud Storage bucket. The source code is
+    /// then copied to a versioned directory in the sources bucket in the consumer
+    /// project during the function deployment.
     ///
     /// It must match the pattern
     /// `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
@@ -6363,6 +6979,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Response of `GenerateSourceUploadUrl` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateUploadUrlResponse : pb::IMessage<GenerateUploadUrlResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6560,6 +7177,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Request of `GenerateDownloadUrl` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateDownloadUrlRequest : pb::IMessage<GenerateDownloadUrlRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6797,6 +7415,7 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Response of `GenerateDownloadUrl` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateDownloadUrlResponse : pb::IMessage<GenerateDownloadUrlResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

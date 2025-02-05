@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,11 +35,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using DateTime = System.DateTime;
+using static Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.TestServerHelpers;
 
 namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
 {
-    using static TestServerHelpers;
-
     public class LoggingTest : IClassFixture<LogValidatingFixture>
     {
         // Used in tests that check logs are properly associated to traces.
@@ -812,7 +811,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             using var client = server.CreateClient();
 
             // We are using a client with a bad credential.
-            var exception = await Assert.ThrowsAsync<AggregateException>(() => client.GetAsync($"/Main/Warning/{testId}"));            
+            var exception = await Assert.ThrowsAsync<AggregateException>(() => client.GetAsync($"/Main/Warning/{testId}"));
             var rpcException = Assert.IsType<RpcException>(exception.InnerException);
             Assert.Equal(StatusCode.Unauthenticated, rpcException.StatusCode);
         }
@@ -831,7 +830,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
     {
         protected readonly string _projectId = TestEnvironment.GetTestProjectId();
 
-        public override void ConfigureServices(IServiceCollection services) 
+        public override void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpContextAccessor();
             services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions

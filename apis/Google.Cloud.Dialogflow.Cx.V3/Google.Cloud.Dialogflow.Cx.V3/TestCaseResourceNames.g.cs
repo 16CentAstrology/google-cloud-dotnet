@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -271,10 +271,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <inheritdoc/>
         public bool Equals(TestCaseName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(TestCaseName a, TestCaseName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(TestCaseName a, TestCaseName b) => !(a == b);
     }
 
@@ -541,10 +553,22 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <inheritdoc/>
         public bool Equals(TestCaseResultName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(TestCaseResultName a, TestCaseResultName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(TestCaseResultName a, TestCaseResultName b) => !(a == b);
     }
 
@@ -595,6 +619,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             get => string.IsNullOrEmpty(Page) ? null : PageName.Parse(Page, allowUnparsed: true);
             set => Page = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class IntentCoverage
+    {
+        public partial class Types
+        {
+            public partial class Intent
+            {
+                /// <summary>
+                /// <see cref="IntentName"/>-typed view over the <see cref="Intent_"/> resource name property.
+                /// </summary>
+                public IntentName Intent_AsIntentName
+                {
+                    get => string.IsNullOrEmpty(Intent_) ? null : IntentName.Parse(Intent_, allowUnparsed: true);
+                    set => Intent_ = value?.ToString() ?? "";
+                }
+            }
         }
     }
 

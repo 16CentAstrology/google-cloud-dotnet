@@ -1,5 +1,65 @@
 # Version history
 
+## Version 2.9.0, released 2024-10-29
+
+### New features
+
+- Add Artifact Registry attachment API ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+- Add Artifact Registry custom remote support ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+- Add Artifact Registry generic repository support ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+- Add Artifact Registry server side resource filtering and sorting ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+- Add Artifact Registry rule APIs ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+- Add Artifact Registry UpdateFile and DeleteFile APIs ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+
+### Documentation improvements
+
+- Include max page size for all Artifact Registry APIs ([commit 04eb4d7](https://github.com/googleapis/google-cloud-dotnet/commit/04eb4d7d1da82e897d63f34b629ccc427ea86e16))
+
+## Version 2.8.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 2.7.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.6.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.5.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.4.0, released 2023-10-30
+
+### New features
+
+- Add support for virtual and remote repositories ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Add support for cleanup policies ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Add support for Docker immutable tags ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Add support for Go and KFP repositories ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Add support for Physical Zone Separation ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Expose the size of the Repository resource ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+
+### Documentation improvements
+
+- Use code font for resource name references ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Mark the create_time and update_time in the Repository resource as output only fields ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+- Mark the repository_id and repository fields in the CreateRepository request as required fields ([commit 766f731](https://github.com/googleapis/google-cloud-dotnet/commit/766f731eafdcded59f327e962976d35f5cb1d791))
+
+## Version 2.3.0, released 2023-09-26
+
+### Bug fixes
+
+- Make repository and repository_id in CreateRepository required ([commit b0752af](https://github.com/googleapis/google-cloud-dotnet/commit/b0752afb3c5a83bffb901743d9a8cd44d526d574))
+
 ## Version 2.2.0, released 2023-02-08
 
 ### Bug fixes

@@ -26,46 +26,53 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzL2RvY3VtZW50X2lv",
             "LnByb3RvEh9nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzGiBnb29n",
-            "bGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byIxCgtSYXdEb2N1bWVudBIP",
-            "Cgdjb250ZW50GAEgASgMEhEKCW1pbWVfdHlwZRgCIAEoCSIxCgtHY3NEb2N1",
-            "bWVudBIPCgdnY3NfdXJpGAEgASgJEhEKCW1pbWVfdHlwZRgCIAEoCSJPCgxH",
-            "Y3NEb2N1bWVudHMSPwoJZG9jdW1lbnRzGAEgAygLMiwuZ29vZ2xlLmNsb3Vk",
-            "LmRvY3VtZW50YWkudjFiZXRhMy5HY3NEb2N1bWVudCIjCglHY3NQcmVmaXgS",
-            "FgoOZ2NzX3VyaV9wcmVmaXgYASABKAkirwEKGUJhdGNoRG9jdW1lbnRzSW5w",
-            "dXRDb25maWcSQAoKZ2NzX3ByZWZpeBgBIAEoCzIqLmdvb2dsZS5jbG91ZC5k",
-            "b2N1bWVudGFpLnYxYmV0YTMuR2NzUHJlZml4SAASRgoNZ2NzX2RvY3VtZW50",
-            "cxgCIAEoCzItLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuR2Nz",
-            "RG9jdW1lbnRzSABCCAoGc291cmNlIo8DChREb2N1bWVudE91dHB1dENvbmZp",
-            "ZxJiChFnY3Nfb3V0cHV0X2NvbmZpZxgBIAEoCzJFLmdvb2dsZS5jbG91ZC5k",
-            "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRPdXRwdXRDb25maWcuR2NzT3V0",
-            "cHV0Q29uZmlnSAAagwIKD0djc091dHB1dENvbmZpZxIPCgdnY3NfdXJpGAEg",
-            "ASgJEi4KCmZpZWxkX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
-            "bGRNYXNrEm0KD3NoYXJkaW5nX2NvbmZpZxgDIAEoCzJULmdvb2dsZS5jbG91",
-            "ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRPdXRwdXRDb25maWcuR2Nz",
-            "T3V0cHV0Q29uZmlnLlNoYXJkaW5nQ29uZmlnGkAKDlNoYXJkaW5nQ29uZmln",
-            "EhcKD3BhZ2VzX3Blcl9zaGFyZBgBIAEoBRIVCg1wYWdlc19vdmVybGFwGAIg",
-            "ASgFQg0KC2Rlc3RpbmF0aW9uIuoBCglPY3JDb25maWcSPwoFaGludHMYAiAB",
-            "KAsyMC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLk9jckNvbmZp",
-            "Zy5IaW50cxIhChllbmFibGVfbmF0aXZlX3BkZl9wYXJzaW5nGAMgASgIEiMK",
-            "G2VuYWJsZV9pbWFnZV9xdWFsaXR5X3Njb3JlcxgEIAEoCBIcChRhZHZhbmNl",
-            "ZF9vY3Jfb3B0aW9ucxgFIAMoCRIVCg1lbmFibGVfc3ltYm9sGAYgASgIGh8K",
-            "BUhpbnRzEhYKDmxhbmd1YWdlX2hpbnRzGAEgAygJQuYBCiNjb20uZ29vZ2xl",
-            "LmNsb3VkLmRvY3VtZW50YWkudjFiZXRhM0IPRG9jdW1lbnRJb1Byb3RvUAFa",
-            "Q2Nsb3VkLmdvb2dsZS5jb20vZ28vZG9jdW1lbnRhaS9hcGl2MWJldGEzL2Rv",
-            "Y3VtZW50YWlwYjtkb2N1bWVudGFpcGKqAh9Hb29nbGUuQ2xvdWQuRG9jdW1l",
-            "bnRBSS5WMUJldGEzygIfR29vZ2xlXENsb3VkXERvY3VtZW50QUlcVjFiZXRh",
-            "M+oCIkdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYxYmV0YTNiBnByb3Rv",
-            "Mw=="));
+            "bGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90byJHCgtSYXdEb2N1bWVudBIP",
+            "Cgdjb250ZW50GAEgASgMEhEKCW1pbWVfdHlwZRgCIAEoCRIUCgxkaXNwbGF5",
+            "X25hbWUYAyABKAkiMQoLR2NzRG9jdW1lbnQSDwoHZ2NzX3VyaRgBIAEoCRIR",
+            "CgltaW1lX3R5cGUYAiABKAkiTwoMR2NzRG9jdW1lbnRzEj8KCWRvY3VtZW50",
+            "cxgBIAMoCzIsLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuR2Nz",
+            "RG9jdW1lbnQiIwoJR2NzUHJlZml4EhYKDmdjc191cmlfcHJlZml4GAEgASgJ",
+            "Iq8BChlCYXRjaERvY3VtZW50c0lucHV0Q29uZmlnEkAKCmdjc19wcmVmaXgY",
+            "ASABKAsyKi5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkdjc1By",
+            "ZWZpeEgAEkYKDWdjc19kb2N1bWVudHMYAiABKAsyLS5nb29nbGUuY2xvdWQu",
+            "ZG9jdW1lbnRhaS52MWJldGEzLkdjc0RvY3VtZW50c0gAQggKBnNvdXJjZSKP",
+            "AwoURG9jdW1lbnRPdXRwdXRDb25maWcSYgoRZ2NzX291dHB1dF9jb25maWcY",
+            "ASABKAsyRS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRvY3Vt",
+            "ZW50T3V0cHV0Q29uZmlnLkdjc091dHB1dENvbmZpZ0gAGoMCCg9HY3NPdXRw",
+            "dXRDb25maWcSDwoHZ2NzX3VyaRgBIAEoCRIuCgpmaWVsZF9tYXNrGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxJtCg9zaGFyZGluZ19jb25m",
+            "aWcYAyABKAsyVC5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLkRv",
+            "Y3VtZW50T3V0cHV0Q29uZmlnLkdjc091dHB1dENvbmZpZy5TaGFyZGluZ0Nv",
+            "bmZpZxpACg5TaGFyZGluZ0NvbmZpZxIXCg9wYWdlc19wZXJfc2hhcmQYASAB",
+            "KAUSFQoNcGFnZXNfb3ZlcmxhcBgCIAEoBUINCgtkZXN0aW5hdGlvbiL8AwoJ",
+            "T2NyQ29uZmlnEj8KBWhpbnRzGAIgASgLMjAuZ29vZ2xlLmNsb3VkLmRvY3Vt",
+            "ZW50YWkudjFiZXRhMy5PY3JDb25maWcuSGludHMSIQoZZW5hYmxlX25hdGl2",
+            "ZV9wZGZfcGFyc2luZxgDIAEoCBIjChtlbmFibGVfaW1hZ2VfcXVhbGl0eV9z",
+            "Y29yZXMYBCABKAgSHAoUYWR2YW5jZWRfb2NyX29wdGlvbnMYBSADKAkSFQoN",
+            "ZW5hYmxlX3N5bWJvbBgGIAEoCBIeChJjb21wdXRlX3N0eWxlX2luZm8YCCAB",
+            "KAhCAhgBEikKIWRpc2FibGVfY2hhcmFjdGVyX2JveGVzX2RldGVjdGlvbhgK",
+            "IAEoCBJUChBwcmVtaXVtX2ZlYXR1cmVzGAsgASgLMjouZ29vZ2xlLmNsb3Vk",
+            "LmRvY3VtZW50YWkudjFiZXRhMy5PY3JDb25maWcuUHJlbWl1bUZlYXR1cmVz",
+            "Gh8KBUhpbnRzEhYKDmxhbmd1YWdlX2hpbnRzGAEgAygJGm8KD1ByZW1pdW1G",
+            "ZWF0dXJlcxInCh9lbmFibGVfc2VsZWN0aW9uX21hcmtfZGV0ZWN0aW9uGAMg",
+            "ASgIEhoKEmNvbXB1dGVfc3R5bGVfaW5mbxgEIAEoCBIXCg9lbmFibGVfbWF0",
+            "aF9vY3IYBSABKAhC5gEKI2NvbS5nb29nbGUuY2xvdWQuZG9jdW1lbnRhaS52",
+            "MWJldGEzQg9Eb2N1bWVudElvUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9kb2N1bWVudGFpL2FwaXYxYmV0YTMvZG9jdW1lbnRhaXBiO2RvY3VtZW50",
+            "YWlwYqoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0YTPKAh9Hb29n",
+            "bGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEz6gIiR29vZ2xlOjpDbG91ZDo6",
+            "RG9jdW1lbnRBSTo6VjFiZXRhM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.RawDocument), global::Google.Cloud.DocumentAI.V1Beta3.RawDocument.Parser, new[]{ "Content", "MimeType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.RawDocument), global::Google.Cloud.DocumentAI.V1Beta3.RawDocument.Parser, new[]{ "Content", "MimeType", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsDocument), global::Google.Cloud.DocumentAI.V1Beta3.GcsDocument.Parser, new[]{ "GcsUri", "MimeType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsDocuments), global::Google.Cloud.DocumentAI.V1Beta3.GcsDocuments.Parser, new[]{ "Documents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.GcsPrefix), global::Google.Cloud.DocumentAI.V1Beta3.GcsPrefix.Parser, new[]{ "GcsUriPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig), global::Google.Cloud.DocumentAI.V1Beta3.BatchDocumentsInputConfig.Parser, new[]{ "GcsPrefix", "GcsDocuments" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Parser, new[]{ "GcsOutputConfig" }, new[]{ "Destination" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Parser, new[]{ "GcsUri", "FieldMask", "ShardingConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig), global::Google.Cloud.DocumentAI.V1Beta3.DocumentOutputConfig.Types.GcsOutputConfig.Types.ShardingConfig.Parser, new[]{ "PagesPerShard", "PagesOverlap" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig), global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Parser, new[]{ "Hints", "EnableNativePdfParsing", "EnableImageQualityScores", "AdvancedOcrOptions", "EnableSymbol" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints), global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints.Parser, new[]{ "LanguageHints" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig), global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Parser, new[]{ "Hints", "EnableNativePdfParsing", "EnableImageQualityScores", "AdvancedOcrOptions", "EnableSymbol", "ComputeStyleInfo", "DisableCharacterBoxesDetection", "PremiumFeatures" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints), global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.Hints.Parser, new[]{ "LanguageHints" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.PremiumFeatures), global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.PremiumFeatures.Parser, new[]{ "EnableSelectionMarkDetection", "ComputeStyleInfo", "EnableMathOcr" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -75,6 +82,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// <summary>
   /// Payload message of raw document content (bytes).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RawDocument : pb::IMessage<RawDocument>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -111,6 +119,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     public RawDocument(RawDocument other) : this() {
       content_ = other.content_;
       mimeType_ = other.mimeType_;
+      displayName_ = other.displayName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -151,6 +160,25 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 3;
+    private string displayName_ = "";
+    /// <summary>
+    /// The display name of the document, it supports all Unicode characters except
+    /// the following:
+    /// `*`, `?`, `[`, `]`, `%`, `{`, `}`,`'`, `\"`, `,`
+    /// `~`, `=` and `:` are reserved.
+    /// If not specified, a default ID is generated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -168,6 +196,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
       if (Content != other.Content) return false;
       if (MimeType != other.MimeType) return false;
+      if (DisplayName != other.DisplayName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -177,6 +206,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       int hash = 1;
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -203,6 +233,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(18);
         output.WriteString(MimeType);
       }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -221,6 +255,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(18);
         output.WriteString(MimeType);
       }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -236,6 +274,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
       if (MimeType.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MimeType);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -254,6 +295,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       }
       if (other.MimeType.Length != 0) {
         MimeType = other.MimeType;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -276,6 +320,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
           case 18: {
             MimeType = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
             break;
           }
         }
@@ -301,6 +349,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             MimeType = input.ReadString();
             break;
           }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -311,6 +363,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// <summary>
   /// Specifies a document stored on Cloud Storage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDocument : pb::IMessage<GcsDocument>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -546,6 +599,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// <summary>
   /// Specifies a set of documents on Cloud Storage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDocuments : pb::IMessage<GcsDocuments>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -730,6 +784,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// <summary>
   /// Specifies all documents on Cloud Storage with a common prefix.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsPrefix : pb::IMessage<GcsPrefix>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -925,6 +980,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// <summary>
   /// The common config to specify a set of documents used as input.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchDocumentsInputConfig : pb::IMessage<BatchDocumentsInputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1220,6 +1276,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// Config that controls the output of documents. All documents will be written
   /// as a JSON file.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentOutputConfig : pb::IMessage<DocumentOutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1461,6 +1518,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// The configuration used when outputting documents.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GcsOutputConfig : pb::IMessage<GcsOutputConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1759,6 +1817,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           /// <summary>
           /// The sharding config for the output document.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ShardingConfig : pb::IMessage<ShardingConfig>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2004,6 +2063,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   /// <summary>
   /// Config for Document OCR.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OcrConfig : pb::IMessage<OcrConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2043,6 +2103,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       enableImageQualityScores_ = other.enableImageQualityScores_;
       advancedOcrOptions_ = other.advancedOcrOptions_.Clone();
       enableSymbol_ = other.enableSymbol_;
+      computeStyleInfo_ = other.computeStyleInfo_;
+      disableCharacterBoxesDetection_ = other.disableCharacterBoxesDetection_;
+      premiumFeatures_ = other.premiumFeatures_ != null ? other.premiumFeatures_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2106,7 +2169,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> advancedOcrOptions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of advanced OCR options to further fine-tune OCR behavior.
+    /// A list of advanced OCR options to further fine-tune OCR behavior. Current
+    /// valid values are:
+    ///
+    /// - `legacy_layout`: a heuristics layout detection algorithm, which serves as
+    /// an alternative to the current ML-based layout detection algorithm.
+    /// Customers can choose the best suitable layout algorithm based on their
+    /// situation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2126,6 +2195,56 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       get { return enableSymbol_; }
       set {
         enableSymbol_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "compute_style_info" field.</summary>
+    public const int ComputeStyleInfoFieldNumber = 8;
+    private bool computeStyleInfo_;
+    /// <summary>
+    /// Turn on font identification model and return font style information.
+    /// Deprecated, use
+    /// [PremiumFeatures.compute_style_info][google.cloud.documentai.v1beta3.OcrConfig.PremiumFeatures.compute_style_info]
+    /// instead.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ComputeStyleInfo {
+      get { return computeStyleInfo_; }
+      set {
+        computeStyleInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "disable_character_boxes_detection" field.</summary>
+    public const int DisableCharacterBoxesDetectionFieldNumber = 10;
+    private bool disableCharacterBoxesDetection_;
+    /// <summary>
+    /// Turn off character box detector in OCR engine. Character box detection is
+    /// enabled by default in OCR 2.0 (and later) processors.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DisableCharacterBoxesDetection {
+      get { return disableCharacterBoxesDetection_; }
+      set {
+        disableCharacterBoxesDetection_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "premium_features" field.</summary>
+    public const int PremiumFeaturesFieldNumber = 11;
+    private global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.PremiumFeatures premiumFeatures_;
+    /// <summary>
+    /// Configurations for premium OCR features.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.PremiumFeatures PremiumFeatures {
+      get { return premiumFeatures_; }
+      set {
+        premiumFeatures_ = value;
       }
     }
 
@@ -2149,6 +2268,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (EnableImageQualityScores != other.EnableImageQualityScores) return false;
       if(!advancedOcrOptions_.Equals(other.advancedOcrOptions_)) return false;
       if (EnableSymbol != other.EnableSymbol) return false;
+      if (ComputeStyleInfo != other.ComputeStyleInfo) return false;
+      if (DisableCharacterBoxesDetection != other.DisableCharacterBoxesDetection) return false;
+      if (!object.Equals(PremiumFeatures, other.PremiumFeatures)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2161,6 +2283,9 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       if (EnableImageQualityScores != false) hash ^= EnableImageQualityScores.GetHashCode();
       hash ^= advancedOcrOptions_.GetHashCode();
       if (EnableSymbol != false) hash ^= EnableSymbol.GetHashCode();
+      if (ComputeStyleInfo != false) hash ^= ComputeStyleInfo.GetHashCode();
+      if (DisableCharacterBoxesDetection != false) hash ^= DisableCharacterBoxesDetection.GetHashCode();
+      if (premiumFeatures_ != null) hash ^= PremiumFeatures.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2196,6 +2321,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(48);
         output.WriteBool(EnableSymbol);
       }
+      if (ComputeStyleInfo != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(ComputeStyleInfo);
+      }
+      if (DisableCharacterBoxesDetection != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(DisableCharacterBoxesDetection);
+      }
+      if (premiumFeatures_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(PremiumFeatures);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2223,6 +2360,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         output.WriteRawTag(48);
         output.WriteBool(EnableSymbol);
       }
+      if (ComputeStyleInfo != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(ComputeStyleInfo);
+      }
+      if (DisableCharacterBoxesDetection != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(DisableCharacterBoxesDetection);
+      }
+      if (premiumFeatures_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(PremiumFeatures);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2245,6 +2394,15 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       size += advancedOcrOptions_.CalculateSize(_repeated_advancedOcrOptions_codec);
       if (EnableSymbol != false) {
         size += 1 + 1;
+      }
+      if (ComputeStyleInfo != false) {
+        size += 1 + 1;
+      }
+      if (DisableCharacterBoxesDetection != false) {
+        size += 1 + 1;
+      }
+      if (premiumFeatures_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PremiumFeatures);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2273,6 +2431,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       advancedOcrOptions_.Add(other.advancedOcrOptions_);
       if (other.EnableSymbol != false) {
         EnableSymbol = other.EnableSymbol;
+      }
+      if (other.ComputeStyleInfo != false) {
+        ComputeStyleInfo = other.ComputeStyleInfo;
+      }
+      if (other.DisableCharacterBoxesDetection != false) {
+        DisableCharacterBoxesDetection = other.DisableCharacterBoxesDetection;
+      }
+      if (other.premiumFeatures_ != null) {
+        if (premiumFeatures_ == null) {
+          PremiumFeatures = new global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.PremiumFeatures();
+        }
+        PremiumFeatures.MergeFrom(other.PremiumFeatures);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2310,6 +2480,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
           case 48: {
             EnableSymbol = input.ReadBool();
+            break;
+          }
+          case 64: {
+            ComputeStyleInfo = input.ReadBool();
+            break;
+          }
+          case 80: {
+            DisableCharacterBoxesDetection = input.ReadBool();
+            break;
+          }
+          case 90: {
+            if (premiumFeatures_ == null) {
+              PremiumFeatures = new global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.PremiumFeatures();
+            }
+            input.ReadMessage(PremiumFeatures);
             break;
           }
         }
@@ -2350,6 +2535,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             EnableSymbol = input.ReadBool();
             break;
           }
+          case 64: {
+            ComputeStyleInfo = input.ReadBool();
+            break;
+          }
+          case 80: {
+            DisableCharacterBoxesDetection = input.ReadBool();
+            break;
+          }
+          case 90: {
+            if (premiumFeatures_ == null) {
+              PremiumFeatures = new global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Types.PremiumFeatures();
+            }
+            input.ReadMessage(PremiumFeatures);
+            break;
+          }
         }
       }
     }
@@ -2363,6 +2563,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// Hints for OCR Engine
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Hints : pb::IMessage<Hints>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2540,6 +2741,283 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 break;
               case 10: {
                 languageHints_.AddEntriesFrom(ref input, _repeated_languageHints_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Configurations for premium OCR features.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PremiumFeatures : pb::IMessage<PremiumFeatures>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PremiumFeatures> _parser = new pb::MessageParser<PremiumFeatures>(() => new PremiumFeatures());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PremiumFeatures> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DocumentAI.V1Beta3.OcrConfig.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PremiumFeatures() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PremiumFeatures(PremiumFeatures other) : this() {
+          enableSelectionMarkDetection_ = other.enableSelectionMarkDetection_;
+          computeStyleInfo_ = other.computeStyleInfo_;
+          enableMathOcr_ = other.enableMathOcr_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PremiumFeatures Clone() {
+          return new PremiumFeatures(this);
+        }
+
+        /// <summary>Field number for the "enable_selection_mark_detection" field.</summary>
+        public const int EnableSelectionMarkDetectionFieldNumber = 3;
+        private bool enableSelectionMarkDetection_;
+        /// <summary>
+        /// Turn on selection mark detector in OCR engine. Only available in OCR 2.0
+        /// (and later) processors.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnableSelectionMarkDetection {
+          get { return enableSelectionMarkDetection_; }
+          set {
+            enableSelectionMarkDetection_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "compute_style_info" field.</summary>
+        public const int ComputeStyleInfoFieldNumber = 4;
+        private bool computeStyleInfo_;
+        /// <summary>
+        /// Turn on font identification model and return font style information.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool ComputeStyleInfo {
+          get { return computeStyleInfo_; }
+          set {
+            computeStyleInfo_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "enable_math_ocr" field.</summary>
+        public const int EnableMathOcrFieldNumber = 5;
+        private bool enableMathOcr_;
+        /// <summary>
+        /// Turn on the model that can extract LaTeX math formulas.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnableMathOcr {
+          get { return enableMathOcr_; }
+          set {
+            enableMathOcr_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PremiumFeatures);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PremiumFeatures other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (EnableSelectionMarkDetection != other.EnableSelectionMarkDetection) return false;
+          if (ComputeStyleInfo != other.ComputeStyleInfo) return false;
+          if (EnableMathOcr != other.EnableMathOcr) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (EnableSelectionMarkDetection != false) hash ^= EnableSelectionMarkDetection.GetHashCode();
+          if (ComputeStyleInfo != false) hash ^= ComputeStyleInfo.GetHashCode();
+          if (EnableMathOcr != false) hash ^= EnableMathOcr.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EnableSelectionMarkDetection != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(EnableSelectionMarkDetection);
+          }
+          if (ComputeStyleInfo != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(ComputeStyleInfo);
+          }
+          if (EnableMathOcr != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(EnableMathOcr);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EnableSelectionMarkDetection != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(EnableSelectionMarkDetection);
+          }
+          if (ComputeStyleInfo != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(ComputeStyleInfo);
+          }
+          if (EnableMathOcr != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(EnableMathOcr);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (EnableSelectionMarkDetection != false) {
+            size += 1 + 1;
+          }
+          if (ComputeStyleInfo != false) {
+            size += 1 + 1;
+          }
+          if (EnableMathOcr != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PremiumFeatures other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EnableSelectionMarkDetection != false) {
+            EnableSelectionMarkDetection = other.EnableSelectionMarkDetection;
+          }
+          if (other.ComputeStyleInfo != false) {
+            ComputeStyleInfo = other.ComputeStyleInfo;
+          }
+          if (other.EnableMathOcr != false) {
+            EnableMathOcr = other.EnableMathOcr;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 24: {
+                EnableSelectionMarkDetection = input.ReadBool();
+                break;
+              }
+              case 32: {
+                ComputeStyleInfo = input.ReadBool();
+                break;
+              }
+              case 40: {
+                EnableMathOcr = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 24: {
+                EnableSelectionMarkDetection = input.ReadBool();
+                break;
+              }
+              case 32: {
+                ComputeStyleInfo = input.ReadBool();
+                break;
+              }
+              case 40: {
+                EnableMathOcr = input.ReadBool();
                 break;
               }
             }

@@ -27,9 +27,9 @@ namespace Google.LongRunning {
             "CiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90bxISZ29vZ2xl",
             "LmxvbmdydW5uaW5nGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdn",
             "b29nbGUvYXBpL2NsaWVudC5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2FueS5w",
-            "cm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGhtnb29nbGUv",
-            "cHJvdG9idWYvZW1wdHkucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3Rv",
-            "GiBnb29nbGUvcHJvdG9idWYvZGVzY3JpcHRvci5wcm90byKoAQoJT3BlcmF0",
+            "cm90bxogZ29vZ2xlL3Byb3RvYnVmL2Rlc2NyaXB0b3IucHJvdG8aHmdvb2ds",
+            "ZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2Vt",
+            "cHR5LnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKoAQoJT3BlcmF0",
             "aW9uEgwKBG5hbWUYASABKAkSJgoIbWV0YWRhdGEYAiABKAsyFC5nb29nbGUu",
             "cHJvdG9idWYuQW55EgwKBGRvbmUYAyABKAgSIwoFZXJyb3IYBCABKAsyEi5n",
             "b29nbGUucnBjLlN0YXR1c0gAEigKCHJlc3BvbnNlGAUgASgLMhQuZ29vZ2xl",
@@ -46,27 +46,27 @@ namespace Google.LongRunning {
             "dHlwZRgBIAEoCRIVCg1tZXRhZGF0YV90eXBlGAIgASgJMqoFCgpPcGVyYXRp",
             "b25zEpQBCg5MaXN0T3BlcmF0aW9ucxIpLmdvb2dsZS5sb25ncnVubmluZy5M",
             "aXN0T3BlcmF0aW9uc1JlcXVlc3QaKi5nb29nbGUubG9uZ3J1bm5pbmcuTGlz",
-            "dE9wZXJhdGlvbnNSZXNwb25zZSIrgtPkkwIXEhUvdjEve25hbWU9b3BlcmF0",
-            "aW9uc33aQQtuYW1lLGZpbHRlchJ/CgxHZXRPcGVyYXRpb24SJy5nb29nbGUu",
+            "dE9wZXJhdGlvbnNSZXNwb25zZSIr2kELbmFtZSxmaWx0ZXKC0+STAhcSFS92",
+            "MS97bmFtZT1vcGVyYXRpb25zfRJ/CgxHZXRPcGVyYXRpb24SJy5nb29nbGUu",
             "bG9uZ3J1bm5pbmcuR2V0T3BlcmF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24iJ4LT5JMCGhIYL3YxL3tuYW1lPW9wZXJhdGlv",
-            "bnMvKip92kEEbmFtZRJ+Cg9EZWxldGVPcGVyYXRpb24SKi5nb29nbGUubG9u",
+            "cnVubmluZy5PcGVyYXRpb24iJ9pBBG5hbWWC0+STAhoSGC92MS97bmFtZT1v",
+            "cGVyYXRpb25zLyoqfRJ+Cg9EZWxldGVPcGVyYXRpb24SKi5nb29nbGUubG9u",
             "Z3J1bm5pbmcuRGVsZXRlT3BlcmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSIngtPkkwIaKhgvdjEve25hbWU9b3BlcmF0aW9ucy8qKn3a",
-            "QQRuYW1lEogBCg9DYW5jZWxPcGVyYXRpb24SKi5nb29nbGUubG9uZ3J1bm5p",
+            "b2J1Zi5FbXB0eSIn2kEEbmFtZYLT5JMCGioYL3YxL3tuYW1lPW9wZXJhdGlv",
+            "bnMvKip9EogBCg9DYW5jZWxPcGVyYXRpb24SKi5nb29nbGUubG9uZ3J1bm5p",
             "bmcuQ2FuY2VsT3BlcmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSIxgtPkkwIkIh8vdjEve25hbWU9b3BlcmF0aW9ucy8qKn06Y2FuY2Vs",
-            "OgEq2kEEbmFtZRJaCg1XYWl0T3BlcmF0aW9uEiguZ29vZ2xlLmxvbmdydW5u",
+            "bXB0eSIx2kEEbmFtZYLT5JMCJCIfL3YxL3tuYW1lPW9wZXJhdGlvbnMvKip9",
+            "OmNhbmNlbDoBKhJaCg1XYWl0T3BlcmF0aW9uEiguZ29vZ2xlLmxvbmdydW5u",
             "aW5nLldhaXRPcGVyYXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
             "Lk9wZXJhdGlvbiIAGh3KQRpsb25ncnVubmluZy5nb29nbGVhcGlzLmNvbTpa",
             "Cg5vcGVyYXRpb25faW5mbxIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRp",
             "b25zGJkIIAEoCzIhLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb25JbmZv",
-            "Qp0BChZjb20uZ29vZ2xlLmxvbmdydW5uaW5nQg9PcGVyYXRpb25zUHJvdG9Q",
+            "QqUBChZjb20uZ29vZ2xlLmxvbmdydW5uaW5nQg9PcGVyYXRpb25zUHJvdG9Q",
             "AVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9sb25ncnVubmluZy9hdXRvZ2VuL2xv",
-            "bmdydW5uaW5ncGI7bG9uZ3J1bm5pbmdwYvgBAaoCEkdvb2dsZS5Mb25nUnVu",
-            "bmluZ8oCEkdvb2dsZVxMb25nUnVubmluZ2IGcHJvdG8z"));
+            "bmdydW5uaW5ncGI7bG9uZ3J1bm5pbmdwYvgBAaICBUdMUlVOqgISR29vZ2xl",
+            "LkxvbmdSdW5uaW5nygISR29vZ2xlXExvbmdSdW5uaW5nYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pb::Extension[] { OperationsExtensions.OperationInfo }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.Operation), global::Google.LongRunning.Operation.Parser, new[]{ "Name", "Metadata", "Done", "Error", "Response" }, new[]{ "Result" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.GetOperationRequest), global::Google.LongRunning.GetOperationRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -100,6 +100,7 @@ namespace Google.LongRunning {
   /// This resource represents a long-running operation that is the result of a
   /// network API call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Operation : pb::IMessage<Operation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -225,7 +226,7 @@ namespace Google.LongRunning {
     /// <summary>Field number for the "response" field.</summary>
     public const int ResponseFieldNumber = 5;
     /// <summary>
-    /// The normal response of the operation in case of success.  If the original
+    /// The normal, successful response of the operation.  If the original
     /// method returns no data on success, such as `Delete`, the response is
     /// `google.protobuf.Empty`.  If the original method is standard
     /// `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -535,8 +536,10 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation].
+  /// The request message for
+  /// [Operations.GetOperation][google.longrunning.Operations.GetOperation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetOperationRequest : pb::IMessage<GetOperationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -730,8 +733,10 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+  /// The request message for
+  /// [Operations.ListOperations][google.longrunning.Operations.ListOperations].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOperationsRequest : pb::IMessage<ListOperationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1045,8 +1050,10 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+  /// The response message for
+  /// [Operations.ListOperations][google.longrunning.Operations.ListOperations].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOperationsResponse : pb::IMessage<ListOperationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1269,8 +1276,10 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
+  /// The request message for
+  /// [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CancelOperationRequest : pb::IMessage<CancelOperationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1464,8 +1473,10 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
+  /// The request message for
+  /// [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteOperationRequest : pb::IMessage<DeleteOperationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1659,8 +1670,10 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  /// The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
+  /// The request message for
+  /// [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WaitOperationRequest : pb::IMessage<WaitOperationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1909,14 +1922,14 @@ namespace Google.LongRunning {
   ///
   /// Example:
   ///
-  ///   rpc LongRunningRecognize(LongRunningRecognizeRequest)
-  ///       returns (google.longrunning.Operation) {
-  ///     option (google.longrunning.operation_info) = {
-  ///       response_type: "LongRunningRecognizeResponse"
-  ///       metadata_type: "LongRunningRecognizeMetadata"
-  ///     };
-  ///   }
+  ///     rpc Export(ExportRequest) returns (google.longrunning.Operation) {
+  ///       option (google.longrunning.operation_info) = {
+  ///         response_type: "ExportResponse"
+  ///         metadata_type: "ExportMetadata"
+  ///       };
+  ///     }
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationInfo : pb::IMessage<OperationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

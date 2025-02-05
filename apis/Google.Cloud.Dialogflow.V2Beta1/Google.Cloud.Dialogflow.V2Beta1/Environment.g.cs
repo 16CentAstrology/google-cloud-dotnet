@@ -88,9 +88,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "EogCChBMaXN0RW52aXJvbm1lbnRzEjguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
             "b3cudjJiZXRhMS5MaXN0RW52aXJvbm1lbnRzUmVxdWVzdBo5Lmdvb2dsZS5j",
             "bG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuTGlzdEVudmlyb25tZW50c1Jlc3Bv",
-            "bnNlIn+C0+STAnASLy92MmJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2Vu",
-            "dH0vZW52aXJvbm1lbnRzWj0SOy92MmJldGExL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9hZ2VudH0vZW52aXJvbm1lbnRz2kEGcGFyZW50Eu4B",
+            "bnNlIn/aQQZwYXJlbnSC0+STAnASLy92MmJldGExL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9hZ2VudH0vZW52aXJvbm1lbnRzWj0SOy92MmJldGExL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudH0vZW52aXJvbm1lbnRzEu4B",
             "Cg5HZXRFbnZpcm9ubWVudBI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
             "YmV0YTEuR2V0RW52aXJvbm1lbnRSZXF1ZXN0GiwuZ29vZ2xlLmNsb3VkLmRp",
             "YWxvZ2Zsb3cudjJiZXRhMS5FbnZpcm9ubWVudCJ2gtPkkwJwEi8vdjJiZXRh",
@@ -167,6 +167,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// For more information, see the [versions and environments
   /// guide](https://cloud.google.com/dialogflow/docs/agents-versions).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Environment : pb::IMessage<Environment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -223,9 +224,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Output only. The unique identifier of this agent environment.
     /// Supported formats:
-    /// - `projects/&lt;Project Number / ID>/agent/environments/&lt;Environment ID>`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location
-    ///   ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
+    /// ID>/agent/environments/&lt;Environment ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -260,7 +261,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// Supported formats:
     /// - `projects/&lt;Project ID>/agent/versions/&lt;Version ID>`
     /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent/versions/&lt;Version
-    ///   ID>`
+    /// ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -674,6 +675,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// <summary>
   /// Instructs the speech synthesizer on how to generate the output audio content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextToSpeechSettings : pb::IMessage<TextToSpeechSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -912,7 +914,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (other.SampleRateHertz != 0) {
         SampleRateHertz = other.SampleRateHertz;
       }
-      synthesizeSpeechConfigs_.Add(other.synthesizeSpeechConfigs_);
+      synthesizeSpeechConfigs_.MergeFrom(other.synthesizeSpeechConfigs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -986,6 +988,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Environments.ListEnvironments][google.cloud.dialogflow.v2beta1.Environments.ListEnvironments].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEnvironmentsRequest : pb::IMessage<ListEnvironmentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1038,8 +1041,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Required. The agent to list all environments from.
     /// Format:
-    /// - `projects/&lt;Project Number / ID>/agent`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location ID>/agent`
+    /// - `projects/&lt;Project ID>/agent`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1266,6 +1269,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The response message for
   /// [Environments.ListEnvironments][google.cloud.dialogflow.v2beta1.Environments.ListEnvironments].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEnvironmentsResponse : pb::IMessage<ListEnvironmentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1493,6 +1497,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Environments.GetEnvironment][google.cloud.dialogflow.v2beta1.Environments.GetEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEnvironmentRequest : pb::IMessage<GetEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1543,8 +1548,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Required. The name of the environment.
     /// Supported formats:
-    /// - `projects/&lt;Project Number / ID>/agent/environments/&lt;Environment ID>`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     ///   ID>/agent/environments/&lt;Environment ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1693,6 +1698,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Environments.CreateEnvironment][google.cloud.dialogflow.v2beta1.Environments.CreateEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEnvironmentRequest : pb::IMessage<CreateEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1745,8 +1751,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Required. The agent to create an environment for.
     /// Supported formats:
-    /// - `projects/&lt;Project Number / ID>/agent`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location ID>/agent`
+    /// - `projects/&lt;Project ID>/agent`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location ID>/agent`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1981,6 +1987,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Environments.UpdateEnvironment][google.cloud.dialogflow.v2beta1.Environments.UpdateEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateEnvironmentRequest : pb::IMessage<UpdateEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2278,6 +2285,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Environments.DeleteEnvironment][google.cloud.dialogflow.v2beta1.Environments.DeleteEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEnvironmentRequest : pb::IMessage<DeleteEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2328,8 +2336,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Required. The name of the environment to delete.
     /// / Format:
-    /// - `projects/&lt;Project Number / ID>/agent/environments/&lt;Environment ID>`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     /// ID>/agent/environments/&lt;Environment ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2478,6 +2486,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [Environments.GetEnvironmentHistory][google.cloud.dialogflow.v2beta1.Environments.GetEnvironmentHistory].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEnvironmentHistoryRequest : pb::IMessage<GetEnvironmentHistoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2530,8 +2539,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Required. The name of the environment to retrieve history for.
     /// Supported formats:
-    /// - `projects/&lt;Project Number / ID>/agent/environments/&lt;Environment ID>`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     ///   ID>/agent/environments/&lt;Environment ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2759,6 +2768,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The response message for
   /// [Environments.GetEnvironmentHistory][google.cloud.dialogflow.v2beta1.Environments.GetEnvironmentHistory].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnvironmentHistory : pb::IMessage<EnvironmentHistory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2811,8 +2821,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>
     /// Output only. The name of the environment this history is for.
     /// Supported formats:
-    /// - `projects/&lt;Project Number / ID>/agent/environments/&lt;Environment ID>`
-    /// - `projects/&lt;Project Number / ID>/locations/&lt;Location
+    /// - `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`
+    /// - `projects/&lt;Project ID>/locations/&lt;Location
     ///    ID>/agent/environments/&lt;Environment ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3032,6 +3042,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       /// <summary>
       /// Represents an environment history entry.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Entry : pb::IMessage<Entry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

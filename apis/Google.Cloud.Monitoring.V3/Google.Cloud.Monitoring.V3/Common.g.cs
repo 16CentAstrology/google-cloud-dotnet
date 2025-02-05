@@ -60,12 +60,12 @@ namespace Google.Cloud.Monitoring.V3 {
             "EQoNQ09NUEFSSVNPTl9MRRAEEhEKDUNPTVBBUklTT05fRVEQBRIRCg1DT01Q",
             "QVJJU09OX05FEAYqYQoLU2VydmljZVRpZXISHAoYU0VSVklDRV9USUVSX1VO",
             "U1BFQ0lGSUVEEAASFgoSU0VSVklDRV9USUVSX0JBU0lDEAESGAoUU0VSVklD",
-            "RV9USUVSX1BSRU1JVU0QAhoCGAFCwwEKGGNvbS5nb29nbGUubW9uaXRvcmlu",
-            "Zy52M0ILQ29tbW9uUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29n",
-            "bGUuQ2xvdWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9y",
-            "aW5nXFYz6gIdR29vZ2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6VjNiBnByb3Rv",
-            "Mw=="));
+            "RV9USUVSX1BSRU1JVU0QAhoCGAFCzQEKGGNvbS5nb29nbGUubW9uaXRvcmlu",
+            "Zy52M0ILQ29tbW9uUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9tb25p",
+            "dG9yaW5nL2FwaXYzL3YyL21vbml0b3JpbmdwYjttb25pdG9yaW5ncGKiAgRH",
+            "TU9OqgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xv",
+            "dWRcTW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6",
+            "OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Monitoring.V3.ComparisonType), typeof(global::Google.Cloud.Monitoring.V3.ServiceTier), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -114,11 +114,12 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  /// The tier of service for a Workspace. Please see the
+  /// The tier of service for a Metrics Scope. Please see the
   /// [service tiers
   /// documentation](https://cloud.google.com/monitoring/workspaces/tiers) for more
   /// details.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public enum ServiceTier {
     /// <summary>
     /// An invalid sentinel value, used to indicate that a tier has not
@@ -126,7 +127,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// </summary>
     [pbr::OriginalName("SERVICE_TIER_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// The Stackdriver Basic tier, a free tier of service that provides basic
+    /// The Cloud Monitoring Basic tier, a free tier of service that provides basic
     /// features, a moderate allotment of logs, and access to built-in metrics.
     /// A number of features are not available in this tier. For more details,
     /// see [the service tiers
@@ -134,10 +135,10 @@ namespace Google.Cloud.Monitoring.V3 {
     /// </summary>
     [pbr::OriginalName("SERVICE_TIER_BASIC")] Basic = 1,
     /// <summary>
-    /// The Stackdriver Premium tier, a higher, more expensive tier of service
-    /// that provides access to all Stackdriver features, lets you use Stackdriver
-    /// with AWS accounts, and has a larger allotments for logs and metrics. For
-    /// more details, see [the service tiers
+    /// The Cloud Monitoring Premium tier, a higher, more expensive tier of service
+    /// that provides access to all Cloud Monitoring features, lets you use Cloud
+    /// Monitoring with AWS accounts, and has a larger allotments for logs and
+    /// metrics. For more details, see [the service tiers
     /// documentation](https://cloud.google.com/monitoring/workspaces/tiers).
     /// </summary>
     [pbr::OriginalName("SERVICE_TIER_PREMIUM")] Premium = 2,
@@ -149,6 +150,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// A single strongly-typed value.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TypedValue : pb::IMessage<TypedValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -218,10 +220,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BoolValue {
-      get { return valueCase_ == ValueOneofCase.BoolValue ? (bool) value_ : false; }
+      get { return HasBoolValue ? (bool) value_ : false; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.BoolValue;
+      }
+    }
+    /// <summary>Gets whether the "bool_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBoolValue {
+      get { return valueCase_ == ValueOneofCase.BoolValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "bool_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBoolValue() {
+      if (HasBoolValue) {
+        ClearValue();
       }
     }
 
@@ -233,10 +249,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Int64Value {
-      get { return valueCase_ == ValueOneofCase.Int64Value ? (long) value_ : 0L; }
+      get { return HasInt64Value ? (long) value_ : 0L; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.Int64Value;
+      }
+    }
+    /// <summary>Gets whether the "int64_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInt64Value {
+      get { return valueCase_ == ValueOneofCase.Int64Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "int64_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInt64Value() {
+      if (HasInt64Value) {
+        ClearValue();
       }
     }
 
@@ -250,10 +280,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double DoubleValue {
-      get { return valueCase_ == ValueOneofCase.DoubleValue ? (double) value_ : 0D; }
+      get { return HasDoubleValue ? (double) value_ : 0D; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.DoubleValue;
+      }
+    }
+    /// <summary>Gets whether the "double_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDoubleValue {
+      get { return valueCase_ == ValueOneofCase.DoubleValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "double_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDoubleValue() {
+      if (HasDoubleValue) {
+        ClearValue();
       }
     }
 
@@ -265,10 +309,24 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StringValue {
-      get { return valueCase_ == ValueOneofCase.StringValue ? (string) value_ : ""; }
+      get { return HasStringValue ? (string) value_ : ""; }
       set {
         value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueCase_ = ValueOneofCase.StringValue;
+      }
+    }
+    /// <summary>Gets whether the "string_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStringValue {
+      get { return valueCase_ == ValueOneofCase.StringValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStringValue() {
+      if (HasStringValue) {
+        ClearValue();
       }
     }
 
@@ -339,10 +397,10 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (valueCase_ == ValueOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
-      if (valueCase_ == ValueOneofCase.Int64Value) hash ^= Int64Value.GetHashCode();
-      if (valueCase_ == ValueOneofCase.DoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
-      if (valueCase_ == ValueOneofCase.StringValue) hash ^= StringValue.GetHashCode();
+      if (HasBoolValue) hash ^= BoolValue.GetHashCode();
+      if (HasInt64Value) hash ^= Int64Value.GetHashCode();
+      if (HasDoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
+      if (HasStringValue) hash ^= StringValue.GetHashCode();
       if (valueCase_ == ValueOneofCase.DistributionValue) hash ^= DistributionValue.GetHashCode();
       hash ^= (int) valueCase_;
       if (_unknownFields != null) {
@@ -363,19 +421,19 @@ namespace Google.Cloud.Monitoring.V3 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(8);
         output.WriteBool(BoolValue);
       }
-      if (valueCase_ == ValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(16);
         output.WriteInt64(Int64Value);
       }
-      if (valueCase_ == ValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(25);
         output.WriteDouble(DoubleValue);
       }
-      if (valueCase_ == ValueOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(34);
         output.WriteString(StringValue);
       }
@@ -393,19 +451,19 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(8);
         output.WriteBool(BoolValue);
       }
-      if (valueCase_ == ValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(16);
         output.WriteInt64(Int64Value);
       }
-      if (valueCase_ == ValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(25);
         output.WriteDouble(DoubleValue);
       }
-      if (valueCase_ == ValueOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(34);
         output.WriteString(StringValue);
       }
@@ -423,16 +481,16 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         size += 1 + 1;
       }
-      if (valueCase_ == ValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Int64Value);
       }
-      if (valueCase_ == ValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         size += 1 + 8;
       }
-      if (valueCase_ == ValueOneofCase.StringValue) {
+      if (HasStringValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StringValue);
       }
       if (valueCase_ == ValueOneofCase.DistributionValue) {
@@ -559,35 +617,46 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  /// A closed time interval. It extends from the start time to the end time, and includes both: `[startTime, endTime]`. Valid time intervals depend on the [`MetricKind`](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors#MetricKind) of the metric value. The end time must not be earlier than the start time. When writing data points, the start time must not be more than 25 hours in the past and the end time must not be more than five minutes in the future.
+  /// Describes a time interval:
   ///
-  /// * For `GAUGE` metrics, the `startTime` value is technically optional; if
-  ///   no value is specified, the start time defaults to the value of the
-  ///   end time, and the interval represents a single point in time. If both
-  ///   start and end times are specified, they must be identical. Such an
-  ///   interval is valid only for `GAUGE` metrics, which are point-in-time
-  ///   measurements. The end time of a new interval must be at least a
-  ///   millisecond after the end time of the previous interval.
-  ///
-  /// * For `DELTA` metrics, the start time and end time must specify a
-  ///   non-zero interval, with subsequent points specifying contiguous and
-  ///   non-overlapping intervals. For `DELTA` metrics, the start time of
-  ///   the next interval must be at least a millisecond after the end time
-  ///   of the previous interval.
-  ///
-  /// * For `CUMULATIVE` metrics, the start time and end time must specify a
-  ///   non-zero interval, with subsequent points specifying the same
-  ///   start time and increasing end times, until an event resets the
-  ///   cumulative value to zero and sets a new start time for the following
-  ///   points. The new start time must be at least a millisecond after the
-  ///   end time of the previous interval.
-  ///
-  /// * The start time of a new interval must be at least a millisecond after the
-  ///   end time of the previous interval because intervals are closed. If the
-  ///   start time of a new interval is the same as the end time of the previous
-  ///   interval, then data written at the new start time could overwrite data
-  ///   written at the previous end time.
+  ///   * Reads: A half-open time interval. It includes the end time but
+  ///     excludes the start time: `(startTime, endTime]`. The start time
+  ///     must be specified, must be earlier than the end time, and should be
+  ///     no older than the data retention period for the metric.
+  ///   * Writes: A closed time interval. It extends from the start time to the end
+  ///   time,
+  ///     and includes both: `[startTime, endTime]`. Valid time intervals
+  ///     depend on the
+  ///     [`MetricKind`](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors#MetricKind)
+  ///     of the metric value. The end time must not be earlier than the start
+  ///     time, and the end time must not be more than 25 hours in the past or more
+  ///     than five minutes in the future.
+  ///     * For `GAUGE` metrics, the `startTime` value is technically optional; if
+  ///       no value is specified, the start time defaults to the value of the
+  ///       end time, and the interval represents a single point in time. If both
+  ///       start and end times are specified, they must be identical. Such an
+  ///       interval is valid only for `GAUGE` metrics, which are point-in-time
+  ///       measurements. The end time of a new interval must be at least a
+  ///       millisecond after the end time of the previous interval.
+  ///     * For `DELTA` metrics, the start time and end time must specify a
+  ///       non-zero interval, with subsequent points specifying contiguous and
+  ///       non-overlapping intervals. For `DELTA` metrics, the start time of
+  ///       the next interval must be at least a millisecond after the end time
+  ///       of the previous interval.
+  ///     * For `CUMULATIVE` metrics, the start time and end time must specify a
+  ///       non-zero interval, with subsequent points specifying the same
+  ///       start time and increasing end times, until an event resets the
+  ///       cumulative value to zero and sets a new start time for the following
+  ///       points. The new start time must be at least a millisecond after the
+  ///       end time of the previous interval.
+  ///     * The start time of a new interval must be at least a millisecond after
+  ///     the
+  ///       end time of the previous interval because intervals are closed. If the
+  ///       start time of a new interval is the same as the end time of the
+  ///       previous interval, then data written at the new start time could
+  ///       overwrite data written at the previous end time.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeInterval : pb::IMessage<TimeInterval>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -868,6 +937,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// details, see [Filtering and
   /// aggregation](https://cloud.google.com/monitoring/api/v3/aggregation).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Aggregation : pb::IMessage<Aggregation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

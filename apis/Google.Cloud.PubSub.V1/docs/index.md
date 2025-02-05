@@ -89,6 +89,10 @@ container provided by the [Microsoft.Extensions.DependencyInjection](https://www
 The `Google.Cloud.PubSub.V1` package provides extension methods to register the clients with the dependency
 injection container in the `Microsoft.Extensions.DependencyInjection` namespace.
 
+Please refer to the Google Cloud .NET libraries general purpose
+[dependency injection documentation](client-lifecycle.md#dependency-injection-in-high-load-at-startup-environments)
+for a workaround on a known issue that may lead to thread starvation and high latency.
+
 ### PublisherClient
 
 To register a singleton `PublisherClient` instance with default settings in the `IServiceCollection`, use the
@@ -100,6 +104,14 @@ There is an overload of the `AddPublisherClient` method that takes `Action<Publi
 and can be used to add the customized `PublisherClient` singleton instance as shown below:
 
 {{sample:PublisherClient.AddCustomizedPublisherClient}}
+
+A similar overload of the `AddPublisherClient` method takes
+`Action<IServiceProvider, PublisherClientBuilder>` as a parameter
+and can be used to add the customized `PublisherClient` singleton
+instance based on other information provided by the DI container, as
+shown below:
+
+{{sample:PublisherClient.AddCustomizedPublisherClientWithProvider}}
 
 The registered `PublisherClient` can then be used like any other service registered with the dependency injection container. For instance, in a `MyService` class that is itself registered with the dependency injection container,
 the `PublisherClient` can be passed as a constructor parameter.
@@ -127,6 +139,14 @@ There is an overload of the `AddSubscriberClient` method that takes `Action<Subs
 and can be used to add the customized `SubscriberClient` singleton instance as shown below:
 
 {{sample:SubscriberClient.AddCustomizedSubscriberClient}}
+
+A similar overload of the `AddSubscriberClient` method takes
+`Action<IServiceProvider, SubscriberClientBuilder>` as a parameter
+and can be used to add the customized `SubscriberClient` singleton
+instance based on other information provided by the DI container, as
+shown below:
+
+{{sample:SubscriberClient.AddCustomizedSubscriberClientWithProvider}}
 
 Registering the `SubscriberClient` doesn't automatically start the client. It needs to be started explicitly by calling the `StartAsync` method.
 The `SubscriberClient` is a long-running client and so it may be useful to use

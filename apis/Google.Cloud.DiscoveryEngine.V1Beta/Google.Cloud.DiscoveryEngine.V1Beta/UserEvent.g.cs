@@ -29,67 +29,73 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2Fw",
             "aS9yZXNvdXJjZS5wcm90bxowZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVyeWVuZ2lu",
             "ZS92MWJldGEvY29tbW9uLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRp",
-            "b24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i4wcK",
+            "b24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipwkK",
             "CVVzZXJFdmVudBIXCgpldmVudF90eXBlGAEgASgJQgPgQQISGwoOdXNlcl9w",
-            "c2V1ZG9faWQYAiABKAlCA+BBAhIuCgpldmVudF90aW1lGAMgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBJACgl1c2VyX2luZm8YBCABKAsyLS5n",
-            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Vc2VySW5mbxIb",
-            "ChNkaXJlY3RfdXNlcl9yZXF1ZXN0GAUgASgIEhIKCnNlc3Npb25faWQYBiAB",
-            "KAkSQAoJcGFnZV9pbmZvGAcgASgLMi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
-            "eWVuZ2luZS52MWJldGEuUGFnZUluZm8SGQoRYXR0cmlidXRpb25fdG9rZW4Y",
-            "CCABKAkSDgoGZmlsdGVyGAkgASgJEkQKCWRvY3VtZW50cxgKIAMoCzIxLmdv",
-            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkRvY3VtZW50SW5m",
-            "bxI9CgVwYW5lbBgLIAEoCzIuLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
-            "bmUudjFiZXRhLlBhbmVsSW5mbxJECgtzZWFyY2hfaW5mbxgMIAEoCzIvLmdv",
-            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlNlYXJjaEluZm8S",
-            "TAoPY29tcGxldGlvbl9pbmZvGA0gASgLMjMuZ29vZ2xlLmNsb3VkLmRpc2Nv",
-            "dmVyeWVuZ2luZS52MWJldGEuQ29tcGxldGlvbkluZm8STgoQdHJhbnNhY3Rp",
-            "b25faW5mbxgOIAEoCzI0Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
-            "djFiZXRhLlRyYW5zYWN0aW9uSW5mbxIPCgd0YWdfaWRzGA8gAygJEhUKDXBy",
-            "b21vdGlvbl9pZHMYECADKAkSUgoKYXR0cmlidXRlcxgRIAMoCzI+Lmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlVzZXJFdmVudC5BdHRy",
-            "aWJ1dGVzRW50cnkSQgoKbWVkaWFfaW5mbxgSIAEoCzIuLmdvb2dsZS5jbG91",
-            "ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLk1lZGlhSW5mbxpnCg9BdHRyaWJ1",
-            "dGVzRW50cnkSCwoDa2V5GAEgASgJEkMKBXZhbHVlGAIgASgLMjQuZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuQ3VzdG9tQXR0cmlidXRl",
-            "OgI4ASJZCghQYWdlSW5mbxITCgtwYWdldmlld19pZBgBIAEoCRIVCg1wYWdl",
-            "X2NhdGVnb3J5GAIgASgJEgsKA3VyaRgDIAEoCRIUCgxyZWZlcnJlcl91cmkY",
-            "BCABKAkiVAoKU2VhcmNoSW5mbxIUCgxzZWFyY2hfcXVlcnkYASABKAkSEAoI",
-            "b3JkZXJfYnkYAiABKAkSEwoGb2Zmc2V0GAMgASgFSACIAQFCCQoHX29mZnNl",
-            "dCJICg5Db21wbGV0aW9uSW5mbxIbChNzZWxlY3RlZF9zdWdnZXN0aW9uGAEg",
-            "ASgJEhkKEXNlbGVjdGVkX3Bvc2l0aW9uGAIgASgFIskBCg9UcmFuc2FjdGlv",
-            "bkluZm8SFwoFdmFsdWUYASABKAJCA+BBAkgAiAEBEhUKCGN1cnJlbmN5GAIg",
-            "ASgJQgPgQQISFgoOdHJhbnNhY3Rpb25faWQYAyABKAkSEAoDdGF4GAQgASgC",
-            "SAGIAQESEQoEY29zdBgFIAEoAkgCiAEBEhsKDmRpc2NvdW50X3ZhbHVlGAYg",
-            "ASgCSAOIAQFCCAoGX3ZhbHVlQgYKBF90YXhCBwoFX2Nvc3RCEQoPX2Rpc2Nv",
-            "dW50X3ZhbHVlIrQBCgxEb2N1bWVudEluZm8SEQoCaWQYASABKAlCA+BBAkgA",
-            "Ej8KBG5hbWUYAiABKAlCL+BBAvpBKQonZGlzY292ZXJ5ZW5naW5lLmdvb2ds",
-            "ZWFwaXMuY29tL0RvY3VtZW50SAASFQoIcXVhbnRpdHkYAyABKAVIAYgBARIV",
-            "Cg1wcm9tb3Rpb25faWRzGAQgAygJQhUKE2RvY3VtZW50X2Rlc2NyaXB0b3JC",
-            "CwoJX3F1YW50aXR5IpQBCglQYW5lbEluZm8SFQoIcGFuZWxfaWQYAiABKAlC",
-            "A+BBAhIUCgxkaXNwbGF5X25hbWUYAyABKAkSGwoOcGFuZWxfcG9zaXRpb24Y",
-            "BCABKAVIAIgBARIZCgx0b3RhbF9wYW5lbHMYBSABKAVIAYgBAUIRCg9fcGFu",
-            "ZWxfcG9zaXRpb25CDwoNX3RvdGFsX3BhbmVscyKNAQoJTWVkaWFJbmZvEjoK",
-            "F21lZGlhX3Byb2dyZXNzX2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uEiYKGW1lZGlhX3Byb2dyZXNzX3BlcmNlbnRhZ2UYAiAB",
-            "KAJIAIgBAUIcChpfbWVkaWFfcHJvZ3Jlc3NfcGVyY2VudGFnZUKVAgonY29t",
-            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhQg5Vc2VyRXZl",
-            "bnRQcm90b1ABWlFjbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2lu",
-            "ZS9hcGl2MWJldGEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5l",
-            "cGKiAg9ESVNDT1ZFUllFTkdJTkWqAiNHb29nbGUuQ2xvdWQuRGlzY292ZXJ5",
-            "RW5naW5lLlYxQmV0YcoCI0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVc",
-            "VjFiZXRh6gImR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWJl",
-            "dGFiBnByb3RvMw=="));
+            "c2V1ZG9faWQYAiABKAlCA+BBAhI6CgZlbmdpbmUYEyABKAlCKvpBJwolZGlz",
+            "Y292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0VuZ2luZRJBCgpkYXRhX3N0",
+            "b3JlGBQgASgJQi36QSoKKGRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNv",
+            "bS9EYXRhU3RvcmUSLgoKZXZlbnRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASQAoJdXNlcl9pbmZvGAQgASgLMi0uZ29vZ2xlLmNs",
+            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuVXNlckluZm8SGwoTZGlyZWN0",
+            "X3VzZXJfcmVxdWVzdBgFIAEoCBISCgpzZXNzaW9uX2lkGAYgASgJEkAKCXBh",
+            "Z2VfaW5mbxgHIAEoCzItLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUu",
+            "djFiZXRhLlBhZ2VJbmZvEhkKEWF0dHJpYnV0aW9uX3Rva2VuGAggASgJEg4K",
+            "BmZpbHRlchgJIAEoCRJECglkb2N1bWVudHMYCiADKAsyMS5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Eb2N1bWVudEluZm8SPQoFcGFu",
+            "ZWwYCyABKAsyLi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
+            "YS5QYW5lbEluZm8SRAoLc2VhcmNoX2luZm8YDCABKAsyLy5nb29nbGUuY2xv",
+            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5TZWFyY2hJbmZvEkwKD2NvbXBs",
+            "ZXRpb25faW5mbxgNIAEoCzIzLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
+            "bmUudjFiZXRhLkNvbXBsZXRpb25JbmZvEk4KEHRyYW5zYWN0aW9uX2luZm8Y",
+            "DiABKAsyNC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5U",
+            "cmFuc2FjdGlvbkluZm8SDwoHdGFnX2lkcxgPIAMoCRIVCg1wcm9tb3Rpb25f",
+            "aWRzGBAgAygJElIKCmF0dHJpYnV0ZXMYESADKAsyPi5nb29nbGUuY2xvdWQu",
+            "ZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Vc2VyRXZlbnQuQXR0cmlidXRlc0Vu",
+            "dHJ5EkIKCm1lZGlhX2luZm8YEiABKAsyLi5nb29nbGUuY2xvdWQuZGlzY292",
+            "ZXJ5ZW5naW5lLnYxYmV0YS5NZWRpYUluZm8SQwoGcGFuZWxzGBYgAygLMi4u",
+            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuUGFuZWxJbmZv",
+            "QgPgQQEaZwoPQXR0cmlidXRlc0VudHJ5EgsKA2tleRgBIAEoCRJDCgV2YWx1",
+            "ZRgCIAEoCzI0Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRh",
+            "LkN1c3RvbUF0dHJpYnV0ZToCOAEiWQoIUGFnZUluZm8SEwoLcGFnZXZpZXdf",
+            "aWQYASABKAkSFQoNcGFnZV9jYXRlZ29yeRgCIAEoCRILCgN1cmkYAyABKAkS",
+            "FAoMcmVmZXJyZXJfdXJpGAQgASgJIlQKClNlYXJjaEluZm8SFAoMc2VhcmNo",
+            "X3F1ZXJ5GAEgASgJEhAKCG9yZGVyX2J5GAIgASgJEhMKBm9mZnNldBgDIAEo",
+            "BUgAiAEBQgkKB19vZmZzZXQiSAoOQ29tcGxldGlvbkluZm8SGwoTc2VsZWN0",
+            "ZWRfc3VnZ2VzdGlvbhgBIAEoCRIZChFzZWxlY3RlZF9wb3NpdGlvbhgCIAEo",
+            "BSLJAQoPVHJhbnNhY3Rpb25JbmZvEhcKBXZhbHVlGAEgASgCQgPgQQJIAIgB",
+            "ARIVCghjdXJyZW5jeRgCIAEoCUID4EECEhYKDnRyYW5zYWN0aW9uX2lkGAMg",
+            "ASgJEhAKA3RheBgEIAEoAkgBiAEBEhEKBGNvc3QYBSABKAJIAogBARIbCg5k",
+            "aXNjb3VudF92YWx1ZRgGIAEoAkgDiAEBQggKBl92YWx1ZUIGCgRfdGF4QgcK",
+            "BV9jb3N0QhEKD19kaXNjb3VudF92YWx1ZSLQAQoMRG9jdW1lbnRJbmZvEgwK",
+            "AmlkGAEgASgJSAASPAoEbmFtZRgCIAEoCUIs+kEpCidkaXNjb3Zlcnllbmdp",
+            "bmUuZ29vZ2xlYXBpcy5jb20vRG9jdW1lbnRIABINCgN1cmkYBiABKAlIABIV",
+            "CghxdWFudGl0eRgDIAEoBUgBiAEBEhUKDXByb21vdGlvbl9pZHMYBCADKAkS",
+            "EwoGam9pbmVkGAUgASgIQgPgQQNCFQoTZG9jdW1lbnRfZGVzY3JpcHRvckIL",
+            "CglfcXVhbnRpdHki3wEKCVBhbmVsSW5mbxIVCghwYW5lbF9pZBgCIAEoCUID",
+            "4EECEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRIbCg5wYW5lbF9wb3NpdGlvbhgE",
+            "IAEoBUgAiAEBEhkKDHRvdGFsX3BhbmVscxgFIAEoBUgBiAEBEkkKCWRvY3Vt",
+            "ZW50cxgGIAMoCzIxLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFi",
+            "ZXRhLkRvY3VtZW50SW5mb0ID4EEBQhEKD19wYW5lbF9wb3NpdGlvbkIPCg1f",
+            "dG90YWxfcGFuZWxzIo0BCglNZWRpYUluZm8SOgoXbWVkaWFfcHJvZ3Jlc3Nf",
+            "ZHVyYXRpb24YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SJgoZ",
+            "bWVkaWFfcHJvZ3Jlc3NfcGVyY2VudGFnZRgCIAEoAkgAiAEBQhwKGl9tZWRp",
+            "YV9wcm9ncmVzc19wZXJjZW50YWdlQpUCCidjb20uZ29vZ2xlLmNsb3VkLmRp",
+            "c2NvdmVyeWVuZ2luZS52MWJldGFCDlVzZXJFdmVudFByb3RvUAFaUWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNj",
+            "b3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVO",
+            "R0lORaoCI0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIj",
+            "R29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29nbGU6",
+            "OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.UserEvent), global::Google.Cloud.DiscoveryEngine.V1Beta.UserEvent.Parser, new[]{ "EventType", "UserPseudoId", "EventTime", "UserInfo", "DirectUserRequest", "SessionId", "PageInfo", "AttributionToken", "Filter", "Documents", "Panel", "SearchInfo", "CompletionInfo", "TransactionInfo", "TagIds", "PromotionIds", "Attributes", "MediaInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.UserEvent), global::Google.Cloud.DiscoveryEngine.V1Beta.UserEvent.Parser, new[]{ "EventType", "UserPseudoId", "Engine", "DataStore", "EventTime", "UserInfo", "DirectUserRequest", "SessionId", "PageInfo", "AttributionToken", "Filter", "Documents", "Panel", "SearchInfo", "CompletionInfo", "TransactionInfo", "TagIds", "PromotionIds", "Attributes", "MediaInfo", "Panels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.PageInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.PageInfo.Parser, new[]{ "PageviewId", "PageCategory", "Uri", "ReferrerUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.SearchInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.SearchInfo.Parser, new[]{ "SearchQuery", "OrderBy", "Offset" }, new[]{ "Offset" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.CompletionInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.CompletionInfo.Parser, new[]{ "SelectedSuggestion", "SelectedPosition" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.TransactionInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.TransactionInfo.Parser, new[]{ "Value", "Currency", "TransactionId", "Tax", "Cost", "DiscountValue" }, new[]{ "Value", "Tax", "Cost", "DiscountValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo.Parser, new[]{ "Id", "Name", "Quantity", "PromotionIds" }, new[]{ "DocumentDescriptor", "Quantity" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.PanelInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.PanelInfo.Parser, new[]{ "PanelId", "DisplayName", "PanelPosition", "TotalPanels" }, new[]{ "PanelPosition", "TotalPanels" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo.Parser, new[]{ "Id", "Name", "Uri", "Quantity", "PromotionIds", "Joined" }, new[]{ "DocumentDescriptor", "Quantity" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.PanelInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.PanelInfo.Parser, new[]{ "PanelId", "DisplayName", "PanelPosition", "TotalPanels", "Documents" }, new[]{ "PanelPosition", "TotalPanels" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.MediaInfo), global::Google.Cloud.DiscoveryEngine.V1Beta.MediaInfo.Parser, new[]{ "MediaProgressDuration", "MediaProgressPercentage" }, new[]{ "MediaProgressPercentage" }, null, null, null)
           }));
     }
@@ -99,8 +105,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   #region Messages
   /// <summary>
   /// UserEvent captures all metadata information Discovery Engine API needs to
-  /// know about how end users interact with customers' website.
+  /// know about how end users interact with your website.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserEvent : pb::IMessage<UserEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -137,6 +144,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public UserEvent(UserEvent other) : this() {
       eventType_ = other.eventType_;
       userPseudoId_ = other.userPseudoId_;
+      engine_ = other.engine_;
+      dataStore_ = other.dataStore_;
       eventTime_ = other.eventTime_ != null ? other.eventTime_.Clone() : null;
       userInfo_ = other.userInfo_ != null ? other.userInfo_.Clone() : null;
       directUserRequest_ = other.directUserRequest_;
@@ -153,6 +162,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       promotionIds_ = other.promotionIds_.Clone();
       attributes_ = other.attributes_.Clone();
       mediaInfo_ = other.mediaInfo_ != null ? other.mediaInfo_.Clone() : null;
+      panels_ = other.panels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -175,6 +185,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// * `view-item-list`: View of a panel or ordered list of Documents.
     /// * `view-home-page`: View of the home page.
     /// * `view-category-page`: View of a category page, e.g. Home > Men > Jeans
+    /// * `add-feedback`: Add a user feedback.
     ///
     /// Retail-related values:
     ///
@@ -210,7 +221,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// quality.
     ///
     /// The field must be a UTF-8 encoded string with a length limit of 128
-    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
     ///
     /// The field should not contain PII or user-data. We recommend to use Google
     /// Analytics [Client
@@ -223,6 +234,51 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       get { return userPseudoId_; }
       set {
         userPseudoId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "engine" field.</summary>
+    public const int EngineFieldNumber = 19;
+    private string engine_ = "";
+    /// <summary>
+    /// The [Engine][google.cloud.discoveryengine.v1beta.Engine] resource name, in
+    /// the form of
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/engines/{engine_id}`.
+    ///
+    /// Optional. Only required for
+    /// [Engine][google.cloud.discoveryengine.v1beta.Engine] produced user events.
+    /// For example, user events from blended search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Engine {
+      get { return engine_; }
+      set {
+        engine_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data_store" field.</summary>
+    public const int DataStoreFieldNumber = 20;
+    private string dataStore_ = "";
+    /// <summary>
+    /// The [DataStore][google.cloud.discoveryengine.v1beta.DataStore] resource
+    /// full name, of the form
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+    ///
+    /// Optional. Only required for user events whose data store can't by
+    /// determined by
+    /// [UserEvent.engine][google.cloud.discoveryengine.v1beta.UserEvent.engine] or
+    /// [UserEvent.documents][google.cloud.discoveryengine.v1beta.UserEvent.documents].
+    /// If data store is set in the parent of write/import/collect user event
+    /// requests, this field can be omitted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DataStore {
+      get { return dataStore_; }
+      set {
+        dataStore_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -330,24 +386,26 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// Token to attribute an API response to user action(s) to trigger the event.
     ///
     /// Highly recommended for user events that are the result of
-    /// [PredictionService.Predict][]. This field enables accurate attribution of
-    /// recommendation model performance.
+    /// [RecommendationService.Recommend][google.cloud.discoveryengine.v1beta.RecommendationService.Recommend].
+    /// This field enables accurate attribution of recommendation model
+    /// performance.
     ///
     /// The value must be one of:
     ///
-    /// * [PredictResponse.attribution_token][] for events that are the result of
-    /// [PredictionService.Predict][].
+    /// * [RecommendResponse.attribution_token][google.cloud.discoveryengine.v1beta.RecommendResponse.attribution_token] for events that are the result of
+    /// [RecommendationService.Recommend][google.cloud.discoveryengine.v1beta.RecommendationService.Recommend].
     /// * [SearchResponse.attribution_token][google.cloud.discoveryengine.v1beta.SearchResponse.attribution_token] for events that are the result of
-    /// [SearchService.Search][].
-    /// * [CompleteQueryResponse.attribution_token][] for events that are the
-    /// result of [SearchService.CompleteQuery][].
+    /// [SearchService.Search][google.cloud.discoveryengine.v1beta.SearchService.Search].
     ///
     /// This token enables us to accurately attribute page view or conversion
     /// completion back to the event and the particular predict response containing
     /// this clicked/purchased product. If user clicks on product K in the
-    /// recommendation results, pass [PredictResponse.attribution_token][] as a URL
-    /// parameter to product K's page. When recording events on product K's page,
-    /// log the [PredictResponse.attribution_token][] to this field.
+    /// recommendation results, pass
+    /// [RecommendResponse.attribution_token][google.cloud.discoveryengine.v1beta.RecommendResponse.attribution_token]
+    /// as a URL parameter to product K's page. When recording events on product
+    /// K's page, log the
+    /// [RecommendResponse.attribution_token][google.cloud.discoveryengine.v1beta.RecommendResponse.attribution_token]
+    /// to this field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -366,17 +424,19 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// predicate from one or more fields of the documents being filtered.
     ///
     /// One example is for `search` events, the associated
-    /// [SearchService.SearchRequest][] may contain a filter expression in
-    /// [SearchService.SearchRequest.filter][] conforming to
-    /// https://google.aip.dev/160#filtering.
+    /// [SearchRequest][google.cloud.discoveryengine.v1beta.SearchRequest] may
+    /// contain a filter expression in
+    /// [SearchRequest.filter][google.cloud.discoveryengine.v1beta.SearchRequest.filter]
+    /// conforming to https://google.aip.dev/160#filtering.
     ///
     /// Similarly, for `view-item-list` events that are generated from a
-    /// [PredictionService.PredictRequest][], this field may be populated directly
-    /// from [PredictionService.PredictRequest.filter][] conforming to
-    /// https://google.aip.dev/160#filtering.
+    /// [RecommendRequest][google.cloud.discoveryengine.v1beta.RecommendRequest],
+    /// this field may be populated directly from
+    /// [RecommendRequest.filter][google.cloud.discoveryengine.v1beta.RecommendRequest.filter]
+    /// conforming to https://google.aip.dev/160#filtering.
     ///
     /// The value must be a UTF-8 encoded string with a length limit of 1,000
-    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -393,7 +453,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         = pb::FieldCodec.ForMessage(82, global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo> documents_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo>();
     /// <summary>
-    /// List of Documents associated with this user event.
+    /// List of [Document][google.cloud.discoveryengine.v1beta.Document]s
+    /// associated with this user event.
     ///
     /// This field is optional except for the following event types:
     ///
@@ -436,7 +497,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int SearchInfoFieldNumber = 12;
     private global::Google.Cloud.DiscoveryEngine.V1Beta.SearchInfo searchInfo_;
     /// <summary>
-    /// Search API details related to the event.
+    /// [SearchService.Search][google.cloud.discoveryengine.v1beta.SearchService.Search]
+    /// details related to the event.
     ///
     /// This field should be set for `search` event.
     /// </summary>
@@ -453,7 +515,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int CompletionInfoFieldNumber = 13;
     private global::Google.Cloud.DiscoveryEngine.V1Beta.CompletionInfo completionInfo_;
     /// <summary>
-    /// CompleteQuery API details related to the event.
+    /// [CompletionService.CompleteQuery][google.cloud.discoveryengine.v1beta.CompletionService.CompleteQuery]
+    /// details related to the event.
     ///
     /// This field should be set for `search` event when autocomplete function is
     /// enabled and the user clicks a suggestion for search.
@@ -490,7 +553,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// A list of identifiers for the independent experiment groups this user event
     /// belongs to. This is used to distinguish between user events associated with
-    /// different experiment setups on the customer end.
+    /// different experiment setups.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -530,8 +593,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// those custom attributes when training models and serving predictions, which
     /// helps improve recommendation quality.
     ///
-    /// This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT
-    /// error is returned:
+    /// This field needs to pass all below criteria, otherwise an
+    /// `INVALID_ARGUMENT` error is returned:
     ///
     /// * The key must be a UTF-8 encoded string with a length limit of 5,000
     ///   characters.
@@ -541,7 +604,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// * For number attributes, at most 400 values are allowed.
     ///
     /// For product recommendations, an example of extra user information is
-    /// traffic_channel, which is how a user arrives at the site. Users can arrive
+    /// `traffic_channel`, which is how a user arrives at the site. Users can
+    /// arrive
     /// at the site by coming to the site directly, coming through Google
     /// search, or in other ways.
     /// </summary>
@@ -566,6 +630,21 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "panels" field.</summary>
+    public const int PanelsFieldNumber = 22;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DiscoveryEngine.V1Beta.PanelInfo> _repeated_panels_codec
+        = pb::FieldCodec.ForMessage(178, global::Google.Cloud.DiscoveryEngine.V1Beta.PanelInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1Beta.PanelInfo> panels_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1Beta.PanelInfo>();
+    /// <summary>
+    /// Optional. List of panels associated with this event.
+    /// Used for page-level impression data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1Beta.PanelInfo> Panels {
+      get { return panels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -583,6 +662,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (EventType != other.EventType) return false;
       if (UserPseudoId != other.UserPseudoId) return false;
+      if (Engine != other.Engine) return false;
+      if (DataStore != other.DataStore) return false;
       if (!object.Equals(EventTime, other.EventTime)) return false;
       if (!object.Equals(UserInfo, other.UserInfo)) return false;
       if (DirectUserRequest != other.DirectUserRequest) return false;
@@ -599,6 +680,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if(!promotionIds_.Equals(other.promotionIds_)) return false;
       if (!Attributes.Equals(other.Attributes)) return false;
       if (!object.Equals(MediaInfo, other.MediaInfo)) return false;
+      if(!panels_.Equals(other.panels_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -608,6 +690,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       int hash = 1;
       if (EventType.Length != 0) hash ^= EventType.GetHashCode();
       if (UserPseudoId.Length != 0) hash ^= UserPseudoId.GetHashCode();
+      if (Engine.Length != 0) hash ^= Engine.GetHashCode();
+      if (DataStore.Length != 0) hash ^= DataStore.GetHashCode();
       if (eventTime_ != null) hash ^= EventTime.GetHashCode();
       if (userInfo_ != null) hash ^= UserInfo.GetHashCode();
       if (DirectUserRequest != false) hash ^= DirectUserRequest.GetHashCode();
@@ -624,6 +708,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       hash ^= promotionIds_.GetHashCode();
       hash ^= Attributes.GetHashCode();
       if (mediaInfo_ != null) hash ^= MediaInfo.GetHashCode();
+      hash ^= panels_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -702,6 +787,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(146, 1);
         output.WriteMessage(MediaInfo);
       }
+      if (Engine.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Engine);
+      }
+      if (DataStore.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(DataStore);
+      }
+      panels_.WriteTo(output, _repeated_panels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -772,6 +866,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(146, 1);
         output.WriteMessage(MediaInfo);
       }
+      if (Engine.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Engine);
+      }
+      if (DataStore.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(DataStore);
+      }
+      panels_.WriteTo(ref output, _repeated_panels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -787,6 +890,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (UserPseudoId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserPseudoId);
+      }
+      if (Engine.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Engine);
+      }
+      if (DataStore.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DataStore);
       }
       if (eventTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EventTime);
@@ -828,6 +937,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (mediaInfo_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(MediaInfo);
       }
+      size += panels_.CalculateSize(_repeated_panels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -845,6 +955,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (other.UserPseudoId.Length != 0) {
         UserPseudoId = other.UserPseudoId;
+      }
+      if (other.Engine.Length != 0) {
+        Engine = other.Engine;
+      }
+      if (other.DataStore.Length != 0) {
+        DataStore = other.DataStore;
       }
       if (other.eventTime_ != null) {
         if (eventTime_ == null) {
@@ -903,13 +1019,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       tagIds_.Add(other.tagIds_);
       promotionIds_.Add(other.promotionIds_);
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       if (other.mediaInfo_ != null) {
         if (mediaInfo_ == null) {
           MediaInfo = new global::Google.Cloud.DiscoveryEngine.V1Beta.MediaInfo();
         }
         MediaInfo.MergeFrom(other.MediaInfo);
       }
+      panels_.Add(other.panels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1019,6 +1136,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               MediaInfo = new global::Google.Cloud.DiscoveryEngine.V1Beta.MediaInfo();
             }
             input.ReadMessage(MediaInfo);
+            break;
+          }
+          case 154: {
+            Engine = input.ReadString();
+            break;
+          }
+          case 162: {
+            DataStore = input.ReadString();
+            break;
+          }
+          case 178: {
+            panels_.AddEntriesFrom(input, _repeated_panels_codec);
             break;
           }
         }
@@ -1132,6 +1261,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             input.ReadMessage(MediaInfo);
             break;
           }
+          case 154: {
+            Engine = input.ReadString();
+            break;
+          }
+          case 162: {
+            DataStore = input.ReadString();
+            break;
+          }
+          case 178: {
+            panels_.AddEntriesFrom(ref input, _repeated_panels_codec);
+            break;
+          }
         }
       }
     }
@@ -1142,6 +1283,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// <summary>
   /// Detailed page information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PageInfo : pb::IMessage<PageInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1197,7 +1339,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     ///
     /// This should be kept the same for all user events triggered from the same
     /// pageview. For example, an item detail page view could trigger multiple
-    /// events as the user is browsing the page. The `pageViewId` property should
+    /// events as the user is browsing the page. The `pageview_id` property should
     /// be kept the same for all these events so that they can be grouped together
     /// properly.
     ///
@@ -1220,15 +1362,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// The most specific category associated with a category page.
     ///
     /// To represent full path of category, use '>' sign to separate different
-    /// hierarchies. If '>' is part of the category name, please replace it with
+    /// hierarchies. If '>' is part of the category name, replace it with
     /// other character(s).
     ///
     /// Category pages include special pages such as sales or promotions. For
     /// instance, a special sale page may have the category hierarchy:
-    /// "pageCategory" : "Sales > 2017 Black Friday Deals".
+    /// `"pageCategory" : "Sales > 2017 Black Friday Deals"`.
     ///
     /// Required for `view-category-page` events. Other event types should not set
-    /// this field. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// this field. Otherwise, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1485,6 +1627,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// <summary>
   /// Detailed search information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchInfo : pb::IMessage<SearchInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1544,13 +1687,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// for definition.
     ///
     /// The value must be a UTF-8 encoded string with a length limit of 5,000
-    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
     ///
     /// At least one of
     /// [search_query][google.cloud.discoveryengine.v1beta.SearchInfo.search_query]
-    /// or [page_categories][] is required for `search` events. Other event types
-    /// should not set this field. Otherwise, an INVALID_ARGUMENT error is
-    /// returned.
+    /// or
+    /// [PageInfo.page_category][google.cloud.discoveryengine.v1beta.PageInfo.page_category]
+    /// is required for `search` events. Other event types should not set this
+    /// field. Otherwise, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1572,10 +1716,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// for definition and syntax.
     ///
     /// The value must be a UTF-8 encoded string with a length limit of 1,000
-    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
     ///
     /// This can only be set for `search` events. Other event types should not set
-    /// this field. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// this field. Otherwise, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1588,6 +1732,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "offset" field.</summary>
     public const int OffsetFieldNumber = 3;
+    private readonly static int OffsetDefaultValue = 0;
+
     private int offset_;
     /// <summary>
     /// An integer that specifies the current offset for pagination (the 0-indexed
@@ -1597,15 +1743,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// [SearchRequest.offset][google.cloud.discoveryengine.v1beta.SearchRequest.offset]
     /// for definition.
     ///
-    /// If this field is negative, an INVALID_ARGUMENT is returned.
+    /// If this field is negative, an `INVALID_ARGUMENT` is returned.
     ///
     /// This can only be set for `search` events. Other event types should not set
-    /// this field. Otherwise, an INVALID_ARGUMENT error is returned.
+    /// this field. Otherwise, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Offset {
-      get { if ((_hasBits0 & 1) != 0) { return offset_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return offset_; } else { return OffsetDefaultValue; } }
       set {
         _hasBits0 |= 1;
         offset_ = value;
@@ -1809,6 +1955,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// Detailed completion information including completion attribution token and
   /// clicked completion info.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompletionInfo : pb::IMessage<CompletionInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1858,7 +2005,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int SelectedSuggestionFieldNumber = 1;
     private string selectedSuggestion_ = "";
     /// <summary>
-    /// End user selected [CompleteQueryResponse.CompletionResult.suggestion][].
+    /// End user selected
+    /// [CompleteQueryResponse.QuerySuggestion.suggestion][google.cloud.discoveryengine.v1beta.CompleteQueryResponse.QuerySuggestion.suggestion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1873,7 +2021,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int SelectedPositionFieldNumber = 2;
     private int selectedPosition_;
     /// <summary>
-    /// End user selected [CompleteQueryResponse.CompletionResult.suggestion][]
+    /// End user selected
+    /// [CompleteQueryResponse.QuerySuggestion.suggestion][google.cloud.discoveryengine.v1beta.CompleteQueryResponse.QuerySuggestion.suggestion]
     /// position, starting from 0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2045,6 +2194,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// <summary>
   /// A transaction represents the entire purchase transaction.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransactionInfo : pb::IMessage<TransactionInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2098,6 +2248,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 1;
+    private readonly static float ValueDefaultValue = 0F;
+
     private float value_;
     /// <summary>
     /// Required. Total non-zero value associated with the transaction. This value
@@ -2107,7 +2259,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Value {
-      get { if ((_hasBits0 & 1) != 0) { return value_; } else { return 0F; } }
+      get { if ((_hasBits0 & 1) != 0) { return value_; } else { return ValueDefaultValue; } }
       set {
         _hasBits0 |= 1;
         value_ = value;
@@ -2158,6 +2310,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "tax" field.</summary>
     public const int TaxFieldNumber = 4;
+    private readonly static float TaxDefaultValue = 0F;
+
     private float tax_;
     /// <summary>
     /// All the taxes associated with the transaction.
@@ -2165,7 +2319,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Tax {
-      get { if ((_hasBits0 & 2) != 0) { return tax_; } else { return 0F; } }
+      get { if ((_hasBits0 & 2) != 0) { return tax_; } else { return TaxDefaultValue; } }
       set {
         _hasBits0 |= 2;
         tax_ = value;
@@ -2186,6 +2340,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "cost" field.</summary>
     public const int CostFieldNumber = 5;
+    private readonly static float CostDefaultValue = 0F;
+
     private float cost_;
     /// <summary>
     /// All the costs associated with the products. These can be manufacturing
@@ -2200,7 +2356,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Cost {
-      get { if ((_hasBits0 & 4) != 0) { return cost_; } else { return 0F; } }
+      get { if ((_hasBits0 & 4) != 0) { return cost_; } else { return CostDefaultValue; } }
       set {
         _hasBits0 |= 4;
         cost_ = value;
@@ -2221,6 +2377,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "discount_value" field.</summary>
     public const int DiscountValueFieldNumber = 6;
+    private readonly static float DiscountValueDefaultValue = 0F;
+
     private float discountValue_;
     /// <summary>
     /// The total discount(s) value applied to this transaction.
@@ -2248,7 +2406,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float DiscountValue {
-      get { if ((_hasBits0 & 8) != 0) { return discountValue_; } else { return 0F; } }
+      get { if ((_hasBits0 & 8) != 0) { return discountValue_; } else { return DiscountValueDefaultValue; } }
       set {
         _hasBits0 |= 8;
         discountValue_ = value;
@@ -2523,6 +2681,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// <summary>
   /// Detailed document information associated with a user event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentInfo : pb::IMessage<DocumentInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2561,12 +2720,16 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       _hasBits0 = other._hasBits0;
       quantity_ = other.quantity_;
       promotionIds_ = other.promotionIds_.Clone();
+      joined_ = other.joined_;
       switch (other.DocumentDescriptorCase) {
         case DocumentDescriptorOneofCase.Id:
           Id = other.Id;
           break;
         case DocumentDescriptorOneofCase.Name:
           Name = other.Name;
+          break;
+        case DocumentDescriptorOneofCase.Uri:
+          Uri = other.Uri;
           break;
       }
 
@@ -2582,41 +2745,102 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     /// <summary>
-    /// Required. The Document resource ID.
+    /// The [Document][google.cloud.discoveryengine.v1beta.Document] resource ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
-      get { return documentDescriptorCase_ == DocumentDescriptorOneofCase.Id ? (string) documentDescriptor_ : ""; }
+      get { return HasId ? (string) documentDescriptor_ : ""; }
       set {
         documentDescriptor_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         documentDescriptorCase_ = DocumentDescriptorOneofCase.Id;
+      }
+    }
+    /// <summary>Gets whether the "id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasId {
+      get { return documentDescriptorCase_ == DocumentDescriptorOneofCase.Id; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearId() {
+      if (HasId) {
+        ClearDocumentDescriptor();
       }
     }
 
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 2;
     /// <summary>
-    /// Required. The Document resource full name, of the form:
-    /// projects/{project\_id}/locations/{location}/collections/{collection\_id}/dataStores/{data\_store\_id}/branches/{branch\_id}/documents/{document\_id}
+    /// The [Document][google.cloud.discoveryengine.v1beta.Document] resource
+    /// full name, of the form:
+    /// `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
-      get { return documentDescriptorCase_ == DocumentDescriptorOneofCase.Name ? (string) documentDescriptor_ : ""; }
+      get { return HasName ? (string) documentDescriptor_ : ""; }
       set {
         documentDescriptor_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         documentDescriptorCase_ = DocumentDescriptorOneofCase.Name;
       }
     }
+    /// <summary>Gets whether the "name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasName {
+      get { return documentDescriptorCase_ == DocumentDescriptorOneofCase.Name; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearName() {
+      if (HasName) {
+        ClearDocumentDescriptor();
+      }
+    }
+
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 6;
+    /// <summary>
+    /// The [Document][google.cloud.discoveryengine.v1beta.Document] URI - only
+    /// allowed for website data stores.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uri {
+      get { return HasUri ? (string) documentDescriptor_ : ""; }
+      set {
+        documentDescriptor_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        documentDescriptorCase_ = DocumentDescriptorOneofCase.Uri;
+      }
+    }
+    /// <summary>Gets whether the "uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUri {
+      get { return documentDescriptorCase_ == DocumentDescriptorOneofCase.Uri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUri() {
+      if (HasUri) {
+        ClearDocumentDescriptor();
+      }
+    }
 
     /// <summary>Field number for the "quantity" field.</summary>
     public const int QuantityFieldNumber = 3;
+    private readonly static int QuantityDefaultValue = 0;
+
     private int quantity_;
     /// <summary>
     /// Quantity of the Document associated with the user event. Defaults to 1.
     ///
-    /// For example, this field will be 2 if two quantities of the same Document
+    /// For example, this field is 2 if two quantities of the same Document
     /// are involved in a `add-to-cart` event.
     ///
     /// Required for events of the following event types:
@@ -2627,7 +2851,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Quantity {
-      get { if ((_hasBits0 & 1) != 0) { return quantity_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return quantity_; } else { return QuantityDefaultValue; } }
       set {
         _hasBits0 |= 1;
         quantity_ = value;
@@ -2661,12 +2885,29 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       get { return promotionIds_; }
     }
 
+    /// <summary>Field number for the "joined" field.</summary>
+    public const int JoinedFieldNumber = 5;
+    private bool joined_;
+    /// <summary>
+    /// Output only. Whether the referenced Document can be found in the data
+    /// store.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Joined {
+      get { return joined_; }
+      set {
+        joined_ = value;
+      }
+    }
+
     private object documentDescriptor_;
     /// <summary>Enum of possible cases for the "document_descriptor" oneof.</summary>
     public enum DocumentDescriptorOneofCase {
       None = 0,
       Id = 1,
       Name = 2,
+      Uri = 6,
     }
     private DocumentDescriptorOneofCase documentDescriptorCase_ = DocumentDescriptorOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2699,8 +2940,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
       if (Id != other.Id) return false;
       if (Name != other.Name) return false;
+      if (Uri != other.Uri) return false;
       if (Quantity != other.Quantity) return false;
       if(!promotionIds_.Equals(other.promotionIds_)) return false;
+      if (Joined != other.Joined) return false;
       if (DocumentDescriptorCase != other.DocumentDescriptorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2709,10 +2952,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Id) hash ^= Id.GetHashCode();
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Name) hash ^= Name.GetHashCode();
+      if (HasId) hash ^= Id.GetHashCode();
+      if (HasName) hash ^= Name.GetHashCode();
+      if (HasUri) hash ^= Uri.GetHashCode();
       if (HasQuantity) hash ^= Quantity.GetHashCode();
       hash ^= promotionIds_.GetHashCode();
+      if (Joined != false) hash ^= Joined.GetHashCode();
       hash ^= (int) documentDescriptorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2732,11 +2977,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Id) {
+      if (HasId) {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Name) {
+      if (HasName) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
@@ -2745,6 +2990,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteInt32(Quantity);
       }
       promotionIds_.WriteTo(output, _repeated_promotionIds_codec);
+      if (Joined != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Joined);
+      }
+      if (HasUri) {
+        output.WriteRawTag(50);
+        output.WriteString(Uri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2755,11 +3008,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Id) {
+      if (HasId) {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Name) {
+      if (HasName) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
@@ -2768,6 +3021,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteInt32(Quantity);
       }
       promotionIds_.WriteTo(ref output, _repeated_promotionIds_codec);
+      if (Joined != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Joined);
+      }
+      if (HasUri) {
+        output.WriteRawTag(50);
+        output.WriteString(Uri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2778,16 +3039,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Id) {
+      if (HasId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (documentDescriptorCase_ == DocumentDescriptorOneofCase.Name) {
+      if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (HasUri) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
       }
       if (HasQuantity) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Quantity);
       }
       size += promotionIds_.CalculateSize(_repeated_promotionIds_codec);
+      if (Joined != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2804,12 +3071,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         Quantity = other.Quantity;
       }
       promotionIds_.Add(other.promotionIds_);
+      if (other.Joined != false) {
+        Joined = other.Joined;
+      }
       switch (other.DocumentDescriptorCase) {
         case DocumentDescriptorOneofCase.Id:
           Id = other.Id;
           break;
         case DocumentDescriptorOneofCase.Name:
           Name = other.Name;
+          break;
+        case DocumentDescriptorOneofCase.Uri:
+          Uri = other.Uri;
           break;
       }
 
@@ -2844,6 +3117,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             promotionIds_.AddEntriesFrom(input, _repeated_promotionIds_codec);
             break;
           }
+          case 40: {
+            Joined = input.ReadBool();
+            break;
+          }
+          case 50: {
+            Uri = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2875,6 +3156,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             promotionIds_.AddEntriesFrom(ref input, _repeated_promotionIds_codec);
             break;
           }
+          case 40: {
+            Joined = input.ReadBool();
+            break;
+          }
+          case 50: {
+            Uri = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2885,6 +3174,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// <summary>
   /// Detailed panel information associated with a user event.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PanelInfo : pb::IMessage<PanelInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2925,6 +3215,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       displayName_ = other.displayName_;
       panelPosition_ = other.panelPosition_;
       totalPanels_ = other.totalPanels_;
+      documents_ = other.documents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2966,6 +3257,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "panel_position" field.</summary>
     public const int PanelPositionFieldNumber = 4;
+    private readonly static int PanelPositionDefaultValue = 0;
+
     private int panelPosition_;
     /// <summary>
     /// The ordered position of the panel, if shown to the user with other panels.
@@ -2976,7 +3269,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PanelPosition {
-      get { if ((_hasBits0 & 1) != 0) { return panelPosition_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return panelPosition_; } else { return PanelPositionDefaultValue; } }
       set {
         _hasBits0 |= 1;
         panelPosition_ = value;
@@ -2997,6 +3290,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "total_panels" field.</summary>
     public const int TotalPanelsFieldNumber = 5;
+    private readonly static int TotalPanelsDefaultValue = 0;
+
     private int totalPanels_;
     /// <summary>
     /// The total number of panels, including this one, shown to the user.
@@ -3007,7 +3302,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TotalPanels {
-      get { if ((_hasBits0 & 2) != 0) { return totalPanels_; } else { return 0; } }
+      get { if ((_hasBits0 & 2) != 0) { return totalPanels_; } else { return TotalPanelsDefaultValue; } }
       set {
         _hasBits0 |= 2;
         totalPanels_ = value;
@@ -3024,6 +3319,20 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTotalPanels() {
       _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "documents" field.</summary>
+    public const int DocumentsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo> _repeated_documents_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo> documents_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo>();
+    /// <summary>
+    /// Optional. The document IDs associated with this panel.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentInfo> Documents {
+      get { return documents_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3045,6 +3354,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (DisplayName != other.DisplayName) return false;
       if (PanelPosition != other.PanelPosition) return false;
       if (TotalPanels != other.TotalPanels) return false;
+      if(!documents_.Equals(other.documents_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3056,6 +3366,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (HasPanelPosition) hash ^= PanelPosition.GetHashCode();
       if (HasTotalPanels) hash ^= TotalPanels.GetHashCode();
+      hash ^= documents_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3090,6 +3401,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(40);
         output.WriteInt32(TotalPanels);
       }
+      documents_.WriteTo(output, _repeated_documents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3116,6 +3428,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(40);
         output.WriteInt32(TotalPanels);
       }
+      documents_.WriteTo(ref output, _repeated_documents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3138,6 +3451,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (HasTotalPanels) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalPanels);
       }
+      size += documents_.CalculateSize(_repeated_documents_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3162,6 +3476,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if (other.HasTotalPanels) {
         TotalPanels = other.TotalPanels;
       }
+      documents_.Add(other.documents_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3191,6 +3506,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           }
           case 40: {
             TotalPanels = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            documents_.AddEntriesFrom(input, _repeated_documents_codec);
             break;
           }
         }
@@ -3224,6 +3543,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             TotalPanels = input.ReadInt32();
             break;
           }
+          case 50: {
+            documents_.AddEntriesFrom(ref input, _repeated_documents_codec);
+            break;
+          }
         }
       }
     }
@@ -3234,6 +3557,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
   /// <summary>
   /// Media-specific user event information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MediaInfo : pb::IMessage<MediaInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3287,8 +3611,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// The media progress time in seconds, if applicable.
     /// For example, if the end user has finished 90 seconds of a playback video,
-    /// then [MediaInfo.media_progress_duration.seconds][Duration.seconds] should
-    /// be set to 90.
+    /// then
+    /// [MediaInfo.media_progress_duration.seconds][google.protobuf.Duration.seconds]
+    /// should be set to 90.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3301,12 +3626,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
 
     /// <summary>Field number for the "media_progress_percentage" field.</summary>
     public const int MediaProgressPercentageFieldNumber = 2;
+    private readonly static float MediaProgressPercentageDefaultValue = 0F;
+
     private float mediaProgressPercentage_;
     /// <summary>
-    /// Media progress should be computed using only the media_progress_duration
+    /// Media progress should be computed using only the
+    /// [media_progress_duration][google.cloud.discoveryengine.v1beta.MediaInfo.media_progress_duration]
     /// relative to the media total length.
     ///
-    /// This value must be between [0, 1.0] inclusive.
+    /// This value must be between `[0, 1.0]` inclusive.
     ///
     /// If this is not a playback or the progress cannot be computed (e.g. ongoing
     /// livestream), this field should be unset.
@@ -3314,7 +3642,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float MediaProgressPercentage {
-      get { if ((_hasBits0 & 1) != 0) { return mediaProgressPercentage_; } else { return 0F; } }
+      get { if ((_hasBits0 & 1) != 0) { return mediaProgressPercentage_; } else { return MediaProgressPercentageDefaultValue; } }
       set {
         _hasBits0 |= 1;
         mediaProgressPercentage_ = value;

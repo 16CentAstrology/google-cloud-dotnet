@@ -72,18 +72,20 @@ namespace Google.Cloud.Firestore.IntegrationTests
             Assert.Equal(orderedByReference, snapshot.Documents.Select(x => x.Id));
         }
 
-        [Fact(Skip = "Requires CreateIndex support")]
+        [SkippableFact]
         public async Task OrderBySecondaryAscending()
         {
+            Skip.If(_fixture.RunningOnEmulator);
             var query = _fixture.HighScoreCollection.OrderBy("Score").OrderBy("Level");
             var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.OrderBy(x => x.Score).ThenBy(x => x.Level), items);
         }
 
-        [Fact(Skip = "Requires CreateIndex support")]
+        [SkippableFact]
         public async Task OrderBySecondaryDescending()
         {
+            Skip.If(_fixture.RunningOnEmulator);
             var query = _fixture.HighScoreCollection.OrderBy("Score").OrderByDescending("Level");
             var snapshot = await query.GetSnapshotAsync();
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
@@ -133,10 +135,11 @@ namespace Google.Cloud.Firestore.IntegrationTests
         }
 
         [Fact]
-        public void LimitToLast_StreamingThrows()
+        public async Task LimitToLast_StreamingThrows()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").LimitToLast(3);
-            Assert.Throws<InvalidOperationException>(() => query.StreamAsync());
+            // We need to use the result, as the validation is deferred.
+            await Assert.ThrowsAsync<InvalidOperationException>(() => query.StreamAsync().CountAsync().AsTask());
         }
 
         [Fact]
@@ -379,7 +382,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             batch.Set(collection.Document("d"), new { X = 4 });
             await batch.CommitAsync();
 
-            var query = collection.WhereIn(FieldPath.DocumentId, new[] { "a","c" });
+            var query = collection.WhereIn(FieldPath.DocumentId, new[] { "a", "c" });
             var snapshot = await query.GetSnapshotAsync();
             Assert.Equal(2, snapshot.Count);
         }
@@ -449,24 +452,6 @@ namespace Google.Cloud.Firestore.IntegrationTests
             Assert.Equal(new[] { "a", "b", "d", "e" }, ids);
         }
 
-        [Fact]
-        public async Task Count_WithoutLimit()
-        {
-            CollectionReference collection = _fixture.HighScoreCollection;
-            var snapshot = await collection.Count().GetSnapshotAsync();
-            Assert.Equal(HighScore.Data.Length, snapshot.Count);
-        }
-
-        [Fact]
-        public async Task Count_WithLimit()
-        {
-            CollectionReference collection = _fixture.HighScoreCollection;
-            var snapshotWithoutLimit = await collection.Count().GetSnapshotAsync();
-            var snapshotWithLimit = await collection.Limit(2).Count().GetSnapshotAsync();
-            Assert.Equal(HighScore.Data.Length, snapshotWithoutLimit.Count);
-            Assert.Equal(2, snapshotWithLimit.Count);
-        }
-
         public static TheoryData<string, object, string[]> ArrayContainsTheoryData = new TheoryData<string, object, string[]>
         {
             { "StringArray", "x", new[] { "string-x,y", "mixed" } },
@@ -497,14 +482,32 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
         [Fact]
         public async Task OrQueriesAsync()
-        { 
+        {
             CollectionReference collection = _fixture.HighScoreCollection;
             var query = collection.Where(Filter.Or(
                                                     Filter.EqualTo("Score", 90),
                                                     Filter.EqualTo("Score", 110)
-                                                   )); 
+                                                   ));
             var snapshot = await query.GetSnapshotAsync();
             Assert.Equal(2, snapshot.Count);
+        }
+
+        [SkippableFact]
+        public async Task MultipleInequalitiesAsync()
+        {
+            Skip.If(_fixture.RunningOnEmulator);
+
+            CollectionReference collection = _fixture.HighScoreCollection;
+            await _fixture.CreateIndexAsync(collection, _fixture.AscendingField("Level"), _fixture.AscendingField("Score"));
+            var levelFilter = Filter.GreaterThan("Level", 17);
+            var scoreFilter = Filter.GreaterThan("Score", 105);
+            var query = collection.Where(Filter.And(levelFilter, scoreFilter));
+            var snapshot = await query.GetSnapshotAsync();
+            // Dalip and Erin meet the criteria.
+            // Alice's score is too low; Carol's level is too low. (Bob fails on both counts.)
+            Assert.Equal(2, snapshot.Count);
+            var docs = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
+            Assert.Equal(new[] { "Dalip", "Erin" }, docs.Select(doc => doc.Name).OrderBy(x => x));
         }
     }
 }

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.CloudBuild.V2
 {
@@ -69,6 +69,7 @@ namespace Google.Cloud.CloudBuild.V2
             FetchReadWriteTokenSettings = existing.FetchReadWriteTokenSettings;
             FetchReadTokenSettings = existing.FetchReadTokenSettings;
             FetchLinkableRepositoriesSettings = existing.FetchLinkableRepositoriesSettings;
+            FetchGitRefsSettings = existing.FetchGitRefsSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -386,6 +387,18 @@ namespace Google.Cloud.CloudBuild.V2
         public gaxgrpc::CallSettings FetchLinkableRepositoriesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RepositoryManagerClient.FetchGitRefs</c> and <c>RepositoryManagerClient.FetchGitRefsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchGitRefsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -438,14 +451,14 @@ namespace Google.Cloud.CloudBuild.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return RepositoryManagerClient.Create(callInvoker, Settings, Logger);
+            return RepositoryManagerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<RepositoryManagerClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return RepositoryManagerClient.Create(callInvoker, Settings, Logger);
+            return RepositoryManagerClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -454,7 +467,7 @@ namespace Google.Cloud.CloudBuild.V2
 
     /// <summary>RepositoryManager client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Manages connections to source code repostiories.
+    /// Manages connections to source code repositories.
     /// </remarks>
     public abstract partial class RepositoryManagerClient
     {
@@ -887,13 +900,22 @@ namespace Google.Cloud.CloudBuild.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnections(new ListConnectionsRequest
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connections in a given project and location.
@@ -912,13 +934,22 @@ namespace Google.Cloud.CloudBuild.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionsAsync(new ListConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connections in a given project and location.
@@ -937,13 +968,22 @@ namespace Google.Cloud.CloudBuild.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnections(new ListConnectionsRequest
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnections(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Connections in a given project and location.
@@ -962,13 +1002,22 @@ namespace Google.Cloud.CloudBuild.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListConnectionsAsync(new ListConnectionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListConnectionsRequest request = new ListConnectionsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListConnectionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates a single connection.
@@ -1745,13 +1794,22 @@ namespace Google.Cloud.CloudBuild.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositories(new ListRepositoriesRequest
+        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Repositories in a given connection.
@@ -1770,13 +1828,22 @@ namespace Google.Cloud.CloudBuild.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositoriesAsync(new ListRepositoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Repositories in a given connection.
@@ -1795,13 +1862,22 @@ namespace Google.Cloud.CloudBuild.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositories(new ListRepositoriesRequest
+        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 ParentAsConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositories(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Repositories in a given connection.
@@ -1820,13 +1896,22 @@ namespace Google.Cloud.CloudBuild.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Repository"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListRepositoriesAsync(new ListRepositoriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(ConnectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRepositoriesRequest request = new ListRepositoriesRequest
             {
                 ParentAsConnectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRepositoriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a single repository.
@@ -2206,11 +2291,122 @@ namespace Google.Cloud.CloudBuild.V2
         /// <returns>A pageable asynchronous sequence of <see cref="Repository"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<FetchLinkableRepositoriesResponse, Repository> FetchLinkableRepositoriesAsync(FetchLinkableRepositoriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch the list of branches or tags for a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchGitRefsResponse FetchGitRefs(FetchGitRefsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch the list of branches or tags for a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRefsResponse> FetchGitRefsAsync(FetchGitRefsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch the list of branches or tags for a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRefsResponse> FetchGitRefsAsync(FetchGitRefsRequest request, st::CancellationToken cancellationToken) =>
+            FetchGitRefsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch the list of branches or tags for a given repository.
+        /// </summary>
+        /// <param name="repository">
+        /// Required. The resource name of the repository in the format
+        /// `projects/*/locations/*/connections/*/repositories/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchGitRefsResponse FetchGitRefs(string repository, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRefs(new FetchGitRefsRequest
+            {
+                Repository = gax::GaxPreconditions.CheckNotNullOrEmpty(repository, nameof(repository)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch the list of branches or tags for a given repository.
+        /// </summary>
+        /// <param name="repository">
+        /// Required. The resource name of the repository in the format
+        /// `projects/*/locations/*/connections/*/repositories/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRefsResponse> FetchGitRefsAsync(string repository, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRefsAsync(new FetchGitRefsRequest
+            {
+                Repository = gax::GaxPreconditions.CheckNotNullOrEmpty(repository, nameof(repository)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch the list of branches or tags for a given repository.
+        /// </summary>
+        /// <param name="repository">
+        /// Required. The resource name of the repository in the format
+        /// `projects/*/locations/*/connections/*/repositories/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRefsResponse> FetchGitRefsAsync(string repository, st::CancellationToken cancellationToken) =>
+            FetchGitRefsAsync(repository, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch the list of branches or tags for a given repository.
+        /// </summary>
+        /// <param name="repository">
+        /// Required. The resource name of the repository in the format
+        /// `projects/*/locations/*/connections/*/repositories/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchGitRefsResponse FetchGitRefs(RepositoryName repository, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRefs(new FetchGitRefsRequest
+            {
+                RepositoryAsRepositoryName = gax::GaxPreconditions.CheckNotNull(repository, nameof(repository)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch the list of branches or tags for a given repository.
+        /// </summary>
+        /// <param name="repository">
+        /// Required. The resource name of the repository in the format
+        /// `projects/*/locations/*/connections/*/repositories/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRefsResponse> FetchGitRefsAsync(RepositoryName repository, gaxgrpc::CallSettings callSettings = null) =>
+            FetchGitRefsAsync(new FetchGitRefsRequest
+            {
+                RepositoryAsRepositoryName = gax::GaxPreconditions.CheckNotNull(repository, nameof(repository)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch the list of branches or tags for a given repository.
+        /// </summary>
+        /// <param name="repository">
+        /// Required. The resource name of the repository in the format
+        /// `projects/*/locations/*/connections/*/repositories/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchGitRefsResponse> FetchGitRefsAsync(RepositoryName repository, st::CancellationToken cancellationToken) =>
+            FetchGitRefsAsync(repository, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>RepositoryManager client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Manages connections to source code repostiories.
+    /// Manages connections to source code repositories.
     /// </remarks>
     public sealed partial class RepositoryManagerClientImpl : RepositoryManagerClient
     {
@@ -2240,6 +2436,8 @@ namespace Google.Cloud.CloudBuild.V2
 
         private readonly gaxgrpc::ApiCall<FetchLinkableRepositoriesRequest, FetchLinkableRepositoriesResponse> _callFetchLinkableRepositories;
 
+        private readonly gaxgrpc::ApiCall<FetchGitRefsRequest, FetchGitRefsResponse> _callFetchGitRefs;
+
         /// <summary>
         /// Constructs a client wrapper for the RepositoryManager service, with the specified gRPC client and settings.
         /// </summary>
@@ -2250,7 +2448,11 @@ namespace Google.Cloud.CloudBuild.V2
         {
             GrpcClient = grpcClient;
             RepositoryManagerSettings effectiveSettings = settings ?? RepositoryManagerSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateConnectionOperationsSettings, logger);
             UpdateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateConnectionOperationsSettings, logger);
             DeleteConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteConnectionOperationsSettings, logger);
@@ -2298,6 +2500,9 @@ namespace Google.Cloud.CloudBuild.V2
             _callFetchLinkableRepositories = clientHelper.BuildApiCall<FetchLinkableRepositoriesRequest, FetchLinkableRepositoriesResponse>("FetchLinkableRepositories", grpcClient.FetchLinkableRepositoriesAsync, grpcClient.FetchLinkableRepositories, effectiveSettings.FetchLinkableRepositoriesSettings).WithGoogleRequestParam("connection", request => request.Connection);
             Modify_ApiCall(ref _callFetchLinkableRepositories);
             Modify_FetchLinkableRepositoriesApiCall(ref _callFetchLinkableRepositories);
+            _callFetchGitRefs = clientHelper.BuildApiCall<FetchGitRefsRequest, FetchGitRefsResponse>("FetchGitRefs", grpcClient.FetchGitRefsAsync, grpcClient.FetchGitRefs, effectiveSettings.FetchGitRefsSettings).WithGoogleRequestParam("repository", request => request.Repository);
+            Modify_ApiCall(ref _callFetchGitRefs);
+            Modify_FetchGitRefsApiCall(ref _callFetchGitRefs);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2328,6 +2533,8 @@ namespace Google.Cloud.CloudBuild.V2
         partial void Modify_FetchReadTokenApiCall(ref gaxgrpc::ApiCall<FetchReadTokenRequest, FetchReadTokenResponse> call);
 
         partial void Modify_FetchLinkableRepositoriesApiCall(ref gaxgrpc::ApiCall<FetchLinkableRepositoriesRequest, FetchLinkableRepositoriesResponse> call);
+
+        partial void Modify_FetchGitRefsApiCall(ref gaxgrpc::ApiCall<FetchGitRefsRequest, FetchGitRefsResponse> call);
 
         partial void OnConstruction(RepositoryManager.RepositoryManagerClient grpcClient, RepositoryManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2365,6 +2572,8 @@ namespace Google.Cloud.CloudBuild.V2
         partial void Modify_FetchReadTokenRequest(ref FetchReadTokenRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FetchLinkableRepositoriesRequest(ref FetchLinkableRepositoriesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchGitRefsRequest(ref FetchGitRefsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateConnection</c>.</summary>
         public override lro::OperationsClient CreateConnectionOperationsClient { get; }
@@ -2696,6 +2905,30 @@ namespace Google.Cloud.CloudBuild.V2
         {
             Modify_FetchLinkableRepositoriesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<FetchLinkableRepositoriesRequest, FetchLinkableRepositoriesResponse, Repository>(_callFetchLinkableRepositories, request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch the list of branches or tags for a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FetchGitRefsResponse FetchGitRefs(FetchGitRefsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchGitRefsRequest(ref request, ref callSettings);
+            return _callFetchGitRefs.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch the list of branches or tags for a given repository.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FetchGitRefsResponse> FetchGitRefsAsync(FetchGitRefsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchGitRefsRequest(ref request, ref callSettings);
+            return _callFetchGitRefs.Async(request, callSettings);
         }
     }
 

@@ -1,5 +1,36 @@
 # Version history
 
+## Version 2.9.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.8.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.7.0, released 2024-02-29
+
+No API surface changes; just dependency updates.
+
+## Version 2.6.0, released 2023-07-13
+
+### New features
+
+- Added support for segment template manifest generation with DASH ([commit b6f1f52](https://github.com/googleapis/google-cloud-dotnet/commit/b6f1f52743c6818e9615bbc84a007759cbf7b064))
+- Added support for batch mode priority ([commit b6f1f52](https://github.com/googleapis/google-cloud-dotnet/commit/b6f1f52743c6818e9615bbc84a007759cbf7b064))
+- Added support for disabling job processing optimizations ([commit b6f1f52](https://github.com/googleapis/google-cloud-dotnet/commit/b6f1f52743c6818e9615bbc84a007759cbf7b064))
+- Added support for content encryption (DRM) ([commit b6f1f52](https://github.com/googleapis/google-cloud-dotnet/commit/b6f1f52743c6818e9615bbc84a007759cbf7b064))
+
+## Version 2.5.0, released 2023-04-19
+
+### New features
+
+- Add support for batch processing mode ([commit 9eb2a76](https://github.com/googleapis/google-cloud-dotnet/commit/9eb2a76b6062711aaa2f1a22ca307bcdbac9176f))
+
 ## Version 2.4.0, released 2023-03-06
 
 ### New features

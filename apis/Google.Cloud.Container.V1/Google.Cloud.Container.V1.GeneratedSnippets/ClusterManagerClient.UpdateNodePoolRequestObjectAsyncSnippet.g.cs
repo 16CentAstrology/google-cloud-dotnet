@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Container.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START container_v1_generated_ClusterManager_UpdateNodePool_async]
     using Google.Cloud.Container.V1;
@@ -57,6 +57,17 @@ namespace Google.Cloud.Container.V1.Snippets
                 LoggingConfig = new NodePoolLoggingConfig(),
                 ResourceLabels = new ResourceLabels(),
                 WindowsNodeConfig = new WindowsNodeConfig(),
+                Accelerators =
+                {
+                    new AcceleratorConfig(),
+                },
+                MachineType = "",
+                DiskType = "",
+                DiskSizeGb = 0L,
+                ResourceManagerTags = new ResourceManagerTags(),
+                ContainerdConfig = new ContainerdConfig(),
+                QueuedProvisioning = new NodePool.Types.QueuedProvisioning(),
+                StoragePools = { "", },
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);

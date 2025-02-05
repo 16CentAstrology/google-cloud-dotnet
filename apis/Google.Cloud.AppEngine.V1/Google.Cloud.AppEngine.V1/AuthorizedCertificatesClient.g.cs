@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.AppEngine.V1
 {
@@ -166,14 +166,14 @@ namespace Google.Cloud.AppEngine.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AuthorizedCertificatesClient.Create(callInvoker, Settings, Logger);
+            return AuthorizedCertificatesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AuthorizedCertificatesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AuthorizedCertificatesClient.Create(callInvoker, Settings, Logger);
+            return AuthorizedCertificatesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -441,7 +441,11 @@ namespace Google.Cloud.AppEngine.V1
         {
             GrpcClient = grpcClient;
             AuthorizedCertificatesSettings effectiveSettings = settings ?? AuthorizedCertificatesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListAuthorizedCertificates = clientHelper.BuildApiCall<ListAuthorizedCertificatesRequest, ListAuthorizedCertificatesResponse>("ListAuthorizedCertificates", grpcClient.ListAuthorizedCertificatesAsync, grpcClient.ListAuthorizedCertificates, effectiveSettings.ListAuthorizedCertificatesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAuthorizedCertificates);
             Modify_ListAuthorizedCertificatesApiCall(ref _callListAuthorizedCertificates);

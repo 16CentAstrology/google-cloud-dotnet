@@ -1,4 +1,4 @@
-﻿// Copyright 2019, Google LLC
+// Copyright 2019, Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ using wkt = Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.Firestore
 {
     /// <summary>
-    /// Attribute indicating that a property should be populated with the read timestamp from a Firestore document snapshot.
+    /// Attribute indicating that a property should be populated with the update timestamp from a Firestore document snapshot.
     /// </summary>
     /// <remarks>
     /// This attribute must only be applied to properties of <see cref="DateTime"/>, <see cref="DateTimeOffset"/>, <see cref="Timestamp" />,

@@ -1,5 +1,80 @@
 # Version history
 
+## Version 5.16.0, released 2024-10-21
+
+### New features
+
+- Add `ProvisioningModelMix` to support mixing of spot and standard instances for secondary workers ([commit dde1a4f](https://github.com/googleapis/google-cloud-dotnet/commit/dde1a4f656d818f682687266ab7519eb484a0d45))
+- Add support for configuration of bootdisk IOPS and throughput when bootdisk is a hyperdisk ([commit dde1a4f](https://github.com/googleapis/google-cloud-dotnet/commit/dde1a4f656d818f682687266ab7519eb484a0d45))
+
+## Version 5.15.0, released 2024-09-26
+
+### New features
+
+- Add support for Spark Connect sessions in Dataproc Serverless for Spark ([commit 2a56544](https://github.com/googleapis/google-cloud-dotnet/commit/2a5654405a1350a08e95dde23c034ca49a3f19b5))
+
+### Documentation improvements
+
+- Update docs for `filter` field in `ListSessionsRequest` ([commit 2a56544](https://github.com/googleapis/google-cloud-dotnet/commit/2a5654405a1350a08e95dde23c034ca49a3f19b5))
+
+## Version 5.14.0, released 2024-09-16
+
+### New features
+
+- Add resource reference for KMS keys and fix comments ([commit 2a39cfd](https://github.com/googleapis/google-cloud-dotnet/commit/2a39cfd6e0994f9aeeec70fae4af878d22a29d09))
+- Add support for new Dataproc features ([commit 2a8cd75](https://github.com/googleapis/google-cloud-dotnet/commit/2a8cd7532c01b59e5f62dfe7655a991dab958181))
+- Add support for new Dataproc features ([commit 25f2519](https://github.com/googleapis/google-cloud-dotnet/commit/25f2519badff8e1691db0efc8af634102493b2e8))
+
+## Version 5.13.0, released 2024-09-09
+
+### New features
+
+- Add optional parameters (tarball-access) in DiagnoseClusterRequest ([commit 8e5af66](https://github.com/googleapis/google-cloud-dotnet/commit/8e5af666cfaf9193af598b9d4f05a8650433c1f5))
+
+## Version 5.12.0, released 2024-07-08
+
+### New features
+
+- Add the cohort and auto tuning configuration to the batch's RuntimeConfig ([commit b5e041d](https://github.com/googleapis/google-cloud-dotnet/commit/b5e041d1f859a5d14601e4f37c1f4b7b8bf0fa15))
+
+## Version 5.11.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 5.10.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 5.9.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 5.8.0, released 2023-11-07
+
+### New features
+
+- Support required_registration_fraction for secondary workers ([commit cccf5b6](https://github.com/googleapis/google-cloud-dotnet/commit/cccf5b636972ff9efa55d5af9032db957957f3a7))
+
+## Version 5.7.0, released 2023-09-18
+
+### New features
+
+- Add optional parameters (tarball_gcs_dir, diagnosis_interval, jobs, yarn_application_ids) in DiagnoseClusterRequest ([commit adf57b2](https://github.com/googleapis/google-cloud-dotnet/commit/adf57b2465aec1a9c6d5d11559dc8ba34cdc45bb))
+
+## Version 5.6.0, released 2023-08-23
+
+### New features
+
+- Support min_num_instances for primary worker and InstanceFlexibilityPolicy for secondary worker ([commit 1783572](https://github.com/googleapis/google-cloud-dotnet/commit/1783572f62de9ed84cb7b0bc44993d39f7cb30ce))
+
+### Documentation improvements
+
+- Minor formatting ([commit 5a4054c](https://github.com/googleapis/google-cloud-dotnet/commit/5a4054c983789e87cee928cf31fdc61483cecd29))
+
 ## Version 5.5.0, released 2023-03-20
 
 ### New features

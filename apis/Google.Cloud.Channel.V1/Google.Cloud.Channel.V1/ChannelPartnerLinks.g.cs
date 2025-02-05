@@ -114,6 +114,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Entity representing a link between distributors and their indirect
   /// resellers in an n-tier resale channel.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChannelPartnerLink : pb::IMessage<ChannelPartnerLink>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

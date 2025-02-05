@@ -16,10 +16,28 @@
                 "CreateDatasetAsync"
               ]
             },
+            "CreateDatasetVersion": {
+              "methods": [
+                "CreateDatasetVersion",
+                "CreateDatasetVersionAsync"
+              ]
+            },
             "DeleteDataset": {
               "methods": [
                 "DeleteDataset",
                 "DeleteDatasetAsync"
+              ]
+            },
+            "DeleteDatasetVersion": {
+              "methods": [
+                "DeleteDatasetVersion",
+                "DeleteDatasetVersionAsync"
+              ]
+            },
+            "DeleteSavedQuery": {
+              "methods": [
+                "DeleteSavedQuery",
+                "DeleteSavedQueryAsync"
               ]
             },
             "ExportData": {
@@ -40,6 +58,12 @@
                 "GetDatasetAsync"
               ]
             },
+            "GetDatasetVersion": {
+              "methods": [
+                "GetDatasetVersion",
+                "GetDatasetVersionAsync"
+              ]
+            },
             "ImportData": {
               "methods": [
                 "ImportData",
@@ -58,6 +82,12 @@
                 "ListDataItemsAsync"
               ]
             },
+            "ListDatasetVersions": {
+              "methods": [
+                "ListDatasetVersions",
+                "ListDatasetVersionsAsync"
+              ]
+            },
             "ListDatasets": {
               "methods": [
                 "ListDatasets",
@@ -70,6 +100,12 @@
                 "ListSavedQueriesAsync"
               ]
             },
+            "RestoreDatasetVersion": {
+              "methods": [
+                "RestoreDatasetVersion",
+                "RestoreDatasetVersionAsync"
+              ]
+            },
             "SearchDataItems": {
               "methods": [
                 "SearchDataItems",
@@ -80,6 +116,57 @@
               "methods": [
                 "UpdateDataset",
                 "UpdateDatasetAsync"
+              ]
+            },
+            "UpdateDatasetVersion": {
+              "methods": [
+                "UpdateDatasetVersion",
+                "UpdateDatasetVersionAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "DeploymentResourcePoolService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DeploymentResourcePoolServiceClient",
+          "rpcs": {
+            "CreateDeploymentResourcePool": {
+              "methods": [
+                "CreateDeploymentResourcePool",
+                "CreateDeploymentResourcePoolAsync"
+              ]
+            },
+            "DeleteDeploymentResourcePool": {
+              "methods": [
+                "DeleteDeploymentResourcePool",
+                "DeleteDeploymentResourcePoolAsync"
+              ]
+            },
+            "GetDeploymentResourcePool": {
+              "methods": [
+                "GetDeploymentResourcePool",
+                "GetDeploymentResourcePoolAsync"
+              ]
+            },
+            "ListDeploymentResourcePools": {
+              "methods": [
+                "ListDeploymentResourcePools",
+                "ListDeploymentResourcePoolsAsync"
+              ]
+            },
+            "QueryDeployedModels": {
+              "methods": [
+                "QueryDeployedModels",
+                "QueryDeployedModelsAsync"
+              ]
+            },
+            "UpdateDeploymentResourcePool": {
+              "methods": [
+                "UpdateDeploymentResourcePool",
+                "UpdateDeploymentResourcePoolAsync"
               ]
             }
           }
@@ -121,6 +208,12 @@
                 "ListEndpointsAsync"
               ]
             },
+            "MutateDeployedModel": {
+              "methods": [
+                "MutateDeployedModel",
+                "MutateDeployedModelAsync"
+              ]
+            },
             "UndeployModel": {
               "methods": [
                 "UndeployModel",
@@ -131,6 +224,210 @@
               "methods": [
                 "UpdateEndpoint",
                 "UpdateEndpointAsync"
+              ]
+            },
+            "UpdateEndpointLongRunning": {
+              "methods": [
+                "UpdateEndpointLongRunning",
+                "UpdateEndpointLongRunningAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "EvaluationService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "EvaluationServiceClient",
+          "rpcs": {
+            "EvaluateInstances": {
+              "methods": [
+                "EvaluateInstances",
+                "EvaluateInstancesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "FeatureOnlineStoreAdminService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FeatureOnlineStoreAdminServiceClient",
+          "rpcs": {
+            "CreateFeatureOnlineStore": {
+              "methods": [
+                "CreateFeatureOnlineStore",
+                "CreateFeatureOnlineStoreAsync"
+              ]
+            },
+            "CreateFeatureView": {
+              "methods": [
+                "CreateFeatureView",
+                "CreateFeatureViewAsync"
+              ]
+            },
+            "DeleteFeatureOnlineStore": {
+              "methods": [
+                "DeleteFeatureOnlineStore",
+                "DeleteFeatureOnlineStoreAsync"
+              ]
+            },
+            "DeleteFeatureView": {
+              "methods": [
+                "DeleteFeatureView",
+                "DeleteFeatureViewAsync"
+              ]
+            },
+            "GetFeatureOnlineStore": {
+              "methods": [
+                "GetFeatureOnlineStore",
+                "GetFeatureOnlineStoreAsync"
+              ]
+            },
+            "GetFeatureView": {
+              "methods": [
+                "GetFeatureView",
+                "GetFeatureViewAsync"
+              ]
+            },
+            "GetFeatureViewSync": {
+              "methods": [
+                "GetFeatureViewSync",
+                "GetFeatureViewSyncAsync"
+              ]
+            },
+            "ListFeatureOnlineStores": {
+              "methods": [
+                "ListFeatureOnlineStores",
+                "ListFeatureOnlineStoresAsync"
+              ]
+            },
+            "ListFeatureViewSyncs": {
+              "methods": [
+                "ListFeatureViewSyncs",
+                "ListFeatureViewSyncsAsync"
+              ]
+            },
+            "ListFeatureViews": {
+              "methods": [
+                "ListFeatureViews",
+                "ListFeatureViewsAsync"
+              ]
+            },
+            "SyncFeatureView": {
+              "methods": [
+                "SyncFeatureView",
+                "SyncFeatureViewAsync"
+              ]
+            },
+            "UpdateFeatureOnlineStore": {
+              "methods": [
+                "UpdateFeatureOnlineStore",
+                "UpdateFeatureOnlineStoreAsync"
+              ]
+            },
+            "UpdateFeatureView": {
+              "methods": [
+                "UpdateFeatureView",
+                "UpdateFeatureViewAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "FeatureOnlineStoreService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FeatureOnlineStoreServiceClient",
+          "rpcs": {
+            "FetchFeatureValues": {
+              "methods": [
+                "FetchFeatureValues",
+                "FetchFeatureValuesAsync"
+              ]
+            },
+            "SearchNearestEntities": {
+              "methods": [
+                "SearchNearestEntities",
+                "SearchNearestEntitiesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "FeatureRegistryService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FeatureRegistryServiceClient",
+          "rpcs": {
+            "BatchCreateFeatures": {
+              "methods": [
+                "BatchCreateFeatures",
+                "BatchCreateFeaturesAsync"
+              ]
+            },
+            "CreateFeature": {
+              "methods": [
+                "CreateFeature",
+                "CreateFeatureAsync"
+              ]
+            },
+            "CreateFeatureGroup": {
+              "methods": [
+                "CreateFeatureGroup",
+                "CreateFeatureGroupAsync"
+              ]
+            },
+            "DeleteFeature": {
+              "methods": [
+                "DeleteFeature",
+                "DeleteFeatureAsync"
+              ]
+            },
+            "DeleteFeatureGroup": {
+              "methods": [
+                "DeleteFeatureGroup",
+                "DeleteFeatureGroupAsync"
+              ]
+            },
+            "GetFeature": {
+              "methods": [
+                "GetFeature",
+                "GetFeatureAsync"
+              ]
+            },
+            "GetFeatureGroup": {
+              "methods": [
+                "GetFeatureGroup",
+                "GetFeatureGroupAsync"
+              ]
+            },
+            "ListFeatureGroups": {
+              "methods": [
+                "ListFeatureGroups",
+                "ListFeatureGroupsAsync"
+              ]
+            },
+            "ListFeatures": {
+              "methods": [
+                "ListFeatures",
+                "ListFeaturesAsync"
+              ]
+            },
+            "UpdateFeature": {
+              "methods": [
+                "UpdateFeature",
+                "UpdateFeatureAsync"
+              ]
+            },
+            "UpdateFeatureGroup": {
+              "methods": [
+                "UpdateFeatureGroup",
+                "UpdateFeatureGroupAsync"
               ]
             }
           }
@@ -293,6 +590,84 @@
               "methods": [
                 "UpdateFeaturestore",
                 "UpdateFeaturestoreAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "GenAiCacheService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GenAiCacheServiceClient",
+          "rpcs": {
+            "CreateCachedContent": {
+              "methods": [
+                "CreateCachedContent",
+                "CreateCachedContentAsync"
+              ]
+            },
+            "DeleteCachedContent": {
+              "methods": [
+                "DeleteCachedContent",
+                "DeleteCachedContentAsync"
+              ]
+            },
+            "GetCachedContent": {
+              "methods": [
+                "GetCachedContent",
+                "GetCachedContentAsync"
+              ]
+            },
+            "ListCachedContents": {
+              "methods": [
+                "ListCachedContents",
+                "ListCachedContentsAsync"
+              ]
+            },
+            "UpdateCachedContent": {
+              "methods": [
+                "UpdateCachedContent",
+                "UpdateCachedContentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "GenAiTuningService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GenAiTuningServiceClient",
+          "rpcs": {
+            "CancelTuningJob": {
+              "methods": [
+                "CancelTuningJob",
+                "CancelTuningJobAsync"
+              ]
+            },
+            "CreateTuningJob": {
+              "methods": [
+                "CreateTuningJob",
+                "CreateTuningJobAsync"
+              ]
+            },
+            "GetTuningJob": {
+              "methods": [
+                "GetTuningJob",
+                "GetTuningJobAsync"
+              ]
+            },
+            "ListTuningJobs": {
+              "methods": [
+                "ListTuningJobs",
+                "ListTuningJobsAsync"
+              ]
+            },
+            "RebaseTunedModel": {
+              "methods": [
+                "RebaseTunedModel",
+                "RebaseTunedModelAsync"
               ]
             }
           }
@@ -626,6 +1001,48 @@
         }
       }
     },
+    "LlmUtilityService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LlmUtilityServiceClient",
+          "rpcs": {
+            "ComputeTokens": {
+              "methods": [
+                "ComputeTokens",
+                "ComputeTokensAsync"
+              ]
+            },
+            "CountTokens": {
+              "methods": [
+                "CountTokens",
+                "CountTokensAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "MatchService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MatchServiceClient",
+          "rpcs": {
+            "FindNeighbors": {
+              "methods": [
+                "FindNeighbors",
+                "FindNeighborsAsync"
+              ]
+            },
+            "ReadIndexDatapoints": {
+              "methods": [
+                "ReadIndexDatapoints",
+                "ReadIndexDatapointsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "MetadataService": {
       "clients": {
         "grpc": {
@@ -848,6 +1265,21 @@
         }
       }
     },
+    "ModelGardenService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ModelGardenServiceClient",
+          "rpcs": {
+            "GetPublisherModel": {
+              "methods": [
+                "GetPublisherModel",
+                "GetPublisherModelAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ModelService": {
       "clients": {
         "grpc": {
@@ -925,6 +1357,12 @@
                 "ListModelEvaluationsAsync"
               ]
             },
+            "ListModelVersionCheckpoints": {
+              "methods": [
+                "ListModelVersionCheckpoints",
+                "ListModelVersionCheckpointsAsync"
+              ]
+            },
             "ListModelVersions": {
               "methods": [
                 "ListModelVersions",
@@ -943,6 +1381,12 @@
                 "MergeVersionAliasesAsync"
               ]
             },
+            "UpdateExplanationDataset": {
+              "methods": [
+                "UpdateExplanationDataset",
+                "UpdateExplanationDatasetAsync"
+              ]
+            },
             "UpdateModel": {
               "methods": [
                 "UpdateModel",
@@ -959,11 +1403,173 @@
         }
       }
     },
+    "NotebookService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NotebookServiceClient",
+          "rpcs": {
+            "AssignNotebookRuntime": {
+              "methods": [
+                "AssignNotebookRuntime",
+                "AssignNotebookRuntimeAsync"
+              ]
+            },
+            "CreateNotebookExecutionJob": {
+              "methods": [
+                "CreateNotebookExecutionJob",
+                "CreateNotebookExecutionJobAsync"
+              ]
+            },
+            "CreateNotebookRuntimeTemplate": {
+              "methods": [
+                "CreateNotebookRuntimeTemplate",
+                "CreateNotebookRuntimeTemplateAsync"
+              ]
+            },
+            "DeleteNotebookExecutionJob": {
+              "methods": [
+                "DeleteNotebookExecutionJob",
+                "DeleteNotebookExecutionJobAsync"
+              ]
+            },
+            "DeleteNotebookRuntime": {
+              "methods": [
+                "DeleteNotebookRuntime",
+                "DeleteNotebookRuntimeAsync"
+              ]
+            },
+            "DeleteNotebookRuntimeTemplate": {
+              "methods": [
+                "DeleteNotebookRuntimeTemplate",
+                "DeleteNotebookRuntimeTemplateAsync"
+              ]
+            },
+            "GetNotebookExecutionJob": {
+              "methods": [
+                "GetNotebookExecutionJob",
+                "GetNotebookExecutionJobAsync"
+              ]
+            },
+            "GetNotebookRuntime": {
+              "methods": [
+                "GetNotebookRuntime",
+                "GetNotebookRuntimeAsync"
+              ]
+            },
+            "GetNotebookRuntimeTemplate": {
+              "methods": [
+                "GetNotebookRuntimeTemplate",
+                "GetNotebookRuntimeTemplateAsync"
+              ]
+            },
+            "ListNotebookExecutionJobs": {
+              "methods": [
+                "ListNotebookExecutionJobs",
+                "ListNotebookExecutionJobsAsync"
+              ]
+            },
+            "ListNotebookRuntimeTemplates": {
+              "methods": [
+                "ListNotebookRuntimeTemplates",
+                "ListNotebookRuntimeTemplatesAsync"
+              ]
+            },
+            "ListNotebookRuntimes": {
+              "methods": [
+                "ListNotebookRuntimes",
+                "ListNotebookRuntimesAsync"
+              ]
+            },
+            "StartNotebookRuntime": {
+              "methods": [
+                "StartNotebookRuntime",
+                "StartNotebookRuntimeAsync"
+              ]
+            },
+            "StopNotebookRuntime": {
+              "methods": [
+                "StopNotebookRuntime",
+                "StopNotebookRuntimeAsync"
+              ]
+            },
+            "UpdateNotebookRuntimeTemplate": {
+              "methods": [
+                "UpdateNotebookRuntimeTemplate",
+                "UpdateNotebookRuntimeTemplateAsync"
+              ]
+            },
+            "UpgradeNotebookRuntime": {
+              "methods": [
+                "UpgradeNotebookRuntime",
+                "UpgradeNotebookRuntimeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PersistentResourceService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PersistentResourceServiceClient",
+          "rpcs": {
+            "CreatePersistentResource": {
+              "methods": [
+                "CreatePersistentResource",
+                "CreatePersistentResourceAsync"
+              ]
+            },
+            "DeletePersistentResource": {
+              "methods": [
+                "DeletePersistentResource",
+                "DeletePersistentResourceAsync"
+              ]
+            },
+            "GetPersistentResource": {
+              "methods": [
+                "GetPersistentResource",
+                "GetPersistentResourceAsync"
+              ]
+            },
+            "ListPersistentResources": {
+              "methods": [
+                "ListPersistentResources",
+                "ListPersistentResourcesAsync"
+              ]
+            },
+            "RebootPersistentResource": {
+              "methods": [
+                "RebootPersistentResource",
+                "RebootPersistentResourceAsync"
+              ]
+            },
+            "UpdatePersistentResource": {
+              "methods": [
+                "UpdatePersistentResource",
+                "UpdatePersistentResourceAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "PipelineService": {
       "clients": {
         "grpc": {
           "libraryClient": "PipelineServiceClient",
           "rpcs": {
+            "BatchCancelPipelineJobs": {
+              "methods": [
+                "BatchCancelPipelineJobs",
+                "BatchCancelPipelineJobsAsync"
+              ]
+            },
+            "BatchDeletePipelineJobs": {
+              "methods": [
+                "BatchDeletePipelineJobs",
+                "BatchDeletePipelineJobsAsync"
+              ]
+            },
             "CancelPipelineJob": {
               "methods": [
                 "CancelPipelineJob",
@@ -1033,10 +1639,28 @@
         "grpc": {
           "libraryClient": "PredictionServiceClient",
           "rpcs": {
+            "DirectPredict": {
+              "methods": [
+                "DirectPredict",
+                "DirectPredictAsync"
+              ]
+            },
+            "DirectRawPredict": {
+              "methods": [
+                "DirectRawPredict",
+                "DirectRawPredictAsync"
+              ]
+            },
             "Explain": {
               "methods": [
                 "Explain",
                 "ExplainAsync"
+              ]
+            },
+            "GenerateContent": {
+              "methods": [
+                "GenerateContent",
+                "GenerateContentAsync"
               ]
             },
             "Predict": {
@@ -1049,6 +1673,159 @@
               "methods": [
                 "RawPredict",
                 "RawPredictAsync"
+              ]
+            },
+            "ServerStreamingPredict": {
+              "methods": [
+                "ServerStreamingPredict",
+                "ServerStreamingPredictAsync"
+              ]
+            },
+            "StreamDirectPredict": {
+              "methods": [
+                "StreamDirectPredict",
+                "StreamDirectPredictAsync"
+              ]
+            },
+            "StreamDirectRawPredict": {
+              "methods": [
+                "StreamDirectRawPredict",
+                "StreamDirectRawPredictAsync"
+              ]
+            },
+            "StreamGenerateContent": {
+              "methods": [
+                "StreamGenerateContent",
+                "StreamGenerateContentAsync"
+              ]
+            },
+            "StreamRawPredict": {
+              "methods": [
+                "StreamRawPredict",
+                "StreamRawPredictAsync"
+              ]
+            },
+            "StreamingPredict": {
+              "methods": [
+                "StreamingPredict",
+                "StreamingPredictAsync"
+              ]
+            },
+            "StreamingRawPredict": {
+              "methods": [
+                "StreamingRawPredict",
+                "StreamingRawPredictAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ReasoningEngineExecutionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ReasoningEngineExecutionServiceClient",
+          "rpcs": {
+            "QueryReasoningEngine": {
+              "methods": [
+                "QueryReasoningEngine",
+                "QueryReasoningEngineAsync"
+              ]
+            },
+            "StreamQueryReasoningEngine": {
+              "methods": [
+                "StreamQueryReasoningEngine",
+                "StreamQueryReasoningEngineAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ReasoningEngineService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ReasoningEngineServiceClient",
+          "rpcs": {
+            "CreateReasoningEngine": {
+              "methods": [
+                "CreateReasoningEngine",
+                "CreateReasoningEngineAsync"
+              ]
+            },
+            "DeleteReasoningEngine": {
+              "methods": [
+                "DeleteReasoningEngine",
+                "DeleteReasoningEngineAsync"
+              ]
+            },
+            "GetReasoningEngine": {
+              "methods": [
+                "GetReasoningEngine",
+                "GetReasoningEngineAsync"
+              ]
+            },
+            "ListReasoningEngines": {
+              "methods": [
+                "ListReasoningEngines",
+                "ListReasoningEnginesAsync"
+              ]
+            },
+            "UpdateReasoningEngine": {
+              "methods": [
+                "UpdateReasoningEngine",
+                "UpdateReasoningEngineAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ScheduleService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ScheduleServiceClient",
+          "rpcs": {
+            "CreateSchedule": {
+              "methods": [
+                "CreateSchedule",
+                "CreateScheduleAsync"
+              ]
+            },
+            "DeleteSchedule": {
+              "methods": [
+                "DeleteSchedule",
+                "DeleteScheduleAsync"
+              ]
+            },
+            "GetSchedule": {
+              "methods": [
+                "GetSchedule",
+                "GetScheduleAsync"
+              ]
+            },
+            "ListSchedules": {
+              "methods": [
+                "ListSchedules",
+                "ListSchedulesAsync"
+              ]
+            },
+            "PauseSchedule": {
+              "methods": [
+                "PauseSchedule",
+                "PauseScheduleAsync"
+              ]
+            },
+            "ResumeSchedule": {
+              "methods": [
+                "ResumeSchedule",
+                "ResumeScheduleAsync"
+              ]
+            },
+            "UpdateSchedule": {
+              "methods": [
+                "UpdateSchedule",
+                "UpdateScheduleAsync"
               ]
             }
           }
@@ -1225,6 +2002,12 @@
                 "ReadTensorboardBlobDataAsync"
               ]
             },
+            "ReadTensorboardSize": {
+              "methods": [
+                "ReadTensorboardSize",
+                "ReadTensorboardSizeAsync"
+              ]
+            },
             "ReadTensorboardTimeSeriesData": {
               "methods": [
                 "ReadTensorboardTimeSeriesData",
@@ -1271,6 +2054,102 @@
               "methods": [
                 "WriteTensorboardRunData",
                 "WriteTensorboardRunDataAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "VertexRagDataService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "VertexRagDataServiceClient",
+          "rpcs": {
+            "CreateRagCorpus": {
+              "methods": [
+                "CreateRagCorpus",
+                "CreateRagCorpusAsync"
+              ]
+            },
+            "DeleteRagCorpus": {
+              "methods": [
+                "DeleteRagCorpus",
+                "DeleteRagCorpusAsync"
+              ]
+            },
+            "DeleteRagFile": {
+              "methods": [
+                "DeleteRagFile",
+                "DeleteRagFileAsync"
+              ]
+            },
+            "GetRagCorpus": {
+              "methods": [
+                "GetRagCorpus",
+                "GetRagCorpusAsync"
+              ]
+            },
+            "GetRagFile": {
+              "methods": [
+                "GetRagFile",
+                "GetRagFileAsync"
+              ]
+            },
+            "ImportRagFiles": {
+              "methods": [
+                "ImportRagFiles",
+                "ImportRagFilesAsync"
+              ]
+            },
+            "ListRagCorpora": {
+              "methods": [
+                "ListRagCorpora",
+                "ListRagCorporaAsync"
+              ]
+            },
+            "ListRagFiles": {
+              "methods": [
+                "ListRagFiles",
+                "ListRagFilesAsync"
+              ]
+            },
+            "UpdateRagCorpus": {
+              "methods": [
+                "UpdateRagCorpus",
+                "UpdateRagCorpusAsync"
+              ]
+            },
+            "UploadRagFile": {
+              "methods": [
+                "UploadRagFile",
+                "UploadRagFileAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "VertexRagService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "VertexRagServiceClient",
+          "rpcs": {
+            "AugmentPrompt": {
+              "methods": [
+                "AugmentPrompt",
+                "AugmentPromptAsync"
+              ]
+            },
+            "CorroborateContent": {
+              "methods": [
+                "CorroborateContent",
+                "CorroborateContentAsync"
+              ]
+            },
+            "RetrieveContexts": {
+              "methods": [
+                "RetrieveContexts",
+                "RetrieveContextsAsync"
               ]
             }
           }

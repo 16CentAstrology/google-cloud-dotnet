@@ -3,7 +3,7 @@
 //     source: google/cloud/aiplatform/v1/vizier_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2023 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -309,7 +309,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// suggested by Vertex AI Vizier. Returns a long-running
       /// operation associated with the generation of Trial suggestions.
       /// When this long-running operation succeeds, it will contain
-      /// a [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+      /// a
+      /// [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -717,7 +718,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// suggested by Vertex AI Vizier. Returns a long-running
       /// operation associated with the generation of Trial suggestions.
       /// When this long-running operation succeeds, it will contain
-      /// a [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+      /// a
+      /// [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -734,7 +736,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// suggested by Vertex AI Vizier. Returns a long-running
       /// operation associated with the generation of Trial suggestions.
       /// When this long-running operation succeeds, it will contain
-      /// a [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+      /// a
+      /// [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -749,7 +752,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// suggested by Vertex AI Vizier. Returns a long-running
       /// operation associated with the generation of Trial suggestions.
       /// When this long-running operation succeeds, it will contain
-      /// a [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+      /// a
+      /// [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -766,7 +770,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// suggested by Vertex AI Vizier. Returns a long-running
       /// operation associated with the generation of Trial suggestions.
       /// When this long-running operation succeeds, it will contain
-      /// a [SuggestTrialsResponse][google.cloud.ml.v1.SuggestTrialsResponse].
+      /// a
+      /// [SuggestTrialsResponse][google.cloud.aiplatform.v1.SuggestTrialsResponse].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

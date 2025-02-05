@@ -44,38 +44,39 @@ namespace Google.Cloud.Channel.V1 {
             "dG5lclJlcHJpY2luZ0NvbmZpZxJ6YWNjb3VudHMve2FjY291bnR9L2NoYW5u",
             "ZWxQYXJ0bmVyTGlua3Mve2NoYW5uZWxfcGFydG5lcn0vY2hhbm5lbFBhcnRu",
             "ZXJSZXByaWNpbmdDb25maWdzL3tjaGFubmVsX3BhcnRuZXJfcmVwcmljaW5n",
-            "X2NvbmZpZ30i/QQKD1JlcHJpY2luZ0NvbmZpZxJiChdlbnRpdGxlbWVudF9n",
+            "X2NvbmZpZ30ihQUKD1JlcHJpY2luZ0NvbmZpZxJiChdlbnRpdGxlbWVudF9n",
             "cmFudWxhcml0eRgEIAEoCzI/Lmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlJl",
-            "cHJpY2luZ0NvbmZpZy5FbnRpdGxlbWVudEdyYW51bGFyaXR5SAASaQobY2hh",
+            "cHJpY2luZ0NvbmZpZy5FbnRpdGxlbWVudEdyYW51bGFyaXR5SAASbQobY2hh",
             "bm5lbF9wYXJ0bmVyX2dyYW51bGFyaXR5GAUgASgLMkIuZ29vZ2xlLmNsb3Vk",
             "LmNoYW5uZWwudjEuUmVwcmljaW5nQ29uZmlnLkNoYW5uZWxQYXJ0bmVyR3Jh",
-            "bnVsYXJpdHlIABI3ChdlZmZlY3RpdmVfaW52b2ljZV9tb250aBgBIAEoCzIR",
-            "Lmdvb2dsZS50eXBlLkRhdGVCA+BBAhJFCgphZGp1c3RtZW50GAIgASgLMiwu",
-            "Z29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUmVwcmljaW5nQWRqdXN0bWVudEID",
-            "4EECEkUKD3JlYmlsbGluZ19iYXNpcxgDIAEoDjInLmdvb2dsZS5jbG91ZC5j",
-            "aGFubmVsLnYxLlJlYmlsbGluZ0Jhc2lzQgPgQQISSwoVY29uZGl0aW9uYWxf",
-            "b3ZlcnJpZGVzGAYgAygLMiwuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuQ29u",
-            "ZGl0aW9uYWxPdmVycmlkZRpbChZFbnRpdGxlbWVudEdyYW51bGFyaXR5EkEK",
-            "C2VudGl0bGVtZW50GAEgASgJQiz6QSkKJ2Nsb3VkY2hhbm5lbC5nb29nbGVh",
-            "cGlzLmNvbS9FbnRpdGxlbWVudBobChlDaGFubmVsUGFydG5lckdyYW51bGFy",
-            "aXR5Qg0KC2dyYW51bGFyaXR5InMKE1JlcHJpY2luZ0FkanVzdG1lbnQSTgoV",
-            "cGVyY2VudGFnZV9hZGp1c3RtZW50GAIgASgLMi0uZ29vZ2xlLmNsb3VkLmNo",
-            "YW5uZWwudjEuUGVyY2VudGFnZUFkanVzdG1lbnRIAEIMCgphZGp1c3RtZW50",
-            "IkAKFFBlcmNlbnRhZ2VBZGp1c3RtZW50EigKCnBlcmNlbnRhZ2UYAiABKAsy",
-            "FC5nb29nbGUudHlwZS5EZWNpbWFsIvIBChNDb25kaXRpb25hbE92ZXJyaWRl",
-            "EkUKCmFkanVzdG1lbnQYASABKAsyLC5nb29nbGUuY2xvdWQuY2hhbm5lbC52",
-            "MS5SZXByaWNpbmdBZGp1c3RtZW50QgPgQQISRQoPcmViaWxsaW5nX2Jhc2lz",
-            "GAIgASgOMicuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUmViaWxsaW5nQmFz",
-            "aXNCA+BBAhJNChNyZXByaWNpbmdfY29uZGl0aW9uGAMgASgLMisuZ29vZ2xl",
-            "LmNsb3VkLmNoYW5uZWwudjEuUmVwcmljaW5nQ29uZGl0aW9uQgPgQQIibAoS",
-            "UmVwcmljaW5nQ29uZGl0aW9uEkkKE3NrdV9ncm91cF9jb25kaXRpb24YASAB",
-            "KAsyKi5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5Ta3VHcm91cENvbmRpdGlv",
-            "bkgAQgsKCWNvbmRpdGlvbiImChFTa3VHcm91cENvbmRpdGlvbhIRCglza3Vf",
-            "Z3JvdXAYASABKAkqXQoOUmViaWxsaW5nQmFzaXMSHwobUkVCSUxMSU5HX0JB",
-            "U0lTX1VOU1BFQ0lGSUVEEAASEAoMQ09TVF9BVF9MSVNUEAESGAoURElSRUNU",
-            "X0NVU1RPTUVSX0NPU1QQAkJmChtjb20uZ29vZ2xlLmNsb3VkLmNoYW5uZWwu",
-            "djFCDlJlcHJpY2luZ1Byb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vY2hh",
-            "bm5lbC9hcGl2MS9jaGFubmVscGI7Y2hhbm5lbHBiYgZwcm90bzM="));
+            "bnVsYXJpdHlCAhgBSAASNwoXZWZmZWN0aXZlX2ludm9pY2VfbW9udGgYASAB",
+            "KAsyES5nb29nbGUudHlwZS5EYXRlQgPgQQISRQoKYWRqdXN0bWVudBgCIAEo",
+            "CzIsLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlJlcHJpY2luZ0FkanVzdG1l",
+            "bnRCA+BBAhJFCg9yZWJpbGxpbmdfYmFzaXMYAyABKA4yJy5nb29nbGUuY2xv",
+            "dWQuY2hhbm5lbC52MS5SZWJpbGxpbmdCYXNpc0ID4EECEksKFWNvbmRpdGlv",
+            "bmFsX292ZXJyaWRlcxgGIAMoCzIsLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYx",
+            "LkNvbmRpdGlvbmFsT3ZlcnJpZGUaWwoWRW50aXRsZW1lbnRHcmFudWxhcml0",
+            "eRJBCgtlbnRpdGxlbWVudBgBIAEoCUIs+kEpCidjbG91ZGNoYW5uZWwuZ29v",
+            "Z2xlYXBpcy5jb20vRW50aXRsZW1lbnQaHwoZQ2hhbm5lbFBhcnRuZXJHcmFu",
+            "dWxhcml0eToCGAFCDQoLZ3JhbnVsYXJpdHkicwoTUmVwcmljaW5nQWRqdXN0",
+            "bWVudBJOChVwZXJjZW50YWdlX2FkanVzdG1lbnQYAiABKAsyLS5nb29nbGUu",
+            "Y2xvdWQuY2hhbm5lbC52MS5QZXJjZW50YWdlQWRqdXN0bWVudEgAQgwKCmFk",
+            "anVzdG1lbnQiQAoUUGVyY2VudGFnZUFkanVzdG1lbnQSKAoKcGVyY2VudGFn",
+            "ZRgCIAEoCzIULmdvb2dsZS50eXBlLkRlY2ltYWwi8gEKE0NvbmRpdGlvbmFs",
+            "T3ZlcnJpZGUSRQoKYWRqdXN0bWVudBgBIAEoCzIsLmdvb2dsZS5jbG91ZC5j",
+            "aGFubmVsLnYxLlJlcHJpY2luZ0FkanVzdG1lbnRCA+BBAhJFCg9yZWJpbGxp",
+            "bmdfYmFzaXMYAiABKA4yJy5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5SZWJp",
+            "bGxpbmdCYXNpc0ID4EECEk0KE3JlcHJpY2luZ19jb25kaXRpb24YAyABKAsy",
+            "Ky5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5SZXByaWNpbmdDb25kaXRpb25C",
+            "A+BBAiJsChJSZXByaWNpbmdDb25kaXRpb24SSQoTc2t1X2dyb3VwX2NvbmRp",
+            "dGlvbhgBIAEoCzIqLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlNrdUdyb3Vw",
+            "Q29uZGl0aW9uSABCCwoJY29uZGl0aW9uIiYKEVNrdUdyb3VwQ29uZGl0aW9u",
+            "EhEKCXNrdV9ncm91cBgBIAEoCSpdCg5SZWJpbGxpbmdCYXNpcxIfChtSRUJJ",
+            "TExJTkdfQkFTSVNfVU5TUEVDSUZJRUQQABIQCgxDT1NUX0FUX0xJU1QQARIY",
+            "ChRESVJFQ1RfQ1VTVE9NRVJfQ09TVBACQmYKG2NvbS5nb29nbGUuY2xvdWQu",
+            "Y2hhbm5lbC52MUIOUmVwcmljaW5nUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9jaGFubmVsL2FwaXYxL2NoYW5uZWxwYjtjaGFubmVscGJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DecimalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Channel.V1.RebillingBasis), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -121,6 +122,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Configuration for how a reseller will reprice a Customer.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomerRepricingConfig : pb::IMessage<CustomerRepricingConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -421,6 +423,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Configuration for how a distributor will rebill a channel partner
   /// (also known as a distributor-authorized reseller).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChannelPartnerRepricingConfig : pb::IMessage<ChannelPartnerRepricingConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -720,6 +723,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Configuration for repricing a Google bill over a period of time.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RepricingConfig : pb::IMessage<RepricingConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -779,8 +783,20 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>Field number for the "entitlement_granularity" field.</summary>
     public const int EntitlementGranularityFieldNumber = 4;
     /// <summary>
-    /// Applies the repricing configuration at the entitlement level. This is
-    /// the only supported value for CustomerRepricingConfig.
+    /// Applies the repricing configuration at the entitlement level.
+    ///
+    /// Note: If a
+    /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+    /// using
+    /// [RepricingConfig.EntitlementGranularity][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity]
+    /// becomes effective, then no existing or future
+    /// [RepricingConfig.ChannelPartnerGranularity][google.cloud.channel.v1.RepricingConfig.ChannelPartnerGranularity]
+    /// will apply to the
+    /// [RepricingConfig.EntitlementGranularity.entitlement][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity.entitlement].
+    /// This is the recommended value for both
+    /// [CustomerRepricingConfig][google.cloud.channel.v1.CustomerRepricingConfig]
+    /// and
+    /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -796,8 +812,13 @@ namespace Google.Cloud.Channel.V1 {
     public const int ChannelPartnerGranularityFieldNumber = 5;
     /// <summary>
     /// Applies the repricing configuration at the channel partner level.
-    /// This is the only supported value for ChannelPartnerRepricingConfig.
+    /// Only
+    /// [ChannelPartnerRepricingConfig][google.cloud.channel.v1.ChannelPartnerRepricingConfig]
+    /// supports this value. Deprecated: This is no longer supported. Use
+    /// [RepricingConfig.entitlement_granularity][google.cloud.channel.v1.RepricingConfig.entitlement_granularity]
+    /// instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.RepricingConfig.Types.ChannelPartnerGranularity ChannelPartnerGranularity {
@@ -1191,6 +1212,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <summary>
       /// Applies the repricing configuration at the entitlement level.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EntitlementGranularity : pb::IMessage<EntitlementGranularity>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1389,7 +1411,12 @@ namespace Google.Cloud.Channel.V1 {
       /// Applies the repricing configuration at the channel partner level.
       /// The channel partner value is derived from the resource name. Takes an
       /// empty json object.
+      /// Deprecated: This is no longer supported. Use
+      /// [RepricingConfig.EntitlementGranularity][google.cloud.channel.v1.RepricingConfig.EntitlementGranularity]
+      /// instead.
       /// </summary>
+      [global::System.ObsoleteAttribute]
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ChannelPartnerGranularity : pb::IMessage<ChannelPartnerGranularity>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1550,6 +1577,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// A type that represents the various adjustments you can apply to a bill.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RepricingAdjustment : pb::IMessage<RepricingAdjustment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1788,6 +1816,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// An adjustment that applies a flat markup or markdown to an entire bill.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PercentageAdjustment : pb::IMessage<PercentageAdjustment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1996,6 +2025,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Specifies the override to conditionally apply.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConditionalOverride : pb::IMessage<ConditionalOverride>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2292,6 +2322,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Represents the various repricing conditions you can use for a conditional
   /// override.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RepricingCondition : pb::IMessage<RepricingCondition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2531,6 +2562,7 @@ namespace Google.Cloud.Channel.V1 {
   /// A condition that applies the override if a line item SKU is found in the SKU
   /// group.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SkuGroupCondition : pb::IMessage<SkuGroupCondition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

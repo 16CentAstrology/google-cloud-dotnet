@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.ResourceManager.V3
 {
@@ -50,6 +50,7 @@ namespace Google.Cloud.ResourceManager.V3
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListTagValuesSettings = existing.ListTagValuesSettings;
             GetTagValueSettings = existing.GetTagValueSettings;
+            GetNamespacedTagValueSettings = existing.GetNamespacedTagValueSettings;
             CreateTagValueSettings = existing.CreateTagValueSettings;
             CreateTagValueOperationsSettings = existing.CreateTagValueOperationsSettings.Clone();
             UpdateTagValueSettings = existing.UpdateTagValueSettings;
@@ -99,6 +100,18 @@ namespace Google.Cloud.ResourceManager.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetTagValueSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TagValuesClient.GetNamespacedTagValue</c> and <c>TagValuesClient.GetNamespacedTagValueAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetNamespacedTagValueSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -274,14 +287,14 @@ namespace Google.Cloud.ResourceManager.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TagValuesClient.Create(callInvoker, Settings, Logger);
+            return TagValuesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<TagValuesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TagValuesClient.Create(callInvoker, Settings, Logger);
+            return TagValuesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -396,8 +409,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// Lists all TagValues for a specific TagKey.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name for TagKey, parent of the TagValues to be listed,
-        /// in the format `tagKeys/123`.
+        /// Required.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -409,20 +421,28 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TagValue"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTagValuesResponse, TagValue> ListTagValues(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagValues(new ListTagValuesRequest
+        public virtual gax::PagedEnumerable<ListTagValuesResponse, TagValue> ListTagValues(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagValuesRequest request = new ListTagValuesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagValues(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all TagValues for a specific TagKey.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name for TagKey, parent of the TagValues to be listed,
-        /// in the format `tagKeys/123`.
+        /// Required.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -434,20 +454,28 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TagValue"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTagValuesResponse, TagValue> ListTagValuesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagValuesAsync(new ListTagValuesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTagValuesResponse, TagValue> ListTagValuesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagValuesRequest request = new ListTagValuesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagValuesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all TagValues for a specific TagKey.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name for TagKey, parent of the TagValues to be listed,
-        /// in the format `tagKeys/123`.
+        /// Required.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -459,20 +487,28 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TagValue"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTagValuesResponse, TagValue> ListTagValues(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagValues(new ListTagValuesRequest
+        public virtual gax::PagedEnumerable<ListTagValuesResponse, TagValue> ListTagValues(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagValuesRequest request = new ListTagValuesRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagValues(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all TagValues for a specific TagKey.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name for TagKey, parent of the TagValues to be listed,
-        /// in the format `tagKeys/123`.
+        /// Required.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -484,18 +520,26 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TagValue"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTagValuesResponse, TagValue> ListTagValuesAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagValuesAsync(new ListTagValuesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTagValuesResponse, TagValue> ListTagValuesAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagValuesRequest request = new ListTagValuesRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagValuesAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-        /// if the user does not have permission to view it, this method will return
-        /// `PERMISSION_DENIED`.
+        /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+        /// value does not exist or the user does not have permission to view it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -504,9 +548,8 @@ namespace Google.Cloud.ResourceManager.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-        /// if the user does not have permission to view it, this method will return
-        /// `PERMISSION_DENIED`.
+        /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+        /// value does not exist or the user does not have permission to view it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -515,9 +558,8 @@ namespace Google.Cloud.ResourceManager.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-        /// if the user does not have permission to view it, this method will return
-        /// `PERMISSION_DENIED`.
+        /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+        /// value does not exist or the user does not have permission to view it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -526,12 +568,12 @@ namespace Google.Cloud.ResourceManager.V3
             GetTagValueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-        /// if the user does not have permission to view it, this method will return
-        /// `PERMISSION_DENIED`.
+        /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+        /// value does not exist or the user does not have permission to view it.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name for TagValue to be fetched in the format `tagValues/456`.
+        /// Required. Resource name for TagValue to be fetched in the format
+        /// `tagValues/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -542,12 +584,12 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-        /// if the user does not have permission to view it, this method will return
-        /// `PERMISSION_DENIED`.
+        /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+        /// value does not exist or the user does not have permission to view it.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name for TagValue to be fetched in the format `tagValues/456`.
+        /// Required. Resource name for TagValue to be fetched in the format
+        /// `tagValues/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -558,12 +600,12 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-        /// if the user does not have permission to view it, this method will return
-        /// `PERMISSION_DENIED`.
+        /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+        /// value does not exist or the user does not have permission to view it.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name for TagValue to be fetched in the format `tagValues/456`.
+        /// Required. Resource name for TagValue to be fetched in the format
+        /// `tagValues/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -571,12 +613,12 @@ namespace Google.Cloud.ResourceManager.V3
             GetTagValueAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-        /// if the user does not have permission to view it, this method will return
-        /// `PERMISSION_DENIED`.
+        /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+        /// value does not exist or the user does not have permission to view it.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name for TagValue to be fetched in the format `tagValues/456`.
+        /// Required. Resource name for TagValue to be fetched in the format
+        /// `tagValues/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -587,12 +629,12 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-        /// if the user does not have permission to view it, this method will return
-        /// `PERMISSION_DENIED`.
+        /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+        /// value does not exist or the user does not have permission to view it.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name for TagValue to be fetched in the format `tagValues/456`.
+        /// Required. Resource name for TagValue to be fetched in the format
+        /// `tagValues/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -603,12 +645,12 @@ namespace Google.Cloud.ResourceManager.V3
             }, callSettings);
 
         /// <summary>
-        /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-        /// if the user does not have permission to view it, this method will return
-        /// `PERMISSION_DENIED`.
+        /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+        /// value does not exist or the user does not have permission to view it.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name for TagValue to be fetched in the format `tagValues/456`.
+        /// Required. Resource name for TagValue to be fetched in the format
+        /// `tagValues/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -616,9 +658,180 @@ namespace Google.Cloud.ResourceManager.V3
             GetTagValueAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Retrieves a TagValue by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the value does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TagValue GetNamespacedTagValue(GetNamespacedTagValueRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a TagValue by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the value does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagValue> GetNamespacedTagValueAsync(GetNamespacedTagValueRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a TagValue by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the value does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagValue> GetNamespacedTagValueAsync(GetNamespacedTagValueRequest request, st::CancellationToken cancellationToken) =>
+            GetNamespacedTagValueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a TagValue by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the value does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A namespaced tag value name in the following format:
+        /// 
+        /// `{parentId}/{tagKeyShort}/{tagValueShort}`
+        /// 
+        /// Examples:
+        /// - `42/foo/abc` for a value with short name "abc" under the key with short
+        /// name "foo" under the organization with ID 42
+        /// - `r2-d2/bar/xyz` for a value with short name "xyz" under the key with
+        /// short name "bar" under the project with ID "r2-d2"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TagValue GetNamespacedTagValue(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNamespacedTagValue(new GetNamespacedTagValueRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a TagValue by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the value does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A namespaced tag value name in the following format:
+        /// 
+        /// `{parentId}/{tagKeyShort}/{tagValueShort}`
+        /// 
+        /// Examples:
+        /// - `42/foo/abc` for a value with short name "abc" under the key with short
+        /// name "foo" under the organization with ID 42
+        /// - `r2-d2/bar/xyz` for a value with short name "xyz" under the key with
+        /// short name "bar" under the project with ID "r2-d2"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagValue> GetNamespacedTagValueAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNamespacedTagValueAsync(new GetNamespacedTagValueRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a TagValue by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the value does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A namespaced tag value name in the following format:
+        /// 
+        /// `{parentId}/{tagKeyShort}/{tagValueShort}`
+        /// 
+        /// Examples:
+        /// - `42/foo/abc` for a value with short name "abc" under the key with short
+        /// name "foo" under the organization with ID 42
+        /// - `r2-d2/bar/xyz` for a value with short name "xyz" under the key with
+        /// short name "bar" under the project with ID "r2-d2"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagValue> GetNamespacedTagValueAsync(string name, st::CancellationToken cancellationToken) =>
+            GetNamespacedTagValueAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a TagValue by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the value does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A namespaced tag value name in the following format:
+        /// 
+        /// `{parentId}/{tagKeyShort}/{tagValueShort}`
+        /// 
+        /// Examples:
+        /// - `42/foo/abc` for a value with short name "abc" under the key with short
+        /// name "foo" under the organization with ID 42
+        /// - `r2-d2/bar/xyz` for a value with short name "xyz" under the key with
+        /// short name "bar" under the project with ID "r2-d2"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TagValue GetNamespacedTagValue(TagValueName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNamespacedTagValue(new GetNamespacedTagValueRequest
+            {
+                TagValueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a TagValue by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the value does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A namespaced tag value name in the following format:
+        /// 
+        /// `{parentId}/{tagKeyShort}/{tagValueShort}`
+        /// 
+        /// Examples:
+        /// - `42/foo/abc` for a value with short name "abc" under the key with short
+        /// name "foo" under the organization with ID 42
+        /// - `r2-d2/bar/xyz` for a value with short name "xyz" under the key with
+        /// short name "bar" under the project with ID "r2-d2"
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagValue> GetNamespacedTagValueAsync(TagValueName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNamespacedTagValueAsync(new GetNamespacedTagValueRequest
+            {
+                TagValueName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a TagValue by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the value does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A namespaced tag value name in the following format:
+        /// 
+        /// `{parentId}/{tagKeyShort}/{tagValueShort}`
+        /// 
+        /// Examples:
+        /// - `42/foo/abc` for a value with short name "abc" under the key with short
+        /// name "foo" under the organization with ID 42
+        /// - `r2-d2/bar/xyz` for a value with short name "xyz" under the key with
+        /// short name "bar" under the project with ID "r2-d2"
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagValue> GetNamespacedTagValueAsync(TagValueName name, st::CancellationToken cancellationToken) =>
+            GetNamespacedTagValueAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a TagValue as a child of the specified TagKey. If a another
         /// request with the same parameters is sent while the original request is in
-        /// process the second request will receive an error. A maximum of 300
+        /// process the second request will receive an error. A maximum of 1000
         /// TagValues can exist under a TagKey at any given time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -630,7 +843,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// <summary>
         /// Creates a TagValue as a child of the specified TagKey. If a another
         /// request with the same parameters is sent while the original request is in
-        /// process the second request will receive an error. A maximum of 300
+        /// process the second request will receive an error. A maximum of 1000
         /// TagValues can exist under a TagKey at any given time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -642,7 +855,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// <summary>
         /// Creates a TagValue as a child of the specified TagKey. If a another
         /// request with the same parameters is sent while the original request is in
-        /// process the second request will receive an error. A maximum of 300
+        /// process the second request will receive an error. A maximum of 1000
         /// TagValues can exist under a TagKey at any given time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -680,12 +893,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// <summary>
         /// Creates a TagValue as a child of the specified TagKey. If a another
         /// request with the same parameters is sent while the original request is in
-        /// process the second request will receive an error. A maximum of 300
+        /// process the second request will receive an error. A maximum of 1000
         /// TagValues can exist under a TagKey at any given time.
         /// </summary>
         /// <param name="tagValue">
-        /// Required. The TagValue to be created. Only fields `short_name`, `description`,
-        /// and `parent` are considered during the creation request.
+        /// Required. The TagValue to be created. Only fields `short_name`,
+        /// `description`, and `parent` are considered during the creation request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -698,12 +911,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// <summary>
         /// Creates a TagValue as a child of the specified TagKey. If a another
         /// request with the same parameters is sent while the original request is in
-        /// process the second request will receive an error. A maximum of 300
+        /// process the second request will receive an error. A maximum of 1000
         /// TagValues can exist under a TagKey at any given time.
         /// </summary>
         /// <param name="tagValue">
-        /// Required. The TagValue to be created. Only fields `short_name`, `description`,
-        /// and `parent` are considered during the creation request.
+        /// Required. The TagValue to be created. Only fields `short_name`,
+        /// `description`, and `parent` are considered during the creation request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -716,12 +929,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// <summary>
         /// Creates a TagValue as a child of the specified TagKey. If a another
         /// request with the same parameters is sent while the original request is in
-        /// process the second request will receive an error. A maximum of 300
+        /// process the second request will receive an error. A maximum of 1000
         /// TagValues can exist under a TagKey at any given time.
         /// </summary>
         /// <param name="tagValue">
-        /// Required. The TagValue to be created. Only fields `short_name`, `description`,
-        /// and `parent` are considered during the creation request.
+        /// Required. The TagValue to be created. Only fields `short_name`,
+        /// `description`, and `parent` are considered during the creation request.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -785,10 +998,10 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates the attributes of the TagValue resource.
         /// </summary>
         /// <param name="tagValue">
-        /// Required. The new definition of the TagValue. Only fields `description` and `etag`
-        /// fields can be updated by this request. If the `etag` field is nonempty, it
-        /// must match the `etag` field of the existing ControlGroup. Otherwise,
-        /// `FAILED_PRECONDITION` will be returned.
+        /// Required. The new definition of the TagValue. Only fields `description` and
+        /// `etag` fields can be updated by this request. If the `etag` field is
+        /// nonempty, it must match the `etag` field of the existing ControlGroup.
+        /// Otherwise, `ABORTED` will be returned.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Fields to be updated.
@@ -806,10 +1019,10 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates the attributes of the TagValue resource.
         /// </summary>
         /// <param name="tagValue">
-        /// Required. The new definition of the TagValue. Only fields `description` and `etag`
-        /// fields can be updated by this request. If the `etag` field is nonempty, it
-        /// must match the `etag` field of the existing ControlGroup. Otherwise,
-        /// `FAILED_PRECONDITION` will be returned.
+        /// Required. The new definition of the TagValue. Only fields `description` and
+        /// `etag` fields can be updated by this request. If the `etag` field is
+        /// nonempty, it must match the `etag` field of the existing ControlGroup.
+        /// Otherwise, `ABORTED` will be returned.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Fields to be updated.
@@ -827,10 +1040,10 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates the attributes of the TagValue resource.
         /// </summary>
         /// <param name="tagValue">
-        /// Required. The new definition of the TagValue. Only fields `description` and `etag`
-        /// fields can be updated by this request. If the `etag` field is nonempty, it
-        /// must match the `etag` field of the existing ControlGroup. Otherwise,
-        /// `FAILED_PRECONDITION` will be returned.
+        /// Required. The new definition of the TagValue. Only fields `description` and
+        /// `etag` fields can be updated by this request. If the `etag` field is
+        /// nonempty, it must match the `etag` field of the existing ControlGroup.
+        /// Otherwise, `ABORTED` will be returned.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Fields to be updated.
@@ -901,7 +1114,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name for TagValue to be deleted in the format tagValues/456.
+        /// Required. Resource name for TagValue to be deleted in the format
+        /// tagValues/456.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -916,7 +1130,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name for TagValue to be deleted in the format tagValues/456.
+        /// Required. Resource name for TagValue to be deleted in the format
+        /// tagValues/456.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -931,7 +1146,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name for TagValue to be deleted in the format tagValues/456.
+        /// Required. Resource name for TagValue to be deleted in the format
+        /// tagValues/456.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -943,7 +1159,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name for TagValue to be deleted in the format tagValues/456.
+        /// Required. Resource name for TagValue to be deleted in the format
+        /// tagValues/456.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -958,7 +1175,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name for TagValue to be deleted in the format tagValues/456.
+        /// Required. Resource name for TagValue to be deleted in the format
+        /// tagValues/456.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -973,7 +1191,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// deleted.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name for TagValue to be deleted in the format tagValues/456.
+        /// Required. Resource name for TagValue to be deleted in the format
+        /// tagValues/456.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1533,6 +1752,8 @@ namespace Google.Cloud.ResourceManager.V3
 
         private readonly gaxgrpc::ApiCall<GetTagValueRequest, TagValue> _callGetTagValue;
 
+        private readonly gaxgrpc::ApiCall<GetNamespacedTagValueRequest, TagValue> _callGetNamespacedTagValue;
+
         private readonly gaxgrpc::ApiCall<CreateTagValueRequest, lro::Operation> _callCreateTagValue;
 
         private readonly gaxgrpc::ApiCall<UpdateTagValueRequest, lro::Operation> _callUpdateTagValue;
@@ -1555,7 +1776,11 @@ namespace Google.Cloud.ResourceManager.V3
         {
             GrpcClient = grpcClient;
             TagValuesSettings effectiveSettings = settings ?? TagValuesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateTagValueOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTagValueOperationsSettings, logger);
             UpdateTagValueOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTagValueOperationsSettings, logger);
             DeleteTagValueOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTagValueOperationsSettings, logger);
@@ -1565,6 +1790,9 @@ namespace Google.Cloud.ResourceManager.V3
             _callGetTagValue = clientHelper.BuildApiCall<GetTagValueRequest, TagValue>("GetTagValue", grpcClient.GetTagValueAsync, grpcClient.GetTagValue, effectiveSettings.GetTagValueSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTagValue);
             Modify_GetTagValueApiCall(ref _callGetTagValue);
+            _callGetNamespacedTagValue = clientHelper.BuildApiCall<GetNamespacedTagValueRequest, TagValue>("GetNamespacedTagValue", grpcClient.GetNamespacedTagValueAsync, grpcClient.GetNamespacedTagValue, effectiveSettings.GetNamespacedTagValueSettings);
+            Modify_ApiCall(ref _callGetNamespacedTagValue);
+            Modify_GetNamespacedTagValueApiCall(ref _callGetNamespacedTagValue);
             _callCreateTagValue = clientHelper.BuildApiCall<CreateTagValueRequest, lro::Operation>("CreateTagValue", grpcClient.CreateTagValueAsync, grpcClient.CreateTagValue, effectiveSettings.CreateTagValueSettings);
             Modify_ApiCall(ref _callCreateTagValue);
             Modify_CreateTagValueApiCall(ref _callCreateTagValue);
@@ -1592,6 +1820,8 @@ namespace Google.Cloud.ResourceManager.V3
 
         partial void Modify_GetTagValueApiCall(ref gaxgrpc::ApiCall<GetTagValueRequest, TagValue> call);
 
+        partial void Modify_GetNamespacedTagValueApiCall(ref gaxgrpc::ApiCall<GetNamespacedTagValueRequest, TagValue> call);
+
         partial void Modify_CreateTagValueApiCall(ref gaxgrpc::ApiCall<CreateTagValueRequest, lro::Operation> call);
 
         partial void Modify_UpdateTagValueApiCall(ref gaxgrpc::ApiCall<UpdateTagValueRequest, lro::Operation> call);
@@ -1612,6 +1842,8 @@ namespace Google.Cloud.ResourceManager.V3
         partial void Modify_ListTagValuesRequest(ref ListTagValuesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetTagValueRequest(ref GetTagValueRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetNamespacedTagValueRequest(ref GetNamespacedTagValueRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateTagValueRequest(ref CreateTagValueRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1650,9 +1882,8 @@ namespace Google.Cloud.ResourceManager.V3
         }
 
         /// <summary>
-        /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-        /// if the user does not have permission to view it, this method will return
-        /// `PERMISSION_DENIED`.
+        /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+        /// value does not exist or the user does not have permission to view it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1664,9 +1895,8 @@ namespace Google.Cloud.ResourceManager.V3
         }
 
         /// <summary>
-        /// Retrieves TagValue. If the TagValue or namespaced name does not exist, or
-        /// if the user does not have permission to view it, this method will return
-        /// `PERMISSION_DENIED`.
+        /// Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the
+        /// value does not exist or the user does not have permission to view it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1677,13 +1907,41 @@ namespace Google.Cloud.ResourceManager.V3
             return _callGetTagValue.Async(request, callSettings);
         }
 
+        /// <summary>
+        /// Retrieves a TagValue by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the value does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TagValue GetNamespacedTagValue(GetNamespacedTagValueRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNamespacedTagValueRequest(ref request, ref callSettings);
+            return _callGetNamespacedTagValue.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a TagValue by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the value does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TagValue> GetNamespacedTagValueAsync(GetNamespacedTagValueRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNamespacedTagValueRequest(ref request, ref callSettings);
+            return _callGetNamespacedTagValue.Async(request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>CreateTagValue</c>.</summary>
         public override lro::OperationsClient CreateTagValueOperationsClient { get; }
 
         /// <summary>
         /// Creates a TagValue as a child of the specified TagKey. If a another
         /// request with the same parameters is sent while the original request is in
-        /// process the second request will receive an error. A maximum of 300
+        /// process the second request will receive an error. A maximum of 1000
         /// TagValues can exist under a TagKey at any given time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1698,7 +1956,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// <summary>
         /// Creates a TagValue as a child of the specified TagKey. If a another
         /// request with the same parameters is sent while the original request is in
-        /// process the second request will receive an error. A maximum of 300
+        /// process the second request will receive an error. A maximum of 1000
         /// TagValues can exist under a TagKey at any given time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

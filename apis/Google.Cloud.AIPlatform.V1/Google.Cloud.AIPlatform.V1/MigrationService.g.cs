@@ -42,7 +42,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29n",
             "bGVhcGlzLmNvbS9Mb2NhdGlvbhJaChltaWdyYXRlX3Jlc291cmNlX3JlcXVl",
             "c3RzGAIgAygLMjIuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTWlncmF0",
-            "ZVJlc291cmNlUmVxdWVzdEID4EECIvoKChZNaWdyYXRlUmVzb3VyY2VSZXF1",
+            "ZVJlc291cmNlUmVxdWVzdEID4EECIuIKChZNaWdyYXRlUmVzb3VyY2VSZXF1",
             "ZXN0EoYBCiZtaWdyYXRlX21sX2VuZ2luZV9tb2RlbF92ZXJzaW9uX2NvbmZp",
             "ZxgBIAEoCzJULmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1pZ3JhdGVS",
             "ZXNvdXJjZVJlcXVlc3QuTWlncmF0ZU1sRW5naW5lTW9kZWxWZXJzaW9uQ29u",
@@ -57,61 +57,61 @@ namespace Google.Cloud.AIPlatform.V1 {
             "RGF0YXNldENvbmZpZ0gAGpUBCiFNaWdyYXRlTWxFbmdpbmVNb2RlbFZlcnNp",
             "b25Db25maWcSFQoIZW5kcG9pbnQYASABKAlCA+BBAhI4Cg1tb2RlbF92ZXJz",
             "aW9uGAIgASgJQiHgQQL6QRsKGW1sLmdvb2dsZWFwaXMuY29tL1ZlcnNpb24S",
-            "HwoSbW9kZWxfZGlzcGxheV9uYW1lGAMgASgJQgPgQQIadQoYTWlncmF0ZUF1",
-            "dG9tbE1vZGVsQ29uZmlnEjgKBW1vZGVsGAEgASgJQingQQL6QSMKIWF1dG9t",
-            "bC5nb29nbGVhcGlzLmNvbS9BdXRvTUxNb2RlbBIfChJtb2RlbF9kaXNwbGF5",
-            "X25hbWUYAiABKAlCA+BBARp9ChpNaWdyYXRlQXV0b21sRGF0YXNldENvbmZp",
-            "ZxI8CgdkYXRhc2V0GAEgASgJQivgQQL6QSUKI2F1dG9tbC5nb29nbGVhcGlz",
-            "LmNvbS9BdXRvTUxEYXRhc2V0EiEKFGRhdGFzZXRfZGlzcGxheV9uYW1lGAIg",
-            "ASgJQgPgQQIaywMKIE1pZ3JhdGVEYXRhTGFiZWxpbmdEYXRhc2V0Q29uZmln",
-            "EkgKB2RhdGFzZXQYASABKAlCN+BBAvpBMQovZGF0YWxhYmVsaW5nLmdvb2ds",
-            "ZWFwaXMuY29tL0RhdGFMYWJlbGluZ0RhdGFzZXQSIQoUZGF0YXNldF9kaXNw",
-            "bGF5X25hbWUYAiABKAlCA+BBARK7AQovbWlncmF0ZV9kYXRhX2xhYmVsaW5n",
-            "X2Fubm90YXRlZF9kYXRhc2V0X2NvbmZpZ3MYAyADKAsyfS5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5NaWdyYXRlUmVzb3VyY2VSZXF1ZXN0Lk1pZ3Jh",
-            "dGVEYXRhTGFiZWxpbmdEYXRhc2V0Q29uZmlnLk1pZ3JhdGVEYXRhTGFiZWxp",
-            "bmdBbm5vdGF0ZWREYXRhc2V0Q29uZmlnQgPgQQEafAopTWlncmF0ZURhdGFM",
-            "YWJlbGluZ0Fubm90YXRlZERhdGFzZXRDb25maWcSTwoRYW5ub3RhdGVkX2Rh",
-            "dGFzZXQYASABKAlCNOBBAvpBLgosZGF0YWxhYmVsaW5nLmdvb2dsZWFwaXMu",
-            "Y29tL0Fubm90YXRlZERhdGFzZXRCCQoHcmVxdWVzdCJ4Ch1CYXRjaE1pZ3Jh",
-            "dGVSZXNvdXJjZXNSZXNwb25zZRJXChptaWdyYXRlX3Jlc291cmNlX3Jlc3Bv",
-            "bnNlcxgBIAMoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1pZ3Jh",
-            "dGVSZXNvdXJjZVJlc3BvbnNlIu0BChdNaWdyYXRlUmVzb3VyY2VSZXNwb25z",
-            "ZRI5CgdkYXRhc2V0GAEgASgJQib6QSMKIWFpcGxhdGZvcm0uZ29vZ2xlYXBp",
-            "cy5jb20vRGF0YXNldEgAEjUKBW1vZGVsGAIgASgJQiT6QSEKH2FpcGxhdGZv",
-            "cm0uZ29vZ2xlYXBpcy5jb20vTW9kZWxIABJLChNtaWdyYXRhYmxlX3Jlc291",
-            "cmNlGAMgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTWlncmF0",
-            "YWJsZVJlc291cmNlQhMKEW1pZ3JhdGVkX3Jlc291cmNlItsDCiZCYXRjaE1p",
-            "Z3JhdGVSZXNvdXJjZXNPcGVyYXRpb25NZXRhZGF0YRJOChBnZW5lcmljX21l",
-            "dGFkYXRhGAEgASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2Vu",
-            "ZXJpY09wZXJhdGlvbk1ldGFkYXRhEmkKD3BhcnRpYWxfcmVzdWx0cxgCIAMo",
-            "CzJQLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJhdGNoTWlncmF0ZVJl",
-            "c291cmNlc09wZXJhdGlvbk1ldGFkYXRhLlBhcnRpYWxSZXN1bHQa9QEKDVBh",
-            "cnRpYWxSZXN1bHQSIwoFZXJyb3IYAiABKAsyEi5nb29nbGUucnBjLlN0YXR1",
-            "c0gAEjUKBW1vZGVsGAMgASgJQiT6QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBp",
-            "cy5jb20vTW9kZWxIABI5CgdkYXRhc2V0GAQgASgJQib6QSMKIWFpcGxhdGZv",
-            "cm0uZ29vZ2xlYXBpcy5jb20vRGF0YXNldEgAEkMKB3JlcXVlc3QYASABKAsy",
-            "Mi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5NaWdyYXRlUmVzb3VyY2VS",
-            "ZXF1ZXN0QggKBnJlc3VsdDKCBQoQTWlncmF0aW9uU2VydmljZRLsAQoZU2Vh",
-            "cmNoTWlncmF0YWJsZVJlc291cmNlcxI8Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLlNlYXJjaE1pZ3JhdGFibGVSZXNvdXJjZXNSZXF1ZXN0Gj0uZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU2VhcmNoTWlncmF0YWJsZVJlc291",
-            "cmNlc1Jlc3BvbnNlIlKC0+STAkMiPi92MS97cGFyZW50PXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyp9L21pZ3JhdGFibGVSZXNvdXJjZXM6c2VhcmNoOgEq2kEG",
-            "cGFyZW50Eq8CChVCYXRjaE1pZ3JhdGVSZXNvdXJjZXMSOC5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5CYXRjaE1pZ3JhdGVSZXNvdXJjZXNSZXF1ZXN0",
-            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiK8AYLT5JMCSSJEL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vbWlncmF0YWJsZVJl",
-            "c291cmNlczpiYXRjaE1pZ3JhdGU6ASraQSBwYXJlbnQsbWlncmF0ZV9yZXNv",
-            "dXJjZV9yZXF1ZXN0c8pBRwodQmF0Y2hNaWdyYXRlUmVzb3VyY2VzUmVzcG9u",
-            "c2USJkJhdGNoTWlncmF0ZVJlc291cmNlc09wZXJhdGlvbk1ldGFkYXRhGk3K",
-            "QRlhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULTAQoeY29tLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxQhVNaWdyYXRpb25TZXJ2aWNlUHJvdG9Q",
-            "AVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2FpcGxh",
-            "dGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
-            "bS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpD",
-            "bG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "HwoSbW9kZWxfZGlzcGxheV9uYW1lGAMgASgJQgPgQQIabwoYTWlncmF0ZUF1",
+            "dG9tbE1vZGVsQ29uZmlnEjIKBW1vZGVsGAEgASgJQiPgQQL6QR0KG2F1dG9t",
+            "bC5nb29nbGVhcGlzLmNvbS9Nb2RlbBIfChJtb2RlbF9kaXNwbGF5X25hbWUY",
+            "AiABKAlCA+BBARp3ChpNaWdyYXRlQXV0b21sRGF0YXNldENvbmZpZxI2Cgdk",
+            "YXRhc2V0GAEgASgJQiXgQQL6QR8KHWF1dG9tbC5nb29nbGVhcGlzLmNvbS9E",
+            "YXRhc2V0EiEKFGRhdGFzZXRfZGlzcGxheV9uYW1lGAIgASgJQgPgQQIavwMK",
+            "IE1pZ3JhdGVEYXRhTGFiZWxpbmdEYXRhc2V0Q29uZmlnEjwKB2RhdGFzZXQY",
+            "ASABKAlCK+BBAvpBJQojZGF0YWxhYmVsaW5nLmdvb2dsZWFwaXMuY29tL0Rh",
+            "dGFzZXQSIQoUZGF0YXNldF9kaXNwbGF5X25hbWUYAiABKAlCA+BBARK7AQov",
+            "bWlncmF0ZV9kYXRhX2xhYmVsaW5nX2Fubm90YXRlZF9kYXRhc2V0X2NvbmZp",
+            "Z3MYAyADKAsyfS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5NaWdyYXRl",
+            "UmVzb3VyY2VSZXF1ZXN0Lk1pZ3JhdGVEYXRhTGFiZWxpbmdEYXRhc2V0Q29u",
+            "ZmlnLk1pZ3JhdGVEYXRhTGFiZWxpbmdBbm5vdGF0ZWREYXRhc2V0Q29uZmln",
+            "QgPgQQEafAopTWlncmF0ZURhdGFMYWJlbGluZ0Fubm90YXRlZERhdGFzZXRD",
+            "b25maWcSTwoRYW5ub3RhdGVkX2RhdGFzZXQYASABKAlCNOBBAvpBLgosZGF0",
+            "YWxhYmVsaW5nLmdvb2dsZWFwaXMuY29tL0Fubm90YXRlZERhdGFzZXRCCQoH",
+            "cmVxdWVzdCJ4Ch1CYXRjaE1pZ3JhdGVSZXNvdXJjZXNSZXNwb25zZRJXChpt",
+            "aWdyYXRlX3Jlc291cmNlX3Jlc3BvbnNlcxgBIAMoCzIzLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLk1pZ3JhdGVSZXNvdXJjZVJlc3BvbnNlIu0BChdN",
+            "aWdyYXRlUmVzb3VyY2VSZXNwb25zZRI5CgdkYXRhc2V0GAEgASgJQib6QSMK",
+            "IWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRGF0YXNldEgAEjUKBW1vZGVs",
+            "GAIgASgJQiT6QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWxI",
+            "ABJLChNtaWdyYXRhYmxlX3Jlc291cmNlGAMgASgLMi4uZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjEuTWlncmF0YWJsZVJlc291cmNlQhMKEW1pZ3JhdGVk",
+            "X3Jlc291cmNlItsDCiZCYXRjaE1pZ3JhdGVSZXNvdXJjZXNPcGVyYXRpb25N",
+            "ZXRhZGF0YRJOChBnZW5lcmljX21ldGFkYXRhGAEgASgLMjQuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuR2VuZXJpY09wZXJhdGlvbk1ldGFkYXRhEmkK",
+            "D3BhcnRpYWxfcmVzdWx0cxgCIAMoCzJQLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLkJhdGNoTWlncmF0ZVJlc291cmNlc09wZXJhdGlvbk1ldGFkYXRh",
+            "LlBhcnRpYWxSZXN1bHQa9QEKDVBhcnRpYWxSZXN1bHQSIwoFZXJyb3IYAiAB",
+            "KAsyEi5nb29nbGUucnBjLlN0YXR1c0gAEjUKBW1vZGVsGAMgASgJQiT6QSEK",
+            "H2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWxIABI5CgdkYXRhc2V0",
+            "GAQgASgJQib6QSMKIWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRGF0YXNl",
+            "dEgAEkMKB3JlcXVlc3QYASABKAsyMi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5NaWdyYXRlUmVzb3VyY2VSZXF1ZXN0QggKBnJlc3VsdDKCBQoQTWln",
+            "cmF0aW9uU2VydmljZRLsAQoZU2VhcmNoTWlncmF0YWJsZVJlc291cmNlcxI8",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNlYXJjaE1pZ3JhdGFibGVS",
+            "ZXNvdXJjZXNSZXF1ZXN0Gj0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "U2VhcmNoTWlncmF0YWJsZVJlc291cmNlc1Jlc3BvbnNlIlLaQQZwYXJlbnSC",
+            "0+STAkMiPi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L21p",
+            "Z3JhdGFibGVSZXNvdXJjZXM6c2VhcmNoOgEqEq8CChVCYXRjaE1pZ3JhdGVS",
+            "ZXNvdXJjZXMSOC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CYXRjaE1p",
+            "Z3JhdGVSZXNvdXJjZXNSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
+            "ZXJhdGlvbiK8AcpBRwodQmF0Y2hNaWdyYXRlUmVzb3VyY2VzUmVzcG9uc2US",
+            "JkJhdGNoTWlncmF0ZVJlc291cmNlc09wZXJhdGlvbk1ldGFkYXRh2kEgcGFy",
+            "ZW50LG1pZ3JhdGVfcmVzb3VyY2VfcmVxdWVzdHOC0+STAkkiRC92MS97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L21pZ3JhdGFibGVSZXNvdXJj",
+            "ZXM6YmF0Y2hNaWdyYXRlOgEqGk3KQRlhaXBsYXRmb3JtLmdvb2dsZWFwaXMu",
+            "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
+            "bGF0Zm9ybULTAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhVN",
+            "aWdyYXRpb25TZXJ2aWNlUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9h",
+            "aXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpH",
+            "b29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBs",
+            "YXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MigratableResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OperationReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -135,6 +135,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [MigrationService.SearchMigratableResources][google.cloud.aiplatform.v1.MigrationService.SearchMigratableResources].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchMigratableResourcesRequest : pb::IMessage<SearchMigratableResourcesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -466,6 +467,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [MigrationService.SearchMigratableResources][google.cloud.aiplatform.v1.MigrationService.SearchMigratableResources].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchMigratableResourcesResponse : pb::IMessage<SearchMigratableResourcesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -694,6 +696,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [MigrationService.BatchMigrateResources][google.cloud.aiplatform.v1.MigrationService.BatchMigrateResources].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchMigrateResourcesRequest : pb::IMessage<BatchMigrateResourcesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -922,6 +925,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Config of migrating one resource from automl.googleapis.com,
   /// datalabeling.googleapis.com and ml.googleapis.com to Vertex AI.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MigrateResourceRequest : pb::IMessage<MigrateResourceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1334,6 +1338,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Config for migrating version in ml.googleapis.com to Vertex AI's Model.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MigrateMlEngineModelVersionConfig : pb::IMessage<MigrateMlEngineModelVersionConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1620,6 +1625,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Config for migrating Model in automl.googleapis.com to Vertex AI's Model.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MigrateAutomlModelConfig : pb::IMessage<MigrateAutomlModelConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1859,6 +1865,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Config for migrating Dataset in automl.googleapis.com to Vertex AI's
       /// Dataset.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MigrateAutomlDatasetConfig : pb::IMessage<MigrateAutomlDatasetConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2098,6 +2105,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Config for migrating Dataset in datalabeling.googleapis.com to Vertex
       /// AI's Dataset.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MigrateDataLabelingDatasetConfig : pb::IMessage<MigrateDataLabelingDatasetConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2371,6 +2379,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// Config for migrating AnnotatedDataset in datalabeling.googleapis.com to
           /// Vertex AI's SavedQuery.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class MigrateDataLabelingAnnotatedDatasetConfig : pb::IMessage<MigrateDataLabelingAnnotatedDatasetConfig>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2579,6 +2588,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [MigrationService.BatchMigrateResources][google.cloud.aiplatform.v1.MigrationService.BatchMigrateResources].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchMigrateResourcesResponse : pb::IMessage<BatchMigrateResourcesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2763,6 +2773,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Describes a successfully migrated resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MigrateResourceResponse : pb::IMessage<MigrateResourceResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2824,10 +2835,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Dataset {
-      get { return migratedResourceCase_ == MigratedResourceOneofCase.Dataset ? (string) migratedResource_ : ""; }
+      get { return HasDataset ? (string) migratedResource_ : ""; }
       set {
         migratedResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         migratedResourceCase_ = MigratedResourceOneofCase.Dataset;
+      }
+    }
+    /// <summary>Gets whether the "dataset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDataset {
+      get { return migratedResourceCase_ == MigratedResourceOneofCase.Dataset; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "dataset" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDataset() {
+      if (HasDataset) {
+        ClearMigratedResource();
       }
     }
 
@@ -2839,10 +2864,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
-      get { return migratedResourceCase_ == MigratedResourceOneofCase.Model ? (string) migratedResource_ : ""; }
+      get { return HasModel ? (string) migratedResource_ : ""; }
       set {
         migratedResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         migratedResourceCase_ = MigratedResourceOneofCase.Model;
+      }
+    }
+    /// <summary>Gets whether the "model" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasModel {
+      get { return migratedResourceCase_ == MigratedResourceOneofCase.Model; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "model" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearModel() {
+      if (HasModel) {
+        ClearMigratedResource();
       }
     }
 
@@ -2909,8 +2948,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Dataset) hash ^= Dataset.GetHashCode();
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Model) hash ^= Model.GetHashCode();
+      if (HasDataset) hash ^= Dataset.GetHashCode();
+      if (HasModel) hash ^= Model.GetHashCode();
       if (migratableResource_ != null) hash ^= MigratableResource.GetHashCode();
       hash ^= (int) migratedResourceCase_;
       if (_unknownFields != null) {
@@ -2931,11 +2970,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Dataset) {
+      if (HasDataset) {
         output.WriteRawTag(10);
         output.WriteString(Dataset);
       }
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Model) {
+      if (HasModel) {
         output.WriteRawTag(18);
         output.WriteString(Model);
       }
@@ -2953,11 +2992,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Dataset) {
+      if (HasDataset) {
         output.WriteRawTag(10);
         output.WriteString(Dataset);
       }
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Model) {
+      if (HasModel) {
         output.WriteRawTag(18);
         output.WriteString(Model);
       }
@@ -2975,10 +3014,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Dataset) {
+      if (HasDataset) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
       }
-      if (migratedResourceCase_ == MigratedResourceOneofCase.Model) {
+      if (HasModel) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
       }
       if (migratableResource_ != null) {
@@ -3082,6 +3121,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Runtime operation information for
   /// [MigrationService.BatchMigrateResources][google.cloud.aiplatform.v1.MigrationService.BatchMigrateResources].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchMigrateResourcesOperationMetadata : pb::IMessage<BatchMigrateResourcesOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3319,6 +3359,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Represents a partial result in batch migration operation for one
       /// [MigrateResourceRequest][google.cloud.aiplatform.v1.MigrateResourceRequest].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PartialResult : pb::IMessage<PartialResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3398,10 +3439,24 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Model {
-          get { return resultCase_ == ResultOneofCase.Model ? (string) result_ : ""; }
+          get { return HasModel ? (string) result_ : ""; }
           set {
             result_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             resultCase_ = ResultOneofCase.Model;
+          }
+        }
+        /// <summary>Gets whether the "model" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasModel {
+          get { return resultCase_ == ResultOneofCase.Model; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "model" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearModel() {
+          if (HasModel) {
+            ClearResult();
           }
         }
 
@@ -3413,10 +3468,24 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Dataset {
-          get { return resultCase_ == ResultOneofCase.Dataset ? (string) result_ : ""; }
+          get { return HasDataset ? (string) result_ : ""; }
           set {
             result_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             resultCase_ = ResultOneofCase.Dataset;
+          }
+        }
+        /// <summary>Gets whether the "dataset" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDataset {
+          get { return resultCase_ == ResultOneofCase.Dataset; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "dataset" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDataset() {
+          if (HasDataset) {
+            ClearResult();
           }
         }
 
@@ -3425,7 +3494,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         private global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest request_;
         /// <summary>
         /// It's the same as the value in
-        /// [MigrateResourceRequest.migrate_resource_requests][].
+        /// [BatchMigrateResourcesRequest.migrate_resource_requests][google.cloud.aiplatform.v1.BatchMigrateResourcesRequest.migrate_resource_requests].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3486,8 +3555,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (resultCase_ == ResultOneofCase.Error) hash ^= Error.GetHashCode();
-          if (resultCase_ == ResultOneofCase.Model) hash ^= Model.GetHashCode();
-          if (resultCase_ == ResultOneofCase.Dataset) hash ^= Dataset.GetHashCode();
+          if (HasModel) hash ^= Model.GetHashCode();
+          if (HasDataset) hash ^= Dataset.GetHashCode();
           if (request_ != null) hash ^= Request.GetHashCode();
           hash ^= (int) resultCase_;
           if (_unknownFields != null) {
@@ -3516,11 +3585,11 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(18);
             output.WriteMessage(Error);
           }
-          if (resultCase_ == ResultOneofCase.Model) {
+          if (HasModel) {
             output.WriteRawTag(26);
             output.WriteString(Model);
           }
-          if (resultCase_ == ResultOneofCase.Dataset) {
+          if (HasDataset) {
             output.WriteRawTag(34);
             output.WriteString(Dataset);
           }
@@ -3542,11 +3611,11 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(18);
             output.WriteMessage(Error);
           }
-          if (resultCase_ == ResultOneofCase.Model) {
+          if (HasModel) {
             output.WriteRawTag(26);
             output.WriteString(Model);
           }
-          if (resultCase_ == ResultOneofCase.Dataset) {
+          if (HasDataset) {
             output.WriteRawTag(34);
             output.WriteString(Dataset);
           }
@@ -3563,10 +3632,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (resultCase_ == ResultOneofCase.Error) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
           }
-          if (resultCase_ == ResultOneofCase.Model) {
+          if (HasModel) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
           }
-          if (resultCase_ == ResultOneofCase.Dataset) {
+          if (HasDataset) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
           }
           if (request_ != null) {

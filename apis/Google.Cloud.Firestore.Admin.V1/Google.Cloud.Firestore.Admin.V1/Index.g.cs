@@ -25,35 +25,43 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL2luZGV4LnByb3RvEhlnb29n",
-            "bGUuZmlyZXN0b3JlLmFkbWluLnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvIqMGCgVJbmRleBIMCgRuYW1lGAEgASgJEkAKC3F1ZXJ5X3Njb3BlGAIg",
-            "ASgOMisuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5RdWVyeVNj",
-            "b3BlEjsKBmZpZWxkcxgDIAMoCzIrLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4u",
-            "djEuSW5kZXguSW5kZXhGaWVsZBI1CgVzdGF0ZRgEIAEoDjImLmdvb2dsZS5m",
-            "aXJlc3RvcmUuYWRtaW4udjEuSW5kZXguU3RhdGUavQIKCkluZGV4RmllbGQS",
-            "EgoKZmllbGRfcGF0aBgBIAEoCRJCCgVvcmRlchgCIAEoDjIxLmdvb2dsZS5m",
-            "aXJlc3RvcmUuYWRtaW4udjEuSW5kZXguSW5kZXhGaWVsZC5PcmRlckgAEk8K",
-            "DGFycmF5X2NvbmZpZxgDIAEoDjI3Lmdvb2dsZS5maXJlc3RvcmUuYWRtaW4u",
-            "djEuSW5kZXguSW5kZXhGaWVsZC5BcnJheUNvbmZpZ0gAIj0KBU9yZGVyEhUK",
-            "EU9SREVSX1VOU1BFQ0lGSUVEEAASDQoJQVNDRU5ESU5HEAESDgoKREVTQ0VO",
-            "RElORxACIjkKC0FycmF5Q29uZmlnEhwKGEFSUkFZX0NPTkZJR19VTlNQRUNJ",
-            "RklFRBAAEgwKCENPTlRBSU5TEAFCDAoKdmFsdWVfbW9kZSJPCgpRdWVyeVNj",
-            "b3BlEhsKF1FVRVJZX1NDT1BFX1VOU1BFQ0lGSUVEEAASDgoKQ09MTEVDVElP",
-            "ThABEhQKEENPTExFQ1RJT05fR1JPVVAQAiJJCgVTdGF0ZRIVChFTVEFURV9V",
-            "TlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIQCgxORUVE",
-            "U19SRVBBSVIQAzp66kF3Ch5maXJlc3RvcmUuZ29vZ2xlYXBpcy5jb20vSW5k",
-            "ZXgSVXByb2plY3RzL3twcm9qZWN0fS9kYXRhYmFzZXMve2RhdGFiYXNlfS9j",
-            "b2xsZWN0aW9uR3JvdXBzL3tjb2xsZWN0aW9ufS9pbmRleGVzL3tpbmRleH1C",
-            "2QEKHWNvbS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxQgpJbmRleFByb3Rv",
-            "UAFaOWNsb3VkLmdvb2dsZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2FkbWlu",
-            "L2FwaXYxcGI7YXBpdjFwYqICBEdDRlOqAh9Hb29nbGUuQ2xvdWQuRmlyZXN0",
-            "b3JlLkFkbWluLlYxygIfR29vZ2xlXENsb3VkXEZpcmVzdG9yZVxBZG1pblxW",
-            "MeoCI0dvb2dsZTo6Q2xvdWQ6OkZpcmVzdG9yZTo6QWRtaW46OlYxYgZwcm90",
-            "bzM="));
+            "bGUuZmlyZXN0b3JlLmFkbWluLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
+            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIpEJCgVJbmRl",
+            "eBIMCgRuYW1lGAEgASgJEkAKC3F1ZXJ5X3Njb3BlGAIgASgOMisuZ29vZ2xl",
+            "LmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5RdWVyeVNjb3BlEjwKCWFwaV9z",
+            "Y29wZRgFIAEoDjIpLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXgu",
+            "QXBpU2NvcGUSOwoGZmllbGRzGAMgAygLMisuZ29vZ2xlLmZpcmVzdG9yZS5h",
+            "ZG1pbi52MS5JbmRleC5JbmRleEZpZWxkEjUKBXN0YXRlGAQgASgOMiYuZ29v",
+            "Z2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5TdGF0ZRqiBAoKSW5kZXhG",
+            "aWVsZBISCgpmaWVsZF9wYXRoGAEgASgJEkIKBW9yZGVyGAIgASgOMjEuZ29v",
+            "Z2xlLmZpcmVzdG9yZS5hZG1pbi52MS5JbmRleC5JbmRleEZpZWxkLk9yZGVy",
+            "SAASTwoMYXJyYXlfY29uZmlnGAMgASgOMjcuZ29vZ2xlLmZpcmVzdG9yZS5h",
+            "ZG1pbi52MS5JbmRleC5JbmRleEZpZWxkLkFycmF5Q29uZmlnSAASUQoNdmVj",
+            "dG9yX2NvbmZpZxgEIAEoCzI4Lmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEu",
+            "SW5kZXguSW5kZXhGaWVsZC5WZWN0b3JDb25maWdIABqPAQoMVmVjdG9yQ29u",
+            "ZmlnEhYKCWRpbWVuc2lvbhgBIAEoBUID4EECElIKBGZsYXQYAiABKAsyQi5n",
+            "b29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkluZGV4LkluZGV4RmllbGQuVmVj",
+            "dG9yQ29uZmlnLkZsYXRJbmRleEgAGgsKCUZsYXRJbmRleEIGCgR0eXBlIj0K",
+            "BU9yZGVyEhUKEU9SREVSX1VOU1BFQ0lGSUVEEAASDQoJQVNDRU5ESU5HEAES",
+            "DgoKREVTQ0VORElORxACIjkKC0FycmF5Q29uZmlnEhwKGEFSUkFZX0NPTkZJ",
+            "R19VTlNQRUNJRklFRBAAEgwKCENPTlRBSU5TEAFCDAoKdmFsdWVfbW9kZSJp",
+            "CgpRdWVyeVNjb3BlEhsKF1FVRVJZX1NDT1BFX1VOU1BFQ0lGSUVEEAASDgoK",
+            "Q09MTEVDVElPThABEhQKEENPTExFQ1RJT05fR1JPVVAQAhIYChRDT0xMRUNU",
+            "SU9OX1JFQ1VSU0lWRRADIi8KCEFwaVNjb3BlEgsKB0FOWV9BUEkQABIWChJE",
+            "QVRBU1RPUkVfTU9ERV9BUEkQASJJCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
+            "RklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIQCgxORUVEU19SRVBB",
+            "SVIQAzp66kF3Ch5maXJlc3RvcmUuZ29vZ2xlYXBpcy5jb20vSW5kZXgSVXBy",
+            "b2plY3RzL3twcm9qZWN0fS9kYXRhYmFzZXMve2RhdGFiYXNlfS9jb2xsZWN0",
+            "aW9uR3JvdXBzL3tjb2xsZWN0aW9ufS9pbmRleGVzL3tpbmRleH1C2QEKHWNv",
+            "bS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxQgpJbmRleFByb3RvUAFaOWNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2FkbWluL2FkbWlu",
+            "cGI7YWRtaW5wYqICBEdDRlOqAh9Hb29nbGUuQ2xvdWQuRmlyZXN0b3JlLkFk",
+            "bWluLlYxygIfR29vZ2xlXENsb3VkXEZpcmVzdG9yZVxBZG1pblxWMeoCI0dv",
+            "b2dsZTo6Q2xvdWQ6OkZpcmVzdG9yZTo6QWRtaW46OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index), global::Google.Cloud.Firestore.Admin.V1.Index.Parser, new[]{ "Name", "QueryScope", "Fields", "State" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Parser, new[]{ "FieldPath", "Order", "ArrayConfig" }, new[]{ "ValueMode" }, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) }, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index), global::Google.Cloud.Firestore.Admin.V1.Index.Parser, new[]{ "Name", "QueryScope", "ApiScope", "Fields", "State" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Parser, new[]{ "FieldPath", "Order", "ArrayConfig", "VectorConfig" }, new[]{ "ValueMode" }, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order), typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Parser, new[]{ "Dimension", "Flat" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex), global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex.Parser, null, null, null, null, null)})})})
           }));
     }
     #endregion
@@ -64,6 +72,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   /// Cloud Firestore indexes enable simple and complex queries against
   /// documents in a database.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Index : pb::IMessage<Index>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -100,6 +109,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     public Index(Index other) : this() {
       name_ = other.name_;
       queryScope_ = other.queryScope_;
+      apiScope_ = other.apiScope_;
       fields_ = other.fields_.Clone();
       state_ = other.state_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -135,11 +145,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     /// <summary>
     /// Indexes with a collection query scope specified allow queries
     /// against a collection that is the child of a specific document, specified at
-    /// query time, and that has the same collection id.
+    /// query time, and that has the same collection ID.
     ///
     /// Indexes with a collection group query scope specified allow queries against
     /// all collections descended from a specific document, specified at query
-    /// time, and that have the same collection id as this index.
+    /// time, and that have the same collection ID as this index.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -147,6 +157,21 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       get { return queryScope_; }
       set {
         queryScope_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "api_scope" field.</summary>
+    public const int ApiScopeFieldNumber = 5;
+    private global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope apiScope_ = global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope.AnyApi;
+    /// <summary>
+    /// The API scope supported by this index.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope ApiScope {
+      get { return apiScope_; }
+      set {
+        apiScope_ = value;
       }
     }
 
@@ -158,12 +183,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     /// <summary>
     /// The fields supported by this index.
     ///
-    /// For composite indexes, this is always 2 or more fields.
-    /// The last field entry is always for the field path `__name__`. If, on
-    /// creation, `__name__` was not specified as the last field, it will be added
-    /// automatically with the same direction as that of the last field defined. If
-    /// the final field in a composite index is not directional, the `__name__`
-    /// will be ordered ASCENDING (unless explicitly specified).
+    /// For composite indexes, this requires a minimum of 2 and a maximum of 100
+    /// fields. The last field entry is always for the field path `__name__`. If,
+    /// on creation, `__name__` was not specified as the last field, it will be
+    /// added automatically with the same direction as that of the last field
+    /// defined. If the final field in a composite index is not directional, the
+    /// `__name__` will be ordered ASCENDING (unless explicitly specified).
     ///
     /// For single field indexes, this will always be exactly one entry with a
     /// field path equal to the field path of the associated field.
@@ -206,6 +231,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (Name != other.Name) return false;
       if (QueryScope != other.QueryScope) return false;
+      if (ApiScope != other.ApiScope) return false;
       if(!fields_.Equals(other.fields_)) return false;
       if (State != other.State) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -217,6 +243,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (QueryScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope.Unspecified) hash ^= QueryScope.GetHashCode();
+      if (ApiScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope.AnyApi) hash ^= ApiScope.GetHashCode();
       hash ^= fields_.GetHashCode();
       if (State != global::Google.Cloud.Firestore.Admin.V1.Index.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
@@ -250,6 +277,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) State);
       }
+      if (ApiScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope.AnyApi) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ApiScope);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -273,6 +304,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) State);
       }
+      if (ApiScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope.AnyApi) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) ApiScope);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -288,6 +323,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (QueryScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) QueryScope);
+      }
+      if (ApiScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope.AnyApi) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ApiScope);
       }
       size += fields_.CalculateSize(_repeated_fields_codec);
       if (State != global::Google.Cloud.Firestore.Admin.V1.Index.Types.State.Unspecified) {
@@ -310,6 +348,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
       if (other.QueryScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope.Unspecified) {
         QueryScope = other.QueryScope;
+      }
+      if (other.ApiScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope.AnyApi) {
+        ApiScope = other.ApiScope;
       }
       fields_.Add(other.fields_);
       if (other.State != global::Google.Cloud.Firestore.Admin.V1.Index.Types.State.Unspecified) {
@@ -346,6 +387,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             State = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.State) input.ReadEnum();
             break;
           }
+          case 40: {
+            ApiScope = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -377,6 +422,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             State = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.State) input.ReadEnum();
             break;
           }
+          case 40: {
+            ApiScope = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.ApiScope) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -399,15 +448,36 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         /// <summary>
         /// Indexes with a collection query scope specified allow queries
         /// against a collection that is the child of a specific document, specified
-        /// at query time, and that has the collection id specified by the index.
+        /// at query time, and that has the collection ID specified by the index.
         /// </summary>
         [pbr::OriginalName("COLLECTION")] Collection = 1,
         /// <summary>
         /// Indexes with a collection group query scope specified allow queries
-        /// against all collections that has the collection id specified by the
+        /// against all collections that has the collection ID specified by the
         /// index.
         /// </summary>
         [pbr::OriginalName("COLLECTION_GROUP")] CollectionGroup = 2,
+        /// <summary>
+        /// Include all the collections's ancestor in the index. Only available for
+        /// Datastore Mode databases.
+        /// </summary>
+        [pbr::OriginalName("COLLECTION_RECURSIVE")] CollectionRecursive = 3,
+      }
+
+      /// <summary>
+      /// API Scope defines the APIs (Firestore Native, or Firestore in
+      /// Datastore Mode) that are supported for queries.
+      /// </summary>
+      public enum ApiScope {
+        /// <summary>
+        /// The index can only be used by the Firestore Native query API.
+        /// This is the default.
+        /// </summary>
+        [pbr::OriginalName("ANY_API")] AnyApi = 0,
+        /// <summary>
+        /// The index can only be used by the Firestore in Datastore Mode query API.
+        /// </summary>
+        [pbr::OriginalName("DATASTORE_MODE_API")] DatastoreModeApi = 1,
       }
 
       /// <summary>
@@ -452,6 +522,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// The field_path describes which field is indexed, the value_mode describes
       /// how the field value is indexed.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IndexField : pb::IMessage<IndexField>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -494,6 +565,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             case ValueModeOneofCase.ArrayConfig:
               ArrayConfig = other.ArrayConfig;
               break;
+            case ValueModeOneofCase.VectorConfig:
+              VectorConfig = other.VectorConfig.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -531,10 +605,24 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order Order {
-          get { return valueModeCase_ == ValueModeOneofCase.Order ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order) valueMode_ : global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order.Unspecified; }
+          get { return HasOrder ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order) valueMode_ : global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.Order.Unspecified; }
           set {
             valueMode_ = value;
             valueModeCase_ = ValueModeOneofCase.Order;
+          }
+        }
+        /// <summary>Gets whether the "order" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasOrder {
+          get { return valueModeCase_ == ValueModeOneofCase.Order; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "order" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearOrder() {
+          if (HasOrder) {
+            ClearValueMode();
           }
         }
 
@@ -546,10 +634,40 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig ArrayConfig {
-          get { return valueModeCase_ == ValueModeOneofCase.ArrayConfig ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) valueMode_ : global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig.Unspecified; }
+          get { return HasArrayConfig ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig) valueMode_ : global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.ArrayConfig.Unspecified; }
           set {
             valueMode_ = value;
             valueModeCase_ = ValueModeOneofCase.ArrayConfig;
+          }
+        }
+        /// <summary>Gets whether the "array_config" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasArrayConfig {
+          get { return valueModeCase_ == ValueModeOneofCase.ArrayConfig; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "array_config" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearArrayConfig() {
+          if (HasArrayConfig) {
+            ClearValueMode();
+          }
+        }
+
+        /// <summary>Field number for the "vector_config" field.</summary>
+        public const int VectorConfigFieldNumber = 4;
+        /// <summary>
+        /// Indicates that this field supports nearest neighbor and distance
+        /// operations on vector.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig VectorConfig {
+          get { return valueModeCase_ == ValueModeOneofCase.VectorConfig ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig) valueMode_ : null; }
+          set {
+            valueMode_ = value;
+            valueModeCase_ = value == null ? ValueModeOneofCase.None : ValueModeOneofCase.VectorConfig;
           }
         }
 
@@ -559,6 +677,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           None = 0,
           Order = 2,
           ArrayConfig = 3,
+          VectorConfig = 4,
         }
         private ValueModeOneofCase valueModeCase_ = ValueModeOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -592,6 +711,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           if (FieldPath != other.FieldPath) return false;
           if (Order != other.Order) return false;
           if (ArrayConfig != other.ArrayConfig) return false;
+          if (!object.Equals(VectorConfig, other.VectorConfig)) return false;
           if (ValueModeCase != other.ValueModeCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -601,8 +721,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (FieldPath.Length != 0) hash ^= FieldPath.GetHashCode();
-          if (valueModeCase_ == ValueModeOneofCase.Order) hash ^= Order.GetHashCode();
-          if (valueModeCase_ == ValueModeOneofCase.ArrayConfig) hash ^= ArrayConfig.GetHashCode();
+          if (HasOrder) hash ^= Order.GetHashCode();
+          if (HasArrayConfig) hash ^= ArrayConfig.GetHashCode();
+          if (valueModeCase_ == ValueModeOneofCase.VectorConfig) hash ^= VectorConfig.GetHashCode();
           hash ^= (int) valueModeCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -626,13 +747,17 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             output.WriteRawTag(10);
             output.WriteString(FieldPath);
           }
-          if (valueModeCase_ == ValueModeOneofCase.Order) {
+          if (HasOrder) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Order);
           }
-          if (valueModeCase_ == ValueModeOneofCase.ArrayConfig) {
+          if (HasArrayConfig) {
             output.WriteRawTag(24);
             output.WriteEnum((int) ArrayConfig);
+          }
+          if (valueModeCase_ == ValueModeOneofCase.VectorConfig) {
+            output.WriteRawTag(34);
+            output.WriteMessage(VectorConfig);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -648,13 +773,17 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             output.WriteRawTag(10);
             output.WriteString(FieldPath);
           }
-          if (valueModeCase_ == ValueModeOneofCase.Order) {
+          if (HasOrder) {
             output.WriteRawTag(16);
             output.WriteEnum((int) Order);
           }
-          if (valueModeCase_ == ValueModeOneofCase.ArrayConfig) {
+          if (HasArrayConfig) {
             output.WriteRawTag(24);
             output.WriteEnum((int) ArrayConfig);
+          }
+          if (valueModeCase_ == ValueModeOneofCase.VectorConfig) {
+            output.WriteRawTag(34);
+            output.WriteMessage(VectorConfig);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -669,11 +798,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           if (FieldPath.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(FieldPath);
           }
-          if (valueModeCase_ == ValueModeOneofCase.Order) {
+          if (HasOrder) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Order);
           }
-          if (valueModeCase_ == ValueModeOneofCase.ArrayConfig) {
+          if (HasArrayConfig) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ArrayConfig);
+          }
+          if (valueModeCase_ == ValueModeOneofCase.VectorConfig) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(VectorConfig);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -696,6 +828,12 @@ namespace Google.Cloud.Firestore.Admin.V1 {
               break;
             case ValueModeOneofCase.ArrayConfig:
               ArrayConfig = other.ArrayConfig;
+              break;
+            case ValueModeOneofCase.VectorConfig:
+              if (VectorConfig == null) {
+                VectorConfig = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig();
+              }
+              VectorConfig.MergeFrom(other.VectorConfig);
               break;
           }
 
@@ -728,6 +866,15 @@ namespace Google.Cloud.Firestore.Admin.V1 {
                 valueModeCase_ = ValueModeOneofCase.ArrayConfig;
                 break;
               }
+              case 34: {
+                global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig subBuilder = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig();
+                if (valueModeCase_ == ValueModeOneofCase.VectorConfig) {
+                  subBuilder.MergeFrom(VectorConfig);
+                }
+                input.ReadMessage(subBuilder);
+                VectorConfig = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -755,6 +902,15 @@ namespace Google.Cloud.Firestore.Admin.V1 {
               case 24: {
                 valueMode_ = input.ReadEnum();
                 valueModeCase_ = ValueModeOneofCase.ArrayConfig;
+                break;
+              }
+              case 34: {
+                global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig subBuilder = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig();
+                if (valueModeCase_ == ValueModeOneofCase.VectorConfig) {
+                  subBuilder.MergeFrom(VectorConfig);
+                }
+                input.ReadMessage(subBuilder);
+                VectorConfig = subBuilder;
                 break;
               }
             }
@@ -797,6 +953,453 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             /// The index supports array containment queries.
             /// </summary>
             [pbr::OriginalName("CONTAINS")] Contains = 1,
+          }
+
+          /// <summary>
+          /// The index configuration to support vector search operations
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class VectorConfig : pb::IMessage<VectorConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<VectorConfig> _parser = new pb::MessageParser<VectorConfig>(() => new VectorConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<VectorConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public VectorConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public VectorConfig(VectorConfig other) : this() {
+              dimension_ = other.dimension_;
+              switch (other.TypeCase) {
+                case TypeOneofCase.Flat:
+                  Flat = other.Flat.Clone();
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public VectorConfig Clone() {
+              return new VectorConfig(this);
+            }
+
+            /// <summary>Field number for the "dimension" field.</summary>
+            public const int DimensionFieldNumber = 1;
+            private int dimension_;
+            /// <summary>
+            /// Required. The vector dimension this configuration applies to.
+            ///
+            /// The resulting index will only include vectors of this dimension, and
+            /// can be used for vector search with the same dimension.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int Dimension {
+              get { return dimension_; }
+              set {
+                dimension_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "flat" field.</summary>
+            public const int FlatFieldNumber = 2;
+            /// <summary>
+            /// Indicates the vector index is a flat index.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex Flat {
+              get { return typeCase_ == TypeOneofCase.Flat ? (global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex) type_ : null; }
+              set {
+                type_ = value;
+                typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.Flat;
+              }
+            }
+
+            private object type_;
+            /// <summary>Enum of possible cases for the "type" oneof.</summary>
+            public enum TypeOneofCase {
+              None = 0,
+              Flat = 2,
+            }
+            private TypeOneofCase typeCase_ = TypeOneofCase.None;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TypeOneofCase TypeCase {
+              get { return typeCase_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearType() {
+              typeCase_ = TypeOneofCase.None;
+              type_ = null;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as VectorConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(VectorConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Dimension != other.Dimension) return false;
+              if (!object.Equals(Flat, other.Flat)) return false;
+              if (TypeCase != other.TypeCase) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Dimension != 0) hash ^= Dimension.GetHashCode();
+              if (typeCase_ == TypeOneofCase.Flat) hash ^= Flat.GetHashCode();
+              hash ^= (int) typeCase_;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Dimension != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(Dimension);
+              }
+              if (typeCase_ == TypeOneofCase.Flat) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Flat);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Dimension != 0) {
+                output.WriteRawTag(8);
+                output.WriteInt32(Dimension);
+              }
+              if (typeCase_ == TypeOneofCase.Flat) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Flat);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Dimension != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeInt32Size(Dimension);
+              }
+              if (typeCase_ == TypeOneofCase.Flat) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Flat);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(VectorConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Dimension != 0) {
+                Dimension = other.Dimension;
+              }
+              switch (other.TypeCase) {
+                case TypeOneofCase.Flat:
+                  if (Flat == null) {
+                    Flat = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex();
+                  }
+                  Flat.MergeFrom(other.Flat);
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    Dimension = input.ReadInt32();
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex subBuilder = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex();
+                    if (typeCase_ == TypeOneofCase.Flat) {
+                      subBuilder.MergeFrom(Flat);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Flat = subBuilder;
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    Dimension = input.ReadInt32();
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex subBuilder = new global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Types.FlatIndex();
+                    if (typeCase_ == TypeOneofCase.Flat) {
+                      subBuilder.MergeFrom(Flat);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Flat = subBuilder;
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the VectorConfig message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// An index that stores vectors in a flat data structure, and supports
+              /// exhaustive search.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class FlatIndex : pb::IMessage<FlatIndex>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<FlatIndex> _parser = new pb::MessageParser<FlatIndex>(() => new FlatIndex());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<FlatIndex> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Firestore.Admin.V1.Index.Types.IndexField.Types.VectorConfig.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public FlatIndex() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public FlatIndex(FlatIndex other) : this() {
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public FlatIndex Clone() {
+                  return new FlatIndex(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as FlatIndex);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(FlatIndex other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(FlatIndex other) {
+                  if (other == null) {
+                    return;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
+
           }
 
         }

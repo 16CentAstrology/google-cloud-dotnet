@@ -3,7 +3,7 @@
 //     source: google/spanner/admin/database/v1/spanner_database_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -29,7 +29,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   /// The Cloud Spanner Database Admin API can be used to:
   ///   * create, drop, and list databases
   ///   * update the schema of pre-existing databases
-  ///   * create, delete and list backups for a database
+  ///   * create, delete, copy and list backups for a database
   ///   * restore a database from an existing backup
   /// </summary>
   public static partial class DatabaseAdmin
@@ -82,6 +82,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.Database> __Marshaller_google_spanner_admin_database_v1_Database = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.Database.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest> __Marshaller_google_spanner_admin_database_v1_UpdateDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest> __Marshaller_google_spanner_admin_database_v1_UpdateDatabaseDdlRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest> __Marshaller_google_spanner_admin_database_v1_DropDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest.Parser));
@@ -131,6 +133,24 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest> __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse> __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest> __Marshaller_google_spanner_admin_database_v1_AddSplitPointsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse> __Marshaller_google_spanner_admin_database_v1_AddSplitPointsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest> __Marshaller_google_spanner_admin_database_v1_CreateBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> __Marshaller_google_spanner_admin_database_v1_BackupSchedule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest> __Marshaller_google_spanner_admin_database_v1_GetBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest> __Marshaller_google_spanner_admin_database_v1_UpdateBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest> __Marshaller_google_spanner_admin_database_v1_DeleteBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest> __Marshaller_google_spanner_admin_database_v1_ListBackupSchedulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse> __Marshaller_google_spanner_admin_database_v1_ListBackupSchedulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> __Method_ListDatabases = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse>(
@@ -155,6 +175,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         "GetDatabase",
         __Marshaller_google_spanner_admin_database_v1_GetDatabaseRequest,
         __Marshaller_google_spanner_admin_database_v1_Database);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation> __Method_UpdateDatabase = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDatabase",
+        __Marshaller_google_spanner_admin_database_v1_UpdateDatabaseRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest, global::Google.LongRunning.Operation> __Method_UpdateDatabaseDdl = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest, global::Google.LongRunning.Operation>(
@@ -284,6 +312,54 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesRequest,
         __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse> __Method_AddSplitPoints = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddSplitPoints",
+        __Marshaller_google_spanner_admin_database_v1_AddSplitPointsRequest,
+        __Marshaller_google_spanner_admin_database_v1_AddSplitPointsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> __Method_CreateBackupSchedule = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateBackupSchedule",
+        __Marshaller_google_spanner_admin_database_v1_CreateBackupScheduleRequest,
+        __Marshaller_google_spanner_admin_database_v1_BackupSchedule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> __Method_GetBackupSchedule = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBackupSchedule",
+        __Marshaller_google_spanner_admin_database_v1_GetBackupScheduleRequest,
+        __Marshaller_google_spanner_admin_database_v1_BackupSchedule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> __Method_UpdateBackupSchedule = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateBackupSchedule",
+        __Marshaller_google_spanner_admin_database_v1_UpdateBackupScheduleRequest,
+        __Marshaller_google_spanner_admin_database_v1_BackupSchedule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBackupSchedule = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteBackupSchedule",
+        __Marshaller_google_spanner_admin_database_v1_DeleteBackupScheduleRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse> __Method_ListBackupSchedules = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListBackupSchedules",
+        __Marshaller_google_spanner_admin_database_v1_ListBackupSchedulesRequest,
+        __Marshaller_google_spanner_admin_database_v1_ListBackupSchedulesResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -312,8 +388,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
       /// can be used to track preparation of the database. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-      /// [response][google.longrunning.Operation.response] field type is
+      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
       /// [Database][google.spanner.admin.database.v1.Database], if successful.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -338,13 +414,61 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
 
       /// <summary>
+      /// Updates a Cloud Spanner database. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the database. If the named database does not
+      /// exist, returns `NOT_FOUND`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field is set to true.
+      ///   * Cancelling the operation is best-effort. If the cancellation succeeds,
+      ///     the operation metadata's
+      ///     [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+      ///     is set, the updates are reverted, and the operation terminates with a
+      ///     `CANCELLED` status.
+      ///   * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+      ///     until the pending operation is done (returns successfully or with
+      ///     error).
+      ///   * Reading the database via the API continues to give the pre-request
+      ///     values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * The new values are in effect and readable via the API.
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`
+      /// and can be used to track the database modification. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Updates the schema of a Cloud Spanner database by
       /// creating/altering/dropping tables, columns, indexes, etc. The returned
       /// [long-running operation][google.longrunning.Operation] will have a name of
       /// the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
       /// track execution of the schema change(s). The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+      /// The operation has no response.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -450,12 +574,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
       /// and can be used to track creation of the backup. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-      /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
-      /// There can be only one pending backup creation per database. Backup creation
-      /// of different databases can run concurrently.
+      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+      /// Cancelling the returned operation will stop the creation and delete the
+      /// backup. There can be only one pending backup creation per database. Backup
+      /// creation of different databases can run concurrently.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -476,9 +600,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// The [metadata][google.longrunning.Operation.metadata] field type is
       /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-      /// copying and delete the backup.
-      /// Concurrent CopyBackup requests can run on the same source backup.
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+      /// Cancelling the returned operation will stop the copying and delete the
+      /// destination backup. Concurrent CopyBackup requests can run on the same
+      /// source backup.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -490,7 +615,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
 
       /// <summary>
-      /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Gets metadata on a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -502,7 +628,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
 
       /// <summary>
-      /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Updates a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -514,7 +641,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
 
       /// <summary>
-      /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Deletes a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -619,6 +747,78 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Adds split points to specified tables, indexes of a database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse> AddSplitPoints(global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new backup schedule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> CreateBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets backup schedule for the input schedule name.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> GetBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> UpdateBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all the backup schedules for the database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse> ListBackupSchedules(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Client for DatabaseAdmin</summary>
@@ -702,8 +902,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
       /// can be used to track preparation of the database. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-      /// [response][google.longrunning.Operation.response] field type is
+      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
       /// [Database][google.spanner.admin.database.v1.Database], if successful.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -722,8 +922,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
       /// can be used to track preparation of the database. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-      /// [response][google.longrunning.Operation.response] field type is
+      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
       /// [Database][google.spanner.admin.database.v1.Database], if successful.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -740,8 +940,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
       /// can be used to track preparation of the database. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-      /// [response][google.longrunning.Operation.response] field type is
+      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
       /// [Database][google.spanner.admin.database.v1.Database], if successful.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -760,8 +960,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
       /// can be used to track preparation of the database. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-      /// [response][google.longrunning.Operation.response] field type is
+      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
       /// [Database][google.spanner.admin.database.v1.Database], if successful.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -821,13 +1021,202 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDatabase, null, options, request);
       }
       /// <summary>
+      /// Updates a Cloud Spanner database. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the database. If the named database does not
+      /// exist, returns `NOT_FOUND`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field is set to true.
+      ///   * Cancelling the operation is best-effort. If the cancellation succeeds,
+      ///     the operation metadata's
+      ///     [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+      ///     is set, the updates are reverted, and the operation terminates with a
+      ///     `CANCELLED` status.
+      ///   * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+      ///     until the pending operation is done (returns successfully or with
+      ///     error).
+      ///   * Reading the database via the API continues to give the pre-request
+      ///     values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * The new values are in effect and readable via the API.
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`
+      /// and can be used to track the database modification. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Cloud Spanner database. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the database. If the named database does not
+      /// exist, returns `NOT_FOUND`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field is set to true.
+      ///   * Cancelling the operation is best-effort. If the cancellation succeeds,
+      ///     the operation metadata's
+      ///     [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+      ///     is set, the updates are reverted, and the operation terminates with a
+      ///     `CANCELLED` status.
+      ///   * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+      ///     until the pending operation is done (returns successfully or with
+      ///     error).
+      ///   * Reading the database via the API continues to give the pre-request
+      ///     values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * The new values are in effect and readable via the API.
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`
+      /// and can be used to track the database modification. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Cloud Spanner database. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the database. If the named database does not
+      /// exist, returns `NOT_FOUND`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field is set to true.
+      ///   * Cancelling the operation is best-effort. If the cancellation succeeds,
+      ///     the operation metadata's
+      ///     [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+      ///     is set, the updates are reverted, and the operation terminates with a
+      ///     `CANCELLED` status.
+      ///   * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+      ///     until the pending operation is done (returns successfully or with
+      ///     error).
+      ///   * Reading the database via the API continues to give the pre-request
+      ///     values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * The new values are in effect and readable via the API.
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`
+      /// and can be used to track the database modification. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Cloud Spanner database. The returned
+      /// [long-running operation][google.longrunning.Operation] can be used to track
+      /// the progress of updating the database. If the named database does not
+      /// exist, returns `NOT_FOUND`.
+      ///
+      /// While the operation is pending:
+      ///
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field is set to true.
+      ///   * Cancelling the operation is best-effort. If the cancellation succeeds,
+      ///     the operation metadata's
+      ///     [cancel_time][google.spanner.admin.database.v1.UpdateDatabaseMetadata.cancel_time]
+      ///     is set, the updates are reverted, and the operation terminates with a
+      ///     `CANCELLED` status.
+      ///   * New UpdateDatabase requests will return a `FAILED_PRECONDITION` error
+      ///     until the pending operation is done (returns successfully or with
+      ///     error).
+      ///   * Reading the database via the API continues to give the pre-request
+      ///     values.
+      ///
+      /// Upon completion of the returned operation:
+      ///
+      ///   * The new values are in effect and readable via the API.
+      ///   * The database's
+      ///     [reconciling][google.spanner.admin.database.v1.Database.reconciling]
+      ///     field becomes false.
+      ///
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format
+      /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>/operations/&lt;operation_id>`
+      /// and can be used to track the database modification. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseMetadata][google.spanner.admin.database.v1.UpdateDatabaseMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDatabase, null, options, request);
+      }
+      /// <summary>
       /// Updates the schema of a Cloud Spanner database by
       /// creating/altering/dropping tables, columns, indexes, etc. The returned
       /// [long-running operation][google.longrunning.Operation] will have a name of
       /// the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
       /// track execution of the schema change(s). The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+      /// The operation has no response.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -846,7 +1235,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
       /// track execution of the schema change(s). The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+      /// The operation has no response.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -863,7 +1253,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
       /// track execution of the schema change(s). The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+      /// The operation has no response.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -882,7 +1273,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
       /// track execution of the schema change(s). The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].
+      /// The operation has no response.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1251,12 +1643,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
       /// and can be used to track creation of the backup. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-      /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
-      /// There can be only one pending backup creation per database. Backup creation
-      /// of different databases can run concurrently.
+      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+      /// Cancelling the returned operation will stop the creation and delete the
+      /// backup. There can be only one pending backup creation per database. Backup
+      /// creation of different databases can run concurrently.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1275,12 +1667,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
       /// and can be used to track creation of the backup. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-      /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
-      /// There can be only one pending backup creation per database. Backup creation
-      /// of different databases can run concurrently.
+      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+      /// Cancelling the returned operation will stop the creation and delete the
+      /// backup. There can be only one pending backup creation per database. Backup
+      /// creation of different databases can run concurrently.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1297,12 +1689,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
       /// and can be used to track creation of the backup. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-      /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
-      /// There can be only one pending backup creation per database. Backup creation
-      /// of different databases can run concurrently.
+      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+      /// Cancelling the returned operation will stop the creation and delete the
+      /// backup. There can be only one pending backup creation per database. Backup
+      /// creation of different databases can run concurrently.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1321,12 +1713,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// `projects/&lt;project>/instances/&lt;instance>/backups/&lt;backup>/operations/&lt;operation_id>`
       /// and can be used to track creation of the backup. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata]. The
-      /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
-      /// There can be only one pending backup creation per database. Backup creation
-      /// of different databases can run concurrently.
+      /// [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+      /// Cancelling the returned operation will stop the creation and delete the
+      /// backup. There can be only one pending backup creation per database. Backup
+      /// creation of different databases can run concurrently.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1346,9 +1738,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// The [metadata][google.longrunning.Operation.metadata] field type is
       /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-      /// copying and delete the backup.
-      /// Concurrent CopyBackup requests can run on the same source backup.
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+      /// Cancelling the returned operation will stop the copying and delete the
+      /// destination backup. Concurrent CopyBackup requests can run on the same
+      /// source backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1370,9 +1763,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// The [metadata][google.longrunning.Operation.metadata] field type is
       /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-      /// copying and delete the backup.
-      /// Concurrent CopyBackup requests can run on the same source backup.
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+      /// Cancelling the returned operation will stop the copying and delete the
+      /// destination backup. Concurrent CopyBackup requests can run on the same
+      /// source backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1392,9 +1786,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// The [metadata][google.longrunning.Operation.metadata] field type is
       /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-      /// copying and delete the backup.
-      /// Concurrent CopyBackup requests can run on the same source backup.
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+      /// Cancelling the returned operation will stop the copying and delete the
+      /// destination backup. Concurrent CopyBackup requests can run on the same
+      /// source backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1416,9 +1811,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// The [metadata][google.longrunning.Operation.metadata] field type is
       /// [CopyBackupMetadata][google.spanner.admin.database.v1.CopyBackupMetadata].
       /// The [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.spanner.admin.database.v1.Backup], if successful. Cancelling the returned operation will stop the
-      /// copying and delete the backup.
-      /// Concurrent CopyBackup requests can run on the same source backup.
+      /// [Backup][google.spanner.admin.database.v1.Backup], if successful.
+      /// Cancelling the returned operation will stop the copying and delete the
+      /// destination backup. Concurrent CopyBackup requests can run on the same
+      /// source backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1429,7 +1825,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CopyBackup, null, options, request);
       }
       /// <summary>
-      /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Gets metadata on a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1442,7 +1839,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return GetBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Gets metadata on a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1453,7 +1851,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetBackup, null, options, request);
       }
       /// <summary>
-      /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Gets metadata on a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1466,7 +1865,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return GetBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets metadata on a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Gets metadata on a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1477,7 +1877,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetBackup, null, options, request);
       }
       /// <summary>
-      /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Updates a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1490,7 +1891,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return UpdateBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Updates a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1501,7 +1903,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateBackup, null, options, request);
       }
       /// <summary>
-      /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Updates a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1514,7 +1917,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return UpdateBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Updates a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1525,7 +1929,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateBackup, null, options, request);
       }
       /// <summary>
-      /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Deletes a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1538,7 +1943,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return DeleteBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Deletes a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1549,7 +1955,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteBackup, null, options, request);
       }
       /// <summary>
-      /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Deletes a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1562,7 +1969,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return DeleteBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a pending or completed [Backup][google.spanner.admin.database.v1.Backup].
+      /// Deletes a pending or completed
+      /// [Backup][google.spanner.admin.database.v1.Backup].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1948,6 +2356,294 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDatabaseRoles, null, options, request);
       }
+      /// <summary>
+      /// Adds split points to specified tables, indexes of a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse AddSplitPoints(global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddSplitPoints(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds split points to specified tables, indexes of a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse AddSplitPoints(global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddSplitPoints, null, options, request);
+      }
+      /// <summary>
+      /// Adds split points to specified tables, indexes of a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse> AddSplitPointsAsync(global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddSplitPointsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds split points to specified tables, indexes of a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse> AddSplitPointsAsync(global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddSplitPoints, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule CreateBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule CreateBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> CreateBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateBackupScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> CreateBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Gets backup schedule for the input schedule name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule GetBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets backup schedule for the input schedule name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule GetBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Gets backup schedule for the input schedule name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> GetBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBackupScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets backup schedule for the input schedule name.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> GetBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule UpdateBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule UpdateBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> UpdateBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateBackupScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> UpdateBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupSchedule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBackupSchedule(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteBackupScheduleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a backup schedule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupScheduleAsync(global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteBackupSchedule, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the backup schedules for the database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse ListBackupSchedules(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupSchedules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the backup schedules for the database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse ListBackupSchedules(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListBackupSchedules, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the backup schedules for the database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse> ListBackupSchedulesAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListBackupSchedulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the backup schedules for the database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse> ListBackupSchedulesAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListBackupSchedules, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DatabaseAdminClient NewInstance(ClientBaseConfiguration configuration)
@@ -1965,6 +2661,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           .AddMethod(__Method_ListDatabases, serviceImpl.ListDatabases)
           .AddMethod(__Method_CreateDatabase, serviceImpl.CreateDatabase)
           .AddMethod(__Method_GetDatabase, serviceImpl.GetDatabase)
+          .AddMethod(__Method_UpdateDatabase, serviceImpl.UpdateDatabase)
           .AddMethod(__Method_UpdateDatabaseDdl, serviceImpl.UpdateDatabaseDdl)
           .AddMethod(__Method_DropDatabase, serviceImpl.DropDatabase)
           .AddMethod(__Method_GetDatabaseDdl, serviceImpl.GetDatabaseDdl)
@@ -1980,7 +2677,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           .AddMethod(__Method_RestoreDatabase, serviceImpl.RestoreDatabase)
           .AddMethod(__Method_ListDatabaseOperations, serviceImpl.ListDatabaseOperations)
           .AddMethod(__Method_ListBackupOperations, serviceImpl.ListBackupOperations)
-          .AddMethod(__Method_ListDatabaseRoles, serviceImpl.ListDatabaseRoles).Build();
+          .AddMethod(__Method_ListDatabaseRoles, serviceImpl.ListDatabaseRoles)
+          .AddMethod(__Method_AddSplitPoints, serviceImpl.AddSplitPoints)
+          .AddMethod(__Method_CreateBackupSchedule, serviceImpl.CreateBackupSchedule)
+          .AddMethod(__Method_GetBackupSchedule, serviceImpl.GetBackupSchedule)
+          .AddMethod(__Method_UpdateBackupSchedule, serviceImpl.UpdateBackupSchedule)
+          .AddMethod(__Method_DeleteBackupSchedule, serviceImpl.DeleteBackupSchedule)
+          .AddMethod(__Method_ListBackupSchedules, serviceImpl.ListBackupSchedules).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1993,6 +2696,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       serviceBinder.AddMethod(__Method_ListDatabases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse>(serviceImpl.ListDatabases));
       serviceBinder.AddMethod(__Method_CreateDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDatabase));
       serviceBinder.AddMethod(__Method_GetDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Database>(serviceImpl.GetDatabase));
+      serviceBinder.AddMethod(__Method_UpdateDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDatabase));
       serviceBinder.AddMethod(__Method_UpdateDatabaseDdl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDatabaseDdl));
       serviceBinder.AddMethod(__Method_DropDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DropDatabase));
       serviceBinder.AddMethod(__Method_GetDatabaseDdl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest, global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse>(serviceImpl.GetDatabaseDdl));
@@ -2009,6 +2713,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       serviceBinder.AddMethod(__Method_ListDatabaseOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse>(serviceImpl.ListDatabaseOperations));
       serviceBinder.AddMethod(__Method_ListBackupOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse>(serviceImpl.ListBackupOperations));
       serviceBinder.AddMethod(__Method_ListDatabaseRoles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse>(serviceImpl.ListDatabaseRoles));
+      serviceBinder.AddMethod(__Method_AddSplitPoints, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse>(serviceImpl.AddSplitPoints));
+      serviceBinder.AddMethod(__Method_CreateBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(serviceImpl.CreateBackupSchedule));
+      serviceBinder.AddMethod(__Method_GetBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(serviceImpl.GetBackupSchedule));
+      serviceBinder.AddMethod(__Method_UpdateBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(serviceImpl.UpdateBackupSchedule));
+      serviceBinder.AddMethod(__Method_DeleteBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.DeleteBackupScheduleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBackupSchedule));
+      serviceBinder.AddMethod(__Method_ListBackupSchedules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupSchedulesResponse>(serviceImpl.ListBackupSchedules));
     }
 
   }

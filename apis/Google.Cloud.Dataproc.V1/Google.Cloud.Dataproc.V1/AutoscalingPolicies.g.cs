@@ -77,40 +77,40 @@ namespace Google.Cloud.Dataproc.V1 {
             "aWN5U2VydmljZRKcAgoXQ3JlYXRlQXV0b3NjYWxpbmdQb2xpY3kSOC5nb29n",
             "bGUuY2xvdWQuZGF0YXByb2MudjEuQ3JlYXRlQXV0b3NjYWxpbmdQb2xpY3lS",
             "ZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkF1dG9zY2FsaW5n",
-            "UG9saWN5IpkBgtPkkwKCASI3L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKn0vYXV0b3NjYWxpbmdQb2xpY2llczoGcG9saWN5Wj8iNS92MS97",
-            "cGFyZW50PXByb2plY3RzLyovcmVnaW9ucy8qfS9hdXRvc2NhbGluZ1BvbGlj",
-            "aWVzOgZwb2xpY3naQQ1wYXJlbnQscG9saWN5EqMCChdVcGRhdGVBdXRvc2Nh",
+            "UG9saWN5IpkB2kENcGFyZW50LHBvbGljeYLT5JMCggEiNy92MS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2F1dG9zY2FsaW5nUG9saWNpZXM6",
+            "BnBvbGljeVo/IjUvdjEve3BhcmVudD1wcm9qZWN0cy8qL3JlZ2lvbnMvKn0v",
+            "YXV0b3NjYWxpbmdQb2xpY2llczoGcG9saWN5EqMCChdVcGRhdGVBdXRvc2Nh",
             "bGluZ1BvbGljeRI4Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5VcGRhdGVB",
             "dXRvc2NhbGluZ1BvbGljeVJlcXVlc3QaKy5nb29nbGUuY2xvdWQuZGF0YXBy",
-            "b2MudjEuQXV0b3NjYWxpbmdQb2xpY3kioAGC0+STApABGj4vdjEve3BvbGlj",
-            "eS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYXV0b3NjYWxpbmdQb2xp",
-            "Y2llcy8qfToGcG9saWN5WkYaPC92MS97cG9saWN5Lm5hbWU9cHJvamVjdHMv",
-            "Ki9yZWdpb25zLyovYXV0b3NjYWxpbmdQb2xpY2llcy8qfToGcG9saWN52kEG",
+            "b2MudjEuQXV0b3NjYWxpbmdQb2xpY3kioAHaQQZwb2xpY3mC0+STApABGj4v",
+            "djEve3BvbGljeS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYXV0b3Nj",
+            "YWxpbmdQb2xpY2llcy8qfToGcG9saWN5WkYaPC92MS97cG9saWN5Lm5hbWU9",
+            "cHJvamVjdHMvKi9yZWdpb25zLyovYXV0b3NjYWxpbmdQb2xpY2llcy8qfToG",
             "cG9saWN5EvsBChRHZXRBdXRvc2NhbGluZ1BvbGljeRI1Lmdvb2dsZS5jbG91",
             "ZC5kYXRhcHJvYy52MS5HZXRBdXRvc2NhbGluZ1BvbGljeVJlcXVlc3QaKy5n",
-            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuQXV0b3NjYWxpbmdQb2xpY3kif4LT",
-            "5JMCchI3L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYXV0b3Nj",
-            "YWxpbmdQb2xpY2llcy8qfVo3EjUvdjEve25hbWU9cHJvamVjdHMvKi9yZWdp",
-            "b25zLyovYXV0b3NjYWxpbmdQb2xpY2llcy8qfdpBBG5hbWUSkgIKF0xpc3RB",
+            "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuQXV0b3NjYWxpbmdQb2xpY3kif9pB",
+            "BG5hbWWC0+STAnISNy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2F1dG9zY2FsaW5nUG9saWNpZXMvKn1aNxI1L3YxL3tuYW1lPXByb2plY3Rz",
+            "LyovcmVnaW9ucy8qL2F1dG9zY2FsaW5nUG9saWNpZXMvKn0SkgIKF0xpc3RB",
             "dXRvc2NhbGluZ1BvbGljaWVzEjguZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
             "Lkxpc3RBdXRvc2NhbGluZ1BvbGljaWVzUmVxdWVzdBo5Lmdvb2dsZS5jbG91",
             "ZC5kYXRhcHJvYy52MS5MaXN0QXV0b3NjYWxpbmdQb2xpY2llc1Jlc3BvbnNl",
-            "IoEBgtPkkwJyEjcvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "fS9hdXRvc2NhbGluZ1BvbGljaWVzWjcSNS92MS97cGFyZW50PXByb2plY3Rz",
-            "LyovcmVnaW9ucy8qfS9hdXRvc2NhbGluZ1BvbGljaWVz2kEGcGFyZW50EuwB",
+            "IoEB2kEGcGFyZW50gtPkkwJyEjcvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qfS9hdXRvc2NhbGluZ1BvbGljaWVzWjcSNS92MS97cGFyZW50",
+            "PXByb2plY3RzLyovcmVnaW9ucy8qfS9hdXRvc2NhbGluZ1BvbGljaWVzEuwB",
             "ChdEZWxldGVBdXRvc2NhbGluZ1BvbGljeRI4Lmdvb2dsZS5jbG91ZC5kYXRh",
             "cHJvYy52MS5EZWxldGVBdXRvc2NhbGluZ1BvbGljeVJlcXVlc3QaFi5nb29n",
-            "bGUucHJvdG9idWYuRW1wdHkif4LT5JMCcio3L3YxL3tuYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovYXV0b3NjYWxpbmdQb2xpY2llcy8qfVo3KjUvdjEv",
-            "e25hbWU9cHJvamVjdHMvKi9yZWdpb25zLyovYXV0b3NjYWxpbmdQb2xpY2ll",
-            "cy8qfdpBBG5hbWUaS8pBF2RhdGFwcm9jLmdvb2dsZWFwaXMuY29t0kEuaHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK8",
+            "bGUucHJvdG9idWYuRW1wdHkif9pBBG5hbWWC0+STAnIqNy92MS97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2F1dG9zY2FsaW5nUG9saWNpZXMvKn1a",
+            "Nyo1L3YxL3tuYW1lPXByb2plY3RzLyovcmVnaW9ucy8qL2F1dG9zY2FsaW5n",
+            "UG9saWNpZXMvKn0aS8pBF2RhdGFwcm9jLmdvb2dsZWFwaXMuY29t0kEuaHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK/",
             "AQocY29tLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MUIYQXV0b3NjYWxpbmdQ",
-            "b2xpY2llc1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YXByb2Mv",
-            "YXBpdjEvZGF0YXByb2NwYjtkYXRhcHJvY3Bi6kFFCh5kYXRhcHJvYy5nb29n",
-            "bGVhcGlzLmNvbS9SZWdpb24SI3Byb2plY3RzL3twcm9qZWN0fS9yZWdpb25z",
-            "L3tyZWdpb259YgZwcm90bzM="));
+            "b2xpY2llc1Byb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vZGF0YXByb2Mv",
+            "djIvYXBpdjEvZGF0YXByb2NwYjtkYXRhcHJvY3Bi6kFFCh5kYXRhcHJvYy5n",
+            "b29nbGVhcGlzLmNvbS9SZWdpb24SI3Byb2plY3RzL3twcm9qZWN0fS9yZWdp",
+            "b25zL3tyZWdpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -133,6 +133,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Describes an autoscaling policy for Dataproc cluster autoscaler.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoscalingPolicy : pb::IMessage<AutoscalingPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -474,7 +475,7 @@ namespace Google.Cloud.Dataproc.V1 {
         }
         SecondaryWorkerConfig.MergeFrom(other.SecondaryWorkerConfig);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       switch (other.AlgorithmCase) {
         case AlgorithmOneofCase.BasicAlgorithm:
           if (BasicAlgorithm == null) {
@@ -594,6 +595,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Basic algorithm for autoscaling.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BasicAutoscalingAlgorithm : pb::IMessage<BasicAutoscalingAlgorithm>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -884,6 +886,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Basic autoscaling configurations for YARN.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BasicYarnAutoscalingConfig : pb::IMessage<BasicYarnAutoscalingConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1284,6 +1287,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// Configuration for the size bounds of an instance group, including its
   /// proportional size to other groups.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InstanceGroupAutoscalingPolicyConfig : pb::IMessage<InstanceGroupAutoscalingPolicyConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1584,6 +1588,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to create an autoscaling policy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateAutoscalingPolicyRequest : pb::IMessage<CreateAutoscalingPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1837,6 +1842,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to fetch an autoscaling policy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAutoscalingPolicyRequest : pb::IMessage<GetAutoscalingPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2041,6 +2047,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to update an autoscaling policy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateAutoscalingPolicyRequest : pb::IMessage<UpdateAutoscalingPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2247,6 +2254,7 @@ namespace Google.Cloud.Dataproc.V1 {
   ///
   /// Autoscaling policies in use by one or more clusters will not be deleted.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAutoscalingPolicyRequest : pb::IMessage<DeleteAutoscalingPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2451,6 +2459,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A request to list autoscaling policies in a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAutoscalingPoliciesRequest : pb::IMessage<ListAutoscalingPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2737,6 +2746,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// A response to a request to list autoscaling policies in a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAutoscalingPoliciesResponse : pb::IMessage<ListAutoscalingPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

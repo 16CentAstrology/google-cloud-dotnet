@@ -1,5 +1,161 @@
 # Version history
 
+## Version 4.25.0, released 2024-12-16
+
+### New features
+
+- Add new fields for delivering intermediate transcriptions through PubSub ([commit b94ea2a](https://github.com/googleapis/google-cloud-dotnet/commit/b94ea2a6f6ca0d2551c7471c018da65ee381f65c))
+
+## Version 4.24.0, released 2024-12-06
+
+### New features
+
+- Properly mark TrainingPhrase name field output-only ([commit d336935](https://github.com/googleapis/google-cloud-dotnet/commit/d336935d53910959377f0437f88cee1f1577ebf9))
+
+### Documentation improvements
+
+- Fixed the references to proto method / fields ([commit d336935](https://github.com/googleapis/google-cloud-dotnet/commit/d336935d53910959377f0437f88cee1f1577ebf9))
+
+## Version 4.23.0, released 2024-11-18
+
+### New features
+
+- Add options of query_source, search_config, end_user_metadata and exact_search ([commit a08e4da](https://github.com/googleapis/google-cloud-dotnet/commit/a08e4da2ff37af2a1097ff51e91c694f4b445515))
+- Expose metadata in AnswerSource ([commit a08e4da](https://github.com/googleapis/google-cloud-dotnet/commit/a08e4da2ff37af2a1097ff51e91c694f4b445515))
+- Added support for ALAW encoding ([commit b206f21](https://github.com/googleapis/google-cloud-dotnet/commit/b206f2191e4dcf31df81e2d540ab4ed3bc5c8fb7))
+- Add options of query_source, search_config and context_size ([commit b206f21](https://github.com/googleapis/google-cloud-dotnet/commit/b206f2191e4dcf31df81e2d540ab4ed3bc5c8fb7))
+
+## Version 4.22.0, released 2024-09-26
+
+### New features
+
+- Created new boolean fields in conversation dataset for zone isolation and zone separation compliance status ([commit 1a9f58d](https://github.com/googleapis/google-cloud-dotnet/commit/1a9f58dd2cf7690fc50ec780c2f573ccda43eccb))
+- Add ALAW encoding value to Audio encoding enum ([commit 1a9f58d](https://github.com/googleapis/google-cloud-dotnet/commit/1a9f58dd2cf7690fc50ec780c2f573ccda43eccb))
+- Created new boolean fields in conversation model for zone isolation and zone separation compliance status ([commit 24e7f8f](https://github.com/googleapis/google-cloud-dotnet/commit/24e7f8f17a28c721b9eae24260db021a42292583))
+
+## Version 4.21.0, released 2024-08-05
+
+### Bug fixes
+
+- Changed field behavior for an existing field `parent` in message `.google.cloud.dialogflow.v2.SearchKnowledgeRequest` ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- Changed field behavior for an existing field `session_id` in message `.google.cloud.dialogflow.v2.SearchKnowledgeRequest` ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+
+### New features
+
+- Add Proactive Generative Knowledge Assist endpoints and types ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- Add Generator related services and types ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- Add GenerateStatelessSuggestion related endpoints and types ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.cloud.dialogflow.v2.Conversation` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `conversation_stage` in message `.google.cloud.dialogflow.v2.Conversation` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `filter` in message `.google.cloud.dialogflow.v2.ListConversationsRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `latest_message` in message `.google.cloud.dialogflow.v2.SuggestConversationSummaryRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `context_size` in message `.google.cloud.dialogflow.v2.SuggestConversationSummaryRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `assist_query_params` in message `.google.cloud.dialogflow.v2.SuggestConversationSummaryRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `latest_message` in message `.google.cloud.dialogflow.v2.GenerateStatelessSummaryRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `max_context_size` in message `.google.cloud.dialogflow.v2.GenerateStatelessSummaryRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `parent` in message `.google.cloud.dialogflow.v2.SearchKnowledgeRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `session_id` in message `.google.cloud.dialogflow.v2.SearchKnowledgeRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `conversation` in message `.google.cloud.dialogflow.v2.SearchKnowledgeRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `latest_message` in message `.google.cloud.dialogflow.v2.SearchKnowledgeRequest` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for message `HumanAgentHandoffConfig` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `live_person_config` in message `.google.cloud.dialogflow.v2.HumanAgentHandoffConfig` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+- A comment for field `audio` in message `.google.cloud.dialogflow.v2.AudioInput` is changed ([commit b56beb4](https://github.com/googleapis/google-cloud-dotnet/commit/b56beb4b533d546023e44cec994d1ec3cd93b953))
+
+## Version 4.20.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 4.19.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 4.18.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 4.17.0, released 2024-03-21
+
+### New features
+
+- Added text sections to the submitted summary ([commit 720a6ad](https://github.com/googleapis/google-cloud-dotnet/commit/720a6ad8a0c11a7a7d386208b22f04c1afa48769))
+- Added conformer model migration opt out flag ([commit 720a6ad](https://github.com/googleapis/google-cloud-dotnet/commit/720a6ad8a0c11a7a7d386208b22f04c1afa48769))
+
+### Documentation improvements
+
+- Clarified wording around END_OF_SINGLE_UTTERANCE ([commit 720a6ad](https://github.com/googleapis/google-cloud-dotnet/commit/720a6ad8a0c11a7a7d386208b22f04c1afa48769))
+
+## Version 4.16.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 4.15.0, released 2024-01-08
+
+### New features
+
+- Add sections field to HumanAgentAssistantConfig.SuggestionQueryConfig ([commit 9dcd3d1](https://github.com/googleapis/google-cloud-dotnet/commit/9dcd3d1679ebe9c9a31f422499c23d92ac45c69b))
+- Add enable_conversation_augmented_query field to HumanAgentAssistantConfig.SuggestionFeatureConfig message ([commit 9dcd3d1](https://github.com/googleapis/google-cloud-dotnet/commit/9dcd3d1679ebe9c9a31f422499c23d92ac45c69b))
+- Add INTENT enum in SearchKnowledgeAnswer.AnswerType message ([commit 9dcd3d1](https://github.com/googleapis/google-cloud-dotnet/commit/9dcd3d1679ebe9c9a31f422499c23d92ac45c69b))
+- Add rewritten_query in field in SearchKnowledgeResponse message ([commit 9dcd3d1](https://github.com/googleapis/google-cloud-dotnet/commit/9dcd3d1679ebe9c9a31f422499c23d92ac45c69b))
+
+### Documentation improvements
+
+- Improved comments on audio_config proto ([commit 9dcd3d1](https://github.com/googleapis/google-cloud-dotnet/commit/9dcd3d1679ebe9c9a31f422499c23d92ac45c69b))
+
+## Version 4.14.0, released 2023-10-02
+
+### New features
+
+- Add the enable_extended_streaming flag ([commit 7db6a56](https://github.com/googleapis/google-cloud-dotnet/commit/7db6a5666de3ea07b6321f28e5df8dc42db2097d))
+
+## Version 4.13.0, released 2023-09-06
+
+### New features
+
+- Added speech endpointing setting ([commit b08f369](https://github.com/googleapis/google-cloud-dotnet/commit/b08f369651e6a6877f9527f3b5c881bc34f1ead9))
+- Added Knowledge Search API ([commit b08f369](https://github.com/googleapis/google-cloud-dotnet/commit/b08f369651e6a6877f9527f3b5c881bc34f1ead9))
+
+## Version 4.12.0, released 2023-08-16
+
+### New features
+
+- Added baseline model version used to generate the summary ([commit 561a1e0](https://github.com/googleapis/google-cloud-dotnet/commit/561a1e0215af68aa92c4ff57a1b863e8f8dde700))
+- Added the platform of the virtual agent response messages ([commit 561a1e0](https://github.com/googleapis/google-cloud-dotnet/commit/561a1e0215af68aa92c4ff57a1b863e8f8dde700))
+
+### Documentation improvements
+
+- Minor formatting ([commit 388c3e2](https://github.com/googleapis/google-cloud-dotnet/commit/388c3e2e054dc58062aa1ea7b24c5e613456defc))
+- Minor formatting ([commit 7648d13](https://github.com/googleapis/google-cloud-dotnet/commit/7648d133650b0ae986da702d4948dcef308221bb))
+- Added google.api.field_behavior for some fields in audio_config ([commit 8588148](https://github.com/googleapis/google-cloud-dotnet/commit/858814847ba8e5b7f6ca123cc8f806db2742d375))
+
+## Version 4.11.0, released 2023-06-27
+
+### New features
+
+- Added dialogflow_assist_answer ([commit 4d022ec](https://github.com/googleapis/google-cloud-dotnet/commit/4d022ec34890706a7efdbdacbf8e6f4f3d348b5e))
+- Added session_ttl ([commit 4d022ec](https://github.com/googleapis/google-cloud-dotnet/commit/4d022ec34890706a7efdbdacbf8e6f4f3d348b5e))
+- Added human_agent_side_config ([commit 4d022ec](https://github.com/googleapis/google-cloud-dotnet/commit/4d022ec34890706a7efdbdacbf8e6f4f3d348b5e))
+- Added suggestion_input ([commit 4d022ec](https://github.com/googleapis/google-cloud-dotnet/commit/4d022ec34890706a7efdbdacbf8e6f4f3d348b5e))
+- Added suggest_dialogflow_assists_response ([commit 4d022ec](https://github.com/googleapis/google-cloud-dotnet/commit/4d022ec34890706a7efdbdacbf8e6f4f3d348b5e))
+- Added suggest_entity_extraction_response ([commit 4d022ec](https://github.com/googleapis/google-cloud-dotnet/commit/4d022ec34890706a7efdbdacbf8e6f4f3d348b5e))
+
+## Version 4.10.0, released 2023-05-11
+
+### New features
+
+- Add baseline model configuration for conversation summarization ([commit fe578a7](https://github.com/googleapis/google-cloud-dotnet/commit/fe578a7cbccdebc73b5c3dae63efd9be68a38298))
+- Extended StreamingListCallCompanionEvents timeout to 600 seconds ([commit ddd7f08](https://github.com/googleapis/google-cloud-dotnet/commit/ddd7f0877f1fb600eb42a5e169525a37b6dd99c0))
+- Added debug info for StreamingDetectIntent ([commit ddd7f08](https://github.com/googleapis/google-cloud-dotnet/commit/ddd7f0877f1fb600eb42a5e169525a37b6dd99c0))
+- Added GenerateStatelessSummary method ([commit ddd7f08](https://github.com/googleapis/google-cloud-dotnet/commit/ddd7f0877f1fb600eb42a5e169525a37b6dd99c0))
+
 ## Version 4.9.0, released 2023-03-06
 
 ### New features

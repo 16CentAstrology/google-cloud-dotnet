@@ -107,38 +107,38 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
             "ZXJ2aWNlEuYBChJMaXN0QXBwQ29ubmVjdGlvbnMSRC5nb29nbGUuY2xvdWQu",
             "YmV5b25kY29ycC5hcHBjb25uZWN0aW9ucy52MS5MaXN0QXBwQ29ubmVjdGlv",
             "bnNSZXF1ZXN0GkUuZ29vZ2xlLmNsb3VkLmJleW9uZGNvcnAuYXBwY29ubmVj",
-            "dGlvbnMudjEuTGlzdEFwcENvbm5lY3Rpb25zUmVzcG9uc2UiQ4LT5JMCNBIy",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYXBwQ29ubmVj",
-            "dGlvbnPaQQZwYXJlbnQS0wEKEEdldEFwcENvbm5lY3Rpb24SQi5nb29nbGUu",
+            "dGlvbnMudjEuTGlzdEFwcENvbm5lY3Rpb25zUmVzcG9uc2UiQ9pBBnBhcmVu",
+            "dILT5JMCNBIyL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
+            "YXBwQ29ubmVjdGlvbnMS0wEKEEdldEFwcENvbm5lY3Rpb24SQi5nb29nbGUu",
             "Y2xvdWQuYmV5b25kY29ycC5hcHBjb25uZWN0aW9ucy52MS5HZXRBcHBDb25u",
             "ZWN0aW9uUmVxdWVzdBo4Lmdvb2dsZS5jbG91ZC5iZXlvbmRjb3JwLmFwcGNv",
-            "bm5lY3Rpb25zLnYxLkFwcENvbm5lY3Rpb24iQYLT5JMCNBIyL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwQ29ubmVjdGlvbnMvKn3aQQRu",
-            "YW1lEqQCChNDcmVhdGVBcHBDb25uZWN0aW9uEkUuZ29vZ2xlLmNsb3VkLmJl",
+            "bm5lY3Rpb25zLnYxLkFwcENvbm5lY3Rpb24iQdpBBG5hbWWC0+STAjQSMi92",
+            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FwcENvbm5lY3Rpb25z",
+            "Lyp9EqQCChNDcmVhdGVBcHBDb25uZWN0aW9uEkUuZ29vZ2xlLmNsb3VkLmJl",
             "eW9uZGNvcnAuYXBwY29ubmVjdGlvbnMudjEuQ3JlYXRlQXBwQ29ubmVjdGlv",
-            "blJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqYBgtPk",
-            "kwJEIjIvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9hcHBD",
-            "b25uZWN0aW9uczoOYXBwX2Nvbm5lY3Rpb27aQSdwYXJlbnQsYXBwX2Nvbm5l",
-            "Y3Rpb24sYXBwX2Nvbm5lY3Rpb25faWTKQS8KDUFwcENvbm5lY3Rpb24SHkFw",
-            "cENvbm5lY3Rpb25PcGVyYXRpb25NZXRhZGF0YRKmAgoTVXBkYXRlQXBwQ29u",
+            "blJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqYBykEv",
+            "Cg1BcHBDb25uZWN0aW9uEh5BcHBDb25uZWN0aW9uT3BlcmF0aW9uTWV0YWRh",
+            "dGHaQSdwYXJlbnQsYXBwX2Nvbm5lY3Rpb24sYXBwX2Nvbm5lY3Rpb25faWSC",
+            "0+STAkQiMi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Fw",
+            "cENvbm5lY3Rpb25zOg5hcHBfY29ubmVjdGlvbhKmAgoTVXBkYXRlQXBwQ29u",
             "bmVjdGlvbhJFLmdvb2dsZS5jbG91ZC5iZXlvbmRjb3JwLmFwcGNvbm5lY3Rp",
             "b25zLnYxLlVwZGF0ZUFwcENvbm5lY3Rpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxv",
-            "bmdydW5uaW5nLk9wZXJhdGlvbiKoAYLT5JMCUzJBL3YxL3thcHBfY29ubmVj",
-            "dGlvbi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYXBwQ29ubmVjdGlv",
-            "bnMvKn06DmFwcF9jb25uZWN0aW9u2kEaYXBwX2Nvbm5lY3Rpb24sdXBkYXRl",
-            "X21hc2vKQS8KDUFwcENvbm5lY3Rpb24SHkFwcENvbm5lY3Rpb25PcGVyYXRp",
-            "b25NZXRhZGF0YRL4AQoTRGVsZXRlQXBwQ29ubmVjdGlvbhJFLmdvb2dsZS5j",
+            "bmdydW5uaW5nLk9wZXJhdGlvbiKoAcpBLwoNQXBwQ29ubmVjdGlvbhIeQXBw",
+            "Q29ubmVjdGlvbk9wZXJhdGlvbk1ldGFkYXRh2kEaYXBwX2Nvbm5lY3Rpb24s",
+            "dXBkYXRlX21hc2uC0+STAlMyQS92MS97YXBwX2Nvbm5lY3Rpb24ubmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FwcENvbm5lY3Rpb25zLyp9Og5hcHBf",
+            "Y29ubmVjdGlvbhL4AQoTRGVsZXRlQXBwQ29ubmVjdGlvbhJFLmdvb2dsZS5j",
             "bG91ZC5iZXlvbmRjb3JwLmFwcGNvbm5lY3Rpb25zLnYxLkRlbGV0ZUFwcENv",
             "bm5lY3Rpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biJ7gtPkkwI0KjIvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9h",
-            "cHBDb25uZWN0aW9ucy8qfdpBBG5hbWXKQTcKFWdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eRIeQXBwQ29ubmVjdGlvbk9wZXJhdGlvbk1ldGFkYXRhEvcBChVSZXNv",
+            "biJ7ykE3ChVnb29nbGUucHJvdG9idWYuRW1wdHkSHkFwcENvbm5lY3Rpb25P",
+            "cGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAjQqMi92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2FwcENvbm5lY3Rpb25zLyp9EvcBChVSZXNv",
             "bHZlQXBwQ29ubmVjdGlvbnMSRy5nb29nbGUuY2xvdWQuYmV5b25kY29ycC5h",
             "cHBjb25uZWN0aW9ucy52MS5SZXNvbHZlQXBwQ29ubmVjdGlvbnNSZXF1ZXN0",
             "GkguZ29vZ2xlLmNsb3VkLmJleW9uZGNvcnAuYXBwY29ubmVjdGlvbnMudjEu",
-            "UmVzb2x2ZUFwcENvbm5lY3Rpb25zUmVzcG9uc2UiS4LT5JMCPBI6L3YxL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYXBwQ29ubmVjdGlvbnM6",
-            "cmVzb2x2ZdpBBnBhcmVudBpNykEZYmV5b25kY29ycC5nb29nbGVhcGlzLmNv",
+            "UmVzb2x2ZUFwcENvbm5lY3Rpb25zUmVzcG9uc2UiS9pBBnBhcmVudILT5JMC",
+            "PBI6L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYXBwQ29u",
+            "bmVjdGlvbnM6cmVzb2x2ZRpNykEZYmV5b25kY29ycC5nb29nbGVhcGlzLmNv",
             "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
             "dGZvcm1CigQKLWNvbS5nb29nbGUuY2xvdWQuYmV5b25kY29ycC5hcHBjb25u",
             "ZWN0aW9ucy52MUIaQXBwQ29ubmVjdGlvbnNTZXJ2aWNlUHJvdG9QAVpVY2xv",
@@ -176,6 +176,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
   /// <summary>
   /// Request message for BeyondCorp.ListAppConnections.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAppConnectionsRequest : pb::IMessage<ListAppConnectionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -541,6 +542,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
   /// <summary>
   /// Response message for BeyondCorp.ListAppConnections.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAppConnectionsResponse : pb::IMessage<ListAppConnectionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -795,6 +797,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
   /// <summary>
   /// Request message for BeyondCorp.GetAppConnection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAppConnectionRequest : pb::IMessage<GetAppConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -991,6 +994,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
   /// <summary>
   /// Request message for BeyondCorp.CreateAppConnection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateAppConnectionRequest : pb::IMessage<CreateAppConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1372,6 +1376,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
   /// <summary>
   /// Request message for BeyondCorp.UpdateAppConnection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateAppConnectionRequest : pb::IMessage<UpdateAppConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1765,6 +1770,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
   /// <summary>
   /// Request message for BeyondCorp.DeleteAppConnection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAppConnectionRequest : pb::IMessage<DeleteAppConnectionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2054,6 +2060,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
   /// <summary>
   /// Request message for BeyondCorp.ResolveAppConnections.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResolveAppConnectionsRequest : pb::IMessage<ResolveAppConnectionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2378,6 +2385,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
   /// <summary>
   /// Response message for BeyondCorp.ResolveAppConnections.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResolveAppConnectionsResponse : pb::IMessage<ResolveAppConnectionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2635,6 +2643,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
       /// <summary>
       /// Details of the AppConnection.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AppConnectionDetails : pb::IMessage<AppConnectionDetails>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2877,6 +2886,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
   /// components needed for creating a BeyondCorp protected AppConnection. Multiple
   /// connectors can be authorised for a single AppConnection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppConnection : pb::IMessage<AppConnection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3313,7 +3323,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -3541,6 +3551,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
       /// <summary>
       /// ApplicationEndpoint represents a remote application endpoint.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ApplicationEndpoint : pb::IMessage<ApplicationEndpoint>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3777,6 +3788,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
       /// Gateway represents a user facing component that serves as an entrance to
       /// enable connectivity.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Gateway : pb::IMessage<Gateway>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4121,6 +4133,7 @@ namespace Google.Cloud.BeyondCorp.AppConnections.V1 {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppConnectionOperationMetadata : pb::IMessage<AppConnectionOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

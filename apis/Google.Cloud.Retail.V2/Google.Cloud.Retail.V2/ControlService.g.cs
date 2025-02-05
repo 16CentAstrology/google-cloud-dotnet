@@ -48,25 +48,25 @@ namespace Google.Cloud.Retail.V2 {
             "dHJvbBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAky5AcKDkNvbnRyb2xTZXJ2",
             "aWNlEsQBCg1DcmVhdGVDb250cm9sEiwuZ29vZ2xlLmNsb3VkLnJldGFpbC52",
             "Mi5DcmVhdGVDb250cm9sUmVxdWVzdBofLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
-            "djIuQ29udHJvbCJkgtPkkwJCIjcvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2NhdGFsb2dzLyp9L2NvbnRyb2xzOgdjb250cm9s2kEZcGFy",
-            "ZW50LGNvbnRyb2wsY29udHJvbF9pZBKdAQoNRGVsZXRlQ29udHJvbBIsLmdv",
+            "djIuQ29udHJvbCJk2kEZcGFyZW50LGNvbnRyb2wsY29udHJvbF9pZILT5JMC",
+            "QiI3L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9n",
+            "cy8qfS9jb250cm9sczoHY29udHJvbBKdAQoNRGVsZXRlQ29udHJvbBIsLmdv",
             "b2dsZS5jbG91ZC5yZXRhaWwudjIuRGVsZXRlQ29udHJvbFJlcXVlc3QaFi5n",
-            "b29nbGUucHJvdG9idWYuRW1wdHkiRoLT5JMCOSo3L3YyL3tuYW1lPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9jb250cm9scy8qfdpBBG5h",
-            "bWUSxgEKDVVwZGF0ZUNvbnRyb2wSLC5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
+            "b29nbGUucHJvdG9idWYuRW1wdHkiRtpBBG5hbWWC0+STAjkqNy92Mi97bmFt",
+            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovY29udHJvbHMv",
+            "Kn0SxgEKDVVwZGF0ZUNvbnRyb2wSLC5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
             "LlVwZGF0ZUNvbnRyb2xSZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5Db250cm9sImaC0+STAkoyPy92Mi97Y29udHJvbC5uYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9jb250cm9scy8qfToHY29udHJv",
-            "bNpBE2NvbnRyb2wsdXBkYXRlX21hc2sSoAEKCkdldENvbnRyb2wSKS5nb29n",
+            "Mi5Db250cm9sImbaQRNjb250cm9sLHVwZGF0ZV9tYXNrgtPkkwJKMj8vdjIv",
+            "e2NvbnRyb2wubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dz",
+            "LyovY29udHJvbHMvKn06B2NvbnRyb2wSoAEKCkdldENvbnRyb2wSKS5nb29n",
             "bGUuY2xvdWQucmV0YWlsLnYyLkdldENvbnRyb2xSZXF1ZXN0Gh8uZ29vZ2xl",
-            "LmNsb3VkLnJldGFpbC52Mi5Db250cm9sIkaC0+STAjkSNy92Mi97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovY29udHJvbHMvKn3a",
-            "QQRuYW1lErMBCgxMaXN0Q29udHJvbHMSKy5nb29nbGUuY2xvdWQucmV0YWls",
+            "LmNsb3VkLnJldGFpbC52Mi5Db250cm9sIkbaQQRuYW1lgtPkkwI5EjcvdjIv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL2NvbnRy",
+            "b2xzLyp9ErMBCgxMaXN0Q29udHJvbHMSKy5nb29nbGUuY2xvdWQucmV0YWls",
             "LnYyLkxpc3RDb250cm9sc1JlcXVlc3QaLC5nb29nbGUuY2xvdWQucmV0YWls",
-            "LnYyLkxpc3RDb250cm9sc1Jlc3BvbnNlIkiC0+STAjkSNy92Mi97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKn0vY29udHJvbHPa",
-            "QQZwYXJlbnQaScpBFXJldGFpbC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8v",
+            "LnYyLkxpc3RDb250cm9sc1Jlc3BvbnNlIkjaQQZwYXJlbnSC0+STAjkSNy92",
+            "Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKn0v",
+            "Y29udHJvbHMaScpBFXJldGFpbC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8v",
             "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CvgEKGmNv",
             "bS5nb29nbGUuY2xvdWQucmV0YWlsLnYyQhNDb250cm9sU2VydmljZVByb3Rv",
             "UAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vcmV0YWlsL2FwaXYyL3JldGFpbHBi",
@@ -91,6 +91,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request for CreateControl method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateControlRequest : pb::IMessage<CreateControlRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -380,6 +381,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request for UpdateControl method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateControlRequest : pb::IMessage<UpdateControlRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -639,6 +641,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request for DeleteControl method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteControlRequest : pb::IMessage<DeleteControlRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -835,6 +838,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request for GetControl method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetControlRequest : pb::IMessage<GetControlRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1031,6 +1035,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request for ListControls method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListControlsRequest : pb::IMessage<ListControlsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1354,6 +1359,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Response for ListControls method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListControlsResponse : pb::IMessage<ListControlsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

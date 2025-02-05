@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v2_generated_Participants_StreamingAnalyzeContent_sync]
     using Google.Api.Gax.Grpc;
@@ -38,7 +38,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             ParticipantsClient participantsClient = ParticipantsClient.Create();
             // Initialize streaming call, retrieving the stream object
-            ParticipantsClient.StreamingAnalyzeContentStream response = participantsClient.StreamingAnalyzeContent();
+            using ParticipantsClient.StreamingAnalyzeContentStream response = participantsClient.StreamingAnalyzeContent();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior
@@ -69,8 +69,10 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                     InputAudio = ByteString.Empty,
                     QueryParams = new QueryParameters(),
                     AssistQueryParams = new AssistQueryParameters(),
+                    EnableExtendedStreaming = false,
                     EnablePartialAutomatedAgentReply = false,
                     CxParameters = new Struct(),
+                    EnableDebuggingInfo = false,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

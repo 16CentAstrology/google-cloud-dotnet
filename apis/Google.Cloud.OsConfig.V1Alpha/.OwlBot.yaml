@@ -1,5 +1,5 @@
 
-# Copyright 2023 Google LLC
+# Copyright 2025 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,8 +21,6 @@ deep-remove-regex:
 deep-copy-regex:
     - source: /google/cloud/osconfig/v1alpha/.*-csharp/Google.Cloud.OsConfig.V1Alpha
       dest: /owl-bot-staging/Google.Cloud.OsConfig.V1Alpha/Google.Cloud.OsConfig.V1Alpha
-    - source: /google/cloud/osconfig/v1alpha/.*-csharp/Google.Cloud.OsConfig.V1Alpha.Tests
-      dest: /owl-bot-staging/Google.Cloud.OsConfig.V1Alpha/Google.Cloud.OsConfig.V1Alpha.Tests
     - source: /google/cloud/osconfig/v1alpha/.*-csharp/Google.Cloud.OsConfig.V1Alpha.Snippets
       dest: /owl-bot-staging/Google.Cloud.OsConfig.V1Alpha/Google.Cloud.OsConfig.V1Alpha.Snippets
     - source: /google/cloud/osconfig/v1alpha/.*-csharp/Google.Cloud.OsConfig.V1Alpha.GeneratedSnippets

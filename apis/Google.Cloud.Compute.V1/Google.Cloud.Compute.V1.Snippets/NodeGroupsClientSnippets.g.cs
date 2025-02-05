@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,9 +16,10 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Compute.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Compute.V1;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -177,6 +178,7 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -229,6 +231,7 @@ namespace Google.Cloud.Compute.V1.Snippets
             {
                 OrderBy = "",
                 Project = "",
+                ServiceProjectNumber = 0L,
                 Filter = "",
                 IncludeAllScopes = false,
                 ReturnPartialSuccess = false,
@@ -1433,6 +1436,144 @@ namespace Google.Cloud.Compute.V1.Snippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await nodeGroupsClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenance</summary>
+        public void PerformMaintenanceRequestObject()
+        {
+            // Snippet: PerformMaintenance(PerformMaintenanceNodeGroupRequest, CallSettings)
+            // Create client
+            NodeGroupsClient nodeGroupsClient = NodeGroupsClient.Create();
+            // Initialize request argument(s)
+            PerformMaintenanceNodeGroupRequest request = new PerformMaintenanceNodeGroupRequest
+            {
+                Zone = "",
+                RequestId = "",
+                NodeGroupsPerformMaintenanceRequestResource = new NodeGroupsPerformMaintenanceRequest(),
+                Project = "",
+                NodeGroup = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = nodeGroupsClient.PerformMaintenance(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = nodeGroupsClient.PollOncePerformMaintenance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenanceAsync</summary>
+        public async Task PerformMaintenanceRequestObjectAsync()
+        {
+            // Snippet: PerformMaintenanceAsync(PerformMaintenanceNodeGroupRequest, CallSettings)
+            // Additional: PerformMaintenanceAsync(PerformMaintenanceNodeGroupRequest, CancellationToken)
+            // Create client
+            NodeGroupsClient nodeGroupsClient = await NodeGroupsClient.CreateAsync();
+            // Initialize request argument(s)
+            PerformMaintenanceNodeGroupRequest request = new PerformMaintenanceNodeGroupRequest
+            {
+                Zone = "",
+                RequestId = "",
+                NodeGroupsPerformMaintenanceRequestResource = new NodeGroupsPerformMaintenanceRequest(),
+                Project = "",
+                NodeGroup = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await nodeGroupsClient.PerformMaintenanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await nodeGroupsClient.PollOncePerformMaintenanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenance</summary>
+        public void PerformMaintenance()
+        {
+            // Snippet: PerformMaintenance(string, string, string, NodeGroupsPerformMaintenanceRequest, CallSettings)
+            // Create client
+            NodeGroupsClient nodeGroupsClient = NodeGroupsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string nodeGroup = "";
+            NodeGroupsPerformMaintenanceRequest nodeGroupsPerformMaintenanceRequestResource = new NodeGroupsPerformMaintenanceRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = nodeGroupsClient.PerformMaintenance(project, zone, nodeGroup, nodeGroupsPerformMaintenanceRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = nodeGroupsClient.PollOncePerformMaintenance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenanceAsync</summary>
+        public async Task PerformMaintenanceAsync()
+        {
+            // Snippet: PerformMaintenanceAsync(string, string, string, NodeGroupsPerformMaintenanceRequest, CallSettings)
+            // Additional: PerformMaintenanceAsync(string, string, string, NodeGroupsPerformMaintenanceRequest, CancellationToken)
+            // Create client
+            NodeGroupsClient nodeGroupsClient = await NodeGroupsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string nodeGroup = "";
+            NodeGroupsPerformMaintenanceRequest nodeGroupsPerformMaintenanceRequestResource = new NodeGroupsPerformMaintenanceRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await nodeGroupsClient.PerformMaintenanceAsync(project, zone, nodeGroup, nodeGroupsPerformMaintenanceRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await nodeGroupsClient.PollOncePerformMaintenanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -38,6 +38,16 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public Projection? Projection { get; set; }
 
+        /// <summary>
+        /// When set to true, permanently enable object retention for this bucket.
+        /// </summary>
+        public bool? ObjectRetentionEnabled { get; set; }
+
+        /// <summary>
+        /// Options to pass custom retry configuration for each API request.
+        /// </summary>
+        public RetryOptions RetryOptions { get; set; }
+
         internal void ModifyRequest(BucketsResource.InsertRequest request)
         {
             if (PredefinedAcl != null)
@@ -53,6 +63,10 @@ namespace Google.Cloud.Storage.V1
             if (Projection != null)
             {
                 request.Projection = GaxPreconditions.CheckEnumValue((ProjectionEnum) Projection, nameof(Projection));
+            }
+            if (ObjectRetentionEnabled.HasValue)
+            {
+                request.EnableObjectRetention = ObjectRetentionEnabled.Value;
             }
         }
     }

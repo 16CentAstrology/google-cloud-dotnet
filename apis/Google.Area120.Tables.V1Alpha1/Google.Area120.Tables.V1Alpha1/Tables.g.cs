@@ -97,44 +97,44 @@ namespace Google.Area120.Tables.V1Alpha1 {
             "YWNlfSowCgRWaWV3EhQKEFZJRVdfVU5TUEVDSUZJRUQQABISCg5DT0xVTU5f",
             "SURfVklFVxABMrwRCg1UYWJsZXNTZXJ2aWNlEowBCghHZXRUYWJsZRIvLmdv",
             "b2dsZS5hcmVhMTIwLnRhYmxlcy52MWFscGhhMS5HZXRUYWJsZVJlcXVlc3Qa",
-            "JS5nb29nbGUuYXJlYTEyMC50YWJsZXMudjFhbHBoYTEuVGFibGUiKILT5JMC",
-            "GxIZL3YxYWxwaGExL3tuYW1lPXRhYmxlcy8qfdpBBG5hbWUSjQEKCkxpc3RU",
+            "JS5nb29nbGUuYXJlYTEyMC50YWJsZXMudjFhbHBoYTEuVGFibGUiKNpBBG5h",
+            "bWWC0+STAhsSGS92MWFscGhhMS97bmFtZT10YWJsZXMvKn0SjQEKCkxpc3RU",
             "YWJsZXMSMS5nb29nbGUuYXJlYTEyMC50YWJsZXMudjFhbHBoYTEuTGlzdFRh",
             "Ymxlc1JlcXVlc3QaMi5nb29nbGUuYXJlYTEyMC50YWJsZXMudjFhbHBoYTEu",
             "TGlzdFRhYmxlc1Jlc3BvbnNlIhiC0+STAhISEC92MWFscGhhMS90YWJsZXMS",
             "nAEKDEdldFdvcmtzcGFjZRIzLmdvb2dsZS5hcmVhMTIwLnRhYmxlcy52MWFs",
             "cGhhMS5HZXRXb3Jrc3BhY2VSZXF1ZXN0GikuZ29vZ2xlLmFyZWExMjAudGFi",
-            "bGVzLnYxYWxwaGExLldvcmtzcGFjZSIsgtPkkwIfEh0vdjFhbHBoYTEve25h",
-            "bWU9d29ya3NwYWNlcy8qfdpBBG5hbWUSnQEKDkxpc3RXb3Jrc3BhY2VzEjUu",
+            "bGVzLnYxYWxwaGExLldvcmtzcGFjZSIs2kEEbmFtZYLT5JMCHxIdL3YxYWxw",
+            "aGExL3tuYW1lPXdvcmtzcGFjZXMvKn0SnQEKDkxpc3RXb3Jrc3BhY2VzEjUu",
             "Z29vZ2xlLmFyZWExMjAudGFibGVzLnYxYWxwaGExLkxpc3RXb3Jrc3BhY2Vz",
             "UmVxdWVzdBo2Lmdvb2dsZS5hcmVhMTIwLnRhYmxlcy52MWFscGhhMS5MaXN0",
             "V29ya3NwYWNlc1Jlc3BvbnNlIhyC0+STAhYSFC92MWFscGhhMS93b3Jrc3Bh",
             "Y2VzEo0BCgZHZXRSb3cSLS5nb29nbGUuYXJlYTEyMC50YWJsZXMudjFhbHBo",
             "YTEuR2V0Um93UmVxdWVzdBojLmdvb2dsZS5hcmVhMTIwLnRhYmxlcy52MWFs",
-            "cGhhMS5Sb3ciL4LT5JMCIhIgL3YxYWxwaGExL3tuYW1lPXRhYmxlcy8qL3Jv",
-            "d3MvKn3aQQRuYW1lEqABCghMaXN0Um93cxIvLmdvb2dsZS5hcmVhMTIwLnRh",
+            "cGhhMS5Sb3ciL9pBBG5hbWWC0+STAiISIC92MWFscGhhMS97bmFtZT10YWJs",
+            "ZXMvKi9yb3dzLyp9EqABCghMaXN0Um93cxIvLmdvb2dsZS5hcmVhMTIwLnRh",
             "Ymxlcy52MWFscGhhMS5MaXN0Um93c1JlcXVlc3QaMC5nb29nbGUuYXJlYTEy",
-            "MC50YWJsZXMudjFhbHBoYTEuTGlzdFJvd3NSZXNwb25zZSIxgtPkkwIiEiAv",
-            "djFhbHBoYTEve3BhcmVudD10YWJsZXMvKn0vcm93c9pBBnBhcmVudBKeAQoJ",
+            "MC50YWJsZXMudjFhbHBoYTEuTGlzdFJvd3NSZXNwb25zZSIx2kEGcGFyZW50",
+            "gtPkkwIiEiAvdjFhbHBoYTEve3BhcmVudD10YWJsZXMvKn0vcm93cxKeAQoJ",
             "Q3JlYXRlUm93EjAuZ29vZ2xlLmFyZWExMjAudGFibGVzLnYxYWxwaGExLkNy",
             "ZWF0ZVJvd1JlcXVlc3QaIy5nb29nbGUuYXJlYTEyMC50YWJsZXMudjFhbHBo",
-            "YTEuUm93IjqC0+STAiciIC92MWFscGhhMS97cGFyZW50PXRhYmxlcy8qfS9y",
-            "b3dzOgNyb3faQQpwYXJlbnQscm93ErsBCg9CYXRjaENyZWF0ZVJvd3MSNi5n",
+            "YTEuUm93IjraQQpwYXJlbnQscm93gtPkkwInIiAvdjFhbHBoYTEve3BhcmVu",
+            "dD10YWJsZXMvKn0vcm93czoDcm93ErsBCg9CYXRjaENyZWF0ZVJvd3MSNi5n",
             "b29nbGUuYXJlYTEyMC50YWJsZXMudjFhbHBoYTEuQmF0Y2hDcmVhdGVSb3dz",
             "UmVxdWVzdBo3Lmdvb2dsZS5hcmVhMTIwLnRhYmxlcy52MWFscGhhMS5CYXRj",
             "aENyZWF0ZVJvd3NSZXNwb25zZSI3gtPkkwIxIiwvdjFhbHBoYTEve3BhcmVu",
             "dD10YWJsZXMvKn0vcm93czpiYXRjaENyZWF0ZToBKhKnAQoJVXBkYXRlUm93",
             "EjAuZ29vZ2xlLmFyZWExMjAudGFibGVzLnYxYWxwaGExLlVwZGF0ZVJvd1Jl",
-            "cXVlc3QaIy5nb29nbGUuYXJlYTEyMC50YWJsZXMudjFhbHBoYTEuUm93IkOC",
-            "0+STAisyJC92MWFscGhhMS97cm93Lm5hbWU9dGFibGVzLyovcm93cy8qfToD",
-            "cm932kEPcm93LHVwZGF0ZV9tYXNrErsBCg9CYXRjaFVwZGF0ZVJvd3MSNi5n",
+            "cXVlc3QaIy5nb29nbGUuYXJlYTEyMC50YWJsZXMudjFhbHBoYTEuUm93IkPa",
+            "QQ9yb3csdXBkYXRlX21hc2uC0+STAisyJC92MWFscGhhMS97cm93Lm5hbWU9",
+            "dGFibGVzLyovcm93cy8qfToDcm93ErsBCg9CYXRjaFVwZGF0ZVJvd3MSNi5n",
             "b29nbGUuYXJlYTEyMC50YWJsZXMudjFhbHBoYTEuQmF0Y2hVcGRhdGVSb3dz",
             "UmVxdWVzdBo3Lmdvb2dsZS5hcmVhMTIwLnRhYmxlcy52MWFscGhhMS5CYXRj",
             "aFVwZGF0ZVJvd3NSZXNwb25zZSI3gtPkkwIxIiwvdjFhbHBoYTEve3BhcmVu",
             "dD10YWJsZXMvKn0vcm93czpiYXRjaFVwZGF0ZToBKhKGAQoJRGVsZXRlUm93",
             "EjAuZ29vZ2xlLmFyZWExMjAudGFibGVzLnYxYWxwaGExLkRlbGV0ZVJvd1Jl",
-            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiL4LT5JMCIiogL3YxYWxw",
-            "aGExL3tuYW1lPXRhYmxlcy8qL3Jvd3MvKn3aQQRuYW1lEpoBCg9CYXRjaERl",
+            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiL9pBBG5hbWWC0+STAiIq",
+            "IC92MWFscGhhMS97bmFtZT10YWJsZXMvKi9yb3dzLyp9EpoBCg9CYXRjaERl",
             "bGV0ZVJvd3MSNi5nb29nbGUuYXJlYTEyMC50YWJsZXMudjFhbHBoYTEuQmF0",
             "Y2hEZWxldGVSb3dzUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI3",
             "gtPkkwIxIiwvdjFhbHBoYTEve3BhcmVudD10YWJsZXMvKn0vcm93czpiYXRj",
@@ -201,6 +201,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Request message for TablesService.GetTable.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTableRequest : pb::IMessage<GetTableRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -397,6 +398,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Request message for TablesService.ListTables.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTablesRequest : pb::IMessage<ListTablesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -640,6 +642,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Response message for TablesService.ListTables.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTablesResponse : pb::IMessage<ListTablesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -865,6 +868,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Request message for TablesService.GetWorkspace.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetWorkspaceRequest : pb::IMessage<GetWorkspaceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1061,6 +1065,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Request message for TablesService.ListWorkspaces.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListWorkspacesRequest : pb::IMessage<ListWorkspacesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1304,6 +1309,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Response message for TablesService.ListWorkspaces.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListWorkspacesResponse : pb::IMessage<ListWorkspacesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1529,6 +1535,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Request message for TablesService.GetRow.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetRowRequest : pb::IMessage<GetRowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1766,6 +1773,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Request message for TablesService.ListRows.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRowsRequest : pb::IMessage<ListRowsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2133,6 +2141,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Response message for TablesService.ListRows.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRowsResponse : pb::IMessage<ListRowsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2358,6 +2367,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Request message for TablesService.CreateRow.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateRowRequest : pb::IMessage<CreateRowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2644,6 +2654,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Request message for TablesService.BatchCreateRows.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateRowsRequest : pb::IMessage<BatchCreateRowsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2871,6 +2882,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Response message for TablesService.BatchCreateRows.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateRowsResponse : pb::IMessage<BatchCreateRowsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3055,6 +3067,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Request message for TablesService.UpdateRow.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateRowRequest : pb::IMessage<UpdateRowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3349,6 +3362,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Request message for TablesService.BatchUpdateRows.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateRowsRequest : pb::IMessage<BatchUpdateRowsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3576,6 +3590,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Response message for TablesService.BatchUpdateRows.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchUpdateRowsResponse : pb::IMessage<BatchUpdateRowsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3760,6 +3775,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Request message for TablesService.DeleteRow
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteRowRequest : pb::IMessage<DeleteRowRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3956,6 +3972,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Request message for TablesService.BatchDeleteRows
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchDeleteRowsRequest : pb::IMessage<BatchDeleteRowsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4184,6 +4201,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// A single table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Table : pb::IMessage<Table>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4450,6 +4468,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Details on a column in the table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ColumnDescription : pb::IMessage<ColumnDescription>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4865,6 +4884,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// A single item in a labeled column.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LabeledItem : pb::IMessage<LabeledItem>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5100,6 +5120,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// Details about a relationship column.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RelationshipDetails : pb::IMessage<RelationshipDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5296,6 +5317,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// Details about a lookup column whose value comes from the associated
   /// relationship.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LookupDetails : pb::IMessage<LookupDetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5531,6 +5553,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// A single row in a table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Row : pb::IMessage<Row>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5702,7 +5725,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      values_.Add(other.values_);
+      values_.MergeFrom(other.values_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5759,6 +5782,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   /// <summary>
   /// A single workspace.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Workspace : pb::IMessage<Workspace>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

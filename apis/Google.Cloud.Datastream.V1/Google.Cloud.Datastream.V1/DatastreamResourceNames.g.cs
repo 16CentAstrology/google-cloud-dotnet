@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -129,6 +129,18 @@ namespace Google.Cloud.Datastream.V1
     }
 
     public partial class DeleteStreamRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::StreamName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::StreamName StreamName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::StreamName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RunStreamRequest
     {
         /// <summary>
         /// <see cref="gcdv::StreamName"/>-typed view over the <see cref="Name"/> resource name property.

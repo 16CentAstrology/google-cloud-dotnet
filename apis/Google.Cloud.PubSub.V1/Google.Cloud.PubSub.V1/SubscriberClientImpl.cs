@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.PubSub.V1.Tasks;
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,7 @@ using System.Threading.Tasks;
 namespace Google.Cloud.PubSub.V1;
 
 /// <summary>
-/// Implementation of <see cref="SubscriberClient"/>. 
+/// Implementation of <see cref="SubscriberClient"/>.
 /// </summary>
 public sealed partial class SubscriberClientImpl : SubscriberClient
 {
@@ -59,14 +60,8 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         GaxPreconditions.CheckNotNull(settings, nameof(settings));
         settings.Validate();
         // These values are validated in Settings.Validate() above, so no need to re-validate here.
-        _modifyDeadlineSeconds = (int)((settings.AckDeadline ?? DefaultAckDeadline).TotalSeconds);
-        var autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
-        var autoExtendIntervalForExactlyOnceDelivery = settings.AckExtensionWindow ?? MinimumAckExtensionWindowForExactlyOnceDelivery;
-        // For exactly once delivery subscription, minimum ack extension window value should be the default value of 60 seconds or the user provided value.
-        // Ensure the duration between lease extensions is at least MinimumLeaseExtensionDelay (5 seconds).
-        // The minimum allowable lease duration is 10 seconds, so this will always be reasonable.
-        _autoExtendInterval = TimeSpan.FromTicks(Math.Max(autoExtendInterval.Ticks, MinimumLeaseExtensionDelay.Ticks));
-        _autoExtendIntervalForExactlyOnceDelivery = TimeSpan.FromTicks(Math.Max(autoExtendIntervalForExactlyOnceDelivery.Ticks, MinimumLeaseExtensionDelay.Ticks));
+        _normalLeaseTiming = new LeaseTiming(settings.AckDeadline ?? DefaultAckDeadline, settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
+        _exactlyOnceDeliveryLeaseTiming = new LeaseTiming(settings.AckDeadline ?? DefaultAckDeadlineForExactlyOnceDelivery, settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
         _maxExtensionDuration = settings.MaxTotalAckExtension ?? DefaultMaxTotalAckExtension;
         _shutdown = shutdown;
         _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
@@ -74,17 +69,17 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
         _flowControlSettings = settings.FlowControlSettings ?? DefaultFlowControlSettings;
         _useLegacyFlowControl = settings.UseLegacyFlowControl;
-        _maxAckExtendQueue = (int)Math.Min(_flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, 20_000);
+        _maxAckExtendQueue = (int) Math.Min(_flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, 20_000);
         _disposeTimeout = settings.DisposeTimeout ?? DefaultDisposeTimeout;
+        Logger = settings.Logger;
     }
 
     private readonly object _lock = new object();
     private readonly SubscriberServiceApiClient[] _clients;
     private readonly Func<Task> _shutdown;
-    private readonly TimeSpan _autoExtendInterval; // Interval between message lease auto-extends for non-exactly once delivery subscriptions.
-    private readonly TimeSpan _autoExtendIntervalForExactlyOnceDelivery; // Interval between message lease auto-extends for exactly once delivery subscriptions.
     private readonly TimeSpan _maxExtensionDuration; // Maximum duration for which a message lease will be extended.
-    private readonly int _modifyDeadlineSeconds; // Value to use as new deadline when lease auto-extends
+    private readonly LeaseTiming _normalLeaseTiming;
+    private readonly LeaseTiming _exactlyOnceDeliveryLeaseTiming;
     private readonly int _maxAckExtendQueue; // Maximum count of acks/extends to push to server in a single messages
     private readonly IScheduler _scheduler;
     private readonly IClock _clock;
@@ -98,10 +93,18 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
     private CancellationTokenSource _globalHardStopCts;
 
     // This property only exists for testing.
-    // This is the interval between obtaining a lease on a message and then further extending the lease on that message
+    // This is the delay between obtaining a lease on a message and then further extending the lease on that message
     // (assuming it hasn't been handled).
     // This is calculated from the AckDeadline, AckExtensionWindow, and MinimumLeaseExtensionDelay
-    internal TimeSpan AutoExtendInterval => _autoExtendInterval;
+    internal TimeSpan AutoExtendDelay => _normalLeaseTiming.AutoExtendDelay;
+
+    // This property only exists for testing.
+    // This is the delay between obtaining a lease on a message and then further extending the lease on that message
+    // for exactly-once delivery (assuming it hasn't been handled).
+    // This is calculated from AckDeadline, AckExtensionWindow, MinimumAckExtensionWindowForExactlyOnce and MinimumLeaseExtensionDelay.
+    internal TimeSpan AutoExtendDelayForExactlyOnceDelivery => _exactlyOnceDeliveryLeaseTiming.AutoExtendDelay;
+
+    internal ILogger Logger { get; }
 
     /// <inheritdoc />
     public override SubscriptionName SubscriptionName { get; }
@@ -130,9 +133,9 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         Flow flow = new Flow(_flowControlSettings.MaxOutstandingByteCount ?? long.MaxValue,
             _flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, registerTask, _taskHelper);
         // Start all subscribers
-        var subscriberTasks = _clients.Select(client =>
+        var subscriberTasks = _clients.Select((client, index) =>
         {
-            var singleChannel = new SingleChannel(this, client, handler, flow, _useLegacyFlowControl, registerTask);
+            var singleChannel = new SingleChannel(this, client, index + 1, handler, flow, _useLegacyFlowControl, registerTask, _clock);
             return _taskHelper.Run(() => singleChannel.StartAsync());
         }).ToArray();
         // Set up finish task; code that executes when this subscriber is being shutdown (for whatever reason).
@@ -157,6 +160,10 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
         // Call shutdown function
         if (_shutdown != null)
         {
+            // TODO: Remove this 2 second delay.
+            // This is a temporary patch to avoid race condition between gRPC call cancellation and channel dispose.
+            // Please see https://github.com/grpc/grpc-dotnet/issues/2119 for the deadlock issue in Grpc.Net.Client.
+            await _scheduler.Delay(TimeSpan.FromSeconds(2), CancellationToken.None);
             await _taskHelper.ConfigureAwaitHideErrors(_shutdown);
         }
         // Return final result
@@ -177,14 +184,25 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
     }
 
     /// <inheritdoc />
-    public override ValueTask DisposeAsync() => new ValueTask(StopAsync(_disposeTimeout));
+    public override ValueTask DisposeAsync()
+    {
+        lock (_lock)
+        {
+            if (_mainTcs is null)
+            {
+                // No-op. We don't want to throw exceptions if DisposeAsync is called before StartAsync.
+                return new ValueTask(Task.CompletedTask);
+            }
+        }
+        return new ValueTask(StopAsync(_disposeTimeout));
+    }
 
     /// <inheritdoc />
     public override Task StopAsync(CancellationToken hardStopToken)
     {
         lock (_lock)
         {
-            // Note: If multiple stop requests are made, only the first cancellation token is observed.  
+            // Note: If multiple stop requests are made, only the first cancellation token is observed.
             if (_mainTcs is not null && _globalSoftStopCts.IsCancellationRequested)
             {
                 // No-op. We don't want to throw exceptions if DisposeAsync or StopAsync is called a second time.

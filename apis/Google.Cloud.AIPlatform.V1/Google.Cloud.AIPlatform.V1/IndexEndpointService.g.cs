@@ -81,49 +81,49 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZBgCIAEoCTKvEAoUSW5kZXhFbmRwb2ludFNlcnZpY2USiQIKE0NyZWF0ZUlu",
             "ZGV4RW5kcG9pbnQSNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5DcmVh",
             "dGVJbmRleEVuZHBvaW50UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24imgGC0+STAkQiMi92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyp9L2luZGV4RW5kcG9pbnRzOg5pbmRleF9lbmRwb2ludNpBFXBh",
-            "cmVudCxpbmRleF9lbmRwb2ludMpBNQoNSW5kZXhFbmRwb2ludBIkQ3JlYXRl",
-            "SW5kZXhFbmRwb2ludE9wZXJhdGlvbk1ldGFkYXRhErUBChBHZXRJbmRleEVu",
+            "cGVyYXRpb24imgHKQTUKDUluZGV4RW5kcG9pbnQSJENyZWF0ZUluZGV4RW5k",
+            "cG9pbnRPcGVyYXRpb25NZXRhZGF0YdpBFXBhcmVudCxpbmRleF9lbmRwb2lu",
+            "dILT5JMCRCIyL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
+            "aW5kZXhFbmRwb2ludHM6DmluZGV4X2VuZHBvaW50ErUBChBHZXRJbmRleEVu",
             "ZHBvaW50EjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2V0SW5kZXhF",
             "bmRwb2ludFJlcXVlc3QaKS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5J",
-            "bmRleEVuZHBvaW50IkGC0+STAjQSMi92MS97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2luZGV4RW5kcG9pbnRzLyp92kEEbmFtZRLIAQoSTGlzdElu",
+            "bmRleEVuZHBvaW50IkHaQQRuYW1lgtPkkwI0EjIvdjEve25hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9pbmRleEVuZHBvaW50cy8qfRLIAQoSTGlzdElu",
             "ZGV4RW5kcG9pbnRzEjUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTGlz",
             "dEluZGV4RW5kcG9pbnRzUmVxdWVzdBo2Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLkxpc3RJbmRleEVuZHBvaW50c1Jlc3BvbnNlIkOC0+STAjQSMi92",
-            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2luZGV4RW5kcG9p",
-            "bnRz2kEGcGFyZW50EvABChNVcGRhdGVJbmRleEVuZHBvaW50EjYuZ29vZ2xl",
+            "b3JtLnYxLkxpc3RJbmRleEVuZHBvaW50c1Jlc3BvbnNlIkPaQQZwYXJlbnSC",
+            "0+STAjQSMi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2lu",
+            "ZGV4RW5kcG9pbnRzEvABChNVcGRhdGVJbmRleEVuZHBvaW50EjYuZ29vZ2xl",
             "LmNsb3VkLmFpcGxhdGZvcm0udjEuVXBkYXRlSW5kZXhFbmRwb2ludFJlcXVl",
             "c3QaKS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5JbmRleEVuZHBvaW50",
-            "InaC0+STAlMyQS92MS97aW5kZXhfZW5kcG9pbnQubmFtZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2luZGV4RW5kcG9pbnRzLyp9Og5pbmRleF9lbmRwb2lu",
-            "dNpBGmluZGV4X2VuZHBvaW50LHVwZGF0ZV9tYXNrEuIBChNEZWxldGVJbmRl",
+            "InbaQRppbmRleF9lbmRwb2ludCx1cGRhdGVfbWFza4LT5JMCUzJBL3YxL3tp",
+            "bmRleF9lbmRwb2ludC5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5k",
+            "ZXhFbmRwb2ludHMvKn06DmluZGV4X2VuZHBvaW50EuIBChNEZWxldGVJbmRl",
             "eEVuZHBvaW50EjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVsZXRl",
             "SW5kZXhFbmRwb2ludFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uInSC0+STAjQqMi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2luZGV4RW5kcG9pbnRzLyp92kEEbmFtZcpBMAoVZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5EhdEZWxldGVPcGVyYXRpb25NZXRhZGF0YRKIAgoLRGVwbG95",
+            "cmF0aW9uInTKQTAKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIXRGVsZXRlT3Bl",
+            "cmF0aW9uTWV0YWRhdGHaQQRuYW1lgtPkkwI0KjIvdjEve25hbWU9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9pbmRleEVuZHBvaW50cy8qfRKIAgoLRGVwbG95",
             "SW5kZXgSLi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5EZXBsb3lJbmRl",
-            "eFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqkBgtPk",
-            "kwJNIkgvdjEve2luZGV4X2VuZHBvaW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovaW5kZXhFbmRwb2ludHMvKn06ZGVwbG95SW5kZXg6ASraQR1pbmRleF9l",
-            "bmRwb2ludCxkZXBsb3llZF9pbmRleMpBMwoTRGVwbG95SW5kZXhSZXNwb25z",
-            "ZRIcRGVwbG95SW5kZXhPcGVyYXRpb25NZXRhZGF0YRKVAgoNVW5kZXBsb3lJ",
+            "eFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqkBykEz",
+            "ChNEZXBsb3lJbmRleFJlc3BvbnNlEhxEZXBsb3lJbmRleE9wZXJhdGlvbk1l",
+            "dGFkYXRh2kEdaW5kZXhfZW5kcG9pbnQsZGVwbG95ZWRfaW5kZXiC0+STAk0i",
+            "SC92MS97aW5kZXhfZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9p",
+            "bmRleEVuZHBvaW50cy8qfTpkZXBsb3lJbmRleDoBKhKVAgoNVW5kZXBsb3lJ",
             "bmRleBIwLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlVuZGVwbG95SW5k",
-            "ZXhSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKyAYLT",
-            "5JMCTyJKL3YxL3tpbmRleF9lbmRwb2ludD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2luZGV4RW5kcG9pbnRzLyp9OnVuZGVwbG95SW5kZXg6ASraQSBpbmRl",
-            "eF9lbmRwb2ludCxkZXBsb3llZF9pbmRleF9pZMpBNwoVVW5kZXBsb3lJbmRl",
-            "eFJlc3BvbnNlEh5VbmRlcGxveUluZGV4T3BlcmF0aW9uTWV0YWRhdGESvQIK",
+            "ZXhSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKyAcpB",
+            "NwoVVW5kZXBsb3lJbmRleFJlc3BvbnNlEh5VbmRlcGxveUluZGV4T3BlcmF0",
+            "aW9uTWV0YWRhdGHaQSBpbmRleF9lbmRwb2ludCxkZXBsb3llZF9pbmRleF9p",
+            "ZILT5JMCTyJKL3YxL3tpbmRleF9lbmRwb2ludD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2luZGV4RW5kcG9pbnRzLyp9OnVuZGVwbG95SW5kZXg6ASoSvQIK",
             "E011dGF0ZURlcGxveWVkSW5kZXgSNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
             "bS52MS5NdXRhdGVEZXBsb3llZEluZGV4UmVxdWVzdBodLmdvb2dsZS5sb25n",
-            "cnVubmluZy5PcGVyYXRpb24izgGC0+STAmIiUC92MS97aW5kZXhfZW5kcG9p",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbmRleEVuZHBvaW50cy8qfTpt",
-            "dXRhdGVEZXBsb3llZEluZGV4Og5kZXBsb3llZF9pbmRleNpBHWluZGV4X2Vu",
-            "ZHBvaW50LGRlcGxveWVkX2luZGV4ykFDChtNdXRhdGVEZXBsb3llZEluZGV4",
-            "UmVzcG9uc2USJE11dGF0ZURlcGxveWVkSW5kZXhPcGVyYXRpb25NZXRhZGF0",
-            "YRpNykEZYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
+            "cnVubmluZy5PcGVyYXRpb24izgHKQUMKG011dGF0ZURlcGxveWVkSW5kZXhS",
+            "ZXNwb25zZRIkTXV0YXRlRGVwbG95ZWRJbmRleE9wZXJhdGlvbk1ldGFkYXRh",
+            "2kEdaW5kZXhfZW5kcG9pbnQsZGVwbG95ZWRfaW5kZXiC0+STAmIiUC92MS97",
+            "aW5kZXhfZW5kcG9pbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbmRleEVu",
+            "ZHBvaW50cy8qfTptdXRhdGVEZXBsb3llZEluZGV4Og5kZXBsb3llZF9pbmRl",
+            "eBpNykEZYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
             "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C1wEKHmNvbS5n",
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIZSW5kZXhFbmRwb2ludFNlcnZp",
             "Y2VQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBp",
@@ -159,6 +159,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [IndexEndpointService.CreateIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.CreateIndexEndpoint].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateIndexEndpointRequest : pb::IMessage<CreateIndexEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -405,6 +406,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Runtime operation information for
   /// [IndexEndpointService.CreateIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.CreateIndexEndpoint].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateIndexEndpointOperationMetadata : pb::IMessage<CreateIndexEndpointOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -610,6 +612,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [IndexEndpointService.GetIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.GetIndexEndpoint]
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetIndexEndpointRequest : pb::IMessage<GetIndexEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -808,6 +811,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [IndexEndpointService.ListIndexEndpoints][google.cloud.aiplatform.v1.IndexEndpointService.ListIndexEndpoints].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListIndexEndpointsRequest : pb::IMessage<ListIndexEndpointsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1196,6 +1200,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [IndexEndpointService.ListIndexEndpoints][google.cloud.aiplatform.v1.IndexEndpointService.ListIndexEndpoints].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListIndexEndpointsResponse : pb::IMessage<ListIndexEndpointsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1424,6 +1429,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [IndexEndpointService.UpdateIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.UpdateIndexEndpoint].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateIndexEndpointRequest : pb::IMessage<UpdateIndexEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1679,6 +1685,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [IndexEndpointService.DeleteIndexEndpoint][google.cloud.aiplatform.v1.IndexEndpointService.DeleteIndexEndpoint].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteIndexEndpointRequest : pb::IMessage<DeleteIndexEndpointRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1877,6 +1884,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [IndexEndpointService.DeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.DeployIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeployIndexRequest : pb::IMessage<DeployIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2124,6 +2132,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [IndexEndpointService.DeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.DeployIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeployIndexResponse : pb::IMessage<DeployIndexResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2329,6 +2338,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Runtime operation information for
   /// [IndexEndpointService.DeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.DeployIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeployIndexOperationMetadata : pb::IMessage<DeployIndexOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2574,6 +2584,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [IndexEndpointService.UndeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.UndeployIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UndeployIndexRequest : pb::IMessage<UndeployIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2813,6 +2824,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [IndexEndpointService.UndeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.UndeployIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UndeployIndexResponse : pb::IMessage<UndeployIndexResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2969,6 +2981,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Runtime operation information for
   /// [IndexEndpointService.UndeployIndex][google.cloud.aiplatform.v1.IndexEndpointService.UndeployIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UndeployIndexOperationMetadata : pb::IMessage<UndeployIndexOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3174,6 +3187,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [IndexEndpointService.MutateDeployedIndex][google.cloud.aiplatform.v1.IndexEndpointService.MutateDeployedIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MutateDeployedIndexRequest : pb::IMessage<MutateDeployedIndexRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3241,8 +3255,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.DeployedIndex deployedIndex_;
     /// <summary>
     /// Required. The DeployedIndex to be updated within the IndexEndpoint.
-    /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
-    /// and [DeployedIndex][dedicated_resources]
+    /// Currently, the updatable fields are
+    /// [DeployedIndex.automatic_resources][google.cloud.aiplatform.v1.DeployedIndex.automatic_resources]
+    /// and
+    /// [DeployedIndex.dedicated_resources][google.cloud.aiplatform.v1.DeployedIndex.dedicated_resources]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3423,6 +3439,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [IndexEndpointService.MutateDeployedIndex][google.cloud.aiplatform.v1.IndexEndpointService.MutateDeployedIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MutateDeployedIndexResponse : pb::IMessage<MutateDeployedIndexResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3628,6 +3645,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Runtime operation information for
   /// [IndexEndpointService.MutateDeployedIndex][google.cloud.aiplatform.v1.IndexEndpointService.MutateDeployedIndex].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MutateDeployedIndexOperationMetadata : pb::IMessage<MutateDeployedIndexOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Video.Stitcher.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START videostitcher_v1_generated_VideoStitcherService_CreateLiveSession_async_flattened]
     using Google.Cloud.Video.Stitcher.V1;
@@ -35,7 +35,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             // Create client
             VideoStitcherServiceClient videoStitcherServiceClient = await VideoStitcherServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "projects/[PROJECT]/locations/[LOCATION]/liveSessions/[LIVE_SESSION]";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             LiveSession liveSession = new LiveSession();
             // Make the request
             LiveSession response = await videoStitcherServiceClient.CreateLiveSessionAsync(parent, liveSession);

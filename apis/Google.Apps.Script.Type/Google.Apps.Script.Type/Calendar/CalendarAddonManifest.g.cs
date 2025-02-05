@@ -66,6 +66,7 @@ namespace Google.Apps.Script.Type.Calendar {
   /// <summary>
   /// Calendar add-on manifest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CalendarAddOnManifest : pb::IMessage<CalendarAddOnManifest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -523,6 +524,7 @@ namespace Google.Apps.Script.Type.Calendar {
   /// <summary>
   /// Defines conference related values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConferenceSolution : pb::IMessage<ConferenceSolution>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -842,6 +844,7 @@ namespace Google.Apps.Script.Type.Calendar {
   /// <summary>
   /// Common format for declaring a calendar add-on's triggers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CalendarExtensionPoint : pb::IMessage<CalendarExtensionPoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

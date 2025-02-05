@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Workflows.Executions.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Cloud.Workflows.Common.V1;
+    using Google.Cloud.Workflows.Executions.V1;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -36,6 +37,8 @@ namespace Google.Cloud.Workflows.Executions.V1.Snippets
             {
                 ParentAsWorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 View = ExecutionView.Unspecified,
+                Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListExecutionsResponse, Execution> response = executionsClient.ListExecutions(request);
@@ -85,6 +88,8 @@ namespace Google.Cloud.Workflows.Executions.V1.Snippets
             {
                 ParentAsWorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 View = ExecutionView.Unspecified,
+                Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListExecutionsResponse, Execution> response = executionsClient.ListExecutionsAsync(request);

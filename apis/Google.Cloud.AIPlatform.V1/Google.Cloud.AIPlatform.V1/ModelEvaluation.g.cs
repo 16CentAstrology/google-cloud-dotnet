@@ -66,6 +66,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// A collection of metrics calculated by comparing Model's predictions on all of
   /// the test data against annotations from the test data.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ModelEvaluation : pb::IMessage<ModelEvaluation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -205,8 +206,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> sliceDimensions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// All possible [dimensions][ModelEvaluationSlice.slice.dimension] of
-    /// ModelEvaluationSlices. The dimensions can be used as the filter of the
+    /// All possible
+    /// [dimensions][google.cloud.aiplatform.v1.ModelEvaluationSlice.Slice.dimension]
+    /// of ModelEvaluationSlices. The dimensions can be used as the filter of the
     /// [ModelService.ListModelEvaluationSlices][google.cloud.aiplatform.v1.ModelService.ListModelEvaluationSlices]
     /// request, in the form of `slice.dimension = &lt;dimension>`.
     /// </summary>
@@ -303,7 +305,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// The metadata of the ModelEvaluation.
     /// For the ModelEvaluation uploaded from Managed Pipeline, metadata contains a
     /// structured value with keys of "pipeline_job_id", "evaluation_dataset_type",
-    /// "evaluation_dataset_path".
+    /// "evaluation_dataset_path", "row_based_metrics_path".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -706,6 +708,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ModelEvaluationExplanationSpec : pb::IMessage<ModelEvaluationExplanationSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

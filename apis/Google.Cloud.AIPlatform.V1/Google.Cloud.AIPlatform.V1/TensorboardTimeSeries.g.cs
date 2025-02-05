@@ -65,6 +65,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// TensorboardTimeSeries maps to times series produced in training runs
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TensorboardTimeSeries : pb::IMessage<TensorboardTimeSeries>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -680,6 +681,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Describes metadata for a TensorboardTimeSeries.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Metadata : pb::IMessage<Metadata>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

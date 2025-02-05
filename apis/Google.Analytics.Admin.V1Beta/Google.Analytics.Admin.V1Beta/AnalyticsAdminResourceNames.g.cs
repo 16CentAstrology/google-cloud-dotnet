@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -271,6 +271,54 @@ namespace Google.Analytics.Admin.V1Beta
     }
 
     public partial class ListConversionEventsRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateKeyEventRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetKeyEventRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::KeyEventName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::KeyEventName KeyEventName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::KeyEventName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteKeyEventRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::KeyEventName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::KeyEventName KeyEventName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::KeyEventName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListKeyEventsRequest
     {
         /// <summary>
         /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.

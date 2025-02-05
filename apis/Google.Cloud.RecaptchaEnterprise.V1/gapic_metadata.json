@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "RecaptchaEnterpriseServiceClient",
           "rpcs": {
+            "AddIpOverride": {
+              "methods": [
+                "AddIpOverride",
+                "AddIpOverrideAsync"
+              ]
+            },
             "AnnotateAssessment": {
               "methods": [
                 "AnnotateAssessment",
@@ -22,16 +28,34 @@
                 "CreateAssessmentAsync"
               ]
             },
+            "CreateFirewallPolicy": {
+              "methods": [
+                "CreateFirewallPolicy",
+                "CreateFirewallPolicyAsync"
+              ]
+            },
             "CreateKey": {
               "methods": [
                 "CreateKey",
                 "CreateKeyAsync"
               ]
             },
+            "DeleteFirewallPolicy": {
+              "methods": [
+                "DeleteFirewallPolicy",
+                "DeleteFirewallPolicyAsync"
+              ]
+            },
             "DeleteKey": {
               "methods": [
                 "DeleteKey",
                 "DeleteKeyAsync"
+              ]
+            },
+            "GetFirewallPolicy": {
+              "methods": [
+                "GetFirewallPolicy",
+                "GetFirewallPolicyAsync"
               ]
             },
             "GetKey": {
@@ -44,6 +68,18 @@
               "methods": [
                 "GetMetrics",
                 "GetMetricsAsync"
+              ]
+            },
+            "ListFirewallPolicies": {
+              "methods": [
+                "ListFirewallPolicies",
+                "ListFirewallPoliciesAsync"
+              ]
+            },
+            "ListIpOverrides": {
+              "methods": [
+                "ListIpOverrides",
+                "ListIpOverridesAsync"
               ]
             },
             "ListKeys": {
@@ -70,6 +106,18 @@
                 "MigrateKeyAsync"
               ]
             },
+            "RemoveIpOverride": {
+              "methods": [
+                "RemoveIpOverride",
+                "RemoveIpOverrideAsync"
+              ]
+            },
+            "ReorderFirewallPolicies": {
+              "methods": [
+                "ReorderFirewallPolicies",
+                "ReorderFirewallPoliciesAsync"
+              ]
+            },
             "RetrieveLegacySecretKey": {
               "methods": [
                 "RetrieveLegacySecretKey",
@@ -80,6 +128,12 @@
               "methods": [
                 "SearchRelatedAccountGroupMemberships",
                 "SearchRelatedAccountGroupMembershipsAsync"
+              ]
+            },
+            "UpdateFirewallPolicy": {
+              "methods": [
+                "UpdateFirewallPolicy",
+                "UpdateFirewallPolicyAsync"
               ]
             },
             "UpdateKey": {

@@ -80,6 +80,7 @@ namespace Google.Cloud.Logging.V2 {
   /// <summary>
   /// An individual entry in a log.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LogEntry : pb::IMessage<LogEntry>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -235,10 +236,24 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TextPayload {
-      get { return payloadCase_ == PayloadOneofCase.TextPayload ? (string) payload_ : ""; }
+      get { return HasTextPayload ? (string) payload_ : ""; }
       set {
         payload_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         payloadCase_ = PayloadOneofCase.TextPayload;
+      }
+    }
+    /// <summary>Gets whether the "text_payload" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTextPayload {
+      get { return payloadCase_ == PayloadOneofCase.TextPayload; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "text_payload" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTextPayload() {
+      if (HasTextPayload) {
+        ClearPayload();
       }
     }
 
@@ -262,11 +277,12 @@ namespace Google.Cloud.Logging.V2 {
     public const int TimestampFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
     /// <summary>
-    /// Optional. The time the event described by the log entry occurred. This time is used
-    /// to compute the log entry's age and to enforce the logs retention period.
-    /// If this field is omitted in a new log entry, then Logging assigns it the
-    /// current time. Timestamps have nanosecond accuracy, but trailing zeros in
-    /// the fractional seconds might be omitted when the timestamp is displayed.
+    /// Optional. The time the event described by the log entry occurred. This time
+    /// is used to compute the log entry's age and to enforce the logs retention
+    /// period. If this field is omitted in a new log entry, then Logging assigns
+    /// it the current time. Timestamps have nanosecond accuracy, but trailing
+    /// zeros in the fractional seconds might be omitted when the timestamp is
+    /// displayed.
     ///
     /// Incoming log entries must have timestamps that don't exceed the
     /// [logs retention
@@ -302,7 +318,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int SeverityFieldNumber = 10;
     private global::Google.Cloud.Logging.Type.LogSeverity severity_ = global::Google.Cloud.Logging.Type.LogSeverity.Default;
     /// <summary>
-    /// Optional. The severity of the log entry. The default value is `LogSeverity.DEFAULT`.
+    /// Optional. The severity of the log entry. The default value is
+    /// `LogSeverity.DEFAULT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -317,8 +334,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int InsertIdFieldNumber = 4;
     private string insertId_ = "";
     /// <summary>
-    /// Optional. A unique identifier for the log entry. If you provide a value, then
-    /// Logging considers other log entries in the same project, with the same
+    /// Optional. A unique identifier for the log entry. If you provide a value,
+    /// then Logging considers other log entries in the same project, with the same
     /// `timestamp`, and with the same `insert_id` to be duplicates which are
     /// removed in a single query result. However, there are no guarantees of
     /// de-duplication in the export of logs.
@@ -342,8 +359,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int HttpRequestFieldNumber = 7;
     private global::Google.Cloud.Logging.Type.HttpRequest httpRequest_;
     /// <summary>
-    /// Optional. Information about the HTTP request associated with this log entry, if
-    /// applicable.
+    /// Optional. Information about the HTTP request associated with this log
+    /// entry, if applicable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -360,8 +377,8 @@ namespace Google.Cloud.Logging.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 90);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. A map of key, value pairs that provides additional information about the
-    /// log entry. The labels can be user-defined or system-defined.
+    /// Optional. A map of key, value pairs that provides additional information
+    /// about the log entry. The labels can be user-defined or system-defined.
     ///
     /// User-defined labels are arbitrary key, value pairs that you can use to
     /// classify logs.
@@ -401,10 +418,15 @@ namespace Google.Cloud.Logging.V2 {
     public const int TraceFieldNumber = 22;
     private string trace_ = "";
     /// <summary>
-    /// Optional. Resource name of the trace associated with the log entry, if any. If it
-    /// contains a relative resource name, the name is assumed to be relative to
-    /// `//tracing.googleapis.com`. Example:
-    /// `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+    /// Optional. The REST resource name of the trace being written to
+    /// [Cloud Trace](https://cloud.google.com/trace) in
+    /// association with this log entry. For example, if your trace data is stored
+    /// in the Cloud project "my-trace-project" and if the service that is creating
+    /// the log entry receives a trace header that includes the trace ID "12345",
+    /// then the service should use "projects/my-tracing-project/traces/12345".
+    ///
+    /// The `trace` field provides the link between logs and traces. By using
+    /// this field, you can navigate from a log entry to a trace.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -419,11 +441,36 @@ namespace Google.Cloud.Logging.V2 {
     public const int SpanIdFieldNumber = 27;
     private string spanId_ = "";
     /// <summary>
-    /// Optional. The span ID within the trace associated with the log entry.
+    /// Optional. The ID of the [Cloud Trace](https://cloud.google.com/trace) span
+    /// associated with the current operation in which the log is being written.
+    /// For example, if a span has the REST resource name of
+    /// "projects/some-project/traces/some-trace/spans/some-span-id", then the
+    /// `span_id` field is "some-span-id".
     ///
-    /// For Trace spans, this is the same format that the Trace API v2 uses: a
-    /// 16-character hexadecimal encoding of an 8-byte array, such as
-    /// `000000000000004a`.
+    /// A
+    /// [Span](https://cloud.google.com/trace/docs/reference/v2/rest/v2/projects.traces/batchWrite#Span)
+    /// represents a single operation within a trace. Whereas a trace may involve
+    /// multiple different microservices running on multiple different machines,
+    /// a span generally corresponds to a single logical operation being performed
+    /// in a single instance of a microservice on one specific machine. Spans
+    /// are the nodes within the tree that is a trace.
+    ///
+    /// Applications that are [instrumented for
+    /// tracing](https://cloud.google.com/trace/docs/setup) will generally assign a
+    /// new, unique span ID on each incoming request. It is also common to create
+    /// and record additional spans corresponding to internal processing elements
+    /// as well as issuing requests to dependencies.
+    ///
+    /// The span ID is expected to be a 16-character, hexadecimal encoding of an
+    /// 8-byte array and should not be zero. It should be unique within the trace
+    /// and should, ideally, be generated in a manner that is uniformly random.
+    ///
+    /// Example values:
+    ///
+    ///   - `000000000000004a`
+    ///   - `7a2190356c3fc94b`
+    ///   - `0000f00300090021`
+    ///   - `d39223e101960076`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -459,7 +506,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int SourceLocationFieldNumber = 23;
     private global::Google.Cloud.Logging.V2.LogEntrySourceLocation sourceLocation_;
     /// <summary>
-    /// Optional. Source code location information associated with the log entry, if any.
+    /// Optional. Source code location information associated with the log entry,
+    /// if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -474,8 +522,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int SplitFieldNumber = 35;
     private global::Google.Cloud.Logging.V2.LogSplit split_;
     /// <summary>
-    /// Optional. Information indicating this LogEntry is part of a sequence of multiple log
-    /// entries split from a single LogEntry.
+    /// Optional. Information indicating this LogEntry is part of a sequence of
+    /// multiple log entries split from a single LogEntry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -551,7 +599,7 @@ namespace Google.Cloud.Logging.V2 {
       if (LogName.Length != 0) hash ^= LogName.GetHashCode();
       if (resource_ != null) hash ^= Resource.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.ProtoPayload) hash ^= ProtoPayload.GetHashCode();
-      if (payloadCase_ == PayloadOneofCase.TextPayload) hash ^= TextPayload.GetHashCode();
+      if (HasTextPayload) hash ^= TextPayload.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.JsonPayload) hash ^= JsonPayload.GetHashCode();
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
       if (receiveTimestamp_ != null) hash ^= ReceiveTimestamp.GetHashCode();
@@ -588,7 +636,7 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(ProtoPayload);
       }
-      if (payloadCase_ == PayloadOneofCase.TextPayload) {
+      if (HasTextPayload) {
         output.WriteRawTag(26);
         output.WriteString(TextPayload);
       }
@@ -663,7 +711,7 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(ProtoPayload);
       }
-      if (payloadCase_ == PayloadOneofCase.TextPayload) {
+      if (HasTextPayload) {
         output.WriteRawTag(26);
         output.WriteString(TextPayload);
       }
@@ -743,7 +791,7 @@ namespace Google.Cloud.Logging.V2 {
       if (payloadCase_ == PayloadOneofCase.ProtoPayload) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProtoPayload);
       }
-      if (payloadCase_ == PayloadOneofCase.TextPayload) {
+      if (HasTextPayload) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TextPayload);
       }
       if (payloadCase_ == PayloadOneofCase.JsonPayload) {
@@ -828,7 +876,7 @@ namespace Google.Cloud.Logging.V2 {
         }
         HttpRequest.MergeFrom(other.HttpRequest);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.operation_ != null) {
         if (operation_ == null) {
           Operation = new global::Google.Cloud.Logging.V2.LogEntryOperation();
@@ -1113,6 +1161,7 @@ namespace Google.Cloud.Logging.V2 {
   /// Additional information about a potentially long-running operation with which
   /// a log entry is associated.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LogEntryOperation : pb::IMessage<LogEntryOperation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1432,6 +1481,7 @@ namespace Google.Cloud.Logging.V2 {
   /// Additional information about the source code location that produced the log
   /// entry.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LogEntrySourceLocation : pb::IMessage<LogEntrySourceLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1716,6 +1766,7 @@ namespace Google.Cloud.Logging.V2 {
   /// single LogEntry would exceed the Google Cloud Logging size limit and is
   /// split across multiple log entries.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LogSplit : pb::IMessage<LogSplit>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

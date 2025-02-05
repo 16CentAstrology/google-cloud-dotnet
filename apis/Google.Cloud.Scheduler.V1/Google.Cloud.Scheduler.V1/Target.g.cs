@@ -123,6 +123,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// constitutes a failed execution. For a redirected request, the response
   /// returned by the redirected request is considered.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HttpTarget : pb::IMessage<HttpTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -220,14 +221,20 @@ namespace Google.Cloud.Scheduler.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> headers_ = new pbc::MapField<string, string>();
     /// <summary>
+    /// HTTP request headers.
+    ///
+    /// This map contains the header field names and values.
+    ///
     /// The user can specify HTTP request headers to send with the job's
-    /// HTTP request. This map contains the header field names and
-    /// values. Repeated headers are not supported, but a header value can
-    /// contain commas. These headers represent a subset of the headers
-    /// that will accompany the job's HTTP request. Some HTTP request
-    /// headers will be ignored or replaced. A partial list of headers that
-    /// will be ignored or replaced is below:
-    /// - Host: This will be computed by Cloud Scheduler and derived from
+    /// HTTP request. Repeated headers are not supported, but a header value can
+    /// contain commas.
+    ///
+    /// The following headers represent a subset of the headers
+    /// that accompany the job's HTTP request. Some HTTP request
+    /// headers are ignored or replaced. A partial list of headers that
+    /// are ignored or replaced is below:
+    ///
+    /// * Host: This will be computed by Cloud Scheduler and derived from
     /// [uri][google.cloud.scheduler.v1.HttpTarget.uri].
     /// * `Content-Length`: This will be computed by Cloud Scheduler.
     /// * `User-Agent`: This will be set to `"Google-Cloud-Scheduler"`.
@@ -236,8 +243,17 @@ namespace Google.Cloud.Scheduler.V1 {
     /// * `X-CloudScheduler`: This header will be set to true.
     /// * `X-CloudScheduler-JobName`: This header will contain the job name.
     /// * `X-CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in
-    /// the unix-cron format, this header will contain the job schedule time in
-    /// RFC3339 UTC "Zulu" format.
+    /// the unix-cron format, this header will contain the job schedule as an
+    /// offset of UTC parsed according to RFC3339.
+    ///
+    /// If the job has a [body][google.cloud.scheduler.v1.HttpTarget.body] and the
+    /// following headers are not set by the user, Cloud Scheduler sets default
+    /// values:
+    ///
+    /// * `Content-Type`: This will be set to `"application/octet-stream"`. You
+    ///   can override this default by explicitly setting `Content-Type` to a
+    ///   particular media type when creating the job. For example, you can set
+    ///   `Content-Type` to `"application/json"`.
     ///
     /// The total size of headers must be less than 80KB.
     /// </summary>
@@ -478,7 +494,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (other.HttpMethod != global::Google.Cloud.Scheduler.V1.HttpMethod.Unspecified) {
         HttpMethod = other.HttpMethod;
       }
-      headers_.Add(other.headers_);
+      headers_.MergeFrom(other.headers_);
       if (other.Body.Length != 0) {
         Body = other.Body;
       }
@@ -614,6 +630,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// response code, or a failure to receive a response before the
   /// deadline, constitutes a failed attempt.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppEngineHttpTarget : pb::IMessage<AppEngineHttpTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -734,23 +751,21 @@ namespace Google.Cloud.Scheduler.V1 {
     /// * `X-CloudScheduler`: This header will be set to true.
     /// * `X-CloudScheduler-JobName`: This header will contain the job name.
     /// * `X-CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in
-    /// the unix-cron format, this header will contain the job schedule time in
-    /// RFC3339 UTC "Zulu" format.
+    /// the unix-cron format, this header will contain the job schedule as an
+    /// offset of UTC parsed according to RFC3339.
     ///
-    /// If the job has an
-    /// [body][google.cloud.scheduler.v1.AppEngineHttpTarget.body], Cloud Scheduler
-    /// sets the following headers:
+    /// If the job has a [body][google.cloud.scheduler.v1.AppEngineHttpTarget.body]
+    /// and the following headers are not set by the user, Cloud Scheduler sets
+    /// default values:
     ///
-    /// * `Content-Type`: By default, the `Content-Type` header is set to
-    ///   `"application/octet-stream"`. The default can be overridden by explictly
-    ///   setting `Content-Type` to a particular media type when the job is
-    ///   created.
-    ///   For example, `Content-Type` can be set to `"application/json"`.
-    /// * `Content-Length`: This is computed by Cloud Scheduler. This value is
-    ///   output only. It cannot be changed.
+    /// * `Content-Type`: This will be set to `"application/octet-stream"`. You
+    ///   can override this default by explicitly setting `Content-Type` to a
+    ///   particular media type when creating the job. For example, you can set
+    ///   `Content-Type` to `"application/json"`.
     ///
     /// The headers below are output only. They cannot be set or overridden:
     ///
+    /// * `Content-Length`: This is computed by Cloud Scheduler.
     /// * `X-Google-*`: For Google internal use only.
     /// * `X-AppEngine-*`: For Google internal use only.
     ///
@@ -924,7 +939,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (other.RelativeUri.Length != 0) {
         RelativeUri = other.RelativeUri;
       }
-      headers_.Add(other.headers_);
+      headers_.MergeFrom(other.headers_);
       if (other.Body.Length != 0) {
         Body = other.Body;
       }
@@ -1015,6 +1030,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Pub/Sub target. The job will be delivered by publishing a message to
   /// the given Pub/Sub topic.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PubsubTarget : pb::IMessage<PubsubTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1226,7 +1242,7 @@ namespace Google.Cloud.Scheduler.V1 {
       if (other.Data.Length != 0) {
         Data = other.Data;
       }
-      attributes_.Add(other.attributes_);
+      attributes_.MergeFrom(other.attributes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1301,6 +1317,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// and [App Engine Flex request
   /// routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppEngineRouting : pb::IMessage<AppEngineRouting>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1697,6 +1714,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// This type of authorization should generally only be used when calling Google
   /// APIs hosted on *.googleapis.com.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OAuthToken : pb::IMessage<OAuthToken>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1942,6 +1960,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// calling Cloud Run, or endpoints where you intend to validate the token
   /// yourself.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OidcToken : pb::IMessage<OidcToken>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

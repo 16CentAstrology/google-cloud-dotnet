@@ -1,5 +1,37 @@
 # Version history
 
+## Version 2.7.0, released 2024-09-26
+
+### New features
+
+- Support adding constraints to new method types REMOVE_GRANTS and GOVERN_TAGS ([commit f49e16e](https://github.com/googleapis/google-cloud-dotnet/commit/f49e16e0aff289c5d4932bd6b503ac5e1cf739c8))
+
+## Version 2.6.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.5.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.4.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.3.0, released 2024-01-08
+
+### New features
+
+- Add custom constraints CRUD APIs, proper etag support in Org Policy Update/Delete API ([commit 258a6d5](https://github.com/googleapis/google-cloud-dotnet/commit/258a6d53808c793c4c1883da808c75a9ddc39b35))
+
+### Documentation improvements
+
+- Updated comments ([commit 258a6d5](https://github.com/googleapis/google-cloud-dotnet/commit/258a6d53808c793c4c1883da808c75a9ddc39b35))
+
 ## Version 2.2.0, released 2023-01-19
 
 ### New features

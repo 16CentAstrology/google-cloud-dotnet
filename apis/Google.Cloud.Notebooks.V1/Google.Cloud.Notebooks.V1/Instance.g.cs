@@ -138,6 +138,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// Reservation Affinity for consuming Zonal reservation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReservationAffinity : pb::IMessage<ReservationAffinity>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -433,6 +434,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// The definition of a notebook instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1687,8 +1689,8 @@ namespace Google.Cloud.Notebooks.V1 {
       if (other.Subnet.Length != 0) {
         Subnet = other.Subnet;
       }
-      labels_.Add(other.labels_);
-      metadata_.Add(other.metadata_);
+      labels_.MergeFrom(other.labels_);
+      metadata_.MergeFrom(other.metadata_);
       tags_.Add(other.tags_);
       upgradeHistory_.Add(other.upgradeHistory_);
       if (other.NicType != global::Google.Cloud.Notebooks.V1.Instance.Types.NicType.UnspecifiedNicType) {
@@ -2290,6 +2292,7 @@ namespace Google.Cloud.Notebooks.V1 {
       /// Engine](https://cloud.google.com/compute/docs/gpus/#gpus-list) to find a
       /// valid combination. TPUs are not supported.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AcceleratorConfig : pb::IMessage<AcceleratorConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2525,6 +2528,7 @@ namespace Google.Cloud.Notebooks.V1 {
       /// <summary>
       /// An instance-attached disk resource.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Disk : pb::IMessage<Disk>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3176,6 +3180,7 @@ namespace Google.Cloud.Notebooks.V1 {
           /// <summary>
           /// Guest OS features for boot disk.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class GuestOsFeature : pb::IMessage<GuestOsFeature>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3388,6 +3393,7 @@ namespace Google.Cloud.Notebooks.V1 {
       /// features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
       /// Not all combinations are valid.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ShieldedInstanceConfig : pb::IMessage<ShieldedInstanceConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3672,6 +3678,7 @@ namespace Google.Cloud.Notebooks.V1 {
       /// <summary>
       /// The entry of VM image upgrade history.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UpgradeHistoryEntry : pb::IMessage<UpgradeHistoryEntry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

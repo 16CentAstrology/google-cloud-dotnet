@@ -61,6 +61,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
   /// Specification of the GRPC Endpoint.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GrpcEndpoint : pb::IMessage<GrpcEndpoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -258,6 +259,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// Specification of ValidationCA. Defines the mechanism to obtain the
   /// Certificate Authority certificate to validate the peer certificate.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidationCA : pb::IMessage<ValidationCA>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -558,6 +560,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// and configured by specifying this message. Workloads use the values from this
   /// message to locate and load the CertificateProvider instance configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CertificateProviderInstance : pb::IMessage<CertificateProviderInstance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -756,6 +759,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// Specification of certificate provider. Defines the mechanism to obtain the
   /// certificate and private key for peer to peer authentication.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CertificateProvider : pb::IMessage<CertificateProvider>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

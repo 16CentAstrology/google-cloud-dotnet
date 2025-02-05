@@ -74,6 +74,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// A detailed representation of a Yum artifact.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class YumArtifact : pb::IMessage<YumArtifact>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -415,6 +416,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// Google Cloud Storage location where the artifacts currently reside.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportYumArtifactsGcsSource : pb::IMessage<ImportYumArtifactsGcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -639,6 +641,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The request to import new yum artifacts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportYumArtifactsRequest : pb::IMessage<ImportYumArtifactsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -917,6 +920,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// Error information explaining why a package was not imported.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportYumArtifactsErrorInfo : pb::IMessage<ImportYumArtifactsErrorInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1204,6 +1208,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The response message from importing YUM artifacts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportYumArtifactsResponse : pb::IMessage<ImportYumArtifactsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1417,6 +1422,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The operation metadata for importing artifacts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportYumArtifactsMetadata : pb::IMessage<ImportYumArtifactsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

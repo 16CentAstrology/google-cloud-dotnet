@@ -51,7 +51,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Sample: AddSubscriberClient
             SubscriptionName subscriptionName = SubscriptionName.FromProjectSubscription(projectId, subscriptionId);
             services.AddSubscriberClient(subscriptionName);
-            // End sample        
+            // End sample
         }
 
         [Fact]
@@ -73,17 +73,33 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         [Fact]
+        public void AddCustomizedSubscriberClientWithProvider()
+        {
+            string projectId = "projectId";
+            string subscriptionId = "subscriptionId";
+            var services = new ServiceCollection();
+
+            // Sample: AddCustomizedSubscriberClientWithProvider
+            // In one piece of configuration code...
+            services.AddSingleton(SubscriptionName.FromProjectSubscription(projectId, subscriptionId));
+            // Elsewhere...
+            services.AddSubscriberClient((provider, builder) =>
+                builder.SubscriptionName = provider.GetRequiredService<SubscriptionName>());
+            // End sample
+        }
+
+        [Fact]
         public void AddHostedService()
         {
             var services = new ServiceCollection();
 
             // Sample: AddHostedService
             services.AddHostedService<SubscriberService>();
-            // End sample        
+            // End sample
         }
-                
+
         internal async Task UseSubscriberServiceInConsoleApp()
-        {            
+        {
             string projectId = "projectId";
             string subscriptionId = "subscriptionId";
 
@@ -126,5 +142,5 @@ namespace Google.Cloud.PubSub.V1.Snippets
         public override async Task StopAsync(CancellationToken stoppingToken) =>
             await _subscriberClient.StopAsync(stoppingToken);
     }
-    // End sample    
+    // End sample
 }

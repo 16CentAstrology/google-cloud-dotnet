@@ -71,6 +71,7 @@ namespace Google.Cloud.Iam.Credentials.V1 {
 
   }
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateAccessTokenRequest : pb::IMessage<GenerateAccessTokenRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -388,6 +389,7 @@ namespace Google.Cloud.Iam.Credentials.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateAccessTokenResponse : pb::IMessage<GenerateAccessTokenResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -630,6 +632,7 @@ namespace Google.Cloud.Iam.Credentials.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SignBlobRequest : pb::IMessage<SignBlobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -903,6 +906,7 @@ namespace Google.Cloud.Iam.Credentials.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SignBlobResponse : pb::IMessage<SignBlobResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1135,6 +1139,7 @@ namespace Google.Cloud.Iam.Credentials.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SignJwtRequest : pb::IMessage<SignJwtRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1408,6 +1413,7 @@ namespace Google.Cloud.Iam.Credentials.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SignJwtResponse : pb::IMessage<SignJwtResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1640,6 +1646,7 @@ namespace Google.Cloud.Iam.Credentials.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateIdTokenRequest : pb::IMessage<GenerateIdTokenRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1955,6 +1962,7 @@ namespace Google.Cloud.Iam.Credentials.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenerateIdTokenResponse : pb::IMessage<GenerateIdTokenResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

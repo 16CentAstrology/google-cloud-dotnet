@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Services_TestIamPermissions_async]
     using Google.Api.Gax;
@@ -37,7 +37,7 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task TestIamPermissionsRequestObjectAsync()
         {
             // Create client
-            ServicesClient servicesClient = await ServicesClient.CreateAsync();
+            gcrv::ServicesClient servicesClient = await gcrv::ServicesClient.CreateAsync();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {

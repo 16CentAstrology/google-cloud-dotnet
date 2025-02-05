@@ -1,0 +1,13 @@
+<Project>
+  <!-- Allow Directory.Packages.props to do its magic -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  
+  <!--
+    - Common properties for all tools projects.
+    -->
+  <PropertyGroup>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+</Project>

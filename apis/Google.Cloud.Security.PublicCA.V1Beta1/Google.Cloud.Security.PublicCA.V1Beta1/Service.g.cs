@@ -38,10 +38,10 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1 {
             "U2VydmljZRKZAgoYQ3JlYXRlRXh0ZXJuYWxBY2NvdW50S2V5EkcuZ29vZ2xl",
             "LmNsb3VkLnNlY3VyaXR5LnB1YmxpY2NhLnYxYmV0YTEuQ3JlYXRlRXh0ZXJu",
             "YWxBY2NvdW50S2V5UmVxdWVzdBo6Lmdvb2dsZS5jbG91ZC5zZWN1cml0eS5w",
-            "dWJsaWNjYS52MWJldGExLkV4dGVybmFsQWNjb3VudEtleSJ4gtPkkwJUIjwv",
-            "djFiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2V4dGVy",
-            "bmFsQWNjb3VudEtleXM6FGV4dGVybmFsX2FjY291bnRfa2V52kEbcGFyZW50",
-            "LGV4dGVybmFsX2FjY291bnRfa2V5GkvKQRdwdWJsaWNjYS5nb29nbGVhcGlz",
+            "dWJsaWNjYS52MWJldGExLkV4dGVybmFsQWNjb3VudEtleSJ42kEbcGFyZW50",
+            "LGV4dGVybmFsX2FjY291bnRfa2V5gtPkkwJUIjwvdjFiZXRhMS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2V4dGVybmFsQWNjb3VudEtleXM6",
+            "FGV4dGVybmFsX2FjY291bnRfa2V5GkvKQRdwdWJsaWNjYS5nb29nbGVhcGlz",
             "LmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
             "cGxhdGZvcm1ChgIKKmNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHkucHVibGlj",
             "Y2EudjFiZXRhMUIMU2VydmljZVByb3RvUAFaRmNsb3VkLmdvb2dsZS5jb20v",
@@ -63,6 +63,7 @@ namespace Google.Cloud.Security.PublicCA.V1Beta1 {
   /// <summary>
   /// Creates a new [ExternalAccountKey][google.cloud.security.publicca.v1beta1.ExternalAccountKey] in a given project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateExternalAccountKeyRequest : pb::IMessage<CreateExternalAccountKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

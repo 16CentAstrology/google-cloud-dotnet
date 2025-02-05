@@ -6,13 +6,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Api.CommonProtos" Version="2.7.0" />
-    <PackageReference Include="LibGit2Sharp" Version="0.27.0-preview-0175" />
-    <PackageReference Include="Octokit" Version="0.50.0" />
+    <PackageReference Include="Google.Api.CommonProtos" VersionOverride="2.16.0" />
+    <PackageReference Include="LibGit2Sharp" />
+    <PackageReference Include="NuGet.Protocol" />
+    <PackageReference Include="Octokit" />
     <ProjectReference Include="..\Google.Cloud.Tools.ApiIndex.V1\Google.Cloud.Tools.ApiIndex.V1.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.VersionCompat\Google.Cloud.Tools.VersionCompat.csproj" />
     <EmbeddedResource Include="History/*.json" />
+
+    <!--
+     - Refer to Grpc.Net.Client explicitly, so that smoke tests load the same TFM as
+     - this binary refers to. Without this, we end up loading the netstandard2.0 TFM
+     - for libraries which target that, and that then fails to use the channel.
+     -->
+    <PackageReference Include="Grpc.Net.Client" VersionOverride="2.66.0" />
   </ItemGroup>
 
 </Project>

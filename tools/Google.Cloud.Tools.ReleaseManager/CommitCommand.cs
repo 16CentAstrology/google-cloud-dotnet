@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,14 +24,16 @@ namespace Google.Cloud.Tools.ReleaseManager
 {
     public sealed class CommitCommand : CommandBase
     {
+        private const string DowngradeOverrideEnvironmentVariable = "DOWNGRADE_OVERRIDE";
+
         public CommitCommand()
             : base("commit", "Commit the current set of changes with an appropriate commit message")
         {
         }
 
-        protected override void ExecuteImpl(string[] args) => InternalExecute();
+        protected override int ExecuteImpl(string[] args) => InternalExecute();
 
-        internal void InternalExecute()
+        internal int InternalExecute()
         {
             var diffs = FindChangedVersions();
             if (diffs.Count != 1)
@@ -43,48 +45,68 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 throw new UserErrorException($"Cannot automate a release commit for a deleted API.");
             }
-
-            var historyFilePath = HistoryFile.GetPathForPackage(diff.Id);
-            if (!File.Exists(historyFilePath))
+            // Prevent accidentally downgrading (i.e. lowering the version number).
+            if (diff.OldVersion is not null &&
+                StructuredVersion.FromString(diff.NewVersion).CompareTo(StructuredVersion.FromString(diff.OldVersion)) < 0 &&
+                Environment.GetEnvironmentVariable(DowngradeOverrideEnvironmentVariable) != diff.NewVersion)
             {
-                throw new UserErrorException($"Cannot automate a release commit without a version history file.");
+                throw new UserErrorException(
+                    $"Cannot downgrade from {diff.OldVersion} to {diff.NewVersion} without override. Set {DowngradeOverrideEnvironmentVariable}={diff.NewVersion} to override.");
             }
-
-            var historyFile = HistoryFile.Load(historyFilePath);
-            var section = historyFile.Sections.FirstOrDefault(s => s.Version?.ToString() == diff.NewVersion);
-            if (section is null)
-            {
-                throw new UserErrorException($"Unable to find history file section for {diff.NewVersion}. Cannot automate a release commit in this state.");
-            }
-            if (section.Lines.Any(line => line.Contains(HistoryFile.FixmeBlockingRelease)))
-            {
-                throw new UserErrorException("History file requires editing before release");
-            }
-
+            var apiCatalog = ApiCatalog.Load(RootLayout);
+            var api = apiCatalog[diff.Id];
             string header = $"Release {diff.Id} version {diff.NewVersion}";
-            var message = string.Join("\n", new[] { header, "", "Changes in this release:", "" }.Concat(section.Lines.Skip(2)));
+            var bodyLines = GetCommitBodyLines();
+            string message = string.Join("\n", new[] { header, "" }.Concat(bodyLines));
 
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using (var repo = new Repository(root))
+            using var repo = new Repository(RootLayout.RepositoryRoot);
+            RepositoryStatus status = repo.RetrieveStatus();
+            // TODO: Work out whether this is enough, and whether we actually need all of these.
+            // We basically want git add --all.
+            AddAll(status.Modified);
+            AddAll(status.Missing);
+            AddAll(status.Untracked);
+            repo.Index.Write();
+            var signature = repo.Config.BuildSignature(DateTimeOffset.UtcNow);
+            var commit = repo.Commit(message, signature, signature);
+            Console.WriteLine($"Created commit {commit.Sha}. Review the message and amend if necessary.");
+
+            void AddAll(IEnumerable<StatusEntry> entries)
             {
-                RepositoryStatus status = repo.RetrieveStatus();
-                // TODO: Work out whether this is enough, and whether we actually need all of these.
-                // We basically want git add --all.
-                AddAll(status.Modified);
-                AddAll(status.Missing);
-                AddAll(status.Untracked);
-                repo.Index.Write();
-                var signature = repo.Config.BuildSignature(DateTimeOffset.UtcNow);
-                var commit = repo.Commit(message, signature, signature);
-                Console.WriteLine($"Created commit {commit.Sha}. Review the message and amend if necessary.");
-
-                void AddAll(IEnumerable<StatusEntry> entries)
+                foreach (var entry in entries)
                 {
-                    foreach (var entry in entries)
-                    {
-                        repo.Index.Add(entry.FilePath);
-                    }
+                    repo.Index.Add(entry.FilePath);
                 }
+            }
+            return 0;
+
+            IEnumerable<string> GetCommitBodyLines()
+            {
+                // Handle APIs such as Google.Cloud.OsLogin.Common, where we don't really need a history entry.
+                if (api.NoVersionHistory)
+                {
+                    return new[] { "This library has no dedicated release history. Changes are typically recorded in other libraries, or are just dependency updates." };
+                }
+
+                // Anything else really should have a history.
+                var historyFilePath = HistoryFile.GetPathForPackage(RootLayout, diff.Id);
+                if (!File.Exists(historyFilePath))
+                {
+                    throw new UserErrorException($"Cannot automate a release commit without a version history file.");
+                }
+
+                var historyFile = HistoryFile.Load(historyFilePath);
+                var section = historyFile.Sections.FirstOrDefault(s => s.Version?.ToString() == diff.NewVersion);
+                if (section is null)
+                {
+                    throw new UserErrorException($"Unable to find history file section for {diff.NewVersion}. Cannot automate a release commit in this state.");
+                }
+                if (section.Lines.Any(line => line.Contains(HistoryFile.FixmeBlockingRelease)))
+                {
+                    throw new UserErrorException("History file requires editing before release");
+                }
+
+                return new[] { "Changes in this release:", "" }.Concat(section.Lines.Skip(2));
             }
         }
     }

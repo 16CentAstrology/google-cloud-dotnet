@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -32,8 +32,10 @@ namespace Google.Cloud.Bigtable.V2
         {
             yield return BigtableReflection.Descriptor;
             yield return DataReflection.Descriptor;
+            yield return FeatureFlagsReflection.Descriptor;
             yield return RequestStatsReflection.Descriptor;
             yield return ResponseParamsReflection.Descriptor;
+            yield return TypesReflection.Descriptor;
         }
     }
 }

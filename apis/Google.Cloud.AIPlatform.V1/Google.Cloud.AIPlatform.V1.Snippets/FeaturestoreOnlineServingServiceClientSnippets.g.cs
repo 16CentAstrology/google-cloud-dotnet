@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax.Grpc;
+    using Google.Cloud.AIPlatform.V1;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
@@ -128,7 +129,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
                 FeatureSelector = new FeatureSelector(),
             };
             // Make the request, returning a streaming response
-            FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(request);
+            using FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -151,7 +152,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Initialize request argument(s)
             string entityType = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
             // Make the request, returning a streaming response
-            FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(entityType);
+            using FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(entityType);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -174,7 +175,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Initialize request argument(s)
             EntityTypeName entityType = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
             // Make the request, returning a streaming response
-            FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(entityType);
+            using FeaturestoreOnlineServingServiceClient.StreamingReadFeatureValuesStream response = featurestoreOnlineServingServiceClient.StreamingReadFeatureValues(entityType);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

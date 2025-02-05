@@ -1,5 +1,116 @@
 # Version history
 
+## Version 2.14.0, released 2024-12-06
+
+### New features
+
+- A new method `SetConfig` is added to service `DataCatalog` ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new method `RetrieveConfig` is added to service `DataCatalog` ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new method `RetrieveEffectiveConfig` is added to service `DataCatalog` ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new field `transferred_to_dataplex` is added to message `.google.cloud.datacatalog.v1.EntryGroup` ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new message `SetConfigRequest` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new message `RetrieveConfigRequest` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new message `RetrieveEffectiveConfigRequest` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new enum `TagTemplateMigration` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new enum `CatalogUIExperience` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new message `OrganizationConfig` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new message `MigrationConfig` is added ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new field `dataplex_transfer_status` is added to message `.google.cloud.datacatalog.v1.Tag` ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+- A new value `TRANSFERRED` is added to enum `DataplexTransferStatus` ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+
+### Documentation improvements
+
+- A comment for message `EntryGroup` is changed ([commit 18d632f](https://github.com/googleapis/google-cloud-dotnet/commit/18d632f1b2f5619693af0e37bda54769c6eb4913))
+
+## Version 2.13.0, released 2024-11-18
+
+### New features
+
+- A new field `feature_online_store_spec` is added to message `.google.cloud.datacatalog.v1.Entry` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new value `GENIE` is added to enum `ModelSourceType` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new value `CUSTOM_TEXT_EMBEDDING` is added to enum `ModelSourceType` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new value `MARKETPLACE` is added to enum `ModelSourceType` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new message `FeatureOnlineStoreSpec` is added ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new value `FEATURE_ONLINE_STORE` is added to enum `EntryType` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new value `FEATURE_VIEW` is added to enum `EntryType` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new value `FEATURE_GROUP` is added to enum `EntryType` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new enum `DataplexTransferStatus` is added ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A new field `dataplex_transfer_status` is added to message `.google.cloud.datacatalog.v1.TagTemplate` ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.cloud.datacatalog.v1.Entry` is changed ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A comment for field `name` in message `.google.cloud.datacatalog.v1.EntryGroup` is changed ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A comment for field `name` in message `.google.cloud.datacatalog.v1.Tag` is changed ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A comment for field `name` in message `.google.cloud.datacatalog.v1.TagTemplate` is changed ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+- A comment for field `name` in message `.google.cloud.datacatalog.v1.TagTemplateField` is changed ([commit 7df11e5](https://github.com/googleapis/google-cloud-dotnet/commit/7df11e5255541ed1d824b768452ce634cac5b81f))
+
+## Version 2.12.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.11.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.10.0, released 2024-03-21
+
+### New features
+
+- Add RANGE type to Data Catalog ([commit e436bee](https://github.com/googleapis/google-cloud-dotnet/commit/e436bee75f303e206ee364c63aa7ef85c51ad50a))
+
+## Version 2.9.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.8.0, released 2024-01-16
+
+### Bug fixes
+
+- Change field behavior of the property "name" to IDENTIFIER ([commit 093f27c](https://github.com/googleapis/google-cloud-dotnet/commit/093f27c1285516f85ebb81be4c10753deefd42d4))
+
+## Version 2.7.0, released 2023-10-02
+
+### New features
+
+- Enable Vertex AI Ingestion on DataPlex ([commit af6cde6](https://github.com/googleapis/google-cloud-dotnet/commit/af6cde6b66d1a9054bc2353cd9a01105de6f36ee))
+
+### Documentation improvements
+
+- Fix typo ([commit 3924eff](https://github.com/googleapis/google-cloud-dotnet/commit/3924eff8ce3cd348873825d667b537da884c8f4a))
+
+## Version 2.6.0, released 2023-08-04
+
+### New features
+
+- Add support for admin_search in SearchCatalog() API method ([commit 725097f](https://github.com/googleapis/google-cloud-dotnet/commit/725097f63070b90a2af5cf8947e2666b91782110))
+
+## Version 2.5.0, released 2023-07-13
+
+### New features
+
+- Added rpc RenameTagTemplateFieldEnumValue ([commit 3840102](https://github.com/googleapis/google-cloud-dotnet/commit/3840102cdac33930dee4c73ab098b5c5d09839bc))
+- Returning approximate total size for SearchCatalog ([commit 3840102](https://github.com/googleapis/google-cloud-dotnet/commit/3840102cdac33930dee4c73ab098b5c5d09839bc))
+- Returning unreachable locations for SearchCatalog ([commit 3840102](https://github.com/googleapis/google-cloud-dotnet/commit/3840102cdac33930dee4c73ab098b5c5d09839bc))
+- Added Entry.usage_signal ([commit 3840102](https://github.com/googleapis/google-cloud-dotnet/commit/3840102cdac33930dee4c73ab098b5c5d09839bc))
+
+### Documentation improvements
+
+- Update docs of SearchCatalogRequest message ([commit 3840102](https://github.com/googleapis/google-cloud-dotnet/commit/3840102cdac33930dee4c73ab098b5c5d09839bc))
+
+## Version 2.4.0, released 2023-06-05
+
+### New features
+
+- Add support for entries associated with Spanner and ClougBigTable ([commit 065b49c](https://github.com/googleapis/google-cloud-dotnet/commit/065b49c46d85cf2a0bbb517f32274669d7eac4d0))
+- Expand SearchCatalogResponse with totalSize ([commit 065b49c](https://github.com/googleapis/google-cloud-dotnet/commit/065b49c46d85cf2a0bbb517f32274669d7eac4d0))
+- Modify documentation for FQN support ([commit 065b49c](https://github.com/googleapis/google-cloud-dotnet/commit/065b49c46d85cf2a0bbb517f32274669d7eac4d0))
+- Extend ImportApiRequest with jobId parameter ([commit 065b49c](https://github.com/googleapis/google-cloud-dotnet/commit/065b49c46d85cf2a0bbb517f32274669d7eac4d0))
+
 ## Version 2.3.0, released 2023-03-20
 
 ### New features

@@ -162,6 +162,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// <summary>
   /// An OS policy defines the desired state configuration for a VM.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OSPolicy : pb::IMessage<OSPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -547,6 +548,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <summary>
       /// Filtering criteria to select VMs based on OS details.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OSFilter : pb::IMessage<OSFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -787,6 +789,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <summary>
       /// Filtering criteria to select VMs based on inventory details.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InventoryFilter : pb::IMessage<InventoryFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1033,6 +1036,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// The system ensures that resources are always in their desired state by
       /// taking necessary actions if they have drifted from their desired state.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Resource : pb::IMessage<Resource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1488,6 +1492,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           /// <summary>
           /// A remote or local file.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class File : pb::IMessage<File>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1582,10 +1587,24 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string LocalPath {
-              get { return typeCase_ == TypeOneofCase.LocalPath ? (string) type_ : ""; }
+              get { return HasLocalPath ? (string) type_ : ""; }
               set {
                 type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 typeCase_ = TypeOneofCase.LocalPath;
+              }
+            }
+            /// <summary>Gets whether the "local_path" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasLocalPath {
+              get { return typeCase_ == TypeOneofCase.LocalPath; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "local_path" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearLocalPath() {
+              if (HasLocalPath) {
+                ClearType();
               }
             }
 
@@ -1659,7 +1678,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               int hash = 1;
               if (typeCase_ == TypeOneofCase.Remote) hash ^= Remote.GetHashCode();
               if (typeCase_ == TypeOneofCase.Gcs) hash ^= Gcs.GetHashCode();
-              if (typeCase_ == TypeOneofCase.LocalPath) hash ^= LocalPath.GetHashCode();
+              if (HasLocalPath) hash ^= LocalPath.GetHashCode();
               if (AllowInsecure != false) hash ^= AllowInsecure.GetHashCode();
               hash ^= (int) typeCase_;
               if (_unknownFields != null) {
@@ -1688,7 +1707,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 output.WriteRawTag(18);
                 output.WriteMessage(Gcs);
               }
-              if (typeCase_ == TypeOneofCase.LocalPath) {
+              if (HasLocalPath) {
                 output.WriteRawTag(26);
                 output.WriteString(LocalPath);
               }
@@ -1714,7 +1733,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 output.WriteRawTag(18);
                 output.WriteMessage(Gcs);
               }
-              if (typeCase_ == TypeOneofCase.LocalPath) {
+              if (HasLocalPath) {
                 output.WriteRawTag(26);
                 output.WriteString(LocalPath);
               }
@@ -1738,7 +1757,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               if (typeCase_ == TypeOneofCase.Gcs) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gcs);
               }
-              if (typeCase_ == TypeOneofCase.LocalPath) {
+              if (HasLocalPath) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(LocalPath);
               }
               if (AllowInsecure != false) {
@@ -1872,6 +1891,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// <summary>
               /// Specifies a file available via some URI.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Remote : pb::IMessage<Remote>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -2108,6 +2128,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// <summary>
               /// Specifies a file available as a Cloud Storage Object.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Gcs : pb::IMessage<Gcs>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -2388,6 +2409,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           /// <summary>
           /// A resource that manages a system package.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class PackageResource : pb::IMessage<PackageResource>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3024,6 +3046,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// <summary>
               /// A deb package file. dpkg packages only support INSTALLED state.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Deb : pb::IMessage<Deb>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -3273,6 +3296,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// - install: `apt-get update &amp;&amp; apt-get -y install [name]`
               /// - remove: `apt-get -y remove [name]`
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class APT : pb::IMessage<APT>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -3468,6 +3492,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// <summary>
               /// An RPM package file. RPM packages only support INSTALLED state.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class RPM : pb::IMessage<RPM>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -3717,6 +3742,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// - install: `yum -y install package`
               /// - remove: `yum -y remove package`
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class YUM : pb::IMessage<YUM>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -3914,6 +3940,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// - install: `zypper -y install package`
               /// - remove: `zypper -y rm package`
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Zypper : pb::IMessage<Zypper>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -4111,6 +4138,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// - install: `googet -noconfirm install package`
               /// - remove: `googet -noconfirm remove package`
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class GooGet : pb::IMessage<GooGet>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -4306,6 +4334,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// <summary>
               /// An MSI package. MSI packages only support INSTALLED state.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class MSI : pb::IMessage<MSI>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -4547,6 +4576,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           /// <summary>
           /// A resource that manages a package repository.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class RepositoryResource : pb::IMessage<RepositoryResource>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -4958,6 +4988,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// a repo file that will be managed at
               /// `/etc/apt/sources.list.d/google_osconfig.list`.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class AptRepository : pb::IMessage<AptRepository>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -5332,6 +5363,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// repo file that is managed at
               /// `/etc/yum.repos.d/google_osconfig.repo`.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class YumRepository : pb::IMessage<YumRepository>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -5641,6 +5673,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// repo file that is managed at
               /// `/etc/zypp/repos.d/google_osconfig.repo`.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class ZypperRepository : pb::IMessage<ZypperRepository>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -5950,6 +5983,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// that is managed at
               /// `C:/ProgramData/GooGet/repos/google_osconfig.repo`.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class GooRepository : pb::IMessage<GooRepository>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -6215,6 +6249,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           /// reasons of consistency and being explicit, exit codes `100` and `101`
           /// were chosen.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ExecResource : pb::IMessage<ExecResource>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -6476,6 +6511,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               /// <summary>
               /// A file or script to execute.
               /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
               public sealed partial class Exec : pb::IMessage<Exec>
               #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   , pb::IBufferMessage
@@ -6555,10 +6591,24 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Script {
-                  get { return sourceCase_ == SourceOneofCase.Script ? (string) source_ : ""; }
+                  get { return HasScript ? (string) source_ : ""; }
                   set {
                     source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                     sourceCase_ = SourceOneofCase.Script;
+                  }
+                }
+                /// <summary>Gets whether the "script" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasScript {
+                  get { return sourceCase_ == SourceOneofCase.Script; }
+                }
+                /// <summary> Clears the value of the oneof if it's currently set to "script" </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearScript() {
+                  if (HasScript) {
+                    ClearSource();
                   }
                 }
 
@@ -6661,7 +6711,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 public override int GetHashCode() {
                   int hash = 1;
                   if (sourceCase_ == SourceOneofCase.File) hash ^= File.GetHashCode();
-                  if (sourceCase_ == SourceOneofCase.Script) hash ^= Script.GetHashCode();
+                  if (HasScript) hash ^= Script.GetHashCode();
                   hash ^= args_.GetHashCode();
                   if (Interpreter != global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.ExecResource.Types.Exec.Types.Interpreter.Unspecified) hash ^= Interpreter.GetHashCode();
                   if (OutputFilePath.Length != 0) hash ^= OutputFilePath.GetHashCode();
@@ -6688,7 +6738,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                     output.WriteRawTag(10);
                     output.WriteMessage(File);
                   }
-                  if (sourceCase_ == SourceOneofCase.Script) {
+                  if (HasScript) {
                     output.WriteRawTag(18);
                     output.WriteString(Script);
                   }
@@ -6715,7 +6765,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                     output.WriteRawTag(10);
                     output.WriteMessage(File);
                   }
-                  if (sourceCase_ == SourceOneofCase.Script) {
+                  if (HasScript) {
                     output.WriteRawTag(18);
                     output.WriteString(Script);
                   }
@@ -6741,7 +6791,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                   if (sourceCase_ == SourceOneofCase.File) {
                     size += 1 + pb::CodedOutputStream.ComputeMessageSize(File);
                   }
-                  if (sourceCase_ == SourceOneofCase.Script) {
+                  if (HasScript) {
                     size += 1 + pb::CodedOutputStream.ComputeStringSize(Script);
                   }
                   size += args_.CalculateSize(_repeated_args_codec);
@@ -6912,6 +6962,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
           /// <summary>
           /// A resource that manages the state of a file.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class FileResource : pb::IMessage<FileResource>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -6991,10 +7042,24 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Content {
-              get { return sourceCase_ == SourceOneofCase.Content ? (string) source_ : ""; }
+              get { return HasContent ? (string) source_ : ""; }
               set {
                 source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 sourceCase_ = SourceOneofCase.Content;
+              }
+            }
+            /// <summary>Gets whether the "content" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasContent {
+              get { return sourceCase_ == SourceOneofCase.Content; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "content" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearContent() {
+              if (HasContent) {
+                ClearSource();
               }
             }
 
@@ -7105,7 +7170,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             public override int GetHashCode() {
               int hash = 1;
               if (sourceCase_ == SourceOneofCase.File) hash ^= File.GetHashCode();
-              if (sourceCase_ == SourceOneofCase.Content) hash ^= Content.GetHashCode();
+              if (HasContent) hash ^= Content.GetHashCode();
               if (Path.Length != 0) hash ^= Path.GetHashCode();
               if (State != global::Google.Cloud.OsConfig.V1Alpha.OSPolicy.Types.Resource.Types.FileResource.Types.DesiredState.Unspecified) hash ^= State.GetHashCode();
               if (Permissions.Length != 0) hash ^= Permissions.GetHashCode();
@@ -7132,7 +7197,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 output.WriteRawTag(10);
                 output.WriteMessage(File);
               }
-              if (sourceCase_ == SourceOneofCase.Content) {
+              if (HasContent) {
                 output.WriteRawTag(18);
                 output.WriteString(Content);
               }
@@ -7162,7 +7227,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
                 output.WriteRawTag(10);
                 output.WriteMessage(File);
               }
-              if (sourceCase_ == SourceOneofCase.Content) {
+              if (HasContent) {
                 output.WriteRawTag(18);
                 output.WriteString(Content);
               }
@@ -7191,7 +7256,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
               if (sourceCase_ == SourceOneofCase.File) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(File);
               }
-              if (sourceCase_ == SourceOneofCase.Content) {
+              if (HasContent) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
               }
               if (Path.Length != 0) {
@@ -7369,6 +7434,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// group within the OS policy is selected based on the `OSFilter` specified
       /// within the resource group.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ResourceGroup : pb::IMessage<ResourceGroup>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

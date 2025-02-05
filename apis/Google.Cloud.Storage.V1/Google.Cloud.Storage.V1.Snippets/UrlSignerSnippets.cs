@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -30,6 +30,9 @@ namespace Google.Cloud.Storage.V1.Snippets
     [Collection(nameof(StorageSnippetFixture))]
     public class UrlSignerSnippets
     {
+        // https://cloud.google.com/storage/docs/authentication/hmackeys#restrictions
+        private static readonly TimeSpan s_hmacKeyCreationConsistencyDelay = TimeSpan.FromSeconds(30);
+
         private readonly StorageSnippetFixture _fixture;
 
         public UrlSignerSnippets(StorageSnippetFixture fixture)
@@ -95,6 +98,8 @@ namespace Google.Cloud.Storage.V1.Snippets
             var hmacKey = await storageClient.CreateHmacKeyAsync(_fixture.ProjectId, credential.Id);
             var hmacKeyId = hmacKey.Metadata.AccessId;
             var hmacKeySecret = hmacKey.Secret;
+            // Let's wait for the HMAC key to be ready for use.
+            await Task.Delay(s_hmacKeyCreationConsistencyDelay);
 
             try
             {
@@ -165,7 +170,7 @@ namespace Google.Cloud.Storage.V1.Snippets
                 .FromBucket(bucketName)
                 .WithObjectName(destination)
                 .WithHttpMethod(HttpMethod.Put)
-                .WithContentHeaders(new Dictionary<string, IEnumerable<string>> 
+                .WithContentHeaders(new Dictionary<string, IEnumerable<string>>
                 {
                     { "Content-Type", new[] { "text/plain" } }
                 });

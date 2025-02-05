@@ -1,5 +1,133 @@
 # Version history
 
+## Version 3.12.0, released 2025-01-27
+
+### Bug fixes
+
+- Bump default deadline on CreateDatabase and RestoreDatabase to 2 minutes ([commit 26c2a9d](https://github.com/googleapis/google-cloud-dotnet/commit/26c2a9d2f746ae1e293fb1fbccb12f6455de0498))
+
+### New features
+
+- Add filter argument to FirestoreAdmin.ListBackupsRequest ([commit 26c2a9d](https://github.com/googleapis/google-cloud-dotnet/commit/26c2a9d2f746ae1e293fb1fbccb12f6455de0498))
+
+## Version 3.11.0, released 2024-09-09
+
+### New features
+
+- Add Database.SourceInfo and Database.source_info (information about database provenance, specifically for restored databases) ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+- Add Database.CmekConfig and Database.cmek_config (information about CMEK enablement) ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+- Allow specifying an encryption_config when restoring a database ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+- Add Database.delete_time (the time a database was deleted, if it ever was) ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+- Add Database.previous_id (if a database was deleted, what ID it was using beforehand) ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+
+### Documentation improvements
+
+- Fix assorted capitalization issues with the word "ID" ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+- Clarify restore details ([commit 330fe6a](https://github.com/googleapis/google-cloud-dotnet/commit/330fe6a301f7a6b2c1638db6126ac014c3a3489c))
+- Clarify maximum retention of backups (max 14 weeks) ([commit 48c7024](https://github.com/googleapis/google-cloud-dotnet/commit/48c7024dbf85147a3cb3024681c86ed2f64fa0d2))
+- Remove note about backups running at a specific time ([commit 48c7024](https://github.com/googleapis/google-cloud-dotnet/commit/48c7024dbf85147a3cb3024681c86ed2f64fa0d2))
+- Standardize on the capitalization of "ID" ([commit 48c7024](https://github.com/googleapis/google-cloud-dotnet/commit/48c7024dbf85147a3cb3024681c86ed2f64fa0d2))
+
+## Version 3.10.0, released 2024-06-24
+
+### New features
+
+- Add bulk delete api ([commit 75848dd](https://github.com/googleapis/google-cloud-dotnet/commit/75848dd15ccd47ad3ca9d03d771b75b2d06a8816))
+
+### Documentation improvements
+
+- Update field api description ([commit 75848dd](https://github.com/googleapis/google-cloud-dotnet/commit/75848dd15ccd47ad3ca9d03d771b75b2d06a8816))
+
+## Version 3.9.0, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- Allow 14 week backup retention for Firestore daily backups ([commit 484b7d9](https://github.com/googleapis/google-cloud-dotnet/commit/484b7d946753effa6c5faa8ebd1192f57846e624))
+- Correct BackupSchedule recurrence docs that mentioned specific time of day ([commit d41af41](https://github.com/googleapis/google-cloud-dotnet/commit/d41af41616ae720d5b96e640f9d0a50d83582f3e))
+
+## Version 3.8.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Add Vector Index API ([commit 6d2a003](https://github.com/googleapis/google-cloud-dotnet/commit/6d2a0034b46c52254739cbd097fbe56f6d02b2b8))
+
+## Version 3.7.0, released 2024-03-21
+
+### New features
+
+- A new message `Backup` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new resource_definition `firestore.googleapis.com/Backup` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `GetBackup` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `ListBackups` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `DeleteBackup` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `RestoreDatabase` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `CreateBackupSchedule` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `GetBackupSchedule` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `ListBackupSchedules` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `UpdateBackupSchedule` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new method `DeleteBackupSchedule` is added to service `FirestoreAdmin` ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `CreateBackupScheduleRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `GetBackupScheduleRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `UpdateBackupScheduleRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `ListBackupSchedulesRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `ListBackupSchedulesResponse` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `DeleteBackupScheduleRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `GetBackupRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `ListBackupsRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `ListBackupsResponse` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `DeleteBackupRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `RestoreDatabaseRequest` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `RestoreDatabaseMetadata` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `BackupSchedule` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new resource_definition `firestore.googleapis.com/BackupSchedule` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `DailyRecurrence` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+- A new message `WeeklyRecurrence` is added ([commit 959a792](https://github.com/googleapis/google-cloud-dotnet/commit/959a79280a86ee4e387d4892db7c860aba0ec553))
+
+## Version 3.6.0, released 2024-02-28
+
+### Documentation improvements
+
+- Fix formatting due to unclosed backtick ([commit 9c9f138](https://github.com/googleapis/google-cloud-dotnet/commit/9c9f138f23701d913a1fc192003ff9d77563f792))
+
+## Version 3.5.0, released 2024-01-08
+
+### New features
+
+- Add DeleteDatabase API and delete protection ([commit 045eb3b](https://github.com/googleapis/google-cloud-dotnet/commit/045eb3b54e169edab666bc0e3154683d402fde0e))
+
+### Documentation improvements
+
+- Update Database API description ([commit 045eb3b](https://github.com/googleapis/google-cloud-dotnet/commit/045eb3b54e169edab666bc0e3154683d402fde0e))
+
+## Version 3.4.0, released 2023-12-05
+
+### New features
+
+- Expose Firestore PITR fields in Database to stable ([commit 164e151](https://github.com/googleapis/google-cloud-dotnet/commit/164e151633aa4d82861a61d4a95ff496d38b87ef))
+- Expose Firestore snapshot_time field in export API to stable ([commit 164e151](https://github.com/googleapis/google-cloud-dotnet/commit/164e151633aa4d82861a61d4a95ff496d38b87ef))
+- Expose Firestore namespace ID fields in import/export APIs to stable ([commit 164e151](https://github.com/googleapis/google-cloud-dotnet/commit/164e151633aa4d82861a61d4a95ff496d38b87ef))
+
+### Documentation improvements
+
+- Assorted typo fixes and whitespace updates ([commit 164e151](https://github.com/googleapis/google-cloud-dotnet/commit/164e151633aa4d82861a61d4a95ff496d38b87ef))
+
+## Version 3.3.0, released 2023-06-05
+
+### New features
+
+- Add CreateDatabase API ([commit 09a1ae4](https://github.com/googleapis/google-cloud-dotnet/commit/09a1ae43740e16ae1d27024044aa1c62c7b1ed16))
+
+## Version 3.2.0, released 2023-05-26
+
+### New features
+
+- Add ApiScope and COLLECTION_RECURSIVE query_scope for Firestore index ([commit 4c82bff](https://github.com/googleapis/google-cloud-dotnet/commit/4c82bffa5257d5083f5c06681c7540bf4a03bcfc))
+
 ## Version 3.1.0, released 2023-01-16
 
 ### New features

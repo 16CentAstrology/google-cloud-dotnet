@@ -101,6 +101,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// The description a notebook execution workload.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExecutionTemplate : pb::IMessage<ExecutionTemplate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -756,7 +757,7 @@ namespace Google.Cloud.Notebooks.V1 {
         }
         AcceleratorConfig.MergeFrom(other.AcceleratorConfig);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.InputNotebookFile.Length != 0) {
         InputNotebookFile = other.InputNotebookFile;
       }
@@ -1095,6 +1096,7 @@ namespace Google.Cloud.Notebooks.V1 {
       /// Compute Engine](https://cloud.google.com/compute/docs/gpus) to find a valid
       /// combination. TPUs are not supported.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SchedulerAcceleratorConfig : pb::IMessage<SchedulerAcceleratorConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1330,6 +1332,7 @@ namespace Google.Cloud.Notebooks.V1 {
       /// <summary>
       /// Parameters used in Dataproc JobType executions.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DataprocParameters : pb::IMessage<DataprocParameters>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1526,6 +1529,7 @@ namespace Google.Cloud.Notebooks.V1 {
       /// <summary>
       /// Parameters used in Vertex AI JobType executions.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class VertexAIParameters : pb::IMessage<VertexAIParameters>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1705,7 +1709,7 @@ namespace Google.Cloud.Notebooks.V1 {
           if (other.Network.Length != 0) {
             Network = other.Network;
           }
-          env_.Add(other.env_);
+          env_.MergeFrom(other.env_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1767,6 +1771,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// The definition of a single executed notebook.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Execution : pb::IMessage<Execution>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

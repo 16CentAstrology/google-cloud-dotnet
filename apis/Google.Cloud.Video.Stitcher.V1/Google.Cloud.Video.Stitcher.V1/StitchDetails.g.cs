@@ -57,8 +57,11 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   }
   #region Messages
   /// <summary>
-  /// Detailed information related to the interstitial of a VOD session.
+  /// Information related to the interstitial of a VOD session. This resource is
+  /// only available for VOD sessions that do not implement Google Ad Manager ad
+  /// insertion.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VodStitchDetail : pb::IMessage<VodStitchDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -284,6 +287,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Metadata for a stitched ad.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AdStitchDetail : pb::IMessage<AdStitchDetail>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -550,7 +554,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       if (other.SkipReason.Length != 0) {
         SkipReason = other.SkipReason;
       }
-      media_.Add(other.media_);
+      media_.MergeFrom(other.media_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

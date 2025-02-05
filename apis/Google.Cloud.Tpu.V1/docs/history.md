@@ -1,5 +1,29 @@
 # Version history
 
+## Version 2.4.0, released 2025-01-13
+
+### New features
+
+- Add UNKNOWN to TPU node state, This state will be used to prevent a node from being marked as READY during diagnose after it has failed repair ([commit 5bcb874](https://github.com/googleapis/google-cloud-dotnet/commit/5bcb874031918e9b82d7cdf9ae947d044a5522f6))
+
+## Version 2.3.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.2.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.1.0, released 2024-02-29
+
+### Documentation improvements
+
+- Minor updates in comments ([commit 4386e68](https://github.com/googleapis/google-cloud-dotnet/commit/4386e6852ffac109d2e464d3e1f2bf41c6239c3b))
+
 ## Version 2.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

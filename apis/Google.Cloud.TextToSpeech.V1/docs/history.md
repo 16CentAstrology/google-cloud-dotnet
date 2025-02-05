@@ -1,5 +1,63 @@
 # Version history
 
+## Version 3.10.0, released 2025-01-13
+
+### New features
+
+- StreamingSynthesize now supports opus ([commit f12b892](https://github.com/googleapis/google-cloud-dotnet/commit/f12b892a397252181d30582124f865fbf8fd3c3a))
+
+## Version 3.9.0, released 2024-10-29
+
+### New features
+
+- Add multi-speaker markup, which allows generating dialogue between multiple speakers ([commit 94c353c](https://github.com/googleapis/google-cloud-dotnet/commit/94c353c51b23301309aacbcf055b147a085612e8))
+- Add brand voice lite, which lets you clone a voice with just 10 seconds of audio ([commit 6635e62](https://github.com/googleapis/google-cloud-dotnet/commit/6635e6209450b1005ca0c15495c0724c90a955a5))
+
+## Version 3.8.0, released 2024-10-14
+
+### New features
+
+- Add low latency journey option to proto ([commit 96b9816](https://github.com/googleapis/google-cloud-dotnet/commit/96b9816db06cd726d959b0e8ad57bbd5cdb0ad0a))
+- Add CustomPronunciationParams for upcoming feature work ([commit 96b9816](https://github.com/googleapis/google-cloud-dotnet/commit/96b9816db06cd726d959b0e8ad57bbd5cdb0ad0a))
+
+## Version 3.7.0, released 2024-09-09
+
+### New features
+
+- A new method `StreamingSynthesize` is added to service `TextToSpeech` ([commit 7a34ef0](https://github.com/googleapis/google-cloud-dotnet/commit/7a34ef081baa8b944e2d8d689336ce6b15e5b5e2))
+
+### Documentation improvements
+
+- Update Long Audio capabilities to include SSML ([commit 05630e2](https://github.com/googleapis/google-cloud-dotnet/commit/05630e2e7806e8894ab892a428b83cbeb187ee37))
+- A comment for field `name` in message `.google.cloud.texttospeech.v1.VoiceSelectionParams` is changed ([commit 7a34ef0](https://github.com/googleapis/google-cloud-dotnet/commit/7a34ef081baa8b944e2d8d689336ce6b15e5b5e2))
+
+## Version 3.6.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.5.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.4.0, released 2024-02-29
+
+No API surface changes; just dependency updates.
+
+## Version 3.3.0, released 2024-01-08
+
+### Bug fixes
+
+- Correct long audio synthesis HTTP binding ([commit ce90310](https://github.com/googleapis/google-cloud-dotnet/commit/ce90310499ec80b42ec5412a0cb538a3bbe71561))
+
+### Documentation improvements
+
+- Deprecate the custom voice usage field ([commit ce90310](https://github.com/googleapis/google-cloud-dotnet/commit/ce90310499ec80b42ec5412a0cb538a3bbe71561))
+- Update documentation to require certain fields ([commit 43382af](https://github.com/googleapis/google-cloud-dotnet/commit/43382afe88bd439072507a6c4566a54f67c5f21a))
+
 ## Version 3.2.0, released 2023-01-11
 
 This is primarily a promotion of the previous beta, which includes

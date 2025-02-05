@@ -9,26 +9,16 @@
 declare -r REPO_ROOT=$(readlink -f $(dirname ${BASH_SOURCE}))
 declare -r TOOL_PACKAGES=$REPO_ROOT/packages
 
-declare -r DOTCOVER_VERSION=2019.3.4
-declare -r REPORTGENERATOR_VERSION=2.4.5.0
-declare -r PROTOC_VERSION=3.21.3
-declare -r GRPC_VERSION=2.47.0
-declare -r GAPIC_GENERATOR_VERSION=1.4.11
-
-# Tools that only run under Windows (at the moment)
-declare -r DOTCOVER=$TOOL_PACKAGES/JetBrains.dotCover.CommandLineTools.$DOTCOVER_VERSION/tools/dotCover.exe
-declare -r REPORTGENERATOR=$TOOL_PACKAGES/ReportGenerator.$REPORTGENERATOR_VERSION/tools/ReportGenerator.exe
+declare -r PROTOC_VERSION=3.25.2
+declare -r GRPC_VERSION=2.60.0
+if [[ $GAPIC_GENERATOR_VERSION == "" ]]
+then
+  declare -r GAPIC_GENERATOR_VERSION=v1.4.32
+else
+  echo "Using GAPIC generator override: ${GAPIC_GENERATOR_VERSION}"
+fi
 
 declare -r PROTOBUF_TOOLS_ROOT=$TOOL_PACKAGES/Google.Protobuf.Tools.$PROTOC_VERSION
-
-# Try to detect Python 3. It's quite different between Windows and Linux.
-if which python > /dev/null && python --version 2>&1 | grep -q "Python 3"; then declare -r PYTHON3=python
-elif which py > /dev/null && py -3 --version 2>&1 | grep -q "Python 3"; then declare -r PYTHON3="py -3"
-elif which python3 > /dev/null && python3 --version 2>&1 | grep -q "Python 3"; then declare -r PYTHON3=python3
-else
-  echo "Unable to detect Python 3 installation."
-  exit 1
-fi
 
 # Cross-platform tools
 case "$OSTYPE" in
@@ -68,14 +58,6 @@ install_nuget_package() {
 
 # Installation functions, all of which should be unconditionally called
 # when required. (They handle the case where the tool is already installed.)
-
-install_dotcover() {
-  install_nuget_package JetBrains.dotCover.CommandLineTools $DOTCOVER_VERSION
-}
-
-install_reportgenerator() {
-  install_nuget_package ReportGenerator $REPORTGENERATOR_VERSION
-}
 
 install_protoc() {
   install_nuget_package Google.Protobuf.Tools $PROTOC_VERSION
@@ -121,10 +103,10 @@ install_microgenerator() {
   elif [ -d $GENERATOR_ROOT ]
   then
     git -C $GENERATOR_ROOT fetch -q --tags
-    git -C $GENERATOR_ROOT checkout -q v$GAPIC_GENERATOR_VERSION
+    git -C $GENERATOR_ROOT checkout -q $GAPIC_GENERATOR_VERSION
   else
     git clone https://github.com/googleapis/gapic-generator-csharp $GENERATOR_ROOT -q
-    git -C $GENERATOR_ROOT checkout -q v$GAPIC_GENERATOR_VERSION
+    git -C $GENERATOR_ROOT checkout -q $GAPIC_GENERATOR_VERSION
   fi
 
   # The dotnet restore step isn't generally required when cloning from elsewhere,
@@ -137,14 +119,6 @@ install_microgenerator() {
 install_grpc() {
   install_nuget_package Grpc.Tools $GRPC_VERSION
   chmod +x $GRPC_PLUGIN
-}
-
-install_docfx() {
-  # Note that errors will still appear in stderr, but we don't need
-  # the banner of "here's how to invoke the tool" when installing.
-  # TODO: We can probably remove this soon, and just use "dotnet tool restore"
-  # directly.
-  dotnet tool restore > /dev/null
 }
 
 # Logs to both stdout and a build timing log, allowing

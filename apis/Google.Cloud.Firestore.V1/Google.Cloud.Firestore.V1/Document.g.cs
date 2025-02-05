@@ -25,35 +25,36 @@ namespace Google.Cloud.Firestore.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvZmlyZXN0b3JlL3YxL2RvY3VtZW50LnByb3RvEhNnb29nbGUu",
-            "ZmlyZXN0b3JlLnYxGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9n",
-            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhhnb29nbGUvdHlwZS9s",
-            "YXRsbmcucHJvdG8igAIKCERvY3VtZW50EgwKBG5hbWUYASABKAkSOQoGZmll",
-            "bGRzGAIgAygLMikuZ29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudC5GaWVs",
-            "ZHNFbnRyeRIvCgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wGkkKC0ZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRIp",
-            "CgV2YWx1ZRgCIAEoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWU6AjgB",
-            "Iq4DCgVWYWx1ZRIwCgpudWxsX3ZhbHVlGAsgASgOMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLk51bGxWYWx1ZUgAEhcKDWJvb2xlYW5fdmFsdWUYASABKAhIABIXCg1p",
-            "bnRlZ2VyX3ZhbHVlGAIgASgDSAASFgoMZG91YmxlX3ZhbHVlGAMgASgBSAAS",
-            "NQoPdGltZXN0YW1wX3ZhbHVlGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEgAEhYKDHN0cmluZ192YWx1ZRgRIAEoCUgAEhUKC2J5dGVzX3Zh",
-            "bHVlGBIgASgMSAASGQoPcmVmZXJlbmNlX3ZhbHVlGAUgASgJSAASLgoPZ2Vv",
-            "X3BvaW50X3ZhbHVlGAggASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nSAASNgoL",
-            "YXJyYXlfdmFsdWUYCSABKAsyHy5nb29nbGUuZmlyZXN0b3JlLnYxLkFycmF5",
-            "VmFsdWVIABIyCgltYXBfdmFsdWUYBiABKAsyHS5nb29nbGUuZmlyZXN0b3Jl",
-            "LnYxLk1hcFZhbHVlSABCDAoKdmFsdWVfdHlwZSI4CgpBcnJheVZhbHVlEioK",
-            "BnZhbHVlcxgBIAMoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWUikAEK",
-            "CE1hcFZhbHVlEjkKBmZpZWxkcxgBIAMoCzIpLmdvb2dsZS5maXJlc3RvcmUu",
-            "djEuTWFwVmFsdWUuRmllbGRzRW50cnkaSQoLRmllbGRzRW50cnkSCwoDa2V5",
-            "GAEgASgJEikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5W",
-            "YWx1ZToCOAFCxQEKF2NvbS5nb29nbGUuZmlyZXN0b3JlLnYxQg1Eb2N1bWVu",
-            "dFByb3RvUAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYx",
-            "L2ZpcmVzdG9yZXBiO2ZpcmVzdG9yZXBiogIER0NGU6oCGUdvb2dsZS5DbG91",
-            "ZC5GaXJlc3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRcRmlyZXN0b3JlXFYx6gIc",
-            "R29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpWMWIGcHJvdG8z"));
+            "ZmlyZXN0b3JlLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
+            "Ghxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9i",
+            "dWYvdGltZXN0YW1wLnByb3RvGhhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8i",
+            "gAIKCERvY3VtZW50EgwKBG5hbWUYASABKAkSOQoGZmllbGRzGAIgAygLMiku",
+            "Z29vZ2xlLmZpcmVzdG9yZS52MS5Eb2N1bWVudC5GaWVsZHNFbnRyeRIvCgtj",
+            "cmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "LwoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wGkkKC0ZpZWxkc0VudHJ5EgsKA2tleRgBIAEoCRIpCgV2YWx1ZRgCIAEo",
+            "CzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWU6AjgBIq4DCgVWYWx1ZRIw",
+            "CgpudWxsX3ZhbHVlGAsgASgOMhouZ29vZ2xlLnByb3RvYnVmLk51bGxWYWx1",
+            "ZUgAEhcKDWJvb2xlYW5fdmFsdWUYASABKAhIABIXCg1pbnRlZ2VyX3ZhbHVl",
+            "GAIgASgDSAASFgoMZG91YmxlX3ZhbHVlGAMgASgBSAASNQoPdGltZXN0YW1w",
+            "X3ZhbHVlGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAEhYK",
+            "DHN0cmluZ192YWx1ZRgRIAEoCUgAEhUKC2J5dGVzX3ZhbHVlGBIgASgMSAAS",
+            "GQoPcmVmZXJlbmNlX3ZhbHVlGAUgASgJSAASLgoPZ2VvX3BvaW50X3ZhbHVl",
+            "GAggASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nSAASNgoLYXJyYXlfdmFsdWUY",
+            "CSABKAsyHy5nb29nbGUuZmlyZXN0b3JlLnYxLkFycmF5VmFsdWVIABIyCglt",
+            "YXBfdmFsdWUYBiABKAsyHS5nb29nbGUuZmlyZXN0b3JlLnYxLk1hcFZhbHVl",
+            "SABCDAoKdmFsdWVfdHlwZSI4CgpBcnJheVZhbHVlEioKBnZhbHVlcxgBIAMo",
+            "CzIaLmdvb2dsZS5maXJlc3RvcmUudjEuVmFsdWUikAEKCE1hcFZhbHVlEjkK",
+            "BmZpZWxkcxgBIAMoCzIpLmdvb2dsZS5maXJlc3RvcmUudjEuTWFwVmFsdWUu",
+            "RmllbGRzRW50cnkaSQoLRmllbGRzRW50cnkSCwoDa2V5GAEgASgJEikKBXZh",
+            "bHVlGAIgASgLMhouZ29vZ2xlLmZpcmVzdG9yZS52MS5WYWx1ZToCOAFCxQEK",
+            "F2NvbS5nb29nbGUuZmlyZXN0b3JlLnYxQg1Eb2N1bWVudFByb3RvUAFaO2Ns",
+            "b3VkLmdvb2dsZS5jb20vZ28vZmlyZXN0b3JlL2FwaXYxL2ZpcmVzdG9yZXBi",
+            "O2ZpcmVzdG9yZXBiogIER0NGU6oCGUdvb2dsZS5DbG91ZC5GaXJlc3RvcmUu",
+            "VjHKAhlHb29nbGVcQ2xvdWRcRmlyZXN0b3JlXFYx6gIcR29vZ2xlOjpDbG91",
+            "ZDo6RmlyZXN0b3JlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Document), global::Google.Cloud.Firestore.V1.Document.Parser, new[]{ "Name", "Fields", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Value), global::Google.Cloud.Firestore.V1.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "StringValue", "BytesValue", "ReferenceValue", "GeoPointValue", "ArrayValue", "MapValue" }, new[]{ "ValueType" }, null, null, null),
@@ -70,6 +71,7 @@ namespace Google.Cloud.Firestore.V1 {
   ///
   /// Must not exceed 1 MiB - 4 bytes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Document : pb::IMessage<Document>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -143,23 +145,23 @@ namespace Google.Cloud.Firestore.V1 {
     ///
     /// The map keys represent field names.
     ///
+    /// Field names matching the regular expression `__.*__` are reserved. Reserved
+    /// field names are forbidden except in certain documented contexts. The field
+    /// names, represented as UTF-8, must not exceed 1,500 bytes and cannot be
+    /// empty.
+    ///
+    /// Field paths may be used in other contexts to refer to structured fields
+    /// defined here. For `map_value`, the field path is represented by a
+    /// dot-delimited (`.`) string of segments. Each segment is either a simple
+    /// field name (defined below) or a quoted field name. For example, the
+    /// structured field `"foo" : { map_value: { "x&amp;y" : { string_value: "hello"
+    /// }}}` would be represented by the field path `` foo.`x&amp;y` ``.
+    ///
     /// A simple field name contains only characters `a` to `z`, `A` to `Z`,
     /// `0` to `9`, or `_`, and must not start with `0` to `9`. For example,
     /// `foo_bar_17`.
     ///
-    /// Field names matching the regular expression `__.*__` are reserved. Reserved
-    /// field names are forbidden except in certain documented contexts. The map
-    /// keys, represented as UTF-8, must not exceed 1,500 bytes and cannot be
-    /// empty.
-    ///
-    /// Field paths may be used in other contexts to refer to structured fields
-    /// defined here. For `map_value`, the field path is represented by the simple
-    /// or quoted field names of the containing fields, delimited by `.`. For
-    /// example, the structured field
-    /// `"foo" : { map_value: { "x&amp;y" : { string_value: "hello" }}}` would be
-    /// represented by the field path `foo.x&amp;y`.
-    ///
-    /// Within a field path, a quoted field name starts and ends with `` ` `` and
+    /// A quoted field name starts and ends with `` ` `` and
     /// may contain any character. Some characters, including `` ` ``, must be
     /// escaped using a `\`. For example, `` `x&amp;y` `` represents `x&amp;y` and
     /// `` `bak\`tik` `` represents `` bak`tik ``.
@@ -327,7 +329,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      fields_.Add(other.fields_);
+      fields_.MergeFrom(other.fields_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -424,6 +426,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// <summary>
   /// A message that can hold any of the supported value types.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Value : pb::IMessage<Value>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -511,10 +514,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.NullValue NullValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.NullValue ? (global::Google.Protobuf.WellKnownTypes.NullValue) valueType_ : global::Google.Protobuf.WellKnownTypes.NullValue.NullValue; }
+      get { return HasNullValue ? (global::Google.Protobuf.WellKnownTypes.NullValue) valueType_ : global::Google.Protobuf.WellKnownTypes.NullValue.NullValue; }
       set {
         valueType_ = value;
         valueTypeCase_ = ValueTypeOneofCase.NullValue;
+      }
+    }
+    /// <summary>Gets whether the "null_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNullValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.NullValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "null_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNullValue() {
+      if (HasNullValue) {
+        ClearValueType();
       }
     }
 
@@ -526,10 +543,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BooleanValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.BooleanValue ? (bool) valueType_ : false; }
+      get { return HasBooleanValue ? (bool) valueType_ : false; }
       set {
         valueType_ = value;
         valueTypeCase_ = ValueTypeOneofCase.BooleanValue;
+      }
+    }
+    /// <summary>Gets whether the "boolean_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBooleanValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.BooleanValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "boolean_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBooleanValue() {
+      if (HasBooleanValue) {
+        ClearValueType();
       }
     }
 
@@ -541,10 +572,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long IntegerValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.IntegerValue ? (long) valueType_ : 0L; }
+      get { return HasIntegerValue ? (long) valueType_ : 0L; }
       set {
         valueType_ = value;
         valueTypeCase_ = ValueTypeOneofCase.IntegerValue;
+      }
+    }
+    /// <summary>Gets whether the "integer_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIntegerValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.IntegerValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "integer_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIntegerValue() {
+      if (HasIntegerValue) {
+        ClearValueType();
       }
     }
 
@@ -556,10 +601,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double DoubleValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.DoubleValue ? (double) valueType_ : 0D; }
+      get { return HasDoubleValue ? (double) valueType_ : 0D; }
       set {
         valueType_ = value;
         valueTypeCase_ = ValueTypeOneofCase.DoubleValue;
+      }
+    }
+    /// <summary>Gets whether the "double_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDoubleValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.DoubleValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "double_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDoubleValue() {
+      if (HasDoubleValue) {
+        ClearValueType();
       }
     }
 
@@ -593,10 +652,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StringValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.StringValue ? (string) valueType_ : ""; }
+      get { return HasStringValue ? (string) valueType_ : ""; }
       set {
         valueType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueTypeCase_ = ValueTypeOneofCase.StringValue;
+      }
+    }
+    /// <summary>Gets whether the "string_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStringValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.StringValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "string_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStringValue() {
+      if (HasStringValue) {
+        ClearValueType();
       }
     }
 
@@ -611,10 +684,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString BytesValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.BytesValue ? (pb::ByteString) valueType_ : pb::ByteString.Empty; }
+      get { return HasBytesValue ? (pb::ByteString) valueType_ : pb::ByteString.Empty; }
       set {
         valueType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueTypeCase_ = ValueTypeOneofCase.BytesValue;
+      }
+    }
+    /// <summary>Gets whether the "bytes_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBytesValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.BytesValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "bytes_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBytesValue() {
+      if (HasBytesValue) {
+        ClearValueType();
       }
     }
 
@@ -627,10 +714,24 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ReferenceValue {
-      get { return valueTypeCase_ == ValueTypeOneofCase.ReferenceValue ? (string) valueType_ : ""; }
+      get { return HasReferenceValue ? (string) valueType_ : ""; }
       set {
         valueType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueTypeCase_ = ValueTypeOneofCase.ReferenceValue;
+      }
+    }
+    /// <summary>Gets whether the "reference_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReferenceValue {
+      get { return valueTypeCase_ == ValueTypeOneofCase.ReferenceValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "reference_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReferenceValue() {
+      if (HasReferenceValue) {
+        ClearValueType();
       }
     }
 
@@ -654,7 +755,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>
     /// An array value.
     ///
-    /// Cannot directly contain another array value, though can contain an
+    /// Cannot directly contain another array value, though can contain a
     /// map which contains another array.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -746,14 +847,14 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (valueTypeCase_ == ValueTypeOneofCase.NullValue) hash ^= NullValue.GetHashCode();
-      if (valueTypeCase_ == ValueTypeOneofCase.BooleanValue) hash ^= BooleanValue.GetHashCode();
-      if (valueTypeCase_ == ValueTypeOneofCase.IntegerValue) hash ^= IntegerValue.GetHashCode();
-      if (valueTypeCase_ == ValueTypeOneofCase.DoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
+      if (HasNullValue) hash ^= NullValue.GetHashCode();
+      if (HasBooleanValue) hash ^= BooleanValue.GetHashCode();
+      if (HasIntegerValue) hash ^= IntegerValue.GetHashCode();
+      if (HasDoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
       if (valueTypeCase_ == ValueTypeOneofCase.TimestampValue) hash ^= TimestampValue.GetHashCode();
-      if (valueTypeCase_ == ValueTypeOneofCase.StringValue) hash ^= StringValue.GetHashCode();
-      if (valueTypeCase_ == ValueTypeOneofCase.BytesValue) hash ^= BytesValue.GetHashCode();
-      if (valueTypeCase_ == ValueTypeOneofCase.ReferenceValue) hash ^= ReferenceValue.GetHashCode();
+      if (HasStringValue) hash ^= StringValue.GetHashCode();
+      if (HasBytesValue) hash ^= BytesValue.GetHashCode();
+      if (HasReferenceValue) hash ^= ReferenceValue.GetHashCode();
       if (valueTypeCase_ == ValueTypeOneofCase.GeoPointValue) hash ^= GeoPointValue.GetHashCode();
       if (valueTypeCase_ == ValueTypeOneofCase.ArrayValue) hash ^= ArrayValue.GetHashCode();
       if (valueTypeCase_ == ValueTypeOneofCase.MapValue) hash ^= MapValue.GetHashCode();
@@ -776,19 +877,19 @@ namespace Google.Cloud.Firestore.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (valueTypeCase_ == ValueTypeOneofCase.BooleanValue) {
+      if (HasBooleanValue) {
         output.WriteRawTag(8);
         output.WriteBool(BooleanValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.IntegerValue) {
+      if (HasIntegerValue) {
         output.WriteRawTag(16);
         output.WriteInt64(IntegerValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(25);
         output.WriteDouble(DoubleValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.ReferenceValue) {
+      if (HasReferenceValue) {
         output.WriteRawTag(42);
         output.WriteString(ReferenceValue);
       }
@@ -808,15 +909,15 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(TimestampValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.NullValue) {
+      if (HasNullValue) {
         output.WriteRawTag(88);
         output.WriteEnum((int) NullValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(138, 1);
         output.WriteString(StringValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.BytesValue) {
+      if (HasBytesValue) {
         output.WriteRawTag(146, 1);
         output.WriteBytes(BytesValue);
       }
@@ -830,19 +931,19 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (valueTypeCase_ == ValueTypeOneofCase.BooleanValue) {
+      if (HasBooleanValue) {
         output.WriteRawTag(8);
         output.WriteBool(BooleanValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.IntegerValue) {
+      if (HasIntegerValue) {
         output.WriteRawTag(16);
         output.WriteInt64(IntegerValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(25);
         output.WriteDouble(DoubleValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.ReferenceValue) {
+      if (HasReferenceValue) {
         output.WriteRawTag(42);
         output.WriteString(ReferenceValue);
       }
@@ -862,15 +963,15 @@ namespace Google.Cloud.Firestore.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(TimestampValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.NullValue) {
+      if (HasNullValue) {
         output.WriteRawTag(88);
         output.WriteEnum((int) NullValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.StringValue) {
+      if (HasStringValue) {
         output.WriteRawTag(138, 1);
         output.WriteString(StringValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.BytesValue) {
+      if (HasBytesValue) {
         output.WriteRawTag(146, 1);
         output.WriteBytes(BytesValue);
       }
@@ -884,28 +985,28 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (valueTypeCase_ == ValueTypeOneofCase.NullValue) {
+      if (HasNullValue) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NullValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.BooleanValue) {
+      if (HasBooleanValue) {
         size += 1 + 1;
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.IntegerValue) {
+      if (HasIntegerValue) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(IntegerValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         size += 1 + 8;
       }
       if (valueTypeCase_ == ValueTypeOneofCase.TimestampValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimestampValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.StringValue) {
+      if (HasStringValue) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(StringValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.BytesValue) {
+      if (HasBytesValue) {
         size += 2 + pb::CodedOutputStream.ComputeBytesSize(BytesValue);
       }
-      if (valueTypeCase_ == ValueTypeOneofCase.ReferenceValue) {
+      if (HasReferenceValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ReferenceValue);
       }
       if (valueTypeCase_ == ValueTypeOneofCase.GeoPointValue) {
@@ -1147,6 +1248,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// <summary>
   /// An array value.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ArrayValue : pb::IMessage<ArrayValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1331,6 +1433,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// <summary>
   /// A map value.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MapValue : pb::IMessage<MapValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1471,7 +1574,7 @@ namespace Google.Cloud.Firestore.V1 {
       if (other == null) {
         return;
       }
-      fields_.Add(other.fields_);
+      fields_.MergeFrom(other.fields_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

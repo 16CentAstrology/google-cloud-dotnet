@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,20 +15,20 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.GSuiteAddOns.V1
 {
@@ -265,14 +265,14 @@ namespace Google.Cloud.GSuiteAddOns.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return GSuiteAddOnsClient.Create(callInvoker, Settings, Logger);
+            return GSuiteAddOnsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<GSuiteAddOnsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return GSuiteAddOnsClient.Create(callInvoker, Settings, Logger);
+            return GSuiteAddOnsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -281,30 +281,30 @@ namespace Google.Cloud.GSuiteAddOns.V1
 
     /// <summary>GSuiteAddOns client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// A service for managing Google Workspace Add-ons deployments.
+    /// A service for managing Google Workspace add-ons deployments.
     /// 
-    /// A Google Workspace Add-on is a third-party embedded component that can be
+    /// A Google Workspace add-on is a third-party embedded component that can be
     /// installed in Google Workspace Applications like Gmail, Calendar, Drive, and
-    /// the Google Docs, Sheets, and Slides editors. Google Workspace Add-ons can
+    /// the Google Docs, Sheets, and Slides editors. Google Workspace add-ons can
     /// display UI cards, receive contextual information from the host application,
     /// and perform actions in the host application (See:
     /// https://developers.google.com/gsuite/add-ons/overview for more information).
     /// 
-    /// A Google Workspace Add-on deployment resource specifies metadata about the
+    /// A Google Workspace add-on deployment resource specifies metadata about the
     /// add-on, including a specification of the entry points in the host application
     /// that trigger add-on executions (see:
     /// https://developers.google.com/gsuite/add-ons/concepts/gsuite-manifests).
-    /// Add-on deployments defined via the Google Workspace Add-ons API define their
+    /// Add-on deployments defined via the Google Workspace add-ons API define their
     /// entrypoints using HTTPS URLs (See:
     /// https://developers.google.com/gsuite/add-ons/guides/alternate-runtimes),
     /// 
-    /// A Google Workspace Add-on deployment can be installed in developer mode,
+    /// A Google Workspace add-on deployment can be installed in developer mode,
     /// which allows an add-on developer to test the experience an end-user would see
     /// when installing and running the add-on in their G Suite applications.  When
     /// running in developer mode, more detailed error messages are exposed in the
     /// add-on UI to aid in debugging.
     /// 
-    /// A Google Workspace Add-on deployment can be published to Google Workspace
+    /// A Google Workspace add-on deployment can be published to Google Workspace
     /// Marketplace, which allows other Google Workspace users to discover and
     /// install the add-on.  See:
     /// https://developers.google.com/gsuite/add-ons/how-tos/publish-add-on-overview
@@ -421,7 +421,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// Gets the authorization information for deployments in a given project.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the project for which to get the Google Workspace Add-ons
+        /// Required. Name of the project for which to get the Google Workspace add-ons
         /// authorization information.
         /// 
         /// Example: `projects/my_project/authorization`.
@@ -438,7 +438,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// Gets the authorization information for deployments in a given project.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the project for which to get the Google Workspace Add-ons
+        /// Required. Name of the project for which to get the Google Workspace add-ons
         /// authorization information.
         /// 
         /// Example: `projects/my_project/authorization`.
@@ -455,7 +455,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// Gets the authorization information for deployments in a given project.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the project for which to get the Google Workspace Add-ons
+        /// Required. Name of the project for which to get the Google Workspace add-ons
         /// authorization information.
         /// 
         /// Example: `projects/my_project/authorization`.
@@ -469,7 +469,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// Gets the authorization information for deployments in a given project.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the project for which to get the Google Workspace Add-ons
+        /// Required. Name of the project for which to get the Google Workspace add-ons
         /// authorization information.
         /// 
         /// Example: `projects/my_project/authorization`.
@@ -486,7 +486,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// Gets the authorization information for deployments in a given project.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the project for which to get the Google Workspace Add-ons
+        /// Required. Name of the project for which to get the Google Workspace add-ons
         /// authorization information.
         /// 
         /// Example: `projects/my_project/authorization`.
@@ -503,7 +503,7 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// Gets the authorization information for deployments in a given project.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the project for which to get the Google Workspace Add-ons
+        /// Required. Name of the project for which to get the Google Workspace add-ons
         /// authorization information.
         /// 
         /// Example: `projects/my_project/authorization`.
@@ -899,13 +899,22 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeploymentsResponse, Deployment> ListDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeployments(new ListDeploymentsRequest
+        public virtual gax::PagedEnumerable<ListDeploymentsResponse, Deployment> ListDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentsRequest request = new ListDeploymentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeployments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all deployments in a particular project.
@@ -925,13 +934,22 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeploymentsResponse, Deployment> ListDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentsAsync(new ListDeploymentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentsResponse, Deployment> ListDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentsRequest request = new ListDeploymentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all deployments in a particular project.
@@ -951,13 +969,22 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListDeploymentsResponse, Deployment> ListDeployments(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeployments(new ListDeploymentsRequest
+        public virtual gax::PagedEnumerable<ListDeploymentsResponse, Deployment> ListDeployments(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentsRequest request = new ListDeploymentsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeployments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all deployments in a particular project.
@@ -977,13 +1004,22 @@ namespace Google.Cloud.GSuiteAddOns.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Deployment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListDeploymentsResponse, Deployment> ListDeploymentsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListDeploymentsAsync(new ListDeploymentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListDeploymentsResponse, Deployment> ListDeploymentsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListDeploymentsRequest request = new ListDeploymentsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListDeploymentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the deployment with the given name.
@@ -1492,30 +1528,30 @@ namespace Google.Cloud.GSuiteAddOns.V1
 
     /// <summary>GSuiteAddOns client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// A service for managing Google Workspace Add-ons deployments.
+    /// A service for managing Google Workspace add-ons deployments.
     /// 
-    /// A Google Workspace Add-on is a third-party embedded component that can be
+    /// A Google Workspace add-on is a third-party embedded component that can be
     /// installed in Google Workspace Applications like Gmail, Calendar, Drive, and
-    /// the Google Docs, Sheets, and Slides editors. Google Workspace Add-ons can
+    /// the Google Docs, Sheets, and Slides editors. Google Workspace add-ons can
     /// display UI cards, receive contextual information from the host application,
     /// and perform actions in the host application (See:
     /// https://developers.google.com/gsuite/add-ons/overview for more information).
     /// 
-    /// A Google Workspace Add-on deployment resource specifies metadata about the
+    /// A Google Workspace add-on deployment resource specifies metadata about the
     /// add-on, including a specification of the entry points in the host application
     /// that trigger add-on executions (see:
     /// https://developers.google.com/gsuite/add-ons/concepts/gsuite-manifests).
-    /// Add-on deployments defined via the Google Workspace Add-ons API define their
+    /// Add-on deployments defined via the Google Workspace add-ons API define their
     /// entrypoints using HTTPS URLs (See:
     /// https://developers.google.com/gsuite/add-ons/guides/alternate-runtimes),
     /// 
-    /// A Google Workspace Add-on deployment can be installed in developer mode,
+    /// A Google Workspace add-on deployment can be installed in developer mode,
     /// which allows an add-on developer to test the experience an end-user would see
     /// when installing and running the add-on in their G Suite applications.  When
     /// running in developer mode, more detailed error messages are exposed in the
     /// add-on UI to aid in debugging.
     /// 
-    /// A Google Workspace Add-on deployment can be published to Google Workspace
+    /// A Google Workspace add-on deployment can be published to Google Workspace
     /// Marketplace, which allows other Google Workspace users to discover and
     /// install the add-on.  See:
     /// https://developers.google.com/gsuite/add-ons/how-tos/publish-add-on-overview
@@ -1551,7 +1587,11 @@ namespace Google.Cloud.GSuiteAddOns.V1
         {
             GrpcClient = grpcClient;
             GSuiteAddOnsSettings effectiveSettings = settings ?? GSuiteAddOnsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callGetAuthorization = clientHelper.BuildApiCall<GetAuthorizationRequest, Authorization>("GetAuthorization", grpcClient.GetAuthorizationAsync, grpcClient.GetAuthorization, effectiveSettings.GetAuthorizationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAuthorization);
             Modify_GetAuthorizationApiCall(ref _callGetAuthorization);

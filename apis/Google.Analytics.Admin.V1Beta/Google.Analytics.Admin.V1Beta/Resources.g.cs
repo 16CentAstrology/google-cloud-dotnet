@@ -28,198 +28,228 @@ namespace Google.Analytics.Admin.V1Beta {
             "dG8SHWdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhGh9nb29nbGUvYXBp",
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
             "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUv",
-            "cHJvdG9idWYvd3JhcHBlcnMucHJvdG8ijgIKB0FjY291bnQSEQoEbmFtZRgB",
+            "cHJvdG9idWYvd3JhcHBlcnMucHJvdG8i5AIKB0FjY291bnQSEQoEbmFtZRgB",
             "IAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
             "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAMgASgLMhouZ29v",
             "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhkKDGRpc3BsYXlfbmFtZRgE",
             "IAEoCUID4EECEhMKC3JlZ2lvbl9jb2RlGAUgASgJEhQKB2RlbGV0ZWQYBiAB",
-            "KAhCA+BBAzo+6kE7CiVhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9B",
-            "Y2NvdW50EhJhY2NvdW50cy97YWNjb3VudH0itgUKCFByb3BlcnR5EhEKBG5h",
-            "bWUYASABKAlCA+BBAxJHCg1wcm9wZXJ0eV90eXBlGA4gASgOMisuZ29vZ2xl",
-            "LmFuYWx5dGljcy5hZG1pbi52MWJldGEuUHJvcGVydHlUeXBlQgPgQQUSNAoL",
-            "Y3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSEwoGcGFyZW50GAIgASgJQgPgQQUSGQoMZGlzcGxh",
-            "eV9uYW1lGAUgASgJQgPgQQISSgoRaW5kdXN0cnlfY2F0ZWdvcnkYBiABKA4y",
-            "Ly5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YS5JbmR1c3RyeUNhdGVn",
-            "b3J5EhYKCXRpbWVfem9uZRgHIAEoCUID4EECEhUKDWN1cnJlbmN5X2NvZGUY",
-            "CCABKAkSRwoNc2VydmljZV9sZXZlbBgKIAEoDjIrLmdvb2dsZS5hbmFseXRp",
-            "Y3MuYWRtaW4udjFiZXRhLlNlcnZpY2VMZXZlbEID4EEDEjQKC2RlbGV0ZV90",
-            "aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
-            "C2V4cGlyZV90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEj4KB2FjY291bnQYDSABKAlCLeBBBfpBJwolYW5hbHl0aWNzYWRt",
-            "aW4uZ29vZ2xlYXBpcy5jb20vQWNjb3VudDpC6kE/CiZhbmFseXRpY3NhZG1p",
-            "bi5nb29nbGVhcGlzLmNvbS9Qcm9wZXJ0eRIVcHJvcGVydGllcy97cHJvcGVy",
-            "dHl9IvUHCgpEYXRhU3RyZWFtElIKD3dlYl9zdHJlYW1fZGF0YRgGIAEoCzI3",
-            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkRhdGFTdHJlYW0uV2Vi",
-            "U3RyZWFtRGF0YUgAEmEKF2FuZHJvaWRfYXBwX3N0cmVhbV9kYXRhGAcgASgL",
-            "Mj4uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWJldGEuRGF0YVN0cmVhbS5B",
-            "bmRyb2lkQXBwU3RyZWFtRGF0YUgAElkKE2lvc19hcHBfc3RyZWFtX2RhdGEY",
-            "CCABKAsyOi5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YS5EYXRhU3Ry",
-            "ZWFtLklvc0FwcFN0cmVhbURhdGFIABIRCgRuYW1lGAEgASgJQgPgQQMSTgoE",
-            "dHlwZRgCIAEoDjI4Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkRh",
-            "dGFTdHJlYW0uRGF0YVN0cmVhbVR5cGVCBuBBBeBBAhIUCgxkaXNwbGF5X25h",
-            "bWUYAyABKAkSNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMaZAoNV2ViU3RyZWFtRGF0YRIb",
-            "Cg5tZWFzdXJlbWVudF9pZBgBIAEoCUID4EEDEhwKD2ZpcmViYXNlX2FwcF9p",
-            "ZBgCIAEoCUID4EEDEhgKC2RlZmF1bHRfdXJpGAMgASgJQgPgQQUaTwoUQW5k",
-            "cm9pZEFwcFN0cmVhbURhdGESHAoPZmlyZWJhc2VfYXBwX2lkGAEgASgJQgPg",
-            "QQMSGQoMcGFja2FnZV9uYW1lGAIgASgJQgPgQQUaSwoQSW9zQXBwU3RyZWFt",
-            "RGF0YRIcCg9maXJlYmFzZV9hcHBfaWQYASABKAlCA+BBAxIZCglidW5kbGVf",
-            "aWQYAiABKAlCBuBBBeBBAiJ9Cg5EYXRhU3RyZWFtVHlwZRIgChxEQVRBX1NU",
-            "UkVBTV9UWVBFX1VOU1BFQ0lGSUVEEAASEwoPV0VCX0RBVEFfU1RSRUFNEAES",
-            "GwoXQU5EUk9JRF9BUFBfREFUQV9TVFJFQU0QAhIXChNJT1NfQVBQX0RBVEFf",
-            "U1RSRUFNEAM6XupBWwooYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
-            "RGF0YVN0cmVhbRIvcHJvcGVydGllcy97cHJvcGVydHl9L2RhdGFTdHJlYW1z",
-            "L3tkYXRhX3N0cmVhbX1CDQoLc3RyZWFtX2RhdGEi0wEKDEZpcmViYXNlTGlu",
-            "axIRCgRuYW1lGAEgASgJQgPgQQMSFAoHcHJvamVjdBgCIAEoCUID4EEFEjQK",
-            "C2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDOmTqQWEKKmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0Zp",
-            "cmViYXNlTGluaxIzcHJvcGVydGllcy97cHJvcGVydHl9L2ZpcmViYXNlTGlu",
-            "a3Mve2ZpcmViYXNlX2xpbmt9IpgDCg1Hb29nbGVBZHNMaW5rEhEKBG5hbWUY",
-            "ASABKAlCA+BBAxIYCgtjdXN0b21lcl9pZBgDIAEoCUID4EEFEh8KEmNhbl9t",
-            "YW5hZ2VfY2xpZW50cxgEIAEoCEID4EEDEj8KG2Fkc19wZXJzb25hbGl6YXRp",
-            "b25fZW5hYmxlZBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUS",
-            "NAoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSIgoVY3JlYXRvcl9lbWFpbF9hZGRyZXNzGAkg",
-            "ASgJQgPgQQM6aOpBZQorYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
-            "R29vZ2xlQWRzTGluaxI2cHJvcGVydGllcy97cHJvcGVydHl9L2dvb2dsZUFk",
-            "c0xpbmtzL3tnb29nbGVfYWRzX2xpbmt9IusCChNEYXRhU2hhcmluZ1NldHRp",
-            "bmdzEhEKBG5hbWUYASABKAlCA+BBAxIrCiNzaGFyaW5nX3dpdGhfZ29vZ2xl",
-            "X3N1cHBvcnRfZW5hYmxlZBgCIAEoCBIyCipzaGFyaW5nX3dpdGhfZ29vZ2xl",
-            "X2Fzc2lnbmVkX3NhbGVzX2VuYWJsZWQYAyABKAgSLQolc2hhcmluZ193aXRo",
-            "X2dvb2dsZV9hbnlfc2FsZXNfZW5hYmxlZBgEIAEoCBIsCiRzaGFyaW5nX3dp",
-            "dGhfZ29vZ2xlX3Byb2R1Y3RzX2VuYWJsZWQYBSABKAgSIwobc2hhcmluZ193",
-            "aXRoX290aGVyc19lbmFibGVkGAYgASgIOl7qQVsKMWFuYWx5dGljc2FkbWlu",
-            "Lmdvb2dsZWFwaXMuY29tL0RhdGFTaGFyaW5nU2V0dGluZ3MSJmFjY291bnRz",
-            "L3thY2NvdW50fS9kYXRhU2hhcmluZ1NldHRpbmdzIpQCCg5BY2NvdW50U3Vt",
-            "bWFyeRIMCgRuYW1lGAEgASgJEjsKB2FjY291bnQYAiABKAlCKvpBJwolYW5h",
-            "bHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjb3VudBIUCgxkaXNwbGF5",
-            "X25hbWUYAyABKAkSSgoScHJvcGVydHlfc3VtbWFyaWVzGAQgAygLMi4uZ29v",
-            "Z2xlLmFuYWx5dGljcy5hZG1pbi52MWJldGEuUHJvcGVydHlTdW1tYXJ5OlXq",
-            "QVIKLGFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291bnRTdW1t",
-            "YXJ5EiJhY2NvdW50U3VtbWFyaWVzL3thY2NvdW50X3N1bW1hcnl9IroBCg9Q",
-            "cm9wZXJ0eVN1bW1hcnkSPQoIcHJvcGVydHkYASABKAlCK/pBKAomYW5hbHl0",
-            "aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vUHJvcGVydHkSFAoMZGlzcGxheV9u",
-            "YW1lGAIgASgJEkIKDXByb3BlcnR5X3R5cGUYAyABKA4yKy5nb29nbGUuYW5h",
-            "bHl0aWNzLmFkbWluLnYxYmV0YS5Qcm9wZXJ0eVR5cGUSDgoGcGFyZW50GAQg",
-            "ASgJIo4CChlNZWFzdXJlbWVudFByb3RvY29sU2VjcmV0EhEKBG5hbWUYASAB",
-            "KAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAhIZCgxzZWNyZXRf",
-            "dmFsdWUYAyABKAlCA+BBAzqnAepBowEKN2FuYWx5dGljc2FkbWluLmdvb2ds",
-            "ZWFwaXMuY29tL01lYXN1cmVtZW50UHJvdG9jb2xTZWNyZXQSaHByb3BlcnRp",
-            "ZXMve3Byb3BlcnR5fS9kYXRhU3RyZWFtcy97ZGF0YV9zdHJlYW19L21lYXN1",
-            "cmVtZW50UHJvdG9jb2xTZWNyZXRzL3ttZWFzdXJlbWVudF9wcm90b2NvbF9z",
-            "ZWNyZXR9IogCChJDaGFuZ2VIaXN0b3J5RXZlbnQSCgoCaWQYASABKAkSLwoL",
-            "Y2hhbmdlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "EjwKCmFjdG9yX3R5cGUYAyABKA4yKC5nb29nbGUuYW5hbHl0aWNzLmFkbWlu",
-            "LnYxYmV0YS5BY3RvclR5cGUSGAoQdXNlcl9hY3Rvcl9lbWFpbBgEIAEoCRIY",
-            "ChBjaGFuZ2VzX2ZpbHRlcmVkGAUgASgIEkMKB2NoYW5nZXMYBiADKAsyMi5n",
-            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YS5DaGFuZ2VIaXN0b3J5Q2hh",
-            "bmdlIqoHChNDaGFuZ2VIaXN0b3J5Q2hhbmdlEhAKCHJlc291cmNlGAEgASgJ",
-            "EjkKBmFjdGlvbhgCIAEoDjIpLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFi",
-            "ZXRhLkFjdGlvblR5cGUSaAoWcmVzb3VyY2VfYmVmb3JlX2NoYW5nZRgDIAEo",
-            "CzJILmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkNoYW5nZUhpc3Rv",
-            "cnlDaGFuZ2UuQ2hhbmdlSGlzdG9yeVJlc291cmNlEmcKFXJlc291cmNlX2Fm",
-            "dGVyX2NoYW5nZRgEIAEoCzJILmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFi",
-            "ZXRhLkNoYW5nZUhpc3RvcnlDaGFuZ2UuQ2hhbmdlSGlzdG9yeVJlc291cmNl",
-            "GvIEChVDaGFuZ2VIaXN0b3J5UmVzb3VyY2USOQoHYWNjb3VudBgBIAEoCzIm",
-            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkFjY291bnRIABI7Cghw",
-            "cm9wZXJ0eRgCIAEoCzInLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRh",
-            "LlByb3BlcnR5SAASRAoNZmlyZWJhc2VfbGluaxgGIAEoCzIrLmdvb2dsZS5h",
-            "bmFseXRpY3MuYWRtaW4udjFiZXRhLkZpcmViYXNlTGlua0gAEkcKD2dvb2ds",
-            "ZV9hZHNfbGluaxgHIAEoCzIsLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFi",
-            "ZXRhLkdvb2dsZUFkc0xpbmtIABJKChBjb252ZXJzaW9uX2V2ZW50GAsgASgL",
-            "Mi4uZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWJldGEuQ29udmVyc2lvbkV2",
-            "ZW50SAASXwobbWVhc3VyZW1lbnRfcHJvdG9jb2xfc2VjcmV0GAwgASgLMjgu",
-            "Z29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWJldGEuTWVhc3VyZW1lbnRQcm90",
-            "b2NvbFNlY3JldEgAElcKF2RhdGFfcmV0ZW50aW9uX3NldHRpbmdzGA8gASgL",
-            "MjQuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWJldGEuRGF0YVJldGVudGlv",
-            "blNldHRpbmdzSAASQAoLZGF0YV9zdHJlYW0YEiABKAsyKS5nb29nbGUuYW5h",
-            "bHl0aWNzLmFkbWluLnYxYmV0YS5EYXRhU3RyZWFtSABCCgoIcmVzb3VyY2Ui",
-            "jwIKD0NvbnZlcnNpb25FdmVudBIRCgRuYW1lGAEgASgJQgPgQQMSFwoKZXZl",
-            "bnRfbmFtZRgCIAEoCUID4EEFEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhYKCWRlbGV0YWJsZRgEIAEo",
-            "CEID4EEDEhMKBmN1c3RvbRgFIAEoCEID4EEDOm3qQWoKLWFuYWx5dGljc2Fk",
-            "bWluLmdvb2dsZWFwaXMuY29tL0NvbnZlcnNpb25FdmVudBI5cHJvcGVydGll",
-            "cy97cHJvcGVydHl9L2NvbnZlcnNpb25FdmVudHMve2NvbnZlcnNpb25fZXZl",
-            "bnR9IrEDCg9DdXN0b21EaW1lbnNpb24SEQoEbmFtZRgBIAEoCUID4EEDEh4K",
-            "DnBhcmFtZXRlcl9uYW1lGAIgASgJQgbgQQLgQQUSGQoMZGlzcGxheV9uYW1l",
-            "GAMgASgJQgPgQQISGAoLZGVzY3JpcHRpb24YBCABKAlCA+BBARJUCgVzY29w",
-            "ZRgFIAEoDjI9Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkN1c3Rv",
-            "bURpbWVuc2lvbi5EaW1lbnNpb25TY29wZUIG4EEC4EEFEikKHGRpc2FsbG93",
-            "X2Fkc19wZXJzb25hbGl6YXRpb24YBiABKAhCA+BBASJGCg5EaW1lbnNpb25T",
-            "Y29wZRIfChtESU1FTlNJT05fU0NPUEVfVU5TUEVDSUZJRUQQABIJCgVFVkVO",
-            "VBABEggKBFVTRVIQAjpt6kFqCi1hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlz",
-            "LmNvbS9DdXN0b21EaW1lbnNpb24SOXByb3BlcnRpZXMve3Byb3BlcnR5fS9j",
-            "dXN0b21EaW1lbnNpb25zL3tjdXN0b21fZGltZW5zaW9ufSLCBgoMQ3VzdG9t",
-            "TWV0cmljEhEKBG5hbWUYASABKAlCA+BBAxIeCg5wYXJhbWV0ZXJfbmFtZRgC",
-            "IAEoCUIG4EEC4EEFEhkKDGRpc3BsYXlfbmFtZRgDIAEoCUID4EECEhgKC2Rl",
-            "c2NyaXB0aW9uGAQgASgJQgPgQQESWgoQbWVhc3VyZW1lbnRfdW5pdBgFIAEo",
-            "DjI7Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkN1c3RvbU1ldHJp",
-            "Yy5NZWFzdXJlbWVudFVuaXRCA+BBAhJOCgVzY29wZRgGIAEoDjI3Lmdvb2ds",
-            "ZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkN1c3RvbU1ldHJpYy5NZXRyaWNT",
-            "Y29wZUIG4EEC4EEFEmUKFnJlc3RyaWN0ZWRfbWV0cmljX3R5cGUYCCADKA4y",
-            "QC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YS5DdXN0b21NZXRyaWMu",
-            "UmVzdHJpY3RlZE1ldHJpY1R5cGVCA+BBASK3AQoPTWVhc3VyZW1lbnRVbml0",
-            "EiAKHE1FQVNVUkVNRU5UX1VOSVRfVU5TUEVDSUZJRUQQABIMCghTVEFOREFS",
-            "RBABEgwKCENVUlJFTkNZEAISCAoERkVFVBADEgoKBk1FVEVSUxAEEg4KCktJ",
-            "TE9NRVRFUlMQBRIJCgVNSUxFUxAGEhAKDE1JTExJU0VDT05EUxAHEgsKB1NF",
-            "Q09ORFMQCBILCgdNSU5VVEVTEAkSCQoFSE9VUlMQCiI2CgtNZXRyaWNTY29w",
-            "ZRIcChhNRVRSSUNfU0NPUEVfVU5TUEVDSUZJRUQQABIJCgVFVkVOVBABIl8K",
-            "FFJlc3RyaWN0ZWRNZXRyaWNUeXBlEiYKIlJFU1RSSUNURURfTUVUUklDX1RZ",
-            "UEVfVU5TUEVDSUZJRUQQABINCglDT1NUX0RBVEEQARIQCgxSRVZFTlVFX0RB",
-            "VEEQAjpk6kFhCiphbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9DdXN0",
-            "b21NZXRyaWMSM3Byb3BlcnRpZXMve3Byb3BlcnR5fS9jdXN0b21NZXRyaWNz",
-            "L3tjdXN0b21fbWV0cmljfSLBAwoVRGF0YVJldGVudGlvblNldHRpbmdzEhEK",
-            "BG5hbWUYASABKAlCA+BBAxJkChRldmVudF9kYXRhX3JldGVudGlvbhgCIAEo",
+            "KAhCA+BBAxJUChBnbXBfb3JnYW5pemF0aW9uGAcgASgJQjrgQQP6QTQKMm1h",
+            "cmtldGluZ3BsYXRmb3JtYWRtaW4uZ29vZ2xlYXBpcy5jb20vT3JnYW5pemF0",
+            "aW9uOj7qQTsKJWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291",
+            "bnQSEmFjY291bnRzL3thY2NvdW50fSK2BQoIUHJvcGVydHkSEQoEbmFtZRgB",
+            "IAEoCUID4EEDEkcKDXByb3BlcnR5X3R5cGUYDiABKA4yKy5nb29nbGUuYW5h",
+            "bHl0aWNzLmFkbWluLnYxYmV0YS5Qcm9wZXJ0eVR5cGVCA+BBBRI0CgtjcmVh",
+            "dGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "AxI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxITCgZwYXJlbnQYAiABKAlCA+BBBRIZCgxkaXNwbGF5X25h",
+            "bWUYBSABKAlCA+BBAhJKChFpbmR1c3RyeV9jYXRlZ29yeRgGIAEoDjIvLmdv",
+            "b2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkluZHVzdHJ5Q2F0ZWdvcnkS",
+            "FgoJdGltZV96b25lGAcgASgJQgPgQQISFQoNY3VycmVuY3lfY29kZRgIIAEo",
+            "CRJHCg1zZXJ2aWNlX2xldmVsGAogASgOMisuZ29vZ2xlLmFuYWx5dGljcy5h",
+            "ZG1pbi52MWJldGEuU2VydmljZUxldmVsQgPgQQMSNAoLZGVsZXRlX3RpbWUY",
+            "CyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLZXhw",
+            "aXJlX3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSPgoHYWNjb3VudBgNIAEoCUIt4EEF+kEnCiVhbmFseXRpY3NhZG1pbi5n",
+            "b29nbGVhcGlzLmNvbS9BY2NvdW50OkLqQT8KJmFuYWx5dGljc2FkbWluLmdv",
+            "b2dsZWFwaXMuY29tL1Byb3BlcnR5EhVwcm9wZXJ0aWVzL3twcm9wZXJ0eX0i",
+            "8AcKCkRhdGFTdHJlYW0SUgoPd2ViX3N0cmVhbV9kYXRhGAYgASgLMjcuZ29v",
+            "Z2xlLmFuYWx5dGljcy5hZG1pbi52MWJldGEuRGF0YVN0cmVhbS5XZWJTdHJl",
+            "YW1EYXRhSAASYQoXYW5kcm9pZF9hcHBfc3RyZWFtX2RhdGEYByABKAsyPi5n",
+            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YS5EYXRhU3RyZWFtLkFuZHJv",
+            "aWRBcHBTdHJlYW1EYXRhSAASWQoTaW9zX2FwcF9zdHJlYW1fZGF0YRgIIAEo",
+            "CzI6Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkRhdGFTdHJlYW0u",
+            "SW9zQXBwU3RyZWFtRGF0YUgAEhEKBG5hbWUYASABKAlCA+BBAxJOCgR0eXBl",
+            "GAIgASgOMjguZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWJldGEuRGF0YVN0",
+            "cmVhbS5EYXRhU3RyZWFtVHlwZUIG4EEF4EECEhQKDGRpc3BsYXlfbmFtZRgD",
+            "IAEoCRI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxpfCg1XZWJTdHJlYW1EYXRhEhsKDm1l",
+            "YXN1cmVtZW50X2lkGAEgASgJQgPgQQMSHAoPZmlyZWJhc2VfYXBwX2lkGAIg",
+            "ASgJQgPgQQMSEwoLZGVmYXVsdF91cmkYAyABKAkaTwoUQW5kcm9pZEFwcFN0",
+            "cmVhbURhdGESHAoPZmlyZWJhc2VfYXBwX2lkGAEgASgJQgPgQQMSGQoMcGFj",
+            "a2FnZV9uYW1lGAIgASgJQgPgQQUaSwoQSW9zQXBwU3RyZWFtRGF0YRIcCg9m",
+            "aXJlYmFzZV9hcHBfaWQYASABKAlCA+BBAxIZCglidW5kbGVfaWQYAiABKAlC",
+            "BuBBBeBBAiJ9Cg5EYXRhU3RyZWFtVHlwZRIgChxEQVRBX1NUUkVBTV9UWVBF",
+            "X1VOU1BFQ0lGSUVEEAASEwoPV0VCX0RBVEFfU1RSRUFNEAESGwoXQU5EUk9J",
+            "RF9BUFBfREFUQV9TVFJFQU0QAhIXChNJT1NfQVBQX0RBVEFfU1RSRUFNEAM6",
+            "XupBWwooYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRGF0YVN0cmVh",
+            "bRIvcHJvcGVydGllcy97cHJvcGVydHl9L2RhdGFTdHJlYW1zL3tkYXRhX3N0",
+            "cmVhbX1CDQoLc3RyZWFtX2RhdGEi0wEKDEZpcmViYXNlTGluaxIRCgRuYW1l",
+            "GAEgASgJQgPgQQMSFAoHcHJvamVjdBgCIAEoCUID4EEFEjQKC2NyZWF0ZV90",
+            "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDOmTq",
+            "QWEKKmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0ZpcmViYXNlTGlu",
+            "axIzcHJvcGVydGllcy97cHJvcGVydHl9L2ZpcmViYXNlTGlua3Mve2ZpcmVi",
+            "YXNlX2xpbmt9IpgDCg1Hb29nbGVBZHNMaW5rEhEKBG5hbWUYASABKAlCA+BB",
+            "AxIYCgtjdXN0b21lcl9pZBgDIAEoCUID4EEFEh8KEmNhbl9tYW5hZ2VfY2xp",
+            "ZW50cxgEIAEoCEID4EEDEj8KG2Fkc19wZXJzb25hbGl6YXRpb25fZW5hYmxl",
+            "ZBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUSNAoLY3JlYXRl",
+            "X3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "NAoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSIgoVY3JlYXRvcl9lbWFpbF9hZGRyZXNzGAkgASgJQgPgQQM6",
+            "aOpBZQorYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vR29vZ2xlQWRz",
+            "TGluaxI2cHJvcGVydGllcy97cHJvcGVydHl9L2dvb2dsZUFkc0xpbmtzL3tn",
+            "b29nbGVfYWRzX2xpbmt9IusCChNEYXRhU2hhcmluZ1NldHRpbmdzEhEKBG5h",
+            "bWUYASABKAlCA+BBAxIrCiNzaGFyaW5nX3dpdGhfZ29vZ2xlX3N1cHBvcnRf",
+            "ZW5hYmxlZBgCIAEoCBIyCipzaGFyaW5nX3dpdGhfZ29vZ2xlX2Fzc2lnbmVk",
+            "X3NhbGVzX2VuYWJsZWQYAyABKAgSLQolc2hhcmluZ193aXRoX2dvb2dsZV9h",
+            "bnlfc2FsZXNfZW5hYmxlZBgEIAEoCBIsCiRzaGFyaW5nX3dpdGhfZ29vZ2xl",
+            "X3Byb2R1Y3RzX2VuYWJsZWQYBSABKAgSIwobc2hhcmluZ193aXRoX290aGVy",
+            "c19lbmFibGVkGAYgASgIOl7qQVsKMWFuYWx5dGljc2FkbWluLmdvb2dsZWFw",
+            "aXMuY29tL0RhdGFTaGFyaW5nU2V0dGluZ3MSJmFjY291bnRzL3thY2NvdW50",
+            "fS9kYXRhU2hhcmluZ1NldHRpbmdzIpQCCg5BY2NvdW50U3VtbWFyeRIMCgRu",
+            "YW1lGAEgASgJEjsKB2FjY291bnQYAiABKAlCKvpBJwolYW5hbHl0aWNzYWRt",
+            "aW4uZ29vZ2xlYXBpcy5jb20vQWNjb3VudBIUCgxkaXNwbGF5X25hbWUYAyAB",
+            "KAkSSgoScHJvcGVydHlfc3VtbWFyaWVzGAQgAygLMi4uZ29vZ2xlLmFuYWx5",
+            "dGljcy5hZG1pbi52MWJldGEuUHJvcGVydHlTdW1tYXJ5OlXqQVIKLGFuYWx5",
+            "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291bnRTdW1tYXJ5EiJhY2Nv",
+            "dW50U3VtbWFyaWVzL3thY2NvdW50X3N1bW1hcnl9IroBCg9Qcm9wZXJ0eVN1",
+            "bW1hcnkSPQoIcHJvcGVydHkYASABKAlCK/pBKAomYW5hbHl0aWNzYWRtaW4u",
+            "Z29vZ2xlYXBpcy5jb20vUHJvcGVydHkSFAoMZGlzcGxheV9uYW1lGAIgASgJ",
+            "EkIKDXByb3BlcnR5X3R5cGUYAyABKA4yKy5nb29nbGUuYW5hbHl0aWNzLmFk",
+            "bWluLnYxYmV0YS5Qcm9wZXJ0eVR5cGUSDgoGcGFyZW50GAQgASgJIo4CChlN",
+            "ZWFzdXJlbWVudFByb3RvY29sU2VjcmV0EhEKBG5hbWUYASABKAlCA+BBAxIZ",
+            "CgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAhIZCgxzZWNyZXRfdmFsdWUYAyAB",
+            "KAlCA+BBAzqnAepBowEKN2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29t",
+            "L01lYXN1cmVtZW50UHJvdG9jb2xTZWNyZXQSaHByb3BlcnRpZXMve3Byb3Bl",
+            "cnR5fS9kYXRhU3RyZWFtcy97ZGF0YV9zdHJlYW19L21lYXN1cmVtZW50UHJv",
+            "dG9jb2xTZWNyZXRzL3ttZWFzdXJlbWVudF9wcm90b2NvbF9zZWNyZXR9IogC",
+            "ChJDaGFuZ2VIaXN0b3J5RXZlbnQSCgoCaWQYASABKAkSLwoLY2hhbmdlX3Rp",
+            "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjwKCmFjdG9y",
+            "X3R5cGUYAyABKA4yKC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YS5B",
+            "Y3RvclR5cGUSGAoQdXNlcl9hY3Rvcl9lbWFpbBgEIAEoCRIYChBjaGFuZ2Vz",
+            "X2ZpbHRlcmVkGAUgASgIEkMKB2NoYW5nZXMYBiADKAsyMi5nb29nbGUuYW5h",
+            "bHl0aWNzLmFkbWluLnYxYmV0YS5DaGFuZ2VIaXN0b3J5Q2hhbmdlIqoHChND",
+            "aGFuZ2VIaXN0b3J5Q2hhbmdlEhAKCHJlc291cmNlGAEgASgJEjkKBmFjdGlv",
+            "bhgCIAEoDjIpLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkFjdGlv",
+            "blR5cGUSaAoWcmVzb3VyY2VfYmVmb3JlX2NoYW5nZRgDIAEoCzJILmdvb2ds",
+            "ZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkNoYW5nZUhpc3RvcnlDaGFuZ2Uu",
+            "Q2hhbmdlSGlzdG9yeVJlc291cmNlEmcKFXJlc291cmNlX2FmdGVyX2NoYW5n",
+            "ZRgEIAEoCzJILmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkNoYW5n",
+            "ZUhpc3RvcnlDaGFuZ2UuQ2hhbmdlSGlzdG9yeVJlc291cmNlGvIEChVDaGFu",
+            "Z2VIaXN0b3J5UmVzb3VyY2USOQoHYWNjb3VudBgBIAEoCzImLmdvb2dsZS5h",
+            "bmFseXRpY3MuYWRtaW4udjFiZXRhLkFjY291bnRIABI7Cghwcm9wZXJ0eRgC",
+            "IAEoCzInLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLlByb3BlcnR5",
+            "SAASRAoNZmlyZWJhc2VfbGluaxgGIAEoCzIrLmdvb2dsZS5hbmFseXRpY3Mu",
+            "YWRtaW4udjFiZXRhLkZpcmViYXNlTGlua0gAEkcKD2dvb2dsZV9hZHNfbGlu",
+            "axgHIAEoCzIsLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkdvb2ds",
+            "ZUFkc0xpbmtIABJKChBjb252ZXJzaW9uX2V2ZW50GAsgASgLMi4uZ29vZ2xl",
+            "LmFuYWx5dGljcy5hZG1pbi52MWJldGEuQ29udmVyc2lvbkV2ZW50SAASXwob",
+            "bWVhc3VyZW1lbnRfcHJvdG9jb2xfc2VjcmV0GAwgASgLMjguZ29vZ2xlLmFu",
+            "YWx5dGljcy5hZG1pbi52MWJldGEuTWVhc3VyZW1lbnRQcm90b2NvbFNlY3Jl",
+            "dEgAElcKF2RhdGFfcmV0ZW50aW9uX3NldHRpbmdzGA8gASgLMjQuZ29vZ2xl",
+            "LmFuYWx5dGljcy5hZG1pbi52MWJldGEuRGF0YVJldGVudGlvblNldHRpbmdz",
+            "SAASQAoLZGF0YV9zdHJlYW0YEiABKAsyKS5nb29nbGUuYW5hbHl0aWNzLmFk",
+            "bWluLnYxYmV0YS5EYXRhU3RyZWFtSABCCgoIcmVzb3VyY2Ui3gUKD0NvbnZl",
+            "cnNpb25FdmVudBIRCgRuYW1lGAEgASgJQgPgQQMSFwoKZXZlbnRfbmFtZRgC",
+            "IAEoCUID4EEFEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEhYKCWRlbGV0YWJsZRgEIAEoCEID4EEDEhMK",
+            "BmN1c3RvbRgFIAEoCEID4EEDEmUKD2NvdW50aW5nX21ldGhvZBgGIAEoDjJH",
+            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkNvbnZlcnNpb25FdmVu",
+            "dC5Db252ZXJzaW9uQ291bnRpbmdNZXRob2RCA+BBARJxChhkZWZhdWx0X2Nv",
+            "bnZlcnNpb25fdmFsdWUYByABKAsyRS5nb29nbGUuYW5hbHl0aWNzLmFkbWlu",
+            "LnYxYmV0YS5Db252ZXJzaW9uRXZlbnQuRGVmYXVsdENvbnZlcnNpb25WYWx1",
+            "ZUID4EEBSACIAQEaZAoWRGVmYXVsdENvbnZlcnNpb25WYWx1ZRISCgV2YWx1",
+            "ZRgBIAEoAUgAiAEBEhoKDWN1cnJlbmN5X2NvZGUYAiABKAlIAYgBAUIICgZf",
+            "dmFsdWVCEAoOX2N1cnJlbmN5X2NvZGUicAoYQ29udmVyc2lvbkNvdW50aW5n",
+            "TWV0aG9kEioKJkNPTlZFUlNJT05fQ09VTlRJTkdfTUVUSE9EX1VOU1BFQ0lG",
+            "SUVEEAASEgoOT05DRV9QRVJfRVZFTlQQARIUChBPTkNFX1BFUl9TRVNTSU9O",
+            "EAI6bepBagotYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQ29udmVy",
+            "c2lvbkV2ZW50Ejlwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vY29udmVyc2lvbkV2",
+            "ZW50cy97Y29udmVyc2lvbl9ldmVudH1CGwoZX2RlZmF1bHRfY29udmVyc2lv",
+            "bl92YWx1ZSLVBAoIS2V5RXZlbnQSEQoEbmFtZRgBIAEoCUID4EEDEhcKCmV2",
+            "ZW50X25hbWUYAiABKAlCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIWCglkZWxldGFibGUYBCAB",
+            "KAhCA+BBAxITCgZjdXN0b20YBSABKAhCA+BBAxJUCg9jb3VudGluZ19tZXRo",
+            "b2QYBiABKA4yNi5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YS5LZXlF",
+            "dmVudC5Db3VudGluZ01ldGhvZEID4EECElAKDWRlZmF1bHRfdmFsdWUYByAB",
+            "KAsyNC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YS5LZXlFdmVudC5E",
+            "ZWZhdWx0VmFsdWVCA+BBARpGCgxEZWZhdWx0VmFsdWUSGgoNbnVtZXJpY192",
+            "YWx1ZRgBIAEoAUID4EECEhoKDWN1cnJlbmN5X2NvZGUYAiABKAlCA+BBAiJb",
+            "Cg5Db3VudGluZ01ldGhvZBIfChtDT1VOVElOR19NRVRIT0RfVU5TUEVDSUZJ",
+            "RUQQABISCg5PTkNFX1BFUl9FVkVOVBABEhQKEE9OQ0VfUEVSX1NFU1NJT04Q",
+            "Ajpt6kFqCiZhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9LZXlFdmVu",
+            "dBIrcHJvcGVydGllcy97cHJvcGVydHl9L2tleUV2ZW50cy97a2V5X2V2ZW50",
+            "fSoJa2V5RXZlbnRzMghrZXlFdmVudCK7AwoPQ3VzdG9tRGltZW5zaW9uEhEK",
+            "BG5hbWUYASABKAlCA+BBAxIeCg5wYXJhbWV0ZXJfbmFtZRgCIAEoCUIG4EEC",
+            "4EEFEhkKDGRpc3BsYXlfbmFtZRgDIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9u",
+            "GAQgASgJQgPgQQESVAoFc2NvcGUYBSABKA4yPS5nb29nbGUuYW5hbHl0aWNz",
+            "LmFkbWluLnYxYmV0YS5DdXN0b21EaW1lbnNpb24uRGltZW5zaW9uU2NvcGVC",
+            "BuBBAuBBBRIpChxkaXNhbGxvd19hZHNfcGVyc29uYWxpemF0aW9uGAYgASgI",
+            "QgPgQQEiUAoORGltZW5zaW9uU2NvcGUSHwobRElNRU5TSU9OX1NDT1BFX1VO",
+            "U1BFQ0lGSUVEEAASCQoFRVZFTlQQARIICgRVU0VSEAISCAoESVRFTRADOm3q",
+            "QWoKLWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0N1c3RvbURpbWVu",
+            "c2lvbhI5cHJvcGVydGllcy97cHJvcGVydHl9L2N1c3RvbURpbWVuc2lvbnMv",
+            "e2N1c3RvbV9kaW1lbnNpb259IsIGCgxDdXN0b21NZXRyaWMSEQoEbmFtZRgB",
+            "IAEoCUID4EEDEh4KDnBhcmFtZXRlcl9uYW1lGAIgASgJQgbgQQLgQQUSGQoM",
+            "ZGlzcGxheV9uYW1lGAMgASgJQgPgQQISGAoLZGVzY3JpcHRpb24YBCABKAlC",
+            "A+BBARJaChBtZWFzdXJlbWVudF91bml0GAUgASgOMjsuZ29vZ2xlLmFuYWx5",
+            "dGljcy5hZG1pbi52MWJldGEuQ3VzdG9tTWV0cmljLk1lYXN1cmVtZW50VW5p",
+            "dEID4EECEk4KBXNjb3BlGAYgASgOMjcuZ29vZ2xlLmFuYWx5dGljcy5hZG1p",
+            "bi52MWJldGEuQ3VzdG9tTWV0cmljLk1ldHJpY1Njb3BlQgbgQQLgQQUSZQoW",
+            "cmVzdHJpY3RlZF9tZXRyaWNfdHlwZRgIIAMoDjJALmdvb2dsZS5hbmFseXRp",
+            "Y3MuYWRtaW4udjFiZXRhLkN1c3RvbU1ldHJpYy5SZXN0cmljdGVkTWV0cmlj",
+            "VHlwZUID4EEBIrcBCg9NZWFzdXJlbWVudFVuaXQSIAocTUVBU1VSRU1FTlRf",
+            "VU5JVF9VTlNQRUNJRklFRBAAEgwKCFNUQU5EQVJEEAESDAoIQ1VSUkVOQ1kQ",
+            "AhIICgRGRUVUEAMSCgoGTUVURVJTEAQSDgoKS0lMT01FVEVSUxAFEgkKBU1J",
+            "TEVTEAYSEAoMTUlMTElTRUNPTkRTEAcSCwoHU0VDT05EUxAIEgsKB01JTlVU",
+            "RVMQCRIJCgVIT1VSUxAKIjYKC01ldHJpY1Njb3BlEhwKGE1FVFJJQ19TQ09Q",
+            "RV9VTlNQRUNJRklFRBAAEgkKBUVWRU5UEAEiXwoUUmVzdHJpY3RlZE1ldHJp",
+            "Y1R5cGUSJgoiUkVTVFJJQ1RFRF9NRVRSSUNfVFlQRV9VTlNQRUNJRklFRBAA",
+            "Eg0KCUNPU1RfREFUQRABEhAKDFJFVkVOVUVfREFUQRACOmTqQWEKKmFuYWx5",
+            "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0N1c3RvbU1ldHJpYxIzcHJvcGVy",
+            "dGllcy97cHJvcGVydHl9L2N1c3RvbU1ldHJpY3Mve2N1c3RvbV9tZXRyaWN9",
+            "IrAEChVEYXRhUmV0ZW50aW9uU2V0dGluZ3MSEQoEbmFtZRgBIAEoCUID4EED",
+            "EmkKFGV2ZW50X2RhdGFfcmV0ZW50aW9uGAIgASgOMkYuZ29vZ2xlLmFuYWx5",
+            "dGljcy5hZG1pbi52MWJldGEuRGF0YVJldGVudGlvblNldHRpbmdzLlJldGVu",
+            "dGlvbkR1cmF0aW9uQgPgQQISaAoTdXNlcl9kYXRhX3JldGVudGlvbhgEIAEo",
             "DjJGLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkRhdGFSZXRlbnRp",
-            "b25TZXR0aW5ncy5SZXRlbnRpb25EdXJhdGlvbhInCh9yZXNldF91c2VyX2Rh",
-            "dGFfb25fbmV3X2FjdGl2aXR5GAMgASgIIp4BChFSZXRlbnRpb25EdXJhdGlv",
-            "bhIiCh5SRVRFTlRJT05fRFVSQVRJT05fVU5TUEVDSUZJRUQQABIOCgpUV09f",
-            "TU9OVEhTEAESEwoPRk9VUlRFRU5fTU9OVEhTEAMSFQoRVFdFTlRZX1NJWF9N",
-            "T05USFMQBBIXChNUSElSVFlfRUlHSFRfTU9OVEhTEAUSEAoMRklGVFlfTU9O",
-            "VEhTEAY6ZepBYgozYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vRGF0",
-            "YVJldGVudGlvblNldHRpbmdzEitwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZGF0",
-            "YVJldGVudGlvblNldHRpbmdzKqoEChBJbmR1c3RyeUNhdGVnb3J5EiEKHUlO",
-            "RFVTVFJZX0NBVEVHT1JZX1VOU1BFQ0lGSUVEEAASDgoKQVVUT01PVElWRRAB",
-            "EiMKH0JVU0lORVNTX0FORF9JTkRVU1RSSUFMX01BUktFVFMQAhILCgdGSU5B",
-            "TkNFEAMSDgoKSEVBTFRIQ0FSRRAEEg4KClRFQ0hOT0xPR1kQBRIKCgZUUkFW",
-            "RUwQBhIJCgVPVEhFUhAHEhoKFkFSVFNfQU5EX0VOVEVSVEFJTk1FTlQQCBIW",
-            "ChJCRUFVVFlfQU5EX0ZJVE5FU1MQCRIYChRCT09LU19BTkRfTElURVJBVFVS",
-            "RRAKEhIKDkZPT0RfQU5EX0RSSU5LEAsSCQoFR0FNRVMQDBIXChNIT0JCSUVT",
-            "X0FORF9MRUlTVVJFEA0SEwoPSE9NRV9BTkRfR0FSREVOEA4SGAoUSU5URVJO",
-            "RVRfQU5EX1RFTEVDT00QDxIWChJMQVdfQU5EX0dPVkVSTk1FTlQQEBIICgRO",
-            "RVdTEBESFgoST05MSU5FX0NPTU1VTklUSUVTEBISFgoSUEVPUExFX0FORF9T",
-            "T0NJRVRZEBMSFAoQUEVUU19BTkRfQU5JTUFMUxAUEg8KC1JFQUxfRVNUQVRF",
-            "EBUSDQoJUkVGRVJFTkNFEBYSCwoHU0NJRU5DRRAXEgoKBlNQT1JUUxAYEhYK",
-            "EkpPQlNfQU5EX0VEVUNBVElPThAZEgwKCFNIT1BQSU5HEBoqZgoMU2Vydmlj",
-            "ZUxldmVsEh0KGVNFUlZJQ0VfTEVWRUxfVU5TUEVDSUZJRUQQABIdChlHT09H",
-            "TEVfQU5BTFlUSUNTX1NUQU5EQVJEEAESGAoUR09PR0xFX0FOQUxZVElDU18z",
-            "NjAQAipKCglBY3RvclR5cGUSGgoWQUNUT1JfVFlQRV9VTlNQRUNJRklFRBAA",
-            "EggKBFVTRVIQARIKCgZTWVNURU0QAhILCgdTVVBQT1JUEAMqUAoKQWN0aW9u",
-            "VHlwZRIbChdBQ1RJT05fVFlQRV9VTlNQRUNJRklFRBAAEgsKB0NSRUFURUQQ",
-            "ARILCgdVUERBVEVEEAISCwoHREVMRVRFRBADKv8CChlDaGFuZ2VIaXN0b3J5",
-            "UmVzb3VyY2VUeXBlEiwKKENIQU5HRV9ISVNUT1JZX1JFU09VUkNFX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABILCgdBQ0NPVU5UEAESDAoIUFJPUEVSVFkQAhIRCg1G",
-            "SVJFQkFTRV9MSU5LEAYSEwoPR09PR0xFX0FEU19MSU5LEAcSGwoXR09PR0xF",
-            "X1NJR05BTFNfU0VUVElOR1MQCBIUChBDT05WRVJTSU9OX0VWRU5UEAkSHwob",
-            "TUVBU1VSRU1FTlRfUFJPVE9DT0xfU0VDUkVUEAoSGwoXREFUQV9SRVRFTlRJ",
-            "T05fU0VUVElOR1MQDRIlCiFESVNQTEFZX1ZJREVPXzM2MF9BRFZFUlRJU0VS",
-            "X0xJTksQDhIuCipESVNQTEFZX1ZJREVPXzM2MF9BRFZFUlRJU0VSX0xJTktf",
-            "UFJPUE9TQUwQDxIPCgtEQVRBX1NUUkVBTRASEhgKFEFUVFJJQlVUSU9OX1NF",
-            "VFRJTkdTEBQqggEKDFByb3BlcnR5VHlwZRIdChlQUk9QRVJUWV9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASGgoWUFJPUEVSVFlfVFlQRV9PUkRJTkFSWRABEh0KGVBS",
-            "T1BFUlRZX1RZUEVfU1VCUFJPUEVSVFkQAhIYChRQUk9QRVJUWV9UWVBFX1JP",
-            "TExVUBADQnkKIWNvbS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YUIO",
-            "UmVzb3VyY2VzUHJvdG9QAVpCZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9hbmFseXRpY3MvYWRtaW4vdjFiZXRhO2FkbWluYgZwcm90",
-            "bzM="));
+            "b25TZXR0aW5ncy5SZXRlbnRpb25EdXJhdGlvbkID4EECEicKH3Jlc2V0X3Vz",
+            "ZXJfZGF0YV9vbl9uZXdfYWN0aXZpdHkYAyABKAgingEKEVJldGVudGlvbkR1",
+            "cmF0aW9uEiIKHlJFVEVOVElPTl9EVVJBVElPTl9VTlNQRUNJRklFRBAAEg4K",
+            "ClRXT19NT05USFMQARITCg9GT1VSVEVFTl9NT05USFMQAxIVChFUV0VOVFlf",
+            "U0lYX01PTlRIUxAEEhcKE1RISVJUWV9FSUdIVF9NT05USFMQBRIQCgxGSUZU",
+            "WV9NT05USFMQBjpl6kFiCjNhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNv",
+            "bS9EYXRhUmV0ZW50aW9uU2V0dGluZ3MSK3Byb3BlcnRpZXMve3Byb3BlcnR5",
+            "fS9kYXRhUmV0ZW50aW9uU2V0dGluZ3MqqgQKEEluZHVzdHJ5Q2F0ZWdvcnkS",
+            "IQodSU5EVVNUUllfQ0FURUdPUllfVU5TUEVDSUZJRUQQABIOCgpBVVRPTU9U",
+            "SVZFEAESIwofQlVTSU5FU1NfQU5EX0lORFVTVFJJQUxfTUFSS0VUUxACEgsK",
+            "B0ZJTkFOQ0UQAxIOCgpIRUFMVEhDQVJFEAQSDgoKVEVDSE5PTE9HWRAFEgoK",
+            "BlRSQVZFTBAGEgkKBU9USEVSEAcSGgoWQVJUU19BTkRfRU5URVJUQUlOTUVO",
+            "VBAIEhYKEkJFQVVUWV9BTkRfRklUTkVTUxAJEhgKFEJPT0tTX0FORF9MSVRF",
+            "UkFUVVJFEAoSEgoORk9PRF9BTkRfRFJJTksQCxIJCgVHQU1FUxAMEhcKE0hP",
+            "QkJJRVNfQU5EX0xFSVNVUkUQDRITCg9IT01FX0FORF9HQVJERU4QDhIYChRJ",
+            "TlRFUk5FVF9BTkRfVEVMRUNPTRAPEhYKEkxBV19BTkRfR09WRVJOTUVOVBAQ",
+            "EggKBE5FV1MQERIWChJPTkxJTkVfQ09NTVVOSVRJRVMQEhIWChJQRU9QTEVf",
+            "QU5EX1NPQ0lFVFkQExIUChBQRVRTX0FORF9BTklNQUxTEBQSDwoLUkVBTF9F",
+            "U1RBVEUQFRINCglSRUZFUkVOQ0UQFhILCgdTQ0lFTkNFEBcSCgoGU1BPUlRT",
+            "EBgSFgoSSk9CU19BTkRfRURVQ0FUSU9OEBkSDAoIU0hPUFBJTkcQGipmCgxT",
+            "ZXJ2aWNlTGV2ZWwSHQoZU0VSVklDRV9MRVZFTF9VTlNQRUNJRklFRBAAEh0K",
+            "GUdPT0dMRV9BTkFMWVRJQ1NfU1RBTkRBUkQQARIYChRHT09HTEVfQU5BTFlU",
+            "SUNTXzM2MBACKkoKCUFjdG9yVHlwZRIaChZBQ1RPUl9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASCAoEVVNFUhABEgoKBlNZU1RFTRACEgsKB1NVUFBPUlQQAypQCgpB",
+            "Y3Rpb25UeXBlEhsKF0FDVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHQ1JF",
+            "QVRFRBABEgsKB1VQREFURUQQAhILCgdERUxFVEVEEAMqqAMKGUNoYW5nZUhp",
+            "c3RvcnlSZXNvdXJjZVR5cGUSLAooQ0hBTkdFX0hJU1RPUllfUkVTT1VSQ0Vf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEgsKB0FDQ09VTlQQARIMCghQUk9QRVJUWRAC",
+            "EhEKDUZJUkVCQVNFX0xJTksQBhITCg9HT09HTEVfQURTX0xJTksQBxIbChdH",
+            "T09HTEVfU0lHTkFMU19TRVRUSU5HUxAIEhQKEENPTlZFUlNJT05fRVZFTlQQ",
+            "CRIfChtNRUFTVVJFTUVOVF9QUk9UT0NPTF9TRUNSRVQQChIUChBDVVNUT01f",
+            "RElNRU5TSU9OEAsSEQoNQ1VTVE9NX01FVFJJQxAMEhsKF0RBVEFfUkVURU5U",
+            "SU9OX1NFVFRJTkdTEA0SJQohRElTUExBWV9WSURFT18zNjBfQURWRVJUSVNF",
+            "Ul9MSU5LEA4SLgoqRElTUExBWV9WSURFT18zNjBfQURWRVJUSVNFUl9MSU5L",
+            "X1BST1BPU0FMEA8SDwoLREFUQV9TVFJFQU0QEhIYChRBVFRSSUJVVElPTl9T",
+            "RVRUSU5HUxAUKoIBCgxQcm9wZXJ0eVR5cGUSHQoZUFJPUEVSVFlfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEhoKFlBST1BFUlRZX1RZUEVfT1JESU5BUlkQARIdChlQ",
+            "Uk9QRVJUWV9UWVBFX1NVQlBST1BFUlRZEAISGAoUUFJPUEVSVFlfVFlQRV9S",
+            "T0xMVVAQA0LJAQohY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRh",
+            "Qg5SZXNvdXJjZXNQcm90b1ABWj1jbG91ZC5nb29nbGUuY29tL2dvL2FuYWx5",
+            "dGljcy9hZG1pbi9hcGl2MWJldGEvYWRtaW5wYjthZG1pbnBi6kFSCjJtYXJr",
+            "ZXRpbmdwbGF0Zm9ybWFkbWluLmdvb2dsZWFwaXMuY29tL09yZ2FuaXphdGlv",
+            "bhIcb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Beta.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Beta.ServiceLevel), typeof(global::Google.Analytics.Admin.V1Beta.ActorType), typeof(global::Google.Analytics.Admin.V1Beta.ActionType), typeof(global::Google.Analytics.Admin.V1Beta.ChangeHistoryResourceType), typeof(global::Google.Analytics.Admin.V1Beta.PropertyType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.Account), global::Google.Analytics.Admin.V1Beta.Account.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DisplayName", "RegionCode", "Deleted" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.Account), global::Google.Analytics.Admin.V1Beta.Account.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DisplayName", "RegionCode", "Deleted", "GmpOrganization" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.Property), global::Google.Analytics.Admin.V1Beta.Property.Parser, new[]{ "Name", "PropertyType", "CreateTime", "UpdateTime", "Parent", "DisplayName", "IndustryCategory", "TimeZone", "CurrencyCode", "ServiceLevel", "DeleteTime", "ExpireTime", "Account" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.DataStream), global::Google.Analytics.Admin.V1Beta.DataStream.Parser, new[]{ "WebStreamData", "AndroidAppStreamData", "IosAppStreamData", "Name", "Type", "DisplayName", "CreateTime", "UpdateTime" }, new[]{ "StreamData" }, new[]{ typeof(global::Google.Analytics.Admin.V1Beta.DataStream.Types.DataStreamType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.DataStream.Types.WebStreamData), global::Google.Analytics.Admin.V1Beta.DataStream.Types.WebStreamData.Parser, new[]{ "MeasurementId", "FirebaseAppId", "DefaultUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.DataStream.Types.AndroidAppStreamData), global::Google.Analytics.Admin.V1Beta.DataStream.Types.AndroidAppStreamData.Parser, new[]{ "FirebaseAppId", "PackageName" }, null, null, null, null),
@@ -232,10 +262,11 @@ namespace Google.Analytics.Admin.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret), global::Google.Analytics.Admin.V1Beta.MeasurementProtocolSecret.Parser, new[]{ "Name", "DisplayName", "SecretValue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.ChangeHistoryEvent), global::Google.Analytics.Admin.V1Beta.ChangeHistoryEvent.Parser, new[]{ "Id", "ChangeTime", "ActorType", "UserActorEmail", "ChangesFiltered", "Changes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.ChangeHistoryChange), global::Google.Analytics.Admin.V1Beta.ChangeHistoryChange.Parser, new[]{ "Resource", "Action", "ResourceBeforeChange", "ResourceAfterChange" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.ChangeHistoryChange.Types.ChangeHistoryResource), global::Google.Analytics.Admin.V1Beta.ChangeHistoryChange.Types.ChangeHistoryResource.Parser, new[]{ "Account", "Property", "FirebaseLink", "GoogleAdsLink", "ConversionEvent", "MeasurementProtocolSecret", "DataRetentionSettings", "DataStream" }, new[]{ "Resource" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.ConversionEvent), global::Google.Analytics.Admin.V1Beta.ConversionEvent.Parser, new[]{ "Name", "EventName", "CreateTime", "Deletable", "Custom" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.ConversionEvent), global::Google.Analytics.Admin.V1Beta.ConversionEvent.Parser, new[]{ "Name", "EventName", "CreateTime", "Deletable", "Custom", "CountingMethod", "DefaultConversionValue" }, new[]{ "DefaultConversionValue" }, new[]{ typeof(global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.ConversionCountingMethod) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.DefaultConversionValue), global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.DefaultConversionValue.Parser, new[]{ "Value", "CurrencyCode" }, new[]{ "Value", "CurrencyCode" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.KeyEvent), global::Google.Analytics.Admin.V1Beta.KeyEvent.Parser, new[]{ "Name", "EventName", "CreateTime", "Deletable", "Custom", "CountingMethod", "DefaultValue" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.CountingMethod) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.DefaultValue), global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.DefaultValue.Parser, new[]{ "NumericValue", "CurrencyCode" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.CustomDimension), global::Google.Analytics.Admin.V1Beta.CustomDimension.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "Scope", "DisallowAdsPersonalization" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Beta.CustomDimension.Types.DimensionScope) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.CustomMetric), global::Google.Analytics.Admin.V1Beta.CustomMetric.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "MeasurementUnit", "Scope", "RestrictedMetricType" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Beta.CustomMetric.Types.MeasurementUnit), typeof(global::Google.Analytics.Admin.V1Beta.CustomMetric.Types.MetricScope), typeof(global::Google.Analytics.Admin.V1Beta.CustomMetric.Types.RestrictedMetricType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.DataRetentionSettings), global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Parser, new[]{ "Name", "EventDataRetention", "ResetUserDataOnNewActivity" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.DataRetentionSettings), global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Parser, new[]{ "Name", "EventDataRetention", "UserDataRetention", "ResetUserDataOnNewActivity" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration) }, null, null)
           }));
     }
     #endregion
@@ -456,6 +487,14 @@ namespace Google.Analytics.Admin.V1Beta {
     /// </summary>
     [pbr::OriginalName("MEASUREMENT_PROTOCOL_SECRET")] MeasurementProtocolSecret = 10,
     /// <summary>
+    /// CustomDimension resource
+    /// </summary>
+    [pbr::OriginalName("CUSTOM_DIMENSION")] CustomDimension = 11,
+    /// <summary>
+    /// CustomMetric resource
+    /// </summary>
+    [pbr::OriginalName("CUSTOM_METRIC")] CustomMetric = 12,
+    /// <summary>
     /// DataRetentionSettings resource
     /// </summary>
     [pbr::OriginalName("DATA_RETENTION_SETTINGS")] DataRetentionSettings = 13,
@@ -478,7 +517,7 @@ namespace Google.Analytics.Admin.V1Beta {
   }
 
   /// <summary>
-  /// Types of Property resources.
+  /// Types of `Property` resources.
   /// </summary>
   public enum PropertyType {
     /// <summary>
@@ -486,15 +525,15 @@ namespace Google.Analytics.Admin.V1Beta {
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Ordinary GA4 property
+    /// Ordinary Google Analytics property
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_ORDINARY")] Ordinary = 1,
     /// <summary>
-    /// GA4 subproperty
+    /// Google Analytics subproperty
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_SUBPROPERTY")] Subproperty = 2,
     /// <summary>
-    /// GA4 rollup property
+    /// Google Analytics rollup property
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_ROLLUP")] Rollup = 3,
   }
@@ -505,6 +544,7 @@ namespace Google.Analytics.Admin.V1Beta {
   /// <summary>
   /// A resource message representing a Google Analytics account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Account : pb::IMessage<Account>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -545,6 +585,7 @@ namespace Google.Analytics.Admin.V1Beta {
       displayName_ = other.displayName_;
       regionCode_ = other.regionCode_;
       deleted_ = other.deleted_;
+      gmpOrganization_ = other.gmpOrganization_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -647,6 +688,23 @@ namespace Google.Analytics.Admin.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "gmp_organization" field.</summary>
+    public const int GmpOrganizationFieldNumber = 7;
+    private string gmpOrganization_ = "";
+    /// <summary>
+    /// Output only. The URI for a Google Marketing Platform organization resource.
+    /// Only set when this account is connected to a GMP organization.
+    /// Format: marketingplatformadmin.googleapis.com/organizations/{org_id}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GmpOrganization {
+      get { return gmpOrganization_; }
+      set {
+        gmpOrganization_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -668,6 +726,7 @@ namespace Google.Analytics.Admin.V1Beta {
       if (DisplayName != other.DisplayName) return false;
       if (RegionCode != other.RegionCode) return false;
       if (Deleted != other.Deleted) return false;
+      if (GmpOrganization != other.GmpOrganization) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -681,6 +740,7 @@ namespace Google.Analytics.Admin.V1Beta {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
       if (Deleted != false) hash ^= Deleted.GetHashCode();
+      if (GmpOrganization.Length != 0) hash ^= GmpOrganization.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -723,6 +783,10 @@ namespace Google.Analytics.Admin.V1Beta {
         output.WriteRawTag(48);
         output.WriteBool(Deleted);
       }
+      if (GmpOrganization.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(GmpOrganization);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -757,6 +821,10 @@ namespace Google.Analytics.Admin.V1Beta {
         output.WriteRawTag(48);
         output.WriteBool(Deleted);
       }
+      if (GmpOrganization.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(GmpOrganization);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -784,6 +852,9 @@ namespace Google.Analytics.Admin.V1Beta {
       }
       if (Deleted != false) {
         size += 1 + 1;
+      }
+      if (GmpOrganization.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GmpOrganization);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -820,6 +891,9 @@ namespace Google.Analytics.Admin.V1Beta {
       }
       if (other.Deleted != false) {
         Deleted = other.Deleted;
+      }
+      if (other.GmpOrganization.Length != 0) {
+        GmpOrganization = other.GmpOrganization;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -864,6 +938,10 @@ namespace Google.Analytics.Admin.V1Beta {
           }
           case 48: {
             Deleted = input.ReadBool();
+            break;
+          }
+          case 58: {
+            GmpOrganization = input.ReadString();
             break;
           }
         }
@@ -911,6 +989,10 @@ namespace Google.Analytics.Admin.V1Beta {
             Deleted = input.ReadBool();
             break;
           }
+          case 58: {
+            GmpOrganization = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -919,8 +1001,9 @@ namespace Google.Analytics.Admin.V1Beta {
   }
 
   /// <summary>
-  /// A resource message representing a Google Analytics GA4 property.
+  /// A resource message representing a Google Analytics property.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Property : pb::IMessage<Property>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1000,8 +1083,7 @@ namespace Google.Analytics.Admin.V1Beta {
     /// <summary>
     /// Immutable. The property type for this Property resource. When creating a
     /// property, if the type is "PROPERTY_TYPE_UNSPECIFIED", then
-    /// "ORDINARY_PROPERTY" will be implied. "SUBPROPERTY" and "ROLLUP_PROPERTY"
-    /// types cannot yet be created with the Google Analytics Admin API.
+    /// "ORDINARY_PROPERTY" will be implied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1661,6 +1743,7 @@ namespace Google.Analytics.Admin.V1Beta {
   /// <summary>
   /// A resource message representing a data stream.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataStream : pb::IMessage<DataStream>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2263,6 +2346,7 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Data specific to web streams.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class WebStreamData : pb::IMessage<WebStreamData>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2313,8 +2397,9 @@ namespace Google.Analytics.Admin.V1Beta {
         public const int MeasurementIdFieldNumber = 1;
         private string measurementId_ = "";
         /// <summary>
-        /// Output only. Analytics "Measurement ID", without the "G-" prefix.
-        /// Example: "G-1A2BCD345E" would just be "1A2BCD345E"
+        /// Output only. Analytics Measurement ID.
+        ///
+        /// Example: "G-1A2BCD345E"
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2345,7 +2430,7 @@ namespace Google.Analytics.Admin.V1Beta {
         public const int DefaultUriFieldNumber = 3;
         private string defaultUri_ = "";
         /// <summary>
-        /// Immutable. Domain name of the web app being measured, or empty.
+        /// Domain name of the web app being measured, or empty.
         /// Example: "http://www.google.com", "https://www.google.com"
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2541,6 +2626,7 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Data specific to Android app streams.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AndroidAppStreamData : pb::IMessage<AndroidAppStreamData>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2778,6 +2864,7 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Data specific to iOS app streams.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IosAppStreamData : pb::IMessage<IosAppStreamData>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3018,8 +3105,9 @@ namespace Google.Analytics.Admin.V1Beta {
   }
 
   /// <summary>
-  /// A link between a GA4 property and a Firebase project.
+  /// A link between a Google Analytics property and a Firebase project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FirebaseLink : pb::IMessage<FirebaseLink>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3308,8 +3396,9 @@ namespace Google.Analytics.Admin.V1Beta {
   }
 
   /// <summary>
-  /// A link between a GA4 property and a Google Ads account.
+  /// A link between a Google Analytics property and a Google Ads account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GoogleAdsLink : pb::IMessage<GoogleAdsLink>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3779,6 +3868,7 @@ namespace Google.Analytics.Admin.V1Beta {
   /// A resource message representing data sharing settings of a Google Analytics
   /// account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataSharingSettings : pb::IMessage<DataSharingSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4179,8 +4269,9 @@ namespace Google.Analytics.Admin.V1Beta {
 
   /// <summary>
   /// A virtual resource representing an overview of an account and
-  /// all its child GA4 properties.
+  /// all its child Google Analytics properties.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccountSummary : pb::IMessage<AccountSummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4487,8 +4578,9 @@ namespace Google.Analytics.Admin.V1Beta {
   }
 
   /// <summary>
-  /// A virtual resource representing metadata for a GA4 property.
+  /// A virtual resource representing metadata for a Google Analytics property.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PropertySummary : pb::IMessage<PropertySummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4810,6 +4902,7 @@ namespace Google.Analytics.Admin.V1Beta {
   /// <summary>
   /// A secret value used for sending hits to Measurement Protocol.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MeasurementProtocolSecret : pb::IMessage<MeasurementProtocolSecret>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5092,6 +5185,7 @@ namespace Google.Analytics.Admin.V1Beta {
   /// Google Analytics UI, changes from customer support, or automatic Google
   /// Analytics system changes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChangeHistoryEvent : pb::IMessage<ChangeHistoryEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5489,6 +5583,7 @@ namespace Google.Analytics.Admin.V1Beta {
   /// <summary>
   /// A description of a change to a single Google Analytics resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ChangeHistoryChange : pb::IMessage<ChangeHistoryChange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5828,6 +5923,7 @@ namespace Google.Analytics.Admin.V1Beta {
       /// A snapshot of a resource as before or after the result of a change in
       /// change history.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ChangeHistoryResource : pb::IMessage<ChangeHistoryResource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6463,6 +6559,7 @@ namespace Google.Analytics.Admin.V1Beta {
   /// <summary>
   /// A conversion event in a Google Analytics property.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConversionEvent : pb::IMessage<ConversionEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6502,6 +6599,8 @@ namespace Google.Analytics.Admin.V1Beta {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       deletable_ = other.deletable_;
       custom_ = other.custom_;
+      countingMethod_ = other.countingMethod_;
+      defaultConversionValue_ = other.defaultConversionValue_ != null ? other.defaultConversionValue_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6594,6 +6693,38 @@ namespace Google.Analytics.Admin.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "counting_method" field.</summary>
+    public const int CountingMethodFieldNumber = 6;
+    private global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.ConversionCountingMethod countingMethod_ = global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.ConversionCountingMethod.Unspecified;
+    /// <summary>
+    /// Optional. The method by which conversions will be counted across multiple
+    /// events within a session. If this value is not provided, it will be set to
+    /// `ONCE_PER_EVENT`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.ConversionCountingMethod CountingMethod {
+      get { return countingMethod_; }
+      set {
+        countingMethod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "default_conversion_value" field.</summary>
+    public const int DefaultConversionValueFieldNumber = 7;
+    private global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.DefaultConversionValue defaultConversionValue_;
+    /// <summary>
+    /// Optional. Defines a default value/currency for a conversion event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.DefaultConversionValue DefaultConversionValue {
+      get { return defaultConversionValue_; }
+      set {
+        defaultConversionValue_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6614,6 +6745,8 @@ namespace Google.Analytics.Admin.V1Beta {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (Deletable != other.Deletable) return false;
       if (Custom != other.Custom) return false;
+      if (CountingMethod != other.CountingMethod) return false;
+      if (!object.Equals(DefaultConversionValue, other.DefaultConversionValue)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6626,6 +6759,8 @@ namespace Google.Analytics.Admin.V1Beta {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (Deletable != false) hash ^= Deletable.GetHashCode();
       if (Custom != false) hash ^= Custom.GetHashCode();
+      if (CountingMethod != global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.ConversionCountingMethod.Unspecified) hash ^= CountingMethod.GetHashCode();
+      if (defaultConversionValue_ != null) hash ^= DefaultConversionValue.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6664,6 +6799,14 @@ namespace Google.Analytics.Admin.V1Beta {
         output.WriteRawTag(40);
         output.WriteBool(Custom);
       }
+      if (CountingMethod != global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.ConversionCountingMethod.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) CountingMethod);
+      }
+      if (defaultConversionValue_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DefaultConversionValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6694,6 +6837,14 @@ namespace Google.Analytics.Admin.V1Beta {
         output.WriteRawTag(40);
         output.WriteBool(Custom);
       }
+      if (CountingMethod != global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.ConversionCountingMethod.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) CountingMethod);
+      }
+      if (defaultConversionValue_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DefaultConversionValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6718,6 +6869,12 @@ namespace Google.Analytics.Admin.V1Beta {
       }
       if (Custom != false) {
         size += 1 + 1;
+      }
+      if (CountingMethod != global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.ConversionCountingMethod.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CountingMethod);
+      }
+      if (defaultConversionValue_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultConversionValue);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6748,6 +6905,15 @@ namespace Google.Analytics.Admin.V1Beta {
       }
       if (other.Custom != false) {
         Custom = other.Custom;
+      }
+      if (other.CountingMethod != global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.ConversionCountingMethod.Unspecified) {
+        CountingMethod = other.CountingMethod;
+      }
+      if (other.defaultConversionValue_ != null) {
+        if (defaultConversionValue_ == null) {
+          DefaultConversionValue = new global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.DefaultConversionValue();
+        }
+        DefaultConversionValue.MergeFrom(other.DefaultConversionValue);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6785,6 +6951,17 @@ namespace Google.Analytics.Admin.V1Beta {
           }
           case 40: {
             Custom = input.ReadBool();
+            break;
+          }
+          case 48: {
+            CountingMethod = (global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.ConversionCountingMethod) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (defaultConversionValue_ == null) {
+              DefaultConversionValue = new global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.DefaultConversionValue();
+            }
+            input.ReadMessage(DefaultConversionValue);
             break;
           }
         }
@@ -6825,16 +7002,1060 @@ namespace Google.Analytics.Admin.V1Beta {
             Custom = input.ReadBool();
             break;
           }
+          case 48: {
+            CountingMethod = (global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.ConversionCountingMethod) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (defaultConversionValue_ == null) {
+              DefaultConversionValue = new global::Google.Analytics.Admin.V1Beta.ConversionEvent.Types.DefaultConversionValue();
+            }
+            input.ReadMessage(DefaultConversionValue);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ConversionEvent message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The method by which conversions will be counted across multiple events
+      /// within a session.
+      /// </summary>
+      public enum ConversionCountingMethod {
+        /// <summary>
+        /// Counting method not specified.
+        /// </summary>
+        [pbr::OriginalName("CONVERSION_COUNTING_METHOD_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Each Event instance is considered a Conversion.
+        /// </summary>
+        [pbr::OriginalName("ONCE_PER_EVENT")] OncePerEvent = 1,
+        /// <summary>
+        /// An Event instance is considered a Conversion at most once per session per
+        /// user.
+        /// </summary>
+        [pbr::OriginalName("ONCE_PER_SESSION")] OncePerSession = 2,
+      }
+
+      /// <summary>
+      /// Defines a default value/currency for a conversion event. Both value and
+      /// currency must be provided.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DefaultConversionValue : pb::IMessage<DefaultConversionValue>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DefaultConversionValue> _parser = new pb::MessageParser<DefaultConversionValue>(() => new DefaultConversionValue());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DefaultConversionValue> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Analytics.Admin.V1Beta.ConversionEvent.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DefaultConversionValue() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DefaultConversionValue(DefaultConversionValue other) : this() {
+          _hasBits0 = other._hasBits0;
+          value_ = other.value_;
+          currencyCode_ = other.currencyCode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DefaultConversionValue Clone() {
+          return new DefaultConversionValue(this);
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 1;
+        private readonly static double ValueDefaultValue = 0D;
+
+        private double value_;
+        /// <summary>
+        /// This value will be used to populate the value for all conversions
+        /// of the specified event_name where the event "value" parameter is unset.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Value {
+          get { if ((_hasBits0 & 1) != 0) { return value_; } else { return ValueDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            value_ = value;
+          }
+        }
+        /// <summary>Gets whether the "value" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValue {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "value" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValue() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "currency_code" field.</summary>
+        public const int CurrencyCodeFieldNumber = 2;
+        private readonly static string CurrencyCodeDefaultValue = "";
+
+        private string currencyCode_;
+        /// <summary>
+        /// When a conversion event for this event_name has no set currency,
+        /// this currency will be applied as the default. Must be in ISO 4217
+        /// currency code format. See https://en.wikipedia.org/wiki/ISO_4217 for
+        /// more information.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string CurrencyCode {
+          get { return currencyCode_ ?? CurrencyCodeDefaultValue; }
+          set {
+            currencyCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+        /// <summary>Gets whether the "currency_code" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasCurrencyCode {
+          get { return currencyCode_ != null; }
+        }
+        /// <summary>Clears the value of the "currency_code" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCurrencyCode() {
+          currencyCode_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DefaultConversionValue);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DefaultConversionValue other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Value, other.Value)) return false;
+          if (CurrencyCode != other.CurrencyCode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Value);
+          if (HasCurrencyCode) hash ^= CurrencyCode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasValue) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Value);
+          }
+          if (HasCurrencyCode) {
+            output.WriteRawTag(18);
+            output.WriteString(CurrencyCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasValue) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Value);
+          }
+          if (HasCurrencyCode) {
+            output.WriteRawTag(18);
+            output.WriteString(CurrencyCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasValue) {
+            size += 1 + 8;
+          }
+          if (HasCurrencyCode) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrencyCode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DefaultConversionValue other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasValue) {
+            Value = other.Value;
+          }
+          if (other.HasCurrencyCode) {
+            CurrencyCode = other.CurrencyCode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                Value = input.ReadDouble();
+                break;
+              }
+              case 18: {
+                CurrencyCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                Value = input.ReadDouble();
+                break;
+              }
+              case 18: {
+                CurrencyCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A key event in a Google Analytics property.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class KeyEvent : pb::IMessage<KeyEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<KeyEvent> _parser = new pb::MessageParser<KeyEvent>(() => new KeyEvent());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<KeyEvent> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Beta.ResourcesReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KeyEvent() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KeyEvent(KeyEvent other) : this() {
+      name_ = other.name_;
+      eventName_ = other.eventName_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      deletable_ = other.deletable_;
+      custom_ = other.custom_;
+      countingMethod_ = other.countingMethod_;
+      defaultValue_ = other.defaultValue_ != null ? other.defaultValue_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KeyEvent Clone() {
+      return new KeyEvent(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Resource name of this key event.
+    /// Format: properties/{property}/keyEvents/{key_event}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "event_name" field.</summary>
+    public const int EventNameFieldNumber = 2;
+    private string eventName_ = "";
+    /// <summary>
+    /// Immutable. The event name for this key event.
+    /// Examples: 'click', 'purchase'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EventName {
+      get { return eventName_; }
+      set {
+        eventName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Time when this key event was created in the property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "deletable" field.</summary>
+    public const int DeletableFieldNumber = 4;
+    private bool deletable_;
+    /// <summary>
+    /// Output only. If set to true, this event can be deleted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Deletable {
+      get { return deletable_; }
+      set {
+        deletable_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "custom" field.</summary>
+    public const int CustomFieldNumber = 5;
+    private bool custom_;
+    /// <summary>
+    /// Output only. If set to true, this key event refers to a custom event.  If
+    /// set to false, this key event refers to a default event in GA. Default
+    /// events typically have special meaning in GA. Default events are usually
+    /// created for you by the GA system, but in some cases can be created by
+    /// property admins. Custom events count towards the maximum number of
+    /// custom key events that may be created per property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Custom {
+      get { return custom_; }
+      set {
+        custom_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "counting_method" field.</summary>
+    public const int CountingMethodFieldNumber = 6;
+    private global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.CountingMethod countingMethod_ = global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.CountingMethod.Unspecified;
+    /// <summary>
+    /// Required. The method by which Key Events will be counted across multiple
+    /// events within a session.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.CountingMethod CountingMethod {
+      get { return countingMethod_; }
+      set {
+        countingMethod_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "default_value" field.</summary>
+    public const int DefaultValueFieldNumber = 7;
+    private global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.DefaultValue defaultValue_;
+    /// <summary>
+    /// Optional. Defines a default value/currency for a key event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.DefaultValue DefaultValue {
+      get { return defaultValue_; }
+      set {
+        defaultValue_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as KeyEvent);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(KeyEvent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (EventName != other.EventName) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (Deletable != other.Deletable) return false;
+      if (Custom != other.Custom) return false;
+      if (CountingMethod != other.CountingMethod) return false;
+      if (!object.Equals(DefaultValue, other.DefaultValue)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (EventName.Length != 0) hash ^= EventName.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (Deletable != false) hash ^= Deletable.GetHashCode();
+      if (Custom != false) hash ^= Custom.GetHashCode();
+      if (CountingMethod != global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.CountingMethod.Unspecified) hash ^= CountingMethod.GetHashCode();
+      if (defaultValue_ != null) hash ^= DefaultValue.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (EventName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EventName);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (Deletable != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Deletable);
+      }
+      if (Custom != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Custom);
+      }
+      if (CountingMethod != global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.CountingMethod.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) CountingMethod);
+      }
+      if (defaultValue_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DefaultValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (EventName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EventName);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (Deletable != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Deletable);
+      }
+      if (Custom != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Custom);
+      }
+      if (CountingMethod != global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.CountingMethod.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) CountingMethod);
+      }
+      if (defaultValue_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DefaultValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (EventName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EventName);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (Deletable != false) {
+        size += 1 + 1;
+      }
+      if (Custom != false) {
+        size += 1 + 1;
+      }
+      if (CountingMethod != global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.CountingMethod.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CountingMethod);
+      }
+      if (defaultValue_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultValue);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(KeyEvent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.EventName.Length != 0) {
+        EventName = other.EventName;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.Deletable != false) {
+        Deletable = other.Deletable;
+      }
+      if (other.Custom != false) {
+        Custom = other.Custom;
+      }
+      if (other.CountingMethod != global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.CountingMethod.Unspecified) {
+        CountingMethod = other.CountingMethod;
+      }
+      if (other.defaultValue_ != null) {
+        if (defaultValue_ == null) {
+          DefaultValue = new global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.DefaultValue();
+        }
+        DefaultValue.MergeFrom(other.DefaultValue);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            EventName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 32: {
+            Deletable = input.ReadBool();
+            break;
+          }
+          case 40: {
+            Custom = input.ReadBool();
+            break;
+          }
+          case 48: {
+            CountingMethod = (global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.CountingMethod) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (defaultValue_ == null) {
+              DefaultValue = new global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.DefaultValue();
+            }
+            input.ReadMessage(DefaultValue);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            EventName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 32: {
+            Deletable = input.ReadBool();
+            break;
+          }
+          case 40: {
+            Custom = input.ReadBool();
+            break;
+          }
+          case 48: {
+            CountingMethod = (global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.CountingMethod) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (defaultValue_ == null) {
+              DefaultValue = new global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.DefaultValue();
+            }
+            input.ReadMessage(DefaultValue);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the KeyEvent message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The method by which Key Events will be counted across multiple events
+      /// within a session.
+      /// </summary>
+      public enum CountingMethod {
+        /// <summary>
+        /// Counting method not specified.
+        /// </summary>
+        [pbr::OriginalName("COUNTING_METHOD_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Each Event instance is considered a Key Event.
+        /// </summary>
+        [pbr::OriginalName("ONCE_PER_EVENT")] OncePerEvent = 1,
+        /// <summary>
+        /// An Event instance is considered a Key Event at most once per session per
+        /// user.
+        /// </summary>
+        [pbr::OriginalName("ONCE_PER_SESSION")] OncePerSession = 2,
+      }
+
+      /// <summary>
+      /// Defines a default value/currency for a key event.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DefaultValue : pb::IMessage<DefaultValue>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DefaultValue> _parser = new pb::MessageParser<DefaultValue>(() => new DefaultValue());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DefaultValue> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Analytics.Admin.V1Beta.KeyEvent.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DefaultValue() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DefaultValue(DefaultValue other) : this() {
+          numericValue_ = other.numericValue_;
+          currencyCode_ = other.currencyCode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DefaultValue Clone() {
+          return new DefaultValue(this);
+        }
+
+        /// <summary>Field number for the "numeric_value" field.</summary>
+        public const int NumericValueFieldNumber = 1;
+        private double numericValue_;
+        /// <summary>
+        /// Required. This will be used to populate the "value" parameter for all
+        /// occurrences of this Key Event (specified by event_name) where that
+        /// parameter is unset.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double NumericValue {
+          get { return numericValue_; }
+          set {
+            numericValue_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "currency_code" field.</summary>
+        public const int CurrencyCodeFieldNumber = 2;
+        private string currencyCode_ = "";
+        /// <summary>
+        /// Required. When an occurrence of this Key Event (specified by event_name)
+        /// has no set currency this currency will be applied as the default. Must be
+        /// in ISO 4217 currency code format.
+        ///
+        /// See https://en.wikipedia.org/wiki/ISO_4217 for more information.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string CurrencyCode {
+          get { return currencyCode_; }
+          set {
+            currencyCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DefaultValue);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DefaultValue other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(NumericValue, other.NumericValue)) return false;
+          if (CurrencyCode != other.CurrencyCode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (NumericValue != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(NumericValue);
+          if (CurrencyCode.Length != 0) hash ^= CurrencyCode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (NumericValue != 0D) {
+            output.WriteRawTag(9);
+            output.WriteDouble(NumericValue);
+          }
+          if (CurrencyCode.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CurrencyCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (NumericValue != 0D) {
+            output.WriteRawTag(9);
+            output.WriteDouble(NumericValue);
+          }
+          if (CurrencyCode.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CurrencyCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (NumericValue != 0D) {
+            size += 1 + 8;
+          }
+          if (CurrencyCode.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrencyCode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DefaultValue other) {
+          if (other == null) {
+            return;
+          }
+          if (other.NumericValue != 0D) {
+            NumericValue = other.NumericValue;
+          }
+          if (other.CurrencyCode.Length != 0) {
+            CurrencyCode = other.CurrencyCode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                NumericValue = input.ReadDouble();
+                break;
+              }
+              case 18: {
+                CurrencyCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                NumericValue = input.ReadDouble();
+                break;
+              }
+              case 18: {
+                CurrencyCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
   /// <summary>
   /// A definition for a CustomDimension.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomDimension : pb::IMessage<CustomDimension>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6849,7 +8070,7 @@ namespace Google.Analytics.Admin.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Beta.ResourcesReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Analytics.Admin.V1Beta.ResourcesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6909,6 +8130,9 @@ namespace Google.Analytics.Admin.V1Beta {
     /// If this is a user-scoped dimension, then this is the user property name.
     /// If this is an event-scoped dimension, then this is the event parameter
     /// name.
+    ///
+    /// If this is an item-scoped dimension, then this is the parameter
+    /// name found in the eCommerce items array.
     ///
     /// May only contain alphanumeric and underscore characters, starting with a
     /// letter. Max length of 24 characters for user-scoped dimensions, 40
@@ -7263,6 +8487,10 @@ namespace Google.Analytics.Admin.V1Beta {
         /// Dimension scoped to a user.
         /// </summary>
         [pbr::OriginalName("USER")] User = 2,
+        /// <summary>
+        /// Dimension scoped to eCommerce items
+        /// </summary>
+        [pbr::OriginalName("ITEM")] Item = 3,
       }
 
     }
@@ -7273,6 +8501,7 @@ namespace Google.Analytics.Admin.V1Beta {
   /// <summary>
   /// A definition for a custom metric.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomMetric : pb::IMessage<CustomMetric>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7287,7 +8516,7 @@ namespace Google.Analytics.Admin.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Beta.ResourcesReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Analytics.Admin.V1Beta.ResourcesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7807,6 +9036,7 @@ namespace Google.Analytics.Admin.V1Beta {
   /// <summary>
   /// Settings values for data retention. This is a singleton resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataRetentionSettings : pb::IMessage<DataRetentionSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7821,7 +9051,7 @@ namespace Google.Analytics.Admin.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Admin.V1Beta.ResourcesReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Analytics.Admin.V1Beta.ResourcesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7843,6 +9073,7 @@ namespace Google.Analytics.Admin.V1Beta {
     public DataRetentionSettings(DataRetentionSettings other) : this() {
       name_ = other.name_;
       eventDataRetention_ = other.eventDataRetention_;
+      userDataRetention_ = other.userDataRetention_;
       resetUserDataOnNewActivity_ = other.resetUserDataOnNewActivity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -7873,7 +9104,7 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int EventDataRetentionFieldNumber = 2;
     private global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration eventDataRetention_ = global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified;
     /// <summary>
-    /// The length of time that event-level data is retained.
+    /// Required. The length of time that event-level data is retained.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7881,6 +9112,21 @@ namespace Google.Analytics.Admin.V1Beta {
       get { return eventDataRetention_; }
       set {
         eventDataRetention_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user_data_retention" field.</summary>
+    public const int UserDataRetentionFieldNumber = 4;
+    private global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration userDataRetention_ = global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified;
+    /// <summary>
+    /// Required. The length of time that user-level data is retained.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration UserDataRetention {
+      get { return userDataRetention_; }
+      set {
+        userDataRetention_ = value;
       }
     }
 
@@ -7917,6 +9163,7 @@ namespace Google.Analytics.Admin.V1Beta {
       }
       if (Name != other.Name) return false;
       if (EventDataRetention != other.EventDataRetention) return false;
+      if (UserDataRetention != other.UserDataRetention) return false;
       if (ResetUserDataOnNewActivity != other.ResetUserDataOnNewActivity) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -7927,6 +9174,7 @@ namespace Google.Analytics.Admin.V1Beta {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (EventDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) hash ^= EventDataRetention.GetHashCode();
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) hash ^= UserDataRetention.GetHashCode();
       if (ResetUserDataOnNewActivity != false) hash ^= ResetUserDataOnNewActivity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -7958,6 +9206,10 @@ namespace Google.Analytics.Admin.V1Beta {
         output.WriteRawTag(24);
         output.WriteBool(ResetUserDataOnNewActivity);
       }
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) UserDataRetention);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7980,6 +9232,10 @@ namespace Google.Analytics.Admin.V1Beta {
         output.WriteRawTag(24);
         output.WriteBool(ResetUserDataOnNewActivity);
       }
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) UserDataRetention);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7995,6 +9251,9 @@ namespace Google.Analytics.Admin.V1Beta {
       }
       if (EventDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EventDataRetention);
+      }
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UserDataRetention);
       }
       if (ResetUserDataOnNewActivity != false) {
         size += 1 + 1;
@@ -8016,6 +9275,9 @@ namespace Google.Analytics.Admin.V1Beta {
       }
       if (other.EventDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
         EventDataRetention = other.EventDataRetention;
+      }
+      if (other.UserDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        UserDataRetention = other.UserDataRetention;
       }
       if (other.ResetUserDataOnNewActivity != false) {
         ResetUserDataOnNewActivity = other.ResetUserDataOnNewActivity;
@@ -8047,6 +9309,10 @@ namespace Google.Analytics.Admin.V1Beta {
             ResetUserDataOnNewActivity = input.ReadBool();
             break;
           }
+          case 32: {
+            UserDataRetention = (global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -8072,6 +9338,10 @@ namespace Google.Analytics.Admin.V1Beta {
           }
           case 24: {
             ResetUserDataOnNewActivity = input.ReadBool();
+            break;
+          }
+          case 32: {
+            UserDataRetention = (global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration) input.ReadEnum();
             break;
           }
         }
@@ -8102,17 +9372,17 @@ namespace Google.Analytics.Admin.V1Beta {
         [pbr::OriginalName("FOURTEEN_MONTHS")] FourteenMonths = 3,
         /// <summary>
         /// The data retention time duration is 26 months.
-        /// Available to 360 properties only.
+        /// Available to 360 properties only. Available for event data only.
         /// </summary>
         [pbr::OriginalName("TWENTY_SIX_MONTHS")] TwentySixMonths = 4,
         /// <summary>
         /// The data retention time duration is 38 months.
-        /// Available to 360 properties only.
+        /// Available to 360 properties only. Available for event data only.
         /// </summary>
         [pbr::OriginalName("THIRTY_EIGHT_MONTHS")] ThirtyEightMonths = 5,
         /// <summary>
         /// The data retention time duration is 50 months.
-        /// Available to 360 properties only.
+        /// Available to 360 properties only. Available for event data only.
         /// </summary>
         [pbr::OriginalName("FIFTY_MONTHS")] FiftyMonths = 6,
       }

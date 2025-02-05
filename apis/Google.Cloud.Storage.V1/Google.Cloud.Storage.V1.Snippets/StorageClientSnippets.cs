@@ -94,7 +94,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             // Sample: CustomerSuppliedEncryptionKeys
             // Use EncryptionKey.Create if you already have a key.
             EncryptionKey key = EncryptionKey.Generate();
-            
+
             // This will affect all relevant object-based operations by default.
             var client = StorageClient.Create(encryptionKey: key);
             var content = Encoding.UTF8.GetBytes("hello, world");
@@ -355,9 +355,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             // var acl = PredefinedAcl.PublicRead // public
             var acl = PredefinedObjectAcl.AuthenticatedRead; // private
             var options = new UploadObjectOptions { PredefinedAcl = acl };
-            // Create a temporary uploader so the upload session can be manually initiated without actually uploading.
-            var tempUploader = client.CreateObjectUploader(bucketName, destination, contentType, new MemoryStream(), options);
-            var uploadUri = await tempUploader.InitiateSessionAsync();
+            var uploadUri = await client.InitiateUploadSessionAsync(bucketName, destination, contentType, contentLength: null, options);
 
             // Send uploadUri to (unauthenticated) client application, so it can perform the upload:
             using (var stream = File.OpenRead(source))
@@ -391,7 +389,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             Console.WriteLine($"Name: {obj.Name}");
             Console.WriteLine($"Size: {obj.Size}");
             Console.WriteLine($"ContentType: {obj.ContentType}");
-            Console.WriteLine($"TimeCreated: {obj.TimeCreated}");
+            Console.WriteLine($"TimeCreated: {obj.TimeCreatedDateTimeOffset}");
             // End snippet
         }
 
@@ -539,7 +537,7 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             var bucket = client.GetBucket(bucketName);
             Console.WriteLine($"Name: {bucket.Name}");
-            Console.WriteLine($"TimeCreated: {bucket.TimeCreated}");
+            Console.WriteLine($"TimeCreated: {bucket.TimeCreatedDateTimeOffset}");
             // End snippet
         }
 
@@ -699,7 +697,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             var bucketName = _fixture.BucketName;
             // Snippet: TestBucketIamPermissions(string,*,*)
             StorageClient client = StorageClient.Create();
-            
+
             IList<string> permissions = client.TestBucketIamPermissions(bucketName,
                 new[] { "storage.buckets.get", "storage.objects.list" });
             Console.WriteLine("Permissions held:");
@@ -977,7 +975,7 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             // End sample
 
-            _fixture.RegisterTopicToDelete(topicName);            
+            _fixture.RegisterTopicToDelete(topicName);
         }
 
         [Fact]

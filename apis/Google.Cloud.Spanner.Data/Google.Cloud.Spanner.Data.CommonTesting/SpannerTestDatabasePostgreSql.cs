@@ -2,14 +2,14 @@
 //
 // Licensed under the Apache License, Version 2.0 (the "License").
 // you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at 
+// You may obtain a copy of the License at
 //
-// https://www.apache.org/licenses/LICENSE-2.0 
+// https://www.apache.org/licenses/LICENSE-2.0
 //
-// Unless required by applicable law or agreed to in writing, software 
+// Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and 
+// See the License for the specific language governing permissions and
 // limitations under the License.
 
 using Google.Api.Gax;
@@ -64,14 +64,33 @@ public sealed class SpannerTestDatabasePostgreSql : SpannerTestDatabaseBase
     /// Initializes a new instance of the <see cref="SpannerTestDatabasePostgreSql"/> class.
     /// </summary>
     /// <param name="projectId">The project ID to be used for test database.</param>
-    private SpannerTestDatabasePostgreSql(string projectId) : base(projectId, EmulatorDetection.None)
+    private SpannerTestDatabasePostgreSql(string projectId) : base(projectId, EmulatorDetection.EmulatorOrProduction)
     {
     }
 
     protected override bool TryCreateDatabase()
     {
+        DatabaseAdminClient databaseAdminClient;
+        if (SpannerClientCreationOptions.UsesEmulator)
+        {
+#if NETSTANDARD2_1
+            // On .NET Core 3.1 (but not .NET 6) Grpc.Net.Client needs an additional switch
+            // to allow an insecure channel in HTTP/2.
+            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+#endif
+            // Try to create a database on the emulator and ignore any AlreadyExists error.
+            var adminClientBuilder = new DatabaseAdminClientBuilder
+            {
+                EmulatorDetection = EmulatorDetection.EmulatorOnly
+            };
+            databaseAdminClient = adminClientBuilder.Build();
+        }
+        else
+        {
+            databaseAdminClient = DatabaseAdminClient.Create();
+        }
+
         const DatabaseDialect dialect = DatabaseDialect.Postgresql;
-        DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
         CreateDatabaseRequest createDatabaseRequest = new CreateDatabaseRequest
         {
             CreateStatement = $"CREATE DATABASE {SpannerDatabase}",

@@ -1,5 +1,62 @@
 # Version history
 
+## Version 4.10.0, released 2024-10-07
+
+### New features
+
+- Add scheduleOptionsV2 and Error fields for TransferConfig ([commit 963221d](https://github.com/googleapis/google-cloud-dotnet/commit/963221d3cd8cb6e5252bb59ac3f413a2d703f4bd))
+
+### Documentation improvements
+
+- Add a note to the CreateTransferConfigRequest and UpdateTransferConfigRequest to disable restricting service account usage ([commit e0a36f4](https://github.com/googleapis/google-cloud-dotnet/commit/e0a36f41394c369bd47d7347479bce2ced7d21a0))
+- Deprecate `authorization_code` ([commit e1a80f1](https://github.com/googleapis/google-cloud-dotnet/commit/e1a80f10bd16b85f5805fa95810fb0d68196dc23))
+- Update OAuth links in `CreateTransferConfigRequest` and `UpdateTransferConfigRequest` ([commit 54d1ff9](https://github.com/googleapis/google-cloud-dotnet/commit/54d1ff93df6c51050015bae58e899296ebdb8fcb))
+
+## Version 4.9.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 4.8.0, released 2024-04-19
+
+### Documentation improvements
+
+- Updated comments ([commit b8e05f5](https://github.com/googleapis/google-cloud-dotnet/commit/b8e05f5d0128f956984115994083d58a142c78b6))
+
+## Version 4.7.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 4.6.0, released 2024-02-28
+
+### Documentation improvements
+
+- Update unenrollDataSources API documentation ([commit 4139f3c](https://github.com/googleapis/google-cloud-dotnet/commit/4139f3c037ac0723446f602a5e167cf695857222))
+
+## Version 4.5.0, released 2024-02-20
+
+### New features
+
+- Add UnenrollDataSources API which gives users a programmatic way to unenroll data sources ([commit 174b0bc](https://github.com/googleapis/google-cloud-dotnet/commit/174b0bc552a3438b586c999a5a4f8f1e57dcbc48))
+
+### Documentation improvements
+
+- Update transferConfig.name description to indicate that it supports both formats ([commit e821bb9](https://github.com/googleapis/google-cloud-dotnet/commit/e821bb96b2abb6b7473ada5169283e27a2e267dd))
+
+## Version 4.4.0, released 2023-08-04
+
+### New features
+
+- Add EncryptionConfiguration to TransferConfig ([commit b3e6563](https://github.com/googleapis/google-cloud-dotnet/commit/b3e65636477e5b1e6940e13bcfeee7e360585fb0))
+- Add List type to Data source parameter. ([commit b3e6563](https://github.com/googleapis/google-cloud-dotnet/commit/b3e65636477e5b1e6940e13bcfeee7e360585fb0))
+
+### Documentation improvements
+
+- Minor comment update ([commit 0736781](https://github.com/googleapis/google-cloud-dotnet/commit/0736781d303db2ef56a5365a2ff824fbde4e10fb))
+
 ## Version 4.3.0, released 2023-01-19
 
 ### New features

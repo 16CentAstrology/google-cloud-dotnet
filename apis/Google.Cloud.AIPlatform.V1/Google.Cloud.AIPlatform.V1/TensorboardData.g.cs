@@ -68,6 +68,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// All the data stored in a TensorboardTimeSeries.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeSeriesData : pb::IMessage<TimeSeriesData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -334,6 +335,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// A TensorboardTimeSeries data point.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimeSeriesDataPoint : pb::IMessage<TimeSeriesDataPoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -773,6 +775,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// One point viewable on a scalar metric plot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Scalar : pb::IMessage<Scalar>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -968,6 +971,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// One point viewable on a tensor metric plot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TensorboardTensor : pb::IMessage<TensorboardTensor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1206,6 +1210,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// One point viewable on a blob metric plot, but mostly just a wrapper message
   /// to work around repeated fields can't be used directly within `oneof` fields.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TensorboardBlobSequence : pb::IMessage<TensorboardBlobSequence>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1390,6 +1395,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// One blob (e.g, image, graph) viewable on a blob metric plot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TensorboardBlob : pb::IMessage<TensorboardBlob>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

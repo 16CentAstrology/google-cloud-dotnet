@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.SecurityCenter.V1
@@ -56,34 +56,57 @@ namespace Google.Cloud.SecurityCenter.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AccessReflection.Descriptor;
+            yield return ApplicationReflection.Descriptor;
             yield return AssetReflection.Descriptor;
+            yield return AttackExposureReflection.Descriptor;
+            yield return AttackPathReflection.Descriptor;
+            yield return BackupDisasterRecoveryReflection.Descriptor;
             yield return BigqueryExportReflection.Descriptor;
+            yield return CloudArmorReflection.Descriptor;
+            yield return CloudDlpDataProfileReflection.Descriptor;
+            yield return CloudDlpInspectionReflection.Descriptor;
             yield return ComplianceReflection.Descriptor;
             yield return ConnectionReflection.Descriptor;
             yield return ContactDetailsReflection.Descriptor;
             yield return ContainerReflection.Descriptor;
             yield return DatabaseReflection.Descriptor;
+            yield return EffectiveEventThreatDetectionCustomModuleReflection.Descriptor;
+            yield return EffectiveSecurityHealthAnalyticsCustomModuleReflection.Descriptor;
+            yield return EventThreatDetectionCustomModuleReflection.Descriptor;
+            yield return EventThreatDetectionCustomModuleValidationErrorsReflection.Descriptor;
             yield return ExfiltrationReflection.Descriptor;
             yield return ExternalSystemReflection.Descriptor;
             yield return FileReflection.Descriptor;
             yield return FindingReflection.Descriptor;
             yield return FolderReflection.Descriptor;
+            yield return GroupMembershipReflection.Descriptor;
             yield return IamBindingReflection.Descriptor;
             yield return IndicatorReflection.Descriptor;
             yield return KernelRootkitReflection.Descriptor;
             yield return KubernetesReflection.Descriptor;
             yield return LabelReflection.Descriptor;
+            yield return LoadBalancerReflection.Descriptor;
+            yield return LogEntryReflection.Descriptor;
             yield return MitreAttackReflection.Descriptor;
             yield return MuteConfigReflection.Descriptor;
+            yield return NotebookReflection.Descriptor;
             yield return NotificationConfigReflection.Descriptor;
             yield return NotificationMessageReflection.Descriptor;
+            yield return OrgPolicyReflection.Descriptor;
             yield return OrganizationSettingsReflection.Descriptor;
             yield return ProcessReflection.Descriptor;
             yield return ResourceReflection.Descriptor;
+            yield return ResourceValueConfigReflection.Descriptor;
             yield return RunAssetDiscoveryResponseReflection.Descriptor;
+            yield return SecurityHealthAnalyticsCustomConfigReflection.Descriptor;
+            yield return SecurityHealthAnalyticsCustomModuleReflection.Descriptor;
             yield return SecurityMarksReflection.Descriptor;
+            yield return SecurityPostureReflection.Descriptor;
             yield return SecuritycenterServiceReflection.Descriptor;
+            yield return SimulationReflection.Descriptor;
             yield return SourceReflection.Descriptor;
+            yield return ToxicCombinationReflection.Descriptor;
+            yield return ValuedResourceReflection.Descriptor;
             yield return VulnerabilityReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

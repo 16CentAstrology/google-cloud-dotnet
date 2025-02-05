@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,9 +16,11 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.Functions.V1
@@ -31,6 +33,11 @@ namespace Google.Cloud.Functions.V1
             .WithRequestNumericEnumJsonEncoding(true)
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
+                {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v1/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("Eh8vdjEve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
+                },
                 {
                     "google.longrunning.Operations.GetOperation",
                     // { "get": "/v1/{name=operations/*}" }
@@ -47,6 +54,10 @@ namespace Google.Cloud.Functions.V1
         {
             yield return FunctionsReflection.Descriptor;
             yield return OperationsReflection.Descriptor;
+            yield return gciv::IamPolicyReflection.Descriptor;
+            yield return gciv::OptionsReflection.Descriptor;
+            yield return gciv::PolicyReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }

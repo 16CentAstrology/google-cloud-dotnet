@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ namespace Google.Cloud.Firestore.Tests
     internal static class SerializationTestData
     {
         internal static FirestoreDb Database { get; } = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
-        internal static DeserializationContext Context => new DeserializationContext(GetSampleSnapshot(Database, "doc1"));
+        internal static IDeserializationContext Context => GetSampleSnapshot(Database, "doc1");
 
         public static IEnumerable<object[]> BclAndValues { get; } = new List<object[]>
         {
@@ -97,7 +97,7 @@ namespace Google.Cloud.Firestore.Tests
             { UInt64Enum.MaxRepresentableValue, new Value { IntegerValue = long.MaxValue } },
             { CustomConversionEnum.Foo, new Value { StringValue = "Foo" } },
             { CustomConversionEnum.Bar, new Value { StringValue = "Bar" } },
-            
+
             // Timestamps
             { new Timestamp(1, 500),
                 new Value { TimestampValue = CreateProtoTimestamp(1, 500) } },
@@ -439,7 +439,7 @@ namespace Google.Cloud.Firestore.Tests
             public int Score { get; set; }
 
             public override int GetHashCode() => Name.GetHashCode() ^ Score;
-            public override bool Equals(object obj) => Equals(obj as CustomPlayer);        
+            public override bool Equals(object obj) => Equals(obj as CustomPlayer);
             public bool Equals(CustomPlayer other) => other != null && other.Name == Name && other.Score == Score;
         }
 
@@ -545,7 +545,7 @@ namespace Google.Cloud.Firestore.Tests
             private List<string> MapKeysInOrder => Map.Keys.OrderBy(k => k).ToList();
             private List<string> MapValuesInKeyOrder => Map.OrderBy(pair => pair.Key).Select(pair => pair.Value).ToList();
 
-            public override bool Equals(object obj) => Equals(obj as TupleModel);
+            public override bool Equals(object obj) => Equals(obj as InterfaceProperties);
 
             public override int GetHashCode() => GaxEqualityHelpers.GetListHashCode(List.ToList())
                 ^ GaxEqualityHelpers.GetListHashCode(MapKeysInOrder)

@@ -1,5 +1,113 @@
 # Version history
 
+## Version 3.15.0, released 2025-02-03
+
+### New features
+
+- Add filter field to snooze proto ([commit 164b017](https://github.com/googleapis/google-cloud-dotnet/commit/164b01761550b4824ad79eff16788995785bd483))
+
+### Documentation improvements
+
+- Remove extra fenced code block markers ([commit 164b017](https://github.com/googleapis/google-cloud-dotnet/commit/164b01761550b4824ad79eff16788995785bd483))
+
+## Version 3.14.0, released 2025-01-13
+
+### New features
+
+- Add active_only field to ListMetricDescriptorsRequest ([commit fa011c0](https://github.com/googleapis/google-cloud-dotnet/commit/fa011c0b115313c5815a59fed28408031743d8e4))
+
+## Version 3.13.0, released 2024-12-16
+
+### New features
+
+- Added SqlCondition in AlertPolicy ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+- Added PrometheusQueryLanguageCondition.disable_metric_validation ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+- Deprecated QueryTimeSeries (MQL query endpoint) ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+- Added TimeSeries.description for input only ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+
+### Documentation improvements
+
+- TimeSeries.unit allows limited updating by CreateTimeSeries ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+- ServiceLevelObjective.goal must be <= 0.9999 ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+- ServiceAgentAuthentication supports generating an OAuth token ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+
+## Version 3.12.0, released 2024-12-06
+
+### New features
+
+- Added support for notification prompts in AlertPolicy ([commit 4541241](https://github.com/googleapis/google-cloud-dotnet/commit/454124189453710c8fd2a0aef225865c6b64bad2))
+- Added support for PromQL metric validation opt-out in AlertPolicy ([commit 4541241](https://github.com/googleapis/google-cloud-dotnet/commit/454124189453710c8fd2a0aef225865c6b64bad2))
+
+## Version 3.11.0, released 2024-06-24
+
+### New features
+
+- Add support to add links in AlertPolicy ([commit 3513b82](https://github.com/googleapis/google-cloud-dotnet/commit/3513b829e9f69a503494975f9e86e4568db66dad))
+
+## Version 3.10.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 3.9.0, released 2024-04-29
+
+### Bug fixes
+
+- Defined class prefix of GMON for Objective C ([commit 679648b](https://github.com/googleapis/google-cloud-dotnet/commit/679648b57fc738b7b554c55abf6b2ab8b2424253))
+
+## Version 3.8.0, released 2024-04-19
+
+### New features
+
+- Added CloudRun, GkeNamespace, GkeWorkload, GkeService, and BasicService service types ([commit a63edc5](https://github.com/googleapis/google-cloud-dotnet/commit/a63edc53397e62b24240e474f2ee883aa1309d89))
+- Added Synthetic Monitor targets to Uptime data model ([commit 4b7d6bc](https://github.com/googleapis/google-cloud-dotnet/commit/4b7d6bc8c0fec524dae47dd164c91d85b29a03b2))
+- Added ServiceAgentAuthentication auth method for Uptime ([commit 4b7d6bc](https://github.com/googleapis/google-cloud-dotnet/commit/4b7d6bc8c0fec524dae47dd164c91d85b29a03b2))
+
+### Documentation improvements
+
+- Updated comments accordingly ([commit a63edc5](https://github.com/googleapis/google-cloud-dotnet/commit/a63edc53397e62b24240e474f2ee883aa1309d89))
+- Updated comments accordingly ([commit 4b7d6bc](https://github.com/googleapis/google-cloud-dotnet/commit/4b7d6bc8c0fec524dae47dd164c91d85b29a03b2))
+- Various updates ([commit dfa71a3](https://github.com/googleapis/google-cloud-dotnet/commit/dfa71a3129299e055d65da1badea1028f4144506))
+
+## Version 3.7.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.6.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 3.5.0, released 2024-01-08
+
+### New features
+
+- Added support for severity in AlertPolicy ([commit cbde75b](https://github.com/googleapis/google-cloud-dotnet/commit/cbde75b40a9be197dff4d39a9f7a1b6876936bc6))
+
+### Documentation improvements
+
+- Add value range to comment on field forecast_horizon ([commit cbde75b](https://github.com/googleapis/google-cloud-dotnet/commit/cbde75b40a9be197dff4d39a9f7a1b6876936bc6))
+
+## Version 3.4.0, released 2023-09-18
+
+### New features
+
+- Added support for retriggering notifications in AlertPolicy ([commit f2d8855](https://github.com/googleapis/google-cloud-dotnet/commit/f2d8855accef7c793dfec45ad7c86db005224993))
+- Added support for forecast options in AlertPolicy ([commit f2d8855](https://github.com/googleapis/google-cloud-dotnet/commit/f2d8855accef7c793dfec45ad7c86db005224993))
+- Added support for promQL condition type in AlertPolicy ([commit f2d8855](https://github.com/googleapis/google-cloud-dotnet/commit/f2d8855accef7c793dfec45ad7c86db005224993))
+
+## Version 3.3.0, released 2023-05-11
+
+### New features
+
+- Add ICMP pings ([commit d4e696b](https://github.com/googleapis/google-cloud-dotnet/commit/d4e696b126046a162870fabb092118fa58ed3b86))
+- Add basic http authentication ([commit d4e696b](https://github.com/googleapis/google-cloud-dotnet/commit/d4e696b126046a162870fabb092118fa58ed3b86))
+- Add json path matching capabilities ([commit d4e696b](https://github.com/googleapis/google-cloud-dotnet/commit/d4e696b126046a162870fabb092118fa58ed3b86))
+- Add httpStatusCode ([commit d4e696b](https://github.com/googleapis/google-cloud-dotnet/commit/d4e696b126046a162870fabb092118fa58ed3b86))
+- Add individual USA regions ([commit d4e696b](https://github.com/googleapis/google-cloud-dotnet/commit/d4e696b126046a162870fabb092118fa58ed3b86))
+
 ## Version 3.2.0, released 2023-01-16
 
 ### New features

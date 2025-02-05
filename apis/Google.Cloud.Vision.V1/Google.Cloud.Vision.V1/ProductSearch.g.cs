@@ -47,10 +47,10 @@ namespace Google.Cloud.Vision.V1 {
             "EkQKB3Jlc3VsdHMYAiADKAsyMy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlBy",
             "b2R1Y3RTZWFyY2hSZXN1bHRzLlJlc3VsdBJZChJvYmplY3RfYW5ub3RhdGlv",
             "bnMYAyADKAsyPS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlByb2R1Y3RTZWFy",
-            "Y2hSZXN1bHRzLk9iamVjdEFubm90YXRpb25CcAoaY29tLmdvb2dsZS5jbG91",
-            "ZC52aXNpb24udjFCElByb2R1Y3RTZWFyY2hQcm90b1ABWjJjbG91ZC5nb29n",
-            "bGUuY29tL2dvL3Zpc2lvbi9hcGl2MS92aXNpb25wYjt2aXNpb25wYvgBAaIC",
-            "BEdDVk5iBnByb3RvMw=="));
+            "Y2hSZXN1bHRzLk9iamVjdEFubm90YXRpb25CcwoaY29tLmdvb2dsZS5jbG91",
+            "ZC52aXNpb24udjFCElByb2R1Y3RTZWFyY2hQcm90b1ABWjVjbG91ZC5nb29n",
+            "bGUuY29tL2dvL3Zpc2lvbi92Mi9hcGl2MS92aXNpb25wYjt2aXNpb25wYvgB",
+            "AaICBEdDVk5iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1.ProductSearchServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -67,6 +67,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Parameters for a product search request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductSearchParams : pb::IMessage<ProductSearchParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -134,7 +135,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int ProductSetFieldNumber = 6;
     private string productSet_ = "";
     /// <summary>
-    /// The resource name of a [ProductSet][google.cloud.vision.v1.ProductSet] to be searched for similar images.
+    /// The resource name of a [ProductSet][google.cloud.vision.v1.ProductSet] to
+    /// be searched for similar images.
     ///
     /// Format is:
     /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
@@ -397,6 +399,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Results for a product search request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductSearchResults : pb::IMessage<ProductSearchResults>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -667,6 +670,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Information about a product.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Result : pb::IMessage<Result>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -953,6 +957,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// Prediction for what the object in the bounding box is.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ObjectAnnotation : pb::IMessage<ObjectAnnotation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1271,6 +1276,7 @@ namespace Google.Cloud.Vision.V1 {
       /// Information about the products similar to a single product in a query
       /// image.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GroupedResult : pb::IMessage<GroupedResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -116,6 +116,30 @@ namespace Google.Cloud.GkeMultiCloud.V1
         }
     }
 
+    public partial class GetAzureOpenIdConfigRequest
+    {
+        /// <summary>
+        /// <see cref="AzureClusterName"/>-typed view over the <see cref="AzureCluster"/> resource name property.
+        /// </summary>
+        public AzureClusterName AzureClusterAsAzureClusterName
+        {
+            get => string.IsNullOrEmpty(AzureCluster) ? null : AzureClusterName.Parse(AzureCluster, allowUnparsed: true);
+            set => AzureCluster = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAzureJsonWebKeysRequest
+    {
+        /// <summary>
+        /// <see cref="AzureClusterName"/>-typed view over the <see cref="AzureCluster"/> resource name property.
+        /// </summary>
+        public AzureClusterName AzureClusterAsAzureClusterName
+        {
+            get => string.IsNullOrEmpty(AzureCluster) ? null : AzureClusterName.Parse(AzureCluster, allowUnparsed: true);
+            set => AzureCluster = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetAzureServerConfigRequest
     {
         /// <summary>
@@ -177,6 +201,18 @@ namespace Google.Cloud.GkeMultiCloud.V1
     }
 
     public partial class GenerateAzureAccessTokenRequest
+    {
+        /// <summary>
+        /// <see cref="AzureClusterName"/>-typed view over the <see cref="AzureCluster"/> resource name property.
+        /// </summary>
+        public AzureClusterName AzureClusterAsAzureClusterName
+        {
+            get => string.IsNullOrEmpty(AzureCluster) ? null : AzureClusterName.Parse(AzureCluster, allowUnparsed: true);
+            set => AzureCluster = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GenerateAzureClusterAgentTokenRequest
     {
         /// <summary>
         /// <see cref="AzureClusterName"/>-typed view over the <see cref="AzureCluster"/> resource name property.

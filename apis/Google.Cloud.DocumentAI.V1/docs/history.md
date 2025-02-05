@@ -1,5 +1,126 @@
 # Version history
 
+## Version 3.19.0, released 2024-10-29
+
+### New features
+
+- Updated the exponential backoff settings for the Document AI ProcessDocument and BatchProcessDocuments methods ([commit e8a1148](https://github.com/googleapis/google-cloud-dotnet/commit/e8a11488194f5da2cfada12645ed89bb8301535e))
+- Add RESOURCE_EXHAUSTED to retryable status codes for ProcessDocument method ([commit e8a1148](https://github.com/googleapis/google-cloud-dotnet/commit/e8a11488194f5da2cfada12645ed89bb8301535e))
+- Added an url for issue reporting and api short name ([commit e8a1148](https://github.com/googleapis/google-cloud-dotnet/commit/e8a11488194f5da2cfada12645ed89bb8301535e))
+
+## Version 3.18.0, released 2024-08-05
+
+### New features
+
+- A new field `imageless_mode` is added to message `.google.cloud.documentai.v1.ProcessRequest` ([commit 8bb3707](https://github.com/googleapis/google-cloud-dotnet/commit/8bb3707919368cf60a6ec33d596ecdc865d13f78))
+- A new field `gen_ai_model_info` is added to message `.google.cloud.documentai.v1.ProcessorVersion` ([commit 8bb3707](https://github.com/googleapis/google-cloud-dotnet/commit/8bb3707919368cf60a6ec33d596ecdc865d13f78))
+
+### Documentation improvements
+
+- Update the comment to add a note about `documentai.processors.create` permission ([commit 885982c](https://github.com/googleapis/google-cloud-dotnet/commit/885982cc55f380091fd5c6d01ff00cb47e02d937))
+
+## Version 3.17.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+- Make Layout Parser generally available in V1 ([commit 25c96f8](https://github.com/googleapis/google-cloud-dotnet/commit/25c96f82e50204a67c9a6222c8dd9af5cb8059cb))
+- Make Layout Parser generally available in V1 ([commit 7359623](https://github.com/googleapis/google-cloud-dotnet/commit/735962332f058547aa816eea244e251591973243))
+
+### Documentation improvements
+
+- Clarify the unavailability of some features ([commit b14ce7d](https://github.com/googleapis/google-cloud-dotnet/commit/b14ce7d087969abb5e061692cd34be171439165f))
+
+## Version 3.16.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+### Documentation improvements
+
+- Updated comments ([commit 82af282](https://github.com/googleapis/google-cloud-dotnet/commit/82af28249fdb04f67c826406ed705581282eaa96))
+
+## Version 3.15.0, released 2024-04-19
+
+### New features
+
+- A new message `FoundationModelTuningOptions` is added ([commit 409c062](https://github.com/googleapis/google-cloud-dotnet/commit/409c0621ce109d3dad62b578232b09a461e9fb93))
+- A new field `foundation_model_tuning_options` is added to message `.google.cloud.documentai.v1.TrainProcessorVersionRequest` ([commit 409c062](https://github.com/googleapis/google-cloud-dotnet/commit/409c0621ce109d3dad62b578232b09a461e9fb93))
+
+### Documentation improvements
+
+- Updated comments ([commit 409c062](https://github.com/googleapis/google-cloud-dotnet/commit/409c0621ce109d3dad62b578232b09a461e9fb93))
+
+## Version 3.14.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.13.0, released 2024-03-13
+
+No API surface changes; just dependency updates.
+
+## Version 3.12.0, released 2024-02-20
+
+### New features
+
+- A new field `schema_override` is added to message `ProcessOptions` ([commit 15870cf](https://github.com/googleapis/google-cloud-dotnet/commit/15870cff4fed13b393950f7382309eb698929bdd))
+- A new field `labels` is added to messages `ProcessRequest` and `BatchProcessRequest` ([commit 15870cf](https://github.com/googleapis/google-cloud-dotnet/commit/15870cff4fed13b393950f7382309eb698929bdd))
+- A new field `display_name` is added to message `DocumentSchema` ([commit 15870cf](https://github.com/googleapis/google-cloud-dotnet/commit/15870cff4fed13b393950f7382309eb698929bdd))
+
+### Documentation improvements
+
+- Updated comments ([commit 15870cf](https://github.com/googleapis/google-cloud-dotnet/commit/15870cff4fed13b393950f7382309eb698929bdd))
+
+## Version 3.11.0, released 2024-02-09
+
+### New features
+
+- Expose model_type in v1 processor, so that user can see the model_type after get or list processor version ([commit 307fadd](https://github.com/googleapis/google-cloud-dotnet/commit/307fadd18a9a0e4c8ae7184061b6d6fd4a90f295))
+
+### Documentation improvements
+
+- Clarify Properties documentation ([commit 89e17b5](https://github.com/googleapis/google-cloud-dotnet/commit/89e17b50c34e72c421ac3eebb0b2078f009ea066))
+- Updated comments ([commit 86a7453](https://github.com/googleapis/google-cloud-dotnet/commit/86a745358ae56aac9b878ad0e68560210b1e3bc7))
+- Minor comment update ([commit 4c3b325](https://github.com/googleapis/google-cloud-dotnet/commit/4c3b3257925feb320332f19764bf4a6c75a5cbc8))
+
+## Version 3.10.0, released 2023-09-26
+
+### Bug fixes
+
+- `OcrConfig.compute_style_info` is deprecated. Use `PremiumFeatures.compute_style_info` instead. ([commit 8f008d6](https://github.com/googleapis/google-cloud-dotnet/commit/8f008d65ca5544d9410bb45552dfaae735158419))
+
+### New features
+
+- [Google.Cloud.DocumentAI.V1] make `page_range` field public ([issue 11086](https://github.com/googleapis/google-cloud-dotnet/issues/11086)) ([commit 8f008d6](https://github.com/googleapis/google-cloud-dotnet/commit/8f008d65ca5544d9410bb45552dfaae735158419))
+
+## Version 3.9.0, released 2023-09-25
+
+### Bug fixes
+
+- Deprecated OcrConfig.compute_style_info ([commit ab6b622](https://github.com/googleapis/google-cloud-dotnet/commit/ab6b622e7e2a1a79fe808f860ed21d90ded49a58))
+
+### New features
+
+- Added field Processor.processor_version_aliases ([commit ab6b622](https://github.com/googleapis/google-cloud-dotnet/commit/ab6b622e7e2a1a79fe808f860ed21d90ded49a58))
+- Added field RawDocument.display_name ([commit ab6b622](https://github.com/googleapis/google-cloud-dotnet/commit/ab6b622e7e2a1a79fe808f860ed21d90ded49a58))
+
+## Version 3.8.0, released 2023-08-04
+
+### New features
+
+- Added http configuration and document publishing for v1beta2 ([commit 0090f90](https://github.com/googleapis/google-cloud-dotnet/commit/0090f900aca37d59a2948fe0000644383f752778))
+- Added ImportDocuments, GetDocument and BatchDeleteDocuments RPCs for v1beta3 ([commit 0090f90](https://github.com/googleapis/google-cloud-dotnet/commit/0090f900aca37d59a2948fe0000644383f752778))
+
+## Version 3.7.0, released 2023-06-20
+
+### New features
+
+- Add StyleInfo to document.proto ([commit 0fc4862](https://github.com/googleapis/google-cloud-dotnet/commit/0fc486293b62365947555b688ae8c203657308b1))
+- Add IMPORTING enum to State in processor.proto ([commit 0fc4862](https://github.com/googleapis/google-cloud-dotnet/commit/0fc486293b62365947555b688ae8c203657308b1))
+
 ## Version 3.6.0, released 2023-02-22
 
 ### New features

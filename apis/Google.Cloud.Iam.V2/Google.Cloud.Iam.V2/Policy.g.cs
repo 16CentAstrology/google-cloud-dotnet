@@ -55,22 +55,22 @@ namespace Google.Cloud.Iam.V2 {
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAy0AYKCFBvbGljaWVz",
             "EoMBCgxMaXN0UG9saWNpZXMSIi5nb29nbGUuaWFtLnYyLkxpc3RQb2xpY2ll",
             "c1JlcXVlc3QaIy5nb29nbGUuaWFtLnYyLkxpc3RQb2xpY2llc1Jlc3BvbnNl",
-            "IiqC0+STAhsSGS92Mi97cGFyZW50PXBvbGljaWVzLyovKn3aQQZwYXJlbnQS",
+            "IiraQQZwYXJlbnSC0+STAhsSGS92Mi97cGFyZW50PXBvbGljaWVzLyovKn0S",
             "bQoJR2V0UG9saWN5Eh8uZ29vZ2xlLmlhbS52Mi5HZXRQb2xpY3lSZXF1ZXN0",
-            "GhUuZ29vZ2xlLmlhbS52Mi5Qb2xpY3kiKILT5JMCGxIZL3YyL3tuYW1lPXBv",
-            "bGljaWVzLyovKi8qfdpBBG5hbWUSugEKDENyZWF0ZVBvbGljeRIiLmdvb2ds",
+            "GhUuZ29vZ2xlLmlhbS52Mi5Qb2xpY3kiKNpBBG5hbWWC0+STAhsSGS92Mi97",
+            "bmFtZT1wb2xpY2llcy8qLyovKn0SugEKDENyZWF0ZVBvbGljeRIiLmdvb2ds",
             "ZS5pYW0udjIuQ3JlYXRlUG9saWN5UmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24iZ4LT5JMCIyIZL3YyL3twYXJlbnQ9cG9saWNpZXMv",
-            "Ki8qfToGcG9saWN52kEXcGFyZW50LHBvbGljeSxwb2xpY3lfaWTKQSEKBlBv",
-            "bGljeRIXUG9saWN5T3BlcmF0aW9uTWV0YWRhdGESpwEKDFVwZGF0ZVBvbGlj",
+            "bmluZy5PcGVyYXRpb24iZ8pBIQoGUG9saWN5EhdQb2xpY3lPcGVyYXRpb25N",
+            "ZXRhZGF0YdpBF3BhcmVudCxwb2xpY3kscG9saWN5X2lkgtPkkwIjIhkvdjIv",
+            "e3BhcmVudD1wb2xpY2llcy8qLyp9OgZwb2xpY3kSpwEKDFVwZGF0ZVBvbGlj",
             "eRIiLmdvb2dsZS5pYW0udjIuVXBkYXRlUG9saWN5UmVxdWVzdBodLmdvb2ds",
-            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24iVILT5JMCKhogL3YyL3twb2xpY3ku",
-            "bmFtZT1wb2xpY2llcy8qLyovKn06BnBvbGljecpBIQoGUG9saWN5EhdQb2xp",
-            "Y3lPcGVyYXRpb25NZXRhZGF0YRKfAQoMRGVsZXRlUG9saWN5EiIuZ29vZ2xl",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24iVMpBIQoGUG9saWN5EhdQb2xpY3lP",
+            "cGVyYXRpb25NZXRhZGF0YYLT5JMCKhogL3YyL3twb2xpY3kubmFtZT1wb2xp",
+            "Y2llcy8qLyovKn06BnBvbGljeRKfAQoMRGVsZXRlUG9saWN5EiIuZ29vZ2xl",
             "LmlhbS52Mi5EZWxldGVQb2xpY3lSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5u",
-            "aW5nLk9wZXJhdGlvbiJMgtPkkwIbKhkvdjIve25hbWU9cG9saWNpZXMvKi8q",
-            "Lyp92kEEbmFtZcpBIQoGUG9saWN5EhdQb2xpY3lPcGVyYXRpb25NZXRhZGF0",
-            "YRpGykESaWFtLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
+            "aW5nLk9wZXJhdGlvbiJMykEhCgZQb2xpY3kSF1BvbGljeU9wZXJhdGlvbk1l",
+            "dGFkYXRh2kEEbmFtZYLT5JMCGyoZL3YyL3tuYW1lPXBvbGljaWVzLyovKi8q",
+            "fRpGykESaWFtLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
             "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJ5ChFjb20uZ29vZ2xlLmlh",
             "bS52MkILUG9saWN5UHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9pYW0v",
             "YXBpdjIvaWFtcGI7aWFtcGKqAhNHb29nbGUuQ2xvdWQuSWFtLlYyygITR29v",
@@ -96,6 +96,7 @@ namespace Google.Cloud.Iam.V2 {
   /// <summary>
   /// Data for an IAM policy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Policy : pb::IMessage<Policy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -544,7 +545,7 @@ namespace Google.Cloud.Iam.V2 {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -716,6 +717,7 @@ namespace Google.Cloud.Iam.V2 {
   /// <summary>
   /// A single rule in a `Policy`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyRule : pb::IMessage<PolicyRule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -995,6 +997,7 @@ namespace Google.Cloud.Iam.V2 {
   /// <summary>
   /// Request message for `ListPolicies`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPoliciesRequest : pb::IMessage<ListPoliciesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1282,6 +1285,7 @@ namespace Google.Cloud.Iam.V2 {
   /// <summary>
   /// Response message for `ListPolicies`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPoliciesResponse : pb::IMessage<ListPoliciesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1507,6 +1511,7 @@ namespace Google.Cloud.Iam.V2 {
   /// <summary>
   /// Request message for `GetPolicy`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPolicyRequest : pb::IMessage<GetPolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1710,6 +1715,7 @@ namespace Google.Cloud.Iam.V2 {
   /// <summary>
   /// Request message for `CreatePolicy`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreatePolicyRequest : pb::IMessage<CreatePolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2006,6 +2012,7 @@ namespace Google.Cloud.Iam.V2 {
   /// <summary>
   /// Request message for `UpdatePolicy`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdatePolicyRequest : pb::IMessage<UpdatePolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2214,6 +2221,7 @@ namespace Google.Cloud.Iam.V2 {
   /// <summary>
   /// Request message for `DeletePolicy`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeletePolicyRequest : pb::IMessage<DeletePolicyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2462,6 +2470,7 @@ namespace Google.Cloud.Iam.V2 {
   /// <summary>
   /// Metadata for long-running `Policy` operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyOperationMetadata : pb::IMessage<PolicyOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

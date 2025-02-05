@@ -1,5 +1,35 @@
 # Version history
 
+## Version 3.7.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.6.0, released 2024-04-18
+
+No API surface changes; just promotion to GA.
+
+## Version 3.6.0-alpha01, released 2024-03-20
+
+Experimental release targeting netstandard2.0 instead of netstandard2.1.
+
+## Version 3.5.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 3.4.0, released 2024-01-30
+
+### New features
+
+- Support API keys directly in the Language library ([commit 33aad2c](https://github.com/googleapis/google-cloud-dotnet/commit/33aad2ce86593aedf4ee4073952227bb82d35d38))
+
+## Version 3.3.0, released 2023-05-26
+
+### New features
+
+- Added support for ModerateText ([commit 0af8e03](https://github.com/googleapis/google-cloud-dotnet/commit/0af8e03d9dbb5ccb1f8c72243bfa6934ed961cb0))
+
 ## Version 3.2.0, released 2023-01-16
 
 ### New features

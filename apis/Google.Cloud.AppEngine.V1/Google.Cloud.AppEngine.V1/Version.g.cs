@@ -232,6 +232,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// A Version resource is a specific set of source code and configuration files
   /// that are deployed into a service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Version : pb::IMessage<Version>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1589,7 +1590,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (other.AppEngineApis != false) {
         AppEngineApis = other.AppEngineApis;
       }
-      betaSettings_.Add(other.betaSettings_);
+      betaSettings_.MergeFrom(other.betaSettings_);
       if (other.Env.Length != 0) {
         Env = other.Env;
       }
@@ -1626,8 +1627,8 @@ namespace Google.Cloud.AppEngine.V1 {
         }
         ApiConfig.MergeFrom(other.ApiConfig);
       }
-      envVariables_.Add(other.envVariables_);
-      buildEnvVariables_.Add(other.buildEnvVariables_);
+      envVariables_.MergeFrom(other.envVariables_);
+      buildEnvVariables_.MergeFrom(other.buildEnvVariables_);
       if (other.defaultExpiration_ != null) {
         if (defaultExpiration_ == null) {
           DefaultExpiration = new global::Google.Protobuf.WellKnownTypes.Duration();
@@ -2173,6 +2174,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// The fields here refer to the name and configuration ID of a "service"
   /// resource in the [Service Management API](https://cloud.google.com/service-management/overview).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EndpointsApiService : pb::IMessage<EndpointsApiService>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2530,6 +2532,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// Automatic scaling is based on request rate, response latencies, and other
   /// application metrics.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutomaticScaling : pb::IMessage<AutomaticScaling>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3294,6 +3297,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// idle. Basic scaling is ideal for work that is intermittent or driven by
   /// user activity.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BasicScaling : pb::IMessage<BasicScaling>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3540,6 +3544,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// A service with manual scaling runs continuously, allowing you to perform
   /// complex initialization and rely on the state of its memory over time.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ManualScaling : pb::IMessage<ManualScaling>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3738,6 +3743,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Target scaling by CPU usage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CpuUtilization : pb::IMessage<CpuUtilization>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3984,6 +3990,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// Target scaling by request utilization.
   /// Only applicable in the App Engine flexible environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RequestUtilization : pb::IMessage<RequestUtilization>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4220,6 +4227,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// Target scaling by disk usage.
   /// Only applicable in the App Engine flexible environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiskUtilization : pb::IMessage<DiskUtilization>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4536,6 +4544,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// Target scaling by network usage.
   /// Only applicable in the App Engine flexible environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NetworkUtilization : pb::IMessage<NetworkUtilization>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4851,6 +4860,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Scheduler settings for standard environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StandardSchedulerSettings : pb::IMessage<StandardSchedulerSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5169,6 +5179,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// Extra network settings.
   /// Only applicable in the App Engine flexible environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Network : pb::IMessage<Network>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5538,6 +5549,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// Volumes mounted within the app container.
   /// Only applicable in the App Engine flexible environment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Volume : pb::IMessage<Volume>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5813,6 +5825,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// Machine resources for a version.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Resources : pb::IMessage<Resources>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6158,6 +6171,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// VPC access connector specification.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VpcAccessConnector : pb::IMessage<VpcAccessConnector>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6421,6 +6435,7 @@ namespace Google.Cloud.AppEngine.V1 {
   /// <summary>
   /// The entrypoint for the application.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Entrypoint : pb::IMessage<Entrypoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6478,10 +6493,24 @@ namespace Google.Cloud.AppEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Shell {
-      get { return commandCase_ == CommandOneofCase.Shell ? (string) command_ : ""; }
+      get { return HasShell ? (string) command_ : ""; }
       set {
         command_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         commandCase_ = CommandOneofCase.Shell;
+      }
+    }
+    /// <summary>Gets whether the "shell" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasShell {
+      get { return commandCase_ == CommandOneofCase.Shell; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "shell" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearShell() {
+      if (HasShell) {
+        ClearCommand();
       }
     }
 
@@ -6529,7 +6558,7 @@ namespace Google.Cloud.AppEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (commandCase_ == CommandOneofCase.Shell) hash ^= Shell.GetHashCode();
+      if (HasShell) hash ^= Shell.GetHashCode();
       hash ^= (int) commandCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6549,7 +6578,7 @@ namespace Google.Cloud.AppEngine.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (commandCase_ == CommandOneofCase.Shell) {
+      if (HasShell) {
         output.WriteRawTag(10);
         output.WriteString(Shell);
       }
@@ -6563,7 +6592,7 @@ namespace Google.Cloud.AppEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (commandCase_ == CommandOneofCase.Shell) {
+      if (HasShell) {
         output.WriteRawTag(10);
         output.WriteString(Shell);
       }
@@ -6577,7 +6606,7 @@ namespace Google.Cloud.AppEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (commandCase_ == CommandOneofCase.Shell) {
+      if (HasShell) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Shell);
       }
       if (_unknownFields != null) {

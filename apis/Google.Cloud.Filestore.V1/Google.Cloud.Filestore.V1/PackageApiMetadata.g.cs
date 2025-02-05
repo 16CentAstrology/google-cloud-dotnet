@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,9 +16,10 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.Filestore.V1
@@ -31,6 +32,16 @@ namespace Google.Cloud.Filestore.V1
             .WithRequestNumericEnumJsonEncoding(true)
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
+                {
+                    "google.cloud.location.Locations.GetLocation",
+                    // { "get": "/v1/{name=projects/*/locations/*}" }
+                    proto::ByteString.FromBase64("EiEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0=")
+                },
+                {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v1/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("Eh8vdjEve25hbWU9cHJvamVjdHMvKn0vbG9jYXRpb25z")
+                },
                 {
                     "google.longrunning.Operations.CancelOperation",
                     // { "post": "/v1/{name=projects/*/locations/*/operations/*}:cancel", "body": "*" }
@@ -56,6 +67,7 @@ namespace Google.Cloud.Filestore.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return CloudFilestoreServiceReflection.Descriptor;
+            yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }

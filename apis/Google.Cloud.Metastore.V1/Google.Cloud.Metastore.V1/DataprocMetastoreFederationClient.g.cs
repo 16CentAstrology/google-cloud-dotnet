@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Metastore.V1
 {
@@ -239,14 +239,14 @@ namespace Google.Cloud.Metastore.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DataprocMetastoreFederationClient.Create(callInvoker, Settings, Logger);
+            return DataprocMetastoreFederationClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<DataprocMetastoreFederationClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DataprocMetastoreFederationClient.Create(callInvoker, Settings, Logger);
+            return DataprocMetastoreFederationClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -380,8 +380,8 @@ namespace Google.Cloud.Metastore.V1
         /// Lists federations in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore federations
-        /// to list, in the following form:
+        /// Required. The relative resource name of the location of metastore
+        /// federations to list, in the following form:
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -394,20 +394,29 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Federation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFederationsResponse, Federation> ListFederations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFederations(new ListFederationsRequest
+        public virtual gax::PagedEnumerable<ListFederationsResponse, Federation> ListFederations(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFederationsRequest request = new ListFederationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFederations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists federations in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore federations
-        /// to list, in the following form:
+        /// Required. The relative resource name of the location of metastore
+        /// federations to list, in the following form:
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -420,20 +429,29 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Federation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFederationsResponse, Federation> ListFederationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFederationsAsync(new ListFederationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFederationsResponse, Federation> ListFederationsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFederationsRequest request = new ListFederationsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFederationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists federations in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore federations
-        /// to list, in the following form:
+        /// Required. The relative resource name of the location of metastore
+        /// federations to list, in the following form:
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -446,20 +464,29 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Federation"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFederationsResponse, Federation> ListFederations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFederations(new ListFederationsRequest
+        public virtual gax::PagedEnumerable<ListFederationsResponse, Federation> ListFederations(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFederationsRequest request = new ListFederationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFederations(request, callSettings);
+        }
 
         /// <summary>
         /// Lists federations in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore federations
-        /// to list, in the following form:
+        /// Required. The relative resource name of the location of metastore
+        /// federations to list, in the following form:
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="pageToken">
@@ -472,13 +499,22 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Federation"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFederationsResponse, Federation> ListFederationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFederationsAsync(new ListFederationsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFederationsResponse, Federation> ListFederationsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFederationsRequest request = new ListFederationsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFederationsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a single federation.
@@ -511,8 +547,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single federation.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore federation to retrieve,
-        /// in the following form:
+        /// Required. The relative resource name of the metastore federation to
+        /// retrieve, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
         /// </param>
@@ -528,8 +564,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single federation.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore federation to retrieve,
-        /// in the following form:
+        /// Required. The relative resource name of the metastore federation to
+        /// retrieve, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
         /// </param>
@@ -545,8 +581,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single federation.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore federation to retrieve,
-        /// in the following form:
+        /// Required. The relative resource name of the metastore federation to
+        /// retrieve, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
         /// </param>
@@ -559,8 +595,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single federation.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore federation to retrieve,
-        /// in the following form:
+        /// Required. The relative resource name of the metastore federation to
+        /// retrieve, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
         /// </param>
@@ -576,8 +612,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single federation.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore federation to retrieve,
-        /// in the following form:
+        /// Required. The relative resource name of the metastore federation to
+        /// retrieve, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
         /// </param>
@@ -593,8 +629,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single federation.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore federation to retrieve,
-        /// in the following form:
+        /// Required. The relative resource name of the metastore federation to
+        /// retrieve, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/federations/{federation_id}`.
         /// </param>
@@ -660,8 +696,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore federation in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a federation
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// federation service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -692,8 +728,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore federation in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a federation
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// federation service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -724,8 +760,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore federation in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a federation
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// federation service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -751,8 +787,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore federation in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a federation
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// federation service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -783,8 +819,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore federation in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a federation
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// federation service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -815,8 +851,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore federation in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a federation
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// federation service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -1153,7 +1189,11 @@ namespace Google.Cloud.Metastore.V1
         {
             GrpcClient = grpcClient;
             DataprocMetastoreFederationSettings effectiveSettings = settings ?? DataprocMetastoreFederationSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateFederationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFederationOperationsSettings, logger);
             UpdateFederationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFederationOperationsSettings, logger);
             DeleteFederationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFederationOperationsSettings, logger);

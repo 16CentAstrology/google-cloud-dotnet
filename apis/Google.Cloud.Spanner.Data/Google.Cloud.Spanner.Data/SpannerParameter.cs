@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -147,10 +147,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 throw new ArgumentException(
                     $"{nameof(SpannerDbType)} must be set to one of "
-                    + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float64)},"
+                    + $"({nameof(SpannerDbType.Bool)}, {nameof(SpannerDbType.Int64)}, {nameof(SpannerDbType.Float32)} ,{nameof(SpannerDbType.Float64)},"
                     + $" {nameof(SpannerDbType.Timestamp)}, {nameof(SpannerDbType.Date)}, {nameof(SpannerDbType.String)},"
                     + $" {nameof(SpannerDbType.Bytes)}, {nameof(SpannerDbType.Json)}, {nameof(SpannerDbType.PgJsonb)}, {nameof(SpannerDbType.Numeric)},"
-                    + $" {nameof(SpannerDbType.PgNumeric)})");
+                    + $" {nameof(SpannerDbType.PgNumeric)}, {nameof(SpannerDbType.PgOid)})");
             }
             return Value;
         }
@@ -166,6 +166,11 @@ namespace Google.Cloud.Spanner.Data
             // Only if SpannerDbType of parameter is not explicitly provided by user.
             if (_spannerDbType == null)
             {
+                if (Value is float)
+                {
+                    return options.SingleToConfiguredSpannerType;
+                }
+
                 if (Value is decimal)
                 {
                     return options.DecimalToConfiguredSpannerType;

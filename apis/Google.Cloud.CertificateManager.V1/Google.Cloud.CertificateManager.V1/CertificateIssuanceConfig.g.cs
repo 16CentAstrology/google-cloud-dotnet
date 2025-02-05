@@ -103,6 +103,7 @@ namespace Google.Cloud.CertificateManager.V1 {
   /// <summary>
   /// Request for the `ListCertificateIssuanceConfigs` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCertificateIssuanceConfigsRequest : pb::IMessage<ListCertificateIssuanceConfigsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -221,7 +222,7 @@ namespace Google.Cloud.CertificateManager.V1 {
     /// <summary>
     /// A list of Certificate Config field names used to specify the order of the
     /// returned results. The default sorting order is ascending. To specify
-    /// descending order for a field, add a suffix " desc".
+    /// descending order for a field, add a suffix `" desc"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -464,6 +465,7 @@ namespace Google.Cloud.CertificateManager.V1 {
   /// <summary>
   /// Response for the `ListCertificateIssuanceConfigs` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCertificateIssuanceConfigsResponse : pb::IMessage<ListCertificateIssuanceConfigsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -719,6 +721,7 @@ namespace Google.Cloud.CertificateManager.V1 {
   /// <summary>
   /// Request for the `GetCertificateIssuanceConfig` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetCertificateIssuanceConfigRequest : pb::IMessage<GetCertificateIssuanceConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -915,6 +918,7 @@ namespace Google.Cloud.CertificateManager.V1 {
   /// <summary>
   /// Request for the `CreateCertificateIssuanceConfig` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateCertificateIssuanceConfigRequest : pb::IMessage<CreateCertificateIssuanceConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1200,6 +1204,7 @@ namespace Google.Cloud.CertificateManager.V1 {
   /// <summary>
   /// Request for the `DeleteCertificateIssuanceConfig` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteCertificateIssuanceConfigRequest : pb::IMessage<DeleteCertificateIssuanceConfigRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1396,6 +1401,7 @@ namespace Google.Cloud.CertificateManager.V1 {
   /// <summary>
   /// CertificateIssuanceConfig specifies how to issue and manage a certificate.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CertificateIssuanceConfig : pb::IMessage<CertificateIssuanceConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1783,7 +1789,7 @@ namespace Google.Cloud.CertificateManager.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
@@ -1963,6 +1969,7 @@ namespace Google.Cloud.CertificateManager.V1 {
       /// The CA that issues the workload certificate. It includes CA address, type,
       /// authentication to CA service, etc.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CertificateAuthorityConfig : pb::IMessage<CertificateAuthorityConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2204,6 +2211,7 @@ namespace Google.Cloud.CertificateManager.V1 {
           /// <summary>
           /// Contains information required to contact CA service.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class CertificateAuthorityServiceConfig : pb::IMessage<CertificateAuthorityServiceConfig>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage

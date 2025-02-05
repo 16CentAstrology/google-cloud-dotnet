@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.SecretManager.V1Beta1
 {
@@ -308,14 +308,14 @@ namespace Google.Cloud.SecretManager.V1Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return SecretManagerServiceClient.Create(callInvoker, Settings, Logger);
+            return SecretManagerServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<SecretManagerServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return SecretManagerServiceClient.Create(callInvoker, Settings, Logger);
+            return SecretManagerServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -450,13 +450,22 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Secret"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSecretsResponse, Secret> ListSecrets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSecrets(new ListSecretsRequest
+        public virtual gax::PagedEnumerable<ListSecretsResponse, Secret> ListSecrets(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSecretsRequest request = new ListSecretsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSecrets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Secrets][google.cloud.secrets.v1beta1.Secret].
@@ -475,13 +484,22 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Secret"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSecretsResponse, Secret> ListSecretsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSecretsAsync(new ListSecretsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSecretsResponse, Secret> ListSecretsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSecretsRequest request = new ListSecretsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSecretsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Secrets][google.cloud.secrets.v1beta1.Secret].
@@ -500,13 +518,22 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Secret"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSecretsResponse, Secret> ListSecrets(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSecrets(new ListSecretsRequest
+        public virtual gax::PagedEnumerable<ListSecretsResponse, Secret> ListSecrets(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSecretsRequest request = new ListSecretsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSecrets(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [Secrets][google.cloud.secrets.v1beta1.Secret].
@@ -525,13 +552,22 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Secret"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSecretsResponse, Secret> ListSecretsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSecretsAsync(new ListSecretsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSecretsResponse, Secret> ListSecretsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSecretsRequest request = new ListSecretsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSecretsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Creates a new [Secret][google.cloud.secrets.v1beta1.Secret] containing no [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion].
@@ -1186,13 +1222,22 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SecretVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSecretVersionsResponse, SecretVersion> ListSecretVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSecretVersions(new ListSecretVersionsRequest
+        public virtual gax::PagedEnumerable<ListSecretVersionsResponse, SecretVersion> ListSecretVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSecretVersionsRequest request = new ListSecretVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSecretVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
@@ -1213,13 +1258,22 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SecretVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSecretVersionsResponse, SecretVersion> ListSecretVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSecretVersionsAsync(new ListSecretVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSecretVersionsResponse, SecretVersion> ListSecretVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSecretVersionsRequest request = new ListSecretVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSecretVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
@@ -1240,13 +1294,22 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SecretVersion"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSecretVersionsResponse, SecretVersion> ListSecretVersions(SecretName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSecretVersions(new ListSecretVersionsRequest
+        public virtual gax::PagedEnumerable<ListSecretVersionsResponse, SecretVersion> ListSecretVersions(SecretName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSecretVersionsRequest request = new ListSecretVersionsRequest
             {
                 ParentAsSecretName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSecretVersions(request, callSettings);
+        }
 
         /// <summary>
         /// Lists [SecretVersions][google.cloud.secrets.v1beta1.SecretVersion]. This call does not return secret
@@ -1267,13 +1330,22 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SecretVersion"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSecretVersionsResponse, SecretVersion> ListSecretVersionsAsync(SecretName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSecretVersionsAsync(new ListSecretVersionsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSecretVersionsResponse, SecretVersion> ListSecretVersionsAsync(SecretName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSecretVersionsRequest request = new ListSecretVersionsRequest
             {
                 ParentAsSecretName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSecretVersionsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets metadata for a [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion].
@@ -2154,7 +2226,11 @@ namespace Google.Cloud.SecretManager.V1Beta1
         {
             GrpcClient = grpcClient;
             SecretManagerServiceSettings effectiveSettings = settings ?? SecretManagerServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListSecrets = clientHelper.BuildApiCall<ListSecretsRequest, ListSecretsResponse>("ListSecrets", grpcClient.ListSecretsAsync, grpcClient.ListSecrets, effectiveSettings.ListSecretsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSecrets);
             Modify_ListSecretsApiCall(ref _callListSecrets);

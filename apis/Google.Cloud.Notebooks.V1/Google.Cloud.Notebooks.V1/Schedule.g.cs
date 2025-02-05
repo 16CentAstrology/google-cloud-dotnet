@@ -59,6 +59,7 @@ namespace Google.Cloud.Notebooks.V1 {
   /// <summary>
   /// The definition of a schedule.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Schedule : pb::IMessage<Schedule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

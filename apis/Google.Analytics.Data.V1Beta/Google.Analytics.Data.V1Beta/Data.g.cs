@@ -43,154 +43,165 @@ namespace Google.Analytics.Data.V1Beta {
             "Q29uY2F0ZW5hdGVFeHByZXNzaW9uEhcKD2RpbWVuc2lvbl9uYW1lcxgBIAMo",
             "CRIRCglkZWxpbWl0ZXIYAiABKAlCEAoOb25lX2V4cHJlc3Npb24iPQoGTWV0",
             "cmljEgwKBG5hbWUYASABKAkSEgoKZXhwcmVzc2lvbhgCIAEoCRIRCglpbnZp",
-            "c2libGUYAyABKAgirQIKEEZpbHRlckV4cHJlc3Npb24SRwoJYW5kX2dyb3Vw",
-            "GAEgASgLMjIuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5GaWx0ZXJF",
-            "eHByZXNzaW9uTGlzdEgAEkYKCG9yX2dyb3VwGAIgASgLMjIuZ29vZ2xlLmFu",
-            "YWx5dGljcy5kYXRhLnYxYmV0YS5GaWx0ZXJFeHByZXNzaW9uTGlzdEgAEkgK",
-            "Dm5vdF9leHByZXNzaW9uGAMgASgLMi4uZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
-            "LnYxYmV0YS5GaWx0ZXJFeHByZXNzaW9uSAASNgoGZmlsdGVyGAQgASgLMiQu",
-            "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5GaWx0ZXJIAEIGCgRleHBy",
-            "IlsKFEZpbHRlckV4cHJlc3Npb25MaXN0EkMKC2V4cHJlc3Npb25zGAEgAygL",
+            "c2libGUYAyABKAginAEKCkNvbXBhcmlzb24SEQoEbmFtZRgBIAEoCUgBiAEB",
+            "EkoKEGRpbWVuc2lvbl9maWx0ZXIYAiABKAsyLi5nb29nbGUuYW5hbHl0aWNz",
+            "LmRhdGEudjFiZXRhLkZpbHRlckV4cHJlc3Npb25IABIUCgpjb21wYXJpc29u",
+            "GAMgASgJSABCEAoOb25lX2NvbXBhcmlzb25CBwoFX25hbWUirQIKEEZpbHRl",
+            "ckV4cHJlc3Npb24SRwoJYW5kX2dyb3VwGAEgASgLMjIuZ29vZ2xlLmFuYWx5",
+            "dGljcy5kYXRhLnYxYmV0YS5GaWx0ZXJFeHByZXNzaW9uTGlzdEgAEkYKCG9y",
+            "X2dyb3VwGAIgASgLMjIuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5G",
+            "aWx0ZXJFeHByZXNzaW9uTGlzdEgAEkgKDm5vdF9leHByZXNzaW9uGAMgASgL",
             "Mi4uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5GaWx0ZXJFeHByZXNz",
-            "aW9uIt4ICgZGaWx0ZXISEgoKZmllbGRfbmFtZRgBIAEoCRJKCg1zdHJpbmdf",
-            "ZmlsdGVyGAMgASgLMjEuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5G",
-            "aWx0ZXIuU3RyaW5nRmlsdGVySAASSwoOaW5fbGlzdF9maWx0ZXIYBCABKAsy",
-            "MS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkZpbHRlci5Jbkxpc3RG",
-            "aWx0ZXJIABJMCg5udW1lcmljX2ZpbHRlchgFIAEoCzIyLmdvb2dsZS5hbmFs",
-            "eXRpY3MuZGF0YS52MWJldGEuRmlsdGVyLk51bWVyaWNGaWx0ZXJIABJMCg5i",
-            "ZXR3ZWVuX2ZpbHRlchgGIAEoCzIyLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
-            "MWJldGEuRmlsdGVyLkJldHdlZW5GaWx0ZXJIABqOAgoMU3RyaW5nRmlsdGVy",
-            "Ek8KCm1hdGNoX3R5cGUYASABKA4yOy5nb29nbGUuYW5hbHl0aWNzLmRhdGEu",
-            "djFiZXRhLkZpbHRlci5TdHJpbmdGaWx0ZXIuTWF0Y2hUeXBlEg0KBXZhbHVl",
-            "GAIgASgJEhYKDmNhc2Vfc2Vuc2l0aXZlGAMgASgIIoUBCglNYXRjaFR5cGUS",
-            "GgoWTUFUQ0hfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUVYQUNUEAESDwoLQkVH",
-            "SU5TX1dJVEgQAhINCglFTkRTX1dJVEgQAxIMCghDT05UQUlOUxAEEg8KC0ZV",
-            "TExfUkVHRVhQEAUSEgoOUEFSVElBTF9SRUdFWFAQBho2CgxJbkxpc3RGaWx0",
-            "ZXISDgoGdmFsdWVzGAEgAygJEhYKDmNhc2Vfc2Vuc2l0aXZlGAIgASgIGqMC",
-            "Cg1OdW1lcmljRmlsdGVyEk8KCW9wZXJhdGlvbhgBIAEoDjI8Lmdvb2dsZS5h",
-            "bmFseXRpY3MuZGF0YS52MWJldGEuRmlsdGVyLk51bWVyaWNGaWx0ZXIuT3Bl",
-            "cmF0aW9uEjkKBXZhbHVlGAIgASgLMiouZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
-            "LnYxYmV0YS5OdW1lcmljVmFsdWUihQEKCU9wZXJhdGlvbhIZChVPUEVSQVRJ",
-            "T05fVU5TUEVDSUZJRUQQABIJCgVFUVVBTBABEg0KCUxFU1NfVEhBThACEhYK",
-            "EkxFU1NfVEhBTl9PUl9FUVVBTBADEhAKDEdSRUFURVJfVEhBThAEEhkKFUdS",
-            "RUFURVJfVEhBTl9PUl9FUVVBTBAFGo0BCg1CZXR3ZWVuRmlsdGVyEj4KCmZy",
-            "b21fdmFsdWUYASABKAsyKi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "Lk51bWVyaWNWYWx1ZRI8Cgh0b192YWx1ZRgCIAEoCzIqLmdvb2dsZS5hbmFs",
-            "eXRpY3MuZGF0YS52MWJldGEuTnVtZXJpY1ZhbHVlQgwKCm9uZV9maWx0ZXIi",
-            "2gUKB09yZGVyQnkSRQoGbWV0cmljGAEgASgLMjMuZ29vZ2xlLmFuYWx5dGlj",
-            "cy5kYXRhLnYxYmV0YS5PcmRlckJ5Lk1ldHJpY09yZGVyQnlIABJLCglkaW1l",
-            "bnNpb24YAiABKAsyNi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk9y",
-            "ZGVyQnkuRGltZW5zaW9uT3JkZXJCeUgAEkMKBXBpdm90GAMgASgLMjIuZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5PcmRlckJ5LlBpdm90T3JkZXJC",
-            "eUgAEgwKBGRlc2MYBCABKAgaJAoNTWV0cmljT3JkZXJCeRITCgttZXRyaWNf",
-            "bmFtZRgBIAEoCRrrAQoQRGltZW5zaW9uT3JkZXJCeRIWCg5kaW1lbnNpb25f",
-            "bmFtZRgBIAEoCRJUCgpvcmRlcl90eXBlGAIgASgOMkAuZ29vZ2xlLmFuYWx5",
-            "dGljcy5kYXRhLnYxYmV0YS5PcmRlckJ5LkRpbWVuc2lvbk9yZGVyQnkuT3Jk",
-            "ZXJUeXBlImkKCU9yZGVyVHlwZRIaChZPUkRFUl9UWVBFX1VOU1BFQ0lGSUVE",
-            "EAASEAoMQUxQSEFOVU1FUklDEAESIQodQ0FTRV9JTlNFTlNJVElWRV9BTFBI",
-            "QU5VTUVSSUMQAhILCgdOVU1FUklDEAMawwEKDFBpdm90T3JkZXJCeRITCgtt",
-            "ZXRyaWNfbmFtZRgBIAEoCRJbChBwaXZvdF9zZWxlY3Rpb25zGAIgAygLMkEu",
-            "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5PcmRlckJ5LlBpdm90T3Jk",
-            "ZXJCeS5QaXZvdFNlbGVjdGlvbhpBCg5QaXZvdFNlbGVjdGlvbhIWCg5kaW1l",
-            "bnNpb25fbmFtZRgBIAEoCRIXCg9kaW1lbnNpb25fdmFsdWUYAiABKAlCDgoM",
-            "b25lX29yZGVyX2J5IsMBCgVQaXZvdBITCgtmaWVsZF9uYW1lcxgBIAMoCRI4",
-            "CglvcmRlcl9ieXMYAiADKAsyJS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
-            "ZXRhLk9yZGVyQnkSDgoGb2Zmc2V0GAMgASgDEg0KBWxpbWl0GAQgASgDEkwK",
-            "E21ldHJpY19hZ2dyZWdhdGlvbnMYBSADKA4yLy5nb29nbGUuYW5hbHl0aWNz",
-            "LmRhdGEudjFiZXRhLk1ldHJpY0FnZ3JlZ2F0aW9uItoBCgpDb2hvcnRTcGVj",
-            "EjUKB2NvaG9ydHMYASADKAsyJC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
-            "ZXRhLkNvaG9ydBJBCg1jb2hvcnRzX3JhbmdlGAIgASgLMiouZ29vZ2xlLmFu",
-            "YWx5dGljcy5kYXRhLnYxYmV0YS5Db2hvcnRzUmFuZ2USUgoWY29ob3J0X3Jl",
-            "cG9ydF9zZXR0aW5ncxgDIAEoCzIyLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
-            "MWJldGEuQ29ob3J0UmVwb3J0U2V0dGluZ3MiZgoGQ29ob3J0EgwKBG5hbWUY",
-            "ASABKAkSEQoJZGltZW5zaW9uGAIgASgJEjsKCmRhdGVfcmFuZ2UYAyABKAsy",
-            "Jy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkRhdGVSYW5nZSLVAQoM",
-            "Q29ob3J0c1JhbmdlEksKC2dyYW51bGFyaXR5GAEgASgOMjYuZ29vZ2xlLmFu",
-            "YWx5dGljcy5kYXRhLnYxYmV0YS5Db2hvcnRzUmFuZ2UuR3JhbnVsYXJpdHkS",
-            "FAoMc3RhcnRfb2Zmc2V0GAIgASgFEhIKCmVuZF9vZmZzZXQYAyABKAUiTgoL",
-            "R3JhbnVsYXJpdHkSGwoXR1JBTlVMQVJJVFlfVU5TUEVDSUZJRUQQABIJCgVE",
-            "QUlMWRABEgoKBldFRUtMWRACEgsKB01PTlRITFkQAyIqChRDb2hvcnRSZXBv",
-            "cnRTZXR0aW5ncxISCgphY2N1bXVsYXRlGAEgASgIIsoFChBSZXNwb25zZU1l",
-            "dGFEYXRhEiAKGGRhdGFfbG9zc19mcm9tX290aGVyX3JvdxgDIAEoCBJyChtz",
-            "Y2hlbWFfcmVzdHJpY3Rpb25fcmVzcG9uc2UYBCABKAsySC5nb29nbGUuYW5h",
-            "bHl0aWNzLmRhdGEudjFiZXRhLlJlc3BvbnNlTWV0YURhdGEuU2NoZW1hUmVz",
-            "dHJpY3Rpb25SZXNwb25zZUgAiAEBEhoKDWN1cnJlbmN5X2NvZGUYBSABKAlI",
-            "AYgBARIWCgl0aW1lX3pvbmUYBiABKAlIAogBARIZCgxlbXB0eV9yZWFzb24Y",
-            "ByABKAlIA4gBARIkChdzdWJqZWN0X3RvX3RocmVzaG9sZGluZxgIIAEoCEgE",
-            "iAEBGr0CChlTY2hlbWFSZXN0cmljdGlvblJlc3BvbnNlEoQBChphY3RpdmVf",
-            "bWV0cmljX3Jlc3RyaWN0aW9ucxgBIAMoCzJgLmdvb2dsZS5hbmFseXRpY3Mu",
-            "ZGF0YS52MWJldGEuUmVzcG9uc2VNZXRhRGF0YS5TY2hlbWFSZXN0cmljdGlv",
-            "blJlc3BvbnNlLkFjdGl2ZU1ldHJpY1Jlc3RyaWN0aW9uGpgBChdBY3RpdmVN",
-            "ZXRyaWNSZXN0cmljdGlvbhIYCgttZXRyaWNfbmFtZRgBIAEoCUgAiAEBElMK",
-            "F3Jlc3RyaWN0ZWRfbWV0cmljX3R5cGVzGAIgAygOMjIuZ29vZ2xlLmFuYWx5",
-            "dGljcy5kYXRhLnYxYmV0YS5SZXN0cmljdGVkTWV0cmljVHlwZUIOCgxfbWV0",
-            "cmljX25hbWVCHgocX3NjaGVtYV9yZXN0cmljdGlvbl9yZXNwb25zZUIQCg5f",
-            "Y3VycmVuY3lfY29kZUIMCgpfdGltZV96b25lQg8KDV9lbXB0eV9yZWFzb25C",
-            "GgoYX3N1YmplY3RfdG9fdGhyZXNob2xkaW5nIh8KD0RpbWVuc2lvbkhlYWRl",
-            "chIMCgRuYW1lGAEgASgJIlQKDE1ldHJpY0hlYWRlchIMCgRuYW1lGAEgASgJ",
-            "EjYKBHR5cGUYAiABKA4yKC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "Lk1ldHJpY1R5cGUidQoLUGl2b3RIZWFkZXISUwoXcGl2b3RfZGltZW5zaW9u",
-            "X2hlYWRlcnMYASADKAsyMi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "LlBpdm90RGltZW5zaW9uSGVhZGVyEhEKCXJvd19jb3VudBgCIAEoBSJeChRQ",
-            "aXZvdERpbWVuc2lvbkhlYWRlchJGChBkaW1lbnNpb25fdmFsdWVzGAEgAygL",
-            "MiwuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5EaW1lbnNpb25WYWx1",
-            "ZSKPAQoDUm93EkYKEGRpbWVuc2lvbl92YWx1ZXMYASADKAsyLC5nb29nbGUu",
-            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLkRpbWVuc2lvblZhbHVlEkAKDW1ldHJp",
-            "Y192YWx1ZXMYAiADKAsyKS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "Lk1ldHJpY1ZhbHVlIi4KDkRpbWVuc2lvblZhbHVlEg8KBXZhbHVlGAEgASgJ",
-            "SABCCwoJb25lX3ZhbHVlIisKC01ldHJpY1ZhbHVlEg8KBXZhbHVlGAQgASgJ",
-            "SABCCwoJb25lX3ZhbHVlIkoKDE51bWVyaWNWYWx1ZRIVCgtpbnQ2NF92YWx1",
-            "ZRgBIAEoA0gAEhYKDGRvdWJsZV92YWx1ZRgCIAEoAUgAQgsKCW9uZV92YWx1",
-            "ZSLjAwoNUHJvcGVydHlRdW90YRJBCg50b2tlbnNfcGVyX2RheRgBIAEoCzIp",
-            "Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUXVvdGFTdGF0dXMSQgoP",
-            "dG9rZW5zX3Blcl9ob3VyGAIgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
-            "LnYxYmV0YS5RdW90YVN0YXR1cxJGChNjb25jdXJyZW50X3JlcXVlc3RzGAMg",
-            "ASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1",
-            "cxJVCiJzZXJ2ZXJfZXJyb3JzX3Blcl9wcm9qZWN0X3Blcl9ob3VyGAQgASgL",
-            "MikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJc",
-            "Cilwb3RlbnRpYWxseV90aHJlc2hvbGRlZF9yZXF1ZXN0c19wZXJfaG91chgF",
-            "IAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUXVvdGFTdGF0",
-            "dXMSTgobdG9rZW5zX3Blcl9wcm9qZWN0X3Blcl9ob3VyGAYgASgLMikuZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cyIyCgtRdW90",
-            "YVN0YXR1cxIQCghjb25zdW1lZBgBIAEoBRIRCglyZW1haW5pbmcYAiABKAUi",
-            "lgEKEURpbWVuc2lvbk1ldGFkYXRhEhAKCGFwaV9uYW1lGAEgASgJEg8KB3Vp",
-            "X25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSHAoUZGVwcmVjYXRl",
-            "ZF9hcGlfbmFtZXMYBCADKAkSGQoRY3VzdG9tX2RlZmluaXRpb24YBSABKAgS",
-            "EAoIY2F0ZWdvcnkYByABKAkikgMKDk1ldHJpY01ldGFkYXRhEhAKCGFwaV9u",
-            "YW1lGAEgASgJEg8KB3VpX25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyAB",
-            "KAkSHAoUZGVwcmVjYXRlZF9hcGlfbmFtZXMYBCADKAkSNgoEdHlwZRgFIAEo",
-            "DjIoLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmljVHlwZRIS",
-            "CgpleHByZXNzaW9uGAYgASgJEhkKEWN1c3RvbV9kZWZpbml0aW9uGAcgASgI",
-            "ElMKD2Jsb2NrZWRfcmVhc29ucxgIIAMoDjI6Lmdvb2dsZS5hbmFseXRpY3Mu",
-            "ZGF0YS52MWJldGEuTWV0cmljTWV0YWRhdGEuQmxvY2tlZFJlYXNvbhIQCghj",
-            "YXRlZ29yeRgKIAEoCSJcCg1CbG9ja2VkUmVhc29uEh4KGkJMT0NLRURfUkVB",
-            "U09OX1VOU1BFQ0lGSUVEEAASFgoSTk9fUkVWRU5VRV9NRVRSSUNTEAESEwoP",
-            "Tk9fQ09TVF9NRVRSSUNTEAIi3AEKFkRpbWVuc2lvbkNvbXBhdGliaWxpdHkS",
-            "UAoSZGltZW5zaW9uX21ldGFkYXRhGAEgASgLMi8uZ29vZ2xlLmFuYWx5dGlj",
-            "cy5kYXRhLnYxYmV0YS5EaW1lbnNpb25NZXRhZGF0YUgAiAEBEkcKDWNvbXBh",
-            "dGliaWxpdHkYAiABKA4yKy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "LkNvbXBhdGliaWxpdHlIAYgBAUIVChNfZGltZW5zaW9uX21ldGFkYXRhQhAK",
-            "Dl9jb21wYXRpYmlsaXR5ItABChNNZXRyaWNDb21wYXRpYmlsaXR5EkoKD21l",
-            "dHJpY19tZXRhZGF0YRgBIAEoCzIsLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
-            "MWJldGEuTWV0cmljTWV0YWRhdGFIAIgBARJHCg1jb21wYXRpYmlsaXR5GAIg",
-            "ASgOMisuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Db21wYXRpYmls",
-            "aXR5SAGIAQFCEgoQX21ldHJpY19tZXRhZGF0YUIQCg5fY29tcGF0aWJpbGl0",
-            "eSpnChFNZXRyaWNBZ2dyZWdhdGlvbhIiCh5NRVRSSUNfQUdHUkVHQVRJT05f",
-            "VU5TUEVDSUZJRUQQABIJCgVUT1RBTBABEgsKB01JTklNVU0QBRILCgdNQVhJ",
-            "TVVNEAYSCQoFQ09VTlQQBCqBAgoKTWV0cmljVHlwZRIbChdNRVRSSUNfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEhAKDFRZUEVfSU5URUdFUhABEg4KClRZUEVfRkxP",
-            "QVQQAhIQCgxUWVBFX1NFQ09ORFMQBBIVChFUWVBFX01JTExJU0VDT05EUxAF",
-            "EhAKDFRZUEVfTUlOVVRFUxAGEg4KClRZUEVfSE9VUlMQBxIRCg1UWVBFX1NU",
-            "QU5EQVJEEAgSEQoNVFlQRV9DVVJSRU5DWRAJEg0KCVRZUEVfRkVFVBAKEg4K",
-            "ClRZUEVfTUlMRVMQCxIPCgtUWVBFX01FVEVSUxAMEhMKD1RZUEVfS0lMT01F",
-            "VEVSUxANKl8KFFJlc3RyaWN0ZWRNZXRyaWNUeXBlEiYKIlJFU1RSSUNURURf",
-            "TUVUUklDX1RZUEVfVU5TUEVDSUZJRUQQABINCglDT1NUX0RBVEEQARIQCgxS",
-            "RVZFTlVFX0RBVEEQAipQCg1Db21wYXRpYmlsaXR5Eh0KGUNPTVBBVElCSUxJ",
-            "VFlfVU5TUEVDSUZJRUQQABIOCgpDT01QQVRJQkxFEAESEAoMSU5DT01QQVRJ",
-            "QkxFEAJCeQogY29tLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGFCEVJl",
-            "cG9ydGluZ0FwaVByb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvYW5hbHl0aWNzL2RhdGEvdjFiZXRhO2RhdGFiBnByb3Rv",
-            "Mw=="));
+            "aW9uSAASNgoGZmlsdGVyGAQgASgLMiQuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYmV0YS5GaWx0ZXJIAEIGCgRleHByIlsKFEZpbHRlckV4cHJlc3Npb25M",
+            "aXN0EkMKC2V4cHJlc3Npb25zGAEgAygLMi4uZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYmV0YS5GaWx0ZXJFeHByZXNzaW9uIrcJCgZGaWx0ZXISEgoKZmll",
+            "bGRfbmFtZRgBIAEoCRJKCg1zdHJpbmdfZmlsdGVyGAMgASgLMjEuZ29vZ2xl",
+            "LmFuYWx5dGljcy5kYXRhLnYxYmV0YS5GaWx0ZXIuU3RyaW5nRmlsdGVySAAS",
+            "SwoOaW5fbGlzdF9maWx0ZXIYBCABKAsyMS5nb29nbGUuYW5hbHl0aWNzLmRh",
+            "dGEudjFiZXRhLkZpbHRlci5Jbkxpc3RGaWx0ZXJIABJMCg5udW1lcmljX2Zp",
+            "bHRlchgFIAEoCzIyLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuRmls",
+            "dGVyLk51bWVyaWNGaWx0ZXJIABJMCg5iZXR3ZWVuX2ZpbHRlchgGIAEoCzIy",
+            "Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuRmlsdGVyLkJldHdlZW5G",
+            "aWx0ZXJIABJICgxlbXB0eV9maWx0ZXIYCCABKAsyMC5nb29nbGUuYW5hbHl0",
+            "aWNzLmRhdGEudjFiZXRhLkZpbHRlci5FbXB0eUZpbHRlckgAGo4CCgxTdHJp",
+            "bmdGaWx0ZXISTwoKbWF0Y2hfdHlwZRgBIAEoDjI7Lmdvb2dsZS5hbmFseXRp",
+            "Y3MuZGF0YS52MWJldGEuRmlsdGVyLlN0cmluZ0ZpbHRlci5NYXRjaFR5cGUS",
+            "DQoFdmFsdWUYAiABKAkSFgoOY2FzZV9zZW5zaXRpdmUYAyABKAgihQEKCU1h",
+            "dGNoVHlwZRIaChZNQVRDSF9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFRVhBQ1QQ",
+            "ARIPCgtCRUdJTlNfV0lUSBACEg0KCUVORFNfV0lUSBADEgwKCENPTlRBSU5T",
+            "EAQSDwoLRlVMTF9SRUdFWFAQBRISCg5QQVJUSUFMX1JFR0VYUBAGGjYKDElu",
+            "TGlzdEZpbHRlchIOCgZ2YWx1ZXMYASADKAkSFgoOY2FzZV9zZW5zaXRpdmUY",
+            "AiABKAgaowIKDU51bWVyaWNGaWx0ZXISTwoJb3BlcmF0aW9uGAEgASgOMjwu",
+            "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5GaWx0ZXIuTnVtZXJpY0Zp",
+            "bHRlci5PcGVyYXRpb24SOQoFdmFsdWUYAiABKAsyKi5nb29nbGUuYW5hbHl0",
+            "aWNzLmRhdGEudjFiZXRhLk51bWVyaWNWYWx1ZSKFAQoJT3BlcmF0aW9uEhkK",
+            "FU9QRVJBVElPTl9VTlNQRUNJRklFRBAAEgkKBUVRVUFMEAESDQoJTEVTU19U",
+            "SEFOEAISFgoSTEVTU19USEFOX09SX0VRVUFMEAMSEAoMR1JFQVRFUl9USEFO",
+            "EAQSGQoVR1JFQVRFUl9USEFOX09SX0VRVUFMEAUajQEKDUJldHdlZW5GaWx0",
+            "ZXISPgoKZnJvbV92YWx1ZRgBIAEoCzIqLmdvb2dsZS5hbmFseXRpY3MuZGF0",
+            "YS52MWJldGEuTnVtZXJpY1ZhbHVlEjwKCHRvX3ZhbHVlGAIgASgLMiouZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5OdW1lcmljVmFsdWUaDQoLRW1w",
+            "dHlGaWx0ZXJCDAoKb25lX2ZpbHRlciLaBQoHT3JkZXJCeRJFCgZtZXRyaWMY",
+            "ASABKAsyMy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk9yZGVyQnku",
+            "TWV0cmljT3JkZXJCeUgAEksKCWRpbWVuc2lvbhgCIAEoCzI2Lmdvb2dsZS5h",
+            "bmFseXRpY3MuZGF0YS52MWJldGEuT3JkZXJCeS5EaW1lbnNpb25PcmRlckJ5",
+            "SAASQwoFcGl2b3QYAyABKAsyMi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
+            "ZXRhLk9yZGVyQnkuUGl2b3RPcmRlckJ5SAASDAoEZGVzYxgEIAEoCBokCg1N",
+            "ZXRyaWNPcmRlckJ5EhMKC21ldHJpY19uYW1lGAEgASgJGusBChBEaW1lbnNp",
+            "b25PcmRlckJ5EhYKDmRpbWVuc2lvbl9uYW1lGAEgASgJElQKCm9yZGVyX3R5",
+            "cGUYAiABKA4yQC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk9yZGVy",
+            "QnkuRGltZW5zaW9uT3JkZXJCeS5PcmRlclR5cGUiaQoJT3JkZXJUeXBlEhoK",
+            "Fk9SREVSX1RZUEVfVU5TUEVDSUZJRUQQABIQCgxBTFBIQU5VTUVSSUMQARIh",
+            "Ch1DQVNFX0lOU0VOU0lUSVZFX0FMUEhBTlVNRVJJQxACEgsKB05VTUVSSUMQ",
+            "AxrDAQoMUGl2b3RPcmRlckJ5EhMKC21ldHJpY19uYW1lGAEgASgJElsKEHBp",
+            "dm90X3NlbGVjdGlvbnMYAiADKAsyQS5nb29nbGUuYW5hbHl0aWNzLmRhdGEu",
+            "djFiZXRhLk9yZGVyQnkuUGl2b3RPcmRlckJ5LlBpdm90U2VsZWN0aW9uGkEK",
+            "DlBpdm90U2VsZWN0aW9uEhYKDmRpbWVuc2lvbl9uYW1lGAEgASgJEhcKD2Rp",
+            "bWVuc2lvbl92YWx1ZRgCIAEoCUIOCgxvbmVfb3JkZXJfYnkiwwEKBVBpdm90",
+            "EhMKC2ZpZWxkX25hbWVzGAEgAygJEjgKCW9yZGVyX2J5cxgCIAMoCzIlLmdv",
+            "b2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuT3JkZXJCeRIOCgZvZmZzZXQY",
+            "AyABKAMSDQoFbGltaXQYBCABKAMSTAoTbWV0cmljX2FnZ3JlZ2F0aW9ucxgF",
+            "IAMoDjIvLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmljQWdn",
+            "cmVnYXRpb24i2gEKCkNvaG9ydFNwZWMSNQoHY29ob3J0cxgBIAMoCzIkLmdv",
+            "b2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuQ29ob3J0EkEKDWNvaG9ydHNf",
+            "cmFuZ2UYAiABKAsyKi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkNv",
+            "aG9ydHNSYW5nZRJSChZjb2hvcnRfcmVwb3J0X3NldHRpbmdzGAMgASgLMjIu",
+            "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Db2hvcnRSZXBvcnRTZXR0",
+            "aW5ncyJmCgZDb2hvcnQSDAoEbmFtZRgBIAEoCRIRCglkaW1lbnNpb24YAiAB",
+            "KAkSOwoKZGF0ZV9yYW5nZRgDIAEoCzInLmdvb2dsZS5hbmFseXRpY3MuZGF0",
+            "YS52MWJldGEuRGF0ZVJhbmdlItUBCgxDb2hvcnRzUmFuZ2USSwoLZ3JhbnVs",
+            "YXJpdHkYASABKA4yNi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkNv",
+            "aG9ydHNSYW5nZS5HcmFudWxhcml0eRIUCgxzdGFydF9vZmZzZXQYAiABKAUS",
+            "EgoKZW5kX29mZnNldBgDIAEoBSJOCgtHcmFudWxhcml0eRIbChdHUkFOVUxB",
+            "UklUWV9VTlNQRUNJRklFRBAAEgkKBURBSUxZEAESCgoGV0VFS0xZEAISCwoH",
+            "TU9OVEhMWRADIioKFENvaG9ydFJlcG9ydFNldHRpbmdzEhIKCmFjY3VtdWxh",
+            "dGUYASABKAgilgYKEFJlc3BvbnNlTWV0YURhdGESIAoYZGF0YV9sb3NzX2Zy",
+            "b21fb3RoZXJfcm93GAMgASgIEnIKG3NjaGVtYV9yZXN0cmljdGlvbl9yZXNw",
+            "b25zZRgEIAEoCzJILmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUmVz",
+            "cG9uc2VNZXRhRGF0YS5TY2hlbWFSZXN0cmljdGlvblJlc3BvbnNlSACIAQES",
+            "GgoNY3VycmVuY3lfY29kZRgFIAEoCUgBiAEBEhYKCXRpbWVfem9uZRgGIAEo",
+            "CUgCiAEBEhkKDGVtcHR5X3JlYXNvbhgHIAEoCUgDiAEBEiQKF3N1YmplY3Rf",
+            "dG9fdGhyZXNob2xkaW5nGAggASgISASIAQESSgoSc2FtcGxpbmdfbWV0YWRh",
+            "dGFzGAkgAygLMi4uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5TYW1w",
+            "bGluZ01ldGFkYXRhGr0CChlTY2hlbWFSZXN0cmljdGlvblJlc3BvbnNlEoQB",
+            "ChphY3RpdmVfbWV0cmljX3Jlc3RyaWN0aW9ucxgBIAMoCzJgLmdvb2dsZS5h",
+            "bmFseXRpY3MuZGF0YS52MWJldGEuUmVzcG9uc2VNZXRhRGF0YS5TY2hlbWFS",
+            "ZXN0cmljdGlvblJlc3BvbnNlLkFjdGl2ZU1ldHJpY1Jlc3RyaWN0aW9uGpgB",
+            "ChdBY3RpdmVNZXRyaWNSZXN0cmljdGlvbhIYCgttZXRyaWNfbmFtZRgBIAEo",
+            "CUgAiAEBElMKF3Jlc3RyaWN0ZWRfbWV0cmljX3R5cGVzGAIgAygOMjIuZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5SZXN0cmljdGVkTWV0cmljVHlw",
+            "ZUIOCgxfbWV0cmljX25hbWVCHgocX3NjaGVtYV9yZXN0cmljdGlvbl9yZXNw",
+            "b25zZUIQCg5fY3VycmVuY3lfY29kZUIMCgpfdGltZV96b25lQg8KDV9lbXB0",
+            "eV9yZWFzb25CGgoYX3N1YmplY3RfdG9fdGhyZXNob2xkaW5nIksKEFNhbXBs",
+            "aW5nTWV0YWRhdGESGgoSc2FtcGxlc19yZWFkX2NvdW50GAEgASgDEhsKE3Nh",
+            "bXBsaW5nX3NwYWNlX3NpemUYAiABKAMiHwoPRGltZW5zaW9uSGVhZGVyEgwK",
+            "BG5hbWUYASABKAkiVAoMTWV0cmljSGVhZGVyEgwKBG5hbWUYASABKAkSNgoE",
+            "dHlwZRgCIAEoDjIoLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0",
+            "cmljVHlwZSJ1CgtQaXZvdEhlYWRlchJTChdwaXZvdF9kaW1lbnNpb25faGVh",
+            "ZGVycxgBIAMoCzIyLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUGl2",
+            "b3REaW1lbnNpb25IZWFkZXISEQoJcm93X2NvdW50GAIgASgFIl4KFFBpdm90",
+            "RGltZW5zaW9uSGVhZGVyEkYKEGRpbWVuc2lvbl92YWx1ZXMYASADKAsyLC5n",
+            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkRpbWVuc2lvblZhbHVlIo8B",
+            "CgNSb3cSRgoQZGltZW5zaW9uX3ZhbHVlcxgBIAMoCzIsLmdvb2dsZS5hbmFs",
+            "eXRpY3MuZGF0YS52MWJldGEuRGltZW5zaW9uVmFsdWUSQAoNbWV0cmljX3Zh",
+            "bHVlcxgCIAMoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0",
+            "cmljVmFsdWUiLgoORGltZW5zaW9uVmFsdWUSDwoFdmFsdWUYASABKAlIAEIL",
+            "CglvbmVfdmFsdWUiKwoLTWV0cmljVmFsdWUSDwoFdmFsdWUYBCABKAlIAEIL",
+            "CglvbmVfdmFsdWUiSgoMTnVtZXJpY1ZhbHVlEhUKC2ludDY0X3ZhbHVlGAEg",
+            "ASgDSAASFgoMZG91YmxlX3ZhbHVlGAIgASgBSABCCwoJb25lX3ZhbHVlIuMD",
+            "Cg1Qcm9wZXJ0eVF1b3RhEkEKDnRva2Vuc19wZXJfZGF5GAEgASgLMikuZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJCCg90b2tl",
+            "bnNfcGVyX2hvdXIYAiABKAsyKS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
+            "ZXRhLlF1b3RhU3RhdHVzEkYKE2NvbmN1cnJlbnRfcmVxdWVzdHMYAyABKAsy",
+            "KS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlF1b3RhU3RhdHVzElUK",
+            "InNlcnZlcl9lcnJvcnNfcGVyX3Byb2plY3RfcGVyX2hvdXIYBCABKAsyKS5n",
+            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlF1b3RhU3RhdHVzElwKKXBv",
+            "dGVudGlhbGx5X3RocmVzaG9sZGVkX3JlcXVlc3RzX3Blcl9ob3VyGAUgASgL",
+            "MikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJO",
+            "Cht0b2tlbnNfcGVyX3Byb2plY3RfcGVyX2hvdXIYBiABKAsyKS5nb29nbGUu",
+            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLlF1b3RhU3RhdHVzIlcKC1F1b3RhU3Rh",
+            "dHVzEhUKCGNvbnN1bWVkGAEgASgFSACIAQESFgoJcmVtYWluaW5nGAIgASgF",
+            "SAGIAQFCCwoJX2NvbnN1bWVkQgwKCl9yZW1haW5pbmcilgEKEURpbWVuc2lv",
+            "bk1ldGFkYXRhEhAKCGFwaV9uYW1lGAEgASgJEg8KB3VpX25hbWUYAiABKAkS",
+            "EwoLZGVzY3JpcHRpb24YAyABKAkSHAoUZGVwcmVjYXRlZF9hcGlfbmFtZXMY",
+            "BCADKAkSGQoRY3VzdG9tX2RlZmluaXRpb24YBSABKAgSEAoIY2F0ZWdvcnkY",
+            "ByABKAkikgMKDk1ldHJpY01ldGFkYXRhEhAKCGFwaV9uYW1lGAEgASgJEg8K",
+            "B3VpX25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSHAoUZGVwcmVj",
+            "YXRlZF9hcGlfbmFtZXMYBCADKAkSNgoEdHlwZRgFIAEoDjIoLmdvb2dsZS5h",
+            "bmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmljVHlwZRISCgpleHByZXNzaW9u",
+            "GAYgASgJEhkKEWN1c3RvbV9kZWZpbml0aW9uGAcgASgIElMKD2Jsb2NrZWRf",
+            "cmVhc29ucxgIIAMoDjI6Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEu",
+            "TWV0cmljTWV0YWRhdGEuQmxvY2tlZFJlYXNvbhIQCghjYXRlZ29yeRgKIAEo",
+            "CSJcCg1CbG9ja2VkUmVhc29uEh4KGkJMT0NLRURfUkVBU09OX1VOU1BFQ0lG",
+            "SUVEEAASFgoSTk9fUkVWRU5VRV9NRVRSSUNTEAESEwoPTk9fQ09TVF9NRVRS",
+            "SUNTEAIiTAoSQ29tcGFyaXNvbk1ldGFkYXRhEhAKCGFwaV9uYW1lGAEgASgJ",
+            "Eg8KB3VpX25hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAki3AEKFkRp",
+            "bWVuc2lvbkNvbXBhdGliaWxpdHkSUAoSZGltZW5zaW9uX21ldGFkYXRhGAEg",
+            "ASgLMi8uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5EaW1lbnNpb25N",
+            "ZXRhZGF0YUgAiAEBEkcKDWNvbXBhdGliaWxpdHkYAiABKA4yKy5nb29nbGUu",
+            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLkNvbXBhdGliaWxpdHlIAYgBAUIVChNf",
+            "ZGltZW5zaW9uX21ldGFkYXRhQhAKDl9jb21wYXRpYmlsaXR5ItABChNNZXRy",
+            "aWNDb21wYXRpYmlsaXR5EkoKD21ldHJpY19tZXRhZGF0YRgBIAEoCzIsLmdv",
+            "b2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmljTWV0YWRhdGFIAIgB",
+            "ARJHCg1jb21wYXRpYmlsaXR5GAIgASgOMisuZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYmV0YS5Db21wYXRpYmlsaXR5SAGIAQFCEgoQX21ldHJpY19tZXRh",
+            "ZGF0YUIQCg5fY29tcGF0aWJpbGl0eSpnChFNZXRyaWNBZ2dyZWdhdGlvbhIi",
+            "Ch5NRVRSSUNfQUdHUkVHQVRJT05fVU5TUEVDSUZJRUQQABIJCgVUT1RBTBAB",
+            "EgsKB01JTklNVU0QBRILCgdNQVhJTVVNEAYSCQoFQ09VTlQQBCqBAgoKTWV0",
+            "cmljVHlwZRIbChdNRVRSSUNfVFlQRV9VTlNQRUNJRklFRBAAEhAKDFRZUEVf",
+            "SU5URUdFUhABEg4KClRZUEVfRkxPQVQQAhIQCgxUWVBFX1NFQ09ORFMQBBIV",
+            "ChFUWVBFX01JTExJU0VDT05EUxAFEhAKDFRZUEVfTUlOVVRFUxAGEg4KClRZ",
+            "UEVfSE9VUlMQBxIRCg1UWVBFX1NUQU5EQVJEEAgSEQoNVFlQRV9DVVJSRU5D",
+            "WRAJEg0KCVRZUEVfRkVFVBAKEg4KClRZUEVfTUlMRVMQCxIPCgtUWVBFX01F",
+            "VEVSUxAMEhMKD1RZUEVfS0lMT01FVEVSUxANKl8KFFJlc3RyaWN0ZWRNZXRy",
+            "aWNUeXBlEiYKIlJFU1RSSUNURURfTUVUUklDX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABINCglDT1NUX0RBVEEQARIQCgxSRVZFTlVFX0RBVEEQAipQCg1Db21wYXRp",
+            "YmlsaXR5Eh0KGUNPTVBBVElCSUxJVFlfVU5TUEVDSUZJRUQQABIOCgpDT01Q",
+            "QVRJQkxFEAESEAoMSU5DT01QQVRJQkxFEAJCeQogY29tLmdvb2dsZS5hbmFs",
+            "eXRpY3MuZGF0YS52MWJldGFCEVJlcG9ydGluZ0FwaVByb3RvUAFaQGdvb2ds",
+            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYW5hbHl0aWNzL2Rh",
+            "dGEvdjFiZXRhO2RhdGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Data.V1Beta.MetricAggregation), typeof(global::Google.Analytics.Data.V1Beta.MetricType), typeof(global::Google.Analytics.Data.V1Beta.RestrictedMetricType), typeof(global::Google.Analytics.Data.V1Beta.Compatibility), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -200,12 +211,14 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionExpression), global::Google.Analytics.Data.V1Beta.DimensionExpression.Parser, new[]{ "LowerCase", "UpperCase", "Concatenate" }, new[]{ "OneExpression" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionExpression.Types.CaseExpression), global::Google.Analytics.Data.V1Beta.DimensionExpression.Types.CaseExpression.Parser, new[]{ "DimensionName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionExpression.Types.ConcatenateExpression), global::Google.Analytics.Data.V1Beta.DimensionExpression.Types.ConcatenateExpression.Parser, new[]{ "DimensionNames", "Delimiter" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Metric), global::Google.Analytics.Data.V1Beta.Metric.Parser, new[]{ "Name", "Expression", "Invisible" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Comparison), global::Google.Analytics.Data.V1Beta.Comparison.Parser, new[]{ "Name", "DimensionFilter", "Comparison_" }, new[]{ "OneComparison", "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.FilterExpression), global::Google.Analytics.Data.V1Beta.FilterExpression.Parser, new[]{ "AndGroup", "OrGroup", "NotExpression", "Filter" }, new[]{ "Expr" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.FilterExpressionList), global::Google.Analytics.Data.V1Beta.FilterExpressionList.Parser, new[]{ "Expressions" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Filter), global::Google.Analytics.Data.V1Beta.Filter.Parser, new[]{ "FieldName", "StringFilter", "InListFilter", "NumericFilter", "BetweenFilter" }, new[]{ "OneFilter" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Filter.Types.StringFilter), global::Google.Analytics.Data.V1Beta.Filter.Types.StringFilter.Parser, new[]{ "MatchType", "Value", "CaseSensitive" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.Filter.Types.StringFilter.Types.MatchType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Filter), global::Google.Analytics.Data.V1Beta.Filter.Parser, new[]{ "FieldName", "StringFilter", "InListFilter", "NumericFilter", "BetweenFilter", "EmptyFilter" }, new[]{ "OneFilter" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Filter.Types.StringFilter), global::Google.Analytics.Data.V1Beta.Filter.Types.StringFilter.Parser, new[]{ "MatchType", "Value", "CaseSensitive" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.Filter.Types.StringFilter.Types.MatchType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Filter.Types.InListFilter), global::Google.Analytics.Data.V1Beta.Filter.Types.InListFilter.Parser, new[]{ "Values", "CaseSensitive" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Filter.Types.NumericFilter), global::Google.Analytics.Data.V1Beta.Filter.Types.NumericFilter.Parser, new[]{ "Operation", "Value" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.Filter.Types.NumericFilter.Types.Operation) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Filter.Types.BetweenFilter), global::Google.Analytics.Data.V1Beta.Filter.Types.BetweenFilter.Parser, new[]{ "FromValue", "ToValue" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Filter.Types.BetweenFilter), global::Google.Analytics.Data.V1Beta.Filter.Types.BetweenFilter.Parser, new[]{ "FromValue", "ToValue" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Filter.Types.EmptyFilter), global::Google.Analytics.Data.V1Beta.Filter.Types.EmptyFilter.Parser, null, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.OrderBy), global::Google.Analytics.Data.V1Beta.OrderBy.Parser, new[]{ "Metric", "Dimension", "Pivot", "Desc" }, new[]{ "OneOrderBy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.OrderBy.Types.MetricOrderBy), global::Google.Analytics.Data.V1Beta.OrderBy.Types.MetricOrderBy.Parser, new[]{ "MetricName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.OrderBy.Types.DimensionOrderBy), global::Google.Analytics.Data.V1Beta.OrderBy.Types.DimensionOrderBy.Parser, new[]{ "DimensionName", "OrderType" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.OrderBy.Types.DimensionOrderBy.Types.OrderType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.OrderBy.Types.PivotOrderBy), global::Google.Analytics.Data.V1Beta.OrderBy.Types.PivotOrderBy.Parser, new[]{ "MetricName", "PivotSelections" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.OrderBy.Types.PivotOrderBy.Types.PivotSelection), global::Google.Analytics.Data.V1Beta.OrderBy.Types.PivotOrderBy.Types.PivotSelection.Parser, new[]{ "DimensionName", "DimensionValue" }, null, null, null, null)})}),
@@ -214,7 +227,8 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Cohort), global::Google.Analytics.Data.V1Beta.Cohort.Parser, new[]{ "Name", "Dimension", "DateRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.CohortsRange), global::Google.Analytics.Data.V1Beta.CohortsRange.Parser, new[]{ "Granularity", "StartOffset", "EndOffset" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.CohortsRange.Types.Granularity) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.CohortReportSettings), global::Google.Analytics.Data.V1Beta.CohortReportSettings.Parser, new[]{ "Accumulate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Parser, new[]{ "DataLossFromOtherRow", "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding" }, new[]{ "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Parser, new[]{ "ActiveMetricRestrictions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction.Parser, new[]{ "MetricName", "RestrictedMetricTypes" }, new[]{ "MetricName" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Parser, new[]{ "DataLossFromOtherRow", "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding", "SamplingMetadatas" }, new[]{ "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason", "SubjectToThresholding" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Parser, new[]{ "ActiveMetricRestrictions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction.Parser, new[]{ "MetricName", "RestrictedMetricTypes" }, new[]{ "MetricName" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.SamplingMetadata), global::Google.Analytics.Data.V1Beta.SamplingMetadata.Parser, new[]{ "SamplesReadCount", "SamplingSpaceSize" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionHeader), global::Google.Analytics.Data.V1Beta.DimensionHeader.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricHeader), global::Google.Analytics.Data.V1Beta.MetricHeader.Parser, new[]{ "Name", "Type" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.PivotHeader), global::Google.Analytics.Data.V1Beta.PivotHeader.Parser, new[]{ "PivotDimensionHeaders", "RowCount" }, null, null, null, null),
@@ -224,9 +238,10 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricValue), global::Google.Analytics.Data.V1Beta.MetricValue.Parser, new[]{ "Value" }, new[]{ "OneValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.NumericValue), global::Google.Analytics.Data.V1Beta.NumericValue.Parser, new[]{ "Int64Value", "DoubleValue" }, new[]{ "OneValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.PropertyQuota), global::Google.Analytics.Data.V1Beta.PropertyQuota.Parser, new[]{ "TokensPerDay", "TokensPerHour", "ConcurrentRequests", "ServerErrorsPerProjectPerHour", "PotentiallyThresholdedRequestsPerHour", "TokensPerProjectPerHour" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.QuotaStatus), global::Google.Analytics.Data.V1Beta.QuotaStatus.Parser, new[]{ "Consumed", "Remaining" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.QuotaStatus), global::Google.Analytics.Data.V1Beta.QuotaStatus.Parser, new[]{ "Consumed", "Remaining" }, new[]{ "Consumed", "Remaining" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionMetadata), global::Google.Analytics.Data.V1Beta.DimensionMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "CustomDefinition", "Category" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricMetadata), global::Google.Analytics.Data.V1Beta.MetricMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "Type", "Expression", "CustomDefinition", "BlockedReasons", "Category" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.MetricMetadata.Types.BlockedReason) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ComparisonMetadata), global::Google.Analytics.Data.V1Beta.ComparisonMetadata.Parser, new[]{ "ApiName", "UiName", "Description" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionCompatibility), global::Google.Analytics.Data.V1Beta.DimensionCompatibility.Parser, new[]{ "DimensionMetadata", "Compatibility" }, new[]{ "DimensionMetadata", "Compatibility" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricCompatibility), global::Google.Analytics.Data.V1Beta.MetricCompatibility.Parser, new[]{ "MetricMetadata", "Compatibility" }, new[]{ "MetricMetadata", "Compatibility" }, null, null, null)
           }));
@@ -320,8 +335,8 @@ namespace Google.Analytics.Data.V1Beta {
   }
 
   /// <summary>
-  /// Categories of data that you may be restricted from viewing on certain GA4
-  /// properties.
+  /// Categories of data that you may be restricted from viewing on certain
+  /// Google Analytics properties.
   /// </summary>
   public enum RestrictedMetricType {
     /// <summary>
@@ -362,9 +377,10 @@ namespace Google.Analytics.Data.V1Beta {
 
   #region Messages
   /// <summary>
-  /// A contiguous set of days: startDate, startDate + 1, ..., endDate. Requests
-  /// are allowed up to 4 date ranges.
+  /// A contiguous set of days: `startDate`, `startDate + 1`, ..., `endDate`.
+  /// Requests are allowed up to 4 date ranges.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DateRange : pb::IMessage<DateRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -647,9 +663,10 @@ namespace Google.Analytics.Data.V1Beta {
   }
 
   /// <summary>
-  /// A contiguous set of minutes: startMinutesAgo, startMinutesAgo + 1, ...,
-  /// endMinutesAgo. Requests are allowed up to 2 minute ranges.
+  /// A contiguous set of minutes: `startMinutesAgo`, `startMinutesAgo + 1`, ...,
+  /// `endMinutesAgo`. Requests are allowed up to 2 minute ranges.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MinuteRange : pb::IMessage<MinuteRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -700,6 +717,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "start_minutes_ago" field.</summary>
     public const int StartMinutesAgoFieldNumber = 1;
+    private readonly static int StartMinutesAgoDefaultValue = 0;
+
     private int startMinutesAgo_;
     /// <summary>
     /// The inclusive start minute for the query as a number of minutes before now.
@@ -714,7 +733,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int StartMinutesAgo {
-      get { if ((_hasBits0 & 1) != 0) { return startMinutesAgo_; } else { return 0; } }
+      get { if ((_hasBits0 & 1) != 0) { return startMinutesAgo_; } else { return StartMinutesAgoDefaultValue; } }
       set {
         _hasBits0 |= 1;
         startMinutesAgo_ = value;
@@ -735,6 +754,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "end_minutes_ago" field.</summary>
     public const int EndMinutesAgoFieldNumber = 2;
+    private readonly static int EndMinutesAgoDefaultValue = 0;
+
     private int endMinutesAgo_;
     /// <summary>
     /// The inclusive end minute for the query as a number of minutes before now.
@@ -750,7 +771,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int EndMinutesAgo {
-      get { if ((_hasBits0 & 2) != 0) { return endMinutesAgo_; } else { return 0; } }
+      get { if ((_hasBits0 & 2) != 0) { return endMinutesAgo_; } else { return EndMinutesAgoDefaultValue; } }
       set {
         _hasBits0 |= 2;
         endMinutesAgo_ = value;
@@ -974,6 +995,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// responses are strings; for example, the city could be "Paris" or "New York".
   /// Requests are allowed up to 9 dimensions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Dimension : pb::IMessage<Dimension>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1025,7 +1047,16 @@ namespace Google.Analytics.Data.V1Beta {
     /// <summary>
     /// The name of the dimension. See the [API
     /// Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#dimensions)
-    /// for the list of dimension names.
+    /// for the list of dimension names supported by core reporting methods such
+    /// as `runReport` and `batchRunReports`. See
+    /// [Realtime
+    /// Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-api-schema#dimensions)
+    /// for the list of dimension names supported by the `runRealtimeReport`
+    /// method. See
+    /// [Funnel
+    /// Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/exploration-api-schema#dimensions)
+    /// for the list of dimension names supported by the `runFunnelReport`
+    /// method.
     ///
     /// If `dimensionExpression` is specified, `name` can be any string that you
     /// would like within the allowed character set. For example if a
@@ -1233,6 +1264,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// 1) lower_case(dimension)
   /// 2) concatenate(dimension1, symbol, dimension2).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DimensionExpression : pb::IMessage<DimensionExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1587,6 +1619,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// Used to convert a dimension value to a single case.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CaseExpression : pb::IMessage<CaseExpression>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1783,6 +1816,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// Used to combine dimension values to a single dimension.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConcatenateExpression : pb::IMessage<ConcatenateExpression>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2021,6 +2055,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// `eventCount` is the total number of events. Requests are allowed up to 10
   /// metrics.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Metric : pb::IMessage<Metric>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2073,7 +2108,16 @@ namespace Google.Analytics.Data.V1Beta {
     /// <summary>
     /// The name of the metric. See the [API
     /// Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#metrics)
-    /// for the list of metric names.
+    /// for the list of metric names supported by core reporting methods such
+    /// as `runReport` and `batchRunReports`. See
+    /// [Realtime
+    /// Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-api-schema#metrics)
+    /// for the list of metric names supported by the `runRealtimeReport`
+    /// method. See
+    /// [Funnel
+    /// Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/exploration-api-schema#metrics)
+    /// for the list of metric names supported by the `runFunnelReport`
+    /// method.
     ///
     /// If `expression` is specified, `name` can be any string that you would like
     /// within the allowed character set. For example if `expression` is
@@ -2308,9 +2352,364 @@ namespace Google.Analytics.Data.V1Beta {
   }
 
   /// <summary>
+  /// Defines an individual comparison. Most requests will include multiple
+  /// comparisons so that the report compares between the comparisons.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Comparison : pb::IMessage<Comparison>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Comparison> _parser = new pb::MessageParser<Comparison>(() => new Comparison());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Comparison> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Comparison() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Comparison(Comparison other) : this() {
+      name_ = other.name_;
+      switch (other.OneComparisonCase) {
+        case OneComparisonOneofCase.DimensionFilter:
+          DimensionFilter = other.DimensionFilter.Clone();
+          break;
+        case OneComparisonOneofCase.Comparison_:
+          Comparison_ = other.Comparison_;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Comparison Clone() {
+      return new Comparison(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private readonly static string NameDefaultValue = "";
+
+    private string name_;
+    /// <summary>
+    /// Each comparison produces separate rows in the response. In the response,
+    /// this comparison is identified by this name. If name is unspecified, we will
+    /// use the saved comparisons display name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_ ?? NameDefaultValue; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasName {
+      get { return name_ != null; }
+    }
+    /// <summary>Clears the value of the "name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearName() {
+      name_ = null;
+    }
+
+    /// <summary>Field number for the "dimension_filter" field.</summary>
+    public const int DimensionFilterFieldNumber = 2;
+    /// <summary>
+    /// A basic comparison.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Data.V1Beta.FilterExpression DimensionFilter {
+      get { return oneComparisonCase_ == OneComparisonOneofCase.DimensionFilter ? (global::Google.Analytics.Data.V1Beta.FilterExpression) oneComparison_ : null; }
+      set {
+        oneComparison_ = value;
+        oneComparisonCase_ = value == null ? OneComparisonOneofCase.None : OneComparisonOneofCase.DimensionFilter;
+      }
+    }
+
+    /// <summary>Field number for the "comparison" field.</summary>
+    public const int Comparison_FieldNumber = 3;
+    /// <summary>
+    /// A saved comparison identified by the comparison's resource name.
+    /// For example, 'comparisons/1234'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Comparison_ {
+      get { return HasComparison_ ? (string) oneComparison_ : ""; }
+      set {
+        oneComparison_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        oneComparisonCase_ = OneComparisonOneofCase.Comparison_;
+      }
+    }
+    /// <summary>Gets whether the "comparison" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasComparison_ {
+      get { return oneComparisonCase_ == OneComparisonOneofCase.Comparison_; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "comparison" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearComparison_() {
+      if (HasComparison_) {
+        ClearOneComparison();
+      }
+    }
+
+    private object oneComparison_;
+    /// <summary>Enum of possible cases for the "one_comparison" oneof.</summary>
+    public enum OneComparisonOneofCase {
+      None = 0,
+      DimensionFilter = 2,
+      Comparison_ = 3,
+    }
+    private OneComparisonOneofCase oneComparisonCase_ = OneComparisonOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OneComparisonOneofCase OneComparisonCase {
+      get { return oneComparisonCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOneComparison() {
+      oneComparisonCase_ = OneComparisonOneofCase.None;
+      oneComparison_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Comparison);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Comparison other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(DimensionFilter, other.DimensionFilter)) return false;
+      if (Comparison_ != other.Comparison_) return false;
+      if (OneComparisonCase != other.OneComparisonCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasName) hash ^= Name.GetHashCode();
+      if (oneComparisonCase_ == OneComparisonOneofCase.DimensionFilter) hash ^= DimensionFilter.GetHashCode();
+      if (HasComparison_) hash ^= Comparison_.GetHashCode();
+      hash ^= (int) oneComparisonCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasName) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (oneComparisonCase_ == OneComparisonOneofCase.DimensionFilter) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DimensionFilter);
+      }
+      if (HasComparison_) {
+        output.WriteRawTag(26);
+        output.WriteString(Comparison_);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasName) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (oneComparisonCase_ == OneComparisonOneofCase.DimensionFilter) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DimensionFilter);
+      }
+      if (HasComparison_) {
+        output.WriteRawTag(26);
+        output.WriteString(Comparison_);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (oneComparisonCase_ == OneComparisonOneofCase.DimensionFilter) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DimensionFilter);
+      }
+      if (HasComparison_) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Comparison_);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Comparison other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasName) {
+        Name = other.Name;
+      }
+      switch (other.OneComparisonCase) {
+        case OneComparisonOneofCase.DimensionFilter:
+          if (DimensionFilter == null) {
+            DimensionFilter = new global::Google.Analytics.Data.V1Beta.FilterExpression();
+          }
+          DimensionFilter.MergeFrom(other.DimensionFilter);
+          break;
+        case OneComparisonOneofCase.Comparison_:
+          Comparison_ = other.Comparison_;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Analytics.Data.V1Beta.FilterExpression subBuilder = new global::Google.Analytics.Data.V1Beta.FilterExpression();
+            if (oneComparisonCase_ == OneComparisonOneofCase.DimensionFilter) {
+              subBuilder.MergeFrom(DimensionFilter);
+            }
+            input.ReadMessage(subBuilder);
+            DimensionFilter = subBuilder;
+            break;
+          }
+          case 26: {
+            Comparison_ = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Analytics.Data.V1Beta.FilterExpression subBuilder = new global::Google.Analytics.Data.V1Beta.FilterExpression();
+            if (oneComparisonCase_ == OneComparisonOneofCase.DimensionFilter) {
+              subBuilder.MergeFrom(DimensionFilter);
+            }
+            input.ReadMessage(subBuilder);
+            DimensionFilter = subBuilder;
+            break;
+          }
+          case 26: {
+            Comparison_ = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// To express dimension or metric filters. The fields in the same
   /// FilterExpression need to be either all dimensions or all metrics.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FilterExpression : pb::IMessage<FilterExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2325,7 +2724,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2718,6 +3117,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// A list of filter expressions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FilterExpressionList : pb::IMessage<FilterExpressionList>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2732,7 +3132,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2902,6 +3302,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// An expression to filter dimension or metric values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Filter : pb::IMessage<Filter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2916,7 +3317,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2949,6 +3350,9 @@ namespace Google.Analytics.Data.V1Beta {
           break;
         case OneFilterOneofCase.BetweenFilter:
           BetweenFilter = other.BetweenFilter.Clone();
+          break;
+        case OneFilterOneofCase.EmptyFilter:
+          EmptyFilter = other.EmptyFilter.Clone();
           break;
       }
 
@@ -3041,6 +3445,21 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "empty_filter" field.</summary>
+    public const int EmptyFilterFieldNumber = 8;
+    /// <summary>
+    /// A filter for empty values such as "(not set)" and "" values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Data.V1Beta.Filter.Types.EmptyFilter EmptyFilter {
+      get { return oneFilterCase_ == OneFilterOneofCase.EmptyFilter ? (global::Google.Analytics.Data.V1Beta.Filter.Types.EmptyFilter) oneFilter_ : null; }
+      set {
+        oneFilter_ = value;
+        oneFilterCase_ = value == null ? OneFilterOneofCase.None : OneFilterOneofCase.EmptyFilter;
+      }
+    }
+
     private object oneFilter_;
     /// <summary>Enum of possible cases for the "one_filter" oneof.</summary>
     public enum OneFilterOneofCase {
@@ -3049,6 +3468,7 @@ namespace Google.Analytics.Data.V1Beta {
       InListFilter = 4,
       NumericFilter = 5,
       BetweenFilter = 6,
+      EmptyFilter = 8,
     }
     private OneFilterOneofCase oneFilterCase_ = OneFilterOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3084,6 +3504,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (!object.Equals(InListFilter, other.InListFilter)) return false;
       if (!object.Equals(NumericFilter, other.NumericFilter)) return false;
       if (!object.Equals(BetweenFilter, other.BetweenFilter)) return false;
+      if (!object.Equals(EmptyFilter, other.EmptyFilter)) return false;
       if (OneFilterCase != other.OneFilterCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3097,6 +3518,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (oneFilterCase_ == OneFilterOneofCase.InListFilter) hash ^= InListFilter.GetHashCode();
       if (oneFilterCase_ == OneFilterOneofCase.NumericFilter) hash ^= NumericFilter.GetHashCode();
       if (oneFilterCase_ == OneFilterOneofCase.BetweenFilter) hash ^= BetweenFilter.GetHashCode();
+      if (oneFilterCase_ == OneFilterOneofCase.EmptyFilter) hash ^= EmptyFilter.GetHashCode();
       hash ^= (int) oneFilterCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3136,6 +3558,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(50);
         output.WriteMessage(BetweenFilter);
       }
+      if (oneFilterCase_ == OneFilterOneofCase.EmptyFilter) {
+        output.WriteRawTag(66);
+        output.WriteMessage(EmptyFilter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3166,6 +3592,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(50);
         output.WriteMessage(BetweenFilter);
       }
+      if (oneFilterCase_ == OneFilterOneofCase.EmptyFilter) {
+        output.WriteRawTag(66);
+        output.WriteMessage(EmptyFilter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3190,6 +3620,9 @@ namespace Google.Analytics.Data.V1Beta {
       }
       if (oneFilterCase_ == OneFilterOneofCase.BetweenFilter) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BetweenFilter);
+      }
+      if (oneFilterCase_ == OneFilterOneofCase.EmptyFilter) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EmptyFilter);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3230,6 +3663,12 @@ namespace Google.Analytics.Data.V1Beta {
             BetweenFilter = new global::Google.Analytics.Data.V1Beta.Filter.Types.BetweenFilter();
           }
           BetweenFilter.MergeFrom(other.BetweenFilter);
+          break;
+        case OneFilterOneofCase.EmptyFilter:
+          if (EmptyFilter == null) {
+            EmptyFilter = new global::Google.Analytics.Data.V1Beta.Filter.Types.EmptyFilter();
+          }
+          EmptyFilter.MergeFrom(other.EmptyFilter);
           break;
       }
 
@@ -3288,6 +3727,15 @@ namespace Google.Analytics.Data.V1Beta {
             BetweenFilter = subBuilder;
             break;
           }
+          case 66: {
+            global::Google.Analytics.Data.V1Beta.Filter.Types.EmptyFilter subBuilder = new global::Google.Analytics.Data.V1Beta.Filter.Types.EmptyFilter();
+            if (oneFilterCase_ == OneFilterOneofCase.EmptyFilter) {
+              subBuilder.MergeFrom(EmptyFilter);
+            }
+            input.ReadMessage(subBuilder);
+            EmptyFilter = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -3343,6 +3791,15 @@ namespace Google.Analytics.Data.V1Beta {
             BetweenFilter = subBuilder;
             break;
           }
+          case 66: {
+            global::Google.Analytics.Data.V1Beta.Filter.Types.EmptyFilter subBuilder = new global::Google.Analytics.Data.V1Beta.Filter.Types.EmptyFilter();
+            if (oneFilterCase_ == OneFilterOneofCase.EmptyFilter) {
+              subBuilder.MergeFrom(EmptyFilter);
+            }
+            input.ReadMessage(subBuilder);
+            EmptyFilter = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -3356,6 +3813,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// The filter for string
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StringFilter : pb::IMessage<StringFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3673,6 +4131,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// The result needs to be in a list of string values.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InListFilter : pb::IMessage<InListFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3898,6 +4357,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// Filters for numeric or date values.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class NumericFilter : pb::IMessage<NumericFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4180,6 +4640,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// To express that the result needs to be between two numbers (inclusive).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BetweenFilter : pb::IMessage<BetweenFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4430,6 +4891,162 @@ namespace Google.Analytics.Data.V1Beta {
 
       }
 
+      /// <summary>
+      /// Filter for empty values.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class EmptyFilter : pb::IMessage<EmptyFilter>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EmptyFilter> _parser = new pb::MessageParser<EmptyFilter>(() => new EmptyFilter());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<EmptyFilter> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Analytics.Data.V1Beta.Filter.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EmptyFilter() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EmptyFilter(EmptyFilter other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EmptyFilter Clone() {
+          return new EmptyFilter(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as EmptyFilter);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(EmptyFilter other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(EmptyFilter other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -4440,6 +5057,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// ordering rows by descending event count is one ordering, and ordering rows by
   /// the event name string is a different ordering.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OrderBy : pb::IMessage<OrderBy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4454,7 +5072,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4833,6 +5451,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// Sorts by metric values.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MetricOrderBy : pb::IMessage<MetricOrderBy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5028,6 +5647,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// Sorts by dimension values.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DimensionOrderBy : pb::IMessage<DimensionOrderBy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5298,6 +5918,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// <summary>
       /// Sorts by a pivot column group.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PivotOrderBy : pb::IMessage<PivotOrderBy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5544,6 +6165,7 @@ namespace Google.Analytics.Data.V1Beta {
           ///       Canada |    3     |       1        |     4    |        1
           ///     ---------|----------|----------------|----------|----------------
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class PivotSelection : pb::IMessage<PivotSelection>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -5789,6 +6411,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Describes the visible dimension columns and rows in the report response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Pivot : pb::IMessage<Pivot>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5803,7 +6426,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5896,7 +6519,7 @@ namespace Google.Analytics.Data.V1Beta {
     /// single pivot requests.
     ///
     /// The product of the `limit` for each `pivot` in a `RunPivotReportRequest`
-    /// must not exceed 100,000. For example, a two pivot request with `limit:
+    /// must not exceed 250,000. For example, a two pivot request with `limit:
     /// 1000` in each pivot will fail because the product is `1,000,000`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6142,6 +6765,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// six weeks. These two percentages can be calculated by the metric
   /// `cohortActiveUsers/cohortTotalUsers` and will be separate rows in the report.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CohortSpec : pb::IMessage<CohortSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6156,7 +6780,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6430,6 +7054,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// a common characteristic. For example, users with the same `firstSessionDate`
   /// belong to the same cohort.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Cohort : pb::IMessage<Cohort>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6444,7 +7069,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6734,6 +7359,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// Configures the extended reporting date range for a cohort report. Specifies
   /// an offset duration to follow the cohorts over.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CohortsRange : pb::IMessage<CohortsRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6748,7 +7374,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7068,6 +7694,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Optional settings of a cohort report.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CohortReportSettings : pb::IMessage<CohortReportSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7082,7 +7709,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7264,6 +7891,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Response's metadata carrying additional information about the report content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResponseMetaData : pb::IMessage<ResponseMetaData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7279,7 +7907,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7306,6 +7934,7 @@ namespace Google.Analytics.Data.V1Beta {
       timeZone_ = other.timeZone_;
       emptyReason_ = other.emptyReason_;
       subjectToThresholding_ = other.subjectToThresholding_;
+      samplingMetadatas_ = other.samplingMetadatas_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7321,6 +7950,18 @@ namespace Google.Analytics.Data.V1Beta {
     /// <summary>
     /// If true, indicates some buckets of dimension combinations are rolled into
     /// "(other)" row. This can happen for high cardinality reports.
+    ///
+    /// The metadata parameter dataLossFromOtherRow is populated based on the
+    /// aggregated data table used in the report. The parameter will be accurately
+    /// populated regardless of the filters and limits in the report.
+    ///
+    /// For example, the (other) row could be dropped from the report because the
+    /// request contains a filter on sessionSource = google. This parameter will
+    /// still be populated if data loss from other row was present in the input
+    /// aggregate data used to generate this report.
+    ///
+    /// To learn more, see [About the (other) row and data
+    /// sampling](https://support.google.com/analytics/answer/13208658#reports).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7350,6 +7991,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "currency_code" field.</summary>
     public const int CurrencyCodeFieldNumber = 5;
+    private readonly static string CurrencyCodeDefaultValue = "";
+
     private string currencyCode_;
     /// <summary>
     /// The currency code used in this report. Intended to be used in formatting
@@ -7366,7 +8009,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CurrencyCode {
-      get { return currencyCode_ ?? ""; }
+      get { return currencyCode_ ?? CurrencyCodeDefaultValue; }
       set {
         currencyCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -7386,6 +8029,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "time_zone" field.</summary>
     public const int TimeZoneFieldNumber = 6;
+    private readonly static string TimeZoneDefaultValue = "";
+
     private string timeZone_;
     /// <summary>
     /// The property's current timezone. Intended to be used to interpret
@@ -7396,7 +8041,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TimeZone {
-      get { return timeZone_ ?? ""; }
+      get { return timeZone_ ?? TimeZoneDefaultValue; }
       set {
         timeZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -7416,6 +8061,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "empty_reason" field.</summary>
     public const int EmptyReasonFieldNumber = 7;
+    private readonly static string EmptyReasonDefaultValue = "";
+
     private string emptyReason_;
     /// <summary>
     /// If empty reason is specified, the report is empty for this reason.
@@ -7423,7 +8070,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EmptyReason {
-      get { return emptyReason_ ?? ""; }
+      get { return emptyReason_ ?? EmptyReasonDefaultValue; }
       set {
         emptyReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
@@ -7443,6 +8090,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "subject_to_thresholding" field.</summary>
     public const int SubjectToThresholdingFieldNumber = 8;
+    private readonly static bool SubjectToThresholdingDefaultValue = false;
+
     private bool subjectToThresholding_;
     /// <summary>
     /// If `subjectToThresholding` is true, this report is subject to thresholding
@@ -7450,14 +8099,12 @@ namespace Google.Analytics.Data.V1Beta {
     /// possible for a request to be subject to thresholding thresholding and no
     /// data is absent from the report, and this happens when all data is above the
     /// thresholds. To learn more, see [Data
-    /// thresholds](https://support.google.com/analytics/answer/9383630) and [About
-    /// Demographics and
-    /// Interests](https://support.google.com/analytics/answer/2799357).
+    /// thresholds](https://support.google.com/analytics/answer/9383630).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SubjectToThresholding {
-      get { if ((_hasBits0 & 1) != 0) { return subjectToThresholding_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return subjectToThresholding_; } else { return SubjectToThresholdingDefaultValue; } }
       set {
         _hasBits0 |= 1;
         subjectToThresholding_ = value;
@@ -7474,6 +8121,27 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearSubjectToThresholding() {
       _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "sampling_metadatas" field.</summary>
+    public const int SamplingMetadatasFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Beta.SamplingMetadata> _repeated_samplingMetadatas_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Analytics.Data.V1Beta.SamplingMetadata.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.SamplingMetadata> samplingMetadatas_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.SamplingMetadata>();
+    /// <summary>
+    /// If this report results is
+    /// [sampled](https://support.google.com/analytics/answer/13331292), this
+    /// describes the percentage of events used in this report. One
+    /// `samplingMetadatas` is populated for each date range. Each
+    /// `samplingMetadatas` corresponds to a date range in order that date ranges
+    /// were specified in the request.
+    ///
+    /// However if the results are not sampled, this field will not be defined.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.SamplingMetadata> SamplingMetadatas {
+      get { return samplingMetadatas_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7497,6 +8165,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (TimeZone != other.TimeZone) return false;
       if (EmptyReason != other.EmptyReason) return false;
       if (SubjectToThresholding != other.SubjectToThresholding) return false;
+      if(!samplingMetadatas_.Equals(other.samplingMetadatas_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7510,6 +8179,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (HasTimeZone) hash ^= TimeZone.GetHashCode();
       if (HasEmptyReason) hash ^= EmptyReason.GetHashCode();
       if (HasSubjectToThresholding) hash ^= SubjectToThresholding.GetHashCode();
+      hash ^= samplingMetadatas_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7552,6 +8222,7 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(64);
         output.WriteBool(SubjectToThresholding);
       }
+      samplingMetadatas_.WriteTo(output, _repeated_samplingMetadatas_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7586,6 +8257,7 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(64);
         output.WriteBool(SubjectToThresholding);
       }
+      samplingMetadatas_.WriteTo(ref output, _repeated_samplingMetadatas_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7614,6 +8286,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (HasSubjectToThresholding) {
         size += 1 + 1;
       }
+      size += samplingMetadatas_.CalculateSize(_repeated_samplingMetadatas_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -7647,6 +8320,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (other.HasSubjectToThresholding) {
         SubjectToThresholding = other.SubjectToThresholding;
       }
+      samplingMetadatas_.Add(other.samplingMetadatas_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -7687,6 +8361,10 @@ namespace Google.Analytics.Data.V1Beta {
           }
           case 64: {
             SubjectToThresholding = input.ReadBool();
+            break;
+          }
+          case 74: {
+            samplingMetadatas_.AddEntriesFrom(input, _repeated_samplingMetadatas_codec);
             break;
           }
         }
@@ -7731,6 +8409,10 @@ namespace Google.Analytics.Data.V1Beta {
             SubjectToThresholding = input.ReadBool();
             break;
           }
+          case 74: {
+            samplingMetadatas_.AddEntriesFrom(ref input, _repeated_samplingMetadatas_codec);
+            break;
+          }
         }
       }
     }
@@ -7746,6 +8428,7 @@ namespace Google.Analytics.Data.V1Beta {
       /// more, see [Access and data-restriction
       /// management](https://support.google.com/analytics/answer/10851388).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SchemaRestrictionResponse : pb::IMessage<SchemaRestrictionResponse>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -7936,6 +8619,7 @@ namespace Google.Analytics.Data.V1Beta {
           /// <summary>
           /// A metric actively restricted in creating the report.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ActiveMetricRestriction : pb::IMessage<ActiveMetricRestriction>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -7983,6 +8667,8 @@ namespace Google.Analytics.Data.V1Beta {
 
             /// <summary>Field number for the "metric_name" field.</summary>
             public const int MetricNameFieldNumber = 1;
+            private readonly static string MetricNameDefaultValue = "";
+
             private string metricName_;
             /// <summary>
             /// The name of the restricted metric.
@@ -7990,7 +8676,7 @@ namespace Google.Analytics.Data.V1Beta {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string MetricName {
-              get { return metricName_ ?? ""; }
+              get { return metricName_ ?? MetricNameDefaultValue; }
               set {
                 metricName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
               }
@@ -8182,11 +8868,260 @@ namespace Google.Analytics.Data.V1Beta {
   }
 
   /// <summary>
+  /// If this report results is
+  /// [sampled](https://support.google.com/analytics/answer/13331292), this
+  /// describes the percentage of events used in this report. Sampling is the
+  /// practice of analyzing a subset of all data in order to uncover the meaningful
+  /// information in the larger data set.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SamplingMetadata : pb::IMessage<SamplingMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SamplingMetadata> _parser = new pb::MessageParser<SamplingMetadata>(() => new SamplingMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SamplingMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SamplingMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SamplingMetadata(SamplingMetadata other) : this() {
+      samplesReadCount_ = other.samplesReadCount_;
+      samplingSpaceSize_ = other.samplingSpaceSize_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SamplingMetadata Clone() {
+      return new SamplingMetadata(this);
+    }
+
+    /// <summary>Field number for the "samples_read_count" field.</summary>
+    public const int SamplesReadCountFieldNumber = 1;
+    private long samplesReadCount_;
+    /// <summary>
+    /// The total number of events read in this sampled report for a date range.
+    /// This is the size of the subset this property's data that was analyzed in
+    /// this report.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long SamplesReadCount {
+      get { return samplesReadCount_; }
+      set {
+        samplesReadCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sampling_space_size" field.</summary>
+    public const int SamplingSpaceSizeFieldNumber = 2;
+    private long samplingSpaceSize_;
+    /// <summary>
+    /// The total number of events present in this property's data that could
+    /// have been analyzed in this report for a date range. Sampling
+    /// uncovers the meaningful information about the larger data set, and this
+    /// is the size of the larger data set.
+    ///
+    /// To calculate the percentage of available data that was used in this
+    /// report, compute `samplesReadCount/samplingSpaceSize`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long SamplingSpaceSize {
+      get { return samplingSpaceSize_; }
+      set {
+        samplingSpaceSize_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SamplingMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SamplingMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SamplesReadCount != other.SamplesReadCount) return false;
+      if (SamplingSpaceSize != other.SamplingSpaceSize) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SamplesReadCount != 0L) hash ^= SamplesReadCount.GetHashCode();
+      if (SamplingSpaceSize != 0L) hash ^= SamplingSpaceSize.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SamplesReadCount != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(SamplesReadCount);
+      }
+      if (SamplingSpaceSize != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(SamplingSpaceSize);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SamplesReadCount != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(SamplesReadCount);
+      }
+      if (SamplingSpaceSize != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(SamplingSpaceSize);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (SamplesReadCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(SamplesReadCount);
+      }
+      if (SamplingSpaceSize != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(SamplingSpaceSize);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SamplingMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SamplesReadCount != 0L) {
+        SamplesReadCount = other.SamplesReadCount;
+      }
+      if (other.SamplingSpaceSize != 0L) {
+        SamplingSpaceSize = other.SamplingSpaceSize;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            SamplesReadCount = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            SamplingSpaceSize = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            SamplesReadCount = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            SamplingSpaceSize = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Describes a dimension column in the report. Dimensions requested in a report
   /// produce column entries within rows and DimensionHeaders. However, dimensions
   /// used exclusively within filters or expressions do not produce columns in a
   /// report; correspondingly, those dimensions do not produce headers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DimensionHeader : pb::IMessage<DimensionHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8201,7 +9136,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8385,6 +9320,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// metrics used exclusively within filters or expressions do not produce columns
   /// in a report; correspondingly, those metrics do not produce headers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MetricHeader : pb::IMessage<MetricHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8399,7 +9335,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8620,6 +9556,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Dimensions' values in a single pivot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PivotHeader : pb::IMessage<PivotHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8634,7 +9571,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8847,6 +9784,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Summarizes dimension values from a row for this pivot.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PivotDimensionHeader : pb::IMessage<PivotDimensionHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8861,7 +9799,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9067,6 +10005,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// ]
   /// ```
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Row : pb::IMessage<Row>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9081,7 +10020,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9281,6 +10220,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// The value of a dimension.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DimensionValue : pb::IMessage<DimensionValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9295,7 +10235,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9338,10 +10278,24 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {
-      get { return oneValueCase_ == OneValueOneofCase.Value ? (string) oneValue_ : ""; }
+      get { return HasValue ? (string) oneValue_ : ""; }
       set {
         oneValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         oneValueCase_ = OneValueOneofCase.Value;
+      }
+    }
+    /// <summary>Gets whether the "value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValue {
+      get { return oneValueCase_ == OneValueOneofCase.Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValue() {
+      if (HasValue) {
+        ClearOneValue();
       }
     }
 
@@ -9389,7 +10343,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (oneValueCase_ == OneValueOneofCase.Value) hash ^= Value.GetHashCode();
+      if (HasValue) hash ^= Value.GetHashCode();
       hash ^= (int) oneValueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -9409,7 +10363,7 @@ namespace Google.Analytics.Data.V1Beta {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (oneValueCase_ == OneValueOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(10);
         output.WriteString(Value);
       }
@@ -9423,7 +10377,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (oneValueCase_ == OneValueOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(10);
         output.WriteString(Value);
       }
@@ -9437,7 +10391,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (oneValueCase_ == OneValueOneofCase.Value) {
+      if (HasValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
       }
       if (_unknownFields != null) {
@@ -9506,6 +10460,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// The value of a metric.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MetricValue : pb::IMessage<MetricValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9520,7 +10475,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9563,10 +10518,24 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {
-      get { return oneValueCase_ == OneValueOneofCase.Value ? (string) oneValue_ : ""; }
+      get { return HasValue ? (string) oneValue_ : ""; }
       set {
         oneValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         oneValueCase_ = OneValueOneofCase.Value;
+      }
+    }
+    /// <summary>Gets whether the "value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValue {
+      get { return oneValueCase_ == OneValueOneofCase.Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValue() {
+      if (HasValue) {
+        ClearOneValue();
       }
     }
 
@@ -9614,7 +10583,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (oneValueCase_ == OneValueOneofCase.Value) hash ^= Value.GetHashCode();
+      if (HasValue) hash ^= Value.GetHashCode();
       hash ^= (int) oneValueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -9634,7 +10603,7 @@ namespace Google.Analytics.Data.V1Beta {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (oneValueCase_ == OneValueOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(34);
         output.WriteString(Value);
       }
@@ -9648,7 +10617,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (oneValueCase_ == OneValueOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(34);
         output.WriteString(Value);
       }
@@ -9662,7 +10631,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (oneValueCase_ == OneValueOneofCase.Value) {
+      if (HasValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
       }
       if (_unknownFields != null) {
@@ -9731,6 +10700,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// To represent a number.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NumericValue : pb::IMessage<NumericValue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9745,7 +10715,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9791,10 +10761,24 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Int64Value {
-      get { return oneValueCase_ == OneValueOneofCase.Int64Value ? (long) oneValue_ : 0L; }
+      get { return HasInt64Value ? (long) oneValue_ : 0L; }
       set {
         oneValue_ = value;
         oneValueCase_ = OneValueOneofCase.Int64Value;
+      }
+    }
+    /// <summary>Gets whether the "int64_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInt64Value {
+      get { return oneValueCase_ == OneValueOneofCase.Int64Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "int64_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInt64Value() {
+      if (HasInt64Value) {
+        ClearOneValue();
       }
     }
 
@@ -9806,10 +10790,24 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double DoubleValue {
-      get { return oneValueCase_ == OneValueOneofCase.DoubleValue ? (double) oneValue_ : 0D; }
+      get { return HasDoubleValue ? (double) oneValue_ : 0D; }
       set {
         oneValue_ = value;
         oneValueCase_ = OneValueOneofCase.DoubleValue;
+      }
+    }
+    /// <summary>Gets whether the "double_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDoubleValue {
+      get { return oneValueCase_ == OneValueOneofCase.DoubleValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "double_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDoubleValue() {
+      if (HasDoubleValue) {
+        ClearOneValue();
       }
     }
 
@@ -9859,8 +10857,8 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (oneValueCase_ == OneValueOneofCase.Int64Value) hash ^= Int64Value.GetHashCode();
-      if (oneValueCase_ == OneValueOneofCase.DoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
+      if (HasInt64Value) hash ^= Int64Value.GetHashCode();
+      if (HasDoubleValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(DoubleValue);
       hash ^= (int) oneValueCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -9880,11 +10878,11 @@ namespace Google.Analytics.Data.V1Beta {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (oneValueCase_ == OneValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(8);
         output.WriteInt64(Int64Value);
       }
-      if (oneValueCase_ == OneValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(17);
         output.WriteDouble(DoubleValue);
       }
@@ -9898,11 +10896,11 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (oneValueCase_ == OneValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(8);
         output.WriteInt64(Int64Value);
       }
-      if (oneValueCase_ == OneValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         output.WriteRawTag(17);
         output.WriteDouble(DoubleValue);
       }
@@ -9916,10 +10914,10 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (oneValueCase_ == OneValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Int64Value);
       }
-      if (oneValueCase_ == OneValueOneofCase.DoubleValue) {
+      if (HasDoubleValue) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -10001,6 +10999,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// property is exhausted, all requests to that property will return Resource
   /// Exhausted errors.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PropertyQuota : pb::IMessage<PropertyQuota>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10015,7 +11014,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10054,8 +11053,8 @@ namespace Google.Analytics.Data.V1Beta {
     public const int TokensPerDayFieldNumber = 1;
     private global::Google.Analytics.Data.V1Beta.QuotaStatus tokensPerDay_;
     /// <summary>
-    /// Standard Analytics Properties can use up to 25,000 tokens per day;
-    /// Analytics 360 Properties can use 250,000 tokens per day. Most requests
+    /// Standard Analytics Properties can use up to 200,000 tokens per day;
+    /// Analytics 360 Properties can use 2,000,000 tokens per day. Most requests
     /// consume fewer than 10 tokens.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10071,8 +11070,8 @@ namespace Google.Analytics.Data.V1Beta {
     public const int TokensPerHourFieldNumber = 2;
     private global::Google.Analytics.Data.V1Beta.QuotaStatus tokensPerHour_;
     /// <summary>
-    /// Standard Analytics Properties can use up to 5,000 tokens per hour;
-    /// Analytics 360 Properties can use 50,000 tokens per hour. An API request
+    /// Standard Analytics Properties can use up to 40,000 tokens per hour;
+    /// Analytics 360 Properties can use 400,000 tokens per hour. An API request
     /// consumes a single number of tokens, and that number is deducted from all of
     /// the hourly, daily, and per project hourly quotas.
     /// </summary>
@@ -10140,9 +11139,9 @@ namespace Google.Analytics.Data.V1Beta {
     public const int TokensPerProjectPerHourFieldNumber = 6;
     private global::Google.Analytics.Data.V1Beta.QuotaStatus tokensPerProjectPerHour_;
     /// <summary>
-    /// Analytics Properties can use up to 25% of their tokens per project per
-    /// hour. This amounts to standard Analytics Properties can use up to 1,250
-    /// tokens per project per hour, and Analytics 360 Properties can use 12,500
+    /// Analytics Properties can use up to 35% of their tokens per project per
+    /// hour. This amounts to standard Analytics Properties can use up to 14,000
+    /// tokens per project per hour, and Analytics 360 Properties can use 140,000
     /// tokens per project per hour. An API request consumes a single number of
     /// tokens, and that number is deducted from all of the hourly, daily, and per
     /// project hourly quotas.
@@ -10466,6 +11465,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Current state for a particular quota group.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QuotaStatus : pb::IMessage<QuotaStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10473,6 +11473,7 @@ namespace Google.Analytics.Data.V1Beta {
   {
     private static readonly pb::MessageParser<QuotaStatus> _parser = new pb::MessageParser<QuotaStatus>(() => new QuotaStatus());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<QuotaStatus> Parser { get { return _parser; } }
@@ -10480,7 +11481,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10500,6 +11501,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuotaStatus(QuotaStatus other) : this() {
+      _hasBits0 = other._hasBits0;
       consumed_ = other.consumed_;
       remaining_ = other.remaining_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -10513,6 +11515,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "consumed" field.</summary>
     public const int ConsumedFieldNumber = 1;
+    private readonly static int ConsumedDefaultValue = 0;
+
     private int consumed_;
     /// <summary>
     /// Quota consumed by this request.
@@ -10520,14 +11524,29 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Consumed {
-      get { return consumed_; }
+      get { if ((_hasBits0 & 1) != 0) { return consumed_; } else { return ConsumedDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         consumed_ = value;
       }
+    }
+    /// <summary>Gets whether the "consumed" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConsumed {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "consumed" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConsumed() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "remaining" field.</summary>
     public const int RemainingFieldNumber = 2;
+    private readonly static int RemainingDefaultValue = 0;
+
     private int remaining_;
     /// <summary>
     /// Quota remaining after this request.
@@ -10535,10 +11554,23 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Remaining {
-      get { return remaining_; }
+      get { if ((_hasBits0 & 2) != 0) { return remaining_; } else { return RemainingDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         remaining_ = value;
       }
+    }
+    /// <summary>Gets whether the "remaining" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRemaining {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "remaining" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRemaining() {
+      _hasBits0 &= ~2;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10565,8 +11597,8 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Consumed != 0) hash ^= Consumed.GetHashCode();
-      if (Remaining != 0) hash ^= Remaining.GetHashCode();
+      if (HasConsumed) hash ^= Consumed.GetHashCode();
+      if (HasRemaining) hash ^= Remaining.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10585,11 +11617,11 @@ namespace Google.Analytics.Data.V1Beta {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Consumed != 0) {
+      if (HasConsumed) {
         output.WriteRawTag(8);
         output.WriteInt32(Consumed);
       }
-      if (Remaining != 0) {
+      if (HasRemaining) {
         output.WriteRawTag(16);
         output.WriteInt32(Remaining);
       }
@@ -10603,11 +11635,11 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Consumed != 0) {
+      if (HasConsumed) {
         output.WriteRawTag(8);
         output.WriteInt32(Consumed);
       }
-      if (Remaining != 0) {
+      if (HasRemaining) {
         output.WriteRawTag(16);
         output.WriteInt32(Remaining);
       }
@@ -10621,10 +11653,10 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Consumed != 0) {
+      if (HasConsumed) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Consumed);
       }
-      if (Remaining != 0) {
+      if (HasRemaining) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Remaining);
       }
       if (_unknownFields != null) {
@@ -10639,10 +11671,10 @@ namespace Google.Analytics.Data.V1Beta {
       if (other == null) {
         return;
       }
-      if (other.Consumed != 0) {
+      if (other.HasConsumed) {
         Consumed = other.Consumed;
       }
-      if (other.Remaining != 0) {
+      if (other.HasRemaining) {
         Remaining = other.Remaining;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -10701,6 +11733,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Explains a dimension.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DimensionMetadata : pb::IMessage<DimensionMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10715,7 +11748,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10818,7 +11851,11 @@ namespace Google.Analytics.Data.V1Beta {
     public const int CustomDefinitionFieldNumber = 5;
     private bool customDefinition_;
     /// <summary>
-    /// True if the dimension is a custom dimension for this property.
+    /// True if the dimension is custom to this property. This includes user,
+    /// event, &amp; item scoped custom dimensions; to learn more about custom
+    /// dimensions, see https://support.google.com/analytics/answer/14240153. This
+    /// also include custom channel groups; to learn more about custom channel
+    /// groups, see https://support.google.com/analytics/answer/13051316.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11091,6 +12128,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// Explains a metric.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MetricMetadata : pb::IMessage<MetricMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11105,7 +12143,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11627,8 +12665,286 @@ namespace Google.Analytics.Data.V1Beta {
   }
 
   /// <summary>
+  /// The metadata for a single comparison.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ComparisonMetadata : pb::IMessage<ComparisonMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ComparisonMetadata> _parser = new pb::MessageParser<ComparisonMetadata>(() => new ComparisonMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ComparisonMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[29]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ComparisonMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ComparisonMetadata(ComparisonMetadata other) : this() {
+      apiName_ = other.apiName_;
+      uiName_ = other.uiName_;
+      description_ = other.description_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ComparisonMetadata Clone() {
+      return new ComparisonMetadata(this);
+    }
+
+    /// <summary>Field number for the "api_name" field.</summary>
+    public const int ApiNameFieldNumber = 1;
+    private string apiName_ = "";
+    /// <summary>
+    /// This comparison's resource name. Useable in [Comparison](#Comparison)'s
+    /// `comparison` field. For example, 'comparisons/1234'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ApiName {
+      get { return apiName_; }
+      set {
+        apiName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ui_name" field.</summary>
+    public const int UiNameFieldNumber = 2;
+    private string uiName_ = "";
+    /// <summary>
+    /// This comparison's name within the Google Analytics user interface.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UiName {
+      get { return uiName_; }
+      set {
+        uiName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    /// <summary>
+    /// This comparison's description.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ComparisonMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ComparisonMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ApiName != other.ApiName) return false;
+      if (UiName != other.UiName) return false;
+      if (Description != other.Description) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ApiName.Length != 0) hash ^= ApiName.GetHashCode();
+      if (UiName.Length != 0) hash ^= UiName.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ApiName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ApiName);
+      }
+      if (UiName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UiName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ApiName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ApiName);
+      }
+      if (UiName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UiName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ApiName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ApiName);
+      }
+      if (UiName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UiName);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ComparisonMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ApiName.Length != 0) {
+        ApiName = other.ApiName;
+      }
+      if (other.UiName.Length != 0) {
+        UiName = other.UiName;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ApiName = input.ReadString();
+            break;
+          }
+          case 18: {
+            UiName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ApiName = input.ReadString();
+            break;
+          }
+          case 18: {
+            UiName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The compatibility for a single dimension.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DimensionCompatibility : pb::IMessage<DimensionCompatibility>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11644,7 +12960,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11695,6 +13011,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "compatibility" field.</summary>
     public const int CompatibilityFieldNumber = 2;
+    private readonly static global::Google.Analytics.Data.V1Beta.Compatibility CompatibilityDefaultValue = global::Google.Analytics.Data.V1Beta.Compatibility.Unspecified;
+
     private global::Google.Analytics.Data.V1Beta.Compatibility compatibility_;
     /// <summary>
     /// The compatibility of this dimension. If the compatibility is COMPATIBLE,
@@ -11703,7 +13021,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Data.V1Beta.Compatibility Compatibility {
-      get { if ((_hasBits0 & 1) != 0) { return compatibility_; } else { return global::Google.Analytics.Data.V1Beta.Compatibility.Unspecified; } }
+      get { if ((_hasBits0 & 1) != 0) { return compatibility_; } else { return CompatibilityDefaultValue; } }
       set {
         _hasBits0 |= 1;
         compatibility_ = value;
@@ -11891,6 +13209,7 @@ namespace Google.Analytics.Data.V1Beta {
   /// <summary>
   /// The compatibility for a single metric.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MetricCompatibility : pb::IMessage<MetricCompatibility>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11906,7 +13225,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11957,6 +13276,8 @@ namespace Google.Analytics.Data.V1Beta {
 
     /// <summary>Field number for the "compatibility" field.</summary>
     public const int CompatibilityFieldNumber = 2;
+    private readonly static global::Google.Analytics.Data.V1Beta.Compatibility CompatibilityDefaultValue = global::Google.Analytics.Data.V1Beta.Compatibility.Unspecified;
+
     private global::Google.Analytics.Data.V1Beta.Compatibility compatibility_;
     /// <summary>
     /// The compatibility of this metric. If the compatibility is COMPATIBLE,
@@ -11965,7 +13286,7 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Data.V1Beta.Compatibility Compatibility {
-      get { if ((_hasBits0 & 1) != 0) { return compatibility_; } else { return global::Google.Analytics.Data.V1Beta.Compatibility.Unspecified; } }
+      get { if ((_hasBits0 & 1) != 0) { return compatibility_; } else { return CompatibilityDefaultValue; } }
       set {
         _hasBits0 |= 1;
         compatibility_ = value;

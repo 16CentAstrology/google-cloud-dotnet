@@ -139,216 +139,216 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZUID4EECEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LkZpZWxkTWFzayJkChdEZWxldGVFbnRpdHlUeXBlUmVxdWVzdBI6CgRuYW1l",
             "GAEgASgJQizgQQL6QSYKJGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW50",
-            "aXR5VHlwZRINCgVmb3JjZRgCIAEoCCKoAQoUQ3JlYXRlRmVhdHVyZVJlcXVl",
-            "c3QSPAoGcGFyZW50GAEgASgJQizgQQL6QSYKJGFpcGxhdGZvcm0uZ29vZ2xl",
-            "YXBpcy5jb20vRW50aXR5VHlwZRI5CgdmZWF0dXJlGAIgASgLMiMuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZUID4EECEhcKCmZlYXR1cmVf",
-            "aWQYAyABKAlCA+BBAiKjAQoaQmF0Y2hDcmVhdGVGZWF0dXJlc1JlcXVlc3QS",
-            "PAoGcGFyZW50GAEgASgJQizgQQL6QSYKJGFpcGxhdGZvcm0uZ29vZ2xlYXBp",
-            "cy5jb20vRW50aXR5VHlwZRJHCghyZXF1ZXN0cxgCIAMoCzIwLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLkNyZWF0ZUZlYXR1cmVSZXF1ZXN0QgPgQQIi",
-            "VAobQmF0Y2hDcmVhdGVGZWF0dXJlc1Jlc3BvbnNlEjUKCGZlYXR1cmVzGAEg",
-            "AygLMiMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZSJMChFH",
-            "ZXRGZWF0dXJlUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIWFpcGxh",
-            "dGZvcm0uZ29vZ2xlYXBpcy5jb20vRmVhdHVyZSLkAQoTTGlzdEZlYXR1cmVz",
-            "UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIxIhYWlwbGF0Zm9ybS5n",
-            "b29nbGVhcGlzLmNvbS9GZWF0dXJlEg4KBmZpbHRlchgCIAEoCRIRCglwYWdl",
-            "X3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCRIQCghvcmRlcl9ieRgF",
-            "IAEoCRItCglyZWFkX21hc2sYBiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
-            "bGRNYXNrEhoKEmxhdGVzdF9zdGF0c19jb3VudBgHIAEoBSJmChRMaXN0RmVh",
-            "dHVyZXNSZXNwb25zZRI1CghmZWF0dXJlcxgBIAMoCzIjLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmUSFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
-            "ASgJIooBChVTZWFyY2hGZWF0dXJlc1JlcXVlc3QSOwoIbG9jYXRpb24YASAB",
-            "KAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9u",
-            "Eg0KBXF1ZXJ5GAMgASgJEhEKCXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rv",
-            "a2VuGAUgASgJImgKFlNlYXJjaEZlYXR1cmVzUmVzcG9uc2USNQoIZmVhdHVy",
-            "ZXMYASADKAsyIy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJl",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKCAQoUVXBkYXRlRmVhdHVyZVJl",
-            "cXVlc3QSOQoHZmVhdHVyZRgBIAEoCzIjLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLkZlYXR1cmVCA+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siTwoURGVsZXRlRmVhdHVyZVJlcXVl",
-            "c3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFhaXBsYXRmb3JtLmdvb2dsZWFw",
-            "aXMuY29tL0ZlYXR1cmUidQojQ3JlYXRlRmVhdHVyZXN0b3JlT3BlcmF0aW9u",
-            "TWV0YWRhdGESTgoQZ2VuZXJpY19tZXRhZGF0YRgBIAEoCzI0Lmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLkdlbmVyaWNPcGVyYXRpb25NZXRhZGF0YSJ1",
-            "CiNVcGRhdGVGZWF0dXJlc3RvcmVPcGVyYXRpb25NZXRhZGF0YRJOChBnZW5l",
-            "cmljX21ldGFkYXRhGAEgASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuR2VuZXJpY09wZXJhdGlvbk1ldGFkYXRhIpsCCiRJbXBvcnRGZWF0dXJl",
-            "VmFsdWVzT3BlcmF0aW9uTWV0YWRhdGESTgoQZ2VuZXJpY19tZXRhZGF0YRgB",
-            "IAEoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdlbmVyaWNPcGVy",
-            "YXRpb25NZXRhZGF0YRIdChVpbXBvcnRlZF9lbnRpdHlfY291bnQYAiABKAMS",
-            "JAocaW1wb3J0ZWRfZmVhdHVyZV92YWx1ZV9jb3VudBgDIAEoAxITCgtzb3Vy",
-            "Y2VfdXJpcxgEIAMoCRIZChFpbnZhbGlkX3Jvd19jb3VudBgGIAEoAxIuCiZ0",
-            "aW1lc3RhbXBfb3V0c2lkZV9yZXRlbnRpb25fcm93c19jb3VudBgHIAEoAyJ2",
-            "CiRFeHBvcnRGZWF0dXJlVmFsdWVzT3BlcmF0aW9uTWV0YWRhdGESTgoQZ2Vu",
-            "ZXJpY19tZXRhZGF0YRgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLkdlbmVyaWNPcGVyYXRpb25NZXRhZGF0YSJ5CidCYXRjaFJlYWRGZWF0",
-            "dXJlVmFsdWVzT3BlcmF0aW9uTWV0YWRhdGESTgoQZ2VuZXJpY19tZXRhZGF0",
-            "YRgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdlbmVyaWNP",
-            "cGVyYXRpb25NZXRhZGF0YSJ2CiREZWxldGVGZWF0dXJlVmFsdWVzT3BlcmF0",
-            "aW9uTWV0YWRhdGESTgoQZ2VuZXJpY19tZXRhZGF0YRgBIAEoCzI0Lmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdlbmVyaWNPcGVyYXRpb25NZXRhZGF0",
-            "YSJzCiFDcmVhdGVFbnRpdHlUeXBlT3BlcmF0aW9uTWV0YWRhdGESTgoQZ2Vu",
-            "ZXJpY19tZXRhZGF0YRgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxLkdlbmVyaWNPcGVyYXRpb25NZXRhZGF0YSJwCh5DcmVhdGVGZWF0dXJl",
+            "aXR5VHlwZRINCgVmb3JjZRgCIAEoCCKlAQoUQ3JlYXRlRmVhdHVyZVJlcXVl",
+            "c3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMSIWFpcGxhdGZvcm0uZ29vZ2xl",
+            "YXBpcy5jb20vRmVhdHVyZRI5CgdmZWF0dXJlGAIgASgLMiMuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZUID4EECEhcKCmZlYXR1cmVfaWQY",
+            "AyABKAlCA+BBAiKgAQoaQmF0Y2hDcmVhdGVGZWF0dXJlc1JlcXVlc3QSOQoG",
+            "cGFyZW50GAEgASgJQingQQL6QSMSIWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5j",
+            "b20vRmVhdHVyZRJHCghyZXF1ZXN0cxgCIAMoCzIwLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLkNyZWF0ZUZlYXR1cmVSZXF1ZXN0QgPgQQIiVAobQmF0",
+            "Y2hDcmVhdGVGZWF0dXJlc1Jlc3BvbnNlEjUKCGZlYXR1cmVzGAEgAygLMiMu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZSJMChFHZXRGZWF0",
+            "dXJlUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIWFpcGxhdGZvcm0u",
+            "Z29vZ2xlYXBpcy5jb20vRmVhdHVyZSLkAQoTTGlzdEZlYXR1cmVzUmVxdWVz",
+            "dBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIxIhYWlwbGF0Zm9ybS5nb29nbGVh",
+            "cGlzLmNvbS9GZWF0dXJlEg4KBmZpbHRlchgCIAEoCRIRCglwYWdlX3NpemUY",
+            "AyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCRIQCghvcmRlcl9ieRgFIAEoCRIt",
+            "CglyZWFkX21hc2sYBiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNr",
+            "EhoKEmxhdGVzdF9zdGF0c19jb3VudBgHIAEoBSJmChRMaXN0RmVhdHVyZXNS",
+            "ZXNwb25zZRI1CghmZWF0dXJlcxgBIAMoCzIjLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLkZlYXR1cmUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIooB",
+            "ChVTZWFyY2hGZWF0dXJlc1JlcXVlc3QSOwoIbG9jYXRpb24YASABKAlCKeBB",
+            "AvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEg0KBXF1",
+            "ZXJ5GAMgASgJEhEKCXBhZ2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rva2VuGAUg",
+            "ASgJImgKFlNlYXJjaEZlYXR1cmVzUmVzcG9uc2USNQoIZmVhdHVyZXMYASAD",
+            "KAsyIy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlEhcKD25l",
+            "eHRfcGFnZV90b2tlbhgCIAEoCSKCAQoUVXBkYXRlRmVhdHVyZVJlcXVlc3QS",
+            "OQoHZmVhdHVyZRgBIAEoCzIjLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LkZlYXR1cmVCA+BBAhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5GaWVsZE1hc2siTwoURGVsZXRlRmVhdHVyZVJlcXVlc3QSNwoE",
+            "bmFtZRgBIAEoCUIp4EEC+kEjCiFhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t",
+            "L0ZlYXR1cmUidQojQ3JlYXRlRmVhdHVyZXN0b3JlT3BlcmF0aW9uTWV0YWRh",
+            "dGESTgoQZ2VuZXJpY19tZXRhZGF0YRgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLkdlbmVyaWNPcGVyYXRpb25NZXRhZGF0YSJ1CiNVcGRh",
+            "dGVGZWF0dXJlc3RvcmVPcGVyYXRpb25NZXRhZGF0YRJOChBnZW5lcmljX21l",
+            "dGFkYXRhGAEgASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2Vu",
+            "ZXJpY09wZXJhdGlvbk1ldGFkYXRhIrsCCiRJbXBvcnRGZWF0dXJlVmFsdWVz",
             "T3BlcmF0aW9uTWV0YWRhdGESTgoQZ2VuZXJpY19tZXRhZGF0YRgBIAEoCzI0",
             "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdlbmVyaWNPcGVyYXRpb25N",
-            "ZXRhZGF0YSJ2CiRCYXRjaENyZWF0ZUZlYXR1cmVzT3BlcmF0aW9uTWV0YWRh",
-            "dGESTgoQZ2VuZXJpY19tZXRhZGF0YRgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLkdlbmVyaWNPcGVyYXRpb25NZXRhZGF0YSLlBAoaRGVs",
-            "ZXRlRmVhdHVyZVZhbHVlc1JlcXVlc3QSXAoNc2VsZWN0X2VudGl0eRgCIAEo",
-            "CzJDLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlbGV0ZUZlYXR1cmVW",
-            "YWx1ZXNSZXF1ZXN0LlNlbGVjdEVudGl0eUgAEnkKHXNlbGVjdF90aW1lX3Jh",
-            "bmdlX2FuZF9mZWF0dXJlGAMgASgLMlAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjEuRGVsZXRlRmVhdHVyZVZhbHVlc1JlcXVlc3QuU2VsZWN0VGltZVJh",
-            "bmdlQW5kRmVhdHVyZUgAEkEKC2VudGl0eV90eXBlGAEgASgJQizgQQL6QSYK",
-            "JGFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW50aXR5VHlwZRpdCgxTZWxl",
-            "Y3RFbnRpdHkSTQoSZW50aXR5X2lkX3NlbGVjdG9yGAEgASgLMiwuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuRW50aXR5SWRTZWxlY3RvckID4EECGrsB",
-            "ChlTZWxlY3RUaW1lUmFuZ2VBbmRGZWF0dXJlEi4KCnRpbWVfcmFuZ2UYASAB",
-            "KAsyFS5nb29nbGUudHlwZS5JbnRlcnZhbEID4EECEkoKEGZlYXR1cmVfc2Vs",
-            "ZWN0b3IYAiABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0",
-            "dXJlU2VsZWN0b3JCA+BBAhIiChpza2lwX29ubGluZV9zdG9yYWdlX2RlbGV0",
-            "ZRgDIAEoCEIOCgxEZWxldGVPcHRpb24ikgQKG0RlbGV0ZUZlYXR1cmVWYWx1",
-            "ZXNSZXNwb25zZRJdCg1zZWxlY3RfZW50aXR5GAEgASgLMkQuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuRGVsZXRlRmVhdHVyZVZhbHVlc1Jlc3BvbnNl",
-            "LlNlbGVjdEVudGl0eUgAEnoKHXNlbGVjdF90aW1lX3JhbmdlX2FuZF9mZWF0",
-            "dXJlGAIgASgLMlEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVsZXRl",
-            "RmVhdHVyZVZhbHVlc1Jlc3BvbnNlLlNlbGVjdFRpbWVSYW5nZUFuZEZlYXR1",
-            "cmVIABptCgxTZWxlY3RFbnRpdHkSMAoob2ZmbGluZV9zdG9yYWdlX2RlbGV0",
-            "ZWRfZW50aXR5X3Jvd19jb3VudBgBIAEoAxIrCiNvbmxpbmVfc3RvcmFnZV9k",
-            "ZWxldGVkX2VudGl0eV9jb3VudBgCIAEoAxqcAQoZU2VsZWN0VGltZVJhbmdl",
-            "QW5kRmVhdHVyZRIeChZpbXBhY3RlZF9mZWF0dXJlX2NvdW50GAEgASgDEjEK",
-            "KW9mZmxpbmVfc3RvcmFnZV9tb2RpZmllZF9lbnRpdHlfcm93X2NvdW50GAIg",
-            "ASgDEiwKJG9ubGluZV9zdG9yYWdlX21vZGlmaWVkX2VudGl0eV9jb3VudBgD",
-            "IAEoA0IKCghyZXNwb25zZSJ7ChBFbnRpdHlJZFNlbGVjdG9yEjsKCmNzdl9z",
-            "b3VyY2UYAyABKAsyJS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Dc3ZT",
-            "b3VyY2VIABIXCg9lbnRpdHlfaWRfZmllbGQYBSABKAlCEQoPRW50aXR5SWRz",
-            "U291cmNlMuYpChNGZWF0dXJlc3RvcmVTZXJ2aWNlEqYCChJDcmVhdGVGZWF0",
-            "dXJlc3RvcmUSNS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5DcmVhdGVG",
-            "ZWF0dXJlc3RvcmVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiK5AYLT5JMCQSIxL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKn0vZmVhdHVyZXN0b3JlczoMZmVhdHVyZXN0b3Jl2kETcGFyZW50LGZl",
-            "YXR1cmVzdG9yZdpBI3BhcmVudCxmZWF0dXJlc3RvcmUsZmVhdHVyZXN0b3Jl",
-            "X2lkykEzCgxGZWF0dXJlc3RvcmUSI0NyZWF0ZUZlYXR1cmVzdG9yZU9wZXJh",
-            "dGlvbk1ldGFkYXRhErEBCg9HZXRGZWF0dXJlc3RvcmUSMi5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5HZXRGZWF0dXJlc3RvcmVSZXF1ZXN0GiguZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZXN0b3JlIkCC0+STAjMS",
-            "MS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9y",
-            "ZXMvKn3aQQRuYW1lEsQBChFMaXN0RmVhdHVyZXN0b3JlcxI0Lmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLkxpc3RGZWF0dXJlc3RvcmVzUmVxdWVzdBo1",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkxpc3RGZWF0dXJlc3RvcmVz",
-            "UmVzcG9uc2UiQoLT5JMCMxIxL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKn0vZmVhdHVyZXN0b3Jlc9pBBnBhcmVudBKSAgoSVXBkYXRlRmVh",
-            "dHVyZXN0b3JlEjUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVXBkYXRl",
-            "RmVhdHVyZXN0b3JlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
-            "YXRpb24ipQGC0+STAk4yPi92MS97ZmVhdHVyZXN0b3JlLm5hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9mZWF0dXJlc3RvcmVzLyp9OgxmZWF0dXJlc3Rv",
-            "cmXaQRhmZWF0dXJlc3RvcmUsdXBkYXRlX21hc2vKQTMKDEZlYXR1cmVzdG9y",
-            "ZRIjVXBkYXRlRmVhdHVyZXN0b3JlT3BlcmF0aW9uTWV0YWRhdGES7QEKEkRl",
-            "bGV0ZUZlYXR1cmVzdG9yZRI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LkRlbGV0ZUZlYXR1cmVzdG9yZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIoABgtPkkwIzKjEvdjEve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi9mZWF0dXJlc3RvcmVzLyp92kEEbmFtZdpBCm5hbWUsZm9y",
-            "Y2XKQTAKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIXRGVsZXRlT3BlcmF0aW9u",
-            "TWV0YWRhdGESqAIKEENyZWF0ZUVudGl0eVR5cGUSMy5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MS5DcmVhdGVFbnRpdHlUeXBlUmVxdWVzdBodLmdvb2ds",
-            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24ivwGC0+STAk4iPy92MS97cGFyZW50",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qfS9lbnRp",
-            "dHlUeXBlczoLZW50aXR5X3R5cGXaQRJwYXJlbnQsZW50aXR5X3R5cGXaQSFw",
-            "YXJlbnQsZW50aXR5X3R5cGUsZW50aXR5X3R5cGVfaWTKQS8KCkVudGl0eVR5",
-            "cGUSIUNyZWF0ZUVudGl0eVR5cGVPcGVyYXRpb25NZXRhZGF0YRK5AQoNR2V0",
-            "RW50aXR5VHlwZRIwLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdldEVu",
-            "dGl0eVR5cGVSZXF1ZXN0GiYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
-            "RW50aXR5VHlwZSJOgtPkkwJBEj8vdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9mZWF0dXJlc3RvcmVzLyovZW50aXR5VHlwZXMvKn3aQQRuYW1l",
-            "EswBCg9MaXN0RW50aXR5VHlwZXMSMi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5MaXN0RW50aXR5VHlwZXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjEuTGlzdEVudGl0eVR5cGVzUmVzcG9uc2UiUILT5JMCQRI/",
-            "L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWF0dXJlc3Rv",
-            "cmVzLyp9L2VudGl0eVR5cGVz2kEGcGFyZW50EusBChBVcGRhdGVFbnRpdHlU",
-            "eXBlEjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVXBkYXRlRW50aXR5",
-            "VHlwZVJlcXVlc3QaJi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbnRp",
-            "dHlUeXBlInqC0+STAloySy92MS97ZW50aXR5X3R5cGUubmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKi9lbnRpdHlUeXBlcy8q",
-            "fToLZW50aXR5X3R5cGXaQRdlbnRpdHlfdHlwZSx1cGRhdGVfbWFzaxL3AQoQ",
-            "RGVsZXRlRW50aXR5VHlwZRIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LkRlbGV0ZUVudGl0eVR5cGVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
-            "Lk9wZXJhdGlvbiKOAYLT5JMCQSo/L3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qL2VudGl0eVR5cGVzLyp92kEEbmFt",
-            "ZdpBCm5hbWUsZm9yY2XKQTAKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIXRGVs",
-            "ZXRlT3BlcmF0aW9uTWV0YWRhdGESlwIKDUNyZWF0ZUZlYXR1cmUSMC5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5DcmVhdGVGZWF0dXJlUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24itAGC0+STAlUiSi92MS97",
-            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8q",
-            "L2VudGl0eVR5cGVzLyp9L2ZlYXR1cmVzOgdmZWF0dXJl2kEOcGFyZW50LGZl",
-            "YXR1cmXaQRlwYXJlbnQsZmVhdHVyZSxmZWF0dXJlX2lkykEpCgdGZWF0dXJl",
-            "Eh5DcmVhdGVGZWF0dXJlT3BlcmF0aW9uTWV0YWRhdGESqAIKE0JhdGNoQ3Jl",
-            "YXRlRmVhdHVyZXMSNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CYXRj",
-            "aENyZWF0ZUZlYXR1cmVzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24iuQGC0+STAlsiVi92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qL2VudGl0eVR5cGVzLyp9L2ZlYXR1",
-            "cmVzOmJhdGNoQ3JlYXRlOgEq2kEPcGFyZW50LHJlcXVlc3RzykFDChtCYXRj",
-            "aENyZWF0ZUZlYXR1cmVzUmVzcG9uc2USJEJhdGNoQ3JlYXRlRmVhdHVyZXNP",
-            "cGVyYXRpb25NZXRhZGF0YRK7AQoKR2V0RmVhdHVyZRItLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLkdldEZlYXR1cmVSZXF1ZXN0GiMuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZSJZgtPkkwJMEkovdjEve25hbWU9",
+            "ZXRhZGF0YRIdChVpbXBvcnRlZF9lbnRpdHlfY291bnQYAiABKAMSJAocaW1w",
+            "b3J0ZWRfZmVhdHVyZV92YWx1ZV9jb3VudBgDIAEoAxITCgtzb3VyY2VfdXJp",
+            "cxgEIAMoCRIZChFpbnZhbGlkX3Jvd19jb3VudBgGIAEoAxIuCiZ0aW1lc3Rh",
+            "bXBfb3V0c2lkZV9yZXRlbnRpb25fcm93c19jb3VudBgHIAEoAxIeChZibG9j",
+            "a2luZ19vcGVyYXRpb25faWRzGAggAygDInYKJEV4cG9ydEZlYXR1cmVWYWx1",
+            "ZXNPcGVyYXRpb25NZXRhZGF0YRJOChBnZW5lcmljX21ldGFkYXRhGAEgASgL",
+            "MjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2VuZXJpY09wZXJhdGlv",
+            "bk1ldGFkYXRhInkKJ0JhdGNoUmVhZEZlYXR1cmVWYWx1ZXNPcGVyYXRpb25N",
+            "ZXRhZGF0YRJOChBnZW5lcmljX21ldGFkYXRhGAEgASgLMjQuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuR2VuZXJpY09wZXJhdGlvbk1ldGFkYXRhInYK",
+            "JERlbGV0ZUZlYXR1cmVWYWx1ZXNPcGVyYXRpb25NZXRhZGF0YRJOChBnZW5l",
+            "cmljX21ldGFkYXRhGAEgASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djEuR2VuZXJpY09wZXJhdGlvbk1ldGFkYXRhInMKIUNyZWF0ZUVudGl0eVR5",
+            "cGVPcGVyYXRpb25NZXRhZGF0YRJOChBnZW5lcmljX21ldGFkYXRhGAEgASgL",
+            "MjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2VuZXJpY09wZXJhdGlv",
+            "bk1ldGFkYXRhInAKHkNyZWF0ZUZlYXR1cmVPcGVyYXRpb25NZXRhZGF0YRJO",
+            "ChBnZW5lcmljX21ldGFkYXRhGAEgASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuR2VuZXJpY09wZXJhdGlvbk1ldGFkYXRhInYKJEJhdGNoQ3Jl",
+            "YXRlRmVhdHVyZXNPcGVyYXRpb25NZXRhZGF0YRJOChBnZW5lcmljX21ldGFk",
+            "YXRhGAEgASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2VuZXJp",
+            "Y09wZXJhdGlvbk1ldGFkYXRhIuUEChpEZWxldGVGZWF0dXJlVmFsdWVzUmVx",
+            "dWVzdBJcCg1zZWxlY3RfZW50aXR5GAIgASgLMkMuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuRGVsZXRlRmVhdHVyZVZhbHVlc1JlcXVlc3QuU2VsZWN0",
+            "RW50aXR5SAASeQodc2VsZWN0X3RpbWVfcmFuZ2VfYW5kX2ZlYXR1cmUYAyAB",
+            "KAsyUC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5EZWxldGVGZWF0dXJl",
+            "VmFsdWVzUmVxdWVzdC5TZWxlY3RUaW1lUmFuZ2VBbmRGZWF0dXJlSAASQQoL",
+            "ZW50aXR5X3R5cGUYASABKAlCLOBBAvpBJgokYWlwbGF0Zm9ybS5nb29nbGVh",
+            "cGlzLmNvbS9FbnRpdHlUeXBlGl0KDFNlbGVjdEVudGl0eRJNChJlbnRpdHlf",
+            "aWRfc2VsZWN0b3IYASABKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5FbnRpdHlJZFNlbGVjdG9yQgPgQQIauwEKGVNlbGVjdFRpbWVSYW5nZUFu",
+            "ZEZlYXR1cmUSLgoKdGltZV9yYW5nZRgBIAEoCzIVLmdvb2dsZS50eXBlLklu",
+            "dGVydmFsQgPgQQISSgoQZmVhdHVyZV9zZWxlY3RvchgCIAEoCzIrLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVTZWxlY3RvckID4EECEiIK",
+            "GnNraXBfb25saW5lX3N0b3JhZ2VfZGVsZXRlGAMgASgIQg4KDERlbGV0ZU9w",
+            "dGlvbiKSBAobRGVsZXRlRmVhdHVyZVZhbHVlc1Jlc3BvbnNlEl0KDXNlbGVj",
+            "dF9lbnRpdHkYASABKAsyRC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5E",
+            "ZWxldGVGZWF0dXJlVmFsdWVzUmVzcG9uc2UuU2VsZWN0RW50aXR5SAASegod",
+            "c2VsZWN0X3RpbWVfcmFuZ2VfYW5kX2ZlYXR1cmUYAiABKAsyUS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5EZWxldGVGZWF0dXJlVmFsdWVzUmVzcG9u",
+            "c2UuU2VsZWN0VGltZVJhbmdlQW5kRmVhdHVyZUgAGm0KDFNlbGVjdEVudGl0",
+            "eRIwCihvZmZsaW5lX3N0b3JhZ2VfZGVsZXRlZF9lbnRpdHlfcm93X2NvdW50",
+            "GAEgASgDEisKI29ubGluZV9zdG9yYWdlX2RlbGV0ZWRfZW50aXR5X2NvdW50",
+            "GAIgASgDGpwBChlTZWxlY3RUaW1lUmFuZ2VBbmRGZWF0dXJlEh4KFmltcGFj",
+            "dGVkX2ZlYXR1cmVfY291bnQYASABKAMSMQopb2ZmbGluZV9zdG9yYWdlX21v",
+            "ZGlmaWVkX2VudGl0eV9yb3dfY291bnQYAiABKAMSLAokb25saW5lX3N0b3Jh",
+            "Z2VfbW9kaWZpZWRfZW50aXR5X2NvdW50GAMgASgDQgoKCHJlc3BvbnNlInsK",
+            "EEVudGl0eUlkU2VsZWN0b3ISOwoKY3N2X3NvdXJjZRgDIAEoCzIlLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkNzdlNvdXJjZUgAEhcKD2VudGl0eV9p",
+            "ZF9maWVsZBgFIAEoCUIRCg9FbnRpdHlJZHNTb3VyY2Uy5ikKE0ZlYXR1cmVz",
+            "dG9yZVNlcnZpY2USpgIKEkNyZWF0ZUZlYXR1cmVzdG9yZRI1Lmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLkNyZWF0ZUZlYXR1cmVzdG9yZVJlcXVlc3Qa",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIrkBykEzCgxGZWF0dXJl",
+            "c3RvcmUSI0NyZWF0ZUZlYXR1cmVzdG9yZU9wZXJhdGlvbk1ldGFkYXRh2kET",
+            "cGFyZW50LGZlYXR1cmVzdG9yZdpBI3BhcmVudCxmZWF0dXJlc3RvcmUsZmVh",
+            "dHVyZXN0b3JlX2lkgtPkkwJBIjEvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qfS9mZWF0dXJlc3RvcmVzOgxmZWF0dXJlc3RvcmUSsQEKD0dl",
+            "dEZlYXR1cmVzdG9yZRIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdl",
+            "dEZlYXR1cmVzdG9yZVJlcXVlc3QaKC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5GZWF0dXJlc3RvcmUiQNpBBG5hbWWC0+STAjMSMS92MS97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKn0SxAEKEUxp",
+            "c3RGZWF0dXJlc3RvcmVzEjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEu",
+            "TGlzdEZlYXR1cmVzdG9yZXNSZXF1ZXN0GjUuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuTGlzdEZlYXR1cmVzdG9yZXNSZXNwb25zZSJC2kEGcGFyZW50",
+            "gtPkkwIzEjEvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9m",
+            "ZWF0dXJlc3RvcmVzEpICChJVcGRhdGVGZWF0dXJlc3RvcmUSNS5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5VcGRhdGVGZWF0dXJlc3RvcmVSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKlAcpBMwoMRmVhdHVy",
+            "ZXN0b3JlEiNVcGRhdGVGZWF0dXJlc3RvcmVPcGVyYXRpb25NZXRhZGF0YdpB",
+            "GGZlYXR1cmVzdG9yZSx1cGRhdGVfbWFza4LT5JMCTjI+L3YxL3tmZWF0dXJl",
+            "c3RvcmUubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9y",
+            "ZXMvKn06DGZlYXR1cmVzdG9yZRLtAQoSRGVsZXRlRmVhdHVyZXN0b3JlEjUu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVsZXRlRmVhdHVyZXN0b3Jl",
+            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24igAHKQTAK",
+            "FWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIXRGVsZXRlT3BlcmF0aW9uTWV0YWRh",
+            "dGHaQQRuYW1l2kEKbmFtZSxmb3JjZYLT5JMCMyoxL3YxL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qfRKoAgoQQ3JlYXRl",
+            "RW50aXR5VHlwZRIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkNyZWF0",
+            "ZUVudGl0eVR5cGVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
+            "dGlvbiK/AcpBLwoKRW50aXR5VHlwZRIhQ3JlYXRlRW50aXR5VHlwZU9wZXJh",
+            "dGlvbk1ldGFkYXRh2kEScGFyZW50LGVudGl0eV90eXBl2kEhcGFyZW50LGVu",
+            "dGl0eV90eXBlLGVudGl0eV90eXBlX2lkgtPkkwJOIj8vdjEve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKn0vZW50aXR5",
+            "VHlwZXM6C2VudGl0eV90eXBlErkBCg1HZXRFbnRpdHlUeXBlEjAuZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjEuR2V0RW50aXR5VHlwZVJlcXVlc3QaJi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbnRpdHlUeXBlIk7aQQRuYW1l",
+            "gtPkkwJBEj8vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWF0",
+            "dXJlc3RvcmVzLyovZW50aXR5VHlwZXMvKn0SzAEKD0xpc3RFbnRpdHlUeXBl",
+            "cxIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkxpc3RFbnRpdHlUeXBl",
+            "c1JlcXVlc3QaMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5MaXN0RW50",
+            "aXR5VHlwZXNSZXNwb25zZSJQ2kEGcGFyZW50gtPkkwJBEj8vdjEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKn0vZW50",
+            "aXR5VHlwZXMS6wEKEFVwZGF0ZUVudGl0eVR5cGUSMy5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5VcGRhdGVFbnRpdHlUeXBlUmVxdWVzdBomLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVudGl0eVR5cGUietpBF2VudGl0eV90",
+            "eXBlLHVwZGF0ZV9tYXNrgtPkkwJaMksvdjEve2VudGl0eV90eXBlLm5hbWU9",
             "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWF0dXJlc3RvcmVzLyovZW50aXR5",
-            "VHlwZXMvKi9mZWF0dXJlcy8qfdpBBG5hbWUSzgEKDExpc3RGZWF0dXJlcxIv",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkxpc3RGZWF0dXJlc1JlcXVl",
-            "c3QaMC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5MaXN0RmVhdHVyZXNS",
-            "ZXNwb25zZSJbgtPkkwJMEkovdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKi9lbnRpdHlUeXBlcy8qfS9mZWF0dXJl",
-            "c9pBBnBhcmVudBLhAQoNVXBkYXRlRmVhdHVyZRIwLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLlVwZGF0ZUZlYXR1cmVSZXF1ZXN0GiMuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZSJ5gtPkkwJdMlIvdjEve2ZlYXR1",
-            "cmUubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMv",
-            "Ki9lbnRpdHlUeXBlcy8qL2ZlYXR1cmVzLyp9OgdmZWF0dXJl2kETZmVhdHVy",
-            "ZSx1cGRhdGVfbWFzaxLvAQoNRGVsZXRlRmVhdHVyZRIwLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxLkRlbGV0ZUZlYXR1cmVSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiKMAYLT5JMCTCpKL3YxL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qL2VudGl0eVR5",
-            "cGVzLyovZmVhdHVyZXMvKn3aQQRuYW1lykEwChVnb29nbGUucHJvdG9idWYu",
-            "RW1wdHkSF0RlbGV0ZU9wZXJhdGlvbk1ldGFkYXRhEqgCChNJbXBvcnRGZWF0",
-            "dXJlVmFsdWVzEjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuSW1wb3J0",
-            "RmVhdHVyZVZhbHVlc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uIrkBgtPkkwJfIlovdjEve2VudGl0eV90eXBlPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qL2VudGl0eVR5cGVzLyp9Omlt",
-            "cG9ydEZlYXR1cmVWYWx1ZXM6ASraQQtlbnRpdHlfdHlwZcpBQwobSW1wb3J0",
-            "RmVhdHVyZVZhbHVlc1Jlc3BvbnNlEiRJbXBvcnRGZWF0dXJlVmFsdWVzT3Bl",
-            "cmF0aW9uTWV0YWRhdGESqwIKFkJhdGNoUmVhZEZlYXR1cmVWYWx1ZXMSOS5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CYXRjaFJlYWRGZWF0dXJlVmFs",
-            "dWVzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24itgGC",
-            "0+STAlUiUC92MS97ZmVhdHVyZXN0b3JlPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovZmVhdHVyZXN0b3Jlcy8qfTpiYXRjaFJlYWRGZWF0dXJlVmFsdWVzOgEq",
-            "2kEMZmVhdHVyZXN0b3JlykFJCh5CYXRjaFJlYWRGZWF0dXJlVmFsdWVzUmVz",
-            "cG9uc2USJ0JhdGNoUmVhZEZlYXR1cmVWYWx1ZXNPcGVyYXRpb25NZXRhZGF0",
-            "YRKoAgoTRXhwb3J0RmVhdHVyZVZhbHVlcxI2Lmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLkV4cG9ydEZlYXR1cmVWYWx1ZXNSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiK5AYLT5JMCXyJaL3YxL3tlbnRpdHlf",
-            "dHlwZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKi9l",
-            "bnRpdHlUeXBlcy8qfTpleHBvcnRGZWF0dXJlVmFsdWVzOgEq2kELZW50aXR5",
-            "X3R5cGXKQUMKG0V4cG9ydEZlYXR1cmVWYWx1ZXNSZXNwb25zZRIkRXhwb3J0",
-            "RmVhdHVyZVZhbHVlc09wZXJhdGlvbk1ldGFkYXRhEqgCChNEZWxldGVGZWF0",
-            "dXJlVmFsdWVzEjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVsZXRl",
-            "RmVhdHVyZVZhbHVlc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uIrkBgtPkkwJfIlovdjEve2VudGl0eV90eXBlPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qL2VudGl0eVR5cGVzLyp9OmRl",
-            "bGV0ZUZlYXR1cmVWYWx1ZXM6ASraQQtlbnRpdHlfdHlwZcpBQwobRGVsZXRl",
-            "RmVhdHVyZVZhbHVlc1Jlc3BvbnNlEiREZWxldGVGZWF0dXJlVmFsdWVzT3Bl",
-            "cmF0aW9uTWV0YWRhdGES3wEKDlNlYXJjaEZlYXR1cmVzEjEuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuU2VhcmNoRmVhdHVyZXNSZXF1ZXN0GjIuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU2VhcmNoRmVhdHVyZXNSZXNwb25z",
-            "ZSJmgtPkkwJEEkIvdjEve2xvY2F0aW9uPXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyp9L2ZlYXR1cmVzdG9yZXM6c2VhcmNoRmVhdHVyZXPaQQhsb2NhdGlvbtpB",
-            "DmxvY2F0aW9uLHF1ZXJ5Gk3KQRlhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t",
-            "0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
-            "Zm9ybULWAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhhGZWF0",
-            "dXJlc3RvcmVTZXJ2aWNlUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9h",
-            "aXBsYXRmb3JtL2FwaXYxL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpH",
-            "b29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBs",
-            "YXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnBy",
-            "b3RvMw=="));
+            "VHlwZXMvKn06C2VudGl0eV90eXBlEvcBChBEZWxldGVFbnRpdHlUeXBlEjMu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVsZXRlRW50aXR5VHlwZVJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIo4BykEwChVn",
+            "b29nbGUucHJvdG9idWYuRW1wdHkSF0RlbGV0ZU9wZXJhdGlvbk1ldGFkYXRh",
+            "2kEEbmFtZdpBCm5hbWUsZm9yY2WC0+STAkEqPy92MS97bmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKi9lbnRpdHlUeXBlcy8q",
+            "fRKXAgoNQ3JlYXRlRmVhdHVyZRIwLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLkNyZWF0ZUZlYXR1cmVSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
+            "Lk9wZXJhdGlvbiK0AcpBKQoHRmVhdHVyZRIeQ3JlYXRlRmVhdHVyZU9wZXJh",
+            "dGlvbk1ldGFkYXRh2kEOcGFyZW50LGZlYXR1cmXaQRlwYXJlbnQsZmVhdHVy",
+            "ZSxmZWF0dXJlX2lkgtPkkwJVIkovdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qL2ZlYXR1cmVzdG9yZXMvKi9lbnRpdHlUeXBlcy8qfS9mZWF0",
+            "dXJlczoHZmVhdHVyZRKoAgoTQmF0Y2hDcmVhdGVGZWF0dXJlcxI2Lmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJhdGNoQ3JlYXRlRmVhdHVyZXNSZXF1",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiK5AcpBQwobQmF0",
+            "Y2hDcmVhdGVGZWF0dXJlc1Jlc3BvbnNlEiRCYXRjaENyZWF0ZUZlYXR1cmVz",
+            "T3BlcmF0aW9uTWV0YWRhdGHaQQ9wYXJlbnQscmVxdWVzdHOC0+STAlsiVi92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jl",
+            "cy8qL2VudGl0eVR5cGVzLyp9L2ZlYXR1cmVzOmJhdGNoQ3JlYXRlOgEqErsB",
+            "CgpHZXRGZWF0dXJlEi0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2V0",
+            "RmVhdHVyZVJlcXVlc3QaIy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5G",
+            "ZWF0dXJlIlnaQQRuYW1lgtPkkwJMEkovdjEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9mZWF0dXJlc3RvcmVzLyovZW50aXR5VHlwZXMvKi9mZWF0",
+            "dXJlcy8qfRLOAQoMTGlzdEZlYXR1cmVzEi8uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuTGlzdEZlYXR1cmVzUmVxdWVzdBowLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLkxpc3RGZWF0dXJlc1Jlc3BvbnNlIlvaQQZwYXJlbnSC",
+            "0+STAkwSSi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZmVh",
+            "dHVyZXN0b3Jlcy8qL2VudGl0eVR5cGVzLyp9L2ZlYXR1cmVzEuEBCg1VcGRh",
+            "dGVGZWF0dXJlEjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVXBkYXRl",
+            "RmVhdHVyZVJlcXVlc3QaIy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5G",
+            "ZWF0dXJlInnaQRNmZWF0dXJlLHVwZGF0ZV9tYXNrgtPkkwJdMlIvdjEve2Zl",
+            "YXR1cmUubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2ZlYXR1cmVzdG9y",
+            "ZXMvKi9lbnRpdHlUeXBlcy8qL2ZlYXR1cmVzLyp9OgdmZWF0dXJlEu8BCg1E",
+            "ZWxldGVGZWF0dXJlEjAuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVs",
+            "ZXRlRmVhdHVyZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
+            "aW9uIowBykEwChVnb29nbGUucHJvdG9idWYuRW1wdHkSF0RlbGV0ZU9wZXJh",
+            "dGlvbk1ldGFkYXRh2kEEbmFtZYLT5JMCTCpKL3YxL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8qL2VudGl0eVR5cGVzLyov",
+            "ZmVhdHVyZXMvKn0SqAIKE0ltcG9ydEZlYXR1cmVWYWx1ZXMSNi5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5JbXBvcnRGZWF0dXJlVmFsdWVzUmVxdWVz",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iuQHKQUMKG0ltcG9y",
+            "dEZlYXR1cmVWYWx1ZXNSZXNwb25zZRIkSW1wb3J0RmVhdHVyZVZhbHVlc09w",
+            "ZXJhdGlvbk1ldGFkYXRh2kELZW50aXR5X3R5cGWC0+STAl8iWi92MS97ZW50",
+            "aXR5X3R5cGU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWF0dXJlc3RvcmVz",
+            "LyovZW50aXR5VHlwZXMvKn06aW1wb3J0RmVhdHVyZVZhbHVlczoBKhKrAgoW",
+            "QmF0Y2hSZWFkRmVhdHVyZVZhbHVlcxI5Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxLkJhdGNoUmVhZEZlYXR1cmVWYWx1ZXNSZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiK2AcpBSQoeQmF0Y2hSZWFkRmVhdHVy",
+            "ZVZhbHVlc1Jlc3BvbnNlEidCYXRjaFJlYWRGZWF0dXJlVmFsdWVzT3BlcmF0",
+            "aW9uTWV0YWRhdGHaQQxmZWF0dXJlc3RvcmWC0+STAlUiUC92MS97ZmVhdHVy",
+            "ZXN0b3JlPXByb2plY3RzLyovbG9jYXRpb25zLyovZmVhdHVyZXN0b3Jlcy8q",
+            "fTpiYXRjaFJlYWRGZWF0dXJlVmFsdWVzOgEqEqgCChNFeHBvcnRGZWF0dXJl",
+            "VmFsdWVzEjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRXhwb3J0RmVh",
+            "dHVyZVZhbHVlc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
+            "aW9uIrkBykFDChtFeHBvcnRGZWF0dXJlVmFsdWVzUmVzcG9uc2USJEV4cG9y",
+            "dEZlYXR1cmVWYWx1ZXNPcGVyYXRpb25NZXRhZGF0YdpBC2VudGl0eV90eXBl",
+            "gtPkkwJfIlovdjEve2VudGl0eV90eXBlPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovZmVhdHVyZXN0b3Jlcy8qL2VudGl0eVR5cGVzLyp9OmV4cG9ydEZlYXR1",
+            "cmVWYWx1ZXM6ASoSqAIKE0RlbGV0ZUZlYXR1cmVWYWx1ZXMSNi5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5EZWxldGVGZWF0dXJlVmFsdWVzUmVxdWVz",
+            "dBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iuQHKQUMKG0RlbGV0",
+            "ZUZlYXR1cmVWYWx1ZXNSZXNwb25zZRIkRGVsZXRlRmVhdHVyZVZhbHVlc09w",
+            "ZXJhdGlvbk1ldGFkYXRh2kELZW50aXR5X3R5cGWC0+STAl8iWi92MS97ZW50",
+            "aXR5X3R5cGU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9mZWF0dXJlc3RvcmVz",
+            "LyovZW50aXR5VHlwZXMvKn06ZGVsZXRlRmVhdHVyZVZhbHVlczoBKhLfAQoO",
+            "U2VhcmNoRmVhdHVyZXMSMS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5T",
+            "ZWFyY2hGZWF0dXJlc1JlcXVlc3QaMi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5TZWFyY2hGZWF0dXJlc1Jlc3BvbnNlImbaQQhsb2NhdGlvbtpBDmxv",
+            "Y2F0aW9uLHF1ZXJ5gtPkkwJEEkIvdjEve2xvY2F0aW9uPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyp9L2ZlYXR1cmVzdG9yZXM6c2VhcmNoRmVhdHVyZXMaTcpB",
+            "GWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQtYBCh5jb20uZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFCGEZlYXR1cmVzdG9yZVNlcnZpY2VQcm90",
+            "b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlw",
+            "bGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRm",
+            "b3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6",
+            "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EntityTypeReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeatureReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeatureSelectorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeaturestoreReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OperationReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -386,7 +386,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeleteFeatureRequest), global::Google.Cloud.AIPlatform.V1.DeleteFeatureRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CreateFeaturestoreOperationMetadata), global::Google.Cloud.AIPlatform.V1.CreateFeaturestoreOperationMetadata.Parser, new[]{ "GenericMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.UpdateFeaturestoreOperationMetadata), global::Google.Cloud.AIPlatform.V1.UpdateFeaturestoreOperationMetadata.Parser, new[]{ "GenericMetadata" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ImportFeatureValuesOperationMetadata), global::Google.Cloud.AIPlatform.V1.ImportFeatureValuesOperationMetadata.Parser, new[]{ "GenericMetadata", "ImportedEntityCount", "ImportedFeatureValueCount", "SourceUris", "InvalidRowCount", "TimestampOutsideRetentionRowsCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ImportFeatureValuesOperationMetadata), global::Google.Cloud.AIPlatform.V1.ImportFeatureValuesOperationMetadata.Parser, new[]{ "GenericMetadata", "ImportedEntityCount", "ImportedFeatureValueCount", "SourceUris", "InvalidRowCount", "TimestampOutsideRetentionRowsCount", "BlockingOperationIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExportFeatureValuesOperationMetadata), global::Google.Cloud.AIPlatform.V1.ExportFeatureValuesOperationMetadata.Parser, new[]{ "GenericMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BatchReadFeatureValuesOperationMetadata), global::Google.Cloud.AIPlatform.V1.BatchReadFeatureValuesOperationMetadata.Parser, new[]{ "GenericMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeleteFeatureValuesOperationMetadata), global::Google.Cloud.AIPlatform.V1.DeleteFeatureValuesOperationMetadata.Parser, new[]{ "GenericMetadata" }, null, null, null, null),
@@ -408,6 +408,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.CreateFeaturestore][google.cloud.aiplatform.v1.FeaturestoreService.CreateFeaturestore].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFeaturestoreRequest : pb::IMessage<CreateFeaturestoreRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -460,7 +461,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Required. The resource name of the Location to create Featurestores.
     /// Format:
-    /// `projects/{project}/locations/{location}'`
+    /// `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -701,6 +702,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.GetFeaturestore][google.cloud.aiplatform.v1.FeaturestoreService.GetFeaturestore].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFeaturestoreRequest : pb::IMessage<GetFeaturestoreRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -897,6 +899,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.ListFeaturestores][google.cloud.aiplatform.v1.FeaturestoreService.ListFeaturestores].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFeaturestoresRequest : pb::IMessage<ListFeaturestoresRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1337,6 +1340,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [FeaturestoreService.ListFeaturestores][google.cloud.aiplatform.v1.FeaturestoreService.ListFeaturestores].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFeaturestoresResponse : pb::IMessage<ListFeaturestoresResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1565,6 +1569,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.UpdateFeaturestore][google.cloud.aiplatform.v1.FeaturestoreService.UpdateFeaturestore].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateFeaturestoreRequest : pb::IMessage<UpdateFeaturestoreRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1644,7 +1649,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///   * `labels`
     ///   * `online_serving_config.fixed_node_count`
     ///   * `online_serving_config.scaling`
-    ///   * `online_storage_ttl_days` (available in Preview)
+    ///   * `online_storage_ttl_days`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1834,6 +1839,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.DeleteFeaturestore][google.cloud.aiplatform.v1.FeaturestoreService.DeleteFeaturestore].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFeaturestoreRequest : pb::IMessage<DeleteFeaturestoreRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2074,6 +2080,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.ImportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ImportFeatureValues].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportFeatureValuesRequest : pb::IMessage<ImportFeatureValuesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2189,10 +2196,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FeatureTimeField {
-      get { return featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTimeField ? (string) featureTimeSource_ : ""; }
+      get { return HasFeatureTimeField ? (string) featureTimeSource_ : ""; }
       set {
         featureTimeSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         featureTimeSourceCase_ = FeatureTimeSourceOneofCase.FeatureTimeField;
+      }
+    }
+    /// <summary>Gets whether the "feature_time_field" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFeatureTimeField {
+      get { return featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTimeField; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "feature_time_field" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFeatureTimeField() {
+      if (HasFeatureTimeField) {
+        ClearFeatureTimeSource();
       }
     }
 
@@ -2234,7 +2255,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string entityIdField_ = "";
     /// <summary>
     /// Source column that holds entity IDs. If not provided, entity IDs are
-    /// extracted from the column named `entity_id`.
+    /// extracted from the column named entity_id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2394,7 +2415,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (sourceCase_ == SourceOneofCase.AvroSource) hash ^= AvroSource.GetHashCode();
       if (sourceCase_ == SourceOneofCase.BigquerySource) hash ^= BigquerySource.GetHashCode();
       if (sourceCase_ == SourceOneofCase.CsvSource) hash ^= CsvSource.GetHashCode();
-      if (featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTimeField) hash ^= FeatureTimeField.GetHashCode();
+      if (HasFeatureTimeField) hash ^= FeatureTimeField.GetHashCode();
       if (featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTime) hash ^= FeatureTime.GetHashCode();
       if (EntityType.Length != 0) hash ^= EntityType.GetHashCode();
       if (EntityIdField.Length != 0) hash ^= EntityIdField.GetHashCode();
@@ -2442,7 +2463,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteString(EntityIdField);
       }
-      if (featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTimeField) {
+      if (HasFeatureTimeField) {
         output.WriteRawTag(50);
         output.WriteString(FeatureTimeField);
       }
@@ -2493,7 +2514,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(42);
         output.WriteString(EntityIdField);
       }
-      if (featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTimeField) {
+      if (HasFeatureTimeField) {
         output.WriteRawTag(50);
         output.WriteString(FeatureTimeField);
       }
@@ -2533,7 +2554,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (sourceCase_ == SourceOneofCase.CsvSource) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CsvSource);
       }
-      if (featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTimeField) {
+      if (HasFeatureTimeField) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FeatureTimeField);
       }
       if (featureTimeSourceCase_ == FeatureTimeSourceOneofCase.FeatureTime) {
@@ -2787,6 +2808,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Defines the Feature value(s) to import.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FeatureSpec : pb::IMessage<FeatureSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3030,6 +3052,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [FeaturestoreService.ImportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ImportFeatureValues].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportFeatureValuesResponse : pb::IMessage<ImportFeatureValuesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3351,6 +3374,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.BatchReadFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.BatchReadFeatureValues].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchReadFeatureValuesRequest : pb::IMessage<BatchReadFeatureValuesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3878,6 +3902,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Describe pass-through fields in read_instance source.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PassThroughField : pb::IMessage<PassThroughField>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4076,6 +4101,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Selects Features of an EntityType to read values of and specifies read
       /// settings.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EntityTypeSpec : pb::IMessage<EntityTypeSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4359,6 +4385,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.ExportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ExportFeatureValues].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportFeatureValuesRequest : pb::IMessage<ExportFeatureValuesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4828,6 +4855,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Describes exporting the latest Feature values of all entities of the
       /// EntityType between [start_time, snapshot_time].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SnapshotExport : pb::IMessage<SnapshotExport>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5086,6 +5114,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Describes exporting all historical Feature values of all entities of the
       /// EntityType between [start_time, end_time].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FullExport : pb::IMessage<FullExport>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5345,6 +5374,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DestinationFeatureSetting : pb::IMessage<DestinationFeatureSetting>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5581,6 +5611,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// A destination location for Feature values and format.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeatureValueDestination : pb::IMessage<FeatureValueDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5947,6 +5978,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [FeaturestoreService.ExportFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.ExportFeatureValues].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportFeatureValuesResponse : pb::IMessage<ExportFeatureValuesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6103,6 +6135,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [FeaturestoreService.BatchReadFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.BatchReadFeatureValues].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchReadFeatureValuesResponse : pb::IMessage<BatchReadFeatureValuesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6259,6 +6292,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.CreateEntityType][google.cloud.aiplatform.v1.FeaturestoreService.CreateEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEntityTypeRequest : pb::IMessage<CreateEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6552,6 +6586,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.GetEntityType][google.cloud.aiplatform.v1.FeaturestoreService.GetEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEntityTypeRequest : pb::IMessage<GetEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6750,6 +6785,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.ListEntityTypes][google.cloud.aiplatform.v1.FeaturestoreService.ListEntityTypes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEntityTypesRequest : pb::IMessage<ListEntityTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7190,6 +7226,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [FeaturestoreService.ListEntityTypes][google.cloud.aiplatform.v1.FeaturestoreService.ListEntityTypes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEntityTypesResponse : pb::IMessage<ListEntityTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7418,6 +7455,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.UpdateEntityType][google.cloud.aiplatform.v1.FeaturestoreService.UpdateEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateEntityTypeRequest : pb::IMessage<UpdateEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7503,7 +7541,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///   * `monitoring_config.import_features_analysis.anomaly_detection_baseline`
     ///   * `monitoring_config.numerical_threshold_config.value`
     ///   * `monitoring_config.categorical_threshold_config.value`
-    ///   * `offline_storage_ttl_days` (available in Preview)
+    ///   * `offline_storage_ttl_days`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7690,8 +7728,10 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Request message for [FeaturestoreService.DeleteEntityTypes][].
+  /// Request message for
+  /// [FeaturestoreService.DeleteEntityType][google.cloud.aiplatform.v1.FeaturestoreService.DeleteEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEntityTypeRequest : pb::IMessage<DeleteEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7930,7 +7970,10 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Request message for
   /// [FeaturestoreService.CreateFeature][google.cloud.aiplatform.v1.FeaturestoreService.CreateFeature].
+  /// Request message for
+  /// [FeatureRegistryService.CreateFeature][google.cloud.aiplatform.v1.FeatureRegistryService.CreateFeature].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFeatureRequest : pb::IMessage<CreateFeatureRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7981,9 +8024,11 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the EntityType to create a Feature.
-    /// Format:
+    /// Required. The resource name of the EntityType or FeatureGroup to create a
+    /// Feature. Format for entity_type as parent:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+    /// Format for feature_group as parent:
+    /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8019,7 +8064,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// This value may be up to 128 characters, and valid characters are
     /// `[a-z0-9_]`. The first character cannot be a number.
     ///
-    /// The value must be unique within an EntityType.
+    /// The value must be unique within an EntityType/FeatureGroup.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8223,7 +8268,10 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Request message for
   /// [FeaturestoreService.BatchCreateFeatures][google.cloud.aiplatform.v1.FeaturestoreService.BatchCreateFeatures].
+  /// Request message for
+  /// [FeatureRegistryService.BatchCreateFeatures][google.cloud.aiplatform.v1.FeatureRegistryService.BatchCreateFeatures].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateFeaturesRequest : pb::IMessage<BatchCreateFeaturesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8273,9 +8321,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the EntityType to create the batch of
-    /// Features under. Format:
+    /// Required. The resource name of the EntityType/FeatureGroup to create the
+    /// batch of Features under. Format:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+    /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8293,10 +8342,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.CreateFeatureRequest> requests_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.CreateFeatureRequest>();
     /// <summary>
     /// Required. The request message specifying the Features to create. All
-    /// Features must be created under the same parent EntityType. The `parent`
-    /// field in each child request message can be omitted. If `parent` is set in a
-    /// child request, then the value must match the `parent` value in this request
-    /// message.
+    /// Features must be created under the same parent EntityType / FeatureGroup.
+    /// The `parent` field in each child request message can be omitted. If
+    /// `parent` is set in a child request, then the value must match the `parent`
+    /// value in this request message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8455,6 +8504,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [FeaturestoreService.BatchCreateFeatures][google.cloud.aiplatform.v1.FeaturestoreService.BatchCreateFeatures].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateFeaturesResponse : pb::IMessage<BatchCreateFeaturesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8639,7 +8689,10 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Request message for
   /// [FeaturestoreService.GetFeature][google.cloud.aiplatform.v1.FeaturestoreService.GetFeature].
+  /// Request message for
+  /// [FeatureRegistryService.GetFeature][google.cloud.aiplatform.v1.FeatureRegistryService.GetFeature].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetFeatureRequest : pb::IMessage<GetFeatureRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8689,8 +8742,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the Feature resource.
-    /// Format:
+    /// Format for entity_type as parent:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+    /// Format for feature_group as parent:
+    /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8837,7 +8892,10 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Request message for
   /// [FeaturestoreService.ListFeatures][google.cloud.aiplatform.v1.FeaturestoreService.ListFeatures].
+  /// Request message for
+  /// [FeatureRegistryService.ListFeatures][google.cloud.aiplatform.v1.FeatureRegistryService.ListFeatures].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFeaturesRequest : pb::IMessage<ListFeaturesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8893,8 +8951,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the Location to list Features.
-    /// Format:
+    /// Format for entity_type as parent:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+    /// Format for feature_group as parent:
+    /// `projects/{project}/locations/{location}/featureGroups/{feature_group}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8963,10 +9023,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// A page token, received from a previous
     /// [FeaturestoreService.ListFeatures][google.cloud.aiplatform.v1.FeaturestoreService.ListFeatures]
+    /// call or
+    /// [FeatureRegistryService.ListFeatures][google.cloud.aiplatform.v1.FeatureRegistryService.ListFeatures]
     /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to
     /// [FeaturestoreService.ListFeatures][google.cloud.aiplatform.v1.FeaturestoreService.ListFeatures]
+    /// or
+    /// [FeatureRegistryService.ListFeatures][google.cloud.aiplatform.v1.FeatureRegistryService.ListFeatures]
     /// must match the call that provided the page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8987,7 +9051,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Supported fields:
     ///
     ///   * `feature_id`
-    ///   * `value_type`
+    ///   * `value_type` (Not supported for FeatureRegistry Feature)
     ///   * `create_time`
     ///   * `update_time`
     /// </summary>
@@ -9019,6 +9083,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int LatestStatsCountFieldNumber = 7;
     private int latestStatsCount_;
     /// <summary>
+    /// Only applicable for Vertex AI Feature Store (Legacy).
     /// If set, return the most recent
     /// [ListFeaturesRequest.latest_stats_count][google.cloud.aiplatform.v1.ListFeaturesRequest.latest_stats_count]
     /// of stats for each Feature in response. Valid value is [0, 10]. If number of
@@ -9324,7 +9389,10 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Response message for
   /// [FeaturestoreService.ListFeatures][google.cloud.aiplatform.v1.FeaturestoreService.ListFeatures].
+  /// Response message for
+  /// [FeatureRegistryService.ListFeatures][google.cloud.aiplatform.v1.FeatureRegistryService.ListFeatures].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListFeaturesResponse : pb::IMessage<ListFeaturesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9553,6 +9621,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.SearchFeatures][google.cloud.aiplatform.v1.FeaturestoreService.SearchFeatures].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchFeaturesRequest : pb::IMessage<SearchFeaturesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9672,6 +9741,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// * `featurestore_id`: Supports = comparisons.
     ///
     /// Examples:
+    ///
     /// * `description = "foo bar"` --> Any Feature with description exactly equal
     /// to `foo bar`
     /// * `value_type = DOUBLE` --> Features whose type is DOUBLE.
@@ -9937,6 +10007,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [FeaturestoreService.SearchFeatures][google.cloud.aiplatform.v1.FeaturestoreService.SearchFeatures].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchFeaturesResponse : pb::IMessage<SearchFeaturesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10172,7 +10243,10 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Request message for
   /// [FeaturestoreService.UpdateFeature][google.cloud.aiplatform.v1.FeaturestoreService.UpdateFeature].
+  /// Request message for
+  /// [FeatureRegistryService.UpdateFeature][google.cloud.aiplatform.v1.FeatureRegistryService.UpdateFeature].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateFeatureRequest : pb::IMessage<UpdateFeatureRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10226,6 +10300,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// updated.
     /// Format:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+    /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10252,7 +10327,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///
     ///   * `description`
     ///   * `labels`
-    ///   * `disable_monitoring`
+    ///   * `disable_monitoring` (Not supported for FeatureRegistryService Feature)
+    ///   * `point_of_contact` (Not supported for FeaturestoreService FeatureStore)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10441,7 +10517,10 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Request message for
   /// [FeaturestoreService.DeleteFeature][google.cloud.aiplatform.v1.FeaturestoreService.DeleteFeature].
+  /// Request message for
+  /// [FeatureRegistryService.DeleteFeature][google.cloud.aiplatform.v1.FeatureRegistryService.DeleteFeature].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFeatureRequest : pb::IMessage<DeleteFeatureRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10493,6 +10572,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Required. The name of the Features to be deleted.
     /// Format:
     /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}/features/{feature}`
+    /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/features/{feature}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10639,6 +10719,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Details of operations that perform create Featurestore.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFeaturestoreOperationMetadata : pb::IMessage<CreateFeaturestoreOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10843,6 +10924,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Details of operations that perform update Featurestore.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateFeaturestoreOperationMetadata : pb::IMessage<UpdateFeaturestoreOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11047,6 +11129,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Details of operations that perform import Feature values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportFeatureValuesOperationMetadata : pb::IMessage<ImportFeatureValuesOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11087,6 +11170,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       sourceUris_ = other.sourceUris_.Clone();
       invalidRowCount_ = other.invalidRowCount_;
       timestampOutsideRetentionRowsCount_ = other.timestampOutsideRetentionRowsCount_;
+      blockingOperationIds_ = other.blockingOperationIds_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -11190,6 +11274,21 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "blocking_operation_ids" field.</summary>
+    public const int BlockingOperationIdsFieldNumber = 8;
+    private static readonly pb::FieldCodec<long> _repeated_blockingOperationIds_codec
+        = pb::FieldCodec.ForInt64(66);
+    private readonly pbc::RepeatedField<long> blockingOperationIds_ = new pbc::RepeatedField<long>();
+    /// <summary>
+    /// List of ImportFeatureValues operations running under a single EntityType
+    /// that are blocking this operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<long> BlockingOperationIds {
+      get { return blockingOperationIds_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -11211,6 +11310,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if(!sourceUris_.Equals(other.sourceUris_)) return false;
       if (InvalidRowCount != other.InvalidRowCount) return false;
       if (TimestampOutsideRetentionRowsCount != other.TimestampOutsideRetentionRowsCount) return false;
+      if(!blockingOperationIds_.Equals(other.blockingOperationIds_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -11224,6 +11324,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       hash ^= sourceUris_.GetHashCode();
       if (InvalidRowCount != 0L) hash ^= InvalidRowCount.GetHashCode();
       if (TimestampOutsideRetentionRowsCount != 0L) hash ^= TimestampOutsideRetentionRowsCount.GetHashCode();
+      hash ^= blockingOperationIds_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -11263,6 +11364,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(56);
         output.WriteInt64(TimestampOutsideRetentionRowsCount);
       }
+      blockingOperationIds_.WriteTo(output, _repeated_blockingOperationIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11294,6 +11396,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(56);
         output.WriteInt64(TimestampOutsideRetentionRowsCount);
       }
+      blockingOperationIds_.WriteTo(ref output, _repeated_blockingOperationIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -11320,6 +11423,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (TimestampOutsideRetentionRowsCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(TimestampOutsideRetentionRowsCount);
       }
+      size += blockingOperationIds_.CalculateSize(_repeated_blockingOperationIds_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -11351,6 +11455,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other.TimestampOutsideRetentionRowsCount != 0L) {
         TimestampOutsideRetentionRowsCount = other.TimestampOutsideRetentionRowsCount;
       }
+      blockingOperationIds_.Add(other.blockingOperationIds_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -11391,6 +11496,11 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 56: {
             TimestampOutsideRetentionRowsCount = input.ReadInt64();
+            break;
+          }
+          case 66:
+          case 64: {
+            blockingOperationIds_.AddEntriesFrom(input, _repeated_blockingOperationIds_codec);
             break;
           }
         }
@@ -11435,6 +11545,11 @@ namespace Google.Cloud.AIPlatform.V1 {
             TimestampOutsideRetentionRowsCount = input.ReadInt64();
             break;
           }
+          case 66:
+          case 64: {
+            blockingOperationIds_.AddEntriesFrom(ref input, _repeated_blockingOperationIds_codec);
+            break;
+          }
         }
       }
     }
@@ -11445,6 +11560,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Details of operations that exports Features values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportFeatureValuesOperationMetadata : pb::IMessage<ExportFeatureValuesOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11649,6 +11765,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Details of operations that batch reads Feature values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchReadFeatureValuesOperationMetadata : pb::IMessage<BatchReadFeatureValuesOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11853,6 +11970,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Details of operations that delete Feature values.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFeatureValuesOperationMetadata : pb::IMessage<DeleteFeatureValuesOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12057,6 +12175,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Details of operations that perform create EntityType.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEntityTypeOperationMetadata : pb::IMessage<CreateEntityTypeOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12261,6 +12380,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Details of operations that perform create Feature.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFeatureOperationMetadata : pb::IMessage<CreateFeatureOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12465,6 +12585,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Details of operations that perform batch create Features.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCreateFeaturesOperationMetadata : pb::IMessage<BatchCreateFeaturesOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -12670,6 +12791,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Request message for
   /// [FeaturestoreService.DeleteFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.DeleteFeatureValues].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFeatureValuesRequest : pb::IMessage<DeleteFeatureValuesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -13012,6 +13134,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// If an entity id is selected, all the feature values corresponding to the
       /// entity id will be deleted, including the entityId.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SelectEntity : pb::IMessage<SelectEntity>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -13222,6 +13345,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// This might include data from the online storage. If you want to retain
       /// any deleted historical data in the online storage, you must re-ingest it.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SelectTimeRangeAndFeature : pb::IMessage<SelectTimeRangeAndFeature>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -13525,6 +13649,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Response message for
   /// [FeaturestoreService.DeleteFeatureValues][google.cloud.aiplatform.v1.FeaturestoreService.DeleteFeatureValues].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteFeatureValuesResponse : pb::IMessage<DeleteFeatureValuesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -13822,6 +13947,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Response message if the request uses the SelectEntity option.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SelectEntity : pb::IMessage<SelectEntity>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -14060,6 +14186,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Response message if the request uses the SelectTimeRangeAndFeature option.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SelectTimeRangeAndFeature : pb::IMessage<SelectTimeRangeAndFeature>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -14348,6 +14475,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Selector for entityId. Getting ids from the given source.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityIdSelector : pb::IMessage<EntityIdSelector>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -14418,7 +14546,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string entityIdField_ = "";
     /// <summary>
     /// Source column that holds entity IDs. If not provided, entity IDs are
-    /// extracted from the column named `entity_id`.
+    /// extracted from the column named entity_id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

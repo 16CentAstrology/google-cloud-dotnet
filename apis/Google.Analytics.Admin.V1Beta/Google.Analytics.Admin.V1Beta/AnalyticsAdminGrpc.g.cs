@@ -3,7 +3,7 @@
 //     source: google/analytics/admin/v1beta/analytics_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2023 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,14 +17,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
 
 namespace Google.Analytics.Admin.V1Beta {
   /// <summary>
-  /// Service Interface for the Analytics Admin API (GA4).
+  /// Service Interface for the Google Analytics Admin API.
   /// </summary>
   public static partial class AnalyticsAdminService
   {
@@ -152,6 +152,8 @@ namespace Google.Analytics.Admin.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.ConversionEvent> __Marshaller_google_analytics_admin_v1beta_ConversionEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.ConversionEvent.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.UpdateConversionEventRequest> __Marshaller_google_analytics_admin_v1beta_UpdateConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.UpdateConversionEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.GetConversionEventRequest> __Marshaller_google_analytics_admin_v1beta_GetConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.GetConversionEventRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.DeleteConversionEventRequest> __Marshaller_google_analytics_admin_v1beta_DeleteConversionEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.DeleteConversionEventRequest.Parser));
@@ -159,6 +161,20 @@ namespace Google.Analytics.Admin.V1Beta {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.ListConversionEventsRequest> __Marshaller_google_analytics_admin_v1beta_ListConversionEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.ListConversionEventsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.ListConversionEventsResponse> __Marshaller_google_analytics_admin_v1beta_ListConversionEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.ListConversionEventsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.CreateKeyEventRequest> __Marshaller_google_analytics_admin_v1beta_CreateKeyEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.CreateKeyEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.KeyEvent> __Marshaller_google_analytics_admin_v1beta_KeyEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.KeyEvent.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.UpdateKeyEventRequest> __Marshaller_google_analytics_admin_v1beta_UpdateKeyEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.UpdateKeyEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.GetKeyEventRequest> __Marshaller_google_analytics_admin_v1beta_GetKeyEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.GetKeyEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.DeleteKeyEventRequest> __Marshaller_google_analytics_admin_v1beta_DeleteKeyEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.DeleteKeyEventRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.ListKeyEventsRequest> __Marshaller_google_analytics_admin_v1beta_ListKeyEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.ListKeyEventsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.ListKeyEventsResponse> __Marshaller_google_analytics_admin_v1beta_ListKeyEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.ListKeyEventsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Beta.CreateCustomDimensionRequest> __Marshaller_google_analytics_admin_v1beta_CreateCustomDimensionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Beta.CreateCustomDimensionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -429,6 +445,14 @@ namespace Google.Analytics.Admin.V1Beta {
         __Marshaller_google_analytics_admin_v1beta_ConversionEvent);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Beta.UpdateConversionEventRequest, global::Google.Analytics.Admin.V1Beta.ConversionEvent> __Method_UpdateConversionEvent = new grpc::Method<global::Google.Analytics.Admin.V1Beta.UpdateConversionEventRequest, global::Google.Analytics.Admin.V1Beta.ConversionEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateConversionEvent",
+        __Marshaller_google_analytics_admin_v1beta_UpdateConversionEventRequest,
+        __Marshaller_google_analytics_admin_v1beta_ConversionEvent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Beta.GetConversionEventRequest, global::Google.Analytics.Admin.V1Beta.ConversionEvent> __Method_GetConversionEvent = new grpc::Method<global::Google.Analytics.Admin.V1Beta.GetConversionEventRequest, global::Google.Analytics.Admin.V1Beta.ConversionEvent>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -451,6 +475,46 @@ namespace Google.Analytics.Admin.V1Beta {
         "ListConversionEvents",
         __Marshaller_google_analytics_admin_v1beta_ListConversionEventsRequest,
         __Marshaller_google_analytics_admin_v1beta_ListConversionEventsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Beta.CreateKeyEventRequest, global::Google.Analytics.Admin.V1Beta.KeyEvent> __Method_CreateKeyEvent = new grpc::Method<global::Google.Analytics.Admin.V1Beta.CreateKeyEventRequest, global::Google.Analytics.Admin.V1Beta.KeyEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateKeyEvent",
+        __Marshaller_google_analytics_admin_v1beta_CreateKeyEventRequest,
+        __Marshaller_google_analytics_admin_v1beta_KeyEvent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Beta.UpdateKeyEventRequest, global::Google.Analytics.Admin.V1Beta.KeyEvent> __Method_UpdateKeyEvent = new grpc::Method<global::Google.Analytics.Admin.V1Beta.UpdateKeyEventRequest, global::Google.Analytics.Admin.V1Beta.KeyEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateKeyEvent",
+        __Marshaller_google_analytics_admin_v1beta_UpdateKeyEventRequest,
+        __Marshaller_google_analytics_admin_v1beta_KeyEvent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Beta.GetKeyEventRequest, global::Google.Analytics.Admin.V1Beta.KeyEvent> __Method_GetKeyEvent = new grpc::Method<global::Google.Analytics.Admin.V1Beta.GetKeyEventRequest, global::Google.Analytics.Admin.V1Beta.KeyEvent>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetKeyEvent",
+        __Marshaller_google_analytics_admin_v1beta_GetKeyEventRequest,
+        __Marshaller_google_analytics_admin_v1beta_KeyEvent);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Beta.DeleteKeyEventRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteKeyEvent = new grpc::Method<global::Google.Analytics.Admin.V1Beta.DeleteKeyEventRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteKeyEvent",
+        __Marshaller_google_analytics_admin_v1beta_DeleteKeyEventRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Beta.ListKeyEventsRequest, global::Google.Analytics.Admin.V1Beta.ListKeyEventsResponse> __Method_ListKeyEvents = new grpc::Method<global::Google.Analytics.Admin.V1Beta.ListKeyEventsRequest, global::Google.Analytics.Admin.V1Beta.ListKeyEventsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListKeyEvents",
+        __Marshaller_google_analytics_admin_v1beta_ListKeyEventsRequest,
+        __Marshaller_google_analytics_admin_v1beta_ListKeyEventsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Beta.CreateCustomDimensionRequest, global::Google.Analytics.Admin.V1Beta.CustomDimension> __Method_CreateCustomDimension = new grpc::Method<global::Google.Analytics.Admin.V1Beta.CreateCustomDimensionRequest, global::Google.Analytics.Admin.V1Beta.CustomDimension>(
@@ -621,7 +685,7 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -642,7 +706,7 @@ namespace Google.Analytics.Admin.V1Beta {
       ///
       /// If the accounts are not restored before the expiration time, the account
       /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-      /// UserLinks) will be permanently purged.
+      /// AccessBindings) will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
       /// Returns an error if the target is not found.
@@ -693,7 +757,7 @@ namespace Google.Analytics.Admin.V1Beta {
       }
 
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -707,7 +771,6 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -722,7 +785,8 @@ namespace Google.Analytics.Admin.V1Beta {
       }
 
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -740,11 +804,11 @@ namespace Google.Analytics.Admin.V1Beta {
       /// However, they can be restored using the Trash Can UI.
       ///
       /// If the properties are not restored before the expiration time, the Property
-      /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+      /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -868,7 +932,7 @@ namespace Google.Analytics.Admin.V1Beta {
       }
 
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -947,6 +1011,9 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -958,11 +1025,13 @@ namespace Google.Analytics.Admin.V1Beta {
       }
 
       /// <summary>
+      /// Deprecated: Use `CreateKeyEvent` instead.
       /// Creates a conversion event with the specified attributes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Beta.ConversionEvent> CreateConversionEvent(global::Google.Analytics.Admin.V1Beta.CreateConversionEventRequest request, grpc::ServerCallContext context)
       {
@@ -970,11 +1039,27 @@ namespace Google.Analytics.Admin.V1Beta {
       }
 
       /// <summary>
+      /// Deprecated: Use `UpdateKeyEvent` instead.
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Beta.ConversionEvent> UpdateConversionEvent(global::Google.Analytics.Admin.V1Beta.UpdateConversionEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deprecated: Use `GetKeyEvent` instead.
       /// Retrieve a single conversion event.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Beta.ConversionEvent> GetConversionEvent(global::Google.Analytics.Admin.V1Beta.GetConversionEventRequest request, grpc::ServerCallContext context)
       {
@@ -982,11 +1067,13 @@ namespace Google.Analytics.Admin.V1Beta {
       }
 
       /// <summary>
+      /// Deprecated: Use `DeleteKeyEvent` instead.
       /// Deletes a conversion event in a property.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversionEvent(global::Google.Analytics.Admin.V1Beta.DeleteConversionEventRequest request, grpc::ServerCallContext context)
       {
@@ -994,6 +1081,7 @@ namespace Google.Analytics.Admin.V1Beta {
       }
 
       /// <summary>
+      /// Deprecated: Use `ListKeyEvents` instead.
       /// Returns a list of conversion events in the specified parent property.
       ///
       /// Returns an empty list if no conversion events are found.
@@ -1001,8 +1089,70 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Beta.ListConversionEventsResponse> ListConversionEvents(global::Google.Analytics.Admin.V1Beta.ListConversionEventsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a Key Event.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Beta.KeyEvent> CreateKeyEvent(global::Google.Analytics.Admin.V1Beta.CreateKeyEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a Key Event.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Beta.KeyEvent> UpdateKeyEvent(global::Google.Analytics.Admin.V1Beta.UpdateKeyEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve a single Key Event.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Beta.KeyEvent> GetKeyEvent(global::Google.Analytics.Admin.V1Beta.GetKeyEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a Key Event.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteKeyEvent(global::Google.Analytics.Admin.V1Beta.DeleteKeyEventRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns a list of Key Events in the specified parent property.
+      /// Returns an empty list if no Key Events are found.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Beta.ListKeyEventsResponse> ListKeyEvents(global::Google.Analytics.Admin.V1Beta.ListKeyEventsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1216,15 +1366,22 @@ namespace Google.Analytics.Admin.V1Beta {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1315,7 +1472,7 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -1332,7 +1489,7 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -1347,7 +1504,7 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -1364,7 +1521,7 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -1384,7 +1541,7 @@ namespace Google.Analytics.Admin.V1Beta {
       ///
       /// If the accounts are not restored before the expiration time, the account
       /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-      /// UserLinks) will be permanently purged.
+      /// AccessBindings) will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
       /// Returns an error if the target is not found.
@@ -1407,7 +1564,7 @@ namespace Google.Analytics.Admin.V1Beta {
       ///
       /// If the accounts are not restored before the expiration time, the account
       /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-      /// UserLinks) will be permanently purged.
+      /// AccessBindings) will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
       /// Returns an error if the target is not found.
@@ -1428,7 +1585,7 @@ namespace Google.Analytics.Admin.V1Beta {
       ///
       /// If the accounts are not restored before the expiration time, the account
       /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-      /// UserLinks) will be permanently purged.
+      /// AccessBindings) will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
       /// Returns an error if the target is not found.
@@ -1451,7 +1608,7 @@ namespace Google.Analytics.Admin.V1Beta {
       ///
       /// If the accounts are not restored before the expiration time, the account
       /// and all child resources (eg: Properties, GoogleAdsLinks, Streams,
-      /// UserLinks) will be permanently purged.
+      /// AccessBindings) will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
       /// Returns an error if the target is not found.
@@ -1609,7 +1766,7 @@ namespace Google.Analytics.Admin.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ListAccountSummaries, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1622,7 +1779,7 @@ namespace Google.Analytics.Admin.V1Beta {
         return GetProperty(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1633,7 +1790,7 @@ namespace Google.Analytics.Admin.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetProperty, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1646,7 +1803,7 @@ namespace Google.Analytics.Admin.V1Beta {
         return GetPropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1659,7 +1816,6 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -1677,7 +1833,6 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -1693,7 +1848,6 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -1711,7 +1865,6 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -1725,7 +1878,8 @@ namespace Google.Analytics.Admin.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ListProperties, null, options, request);
       }
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1738,7 +1892,8 @@ namespace Google.Analytics.Admin.V1Beta {
         return CreateProperty(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1749,7 +1904,8 @@ namespace Google.Analytics.Admin.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_CreateProperty, null, options, request);
       }
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1762,7 +1918,8 @@ namespace Google.Analytics.Admin.V1Beta {
         return CreatePropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1779,11 +1936,11 @@ namespace Google.Analytics.Admin.V1Beta {
       /// However, they can be restored using the Trash Can UI.
       ///
       /// If the properties are not restored before the expiration time, the Property
-      /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+      /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1802,11 +1959,11 @@ namespace Google.Analytics.Admin.V1Beta {
       /// However, they can be restored using the Trash Can UI.
       ///
       /// If the properties are not restored before the expiration time, the Property
-      /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+      /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1823,11 +1980,11 @@ namespace Google.Analytics.Admin.V1Beta {
       /// However, they can be restored using the Trash Can UI.
       ///
       /// If the properties are not restored before the expiration time, the Property
-      /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+      /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1846,11 +2003,11 @@ namespace Google.Analytics.Admin.V1Beta {
       /// However, they can be restored using the Trash Can UI.
       ///
       /// If the properties are not restored before the expiration time, the Property
-      /// and all child resources (eg: GoogleAdsLinks, Streams, UserLinks)
+      /// and all child resources (eg: GoogleAdsLinks, Streams, AccessBindings)
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2309,7 +2466,7 @@ namespace Google.Analytics.Admin.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataSharingSettings, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2322,7 +2479,7 @@ namespace Google.Analytics.Admin.V1Beta {
         return GetMeasurementProtocolSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2333,7 +2490,7 @@ namespace Google.Analytics.Admin.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetMeasurementProtocolSecret, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2346,7 +2503,7 @@ namespace Google.Analytics.Admin.V1Beta {
         return GetMeasurementProtocolSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2619,6 +2776,9 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2633,6 +2793,9 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2645,6 +2808,9 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2659,6 +2825,9 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2669,6 +2838,7 @@ namespace Google.Analytics.Admin.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_SearchChangeHistoryEvents, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `CreateKeyEvent` instead.
       /// Creates a conversion event with the specified attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2676,23 +2846,27 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Admin.V1Beta.ConversionEvent CreateConversionEvent(global::Google.Analytics.Admin.V1Beta.CreateConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateConversionEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `CreateKeyEvent` instead.
       /// Creates a conversion event with the specified attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Admin.V1Beta.ConversionEvent CreateConversionEvent(global::Google.Analytics.Admin.V1Beta.CreateConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateConversionEvent, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `CreateKeyEvent` instead.
       /// Creates a conversion event with the specified attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2700,23 +2874,83 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.ConversionEvent> CreateConversionEventAsync(global::Google.Analytics.Admin.V1Beta.CreateConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateConversionEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `CreateKeyEvent` instead.
       /// Creates a conversion event with the specified attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.ConversionEvent> CreateConversionEventAsync(global::Google.Analytics.Admin.V1Beta.CreateConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateConversionEvent, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `UpdateKeyEvent` instead.
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Beta.ConversionEvent UpdateConversionEvent(global::Google.Analytics.Admin.V1Beta.UpdateConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConversionEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deprecated: Use `UpdateKeyEvent` instead.
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Beta.ConversionEvent UpdateConversionEvent(global::Google.Analytics.Admin.V1Beta.UpdateConversionEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateConversionEvent, null, options, request);
+      }
+      /// <summary>
+      /// Deprecated: Use `UpdateKeyEvent` instead.
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.ConversionEvent> UpdateConversionEventAsync(global::Google.Analytics.Admin.V1Beta.UpdateConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConversionEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deprecated: Use `UpdateKeyEvent` instead.
+      /// Updates a conversion event with the specified attributes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.ConversionEvent> UpdateConversionEventAsync(global::Google.Analytics.Admin.V1Beta.UpdateConversionEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateConversionEvent, null, options, request);
+      }
+      /// <summary>
+      /// Deprecated: Use `GetKeyEvent` instead.
       /// Retrieve a single conversion event.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2724,23 +2958,27 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Admin.V1Beta.ConversionEvent GetConversionEvent(global::Google.Analytics.Admin.V1Beta.GetConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConversionEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `GetKeyEvent` instead.
       /// Retrieve a single conversion event.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Admin.V1Beta.ConversionEvent GetConversionEvent(global::Google.Analytics.Admin.V1Beta.GetConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetConversionEvent, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `GetKeyEvent` instead.
       /// Retrieve a single conversion event.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2748,23 +2986,27 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.ConversionEvent> GetConversionEventAsync(global::Google.Analytics.Admin.V1Beta.GetConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConversionEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `GetKeyEvent` instead.
       /// Retrieve a single conversion event.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.ConversionEvent> GetConversionEventAsync(global::Google.Analytics.Admin.V1Beta.GetConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetConversionEvent, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `DeleteKeyEvent` instead.
       /// Deletes a conversion event in a property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2772,23 +3014,27 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteConversionEvent(global::Google.Analytics.Admin.V1Beta.DeleteConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteConversionEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `DeleteKeyEvent` instead.
       /// Deletes a conversion event in a property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteConversionEvent(global::Google.Analytics.Admin.V1Beta.DeleteConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteConversionEvent, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `DeleteKeyEvent` instead.
       /// Deletes a conversion event in a property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2796,23 +3042,27 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversionEventAsync(global::Google.Analytics.Admin.V1Beta.DeleteConversionEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteConversionEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `DeleteKeyEvent` instead.
       /// Deletes a conversion event in a property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversionEventAsync(global::Google.Analytics.Admin.V1Beta.DeleteConversionEventRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteConversionEvent, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `ListKeyEvents` instead.
       /// Returns a list of conversion events in the specified parent property.
       ///
       /// Returns an empty list if no conversion events are found.
@@ -2822,12 +3072,14 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Admin.V1Beta.ListConversionEventsResponse ListConversionEvents(global::Google.Analytics.Admin.V1Beta.ListConversionEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListConversionEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `ListKeyEvents` instead.
       /// Returns a list of conversion events in the specified parent property.
       ///
       /// Returns an empty list if no conversion events are found.
@@ -2835,12 +3087,14 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Admin.V1Beta.ListConversionEventsResponse ListConversionEvents(global::Google.Analytics.Admin.V1Beta.ListConversionEventsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListConversionEvents, null, options, request);
       }
       /// <summary>
+      /// Deprecated: Use `ListKeyEvents` instead.
       /// Returns a list of conversion events in the specified parent property.
       ///
       /// Returns an empty list if no conversion events are found.
@@ -2850,12 +3104,14 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.ListConversionEventsResponse> ListConversionEventsAsync(global::Google.Analytics.Admin.V1Beta.ListConversionEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListConversionEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
+      /// Deprecated: Use `ListKeyEvents` instead.
       /// Returns a list of conversion events in the specified parent property.
       ///
       /// Returns an empty list if no conversion events are found.
@@ -2863,10 +3119,255 @@ namespace Google.Analytics.Admin.V1Beta {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.ListConversionEventsResponse> ListConversionEventsAsync(global::Google.Analytics.Admin.V1Beta.ListConversionEventsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListConversionEvents, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Beta.KeyEvent CreateKeyEvent(global::Google.Analytics.Admin.V1Beta.CreateKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateKeyEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Beta.KeyEvent CreateKeyEvent(global::Google.Analytics.Admin.V1Beta.CreateKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Creates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.KeyEvent> CreateKeyEventAsync(global::Google.Analytics.Admin.V1Beta.CreateKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateKeyEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.KeyEvent> CreateKeyEventAsync(global::Google.Analytics.Admin.V1Beta.CreateKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Beta.KeyEvent UpdateKeyEvent(global::Google.Analytics.Admin.V1Beta.UpdateKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateKeyEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Beta.KeyEvent UpdateKeyEvent(global::Google.Analytics.Admin.V1Beta.UpdateKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Updates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.KeyEvent> UpdateKeyEventAsync(global::Google.Analytics.Admin.V1Beta.UpdateKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateKeyEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.KeyEvent> UpdateKeyEventAsync(global::Google.Analytics.Admin.V1Beta.UpdateKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve a single Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Beta.KeyEvent GetKeyEvent(global::Google.Analytics.Admin.V1Beta.GetKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetKeyEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve a single Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Beta.KeyEvent GetKeyEvent(global::Google.Analytics.Admin.V1Beta.GetKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve a single Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.KeyEvent> GetKeyEventAsync(global::Google.Analytics.Admin.V1Beta.GetKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetKeyEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve a single Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.KeyEvent> GetKeyEventAsync(global::Google.Analytics.Admin.V1Beta.GetKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteKeyEvent(global::Google.Analytics.Admin.V1Beta.DeleteKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteKeyEvent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteKeyEvent(global::Google.Analytics.Admin.V1Beta.DeleteKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteKeyEventAsync(global::Google.Analytics.Admin.V1Beta.DeleteKeyEventRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteKeyEventAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Key Event.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteKeyEventAsync(global::Google.Analytics.Admin.V1Beta.DeleteKeyEventRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteKeyEvent, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of Key Events in the specified parent property.
+      /// Returns an empty list if no Key Events are found.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Beta.ListKeyEventsResponse ListKeyEvents(global::Google.Analytics.Admin.V1Beta.ListKeyEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListKeyEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of Key Events in the specified parent property.
+      /// Returns an empty list if no Key Events are found.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Beta.ListKeyEventsResponse ListKeyEvents(global::Google.Analytics.Admin.V1Beta.ListKeyEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListKeyEvents, null, options, request);
+      }
+      /// <summary>
+      /// Returns a list of Key Events in the specified parent property.
+      /// Returns an empty list if no Key Events are found.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.ListKeyEventsResponse> ListKeyEventsAsync(global::Google.Analytics.Admin.V1Beta.ListKeyEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListKeyEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns a list of Key Events in the specified parent property.
+      /// Returns an empty list if no Key Events are found.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Beta.ListKeyEventsResponse> ListKeyEventsAsync(global::Google.Analytics.Admin.V1Beta.ListKeyEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListKeyEvents, null, options, request);
       }
       /// <summary>
       /// Creates a CustomDimension.
@@ -3689,15 +4190,22 @@ namespace Google.Analytics.Admin.V1Beta {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3714,15 +4222,22 @@ namespace Google.Analytics.Admin.V1Beta {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3737,15 +4252,22 @@ namespace Google.Analytics.Admin.V1Beta {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3762,15 +4284,22 @@ namespace Google.Analytics.Admin.V1Beta {
       /// records of each time a user reads Google Analytics reporting data. Access
       /// records are retained for up to 2 years.
       ///
-      /// Data Access Reports can be requested for a property. The property must be
-      /// in Google Analytics 360. This method is only available to Administrators.
+      /// Data Access Reports can be requested for a property. Reports may be
+      /// requested for any property, but dimensions that aren't related to quota can
+      /// only be requested on Google Analytics 360 properties. This method is only
+      /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3821,9 +4350,15 @@ namespace Google.Analytics.Admin.V1Beta {
           .AddMethod(__Method_AcknowledgeUserDataCollection, serviceImpl.AcknowledgeUserDataCollection)
           .AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl.SearchChangeHistoryEvents)
           .AddMethod(__Method_CreateConversionEvent, serviceImpl.CreateConversionEvent)
+          .AddMethod(__Method_UpdateConversionEvent, serviceImpl.UpdateConversionEvent)
           .AddMethod(__Method_GetConversionEvent, serviceImpl.GetConversionEvent)
           .AddMethod(__Method_DeleteConversionEvent, serviceImpl.DeleteConversionEvent)
           .AddMethod(__Method_ListConversionEvents, serviceImpl.ListConversionEvents)
+          .AddMethod(__Method_CreateKeyEvent, serviceImpl.CreateKeyEvent)
+          .AddMethod(__Method_UpdateKeyEvent, serviceImpl.UpdateKeyEvent)
+          .AddMethod(__Method_GetKeyEvent, serviceImpl.GetKeyEvent)
+          .AddMethod(__Method_DeleteKeyEvent, serviceImpl.DeleteKeyEvent)
+          .AddMethod(__Method_ListKeyEvents, serviceImpl.ListKeyEvents)
           .AddMethod(__Method_CreateCustomDimension, serviceImpl.CreateCustomDimension)
           .AddMethod(__Method_UpdateCustomDimension, serviceImpl.UpdateCustomDimension)
           .AddMethod(__Method_ListCustomDimensions, serviceImpl.ListCustomDimensions)
@@ -3878,9 +4413,15 @@ namespace Google.Analytics.Admin.V1Beta {
       serviceBinder.AddMethod(__Method_AcknowledgeUserDataCollection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.AcknowledgeUserDataCollectionRequest, global::Google.Analytics.Admin.V1Beta.AcknowledgeUserDataCollectionResponse>(serviceImpl.AcknowledgeUserDataCollection));
       serviceBinder.AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Beta.SearchChangeHistoryEventsResponse>(serviceImpl.SearchChangeHistoryEvents));
       serviceBinder.AddMethod(__Method_CreateConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.CreateConversionEventRequest, global::Google.Analytics.Admin.V1Beta.ConversionEvent>(serviceImpl.CreateConversionEvent));
+      serviceBinder.AddMethod(__Method_UpdateConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.UpdateConversionEventRequest, global::Google.Analytics.Admin.V1Beta.ConversionEvent>(serviceImpl.UpdateConversionEvent));
       serviceBinder.AddMethod(__Method_GetConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.GetConversionEventRequest, global::Google.Analytics.Admin.V1Beta.ConversionEvent>(serviceImpl.GetConversionEvent));
       serviceBinder.AddMethod(__Method_DeleteConversionEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.DeleteConversionEventRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteConversionEvent));
       serviceBinder.AddMethod(__Method_ListConversionEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.ListConversionEventsRequest, global::Google.Analytics.Admin.V1Beta.ListConversionEventsResponse>(serviceImpl.ListConversionEvents));
+      serviceBinder.AddMethod(__Method_CreateKeyEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.CreateKeyEventRequest, global::Google.Analytics.Admin.V1Beta.KeyEvent>(serviceImpl.CreateKeyEvent));
+      serviceBinder.AddMethod(__Method_UpdateKeyEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.UpdateKeyEventRequest, global::Google.Analytics.Admin.V1Beta.KeyEvent>(serviceImpl.UpdateKeyEvent));
+      serviceBinder.AddMethod(__Method_GetKeyEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.GetKeyEventRequest, global::Google.Analytics.Admin.V1Beta.KeyEvent>(serviceImpl.GetKeyEvent));
+      serviceBinder.AddMethod(__Method_DeleteKeyEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.DeleteKeyEventRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteKeyEvent));
+      serviceBinder.AddMethod(__Method_ListKeyEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.ListKeyEventsRequest, global::Google.Analytics.Admin.V1Beta.ListKeyEventsResponse>(serviceImpl.ListKeyEvents));
       serviceBinder.AddMethod(__Method_CreateCustomDimension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.CreateCustomDimensionRequest, global::Google.Analytics.Admin.V1Beta.CustomDimension>(serviceImpl.CreateCustomDimension));
       serviceBinder.AddMethod(__Method_UpdateCustomDimension, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.UpdateCustomDimensionRequest, global::Google.Analytics.Admin.V1Beta.CustomDimension>(serviceImpl.UpdateCustomDimension));
       serviceBinder.AddMethod(__Method_ListCustomDimensions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Beta.ListCustomDimensionsRequest, global::Google.Analytics.Admin.V1Beta.ListCustomDimensionsResponse>(serviceImpl.ListCustomDimensions));

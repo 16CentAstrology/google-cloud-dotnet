@@ -45,68 +45,93 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "Y3B1X3V0aWxpemF0aW9uX3BlcmNlbnQYAiABKAUSKAogc3RvcmFnZV91dGls",
             "aXphdGlvbl9naWJfcGVyX25vZGUYAyABKAUiTwoRQXV0b3NjYWxpbmdMaW1p",
             "dHMSHAoPbWluX3NlcnZlX25vZGVzGAEgASgFQgPgQQISHAoPbWF4X3NlcnZl",
-            "X25vZGVzGAIgASgFQgPgQQIi0QcKB0NsdXN0ZXISDAoEbmFtZRgBIAEoCRI7",
+            "X25vZGVzGAIgASgFQgPgQQIimgkKB0NsdXN0ZXISDAoEbmFtZRgBIAEoCRI7",
             "Cghsb2NhdGlvbhgCIAEoCUIp4EEF+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBp",
             "cy5jb20vTG9jYXRpb24SOwoFc3RhdGUYAyABKA4yJy5nb29nbGUuYmlndGFi",
             "bGUuYWRtaW4udjIuQ2x1c3Rlci5TdGF0ZUID4EEDEhMKC3NlcnZlX25vZGVz",
-            "GAQgASgFEkkKDmNsdXN0ZXJfY29uZmlnGAcgASgLMi8uZ29vZ2xlLmJpZ3Rh",
-            "YmxlLmFkbWluLnYyLkNsdXN0ZXIuQ2x1c3RlckNvbmZpZ0gAEkgKFGRlZmF1",
-            "bHRfc3RvcmFnZV90eXBlGAUgASgOMiUuZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
-            "LnYyLlN0b3JhZ2VUeXBlQgPgQQUSUgoRZW5jcnlwdGlvbl9jb25maWcYBiAB",
-            "KAsyMi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ2x1c3Rlci5FbmNyeXB0",
-            "aW9uQ29uZmlnQgPgQQUauAEKGENsdXN0ZXJBdXRvc2NhbGluZ0NvbmZpZxJM",
-            "ChJhdXRvc2NhbGluZ19saW1pdHMYASABKAsyKy5nb29nbGUuYmlndGFibGUu",
-            "YWRtaW4udjIuQXV0b3NjYWxpbmdMaW1pdHNCA+BBAhJOChNhdXRvc2NhbGlu",
-            "Z190YXJnZXRzGAIgASgLMiwuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkF1",
-            "dG9zY2FsaW5nVGFyZ2V0c0ID4EECGm8KDUNsdXN0ZXJDb25maWcSXgoaY2x1",
-            "c3Rlcl9hdXRvc2NhbGluZ19jb25maWcYASABKAsyOi5nb29nbGUuYmlndGFi",
-            "bGUuYWRtaW4udjIuQ2x1c3Rlci5DbHVzdGVyQXV0b3NjYWxpbmdDb25maWca",
-            "UAoQRW5jcnlwdGlvbkNvbmZpZxI8CgxrbXNfa2V5X25hbWUYASABKAlCJvpB",
-            "IwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5IlEKBVN0YXRl",
-            "EhMKD1NUQVRFX05PVF9LTk9XThAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQ",
-            "AhIMCghSRVNJWklORxADEgwKCERJU0FCTEVEEAQ6ZepBYgokYmlndGFibGVh",
-            "ZG1pbi5nb29nbGVhcGlzLmNvbS9DbHVzdGVyEjpwcm9qZWN0cy97cHJvamVj",
-            "dH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vY2x1c3RlcnMve2NsdXN0ZXJ9QggK",
-            "BmNvbmZpZyKIBAoKQXBwUHJvZmlsZRIMCgRuYW1lGAEgASgJEgwKBGV0YWcY",
-            "AiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSZwodbXVsdGlfY2x1c3Rlcl9y",
-            "b3V0aW5nX3VzZV9hbnkYBSABKAsyPi5nb29nbGUuYmlndGFibGUuYWRtaW4u",
-            "djIuQXBwUHJvZmlsZS5NdWx0aUNsdXN0ZXJSb3V0aW5nVXNlQW55SAASWwoW",
-            "c2luZ2xlX2NsdXN0ZXJfcm91dGluZxgGIAEoCzI5Lmdvb2dsZS5iaWd0YWJs",
-            "ZS5hZG1pbi52Mi5BcHBQcm9maWxlLlNpbmdsZUNsdXN0ZXJSb3V0aW5nSAAa",
-            "MAoZTXVsdGlDbHVzdGVyUm91dGluZ1VzZUFueRITCgtjbHVzdGVyX2lkcxgB",
-            "IAMoCRpOChRTaW5nbGVDbHVzdGVyUm91dGluZxISCgpjbHVzdGVyX2lkGAEg",
-            "ASgJEiIKGmFsbG93X3RyYW5zYWN0aW9uYWxfd3JpdGVzGAIgASgIOm/qQWwK",
-            "J2JpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXBwUHJvZmlsZRJBcHJv",
-            "amVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2FwcFByb2Zp",
-            "bGVzL3thcHBfcHJvZmlsZX1CEAoOcm91dGluZ19wb2xpY3kiiAMKCUhvdFRh",
-            "YmxldBIMCgRuYW1lGAEgASgJEjsKCnRhYmxlX25hbWUYAiABKAlCJ/pBJAoi",
-            "YmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9UYWJsZRIzCgpzdGFydF90",
-            "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEK",
-            "CGVuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEhEKCXN0YXJ0X2tleRgFIAEoCRIPCgdlbmRfa2V5GAYgASgJEiMKFm5v",
-            "ZGVfY3B1X3VzYWdlX3BlcmNlbnQYByABKAJCA+BBAzp/6kF8CiZiaWd0YWJs",
-            "ZWFkbWluLmdvb2dsZWFwaXMuY29tL0hvdFRhYmxldBJScHJvamVjdHMve3By",
-            "b2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9L2NsdXN0ZXJzL3tjbHVzdGVy",
-            "fS9ob3RUYWJsZXRzL3tob3RfdGFibGV0fULQAgocY29tLmdvb2dsZS5iaWd0",
-            "YWJsZS5hZG1pbi52MkINSW5zdGFuY2VQcm90b1ABWj1nb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2Fk",
-            "bWluqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xl",
-            "XENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91ZDo6Qmln",
-            "dGFibGU6OkFkbWluOjpWMupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20v",
-            "Q3J5cHRvS2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9f",
-            "a2V5fWIGcHJvdG8z"));
+            "GAQgASgFElUKE25vZGVfc2NhbGluZ19mYWN0b3IYCSABKA4yMy5nb29nbGUu",
+            "YmlndGFibGUuYWRtaW4udjIuQ2x1c3Rlci5Ob2RlU2NhbGluZ0ZhY3RvckID",
+            "4EEFEkkKDmNsdXN0ZXJfY29uZmlnGAcgASgLMi8uZ29vZ2xlLmJpZ3RhYmxl",
+            "LmFkbWluLnYyLkNsdXN0ZXIuQ2x1c3RlckNvbmZpZ0gAEkgKFGRlZmF1bHRf",
+            "c3RvcmFnZV90eXBlGAUgASgOMiUuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYy",
+            "LlN0b3JhZ2VUeXBlQgPgQQUSUgoRZW5jcnlwdGlvbl9jb25maWcYBiABKAsy",
+            "Mi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ2x1c3Rlci5FbmNyeXB0aW9u",
+            "Q29uZmlnQgPgQQUauAEKGENsdXN0ZXJBdXRvc2NhbGluZ0NvbmZpZxJMChJh",
+            "dXRvc2NhbGluZ19saW1pdHMYASABKAsyKy5nb29nbGUuYmlndGFibGUuYWRt",
+            "aW4udjIuQXV0b3NjYWxpbmdMaW1pdHNCA+BBAhJOChNhdXRvc2NhbGluZ190",
+            "YXJnZXRzGAIgASgLMiwuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkF1dG9z",
+            "Y2FsaW5nVGFyZ2V0c0ID4EECGm8KDUNsdXN0ZXJDb25maWcSXgoaY2x1c3Rl",
+            "cl9hdXRvc2NhbGluZ19jb25maWcYASABKAsyOi5nb29nbGUuYmlndGFibGUu",
+            "YWRtaW4udjIuQ2x1c3Rlci5DbHVzdGVyQXV0b3NjYWxpbmdDb25maWcaUAoQ",
+            "RW5jcnlwdGlvbkNvbmZpZxI8CgxrbXNfa2V5X25hbWUYASABKAlCJvpBIwoh",
+            "Y2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5IlEKBVN0YXRlEhMK",
+            "D1NUQVRFX05PVF9LTk9XThAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQAhIM",
+            "CghSRVNJWklORxADEgwKCERJU0FCTEVEEAQicAoRTm9kZVNjYWxpbmdGYWN0",
+            "b3ISIwofTk9ERV9TQ0FMSU5HX0ZBQ1RPUl9VTlNQRUNJRklFRBAAEhoKFk5P",
+            "REVfU0NBTElOR19GQUNUT1JfMVgQARIaChZOT0RFX1NDQUxJTkdfRkFDVE9S",
+            "XzJYEAI6ZepBYgokYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9DbHVz",
+            "dGVyEjpwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0v",
+            "Y2x1c3RlcnMve2NsdXN0ZXJ9QggKBmNvbmZpZyLSCgoKQXBwUHJvZmlsZRIM",
+            "CgRuYW1lGAEgASgJEgwKBGV0YWcYAiABKAkSEwoLZGVzY3JpcHRpb24YAyAB",
+            "KAkSZwodbXVsdGlfY2x1c3Rlcl9yb3V0aW5nX3VzZV9hbnkYBSABKAsyPi5n",
+            "b29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5NdWx0aUNsdXN0",
+            "ZXJSb3V0aW5nVXNlQW55SAASWwoWc2luZ2xlX2NsdXN0ZXJfcm91dGluZxgG",
+            "IAEoCzI5Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlLlNp",
+            "bmdsZUNsdXN0ZXJSb3V0aW5nSAASRQoIcHJpb3JpdHkYByABKA4yLS5nb29n",
+            "bGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5Qcmlvcml0eUICGAFI",
+            "ARJUChJzdGFuZGFyZF9pc29sYXRpb24YCyABKAsyNi5nb29nbGUuYmlndGFi",
+            "bGUuYWRtaW4udjIuQXBwUHJvZmlsZS5TdGFuZGFyZElzb2xhdGlvbkgBEmkK",
+            "HmRhdGFfYm9vc3RfaXNvbGF0aW9uX3JlYWRfb25seRgKIAEoCzI/Lmdvb2ds",
+            "ZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlLkRhdGFCb29zdElzb2xh",
+            "dGlvblJlYWRPbmx5SAEarwEKGU11bHRpQ2x1c3RlclJvdXRpbmdVc2VBbnkS",
+            "EwoLY2x1c3Rlcl9pZHMYASADKAkSYgoMcm93X2FmZmluaXR5GAMgASgLMkou",
+            "Z29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUuTXVsdGlDbHVz",
+            "dGVyUm91dGluZ1VzZUFueS5Sb3dBZmZpbml0eUgAGg0KC1Jvd0FmZmluaXR5",
+            "QgoKCGFmZmluaXR5Gk4KFFNpbmdsZUNsdXN0ZXJSb3V0aW5nEhIKCmNsdXN0",
+            "ZXJfaWQYASABKAkSIgoaYWxsb3dfdHJhbnNhY3Rpb25hbF93cml0ZXMYAiAB",
+            "KAgaVAoRU3RhbmRhcmRJc29sYXRpb24SPwoIcHJpb3JpdHkYASABKA4yLS5n",
+            "b29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5Qcmlvcml0eRr8",
+            "AQoaRGF0YUJvb3N0SXNvbGF0aW9uUmVhZE9ubHkSdwoVY29tcHV0ZV9iaWxs",
+            "aW5nX293bmVyGAEgASgOMlMuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkFw",
+            "cFByb2ZpbGUuRGF0YUJvb3N0SXNvbGF0aW9uUmVhZE9ubHkuQ29tcHV0ZUJp",
+            "bGxpbmdPd25lckgAiAEBIksKE0NvbXB1dGVCaWxsaW5nT3duZXISJQohQ09N",
+            "UFVURV9CSUxMSU5HX09XTkVSX1VOU1BFQ0lGSUVEEAASDQoJSE9TVF9QQVlT",
+            "EAFCGAoWX2NvbXB1dGVfYmlsbGluZ19vd25lciJeCghQcmlvcml0eRIYChRQ",
+            "UklPUklUWV9VTlNQRUNJRklFRBAAEhAKDFBSSU9SSVRZX0xPVxABEhMKD1BS",
+            "SU9SSVRZX01FRElVTRACEhEKDVBSSU9SSVRZX0hJR0gQAzpv6kFsCidiaWd0",
+            "YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL0FwcFByb2ZpbGUSQXByb2plY3Rz",
+            "L3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9hcHBQcm9maWxlcy97",
+            "YXBwX3Byb2ZpbGV9QhAKDnJvdXRpbmdfcG9saWN5QgsKCWlzb2xhdGlvbiKI",
+            "AwoJSG90VGFibGV0EgwKBG5hbWUYASABKAkSOwoKdGFibGVfbmFtZRgCIAEo",
+            "CUIn+kEkCiJiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMuY29tL1RhYmxlEjMK",
+            "CnN0YXJ0X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSMQoIZW5kX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSEQoJc3RhcnRfa2V5GAUgASgJEg8KB2VuZF9rZXkYBiAB",
+            "KAkSIwoWbm9kZV9jcHVfdXNhZ2VfcGVyY2VudBgHIAEoAkID4EEDOn/qQXwK",
+            "JmJpZ3RhYmxlYWRtaW4uZ29vZ2xlYXBpcy5jb20vSG90VGFibGV0ElJwcm9q",
+            "ZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vY2x1c3RlcnMv",
+            "e2NsdXN0ZXJ9L2hvdFRhYmxldHMve2hvdF90YWJsZXR9QssCChxjb20uZ29v",
+            "Z2xlLmJpZ3RhYmxlLmFkbWluLnYyQg1JbnN0YW5jZVByb3RvUAFaOGNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vYmlndGFibGUvYWRtaW4vYXBpdjIvYWRtaW5wYjth",
+            "ZG1pbnBiqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29v",
+            "Z2xlXENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91ZDo6",
+            "QmlndGFibGU6OkFkbWluOjpWMupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5j",
+            "b20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlw",
+            "dG9fa2V5fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser, new[]{ "Name", "DisplayName", "State", "Type", "Labels", "CreateTime", "SatisfiesPzs" }, new[]{ "SatisfiesPzs" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets), global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets.Parser, new[]{ "CpuUtilizationPercent", "StorageUtilizationGibPerNode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AutoscalingLimits), global::Google.Cloud.Bigtable.Admin.V2.AutoscalingLimits.Parser, new[]{ "MinServeNodes", "MaxServeNodes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "ClusterConfig", "DefaultStorageType", "EncryptionConfig" }, new[]{ "Config" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig.Parser, new[]{ "AutoscalingLimits", "AutoscalingTargets" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "NodeScalingFactor", "ClusterConfig", "DefaultStorageType", "EncryptionConfig" }, new[]{ "Config" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.NodeScalingFactor) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig.Parser, new[]{ "AutoscalingLimits", "AutoscalingTargets" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig.Parser, new[]{ "ClusterAutoscalingConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting" }, new[]{ "RoutingPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, new[]{ "ClusterIds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting", "Priority", "StandardIsolation", "DataBoostIsolationReadOnly" }, new[]{ "RoutingPolicy", "Isolation" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, new[]{ "ClusterIds", "RowAffinity" }, new[]{ "Affinity" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Types.RowAffinity), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Types.RowAffinity.Parser, null, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation.Parser, new[]{ "Priority" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Parser, new[]{ "ComputeBillingOwner" }, new[]{ "ComputeBillingOwner" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.HotTablet), global::Google.Cloud.Bigtable.Admin.V2.HotTablet.Parser, new[]{ "Name", "TableName", "StartTime", "EndTime", "StartKey", "EndKey", "NodeCpuUsagePercent" }, null, null, null, null)
           }));
     }
@@ -120,6 +145,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// All tables in an instance are served from all
   /// [Clusters][google.bigtable.admin.v2.Cluster] in the instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -264,9 +290,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int CreateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. A server-assigned timestamp representing when this Instance was created.
-    /// For instances created before this field was added (August 2021), this value
-    /// is `seconds: 0, nanos: 1`.
+    /// Output only. A server-assigned timestamp representing when this Instance
+    /// was created. For instances created before this field was added (August
+    /// 2021), this value is `seconds: 0, nanos: 1`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -279,6 +305,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Field number for the "satisfies_pzs" field.</summary>
     public const int SatisfiesPzsFieldNumber = 8;
+    private readonly static bool SatisfiesPzsDefaultValue = false;
+
     private bool satisfiesPzs_;
     /// <summary>
     /// Output only. Reserved for future use.
@@ -286,7 +314,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SatisfiesPzs {
-      get { if ((_hasBits0 & 1) != 0) { return satisfiesPzs_; } else { return false; } }
+      get { if ((_hasBits0 & 1) != 0) { return satisfiesPzs_; } else { return SatisfiesPzsDefaultValue; } }
       set {
         _hasBits0 |= 1;
         satisfiesPzs_ = value;
@@ -472,7 +500,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (other.Type != global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type.Unspecified) {
         Type = other.Type;
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
@@ -634,6 +662,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// <summary>
   /// The Autoscaling targets for a Cluster. These determine the recommended nodes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoscalingTargets : pb::IMessage<AutoscalingTargets>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -703,7 +732,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>
     /// The storage utilization that the Autoscaler should be trying to achieve.
     /// This number is limited between 2560 (2.5TiB) and 5120 (5TiB) for a SSD
-    /// cluster and between 8192 (8TiB) and 16384 (16TiB) for an HDD cluster;
+    /// cluster and between 8192 (8TiB) and 16384 (16TiB) for an HDD cluster,
     /// otherwise it will return INVALID_ARGUMENT error. If this value is set to 0,
     /// it will be treated as if it were set to the default value: 2560 for SSD,
     /// 8192 for HDD.
@@ -877,6 +906,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// <summary>
   /// Limits for the number of nodes a Cluster can autoscale up/down to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoscalingLimits : pb::IMessage<AutoscalingLimits>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1114,6 +1144,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// of serving all [Tables][google.bigtable.admin.v2.Table] in the parent
   /// [Instance][google.bigtable.admin.v2.Instance].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Cluster : pb::IMessage<Cluster>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1152,6 +1183,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       location_ = other.location_;
       state_ = other.state_;
       serveNodes_ = other.serveNodes_;
+      nodeScalingFactor_ = other.nodeScalingFactor_;
       defaultStorageType_ = other.defaultStorageType_;
       encryptionConfig_ = other.encryptionConfig_ != null ? other.encryptionConfig_.Clone() : null;
       switch (other.ConfigCase) {
@@ -1189,8 +1221,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int LocationFieldNumber = 2;
     private string location_ = "";
     /// <summary>
-    /// Immutable. The location where this cluster's nodes and storage reside. For best
-    /// performance, clients should be located as close as possible to this
+    /// Immutable. The location where this cluster's nodes and storage reside. For
+    /// best performance, clients should be located as close as possible to this
     /// cluster. Currently only zones are supported, so values should be of the
     /// form `projects/{project}/locations/{zone}`.
     /// </summary>
@@ -1231,6 +1263,21 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       get { return serveNodes_; }
       set {
         serveNodes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "node_scaling_factor" field.</summary>
+    public const int NodeScalingFactorFieldNumber = 9;
+    private global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.NodeScalingFactor nodeScalingFactor_ = global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.NodeScalingFactor.Unspecified;
+    /// <summary>
+    /// Immutable. The node scaling factor of this cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.NodeScalingFactor NodeScalingFactor {
+      get { return nodeScalingFactor_; }
+      set {
+        nodeScalingFactor_ = value;
       }
     }
 
@@ -1319,6 +1366,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Location != other.Location) return false;
       if (State != other.State) return false;
       if (ServeNodes != other.ServeNodes) return false;
+      if (NodeScalingFactor != other.NodeScalingFactor) return false;
       if (!object.Equals(ClusterConfig, other.ClusterConfig)) return false;
       if (DefaultStorageType != other.DefaultStorageType) return false;
       if (!object.Equals(EncryptionConfig, other.EncryptionConfig)) return false;
@@ -1334,6 +1382,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Location.Length != 0) hash ^= Location.GetHashCode();
       if (State != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown) hash ^= State.GetHashCode();
       if (ServeNodes != 0) hash ^= ServeNodes.GetHashCode();
+      if (NodeScalingFactor != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.NodeScalingFactor.Unspecified) hash ^= NodeScalingFactor.GetHashCode();
       if (configCase_ == ConfigOneofCase.ClusterConfig) hash ^= ClusterConfig.GetHashCode();
       if (DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) hash ^= DefaultStorageType.GetHashCode();
       if (encryptionConfig_ != null) hash ^= EncryptionConfig.GetHashCode();
@@ -1384,6 +1433,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(58);
         output.WriteMessage(ClusterConfig);
       }
+      if (NodeScalingFactor != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.NodeScalingFactor.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) NodeScalingFactor);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1422,6 +1475,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(58);
         output.WriteMessage(ClusterConfig);
       }
+      if (NodeScalingFactor != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.NodeScalingFactor.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) NodeScalingFactor);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1443,6 +1500,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (ServeNodes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ServeNodes);
+      }
+      if (NodeScalingFactor != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.NodeScalingFactor.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NodeScalingFactor);
       }
       if (configCase_ == ConfigOneofCase.ClusterConfig) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClusterConfig);
@@ -1476,6 +1536,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.ServeNodes != 0) {
         ServeNodes = other.ServeNodes;
+      }
+      if (other.NodeScalingFactor != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.NodeScalingFactor.Unspecified) {
+        NodeScalingFactor = other.NodeScalingFactor;
       }
       if (other.DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) {
         DefaultStorageType = other.DefaultStorageType;
@@ -1546,6 +1609,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             ClusterConfig = subBuilder;
             break;
           }
+          case 72: {
+            NodeScalingFactor = (global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.NodeScalingFactor) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -1597,6 +1664,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             ClusterConfig = subBuilder;
             break;
           }
+          case 72: {
+            NodeScalingFactor = (global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.NodeScalingFactor) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -1641,8 +1712,30 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
+      /// Possible node scaling factors of the clusters. Node scaling delivers better
+      /// latency and more throughput by removing node boundaries.
+      /// </summary>
+      public enum NodeScalingFactor {
+        /// <summary>
+        /// No node scaling specified. Defaults to NODE_SCALING_FACTOR_1X.
+        /// </summary>
+        [pbr::OriginalName("NODE_SCALING_FACTOR_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The cluster is running with a scaling factor of 1.
+        /// </summary>
+        [pbr::OriginalName("NODE_SCALING_FACTOR_1X")] _1X = 1,
+        /// <summary>
+        /// The cluster is running with a scaling factor of 2.
+        /// All node count values must be in increments of 2 with this scaling factor
+        /// enabled, otherwise an INVALID_ARGUMENT error will be returned.
+        /// </summary>
+        [pbr::OriginalName("NODE_SCALING_FACTOR_2X")] _2X = 2,
+      }
+
+      /// <summary>
       /// Autoscaling config for a cluster.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ClusterAutoscalingConfig : pb::IMessage<ClusterAutoscalingConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1896,6 +1989,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <summary>
       /// Configuration for a cluster.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ClusterConfig : pb::IMessage<ClusterConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2101,6 +2195,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// Cloud Key Management Service (Cloud KMS) settings for a CMEK-protected
       /// cluster.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EncryptionConfig : pb::IMessage<EncryptionConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2311,6 +2406,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// A configuration object describing how Cloud Bigtable should treat traffic
   /// from a particular end user application.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppProfile : pb::IMessage<AppProfile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2354,6 +2450,18 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           break;
         case RoutingPolicyOneofCase.SingleClusterRouting:
           SingleClusterRouting = other.SingleClusterRouting.Clone();
+          break;
+      }
+
+      switch (other.IsolationCase) {
+        case IsolationOneofCase.Priority:
+          Priority = other.Priority;
+          break;
+        case IsolationOneofCase.StandardIsolation:
+          StandardIsolation = other.StandardIsolation.Clone();
+          break;
+        case IsolationOneofCase.DataBoostIsolationReadOnly:
+          DataBoostIsolationReadOnly = other.DataBoostIsolationReadOnly.Clone();
           break;
       }
 
@@ -2449,6 +2557,73 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
     }
 
+    /// <summary>Field number for the "priority" field.</summary>
+    public const int PriorityFieldNumber = 7;
+    /// <summary>
+    /// This field has been deprecated in favor of `standard_isolation.priority`.
+    /// If you set this field, `standard_isolation.priority` will be set instead.
+    ///
+    /// The priority of requests sent using this app profile.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority Priority {
+      get { return HasPriority ? (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) isolation_ : global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified; }
+      set {
+        isolation_ = value;
+        isolationCase_ = IsolationOneofCase.Priority;
+      }
+    }
+    /// <summary>Gets whether the "priority" field is set</summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPriority {
+      get { return isolationCase_ == IsolationOneofCase.Priority; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "priority" </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPriority() {
+      if (HasPriority) {
+        ClearIsolation();
+      }
+    }
+
+    /// <summary>Field number for the "standard_isolation" field.</summary>
+    public const int StandardIsolationFieldNumber = 11;
+    /// <summary>
+    /// The standard options used for isolating this app profile's traffic from
+    /// other use cases.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation StandardIsolation {
+      get { return isolationCase_ == IsolationOneofCase.StandardIsolation ? (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation) isolation_ : null; }
+      set {
+        isolation_ = value;
+        isolationCase_ = value == null ? IsolationOneofCase.None : IsolationOneofCase.StandardIsolation;
+      }
+    }
+
+    /// <summary>Field number for the "data_boost_isolation_read_only" field.</summary>
+    public const int DataBoostIsolationReadOnlyFieldNumber = 10;
+    /// <summary>
+    /// Specifies that this app profile is intended for read-only usage via the
+    /// Data Boost feature.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly DataBoostIsolationReadOnly {
+      get { return isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly ? (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly) isolation_ : null; }
+      set {
+        isolation_ = value;
+        isolationCase_ = value == null ? IsolationOneofCase.None : IsolationOneofCase.DataBoostIsolationReadOnly;
+      }
+    }
+
     private object routingPolicy_;
     /// <summary>Enum of possible cases for the "routing_policy" oneof.</summary>
     public enum RoutingPolicyOneofCase {
@@ -2468,6 +2643,28 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public void ClearRoutingPolicy() {
       routingPolicyCase_ = RoutingPolicyOneofCase.None;
       routingPolicy_ = null;
+    }
+
+    private object isolation_;
+    /// <summary>Enum of possible cases for the "isolation" oneof.</summary>
+    public enum IsolationOneofCase {
+      None = 0,
+      Priority = 7,
+      StandardIsolation = 11,
+      DataBoostIsolationReadOnly = 10,
+    }
+    private IsolationOneofCase isolationCase_ = IsolationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IsolationOneofCase IsolationCase {
+      get { return isolationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIsolation() {
+      isolationCase_ = IsolationOneofCase.None;
+      isolation_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2490,7 +2687,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Description != other.Description) return false;
       if (!object.Equals(MultiClusterRoutingUseAny, other.MultiClusterRoutingUseAny)) return false;
       if (!object.Equals(SingleClusterRouting, other.SingleClusterRouting)) return false;
+      if (Priority != other.Priority) return false;
+      if (!object.Equals(StandardIsolation, other.StandardIsolation)) return false;
+      if (!object.Equals(DataBoostIsolationReadOnly, other.DataBoostIsolationReadOnly)) return false;
       if (RoutingPolicyCase != other.RoutingPolicyCase) return false;
+      if (IsolationCase != other.IsolationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2503,7 +2704,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (routingPolicyCase_ == RoutingPolicyOneofCase.MultiClusterRoutingUseAny) hash ^= MultiClusterRoutingUseAny.GetHashCode();
       if (routingPolicyCase_ == RoutingPolicyOneofCase.SingleClusterRouting) hash ^= SingleClusterRouting.GetHashCode();
+      if (HasPriority) hash ^= Priority.GetHashCode();
+      if (isolationCase_ == IsolationOneofCase.StandardIsolation) hash ^= StandardIsolation.GetHashCode();
+      if (isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly) hash ^= DataBoostIsolationReadOnly.GetHashCode();
       hash ^= (int) routingPolicyCase_;
+      hash ^= (int) isolationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2542,6 +2747,18 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(SingleClusterRouting);
       }
+      if (HasPriority) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Priority);
+      }
+      if (isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly) {
+        output.WriteRawTag(82);
+        output.WriteMessage(DataBoostIsolationReadOnly);
+      }
+      if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
+        output.WriteRawTag(90);
+        output.WriteMessage(StandardIsolation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2572,6 +2789,18 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(SingleClusterRouting);
       }
+      if (HasPriority) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Priority);
+      }
+      if (isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly) {
+        output.WriteRawTag(82);
+        output.WriteMessage(DataBoostIsolationReadOnly);
+      }
+      if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
+        output.WriteRawTag(90);
+        output.WriteMessage(StandardIsolation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2596,6 +2825,15 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (routingPolicyCase_ == RoutingPolicyOneofCase.SingleClusterRouting) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SingleClusterRouting);
+      }
+      if (HasPriority) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Priority);
+      }
+      if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StandardIsolation);
+      }
+      if (isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataBoostIsolationReadOnly);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2630,6 +2868,24 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             SingleClusterRouting = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting();
           }
           SingleClusterRouting.MergeFrom(other.SingleClusterRouting);
+          break;
+      }
+
+      switch (other.IsolationCase) {
+        case IsolationOneofCase.Priority:
+          Priority = other.Priority;
+          break;
+        case IsolationOneofCase.StandardIsolation:
+          if (StandardIsolation == null) {
+            StandardIsolation = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation();
+          }
+          StandardIsolation.MergeFrom(other.StandardIsolation);
+          break;
+        case IsolationOneofCase.DataBoostIsolationReadOnly:
+          if (DataBoostIsolationReadOnly == null) {
+            DataBoostIsolationReadOnly = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly();
+          }
+          DataBoostIsolationReadOnly.MergeFrom(other.DataBoostIsolationReadOnly);
           break;
       }
 
@@ -2678,6 +2934,29 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             SingleClusterRouting = subBuilder;
             break;
           }
+          case 56: {
+            isolation_ = input.ReadEnum();
+            isolationCase_ = IsolationOneofCase.Priority;
+            break;
+          }
+          case 82: {
+            global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly();
+            if (isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly) {
+              subBuilder.MergeFrom(DataBoostIsolationReadOnly);
+            }
+            input.ReadMessage(subBuilder);
+            DataBoostIsolationReadOnly = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation();
+            if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
+              subBuilder.MergeFrom(StandardIsolation);
+            }
+            input.ReadMessage(subBuilder);
+            StandardIsolation = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -2723,6 +3002,29 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             SingleClusterRouting = subBuilder;
             break;
           }
+          case 56: {
+            isolation_ = input.ReadEnum();
+            isolationCase_ = IsolationOneofCase.Priority;
+            break;
+          }
+          case 82: {
+            global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly();
+            if (isolationCase_ == IsolationOneofCase.DataBoostIsolationReadOnly) {
+              subBuilder.MergeFrom(DataBoostIsolationReadOnly);
+            }
+            input.ReadMessage(subBuilder);
+            DataBoostIsolationReadOnly = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.StandardIsolation();
+            if (isolationCase_ == IsolationOneofCase.StandardIsolation) {
+              subBuilder.MergeFrom(StandardIsolation);
+            }
+            input.ReadMessage(subBuilder);
+            StandardIsolation = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -2734,12 +3036,28 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
+      /// Possible priorities for an app profile. Note that higher priority writes
+      /// can sometimes queue behind lower priority writes to the same tablet, as
+      /// writes must be strictly sequenced in the durability log.
+      /// </summary>
+      public enum Priority {
+        /// <summary>
+        /// Default value. Mapped to PRIORITY_HIGH (the legacy behavior) on creation.
+        /// </summary>
+        [pbr::OriginalName("PRIORITY_UNSPECIFIED")] Unspecified = 0,
+        [pbr::OriginalName("PRIORITY_LOW")] Low = 1,
+        [pbr::OriginalName("PRIORITY_MEDIUM")] Medium = 2,
+        [pbr::OriginalName("PRIORITY_HIGH")] High = 3,
+      }
+
+      /// <summary>
       /// Read/write requests are routed to the nearest cluster in the instance, and
       /// will fail over to the nearest cluster that is available in the event of
       /// transient errors or delays. Clusters in a region are considered
       /// equidistant. Choosing this option sacrifices read-your-writes consistency
       /// to improve availability.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MultiClusterRoutingUseAny : pb::IMessage<MultiClusterRoutingUseAny>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2775,6 +3093,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MultiClusterRoutingUseAny(MultiClusterRoutingUseAny other) : this() {
           clusterIds_ = other.clusterIds_.Clone();
+          switch (other.AffinityCase) {
+            case AffinityOneofCase.RowAffinity:
+              RowAffinity = other.RowAffinity.Clone();
+              break;
+          }
+
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2799,6 +3123,42 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           get { return clusterIds_; }
         }
 
+        /// <summary>Field number for the "row_affinity" field.</summary>
+        public const int RowAffinityFieldNumber = 3;
+        /// <summary>
+        /// Row affinity sticky routing based on the row key of the request.
+        /// Requests that span multiple rows are routed non-deterministically.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Types.RowAffinity RowAffinity {
+          get { return affinityCase_ == AffinityOneofCase.RowAffinity ? (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Types.RowAffinity) affinity_ : null; }
+          set {
+            affinity_ = value;
+            affinityCase_ = value == null ? AffinityOneofCase.None : AffinityOneofCase.RowAffinity;
+          }
+        }
+
+        private object affinity_;
+        /// <summary>Enum of possible cases for the "affinity" oneof.</summary>
+        public enum AffinityOneofCase {
+          None = 0,
+          RowAffinity = 3,
+        }
+        private AffinityOneofCase affinityCase_ = AffinityOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AffinityOneofCase AffinityCase {
+          get { return affinityCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAffinity() {
+          affinityCase_ = AffinityOneofCase.None;
+          affinity_ = null;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -2815,6 +3175,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             return true;
           }
           if(!clusterIds_.Equals(other.clusterIds_)) return false;
+          if (!object.Equals(RowAffinity, other.RowAffinity)) return false;
+          if (AffinityCase != other.AffinityCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2823,6 +3185,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         public override int GetHashCode() {
           int hash = 1;
           hash ^= clusterIds_.GetHashCode();
+          if (affinityCase_ == AffinityOneofCase.RowAffinity) hash ^= RowAffinity.GetHashCode();
+          hash ^= (int) affinityCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2842,6 +3206,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           output.WriteRawMessage(this);
         #else
           clusterIds_.WriteTo(output, _repeated_clusterIds_codec);
+          if (affinityCase_ == AffinityOneofCase.RowAffinity) {
+            output.WriteRawTag(26);
+            output.WriteMessage(RowAffinity);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2853,6 +3221,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           clusterIds_.WriteTo(ref output, _repeated_clusterIds_codec);
+          if (affinityCase_ == AffinityOneofCase.RowAffinity) {
+            output.WriteRawTag(26);
+            output.WriteMessage(RowAffinity);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2864,6 +3236,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         public int CalculateSize() {
           int size = 0;
           size += clusterIds_.CalculateSize(_repeated_clusterIds_codec);
+          if (affinityCase_ == AffinityOneofCase.RowAffinity) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(RowAffinity);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -2877,6 +3252,15 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             return;
           }
           clusterIds_.Add(other.clusterIds_);
+          switch (other.AffinityCase) {
+            case AffinityOneofCase.RowAffinity:
+              if (RowAffinity == null) {
+                RowAffinity = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Types.RowAffinity();
+              }
+              RowAffinity.MergeFrom(other.RowAffinity);
+              break;
+          }
+
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -2894,6 +3278,15 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
                 break;
               case 10: {
                 clusterIds_.AddEntriesFrom(input, _repeated_clusterIds_codec);
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Types.RowAffinity subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Types.RowAffinity();
+                if (affinityCase_ == AffinityOneofCase.RowAffinity) {
+                  subBuilder.MergeFrom(RowAffinity);
+                }
+                input.ReadMessage(subBuilder);
+                RowAffinity = subBuilder;
                 break;
               }
             }
@@ -2915,10 +3308,191 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
                 clusterIds_.AddEntriesFrom(ref input, _repeated_clusterIds_codec);
                 break;
               }
+              case 26: {
+                global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Types.RowAffinity subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Types.RowAffinity();
+                if (affinityCase_ == AffinityOneofCase.RowAffinity) {
+                  subBuilder.MergeFrom(RowAffinity);
+                }
+                input.ReadMessage(subBuilder);
+                RowAffinity = subBuilder;
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the MultiClusterRoutingUseAny message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// If enabled, Bigtable will route the request based on the row key of the
+          /// request, rather than randomly. Instead, each row key will be assigned
+          /// to a cluster, and will stick to that cluster. If clusters are added or
+          /// removed, then this may affect which row keys stick to which clusters.
+          /// To avoid this, users can use a cluster group to specify which clusters
+          /// are to be used. In this case, new clusters that are not a part of the
+          /// cluster group will not be routed to, and routing will be unaffected by
+          /// the new cluster. Moreover, clusters specified in the cluster group cannot
+          /// be deleted unless removed from the cluster group.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class RowAffinity : pb::IMessage<RowAffinity>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<RowAffinity> _parser = new pb::MessageParser<RowAffinity>(() => new RowAffinity());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<RowAffinity> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RowAffinity() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RowAffinity(RowAffinity other) : this() {
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RowAffinity Clone() {
+              return new RowAffinity(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as RowAffinity);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(RowAffinity other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(RowAffinity other) {
+              if (other == null) {
+                return;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
 
       }
 
@@ -2927,6 +3501,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// This option preserves read-your-writes consistency but does not improve
       /// availability.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SingleClusterRouting : pb::IMessage<SingleClusterRouting>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3161,6 +3736,452 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
       }
 
+      /// <summary>
+      /// Standard options for isolating this app profile's traffic from other use
+      /// cases.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class StandardIsolation : pb::IMessage<StandardIsolation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<StandardIsolation> _parser = new pb::MessageParser<StandardIsolation>(() => new StandardIsolation());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StandardIsolation> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StandardIsolation() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StandardIsolation(StandardIsolation other) : this() {
+          priority_ = other.priority_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StandardIsolation Clone() {
+          return new StandardIsolation(this);
+        }
+
+        /// <summary>Field number for the "priority" field.</summary>
+        public const int PriorityFieldNumber = 1;
+        private global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority priority_ = global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified;
+        /// <summary>
+        /// The priority of requests sent using this app profile.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority Priority {
+          get { return priority_; }
+          set {
+            priority_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as StandardIsolation);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StandardIsolation other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Priority != other.Priority) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) hash ^= Priority.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Priority);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Priority);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Priority);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StandardIsolation other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Priority != global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority.Unspecified) {
+            Priority = other.Priority;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Priority = (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Priority = (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.Priority) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Data Boost is a serverless compute capability that lets you run
+      /// high-throughput read jobs on your Bigtable data, without impacting the
+      /// performance of the clusters that handle your application traffic.
+      /// Currently, Data Boost exclusively supports read-only use-cases with
+      /// single-cluster routing.
+      ///
+      /// Data Boost reads are only guaranteed to see the results of writes that
+      /// were written at least 30 minutes ago. This means newly written values may
+      /// not become visible for up to 30m, and also means that old values may
+      /// remain visible for up to 30m after being deleted or overwritten. To
+      /// mitigate the staleness of the data, users may either wait 30m, or use
+      /// CheckConsistency.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DataBoostIsolationReadOnly : pb::IMessage<DataBoostIsolationReadOnly>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DataBoostIsolationReadOnly> _parser = new pb::MessageParser<DataBoostIsolationReadOnly>(() => new DataBoostIsolationReadOnly());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DataBoostIsolationReadOnly> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataBoostIsolationReadOnly() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataBoostIsolationReadOnly(DataBoostIsolationReadOnly other) : this() {
+          _hasBits0 = other._hasBits0;
+          computeBillingOwner_ = other.computeBillingOwner_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataBoostIsolationReadOnly Clone() {
+          return new DataBoostIsolationReadOnly(this);
+        }
+
+        /// <summary>Field number for the "compute_billing_owner" field.</summary>
+        public const int ComputeBillingOwnerFieldNumber = 1;
+        private readonly static global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner ComputeBillingOwnerDefaultValue = global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner.Unspecified;
+
+        private global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner computeBillingOwner_;
+        /// <summary>
+        /// The Compute Billing Owner for this Data Boost App Profile.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner ComputeBillingOwner {
+          get { if ((_hasBits0 & 1) != 0) { return computeBillingOwner_; } else { return ComputeBillingOwnerDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            computeBillingOwner_ = value;
+          }
+        }
+        /// <summary>Gets whether the "compute_billing_owner" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasComputeBillingOwner {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "compute_billing_owner" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearComputeBillingOwner() {
+          _hasBits0 &= ~1;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DataBoostIsolationReadOnly);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DataBoostIsolationReadOnly other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ComputeBillingOwner != other.ComputeBillingOwner) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasComputeBillingOwner) hash ^= ComputeBillingOwner.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasComputeBillingOwner) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ComputeBillingOwner);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasComputeBillingOwner) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ComputeBillingOwner);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasComputeBillingOwner) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ComputeBillingOwner);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DataBoostIsolationReadOnly other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasComputeBillingOwner) {
+            ComputeBillingOwner = other.ComputeBillingOwner;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ComputeBillingOwner = (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ComputeBillingOwner = (global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.DataBoostIsolationReadOnly.Types.ComputeBillingOwner) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the DataBoostIsolationReadOnly message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Compute Billing Owner specifies how usage should be accounted when using
+          /// Data Boost. Compute Billing Owner also configures which Cloud Project is
+          /// charged for relevant quota.
+          /// </summary>
+          public enum ComputeBillingOwner {
+            /// <summary>
+            /// Unspecified value.
+            /// </summary>
+            [pbr::OriginalName("COMPUTE_BILLING_OWNER_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The host Cloud Project containing the targeted Bigtable Instance /
+            /// Table pays for compute.
+            /// </summary>
+            [pbr::OriginalName("HOST_PAYS")] HostPays = 1,
+          }
+
+        }
+        #endregion
+
+      }
+
     }
     #endregion
 
@@ -3173,6 +4194,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// A Hot tablet is a tablet that exhibits high average cpu usage during the time
   /// interval from start time to end time.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HotTablet : pb::IMessage<HotTablet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3319,10 +4341,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NodeCpuUsagePercentFieldNumber = 7;
     private float nodeCpuUsagePercent_;
     /// <summary>
-    /// Output only. The average CPU usage spent by a node on this tablet over the start_time to
-    /// end_time time range. The percentage is the amount of CPU used by the node
-    /// to serve the tablet, from 0% (tablet was not interacted with) to 100% (the
-    /// node spent all cycles serving the hot tablet).
+    /// Output only. The average CPU usage spent by a node on this tablet over the
+    /// start_time to end_time time range. The percentage is the amount of CPU used
+    /// by the node to serve the tablet, from 0% (tablet was not interacted with)
+    /// to 100% (the node spent all cycles serving the hot tablet).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -3,7 +3,7 @@
 //     source: google/monitoring/v3/query_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,14 +17,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
-  /// The QueryService API is used to manage time series data in Stackdriver
+  /// The QueryService API is used to manage time series data in Cloud
   /// Monitoring. Time series data is a collection of data points that describes
   /// the time-varying values of a metric.
   /// </summary>
@@ -89,11 +89,15 @@ namespace Google.Cloud.Monitoring.V3 {
     public abstract partial class QueryServiceBase
     {
       /// <summary>
-      /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+      /// Queries time series by using Monitoring Query Language (MQL). We recommend
+      /// using PromQL instead of MQL. For more information about the status of MQL,
+      /// see the [MQL deprecation
+      /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.QueryTimeSeriesResponse> QueryTimeSeries(global::Google.Cloud.Monitoring.V3.QueryTimeSeriesRequest request, grpc::ServerCallContext context)
       {
@@ -130,48 +134,64 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+      /// Queries time series by using Monitoring Query Language (MQL). We recommend
+      /// using PromQL instead of MQL. For more information about the status of MQL,
+      /// see the [MQL deprecation
+      /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.QueryTimeSeriesResponse QueryTimeSeries(global::Google.Cloud.Monitoring.V3.QueryTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return QueryTimeSeries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+      /// Queries time series by using Monitoring Query Language (MQL). We recommend
+      /// using PromQL instead of MQL. For more information about the status of MQL,
+      /// see the [MQL deprecation
+      /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.QueryTimeSeriesResponse QueryTimeSeries(global::Google.Cloud.Monitoring.V3.QueryTimeSeriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_QueryTimeSeries, null, options, request);
       }
       /// <summary>
-      /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+      /// Queries time series by using Monitoring Query Language (MQL). We recommend
+      /// using PromQL instead of MQL. For more information about the status of MQL,
+      /// see the [MQL deprecation
+      /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.QueryTimeSeriesResponse> QueryTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.QueryTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return QueryTimeSeriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Queries time series using Monitoring Query Language. This method does not require a Workspace.
+      /// Queries time series by using Monitoring Query Language (MQL). We recommend
+      /// using PromQL instead of MQL. For more information about the status of MQL,
+      /// see the [MQL deprecation
+      /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.QueryTimeSeriesResponse> QueryTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.QueryTimeSeriesRequest request, grpc::CallOptions options)
       {

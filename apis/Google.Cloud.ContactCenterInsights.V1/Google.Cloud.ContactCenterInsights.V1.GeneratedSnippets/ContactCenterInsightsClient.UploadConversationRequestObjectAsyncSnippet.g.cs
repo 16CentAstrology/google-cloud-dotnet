@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.ContactCenterInsights.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START contactcenterinsights_v1_generated_ContactCenterInsights_UploadConversation_async]
     using Google.Api.Gax.ResourceNames;
@@ -43,6 +43,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Snippets
                 Conversation = new Conversation(),
                 ConversationId = "",
                 RedactionConfig = new RedactionConfig(),
+                SpeechConfig = new SpeechConfig(),
             };
             // Make the request
             Operation<Conversation, UploadConversationMetadata> response = await contactCenterInsightsClient.UploadConversationAsync(request);

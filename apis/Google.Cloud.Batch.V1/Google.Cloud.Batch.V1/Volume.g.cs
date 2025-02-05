@@ -50,6 +50,7 @@ namespace Google.Cloud.Batch.V1 {
   /// <summary>
   /// Volume describes a volume and parameters for it to be mounted to a VM.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Volume : pb::IMessage<Volume>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -150,10 +151,24 @@ namespace Google.Cloud.Batch.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DeviceName {
-      get { return sourceCase_ == SourceOneofCase.DeviceName ? (string) source_ : ""; }
+      get { return HasDeviceName ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.DeviceName;
+      }
+    }
+    /// <summary>Gets whether the "device_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDeviceName {
+      get { return sourceCase_ == SourceOneofCase.DeviceName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "device_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeviceName() {
+      if (HasDeviceName) {
+        ClearSource();
       }
     }
 
@@ -178,15 +193,19 @@ namespace Google.Cloud.Batch.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> mountOptions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// For Google Cloud Storage (GCS), mount options are the options supported by
-    /// the gcsfuse tool (https://github.com/GoogleCloudPlatform/gcsfuse).
-    /// For existing persistent disks, mount options provided by the
-    /// mount command (https://man7.org/linux/man-pages/man8/mount.8.html) except
-    /// writing are supported. This is due to restrictions of multi-writer mode
-    /// (https://cloud.google.com/compute/docs/disks/sharing-disks-between-vms).
-    /// For other attached disks and Network File System (NFS), mount options are
-    /// these supported by the mount command
-    /// (https://man7.org/linux/man-pages/man8/mount.8.html).
+    /// Mount options vary based on the type of storage volume:
+    ///
+    /// * For a Cloud Storage bucket, all the mount options provided
+    /// by
+    ///   the [`gcsfuse` tool](https://cloud.google.com/storage/docs/gcsfuse-cli)
+    ///   are supported.
+    /// * For an existing persistent disk, all mount options provided by the
+    ///   [`mount` command](https://man7.org/linux/man-pages/man8/mount.8.html)
+    ///   except writing are supported. This is due to restrictions of
+    ///   [multi-writer
+    ///   mode](https://cloud.google.com/compute/docs/disks/sharing-disks-between-vms).
+    /// * For any other disk or a Network File System (NFS), all the
+    ///   mount options provided by the `mount` command are supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -246,7 +265,7 @@ namespace Google.Cloud.Batch.V1 {
       int hash = 1;
       if (sourceCase_ == SourceOneofCase.Nfs) hash ^= Nfs.GetHashCode();
       if (sourceCase_ == SourceOneofCase.Gcs) hash ^= Gcs.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.DeviceName) hash ^= DeviceName.GetHashCode();
+      if (HasDeviceName) hash ^= DeviceName.GetHashCode();
       if (MountPath.Length != 0) hash ^= MountPath.GetHashCode();
       hash ^= mountOptions_.GetHashCode();
       hash ^= (int) sourceCase_;
@@ -281,7 +300,7 @@ namespace Google.Cloud.Batch.V1 {
         output.WriteString(MountPath);
       }
       mountOptions_.WriteTo(output, _repeated_mountOptions_codec);
-      if (sourceCase_ == SourceOneofCase.DeviceName) {
+      if (HasDeviceName) {
         output.WriteRawTag(50);
         output.WriteString(DeviceName);
       }
@@ -308,7 +327,7 @@ namespace Google.Cloud.Batch.V1 {
         output.WriteString(MountPath);
       }
       mountOptions_.WriteTo(ref output, _repeated_mountOptions_codec);
-      if (sourceCase_ == SourceOneofCase.DeviceName) {
+      if (HasDeviceName) {
         output.WriteRawTag(50);
         output.WriteString(DeviceName);
       }
@@ -328,7 +347,7 @@ namespace Google.Cloud.Batch.V1 {
       if (sourceCase_ == SourceOneofCase.Gcs) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gcs);
       }
-      if (sourceCase_ == SourceOneofCase.DeviceName) {
+      if (HasDeviceName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceName);
       }
       if (MountPath.Length != 0) {
@@ -469,6 +488,7 @@ namespace Google.Cloud.Batch.V1 {
   /// <summary>
   /// Represents an NFS volume.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NFS : pb::IMessage<NFS>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -704,6 +724,7 @@ namespace Google.Cloud.Batch.V1 {
   /// <summary>
   /// Represents a Google Cloud Storage volume.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GCS : pb::IMessage<GCS>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

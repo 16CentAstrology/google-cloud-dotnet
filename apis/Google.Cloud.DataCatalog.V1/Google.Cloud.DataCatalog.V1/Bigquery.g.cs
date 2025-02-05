@@ -39,12 +39,12 @@ namespace Google.Cloud.DataCatalog.V1 {
             "ZFNxbEJpZ1F1ZXJ5Q29ubmVjdGlvblNwZWMuRGF0YWJhc2VUeXBlIkYKDERh",
             "dGFiYXNlVHlwZRIdChlEQVRBQkFTRV9UWVBFX1VOU1BFQ0lGSUVEEAASDAoI",
             "UE9TVEdSRVMQARIJCgVNWVNRTBACIjEKE0JpZ1F1ZXJ5Um91dGluZVNwZWMS",
-            "GgoSaW1wb3J0ZWRfbGlicmFyaWVzGAEgAygJQtUBCh9jb20uZ29vZ2xlLmNs",
+            "GgoSaW1wb3J0ZWRfbGlicmFyaWVzGAEgAygJQtIBCh9jb20uZ29vZ2xlLmNs",
             "b3VkLmRhdGFjYXRhbG9nLnYxQg1CaWdRdWVyeVByb3RvUAFaQWNsb3VkLmdv",
             "b2dsZS5jb20vZ28vZGF0YWNhdGFsb2cvYXBpdjEvZGF0YWNhdGFsb2dwYjtk",
-            "YXRhY2F0YWxvZ3Bi+AEBqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9nLlYx",
-            "ygIbR29vZ2xlXENsb3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpDbG91",
-            "ZDo6RGF0YUNhdGFsb2c6OlYxYgZwcm90bzM="));
+            "YXRhY2F0YWxvZ3BiqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9nLlYxygIb",
+            "R29vZ2xlXENsb3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpDbG91ZDo6",
+            "RGF0YUNhdGFsb2c6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -60,6 +60,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Specification for the BigQuery connection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryConnectionSpec : pb::IMessage<BigQueryConnectionSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -401,6 +402,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Specification for the BigQuery connection to a Cloud SQL instance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudSqlBigQueryConnectionSpec : pb::IMessage<CloudSqlBigQueryConnectionSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -702,6 +704,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Fields specific for BigQuery routines.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryRoutineSpec : pb::IMessage<BigQueryRoutineSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

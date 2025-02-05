@@ -212,7 +212,7 @@ namespace Google.Cloud.Logging.Log4Net
                 initialBackoff: TimeSpan.FromSeconds(ServerErrorBackoffDelaySeconds),
                 maxBackoff: TimeSpan.FromSeconds(ServerErrorBackoffMaxDelaySeconds),
                 backoffMultiplier: ServerErrorBackoffMultiplier,
-                retryFilter: _ => true); // Ignored                
+                retryFilter: _ => true); // Ignored
             _logUploader = new LogUploader(
                 _client, _scheduler, _clock,
                 _logQ, logsLostWarningEntry, MaxUploadBatchSize,
@@ -227,7 +227,7 @@ namespace Google.Cloud.Logging.Log4Net
 
         private LoggingServiceV2Client BuildLoggingServiceClient() =>
             new LoggingServiceV2ClientBuilder
-            { 
+            {
                 ChannelCredentials = GetCredentialFromConfiguration()?.ToChannelCredential()
             }.Build();
 
@@ -372,9 +372,9 @@ namespace Google.Cloud.Logging.Log4Net
                 }
             }
             catch (Exception ex) when (
-                ex is SecurityException 
+                ex is SecurityException
                 || ex is InvalidProtocolBufferException
-                || ex is InvalidJsonException 
+                || ex is InvalidJsonException
                 || ex is UnauthorizedAccessException)
             {
                 // This is best-effort only, exceptions from reading/parsing the source_context.json are ignored.
@@ -407,9 +407,24 @@ namespace Google.Cloud.Logging.Log4Net
                 {
                     try
                     {
-                        return AppDomain.CurrentDomain.GetAssemblies()
-                            .SelectMany(a => a.GetTypes())
-                            .FirstOrDefault(t => t.FullName == fullTypeName);
+                        var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+                        foreach (var assembly in assemblies)
+                        {
+                            try
+                            {
+                                var type = assembly.GetTypes().FirstOrDefault(t => t.FullName == fullTypeName);
+                                if (type is not null)
+                                {
+                                    return type;
+                                }
+                            }
+                            catch
+                            {
+                                // Ignore exceptions for this assembly, but continue to further assemblies.
+                            }
+                        }
+                        // Type not found, for whatever reason; cache the failure.
+                        return null;
                     }
                     catch
                     {

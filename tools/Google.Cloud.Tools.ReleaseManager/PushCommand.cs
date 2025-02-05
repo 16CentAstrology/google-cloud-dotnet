@@ -22,16 +22,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Repository = LibGit2Sharp.Repository;
+using static Google.Cloud.Tools.ReleaseManager.GitHubHelpers;
 
 namespace Google.Cloud.Tools.ReleaseManager
 {
     public sealed class PushCommand : CommandBase
     {
-        private const string AccessTokenEnvironmentVariable = "GITHUB_ACCESS_TOKEN";
         private const string AssigneeEnvironmentVariable = "RELEASE_PR_ASSIGNEE";
-        private const string RepositoryOwner = "googleapis";
-        private const string RepositoryName = "google-cloud-dotnet";
-        private const string ApplicationName = "google-cloud-dotnet-release-manager";
         private const string AutoreleasePendingLabel = "autorelease: pending";
         private const string AutomergeExactLabel = "automerge: exact";
 
@@ -40,35 +37,23 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args) => InternalExecute();
+        protected override int ExecuteImpl(string[] args) => InternalExecute();
 
-        internal void InternalExecute()
+        internal int InternalExecute()
         {
-            string gitHubToken = Environment.GetEnvironmentVariable(AccessTokenEnvironmentVariable);
-            if (string.IsNullOrEmpty(gitHubToken))
-            {
-                throw new UserErrorException($"This command requires a non-empty value for the {AccessTokenEnvironmentVariable} environment variable.");
-            }
+            var gitHubToken = GetGitHubAccessToken();
             var gitHubClient = CreateGitHubClient(gitHubToken);
 
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using (var repo = new Repository(root))
-            {
-                ValidateNoChanges(repo);
-                // TODO: "--force" mode to skip this.
-                ValidateProjectReferences();
-                var upstream = GetUpstreamRemote(repo);
+            using var repo = new Repository(RootLayout.RepositoryRoot);
+            ValidateNoChanges(repo);
+            // TODO: "--force" mode to skip this.
+            ValidateProjectReferences();
+            var upstream = GetUpstreamRemote(repo);
 
-                string branch = PushBranch(repo, upstream, gitHubToken);
-                CreatePullRequest(repo, gitHubClient, branch);
-            }
+            string branch = PushBranch(repo, upstream, gitHubToken);
+            CreatePullRequest(repo, gitHubClient, branch);
+            return 0;
         }
-
-        private GitHubClient CreateGitHubClient(string gitHubToken) =>
-            new GitHubClient(new ProductHeaderValue(ApplicationName))
-            {
-                Credentials = new Octokit.Credentials(gitHubToken)
-            };
 
         private void ValidateNoChanges(Repository repo)
         {
@@ -81,7 +66,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private void ValidateProjectReferences()
         {
-            var catalog = ApiCatalog.Load();
+            var catalog = ApiCatalog.Load(RootLayout);
             var newReleaseIds = FindChangedVersions().Select(change => change.Id).ToList();
             foreach (var id in newReleaseIds)
             {
@@ -104,7 +89,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 throw new UserErrorException("No upstream remote configured");
             }
             string actualUrl = upstreamRemote.Url;
-            string expectedUrl = $"https://github.com/{RepositoryOwner}/{RepositoryName}.git";
+            string expectedUrl = $"https://github.com/{GitHubHelpers.RepositoryOwner}/{RepositoryName}.git";
             if (expectedUrl != actualUrl)
             {
                 throw new UserErrorException($"Upstream remote is not as expected. Actual URL: {actualUrl}. Expected URL: {expectedUrl}");

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -271,10 +271,22 @@ namespace Google.Cloud.Retail.V2
         /// <inheritdoc/>
         public bool Equals(ExperimentName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(ExperimentName a, ExperimentName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(ExperimentName a, ExperimentName b) => !(a == b);
     }
 
@@ -297,6 +309,32 @@ namespace Google.Cloud.Retail.V2
         {
             get => string.IsNullOrEmpty(Experiment) ? null : ExperimentName.Parse(Experiment, allowUnparsed: true);
             set => Experiment = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class ServingConfigExperiment
+            {
+                /// <summary>
+                /// <see cref="ServingConfigName"/>-typed view over the <see cref="OriginalServingConfig"/> resource
+                /// name property.
+                /// </summary>
+                public ServingConfigName OriginalServingConfigAsServingConfigName
+                {
+                    get => string.IsNullOrEmpty(OriginalServingConfig) ? null : ServingConfigName.Parse(OriginalServingConfig, allowUnparsed: true);
+                    set => OriginalServingConfig = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="ServingConfigName"/>-typed view over the <see cref="ExperimentServingConfig"/> resource
+                /// name property.
+                /// </summary>
+                public ServingConfigName ExperimentServingConfigAsServingConfigName
+                {
+                    get => string.IsNullOrEmpty(ExperimentServingConfig) ? null : ServingConfigName.Parse(ExperimentServingConfig, allowUnparsed: true);
+                    set => ExperimentServingConfig = value?.ToString() ?? "";
+                }
+            }
         }
     }
 }

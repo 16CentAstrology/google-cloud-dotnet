@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,13 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.RecaptchaEnterprise.V1;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -137,6 +139,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
                 },
                 HashedAccountId = ByteString.Empty,
                 TransactionEvent = new TransactionEvent(),
+                AccountId = "",
             };
             // Make the request
             AnnotateAssessmentResponse response = recaptchaEnterpriseServiceClient.AnnotateAssessment(request);
@@ -161,6 +164,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
                 },
                 HashedAccountId = ByteString.Empty,
                 TransactionEvent = new TransactionEvent(),
+                AccountId = "",
             };
             // Make the request
             AnnotateAssessmentResponse response = await recaptchaEnterpriseServiceClient.AnnotateAssessmentAsync(request);
@@ -954,6 +958,468 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for AddIpOverride</summary>
+        public void AddIpOverrideRequestObject()
+        {
+            // Snippet: AddIpOverride(AddIpOverrideRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            AddIpOverrideRequest request = new AddIpOverrideRequest
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                IpOverrideData = new IpOverrideData(),
+            };
+            // Make the request
+            AddIpOverrideResponse response = recaptchaEnterpriseServiceClient.AddIpOverride(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddIpOverrideAsync</summary>
+        public async Task AddIpOverrideRequestObjectAsync()
+        {
+            // Snippet: AddIpOverrideAsync(AddIpOverrideRequest, CallSettings)
+            // Additional: AddIpOverrideAsync(AddIpOverrideRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AddIpOverrideRequest request = new AddIpOverrideRequest
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                IpOverrideData = new IpOverrideData(),
+            };
+            // Make the request
+            AddIpOverrideResponse response = await recaptchaEnterpriseServiceClient.AddIpOverrideAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddIpOverride</summary>
+        public void AddIpOverride()
+        {
+            // Snippet: AddIpOverride(string, IpOverrideData, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/keys/[KEY]";
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            AddIpOverrideResponse response = recaptchaEnterpriseServiceClient.AddIpOverride(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddIpOverrideAsync</summary>
+        public async Task AddIpOverrideAsync()
+        {
+            // Snippet: AddIpOverrideAsync(string, IpOverrideData, CallSettings)
+            // Additional: AddIpOverrideAsync(string, IpOverrideData, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/keys/[KEY]";
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            AddIpOverrideResponse response = await recaptchaEnterpriseServiceClient.AddIpOverrideAsync(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddIpOverride</summary>
+        public void AddIpOverrideResourceNames()
+        {
+            // Snippet: AddIpOverride(KeyName, IpOverrideData, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            KeyName name = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            AddIpOverrideResponse response = recaptchaEnterpriseServiceClient.AddIpOverride(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddIpOverrideAsync</summary>
+        public async Task AddIpOverrideResourceNamesAsync()
+        {
+            // Snippet: AddIpOverrideAsync(KeyName, IpOverrideData, CallSettings)
+            // Additional: AddIpOverrideAsync(KeyName, IpOverrideData, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            KeyName name = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            AddIpOverrideResponse response = await recaptchaEnterpriseServiceClient.AddIpOverrideAsync(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveIpOverride</summary>
+        public void RemoveIpOverrideRequestObject()
+        {
+            // Snippet: RemoveIpOverride(RemoveIpOverrideRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            RemoveIpOverrideRequest request = new RemoveIpOverrideRequest
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                IpOverrideData = new IpOverrideData(),
+            };
+            // Make the request
+            RemoveIpOverrideResponse response = recaptchaEnterpriseServiceClient.RemoveIpOverride(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveIpOverrideAsync</summary>
+        public async Task RemoveIpOverrideRequestObjectAsync()
+        {
+            // Snippet: RemoveIpOverrideAsync(RemoveIpOverrideRequest, CallSettings)
+            // Additional: RemoveIpOverrideAsync(RemoveIpOverrideRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveIpOverrideRequest request = new RemoveIpOverrideRequest
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                IpOverrideData = new IpOverrideData(),
+            };
+            // Make the request
+            RemoveIpOverrideResponse response = await recaptchaEnterpriseServiceClient.RemoveIpOverrideAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveIpOverride</summary>
+        public void RemoveIpOverride()
+        {
+            // Snippet: RemoveIpOverride(string, IpOverrideData, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/keys/[KEY]";
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            RemoveIpOverrideResponse response = recaptchaEnterpriseServiceClient.RemoveIpOverride(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveIpOverrideAsync</summary>
+        public async Task RemoveIpOverrideAsync()
+        {
+            // Snippet: RemoveIpOverrideAsync(string, IpOverrideData, CallSettings)
+            // Additional: RemoveIpOverrideAsync(string, IpOverrideData, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/keys/[KEY]";
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            RemoveIpOverrideResponse response = await recaptchaEnterpriseServiceClient.RemoveIpOverrideAsync(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveIpOverride</summary>
+        public void RemoveIpOverrideResourceNames()
+        {
+            // Snippet: RemoveIpOverride(KeyName, IpOverrideData, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            KeyName name = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            RemoveIpOverrideResponse response = recaptchaEnterpriseServiceClient.RemoveIpOverride(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveIpOverrideAsync</summary>
+        public async Task RemoveIpOverrideResourceNamesAsync()
+        {
+            // Snippet: RemoveIpOverrideAsync(KeyName, IpOverrideData, CallSettings)
+            // Additional: RemoveIpOverrideAsync(KeyName, IpOverrideData, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            KeyName name = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            IpOverrideData ipOverrideData = new IpOverrideData();
+            // Make the request
+            RemoveIpOverrideResponse response = await recaptchaEnterpriseServiceClient.RemoveIpOverrideAsync(name, ipOverrideData);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIpOverrides</summary>
+        public void ListIpOverridesRequestObject()
+        {
+            // Snippet: ListIpOverrides(ListIpOverridesRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            ListIpOverridesRequest request = new ListIpOverridesRequest
+            {
+                ParentAsKeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            PagedEnumerable<ListIpOverridesResponse, IpOverrideData> response = recaptchaEnterpriseServiceClient.ListIpOverrides(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (IpOverrideData item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListIpOverridesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (IpOverrideData item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<IpOverrideData> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (IpOverrideData item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIpOverridesAsync</summary>
+        public async Task ListIpOverridesRequestObjectAsync()
+        {
+            // Snippet: ListIpOverridesAsync(ListIpOverridesRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListIpOverridesRequest request = new ListIpOverridesRequest
+            {
+                ParentAsKeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListIpOverridesResponse, IpOverrideData> response = recaptchaEnterpriseServiceClient.ListIpOverridesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((IpOverrideData item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListIpOverridesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (IpOverrideData item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<IpOverrideData> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (IpOverrideData item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIpOverrides</summary>
+        public void ListIpOverrides()
+        {
+            // Snippet: ListIpOverrides(string, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/keys/[KEY]";
+            // Make the request
+            PagedEnumerable<ListIpOverridesResponse, IpOverrideData> response = recaptchaEnterpriseServiceClient.ListIpOverrides(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (IpOverrideData item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListIpOverridesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (IpOverrideData item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<IpOverrideData> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (IpOverrideData item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIpOverridesAsync</summary>
+        public async Task ListIpOverridesAsync()
+        {
+            // Snippet: ListIpOverridesAsync(string, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/keys/[KEY]";
+            // Make the request
+            PagedAsyncEnumerable<ListIpOverridesResponse, IpOverrideData> response = recaptchaEnterpriseServiceClient.ListIpOverridesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((IpOverrideData item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListIpOverridesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (IpOverrideData item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<IpOverrideData> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (IpOverrideData item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIpOverrides</summary>
+        public void ListIpOverridesResourceNames()
+        {
+            // Snippet: ListIpOverrides(KeyName, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            KeyName parent = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            // Make the request
+            PagedEnumerable<ListIpOverridesResponse, IpOverrideData> response = recaptchaEnterpriseServiceClient.ListIpOverrides(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (IpOverrideData item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListIpOverridesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (IpOverrideData item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<IpOverrideData> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (IpOverrideData item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIpOverridesAsync</summary>
+        public async Task ListIpOverridesResourceNamesAsync()
+        {
+            // Snippet: ListIpOverridesAsync(KeyName, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            KeyName parent = KeyName.FromProjectKey("[PROJECT]", "[KEY]");
+            // Make the request
+            PagedAsyncEnumerable<ListIpOverridesResponse, IpOverrideData> response = recaptchaEnterpriseServiceClient.ListIpOverridesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((IpOverrideData item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListIpOverridesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (IpOverrideData item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<IpOverrideData> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (IpOverrideData item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for GetMetrics</summary>
         public void GetMetricsRequestObject()
         {
@@ -1038,6 +1504,724 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             MetricsName name = MetricsName.FromProjectKey("[PROJECT]", "[KEY]");
             // Make the request
             Metrics response = await recaptchaEnterpriseServiceClient.GetMetricsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFirewallPolicy</summary>
+        public void CreateFirewallPolicyRequestObject()
+        {
+            // Snippet: CreateFirewallPolicy(CreateFirewallPolicyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            CreateFirewallPolicyRequest request = new CreateFirewallPolicyRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                FirewallPolicy = new FirewallPolicy(),
+            };
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.CreateFirewallPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFirewallPolicyAsync</summary>
+        public async Task CreateFirewallPolicyRequestObjectAsync()
+        {
+            // Snippet: CreateFirewallPolicyAsync(CreateFirewallPolicyRequest, CallSettings)
+            // Additional: CreateFirewallPolicyAsync(CreateFirewallPolicyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateFirewallPolicyRequest request = new CreateFirewallPolicyRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                FirewallPolicy = new FirewallPolicy(),
+            };
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.CreateFirewallPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFirewallPolicy</summary>
+        public void CreateFirewallPolicy()
+        {
+            // Snippet: CreateFirewallPolicy(string, FirewallPolicy, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            FirewallPolicy firewallPolicy = new FirewallPolicy();
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.CreateFirewallPolicy(parent, firewallPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFirewallPolicyAsync</summary>
+        public async Task CreateFirewallPolicyAsync()
+        {
+            // Snippet: CreateFirewallPolicyAsync(string, FirewallPolicy, CallSettings)
+            // Additional: CreateFirewallPolicyAsync(string, FirewallPolicy, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            FirewallPolicy firewallPolicy = new FirewallPolicy();
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.CreateFirewallPolicyAsync(parent, firewallPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFirewallPolicy</summary>
+        public void CreateFirewallPolicyResourceNames()
+        {
+            // Snippet: CreateFirewallPolicy(ProjectName, FirewallPolicy, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            FirewallPolicy firewallPolicy = new FirewallPolicy();
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.CreateFirewallPolicy(parent, firewallPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFirewallPolicyAsync</summary>
+        public async Task CreateFirewallPolicyResourceNamesAsync()
+        {
+            // Snippet: CreateFirewallPolicyAsync(ProjectName, FirewallPolicy, CallSettings)
+            // Additional: CreateFirewallPolicyAsync(ProjectName, FirewallPolicy, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            FirewallPolicy firewallPolicy = new FirewallPolicy();
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.CreateFirewallPolicyAsync(parent, firewallPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFirewallPolicies</summary>
+        public void ListFirewallPoliciesRequestObject()
+        {
+            // Snippet: ListFirewallPolicies(ListFirewallPoliciesRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            ListFirewallPoliciesRequest request = new ListFirewallPoliciesRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> response = recaptchaEnterpriseServiceClient.ListFirewallPolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FirewallPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFirewallPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FirewallPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FirewallPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FirewallPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFirewallPoliciesAsync</summary>
+        public async Task ListFirewallPoliciesRequestObjectAsync()
+        {
+            // Snippet: ListFirewallPoliciesAsync(ListFirewallPoliciesRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListFirewallPoliciesRequest request = new ListFirewallPoliciesRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> response = recaptchaEnterpriseServiceClient.ListFirewallPoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FirewallPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFirewallPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FirewallPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FirewallPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FirewallPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFirewallPolicies</summary>
+        public void ListFirewallPolicies()
+        {
+            // Snippet: ListFirewallPolicies(string, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> response = recaptchaEnterpriseServiceClient.ListFirewallPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FirewallPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFirewallPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FirewallPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FirewallPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FirewallPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFirewallPoliciesAsync</summary>
+        public async Task ListFirewallPoliciesAsync()
+        {
+            // Snippet: ListFirewallPoliciesAsync(string, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> response = recaptchaEnterpriseServiceClient.ListFirewallPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FirewallPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFirewallPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FirewallPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FirewallPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FirewallPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFirewallPolicies</summary>
+        public void ListFirewallPoliciesResourceNames()
+        {
+            // Snippet: ListFirewallPolicies(ProjectName, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> response = recaptchaEnterpriseServiceClient.ListFirewallPolicies(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (FirewallPolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFirewallPoliciesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FirewallPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FirewallPolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FirewallPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFirewallPoliciesAsync</summary>
+        public async Task ListFirewallPoliciesResourceNamesAsync()
+        {
+            // Snippet: ListFirewallPoliciesAsync(ProjectName, string, int?, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListFirewallPoliciesResponse, FirewallPolicy> response = recaptchaEnterpriseServiceClient.ListFirewallPoliciesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((FirewallPolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFirewallPoliciesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (FirewallPolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<FirewallPolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (FirewallPolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFirewallPolicy</summary>
+        public void GetFirewallPolicyRequestObject()
+        {
+            // Snippet: GetFirewallPolicy(GetFirewallPolicyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            GetFirewallPolicyRequest request = new GetFirewallPolicyRequest
+            {
+                FirewallPolicyName = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+            };
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.GetFirewallPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFirewallPolicyAsync</summary>
+        public async Task GetFirewallPolicyRequestObjectAsync()
+        {
+            // Snippet: GetFirewallPolicyAsync(GetFirewallPolicyRequest, CallSettings)
+            // Additional: GetFirewallPolicyAsync(GetFirewallPolicyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetFirewallPolicyRequest request = new GetFirewallPolicyRequest
+            {
+                FirewallPolicyName = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+            };
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.GetFirewallPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFirewallPolicy</summary>
+        public void GetFirewallPolicy()
+        {
+            // Snippet: GetFirewallPolicy(string, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/firewallpolicies/[FIREWALLPOLICY]";
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.GetFirewallPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFirewallPolicyAsync</summary>
+        public async Task GetFirewallPolicyAsync()
+        {
+            // Snippet: GetFirewallPolicyAsync(string, CallSettings)
+            // Additional: GetFirewallPolicyAsync(string, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/firewallpolicies/[FIREWALLPOLICY]";
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.GetFirewallPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFirewallPolicy</summary>
+        public void GetFirewallPolicyResourceNames()
+        {
+            // Snippet: GetFirewallPolicy(FirewallPolicyName, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            FirewallPolicyName name = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]");
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.GetFirewallPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFirewallPolicyAsync</summary>
+        public async Task GetFirewallPolicyResourceNamesAsync()
+        {
+            // Snippet: GetFirewallPolicyAsync(FirewallPolicyName, CallSettings)
+            // Additional: GetFirewallPolicyAsync(FirewallPolicyName, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FirewallPolicyName name = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]");
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.GetFirewallPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFirewallPolicy</summary>
+        public void UpdateFirewallPolicyRequestObject()
+        {
+            // Snippet: UpdateFirewallPolicy(UpdateFirewallPolicyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateFirewallPolicyRequest request = new UpdateFirewallPolicyRequest
+            {
+                FirewallPolicy = new FirewallPolicy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.UpdateFirewallPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFirewallPolicyAsync</summary>
+        public async Task UpdateFirewallPolicyRequestObjectAsync()
+        {
+            // Snippet: UpdateFirewallPolicyAsync(UpdateFirewallPolicyRequest, CallSettings)
+            // Additional: UpdateFirewallPolicyAsync(UpdateFirewallPolicyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateFirewallPolicyRequest request = new UpdateFirewallPolicyRequest
+            {
+                FirewallPolicy = new FirewallPolicy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.UpdateFirewallPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFirewallPolicy</summary>
+        public void UpdateFirewallPolicy()
+        {
+            // Snippet: UpdateFirewallPolicy(FirewallPolicy, FieldMask, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            FirewallPolicy firewallPolicy = new FirewallPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            FirewallPolicy response = recaptchaEnterpriseServiceClient.UpdateFirewallPolicy(firewallPolicy, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFirewallPolicyAsync</summary>
+        public async Task UpdateFirewallPolicyAsync()
+        {
+            // Snippet: UpdateFirewallPolicyAsync(FirewallPolicy, FieldMask, CallSettings)
+            // Additional: UpdateFirewallPolicyAsync(FirewallPolicy, FieldMask, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FirewallPolicy firewallPolicy = new FirewallPolicy();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            FirewallPolicy response = await recaptchaEnterpriseServiceClient.UpdateFirewallPolicyAsync(firewallPolicy, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFirewallPolicy</summary>
+        public void DeleteFirewallPolicyRequestObject()
+        {
+            // Snippet: DeleteFirewallPolicy(DeleteFirewallPolicyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteFirewallPolicyRequest request = new DeleteFirewallPolicyRequest
+            {
+                FirewallPolicyName = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+            };
+            // Make the request
+            recaptchaEnterpriseServiceClient.DeleteFirewallPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFirewallPolicyAsync</summary>
+        public async Task DeleteFirewallPolicyRequestObjectAsync()
+        {
+            // Snippet: DeleteFirewallPolicyAsync(DeleteFirewallPolicyRequest, CallSettings)
+            // Additional: DeleteFirewallPolicyAsync(DeleteFirewallPolicyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteFirewallPolicyRequest request = new DeleteFirewallPolicyRequest
+            {
+                FirewallPolicyName = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+            };
+            // Make the request
+            await recaptchaEnterpriseServiceClient.DeleteFirewallPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFirewallPolicy</summary>
+        public void DeleteFirewallPolicy()
+        {
+            // Snippet: DeleteFirewallPolicy(string, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/firewallpolicies/[FIREWALLPOLICY]";
+            // Make the request
+            recaptchaEnterpriseServiceClient.DeleteFirewallPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFirewallPolicyAsync</summary>
+        public async Task DeleteFirewallPolicyAsync()
+        {
+            // Snippet: DeleteFirewallPolicyAsync(string, CallSettings)
+            // Additional: DeleteFirewallPolicyAsync(string, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/firewallpolicies/[FIREWALLPOLICY]";
+            // Make the request
+            await recaptchaEnterpriseServiceClient.DeleteFirewallPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFirewallPolicy</summary>
+        public void DeleteFirewallPolicyResourceNames()
+        {
+            // Snippet: DeleteFirewallPolicy(FirewallPolicyName, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            FirewallPolicyName name = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]");
+            // Make the request
+            recaptchaEnterpriseServiceClient.DeleteFirewallPolicy(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFirewallPolicyAsync</summary>
+        public async Task DeleteFirewallPolicyResourceNamesAsync()
+        {
+            // Snippet: DeleteFirewallPolicyAsync(FirewallPolicyName, CallSettings)
+            // Additional: DeleteFirewallPolicyAsync(FirewallPolicyName, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FirewallPolicyName name = FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]");
+            // Make the request
+            await recaptchaEnterpriseServiceClient.DeleteFirewallPolicyAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReorderFirewallPolicies</summary>
+        public void ReorderFirewallPoliciesRequestObject()
+        {
+            // Snippet: ReorderFirewallPolicies(ReorderFirewallPoliciesRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            ReorderFirewallPoliciesRequest request = new ReorderFirewallPoliciesRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                FirewallPolicyNames =
+                {
+                    FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+                },
+            };
+            // Make the request
+            ReorderFirewallPoliciesResponse response = recaptchaEnterpriseServiceClient.ReorderFirewallPolicies(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReorderFirewallPoliciesAsync</summary>
+        public async Task ReorderFirewallPoliciesRequestObjectAsync()
+        {
+            // Snippet: ReorderFirewallPoliciesAsync(ReorderFirewallPoliciesRequest, CallSettings)
+            // Additional: ReorderFirewallPoliciesAsync(ReorderFirewallPoliciesRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReorderFirewallPoliciesRequest request = new ReorderFirewallPoliciesRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                FirewallPolicyNames =
+                {
+                    FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+                },
+            };
+            // Make the request
+            ReorderFirewallPoliciesResponse response = await recaptchaEnterpriseServiceClient.ReorderFirewallPoliciesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReorderFirewallPolicies</summary>
+        public void ReorderFirewallPolicies()
+        {
+            // Snippet: ReorderFirewallPolicies(string, IEnumerable<string>, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/firewallpolicies/[FIREWALLPOLICY]",
+            };
+            // Make the request
+            ReorderFirewallPoliciesResponse response = recaptchaEnterpriseServiceClient.ReorderFirewallPolicies(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReorderFirewallPoliciesAsync</summary>
+        public async Task ReorderFirewallPoliciesAsync()
+        {
+            // Snippet: ReorderFirewallPoliciesAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: ReorderFirewallPoliciesAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/firewallpolicies/[FIREWALLPOLICY]",
+            };
+            // Make the request
+            ReorderFirewallPoliciesResponse response = await recaptchaEnterpriseServiceClient.ReorderFirewallPoliciesAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReorderFirewallPolicies</summary>
+        public void ReorderFirewallPoliciesResourceNames()
+        {
+            // Snippet: ReorderFirewallPolicies(ProjectName, IEnumerable<FirewallPolicyName>, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            IEnumerable<FirewallPolicyName> names = new FirewallPolicyName[]
+            {
+                FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+            };
+            // Make the request
+            ReorderFirewallPoliciesResponse response = recaptchaEnterpriseServiceClient.ReorderFirewallPolicies(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReorderFirewallPoliciesAsync</summary>
+        public async Task ReorderFirewallPoliciesResourceNamesAsync()
+        {
+            // Snippet: ReorderFirewallPoliciesAsync(ProjectName, IEnumerable<FirewallPolicyName>, CallSettings)
+            // Additional: ReorderFirewallPoliciesAsync(ProjectName, IEnumerable<FirewallPolicyName>, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            IEnumerable<FirewallPolicyName> names = new FirewallPolicyName[]
+            {
+                FirewallPolicyName.FromProjectFirewallpolicy("[PROJECT]", "[FIREWALLPOLICY]"),
+            };
+            // Make the request
+            ReorderFirewallPoliciesResponse response = await recaptchaEnterpriseServiceClient.ReorderFirewallPoliciesAsync(parent, names);
             // End snippet
         }
 
@@ -1602,8 +2786,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // Initialize request argument(s)
             SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
-                ProjectAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
-                HashedAccountId = ByteString.Empty,
+                ProjectAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                AccountId = "",
             };
             // Make the request
             PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships(request);
@@ -1651,8 +2835,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // Initialize request argument(s)
             SearchRelatedAccountGroupMembershipsRequest request = new SearchRelatedAccountGroupMembershipsRequest
             {
-                ProjectAsRelatedAccountGroupName = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]"),
-                HashedAccountId = ByteString.Empty,
+                ProjectAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                AccountId = "",
             };
             // Make the request
             PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync(request);
@@ -1698,10 +2882,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
             // Initialize request argument(s)
-            string project = "projects/[PROJECT]/relatedaccountgroups/[RELATEDACCOUNTGROUP]";
+            string project = "projects/[PROJECT]";
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships(project, hashedAccountId);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (RelatedAccountGroupMembership item in response)
@@ -1744,10 +2930,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string project = "projects/[PROJECT]/relatedaccountgroups/[RELATEDACCOUNTGROUP]";
+            string project = "projects/[PROJECT]";
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync(project, hashedAccountId);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((RelatedAccountGroupMembership item) =>
@@ -1786,14 +2974,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
         /// <summary>Snippet for SearchRelatedAccountGroupMemberships</summary>
         public void SearchRelatedAccountGroupMembershipsResourceNames()
         {
-            // Snippet: SearchRelatedAccountGroupMemberships(RelatedAccountGroupName, ByteString, string, int?, CallSettings)
+            // Snippet: SearchRelatedAccountGroupMemberships(ProjectName, ByteString, string, int?, CallSettings)
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
             // Initialize request argument(s)
-            RelatedAccountGroupName project = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]");
+            ProjectName project = ProjectName.FromProject("[PROJECT]");
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships(project, hashedAccountId);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (RelatedAccountGroupMembership item in response)
@@ -1832,14 +3022,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
         /// <summary>Snippet for SearchRelatedAccountGroupMembershipsAsync</summary>
         public async Task SearchRelatedAccountGroupMembershipsResourceNamesAsync()
         {
-            // Snippet: SearchRelatedAccountGroupMembershipsAsync(RelatedAccountGroupName, ByteString, string, int?, CallSettings)
+            // Snippet: SearchRelatedAccountGroupMembershipsAsync(ProjectName, ByteString, string, int?, CallSettings)
             // Create client
             RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
             // Initialize request argument(s)
-            RelatedAccountGroupName project = RelatedAccountGroupName.FromProjectRelatedaccountgroup("[PROJECT]", "[RELATEDACCOUNTGROUP]");
+            ProjectName project = ProjectName.FromProject("[PROJECT]");
             ByteString hashedAccountId = ByteString.Empty;
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> response = recaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync(project, hashedAccountId);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((RelatedAccountGroupMembership item) =>

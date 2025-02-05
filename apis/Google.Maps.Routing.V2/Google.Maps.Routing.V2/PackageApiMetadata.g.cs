@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -32,10 +32,12 @@ namespace Google.Maps.Routing.V2
         {
             yield return FallbackInfoReflection.Descriptor;
             yield return GeocodingResultsReflection.Descriptor;
+            yield return LocalizedTimeReflection.Descriptor;
             yield return LocationReflection.Descriptor;
             yield return ManeuverReflection.Descriptor;
             yield return NavigationInstructionReflection.Descriptor;
             yield return PolylineReflection.Descriptor;
+            yield return PolylineDetailsReflection.Descriptor;
             yield return RouteReflection.Descriptor;
             yield return RouteLabelReflection.Descriptor;
             yield return RouteModifiersReflection.Descriptor;
@@ -45,6 +47,9 @@ namespace Google.Maps.Routing.V2
             yield return SpeedReadingIntervalReflection.Descriptor;
             yield return TollInfoReflection.Descriptor;
             yield return TollPassesReflection.Descriptor;
+            yield return TrafficModelReflection.Descriptor;
+            yield return TransitReflection.Descriptor;
+            yield return TransitPreferencesReflection.Descriptor;
             yield return UnitsReflection.Descriptor;
             yield return VehicleEmissionTypeReflection.Descriptor;
             yield return VehicleInfoReflection.Descriptor;

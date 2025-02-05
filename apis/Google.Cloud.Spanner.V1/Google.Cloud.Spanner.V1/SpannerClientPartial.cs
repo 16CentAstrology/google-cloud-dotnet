@@ -12,14 +12,40 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
-using System;
 
 namespace Google.Cloud.Spanner.V1
 {
-    // Partial class to set up resource-based routing.
+    public partial class SpannerClient
+    {
+        private const string LeaderRoutingHeader = "x-goog-spanner-route-to-leader";
+
+        /// <summary>
+        /// Returns the effective <see cref="SpannerSettings"/> used for each API call.
+        /// This can be used to create a modified instance of <see cref="SpannerSettings"/> to pass
+        /// for a single API request.
+        /// </summary>
+        public virtual SpannerSettings Settings { get; protected set; }
+
+        internal void MaybeApplyRouteToLeaderHeader(ref CallSettings settings, TransactionOptions.ModeOneofCase transactionMode)
+        {
+            if (transactionMode == TransactionOptions.ModeOneofCase.ReadWrite ||
+                transactionMode == TransactionOptions.ModeOneofCase.PartitionedDml)
+            {
+                MaybeApplyRouteToLeaderHeader(ref settings);
+            }
+        }
+
+        internal void MaybeApplyRouteToLeaderHeader(ref CallSettings settings)
+        {
+            if (Settings.LeaderRoutingEnabled)
+            {
+                settings = settings.WithHeader(LeaderRoutingHeader, bool.TrueString);
+            }
+        }
+    }
+
     public partial class SpannerClientImpl
     {
         /// <summary>
@@ -35,44 +61,82 @@ namespace Google.Cloud.Spanner.V1
         /// </remarks>
         public const string ResourcePrefixHeader = "google-cloud-resource-prefix";
 
-        partial void Modify_CreateSessionRequest(ref CreateSessionRequest request, ref CallSettings settings) =>
-            ApplyResourcePrefixHeaderFromDatabase(ref settings, request.Database);
+        partial void OnConstruction(Spanner.SpannerClient grpcClient, SpannerSettings effectiveSettings, ClientHelper clientHelper)
+        {
+            Settings = effectiveSettings;
+        }
 
-        partial void Modify_BatchCreateSessionsRequest(ref BatchCreateSessionsRequest request, ref CallSettings settings) =>
+        partial void Modify_CreateSessionRequest(ref CreateSessionRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeaderFromDatabase(ref settings, request.Database);
+            MaybeApplyRouteToLeaderHeader(ref settings);
+        }
 
-        partial void Modify_GetSessionRequest(ref GetSessionRequest request, ref CallSettings settings) =>
+        partial void Modify_BatchCreateSessionsRequest(ref BatchCreateSessionsRequest request, ref CallSettings settings)
+        {
+            ApplyResourcePrefixHeaderFromDatabase(ref settings, request.Database);
+            MaybeApplyRouteToLeaderHeader(ref settings);
+        }
+
+        partial void Modify_GetSessionRequest(ref GetSessionRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Name);
+            MaybeApplyRouteToLeaderHeader(ref settings);
+        }
 
         partial void Modify_ListSessionsRequest(ref ListSessionsRequest request, ref CallSettings settings) =>
+            // This operation is never routed to leader so we don't call MaybeApplyRouteToLeaderHeader.
             ApplyResourcePrefixHeaderFromDatabase(ref settings, request.Database);
 
         partial void Modify_DeleteSessionRequest(ref DeleteSessionRequest request, ref CallSettings settings) =>
+            // This operation is never routed to leader so we don't call MaybeApplyRouteToLeaderHeader.
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Name);
 
         partial void Modify_ExecuteSqlRequest(ref ExecuteSqlRequest request, ref CallSettings settings) =>
+            // This operations is routed to leader only if the transaction it uses is of a certain type.
+            // We don't have that information here so the leader routing header needs to be applied elsewhere.
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
 
-        partial void Modify_ExecuteBatchDmlRequest(ref ExecuteBatchDmlRequest request, ref CallSettings settings) =>
+        partial void Modify_ExecuteBatchDmlRequest(ref ExecuteBatchDmlRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
+            MaybeApplyRouteToLeaderHeader(ref settings);
+        }
 
         partial void Modify_ReadRequest(ref ReadRequest request, ref CallSettings settings) =>
+            // This operations is routed to leader only if the transaction it uses is of a certain type.
+            // We don't have that information here so the leader routing header needs to be applied elsewhere.
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
 
-        partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings) =>
+        partial void Modify_BeginTransactionRequest(ref BeginTransactionRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
+            MaybeApplyRouteToLeaderHeader(ref settings, request.Options?.ModeCase ?? TransactionOptions.ModeOneofCase.None);
+        }
 
-        partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings)=>
+        partial void Modify_CommitRequest(ref CommitRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
+            MaybeApplyRouteToLeaderHeader(ref settings);
+        }
 
-        partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings) =>
+        partial void Modify_RollbackRequest(ref RollbackRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
+            MaybeApplyRouteToLeaderHeader(ref settings);
+        }
 
-        partial void Modify_PartitionQueryRequest(ref PartitionQueryRequest request, ref CallSettings settings) =>
+        partial void Modify_PartitionQueryRequest(ref PartitionQueryRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
+            MaybeApplyRouteToLeaderHeader(ref settings);
+        }
 
-        partial void Modify_PartitionReadRequest(ref PartitionReadRequest request, ref CallSettings settings) =>
+        partial void Modify_PartitionReadRequest(ref PartitionReadRequest request, ref CallSettings settings)
+        {
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
+            MaybeApplyRouteToLeaderHeader(ref settings);
+        }
 
         internal static void ApplyResourcePrefixHeaderFromDatabase(ref CallSettings settings, string resource)
         {

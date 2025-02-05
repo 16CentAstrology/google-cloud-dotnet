@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,17 +19,17 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dataplex.V1
 {
@@ -236,14 +236,14 @@ namespace Google.Cloud.Dataplex.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return ContentServiceClient.Create(callInvoker, Settings, Logger);
+            return ContentServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<ContentServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return ContentServiceClient.Create(callInvoker, Settings, Logger);
+            return ContentServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -1059,13 +1059,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Content"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContentResponse, Content> ListContent(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContent(new ListContentRequest
+        public virtual gax::PagedEnumerable<ListContentResponse, Content> ListContent(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContentRequest request = new ListContentRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContent(request, callSettings);
+        }
 
         /// <summary>
         /// List content.
@@ -1084,13 +1093,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Content"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContentResponse, Content> ListContentAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContentAsync(new ListContentRequest
+        public virtual gax::PagedAsyncEnumerable<ListContentResponse, Content> ListContentAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContentRequest request = new ListContentRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContentAsync(request, callSettings);
+        }
 
         /// <summary>
         /// List content.
@@ -1109,13 +1127,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Content"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListContentResponse, Content> ListContent(LakeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContent(new ListContentRequest
+        public virtual gax::PagedEnumerable<ListContentResponse, Content> ListContent(LakeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContentRequest request = new ListContentRequest
             {
                 ParentAsLakeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContent(request, callSettings);
+        }
 
         /// <summary>
         /// List content.
@@ -1134,13 +1161,22 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Content"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListContentResponse, Content> ListContentAsync(LakeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListContentAsync(new ListContentRequest
+        public virtual gax::PagedAsyncEnumerable<ListContentResponse, Content> ListContentAsync(LakeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListContentRequest request = new ListContentRequest
             {
                 ParentAsLakeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListContentAsync(request, callSettings);
+        }
     }
 
     /// <summary>ContentService client wrapper implementation, for convenient use.</summary>
@@ -1175,7 +1211,11 @@ namespace Google.Cloud.Dataplex.V1
         {
             GrpcClient = grpcClient;
             ContentServiceSettings effectiveSettings = settings ?? ContentServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateContent = clientHelper.BuildApiCall<CreateContentRequest, Content>("CreateContent", grpcClient.CreateContentAsync, grpcClient.CreateContent, effectiveSettings.CreateContentSettings).WithGoogleRequestParam("parent", request => request.Parent);

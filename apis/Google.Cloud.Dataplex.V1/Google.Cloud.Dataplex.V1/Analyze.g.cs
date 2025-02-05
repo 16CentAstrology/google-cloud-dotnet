@@ -121,6 +121,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// Environment represents a user-visible compute infrastructure for analytics
   /// within a lake.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Environment : pb::IMessage<Environment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -600,7 +601,7 @@ namespace Google.Cloud.Dataplex.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
@@ -806,6 +807,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Configuration for the underlying infrastructure used to run workloads.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InfrastructureSpec : pb::IMessage<InfrastructureSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1131,6 +1133,7 @@ namespace Google.Cloud.Dataplex.V1 {
           /// <summary>
           /// Compute resources associated with the analyze interactive workloads.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ComputeResources : pb::IMessage<ComputeResources>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1408,6 +1411,7 @@ namespace Google.Cloud.Dataplex.V1 {
           /// <summary>
           /// Software Runtime Configuration to run Analyze.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class OsImageRuntime : pb::IMessage<OsImageRuntime>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1624,7 +1628,7 @@ namespace Google.Cloud.Dataplex.V1 {
               }
               javaLibraries_.Add(other.javaLibraries_);
               pythonPackages_.Add(other.pythonPackages_);
-              properties_.Add(other.properties_);
+              properties_.MergeFrom(other.properties_);
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 
@@ -1699,6 +1703,10 @@ namespace Google.Cloud.Dataplex.V1 {
 
       }
 
+      /// <summary>
+      /// Configuration for sessions created for this environment.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SessionSpec : pb::IMessage<SessionSpec>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1945,6 +1953,10 @@ namespace Google.Cloud.Dataplex.V1 {
 
       }
 
+      /// <summary>
+      /// Status of sessions created for this environment.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SessionStatus : pb::IMessage<SessionStatus>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2138,6 +2150,10 @@ namespace Google.Cloud.Dataplex.V1 {
 
       }
 
+      /// <summary>
+      /// URI Endpoints to access sessions associated with the Environment.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Endpoints : pb::IMessage<Endpoints>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2378,6 +2394,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// Content represents a user-visible notebook or a sql script
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Content : pb::IMessage<Content>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2560,10 +2577,24 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DataText {
-      get { return dataCase_ == DataOneofCase.DataText ? (string) data_ : ""; }
+      get { return HasDataText ? (string) data_ : ""; }
       set {
         data_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         dataCase_ = DataOneofCase.DataText;
+      }
+    }
+    /// <summary>Gets whether the "data_text" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDataText {
+      get { return dataCase_ == DataOneofCase.DataText; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "data_text" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDataText() {
+      if (HasDataText) {
+        ClearData();
       }
     }
 
@@ -2679,7 +2710,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
-      if (dataCase_ == DataOneofCase.DataText) hash ^= DataText.GetHashCode();
+      if (HasDataText) hash ^= DataText.GetHashCode();
       if (contentCase_ == ContentOneofCase.SqlScript) hash ^= SqlScript.GetHashCode();
       if (contentCase_ == ContentOneofCase.Notebook) hash ^= Notebook.GetHashCode();
       hash ^= (int) dataCase_;
@@ -2727,7 +2758,7 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(58);
         output.WriteString(Description);
       }
-      if (dataCase_ == DataOneofCase.DataText) {
+      if (HasDataText) {
         output.WriteRawTag(74);
         output.WriteString(DataText);
       }
@@ -2774,7 +2805,7 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(58);
         output.WriteString(Description);
       }
-      if (dataCase_ == DataOneofCase.DataText) {
+      if (HasDataText) {
         output.WriteRawTag(74);
         output.WriteString(DataText);
       }
@@ -2815,7 +2846,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
-      if (dataCase_ == DataOneofCase.DataText) {
+      if (HasDataText) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DataText);
       }
       if (contentCase_ == ContentOneofCase.SqlScript) {
@@ -2857,7 +2888,7 @@ namespace Google.Cloud.Dataplex.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Description.Length != 0) {
         Description = other.Description;
       }
@@ -3037,6 +3068,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Configuration for the Sql Script content.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SqlScript : pb::IMessage<SqlScript>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3254,6 +3286,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Configuration for Notebook content.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Notebook : pb::IMessage<Notebook>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3476,6 +3509,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// Represents an active analyze session running for a user.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Session : pb::IMessage<Session>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3572,6 +3606,9 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 4;
     private global::Google.Cloud.Dataplex.V1.State state_ = global::Google.Cloud.Dataplex.V1.State.Unspecified;
+    /// <summary>
+    /// Output only. State of Session
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataplex.V1.State State {

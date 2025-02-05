@@ -1,5 +1,39 @@
 # Version history
 
+## Version 4.4.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 4.3.0, released 2024-03-27
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 7707366](https://github.com/googleapis/google-cloud-dotnet/commit/77073662b153c73c7f9a869ede1376f4c7a12661))
+
+## Version 4.2.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 4.1.0, released 2023-06-20
+
+### New features
+
+- Log Analytics features of the Cloud Logging API ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add ConfigServiceV2.CreateBucketAsync method for creating Log Buckets asynchronously ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add ConfigServiceV2.UpdateBucketAsync method for creating Log Buckets asynchronously ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add ConfigServiceV2.CreateLink method for creating linked datasets for Log Analytics Buckets ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add ConfigServiceV2.DeleteLink method for deleting linked datasets ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add ConfigServiceV2.ListLinks method for listing linked datasets ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add ConfigServiceV2.GetLink methods for describing linked datasets ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add LogBucket.analytics_enabled field that specifies whether Log Bucket's Analytics features are enabled ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+- Add LogBucket.index_configs field that contains a list of Log Bucket's indexed fields and related configuration data ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+
+### Documentation improvements
+
+- Documentation for the Log Analytics features of the Cloud Logging API ([commit 5a7f88f](https://github.com/googleapis/google-cloud-dotnet/commit/5a7f88f19321e890f3f91fecfbc13a2ff1335ed6))
+
 ## Version 4.0.0, released 2022-06-08
 
 This is the first version of this package to depend on GAX v4.

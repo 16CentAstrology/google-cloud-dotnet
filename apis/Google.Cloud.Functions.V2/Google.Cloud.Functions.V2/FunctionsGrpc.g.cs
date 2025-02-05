@@ -3,7 +3,7 @@
 //     source: google/cloud/functions/v2/functions.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -252,11 +252,11 @@ namespace Google.Cloud.Functions.V2 {
       ///   attached, the identity from the credentials would be used, but that
       ///   identity does not have permissions to upload files to the URL.
       ///
-      /// When making a HTTP PUT request, these two headers need to be specified:
+      /// When making a HTTP PUT request, specify this header:
       ///
       /// * `content-type: application/zip`
       ///
-      /// And this header SHOULD NOT be specified:
+      /// Do not specify this header:
       ///
       /// * `Authorization: Bearer YOUR_TOKEN`
       /// </summary>
@@ -599,11 +599,11 @@ namespace Google.Cloud.Functions.V2 {
       ///   attached, the identity from the credentials would be used, but that
       ///   identity does not have permissions to upload files to the URL.
       ///
-      /// When making a HTTP PUT request, these two headers need to be specified:
+      /// When making a HTTP PUT request, specify this header:
       ///
       /// * `content-type: application/zip`
       ///
-      /// And this header SHOULD NOT be specified:
+      /// Do not specify this header:
       ///
       /// * `Authorization: Bearer YOUR_TOKEN`
       /// </summary>
@@ -634,11 +634,11 @@ namespace Google.Cloud.Functions.V2 {
       ///   attached, the identity from the credentials would be used, but that
       ///   identity does not have permissions to upload files to the URL.
       ///
-      /// When making a HTTP PUT request, these two headers need to be specified:
+      /// When making a HTTP PUT request, specify this header:
       ///
       /// * `content-type: application/zip`
       ///
-      /// And this header SHOULD NOT be specified:
+      /// Do not specify this header:
       ///
       /// * `Authorization: Bearer YOUR_TOKEN`
       /// </summary>
@@ -667,11 +667,11 @@ namespace Google.Cloud.Functions.V2 {
       ///   attached, the identity from the credentials would be used, but that
       ///   identity does not have permissions to upload files to the URL.
       ///
-      /// When making a HTTP PUT request, these two headers need to be specified:
+      /// When making a HTTP PUT request, specify this header:
       ///
       /// * `content-type: application/zip`
       ///
-      /// And this header SHOULD NOT be specified:
+      /// Do not specify this header:
       ///
       /// * `Authorization: Bearer YOUR_TOKEN`
       /// </summary>
@@ -702,11 +702,11 @@ namespace Google.Cloud.Functions.V2 {
       ///   attached, the identity from the credentials would be used, but that
       ///   identity does not have permissions to upload files to the URL.
       ///
-      /// When making a HTTP PUT request, these two headers need to be specified:
+      /// When making a HTTP PUT request, specify this header:
       ///
       /// * `content-type: application/zip`
       ///
-      /// And this header SHOULD NOT be specified:
+      /// Do not specify this header:
       ///
       /// * `Authorization: Bearer YOUR_TOKEN`
       /// </summary>

@@ -86,9 +86,9 @@ namespace Google.Cloud.Dialogflow.V2 {
             "YW1wMssMCgxFbnZpcm9ubWVudHMS9AEKEExpc3RFbnZpcm9ubWVudHMSMy5n",
             "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5MaXN0RW52aXJvbm1lbnRzUmVx",
             "dWVzdBo0Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkxpc3RFbnZpcm9u",
-            "bWVudHNSZXNwb25zZSJ1gtPkkwJmEiovdjIve3BhcmVudD1wcm9qZWN0cy8q",
-            "L2FnZW50fS9lbnZpcm9ubWVudHNaOBI2L3YyL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9hZ2VudH0vZW52aXJvbm1lbnRz2kEGcGFyZW50EtoB",
+            "bWVudHNSZXNwb25zZSJ12kEGcGFyZW50gtPkkwJmEiovdjIve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2FnZW50fS9lbnZpcm9ubWVudHNaOBI2L3YyL3twYXJlbnQ9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudH0vZW52aXJvbm1lbnRzEtoB",
             "Cg5HZXRFbnZpcm9ubWVudBIxLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
             "LkdldEVudmlyb25tZW50UmVxdWVzdBonLmdvb2dsZS5jbG91ZC5kaWFsb2dm",
             "bG93LnYyLkVudmlyb25tZW50ImyC0+STAmYSKi92Mi97bmFtZT1wcm9qZWN0",
@@ -118,11 +118,11 @@ namespace Google.Cloud.Dialogflow.V2 {
             "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9hZ2VudC9lbnZpcm9ubWVudHMv",
             "Kn0vaGlzdG9yeRp4ykEZZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0",
             "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0s",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QpkB",
+            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaWFsb2dmbG93QpYB",
             "Ch5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJCEEVudmlyb25tZW50",
             "UHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2FwaXYy",
-            "L2RpYWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGL4AQGiAgJERqoCGkdvb2dsZS5D",
-            "bG91ZC5EaWFsb2dmbG93LlYyYgZwcm90bzM="));
+            "L2RpYWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGKiAgJERqoCGkdvb2dsZS5DbG91",
+            "ZC5EaWFsb2dmbG93LlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.FulfillmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -162,6 +162,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// For more information, see the [versions and environments
   /// guide](https://cloud.google.com/dialogflow/docs/agents-versions).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Environment : pb::IMessage<Environment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -673,6 +674,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// Instructs the speech synthesizer on how to generate the output audio content.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextToSpeechSettings : pb::IMessage<TextToSpeechSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -911,7 +913,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (other.SampleRateHertz != 0) {
         SampleRateHertz = other.SampleRateHertz;
       }
-      synthesizeSpeechConfigs_.Add(other.synthesizeSpeechConfigs_);
+      synthesizeSpeechConfigs_.MergeFrom(other.synthesizeSpeechConfigs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -985,6 +987,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [Environments.ListEnvironments][google.cloud.dialogflow.v2.Environments.ListEnvironments].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEnvironmentsRequest : pb::IMessage<ListEnvironmentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1266,6 +1269,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The response message for
   /// [Environments.ListEnvironments][google.cloud.dialogflow.v2.Environments.ListEnvironments].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEnvironmentsResponse : pb::IMessage<ListEnvironmentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1493,6 +1497,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [Environments.GetEnvironment][google.cloud.dialogflow.v2.Environments.GetEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEnvironmentRequest : pb::IMessage<GetEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1696,6 +1701,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [Environments.CreateEnvironment][google.cloud.dialogflow.v2.Environments.CreateEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateEnvironmentRequest : pb::IMessage<CreateEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1985,6 +1991,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [Environments.UpdateEnvironment][google.cloud.dialogflow.v2.Environments.UpdateEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateEnvironmentRequest : pb::IMessage<UpdateEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2282,6 +2289,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [Environments.DeleteEnvironment][google.cloud.dialogflow.v2.Environments.DeleteEnvironment].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteEnvironmentRequest : pb::IMessage<DeleteEnvironmentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2485,6 +2493,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The request message for
   /// [Environments.GetEnvironmentHistory][google.cloud.dialogflow.v2.Environments.GetEnvironmentHistory].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEnvironmentHistoryRequest : pb::IMessage<GetEnvironmentHistoryRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2769,6 +2778,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// The response message for
   /// [Environments.GetEnvironmentHistory][google.cloud.dialogflow.v2.Environments.GetEnvironmentHistory].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnvironmentHistory : pb::IMessage<EnvironmentHistory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3045,6 +3055,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Represents an environment history entry.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Entry : pb::IMessage<Entry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

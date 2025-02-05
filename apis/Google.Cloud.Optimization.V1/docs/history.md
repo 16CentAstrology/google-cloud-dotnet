@@ -1,5 +1,39 @@
 # Version history
 
+## Version 2.6.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.5.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.4.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.3.0, released 2023-10-30
+
+### New features
+
+- Added the route modifiers ([commit a7431da](https://github.com/googleapis/google-cloud-dotnet/commit/a7431dad485ead7d2e60dbcd4cff258d0898611f))
+
+## Version 2.2.0, released 2023-09-11
+
+### New features
+
+- Added support for walking mode and cost_per_kilometer_below_soft_max ([commit ad1f21c](https://github.com/googleapis/google-cloud-dotnet/commit/ad1f21c26a890aa20f68e8521b2746a8427996cb))
+
+### Documentation improvements
+
+- Minor formatting fix ([commit 0a0b732](https://github.com/googleapis/google-cloud-dotnet/commit/0a0b732a4e07f18f70085b524af978cbf79a2a57))
+- Minor formatting ([commit 0d3ca27](https://github.com/googleapis/google-cloud-dotnet/commit/0d3ca27514dd40c9f0325692508c991b3eeeb350))
+- Clarification for deprecated fields ([commit 4a99682](https://github.com/googleapis/google-cloud-dotnet/commit/4a99682d647b486f3eca9154452779a693565f16))
+
 ## Version 2.1.0, released 2023-01-19
 
 ### New features

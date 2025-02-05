@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Tasks.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudtasks_v2_generated_CloudTasks_ResumeQueue_async]
     using System.Threading.Tasks;
@@ -35,14 +35,14 @@ namespace Google.Cloud.Tasks.V2.Snippets
         public async Task ResumeQueueRequestObjectAsync()
         {
             // Create client
-            CloudTasksClient cloudTasksClient = await CloudTasksClient.CreateAsync();
+            gctv::CloudTasksClient cloudTasksClient = await gctv::CloudTasksClient.CreateAsync();
             // Initialize request argument(s)
-            ResumeQueueRequest request = new ResumeQueueRequest
+            gctv::ResumeQueueRequest request = new gctv::ResumeQueueRequest
             {
-                QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                QueueName = gctv::QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
             };
             // Make the request
-            Queue response = await cloudTasksClient.ResumeQueueAsync(request);
+            gctv::Queue response = await cloudTasksClient.ResumeQueueAsync(request);
         }
     }
     // [END cloudtasks_v2_generated_CloudTasks_ResumeQueue_async]

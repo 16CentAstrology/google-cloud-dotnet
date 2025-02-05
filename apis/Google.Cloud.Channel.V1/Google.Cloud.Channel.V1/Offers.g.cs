@@ -42,58 +42,59 @@ namespace Google.Cloud.Channel.V1 {
             "cl9kZWZpbml0aW9ucxgJIAMoCzIsLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYx",
             "LlBhcmFtZXRlckRlZmluaXRpb24SEQoJZGVhbF9jb2RlGAwgASgJOknqQUYK",
             "IWNsb3VkY2hhbm5lbC5nb29nbGVhcGlzLmNvbS9PZmZlchIhYWNjb3VudHMv",
-            "e2FjY291bnR9L29mZmVycy97b2ZmZXJ9IvsCChNQYXJhbWV0ZXJEZWZpbml0",
+            "e2FjY291bnR9L29mZmVycy97b2ZmZXJ9IogDChNQYXJhbWV0ZXJEZWZpbml0",
             "aW9uEgwKBG5hbWUYASABKAkSUgoOcGFyYW1ldGVyX3R5cGUYAiABKA4yOi5n",
             "b29nbGUuY2xvdWQuY2hhbm5lbC52MS5QYXJhbWV0ZXJEZWZpbml0aW9uLlBh",
             "cmFtZXRlclR5cGUSMQoJbWluX3ZhbHVlGAMgASgLMh4uZ29vZ2xlLmNsb3Vk",
             "LmNoYW5uZWwudjEuVmFsdWUSMQoJbWF4X3ZhbHVlGAQgASgLMh4uZ29vZ2xl",
             "LmNsb3VkLmNoYW5uZWwudjEuVmFsdWUSNgoOYWxsb3dlZF92YWx1ZXMYBSAD",
             "KAsyHi5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5WYWx1ZRIQCghvcHRpb25h",
-            "bBgGIAEoCCJSCg1QYXJhbWV0ZXJUeXBlEh4KGlBBUkFNRVRFUl9UWVBFX1VO",
+            "bBgGIAEoCCJfCg1QYXJhbWV0ZXJUeXBlEh4KGlBBUkFNRVRFUl9UWVBFX1VO",
             "U1BFQ0lGSUVEEAASCQoFSU5UNjQQARIKCgZTVFJJTkcQAhIKCgZET1VCTEUQ",
-            "AyJZCgtDb25zdHJhaW50cxJKChRjdXN0b21lcl9jb25zdHJhaW50cxgBIAEo",
-            "CzIsLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLkN1c3RvbWVyQ29uc3RyYWlu",
-            "dHMi1wEKE0N1c3RvbWVyQ29uc3RyYWludHMSFwoPYWxsb3dlZF9yZWdpb25z",
-            "GAEgAygJElcKFmFsbG93ZWRfY3VzdG9tZXJfdHlwZXMYAiADKA4yNy5nb29n",
-            "bGUuY2xvdWQuY2hhbm5lbC52MS5DbG91ZElkZW50aXR5SW5mby5DdXN0b21l",
-            "clR5cGUSTgoXcHJvbW90aW9uYWxfb3JkZXJfdHlwZXMYAyADKA4yLS5nb29n",
-            "bGUuY2xvdWQuY2hhbm5lbC52MS5Qcm9tb3Rpb25hbE9yZGVyVHlwZSKGAgoE",
-            "UGxhbhI6CgxwYXltZW50X3BsYW4YASABKA4yJC5nb29nbGUuY2xvdWQuY2hh",
-            "bm5lbC52MS5QYXltZW50UGxhbhI6CgxwYXltZW50X3R5cGUYAiABKA4yJC5n",
-            "b29nbGUuY2xvdWQuY2hhbm5lbC52MS5QYXltZW50VHlwZRI2Cg1wYXltZW50",
-            "X2N5Y2xlGAMgASgLMh8uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUGVyaW9k",
-            "EjUKDHRyaWFsX3BlcmlvZBgEIAEoCzIfLmdvb2dsZS5jbG91ZC5jaGFubmVs",
-            "LnYxLlBlcmlvZBIXCg9iaWxsaW5nX2FjY291bnQYBSABKAkiuQEKD1ByaWNl",
-            "QnlSZXNvdXJjZRI8Cg1yZXNvdXJjZV90eXBlGAEgASgOMiUuZ29vZ2xlLmNs",
-            "b3VkLmNoYW5uZWwudjEuUmVzb3VyY2VUeXBlEi0KBXByaWNlGAIgASgLMh4u",
-            "Z29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUHJpY2USOQoMcHJpY2VfcGhhc2Vz",
-            "GAMgAygLMiMuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUHJpY2VQaGFzZSKK",
-            "AQoFUHJpY2USJgoKYmFzZV9wcmljZRgBIAEoCzISLmdvb2dsZS50eXBlLk1v",
-            "bmV5EhAKCGRpc2NvdW50GAIgASgBEisKD2VmZmVjdGl2ZV9wcmljZRgDIAEo",
-            "CzISLmdvb2dsZS50eXBlLk1vbmV5EhoKEmV4dGVybmFsX3ByaWNlX3VyaRgE",
-            "IAEoCSLZAQoKUHJpY2VQaGFzZRI4CgtwZXJpb2RfdHlwZRgBIAEoDjIjLmdv",
-            "b2dsZS5jbG91ZC5jaGFubmVsLnYxLlBlcmlvZFR5cGUSFAoMZmlyc3RfcGVy",
-            "aW9kGAIgASgFEhMKC2xhc3RfcGVyaW9kGAMgASgFEi0KBXByaWNlGAQgASgL",
-            "Mh4uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUHJpY2USNwoLcHJpY2VfdGll",
-            "cnMYBSADKAsyIi5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5QcmljZVRpZXIi",
-            "aQoJUHJpY2VUaWVyEhYKDmZpcnN0X3Jlc291cmNlGAEgASgFEhUKDWxhc3Rf",
-            "cmVzb3VyY2UYAiABKAUSLQoFcHJpY2UYAyABKAsyHi5nb29nbGUuY2xvdWQu",
-            "Y2hhbm5lbC52MS5QcmljZSJUCgZQZXJpb2QSEAoIZHVyYXRpb24YASABKAUS",
-            "OAoLcGVyaW9kX3R5cGUYAiABKA4yIy5nb29nbGUuY2xvdWQuY2hhbm5lbC52",
-            "MS5QZXJpb2RUeXBlKm0KFFByb21vdGlvbmFsT3JkZXJUeXBlEiAKHFBST01P",
-            "VElPTkFMX1RZUEVfVU5TUEVDSUZJRUQQABIPCgtORVdfVVBHUkFERRABEgwK",
-            "CFRSQU5TRkVSEAISFAoQUFJPTU9USU9OX1NXSVRDSBADKmsKC1BheW1lbnRQ",
-            "bGFuEhwKGFBBWU1FTlRfUExBTl9VTlNQRUNJRklFRBAAEg4KCkNPTU1JVE1F",
-            "TlQQARIMCghGTEVYSUJMRRACEggKBEZSRUUQAxIJCgVUUklBTBAEEgsKB09G",
-            "RkxJTkUQBSpECgtQYXltZW50VHlwZRIcChhQQVlNRU5UX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIKCgZQUkVQQVkQARILCgdQT1NUUEFZEAIqigEKDFJlc291cmNl",
-            "VHlwZRIdChlSRVNPVVJDRV9UWVBFX1VOU1BFQ0lGSUVEEAASCAoEU0VBVBAB",
-            "EgcKA01BVRACEgYKAkdCEAMSEQoNTElDRU5TRURfVVNFUhAEEgsKB01JTlVU",
-            "RVMQBRIOCgpJQUFTX1VTQUdFEAYSEAoMU1VCU0NSSVBUSU9OEAcqRwoKUGVy",
-            "aW9kVHlwZRIbChdQRVJJT0RfVFlQRV9VTlNQRUNJRklFRBAAEgcKA0RBWRAB",
-            "EgkKBU1PTlRIEAISCAoEWUVBUhADQmMKG2NvbS5nb29nbGUuY2xvdWQuY2hh",
-            "bm5lbC52MUILT2ZmZXJzUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9j",
-            "aGFubmVsL2FwaXYxL2NoYW5uZWxwYjtjaGFubmVscGJiBnByb3RvMw=="));
+            "AxILCgdCT09MRUFOEAQiWQoLQ29uc3RyYWludHMSSgoUY3VzdG9tZXJfY29u",
+            "c3RyYWludHMYASABKAsyLC5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5DdXN0",
+            "b21lckNvbnN0cmFpbnRzItcBChNDdXN0b21lckNvbnN0cmFpbnRzEhcKD2Fs",
+            "bG93ZWRfcmVnaW9ucxgBIAMoCRJXChZhbGxvd2VkX2N1c3RvbWVyX3R5cGVz",
+            "GAIgAygOMjcuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuQ2xvdWRJZGVudGl0",
+            "eUluZm8uQ3VzdG9tZXJUeXBlEk4KF3Byb21vdGlvbmFsX29yZGVyX3R5cGVz",
+            "GAMgAygOMi0uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUHJvbW90aW9uYWxP",
+            "cmRlclR5cGUihgIKBFBsYW4SOgoMcGF5bWVudF9wbGFuGAEgASgOMiQuZ29v",
+            "Z2xlLmNsb3VkLmNoYW5uZWwudjEuUGF5bWVudFBsYW4SOgoMcGF5bWVudF90",
+            "eXBlGAIgASgOMiQuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUGF5bWVudFR5",
+            "cGUSNgoNcGF5bWVudF9jeWNsZRgDIAEoCzIfLmdvb2dsZS5jbG91ZC5jaGFu",
+            "bmVsLnYxLlBlcmlvZBI1Cgx0cmlhbF9wZXJpb2QYBCABKAsyHy5nb29nbGUu",
+            "Y2xvdWQuY2hhbm5lbC52MS5QZXJpb2QSFwoPYmlsbGluZ19hY2NvdW50GAUg",
+            "ASgJIrkBCg9QcmljZUJ5UmVzb3VyY2USPAoNcmVzb3VyY2VfdHlwZRgBIAEo",
+            "DjIlLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlJlc291cmNlVHlwZRItCgVw",
+            "cmljZRgCIAEoCzIeLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlByaWNlEjkK",
+            "DHByaWNlX3BoYXNlcxgDIAMoCzIjLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYx",
+            "LlByaWNlUGhhc2UiigEKBVByaWNlEiYKCmJhc2VfcHJpY2UYASABKAsyEi5n",
+            "b29nbGUudHlwZS5Nb25leRIQCghkaXNjb3VudBgCIAEoARIrCg9lZmZlY3Rp",
+            "dmVfcHJpY2UYAyABKAsyEi5nb29nbGUudHlwZS5Nb25leRIaChJleHRlcm5h",
+            "bF9wcmljZV91cmkYBCABKAki2QEKClByaWNlUGhhc2USOAoLcGVyaW9kX3R5",
+            "cGUYASABKA4yIy5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5QZXJpb2RUeXBl",
+            "EhQKDGZpcnN0X3BlcmlvZBgCIAEoBRITCgtsYXN0X3BlcmlvZBgDIAEoBRIt",
+            "CgVwcmljZRgEIAEoCzIeLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlByaWNl",
+            "EjcKC3ByaWNlX3RpZXJzGAUgAygLMiIuZ29vZ2xlLmNsb3VkLmNoYW5uZWwu",
+            "djEuUHJpY2VUaWVyImkKCVByaWNlVGllchIWCg5maXJzdF9yZXNvdXJjZRgB",
+            "IAEoBRIVCg1sYXN0X3Jlc291cmNlGAIgASgFEi0KBXByaWNlGAMgASgLMh4u",
+            "Z29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUHJpY2UiVAoGUGVyaW9kEhAKCGR1",
+            "cmF0aW9uGAEgASgFEjgKC3BlcmlvZF90eXBlGAIgASgOMiMuZ29vZ2xlLmNs",
+            "b3VkLmNoYW5uZWwudjEuUGVyaW9kVHlwZSptChRQcm9tb3Rpb25hbE9yZGVy",
+            "VHlwZRIgChxQUk9NT1RJT05BTF9UWVBFX1VOU1BFQ0lGSUVEEAASDwoLTkVX",
+            "X1VQR1JBREUQARIMCghUUkFOU0ZFUhACEhQKEFBST01PVElPTl9TV0lUQ0gQ",
+            "AyprCgtQYXltZW50UGxhbhIcChhQQVlNRU5UX1BMQU5fVU5TUEVDSUZJRUQQ",
+            "ABIOCgpDT01NSVRNRU5UEAESDAoIRkxFWElCTEUQAhIICgRGUkVFEAMSCQoF",
+            "VFJJQUwQBBILCgdPRkZMSU5FEAUqRAoLUGF5bWVudFR5cGUSHAoYUEFZTUVO",
+            "VF9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGUFJFUEFZEAESCwoHUE9TVFBBWRAC",
+            "KooBCgxSZXNvdXJjZVR5cGUSHQoZUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEggKBFNFQVQQARIHCgNNQVUQAhIGCgJHQhADEhEKDUxJQ0VOU0VEX1VT",
+            "RVIQBBILCgdNSU5VVEVTEAUSDgoKSUFBU19VU0FHRRAGEhAKDFNVQlNDUklQ",
+            "VElPThAHKkcKClBlcmlvZFR5cGUSGwoXUEVSSU9EX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIHCgNEQVkQARIJCgVNT05USBACEggKBFlFQVIQA0JjChtjb20uZ29v",
+            "Z2xlLmNsb3VkLmNoYW5uZWwudjFCC09mZmVyc1Byb3RvUAFaNWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vY2hhbm5lbC9hcGl2MS9jaGFubmVscGI7Y2hhbm5lbHBi",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Cloud.Channel.V1.ProductsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Channel.V1.PromotionalOrderType), typeof(global::Google.Cloud.Channel.V1.PaymentPlan), typeof(global::Google.Cloud.Channel.V1.PaymentType), typeof(global::Google.Cloud.Channel.V1.ResourceType), typeof(global::Google.Cloud.Channel.V1.PeriodType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -214,15 +215,14 @@ namespace Google.Cloud.Channel.V1 {
     /// </summary>
     [pbr::OriginalName("MINUTES")] Minutes = 5,
     /// <summary>
-    /// For IaaS SKUs like Google Cloud Platform, monetization is based on usage
-    /// accrued on your billing account irrespective of the type of monetizable
-    /// resource. This enum represents an aggregated resource/container for all
-    /// usage SKUs on a billing account. Currently, only applicable to Google Cloud
-    /// Platform.
+    /// For IaaS SKUs like Google Cloud, monetization is based on usage accrued on
+    /// your billing account irrespective of the type of monetizable resource. This
+    /// enum represents an aggregated resource/container for all usage SKUs on a
+    /// billing account. Currently, only applicable to Google Cloud.
     /// </summary>
     [pbr::OriginalName("IAAS_USAGE")] IaasUsage = 6,
     /// <summary>
-    /// For Google Cloud Platform subscriptions like Anthos or SAP.
+    /// For Google Cloud subscriptions like Anthos or SAP.
     /// </summary>
     [pbr::OriginalName("SUBSCRIPTION")] Subscription = 7,
   }
@@ -257,6 +257,7 @@ namespace Google.Cloud.Channel.V1 {
   /// An offer is associated with a [Sku][google.cloud.channel.v1.Sku], has a plan
   /// for payment, a price, and defines the constraints for buying.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Offer : pb::IMessage<Offer>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -846,6 +847,7 @@ namespace Google.Cloud.Channel.V1 {
   /// Parameter's definition. Specifies what parameter is required to use the
   /// current Offer to purchase.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ParameterDefinition : pb::IMessage<ParameterDefinition>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1275,6 +1277,10 @@ namespace Google.Cloud.Channel.V1 {
         /// Double type.
         /// </summary>
         [pbr::OriginalName("DOUBLE")] Double = 3,
+        /// <summary>
+        /// Boolean type.
+        /// </summary>
+        [pbr::OriginalName("BOOLEAN")] Boolean = 4,
       }
 
     }
@@ -1285,6 +1291,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Represents the constraints for buying the Offer.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Constraints : pb::IMessage<Constraints>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1489,6 +1496,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Represents constraints required to purchase the Offer for a customer.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomerConstraints : pb::IMessage<CustomerConstraints>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1735,6 +1743,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// The payment plan for the Offer. Describes how to make a payment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Plan : pb::IMessage<Plan>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1854,7 +1863,7 @@ namespace Google.Cloud.Channel.V1 {
     private string billingAccount_ = "";
     /// <summary>
     /// Reseller Billing account to charge after an offer transaction.
-    /// Only present for Google Cloud Platform offers.
+    /// Only present for Google Cloud offers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2115,6 +2124,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Represents price by resource type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PriceByResource : pb::IMessage<PriceByResource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2388,6 +2398,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Represents the price of the Offer.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Price : pb::IMessage<Price>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2724,6 +2735,7 @@ namespace Google.Cloud.Channel.V1 {
   /// For example, a 20% discount for the first six months, then a 10% discount
   /// starting on the seventh month.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PricePhase : pb::IMessage<PricePhase>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3084,6 +3096,7 @@ namespace Google.Cloud.Channel.V1 {
   ///
   /// Each of these tiers is represented as a PriceTier.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PriceTier : pb::IMessage<PriceTier>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3368,6 +3381,7 @@ namespace Google.Cloud.Channel.V1 {
   /// <summary>
   /// Represents period in days/months/years.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Period : pb::IMessage<Period>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

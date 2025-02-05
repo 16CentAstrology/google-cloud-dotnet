@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.PubSub.V1.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_SubscriberServiceApi_CreateSubscription_async]
+    // [START pubsub_v1_generated_Subscriber_CreateSubscription_async]
     using Google.Cloud.PubSub.V1;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
@@ -55,10 +55,16 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 TopicMessageRetentionDuration = new Duration(),
                 BigqueryConfig = new BigQueryConfig(),
                 State = Subscription.Types.State.Unspecified,
+                CloudStorageConfig = new CloudStorageConfig(),
+                AnalyticsHubSubscriptionInfo = new Subscription.Types.AnalyticsHubSubscriptionInfo(),
+                MessageTransforms =
+                {
+                    new MessageTransform(),
+                },
             };
             // Make the request
             Subscription response = await subscriberServiceApiClient.CreateSubscriptionAsync(request);
         }
     }
-    // [END pubsub_v1_generated_SubscriberServiceApi_CreateSubscription_async]
+    // [END pubsub_v1_generated_Subscriber_CreateSubscription_async]
 }

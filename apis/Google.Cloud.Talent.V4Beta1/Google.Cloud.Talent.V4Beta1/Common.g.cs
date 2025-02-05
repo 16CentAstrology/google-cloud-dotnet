@@ -604,6 +604,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   ///
   /// An enum that represents who has view access to the resource.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public enum Visibility {
     /// <summary>
     /// Default value.
@@ -679,6 +680,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Message representing a period of time between two timestamps.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TimestampRange : pb::IMessage<TimestampRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -932,6 +934,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// A resource that represents a location with full geographic information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Location : pb::IMessage<Location>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1341,6 +1344,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// conducting the job search. This information is used to improve the
   /// performance of the service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RequestMetadata : pb::IMessage<RequestMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1757,6 +1761,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Additional information returned to client, such as debugging information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResponseMetadata : pb::IMessage<ResponseMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1955,6 +1960,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// other entity conducting the job search. Providing this information improves
   /// the quality of the search results across devices.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeviceInfo : pb::IMessage<DeviceInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2236,6 +2242,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Custom attribute values that are either filterable or non-filterable.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomAttribute : pb::IMessage<CustomAttribute>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2562,6 +2569,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Spell check result.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpellingCorrection : pb::IMessage<SpellingCorrection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2843,6 +2851,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Job compensation details.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompensationInfo : pb::IMessage<CompensationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3272,6 +3281,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// times
       /// [expected_units_per_year][google.cloud.talent.v4beta1.CompensationInfo.CompensationEntry.expected_units_per_year].
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CompensationEntry : pb::IMessage<CompensationEntry>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3751,6 +3761,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <summary>
       /// Compensation range.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class CompensationRange : pb::IMessage<CompensationRange>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4016,6 +4027,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// It's used to replace
   /// [google.longrunning.Operation.metadata][google.longrunning.Operation.metadata].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchOperationMetadata : pb::IMessage<BatchOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -57,22 +57,22 @@ namespace Google.Cloud.Retail.V2 {
             "bG9jYXRpb25zLyovY2F0YWxvZ3MvKn0vdXNlckV2ZW50czpjb2xsZWN0EoYC",
             "Cg9QdXJnZVVzZXJFdmVudHMSLi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlB1",
             "cmdlVXNlckV2ZW50c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uIqMBgtPkkwJEIj8vdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2NhdGFsb2dzLyp9L3VzZXJFdmVudHM6cHVyZ2U6ASrKQVYKLmdv",
-            "b2dsZS5jbG91ZC5yZXRhaWwudjIuUHVyZ2VVc2VyRXZlbnRzUmVzcG9uc2US",
-            "JGdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHVyZ2VNZXRhZGF0YRKLAgoQSW1w",
+            "cmF0aW9uIqMBykFWCi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlB1cmdlVXNl",
+            "ckV2ZW50c1Jlc3BvbnNlEiRnb29nbGUuY2xvdWQucmV0YWlsLnYyLlB1cmdl",
+            "TWV0YWRhdGGC0+STAkQiPy92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovY2F0YWxvZ3MvKn0vdXNlckV2ZW50czpwdXJnZToBKhKLAgoQSW1w",
             "b3J0VXNlckV2ZW50cxIvLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuSW1wb3J0",
             "VXNlckV2ZW50c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIqYBgtPkkwJFIkAvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2NhdGFsb2dzLyp9L3VzZXJFdmVudHM6aW1wb3J0OgEqykFYCi9nb29n",
-            "bGUuY2xvdWQucmV0YWlsLnYyLkltcG9ydFVzZXJFdmVudHNSZXNwb25zZRIl",
-            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5JbXBvcnRNZXRhZGF0YRLnAQoQUmVq",
+            "aW9uIqYBykFYCi9nb29nbGUuY2xvdWQucmV0YWlsLnYyLkltcG9ydFVzZXJF",
+            "dmVudHNSZXNwb25zZRIlZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5JbXBvcnRN",
+            "ZXRhZGF0YYLT5JMCRSJAL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9jYXRhbG9ncy8qfS91c2VyRXZlbnRzOmltcG9ydDoBKhLnAQoQUmVq",
             "b2luVXNlckV2ZW50cxIvLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUmVqb2lu",
             "VXNlckV2ZW50c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIoIBgtPkkwJFIkAvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2NhdGFsb2dzLyp9L3VzZXJFdmVudHM6cmVqb2luOgEqykE0ChhSZWpv",
-            "aW5Vc2VyRXZlbnRzUmVzcG9uc2USGFJlam9pblVzZXJFdmVudHNNZXRhZGF0",
-            "YRpJykEVcmV0YWlsLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
+            "aW9uIoIBykE0ChhSZWpvaW5Vc2VyRXZlbnRzUmVzcG9uc2USGFJlam9pblVz",
+            "ZXJFdmVudHNNZXRhZGF0YYLT5JMCRSJAL3YyL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qfS91c2VyRXZlbnRzOnJlam9pbjoB",
+            "KhpJykEVcmV0YWlsLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29v",
             "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULAAQoaY29tLmdvb2ds",
             "ZS5jbG91ZC5yZXRhaWwudjJCFVVzZXJFdmVudFNlcnZpY2VQcm90b1ABWjJj",
             "bG91ZC5nb29nbGUuY29tL2dvL3JldGFpbC9hcGl2Mi9yZXRhaWxwYjtyZXRh",
@@ -96,6 +96,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request message for WriteUserEvent method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WriteUserEventRequest : pb::IMessage<WriteUserEventRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -384,6 +385,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request message for CollectUserEvent method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CollectUserEventRequest : pb::IMessage<CollectUserEventRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -447,10 +449,24 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PrebuiltRule {
-      get { return conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule ? (string) conversionRule_ : ""; }
+      get { return HasPrebuiltRule ? (string) conversionRule_ : ""; }
       set {
         conversionRule_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         conversionRuleCase_ = ConversionRuleOneofCase.PrebuiltRule;
+      }
+    }
+    /// <summary>Gets whether the "prebuilt_rule" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPrebuiltRule {
+      get { return conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "prebuilt_rule" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPrebuiltRule() {
+      if (HasPrebuiltRule) {
+        ClearConversionRule();
       }
     }
 
@@ -588,7 +604,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule) hash ^= PrebuiltRule.GetHashCode();
+      if (HasPrebuiltRule) hash ^= PrebuiltRule.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (UserEvent.Length != 0) hash ^= UserEvent.GetHashCode();
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
@@ -633,7 +649,7 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(42);
         output.WriteString(RawJson);
       }
-      if (conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule) {
+      if (HasPrebuiltRule) {
         output.WriteRawTag(50);
         output.WriteString(PrebuiltRule);
       }
@@ -667,7 +683,7 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(42);
         output.WriteString(RawJson);
       }
-      if (conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule) {
+      if (HasPrebuiltRule) {
         output.WriteRawTag(50);
         output.WriteString(PrebuiltRule);
       }
@@ -681,7 +697,7 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (conversionRuleCase_ == ConversionRuleOneofCase.PrebuiltRule) {
+      if (HasPrebuiltRule) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PrebuiltRule);
       }
       if (Parent.Length != 0) {
@@ -820,6 +836,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request message for RejoinUserEvents method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RejoinUserEventsRequest : pb::IMessage<RejoinUserEventsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1092,6 +1109,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Response message for `RejoinUserEvents` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RejoinUserEventsResponse : pb::IMessage<RejoinUserEventsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1287,6 +1305,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Metadata for `RejoinUserEvents` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RejoinUserEventsMetadata : pb::IMessage<RejoinUserEventsMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

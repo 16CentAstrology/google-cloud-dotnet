@@ -12,43 +12,97 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.ResourceNames;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Http;
+using Google.Cloud.Firestore.Admin.V1;
 using System;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Google.Cloud.Firestore.CleanTestData
-{
-    internal class Program
-    {
-        private static async Task Main(string[] args)
-        {
-            string project = Environment.GetEnvironmentVariable("FIRESTORE_TEST_PROJECT");
-            var db = FirestoreDb.Create(project);
-            var collections = await db.ListRootCollectionsAsync().ToListAsync();
-            foreach (var collection in collections)
-            {
-                if (collection.Id.StartsWith("test-"))
-                {
-                    await DeleteCollectionAsync(collection);
-                }
-            }
+namespace Google.Cloud.Firestore.CleanTestData;
 
-            async Task DeleteCollectionAsync(CollectionReference collection)
+internal class Program
+{
+    private static async Task Main()
+    {
+        string project = Environment.GetEnvironmentVariable("FIRESTORE_TEST_PROJECT");
+
+        await DeleteCollectionsAsync(project);
+        await DeleteIndexesAsync(project);
+        await DeleteDatabasesAsync(project);
+    }
+
+    private static async Task DeleteCollectionsAsync(string projectId)
+    {
+        var db = await FirestoreDb.CreateAsync(projectId);
+        var collections = await db.ListRootCollectionsAsync()
+            .Where(collection => collection.Id.StartsWith("test-", StringComparison.Ordinal))
+            .ToListAsync();
+        foreach (var collection in collections)
+        {
+            // Log which collections we're deleting here rather than in DeleteCollectionAsync,
+            // as that's called recursively.
+            Console.WriteLine($"Deleting collection {collection.Id}");
+            await DeleteCollectionAsync(collection);
+        }
+
+        async Task DeleteCollectionAsync(CollectionReference collection)
+        {
+            var allDocs = await collection.ListDocumentsAsync().ToListAsync();
+            // Note: one batch per collection is less efficient than filling the batch each time,
+            // but it's not a big problem.
+            var batch = db.StartBatch();
+            foreach (var doc in allDocs)
             {
-                Console.WriteLine($"Deleting {collection.Id}");
-                var allDocs = await collection.ListDocumentsAsync().ToListAsync();
-                // Note: one batch per collection is less efficient than filling the batch each time,
-                // but it's not a big problem.
-                var batch = db.StartBatch();
-                foreach (var doc in allDocs)
+                foreach (var child in await doc.ListCollectionsAsync().ToListAsync())
                 {
-                    foreach (var child in await doc.ListCollectionsAsync().ToListAsync())
-                    {
-                        await DeleteCollectionAsync(child);
-                    }
-                    batch.Delete(doc);
+                    await DeleteCollectionAsync(child);
                 }
-                await batch.CommitAsync();
+                batch.Delete(doc);
+            }
+            await batch.CommitAsync();
+        }
+    }
+
+    private static async Task DeleteIndexesAsync(string projectId)
+    {
+        var adminClient = await FirestoreAdminClient.CreateAsync();
+        var indexes = await adminClient.ListIndexesAsync(new CollectionGroupName(projectId, "(default)", "-"))
+            .Where(index => index.IndexName.CollectionId.StartsWith("test-", StringComparison.Ordinal))
+            .ToListAsync();
+
+        foreach (var index in indexes)
+        {
+            Console.WriteLine($"Deleting index {index.Name}");
+            await adminClient.DeleteIndexAsync(index.IndexName);
+        }
+    }
+
+    private static async Task DeleteDatabasesAsync(string projectId)
+    {
+        var adminClient = await FirestoreAdminClient.CreateAsync();
+        var databases = (await adminClient.ListDatabasesAsync(ProjectName.FromProject(projectId))).Databases
+            .Where(db => db.DatabaseName.DatabaseId.StartsWith("test-", StringComparison.Ordinal))
+            .ToList();
+        foreach (var database in databases)
+        {
+            await DeleteDatabaseAsync(database.DatabaseName);
+        }
+
+        async Task DeleteDatabaseAsync(DatabaseName dbName)
+        {
+            Console.WriteLine($"Attempting to delete {dbName.DatabaseId}");
+            try
+            {
+                await adminClient.DeleteDatabaseAsync(dbName);
+                Console.WriteLine($"Success deleting {dbName.DatabaseId}");
+            }
+            catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
+            {
+                Console.WriteLine($"Failure deleting {dbName.DatabaseId}: Not Found");
             }
         }
     }

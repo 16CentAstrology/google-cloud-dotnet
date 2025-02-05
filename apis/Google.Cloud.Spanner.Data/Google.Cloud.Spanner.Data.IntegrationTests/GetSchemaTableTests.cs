@@ -1,18 +1,20 @@
 // Copyright 2018 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,11 +29,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     {
         private readonly AllTypesTableFixture _fixture;
 
-        // On emulator, the types defined in SchemaTestUnsupportedData are skipped from tests. 
+        // On emulator, the types defined in SchemaTestUnsupportedData are skipped from tests.
         // The table also contains the `K` column that is the primary key.
         internal int ExpectedRowCountOnEmulator => SchemaTestData.Count() + 1;
 
-        // On production, the types defined in both SchemaTestUnsupportedData and SchemaTestData are executed. 
+        // On production, the types defined in both SchemaTestUnsupportedData and SchemaTestData are executed.
         // The table also contains the `K` column that is the primary key.
         internal int ExpectedRowCountOnProduction => SchemaTestUnsupportedData.Count() + SchemaTestData.Count() + 1;
 
@@ -56,7 +58,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [MemberData(nameof(SchemaTestUnsupportedData))]
         public async Task GetSchemaTable_WithFlagEnabled_ReturnsSchema(string columnName, System.Type type, SpannerDbType spannerDbType)
         {
-            Skip.If(_fixture.RunningOnEmulator && (SpannerDbType.Json.Equals(spannerDbType) || SpannerDbType.ArrayOf(SpannerDbType.Json).Equals(spannerDbType)), "The emulator does not support the JSON type");
+            MaybeSkipIfOnEmulator(spannerDbType);
             string selectQuery = $"SELECT {columnName} FROM {_fixture.TableName}";
             await GetSchemaTable_WithFlagEnabled_ReturnsSchema_Impl(columnName, type, spannerDbType, _fixture.ConnectionString, selectQuery);
         }
@@ -65,8 +67,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public static TheoryData<string, System.Type, SpannerDbType> SchemaTestUnsupportedData { get; } =
             new TheoryData<string, System.Type, SpannerDbType>
             {
+                { "Float32Value", typeof(float), SpannerDbType.Float32 },
+                { "Float32ArrayValue", typeof(List<float>), SpannerDbType.ArrayOf(SpannerDbType.Float32) },
                 { "JsonValue", typeof(string), SpannerDbType.Json },
-                { "JsonArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.Json) }
+                { "JsonArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.Json) },
+                // b/348716298
+                { "ProtobufValueValue", typeof(Value), SpannerDbType.FromClrType(typeof(Value)) },
+                { "ProtobufValueArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))) },
+                { "ProtobufPersonValue", typeof(Value), SpannerDbType.FromClrType(typeof(Person)) },
+                { "ProtobufPersonArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))) },
+                { "ProtobufValueWrapperValue", typeof(Value), SpannerDbType.FromClrType(typeof(ValueWrapper)) },
+                { "ProtobufValueWrapperArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))) },
             };
 
         // These SpannerDbTypes are supported on emulator.
@@ -82,6 +93,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BytesValue", typeof(byte[]), SpannerDbType.Bytes },
                 { "TimestampValue", typeof(DateTime), SpannerDbType.Timestamp },
                 { "DateValue", typeof(DateTime), SpannerDbType.Date },
+                { "ProtobufDurationValue", typeof(Value), SpannerDbType.FromClrType(typeof(Duration)) },
+                { "ProtobufRectangleValue", typeof(Value), SpannerDbType.FromClrType(typeof(Rectangle)) },
+                
                 // Array types.
                 { "BoolArrayValue", typeof(List<bool>), SpannerDbType.ArrayOf(SpannerDbType.Bool) },
                 { "Int64ArrayValue", typeof(List<long>), SpannerDbType.ArrayOf(SpannerDbType.Int64) },
@@ -91,7 +105,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "Base64ArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
                 { "BytesArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
                 { "TimestampArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Timestamp) },
-                { "DateArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Date) }
+                { "DateArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Date) },
+                { "ProtobufDurationArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))) },
+                { "ProtobufRectangleArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))) },
             };
 
         internal static async Task GetSchemaTable_WithFlagEnabled_ReturnsSchema_Impl(string columnName, System.Type type, SpannerDbType spannerDbType, string connectionString, string selectQuery)
@@ -133,5 +149,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
+
+        private void MaybeSkipIfOnEmulator(SpannerDbType spannerDbType) =>
+            Skip.If(_fixture.RunningOnEmulator && SchemaTestUnsupportedData.Any(data => spannerDbType.Equals(data[2])),
+                $"The emulator does not support {spannerDbType}.");
     }
 }

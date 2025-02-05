@@ -1,11 +1,11 @@
 // Copyright 2018 Google LLC
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     https://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -203,6 +203,37 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void LeaderRoutingEnabledByDefault() =>
+            Assert.True(new SpannerConnectionStringBuilder().EnableLeaderRouting);
+
+        [Fact]
+        public void EnableLeaderRouting()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder("EnableLeaderRouting=false");
+            Assert.False(connectionStringBuilder.EnableLeaderRouting);
+            connectionStringBuilder.EnableLeaderRouting = true;
+            Assert.True(connectionStringBuilder.EnableLeaderRouting);
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("enableleaderrouting=True", connectionStringBuilder.ToString());
+        }
+
+        [Fact]
+        public void DirectedReadOptionsNullByDefault() =>
+            Assert.Null(new SpannerConnectionStringBuilder().DirectedReadOptions);
+
+        [Fact]
+        public void Clone_WithDirectedReadOptions()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder();
+            connectionStringBuilder.DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions;
+
+            var cloned = connectionStringBuilder.Clone();
+            Assert.NotSame(connectionStringBuilder.DirectedReadOptions, cloned.DirectedReadOptions);
+            Assert.Equal(connectionStringBuilder.DirectedReadOptions, cloned.DirectedReadOptions);
+            Assert.Equal(DirectedReadTests.IncludeDirectedReadOptions, cloned.DirectedReadOptions);
+        }
+
+        [Fact]
         public void WithDatabase()
         {
             var builder = new SpannerConnectionStringBuilder("Data Source=projects/project1/instances/instance1");
@@ -222,8 +253,8 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             // Defaults - When property is not set.
             var builder = new SpannerConnectionStringBuilder();
-            Assert.True(string.IsNullOrEmpty(builder.ClrToSpannerTypeDefaultMappings)); 
-            
+            Assert.True(string.IsNullOrEmpty(builder.ClrToSpannerTypeDefaultMappings));
+
             // Explicitly set valid type mapping.
             builder = new SpannerConnectionStringBuilder("ClrToSpannerTypeDefaultMappings=DecimalToNumeric,DateTimeToDate");
             // DbConnectionStringBuilder lower-cases keywords, annoyingly.
@@ -255,21 +286,21 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal("spannertoclrtypedefaultmappings=dateTospannerDate", builder.ToString());
         }
 
-        [Theory]        
+        [Theory]
         [InlineData("DecimalToFloat64,DecimalToNumeric,DateTimeToDate")] // Multiple mappings for a type.
         [InlineData("DecimalToFloat64,DecimalToPgNumeric,DateTimeToDate,DateTimeToTimestamp")] // Multiple mappings for a type.
-        [InlineData("DecimalToFloat64   ,DecimalToNumeric,DateTimeToDate")] // Multiple mappings and whitespace.       
+        [InlineData("DecimalToFloat64   ,DecimalToNumeric,DateTimeToDate")] // Multiple mappings and whitespace.
         [InlineData("DecimalToFloat64   ,  DateTimeToDate")] // Valid mapping with whitespace.
         [InlineData("UseFloat64ForDecimal,DecimalToNumeric,DateTimeToDate")] // Invalid values.
         public void BadClrToSpannerTypeDefaultMappingsThrows(string clrToSpannerTypeMappings)
         {
-            Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder($"ClrToSpannerTypeDefaultMappings={clrToSpannerTypeMappings}"));            
+            Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder($"ClrToSpannerTypeDefaultMappings={clrToSpannerTypeMappings}"));
             Assert.Throws<ArgumentException>(() => new SpannerConnectionStringBuilder { ClrToSpannerTypeDefaultMappings = clrToSpannerTypeMappings });
         }
 
         [Theory]
         [InlineData("DateToDateTime,DateToSpannerDate")] // Multiple mappings for a type.
-        [InlineData("  DateToDateTime  ,")] // Whitespace.   
+        [InlineData("  DateToDateTime  ,")] // Whitespace.
         [InlineData("UseDateToSpannerDate")] // Invalid value.
         public void BadSpannerToClrTypeDefaultMappingsThrows(string spannerToClrTypeMappings)
         {

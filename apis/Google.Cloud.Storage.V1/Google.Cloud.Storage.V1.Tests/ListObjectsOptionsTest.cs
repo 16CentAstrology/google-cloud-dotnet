@@ -1,11 +1,11 @@
 // Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -28,13 +28,16 @@ namespace Google.Cloud.Storage.V1.Tests
             options.ModifyRequest(request);
             Assert.Null(request.Delimiter);
             Assert.Null(request.IncludeTrailingDelimiter);
+            Assert.Null(request.IncludeFoldersAsPrefixes);
             Assert.Null(request.Projection);
             Assert.Null(request.MaxResults);
             Assert.Null(request.Versions);
+            Assert.Null(request.SoftDeleted);
             Assert.Null(request.UserProject);
             Assert.Null(request.PageToken);
             Assert.Null(request.StartOffset);
             Assert.Null(request.EndOffset);
+            Assert.Null(request.MatchGlob);
         }
 
         [Fact]
@@ -46,25 +49,31 @@ namespace Google.Cloud.Storage.V1.Tests
                 PageSize = 10,
                 Delimiter = "/",
                 IncludeTrailingDelimiter = true,
+                IncludeFoldersAsPrefixes = true,
                 Projection = Projection.Full,
                 Versions = true,
+                SoftDeletedOnly = true,
                 UserProject = "proj",
                 PageToken = "nextpage",
                 Fields = "items(name),nextPageToken",
                 StartOffset = "start",
-                EndOffset = "end"
+                EndOffset = "end",
+                MatchGlob = "a/*.txt"
             };
             options.ModifyRequest(request);
             Assert.Equal(10, request.MaxResults);
             Assert.Equal("/", request.Delimiter);
             Assert.True(request.IncludeTrailingDelimiter);
+            Assert.True(request.IncludeFoldersAsPrefixes);
             Assert.Equal(ProjectionEnum.Full, request.Projection);
             Assert.True(request.Versions);
+            Assert.True(request.SoftDeleted);
             Assert.Equal("proj", request.UserProject);
             Assert.Equal("nextpage", request.PageToken);
             Assert.Equal("items(name),nextPageToken", request.Fields);
             Assert.Equal("start", request.StartOffset);
             Assert.Equal("end", request.EndOffset);
+            Assert.Equal("a/*.txt", request.MatchGlob);
         }
     }
 }

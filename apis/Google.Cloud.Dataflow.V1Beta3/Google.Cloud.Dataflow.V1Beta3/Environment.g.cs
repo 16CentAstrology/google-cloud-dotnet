@@ -286,6 +286,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Describes the environment in which a Dataflow Job runs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Environment : pb::IMessage<Environment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1183,6 +1184,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// various dependencies (libraries, data files, etc.) required in order
   /// for that code to run.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Package : pb::IMessage<Package>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1423,6 +1425,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Describes the data disk used by a workflow job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Disk : pb::IMessage<Disk>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1716,6 +1719,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Provides data to pass through to the worker harness.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WorkerSettings : pb::IMessage<WorkerSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2129,6 +2133,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Taskrunner configuration settings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TaskRunnerSettings : pb::IMessage<TaskRunnerSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3068,6 +3073,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Settings for WorkerPool autoscaling.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AutoscalingSettings : pb::IMessage<AutoscalingSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3303,6 +3309,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Defines a SDK harness container for executing Dataflow pipelines.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SdkHarnessContainerImage : pb::IMessage<SdkHarnessContainerImage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3617,6 +3624,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// multiple pools, in order to match the various computational
   /// requirements of the various stages of the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WorkerPool : pb::IMessage<WorkerPool>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4409,7 +4417,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         OnHostMaintenance = other.OnHostMaintenance;
       }
       dataDisks_.Add(other.dataDisks_);
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.autoscalingSettings_ != null) {
         if (autoscalingSettings_ == null) {
           AutoscalingSettings = new global::Google.Cloud.Dataflow.V1Beta3.AutoscalingSettings();
@@ -4672,6 +4680,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Describes any options that have an effect on the debugging of pipelines.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DebugOptions : pb::IMessage<DebugOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

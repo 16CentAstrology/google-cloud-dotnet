@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -25,17 +25,17 @@ namespace Google.Cloud.Spanner.Data
     internal sealed class VolatileResourceManager : ISinglePhaseNotification, ISpannerTransaction, IDisposable
     {
         private readonly SpannerConnection _spannerConnection;
-        private readonly TimestampBound _timestampBound;
-        private readonly TransactionId _transactionId;
         private Lazy<Task<SpannerTransaction>> _transaction;
+        private readonly SpannerTransactionCreationOptions _transactionCreationOptions;
+        private readonly SpannerTransactionOptions _transactionOptions;
         private bool _hasExecutedDml;
 
-        internal VolatileResourceManager(SpannerConnection spannerConnection, TimestampBound timestampBound, TransactionId transactionId)
+        internal VolatileResourceManager(SpannerConnection spannerConnection, SpannerTransactionCreationOptions creationOptions, SpannerTransactionOptions options)
         {
             _spannerConnection = spannerConnection;
-            _timestampBound = timestampBound;
             _transaction = new Lazy<Task<SpannerTransaction>>(CreateTransactionAsync, LazyThreadSafetyMode.ExecutionAndPublication);
-            _transactionId = transactionId;
+            _transactionCreationOptions = creationOptions;
+            _transactionOptions = options;
         }
 
         private SpannerTransaction SpannerTransaction => SpannerTransactionTask.Result;
@@ -50,11 +50,15 @@ namespace Google.Cloud.Spanner.Data
 
         private Logger Logger => _spannerConnection.Logger;
 
-        private Task<SpannerTransaction> CreateTransactionAsync()
+        private async Task<SpannerTransaction> CreateTransactionAsync()
         {
-            return _timestampBound != null ? _spannerConnection.BeginReadOnlyTransactionAsync(_timestampBound)
-                : _transactionId != null ? Task.FromResult(_spannerConnection.BeginReadOnlyTransaction(_transactionId))
-                : _spannerConnection.BeginTransactionAsync();
+            SpannerTransaction transaction = await _spannerConnection.BeginTransactionAsync(_transactionCreationOptions, cancellationToken: default).ConfigureAwait(false);
+
+            if (_transactionOptions.MaxCommitDelay is not null)
+            {
+                transaction.MaxCommitDelay = _transactionOptions.MaxCommitDelay;
+            }
+            return transaction;
         }
 
         public void Dispose()
@@ -192,33 +196,33 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        public async Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
+        async Task<int> ISpannerTransaction.ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
         {
             ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);
             return await transaction.ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
-        public async Task<ReliableStreamReader> ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        async Task<ReliableStreamReader> ISpannerTransaction.ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken)
         {
             ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);
-            return await transaction.ExecuteReadOrQueryAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
+            return await transaction.ExecuteReadOrQueryAsync(request, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        async Task<long> ISpannerTransaction.ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
             _hasExecutedDml = true;
             ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);
             return await transaction.ExecuteDmlAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
-        public async Task<ReliableStreamReader> ExecuteDmlReaderAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        async Task<ReliableStreamReader> ISpannerTransaction.ExecuteDmlReaderAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
             _hasExecutedDml = true;
             ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);
             return await transaction.ExecuteDmlReaderAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
         }
 
-        public async Task<IEnumerable<long>> ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        async Task<IEnumerable<long>> ISpannerTransaction.ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
             _hasExecutedDml = true;
             ISpannerTransaction transaction = await SpannerTransactionTask.ConfigureAwait(false);

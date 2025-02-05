@@ -132,19 +132,6 @@ namespace Google.Cloud.Spanner.V1
             new Statistics(_targetedPools.ToArray().Select(p => p.Value.GetStatisticsSnapshot()).ToList().AsReadOnly());
 
         /// <summary>
-        /// Provides a snapshot of statistics for a database-specific pool.
-        /// This is equivalent to calling <see cref="GetSegmentStatisticsSnapshot(SessionPoolSegmentKey)"/> passing a segment key
-        /// with a null database role.
-        /// </summary>
-        /// <returns>A snapshot of statistics for this pool.</returns>
-        [Obsolete($"Use the overload {nameof(GetSegmentStatisticsSnapshot)}(DatabaseName) instead.")]
-        public DatabaseStatistics GetStatisticsSnapshot(DatabaseName databaseName)
-        {
-            var poolStatistics = GetSegmentStatisticsSnapshot(databaseName);
-            return (poolStatistics is null) ? null : new DatabaseStatistics(poolStatistics);
-        }
-
-        /// <summary>
         /// Provides a snapshot of statistics for the pool associated with the given <see cref="SessionPoolSegmentKey"/>.
         /// </summary>
         /// <returns>A snapshot of statistics for this pool.</returns>
@@ -164,7 +151,7 @@ namespace Google.Cloud.Spanner.V1
             _targetedPools.TryGetValue(SessionPoolSegmentKey.Create(databaseName), out var pool) ? pool.GetStatisticsSnapshot() : null;
 
         /// <summary>
-        /// Asynchronously acquires a session, potentially associated with a transaction.
+        /// Asynchronously acquires a session that will handle transaction creation as needed.
         /// This is equivalent to calling <see cref="AcquireSessionAsync(SessionPoolSegmentKey, TransactionOptions, CancellationToken)"/>
         /// passing a segment key with a null database role.
         /// </summary>
@@ -172,24 +159,62 @@ namespace Google.Cloud.Spanner.V1
         /// <param name="transactionOptions">The transaction options required for the session. After the operation completes,
         /// this value is no longer used, so modifications to the object will not affect the transaction. May be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        /// <returns>The <see cref="PooledSession"/> representing the client, session and transaction.</returns>
+        /// <returns>The <see cref="PooledSession"/> representing the client, session and, eventually, the transaction.</returns>
         public Task<PooledSession> AcquireSessionAsync(DatabaseName databaseName, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
             AcquireSessionAsync(SessionPoolSegmentKey.Create(databaseName), transactionOptions, cancellationToken);
 
         /// <summary>
-        /// Asynchronously acquires a session using the given <see cref="SessionPoolSegmentKey"/>, potentially associated with a transaction.
+        /// Asynchronously acquires a session, using the given <see cref="SessionPoolSegmentKey"/>.
+        /// The session will handle transaction creation as needed.
         /// </summary>
         /// <param name="key">The <see cref="SessionPoolSegmentKey"/> to acquire the session.</param>
         /// <param name="transactionOptions">The transaction options required for the session. After the operation completes,
         /// this value is no longer used, so modifications to the object will not affect the transaction. May be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        /// <returns>The <see cref="PooledSession"/> representing the client, session and transaction.</returns>
-        public Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, CancellationToken cancellationToken)
+        /// <returns>The <see cref="PooledSession"/> representing the client, session and, eventually, the transaction.</returns>
+        public Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
+            AcquireSessionAsync(key, transactionOptions, singleUseTransaction: false, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously acquires a session using the given <see cref="SessionPoolSegmentKey"/>.
+        /// The session will handle transaction creation as needed.
+        /// </summary>
+        /// <param name="key">The <see cref="SessionPoolSegmentKey"/> to acquire the session.</param>
+        /// <param name="transactionOptions">The transaction options required for the session. After the operation completes,
+        /// this value is no longer used, so modifications to the object will not affect the transaction. May be null.</param>
+        /// <param name="singleUseTransaction">Whether the transaction used by this session is single use or not. May only be true if
+        /// <paramref name="transactionOptions"/> is <see cref="TransactionOptions.ModeOneofCase.ReadOnly"/>.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>The <see cref="PooledSession"/> representing the client, session and, eventually, the transaction.</returns>
+        public Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) =>
+            AcquireSessionAsync(key, transactionOptions, singleUseTransaction, detached: false, cancellationToken);
+
+        private Task<PooledSession> AcquireSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, bool singleUseTransaction, bool detached, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(key, nameof(key));
+            GaxPreconditions.CheckArgument(
+                transactionOptions?.ModeCase == ModeOneofCase.ReadOnly || !singleUseTransaction,
+                nameof(singleUseTransaction),
+                "Single use transactions are only supported for read-only transaction.");
             var targetedPool = _targetedPools.GetOrAdd(key, key => new TargetedSessionPool(this, key, acquireSessionsImmediately: true));
-            return targetedPool.AcquireSessionAsync(transactionOptions, cancellationToken);
+            return targetedPool.AcquireSessionAsync(transactionOptions, singleUseTransaction, detached, cancellationToken);
         }
+
+        /// <summary>
+        /// Asynchronously acquires a session using the given <see cref="SessionPoolSegmentKey"/>.
+        /// The session is detached from the session pool before being returned by this method.
+        /// This session pool won't track the acquired session, which won't be returned to be pool even when released.
+        /// The session will handle transaction creation as needed.
+        /// </summary>
+        /// <param name="key">The <see cref="SessionPoolSegmentKey"/> to acquire the session.</param>
+        /// <param name="transactionOptions">The transaction options required for the session. After the operation completes,
+        /// this value is no longer used, so modifications to the object will not affect the transaction. May be null.</param>
+        /// <param name="singleUseTransaction">Whether the transaction used by this session is single use or not. May only be true if
+        /// <paramref name="transactionOptions"/> is <see cref="TransactionOptions.ModeOneofCase.ReadOnly"/>.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>The <see cref="PooledSession"/> representing the client, session and, eventually, the transaction.</returns>
+        public Task<PooledSession> AcquireDetachedSessionAsync(SessionPoolSegmentKey key, TransactionOptions transactionOptions, bool singleUseTransaction, CancellationToken cancellationToken) =>
+            AcquireSessionAsync(key, transactionOptions, singleUseTransaction, detached: true, cancellationToken);
 
         /// <summary>
         /// Creates a <see cref="PooledSession"/> with a known name and transaction ID/mode, with the client associated
@@ -227,7 +252,16 @@ namespace Google.Cloud.Spanner.V1
         {
             GaxPreconditions.CheckNotNull(sessionName, nameof(sessionName));
             GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-            return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, transactionMode, readTimestamp);
+            return PooledSession.FromSessionName(_detachedSessionPool, sessionName).WithTransaction(transactionId, BuildTransactionOptions(), singleUseTransaction: false, readTimestamp);
+
+            TransactionOptions BuildTransactionOptions() => transactionMode switch
+            {
+                ModeOneofCase.None => new TransactionOptions (),
+                ModeOneofCase.PartitionedDml => new TransactionOptions { PartitionedDml = new() },
+                ModeOneofCase.ReadWrite => new TransactionOptions { ReadWrite = new() },
+                ModeOneofCase.ReadOnly => new TransactionOptions() { ReadOnly = new() },
+                _ => throw new ArgumentException(nameof(transactionMode), $"Unknown {typeof(ModeOneofCase).FullName}: {transactionMode}")
+            };
         }
 
         /// <summary>

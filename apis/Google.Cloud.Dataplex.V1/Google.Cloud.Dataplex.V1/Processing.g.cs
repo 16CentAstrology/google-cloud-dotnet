@@ -31,21 +31,22 @@ namespace Google.Cloud.Dataplex.V1 {
             "cGxleC52MS5UcmlnZ2VyLk9uRGVtYW5kSAASPgoIc2NoZWR1bGUYZSABKAsy",
             "Ki5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuVHJpZ2dlci5TY2hlZHVsZUgA",
             "GgoKCE9uRGVtYW5kGh0KCFNjaGVkdWxlEhEKBGNyb24YASABKAlCA+BBAkIG",
-            "CgRtb2RlIlAKCkRhdGFTb3VyY2USOAoGZW50aXR5GGQgASgJQibgQQX6QSAK",
-            "HmRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudGl0eUgAQggKBnNvdXJjZSKv",
-            "AQoLU2Nhbm5lZERhdGESUwoRaW5jcmVtZW50YWxfZmllbGQYASABKAsyNi5n",
-            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuU2Nhbm5lZERhdGEuSW5jcmVtZW50",
-            "YWxGaWVsZEgAGj0KEEluY3JlbWVudGFsRmllbGQSDQoFZmllbGQYASABKAkS",
-            "DQoFc3RhcnQYAiABKAkSCwoDZW5kGAMgASgJQgwKCmRhdGFfcmFuZ2VCawoc",
-            "Y29tLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MUIPUHJvY2Vzc2luZ1Byb3Rv",
-            "UAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YXBsZXgvYXBpdjEvZGF0YXBs",
-            "ZXhwYjtkYXRhcGxleHBiYgZwcm90bzM="));
+            "CgRtb2RlImkKCkRhdGFTb3VyY2USOAoGZW50aXR5GGQgASgJQibgQQX6QSAK",
+            "HmRhdGFwbGV4Lmdvb2dsZWFwaXMuY29tL0VudGl0eUgAEhcKCHJlc291cmNl",
+            "GGUgASgJQgPgQQVIAEIICgZzb3VyY2UirwEKC1NjYW5uZWREYXRhElMKEWlu",
+            "Y3JlbWVudGFsX2ZpZWxkGAEgASgLMjYuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
+            "LnYxLlNjYW5uZWREYXRhLkluY3JlbWVudGFsRmllbGRIABo9ChBJbmNyZW1l",
+            "bnRhbEZpZWxkEg0KBWZpZWxkGAEgASgJEg0KBXN0YXJ0GAIgASgJEgsKA2Vu",
+            "ZBgDIAEoCUIMCgpkYXRhX3JhbmdlQmsKHGNvbS5nb29nbGUuY2xvdWQuZGF0",
+            "YXBsZXgudjFCD1Byb2Nlc3NpbmdQcm90b1ABWjhjbG91ZC5nb29nbGUuY29t",
+            "L2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhwYmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Trigger), global::Google.Cloud.Dataplex.V1.Trigger.Parser, new[]{ "OnDemand", "Schedule" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Trigger.Types.OnDemand), global::Google.Cloud.Dataplex.V1.Trigger.Types.OnDemand.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.Trigger.Types.Schedule), global::Google.Cloud.Dataplex.V1.Trigger.Types.Schedule.Parser, new[]{ "Cron" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataSource), global::Google.Cloud.Dataplex.V1.DataSource.Parser, new[]{ "Entity" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataSource), global::Google.Cloud.Dataplex.V1.DataSource.Parser, new[]{ "Entity", "Resource" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ScannedData), global::Google.Cloud.Dataplex.V1.ScannedData.Parser, new[]{ "IncrementalField" }, new[]{ "DataRange" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ScannedData.Types.IncrementalField), global::Google.Cloud.Dataplex.V1.ScannedData.Types.IncrementalField.Parser, new[]{ "Field", "Start", "End" }, null, null, null, null)})
           }));
     }
@@ -56,6 +57,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// DataScan scheduling and trigger settings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Trigger : pb::IMessage<Trigger>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -111,7 +113,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>Field number for the "on_demand" field.</summary>
     public const int OnDemandFieldNumber = 100;
     /// <summary>
-    /// The scan runs one-time shortly after DataScan Creation.
+    /// The scan runs once via `RunDataScan` API.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -351,8 +353,9 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The scan runs one-time via RunDataScan API.
+      /// The scan runs once via `RunDataScan` API.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OnDemand : pb::IMessage<OnDemand>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -508,6 +511,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// The scan is scheduled to run periodically.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Schedule : pb::IMessage<Schedule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -556,13 +560,17 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int CronFieldNumber = 1;
         private string cron_ = "";
         /// <summary>
-        /// Required. Cron schedule (https://en.wikipedia.org/wiki/Cron) for running
+        /// Required. [Cron](https://en.wikipedia.org/wiki/Cron) schedule for running
         /// scans periodically.
-        /// To explicitly set a timezone to the cron tab, apply a prefix in the
-        /// cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or "TZ=${IANA_TIME_ZONE}".
-        /// The ${IANA_TIME_ZONE} may only be a valid string from IANA time zone
-        /// database. For example, "CRON_TZ=America/New_York 1 * * * *", or
-        /// "TZ=America/New_York 1 * * * *".
+        ///
+        /// To explicitly set a timezone in the cron tab, apply a prefix in the
+        /// cron tab: **"CRON_TZ=${IANA_TIME_ZONE}"** or **"TZ=${IANA_TIME_ZONE}"**.
+        /// The **${IANA_TIME_ZONE}** may only be a valid string from IANA time zone
+        /// database
+        /// ([wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)).
+        /// For example, `CRON_TZ=America/New_York 1 * * * *`, or
+        /// `TZ=America/New_York 1 * * * *`.
+        ///
         /// This field is required for Schedule scans.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -715,6 +723,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// The data source for DataScan.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataSource : pb::IMessage<DataSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -753,6 +762,9 @@ namespace Google.Cloud.Dataplex.V1 {
         case SourceOneofCase.Entity:
           Entity = other.Entity;
           break;
+        case SourceOneofCase.Resource:
+          Resource = other.Resource;
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -767,17 +779,63 @@ namespace Google.Cloud.Dataplex.V1 {
     /// <summary>Field number for the "entity" field.</summary>
     public const int EntityFieldNumber = 100;
     /// <summary>
-    /// Immutable. The dataplex entity that contains the data for DataScan, of
-    /// the form:
+    /// Immutable. The Dataplex entity that represents the data source (e.g.
+    /// BigQuery table) for DataScan, of the form:
     /// `projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{entity_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Entity {
-      get { return sourceCase_ == SourceOneofCase.Entity ? (string) source_ : ""; }
+      get { return HasEntity ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Entity;
+      }
+    }
+    /// <summary>Gets whether the "entity" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEntity {
+      get { return sourceCase_ == SourceOneofCase.Entity; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "entity" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEntity() {
+      if (HasEntity) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "resource" field.</summary>
+    public const int ResourceFieldNumber = 101;
+    /// <summary>
+    /// Immutable. The service-qualified full resource name of the cloud resource
+    /// for a DataScan job to scan against. The field could be: BigQuery table of
+    /// type "TABLE" for DataProfileScan/DataQualityScan Format:
+    /// //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Resource {
+      get { return HasResource ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.Resource;
+      }
+    }
+    /// <summary>Gets whether the "resource" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasResource {
+      get { return sourceCase_ == SourceOneofCase.Resource; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "resource" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearResource() {
+      if (HasResource) {
+        ClearSource();
       }
     }
 
@@ -786,6 +844,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public enum SourceOneofCase {
       None = 0,
       Entity = 100,
+      Resource = 101,
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -817,6 +876,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return true;
       }
       if (Entity != other.Entity) return false;
+      if (Resource != other.Resource) return false;
       if (SourceCase != other.SourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -825,7 +885,8 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (sourceCase_ == SourceOneofCase.Entity) hash ^= Entity.GetHashCode();
+      if (HasEntity) hash ^= Entity.GetHashCode();
+      if (HasResource) hash ^= Resource.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -845,9 +906,13 @@ namespace Google.Cloud.Dataplex.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (sourceCase_ == SourceOneofCase.Entity) {
+      if (HasEntity) {
         output.WriteRawTag(162, 6);
         output.WriteString(Entity);
+      }
+      if (HasResource) {
+        output.WriteRawTag(170, 6);
+        output.WriteString(Resource);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -859,9 +924,13 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (sourceCase_ == SourceOneofCase.Entity) {
+      if (HasEntity) {
         output.WriteRawTag(162, 6);
         output.WriteString(Entity);
+      }
+      if (HasResource) {
+        output.WriteRawTag(170, 6);
+        output.WriteString(Resource);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -873,8 +942,11 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (sourceCase_ == SourceOneofCase.Entity) {
+      if (HasEntity) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Entity);
+      }
+      if (HasResource) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Resource);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -891,6 +963,9 @@ namespace Google.Cloud.Dataplex.V1 {
       switch (other.SourceCase) {
         case SourceOneofCase.Entity:
           Entity = other.Entity;
+          break;
+        case SourceOneofCase.Resource:
+          Resource = other.Resource;
           break;
       }
 
@@ -913,6 +988,10 @@ namespace Google.Cloud.Dataplex.V1 {
             Entity = input.ReadString();
             break;
           }
+          case 810: {
+            Resource = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -932,6 +1011,10 @@ namespace Google.Cloud.Dataplex.V1 {
             Entity = input.ReadString();
             break;
           }
+          case 810: {
+            Resource = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -942,6 +1025,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// <summary>
   /// The data scanned during processing (e.g. in incremental DataScan)
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ScannedData : pb::IMessage<ScannedData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1183,6 +1267,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// A data range denoted by a pair of start/end values of a field.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class IncrementalField : pb::IMessage<IncrementalField>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1234,7 +1319,7 @@ namespace Google.Cloud.Dataplex.V1 {
         private string field_ = "";
         /// <summary>
         /// The field that contains values which monotonically increases over time
-        /// (e.g. timestamp).
+        /// (e.g. a timestamp column).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1249,7 +1334,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int StartFieldNumber = 2;
         private string start_ = "";
         /// <summary>
-        /// Value that marks the start of the range
+        /// Value that marks the start of the range.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1264,7 +1349,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int EndFieldNumber = 3;
         private string end_ = "";
         /// <summary>
-        /// Value that marks the end of the range
+        /// Value that marks the end of the range.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

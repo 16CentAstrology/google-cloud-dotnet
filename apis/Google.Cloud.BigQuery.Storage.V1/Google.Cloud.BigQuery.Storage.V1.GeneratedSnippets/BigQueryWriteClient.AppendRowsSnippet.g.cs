@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BigQuery.Storage.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START bigquerystorage_v1_generated_BigQueryWrite_AppendRows_sync]
     using Google.Api.Gax.Grpc;
@@ -36,7 +36,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
             // Create client
             BigQueryWriteClient bigQueryWriteClient = BigQueryWriteClient.Create();
             // Initialize streaming call, retrieving the stream object
-            BigQueryWriteClient.AppendRowsStream response = bigQueryWriteClient.AppendRows();
+            using BigQueryWriteClient.AppendRowsStream response = bigQueryWriteClient.AppendRows();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior
@@ -72,6 +72,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Snippets
                             AppendRowsRequest.Types.MissingValueInterpretation.Unspecified
                         },
                     },
+                    DefaultMissingValueInterpretation = AppendRowsRequest.Types.MissingValueInterpretation.Unspecified,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,11 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.CloudDms.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START datamigration_v1_generated_DataMigrationService_VerifyMigrationJob_async]
     using Google.Cloud.CloudDms.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedDataMigrationServiceClientSnippets
@@ -39,6 +40,8 @@ namespace Google.Cloud.CloudDms.V1.Snippets
             VerifyMigrationJobRequest request = new VerifyMigrationJobRequest
             {
                 MigrationJobName = MigrationJobName.FromProjectLocationMigrationJob("[PROJECT]", "[LOCATION]", "[MIGRATION_JOB]"),
+                UpdateMask = new FieldMask(),
+                MigrationJob = new MigrationJob(),
             };
             // Make the request
             Operation<MigrationJob, OperationMetadata> response = await dataMigrationServiceClient.VerifyMigrationJobAsync(request);

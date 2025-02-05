@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,18 +18,18 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.ResourceManager.V3
 {
@@ -50,6 +50,7 @@ namespace Google.Cloud.ResourceManager.V3
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListTagKeysSettings = existing.ListTagKeysSettings;
             GetTagKeySettings = existing.GetTagKeySettings;
+            GetNamespacedTagKeySettings = existing.GetNamespacedTagKeySettings;
             CreateTagKeySettings = existing.CreateTagKeySettings;
             CreateTagKeyOperationsSettings = existing.CreateTagKeyOperationsSettings.Clone();
             UpdateTagKeySettings = existing.UpdateTagKeySettings;
@@ -99,6 +100,18 @@ namespace Google.Cloud.ResourceManager.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetTagKeySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TagKeysClient.GetNamespacedTagKey</c> and <c>TagKeysClient.GetNamespacedTagKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetNamespacedTagKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>TagKeysClient.CreateTagKey</c>
@@ -274,14 +287,14 @@ namespace Google.Cloud.ResourceManager.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TagKeysClient.Create(callInvoker, Settings, Logger);
+            return TagKeysClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<TagKeysClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TagKeysClient.Create(callInvoker, Settings, Logger);
+            return TagKeysClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -396,8 +409,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// Lists all TagKeys for a parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the new TagKey's parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the TagKey's parent.
+        /// Must be of the form `organizations/{org_id}` or `projects/{project_id}` or
+        /// `projects/{project_number}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -409,20 +423,30 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TagKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTagKeysResponse, TagKey> ListTagKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagKeys(new ListTagKeysRequest
+        public virtual gax::PagedEnumerable<ListTagKeysResponse, TagKey> ListTagKeys(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagKeysRequest request = new ListTagKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all TagKeys for a parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the new TagKey's parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the TagKey's parent.
+        /// Must be of the form `organizations/{org_id}` or `projects/{project_id}` or
+        /// `projects/{project_number}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -434,20 +458,30 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TagKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTagKeysResponse, TagKey> ListTagKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagKeysAsync(new ListTagKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListTagKeysResponse, TagKey> ListTagKeysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagKeysRequest request = new ListTagKeysRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all TagKeys for a parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the new TagKey's parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the TagKey's parent.
+        /// Must be of the form `organizations/{org_id}` or `projects/{project_id}` or
+        /// `projects/{project_number}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -459,20 +493,30 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TagKey"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTagKeysResponse, TagKey> ListTagKeys(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagKeys(new ListTagKeysRequest
+        public virtual gax::PagedEnumerable<ListTagKeysResponse, TagKey> ListTagKeys(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagKeysRequest request = new ListTagKeysRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagKeys(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all TagKeys for a parent resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the new TagKey's parent.
-        /// Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+        /// Required. The resource name of the TagKey's parent.
+        /// Must be of the form `organizations/{org_id}` or `projects/{project_id}` or
+        /// `projects/{project_number}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -484,13 +528,22 @@ namespace Google.Cloud.ResourceManager.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TagKey"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTagKeysResponse, TagKey> ListTagKeysAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTagKeysAsync(new ListTagKeysRequest
+        public virtual gax::PagedAsyncEnumerable<ListTagKeysResponse, TagKey> ListTagKeysAsync(gax::IResourceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTagKeysRequest request = new ListTagKeysRequest
             {
                 ParentAsResourceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTagKeysAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves a TagKey. This method will return `PERMISSION_DENIED` if the
@@ -613,10 +666,151 @@ namespace Google.Cloud.ResourceManager.V3
             GetTagKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Retrieves a TagKey by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the key does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TagKey GetNamespacedTagKey(GetNamespacedTagKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a TagKey by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the key does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagKey> GetNamespacedTagKeyAsync(GetNamespacedTagKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a TagKey by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the key does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagKey> GetNamespacedTagKeyAsync(GetNamespacedTagKeyRequest request, st::CancellationToken cancellationToken) =>
+            GetNamespacedTagKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a TagKey by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the key does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A namespaced tag key name in the format
+        /// `{parentId}/{tagKeyShort}`, such as `42/foo` for a key with short name
+        /// "foo" under the organization with ID 42 or `r2-d2/bar` for a key with short
+        /// name "bar" under the project `r2-d2`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TagKey GetNamespacedTagKey(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNamespacedTagKey(new GetNamespacedTagKeyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a TagKey by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the key does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A namespaced tag key name in the format
+        /// `{parentId}/{tagKeyShort}`, such as `42/foo` for a key with short name
+        /// "foo" under the organization with ID 42 or `r2-d2/bar` for a key with short
+        /// name "bar" under the project `r2-d2`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagKey> GetNamespacedTagKeyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNamespacedTagKeyAsync(new GetNamespacedTagKeyRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a TagKey by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the key does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A namespaced tag key name in the format
+        /// `{parentId}/{tagKeyShort}`, such as `42/foo` for a key with short name
+        /// "foo" under the organization with ID 42 or `r2-d2/bar` for a key with short
+        /// name "bar" under the project `r2-d2`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagKey> GetNamespacedTagKeyAsync(string name, st::CancellationToken cancellationToken) =>
+            GetNamespacedTagKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves a TagKey by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the key does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A namespaced tag key name in the format
+        /// `{parentId}/{tagKeyShort}`, such as `42/foo` for a key with short name
+        /// "foo" under the organization with ID 42 or `r2-d2/bar` for a key with short
+        /// name "bar" under the project `r2-d2`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TagKey GetNamespacedTagKey(TagKeyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNamespacedTagKey(new GetNamespacedTagKeyRequest
+            {
+                TagKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a TagKey by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the key does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A namespaced tag key name in the format
+        /// `{parentId}/{tagKeyShort}`, such as `42/foo` for a key with short name
+        /// "foo" under the organization with ID 42 or `r2-d2/bar` for a key with short
+        /// name "bar" under the project `r2-d2`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagKey> GetNamespacedTagKeyAsync(TagKeyName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetNamespacedTagKeyAsync(new GetNamespacedTagKeyRequest
+            {
+                TagKeyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a TagKey by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the key does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A namespaced tag key name in the format
+        /// `{parentId}/{tagKeyShort}`, such as `42/foo` for a key with short name
+        /// "foo" under the organization with ID 42 or `r2-d2/bar` for a key with short
+        /// name "bar" under the project `r2-d2`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TagKey> GetNamespacedTagKeyAsync(TagKeyName name, st::CancellationToken cancellationToken) =>
+            GetNamespacedTagKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a new TagKey. If another request with the same parameters is
         /// sent while the original request is in process, the second request
-        /// will receive an error. A maximum of 300 TagKeys can exist under a parent at
-        /// any given time.
+        /// will receive an error. A maximum of 1000 TagKeys can exist under a parent
+        /// at any given time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -627,8 +821,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// <summary>
         /// Creates a new TagKey. If another request with the same parameters is
         /// sent while the original request is in process, the second request
-        /// will receive an error. A maximum of 300 TagKeys can exist under a parent at
-        /// any given time.
+        /// will receive an error. A maximum of 1000 TagKeys can exist under a parent
+        /// at any given time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -639,8 +833,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// <summary>
         /// Creates a new TagKey. If another request with the same parameters is
         /// sent while the original request is in process, the second request
-        /// will receive an error. A maximum of 300 TagKeys can exist under a parent at
-        /// any given time.
+        /// will receive an error. A maximum of 1000 TagKeys can exist under a parent
+        /// at any given time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -677,12 +871,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// <summary>
         /// Creates a new TagKey. If another request with the same parameters is
         /// sent while the original request is in process, the second request
-        /// will receive an error. A maximum of 300 TagKeys can exist under a parent at
-        /// any given time.
+        /// will receive an error. A maximum of 1000 TagKeys can exist under a parent
+        /// at any given time.
         /// </summary>
         /// <param name="tagKey">
-        /// Required. The TagKey to be created. Only fields `short_name`, `description`,
-        /// and `parent` are considered during the creation request.
+        /// Required. The TagKey to be created. Only fields `short_name`,
+        /// `description`, and `parent` are considered during the creation request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -695,12 +889,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// <summary>
         /// Creates a new TagKey. If another request with the same parameters is
         /// sent while the original request is in process, the second request
-        /// will receive an error. A maximum of 300 TagKeys can exist under a parent at
-        /// any given time.
+        /// will receive an error. A maximum of 1000 TagKeys can exist under a parent
+        /// at any given time.
         /// </summary>
         /// <param name="tagKey">
-        /// Required. The TagKey to be created. Only fields `short_name`, `description`,
-        /// and `parent` are considered during the creation request.
+        /// Required. The TagKey to be created. Only fields `short_name`,
+        /// `description`, and `parent` are considered during the creation request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -713,12 +907,12 @@ namespace Google.Cloud.ResourceManager.V3
         /// <summary>
         /// Creates a new TagKey. If another request with the same parameters is
         /// sent while the original request is in process, the second request
-        /// will receive an error. A maximum of 300 TagKeys can exist under a parent at
-        /// any given time.
+        /// will receive an error. A maximum of 1000 TagKeys can exist under a parent
+        /// at any given time.
         /// </summary>
         /// <param name="tagKey">
-        /// Required. The TagKey to be created. Only fields `short_name`, `description`,
-        /// and `parent` are considered during the creation request.
+        /// Required. The TagKey to be created. Only fields `short_name`,
+        /// `description`, and `parent` are considered during the creation request.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -782,10 +976,10 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates the attributes of the TagKey resource.
         /// </summary>
         /// <param name="tagKey">
-        /// Required. The new definition of the TagKey. Only the `description` and `etag` fields
-        /// can be updated by this request. If the `etag` field is not empty, it
-        /// must match the `etag` field of the existing tag key. Otherwise,
-        /// `FAILED_PRECONDITION` will be returned.
+        /// Required. The new definition of the TagKey. Only the `description` and
+        /// `etag` fields can be updated by this request. If the `etag` field is not
+        /// empty, it must match the `etag` field of the existing tag key. Otherwise,
+        /// `ABORTED` will be returned.
         /// </param>
         /// <param name="updateMask">
         /// Fields to be updated. The mask may only contain `description` or
@@ -805,10 +999,10 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates the attributes of the TagKey resource.
         /// </summary>
         /// <param name="tagKey">
-        /// Required. The new definition of the TagKey. Only the `description` and `etag` fields
-        /// can be updated by this request. If the `etag` field is not empty, it
-        /// must match the `etag` field of the existing tag key. Otherwise,
-        /// `FAILED_PRECONDITION` will be returned.
+        /// Required. The new definition of the TagKey. Only the `description` and
+        /// `etag` fields can be updated by this request. If the `etag` field is not
+        /// empty, it must match the `etag` field of the existing tag key. Otherwise,
+        /// `ABORTED` will be returned.
         /// </param>
         /// <param name="updateMask">
         /// Fields to be updated. The mask may only contain `description` or
@@ -828,10 +1022,10 @@ namespace Google.Cloud.ResourceManager.V3
         /// Updates the attributes of the TagKey resource.
         /// </summary>
         /// <param name="tagKey">
-        /// Required. The new definition of the TagKey. Only the `description` and `etag` fields
-        /// can be updated by this request. If the `etag` field is not empty, it
-        /// must match the `etag` field of the existing tag key. Otherwise,
-        /// `FAILED_PRECONDITION` will be returned.
+        /// Required. The new definition of the TagKey. Only the `description` and
+        /// `etag` fields can be updated by this request. If the `etag` field is not
+        /// empty, it must match the `etag` field of the existing tag key. Otherwise,
+        /// `ABORTED` will be returned.
         /// </param>
         /// <param name="updateMask">
         /// Fields to be updated. The mask may only contain `description` or
@@ -904,9 +1098,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// TagValues.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of a TagKey to be deleted in the format `tagKeys/123`.
-        /// The TagKey cannot be a parent of any existing TagValues or it will not be
-        /// deleted successfully.
+        /// Required. The resource name of a TagKey to be deleted in the format
+        /// `tagKeys/123`. The TagKey cannot be a parent of any existing TagValues or
+        /// it will not be deleted successfully.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -921,9 +1115,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// TagValues.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of a TagKey to be deleted in the format `tagKeys/123`.
-        /// The TagKey cannot be a parent of any existing TagValues or it will not be
-        /// deleted successfully.
+        /// Required. The resource name of a TagKey to be deleted in the format
+        /// `tagKeys/123`. The TagKey cannot be a parent of any existing TagValues or
+        /// it will not be deleted successfully.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -938,9 +1132,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// TagValues.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of a TagKey to be deleted in the format `tagKeys/123`.
-        /// The TagKey cannot be a parent of any existing TagValues or it will not be
-        /// deleted successfully.
+        /// Required. The resource name of a TagKey to be deleted in the format
+        /// `tagKeys/123`. The TagKey cannot be a parent of any existing TagValues or
+        /// it will not be deleted successfully.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -952,9 +1146,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// TagValues.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of a TagKey to be deleted in the format `tagKeys/123`.
-        /// The TagKey cannot be a parent of any existing TagValues or it will not be
-        /// deleted successfully.
+        /// Required. The resource name of a TagKey to be deleted in the format
+        /// `tagKeys/123`. The TagKey cannot be a parent of any existing TagValues or
+        /// it will not be deleted successfully.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -969,9 +1163,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// TagValues.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of a TagKey to be deleted in the format `tagKeys/123`.
-        /// The TagKey cannot be a parent of any existing TagValues or it will not be
-        /// deleted successfully.
+        /// Required. The resource name of a TagKey to be deleted in the format
+        /// `tagKeys/123`. The TagKey cannot be a parent of any existing TagValues or
+        /// it will not be deleted successfully.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -986,9 +1180,9 @@ namespace Google.Cloud.ResourceManager.V3
         /// TagValues.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of a TagKey to be deleted in the format `tagKeys/123`.
-        /// The TagKey cannot be a parent of any existing TagValues or it will not be
-        /// deleted successfully.
+        /// Required. The resource name of a TagKey to be deleted in the format
+        /// `tagKeys/123`. The TagKey cannot be a parent of any existing TagValues or
+        /// it will not be deleted successfully.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1548,6 +1742,8 @@ namespace Google.Cloud.ResourceManager.V3
 
         private readonly gaxgrpc::ApiCall<GetTagKeyRequest, TagKey> _callGetTagKey;
 
+        private readonly gaxgrpc::ApiCall<GetNamespacedTagKeyRequest, TagKey> _callGetNamespacedTagKey;
+
         private readonly gaxgrpc::ApiCall<CreateTagKeyRequest, lro::Operation> _callCreateTagKey;
 
         private readonly gaxgrpc::ApiCall<UpdateTagKeyRequest, lro::Operation> _callUpdateTagKey;
@@ -1570,7 +1766,11 @@ namespace Google.Cloud.ResourceManager.V3
         {
             GrpcClient = grpcClient;
             TagKeysSettings effectiveSettings = settings ?? TagKeysSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateTagKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTagKeyOperationsSettings, logger);
             UpdateTagKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTagKeyOperationsSettings, logger);
             DeleteTagKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTagKeyOperationsSettings, logger);
@@ -1580,6 +1780,9 @@ namespace Google.Cloud.ResourceManager.V3
             _callGetTagKey = clientHelper.BuildApiCall<GetTagKeyRequest, TagKey>("GetTagKey", grpcClient.GetTagKeyAsync, grpcClient.GetTagKey, effectiveSettings.GetTagKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTagKey);
             Modify_GetTagKeyApiCall(ref _callGetTagKey);
+            _callGetNamespacedTagKey = clientHelper.BuildApiCall<GetNamespacedTagKeyRequest, TagKey>("GetNamespacedTagKey", grpcClient.GetNamespacedTagKeyAsync, grpcClient.GetNamespacedTagKey, effectiveSettings.GetNamespacedTagKeySettings);
+            Modify_ApiCall(ref _callGetNamespacedTagKey);
+            Modify_GetNamespacedTagKeyApiCall(ref _callGetNamespacedTagKey);
             _callCreateTagKey = clientHelper.BuildApiCall<CreateTagKeyRequest, lro::Operation>("CreateTagKey", grpcClient.CreateTagKeyAsync, grpcClient.CreateTagKey, effectiveSettings.CreateTagKeySettings);
             Modify_ApiCall(ref _callCreateTagKey);
             Modify_CreateTagKeyApiCall(ref _callCreateTagKey);
@@ -1607,6 +1810,8 @@ namespace Google.Cloud.ResourceManager.V3
 
         partial void Modify_GetTagKeyApiCall(ref gaxgrpc::ApiCall<GetTagKeyRequest, TagKey> call);
 
+        partial void Modify_GetNamespacedTagKeyApiCall(ref gaxgrpc::ApiCall<GetNamespacedTagKeyRequest, TagKey> call);
+
         partial void Modify_CreateTagKeyApiCall(ref gaxgrpc::ApiCall<CreateTagKeyRequest, lro::Operation> call);
 
         partial void Modify_UpdateTagKeyApiCall(ref gaxgrpc::ApiCall<UpdateTagKeyRequest, lro::Operation> call);
@@ -1627,6 +1832,8 @@ namespace Google.Cloud.ResourceManager.V3
         partial void Modify_ListTagKeysRequest(ref ListTagKeysRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetTagKeyRequest(ref GetTagKeyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetNamespacedTagKeyRequest(ref GetNamespacedTagKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateTagKeyRequest(ref CreateTagKeyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1690,14 +1897,42 @@ namespace Google.Cloud.ResourceManager.V3
             return _callGetTagKey.Async(request, callSettings);
         }
 
+        /// <summary>
+        /// Retrieves a TagKey by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the key does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TagKey GetNamespacedTagKey(GetNamespacedTagKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNamespacedTagKeyRequest(ref request, ref callSettings);
+            return _callGetNamespacedTagKey.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a TagKey by its namespaced name.
+        /// This method will return `PERMISSION_DENIED` if the key does not exist
+        /// or the user does not have permission to view it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TagKey> GetNamespacedTagKeyAsync(GetNamespacedTagKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNamespacedTagKeyRequest(ref request, ref callSettings);
+            return _callGetNamespacedTagKey.Async(request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>CreateTagKey</c>.</summary>
         public override lro::OperationsClient CreateTagKeyOperationsClient { get; }
 
         /// <summary>
         /// Creates a new TagKey. If another request with the same parameters is
         /// sent while the original request is in process, the second request
-        /// will receive an error. A maximum of 300 TagKeys can exist under a parent at
-        /// any given time.
+        /// will receive an error. A maximum of 1000 TagKeys can exist under a parent
+        /// at any given time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1711,8 +1946,8 @@ namespace Google.Cloud.ResourceManager.V3
         /// <summary>
         /// Creates a new TagKey. If another request with the same parameters is
         /// sent while the original request is in process, the second request
-        /// will receive an error. A maximum of 300 TagKeys can exist under a parent at
-        /// any given time.
+        /// will receive an error. A maximum of 1000 TagKeys can exist under a parent
+        /// at any given time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

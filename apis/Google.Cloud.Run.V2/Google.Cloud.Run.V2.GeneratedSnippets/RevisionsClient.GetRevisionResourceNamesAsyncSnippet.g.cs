@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Revisions_GetRevision_async_flattened_resourceNames]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Run.V2.Snippets
         public async Task GetRevisionResourceNamesAsync()
         {
             // Create client
-            RevisionsClient revisionsClient = await RevisionsClient.CreateAsync();
+            gcrv::RevisionsClient revisionsClient = await gcrv::RevisionsClient.CreateAsync();
             // Initialize request argument(s)
-            RevisionName name = RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]");
+            gcrv::RevisionName name = gcrv::RevisionName.FromProjectLocationServiceRevision("[PROJECT]", "[LOCATION]", "[SERVICE]", "[REVISION]");
             // Make the request
-            Revision response = await revisionsClient.GetRevisionAsync(name);
+            gcrv::Revision response = await revisionsClient.GetRevisionAsync(name);
         }
     }
     // [END run_v2_generated_Revisions_GetRevision_async_flattened_resourceNames]

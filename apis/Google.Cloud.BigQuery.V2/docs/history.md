@@ -1,5 +1,58 @@
 # Version history
 
+## Version 3.11.0, released 2025-02-03
+
+### Bug fixes
+
+- Remove column name validation. ([commit d79c8ff](https://github.com/googleapis/google-cloud-dotnet/commit/d79c8ff6ae3db02b73a5a5bed3b2b56333a55eb9))
+
+## Version 3.10.0, released 2024-05-30
+
+### New features
+
+- Add a view option to GetTable ([commit 258e723](https://github.com/googleapis/google-cloud-dotnet/commit/258e723949d58454111e456feaae62836557672f))
+
+## Version 3.9.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.8.0, released 2024-03-14
+
+### New features
+
+- Expose GetQueryResultsResponse.CacheHit ([commit 8a349d9](https://github.com/googleapis/google-cloud-dotnet/commit/8a349d9c62c1f5bbca89323af6d5764f4692f861))
+
+## Version 3.7.0, released 2024-03-06
+
+No API surface changes; just dependency updates.
+
+## Version 3.6.0, released 2024-02-20
+
+### New features
+
+- Implement int64-based timestamps ([commit 9677fcb](https://github.com/googleapis/google-cloud-dotnet/commit/9677fcb585130adead6bbb1963477dc77be13f57))
+
+## Version 3.5.0, released 2023-10-13
+
+### New features
+
+- Adds config modifier to BigQuery job options ([commit fbacbb8](https://github.com/googleapis/google-cloud-dotnet/commit/fbacbb8315d62ac10b2960e18fe239e0754420c3))
+- Adds support for policy tags ([commit 730a30e](https://github.com/googleapis/google-cloud-dotnet/commit/730a30e2ae3a4e7e94877918df82641e527a4708))
+
+## Version 3.4.0, released 2023-06-07
+
+### New features
+
+- Add support for encoding in BigQuery load jobs ([commit a1db93c](https://github.com/googleapis/google-cloud-dotnet/commit/a1db93c7a66590b3365869ccd71bfd02985b6576))
+
+## Version 3.3.0, released 2023-04-19
+
+### New features
+
+- Add support for snapshot clones ([commit 09aadf7](https://github.com/googleapis/google-cloud-dotnet/commit/09aadf792d8d20346f0c2e1e4bb45abda2775897))
+
 ## Version 3.2.0, released 2022-11-16
 
 ### New features

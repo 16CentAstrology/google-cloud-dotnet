@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.DiscoveryEngine.V1Beta;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -498,6 +500,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
             {
                 Document = new Document(),
                 AllowMissing = false,
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Document response = documentServiceClient.UpdateDocument(request);
@@ -516,9 +519,39 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
             {
                 Document = new Document(),
                 AllowMissing = false,
+                UpdateMask = new FieldMask(),
             };
             // Make the request
             Document response = await documentServiceClient.UpdateDocumentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDocument</summary>
+        public void UpdateDocument()
+        {
+            // Snippet: UpdateDocument(Document, FieldMask, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            Document document = new Document();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Document response = documentServiceClient.UpdateDocument(document, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDocumentAsync</summary>
+        public async Task UpdateDocumentAsync()
+        {
+            // Snippet: UpdateDocumentAsync(Document, FieldMask, CallSettings)
+            // Additional: UpdateDocumentAsync(Document, FieldMask, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Document document = new Document();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Document response = await documentServiceClient.UpdateDocumentAsync(document, updateMask);
             // End snippet
         }
 
@@ -622,6 +655,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
                 InlineSource = new ImportDocumentsRequest.Types.InlineSource(),
                 ErrorConfig = new ImportErrorConfig(),
                 ReconciliationMode = ImportDocumentsRequest.Types.ReconciliationMode.Unspecified,
+                UpdateMask = new FieldMask(),
+                AutoGenerateIds = false,
+                IdField = "",
             };
             // Make the request
             Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = documentServiceClient.ImportDocuments(request);
@@ -658,6 +694,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
                 InlineSource = new ImportDocumentsRequest.Types.InlineSource(),
                 ErrorConfig = new ImportErrorConfig(),
                 ReconciliationMode = ImportDocumentsRequest.Types.ReconciliationMode.Unspecified,
+                UpdateMask = new FieldMask(),
+                AutoGenerateIds = false,
+                IdField = "",
             };
             // Make the request
             Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = await documentServiceClient.ImportDocumentsAsync(request);
@@ -677,6 +716,168 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta.Snippets
                 // If it has completed, then access the result
                 ImportDocumentsResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeDocuments</summary>
+        public void PurgeDocumentsRequestObject()
+        {
+            // Snippet: PurgeDocuments(PurgeDocumentsRequest, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            PurgeDocumentsRequest request = new PurgeDocumentsRequest
+            {
+                ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
+                Filter = "",
+                Force = false,
+                GcsSource = new GcsSource(),
+                ErrorConfig = new PurgeErrorConfig(),
+            };
+            // Make the request
+            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> response = documentServiceClient.PurgeDocuments(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PurgeDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> retrievedResponse = documentServiceClient.PollOncePurgeDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PurgeDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PurgeDocumentsAsync</summary>
+        public async Task PurgeDocumentsRequestObjectAsync()
+        {
+            // Snippet: PurgeDocumentsAsync(PurgeDocumentsRequest, CallSettings)
+            // Additional: PurgeDocumentsAsync(PurgeDocumentsRequest, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PurgeDocumentsRequest request = new PurgeDocumentsRequest
+            {
+                ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
+                Filter = "",
+                Force = false,
+                GcsSource = new GcsSource(),
+                ErrorConfig = new PurgeErrorConfig(),
+            };
+            // Make the request
+            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> response = await documentServiceClient.PurgeDocumentsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PurgeDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PurgeDocumentsResponse, PurgeDocumentsMetadata> retrievedResponse = await documentServiceClient.PollOncePurgeDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PurgeDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetDocumentsMetadata</summary>
+        public void BatchGetDocumentsMetadataRequestObject()
+        {
+            // Snippet: BatchGetDocumentsMetadata(BatchGetDocumentsMetadataRequest, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            BatchGetDocumentsMetadataRequest request = new BatchGetDocumentsMetadataRequest
+            {
+                ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
+                Matcher = new BatchGetDocumentsMetadataRequest.Types.Matcher(),
+            };
+            // Make the request
+            BatchGetDocumentsMetadataResponse response = documentServiceClient.BatchGetDocumentsMetadata(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetDocumentsMetadataAsync</summary>
+        public async Task BatchGetDocumentsMetadataRequestObjectAsync()
+        {
+            // Snippet: BatchGetDocumentsMetadataAsync(BatchGetDocumentsMetadataRequest, CallSettings)
+            // Additional: BatchGetDocumentsMetadataAsync(BatchGetDocumentsMetadataRequest, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchGetDocumentsMetadataRequest request = new BatchGetDocumentsMetadataRequest
+            {
+                ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
+                Matcher = new BatchGetDocumentsMetadataRequest.Types.Matcher(),
+            };
+            // Make the request
+            BatchGetDocumentsMetadataResponse response = await documentServiceClient.BatchGetDocumentsMetadataAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetDocumentsMetadata</summary>
+        public void BatchGetDocumentsMetadata()
+        {
+            // Snippet: BatchGetDocumentsMetadata(string, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]/branches/[BRANCH]";
+            // Make the request
+            BatchGetDocumentsMetadataResponse response = documentServiceClient.BatchGetDocumentsMetadata(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetDocumentsMetadataAsync</summary>
+        public async Task BatchGetDocumentsMetadataAsync()
+        {
+            // Snippet: BatchGetDocumentsMetadataAsync(string, CallSettings)
+            // Additional: BatchGetDocumentsMetadataAsync(string, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]/branches/[BRANCH]";
+            // Make the request
+            BatchGetDocumentsMetadataResponse response = await documentServiceClient.BatchGetDocumentsMetadataAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetDocumentsMetadata</summary>
+        public void BatchGetDocumentsMetadataResourceNames()
+        {
+            // Snippet: BatchGetDocumentsMetadata(BranchName, CallSettings)
+            // Create client
+            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            // Initialize request argument(s)
+            BranchName parent = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]");
+            // Make the request
+            BatchGetDocumentsMetadataResponse response = documentServiceClient.BatchGetDocumentsMetadata(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchGetDocumentsMetadataAsync</summary>
+        public async Task BatchGetDocumentsMetadataResourceNamesAsync()
+        {
+            // Snippet: BatchGetDocumentsMetadataAsync(BranchName, CallSettings)
+            // Additional: BatchGetDocumentsMetadataAsync(BranchName, CancellationToken)
+            // Create client
+            DocumentServiceClient documentServiceClient = await DocumentServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BranchName parent = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]");
+            // Make the request
+            BatchGetDocumentsMetadataResponse response = await documentServiceClient.BatchGetDocumentsMetadataAsync(parent);
             // End snippet
         }
     }

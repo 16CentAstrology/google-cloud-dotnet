@@ -33,14 +33,14 @@ namespace Grafeas.V1 {
             "Eg0KBWtleWlkGAIgASgJIiEKDEZpbGVMb2NhdGlvbhIRCglmaWxlX3BhdGgY",
             "ASABKAkiLwoHTGljZW5zZRISCgpleHByZXNzaW9uGAEgASgJEhAKCGNvbW1l",
             "bnRzGAIgASgJIiwKBkRpZ2VzdBIMCgRhbGdvGAEgASgJEhQKDGRpZ2VzdF9i",
-            "eXRlcxgCIAEoDCrcAQoITm90ZUtpbmQSGQoVTk9URV9LSU5EX1VOU1BFQ0lG",
+            "eXRlcxgCIAEoDCrwAQoITm90ZUtpbmQSGQoVTk9URV9LSU5EX1VOU1BFQ0lG",
             "SUVEEAASEQoNVlVMTkVSQUJJTElUWRABEgkKBUJVSUxEEAISCQoFSU1BR0UQ",
             "AxILCgdQQUNLQUdFEAQSDgoKREVQTE9ZTUVOVBAFEg0KCURJU0NPVkVSWRAG",
             "Eg8KC0FUVEVTVEFUSU9OEAcSCwoHVVBHUkFERRAIEg4KCkNPTVBMSUFOQ0UQ",
             "CRIUChBEU1NFX0FUVEVTVEFUSU9OEAoSHAoYVlVMTkVSQUJJTElUWV9BU1NF",
-            "U1NNRU5UEAtCUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dS",
-            "QWIGcHJvdG8z"));
+            "U1NNRU5UEAsSEgoOU0JPTV9SRUZFUkVOQ0UQDEJRCg1pby5ncmFmZWFzLnYx",
+            "UAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZ3Jh",
+            "ZmVhcy92MTtncmFmZWFzogIDR1JBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.NoteKind), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -109,6 +109,10 @@ namespace Grafeas.V1 {
     /// This represents a Vulnerability Assessment.
     /// </summary>
     [pbr::OriginalName("VULNERABILITY_ASSESSMENT")] VulnerabilityAssessment = 11,
+    /// <summary>
+    /// This represents an SBOM Reference.
+    /// </summary>
+    [pbr::OriginalName("SBOM_REFERENCE")] SbomReference = 12,
   }
 
   #endregion
@@ -117,6 +121,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Metadata for any related URL information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RelatedUrl : pb::IMessage<RelatedUrl>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -373,6 +378,7 @@ namespace Grafeas.V1 {
   /// this Signature, or the canonical serialization of the proto message that
   /// holds this signature).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Signature : pb::IMessage<Signature>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -631,6 +637,7 @@ namespace Grafeas.V1 {
   /// https://github.com/secure-systems-lab/dsse/blob/master/envelope.proto. An
   /// authenticated message of arbitrary type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Envelope : pb::IMessage<Envelope>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -883,6 +890,7 @@ namespace Grafeas.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnvelopeSignature : pb::IMessage<EnvelopeSignature>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1112,6 +1120,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Indicates the location at which a package was found.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FileLocation : pb::IMessage<FileLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1308,6 +1317,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// License information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class License : pb::IMessage<License>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1547,6 +1557,7 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Digest information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Digest : pb::IMessage<Digest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

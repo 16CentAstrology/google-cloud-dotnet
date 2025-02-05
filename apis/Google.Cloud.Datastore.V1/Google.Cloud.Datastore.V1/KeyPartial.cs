@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -54,7 +54,7 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="id">The ID of the path element to append.</param>
         /// <returns>A clone of this key, with the specified path element.</returns>
         public Key WithElement(string kind, long id) => WithElement(new PathElement(kind, id));
-        
+
         /// <summary>
         /// Constructs a clone of this key and removes the final path element.
         /// </summary>
@@ -118,7 +118,7 @@ namespace Google.Cloud.Datastore.V1
         internal Key NormalizeToProjectId(string projectId)
         {
             return string.IsNullOrEmpty(PartitionId?.ProjectId)
-                ? new Key(this) { PartitionId = new PartitionId(projectId, PartitionId?.NamespaceId ?? "") }
+                ? new Key(this) { PartitionId = new PartitionId(projectId, PartitionId?.NamespaceId ?? "", PartitionId?.DatabaseId ?? "") }
                 : this;
         }
     }

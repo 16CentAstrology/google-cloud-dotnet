@@ -14,7 +14,7 @@ jobs:
       pull-requests: write
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: true
         fetch-depth: 100
@@ -28,7 +28,7 @@ jobs:
         git checkout pr-head
 
     - name: Setup .NET 6.0
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 6.0.x
 
@@ -47,8 +47,11 @@ jobs:
         ./detect-pr-changes.sh $SCRIPT_OPTION 2>&1 | tee -a diff.txt        
         set +o pipefail
 
+    # The purpose of (success() || failure()) in the condition is to
+    # make sure we post a comment on both success and failure, but *not*
+    # if the job is cancelled.
     - name: Post diff as a comment for branches on target fork
-      if: github.event.pull_request.head.repo.full_name == github.repository
+      if: (success() || failure()) && github.event.pull_request.head.repo.full_name == github.repository
       run: |
         ./prepare-release.sh add-pr-comment diff.txt \
            ${{github.event.pull_request.number }} \

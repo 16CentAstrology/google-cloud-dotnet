@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,16 +26,15 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class ShowLaggingCommand : CommandBase
     {
-        public ShowLaggingCommand() : base("show-lagging", "Shows pre-release packages where a GA should be considered")
+        public ShowLaggingCommand() : base("show-lagging", "Shows pre-release packages where a GA should be considered, and unreleased packages")
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
-            Console.WriteLine($"Lagging packages (package ID, current version, date range of current version prerelease series):");
-            var root = DirectoryLayout.DetermineRootDirectory();
-            var catalog = ApiCatalog.Load();
-            using (var repo = new Repository(root))
+            Console.WriteLine("Lagging packages (package ID, current version, date range of current version prerelease series):");
+            var catalog = ApiCatalog.Load(RootLayout);
+            using (var repo = new Repository(RootLayout.RepositoryRoot))
             {
                 var allTags = repo.Tags.OrderByDescending(GitHelpers.GetDate).ToList();
                 foreach (var api in catalog.Apis)
@@ -43,6 +42,20 @@ namespace Google.Cloud.Tools.ReleaseManager
                     MaybeShowLagging(allTags, api);
                 }
             }
+            Console.WriteLine();
+            Console.WriteLine("Unreleased (at current minor) packages:");
+            foreach (var api in catalog.Apis.Where(api => api.Version.EndsWith("00") && api.BlockRelease is null))
+            {
+                Console.WriteLine($"{api.Id,-50}{api.Version,-20}");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Release-blocked packages:");
+            foreach (var api in catalog.Apis.Where(api => api.BlockRelease is not null))
+            {
+                Console.WriteLine($"{api.Id,-50}{api.BlockRelease}");
+            }
+            return 0;
         }
 
         private static void MaybeShowLagging(List<Tag> allTags, ApiMetadata api)

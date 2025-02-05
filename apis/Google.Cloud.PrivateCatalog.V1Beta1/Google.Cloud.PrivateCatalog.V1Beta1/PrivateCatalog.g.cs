@@ -144,6 +144,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// <summary>
   /// Request message for [PrivateCatalog.SearchCatalogs][google.cloud.privatecatalog.v1beta1.PrivateCatalog.SearchCatalogs].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchCatalogsRequest : pb::IMessage<SearchCatalogsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -466,6 +467,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// <summary>
   /// Response message for [PrivateCatalog.SearchCatalogs][google.cloud.privatecatalog.v1beta1.PrivateCatalog.SearchCatalogs].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchCatalogsResponse : pb::IMessage<SearchCatalogsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -691,6 +693,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// <summary>
   /// Request message for [PrivateCatalog.SearchProducts][google.cloud.privatecatalog.v1beta1.PrivateCatalog.SearchProducts].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchProductsRequest : pb::IMessage<SearchProductsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1014,6 +1017,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// <summary>
   /// Response message for [PrivateCatalog.SearchProducts][google.cloud.privatecatalog.v1beta1.PrivateCatalog.SearchProducts].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchProductsResponse : pb::IMessage<SearchProductsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1239,6 +1243,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// <summary>
   /// Request message for [PrivateCatalog.SearchVersions][google.cloud.privatecatalog.v1beta1.PrivateCatalog.SearchVersions].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchVersionsRequest : pb::IMessage<SearchVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1562,6 +1567,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// <summary>
   /// Response message for [PrivateCatalog.SearchVersions][google.cloud.privatecatalog.v1beta1.PrivateCatalog.SearchVersions].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchVersionsResponse : pb::IMessage<SearchVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1788,6 +1794,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// The readonly representation of a catalog computed with a given resource
   /// context.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Catalog : pb::IMessage<Catalog>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1841,7 +1848,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The resource name of the target catalog, in the format of
-    /// `catalogs/{catalog}'.
+    /// `catalogs/{catalog}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2163,6 +2170,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// The readonly representation of a product computed with a given resource
   /// context.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Product : pb::IMessage<Product>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2778,6 +2786,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// <summary>
   /// Defines the reference of an asset belonging to a product.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AssetReference : pb::IMessage<AssetReference>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2926,10 +2935,24 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Asset {
-      get { return sourceCase_ == SourceOneofCase.Asset ? (string) source_ : ""; }
+      get { return HasAsset ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.Asset;
+      }
+    }
+    /// <summary>Gets whether the "asset" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAsset {
+      get { return sourceCase_ == SourceOneofCase.Asset; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "asset" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAsset() {
+      if (HasAsset) {
+        ClearSource();
       }
     }
 
@@ -2942,10 +2965,26 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsPath {
-      get { return sourceCase_ == SourceOneofCase.GcsPath ? (string) source_ : ""; }
+      get { return HasGcsPath ? (string) source_ : ""; }
       set {
         source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         sourceCase_ = SourceOneofCase.GcsPath;
+      }
+    }
+    /// <summary>Gets whether the "gcs_path" field is set</summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsPath {
+      get { return sourceCase_ == SourceOneofCase.GcsPath; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_path" </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsPath() {
+      if (HasGcsPath) {
+        ClearSource();
       }
     }
 
@@ -3087,8 +3126,8 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
       if (inputs_ != null) hash ^= Inputs.GetHashCode();
       if (ValidationStatus != global::Google.Cloud.PrivateCatalog.V1Beta1.AssetReference.Types.AssetValidationState.Unspecified) hash ^= ValidationStatus.GetHashCode();
       if (validationOperation_ != null) hash ^= ValidationOperation.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.Asset) hash ^= Asset.GetHashCode();
-      if (sourceCase_ == SourceOneofCase.GcsPath) hash ^= GcsPath.GetHashCode();
+      if (HasAsset) hash ^= Asset.GetHashCode();
+      if (HasGcsPath) hash ^= GcsPath.GetHashCode();
       if (sourceCase_ == SourceOneofCase.GitSource) hash ^= GitSource.GetHashCode();
       if (gcsSource_ != null) hash ^= GcsSource.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
@@ -3133,11 +3172,11 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(ValidationOperation);
       }
-      if (sourceCase_ == SourceOneofCase.Asset) {
+      if (HasAsset) {
         output.WriteRawTag(82);
         output.WriteString(Asset);
       }
-      if (sourceCase_ == SourceOneofCase.GcsPath) {
+      if (HasGcsPath) {
         output.WriteRawTag(90);
         output.WriteString(GcsPath);
       }
@@ -3191,11 +3230,11 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteMessage(ValidationOperation);
       }
-      if (sourceCase_ == SourceOneofCase.Asset) {
+      if (HasAsset) {
         output.WriteRawTag(82);
         output.WriteString(Asset);
       }
-      if (sourceCase_ == SourceOneofCase.GcsPath) {
+      if (HasGcsPath) {
         output.WriteRawTag(90);
         output.WriteString(GcsPath);
       }
@@ -3244,10 +3283,10 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
       if (validationOperation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ValidationOperation);
       }
-      if (sourceCase_ == SourceOneofCase.Asset) {
+      if (HasAsset) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Asset);
       }
-      if (sourceCase_ == SourceOneofCase.GcsPath) {
+      if (HasGcsPath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsPath);
       }
       if (sourceCase_ == SourceOneofCase.GitSource) {
@@ -3540,6 +3579,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// <summary>
   /// Defines definition of input parameters of asset templates.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Inputs : pb::IMessage<Inputs>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3744,6 +3784,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// <summary>
   /// Defines how to access Cloud Storage source.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4029,6 +4070,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// <summary>
   /// Defines how to access a Git Source.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GitSource : pb::IMessage<GitSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4127,10 +4169,24 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Commit {
-      get { return refCase_ == RefOneofCase.Commit ? (string) ref_ : ""; }
+      get { return HasCommit ? (string) ref_ : ""; }
       set {
         ref_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         refCase_ = RefOneofCase.Commit;
+      }
+    }
+    /// <summary>Gets whether the "commit" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCommit {
+      get { return refCase_ == RefOneofCase.Commit; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "commit" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCommit() {
+      if (HasCommit) {
+        ClearRef();
       }
     }
 
@@ -4142,10 +4198,24 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Branch {
-      get { return refCase_ == RefOneofCase.Branch ? (string) ref_ : ""; }
+      get { return HasBranch ? (string) ref_ : ""; }
       set {
         ref_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         refCase_ = RefOneofCase.Branch;
+      }
+    }
+    /// <summary>Gets whether the "branch" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBranch {
+      get { return refCase_ == RefOneofCase.Branch; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "branch" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBranch() {
+      if (HasBranch) {
+        ClearRef();
       }
     }
 
@@ -4157,10 +4227,24 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Tag {
-      get { return refCase_ == RefOneofCase.Tag ? (string) ref_ : ""; }
+      get { return HasTag ? (string) ref_ : ""; }
       set {
         ref_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         refCase_ = RefOneofCase.Tag;
+      }
+    }
+    /// <summary>Gets whether the "tag" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTag {
+      get { return refCase_ == RefOneofCase.Tag; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "tag" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTag() {
+      if (HasTag) {
+        ClearRef();
       }
     }
 
@@ -4216,9 +4300,9 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
       int hash = 1;
       if (Repo.Length != 0) hash ^= Repo.GetHashCode();
       if (Dir.Length != 0) hash ^= Dir.GetHashCode();
-      if (refCase_ == RefOneofCase.Commit) hash ^= Commit.GetHashCode();
-      if (refCase_ == RefOneofCase.Branch) hash ^= Branch.GetHashCode();
-      if (refCase_ == RefOneofCase.Tag) hash ^= Tag.GetHashCode();
+      if (HasCommit) hash ^= Commit.GetHashCode();
+      if (HasBranch) hash ^= Branch.GetHashCode();
+      if (HasTag) hash ^= Tag.GetHashCode();
       hash ^= (int) refCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4246,15 +4330,15 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(Dir);
       }
-      if (refCase_ == RefOneofCase.Commit) {
+      if (HasCommit) {
         output.WriteRawTag(26);
         output.WriteString(Commit);
       }
-      if (refCase_ == RefOneofCase.Branch) {
+      if (HasBranch) {
         output.WriteRawTag(34);
         output.WriteString(Branch);
       }
-      if (refCase_ == RefOneofCase.Tag) {
+      if (HasTag) {
         output.WriteRawTag(42);
         output.WriteString(Tag);
       }
@@ -4276,15 +4360,15 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(Dir);
       }
-      if (refCase_ == RefOneofCase.Commit) {
+      if (HasCommit) {
         output.WriteRawTag(26);
         output.WriteString(Commit);
       }
-      if (refCase_ == RefOneofCase.Branch) {
+      if (HasBranch) {
         output.WriteRawTag(34);
         output.WriteString(Branch);
       }
-      if (refCase_ == RefOneofCase.Tag) {
+      if (HasTag) {
         output.WriteRawTag(42);
         output.WriteString(Tag);
       }
@@ -4304,13 +4388,13 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
       if (Dir.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Dir);
       }
-      if (refCase_ == RefOneofCase.Commit) {
+      if (HasCommit) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Commit);
       }
-      if (refCase_ == RefOneofCase.Branch) {
+      if (HasBranch) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Branch);
       }
-      if (refCase_ == RefOneofCase.Tag) {
+      if (HasTag) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Tag);
       }
       if (_unknownFields != null) {
@@ -4424,6 +4508,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
   /// The consumer representation of a version which is a child resource under a
   /// `Product` with asset data.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Version : pb::IMessage<Version>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4477,7 +4562,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The resource name of the version, in the format
-    /// `catalogs/{catalog}/products/{product}/versions/[a-z][-a-z0-9]*[a-z0-9]'.
+    /// `catalogs/{catalog}/products/{product}/versions/[a-z][-a-z0-9]*[a-z0-9]`.
     ///
     /// A unique identifier for the version under a product.
     /// </summary>

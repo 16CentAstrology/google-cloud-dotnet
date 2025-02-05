@@ -12,10 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Tools.Common;
 using LibGit2Sharp;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text.RegularExpressions;
@@ -73,7 +75,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         /// Attempts to come up with suitable markdown for release notes, based on a commit.
         /// This is best effort, heuristic-based - and we'll want to tweak it over time.
         /// </summary>
-        internal IEnumerable<ReleaseNoteElement> GetReleaseNoteElements()
+        internal IEnumerable<ReleaseNoteElement> GetReleaseNoteElements(RootLayout rootLayout)
         {
             // Use the override if one has been provided for this commit, or the commit message otherwise.
             string message = CommitOverrides.HashPrefixToMessageMap.GetValueOrDefault(HashPrefix, _libGit2Commit.Message);
@@ -90,7 +92,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 if (sourceLink is object)
                 {
                     var commit = sourceLink.Split('/').Last();
-                    messageLines = GetGoogleApisCommitLines(commit) ?? messageLines;
+                    messageLines = GetGoogleApisCommitLines(rootLayout, commit) ?? messageLines;
                 }
                 messageLines = messageLines
                     .Where(line => !line.StartsWith("Committer: @"))
@@ -151,13 +153,43 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 IssuePattern.Replace(line, "[issue $1](https://github.com/googleapis/google-cloud-dotnet/issues/$1)");
         }
 
-        private List<string> GetGoogleApisCommitLines(string hash)
+        private List<string> GetGoogleApisCommitLines(RootLayout rootLayout, string hash)
         {
             if (s_googleApisCommitMessageCache.TryGetValue(hash, out var cachedResult))
             {
                 return cachedResult;
             }
 
+            // If there's a local googleapis directory, try getting the commit from there.
+            // Otherwise, fetch from github. (The latter will fail eventually if there are a lot
+            // of commits to fetch, but it means if the local googleapis repo is just a little
+            // out of date, we can fetch the most recent commits from GitHub.)
+            var result = GetLocalGoogleApisCommitLines(rootLayout, hash) ?? GetGitHubGoogleApisCommitLines(hash);
+
+            if (result != null)
+            {
+                s_googleApisCommitMessageCache[hash] = result;
+            }
+            return result;
+        }
+
+        private List<string> GetLocalGoogleApisCommitLines(RootLayout rootLayout, string hash)
+        {
+            if (!Directory.Exists(rootLayout.Googleapis))
+            {
+                return null;
+            }
+            using Repository googleApisLocalRepo = new Repository(rootLayout.Googleapis);
+            var obj = googleApisLocalRepo.Lookup(new ObjectId(hash));
+            if (obj is not Commit commit)
+            {
+                return null;
+            }
+            return SplitCommitMessage(commit.Message);
+        }
+
+        private List<string> GetGitHubGoogleApisCommitLines(string hash)
+        {
             // We could use Octokit etc, but we don't really need to, and it's simpler not to plumb it through.
             var client = new HttpClient();
             client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36");
@@ -167,9 +199,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 // Note: waiting in a console app should be fine.
                 string json = client.GetStringAsync(url).GetAwaiter().GetResult();
                 string message = (string) JObject.Parse(json)["message"];
-                var result = SplitCommitMessage(message);
-                s_googleApisCommitMessageCache[hash] = result;
-                return result;
+                return SplitCommitMessage(message);
             }
             catch (HttpRequestException e)
             {

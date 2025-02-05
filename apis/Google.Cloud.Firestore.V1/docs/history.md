@@ -4,6 +4,68 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 3.9.0, released 2024-09-26
+
+### New features
+
+- Expose the `FindNearest.distance_result_field` parameter ([commit 90e89c5](https://github.com/googleapis/google-cloud-dotnet/commit/90e89c54a34ab97ac383fb7fc7ccd308cd9ba189))
+- Expose the `FindNearest.distance_threshold` parameter ([commit 90e89c5](https://github.com/googleapis/google-cloud-dotnet/commit/90e89c54a34ab97ac383fb7fc7ccd308cd9ba189))
+
+### Documentation improvements
+
+- Minor documentation clarifications on FindNearest DistanceMeasure options ([commit 0997231](https://github.com/googleapis/google-cloud-dotnet/commit/099723106fe192589286ed58ab1ee8af88ce53d1))
+
+## Version 3.8.0, released 2024-06-24
+
+No API surface changes; just dependency updates.
+
+## Version 3.7.0, released 2024-05-03
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.6.0, released 2024-03-27
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+- Add VectorSearch API ([commit 6b45d22](https://github.com/googleapis/google-cloud-dotnet/commit/6b45d2250c9652a430fc0ae1a371353e4ff31056))
+- Add new types ExplainOptions, ExplainMetrics, PlanSummary, ExecutionStats ([commit c2793f0](https://github.com/googleapis/google-cloud-dotnet/commit/c2793f0cc57d48470bb8834b6ac1d4ace0305a1e))
+- Add ExplainOptions field to RunQueryRequest ([commit c2793f0](https://github.com/googleapis/google-cloud-dotnet/commit/c2793f0cc57d48470bb8834b6ac1d4ace0305a1e))
+- Add ExplainMetrics field to RunQueryResponse ([commit c2793f0](https://github.com/googleapis/google-cloud-dotnet/commit/c2793f0cc57d48470bb8834b6ac1d4ace0305a1e))
+- Add ExplainOptions field to RunAggregationQueryRequest ([commit c2793f0](https://github.com/googleapis/google-cloud-dotnet/commit/c2793f0cc57d48470bb8834b6ac1d4ace0305a1e))
+- Add ExplainMetrics field to RunAggregationQueryResponse ([commit c2793f0](https://github.com/googleapis/google-cloud-dotnet/commit/c2793f0cc57d48470bb8834b6ac1d4ace0305a1e))
+
+## Version 3.5.1, released 2024-02-14
+
+### Bug fixes
+
+- Restore the use of "legacy" routing headers until the newer header is fully supported in the Firestore emulator. ([commit 6a5e369](https://github.com/googleapis/google-cloud-dotnet/commit/6a5e3696c4101fd1c33b5febdf4d75602415889c))
+
+## Version 3.5.0, released 2024-01-30
+
+### Documentation improvements
+
+- Improve the documentation on Document.fields ([commit 91ef4a3](https://github.com/googleapis/google-cloud-dotnet/commit/91ef4a354074c3d83e757d7c89e91b2e77cd96f5))
+
+## Version 3.5.0-beta01, released 2023-11-29
+
+No API surface changes; just dependency updates.
+
+## Version 3.4.0, released 2023-10-04
+
+### New features
+
+- Publish proto definitions for SUM/AVG in Firestore ([commit 9931b9d](https://github.com/googleapis/google-cloud-dotnet/commit/9931b9db0820aeda79300914c7e0ddb5edb647c4))
+- Add bloom filter related proto fields ([commit c9dbc16](https://github.com/googleapis/google-cloud-dotnet/commit/c9dbc16b36d6fdfb0e6697585f6aa6fe26c01740))
+
+## Version 3.3.0, released 2023-05-03
+
+### Bug fixes
+
+- Add resource prefix header in aggregation query. This is required to use aggregation queries in the emulator. [Commit 100689b](https://github.com/googleapis/google-cloud-dotnet/commit/100689b2dae0855af5e57f6ebbaadf6f686c3e03)
+
 ## Version 3.2.0, released 2023-03-22
 
 ### New features

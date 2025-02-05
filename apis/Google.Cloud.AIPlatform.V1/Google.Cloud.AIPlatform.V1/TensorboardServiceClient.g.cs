@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.AIPlatform.V1
 {
@@ -53,12 +53,13 @@ namespace Google.Cloud.AIPlatform.V1
             CreateTensorboardSettings = existing.CreateTensorboardSettings;
             CreateTensorboardOperationsSettings = existing.CreateTensorboardOperationsSettings.Clone();
             GetTensorboardSettings = existing.GetTensorboardSettings;
-            ReadTensorboardUsageSettings = existing.ReadTensorboardUsageSettings;
             UpdateTensorboardSettings = existing.UpdateTensorboardSettings;
             UpdateTensorboardOperationsSettings = existing.UpdateTensorboardOperationsSettings.Clone();
             ListTensorboardsSettings = existing.ListTensorboardsSettings;
             DeleteTensorboardSettings = existing.DeleteTensorboardSettings;
             DeleteTensorboardOperationsSettings = existing.DeleteTensorboardOperationsSettings.Clone();
+            ReadTensorboardUsageSettings = existing.ReadTensorboardUsageSettings;
+            ReadTensorboardSizeSettings = existing.ReadTensorboardSizeSettings;
             CreateTensorboardExperimentSettings = existing.CreateTensorboardExperimentSettings;
             GetTensorboardExperimentSettings = existing.GetTensorboardExperimentSettings;
             UpdateTensorboardExperimentSettings = existing.UpdateTensorboardExperimentSettings;
@@ -137,19 +138,6 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>TensorboardServiceClient.ReadTensorboardUsage</c> and
-        /// <c>TensorboardServiceClient.ReadTensorboardUsageAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings ReadTensorboardUsageSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>TensorboardServiceClient.UpdateTensorboard</c> and <c>TensorboardServiceClient.UpdateTensorboardAsync</c>
         /// .
         /// </summary>
@@ -221,6 +209,32 @@ namespace Google.Cloud.AIPlatform.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TensorboardServiceClient.ReadTensorboardUsage</c> and
+        /// <c>TensorboardServiceClient.ReadTensorboardUsageAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReadTensorboardUsageSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TensorboardServiceClient.ReadTensorboardSize</c> and <c>TensorboardServiceClient.ReadTensorboardSizeAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReadTensorboardSizeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -628,14 +642,14 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return TensorboardServiceClient.Create(callInvoker, Settings, Logger);
+            return TensorboardServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<TensorboardServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return TensorboardServiceClient.Create(callInvoker, Settings, Logger);
+            return TensorboardServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -669,7 +683,7 @@ namespace Google.Cloud.AIPlatform.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TensorboardService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(TensorboardService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -1015,123 +1029,6 @@ namespace Google.Cloud.AIPlatform.V1
             GetTensorboardAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, st::CancellationToken cancellationToken) =>
-            ReadTensorboardUsageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="tensorboard">
-        /// Required. The name of the Tensorboard resource.
-        /// Format:
-        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
-            ReadTensorboardUsage(new ReadTensorboardUsageRequest
-            {
-                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
-            }, callSettings);
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="tensorboard">
-        /// Required. The name of the Tensorboard resource.
-        /// Format:
-        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
-            ReadTensorboardUsageAsync(new ReadTensorboardUsageRequest
-            {
-                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
-            }, callSettings);
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="tensorboard">
-        /// Required. The name of the Tensorboard resource.
-        /// Format:
-        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(string tensorboard, st::CancellationToken cancellationToken) =>
-            ReadTensorboardUsageAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="tensorboard">
-        /// Required. The name of the Tensorboard resource.
-        /// Format:
-        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
-            ReadTensorboardUsage(new ReadTensorboardUsageRequest
-            {
-                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
-            }, callSettings);
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="tensorboard">
-        /// Required. The name of the Tensorboard resource.
-        /// Format:
-        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
-            ReadTensorboardUsageAsync(new ReadTensorboardUsageRequest
-            {
-                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
-            }, callSettings);
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="tensorboard">
-        /// Required. The name of the Tensorboard resource.
-        /// Format:
-        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(TensorboardName tensorboard, st::CancellationToken cancellationToken) =>
-            ReadTensorboardUsageAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Updates a Tensorboard.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1292,13 +1189,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Tensorboard"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTensorboardsResponse, Tensorboard> ListTensorboards(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboards(new ListTensorboardsRequest
+        public virtual gax::PagedEnumerable<ListTensorboardsResponse, Tensorboard> ListTensorboards(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardsRequest request = new ListTensorboardsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboards(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Tensorboards in a Location.
@@ -1318,13 +1224,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Tensorboard"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTensorboardsResponse, Tensorboard> ListTensorboardsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardsAsync(new ListTensorboardsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTensorboardsResponse, Tensorboard> ListTensorboardsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardsRequest request = new ListTensorboardsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Tensorboards in a Location.
@@ -1344,13 +1259,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Tensorboard"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTensorboardsResponse, Tensorboard> ListTensorboards(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboards(new ListTensorboardsRequest
+        public virtual gax::PagedEnumerable<ListTensorboardsResponse, Tensorboard> ListTensorboards(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardsRequest request = new ListTensorboardsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboards(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Tensorboards in a Location.
@@ -1370,13 +1294,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Tensorboard"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTensorboardsResponse, Tensorboard> ListTensorboardsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardsAsync(new ListTensorboardsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTensorboardsResponse, Tensorboard> ListTensorboardsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardsRequest request = new ListTensorboardsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a Tensorboard.
@@ -1523,6 +1456,240 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteTensorboardAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, st::CancellationToken cancellationToken) =>
+            ReadTensorboardUsageAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardUsage(new ReadTensorboardUsageRequest
+            {
+                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardUsageAsync(new ReadTensorboardUsageRequest
+            {
+                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(string tensorboard, st::CancellationToken cancellationToken) =>
+            ReadTensorboardUsageAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardUsageResponse ReadTensorboardUsage(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardUsage(new ReadTensorboardUsageRequest
+            {
+                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardUsageAsync(new ReadTensorboardUsageRequest
+            {
+                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(TensorboardName tensorboard, st::CancellationToken cancellationToken) =>
+            ReadTensorboardUsageAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardSizeResponse ReadTensorboardSize(ReadTensorboardSizeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(ReadTensorboardSizeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(ReadTensorboardSizeRequest request, st::CancellationToken cancellationToken) =>
+            ReadTensorboardSizeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardSizeResponse ReadTensorboardSize(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardSize(new ReadTensorboardSizeRequest
+            {
+                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(string tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardSizeAsync(new ReadTensorboardSizeRequest
+            {
+                Tensorboard = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(string tensorboard, st::CancellationToken cancellationToken) =>
+            ReadTensorboardSizeAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReadTensorboardSizeResponse ReadTensorboardSize(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardSize(new ReadTensorboardSizeRequest
+            {
+                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(TensorboardName tensorboard, gaxgrpc::CallSettings callSettings = null) =>
+            ReadTensorboardSizeAsync(new ReadTensorboardSizeRequest
+            {
+                TensorboardAsTensorboardName = gax::GaxPreconditions.CheckNotNull(tensorboard, nameof(tensorboard)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="tensorboard">
+        /// Required. The name of the Tensorboard resource.
+        /// Format:
+        /// `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(TensorboardName tensorboard, st::CancellationToken cancellationToken) =>
+            ReadTensorboardSizeAsync(tensorboard, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a TensorboardExperiment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1565,7 +1732,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1593,7 +1760,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1621,7 +1788,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1644,7 +1811,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1672,7 +1839,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1700,7 +1867,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// final component of the Tensorboard experiment's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1958,13 +2125,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TensorboardExperiment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTensorboardExperimentsResponse, TensorboardExperiment> ListTensorboardExperiments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardExperiments(new ListTensorboardExperimentsRequest
+        public virtual gax::PagedEnumerable<ListTensorboardExperimentsResponse, TensorboardExperiment> ListTensorboardExperiments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardExperimentsRequest request = new ListTensorboardExperimentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardExperiments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TensorboardExperiments in a Location.
@@ -1984,13 +2160,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TensorboardExperiment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTensorboardExperimentsResponse, TensorboardExperiment> ListTensorboardExperimentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardExperimentsAsync(new ListTensorboardExperimentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTensorboardExperimentsResponse, TensorboardExperiment> ListTensorboardExperimentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardExperimentsRequest request = new ListTensorboardExperimentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardExperimentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TensorboardExperiments in a Location.
@@ -2010,13 +2195,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TensorboardExperiment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTensorboardExperimentsResponse, TensorboardExperiment> ListTensorboardExperiments(TensorboardName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardExperiments(new ListTensorboardExperimentsRequest
+        public virtual gax::PagedEnumerable<ListTensorboardExperimentsResponse, TensorboardExperiment> ListTensorboardExperiments(TensorboardName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardExperimentsRequest request = new ListTensorboardExperimentsRequest
             {
                 ParentAsTensorboardName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardExperiments(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TensorboardExperiments in a Location.
@@ -2036,13 +2230,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TensorboardExperiment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTensorboardExperimentsResponse, TensorboardExperiment> ListTensorboardExperimentsAsync(TensorboardName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardExperimentsAsync(new ListTensorboardExperimentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTensorboardExperimentsResponse, TensorboardExperiment> ListTensorboardExperimentsAsync(TensorboardName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardExperimentsRequest request = new ListTensorboardExperimentsRequest
             {
                 ParentAsTensorboardName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardExperimentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a TensorboardExperiment.
@@ -2231,7 +2434,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2259,7 +2462,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2287,7 +2490,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2310,7 +2513,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2338,7 +2541,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2366,7 +2569,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// component of the Tensorboard run's resource name.
         /// 
         /// This value should be 1-128 characters, and valid characters
-        /// are /[a-z][0-9]-/.
+        /// are `/[a-z][0-9]-/`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2793,13 +2996,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TensorboardRun"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTensorboardRunsResponse, TensorboardRun> ListTensorboardRuns(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardRuns(new ListTensorboardRunsRequest
+        public virtual gax::PagedEnumerable<ListTensorboardRunsResponse, TensorboardRun> ListTensorboardRuns(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardRunsRequest request = new ListTensorboardRunsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardRuns(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TensorboardRuns in a Location.
@@ -2819,13 +3031,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TensorboardRun"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTensorboardRunsResponse, TensorboardRun> ListTensorboardRunsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardRunsAsync(new ListTensorboardRunsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTensorboardRunsResponse, TensorboardRun> ListTensorboardRunsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardRunsRequest request = new ListTensorboardRunsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardRunsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TensorboardRuns in a Location.
@@ -2845,13 +3066,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TensorboardRun"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTensorboardRunsResponse, TensorboardRun> ListTensorboardRuns(TensorboardExperimentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardRuns(new ListTensorboardRunsRequest
+        public virtual gax::PagedEnumerable<ListTensorboardRunsResponse, TensorboardRun> ListTensorboardRuns(TensorboardExperimentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardRunsRequest request = new ListTensorboardRunsRequest
             {
                 ParentAsTensorboardExperimentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardRuns(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TensorboardRuns in a Location.
@@ -2871,13 +3101,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TensorboardRun"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTensorboardRunsResponse, TensorboardRun> ListTensorboardRunsAsync(TensorboardExperimentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardRunsAsync(new ListTensorboardRunsRequest
+        public virtual gax::PagedAsyncEnumerable<ListTensorboardRunsResponse, TensorboardRun> ListTensorboardRunsAsync(TensorboardExperimentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardRunsRequest request = new ListTensorboardRunsRequest
             {
                 ParentAsTensorboardExperimentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardRunsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a TensorboardRun.
@@ -3603,13 +3842,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TensorboardTimeSeries"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTensorboardTimeSeriesResponse, TensorboardTimeSeries> ListTensorboardTimeSeries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardTimeSeries(new ListTensorboardTimeSeriesRequest
+        public virtual gax::PagedEnumerable<ListTensorboardTimeSeriesResponse, TensorboardTimeSeries> ListTensorboardTimeSeries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardTimeSeriesRequest request = new ListTensorboardTimeSeriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardTimeSeries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TensorboardTimeSeries in a Location.
@@ -3629,13 +3877,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TensorboardTimeSeries"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTensorboardTimeSeriesResponse, TensorboardTimeSeries> ListTensorboardTimeSeriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardTimeSeriesAsync(new ListTensorboardTimeSeriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTensorboardTimeSeriesResponse, TensorboardTimeSeries> ListTensorboardTimeSeriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardTimeSeriesRequest request = new ListTensorboardTimeSeriesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardTimeSeriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TensorboardTimeSeries in a Location.
@@ -3655,13 +3912,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TensorboardTimeSeries"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTensorboardTimeSeriesResponse, TensorboardTimeSeries> ListTensorboardTimeSeries(TensorboardRunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardTimeSeries(new ListTensorboardTimeSeriesRequest
+        public virtual gax::PagedEnumerable<ListTensorboardTimeSeriesResponse, TensorboardTimeSeries> ListTensorboardTimeSeries(TensorboardRunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardTimeSeriesRequest request = new ListTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardRunName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardTimeSeries(request, callSettings);
+        }
 
         /// <summary>
         /// Lists TensorboardTimeSeries in a Location.
@@ -3681,13 +3947,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TensorboardTimeSeries"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTensorboardTimeSeriesResponse, TensorboardTimeSeries> ListTensorboardTimeSeriesAsync(TensorboardRunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTensorboardTimeSeriesAsync(new ListTensorboardTimeSeriesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTensorboardTimeSeriesResponse, TensorboardTimeSeries> ListTensorboardTimeSeriesAsync(TensorboardRunName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTensorboardTimeSeriesRequest request = new ListTensorboardTimeSeriesRequest
             {
                 ParentAsTensorboardRunName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTensorboardTimeSeriesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a TensorboardTimeSeries.
@@ -4598,13 +4873,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TimeSeriesDataPoint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ExportTensorboardTimeSeriesDataResponse, TimeSeriesDataPoint> ExportTensorboardTimeSeriesData(string tensorboardTimeSeries, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ExportTensorboardTimeSeriesData(new ExportTensorboardTimeSeriesDataRequest
+        public virtual gax::PagedEnumerable<ExportTensorboardTimeSeriesDataResponse, TimeSeriesDataPoint> ExportTensorboardTimeSeriesData(string tensorboardTimeSeries, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ExportTensorboardTimeSeriesDataRequest request = new ExportTensorboardTimeSeriesDataRequest
             {
                 TensorboardTimeSeries = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboardTimeSeries, nameof(tensorboardTimeSeries)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ExportTensorboardTimeSeriesData(request, callSettings);
+        }
 
         /// <summary>
         /// Exports a TensorboardTimeSeries' data. Data is returned in paginated
@@ -4625,13 +4909,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TimeSeriesDataPoint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ExportTensorboardTimeSeriesDataResponse, TimeSeriesDataPoint> ExportTensorboardTimeSeriesDataAsync(string tensorboardTimeSeries, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ExportTensorboardTimeSeriesDataAsync(new ExportTensorboardTimeSeriesDataRequest
+        public virtual gax::PagedAsyncEnumerable<ExportTensorboardTimeSeriesDataResponse, TimeSeriesDataPoint> ExportTensorboardTimeSeriesDataAsync(string tensorboardTimeSeries, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ExportTensorboardTimeSeriesDataRequest request = new ExportTensorboardTimeSeriesDataRequest
             {
                 TensorboardTimeSeries = gax::GaxPreconditions.CheckNotNullOrEmpty(tensorboardTimeSeries, nameof(tensorboardTimeSeries)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ExportTensorboardTimeSeriesDataAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Exports a TensorboardTimeSeries' data. Data is returned in paginated
@@ -4652,13 +4945,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="TimeSeriesDataPoint"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ExportTensorboardTimeSeriesDataResponse, TimeSeriesDataPoint> ExportTensorboardTimeSeriesData(TensorboardTimeSeriesName tensorboardTimeSeries, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ExportTensorboardTimeSeriesData(new ExportTensorboardTimeSeriesDataRequest
+        public virtual gax::PagedEnumerable<ExportTensorboardTimeSeriesDataResponse, TimeSeriesDataPoint> ExportTensorboardTimeSeriesData(TensorboardTimeSeriesName tensorboardTimeSeries, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ExportTensorboardTimeSeriesDataRequest request = new ExportTensorboardTimeSeriesDataRequest
             {
                 TensorboardTimeSeriesAsTensorboardTimeSeriesName = gax::GaxPreconditions.CheckNotNull(tensorboardTimeSeries, nameof(tensorboardTimeSeries)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ExportTensorboardTimeSeriesData(request, callSettings);
+        }
 
         /// <summary>
         /// Exports a TensorboardTimeSeries' data. Data is returned in paginated
@@ -4679,13 +4981,22 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="TimeSeriesDataPoint"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ExportTensorboardTimeSeriesDataResponse, TimeSeriesDataPoint> ExportTensorboardTimeSeriesDataAsync(TensorboardTimeSeriesName tensorboardTimeSeries, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ExportTensorboardTimeSeriesDataAsync(new ExportTensorboardTimeSeriesDataRequest
+        public virtual gax::PagedAsyncEnumerable<ExportTensorboardTimeSeriesDataResponse, TimeSeriesDataPoint> ExportTensorboardTimeSeriesDataAsync(TensorboardTimeSeriesName tensorboardTimeSeries, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ExportTensorboardTimeSeriesDataRequest request = new ExportTensorboardTimeSeriesDataRequest
             {
                 TensorboardTimeSeriesAsTensorboardTimeSeriesName = gax::GaxPreconditions.CheckNotNull(tensorboardTimeSeries, nameof(tensorboardTimeSeries)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ExportTensorboardTimeSeriesDataAsync(request, callSettings);
+        }
     }
 
     /// <summary>TensorboardService client wrapper implementation, for convenient use.</summary>
@@ -4698,13 +5009,15 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<GetTensorboardRequest, Tensorboard> _callGetTensorboard;
 
-        private readonly gaxgrpc::ApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse> _callReadTensorboardUsage;
-
         private readonly gaxgrpc::ApiCall<UpdateTensorboardRequest, lro::Operation> _callUpdateTensorboard;
 
         private readonly gaxgrpc::ApiCall<ListTensorboardsRequest, ListTensorboardsResponse> _callListTensorboards;
 
         private readonly gaxgrpc::ApiCall<DeleteTensorboardRequest, lro::Operation> _callDeleteTensorboard;
+
+        private readonly gaxgrpc::ApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse> _callReadTensorboardUsage;
+
+        private readonly gaxgrpc::ApiCall<ReadTensorboardSizeRequest, ReadTensorboardSizeResponse> _callReadTensorboardSize;
 
         private readonly gaxgrpc::ApiCall<CreateTensorboardExperimentRequest, TensorboardExperiment> _callCreateTensorboardExperiment;
 
@@ -4762,7 +5075,11 @@ namespace Google.Cloud.AIPlatform.V1
         {
             GrpcClient = grpcClient;
             TensorboardServiceSettings effectiveSettings = settings ?? TensorboardServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateTensorboardOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTensorboardOperationsSettings, logger);
             UpdateTensorboardOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTensorboardOperationsSettings, logger);
             DeleteTensorboardOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTensorboardOperationsSettings, logger);
@@ -4777,9 +5094,6 @@ namespace Google.Cloud.AIPlatform.V1
             _callGetTensorboard = clientHelper.BuildApiCall<GetTensorboardRequest, Tensorboard>("GetTensorboard", grpcClient.GetTensorboardAsync, grpcClient.GetTensorboard, effectiveSettings.GetTensorboardSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTensorboard);
             Modify_GetTensorboardApiCall(ref _callGetTensorboard);
-            _callReadTensorboardUsage = clientHelper.BuildApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse>("ReadTensorboardUsage", grpcClient.ReadTensorboardUsageAsync, grpcClient.ReadTensorboardUsage, effectiveSettings.ReadTensorboardUsageSettings).WithGoogleRequestParam("tensorboard", request => request.Tensorboard);
-            Modify_ApiCall(ref _callReadTensorboardUsage);
-            Modify_ReadTensorboardUsageApiCall(ref _callReadTensorboardUsage);
             _callUpdateTensorboard = clientHelper.BuildApiCall<UpdateTensorboardRequest, lro::Operation>("UpdateTensorboard", grpcClient.UpdateTensorboardAsync, grpcClient.UpdateTensorboard, effectiveSettings.UpdateTensorboardSettings).WithGoogleRequestParam("tensorboard.name", request => request.Tensorboard?.Name);
             Modify_ApiCall(ref _callUpdateTensorboard);
             Modify_UpdateTensorboardApiCall(ref _callUpdateTensorboard);
@@ -4789,6 +5103,12 @@ namespace Google.Cloud.AIPlatform.V1
             _callDeleteTensorboard = clientHelper.BuildApiCall<DeleteTensorboardRequest, lro::Operation>("DeleteTensorboard", grpcClient.DeleteTensorboardAsync, grpcClient.DeleteTensorboard, effectiveSettings.DeleteTensorboardSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTensorboard);
             Modify_DeleteTensorboardApiCall(ref _callDeleteTensorboard);
+            _callReadTensorboardUsage = clientHelper.BuildApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse>("ReadTensorboardUsage", grpcClient.ReadTensorboardUsageAsync, grpcClient.ReadTensorboardUsage, effectiveSettings.ReadTensorboardUsageSettings).WithGoogleRequestParam("tensorboard", request => request.Tensorboard);
+            Modify_ApiCall(ref _callReadTensorboardUsage);
+            Modify_ReadTensorboardUsageApiCall(ref _callReadTensorboardUsage);
+            _callReadTensorboardSize = clientHelper.BuildApiCall<ReadTensorboardSizeRequest, ReadTensorboardSizeResponse>("ReadTensorboardSize", grpcClient.ReadTensorboardSizeAsync, grpcClient.ReadTensorboardSize, effectiveSettings.ReadTensorboardSizeSettings).WithGoogleRequestParam("tensorboard", request => request.Tensorboard);
+            Modify_ApiCall(ref _callReadTensorboardSize);
+            Modify_ReadTensorboardSizeApiCall(ref _callReadTensorboardSize);
             _callCreateTensorboardExperiment = clientHelper.BuildApiCall<CreateTensorboardExperimentRequest, TensorboardExperiment>("CreateTensorboardExperiment", grpcClient.CreateTensorboardExperimentAsync, grpcClient.CreateTensorboardExperiment, effectiveSettings.CreateTensorboardExperimentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTensorboardExperiment);
             Modify_CreateTensorboardExperimentApiCall(ref _callCreateTensorboardExperiment);
@@ -4869,13 +5189,15 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_GetTensorboardApiCall(ref gaxgrpc::ApiCall<GetTensorboardRequest, Tensorboard> call);
 
-        partial void Modify_ReadTensorboardUsageApiCall(ref gaxgrpc::ApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse> call);
-
         partial void Modify_UpdateTensorboardApiCall(ref gaxgrpc::ApiCall<UpdateTensorboardRequest, lro::Operation> call);
 
         partial void Modify_ListTensorboardsApiCall(ref gaxgrpc::ApiCall<ListTensorboardsRequest, ListTensorboardsResponse> call);
 
         partial void Modify_DeleteTensorboardApiCall(ref gaxgrpc::ApiCall<DeleteTensorboardRequest, lro::Operation> call);
+
+        partial void Modify_ReadTensorboardUsageApiCall(ref gaxgrpc::ApiCall<ReadTensorboardUsageRequest, ReadTensorboardUsageResponse> call);
+
+        partial void Modify_ReadTensorboardSizeApiCall(ref gaxgrpc::ApiCall<ReadTensorboardSizeRequest, ReadTensorboardSizeResponse> call);
 
         partial void Modify_CreateTensorboardExperimentApiCall(ref gaxgrpc::ApiCall<CreateTensorboardExperimentRequest, TensorboardExperiment> call);
 
@@ -4938,13 +5260,15 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_GetTensorboardRequest(ref GetTensorboardRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_ReadTensorboardUsageRequest(ref ReadTensorboardUsageRequest request, ref gaxgrpc::CallSettings settings);
-
         partial void Modify_UpdateTensorboardRequest(ref UpdateTensorboardRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListTensorboardsRequest(ref ListTensorboardsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteTensorboardRequest(ref DeleteTensorboardRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReadTensorboardUsageRequest(ref ReadTensorboardUsageRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReadTensorboardSizeRequest(ref ReadTensorboardSizeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateTensorboardExperimentRequest(ref CreateTensorboardExperimentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5043,30 +5367,6 @@ namespace Google.Cloud.AIPlatform.V1
             return _callGetTensorboard.Async(request, callSettings);
         }
 
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override ReadTensorboardUsageResponse ReadTensorboardUsage(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ReadTensorboardUsageRequest(ref request, ref callSettings);
-            return _callReadTensorboardUsage.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns a list of monthly active users for a given TensorBoard instance.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_ReadTensorboardUsageRequest(ref request, ref callSettings);
-            return _callReadTensorboardUsage.Async(request, callSettings);
-        }
-
         /// <summary>The long-running operations client for <c>UpdateTensorboard</c>.</summary>
         public override lro::OperationsClient UpdateTensorboardOperationsClient { get; }
 
@@ -5143,6 +5443,54 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_DeleteTensorboardRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteTensorboard.Async(request, callSettings).ConfigureAwait(false), DeleteTensorboardOperationsClient);
+        }
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReadTensorboardUsageResponse ReadTensorboardUsage(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadTensorboardUsageRequest(ref request, ref callSettings);
+            return _callReadTensorboardUsage.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns a list of monthly active users for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReadTensorboardUsageResponse> ReadTensorboardUsageAsync(ReadTensorboardUsageRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadTensorboardUsageRequest(ref request, ref callSettings);
+            return _callReadTensorboardUsage.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReadTensorboardSizeResponse ReadTensorboardSize(ReadTensorboardSizeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadTensorboardSizeRequest(ref request, ref callSettings);
+            return _callReadTensorboardSize.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the storage size for a given TensorBoard instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReadTensorboardSizeResponse> ReadTensorboardSizeAsync(ReadTensorboardSizeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReadTensorboardSizeRequest(ref request, ref callSettings);
+            return _callReadTensorboardSize.Async(request, callSettings);
         }
 
         /// <summary>

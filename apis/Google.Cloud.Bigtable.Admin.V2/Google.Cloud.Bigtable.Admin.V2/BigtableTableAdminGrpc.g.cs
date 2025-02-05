@@ -3,7 +3,7 @@
 //     source: google/bigtable/admin/v2/bigtable_table_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2022 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-#pragma warning disable 0414, 1591, 8981
+#pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
 using grpc = global::Grpc.Core;
@@ -89,6 +89,20 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.UndeleteTableRequest> __Marshaller_google_bigtable_admin_v2_UndeleteTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.UndeleteTableRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateAuthorizedViewRequest> __Marshaller_google_bigtable_admin_v2_CreateAuthorizedViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.CreateAuthorizedViewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsRequest> __Marshaller_google_bigtable_admin_v2_ListAuthorizedViewsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsResponse> __Marshaller_google_bigtable_admin_v2_ListAuthorizedViewsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetAuthorizedViewRequest> __Marshaller_google_bigtable_admin_v2_GetAuthorizedViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.GetAuthorizedViewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.AuthorizedView> __Marshaller_google_bigtable_admin_v2_AuthorizedView = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.AuthorizedView.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.UpdateAuthorizedViewRequest> __Marshaller_google_bigtable_admin_v2_UpdateAuthorizedViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.UpdateAuthorizedViewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteAuthorizedViewRequest> __Marshaller_google_bigtable_admin_v2_DeleteAuthorizedViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.DeleteAuthorizedViewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest> __Marshaller_google_bigtable_admin_v2_ModifyColumnFamiliesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest> __Marshaller_google_bigtable_admin_v2_DropRowRangeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest.Parser));
@@ -128,6 +142,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse> __Marshaller_google_bigtable_admin_v2_ListBackupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest> __Marshaller_google_bigtable_admin_v2_RestoreTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest> __Marshaller_google_bigtable_admin_v2_CopyBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -194,6 +210,46 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         "UndeleteTable",
         __Marshaller_google_bigtable_admin_v2_UndeleteTableRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateAuthorizedViewRequest, global::Google.LongRunning.Operation> __Method_CreateAuthorizedView = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateAuthorizedViewRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAuthorizedView",
+        __Marshaller_google_bigtable_admin_v2_CreateAuthorizedViewRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsResponse> __Method_ListAuthorizedViews = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAuthorizedViews",
+        __Marshaller_google_bigtable_admin_v2_ListAuthorizedViewsRequest,
+        __Marshaller_google_bigtable_admin_v2_ListAuthorizedViewsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetAuthorizedViewRequest, global::Google.Cloud.Bigtable.Admin.V2.AuthorizedView> __Method_GetAuthorizedView = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetAuthorizedViewRequest, global::Google.Cloud.Bigtable.Admin.V2.AuthorizedView>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAuthorizedView",
+        __Marshaller_google_bigtable_admin_v2_GetAuthorizedViewRequest,
+        __Marshaller_google_bigtable_admin_v2_AuthorizedView);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateAuthorizedViewRequest, global::Google.LongRunning.Operation> __Method_UpdateAuthorizedView = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateAuthorizedViewRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAuthorizedView",
+        __Marshaller_google_bigtable_admin_v2_UpdateAuthorizedViewRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteAuthorizedViewRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAuthorizedView = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteAuthorizedViewRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAuthorizedView",
+        __Marshaller_google_bigtable_admin_v2_DeleteAuthorizedViewRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest, global::Google.Cloud.Bigtable.Admin.V2.Table> __Method_ModifyColumnFamilies = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(
@@ -305,6 +361,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __ServiceName,
         "RestoreTable",
         __Marshaller_google_bigtable_admin_v2_RestoreTableRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest, global::Google.LongRunning.Operation> __Method_CopyBackup = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CopyBackup",
+        __Marshaller_google_bigtable_admin_v2_CopyBackupRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -430,6 +494,66 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UndeleteTable(global::Google.Cloud.Bigtable.Admin.V2.UndeleteTableRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new AuthorizedView in a table.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAuthorizedView(global::Google.Cloud.Bigtable.Admin.V2.CreateAuthorizedViewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all AuthorizedViews from a specific table.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsResponse> ListAuthorizedViews(global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets information from a specified AuthorizedView.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.AuthorizedView> GetAuthorizedView(global::Google.Cloud.Bigtable.Admin.V2.GetAuthorizedViewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an AuthorizedView in a table.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAuthorizedView(global::Google.Cloud.Bigtable.Admin.V2.UpdateAuthorizedViewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Permanently deletes a specified AuthorizedView.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAuthorizedView(global::Google.Cloud.Bigtable.Admin.V2.DeleteAuthorizedViewRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -572,8 +696,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+      /// returned operation will stop the creation and delete the backup.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -634,12 +758,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same project as the instance containing the backup.  The
+      /// Create a new table by restoring from a completed backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
       /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
+      /// [RestoreTableMetadata][google.bigtable.admin.v2.RestoreTableMetadata].  The
       /// [response][google.longrunning.Operation.response] type is
       /// [Table][google.bigtable.admin.v2.Table], if successful.
       /// </summary>
@@ -648,6 +771,19 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreTable(global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+      /// located in the destination instance and project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CopyBackup(global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -680,7 +816,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup resource.
+      /// Returns permissions that the caller has on the specified Table or Backup
+      /// resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1091,6 +1228,246 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UndeleteTableAsync(global::Google.Cloud.Bigtable.Admin.V2.UndeleteTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UndeleteTable, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new AuthorizedView in a table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAuthorizedView(global::Google.Cloud.Bigtable.Admin.V2.CreateAuthorizedViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAuthorizedView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new AuthorizedView in a table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAuthorizedView(global::Google.Cloud.Bigtable.Admin.V2.CreateAuthorizedViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAuthorizedView, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new AuthorizedView in a table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAuthorizedViewAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateAuthorizedViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAuthorizedViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new AuthorizedView in a table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAuthorizedViewAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateAuthorizedViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAuthorizedView, null, options, request);
+      }
+      /// <summary>
+      /// Lists all AuthorizedViews from a specific table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsResponse ListAuthorizedViews(global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAuthorizedViews(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all AuthorizedViews from a specific table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsResponse ListAuthorizedViews(global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAuthorizedViews, null, options, request);
+      }
+      /// <summary>
+      /// Lists all AuthorizedViews from a specific table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsResponse> ListAuthorizedViewsAsync(global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAuthorizedViewsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all AuthorizedViews from a specific table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsResponse> ListAuthorizedViewsAsync(global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAuthorizedViews, null, options, request);
+      }
+      /// <summary>
+      /// Gets information from a specified AuthorizedView.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.AuthorizedView GetAuthorizedView(global::Google.Cloud.Bigtable.Admin.V2.GetAuthorizedViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAuthorizedView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information from a specified AuthorizedView.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.Admin.V2.AuthorizedView GetAuthorizedView(global::Google.Cloud.Bigtable.Admin.V2.GetAuthorizedViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAuthorizedView, null, options, request);
+      }
+      /// <summary>
+      /// Gets information from a specified AuthorizedView.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.AuthorizedView> GetAuthorizedViewAsync(global::Google.Cloud.Bigtable.Admin.V2.GetAuthorizedViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAuthorizedViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information from a specified AuthorizedView.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.AuthorizedView> GetAuthorizedViewAsync(global::Google.Cloud.Bigtable.Admin.V2.GetAuthorizedViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAuthorizedView, null, options, request);
+      }
+      /// <summary>
+      /// Updates an AuthorizedView in a table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAuthorizedView(global::Google.Cloud.Bigtable.Admin.V2.UpdateAuthorizedViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAuthorizedView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an AuthorizedView in a table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAuthorizedView(global::Google.Cloud.Bigtable.Admin.V2.UpdateAuthorizedViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAuthorizedView, null, options, request);
+      }
+      /// <summary>
+      /// Updates an AuthorizedView in a table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAuthorizedViewAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateAuthorizedViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAuthorizedViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an AuthorizedView in a table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAuthorizedViewAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateAuthorizedViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAuthorizedView, null, options, request);
+      }
+      /// <summary>
+      /// Permanently deletes a specified AuthorizedView.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAuthorizedView(global::Google.Cloud.Bigtable.Admin.V2.DeleteAuthorizedViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAuthorizedView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Permanently deletes a specified AuthorizedView.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAuthorizedView(global::Google.Cloud.Bigtable.Admin.V2.DeleteAuthorizedViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAuthorizedView, null, options, request);
+      }
+      /// <summary>
+      /// Permanently deletes a specified AuthorizedView.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAuthorizedViewAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteAuthorizedViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAuthorizedViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Permanently deletes a specified AuthorizedView.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAuthorizedViewAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteAuthorizedViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAuthorizedView, null, options, request);
       }
       /// <summary>
       /// Performs a series of column family modifications on the specified table.
@@ -1623,8 +2000,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+      /// returned operation will stop the creation and delete the backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1643,8 +2020,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+      /// returned operation will stop the creation and delete the backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1661,8 +2038,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+      /// returned operation will stop the creation and delete the backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1681,8 +2058,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-      /// creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+      /// returned operation will stop the creation and delete the backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1889,12 +2266,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListBackups, null, options, request);
       }
       /// <summary>
-      /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same project as the instance containing the backup.  The
+      /// Create a new table by restoring from a completed backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
       /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
+      /// [RestoreTableMetadata][google.bigtable.admin.v2.RestoreTableMetadata].  The
       /// [response][google.longrunning.Operation.response] type is
       /// [Table][google.bigtable.admin.v2.Table], if successful.
       /// </summary>
@@ -1909,12 +2285,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return RestoreTable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same project as the instance containing the backup.  The
+      /// Create a new table by restoring from a completed backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
       /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
+      /// [RestoreTableMetadata][google.bigtable.admin.v2.RestoreTableMetadata].  The
       /// [response][google.longrunning.Operation.response] type is
       /// [Table][google.bigtable.admin.v2.Table], if successful.
       /// </summary>
@@ -1927,12 +2302,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_RestoreTable, null, options, request);
       }
       /// <summary>
-      /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same project as the instance containing the backup.  The
+      /// Create a new table by restoring from a completed backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
       /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
+      /// [RestoreTableMetadata][google.bigtable.admin.v2.RestoreTableMetadata].  The
       /// [response][google.longrunning.Operation.response] type is
       /// [Table][google.bigtable.admin.v2.Table], if successful.
       /// </summary>
@@ -1947,12 +2321,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return RestoreTableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same project as the instance containing the backup.  The
+      /// Create a new table by restoring from a completed backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
       /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
+      /// [RestoreTableMetadata][google.bigtable.admin.v2.RestoreTableMetadata].  The
       /// [response][google.longrunning.Operation.response] type is
       /// [Table][google.bigtable.admin.v2.Table], if successful.
       /// </summary>
@@ -1963,6 +2336,58 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreTableAsync(global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RestoreTable, null, options, request);
+      }
+      /// <summary>
+      /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+      /// located in the destination instance and project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CopyBackup(global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CopyBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+      /// located in the destination instance and project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CopyBackup(global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CopyBackup, null, options, request);
+      }
+      /// <summary>
+      /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+      /// located in the destination instance and project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CopyBackupAsync(global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CopyBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+      /// located in the destination instance and project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CopyBackupAsync(global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CopyBackup, null, options, request);
       }
       /// <summary>
       /// Gets the access control policy for a Table or Backup resource.
@@ -2073,7 +2498,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup resource.
+      /// Returns permissions that the caller has on the specified Table or Backup
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2086,7 +2512,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup resource.
+      /// Returns permissions that the caller has on the specified Table or Backup
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2097,7 +2524,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup resource.
+      /// Returns permissions that the caller has on the specified Table or Backup
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2110,7 +2538,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified Table or Backup resource.
+      /// Returns permissions that the caller has on the specified Table or Backup
+      /// resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2141,6 +2570,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           .AddMethod(__Method_UpdateTable, serviceImpl.UpdateTable)
           .AddMethod(__Method_DeleteTable, serviceImpl.DeleteTable)
           .AddMethod(__Method_UndeleteTable, serviceImpl.UndeleteTable)
+          .AddMethod(__Method_CreateAuthorizedView, serviceImpl.CreateAuthorizedView)
+          .AddMethod(__Method_ListAuthorizedViews, serviceImpl.ListAuthorizedViews)
+          .AddMethod(__Method_GetAuthorizedView, serviceImpl.GetAuthorizedView)
+          .AddMethod(__Method_UpdateAuthorizedView, serviceImpl.UpdateAuthorizedView)
+          .AddMethod(__Method_DeleteAuthorizedView, serviceImpl.DeleteAuthorizedView)
           .AddMethod(__Method_ModifyColumnFamilies, serviceImpl.ModifyColumnFamilies)
           .AddMethod(__Method_DropRowRange, serviceImpl.DropRowRange)
           .AddMethod(__Method_GenerateConsistencyToken, serviceImpl.GenerateConsistencyToken)
@@ -2155,6 +2589,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
           .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
           .AddMethod(__Method_RestoreTable, serviceImpl.RestoreTable)
+          .AddMethod(__Method_CopyBackup, serviceImpl.CopyBackup)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
@@ -2174,6 +2609,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       serviceBinder.AddMethod(__Method_UpdateTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.UpdateTableRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateTable));
       serviceBinder.AddMethod(__Method_DeleteTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTable));
       serviceBinder.AddMethod(__Method_UndeleteTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.UndeleteTableRequest, global::Google.LongRunning.Operation>(serviceImpl.UndeleteTable));
+      serviceBinder.AddMethod(__Method_CreateAuthorizedView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CreateAuthorizedViewRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAuthorizedView));
+      serviceBinder.AddMethod(__Method_ListAuthorizedViews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListAuthorizedViewsResponse>(serviceImpl.ListAuthorizedViews));
+      serviceBinder.AddMethod(__Method_GetAuthorizedView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GetAuthorizedViewRequest, global::Google.Cloud.Bigtable.Admin.V2.AuthorizedView>(serviceImpl.GetAuthorizedView));
+      serviceBinder.AddMethod(__Method_UpdateAuthorizedView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.UpdateAuthorizedViewRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAuthorizedView));
+      serviceBinder.AddMethod(__Method_DeleteAuthorizedView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteAuthorizedViewRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAuthorizedView));
       serviceBinder.AddMethod(__Method_ModifyColumnFamilies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(serviceImpl.ModifyColumnFamilies));
       serviceBinder.AddMethod(__Method_DropRowRange, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DropRowRange));
       serviceBinder.AddMethod(__Method_GenerateConsistencyToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest, global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse>(serviceImpl.GenerateConsistencyToken));
@@ -2188,6 +2628,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBackup));
       serviceBinder.AddMethod(__Method_ListBackups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse>(serviceImpl.ListBackups));
       serviceBinder.AddMethod(__Method_RestoreTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreTable));
+      serviceBinder.AddMethod(__Method_CopyBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CopyBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.CopyBackup));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));

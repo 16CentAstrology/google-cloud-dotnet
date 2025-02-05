@@ -1,5 +1,76 @@
 # Version history
 
+## Version 3.12.0, released 2024-05-13
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.11.0, released 2024-04-19
+
+### New features
+
+- Add tag key id support ([commit 74afcba](https://github.com/googleapis/google-cloud-dotnet/commit/74afcba52ed630e837ce66ebf6d7e9afef48d6cf))
+
+### Documentation improvements
+
+- Add tagKeyIds example for ResourceSearchResult.tags ([commit 74afcba](https://github.com/googleapis/google-cloud-dotnet/commit/74afcba52ed630e837ce66ebf6d7e9afef48d6cf))
+
+## Version 3.10.0, released 2024-03-28
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit cba7759](https://github.com/googleapis/google-cloud-dotnet/commit/cba77591907c4a4594a184466534ee9e258bb5ef))
+
+## Version 3.9.0, released 2024-03-21
+
+### New features
+
+- Add `asset_type` field to `GovernedIamPolicy` and `GovernedResource` ([commit eaf3b84](https://github.com/googleapis/google-cloud-dotnet/commit/eaf3b84414ef1545d66884c3398c161bdd79e5ad))
+- Add `effective_tags` field to `GovernedResource` ([commit eaf3b84](https://github.com/googleapis/google-cloud-dotnet/commit/eaf3b84414ef1545d66884c3398c161bdd79e5ad))
+- Add fields `project`, `folders`, `organization` and `effective_tags` to `GovernedContainer` ([commit eaf3b84](https://github.com/googleapis/google-cloud-dotnet/commit/eaf3b84414ef1545d66884c3398c161bdd79e5ad))
+- Add fields `project`, `folders` and `organization` to `OrgPolicyResult` ([commit eaf3b84](https://github.com/googleapis/google-cloud-dotnet/commit/eaf3b84414ef1545d66884c3398c161bdd79e5ad))
+- Add field `condition_evaluation` to `AnalyzerOrgPolicy.Rule` ([commit eaf3b84](https://github.com/googleapis/google-cloud-dotnet/commit/eaf3b84414ef1545d66884c3398c161bdd79e5ad))
+
+### Documentation improvements
+
+- Minor comment updates ([commit ddb9f51](https://github.com/googleapis/google-cloud-dotnet/commit/ddb9f5135966f10b5a3a76b4778b37019cef5346))
+- Update comment for rpc `AnalyzeOrgPolicyGovernedAssets` to include additional canned constraints ([commit eaf3b84](https://github.com/googleapis/google-cloud-dotnet/commit/eaf3b84414ef1545d66884c3398c161bdd79e5ad))
+
+## Version 3.8.0, released 2024-02-28
+
+### Documentation improvements
+
+- Updated comments ([commit 7e05ff6](https://github.com/googleapis/google-cloud-dotnet/commit/7e05ff64ba030f13b3da3e8925783cc77d25b036))
+
+## Version 3.7.0, released 2024-01-08
+
+### New features
+
+- Added new resource references to fields in AnalyzeMoveRequest ([commit 7a630af](https://github.com/googleapis/google-cloud-dotnet/commit/7a630af1ca491162f79358d2f802a330e1070b72))
+
+### Documentation improvements
+
+- Updated comments ([commit 7a630af](https://github.com/googleapis/google-cloud-dotnet/commit/7a630af1ca491162f79358d2f802a330e1070b72))
+
+## Version 3.6.0, released 2023-09-26
+
+### New features
+
+- Add support for directly attached and effective tags ([commit 46297c2](https://github.com/googleapis/google-cloud-dotnet/commit/46297c285809c35aba4e5cd0fc3a42eebac722eb))
+
+### Documentation improvements
+
+- Clarify comments for tags and effective tags ([commit 46297c2](https://github.com/googleapis/google-cloud-dotnet/commit/46297c285809c35aba4e5cd0fc3a42eebac722eb))
+
+## Version 3.5.0, released 2023-04-12
+
+### New features
+
+- Add client library support for AssetService v1 AnalyzeOrgPolicies API ([commit cc62098](https://github.com/googleapis/google-cloud-dotnet/commit/cc62098de3549c846ca6e0eb073a83cebd7a0dfa))
+- Add client library support for AssetService v1 AnalyzeOrgPolicyGovernedContainers API ([commit cc62098](https://github.com/googleapis/google-cloud-dotnet/commit/cc62098de3549c846ca6e0eb073a83cebd7a0dfa))
+- Add client library support for AssetService v1 AnalyzeOrgPolicyGovernedAssets API ([commit cc62098](https://github.com/googleapis/google-cloud-dotnet/commit/cc62098de3549c846ca6e0eb073a83cebd7a0dfa))
+
 ## Version 3.4.0, released 2023-01-16
 
 ### New features

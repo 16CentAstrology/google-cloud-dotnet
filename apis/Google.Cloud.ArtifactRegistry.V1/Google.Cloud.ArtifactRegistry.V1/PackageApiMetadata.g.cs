@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,9 +17,9 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.ArtifactRegistry.V1
@@ -53,9 +53,12 @@ namespace Google.Cloud.ArtifactRegistry.V1
         {
             yield return AptArtifactReflection.Descriptor;
             yield return ArtifactReflection.Descriptor;
+            yield return AttachmentReflection.Descriptor;
             yield return FileReflection.Descriptor;
+            yield return GenericReflection.Descriptor;
             yield return PackageReflection.Descriptor;
             yield return RepositoryReflection.Descriptor;
+            yield return RuleReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
             yield return SettingsReflection.Descriptor;
             yield return TagReflection.Descriptor;

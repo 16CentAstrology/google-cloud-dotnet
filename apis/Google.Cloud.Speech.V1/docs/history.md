@@ -1,5 +1,31 @@
 # Version history
 
+## Version 3.8.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.7.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.6.0, released 2024-02-29
+
+No API surface changes; just dependency updates.
+
+## Version 3.5.0, released 2023-11-07
+
+### New features
+
+- Support MP3, TranscriptNormalization and SpeakerLabels in STT V1 API ([commit f2cb8d6](https://github.com/googleapis/google-cloud-dotnet/commit/f2cb8d6e29b3fbe498e83e4d5ac38837387cc4d8))
+
+### Documentation improvements
+
+- Fix the resource name format in comment for CreatePhraseSetRequest ([commit af90271](https://github.com/googleapis/google-cloud-dotnet/commit/af90271586531102fb7433bd36df8566f3a6ca01))
+
 ## Version 3.4.0, released 2023-03-06
 
 ### New features

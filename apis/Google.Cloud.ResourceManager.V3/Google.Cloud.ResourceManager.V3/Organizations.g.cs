@@ -53,23 +53,23 @@ namespace Google.Cloud.ResourceManager.V3 {
             "bmRlbGV0ZU9yZ2FuaXphdGlvbk1ldGFkYXRhMuUHCg1Pcmdhbml6YXRpb25z",
             "EqQBCg9HZXRPcmdhbml6YXRpb24SNy5nb29nbGUuY2xvdWQucmVzb3VyY2Vt",
             "YW5hZ2VyLnYzLkdldE9yZ2FuaXphdGlvblJlcXVlc3QaLS5nb29nbGUuY2xv",
-            "dWQucmVzb3VyY2VtYW5hZ2VyLnYzLk9yZ2FuaXphdGlvbiIpgtPkkwIcEhov",
-            "djMve25hbWU9b3JnYW5pemF0aW9ucy8qfdpBBG5hbWUSugEKE1NlYXJjaE9y",
+            "dWQucmVzb3VyY2VtYW5hZ2VyLnYzLk9yZ2FuaXphdGlvbiIp2kEEbmFtZYLT",
+            "5JMCHBIaL3YzL3tuYW1lPW9yZ2FuaXphdGlvbnMvKn0SugEKE1NlYXJjaE9y",
             "Z2FuaXphdGlvbnMSOy5nb29nbGUuY2xvdWQucmVzb3VyY2VtYW5hZ2VyLnYz",
             "LlNlYXJjaE9yZ2FuaXphdGlvbnNSZXF1ZXN0GjwuZ29vZ2xlLmNsb3VkLnJl",
             "c291cmNlbWFuYWdlci52My5TZWFyY2hPcmdhbml6YXRpb25zUmVzcG9uc2Ui",
-            "KILT5JMCGhIYL3YzL29yZ2FuaXphdGlvbnM6c2VhcmNo2kEFcXVlcnkSjAEK",
+            "KNpBBXF1ZXJ5gtPkkwIaEhgvdjMvb3JnYW5pemF0aW9uczpzZWFyY2gSjAEK",
             "DEdldElhbVBvbGljeRIiLmdvb2dsZS5pYW0udjEuR2V0SWFtUG9saWN5UmVx",
-            "dWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IkGC0+STAjAiKy92My97cmVz",
-            "b3VyY2U9b3JnYW5pemF0aW9ucy8qfTpnZXRJYW1Qb2xpY3k6ASraQQhyZXNv",
-            "dXJjZRKMAQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Q",
-            "b2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiQYLT5JMCMCIr",
-            "L3YzL3tyZXNvdXJjZT1vcmdhbml6YXRpb25zLyp9OnNldElhbVBvbGljeToB",
-            "KtpBCHJlc291cmNlEr4BChJUZXN0SWFtUGVybWlzc2lvbnMSKC5nb29nbGUu",
+            "dWVzdBoVLmdvb2dsZS5pYW0udjEuUG9saWN5IkHaQQhyZXNvdXJjZYLT5JMC",
+            "MCIrL3YzL3tyZXNvdXJjZT1vcmdhbml6YXRpb25zLyp9OmdldElhbVBvbGlj",
+            "eToBKhKMAQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Q",
+            "b2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiQdpBCHJlc291",
+            "cmNlgtPkkwIwIisvdjMve3Jlc291cmNlPW9yZ2FuaXphdGlvbnMvKn06c2V0",
+            "SWFtUG9saWN5OgEqEr4BChJUZXN0SWFtUGVybWlzc2lvbnMSKC5nb29nbGUu",
             "aWFtLnYxLlRlc3RJYW1QZXJtaXNzaW9uc1JlcXVlc3QaKS5nb29nbGUuaWFt",
-            "LnYxLlRlc3RJYW1QZXJtaXNzaW9uc1Jlc3BvbnNlIlOC0+STAjYiMS92My97",
-            "cmVzb3VyY2U9b3JnYW5pemF0aW9ucy8qfTp0ZXN0SWFtUGVybWlzc2lvbnM6",
-            "ASraQRRyZXNvdXJjZSxwZXJtaXNzaW9ucxqQAcpBI2Nsb3VkcmVzb3VyY2Vt",
+            "LnYxLlRlc3RJYW1QZXJtaXNzaW9uc1Jlc3BvbnNlIlPaQRRyZXNvdXJjZSxw",
+            "ZXJtaXNzaW9uc4LT5JMCNiIxL3YzL3tyZXNvdXJjZT1vcmdhbml6YXRpb25z",
+            "Lyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKhqQAcpBI2Nsb3VkcmVzb3VyY2Vt",
             "YW5hZ2VyLmdvb2dsZWFwaXMuY29t0kFnaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
             "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVh",
             "cGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLnJlYWQtb25seULzAQojY29t",
@@ -98,6 +98,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// The root node in the resource hierarchy to which a particular entity's
   /// (a company, for example) resources belong.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Organization : pb::IMessage<Organization>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -197,10 +198,24 @@ namespace Google.Cloud.ResourceManager.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DirectoryCustomerId {
-      get { return ownerCase_ == OwnerOneofCase.DirectoryCustomerId ? (string) owner_ : ""; }
+      get { return HasDirectoryCustomerId ? (string) owner_ : ""; }
       set {
         owner_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         ownerCase_ = OwnerOneofCase.DirectoryCustomerId;
+      }
+    }
+    /// <summary>Gets whether the "directory_customer_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDirectoryCustomerId {
+      get { return ownerCase_ == OwnerOneofCase.DirectoryCustomerId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "directory_customer_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDirectoryCustomerId() {
+      if (HasDirectoryCustomerId) {
+        ClearOwner();
       }
     }
 
@@ -268,9 +283,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int EtagFieldNumber = 8;
     private string etag_ = "";
     /// <summary>
-    /// Output only. A checksum computed by the server based on the current value of the
-    /// Organization resource. This may be sent on update and delete requests to
-    /// ensure the client has an up-to-date value before proceeding.
+    /// Output only. A checksum computed by the server based on the current value
+    /// of the Organization resource. This may be sent on update and delete
+    /// requests to ensure the client has an up-to-date value before proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -334,7 +349,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (ownerCase_ == OwnerOneofCase.DirectoryCustomerId) hash ^= DirectoryCustomerId.GetHashCode();
+      if (HasDirectoryCustomerId) hash ^= DirectoryCustomerId.GetHashCode();
       if (State != global::Google.Cloud.ResourceManager.V3.Organization.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -367,7 +382,7 @@ namespace Google.Cloud.ResourceManager.V3 {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (ownerCase_ == OwnerOneofCase.DirectoryCustomerId) {
+      if (HasDirectoryCustomerId) {
         output.WriteRawTag(26);
         output.WriteString(DirectoryCustomerId);
       }
@@ -409,7 +424,7 @@ namespace Google.Cloud.ResourceManager.V3 {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
-      if (ownerCase_ == OwnerOneofCase.DirectoryCustomerId) {
+      if (HasDirectoryCustomerId) {
         output.WriteRawTag(26);
         output.WriteString(DirectoryCustomerId);
       }
@@ -449,7 +464,7 @@ namespace Google.Cloud.ResourceManager.V3 {
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (ownerCase_ == OwnerOneofCase.DirectoryCustomerId) {
+      if (HasDirectoryCustomerId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DirectoryCustomerId);
       }
       if (State != global::Google.Cloud.ResourceManager.V3.Organization.Types.State.Unspecified) {
@@ -664,6 +679,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// The request sent to the `GetOrganization` method. The `name` field is
   /// required. `organization_id` is no longer accepted.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetOrganizationRequest : pb::IMessage<GetOrganizationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -712,9 +728,9 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the Organization to fetch. This is the organization's
-    /// relative path in the API, formatted as "organizations/[organizationId]".
-    /// For example, "organizations/1234".
+    /// Required. The resource name of the Organization to fetch. This is the
+    /// organization's relative path in the API, formatted as
+    /// "organizations/[organizationId]". For example, "organizations/1234".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -861,6 +877,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// The request sent to the `SearchOrganizations` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchOrganizationsRequest : pb::IMessage<SearchOrganizationsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -912,7 +929,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     private int pageSize_;
     /// <summary>
     /// Optional. The maximum number of organizations to return in the response.
-    /// If unspecified, server picks an appropriate default.
+    /// The server can return fewer organizations than requested. If unspecified,
+    /// server picks an appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -927,8 +945,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A pagination token returned from a previous call to `SearchOrganizations`
-    /// that indicates from where listing should continue.
+    /// Optional. A pagination token returned from a previous call to
+    /// `SearchOrganizations` that indicates from where listing should continue.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -943,8 +961,8 @@ namespace Google.Cloud.ResourceManager.V3 {
     public const int QueryFieldNumber = 3;
     private string query_ = "";
     /// <summary>
-    /// Optional. An optional query string used to filter the Organizations to return in
-    /// the response. Query rules are case-insensitive.
+    /// Optional. An optional query string used to filter the Organizations to
+    /// return in the response. Query rules are case-insensitive.
     ///
     /// ```
     /// | Field            | Description                                |
@@ -1155,6 +1173,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// <summary>
   /// The response returned from the `SearchOrganizations` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchOrganizationsResponse : pb::IMessage<SearchOrganizationsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1385,6 +1404,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// A status object which is used as the `metadata` field for the operation
   /// returned by DeleteOrganization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteOrganizationMetadata : pb::IMessage<DeleteOrganizationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1541,6 +1561,7 @@ namespace Google.Cloud.ResourceManager.V3 {
   /// A status object which is used as the `metadata` field for the Operation
   /// returned by UndeleteOrganization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UndeleteOrganizationMetadata : pb::IMessage<UndeleteOrganizationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

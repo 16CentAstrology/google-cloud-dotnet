@@ -53,39 +53,39 @@ namespace Google.Cloud.Retail.V2 {
             "bW9kZWwYASABKAkiIgoRVHVuZU1vZGVsTWV0YWRhdGESDQoFbW9kZWwYASAB",
             "KAkiEwoRVHVuZU1vZGVsUmVzcG9uc2UyxQwKDE1vZGVsU2VydmljZRL7AQoL",
             "Q3JlYXRlTW9kZWwSKi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkNyZWF0ZU1v",
-            "ZGVsUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ioAGC",
-            "0+STAj4iNS92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0",
-            "YWxvZ3MvKn0vbW9kZWxzOgVtb2RlbNpBDHBhcmVudCxtb2RlbMpBSgocZ29v",
-            "Z2xlLmNsb3VkLnJldGFpbC52Mi5Nb2RlbBIqZ29vZ2xlLmNsb3VkLnJldGFp",
-            "bC52Mi5DcmVhdGVNb2RlbE1ldGFkYXRhEpgBCghHZXRNb2RlbBInLmdvb2ds",
+            "ZGVsUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ioAHK",
+            "QUoKHGdvb2dsZS5jbG91ZC5yZXRhaWwudjIuTW9kZWwSKmdvb2dsZS5jbG91",
+            "ZC5yZXRhaWwudjIuQ3JlYXRlTW9kZWxNZXRhZGF0YdpBDHBhcmVudCxtb2Rl",
+            "bILT5JMCPiI1L3YyL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9j",
+            "YXRhbG9ncy8qfS9tb2RlbHM6BW1vZGVsEpgBCghHZXRNb2RlbBInLmdvb2ds",
             "ZS5jbG91ZC5yZXRhaWwudjIuR2V0TW9kZWxSZXF1ZXN0Gh0uZ29vZ2xlLmNs",
-            "b3VkLnJldGFpbC52Mi5Nb2RlbCJEgtPkkwI3EjUvdjIve25hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL21vZGVscy8qfdpBBG5hbWUS",
+            "b3VkLnJldGFpbC52Mi5Nb2RlbCJE2kEEbmFtZYLT5JMCNxI1L3YyL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9tb2RlbHMvKn0S",
             "pQEKClBhdXNlTW9kZWwSKS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlBhdXNl",
             "TW9kZWxSZXF1ZXN0Gh0uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Nb2RlbCJN",
-            "gtPkkwJAIjsvdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRh",
-            "bG9ncy8qL21vZGVscy8qfTpwYXVzZToBKtpBBG5hbWUSqAEKC1Jlc3VtZU1v",
+            "2kEEbmFtZYLT5JMCQCI7L3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovY2F0YWxvZ3MvKi9tb2RlbHMvKn06cGF1c2U6ASoSqAEKC1Jlc3VtZU1v",
             "ZGVsEiouZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5SZXN1bWVNb2RlbFJlcXVl",
-            "c3QaHS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLk1vZGVsIk6C0+STAkEiPC92",
-            "Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovbW9k",
-            "ZWxzLyp9OnJlc3VtZToBKtpBBG5hbWUSlwEKC0RlbGV0ZU1vZGVsEiouZ29v",
+            "c3QaHS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLk1vZGVsIk7aQQRuYW1lgtPk",
+            "kwJBIjwvdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9n",
+            "cy8qL21vZGVscy8qfTpyZXN1bWU6ASoSlwEKC0RlbGV0ZU1vZGVsEiouZ29v",
             "Z2xlLmNsb3VkLnJldGFpbC52Mi5EZWxldGVNb2RlbFJlcXVlc3QaFi5nb29n",
-            "bGUucHJvdG9idWYuRW1wdHkiRILT5JMCNyo1L3YyL3tuYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9tb2RlbHMvKn3aQQRuYW1lEqsB",
+            "bGUucHJvdG9idWYuRW1wdHkiRNpBBG5hbWWC0+STAjcqNS92Mi97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovbW9kZWxzLyp9EqsB",
             "CgpMaXN0TW9kZWxzEikuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5MaXN0TW9k",
             "ZWxzUmVxdWVzdBoqLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuTGlzdE1vZGVs",
-            "c1Jlc3BvbnNlIkaC0+STAjcSNS92Mi97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovY2F0YWxvZ3MvKn0vbW9kZWxz2kEGcGFyZW50ErgBCgtVcGRh",
+            "c1Jlc3BvbnNlIkbaQQZwYXJlbnSC0+STAjcSNS92Mi97cGFyZW50PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKn0vbW9kZWxzErgBCgtVcGRh",
             "dGVNb2RlbBIqLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuVXBkYXRlTW9kZWxS",
-            "ZXF1ZXN0Gh0uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Nb2RlbCJegtPkkwJE",
-            "MjsvdjIve21vZGVsLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRh",
-            "bG9ncy8qL21vZGVscy8qfToFbW9kZWzaQRFtb2RlbCx1cGRhdGVfbWFzaxL6",
+            "ZXF1ZXN0Gh0uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Nb2RlbCJe2kERbW9k",
+            "ZWwsdXBkYXRlX21hc2uC0+STAkQyOy92Mi97bW9kZWwubmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovbW9kZWxzLyp9OgVtb2RlbBL6",
             "AQoJVHVuZU1vZGVsEiguZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5UdW5lTW9k",
-            "ZWxSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKjAYLT",
-            "5JMCPyI6L3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxv",
-            "Z3MvKi9tb2RlbHMvKn06dHVuZToBKtpBBG5hbWXKQVQKKGdvb2dsZS5jbG91",
-            "ZC5yZXRhaWwudjIuVHVuZU1vZGVsUmVzcG9uc2USKGdvb2dsZS5jbG91ZC5y",
-            "ZXRhaWwudjIuVHVuZU1vZGVsTWV0YWRhdGEaScpBFXJldGFpbC5nb29nbGVh",
+            "ZWxSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKjAcpB",
+            "VAooZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5UdW5lTW9kZWxSZXNwb25zZRIo",
+            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5UdW5lTW9kZWxNZXRhZGF0YdpBBG5h",
+            "bWWC0+STAj8iOi92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nh",
+            "dGFsb2dzLyovbW9kZWxzLyp9OnR1bmU6ASoaScpBFXJldGFpbC5nb29nbGVh",
             "cGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
             "dWQtcGxhdGZvcm1CvAEKGmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYyQhFN",
             "b2RlbFNlcnZpY2VQcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL3JldGFp",
@@ -116,6 +116,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request for creating a model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateModelRequest : pb::IMessage<CreateModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -403,6 +404,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request for updating an existing model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateModelRequest : pb::IMessage<UpdateModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -657,6 +659,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request for getting a model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetModelRequest : pb::IMessage<GetModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -854,6 +857,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request for pausing training of a model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PauseModelRequest : pb::IMessage<PauseModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1051,6 +1055,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request for resuming training of a model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResumeModelRequest : pb::IMessage<ResumeModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1248,6 +1253,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request for listing models associated with a resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListModelsRequest : pb::IMessage<ListModelsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1527,6 +1533,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Request for deleting a model.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteModelRequest : pb::IMessage<DeleteModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1724,6 +1731,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Response to a ListModelRequest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListModelsResponse : pb::IMessage<ListModelsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1949,6 +1957,7 @@ namespace Google.Cloud.Retail.V2 {
   /// Request to manually start a tuning process now (instead of waiting for
   /// the periodically scheduled tuning to happen).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TuneModelRequest : pb::IMessage<TuneModelRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2146,6 +2155,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Metadata associated with a create operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateModelMetadata : pb::IMessage<CreateModelMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2343,6 +2353,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Metadata associated with a tune operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TuneModelMetadata : pb::IMessage<TuneModelMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2540,6 +2551,7 @@ namespace Google.Cloud.Retail.V2 {
   /// <summary>
   /// Response associated with a tune operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TuneModelResponse : pb::IMessage<TuneModelResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

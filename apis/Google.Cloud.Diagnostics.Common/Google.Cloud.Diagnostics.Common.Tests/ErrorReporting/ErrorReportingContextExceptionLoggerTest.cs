@@ -1,11 +1,11 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
-// 
+// Copyright 2017 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -13,10 +13,10 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Diagnostics.Common.Tests.Trace;
 using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
-using Moq;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -43,11 +43,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         public ErrorReportingContextExceptionLoggerTest()
         {
-            var tracerMock = new Mock<IManagedTracer>(MockBehavior.Strict);
-
-            tracerMock.Setup(t => t.GetCurrentTraceId()).Returns(_traceId);
-            tracerMock.Setup(t => t.GetCurrentSpanId()).Returns(_spanId);
-            ContextTracerManager.SetCurrentTracer(tracerMock.Object);
+            var tracer = new FakeManagedTracer(_traceId, _spanId);
+            ContextTracerManager.SetCurrentTracer(tracer);
         }
 
         [Fact]
@@ -97,7 +94,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var entries = consumer.Entries.ToList();
             if (entries.Count != 1)
             {
-                Assert.True(false, $"Expected single matching entry. Received:\n{string.Join("\n", entries)}");
+                Assert.Fail($"Expected single matching entry. Received:\n{string.Join("\n", entries)}");
             }
             var entry = entries[0];
             var json = entry.JsonPayload?.Fields;

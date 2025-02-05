@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,9 +18,9 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
+using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
-using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
 namespace Google.Cloud.AlloyDb.V1Beta
@@ -67,6 +67,9 @@ namespace Google.Cloud.AlloyDb.V1Beta
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return CsqlResourcesReflection.Descriptor;
+            yield return DataModelReflection.Descriptor;
+            yield return GeminiReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;
             yield return ServiceReflection.Descriptor;
             yield return gciv::IamPolicyReflection.Descriptor;

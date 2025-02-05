@@ -1,11 +1,11 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
-// 
+// Copyright 2017 Google Inc. All Rights Reserved.
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,6 +16,7 @@ using Google.Apis.Http;
 using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
@@ -73,7 +74,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 ["lab6"] = null,
             };
 
-            Assert.Equal(expectedResult, result);
+            Assert.Collection(result, DictionaryElementInspectors(expectedResult));
 
             var finalLabels = client.GetBucket(bucketName).Labels;
             var expectedFinalLabels = new Dictionary<string, string>
@@ -85,6 +86,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             };
 
             Assert.Equal(expectedFinalLabels, finalLabels);
+
+            Action<KeyValuePair<string, string>>[] DictionaryElementInspectors(Dictionary<string, string> expectedElements) =>
+                expectedElements.Select<KeyValuePair<string, string>, Action<KeyValuePair<string, string>>>(expected =>
+                    (actual) => Assert.Equal(expected, actual)).ToArray();
         }
 
         [Theory]
@@ -288,10 +293,18 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         private static TException AssertThrowsMaybeAsync<TException>(bool runAsync, Action sync, Func<Task> async)
-            where TException : Exception =>
-            runAsync
+            where TException : Exception
+        {
+            TException exception = runAsync
                 ? Task.Run(() => Assert.ThrowsAsync<TException>(async).Result).Result
                 : Assert.Throws<TException>(sync);
+
+            // Sleep, as everything in this test modifies buckets, and we can't do that very frequently.
+            // Even though the attempted modification failed, it reached the server, and it counts towards quota.
+            StorageFixture.SleepAfterBucketCreateDelete();
+
+            return exception;
+        }
 
         private class PatchFoilingInterceptor : IHttpExecuteInterceptor
         {

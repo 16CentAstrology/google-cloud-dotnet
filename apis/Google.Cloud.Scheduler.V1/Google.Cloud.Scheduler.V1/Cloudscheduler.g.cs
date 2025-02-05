@@ -51,32 +51,32 @@ namespace Google.Cloud.Scheduler.V1 {
             "CUIp4EEC+kEjCiFjbG91ZHNjaGVkdWxlci5nb29nbGVhcGlzLmNvbS9Kb2Iy",
             "swoKDkNsb3VkU2NoZWR1bGVyEp4BCghMaXN0Sm9icxIqLmdvb2dsZS5jbG91",
             "ZC5zY2hlZHVsZXIudjEuTGlzdEpvYnNSZXF1ZXN0GisuZ29vZ2xlLmNsb3Vk",
-            "LnNjaGVkdWxlci52MS5MaXN0Sm9ic1Jlc3BvbnNlIjmC0+STAioSKC92MS97",
-            "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2pvYnPaQQZwYXJlbnQS",
+            "LnNjaGVkdWxlci52MS5MaXN0Sm9ic1Jlc3BvbnNlIjnaQQZwYXJlbnSC0+ST",
+            "AioSKC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2pvYnMS",
             "iwEKBkdldEpvYhIoLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuR2V0Sm9i",
-            "UmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuSm9iIjeC0+ST",
-            "AioSKC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKn3a",
-            "QQRuYW1lEpwBCglDcmVhdGVKb2ISKy5nb29nbGUuY2xvdWQuc2NoZWR1bGVy",
+            "UmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuSm9iIjfaQQRu",
+            "YW1lgtPkkwIqEigvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9q",
+            "b2JzLyp9EpwBCglDcmVhdGVKb2ISKy5nb29nbGUuY2xvdWQuc2NoZWR1bGVy",
             "LnYxLkNyZWF0ZUpvYlJlcXVlc3QaHi5nb29nbGUuY2xvdWQuc2NoZWR1bGVy",
-            "LnYxLkpvYiJCgtPkkwIvIigvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qfS9qb2JzOgNqb2LaQQpwYXJlbnQsam9iEqUBCglVcGRhdGVKb2IS",
+            "LnYxLkpvYiJC2kEKcGFyZW50LGpvYoLT5JMCLyIoL3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKn0vam9iczoDam9iEqUBCglVcGRhdGVKb2IS",
             "Ky5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLlVwZGF0ZUpvYlJlcXVlc3Qa",
-            "Hi5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLkpvYiJLgtPkkwIzMiwvdjEv",
-            "e2pvYi5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfToDam9i",
-            "2kEPam9iLHVwZGF0ZV9tYXNrEokBCglEZWxldGVKb2ISKy5nb29nbGUuY2xv",
+            "Hi5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLkpvYiJL2kEPam9iLHVwZGF0",
+            "ZV9tYXNrgtPkkwIzMiwvdjEve2pvYi5uYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovam9icy8qfToDam9iEokBCglEZWxldGVKb2ISKy5nb29nbGUuY2xv",
             "dWQuc2NoZWR1bGVyLnYxLkRlbGV0ZUpvYlJlcXVlc3QaFi5nb29nbGUucHJv",
-            "dG9idWYuRW1wdHkiN4LT5JMCKiooL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovam9icy8qfdpBBG5hbWUSmAEKCFBhdXNlSm9iEiouZ29vZ2xl",
+            "dG9idWYuRW1wdHkiN9pBBG5hbWWC0+STAioqKC92MS97bmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2pvYnMvKn0SmAEKCFBhdXNlSm9iEiouZ29vZ2xl",
             "LmNsb3VkLnNjaGVkdWxlci52MS5QYXVzZUpvYlJlcXVlc3QaHi5nb29nbGUu",
-            "Y2xvdWQuc2NoZWR1bGVyLnYxLkpvYiJAgtPkkwIzIi4vdjEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyp9OnBhdXNlOgEq2kEEbmFtZRKb",
+            "Y2xvdWQuc2NoZWR1bGVyLnYxLkpvYiJA2kEEbmFtZYLT5JMCMyIuL3YxL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTpwYXVzZToBKhKb",
             "AQoJUmVzdW1lSm9iEisuZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MS5SZXN1",
             "bWVKb2JSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLnNjaGVkdWxlci52MS5Kb2Ii",
-            "QYLT5JMCNCIvL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovam9i",
-            "cy8qfTpyZXN1bWU6ASraQQRuYW1lEpIBCgZSdW5Kb2ISKC5nb29nbGUuY2xv",
+            "QdpBBG5hbWWC0+STAjQiLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2pvYnMvKn06cmVzdW1lOgEqEpIBCgZSdW5Kb2ISKC5nb29nbGUuY2xv",
             "dWQuc2NoZWR1bGVyLnYxLlJ1bkpvYlJlcXVlc3QaHi5nb29nbGUuY2xvdWQu",
-            "c2NoZWR1bGVyLnYxLkpvYiI+gtPkkwIxIiwvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKi9qb2JzLyp9OnJ1bjoBKtpBBG5hbWUaUcpBHWNsb3Vk",
+            "c2NoZWR1bGVyLnYxLkpvYiI+2kEEbmFtZYLT5JMCMSIsL3YxL3tuYW1lPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfTpydW46ASoaUcpBHWNsb3Vk",
             "c2NoZWR1bGVyLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
             "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJ6Ch1jb20uZ29vZ2xlLmNs",
             "b3VkLnNjaGVkdWxlci52MUIOU2NoZWR1bGVyUHJvdG9QAVo7Y2xvdWQuZ29v",
@@ -104,6 +104,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for listing jobs using
   /// [ListJobs][google.cloud.scheduler.v1.CloudScheduler.ListJobs].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsRequest : pb::IMessage<ListJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -195,11 +196,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// request the next page of results, page_token must be the value of
     /// [next_page_token][google.cloud.scheduler.v1.ListJobsResponse.next_page_token]
     /// returned from the previous call to
-    /// [ListJobs][google.cloud.scheduler.v1.CloudScheduler.ListJobs]. It is an
-    /// error to switch the value of
-    /// [filter][google.cloud.scheduler.v1.ListJobsRequest.filter] or
-    /// [order_by][google.cloud.scheduler.v1.ListJobsRequest.order_by] while
-    /// iterating through pages.
+    /// [ListJobs][google.cloud.scheduler.v1.CloudScheduler.ListJobs].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -395,6 +392,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Response message for listing jobs using
   /// [ListJobs][google.cloud.scheduler.v1.CloudScheduler.ListJobs].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsResponse : pb::IMessage<ListJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -627,6 +625,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for
   /// [GetJob][google.cloud.scheduler.v1.CloudScheduler.GetJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetJobRequest : pb::IMessage<GetJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -824,6 +823,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for
   /// [CreateJob][google.cloud.scheduler.v1.CloudScheduler.CreateJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateJobRequest : pb::IMessage<CreateJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1075,6 +1075,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for
   /// [UpdateJob][google.cloud.scheduler.v1.CloudScheduler.UpdateJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateJobRequest : pb::IMessage<UpdateJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1333,6 +1334,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for deleting a job using
   /// [DeleteJob][google.cloud.scheduler.v1.CloudScheduler.DeleteJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteJobRequest : pb::IMessage<DeleteJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1530,6 +1532,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for
   /// [PauseJob][google.cloud.scheduler.v1.CloudScheduler.PauseJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PauseJobRequest : pb::IMessage<PauseJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1727,6 +1730,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for
   /// [ResumeJob][google.cloud.scheduler.v1.CloudScheduler.ResumeJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResumeJobRequest : pb::IMessage<ResumeJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1924,6 +1928,7 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Request message for forcing a job to run now using
   /// [RunJob][google.cloud.scheduler.v1.CloudScheduler.RunJob].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RunJobRequest : pb::IMessage<RunJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

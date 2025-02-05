@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,6 @@
 
 using Google.Cloud.Tools.Common;
 using System;
-using System.IO;
 
 namespace Google.Cloud.Tools.ReleaseManager
 {
@@ -25,42 +24,45 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             string id = args[0];
             string version = args[1];
-            InternalExecute(id, version, quiet: false);
+            return InternalExecute(id, version, quiet: false);
         }
 
-        internal void InternalExecute(string id, string version, bool quiet)
+        internal int InternalExecute(string id, string version, bool quiet)
         {
-            var catalog = ApiCatalog.Load();
+            var nonSourceGenerator = new NonSourceGenerator(RootLayout);
+            var catalog = nonSourceGenerator.ApiCatalog;
             var api = catalog[id];
+
+            if (api.BlockRelease is string blockRelease)
+            {
+                throw new UserErrorException($"Changing the version of {api.Id} is blocked: {blockRelease}");
+            }
 
             string oldVersion = api.Version;
             api.Version = version;
             if (api.StructuredVersion.Patch == 0)
             {
-                GenerateProjectsCommand.UpdateDependencies(catalog, api);
+                UpdateDependenciesCommand.UpdateDependencies(catalog, api);
             }
-            var layout = DirectoryLayout.ForApi(id);
-            var apiNames = catalog.CreateIdHashSet();
-            // This will still write output, even if "quiet" is true, but that's probably
-            // okay for batch releasing.
-            GenerateProjectsCommand.GenerateMetadataFile(layout.SourceDirectory, api);
-            GenerateProjectsCommand.GenerateProjects(layout.SourceDirectory, api, apiNames);
-            GenerateProjectsCommand.RewriteReadme(catalog);
+
+            nonSourceGenerator.GenerateApiFiles(api);
+            nonSourceGenerator.GenerateNonApiFiles();
 
             // Update the parsed JObject associated with the ID, and write it back to apis.json.
             api.Json["version"] = version;
             string formatted = catalog.FormatJson();
-            File.WriteAllText(ApiCatalog.CatalogPath, formatted);
+            catalog.Save(nonSourceGenerator.RootLayout);
             if (!quiet)
             {
                 Console.WriteLine("Updated apis.json");
                 Console.WriteLine();
                 Console.WriteLine(new ApiVersionPair(id, oldVersion, version));
             }
+            return 0;
         }
     }
 }

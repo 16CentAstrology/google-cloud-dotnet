@@ -1,5 +1,33 @@
 # Version history
 
+## Version 2.6.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.5.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.4.0, released 2024-02-27
+
+### New features
+
+- Add `start_time` to Profile proto ([commit 4e7680a](https://github.com/googleapis/google-cloud-dotnet/commit/4e7680a120658891eddb812e47e739e239eb524d))
+
+### Documentation improvements
+
+- Update documentation to add guidance around use of ProfilerService API methods ([commit 4e7680a](https://github.com/googleapis/google-cloud-dotnet/commit/4e7680a120658891eddb812e47e739e239eb524d))
+
+## Version 2.3.0, released 2024-01-08
+
+### New features
+
+- Add `ListProfiles` RPC to `ExportService` ([commit 720d004](https://github.com/googleapis/google-cloud-dotnet/commit/720d004863acc47395697f6bfcb54063f4dd529f))
+
 ## Version 2.2.0, released 2023-03-20
 
 ### Bug fixes

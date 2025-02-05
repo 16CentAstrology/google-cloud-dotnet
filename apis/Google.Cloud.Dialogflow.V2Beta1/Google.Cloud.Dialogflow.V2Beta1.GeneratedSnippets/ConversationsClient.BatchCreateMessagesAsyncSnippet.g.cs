@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dialogflow_v2beta1_generated_Conversations_BatchCreateMessages_async_flattened]
     using Google.Cloud.Dialogflow.V2Beta1;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedConversationsClientSnippets
@@ -36,8 +37,12 @@ namespace Google.Cloud.Dialogflow.V2Beta1.Snippets
             ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/conversations/[CONVERSATION]";
+            IEnumerable<CreateMessageRequest> requests = new CreateMessageRequest[]
+            {
+                new CreateMessageRequest(),
+            };
             // Make the request
-            BatchCreateMessagesResponse response = await conversationsClient.BatchCreateMessagesAsync(parent);
+            BatchCreateMessagesResponse response = await conversationsClient.BatchCreateMessagesAsync(parent, requests);
         }
     }
     // [END dialogflow_v2beta1_generated_Conversations_BatchCreateMessages_async_flattened]

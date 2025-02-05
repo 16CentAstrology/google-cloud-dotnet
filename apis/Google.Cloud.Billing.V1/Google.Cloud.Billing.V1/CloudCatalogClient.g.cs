@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,16 +17,16 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Billing.V1
 {
@@ -118,14 +118,14 @@ namespace Google.Cloud.Billing.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return CloudCatalogClient.Create(callInvoker, Settings, Logger);
+            return CloudCatalogClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<CloudCatalogClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return CloudCatalogClient.Create(callInvoker, Settings, Logger);
+            return CloudCatalogClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -253,12 +253,19 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest { };
+            if (pageToken != null)
             {
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all public cloud services.
@@ -273,12 +280,19 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest { };
+            if (pageToken != null)
             {
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all publicly available SKUs for a given cloud service.
@@ -303,7 +317,7 @@ namespace Google.Cloud.Billing.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the service.
-        /// Example: "services/DA34-426B-A397"
+        /// Example: "services/6F81-5844-456A"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -315,20 +329,29 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Sku"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSkusResponse, Sku> ListSkus(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkus(new ListSkusRequest
+        public virtual gax::PagedEnumerable<ListSkusResponse, Sku> ListSkus(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkusRequest request = new ListSkusRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkus(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all publicly available SKUs for a given cloud service.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the service.
-        /// Example: "services/DA34-426B-A397"
+        /// Example: "services/6F81-5844-456A"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -340,20 +363,29 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Sku"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSkusResponse, Sku> ListSkusAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkusAsync(new ListSkusRequest
+        public virtual gax::PagedAsyncEnumerable<ListSkusResponse, Sku> ListSkusAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkusRequest request = new ListSkusRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkusAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all publicly available SKUs for a given cloud service.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the service.
-        /// Example: "services/DA34-426B-A397"
+        /// Example: "services/6F81-5844-456A"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -365,20 +397,29 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Sku"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSkusResponse, Sku> ListSkus(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkus(new ListSkusRequest
+        public virtual gax::PagedEnumerable<ListSkusResponse, Sku> ListSkus(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkusRequest request = new ListSkusRequest
             {
                 ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkus(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all publicly available SKUs for a given cloud service.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the service.
-        /// Example: "services/DA34-426B-A397"
+        /// Example: "services/6F81-5844-456A"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -390,13 +431,22 @@ namespace Google.Cloud.Billing.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Sku"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSkusResponse, Sku> ListSkusAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSkusAsync(new ListSkusRequest
+        public virtual gax::PagedAsyncEnumerable<ListSkusResponse, Sku> ListSkusAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSkusRequest request = new ListSkusRequest
             {
                 ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSkusAsync(request, callSettings);
+        }
     }
 
     /// <summary>CloudCatalog client wrapper implementation, for convenient use.</summary>
@@ -421,7 +471,11 @@ namespace Google.Cloud.Billing.V1
         {
             GrpcClient = grpcClient;
             CloudCatalogSettings effectiveSettings = settings ?? CloudCatalogSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>("ListServices", grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings);
             Modify_ApiCall(ref _callListServices);
             Modify_ListServicesApiCall(ref _callListServices);

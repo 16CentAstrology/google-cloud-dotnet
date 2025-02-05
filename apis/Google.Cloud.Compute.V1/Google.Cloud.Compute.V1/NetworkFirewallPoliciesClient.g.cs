@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,16 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -51,6 +52,7 @@ namespace Google.Cloud.Compute.V1
             AddAssociationOperationsSettings = existing.AddAssociationOperationsSettings.Clone();
             AddRuleSettings = existing.AddRuleSettings;
             AddRuleOperationsSettings = existing.AddRuleOperationsSettings.Clone();
+            AggregatedListSettings = existing.AggregatedListSettings;
             CloneRulesSettings = existing.CloneRulesSettings;
             CloneRulesOperationsSettings = existing.CloneRulesOperationsSettings.Clone();
             DeleteSettings = existing.DeleteSettings;
@@ -137,6 +139,28 @@ namespace Google.Cloud.Compute.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkFirewallPoliciesClient.AggregatedList</c> and <c>NetworkFirewallPoliciesClient.AggregatedListAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AggregatedListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -525,14 +549,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return NetworkFirewallPoliciesClient.Create(callInvoker, Settings, Logger);
+            return NetworkFirewallPoliciesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<NetworkFirewallPoliciesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return NetworkFirewallPoliciesClient.Create(callInvoker, Settings, Logger);
+            return NetworkFirewallPoliciesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -855,6 +879,94 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> AddRuleAsync(string project, string firewallPolicy, FirewallPolicyRule firewallPolicyRuleResource, st::CancellationToken cancellationToken) =>
             AddRuleAsync(project, firewallPolicy, firewallPolicyRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves an aggregated list of network firewall policies, listing network firewall policies from all applicable scopes (global and regional) and grouping the results per scope. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NetworkFirewallPolicyAggregatedList, scg::KeyValuePair<string, FirewallPoliciesScopedList>> AggregatedList(AggregatedListNetworkFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves an aggregated list of network firewall policies, listing network firewall policies from all applicable scopes (global and regional) and grouping the results per scope. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<NetworkFirewallPolicyAggregatedList, scg::KeyValuePair<string, FirewallPoliciesScopedList>> AggregatedListAsync(AggregatedListNetworkFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves an aggregated list of network firewall policies, listing network firewall policies from all applicable scopes (global and regional) and grouping the results per scope. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<NetworkFirewallPolicyAggregatedList, scg::KeyValuePair<string, FirewallPoliciesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListNetworkFirewallPoliciesRequest request = new AggregatedListNetworkFirewallPoliciesRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedList(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves an aggregated list of network firewall policies, listing network firewall policies from all applicable scopes (global and regional) and grouping the results per scope. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<NetworkFirewallPolicyAggregatedList, scg::KeyValuePair<string, FirewallPoliciesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListNetworkFirewallPoliciesRequest request = new AggregatedListNetworkFirewallPoliciesRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Copies rules to the specified firewall policy.
@@ -1507,13 +1619,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="FirewallPolicy"/> resources.</returns>
-        public virtual gax::PagedEnumerable<FirewallPolicyList, FirewallPolicy> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListNetworkFirewallPoliciesRequest
+        public virtual gax::PagedEnumerable<FirewallPolicyList, FirewallPolicy> List(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkFirewallPoliciesRequest request = new ListNetworkFirewallPoliciesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all the policies that have been configured for the specified project.
@@ -1531,13 +1652,22 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="FirewallPolicy"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<FirewallPolicyList, FirewallPolicy> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListNetworkFirewallPoliciesRequest
+        public virtual gax::PagedAsyncEnumerable<FirewallPolicyList, FirewallPolicy> ListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNetworkFirewallPoliciesRequest request = new ListNetworkFirewallPoliciesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Patches the specified policy with the data included in the request.
@@ -2161,6 +2291,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<AddRuleNetworkFirewallPolicyRequest, Operation> _callAddRule;
 
+        private readonly gaxgrpc::ApiCall<AggregatedListNetworkFirewallPoliciesRequest, NetworkFirewallPolicyAggregatedList> _callAggregatedList;
+
         private readonly gaxgrpc::ApiCall<CloneRulesNetworkFirewallPolicyRequest, Operation> _callCloneRules;
 
         private readonly gaxgrpc::ApiCall<DeleteNetworkFirewallPolicyRequest, Operation> _callDelete;
@@ -2202,7 +2334,11 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             NetworkFirewallPoliciesSettings effectiveSettings = settings ?? NetworkFirewallPoliciesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             AddAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddAssociationOperationsSettings, logger);
             AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddRuleOperationsSettings, logger);
             CloneRulesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.CloneRulesOperationsSettings, logger);
@@ -2218,6 +2354,9 @@ namespace Google.Cloud.Compute.V1
             _callAddRule = clientHelper.BuildApiCall<AddRuleNetworkFirewallPolicyRequest, Operation>("AddRule", grpcClient.AddRuleAsync, grpcClient.AddRule, effectiveSettings.AddRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callAddRule);
             Modify_AddRuleApiCall(ref _callAddRule);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListNetworkFirewallPoliciesRequest, NetworkFirewallPolicyAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            Modify_ApiCall(ref _callAggregatedList);
+            Modify_AggregatedListApiCall(ref _callAggregatedList);
             _callCloneRules = clientHelper.BuildApiCall<CloneRulesNetworkFirewallPolicyRequest, Operation>("CloneRules", grpcClient.CloneRulesAsync, grpcClient.CloneRules, effectiveSettings.CloneRulesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callCloneRules);
             Modify_CloneRulesApiCall(ref _callCloneRules);
@@ -2269,6 +2408,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_AddRuleApiCall(ref gaxgrpc::ApiCall<AddRuleNetworkFirewallPolicyRequest, Operation> call);
 
+        partial void Modify_AggregatedListApiCall(ref gaxgrpc::ApiCall<AggregatedListNetworkFirewallPoliciesRequest, NetworkFirewallPolicyAggregatedList> call);
+
         partial void Modify_CloneRulesApiCall(ref gaxgrpc::ApiCall<CloneRulesNetworkFirewallPolicyRequest, Operation> call);
 
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteNetworkFirewallPolicyRequest, Operation> call);
@@ -2305,6 +2446,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_AddAssociationNetworkFirewallPolicyRequest(ref AddAssociationNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AddRuleNetworkFirewallPolicyRequest(ref AddRuleNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AggregatedListNetworkFirewallPoliciesRequest(ref AggregatedListNetworkFirewallPoliciesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CloneRulesNetworkFirewallPolicyRequest(ref CloneRulesNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2398,6 +2541,32 @@ namespace Google.Cloud.Compute.V1
             GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Retrieves an aggregated list of network firewall policies, listing network firewall policies from all applicable scopes (global and regional) and grouping the results per scope. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public override gax::PagedEnumerable<NetworkFirewallPolicyAggregatedList, scg::KeyValuePair<string, FirewallPoliciesScopedList>> AggregatedList(AggregatedListNetworkFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListNetworkFirewallPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListNetworkFirewallPoliciesRequest, NetworkFirewallPolicyAggregatedList, scg::KeyValuePair<string, FirewallPoliciesScopedList>>(_callAggregatedList, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves an aggregated list of network firewall policies, listing network firewall policies from all applicable scopes (global and regional) and grouping the results per scope. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<NetworkFirewallPolicyAggregatedList, scg::KeyValuePair<string, FirewallPoliciesScopedList>> AggregatedListAsync(AggregatedListNetworkFirewallPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListNetworkFirewallPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListNetworkFirewallPoliciesRequest, NetworkFirewallPolicyAggregatedList, scg::KeyValuePair<string, FirewallPoliciesScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>CloneRules</c>.</summary>
@@ -2800,6 +2969,16 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class AggregatedListNetworkFirewallPoliciesRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
     public partial class ListNetworkFirewallPoliciesRequest : gaxgrpc::IPageRequest
     {
         /// <inheritdoc/>
@@ -2808,6 +2987,15 @@ namespace Google.Cloud.Compute.V1
             get => checked((int)MaxResults);
             set => MaxResults = checked((uint)value);
         }
+    }
+
+    public partial class NetworkFirewallPolicyAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, FirewallPoliciesScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, FirewallPoliciesScopedList>> GetEnumerator() =>
+            Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public static partial class NetworkFirewallPolicies

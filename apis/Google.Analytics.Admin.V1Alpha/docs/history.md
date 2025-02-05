@@ -1,5 +1,163 @@
 # Version history
 
+## Version 2.0.0-alpha21, released 2025-02-03
+
+### Bug fixes
+
+- Mark `event_data_retention` field in `DataRetentionSettings` as `REQUIRED` ([commit 22ae76a](https://github.com/googleapis/google-cloud-dotnet/commit/22ae76a162d95a8aee08c1b21a5540f335b2da53))
+
+### New features
+
+- Add `user_data_retention` field to `DataRetentionSettings` and mark as `REQUIRED` ([commit 22ae76a](https://github.com/googleapis/google-cloud-dotnet/commit/22ae76a162d95a8aee08c1b21a5540f335b2da53))
+
+### Documentation improvements
+
+- Replace "GA4" with "Google Analytics" or "GA" in all comments ([commit 22ae76a](https://github.com/googleapis/google-cloud-dotnet/commit/22ae76a162d95a8aee08c1b21a5540f335b2da53))
+
+## Version 2.0.0-alpha20, released 2024-08-05
+
+### Bug fixes
+
+- **BREAKING CHANGE** Rename custom method `CreateSubpropertyRequest` to `ProvisionSubpropertyRequest` ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+
+### New features
+
+- Add `GetKeyEvent`, `CreateKeyEvent`, `ListKeyEvents`, `UpdateKeyEvent`, and `DeleteKeyEvent` methods ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Mark `GetConversionEvent`, `CreateConversionEvent`, `ListConversionEvents`, `UpdateConversionEvent`, and `DeleteConversionEvent` methods as deprecated ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add the `create_time` field to the `Audience` resource ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add the `primary` field to the `ChannelGroup` resource ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add `CreateBigQueryLink`, `UpdateBigQueryLink`, and `DeleteBigQueryLink` methods ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add the `dataset_location` field to the `BigQueryLink` resource ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add the `BIGQUERY_LINK` option to the `ChangeHistoryResourceType` enum ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add the `gmp_organization` field to the `Account` resource ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Add `GetEventEditRule`, `CreateEventEditRule`, `ListEventEditRules`, `UpdateEventEditRule`, `DeleteEventEditRule`, and `ReorderEventEditRules` methods to the Admin API v1 alpha ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+
+### Documentation improvements
+
+- Add deprecation comment to `GetConversionEvent`, `CreateConversionEvent`, `ListConversionEvents`, `UpdateConversionEvent`, and `DeleteConversionEvent` methods ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Improve comment formatting of the `parent` field in `CreateFirebaseLinkRequest` and `ListFirebaseLinksRequest` ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Improve comment formatting of the `name` field in `DeleteFirebaseLinkRequest`, `GetGlobalSiteTagRequest`, and `GetDataSharingSettingsRequest` ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+- Improve comment formatting of `account` and `property` fields in `SearchChangeHistoryEventsRequest` ([commit 998db44](https://github.com/googleapis/google-cloud-dotnet/commit/998db446b4a48cc8addaf19c30d54bebf8950b3d))
+
+## Version 2.0.0-alpha19, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.0.0-alpha18, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.0.0-alpha17, released 2024-03-13
+
+No API surface changes; just dependency updates.
+
+## Version 2.0.0-alpha16, released 2024-02-08
+
+### New features
+
+- Add `GetCalculatedMetric`, `CreateCalculatedMetric`, `ListCalculatedMetrics`, `UpdateCalculatedMetric`, `DeleteCalculatedMetric` methods to the Admin API v1alpha ([commit 7e182b3](https://github.com/googleapis/google-cloud-dotnet/commit/7e182b31f53fef45ab151247c672a4a70a825138))
+- Add the `CALCULATED_METRIC` option to the `ChangeHistoryResourceType` enum ([commit 7e182b3](https://github.com/googleapis/google-cloud-dotnet/commit/7e182b31f53fef45ab151247c672a4a70a825138))
+- Add the `calculated_metric` field to the `ChangeHistoryResource.resource` oneof field ([commit 7e182b3](https://github.com/googleapis/google-cloud-dotnet/commit/7e182b31f53fef45ab151247c672a4a70a825138))
+- Add the `CalculatedMetric` resource ([commit 7e182b3](https://github.com/googleapis/google-cloud-dotnet/commit/7e182b31f53fef45ab151247c672a4a70a825138))
+
+## Version 2.0.0-alpha15, released 2024-01-08
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove values `PAID_AND_ORGANIC_CHANNELS_FIRST_CLICK`, `PAID_AND_ORGANIC_CHANNELS_LINEAR`, `PAID_AND_ORGANIC_CHANNELS_POSITION_BASED`, `PAID_AND_ORGANIC_CHANNELS_TIME_DECAY` corresponding to the deprecated attribution models from the `ReportingAttributionModel` enum, as per announcement in https://support.google.com/analytics/answer/9164320[issue 040623](https://github.com/googleapis/google-cloud-dotnet/issues/040623) ([commit c84ffbc](https://github.com/googleapis/google-cloud-dotnet/commit/c84ffbc15dbfd02f6583db2ec96b6e72c9c83e12))
+
+### New features
+
+- Add `GetSubpropertyEventFilter`, `ListSubpropertyEventFilters` methods to the Admin API v1 alpha ([commit c84ffbc](https://github.com/googleapis/google-cloud-dotnet/commit/c84ffbc15dbfd02f6583db2ec96b6e72c9c83e12))
+- Add the `default_conversion_value` field to the `ConversionEvent` type ([commit c84ffbc](https://github.com/googleapis/google-cloud-dotnet/commit/c84ffbc15dbfd02f6583db2ec96b6e72c9c83e12))
+
+### Documentation improvements
+
+- Update the documentation for the `RunAccessReport` method ([commit c84ffbc](https://github.com/googleapis/google-cloud-dotnet/commit/c84ffbc15dbfd02f6583db2ec96b6e72c9c83e12))
+- Update the documentation for `grouping_rule`, `system_defined` fields of the `ChannelGroup` type ([commit c84ffbc](https://github.com/googleapis/google-cloud-dotnet/commit/c84ffbc15dbfd02f6583db2ec96b6e72c9c83e12))
+
+## Version 2.0.0-alpha14, released 2023-10-25
+
+### Bug fixes
+
+- **BREAKING CHANGE** Delete `BatchDeleteUserLinks`, `DeleteUserLink`, `BatchUpdateUserLinks`, `UpdateUserLink`, `BatchCreateUserLinks`, `CreateUserLink`, `AuditUserLinks`, `ListUserLinks`, `BatchGetUserLinks`, `GetUserLink` from the Admin API v1 alpha as per the announcement in https://bit.ly/46yBIDt ([commit 5948499](https://github.com/googleapis/google-cloud-dotnet/commit/5948499acbe3711fe1e3a05c691a41918b26ea1c))
+
+### New features
+
+- Add `UpdateDataRedactionSettings`, `CreateRollupProperty`, `GetRollupPropertySourceLink`, `ListRollupPropertySourceLinks`, `CreateRollupPropertySourceLink`, `DeleteRollupPropertySourceLink`, `CreateSubproperty`, `CreateSubpropertyEventFilter`, `CreateSubpropertyEventFilter`, `ListSubpropertyEventFilters`, `UpdateSubpropertyEventFilter`, `DeleteSubpropertyEventFilter` methods to the Admin API v1 alpha ([commit 5948499](https://github.com/googleapis/google-cloud-dotnet/commit/5948499acbe3711fe1e3a05c691a41918b26ea1c))
+- Add `include_all_users`, `expand_groups` fields to `RunAccessReportRequest` ([commit 5948499](https://github.com/googleapis/google-cloud-dotnet/commit/5948499acbe3711fe1e3a05c691a41918b26ea1c))
+- Add `DataRedactionSettings`, `RollupPropertySourceLink`, `SubpropertyEventFilterCondition`, `SubpropertyEventFilterExpression`, `SubpropertyEventFilterExpressionList`, `SubpropertyEventFilterClause`, `SubpropertyEventFilter` types ([commit 5948499](https://github.com/googleapis/google-cloud-dotnet/commit/5948499acbe3711fe1e3a05c691a41918b26ea1c))
+- Add the `DATA_REDACTION_SETTINGS` option to the `ChangeHistoryResourceType` enum ([commit 5948499](https://github.com/googleapis/google-cloud-dotnet/commit/5948499acbe3711fe1e3a05c691a41918b26ea1c))
+- Add the `data_redaction_settings` field to the `ChangeHistoryResource.resource` oneof field ([commit 5948499](https://github.com/googleapis/google-cloud-dotnet/commit/5948499acbe3711fe1e3a05c691a41918b26ea1c))
+
+## Version 2.0.0-alpha13, released 2023-09-01
+
+### Bug fixes
+
+- **BREAKING CHANGE** Rename the `enterprise_daily_export_enabled` field to `fresh_daily_export_enabled` in the `BigQueryLink` resource ([commit 58e7869](https://github.com/googleapis/google-cloud-dotnet/commit/58e786952625c333bd690f1a9e64687e5d68a2fc))
+
+### New features
+
+- Add `GetSKAdNetworkConversionValueSchema`, `CreateSKAdNetworkConversionValueSchema`, `DeleteSKAdNetworkConversionValueSchema`, `UpdateSKAdNetworkConversionValueSchema`, `ListSKAdNetworkConversionValueSchemas` methods to the Admin API v1 alpha ([commit 58e7869](https://github.com/googleapis/google-cloud-dotnet/commit/58e786952625c333bd690f1a9e64687e5d68a2fc))
+- Add the `skadnetwork_conversion_value_schema` field to the `ChangeHistoryResource.resource` oneof type ([commit 58e7869](https://github.com/googleapis/google-cloud-dotnet/commit/58e786952625c333bd690f1a9e64687e5d68a2fc))
+- Add the `SKADNETWORK_CONVERSION_VALUE_SCHEMA` option to the `ChangeHistoryResourceType` enum ([commit 58e7869](https://github.com/googleapis/google-cloud-dotnet/commit/58e786952625c333bd690f1a9e64687e5d68a2fc))
+- Add `CoarseValue`, `ConversionValues`, `EventMapping`, `SKAdNetworkConversionValueSchema` types ([commit 58e7869](https://github.com/googleapis/google-cloud-dotnet/commit/58e786952625c333bd690f1a9e64687e5d68a2fc))
+
+## Version 2.0.0-alpha12, released 2023-08-16
+
+### Bug fixes
+
+- **BREAKING CHANGE** Rename the `enterprise_daily_export_enabled` field to `fresh_daily_export_enabled` in the `BigQueryLink` resource ([commit bb7b89d](https://github.com/googleapis/google-cloud-dotnet/commit/bb7b89df13baa26b976c2829cd4c41349853bd4e))
+
+### New features
+
+- Add `UpdateConversionEvent` method to the Admin API v1 alpha ([commit bb7b89d](https://github.com/googleapis/google-cloud-dotnet/commit/bb7b89df13baa26b976c2829cd4c41349853bd4e))
+- Add the `counting_method` field to the `ConversionEvent` type ([commit bb7b89d](https://github.com/googleapis/google-cloud-dotnet/commit/bb7b89df13baa26b976c2829cd4c41349853bd4e))
+- Add the `ConversionCountingMethod` enum ([commit bb7b89d](https://github.com/googleapis/google-cloud-dotnet/commit/bb7b89df13baa26b976c2829cd4c41349853bd4e))
+
+## Version 2.0.0-alpha11, released 2023-08-04
+
+### Bug fixes
+
+- **BREAKING CHANGE** Update the `ReportingAttributionModel` enum to rename `CROSS_CHANNEL_DATA_DRIVEN` to `PAID_AND_ORGANIC_CHANNELS_DATA_DRIVEN`, `CROSS_CHANNEL_LAST_CLICK` to `PAID_AND_ORGANIC_CHANNELS_LAST_CLICK`, `CROSS_CHANNEL_FIRST_CLICK` to `PAID_AND_ORGANIC_CHANNELS_FIRST_CLICK`, `CROSS_CHANNEL_LINEAR` to `PAID_AND_ORGANIC_CHANNELS_LINEAR`, `CROSS_CHANNEL_POSITION_BASED` to `PAID_AND_ORGANIC_CHANNELS_POSITION_BASED` `CROSS_CHANNEL_TIME_DECAY` to `PAID_AND_ORGANIC_CHANNELS_TIME_DECAY`, `ADS_PREFERRED_LAST_CLICK` to `GOOGLE_PAID_CHANNELS_LAST_CLICK` ([commit c79ae51](https://github.com/googleapis/google-cloud-dotnet/commit/c79ae51d613741a86429d3a9b151867f9622d9db))
+- **BREAKING CHANGE** Update the `AdsWebConversionDataExportScope` enum to rename `CROSS_CHANNEL` to `PAID_AND_ORGANIC_CHANNELS`, `ADS_PREFERRED` to `GOOGLE_PAID_CHANNELS` ([commit c79ae51](https://github.com/googleapis/google-cloud-dotnet/commit/c79ae51d613741a86429d3a9b151867f9622d9db))
+
+## Version 2.0.0-alpha10, released 2023-06-27
+
+### New features
+
+- Update the `default_uri` field of the `WebStreamData` type to be mutable ([commit e8c8b20](https://github.com/googleapis/google-cloud-dotnet/commit/e8c8b209240faca77da8e750e2feb15b01155982))
+- Add the `ads_web_conversion_data_export_scope` field to the `ReportingAttributionModel` type ([commit e8c8b20](https://github.com/googleapis/google-cloud-dotnet/commit/e8c8b209240faca77da8e750e2feb15b01155982))
+- Add `AdsWebConversionDataExportScope` enum to the Admin API v1alpha ([commit e8c8b20](https://github.com/googleapis/google-cloud-dotnet/commit/e8c8b209240faca77da8e750e2feb15b01155982))
+
+### Documentation improvements
+
+- Announce the deprecation of first-click, linear, time-decay and position-based attribution models ([commit e8c8b20](https://github.com/googleapis/google-cloud-dotnet/commit/e8c8b209240faca77da8e750e2feb15b01155982))
+
+## Version 2.0.0-alpha09, released 2023-05-16
+
+### New features
+
+- Add `GetAdSenseLink`, `CreateAdSenseLink`, `DeleteAdSenseLink`, `ListAdSenseLinks` methods to the Admin API v1alpha ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+- Add `FetchConnectedGa4Property` method to the Admin API v1alpha ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+- Add `CreateEventCreateRule`, `UpdateEventCreateRule`,`DeleteEventCreateRule`, `ListEventCreateRules` methods to the Admin API v1alpha ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+- Add `EventCreateRule`, `MatchingCondition` types to the Admin API v1alpha ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+- Add `AdSenseLink` type to the Admin API v1alpha ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+- Add `AUDIENCE`, `EVENT_CREATE_RULE` options to the `ChangeHistoryResourceType` enum ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+- Add `audience`, `event_create_rule` fields to the `ChangeHistoryResource.resource` oneof field ([commit 9e6f80c](https://github.com/googleapis/google-cloud-dotnet/commit/9e6f80cee15d2582dad4f230ada810a24d808374))
+
+## Version 2.0.0-alpha08, released 2023-05-03
+
+### New features
+
+- Add FetchConnectedGa4Property method to the Admin API v1alpha ([commit c8b636f](https://github.com/googleapis/google-cloud-dotnet/commit/c8b636f560e7144b101451be96564d247e0eb879))
+- Add `GetChannelGroup`, `ListChannelGroups`, `CreateChannelGroup`, `UpdateChannelGroup` methods to the Admin API v1alpha ([commit c8b636f](https://github.com/googleapis/google-cloud-dotnet/commit/c8b636f560e7144b101451be96564d247e0eb879))
+- Add `ChannelGroupFilter`, `ChannelGroupFilterExpression`, `ChannelGroupFilterExpressionList`, `GroupingRule`, `ChannelGroup` types to the Admin API v1alpha ([commit c8b636f](https://github.com/googleapis/google-cloud-dotnet/commit/c8b636f560e7144b101451be96564d247e0eb879))
+
 ## Version 2.0.0-alpha07, released 2023-03-27
 
 ### New features

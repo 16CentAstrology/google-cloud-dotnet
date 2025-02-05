@@ -56,6 +56,7 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// Restricts access to Cloud Console and Google Cloud APIs for a set of users
   /// using Context-Aware Access.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcpUserAccessBinding : pb::IMessage<GcpUserAccessBinding>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

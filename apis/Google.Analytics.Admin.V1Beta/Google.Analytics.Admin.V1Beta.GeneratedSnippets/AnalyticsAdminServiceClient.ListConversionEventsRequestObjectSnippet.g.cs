@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Analytics.Admin.V1Beta.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START analyticsadmin_v1beta_generated_AnalyticsAdminService_ListConversionEvents_sync]
     using Google.Analytics.Admin.V1Beta;
@@ -41,7 +41,9 @@ namespace Google.Analytics.Admin.V1Beta.Snippets
                 ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListConversionEventsResponse, ConversionEvent> response = analyticsAdminServiceClient.ListConversionEvents(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (ConversionEvent item in response)

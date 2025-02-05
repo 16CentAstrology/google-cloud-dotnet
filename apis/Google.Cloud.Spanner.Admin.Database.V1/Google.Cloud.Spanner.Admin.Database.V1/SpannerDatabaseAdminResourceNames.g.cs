@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -273,10 +273,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <inheritdoc/>
         public bool Equals(DatabaseRoleName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(DatabaseRoleName a, DatabaseRoleName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(DatabaseRoleName a, DatabaseRoleName b) => !(a == b);
     }
 
@@ -429,6 +441,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             get => string.IsNullOrEmpty(KmsKeyName) ? null : CryptoKeyName.Parse(KmsKeyName, allowUnparsed: true);
             set => KmsKeyName = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKeyNames"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<CryptoKeyName> KmsKeyNamesAsCryptoKeyNames
+        {
+            get => new gax::ResourceNameList<CryptoKeyName>(KmsKeyNames, s => string.IsNullOrEmpty(s) ? null : CryptoKeyName.Parse(s, allowUnparsed: true));
+        }
     }
 
     public partial class RestoreDatabaseMetadata
@@ -476,6 +496,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : gcscv::DatabaseName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AddSplitPointsRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public gcscv::DatabaseName DatabaseAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database, allowUnparsed: true);
+            set => Database = value?.ToString() ?? "";
         }
     }
 }

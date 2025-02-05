@@ -16,7 +16,8 @@ using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Firestore.V1;
 using Google.Protobuf;
-using Moq;
+using NSubstitute;
+using NSubstitute.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +26,8 @@ using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Firestore.Tests.ProtoHelpers;
 using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
-using ProtoFilter = Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter;
 using ProtoCompositeFilter = Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter;
+using ProtoFilter = Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -606,7 +607,7 @@ namespace Google.Cloud.Firestore.Tests
             };
             Assert.Equal(expected, query.ToStructuredQuery());
         }
-        
+
         [Fact]
         public void EndAt()
         {
@@ -756,7 +757,7 @@ namespace Google.Cloud.Firestore.Tests
         [Fact]
         public async Task GetSnapshotAsync_NoDocuments()
         {
-            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var mock = Substitute.ForPartsOf<FirestoreClient>();
             var request = new RunQueryRequest
             {
                 Parent = "projects/proj/databases/db/documents",
@@ -770,21 +771,21 @@ namespace Google.Cloud.Firestore.Tests
             {
                 new RunQueryResponse { ReadTime = CreateProtoTimestamp(1, 2) }
             };
-            mock.Setup(c => c.RunQuery(request, It.IsAny<CallSettings>())).Returns(new FakeQueryStream(responses));
-            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            mock.Configure().RunQuery(request, Arg.Any<CallSettings>()).Returns(new FakeQueryStream(responses));
+            var db = FirestoreDb.Create("proj", "db", mock);
             var query = db.Collection("col").Select("Name");
             var snapshot = await query.GetSnapshotAsync();
             Assert.Empty(snapshot.Documents);
             Assert.Same(query, snapshot.Query);
             Assert.Equal(new Timestamp(1, 2), snapshot.ReadTime);
 
-            mock.VerifyAll();
+            mock.Received(1).RunQuery(request, Arg.Any<CallSettings>());
         }
 
         [Fact]
         public async Task GetSnapshotAsync_WithDocuments()
         {
-            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var mock = Substitute.ForPartsOf<FirestoreClient>();
             var request = new RunQueryRequest
             {
                 Parent = "projects/proj/databases/db/documents",
@@ -821,8 +822,8 @@ namespace Google.Cloud.Firestore.Tests
                     }
                 }
             };
-            mock.Setup(c => c.RunQuery(request, It.IsAny<CallSettings>())).Returns(new FakeQueryStream(responses));
-            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            mock.Configure().RunQuery(request, Arg.Any<CallSettings>()).Returns(new FakeQueryStream(responses));
+            var db = FirestoreDb.Create("proj", "db", mock);
             var query = db.Collection("col").Select("Name").Offset(3);
             var snapshot = await query.GetSnapshotAsync();
             Assert.Equal(2, snapshot.Documents.Count);
@@ -842,13 +843,13 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(new Timestamp(0, 3), doc2.CreateTime);
             Assert.Equal(new Timestamp(0, 4), doc2.UpdateTime);
             Assert.Equal("x", doc1.GetValue<string>("Name"));
-            mock.VerifyAll();
+            mock.Received(1).RunQuery(request, Arg.Any<CallSettings>());
         }
 
         [Fact]
         public async Task GetSnapshotAsync_NoResponses()
         {
-            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var mock = Substitute.ForPartsOf<FirestoreClient>();
             var request = new RunQueryRequest
             {
                 Parent = "projects/proj/databases/db/documents",
@@ -859,18 +860,18 @@ namespace Google.Cloud.Firestore.Tests
                 }
             };
             var responses = new RunQueryResponse[0];
-            mock.Setup(c => c.RunQuery(request, It.IsAny<CallSettings>())).Returns(new FakeQueryStream(responses));
-            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            mock.Configure().RunQuery(request, Arg.Any<CallSettings>()).Returns(new FakeQueryStream(responses));
+            var db = FirestoreDb.Create("proj", "db", mock);
             var query = db.Collection("col").Select("Name");
             // This shouldn't happen, of course - but let's check that we do what we expect.
             await Assert.ThrowsAsync<InvalidOperationException>(() => query.GetSnapshotAsync());
-            mock.VerifyAll();
+            mock.Received(1).RunQuery(request, Arg.Any<CallSettings>());
         }
 
         [Fact]
         public async Task StreamAsync_WithDocuments()
         {
-            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var mock = Substitute.ForPartsOf<FirestoreClient>();
             var request = new RunQueryRequest
             {
                 Parent = "projects/proj/databases/db/documents",
@@ -908,12 +909,14 @@ namespace Google.Cloud.Firestore.Tests
                     }
                 }
             };
-            mock.Setup(c => c.RunQuery(request, It.IsAny<CallSettings>())).Returns(new FakeQueryStream(responses));
-            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            var fakeQueryStream = new FakeQueryStream(responses);
+            mock.Configure().RunQuery(request, Arg.Any<CallSettings>()).Returns(fakeQueryStream);
+            var db = FirestoreDb.Create("proj", "db", mock);
             var query = db.Collection("col").Select("Name").Offset(3);
             // Just for variety, we'll provide a transaction ID this time...
             var documents = await query.StreamAsync(ByteString.CopyFrom(1, 2, 3, 4), CancellationToken.None, allowLimitToLast: false).ToListAsync();
             Assert.Equal(2, documents.Count);
+            Assert.True(fakeQueryStream.Disposed);
 
             var doc1 = documents[0];
             Assert.Equal(db.Document("col/doc1"), doc1.Reference);
@@ -928,13 +931,13 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(new Timestamp(0, 3), doc2.CreateTime);
             Assert.Equal(new Timestamp(0, 4), doc2.UpdateTime);
             Assert.Equal("x", doc1.GetValue<string>("Name"));
-            mock.VerifyAll();
+            mock.Received(1).RunQuery(request, Arg.Any<CallSettings>());
         }
 
         [Fact]
         public async Task StreamAsync_NoResponses()
         {
-            var mock = new Mock<FirestoreClient> { CallBase = true };
+            var mock = Substitute.ForPartsOf<FirestoreClient>();
             var request = new RunQueryRequest
             {
                 Parent = "projects/proj/databases/db/documents",
@@ -945,12 +948,52 @@ namespace Google.Cloud.Firestore.Tests
                 }
             };
             var responses = new RunQueryResponse[0];
-            mock.Setup(c => c.RunQuery(request, It.IsAny<CallSettings>())).Returns(new FakeQueryStream(responses));
-            var db = FirestoreDb.Create("proj", "db", mock.Object);
+            mock.Configure().RunQuery(request, Arg.Any<CallSettings>()).Returns(new FakeQueryStream(responses));
+            var db = FirestoreDb.Create("proj", "db", mock);
             var query = db.Collection("col").Select("Name");
             var documents = await query.StreamAsync().ToListAsync();
             Assert.Empty(documents);
-            mock.VerifyAll();
+            mock.Received(1).RunQuery(request, Arg.Any<CallSettings>());
+        }
+
+        [Fact]
+        public void StreamAsync_RpcIsLazy()
+        {
+            var mock = Substitute.ForPartsOf<FirestoreClient>();
+            var db = FirestoreDb.Create("proj", "db", mock);
+            var query = db.Collection("col").Select("Name");
+            // We deliberately don't do anything with the result here. We're asserting
+            // that when the result isn't iterated over, there's no RPC so we don't need to dispose of anything.
+            query.StreamAsync();
+            Assert.Empty(mock.ReceivedCalls());
+        }
+
+        [Fact]
+        public async Task StreamAsync_IteratorDisposal()
+        {
+            var mock = Substitute.ForPartsOf<FirestoreClient>();
+            var runQueryResponse = new RunQueryResponse
+            {
+                ReadTime = CreateProtoTimestamp(1, 3),
+                Document = new Document
+                {
+                    CreateTime = CreateProtoTimestamp(0, 3),
+                    UpdateTime = CreateProtoTimestamp(0, 4),
+                    Name = "projects/proj/databases/db/documents/col/doc2",
+                    Fields = { { "Name", CreateValue("y") } }
+                }
+            };
+            var fakeQueryStream = new FakeQueryStream(new[] { runQueryResponse });
+            mock.Configure().RunQuery(Arg.Any<RunQueryRequest>(), Arg.Any<CallSettings>()).Returns(fakeQueryStream);
+            var db = FirestoreDb.Create("proj", "db", mock);
+            var query = db.Collection("col").Select("Name");
+            var sequence = query.StreamAsync();
+            var iterator = sequence.GetAsyncEnumerator();
+            Assert.True(await iterator.MoveNextAsync());
+            Assert.False(fakeQueryStream.Disposed);
+            await iterator.DisposeAsync();
+            Assert.True(fakeQueryStream.Disposed);
+            mock.Received(1).RunQuery(Arg.Any<RunQueryRequest>(), Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -1234,6 +1277,34 @@ namespace Google.Cloud.Firestore.Tests
         {
             var query = s_db.Collection("col").LimitToLast(42);
             Assert.Throws<InvalidOperationException>(() => query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Aggregate_NullSingle()
+        {
+            var query = s_db.Collection("col");
+            Assert.Throws<ArgumentNullException>(() => query.Aggregate((AggregateField) null));
+        }
+
+        [Fact]
+        public void Aggregate_NullParams()
+        {
+            var query = s_db.Collection("col");
+            Assert.Throws<ArgumentNullException>(() => query.Aggregate(AggregateField.Count(), null));
+        }
+
+        [Fact]
+        public void Aggregate_NullSequence()
+        {
+            var query = s_db.Collection("col");
+            Assert.Throws<ArgumentNullException>(() => query.Aggregate((IEnumerable<AggregateField>) null));
+        }
+
+        [Fact]
+        public void Aggregate_EmptySequence()
+        {
+            var query = s_db.Collection("col");
+            Assert.Throws<ArgumentException>(() => query.Aggregate(new AggregateField[0]));
         }
 
         // Result reversal and StreamAsync being rejected are handled in integration tests.

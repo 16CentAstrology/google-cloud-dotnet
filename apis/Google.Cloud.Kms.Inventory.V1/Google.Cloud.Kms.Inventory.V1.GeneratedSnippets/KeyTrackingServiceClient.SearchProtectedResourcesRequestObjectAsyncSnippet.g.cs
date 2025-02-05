@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Kms.Inventory.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START kmsinventory_v1_generated_KeyTrackingService_SearchProtectedResources_async]
     using Google.Api.Gax;
@@ -43,6 +43,7 @@ namespace Google.Cloud.Kms.Inventory.V1.Snippets
             {
                 CryptoKeyAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 ScopeAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+                ResourceTypes = { "", },
             };
             // Make the request
             PagedAsyncEnumerable<SearchProtectedResourcesResponse, ProtectedResource> response = keyTrackingServiceClient.SearchProtectedResourcesAsync(request);

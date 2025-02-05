@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,22 +15,22 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Firestore.Admin.V1
 {
@@ -62,10 +62,26 @@ namespace Google.Cloud.Firestore.Admin.V1
             ExportDocumentsOperationsSettings = existing.ExportDocumentsOperationsSettings.Clone();
             ImportDocumentsSettings = existing.ImportDocumentsSettings;
             ImportDocumentsOperationsSettings = existing.ImportDocumentsOperationsSettings.Clone();
+            BulkDeleteDocumentsSettings = existing.BulkDeleteDocumentsSettings;
+            BulkDeleteDocumentsOperationsSettings = existing.BulkDeleteDocumentsOperationsSettings.Clone();
+            CreateDatabaseSettings = existing.CreateDatabaseSettings;
+            CreateDatabaseOperationsSettings = existing.CreateDatabaseOperationsSettings.Clone();
             GetDatabaseSettings = existing.GetDatabaseSettings;
             ListDatabasesSettings = existing.ListDatabasesSettings;
             UpdateDatabaseSettings = existing.UpdateDatabaseSettings;
             UpdateDatabaseOperationsSettings = existing.UpdateDatabaseOperationsSettings.Clone();
+            DeleteDatabaseSettings = existing.DeleteDatabaseSettings;
+            DeleteDatabaseOperationsSettings = existing.DeleteDatabaseOperationsSettings.Clone();
+            GetBackupSettings = existing.GetBackupSettings;
+            ListBackupsSettings = existing.ListBackupsSettings;
+            DeleteBackupSettings = existing.DeleteBackupSettings;
+            RestoreDatabaseSettings = existing.RestoreDatabaseSettings;
+            RestoreDatabaseOperationsSettings = existing.RestoreDatabaseOperationsSettings.Clone();
+            CreateBackupScheduleSettings = existing.CreateBackupScheduleSettings;
+            GetBackupScheduleSettings = existing.GetBackupScheduleSettings;
+            ListBackupSchedulesSettings = existing.ListBackupSchedulesSettings;
+            UpdateBackupScheduleSettings = existing.UpdateBackupScheduleSettings;
+            DeleteBackupScheduleSettings = existing.DeleteBackupScheduleSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -299,6 +315,66 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.BulkDeleteDocuments</c> and <c>FirestoreAdminClient.BulkDeleteDocumentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BulkDeleteDocumentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FirestoreAdminClient.BulkDeleteDocuments</c> and
+        /// <c>FirestoreAdminClient.BulkDeleteDocumentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BulkDeleteDocumentsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.CreateDatabase</c> and <c>FirestoreAdminClient.CreateDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateDatabaseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FirestoreAdminClient.CreateDatabase</c> and
+        /// <c>FirestoreAdminClient.CreateDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>FirestoreAdminClient.GetDatabase</c> and <c>FirestoreAdminClient.GetDatabaseAsync</c>.
         /// </summary>
         /// <remarks>
@@ -352,6 +428,162 @@ namespace Google.Cloud.Firestore.Admin.V1
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.DeleteDatabase</c> and <c>FirestoreAdminClient.DeleteDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDatabaseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FirestoreAdminClient.DeleteDatabase</c> and
+        /// <c>FirestoreAdminClient.DeleteDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.GetBackup</c> and <c>FirestoreAdminClient.GetBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.ListBackups</c> and <c>FirestoreAdminClient.ListBackupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.DeleteBackup</c> and <c>FirestoreAdminClient.DeleteBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.RestoreDatabase</c> and <c>FirestoreAdminClient.RestoreDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RestoreDatabaseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FirestoreAdminClient.RestoreDatabase</c> and
+        /// <c>FirestoreAdminClient.RestoreDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RestoreDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.CreateBackupSchedule</c> and <c>FirestoreAdminClient.CreateBackupScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBackupScheduleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.GetBackupSchedule</c> and <c>FirestoreAdminClient.GetBackupScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupScheduleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.ListBackupSchedules</c> and <c>FirestoreAdminClient.ListBackupSchedulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupSchedulesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.UpdateBackupSchedule</c> and <c>FirestoreAdminClient.UpdateBackupScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateBackupScheduleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.DeleteBackupSchedule</c> and <c>FirestoreAdminClient.DeleteBackupScheduleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBackupScheduleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -399,14 +631,14 @@ namespace Google.Cloud.Firestore.Admin.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return FirestoreAdminClient.Create(callInvoker, Settings, Logger);
+            return FirestoreAdminClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<FirestoreAdminClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return FirestoreAdminClient.Create(callInvoker, Settings, Logger);
+            return FirestoreAdminClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -530,9 +762,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -541,9 +775,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -552,9 +788,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -589,9 +827,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             lro::Operation<Index, IndexOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateIndexOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -610,9 +850,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -631,9 +873,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -648,9 +892,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             CreateIndexAsync(parent, index, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -669,9 +915,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -690,9 +938,11 @@ namespace Google.Cloud.Firestore.Admin.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -741,13 +991,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Index"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIndexesResponse, Index> ListIndexes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIndexes(new ListIndexesRequest
+        public virtual gax::PagedEnumerable<ListIndexesResponse, Index> ListIndexes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIndexesRequest request = new ListIndexesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIndexes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists composite indexes.
@@ -766,13 +1025,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Index"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIndexesResponse, Index> ListIndexesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIndexesAsync(new ListIndexesRequest
+        public virtual gax::PagedAsyncEnumerable<ListIndexesResponse, Index> ListIndexesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIndexesRequest request = new ListIndexesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIndexesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists composite indexes.
@@ -791,13 +1059,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Index"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListIndexesResponse, Index> ListIndexes(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIndexes(new ListIndexesRequest
+        public virtual gax::PagedEnumerable<ListIndexesResponse, Index> ListIndexes(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIndexesRequest request = new ListIndexesRequest
             {
                 ParentAsCollectionGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIndexes(request, callSettings);
+        }
 
         /// <summary>
         /// Lists composite indexes.
@@ -816,13 +1093,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Index"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListIndexesResponse, Index> ListIndexesAsync(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListIndexesAsync(new ListIndexesRequest
+        public virtual gax::PagedAsyncEnumerable<ListIndexesResponse, Index> ListIndexesAsync(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIndexesRequest request = new ListIndexesRequest
             {
                 ParentAsCollectionGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIndexesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a composite index.
@@ -1160,13 +1446,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -1181,13 +1470,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -1202,13 +1494,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -1249,13 +1544,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -1275,13 +1573,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -1301,13 +1602,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -1324,10 +1628,13 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1338,10 +1645,13 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1352,10 +1662,13 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -1371,21 +1684,33 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Field"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFieldsResponse, Field> ListFields(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFields(new ListFieldsRequest
+        public virtual gax::PagedEnumerable<ListFieldsResponse, Field> ListFields(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFieldsRequest request = new ListFieldsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFields(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -1401,21 +1726,33 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Field"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFieldsResponse, Field> ListFieldsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFieldsAsync(new ListFieldsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFieldsResponse, Field> ListFieldsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFieldsRequest request = new ListFieldsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFieldsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -1431,21 +1768,33 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Field"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListFieldsResponse, Field> ListFields(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFields(new ListFieldsRequest
+        public virtual gax::PagedEnumerable<ListFieldsResponse, Field> ListFields(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFieldsRequest request = new ListFieldsRequest
             {
                 ParentAsCollectionGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFields(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="parent">
         /// Required. A parent name of the form
@@ -1461,13 +1810,22 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Field"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListFieldsResponse, Field> ListFieldsAsync(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListFieldsAsync(new ListFieldsRequest
+        public virtual gax::PagedAsyncEnumerable<ListFieldsResponse, Field> ListFieldsAsync(CollectionGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListFieldsRequest request = new ListFieldsRequest
             {
                 ParentAsCollectionGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListFieldsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Exports a copy of all or a subset of documents from Google Cloud Firestore
@@ -1870,6 +2228,430 @@ namespace Google.Cloud.Firestore.Admin.V1
             ImportDocumentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata> BulkDeleteDocuments(BulkDeleteDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(BulkDeleteDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(BulkDeleteDocumentsRequest request, st::CancellationToken cancellationToken) =>
+            BulkDeleteDocumentsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BulkDeleteDocuments</c>.</summary>
+        public virtual lro::OperationsClient BulkDeleteDocumentsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BulkDeleteDocuments</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata> PollOnceBulkDeleteDocuments(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkDeleteDocumentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkDeleteDocuments</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> PollOnceBulkDeleteDocumentsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkDeleteDocumentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="name">
+        /// Required. Database to operate. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata> BulkDeleteDocuments(string name, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteDocuments(new BulkDeleteDocumentsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="name">
+        /// Required. Database to operate. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteDocumentsAsync(new BulkDeleteDocumentsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="name">
+        /// Required. Database to operate. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(string name, st::CancellationToken cancellationToken) =>
+            BulkDeleteDocumentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="name">
+        /// Required. Database to operate. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata> BulkDeleteDocuments(DatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteDocuments(new BulkDeleteDocumentsRequest
+            {
+                DatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="name">
+        /// Required. Database to operate. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(DatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            BulkDeleteDocumentsAsync(new BulkDeleteDocumentsRequest
+            {
+                DatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="name">
+        /// Required. Database to operate. Should be of the form:
+        /// `projects/{project_id}/databases/{database_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(DatabaseName name, st::CancellationToken cancellationToken) =>
+            BulkDeleteDocumentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, CreateDatabaseMetadata> CreateDatabase(CreateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(CreateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(CreateDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            CreateDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateDatabase</c>.</summary>
+        public virtual lro::OperationsClient CreateDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Database, CreateDatabaseMetadata> PollOnceCreateDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, CreateDatabaseMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> PollOnceCreateDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, CreateDatabaseMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}`
+        /// </param>
+        /// <param name="database">
+        /// Required. The Database to create.
+        /// </param>
+        /// <param name="databaseId">
+        /// Required. The ID to use for the database, which will become the final
+        /// component of the database's resource name.
+        /// 
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// 
+        /// "(default)" database ID is also valid.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, CreateDatabaseMetadata> CreateDatabase(string parent, Database database, string databaseId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatabase(new CreateDatabaseRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Database = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                DatabaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(databaseId, nameof(databaseId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}`
+        /// </param>
+        /// <param name="database">
+        /// Required. The Database to create.
+        /// </param>
+        /// <param name="databaseId">
+        /// Required. The ID to use for the database, which will become the final
+        /// component of the database's resource name.
+        /// 
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// 
+        /// "(default)" database ID is also valid.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(string parent, Database database, string databaseId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatabaseAsync(new CreateDatabaseRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Database = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                DatabaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(databaseId, nameof(databaseId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}`
+        /// </param>
+        /// <param name="database">
+        /// Required. The Database to create.
+        /// </param>
+        /// <param name="databaseId">
+        /// Required. The ID to use for the database, which will become the final
+        /// component of the database's resource name.
+        /// 
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// 
+        /// "(default)" database ID is also valid.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(string parent, Database database, string databaseId, st::CancellationToken cancellationToken) =>
+            CreateDatabaseAsync(parent, database, databaseId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}`
+        /// </param>
+        /// <param name="database">
+        /// Required. The Database to create.
+        /// </param>
+        /// <param name="databaseId">
+        /// Required. The ID to use for the database, which will become the final
+        /// component of the database's resource name.
+        /// 
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// 
+        /// "(default)" database ID is also valid.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, CreateDatabaseMetadata> CreateDatabase(gagr::ProjectName parent, Database database, string databaseId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatabase(new CreateDatabaseRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Database = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                DatabaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(databaseId, nameof(databaseId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}`
+        /// </param>
+        /// <param name="database">
+        /// Required. The Database to create.
+        /// </param>
+        /// <param name="databaseId">
+        /// Required. The ID to use for the database, which will become the final
+        /// component of the database's resource name.
+        /// 
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// 
+        /// "(default)" database ID is also valid.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(gagr::ProjectName parent, Database database, string databaseId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateDatabaseAsync(new CreateDatabaseRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Database = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                DatabaseId = gax::GaxPreconditions.CheckNotNullOrEmpty(databaseId, nameof(databaseId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}`
+        /// </param>
+        /// <param name="database">
+        /// Required. The Database to create.
+        /// </param>
+        /// <param name="databaseId">
+        /// Required. The ID to use for the database, which will become the final
+        /// component of the database's resource name.
+        /// 
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// 
+        /// "(default)" database ID is also valid.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(gagr::ProjectName parent, Database database, string databaseId, st::CancellationToken cancellationToken) =>
+            CreateDatabaseAsync(parent, database, databaseId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets information about a database.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2193,6 +2975,1210 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Database, UpdateDatabaseMetadata>> UpdateDatabaseAsync(Database database, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateDatabaseAsync(database, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, DeleteDatabaseMetadata> DeleteDatabase(DeleteDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(DeleteDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(DeleteDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteDatabase</c>.</summary>
+        public virtual lro::OperationsClient DeleteDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Database, DeleteDatabaseMetadata> PollOnceDeleteDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, DeleteDatabaseMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> PollOnceDeleteDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, DeleteDatabaseMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, DeleteDatabaseMetadata> DeleteDatabase(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatabase(new DeleteDatabaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatabaseAsync(new DeleteDatabaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, DeleteDatabaseMetadata> DeleteDatabase(DatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatabase(new DeleteDatabaseRequest
+            {
+                DatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(DatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDatabaseAsync(new DeleteDatabaseRequest
+            {
+                DatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(DatabaseName name, st::CancellationToken cancellationToken) =>
+            DeleteDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(GetBackupRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to fetch.
+        /// 
+        /// Format is `projects/{project}/locations/{location}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackup(new GetBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to fetch.
+        /// 
+        /// Format is `projects/{project}/locations/{location}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupAsync(new GetBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to fetch.
+        /// 
+        /// Format is `projects/{project}/locations/{location}/backups/{backup}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to fetch.
+        /// 
+        /// Format is `projects/{project}/locations/{location}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackup(new GetBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to fetch.
+        /// 
+        /// Format is `projects/{project}/locations/{location}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupAsync(new GetBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to fetch.
+        /// 
+        /// Format is `projects/{project}/locations/{location}/backups/{backup}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the backups.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListBackupsResponse ListBackups(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the backups.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListBackupsResponse> ListBackupsAsync(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the backups.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListBackupsResponse> ListBackupsAsync(ListBackupsRequest request, st::CancellationToken cancellationToken) =>
+            ListBackupsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the backups.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to list backups from.
+        /// 
+        /// Format is `projects/{project}/locations/{location}`.
+        /// Use `{location} = '-'` to list backups from all locations for the given
+        /// project. This allows listing backups from a single location or from all
+        /// locations.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListBackupsResponse ListBackups(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackups(new ListBackupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all the backups.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to list backups from.
+        /// 
+        /// Format is `projects/{project}/locations/{location}`.
+        /// Use `{location} = '-'` to list backups from all locations for the given
+        /// project. This allows listing backups from a single location or from all
+        /// locations.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListBackupsResponse> ListBackupsAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupsAsync(new ListBackupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all the backups.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to list backups from.
+        /// 
+        /// Format is `projects/{project}/locations/{location}`.
+        /// Use `{location} = '-'` to list backups from all locations for the given
+        /// project. This allows listing backups from a single location or from all
+        /// locations.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListBackupsResponse> ListBackupsAsync(string parent, st::CancellationToken cancellationToken) =>
+            ListBackupsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the backups.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to list backups from.
+        /// 
+        /// Format is `projects/{project}/locations/{location}`.
+        /// Use `{location} = '-'` to list backups from all locations for the given
+        /// project. This allows listing backups from a single location or from all
+        /// locations.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListBackupsResponse ListBackups(LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackups(new ListBackupsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all the backups.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to list backups from.
+        /// 
+        /// Format is `projects/{project}/locations/{location}`.
+        /// Use `{location} = '-'` to list backups from all locations for the given
+        /// project. This allows listing backups from a single location or from all
+        /// locations.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListBackupsResponse> ListBackupsAsync(LocationName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupsAsync(new ListBackupsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all the backups.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The location to list backups from.
+        /// 
+        /// Format is `projects/{project}/locations/{location}`.
+        /// Use `{location} = '-'` to list backups from all locations for the given
+        /// project. This allows listing backups from a single location or from all
+        /// locations.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListBackupsResponse> ListBackupsAsync(LocationName parent, st::CancellationToken cancellationToken) =>
+            ListBackupsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackup(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupAsync(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupAsync(DeleteBackupRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to delete.
+        /// 
+        /// format is `projects/{project}/locations/{location}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackup(new DeleteBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to delete.
+        /// 
+        /// format is `projects/{project}/locations/{location}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupAsync(new DeleteBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to delete.
+        /// 
+        /// format is `projects/{project}/locations/{location}/backups/{backup}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to delete.
+        /// 
+        /// format is `projects/{project}/locations/{location}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackup(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackup(new DeleteBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to delete.
+        /// 
+        /// format is `projects/{project}/locations/{location}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupAsync(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupAsync(new DeleteBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to delete.
+        /// 
+        /// format is `projects/{project}/locations/{location}/backups/{backup}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new database by restoring from an existing backup.
+        /// 
+        /// The new database must be in the same cloud region or multi-region location
+        /// as the existing backup. This behaves similar to
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+        /// except instead of creating a new empty database, a new database is created
+        /// with the database type, index configuration, and documents from an existing
+        /// backup.
+        /// 
+        /// The [long-running operation][google.longrunning.Operation] can be used to
+        /// track the progress of the restore, with the Operation's
+        /// [metadata][google.longrunning.Operation.metadata] field type being the
+        /// [RestoreDatabaseMetadata][google.firestore.admin.v1.RestoreDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] type is the
+        /// [Database][google.firestore.admin.v1.Database] if the restore was
+        /// successful. The new database is not readable or writeable until the LRO has
+        /// completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Database, RestoreDatabaseMetadata> RestoreDatabase(RestoreDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new database by restoring from an existing backup.
+        /// 
+        /// The new database must be in the same cloud region or multi-region location
+        /// as the existing backup. This behaves similar to
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+        /// except instead of creating a new empty database, a new database is created
+        /// with the database type, index configuration, and documents from an existing
+        /// backup.
+        /// 
+        /// The [long-running operation][google.longrunning.Operation] can be used to
+        /// track the progress of the restore, with the Operation's
+        /// [metadata][google.longrunning.Operation.metadata] field type being the
+        /// [RestoreDatabaseMetadata][google.firestore.admin.v1.RestoreDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] type is the
+        /// [Database][google.firestore.admin.v1.Database] if the restore was
+        /// successful. The new database is not readable or writeable until the LRO has
+        /// completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, RestoreDatabaseMetadata>> RestoreDatabaseAsync(RestoreDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new database by restoring from an existing backup.
+        /// 
+        /// The new database must be in the same cloud region or multi-region location
+        /// as the existing backup. This behaves similar to
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+        /// except instead of creating a new empty database, a new database is created
+        /// with the database type, index configuration, and documents from an existing
+        /// backup.
+        /// 
+        /// The [long-running operation][google.longrunning.Operation] can be used to
+        /// track the progress of the restore, with the Operation's
+        /// [metadata][google.longrunning.Operation.metadata] field type being the
+        /// [RestoreDatabaseMetadata][google.firestore.admin.v1.RestoreDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] type is the
+        /// [Database][google.firestore.admin.v1.Database] if the restore was
+        /// successful. The new database is not readable or writeable until the LRO has
+        /// completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Database, RestoreDatabaseMetadata>> RestoreDatabaseAsync(RestoreDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            RestoreDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RestoreDatabase</c>.</summary>
+        public virtual lro::OperationsClient RestoreDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RestoreDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Database, RestoreDatabaseMetadata> PollOnceRestoreDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, RestoreDatabaseMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RestoreDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Database, RestoreDatabaseMetadata>> PollOnceRestoreDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Database, RestoreDatabaseMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a backup schedule on a database.
+        /// At most two backup schedules can be configured on a database, one daily
+        /// backup schedule and one weekly backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule CreateBackupSchedule(CreateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a backup schedule on a database.
+        /// At most two backup schedules can be configured on a database, one daily
+        /// backup schedule and one weekly backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(CreateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a backup schedule on a database.
+        /// At most two backup schedules can be configured on a database, one daily
+        /// backup schedule and one weekly backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(CreateBackupScheduleRequest request, st::CancellationToken cancellationToken) =>
+            CreateBackupScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a backup schedule on a database.
+        /// At most two backup schedules can be configured on a database, one daily
+        /// backup schedule and one weekly backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent database.
+        /// 
+        /// Format `projects/{project}/databases/{database}`
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule CreateBackupSchedule(string parent, BackupSchedule backupSchedule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupSchedule(new CreateBackupScheduleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a backup schedule on a database.
+        /// At most two backup schedules can be configured on a database, one daily
+        /// backup schedule and one weekly backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent database.
+        /// 
+        /// Format `projects/{project}/databases/{database}`
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(string parent, BackupSchedule backupSchedule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupScheduleAsync(new CreateBackupScheduleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a backup schedule on a database.
+        /// At most two backup schedules can be configured on a database, one daily
+        /// backup schedule and one weekly backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent database.
+        /// 
+        /// Format `projects/{project}/databases/{database}`
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(string parent, BackupSchedule backupSchedule, st::CancellationToken cancellationToken) =>
+            CreateBackupScheduleAsync(parent, backupSchedule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a backup schedule on a database.
+        /// At most two backup schedules can be configured on a database, one daily
+        /// backup schedule and one weekly backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent database.
+        /// 
+        /// Format `projects/{project}/databases/{database}`
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule CreateBackupSchedule(DatabaseName parent, BackupSchedule backupSchedule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupSchedule(new CreateBackupScheduleRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a backup schedule on a database.
+        /// At most two backup schedules can be configured on a database, one daily
+        /// backup schedule and one weekly backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent database.
+        /// 
+        /// Format `projects/{project}/databases/{database}`
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(DatabaseName parent, BackupSchedule backupSchedule, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupScheduleAsync(new CreateBackupScheduleRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a backup schedule on a database.
+        /// At most two backup schedules can be configured on a database, one daily
+        /// backup schedule and one weekly backup schedule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent database.
+        /// 
+        /// Format `projects/{project}/databases/{database}`
+        /// </param>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> CreateBackupScheduleAsync(DatabaseName parent, BackupSchedule backupSchedule, st::CancellationToken cancellationToken) =>
+            CreateBackupScheduleAsync(parent, backupSchedule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule GetBackupSchedule(GetBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(GetBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(GetBackupScheduleRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the backup schedule.
+        /// 
+        /// Format
+        /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule GetBackupSchedule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupSchedule(new GetBackupScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the backup schedule.
+        /// 
+        /// Format
+        /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupScheduleAsync(new GetBackupScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the backup schedule.
+        /// 
+        /// Format
+        /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the backup schedule.
+        /// 
+        /// Format
+        /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule GetBackupSchedule(BackupScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupSchedule(new GetBackupScheduleRequest
+            {
+                BackupScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the backup schedule.
+        /// 
+        /// Format
+        /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(BackupScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupScheduleAsync(new GetBackupScheduleRequest
+            {
+                BackupScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the backup schedule.
+        /// 
+        /// Format
+        /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> GetBackupScheduleAsync(BackupScheduleName name, st::CancellationToken cancellationToken) =>
+            GetBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List backup schedules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListBackupSchedulesResponse ListBackupSchedules(ListBackupSchedulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List backup schedules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListBackupSchedulesResponse> ListBackupSchedulesAsync(ListBackupSchedulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List backup schedules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListBackupSchedulesResponse> ListBackupSchedulesAsync(ListBackupSchedulesRequest request, st::CancellationToken cancellationToken) =>
+            ListBackupSchedulesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List backup schedules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent database.
+        /// 
+        /// Format is `projects/{project}/databases/{database}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListBackupSchedulesResponse ListBackupSchedules(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupSchedules(new ListBackupSchedulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// List backup schedules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent database.
+        /// 
+        /// Format is `projects/{project}/databases/{database}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListBackupSchedulesResponse> ListBackupSchedulesAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupSchedulesAsync(new ListBackupSchedulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// List backup schedules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent database.
+        /// 
+        /// Format is `projects/{project}/databases/{database}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListBackupSchedulesResponse> ListBackupSchedulesAsync(string parent, st::CancellationToken cancellationToken) =>
+            ListBackupSchedulesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List backup schedules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent database.
+        /// 
+        /// Format is `projects/{project}/databases/{database}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListBackupSchedulesResponse ListBackupSchedules(DatabaseName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupSchedules(new ListBackupSchedulesRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// List backup schedules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent database.
+        /// 
+        /// Format is `projects/{project}/databases/{database}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListBackupSchedulesResponse> ListBackupSchedulesAsync(DatabaseName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupSchedulesAsync(new ListBackupSchedulesRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// List backup schedules.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent database.
+        /// 
+        /// Format is `projects/{project}/databases/{database}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListBackupSchedulesResponse> ListBackupSchedulesAsync(DatabaseName parent, st::CancellationToken cancellationToken) =>
+            ListBackupSchedulesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule UpdateBackupSchedule(UpdateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> UpdateBackupScheduleAsync(UpdateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> UpdateBackupScheduleAsync(UpdateBackupScheduleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateBackupScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupSchedule UpdateBackupSchedule(BackupSchedule backupSchedule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupSchedule(new UpdateBackupScheduleRequest
+            {
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> UpdateBackupScheduleAsync(BackupSchedule backupSchedule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupScheduleAsync(new UpdateBackupScheduleRequest
+            {
+                BackupSchedule = gax::GaxPreconditions.CheckNotNull(backupSchedule, nameof(backupSchedule)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="backupSchedule">
+        /// Required. The backup schedule to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupSchedule> UpdateBackupScheduleAsync(BackupSchedule backupSchedule, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBackupScheduleAsync(backupSchedule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackupSchedule(DeleteBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(DeleteBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(DeleteBackupScheduleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBackupScheduleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the backup schedule.
+        /// 
+        /// Format
+        /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackupSchedule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupSchedule(new DeleteBackupScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the backup schedule.
+        /// 
+        /// Format
+        /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupScheduleAsync(new DeleteBackupScheduleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the backup schedule.
+        /// 
+        /// Format
+        /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the backup schedule.
+        /// 
+        /// Format
+        /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackupSchedule(BackupScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupSchedule(new DeleteBackupScheduleRequest
+            {
+                BackupScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the backup schedule.
+        /// 
+        /// Format
+        /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(BackupScheduleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupScheduleAsync(new DeleteBackupScheduleRequest
+            {
+                BackupScheduleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the backup schedule.
+        /// 
+        /// Format
+        /// `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupScheduleAsync(BackupScheduleName name, st::CancellationToken cancellationToken) =>
+            DeleteBackupScheduleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>FirestoreAdmin client wrapper implementation, for convenient use.</summary>
@@ -2246,11 +4232,35 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         private readonly gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> _callImportDocuments;
 
+        private readonly gaxgrpc::ApiCall<BulkDeleteDocumentsRequest, lro::Operation> _callBulkDeleteDocuments;
+
+        private readonly gaxgrpc::ApiCall<CreateDatabaseRequest, lro::Operation> _callCreateDatabase;
+
         private readonly gaxgrpc::ApiCall<GetDatabaseRequest, Database> _callGetDatabase;
 
         private readonly gaxgrpc::ApiCall<ListDatabasesRequest, ListDatabasesResponse> _callListDatabases;
 
         private readonly gaxgrpc::ApiCall<UpdateDatabaseRequest, lro::Operation> _callUpdateDatabase;
+
+        private readonly gaxgrpc::ApiCall<DeleteDatabaseRequest, lro::Operation> _callDeleteDatabase;
+
+        private readonly gaxgrpc::ApiCall<GetBackupRequest, Backup> _callGetBackup;
+
+        private readonly gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> _callListBackups;
+
+        private readonly gaxgrpc::ApiCall<DeleteBackupRequest, wkt::Empty> _callDeleteBackup;
+
+        private readonly gaxgrpc::ApiCall<RestoreDatabaseRequest, lro::Operation> _callRestoreDatabase;
+
+        private readonly gaxgrpc::ApiCall<CreateBackupScheduleRequest, BackupSchedule> _callCreateBackupSchedule;
+
+        private readonly gaxgrpc::ApiCall<GetBackupScheduleRequest, BackupSchedule> _callGetBackupSchedule;
+
+        private readonly gaxgrpc::ApiCall<ListBackupSchedulesRequest, ListBackupSchedulesResponse> _callListBackupSchedules;
+
+        private readonly gaxgrpc::ApiCall<UpdateBackupScheduleRequest, BackupSchedule> _callUpdateBackupSchedule;
+
+        private readonly gaxgrpc::ApiCall<DeleteBackupScheduleRequest, wkt::Empty> _callDeleteBackupSchedule;
 
         /// <summary>
         /// Constructs a client wrapper for the FirestoreAdmin service, with the specified gRPC client and settings.
@@ -2262,12 +4272,20 @@ namespace Google.Cloud.Firestore.Admin.V1
         {
             GrpcClient = grpcClient;
             FirestoreAdminSettings effectiveSettings = settings ?? FirestoreAdminSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIndexOperationsSettings, logger);
             UpdateFieldOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFieldOperationsSettings, logger);
             ExportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportDocumentsOperationsSettings, logger);
             ImportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDocumentsOperationsSettings, logger);
+            BulkDeleteDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkDeleteDocumentsOperationsSettings, logger);
+            CreateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDatabaseOperationsSettings, logger);
             UpdateDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDatabaseOperationsSettings, logger);
+            DeleteDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatabaseOperationsSettings, logger);
+            RestoreDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreDatabaseOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>("CreateIndex", grpcClient.CreateIndexAsync, grpcClient.CreateIndex, effectiveSettings.CreateIndexSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateIndex);
@@ -2296,6 +4314,12 @@ namespace Google.Cloud.Firestore.Admin.V1
             _callImportDocuments = clientHelper.BuildApiCall<ImportDocumentsRequest, lro::Operation>("ImportDocuments", grpcClient.ImportDocumentsAsync, grpcClient.ImportDocuments, effectiveSettings.ImportDocumentsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callImportDocuments);
             Modify_ImportDocumentsApiCall(ref _callImportDocuments);
+            _callBulkDeleteDocuments = clientHelper.BuildApiCall<BulkDeleteDocumentsRequest, lro::Operation>("BulkDeleteDocuments", grpcClient.BulkDeleteDocumentsAsync, grpcClient.BulkDeleteDocuments, effectiveSettings.BulkDeleteDocumentsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callBulkDeleteDocuments);
+            Modify_BulkDeleteDocumentsApiCall(ref _callBulkDeleteDocuments);
+            _callCreateDatabase = clientHelper.BuildApiCall<CreateDatabaseRequest, lro::Operation>("CreateDatabase", grpcClient.CreateDatabaseAsync, grpcClient.CreateDatabase, effectiveSettings.CreateDatabaseSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateDatabase);
+            Modify_CreateDatabaseApiCall(ref _callCreateDatabase);
             _callGetDatabase = clientHelper.BuildApiCall<GetDatabaseRequest, Database>("GetDatabase", grpcClient.GetDatabaseAsync, grpcClient.GetDatabase, effectiveSettings.GetDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetDatabase);
             Modify_GetDatabaseApiCall(ref _callGetDatabase);
@@ -2305,6 +4329,36 @@ namespace Google.Cloud.Firestore.Admin.V1
             _callUpdateDatabase = clientHelper.BuildApiCall<UpdateDatabaseRequest, lro::Operation>("UpdateDatabase", grpcClient.UpdateDatabaseAsync, grpcClient.UpdateDatabase, effectiveSettings.UpdateDatabaseSettings).WithGoogleRequestParam("database.name", request => request.Database?.Name);
             Modify_ApiCall(ref _callUpdateDatabase);
             Modify_UpdateDatabaseApiCall(ref _callUpdateDatabase);
+            _callDeleteDatabase = clientHelper.BuildApiCall<DeleteDatabaseRequest, lro::Operation>("DeleteDatabase", grpcClient.DeleteDatabaseAsync, grpcClient.DeleteDatabase, effectiveSettings.DeleteDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteDatabase);
+            Modify_DeleteDatabaseApiCall(ref _callDeleteDatabase);
+            _callGetBackup = clientHelper.BuildApiCall<GetBackupRequest, Backup>("GetBackup", grpcClient.GetBackupAsync, grpcClient.GetBackup, effectiveSettings.GetBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackup);
+            Modify_GetBackupApiCall(ref _callGetBackup);
+            _callListBackups = clientHelper.BuildApiCall<ListBackupsRequest, ListBackupsResponse>("ListBackups", grpcClient.ListBackupsAsync, grpcClient.ListBackups, effectiveSettings.ListBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackups);
+            Modify_ListBackupsApiCall(ref _callListBackups);
+            _callDeleteBackup = clientHelper.BuildApiCall<DeleteBackupRequest, wkt::Empty>("DeleteBackup", grpcClient.DeleteBackupAsync, grpcClient.DeleteBackup, effectiveSettings.DeleteBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBackup);
+            Modify_DeleteBackupApiCall(ref _callDeleteBackup);
+            _callRestoreDatabase = clientHelper.BuildApiCall<RestoreDatabaseRequest, lro::Operation>("RestoreDatabase", grpcClient.RestoreDatabaseAsync, grpcClient.RestoreDatabase, effectiveSettings.RestoreDatabaseSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callRestoreDatabase);
+            Modify_RestoreDatabaseApiCall(ref _callRestoreDatabase);
+            _callCreateBackupSchedule = clientHelper.BuildApiCall<CreateBackupScheduleRequest, BackupSchedule>("CreateBackupSchedule", grpcClient.CreateBackupScheduleAsync, grpcClient.CreateBackupSchedule, effectiveSettings.CreateBackupScheduleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBackupSchedule);
+            Modify_CreateBackupScheduleApiCall(ref _callCreateBackupSchedule);
+            _callGetBackupSchedule = clientHelper.BuildApiCall<GetBackupScheduleRequest, BackupSchedule>("GetBackupSchedule", grpcClient.GetBackupScheduleAsync, grpcClient.GetBackupSchedule, effectiveSettings.GetBackupScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackupSchedule);
+            Modify_GetBackupScheduleApiCall(ref _callGetBackupSchedule);
+            _callListBackupSchedules = clientHelper.BuildApiCall<ListBackupSchedulesRequest, ListBackupSchedulesResponse>("ListBackupSchedules", grpcClient.ListBackupSchedulesAsync, grpcClient.ListBackupSchedules, effectiveSettings.ListBackupSchedulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackupSchedules);
+            Modify_ListBackupSchedulesApiCall(ref _callListBackupSchedules);
+            _callUpdateBackupSchedule = clientHelper.BuildApiCall<UpdateBackupScheduleRequest, BackupSchedule>("UpdateBackupSchedule", grpcClient.UpdateBackupScheduleAsync, grpcClient.UpdateBackupSchedule, effectiveSettings.UpdateBackupScheduleSettings).WithGoogleRequestParam("backup_schedule.name", request => request.BackupSchedule?.Name);
+            Modify_ApiCall(ref _callUpdateBackupSchedule);
+            Modify_UpdateBackupScheduleApiCall(ref _callUpdateBackupSchedule);
+            _callDeleteBackupSchedule = clientHelper.BuildApiCall<DeleteBackupScheduleRequest, wkt::Empty>("DeleteBackupSchedule", grpcClient.DeleteBackupScheduleAsync, grpcClient.DeleteBackupSchedule, effectiveSettings.DeleteBackupScheduleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBackupSchedule);
+            Modify_DeleteBackupScheduleApiCall(ref _callDeleteBackupSchedule);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2328,11 +4382,35 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         partial void Modify_ImportDocumentsApiCall(ref gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> call);
 
+        partial void Modify_BulkDeleteDocumentsApiCall(ref gaxgrpc::ApiCall<BulkDeleteDocumentsRequest, lro::Operation> call);
+
+        partial void Modify_CreateDatabaseApiCall(ref gaxgrpc::ApiCall<CreateDatabaseRequest, lro::Operation> call);
+
         partial void Modify_GetDatabaseApiCall(ref gaxgrpc::ApiCall<GetDatabaseRequest, Database> call);
 
         partial void Modify_ListDatabasesApiCall(ref gaxgrpc::ApiCall<ListDatabasesRequest, ListDatabasesResponse> call);
 
         partial void Modify_UpdateDatabaseApiCall(ref gaxgrpc::ApiCall<UpdateDatabaseRequest, lro::Operation> call);
+
+        partial void Modify_DeleteDatabaseApiCall(ref gaxgrpc::ApiCall<DeleteDatabaseRequest, lro::Operation> call);
+
+        partial void Modify_GetBackupApiCall(ref gaxgrpc::ApiCall<GetBackupRequest, Backup> call);
+
+        partial void Modify_ListBackupsApiCall(ref gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> call);
+
+        partial void Modify_DeleteBackupApiCall(ref gaxgrpc::ApiCall<DeleteBackupRequest, wkt::Empty> call);
+
+        partial void Modify_RestoreDatabaseApiCall(ref gaxgrpc::ApiCall<RestoreDatabaseRequest, lro::Operation> call);
+
+        partial void Modify_CreateBackupScheduleApiCall(ref gaxgrpc::ApiCall<CreateBackupScheduleRequest, BackupSchedule> call);
+
+        partial void Modify_GetBackupScheduleApiCall(ref gaxgrpc::ApiCall<GetBackupScheduleRequest, BackupSchedule> call);
+
+        partial void Modify_ListBackupSchedulesApiCall(ref gaxgrpc::ApiCall<ListBackupSchedulesRequest, ListBackupSchedulesResponse> call);
+
+        partial void Modify_UpdateBackupScheduleApiCall(ref gaxgrpc::ApiCall<UpdateBackupScheduleRequest, BackupSchedule> call);
+
+        partial void Modify_DeleteBackupScheduleApiCall(ref gaxgrpc::ApiCall<DeleteBackupScheduleRequest, wkt::Empty> call);
 
         partial void OnConstruction(FirestoreAdmin.FirestoreAdminClient grpcClient, FirestoreAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2360,19 +4438,45 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         partial void Modify_ImportDocumentsRequest(ref ImportDocumentsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_BulkDeleteDocumentsRequest(ref BulkDeleteDocumentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateDatabaseRequest(ref CreateDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetDatabaseRequest(ref GetDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDatabasesRequest(ref ListDatabasesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateDatabaseRequest(ref UpdateDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_DeleteDatabaseRequest(ref DeleteDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupRequest(ref GetBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupsRequest(ref ListBackupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBackupRequest(ref DeleteBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RestoreDatabaseRequest(ref RestoreDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateBackupScheduleRequest(ref CreateBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupScheduleRequest(ref GetBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupSchedulesRequest(ref ListBackupSchedulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateBackupScheduleRequest(ref UpdateBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBackupScheduleRequest(ref DeleteBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>The long-running operations client for <c>CreateIndex</c>.</summary>
         public override lro::OperationsClient CreateIndexOperationsClient { get; }
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2384,9 +4488,11 @@ namespace Google.Cloud.Firestore.Admin.V1
         }
 
         /// <summary>
-        /// Creates a composite index. This returns a [google.longrunning.Operation][google.longrunning.Operation]
-        /// which may be used to track the status of the creation. The metadata for
-        /// the operation will be the type [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
+        /// Creates a composite index. This returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the creation. The metadata for the operation
+        /// will be the type
+        /// [IndexOperationMetadata][google.firestore.admin.v1.IndexOperationMetadata].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2499,13 +4605,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -2523,13 +4632,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Updates a field configuration. Currently, field updates apply only to
         /// single field index configuration. However, calls to
-        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField] should provide a field mask to avoid
-        /// changing any configuration that the caller isn't aware of. The field mask
-        /// should be specified as: `{ paths: "index_config" }`.
+        /// [FirestoreAdmin.UpdateField][google.firestore.admin.v1.FirestoreAdmin.UpdateField]
+        /// should provide a field mask to avoid changing any configuration that the
+        /// caller isn't aware of. The field mask should be specified as: `{ paths:
+        /// "index_config" }`.
         /// 
-        /// This call returns a [google.longrunning.Operation][google.longrunning.Operation] which may be used to
-        /// track the status of the field update. The metadata for
-        /// the operation will be the type [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
+        /// This call returns a
+        /// [google.longrunning.Operation][google.longrunning.Operation] which may be
+        /// used to track the status of the field update. The metadata for the
+        /// operation will be the type
+        /// [FieldOperationMetadata][google.firestore.admin.v1.FieldOperationMetadata].
         /// 
         /// To configure the default field settings for the database, use
         /// the special `Field` with resource name:
@@ -2547,10 +4659,13 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2564,10 +4679,13 @@ namespace Google.Cloud.Firestore.Admin.V1
         /// <summary>
         /// Lists the field configuration and metadata for this database.
         /// 
-        /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
-        /// that have been explicitly overridden. To issue this query, call
-        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-        /// `indexConfig.usesAncestorConfig:false` .
+        /// Currently,
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// only supports listing fields that have been explicitly overridden. To issue
+        /// this query, call
+        /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields]
+        /// with the filter set to `indexConfig.usesAncestorConfig:false` or
+        /// `ttlConfig:*`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2660,6 +4778,74 @@ namespace Google.Cloud.Firestore.Admin.V1
             return new lro::Operation<wkt::Empty, ImportDocumentsMetadata>(await _callImportDocuments.Async(request, callSettings).ConfigureAwait(false), ImportDocumentsOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>BulkDeleteDocuments</c>.</summary>
+        public override lro::OperationsClient BulkDeleteDocumentsOperationsClient { get; }
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata> BulkDeleteDocuments(BulkDeleteDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkDeleteDocumentsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>(_callBulkDeleteDocuments.Sync(request, callSettings), BulkDeleteDocumentsOperationsClient);
+        }
+
+        /// <summary>
+        /// Bulk deletes a subset of documents from Google Cloud Firestore.
+        /// Documents created or updated after the underlying system starts to process
+        /// the request will not be deleted. The bulk delete occurs in the background
+        /// and its progress can be monitored and managed via the Operation resource
+        /// that is created.
+        /// 
+        /// For more details on bulk delete behavior, refer to:
+        /// https://cloud.google.com/firestore/docs/manage-data/bulk-delete
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>> BulkDeleteDocumentsAsync(BulkDeleteDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BulkDeleteDocumentsRequest(ref request, ref callSettings);
+            return new lro::Operation<BulkDeleteDocumentsResponse, BulkDeleteDocumentsMetadata>(await _callBulkDeleteDocuments.Async(request, callSettings).ConfigureAwait(false), BulkDeleteDocumentsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateDatabase</c>.</summary>
+        public override lro::OperationsClient CreateDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Database, CreateDatabaseMetadata> CreateDatabase(CreateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, CreateDatabaseMetadata>(_callCreateDatabase.Sync(request, callSettings), CreateDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Database, CreateDatabaseMetadata>> CreateDatabaseAsync(CreateDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, CreateDatabaseMetadata>(await _callCreateDatabase.Async(request, callSettings).ConfigureAwait(false), CreateDatabaseOperationsClient);
+        }
+
         /// <summary>
         /// Gets information about a database.
         /// </summary>
@@ -2733,6 +4919,288 @@ namespace Google.Cloud.Firestore.Admin.V1
         {
             Modify_UpdateDatabaseRequest(ref request, ref callSettings);
             return new lro::Operation<Database, UpdateDatabaseMetadata>(await _callUpdateDatabase.Async(request, callSettings).ConfigureAwait(false), UpdateDatabaseOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteDatabase</c>.</summary>
+        public override lro::OperationsClient DeleteDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Database, DeleteDatabaseMetadata> DeleteDatabase(DeleteDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, DeleteDatabaseMetadata>(_callDeleteDatabase.Sync(request, callSettings), DeleteDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Database, DeleteDatabaseMetadata>> DeleteDatabaseAsync(DeleteDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, DeleteDatabaseMetadata>(await _callDeleteDatabase.Async(request, callSettings).ConfigureAwait(false), DeleteDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets information about a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Backup GetBackup(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupRequest(ref request, ref callSettings);
+            return _callGetBackup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Backup> GetBackupAsync(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupRequest(ref request, ref callSettings);
+            return _callGetBackup.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the backups.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ListBackupsResponse ListBackups(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupsRequest(ref request, ref callSettings);
+            return _callListBackups.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the backups.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ListBackupsResponse> ListBackupsAsync(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupsRequest(ref request, ref callSettings);
+            return _callListBackups.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteBackup(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupRequest(ref request, ref callSettings);
+            _callDeleteBackup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteBackupAsync(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupRequest(ref request, ref callSettings);
+            return _callDeleteBackup.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>RestoreDatabase</c>.</summary>
+        public override lro::OperationsClient RestoreDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new database by restoring from an existing backup.
+        /// 
+        /// The new database must be in the same cloud region or multi-region location
+        /// as the existing backup. This behaves similar to
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+        /// except instead of creating a new empty database, a new database is created
+        /// with the database type, index configuration, and documents from an existing
+        /// backup.
+        /// 
+        /// The [long-running operation][google.longrunning.Operation] can be used to
+        /// track the progress of the restore, with the Operation's
+        /// [metadata][google.longrunning.Operation.metadata] field type being the
+        /// [RestoreDatabaseMetadata][google.firestore.admin.v1.RestoreDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] type is the
+        /// [Database][google.firestore.admin.v1.Database] if the restore was
+        /// successful. The new database is not readable or writeable until the LRO has
+        /// completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Database, RestoreDatabaseMetadata> RestoreDatabase(RestoreDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestoreDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, RestoreDatabaseMetadata>(_callRestoreDatabase.Sync(request, callSettings), RestoreDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new database by restoring from an existing backup.
+        /// 
+        /// The new database must be in the same cloud region or multi-region location
+        /// as the existing backup. This behaves similar to
+        /// [FirestoreAdmin.CreateDatabase][google.firestore.admin.v1.FirestoreAdmin.CreateDatabase]
+        /// except instead of creating a new empty database, a new database is created
+        /// with the database type, index configuration, and documents from an existing
+        /// backup.
+        /// 
+        /// The [long-running operation][google.longrunning.Operation] can be used to
+        /// track the progress of the restore, with the Operation's
+        /// [metadata][google.longrunning.Operation.metadata] field type being the
+        /// [RestoreDatabaseMetadata][google.firestore.admin.v1.RestoreDatabaseMetadata].
+        /// The [response][google.longrunning.Operation.response] type is the
+        /// [Database][google.firestore.admin.v1.Database] if the restore was
+        /// successful. The new database is not readable or writeable until the LRO has
+        /// completed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Database, RestoreDatabaseMetadata>> RestoreDatabaseAsync(RestoreDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestoreDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<Database, RestoreDatabaseMetadata>(await _callRestoreDatabase.Async(request, callSettings).ConfigureAwait(false), RestoreDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a backup schedule on a database.
+        /// At most two backup schedules can be configured on a database, one daily
+        /// backup schedule and one weekly backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupSchedule CreateBackupSchedule(CreateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupScheduleRequest(ref request, ref callSettings);
+            return _callCreateBackupSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a backup schedule on a database.
+        /// At most two backup schedules can be configured on a database, one daily
+        /// backup schedule and one weekly backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupSchedule> CreateBackupScheduleAsync(CreateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupScheduleRequest(ref request, ref callSettings);
+            return _callCreateBackupSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupSchedule GetBackupSchedule(GetBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupScheduleRequest(ref request, ref callSettings);
+            return _callGetBackupSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupSchedule> GetBackupScheduleAsync(GetBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupScheduleRequest(ref request, ref callSettings);
+            return _callGetBackupSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List backup schedules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ListBackupSchedulesResponse ListBackupSchedules(ListBackupSchedulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupSchedulesRequest(ref request, ref callSettings);
+            return _callListBackupSchedules.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List backup schedules.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ListBackupSchedulesResponse> ListBackupSchedulesAsync(ListBackupSchedulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupSchedulesRequest(ref request, ref callSettings);
+            return _callListBackupSchedules.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupSchedule UpdateBackupSchedule(UpdateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupScheduleRequest(ref request, ref callSettings);
+            return _callUpdateBackupSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupSchedule> UpdateBackupScheduleAsync(UpdateBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateBackupScheduleRequest(ref request, ref callSettings);
+            return _callUpdateBackupSchedule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteBackupSchedule(DeleteBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupScheduleRequest(ref request, ref callSettings);
+            _callDeleteBackupSchedule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a backup schedule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteBackupScheduleAsync(DeleteBackupScheduleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupScheduleRequest(ref request, ref callSettings);
+            return _callDeleteBackupSchedule.Async(request, callSettings);
         }
     }
 

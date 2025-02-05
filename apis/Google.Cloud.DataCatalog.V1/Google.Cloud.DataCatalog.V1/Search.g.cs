@@ -39,12 +39,12 @@ namespace Google.Cloud.DataCatalog.V1 {
             "dWFsaWZpZWRfbmFtZRgKIAEoCRIUCgxkaXNwbGF5X25hbWUYDCABKAkSEwoL",
             "ZGVzY3JpcHRpb24YDSABKAlCCAoGc3lzdGVtKmQKEFNlYXJjaFJlc3VsdFR5",
             "cGUSIgoeU0VBUkNIX1JFU1VMVF9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFRU5U",
-            "UlkQARIQCgxUQUdfVEVNUExBVEUQAhIPCgtFTlRSWV9HUk9VUBADQsYBCh9j",
+            "UlkQARIQCgxUQUdfVEVNUExBVEUQAhIPCgtFTlRSWV9HUk9VUBADQsMBCh9j",
             "b20uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxUAFaQWNsb3VkLmdvb2ds",
             "ZS5jb20vZ28vZGF0YWNhdGFsb2cvYXBpdjEvZGF0YWNhdGFsb2dwYjtkYXRh",
-            "Y2F0YWxvZ3Bi+AEBqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9nLlYxygIb",
-            "R29vZ2xlXENsb3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpDbG91ZDo6",
-            "RGF0YUNhdGFsb2c6OlYxYgZwcm90bzM="));
+            "Y2F0YWxvZ3BiqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9nLlYxygIbR29v",
+            "Z2xlXENsb3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpDbG91ZDo6RGF0",
+            "YUNhdGFsb2c6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.V1.SearchResultType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,6 +85,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   ///
   /// Each result captures details of one entry that matches the search.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchCatalogResult : pb::IMessage<SearchCatalogResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -249,10 +250,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataCatalog.V1.IntegratedSystem IntegratedSystem {
-      get { return systemCase_ == SystemOneofCase.IntegratedSystem ? (global::Google.Cloud.DataCatalog.V1.IntegratedSystem) system_ : global::Google.Cloud.DataCatalog.V1.IntegratedSystem.Unspecified; }
+      get { return HasIntegratedSystem ? (global::Google.Cloud.DataCatalog.V1.IntegratedSystem) system_ : global::Google.Cloud.DataCatalog.V1.IntegratedSystem.Unspecified; }
       set {
         system_ = value;
         systemCase_ = SystemOneofCase.IntegratedSystem;
+      }
+    }
+    /// <summary>Gets whether the "integrated_system" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIntegratedSystem {
+      get { return systemCase_ == SystemOneofCase.IntegratedSystem; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "integrated_system" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIntegratedSystem() {
+      if (HasIntegratedSystem) {
+        ClearSystem();
       }
     }
 
@@ -264,10 +279,24 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UserSpecifiedSystem {
-      get { return systemCase_ == SystemOneofCase.UserSpecifiedSystem ? (string) system_ : ""; }
+      get { return HasUserSpecifiedSystem ? (string) system_ : ""; }
       set {
         system_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         systemCase_ = SystemOneofCase.UserSpecifiedSystem;
+      }
+    }
+    /// <summary>Gets whether the "user_specified_system" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUserSpecifiedSystem {
+      get { return systemCase_ == SystemOneofCase.UserSpecifiedSystem; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "user_specified_system" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUserSpecifiedSystem() {
+      if (HasUserSpecifiedSystem) {
+        ClearSystem();
       }
     }
 
@@ -390,8 +419,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (RelativeResourceName.Length != 0) hash ^= RelativeResourceName.GetHashCode();
       if (LinkedResource.Length != 0) hash ^= LinkedResource.GetHashCode();
       if (modifyTime_ != null) hash ^= ModifyTime.GetHashCode();
-      if (systemCase_ == SystemOneofCase.IntegratedSystem) hash ^= IntegratedSystem.GetHashCode();
-      if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) hash ^= UserSpecifiedSystem.GetHashCode();
+      if (HasIntegratedSystem) hash ^= IntegratedSystem.GetHashCode();
+      if (HasUserSpecifiedSystem) hash ^= UserSpecifiedSystem.GetHashCode();
       if (FullyQualifiedName.Length != 0) hash ^= FullyQualifiedName.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
@@ -434,11 +463,11 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(ModifyTime);
       }
-      if (systemCase_ == SystemOneofCase.IntegratedSystem) {
+      if (HasIntegratedSystem) {
         output.WriteRawTag(64);
         output.WriteEnum((int) IntegratedSystem);
       }
-      if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) {
+      if (HasUserSpecifiedSystem) {
         output.WriteRawTag(74);
         output.WriteString(UserSpecifiedSystem);
       }
@@ -484,11 +513,11 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(ModifyTime);
       }
-      if (systemCase_ == SystemOneofCase.IntegratedSystem) {
+      if (HasIntegratedSystem) {
         output.WriteRawTag(64);
         output.WriteEnum((int) IntegratedSystem);
       }
-      if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) {
+      if (HasUserSpecifiedSystem) {
         output.WriteRawTag(74);
         output.WriteString(UserSpecifiedSystem);
       }
@@ -529,10 +558,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (modifyTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModifyTime);
       }
-      if (systemCase_ == SystemOneofCase.IntegratedSystem) {
+      if (HasIntegratedSystem) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IntegratedSystem);
       }
-      if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) {
+      if (HasUserSpecifiedSystem) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserSpecifiedSystem);
       }
       if (FullyQualifiedName.Length != 0) {

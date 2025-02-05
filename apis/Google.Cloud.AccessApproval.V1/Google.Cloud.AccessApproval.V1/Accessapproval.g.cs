@@ -121,17 +121,17 @@ namespace Google.Cloud.AccessApproval.V1 {
             "Cg5BY2Nlc3NBcHByb3ZhbBKqAgoUTGlzdEFwcHJvdmFsUmVxdWVzdHMSOy5n",
             "b29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuTGlzdEFwcHJvdmFsUmVx",
             "dWVzdHNNZXNzYWdlGjwuZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYx",
-            "Lkxpc3RBcHByb3ZhbFJlcXVlc3RzUmVzcG9uc2UilgGC0+STAoYBEigvdjEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qfS9hcHByb3ZhbFJlcXVlc3RzWikSJy92MS97",
-            "cGFyZW50PWZvbGRlcnMvKn0vYXBwcm92YWxSZXF1ZXN0c1ovEi0vdjEve3Bh",
-            "cmVudD1vcmdhbml6YXRpb25zLyp9L2FwcHJvdmFsUmVxdWVzdHPaQQZwYXJl",
-            "bnQSlwIKEkdldEFwcHJvdmFsUmVxdWVzdBI5Lmdvb2dsZS5jbG91ZC5hY2Nl",
+            "Lkxpc3RBcHByb3ZhbFJlcXVlc3RzUmVzcG9uc2UilgHaQQZwYXJlbnSC0+ST",
+            "AoYBEigvdjEve3BhcmVudD1wcm9qZWN0cy8qfS9hcHByb3ZhbFJlcXVlc3Rz",
+            "WikSJy92MS97cGFyZW50PWZvbGRlcnMvKn0vYXBwcm92YWxSZXF1ZXN0c1ov",
+            "Ei0vdjEve3BhcmVudD1vcmdhbml6YXRpb25zLyp9L2FwcHJvdmFsUmVxdWVz",
+            "dHMSlwIKEkdldEFwcHJvdmFsUmVxdWVzdBI5Lmdvb2dsZS5jbG91ZC5hY2Nl",
             "c3NhcHByb3ZhbC52MS5HZXRBcHByb3ZhbFJlcXVlc3RNZXNzYWdlGi8uZ29v",
             "Z2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkFwcHJvdmFsUmVxdWVzdCKU",
-            "AYLT5JMChgESKC92MS97bmFtZT1wcm9qZWN0cy8qL2FwcHJvdmFsUmVxdWVz",
-            "dHMvKn1aKRInL3YxL3tuYW1lPWZvbGRlcnMvKi9hcHByb3ZhbFJlcXVlc3Rz",
-            "Lyp9Wi8SLS92MS97bmFtZT1vcmdhbml6YXRpb25zLyovYXBwcm92YWxSZXF1",
-            "ZXN0cy8qfdpBBG5hbWUSuQIKFkFwcHJvdmVBcHByb3ZhbFJlcXVlc3QSPS5n",
+            "AdpBBG5hbWWC0+STAoYBEigvdjEve25hbWU9cHJvamVjdHMvKi9hcHByb3Zh",
+            "bFJlcXVlc3RzLyp9WikSJy92MS97bmFtZT1mb2xkZXJzLyovYXBwcm92YWxS",
+            "ZXF1ZXN0cy8qfVovEi0vdjEve25hbWU9b3JnYW5pemF0aW9ucy8qL2FwcHJv",
+            "dmFsUmVxdWVzdHMvKn0SuQIKFkFwcHJvdmVBcHByb3ZhbFJlcXVlc3QSPS5n",
             "b29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuQXBwcm92ZUFwcHJvdmFs",
             "UmVxdWVzdE1lc3NhZ2UaLy5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwu",
             "djEuQXBwcm92YWxSZXF1ZXN0Iq4BgtPkkwKnASIwL3YxL3tuYW1lPXByb2pl",
@@ -156,32 +156,32 @@ namespace Google.Cloud.AccessApproval.V1 {
             "c0FwcHJvdmFsU2V0dGluZ3MSQC5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92",
             "YWwudjEuR2V0QWNjZXNzQXBwcm92YWxTZXR0aW5nc01lc3NhZ2UaNi5nb29n",
             "bGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuQWNjZXNzQXBwcm92YWxTZXR0",
-            "aW5ncyKgAYLT5JMCkgESLC92MS97bmFtZT1wcm9qZWN0cy8qL2FjY2Vzc0Fw",
-            "cHJvdmFsU2V0dGluZ3N9Wi0SKy92MS97bmFtZT1mb2xkZXJzLyovYWNjZXNz",
-            "QXBwcm92YWxTZXR0aW5nc31aMxIxL3YxL3tuYW1lPW9yZ2FuaXphdGlvbnMv",
-            "Ki9hY2Nlc3NBcHByb3ZhbFNldHRpbmdzfdpBBG5hbWUShwMKHFVwZGF0ZUFj",
+            "aW5ncyKgAdpBBG5hbWWC0+STApIBEiwvdjEve25hbWU9cHJvamVjdHMvKi9h",
+            "Y2Nlc3NBcHByb3ZhbFNldHRpbmdzfVotEisvdjEve25hbWU9Zm9sZGVycy8q",
+            "L2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N9WjMSMS92MS97bmFtZT1vcmdhbml6",
+            "YXRpb25zLyovYWNjZXNzQXBwcm92YWxTZXR0aW5nc30ShwMKHFVwZGF0ZUFj",
             "Y2Vzc0FwcHJvdmFsU2V0dGluZ3MSQy5nb29nbGUuY2xvdWQuYWNjZXNzYXBw",
             "cm92YWwudjEuVXBkYXRlQWNjZXNzQXBwcm92YWxTZXR0aW5nc01lc3NhZ2Ua",
             "Ni5nb29nbGUuY2xvdWQuYWNjZXNzYXBwcm92YWwudjEuQWNjZXNzQXBwcm92",
-            "YWxTZXR0aW5ncyLpAYLT5JMCywEyNS92MS97c2V0dGluZ3MubmFtZT1wcm9q",
-            "ZWN0cy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N9OghzZXR0aW5nc1pAMjQv",
-            "djEve3NldHRpbmdzLm5hbWU9Zm9sZGVycy8qL2FjY2Vzc0FwcHJvdmFsU2V0",
-            "dGluZ3N9OghzZXR0aW5nc1pGMjovdjEve3NldHRpbmdzLm5hbWU9b3JnYW5p",
-            "emF0aW9ucy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N9OghzZXR0aW5nc9pB",
-            "FHNldHRpbmdzLHVwZGF0ZV9tYXNrEp4CChxEZWxldGVBY2Nlc3NBcHByb3Zh",
+            "YWxTZXR0aW5ncyLpAdpBFHNldHRpbmdzLHVwZGF0ZV9tYXNrgtPkkwLLATI1",
+            "L3YxL3tzZXR0aW5ncy5uYW1lPXByb2plY3RzLyovYWNjZXNzQXBwcm92YWxT",
+            "ZXR0aW5nc306CHNldHRpbmdzWkAyNC92MS97c2V0dGluZ3MubmFtZT1mb2xk",
+            "ZXJzLyovYWNjZXNzQXBwcm92YWxTZXR0aW5nc306CHNldHRpbmdzWkYyOi92",
+            "MS97c2V0dGluZ3MubmFtZT1vcmdhbml6YXRpb25zLyovYWNjZXNzQXBwcm92",
+            "YWxTZXR0aW5nc306CHNldHRpbmdzEp4CChxEZWxldGVBY2Nlc3NBcHByb3Zh",
             "bFNldHRpbmdzEkMuZ29vZ2xlLmNsb3VkLmFjY2Vzc2FwcHJvdmFsLnYxLkRl",
             "bGV0ZUFjY2Vzc0FwcHJvdmFsU2V0dGluZ3NNZXNzYWdlGhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5IqABgtPkkwKSASosL3YxL3tuYW1lPXByb2plY3RzLyov",
-            "YWNjZXNzQXBwcm92YWxTZXR0aW5nc31aLSorL3YxL3tuYW1lPWZvbGRlcnMv",
-            "Ki9hY2Nlc3NBcHByb3ZhbFNldHRpbmdzfVozKjEvdjEve25hbWU9b3JnYW5p",
-            "emF0aW9ucy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N92kEEbmFtZRKxAgof",
+            "b3RvYnVmLkVtcHR5IqAB2kEEbmFtZYLT5JMCkgEqLC92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2FjY2Vzc0FwcHJvdmFsU2V0dGluZ3N9Wi0qKy92MS97bmFtZT1m",
+            "b2xkZXJzLyovYWNjZXNzQXBwcm92YWxTZXR0aW5nc31aMyoxL3YxL3tuYW1l",
+            "PW9yZ2FuaXphdGlvbnMvKi9hY2Nlc3NBcHByb3ZhbFNldHRpbmdzfRKxAgof",
             "R2V0QWNjZXNzQXBwcm92YWxTZXJ2aWNlQWNjb3VudBJGLmdvb2dsZS5jbG91",
             "ZC5hY2Nlc3NhcHByb3ZhbC52MS5HZXRBY2Nlc3NBcHByb3ZhbFNlcnZpY2VB",
             "Y2NvdW50TWVzc2FnZRo8Lmdvb2dsZS5jbG91ZC5hY2Nlc3NhcHByb3ZhbC52",
-            "MS5BY2Nlc3NBcHByb3ZhbFNlcnZpY2VBY2NvdW50IocBgtPkkwJ6EiQvdjEv",
-            "e25hbWU9cHJvamVjdHMvKi9zZXJ2aWNlQWNjb3VudH1aJRIjL3YxL3tuYW1l",
-            "PWZvbGRlcnMvKi9zZXJ2aWNlQWNjb3VudH1aKxIpL3YxL3tuYW1lPW9yZ2Fu",
-            "aXphdGlvbnMvKi9zZXJ2aWNlQWNjb3VudH3aQQRuYW1lGlHKQR1hY2Nlc3Nh",
+            "MS5BY2Nlc3NBcHByb3ZhbFNlcnZpY2VBY2NvdW50IocB2kEEbmFtZYLT5JMC",
+            "ehIkL3YxL3tuYW1lPXByb2plY3RzLyovc2VydmljZUFjY291bnR9WiUSIy92",
+            "MS97bmFtZT1mb2xkZXJzLyovc2VydmljZUFjY291bnR9WisSKS92MS97bmFt",
+            "ZT1vcmdhbml6YXRpb25zLyovc2VydmljZUFjY291bnR9GlHKQR1hY2Nlc3Nh",
             "cHByb3ZhbC5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
             "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C7QEKImNvbS5nb29nbGUuY2xv",
             "dWQuYWNjZXNzYXBwcm92YWwudjFCE0FjY2Vzc0FwcHJvdmFsUHJvdG9QAVpK",
@@ -239,6 +239,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Home office and physical location of the principal.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessLocations : pb::IMessage<AccessLocations>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -497,6 +498,7 @@ namespace Google.Cloud.AccessApproval.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessReason : pb::IMessage<AccessReason>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -785,6 +787,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Information about the digital signature of the resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SignatureInfo : pb::IMessage<SignatureInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -863,10 +866,24 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GooglePublicKeyPem {
-      get { return verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem ? (string) verificationInfo_ : ""; }
+      get { return HasGooglePublicKeyPem ? (string) verificationInfo_ : ""; }
       set {
         verificationInfo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         verificationInfoCase_ = VerificationInfoOneofCase.GooglePublicKeyPem;
+      }
+    }
+    /// <summary>Gets whether the "google_public_key_pem" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGooglePublicKeyPem {
+      get { return verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "google_public_key_pem" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGooglePublicKeyPem() {
+      if (HasGooglePublicKeyPem) {
+        ClearVerificationInfo();
       }
     }
 
@@ -878,10 +895,24 @@ namespace Google.Cloud.AccessApproval.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerKmsKeyVersion {
-      get { return verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion ? (string) verificationInfo_ : ""; }
+      get { return HasCustomerKmsKeyVersion ? (string) verificationInfo_ : ""; }
       set {
         verificationInfo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         verificationInfoCase_ = VerificationInfoOneofCase.CustomerKmsKeyVersion;
+      }
+    }
+    /// <summary>Gets whether the "customer_kms_key_version" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCustomerKmsKeyVersion {
+      get { return verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "customer_kms_key_version" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCustomerKmsKeyVersion() {
+      if (HasCustomerKmsKeyVersion) {
+        ClearVerificationInfo();
       }
     }
 
@@ -933,8 +964,8 @@ namespace Google.Cloud.AccessApproval.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Signature.Length != 0) hash ^= Signature.GetHashCode();
-      if (verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem) hash ^= GooglePublicKeyPem.GetHashCode();
-      if (verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion) hash ^= CustomerKmsKeyVersion.GetHashCode();
+      if (HasGooglePublicKeyPem) hash ^= GooglePublicKeyPem.GetHashCode();
+      if (HasCustomerKmsKeyVersion) hash ^= CustomerKmsKeyVersion.GetHashCode();
       hash ^= (int) verificationInfoCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -958,11 +989,11 @@ namespace Google.Cloud.AccessApproval.V1 {
         output.WriteRawTag(10);
         output.WriteBytes(Signature);
       }
-      if (verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem) {
+      if (HasGooglePublicKeyPem) {
         output.WriteRawTag(18);
         output.WriteString(GooglePublicKeyPem);
       }
-      if (verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion) {
+      if (HasCustomerKmsKeyVersion) {
         output.WriteRawTag(26);
         output.WriteString(CustomerKmsKeyVersion);
       }
@@ -980,11 +1011,11 @@ namespace Google.Cloud.AccessApproval.V1 {
         output.WriteRawTag(10);
         output.WriteBytes(Signature);
       }
-      if (verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem) {
+      if (HasGooglePublicKeyPem) {
         output.WriteRawTag(18);
         output.WriteString(GooglePublicKeyPem);
       }
-      if (verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion) {
+      if (HasCustomerKmsKeyVersion) {
         output.WriteRawTag(26);
         output.WriteString(CustomerKmsKeyVersion);
       }
@@ -1001,10 +1032,10 @@ namespace Google.Cloud.AccessApproval.V1 {
       if (Signature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Signature);
       }
-      if (verificationInfoCase_ == VerificationInfoOneofCase.GooglePublicKeyPem) {
+      if (HasGooglePublicKeyPem) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GooglePublicKeyPem);
       }
-      if (verificationInfoCase_ == VerificationInfoOneofCase.CustomerKmsKeyVersion) {
+      if (HasCustomerKmsKeyVersion) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerKmsKeyVersion);
       }
       if (_unknownFields != null) {
@@ -1095,6 +1126,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// A decision that has been made to approve access to a resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApproveDecision : pb::IMessage<ApproveDecision>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1486,6 +1518,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// A decision that has been made to dismiss an approval request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DismissDecision : pb::IMessage<DismissDecision>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1732,6 +1765,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// The properties associated with the resource of the request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceProperties : pb::IMessage<ResourceProperties>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1928,6 +1962,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// A request for the customer to approve access to a resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApprovalRequest : pb::IMessage<ApprovalRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2555,6 +2590,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Represents the enrollment of a cloud resource into a specific service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnrolledService : pb::IMessage<EnrolledService>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2851,6 +2887,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Settings on a Project/Folder/Organization related to Access Approval.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessApprovalSettings : pb::IMessage<AccessApprovalSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3297,6 +3334,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Access Approval service account related to a project/folder/organization.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccessApprovalServiceAccount : pb::IMessage<AccessApprovalServiceAccount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3536,6 +3574,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Request to list approval requests.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListApprovalRequestsMessage : pb::IMessage<ListApprovalRequestsMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3863,6 +3902,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Response to listing of ApprovalRequest objects.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListApprovalRequestsResponse : pb::IMessage<ListApprovalRequestsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4087,6 +4127,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Request to get an approval request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetApprovalRequestMessage : pb::IMessage<GetApprovalRequestMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4284,6 +4325,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Request to approve an ApprovalRequest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApproveApprovalRequestMessage : pb::IMessage<ApproveApprovalRequestMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4528,6 +4570,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Request to dismiss an approval request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DismissApprovalRequestMessage : pb::IMessage<DismissApprovalRequestMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4723,6 +4766,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Request to invalidate an existing approval.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InvalidateApprovalRequestMessage : pb::IMessage<InvalidateApprovalRequestMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4918,6 +4962,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Request to get access approval settings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAccessApprovalSettingsMessage : pb::IMessage<GetAccessApprovalSettingsMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5114,6 +5159,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Request to update access approval settings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateAccessApprovalSettingsMessage : pb::IMessage<UpdateAccessApprovalSettingsMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5376,6 +5422,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Request to delete access approval settings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAccessApprovalSettingsMessage : pb::IMessage<DeleteAccessApprovalSettingsMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5571,6 +5618,7 @@ namespace Google.Cloud.AccessApproval.V1 {
   /// <summary>
   /// Request to get an Access Approval service account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAccessApprovalServiceAccountMessage : pb::IMessage<GetAccessApprovalServiceAccountMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

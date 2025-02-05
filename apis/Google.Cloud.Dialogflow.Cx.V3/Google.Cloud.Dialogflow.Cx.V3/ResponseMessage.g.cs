@@ -27,7 +27,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "CjRnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9yZXNwb25zZV9tZXNz",
             "YWdlLnByb3RvEh1nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52MxofZ29v",
             "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxocZ29vZ2xlL3Byb3RvYnVm",
-            "L3N0cnVjdC5wcm90byK8CwoPUmVzcG9uc2VNZXNzYWdlEkMKBHRleHQYASAB",
+            "L3N0cnVjdC5wcm90byLxDQoPUmVzcG9uc2VNZXNzYWdlEkMKBHRleHQYASAB",
             "KAsyMy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1l",
             "c3NhZ2UuVGV4dEgAEioKB3BheWxvYWQYAiABKAsyFy5nb29nbGUucHJvdG9i",
             "dWYuU3RydWN0SAASYgoUY29udmVyc2F0aW9uX3N1Y2Nlc3MYCSABKAsyQi5n",
@@ -44,38 +44,46 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "MjkuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVzcG9uc2VNZXNz",
             "YWdlLk1peGVkQXVkaW9CA+BBA0gAEmcKF3RlbGVwaG9ueV90cmFuc2Zlcl9j",
             "YWxsGBIgASgLMkQuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuUmVz",
-            "cG9uc2VNZXNzYWdlLlRlbGVwaG9ueVRyYW5zZmVyQ2FsbEgAEg8KB2NoYW5u",
-            "ZWwYEyABKAkaQwoEVGV4dBIRCgR0ZXh0GAEgAygJQgPgQQISKAobYWxsb3df",
-            "cGxheWJhY2tfaW50ZXJydXB0aW9uGAIgASgIQgPgQQMaPQoQTGl2ZUFnZW50",
-            "SGFuZG9mZhIpCghtZXRhZGF0YRgBIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5T",
-            "dHJ1Y3QaQAoTQ29udmVyc2F0aW9uU3VjY2VzcxIpCghtZXRhZGF0YRgBIAEo",
-            "CzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QaZQoPT3V0cHV0QXVkaW9UZXh0",
-            "Eg4KBHRleHQYASABKAlIABIOCgRzc21sGAIgASgJSAASKAobYWxsb3dfcGxh",
-            "eWJhY2tfaW50ZXJydXB0aW9uGAMgASgIQgPgQQNCCAoGc291cmNlGhAKDkVu",
-            "ZEludGVyYWN0aW9uGk0KCVBsYXlBdWRpbxIWCglhdWRpb191cmkYASABKAlC",
-            "A+BBAhIoChthbGxvd19wbGF5YmFja19pbnRlcnJ1cHRpb24YAiABKAhCA+BB",
-            "AxrBAQoKTWl4ZWRBdWRpbxJTCghzZWdtZW50cxgBIAMoCzJBLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LmN4LnYzLlJlc3BvbnNlTWVzc2FnZS5NaXhlZEF1",
-            "ZGlvLlNlZ21lbnQaXgoHU2VnbWVudBIPCgVhdWRpbxgBIAEoDEgAEg0KA3Vy",
-            "aRgCIAEoCUgAEigKG2FsbG93X3BsYXliYWNrX2ludGVycnVwdGlvbhgDIAEo",
-            "CEID4EEDQgkKB2NvbnRlbnQaOwoVVGVsZXBob255VHJhbnNmZXJDYWxsEhYK",
-            "DHBob25lX251bWJlchgBIAEoCUgAQgoKCGVuZHBvaW50QgkKB21lc3NhZ2VC",
-            "ugEKIWNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0IUUmVzcG9u",
-            "c2VNZXNzYWdlUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dm",
-            "bG93L2N4L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgIdR29vZ2xlLkNsb3Vk",
-            "LkRpYWxvZ2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93",
-            "OjpDWDo6VjNiBnByb3RvMw=="));
+            "cG9uc2VNZXNzYWdlLlRlbGVwaG9ueVRyYW5zZmVyQ2FsbEgAEl8KE2tub3ds",
+            "ZWRnZV9pbmZvX2NhcmQYFCABKAsyQC5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy5jeC52My5SZXNwb25zZU1lc3NhZ2UuS25vd2xlZGdlSW5mb0NhcmRIABJS",
+            "Cg1yZXNwb25zZV90eXBlGAQgASgOMjsuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cuY3gudjMuUmVzcG9uc2VNZXNzYWdlLlJlc3BvbnNlVHlwZRIPCgdjaGFu",
+            "bmVsGBMgASgJGkMKBFRleHQSEQoEdGV4dBgBIAMoCUID4EECEigKG2FsbG93",
+            "X3BsYXliYWNrX2ludGVycnVwdGlvbhgCIAEoCEID4EEDGj0KEExpdmVBZ2Vu",
+            "dEhhbmRvZmYSKQoIbWV0YWRhdGEYASABKAsyFy5nb29nbGUucHJvdG9idWYu",
+            "U3RydWN0GkAKE0NvbnZlcnNhdGlvblN1Y2Nlc3MSKQoIbWV0YWRhdGEYASAB",
+            "KAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0GmUKD091dHB1dEF1ZGlvVGV4",
+            "dBIOCgR0ZXh0GAEgASgJSAASDgoEc3NtbBgCIAEoCUgAEigKG2FsbG93X3Bs",
+            "YXliYWNrX2ludGVycnVwdGlvbhgDIAEoCEID4EEDQggKBnNvdXJjZRoQCg5F",
+            "bmRJbnRlcmFjdGlvbhpNCglQbGF5QXVkaW8SFgoJYXVkaW9fdXJpGAEgASgJ",
+            "QgPgQQISKAobYWxsb3dfcGxheWJhY2tfaW50ZXJydXB0aW9uGAIgASgIQgPg",
+            "QQMawQEKCk1peGVkQXVkaW8SUwoIc2VnbWVudHMYASADKAsyQS5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1lc3NhZ2UuTWl4ZWRB",
+            "dWRpby5TZWdtZW50Gl4KB1NlZ21lbnQSDwoFYXVkaW8YASABKAxIABINCgN1",
+            "cmkYAiABKAlIABIoChthbGxvd19wbGF5YmFja19pbnRlcnJ1cHRpb24YAyAB",
+            "KAhCA+BBA0IJCgdjb250ZW50GjsKFVRlbGVwaG9ueVRyYW5zZmVyQ2FsbBIW",
+            "CgxwaG9uZV9udW1iZXIYASABKAlIAEIKCghlbmRwb2ludBoTChFLbm93bGVk",
+            "Z2VJbmZvQ2FyZCJpCgxSZXNwb25zZVR5cGUSHQoZUkVTUE9OU0VfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEhAKDEVOVFJZX1BST01QVBABEhQKEFBBUkFNRVRFUl9Q",
+            "Uk9NUFQQAhISCg5IQU5ETEVSX1BST01QVBADQgkKB21lc3NhZ2VCugEKIWNv",
+            "bS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52M0IUUmVzcG9uc2VNZXNz",
+            "YWdlUHJvdG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2N4",
+            "L2FwaXYzL2N4cGI7Y3hwYvgBAaICAkRGqgIdR29vZ2xlLkNsb3VkLkRpYWxv",
+            "Z2Zsb3cuQ3guVjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93OjpDWDo6",
+            "VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Parser, new[]{ "Text", "Payload", "ConversationSuccess", "OutputAudioText", "LiveAgentHandoff", "EndInteraction", "PlayAudio", "MixedAudio", "TelephonyTransferCall", "Channel" }, new[]{ "Message" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text.Parser, new[]{ "Text_", "AllowPlaybackInterruption" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Parser, new[]{ "Text", "Payload", "ConversationSuccess", "OutputAudioText", "LiveAgentHandoff", "EndInteraction", "PlayAudio", "MixedAudio", "TelephonyTransferCall", "KnowledgeInfoCard", "ResponseType", "Channel" }, new[]{ "Message" }, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.Text.Parser, new[]{ "Text_", "AllowPlaybackInterruption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.LiveAgentHandoff), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.LiveAgentHandoff.Parser, new[]{ "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ConversationSuccess), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ConversationSuccess.Parser, new[]{ "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText.Parser, new[]{ "Text", "Ssml", "AllowPlaybackInterruption" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.EndInteraction), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.EndInteraction.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.PlayAudio), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.PlayAudio.Parser, new[]{ "AudioUri", "AllowPlaybackInterruption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio.Parser, new[]{ "Segments" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio.Types.Segment), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio.Types.Segment.Parser, new[]{ "Audio", "Uri", "AllowPlaybackInterruption" }, new[]{ "Content" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.TelephonyTransferCall), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.TelephonyTransferCall.Parser, new[]{ "PhoneNumber" }, new[]{ "Endpoint" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.TelephonyTransferCall), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.TelephonyTransferCall.Parser, new[]{ "PhoneNumber" }, new[]{ "Endpoint" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard.Parser, null, null, null, null, null)})
           }));
     }
     #endregion
@@ -101,6 +109,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// This approach allows for more sophisticated user experience scenarios, where
   /// the text displayed to the user may differ from what is heard.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResponseMessage : pb::IMessage<ResponseMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -135,6 +144,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResponseMessage(ResponseMessage other) : this() {
+      responseType_ = other.responseType_;
       channel_ = other.channel_;
       switch (other.MessageCase) {
         case MessageOneofCase.Text:
@@ -163,6 +173,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           break;
         case MessageOneofCase.TelephonyTransferCall:
           TelephonyTransferCall = other.TelephonyTransferCall.Clone();
+          break;
+        case MessageOneofCase.KnowledgeInfoCard:
+          KnowledgeInfoCard = other.KnowledgeInfoCard.Clone();
           break;
       }
 
@@ -325,6 +338,37 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "knowledge_info_card" field.</summary>
+    public const int KnowledgeInfoCardFieldNumber = 20;
+    /// <summary>
+    /// Represents info card for knowledge answers, to be better rendered in
+    /// Dialogflow Messenger.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard KnowledgeInfoCard {
+      get { return messageCase_ == MessageOneofCase.KnowledgeInfoCard ? (global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard) message_ : null; }
+      set {
+        message_ = value;
+        messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.KnowledgeInfoCard;
+      }
+    }
+
+    /// <summary>Field number for the "response_type" field.</summary>
+    public const int ResponseTypeFieldNumber = 4;
+    private global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType responseType_ = global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified;
+    /// <summary>
+    /// Response type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType ResponseType {
+      get { return responseType_; }
+      set {
+        responseType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "channel" field.</summary>
     public const int ChannelFieldNumber = 19;
     private string channel_ = "";
@@ -356,6 +400,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       PlayAudio = 12,
       MixedAudio = 13,
       TelephonyTransferCall = 18,
+      KnowledgeInfoCard = 20,
     }
     private MessageOneofCase messageCase_ = MessageOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -395,6 +440,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (!object.Equals(PlayAudio, other.PlayAudio)) return false;
       if (!object.Equals(MixedAudio, other.MixedAudio)) return false;
       if (!object.Equals(TelephonyTransferCall, other.TelephonyTransferCall)) return false;
+      if (!object.Equals(KnowledgeInfoCard, other.KnowledgeInfoCard)) return false;
+      if (ResponseType != other.ResponseType) return false;
       if (Channel != other.Channel) return false;
       if (MessageCase != other.MessageCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -413,6 +460,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (messageCase_ == MessageOneofCase.PlayAudio) hash ^= PlayAudio.GetHashCode();
       if (messageCase_ == MessageOneofCase.MixedAudio) hash ^= MixedAudio.GetHashCode();
       if (messageCase_ == MessageOneofCase.TelephonyTransferCall) hash ^= TelephonyTransferCall.GetHashCode();
+      if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) hash ^= KnowledgeInfoCard.GetHashCode();
+      if (ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) hash ^= ResponseType.GetHashCode();
       if (Channel.Length != 0) hash ^= Channel.GetHashCode();
       hash ^= (int) messageCase_;
       if (_unknownFields != null) {
@@ -441,6 +490,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(18);
         output.WriteMessage(Payload);
       }
+      if (ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ResponseType);
+      }
       if (messageCase_ == MessageOneofCase.OutputAudioText) {
         output.WriteRawTag(66);
         output.WriteMessage(OutputAudioText);
@@ -472,6 +525,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Channel.Length != 0) {
         output.WriteRawTag(154, 1);
         output.WriteString(Channel);
+      }
+      if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(KnowledgeInfoCard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -491,6 +548,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(18);
         output.WriteMessage(Payload);
       }
+      if (ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ResponseType);
+      }
       if (messageCase_ == MessageOneofCase.OutputAudioText) {
         output.WriteRawTag(66);
         output.WriteMessage(OutputAudioText);
@@ -522,6 +583,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (Channel.Length != 0) {
         output.WriteRawTag(154, 1);
         output.WriteString(Channel);
+      }
+      if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(KnowledgeInfoCard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -560,6 +625,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       if (messageCase_ == MessageOneofCase.TelephonyTransferCall) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(TelephonyTransferCall);
       }
+      if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(KnowledgeInfoCard);
+      }
+      if (ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResponseType);
+      }
       if (Channel.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Channel);
       }
@@ -574,6 +645,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public void MergeFrom(ResponseMessage other) {
       if (other == null) {
         return;
+      }
+      if (other.ResponseType != global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType.Unspecified) {
+        ResponseType = other.ResponseType;
       }
       if (other.Channel.Length != 0) {
         Channel = other.Channel;
@@ -633,6 +707,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           TelephonyTransferCall.MergeFrom(other.TelephonyTransferCall);
           break;
+        case MessageOneofCase.KnowledgeInfoCard:
+          if (KnowledgeInfoCard == null) {
+            KnowledgeInfoCard = new global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard();
+          }
+          KnowledgeInfoCard.MergeFrom(other.KnowledgeInfoCard);
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -668,6 +748,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             Payload = subBuilder;
             break;
           }
+          case 32: {
+            ResponseType = (global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType) input.ReadEnum();
+            break;
+          }
           case 66: {
             global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText();
             if (messageCase_ == MessageOneofCase.OutputAudioText) {
@@ -733,6 +817,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           case 154: {
             Channel = input.ReadString();
+            break;
+          }
+          case 162: {
+            global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard();
+            if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) {
+              subBuilder.MergeFrom(KnowledgeInfoCard);
+            }
+            input.ReadMessage(subBuilder);
+            KnowledgeInfoCard = subBuilder;
             break;
           }
         }
@@ -768,6 +861,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             Payload = subBuilder;
             break;
           }
+          case 32: {
+            ResponseType = (global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ResponseType) input.ReadEnum();
+            break;
+          }
           case 66: {
             global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText();
             if (messageCase_ == MessageOneofCase.OutputAudioText) {
@@ -835,6 +932,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             Channel = input.ReadString();
             break;
           }
+          case 162: {
+            global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard subBuilder = new global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.KnowledgeInfoCard();
+            if (messageCase_ == MessageOneofCase.KnowledgeInfoCard) {
+              subBuilder.MergeFrom(KnowledgeInfoCard);
+            }
+            input.ReadMessage(subBuilder);
+            KnowledgeInfoCard = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -846,8 +952,37 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
+      /// Represents different response types.
+      /// </summary>
+      public enum ResponseType {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("RESPONSE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The response is from an [entry
+        /// prompt][google.cloud.dialogflow.cx.v3.Page.entry_fulfillment] in the
+        /// page.
+        /// </summary>
+        [pbr::OriginalName("ENTRY_PROMPT")] EntryPrompt = 1,
+        /// <summary>
+        /// The response is from [form-filling
+        /// prompt][google.cloud.dialogflow.cx.v3.Form.Parameter.fill_behavior] in
+        /// the page.
+        /// </summary>
+        [pbr::OriginalName("PARAMETER_PROMPT")] ParameterPrompt = 2,
+        /// <summary>
+        /// The response is from a [transition
+        /// route][google.cloud.dialogflow.cx.v3.TransitionRoute] or an [event
+        /// handler][EventHandler] in the page or flow or transition route group.
+        /// </summary>
+        [pbr::OriginalName("HANDLER_PROMPT")] HandlerPrompt = 3,
+      }
+
+      /// <summary>
       /// The text response message.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Text : pb::IMessage<Text>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -899,7 +1034,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> text_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Required. A collection of text responses.
+        /// Required. A collection of text response variants. If multiple variants
+        /// are defined, only one text response variant is returned at runtime.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1087,6 +1223,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// * In a webhook response when you determine that the customer issue can only
       ///   be handled by a human.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class LiveAgentHandoff : pb::IMessage<LiveAgentHandoff>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1307,6 +1444,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// * In a webhook response when you determine that you handled the customer
       ///   issue.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ConversationSuccess : pb::IMessage<ConversationSuccess>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1512,6 +1650,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// A text or ssml response that is preferentially used for TTS output audio
       /// synthesis, as described in the comment on the ResponseMessage message.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OutputAudioText : pb::IMessage<OutputAudioText>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1573,10 +1712,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Text {
-          get { return sourceCase_ == SourceOneofCase.Text ? (string) source_ : ""; }
+          get { return HasText ? (string) source_ : ""; }
           set {
             source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             sourceCase_ = SourceOneofCase.Text;
+          }
+        }
+        /// <summary>Gets whether the "text" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasText {
+          get { return sourceCase_ == SourceOneofCase.Text; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "text" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearText() {
+          if (HasText) {
+            ClearSource();
           }
         }
 
@@ -1589,10 +1742,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Ssml {
-          get { return sourceCase_ == SourceOneofCase.Ssml ? (string) source_ : ""; }
+          get { return HasSsml ? (string) source_ : ""; }
           set {
             source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             sourceCase_ = SourceOneofCase.Ssml;
+          }
+        }
+        /// <summary>Gets whether the "ssml" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSsml {
+          get { return sourceCase_ == SourceOneofCase.Ssml; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "ssml" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSsml() {
+          if (HasSsml) {
+            ClearSource();
           }
         }
 
@@ -1660,8 +1827,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (sourceCase_ == SourceOneofCase.Text) hash ^= Text.GetHashCode();
-          if (sourceCase_ == SourceOneofCase.Ssml) hash ^= Ssml.GetHashCode();
+          if (HasText) hash ^= Text.GetHashCode();
+          if (HasSsml) hash ^= Ssml.GetHashCode();
           if (AllowPlaybackInterruption != false) hash ^= AllowPlaybackInterruption.GetHashCode();
           hash ^= (int) sourceCase_;
           if (_unknownFields != null) {
@@ -1682,11 +1849,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (sourceCase_ == SourceOneofCase.Text) {
+          if (HasText) {
             output.WriteRawTag(10);
             output.WriteString(Text);
           }
-          if (sourceCase_ == SourceOneofCase.Ssml) {
+          if (HasSsml) {
             output.WriteRawTag(18);
             output.WriteString(Ssml);
           }
@@ -1704,11 +1871,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (sourceCase_ == SourceOneofCase.Text) {
+          if (HasText) {
             output.WriteRawTag(10);
             output.WriteString(Text);
           }
-          if (sourceCase_ == SourceOneofCase.Ssml) {
+          if (HasSsml) {
             output.WriteRawTag(18);
             output.WriteString(Ssml);
           }
@@ -1726,10 +1893,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (sourceCase_ == SourceOneofCase.Text) {
+          if (HasText) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
           }
-          if (sourceCase_ == SourceOneofCase.Ssml) {
+          if (HasSsml) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Ssml);
           }
           if (AllowPlaybackInterruption != false) {
@@ -1825,6 +1992,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// This message is generated by Dialogflow only and not supposed to be
       /// defined by the user.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EndInteraction : pb::IMessage<EndInteraction>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1980,6 +2148,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <summary>
       /// Specifies an audio clip to be played by the client as part of the response.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PlayAudio : pb::IMessage<PlayAudio>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2224,6 +2393,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// This message is generated by Dialogflow only and not supposed to be
       /// defined by the user.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class MixedAudio : pb::IMessage<MixedAudio>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2411,6 +2581,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           /// <summary>
           /// Represents one segment of audio.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Segment : pb::IMessage<Segment>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2473,10 +2644,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pb::ByteString Audio {
-              get { return contentCase_ == ContentOneofCase.Audio ? (pb::ByteString) content_ : pb::ByteString.Empty; }
+              get { return HasAudio ? (pb::ByteString) content_ : pb::ByteString.Empty; }
               set {
                 content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 contentCase_ = ContentOneofCase.Audio;
+              }
+            }
+            /// <summary>Gets whether the "audio" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasAudio {
+              get { return contentCase_ == ContentOneofCase.Audio; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "audio" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearAudio() {
+              if (HasAudio) {
+                ClearContent();
               }
             }
 
@@ -2489,10 +2674,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Uri {
-              get { return contentCase_ == ContentOneofCase.Uri ? (string) content_ : ""; }
+              get { return HasUri ? (string) content_ : ""; }
               set {
                 content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
                 contentCase_ = ContentOneofCase.Uri;
+              }
+            }
+            /// <summary>Gets whether the "uri" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasUri {
+              get { return contentCase_ == ContentOneofCase.Uri; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearUri() {
+              if (HasUri) {
+                ClearContent();
               }
             }
 
@@ -2560,8 +2759,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
-              if (contentCase_ == ContentOneofCase.Audio) hash ^= Audio.GetHashCode();
-              if (contentCase_ == ContentOneofCase.Uri) hash ^= Uri.GetHashCode();
+              if (HasAudio) hash ^= Audio.GetHashCode();
+              if (HasUri) hash ^= Uri.GetHashCode();
               if (AllowPlaybackInterruption != false) hash ^= AllowPlaybackInterruption.GetHashCode();
               hash ^= (int) contentCase_;
               if (_unknownFields != null) {
@@ -2582,11 +2781,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
-              if (contentCase_ == ContentOneofCase.Audio) {
+              if (HasAudio) {
                 output.WriteRawTag(10);
                 output.WriteBytes(Audio);
               }
-              if (contentCase_ == ContentOneofCase.Uri) {
+              if (HasUri) {
                 output.WriteRawTag(18);
                 output.WriteString(Uri);
               }
@@ -2604,11 +2803,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (contentCase_ == ContentOneofCase.Audio) {
+              if (HasAudio) {
                 output.WriteRawTag(10);
                 output.WriteBytes(Audio);
               }
-              if (contentCase_ == ContentOneofCase.Uri) {
+              if (HasUri) {
                 output.WriteRawTag(18);
                 output.WriteString(Uri);
               }
@@ -2626,10 +2825,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
-              if (contentCase_ == ContentOneofCase.Audio) {
+              if (HasAudio) {
                 size += 1 + pb::CodedOutputStream.ComputeBytesSize(Audio);
               }
-              if (contentCase_ == ContentOneofCase.Uri) {
+              if (HasUri) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
               }
               if (AllowPlaybackInterruption != false) {
@@ -2729,6 +2928,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// Represents the signal that telles the client to transfer the phone call
       /// connected to the agent to a third-party endpoint.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TelephonyTransferCall : pb::IMessage<TelephonyTransferCall>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2787,10 +2987,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string PhoneNumber {
-          get { return endpointCase_ == EndpointOneofCase.PhoneNumber ? (string) endpoint_ : ""; }
+          get { return HasPhoneNumber ? (string) endpoint_ : ""; }
           set {
             endpoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             endpointCase_ = EndpointOneofCase.PhoneNumber;
+          }
+        }
+        /// <summary>Gets whether the "phone_number" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPhoneNumber {
+          get { return endpointCase_ == EndpointOneofCase.PhoneNumber; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "phone_number" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPhoneNumber() {
+          if (HasPhoneNumber) {
+            ClearEndpoint();
           }
         }
 
@@ -2838,7 +3052,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (endpointCase_ == EndpointOneofCase.PhoneNumber) hash ^= PhoneNumber.GetHashCode();
+          if (HasPhoneNumber) hash ^= PhoneNumber.GetHashCode();
           hash ^= (int) endpointCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -2858,7 +3072,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (endpointCase_ == EndpointOneofCase.PhoneNumber) {
+          if (HasPhoneNumber) {
             output.WriteRawTag(10);
             output.WriteString(PhoneNumber);
           }
@@ -2872,7 +3086,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (endpointCase_ == EndpointOneofCase.PhoneNumber) {
+          if (HasPhoneNumber) {
             output.WriteRawTag(10);
             output.WriteString(PhoneNumber);
           }
@@ -2886,7 +3100,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (endpointCase_ == EndpointOneofCase.PhoneNumber) {
+          if (HasPhoneNumber) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(PhoneNumber);
           }
           if (_unknownFields != null) {
@@ -2945,6 +3159,166 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
                 PhoneNumber = input.ReadString();
                 break;
               }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Represents info card response. If the response contains generative
+      /// knowledge prediction, Dialogflow will return a payload with Infobot
+      /// Messenger compatible info card.
+      ///
+      /// Otherwise, the info card response is skipped.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class KnowledgeInfoCard : pb::IMessage<KnowledgeInfoCard>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<KnowledgeInfoCard> _parser = new pb::MessageParser<KnowledgeInfoCard>(() => new KnowledgeInfoCard());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<KnowledgeInfoCard> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Descriptor.NestedTypes[8]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KnowledgeInfoCard() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KnowledgeInfoCard(KnowledgeInfoCard other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public KnowledgeInfoCard Clone() {
+          return new KnowledgeInfoCard(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as KnowledgeInfoCard);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(KnowledgeInfoCard other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(KnowledgeInfoCard other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
             }
           }
         }

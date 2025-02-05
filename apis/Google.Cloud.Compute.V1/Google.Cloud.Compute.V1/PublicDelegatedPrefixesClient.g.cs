@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,17 +17,17 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
 
 namespace Google.Cloud.Compute.V1
 {
@@ -49,6 +49,8 @@ namespace Google.Cloud.Compute.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             AggregatedListSettings = existing.AggregatedListSettings;
+            AnnounceSettings = existing.AnnounceSettings;
+            AnnounceOperationsSettings = existing.AnnounceOperationsSettings.Clone();
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
@@ -57,6 +59,8 @@ namespace Google.Cloud.Compute.V1
             ListSettings = existing.ListSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
+            WithdrawSettings = existing.WithdrawSettings;
+            WithdrawOperationsSettings = existing.WithdrawOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -83,6 +87,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings AggregatedListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PublicDelegatedPrefixesClient.Announce</c> and <c>PublicDelegatedPrefixesClient.AnnounceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AnnounceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>PublicDelegatedPrefixesClient.Announce</c> and
+        /// <c>PublicDelegatedPrefixesClient.AnnounceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AnnounceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -216,6 +250,36 @@ namespace Google.Cloud.Compute.V1
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PublicDelegatedPrefixesClient.Withdraw</c> and <c>PublicDelegatedPrefixesClient.WithdrawAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings WithdrawSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>PublicDelegatedPrefixesClient.Withdraw</c> and
+        /// <c>PublicDelegatedPrefixesClient.WithdrawAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings WithdrawOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PublicDelegatedPrefixesSettings"/> object.</returns>
         public PublicDelegatedPrefixesSettings Clone() => new PublicDelegatedPrefixesSettings(this);
@@ -259,14 +323,14 @@ namespace Google.Cloud.Compute.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return PublicDelegatedPrefixesClient.Create(callInvoker, Settings, Logger);
+            return PublicDelegatedPrefixesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<PublicDelegatedPrefixesClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return PublicDelegatedPrefixesClient.Create(callInvoker, Settings, Logger);
+            return PublicDelegatedPrefixesClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -363,7 +427,7 @@ namespace Google.Cloud.Compute.V1
         public virtual PublicDelegatedPrefixes.PublicDelegatedPrefixesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
+        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -372,7 +436,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
+        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -383,7 +447,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
+        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -398,16 +462,25 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
-        public virtual gax::PagedEnumerable<PublicDelegatedPrefixAggregatedList, scg::KeyValuePair<string, PublicDelegatedPrefixesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedList(new AggregatedListPublicDelegatedPrefixesRequest
+        public virtual gax::PagedEnumerable<PublicDelegatedPrefixAggregatedList, scg::KeyValuePair<string, PublicDelegatedPrefixesScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListPublicDelegatedPrefixesRequest request = new AggregatedListPublicDelegatedPrefixesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedList(request, callSettings);
+        }
 
         /// <summary>
-        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
+        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="project">
         /// Name of the project scoping this request.
@@ -424,13 +497,136 @@ namespace Google.Cloud.Compute.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
         /// </returns>
-        public virtual gax::PagedAsyncEnumerable<PublicDelegatedPrefixAggregatedList, scg::KeyValuePair<string, PublicDelegatedPrefixesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            AggregatedListAsync(new AggregatedListPublicDelegatedPrefixesRequest
+        public virtual gax::PagedAsyncEnumerable<PublicDelegatedPrefixAggregatedList, scg::KeyValuePair<string, PublicDelegatedPrefixesScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListPublicDelegatedPrefixesRequest request = new AggregatedListPublicDelegatedPrefixesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedListAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Announces the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Announce(AnnouncePublicDelegatedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Announces the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AnnounceAsync(AnnouncePublicDelegatedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Announces the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AnnounceAsync(AnnouncePublicDelegatedPrefixeRequest request, st::CancellationToken cancellationToken) =>
+            AnnounceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Announce</c>.</summary>
+        public virtual lro::OperationsClient AnnounceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Announce</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceAnnounce(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AnnounceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>Announce</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceAnnounceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AnnounceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Announces the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region where the public delegated prefix is located. It should comply with RFC1035.
+        /// </param>
+        /// <param name="publicDelegatedPrefix">
+        /// The name of the public delegated prefix. It should comply with RFC1035.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Announce(string project, string region, string publicDelegatedPrefix, gaxgrpc::CallSettings callSettings = null) =>
+            Announce(new AnnouncePublicDelegatedPrefixeRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PublicDelegatedPrefix = gax::GaxPreconditions.CheckNotNullOrEmpty(publicDelegatedPrefix, nameof(publicDelegatedPrefix)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
             }, callSettings);
+
+        /// <summary>
+        /// Announces the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region where the public delegated prefix is located. It should comply with RFC1035.
+        /// </param>
+        /// <param name="publicDelegatedPrefix">
+        /// The name of the public delegated prefix. It should comply with RFC1035.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AnnounceAsync(string project, string region, string publicDelegatedPrefix, gaxgrpc::CallSettings callSettings = null) =>
+            AnnounceAsync(new AnnouncePublicDelegatedPrefixeRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PublicDelegatedPrefix = gax::GaxPreconditions.CheckNotNullOrEmpty(publicDelegatedPrefix, nameof(publicDelegatedPrefix)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Announces the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region where the public delegated prefix is located. It should comply with RFC1035.
+        /// </param>
+        /// <param name="publicDelegatedPrefix">
+        /// The name of the public delegated prefix. It should comply with RFC1035.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AnnounceAsync(string project, string region, string publicDelegatedPrefix, st::CancellationToken cancellationToken) =>
+            AnnounceAsync(project, region, publicDelegatedPrefix, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes the specified PublicDelegatedPrefix in the given region.
@@ -785,14 +981,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="PublicDelegatedPrefix"/> resources.</returns>
-        public virtual gax::PagedEnumerable<PublicDelegatedPrefixList, PublicDelegatedPrefix> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            List(new ListPublicDelegatedPrefixesRequest
+        public virtual gax::PagedEnumerable<PublicDelegatedPrefixList, PublicDelegatedPrefix> List(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPublicDelegatedPrefixesRequest request = new ListPublicDelegatedPrefixesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return List(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the PublicDelegatedPrefixes for a project in the given region.
@@ -813,14 +1018,23 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="PublicDelegatedPrefix"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<PublicDelegatedPrefixList, PublicDelegatedPrefix> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAsync(new ListPublicDelegatedPrefixesRequest
+        public virtual gax::PagedAsyncEnumerable<PublicDelegatedPrefixList, PublicDelegatedPrefix> ListAsync(string project, string region, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPublicDelegatedPrefixesRequest request = new ListPublicDelegatedPrefixesRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
                 Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Patches the specified PublicDelegatedPrefix resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
@@ -946,6 +1160,120 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAsync(string project, string region, string publicDelegatedPrefix, PublicDelegatedPrefix publicDelegatedPrefixResource, st::CancellationToken cancellationToken) =>
             PatchAsync(project, region, publicDelegatedPrefix, publicDelegatedPrefixResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Withdraws the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Withdraw(WithdrawPublicDelegatedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Withdraws the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> WithdrawAsync(WithdrawPublicDelegatedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Withdraws the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> WithdrawAsync(WithdrawPublicDelegatedPrefixeRequest request, st::CancellationToken cancellationToken) =>
+            WithdrawAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Withdraw</c>.</summary>
+        public virtual lro::OperationsClient WithdrawOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Withdraw</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceWithdraw(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), WithdrawOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>Withdraw</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceWithdrawAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), WithdrawOperationsClient, callSettings);
+
+        /// <summary>
+        /// Withdraws the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region where the public delegated prefix is located. It should comply with RFC1035.
+        /// </param>
+        /// <param name="publicDelegatedPrefix">
+        /// The name of the public delegated prefix. It should comply with RFC1035.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Withdraw(string project, string region, string publicDelegatedPrefix, gaxgrpc::CallSettings callSettings = null) =>
+            Withdraw(new WithdrawPublicDelegatedPrefixeRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PublicDelegatedPrefix = gax::GaxPreconditions.CheckNotNullOrEmpty(publicDelegatedPrefix, nameof(publicDelegatedPrefix)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Withdraws the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region where the public delegated prefix is located. It should comply with RFC1035.
+        /// </param>
+        /// <param name="publicDelegatedPrefix">
+        /// The name of the public delegated prefix. It should comply with RFC1035.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> WithdrawAsync(string project, string region, string publicDelegatedPrefix, gaxgrpc::CallSettings callSettings = null) =>
+            WithdrawAsync(new WithdrawPublicDelegatedPrefixeRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                PublicDelegatedPrefix = gax::GaxPreconditions.CheckNotNullOrEmpty(publicDelegatedPrefix, nameof(publicDelegatedPrefix)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Withdraws the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// The name of the region where the public delegated prefix is located. It should comply with RFC1035.
+        /// </param>
+        /// <param name="publicDelegatedPrefix">
+        /// The name of the public delegated prefix. It should comply with RFC1035.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> WithdrawAsync(string project, string region, string publicDelegatedPrefix, st::CancellationToken cancellationToken) =>
+            WithdrawAsync(project, region, publicDelegatedPrefix, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>PublicDelegatedPrefixes client wrapper implementation, for convenient use.</summary>
@@ -956,6 +1284,8 @@ namespace Google.Cloud.Compute.V1
     {
         private readonly gaxgrpc::ApiCall<AggregatedListPublicDelegatedPrefixesRequest, PublicDelegatedPrefixAggregatedList> _callAggregatedList;
 
+        private readonly gaxgrpc::ApiCall<AnnouncePublicDelegatedPrefixeRequest, Operation> _callAnnounce;
+
         private readonly gaxgrpc::ApiCall<DeletePublicDelegatedPrefixeRequest, Operation> _callDelete;
 
         private readonly gaxgrpc::ApiCall<GetPublicDelegatedPrefixeRequest, PublicDelegatedPrefix> _callGet;
@@ -965,6 +1295,8 @@ namespace Google.Cloud.Compute.V1
         private readonly gaxgrpc::ApiCall<ListPublicDelegatedPrefixesRequest, PublicDelegatedPrefixList> _callList;
 
         private readonly gaxgrpc::ApiCall<PatchPublicDelegatedPrefixeRequest, Operation> _callPatch;
+
+        private readonly gaxgrpc::ApiCall<WithdrawPublicDelegatedPrefixeRequest, Operation> _callWithdraw;
 
         /// <summary>
         /// Constructs a client wrapper for the PublicDelegatedPrefixes service, with the specified gRPC client and
@@ -979,13 +1311,22 @@ namespace Google.Cloud.Compute.V1
         {
             GrpcClient = grpcClient;
             PublicDelegatedPrefixesSettings effectiveSettings = settings ?? PublicDelegatedPrefixesSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
+            AnnounceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AnnounceOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            WithdrawOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.WithdrawOperationsSettings, logger);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListPublicDelegatedPrefixesRequest, PublicDelegatedPrefixAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
+            _callAnnounce = clientHelper.BuildApiCall<AnnouncePublicDelegatedPrefixeRequest, Operation>("Announce", grpcClient.AnnounceAsync, grpcClient.Announce, effectiveSettings.AnnounceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("public_delegated_prefix", request => request.PublicDelegatedPrefix);
+            Modify_ApiCall(ref _callAnnounce);
+            Modify_AnnounceApiCall(ref _callAnnounce);
             _callDelete = clientHelper.BuildApiCall<DeletePublicDelegatedPrefixeRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("public_delegated_prefix", request => request.PublicDelegatedPrefix);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -1001,12 +1342,17 @@ namespace Google.Cloud.Compute.V1
             _callPatch = clientHelper.BuildApiCall<PatchPublicDelegatedPrefixeRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("public_delegated_prefix", request => request.PublicDelegatedPrefix);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callWithdraw = clientHelper.BuildApiCall<WithdrawPublicDelegatedPrefixeRequest, Operation>("Withdraw", grpcClient.WithdrawAsync, grpcClient.Withdraw, effectiveSettings.WithdrawSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("public_delegated_prefix", request => request.PublicDelegatedPrefix);
+            Modify_ApiCall(ref _callWithdraw);
+            Modify_WithdrawApiCall(ref _callWithdraw);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_AggregatedListApiCall(ref gaxgrpc::ApiCall<AggregatedListPublicDelegatedPrefixesRequest, PublicDelegatedPrefixAggregatedList> call);
+
+        partial void Modify_AnnounceApiCall(ref gaxgrpc::ApiCall<AnnouncePublicDelegatedPrefixeRequest, Operation> call);
 
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeletePublicDelegatedPrefixeRequest, Operation> call);
 
@@ -1018,12 +1364,16 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchPublicDelegatedPrefixeRequest, Operation> call);
 
+        partial void Modify_WithdrawApiCall(ref gaxgrpc::ApiCall<WithdrawPublicDelegatedPrefixeRequest, Operation> call);
+
         partial void OnConstruction(PublicDelegatedPrefixes.PublicDelegatedPrefixesClient grpcClient, PublicDelegatedPrefixesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC PublicDelegatedPrefixes client</summary>
         public override PublicDelegatedPrefixes.PublicDelegatedPrefixesClient GrpcClient { get; }
 
         partial void Modify_AggregatedListPublicDelegatedPrefixesRequest(ref AggregatedListPublicDelegatedPrefixesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AnnouncePublicDelegatedPrefixeRequest(ref AnnouncePublicDelegatedPrefixeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeletePublicDelegatedPrefixeRequest(ref DeletePublicDelegatedPrefixeRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1035,8 +1385,10 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PatchPublicDelegatedPrefixeRequest(ref PatchPublicDelegatedPrefixeRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_WithdrawPublicDelegatedPrefixeRequest(ref WithdrawPublicDelegatedPrefixeRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
-        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
+        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1048,7 +1400,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
+        /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1059,6 +1411,39 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_AggregatedListPublicDelegatedPrefixesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListPublicDelegatedPrefixesRequest, PublicDelegatedPrefixAggregatedList, scg::KeyValuePair<string, PublicDelegatedPrefixesScopedList>>(_callAggregatedList, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>Announce</c>.</summary>
+        public override lro::OperationsClient AnnounceOperationsClient { get; }
+
+        /// <summary>
+        /// Announces the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> Announce(AnnouncePublicDelegatedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AnnouncePublicDelegatedPrefixeRequest(ref request, ref callSettings);
+            Operation response = _callAnnounce.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AnnounceOperationsClient);
+        }
+
+        /// <summary>
+        /// Announces the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> AnnounceAsync(AnnouncePublicDelegatedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AnnouncePublicDelegatedPrefixeRequest(ref request, ref callSettings);
+            Operation response = await _callAnnounce.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AnnounceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
@@ -1206,6 +1591,39 @@ namespace Google.Cloud.Compute.V1
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>Withdraw</c>.</summary>
+        public override lro::OperationsClient WithdrawOperationsClient { get; }
+
+        /// <summary>
+        /// Withdraws the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> Withdraw(WithdrawPublicDelegatedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_WithdrawPublicDelegatedPrefixeRequest(ref request, ref callSettings);
+            Operation response = _callWithdraw.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), WithdrawOperationsClient);
+        }
+
+        /// <summary>
+        /// Withdraws the specified PublicDelegatedPrefix in the given region.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> WithdrawAsync(WithdrawPublicDelegatedPrefixeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_WithdrawPublicDelegatedPrefixeRequest(ref request, ref callSettings);
+            Operation response = await _callWithdraw.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), WithdrawOperationsClient);
         }
     }
 

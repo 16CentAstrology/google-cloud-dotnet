@@ -58,6 +58,7 @@ namespace Google.Cloud.Spanner.V1 {
   /// applied to a Cloud Spanner database by sending them in a
   /// [Commit][google.spanner.v1.Spanner.Commit] call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Mutation : pb::IMessage<Mutation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -541,6 +542,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// Arguments to [insert][google.spanner.v1.Mutation.insert], [update][google.spanner.v1.Mutation.update], [insert_or_update][google.spanner.v1.Mutation.insert_or_update], and
       /// [replace][google.spanner.v1.Mutation.replace] operations.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Write : pb::IMessage<Write>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -805,6 +807,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <summary>
       /// Arguments to [delete][google.spanner.v1.Mutation.delete] operations.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Delete : pb::IMessage<Delete>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

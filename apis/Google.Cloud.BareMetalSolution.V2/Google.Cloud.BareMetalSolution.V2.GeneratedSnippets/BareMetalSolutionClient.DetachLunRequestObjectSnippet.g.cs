@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.BareMetalSolution.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START baremetalsolution_v2_generated_BareMetalSolution_DetachLun_sync]
     using Google.Cloud.BareMetalSolution.V2;
@@ -39,6 +39,7 @@ namespace Google.Cloud.BareMetalSolution.V2.Snippets
             {
                 InstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 LunAsLunName = LunName.FromProjectLocationVolumeLun("[PROJECT]", "[LOCATION]", "[VOLUME]", "[LUN]"),
+                SkipReboot = false,
             };
             // Make the request
             Operation<Instance, OperationMetadata> response = bareMetalSolutionClient.DetachLun(request);

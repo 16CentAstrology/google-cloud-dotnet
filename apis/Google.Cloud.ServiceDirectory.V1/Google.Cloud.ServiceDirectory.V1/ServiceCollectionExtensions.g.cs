@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,10 +16,12 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using gcsv = Google.Cloud.ServiceDirectory.V1;
 using gpr = Google.Protobuf.Reflection;
-using sys = System;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -42,6 +44,22 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcsv::LookupServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddLookupServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcsv::LookupServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcsv::LookupServiceClientBuilder builder = new gcsv::LookupServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcsv::RegistrationServiceClient"/> to <paramref name="services"/>.
         /// </summary>
@@ -57,6 +75,24 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gcsv::RegistrationServiceClientBuilder builder = new gcsv::RegistrationServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gcsv::RegistrationServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegistrationServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcsv::RegistrationServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcsv::RegistrationServiceClientBuilder builder = new gcsv::RegistrationServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

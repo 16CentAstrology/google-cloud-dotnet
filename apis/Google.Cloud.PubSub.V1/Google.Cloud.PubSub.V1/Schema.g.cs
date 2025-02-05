@@ -78,46 +78,46 @@ namespace Google.Cloud.PubSub.V1 {
             "T0RJTkdfVU5TUEVDSUZJRUQQABIICgRKU09OEAESCgoGQklOQVJZEAIyiA0K",
             "DVNjaGVtYVNlcnZpY2USmgEKDENyZWF0ZVNjaGVtYRIlLmdvb2dsZS5wdWJz",
             "dWIudjEuQ3JlYXRlU2NoZW1hUmVxdWVzdBoYLmdvb2dsZS5wdWJzdWIudjEu",
-            "U2NoZW1hIkmC0+STAikiHy92MS97cGFyZW50PXByb2plY3RzLyp9L3NjaGVt",
-            "YXM6BnNjaGVtYdpBF3BhcmVudCxzY2hlbWEsc2NoZW1hX2lkEnkKCUdldFNj",
+            "U2NoZW1hIknaQRdwYXJlbnQsc2NoZW1hLHNjaGVtYV9pZILT5JMCKSIfL3Yx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKn0vc2NoZW1hczoGc2NoZW1hEnkKCUdldFNj",
             "aGVtYRIiLmdvb2dsZS5wdWJzdWIudjEuR2V0U2NoZW1hUmVxdWVzdBoYLmdv",
-            "b2dsZS5wdWJzdWIudjEuU2NoZW1hIi6C0+STAiESHy92MS97bmFtZT1wcm9q",
-            "ZWN0cy8qL3NjaGVtYXMvKn3aQQRuYW1lEowBCgtMaXN0U2NoZW1hcxIkLmdv",
+            "b2dsZS5wdWJzdWIudjEuU2NoZW1hIi7aQQRuYW1lgtPkkwIhEh8vdjEve25h",
+            "bWU9cHJvamVjdHMvKi9zY2hlbWFzLyp9EowBCgtMaXN0U2NoZW1hcxIkLmdv",
             "b2dsZS5wdWJzdWIudjEuTGlzdFNjaGVtYXNSZXF1ZXN0GiUuZ29vZ2xlLnB1",
-            "YnN1Yi52MS5MaXN0U2NoZW1hc1Jlc3BvbnNlIjCC0+STAiESHy92MS97cGFy",
-            "ZW50PXByb2plY3RzLyp9L3NjaGVtYXPaQQZwYXJlbnQSsAEKE0xpc3RTY2hl",
+            "YnN1Yi52MS5MaXN0U2NoZW1hc1Jlc3BvbnNlIjDaQQZwYXJlbnSC0+STAiES",
+            "Hy92MS97cGFyZW50PXByb2plY3RzLyp9L3NjaGVtYXMSsAEKE0xpc3RTY2hl",
             "bWFSZXZpc2lvbnMSLC5nb29nbGUucHVic3ViLnYxLkxpc3RTY2hlbWFSZXZp",
             "c2lvbnNSZXF1ZXN0Gi0uZ29vZ2xlLnB1YnN1Yi52MS5MaXN0U2NoZW1hUmV2",
-            "aXNpb25zUmVzcG9uc2UiPILT5JMCLxItL3YxL3tuYW1lPXByb2plY3RzLyov",
-            "c2NoZW1hcy8qfTpsaXN0UmV2aXNpb25z2kEEbmFtZRKQAQoMQ29tbWl0U2No",
+            "aXNpb25zUmVzcG9uc2UiPNpBBG5hbWWC0+STAi8SLS92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL3NjaGVtYXMvKn06bGlzdFJldmlzaW9ucxKQAQoMQ29tbWl0U2No",
             "ZW1hEiUuZ29vZ2xlLnB1YnN1Yi52MS5Db21taXRTY2hlbWFSZXF1ZXN0Ghgu",
-            "Z29vZ2xlLnB1YnN1Yi52MS5TY2hlbWEiP4LT5JMCKyImL3YxL3tuYW1lPXBy",
-            "b2plY3RzLyovc2NoZW1hcy8qfTpjb21taXQ6ASraQQtuYW1lLHNjaGVtYRKb",
+            "Z29vZ2xlLnB1YnN1Yi52MS5TY2hlbWEiP9pBC25hbWUsc2NoZW1hgtPkkwIr",
+            "IiYvdjEve25hbWU9cHJvamVjdHMvKi9zY2hlbWFzLyp9OmNvbW1pdDoBKhKb",
             "AQoOUm9sbGJhY2tTY2hlbWESJy5nb29nbGUucHVic3ViLnYxLlJvbGxiYWNr",
-            "U2NoZW1hUmVxdWVzdBoYLmdvb2dsZS5wdWJzdWIudjEuU2NoZW1hIkaC0+ST",
-            "Ai0iKC92MS97bmFtZT1wcm9qZWN0cy8qL3NjaGVtYXMvKn06cm9sbGJhY2s6",
-            "ASraQRBuYW1lLHJldmlzaW9uX2lkEqoBChREZWxldGVTY2hlbWFSZXZpc2lv",
+            "U2NoZW1hUmVxdWVzdBoYLmdvb2dsZS5wdWJzdWIudjEuU2NoZW1hIkbaQRBu",
+            "YW1lLHJldmlzaW9uX2lkgtPkkwItIigvdjEve25hbWU9cHJvamVjdHMvKi9z",
+            "Y2hlbWFzLyp9OnJvbGxiYWNrOgEqEqoBChREZWxldGVTY2hlbWFSZXZpc2lv",
             "bhItLmdvb2dsZS5wdWJzdWIudjEuRGVsZXRlU2NoZW1hUmV2aXNpb25SZXF1",
-            "ZXN0GhguZ29vZ2xlLnB1YnN1Yi52MS5TY2hlbWEiSYLT5JMCMCouL3YxL3tu",
-            "YW1lPXByb2plY3RzLyovc2NoZW1hcy8qfTpkZWxldGVSZXZpc2lvbtpBEG5h",
-            "bWUscmV2aXNpb25faWQSfQoMRGVsZXRlU2NoZW1hEiUuZ29vZ2xlLnB1YnN1",
+            "ZXN0GhguZ29vZ2xlLnB1YnN1Yi52MS5TY2hlbWEiSdpBEG5hbWUscmV2aXNp",
+            "b25faWSC0+STAjAqLi92MS97bmFtZT1wcm9qZWN0cy8qL3NjaGVtYXMvKn06",
+            "ZGVsZXRlUmV2aXNpb24SfQoMRGVsZXRlU2NoZW1hEiUuZ29vZ2xlLnB1YnN1",
             "Yi52MS5EZWxldGVTY2hlbWFSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5Ii6C0+STAiEqHy92MS97bmFtZT1wcm9qZWN0cy8qL3NjaGVtYXMvKn3a",
-            "QQRuYW1lEqgBCg5WYWxpZGF0ZVNjaGVtYRInLmdvb2dsZS5wdWJzdWIudjEu",
+            "cHR5Ii7aQQRuYW1lgtPkkwIhKh8vdjEve25hbWU9cHJvamVjdHMvKi9zY2hl",
+            "bWFzLyp9EqgBCg5WYWxpZGF0ZVNjaGVtYRInLmdvb2dsZS5wdWJzdWIudjEu",
             "VmFsaWRhdGVTY2hlbWFSZXF1ZXN0GiguZ29vZ2xlLnB1YnN1Yi52MS5WYWxp",
-            "ZGF0ZVNjaGVtYVJlc3BvbnNlIkOC0+STAi0iKC92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyp9L3NjaGVtYXM6dmFsaWRhdGU6ASraQQ1wYXJlbnQsc2NoZW1hEqIB",
+            "ZGF0ZVNjaGVtYVJlc3BvbnNlIkPaQQ1wYXJlbnQsc2NoZW1hgtPkkwItIigv",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qfS9zY2hlbWFzOnZhbGlkYXRlOgEqEqIB",
             "Cg9WYWxpZGF0ZU1lc3NhZ2USKC5nb29nbGUucHVic3ViLnYxLlZhbGlkYXRl",
             "TWVzc2FnZVJlcXVlc3QaKS5nb29nbGUucHVic3ViLnYxLlZhbGlkYXRlTWVz",
             "c2FnZVJlc3BvbnNlIjqC0+STAjQiLy92MS97cGFyZW50PXByb2plY3RzLyp9",
             "L3NjaGVtYXM6dmFsaWRhdGVNZXNzYWdlOgEqGnDKQRVwdWJzdWIuZ29vZ2xl",
             "YXBpcy5jb23SQVVodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Ns",
             "b3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
-            "cHVic3ViQqoBChRjb20uZ29vZ2xlLnB1YnN1Yi52MUILU2NoZW1hUHJvdG9Q",
+            "cHVic3ViQqcBChRjb20uZ29vZ2xlLnB1YnN1Yi52MUILU2NoZW1hUHJvdG9Q",
             "AVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9wdWJzdWIvYXBpdjEvcHVic3VicGI7",
-            "cHVic3VicGL4AQGqAhZHb29nbGUuQ2xvdWQuUHViU3ViLlYxygIWR29vZ2xl",
-            "XENsb3VkXFB1YlN1YlxWMeoCGUdvb2dsZTo6Q2xvdWQ6OlB1YlN1Yjo6VjFi",
-            "BnByb3RvMw=="));
+            "cHVic3VicGKqAhZHb29nbGUuQ2xvdWQuUHViU3ViLlYxygIWR29vZ2xlXENs",
+            "b3VkXFB1YlN1YlxWMeoCGUdvb2dsZTo6Q2xvdWQ6OlB1YlN1Yjo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.PubSub.V1.SchemaView), typeof(global::Google.Cloud.PubSub.V1.Encoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -186,6 +186,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// A schema resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Schema : pb::IMessage<Schema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -579,6 +580,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// Request for the CreateSchema method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSchemaRequest : pb::IMessage<CreateSchemaRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -667,8 +669,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// The ID to use for the schema, which will become the final component of
     /// the schema's resource name.
     ///
-    /// See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
-    /// name constraints.
+    /// See https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names for
+    /// resource name constraints.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -872,6 +874,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// Request for the GetSchema method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSchemaRequest : pb::IMessage<GetSchemaRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1109,6 +1112,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// Request for the `ListSchemas` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSchemasRequest : pb::IMessage<ListSchemasRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1429,6 +1433,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// Response for the `ListSchemas` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSchemasResponse : pb::IMessage<ListSchemasResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1654,6 +1659,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// Request for the `ListSchemaRevisions` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSchemaRevisionsRequest : pb::IMessage<ListSchemaRevisionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1972,6 +1978,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// Response for the `ListSchemaRevisions` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSchemaRevisionsResponse : pb::IMessage<ListSchemaRevisionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2197,6 +2204,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// Request for CommitSchema method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CommitSchemaRequest : pb::IMessage<CommitSchemaRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2442,6 +2450,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// Request for the `RollbackSchema` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RollbackSchemaRequest : pb::IMessage<RollbackSchemaRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2680,6 +2689,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// Request for the `DeleteSchemaRevision` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSchemaRevisionRequest : pb::IMessage<DeleteSchemaRevisionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2921,6 +2931,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// Request for the `DeleteSchema` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSchemaRequest : pb::IMessage<DeleteSchemaRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3117,6 +3128,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// Request for the `ValidateSchema` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidateSchemaRequest : pb::IMessage<ValidateSchemaRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3363,6 +3375,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// Response for the `ValidateSchema` method.
   /// Empty for now.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidateSchemaResponse : pb::IMessage<ValidateSchemaResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3518,6 +3531,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// <summary>
   /// Request for the `ValidateMessage` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidateMessageRequest : pb::IMessage<ValidateMessageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3599,10 +3613,24 @@ namespace Google.Cloud.PubSub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
-      get { return schemaSpecCase_ == SchemaSpecOneofCase.Name ? (string) schemaSpec_ : ""; }
+      get { return HasName ? (string) schemaSpec_ : ""; }
       set {
         schemaSpec_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         schemaSpecCase_ = SchemaSpecOneofCase.Name;
+      }
+    }
+    /// <summary>Gets whether the "name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasName {
+      get { return schemaSpecCase_ == SchemaSpecOneofCase.Name; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearName() {
+      if (HasName) {
+        ClearSchemaSpec();
       }
     }
 
@@ -3701,7 +3729,7 @@ namespace Google.Cloud.PubSub.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (schemaSpecCase_ == SchemaSpecOneofCase.Name) hash ^= Name.GetHashCode();
+      if (HasName) hash ^= Name.GetHashCode();
       if (schemaSpecCase_ == SchemaSpecOneofCase.Schema) hash ^= Schema.GetHashCode();
       if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (Encoding != global::Google.Cloud.PubSub.V1.Encoding.Unspecified) hash ^= Encoding.GetHashCode();
@@ -3728,7 +3756,7 @@ namespace Google.Cloud.PubSub.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (schemaSpecCase_ == SchemaSpecOneofCase.Name) {
+      if (HasName) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
@@ -3758,7 +3786,7 @@ namespace Google.Cloud.PubSub.V1 {
         output.WriteRawTag(10);
         output.WriteString(Parent);
       }
-      if (schemaSpecCase_ == SchemaSpecOneofCase.Name) {
+      if (HasName) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
@@ -3787,7 +3815,7 @@ namespace Google.Cloud.PubSub.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
-      if (schemaSpecCase_ == SchemaSpecOneofCase.Name) {
+      if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (schemaSpecCase_ == SchemaSpecOneofCase.Schema) {
@@ -3923,6 +3951,7 @@ namespace Google.Cloud.PubSub.V1 {
   /// Response for the `ValidateMessage` method.
   /// Empty for now.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidateMessageResponse : pb::IMessage<ValidateMessageResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

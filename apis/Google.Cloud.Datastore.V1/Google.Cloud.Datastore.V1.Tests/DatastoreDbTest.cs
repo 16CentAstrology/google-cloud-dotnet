@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -64,7 +64,7 @@ namespace Google.Cloud.Datastore.V1.Tests
         {
             await TestLookup((db, keys) => db.LookupAsync(keys));
         }
-        
+
         private async Task TestLookup(Func<DatastoreDb, IEnumerable<Key>, Task<IReadOnlyList<Entity>>> lookupFunc)
         {
             KeyFactory factory = new KeyFactory("project", "ns", "kind");
@@ -96,8 +96,8 @@ namespace Google.Cloud.Datastore.V1.Tests
                 ["human_key"] = RenderKey(key)
             };
 
-        private static LookupRequest NormalizeRequest(LookupRequest input)
-            => new LookupRequest
+        private static LookupRequest NormalizeRequest(LookupRequest input) =>
+            new LookupRequest
             {
                 Keys = { input.Keys.Select(k => k.Clone()).OrderBy(RenderKey) },
                 ProjectId = input.ProjectId,
@@ -110,7 +110,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             string path = string.Join("/", key.Path.Select(pe => $"{pe.Kind}={pe.Id}"));
             return $"{key.PartitionId.ProjectId}:{key.PartitionId.NamespaceId}/{path}";
         }
-        
+
         private class FakeDatastoreClient : DatastoreClient
         {
             private readonly KeyFactory keyFactory;
@@ -126,7 +126,7 @@ namespace Google.Cloud.Datastore.V1.Tests
             }
 
             public override LookupResponse Lookup(LookupRequest request, CallSettings callSettings = null)
-            {                
+            {
                 requests.Add(NormalizeRequest(request));
                 // Report "found" entities in the order they were presented in the constructor.
                 // Report everything else as deferred. Ignore "missing"...

@@ -1,4 +1,10 @@
 <Project>
+
+  <!-- Allow Directory.Packages.props to do its magic -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  
   <!--
     - Common properties for all API projects. Some are unnecessary,
     - e.g. because they're for packages and the project is a test
@@ -12,7 +18,7 @@
     -->
   <PropertyGroup>
     <!-- Make the repository root available for other properties -->
-    <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('.gitignore', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
+    <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('toolversions.sh', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
 
     <!-- Build properties -->
     <AssemblyOriginatorKeyFile>$(RepoRoot)/apis/GoogleApis.snk</AssemblyOriginatorKeyFile>

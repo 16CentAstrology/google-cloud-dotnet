@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Functions.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START cloudfunctions_v2_generated_FunctionService_GenerateUploadUrl_sync]
     using Google.Api.Gax.ResourceNames;
@@ -39,6 +39,7 @@ namespace Google.Cloud.Functions.V2.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                Environment = Environment.Unspecified,
             };
             // Make the request
             GenerateUploadUrlResponse response = functionServiceClient.GenerateUploadUrl(request);

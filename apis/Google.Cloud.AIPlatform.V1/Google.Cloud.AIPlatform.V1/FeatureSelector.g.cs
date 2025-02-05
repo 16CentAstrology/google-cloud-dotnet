@@ -48,6 +48,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Matcher for Features of an EntityType by Feature ID.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IdMatcher : pb::IMessage<IdMatcher>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -237,6 +238,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Selector for Features of an EntityType.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeatureSelector : pb::IMessage<FeatureSelector>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

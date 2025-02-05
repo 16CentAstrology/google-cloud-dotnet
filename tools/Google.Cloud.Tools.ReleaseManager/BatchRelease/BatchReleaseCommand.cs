@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         {
         }
 
-        protected override void ExecuteImpl(string[] args)
+        protected override int ExecuteImpl(string[] args)
         {
             string configFile = args[0];
             var json = File.ReadAllText(configFile);
@@ -42,8 +42,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
             if (!config.DryRun)
             {
-                var root = DirectoryLayout.DetermineRootDirectory();
-                using var repo = new Repository(root);
+                using var repo = new Repository(RootLayout.RepositoryRoot);
 
                 if (repo.RetrieveStatus().IsDirty)
                 {
@@ -51,19 +50,50 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 }
             }
 
-            var catalog = ApiCatalog.Load();
+            var catalog = ApiCatalog.Load(RootLayout);
             var criterion = criteria[0];
             Func<string, StructuredVersion, StructuredVersion> versionIncrementer =
                 config.PostMajorVersion
                 ? (id, sv) => sv.AfterMajorVersion(id)
                 : (id, sv) => sv.AfterIncrement();
             string defaultMessage = config.DefaultHistoryMessageFile is null ? null : File.ReadAllText(config.DefaultHistoryMessageFile);
-            var proposals = criterion.GetProposals(catalog, versionIncrementer, defaultMessage);
+
+            var lastLog = DateTime.UtcNow;
+            var proposals = criterion.GetProposals(RootLayout, catalog, versionIncrementer, defaultMessage, MaybeLogProgress);
+
+            if (config.CollectProposalsEagerly)
+            {
+                Console.WriteLine("Collecting proposals eagerly. Will periodically report progress.");
+                proposals = proposals.ToList();
+            }
 
             foreach (var proposal in proposals)
             {
                 // Note: This takes into account the dry-run flag.
-                proposal.Execute(config);
+                proposal.Execute(RootLayout, config);
+            }
+
+            if (config.DeferPush && proposals.Any(p => p.Completed))
+            {
+                Console.WriteLine();
+                Console.WriteLine("*****************************************************************************");
+                Console.WriteLine("* Don't forget to push the release branches with the push-releases command. *");
+                Console.WriteLine("*****************************************************************************");
+            }
+            return 0;
+
+            void MaybeLogProgress(int progress, int total)
+            {
+                if (!config.CollectProposalsEagerly)
+                {
+                    return;
+                }
+                var now = DateTime.UtcNow;
+                if ((now - lastLog).TotalMinutes >= 1)
+                {
+                    Console.WriteLine($"{now:HH:mm:ss}Z: Evaluating API {progress} out of {total}");
+                    lastLog = now;
+                }
             }
         }
     }

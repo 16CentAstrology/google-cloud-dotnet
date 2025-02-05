@@ -1,5 +1,28 @@
 # Version history
 
+## Version 3.0.0-beta06, released 2025-01-06
+
+### New features
+
+- A new enum `RelevanceThreshold` is added ([commit d704518](https://github.com/googleapis/google-cloud-dotnet/commit/d70451883734a3c0675a9d646074011da7b0bf5f))
+- A new field `relevance_threshold` is added to message `.google.cloud.talent.v4beta1.SearchJobsRequest` ([commit d704518](https://github.com/googleapis/google-cloud-dotnet/commit/d70451883734a3c0675a9d646074011da7b0bf5f))
+
+## Version 3.0.0-beta05, released 2024-05-08
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.0.0-beta04, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.0.0-beta03, released 2024-02-29
+
+No API surface changes; just dependency updates.
+
 ## Version 3.0.0-beta02, released 2023-01-19
 
 ### New features

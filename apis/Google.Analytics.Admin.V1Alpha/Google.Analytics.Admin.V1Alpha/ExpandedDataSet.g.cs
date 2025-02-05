@@ -80,6 +80,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A specific filter for a single dimension
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExpandedDataSetFilter : pb::IMessage<ExpandedDataSetFilter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -418,6 +419,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// A filter for a string-type dimension that matches a particular pattern.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StringFilter : pb::IMessage<StringFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -722,6 +724,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// A filter for a string dimension that matches a particular list of options.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InListFilter : pb::IMessage<InListFilter>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -954,6 +957,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A logical expression of EnhancedDataSet dimension filters.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExpandedDataSetFilterExpression : pb::IMessage<ExpandedDataSetFilterExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1030,7 +1034,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// <summary>Field number for the "not_expression" field.</summary>
     public const int NotExpressionFieldNumber = 2;
     /// <summary>
-    /// A filter expression to be NOT'ed (i.e., inverted, complemented). It
+    /// A filter expression to be NOT'ed (that is, inverted, complemented). It
     /// must include a dimension_filter. This cannot be set on the
     /// top level ExpandedDataSetFilterExpression.
     /// </summary>
@@ -1310,6 +1314,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A list of ExpandedDataSet filter expressions.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExpandedDataSetFilterExpressionList : pb::IMessage<ExpandedDataSetFilterExpressionList>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1492,8 +1497,9 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A resource message representing a GA4 ExpandedDataSet.
+  /// A resource message representing an `ExpandedDataSet`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExpandedDataSet : pb::IMessage<ExpandedDataSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1632,7 +1638,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// <summary>
     /// Immutable. A logical expression of ExpandedDataSet filters applied to
     /// dimension included in the ExpandedDataSet. This filter is used to reduce
-    /// the number of rows and thus the change of encountering `other row`.
+    /// the number of rows and thus the chance of encountering `other` row.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

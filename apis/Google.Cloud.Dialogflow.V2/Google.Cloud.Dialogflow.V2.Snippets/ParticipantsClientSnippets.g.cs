@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Dialogflow.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
+    using Google.Cloud.Dialogflow.V2;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -715,7 +716,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // Create client
             ParticipantsClient participantsClient = ParticipantsClient.Create();
             // Initialize streaming call, retrieving the stream object
-            ParticipantsClient.StreamingAnalyzeContentStream response = participantsClient.StreamingAnalyzeContent();
+            using ParticipantsClient.StreamingAnalyzeContentStream response = participantsClient.StreamingAnalyzeContent();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior
@@ -746,8 +747,10 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
                     InputAudio = ByteString.Empty,
                     QueryParams = new QueryParameters(),
                     AssistQueryParams = new AssistQueryParameters(),
+                    EnableExtendedStreaming = false,
                     EnablePartialAutomatedAgentReply = false,
                     CxParameters = new Struct(),
+                    EnableDebuggingInfo = false,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);
@@ -1038,6 +1041,45 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             ParticipantName parent = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]");
             // Make the request
             SuggestSmartRepliesResponse response = await participantsClient.SuggestSmartRepliesAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestKnowledgeAssist</summary>
+        public void SuggestKnowledgeAssistRequestObject()
+        {
+            // Snippet: SuggestKnowledgeAssist(SuggestKnowledgeAssistRequest, CallSettings)
+            // Create client
+            ParticipantsClient participantsClient = ParticipantsClient.Create();
+            // Initialize request argument(s)
+            SuggestKnowledgeAssistRequest request = new SuggestKnowledgeAssistRequest
+            {
+                ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 0,
+                PreviousSuggestedQuery = "",
+            };
+            // Make the request
+            SuggestKnowledgeAssistResponse response = participantsClient.SuggestKnowledgeAssist(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestKnowledgeAssistAsync</summary>
+        public async Task SuggestKnowledgeAssistRequestObjectAsync()
+        {
+            // Snippet: SuggestKnowledgeAssistAsync(SuggestKnowledgeAssistRequest, CallSettings)
+            // Additional: SuggestKnowledgeAssistAsync(SuggestKnowledgeAssistRequest, CancellationToken)
+            // Create client
+            ParticipantsClient participantsClient = await ParticipantsClient.CreateAsync();
+            // Initialize request argument(s)
+            SuggestKnowledgeAssistRequest request = new SuggestKnowledgeAssistRequest
+            {
+                ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 0,
+                PreviousSuggestedQuery = "",
+            };
+            // Make the request
+            SuggestKnowledgeAssistResponse response = await participantsClient.SuggestKnowledgeAssistAsync(request);
             // End snippet
         }
     }

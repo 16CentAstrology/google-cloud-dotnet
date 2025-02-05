@@ -26,7 +26,7 @@ namespace Google.Cloud.Run.V2 {
           string.Concat(
             "CiFnb29nbGUvY2xvdWQvcnVuL3YyL2s4cy5taW4ucHJvdG8SE2dvb2dsZS5j",
             "bG91ZC5ydW4udjIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
-            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8inAMKCUNvbnRhaW5lchIMCgRu",
+            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8igQQKCUNvbnRhaW5lchIMCgRu",
             "YW1lGAEgASgJEhIKBWltYWdlGAIgASgJQgPgQQISDwoHY29tbWFuZBgDIAMo",
             "CRIMCgRhcmdzGAQgAygJEigKA2VudhgFIAMoCzIbLmdvb2dsZS5jbG91ZC5y",
             "dW4udjIuRW52VmFyEjwKCXJlc291cmNlcxgGIAEoCzIpLmdvb2dsZS5jbG91",
@@ -35,71 +35,92 @@ namespace Google.Cloud.Run.V2 {
             "X21vdW50cxgIIAMoCzIgLmdvb2dsZS5jbG91ZC5ydW4udjIuVm9sdW1lTW91",
             "bnQSEwoLd29ya2luZ19kaXIYCSABKAkSMgoObGl2ZW5lc3NfcHJvYmUYCiAB",
             "KAsyGi5nb29nbGUuY2xvdWQucnVuLnYyLlByb2JlEjEKDXN0YXJ0dXBfcHJv",
-            "YmUYCyABKAsyGi5nb29nbGUuY2xvdWQucnVuLnYyLlByb2JlIp4BChRSZXNv",
-            "dXJjZVJlcXVpcmVtZW50cxJFCgZsaW1pdHMYASADKAsyNS5nb29nbGUuY2xv",
-            "dWQucnVuLnYyLlJlc291cmNlUmVxdWlyZW1lbnRzLkxpbWl0c0VudHJ5EhAK",
-            "CGNwdV9pZGxlGAIgASgIGi0KC0xpbWl0c0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEicQoGRW52VmFyEhEKBG5hbWUYASABKAlCA+BB",
-            "AhIPCgV2YWx1ZRgCIAEoCUgAEjkKDHZhbHVlX3NvdXJjZRgDIAEoCzIhLmdv",
-            "b2dsZS5jbG91ZC5ydW4udjIuRW52VmFyU291cmNlSABCCAoGdmFsdWVzIk4K",
-            "DEVudlZhclNvdXJjZRI+Cg5zZWNyZXRfa2V5X3JlZhgBIAEoCzImLmdvb2ds",
-            "ZS5jbG91ZC5ydW4udjIuU2VjcmV0S2V5U2VsZWN0b3IikgEKEVNlY3JldEtl",
-            "eVNlbGVjdG9yEjsKBnNlY3JldBgBIAEoCUIr4EEC+kElCiNzZWNyZXRtYW5h",
-            "Z2VyLmdvb2dsZWFwaXMuY29tL1NlY3JldBJACgd2ZXJzaW9uGAIgASgJQi/6",
-            "QSwKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lv",
-            "biI1Cg1Db250YWluZXJQb3J0EgwKBG5hbWUYASABKAkSFgoOY29udGFpbmVy",
-            "X3BvcnQYAyABKAUiOQoLVm9sdW1lTW91bnQSEQoEbmFtZRgBIAEoCUID4EEC",
-            "EhcKCm1vdW50X3BhdGgYAyABKAlCA+BBAiKqAQoGVm9sdW1lEhEKBG5hbWUY",
-            "ASABKAlCA+BBAhI5CgZzZWNyZXQYAiABKAsyJy5nb29nbGUuY2xvdWQucnVu",
-            "LnYyLlNlY3JldFZvbHVtZVNvdXJjZUgAEkMKEmNsb3VkX3NxbF9pbnN0YW5j",
-            "ZRgDIAEoCzIlLmdvb2dsZS5jbG91ZC5ydW4udjIuQ2xvdWRTcWxJbnN0YW5j",
-            "ZUgAQg0KC3ZvbHVtZV90eXBlInIKElNlY3JldFZvbHVtZVNvdXJjZRITCgZz",
-            "ZWNyZXQYASABKAlCA+BBAhIxCgVpdGVtcxgCIAMoCzIiLmdvb2dsZS5jbG91",
-            "ZC5ydW4udjIuVmVyc2lvblRvUGF0aBIUCgxkZWZhdWx0X21vZGUYAyABKAUi",
-            "QQoNVmVyc2lvblRvUGF0aBIRCgRwYXRoGAEgASgJQgPgQQISDwoHdmVyc2lv",
-            "bhgCIAEoCRIMCgRtb2RlGAMgASgFIiUKEENsb3VkU3FsSW5zdGFuY2USEQoJ",
-            "aW5zdGFuY2VzGAEgAygJIqUCCgVQcm9iZRIdChVpbml0aWFsX2RlbGF5X3Nl",
-            "Y29uZHMYASABKAUSFwoPdGltZW91dF9zZWNvbmRzGAIgASgFEhYKDnBlcmlv",
-            "ZF9zZWNvbmRzGAMgASgFEhkKEWZhaWx1cmVfdGhyZXNob2xkGAQgASgFEjYK",
-            "CGh0dHBfZ2V0GAUgASgLMiIuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5IVFRQR2V0",
-            "QWN0aW9uSAASOgoKdGNwX3NvY2tldBgGIAEoCzIkLmdvb2dsZS5jbG91ZC5y",
-            "dW4udjIuVENQU29ja2V0QWN0aW9uSAASLwoEZ3JwYxgHIAEoCzIfLmdvb2ds",
-            "ZS5jbG91ZC5ydW4udjIuR1JQQ0FjdGlvbkgAQgwKCnByb2JlX3R5cGUiVAoN",
-            "SFRUUEdldEFjdGlvbhIMCgRwYXRoGAEgASgJEjUKDGh0dHBfaGVhZGVycxgE",
-            "IAMoCzIfLmdvb2dsZS5jbG91ZC5ydW4udjIuSFRUUEhlYWRlciIuCgpIVFRQ",
-            "SGVhZGVyEhEKBG5hbWUYASABKAlCA+BBAhINCgV2YWx1ZRgCIAEoCSIfCg9U",
-            "Q1BTb2NrZXRBY3Rpb24SDAoEcG9ydBgBIAEoBSIrCgpHUlBDQWN0aW9uEgwK",
-            "BHBvcnQYASABKAUSDwoHc2VydmljZRgCIAEoCULpAwoXY29tLmdvb2dsZS5j",
-            "bG91ZC5ydW4udjJCC0s4c01pblByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vcnVuL2FwaXYyL3J1bnBiO3J1bnBi6kF4CiFjbG91ZGttcy5nb29nbGVh",
-            "cGlzLmNvbS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMv",
-            "e2NyeXB0b19rZXl96kFKCiNzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "L1NlY3JldBIjcHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3NlY3JldH3q",
-            "QWQKKnNlY3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lv",
-            "bhI2cHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3NlY3JldH0vdmVyc2lv",
-            "bnMve3ZlcnNpb2596kFkCiJ2cGNhY2Nlc3MuZ29vZ2xlYXBpcy5jb20vQ29u",
-            "bmVjdG9yEj5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vY29ubmVjdG9ycy97Y29ubmVjdG9yfWIGcHJvdG8z"));
+            "YmUYCyABKAsyGi5nb29nbGUuY2xvdWQucnVuLnYyLlByb2JlEhIKCmRlcGVu",
+            "ZHNfb24YDCADKAkSFgoOYmFzZV9pbWFnZV91cmkYDSABKAkSNwoKYnVpbGRf",
+            "aW5mbxgPIAEoCzIeLmdvb2dsZS5jbG91ZC5ydW4udjIuQnVpbGRJbmZvQgPg",
+            "QQMiuQEKFFJlc291cmNlUmVxdWlyZW1lbnRzEkUKBmxpbWl0cxgBIAMoCzI1",
+            "Lmdvb2dsZS5jbG91ZC5ydW4udjIuUmVzb3VyY2VSZXF1aXJlbWVudHMuTGlt",
+            "aXRzRW50cnkSEAoIY3B1X2lkbGUYAiABKAgSGQoRc3RhcnR1cF9jcHVfYm9v",
+            "c3QYAyABKAgaLQoLTGltaXRzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4ASJxCgZFbnZWYXISEQoEbmFtZRgBIAEoCUID4EECEg8KBXZh",
+            "bHVlGAIgASgJSAASOQoMdmFsdWVfc291cmNlGAMgASgLMiEuZ29vZ2xlLmNs",
+            "b3VkLnJ1bi52Mi5FbnZWYXJTb3VyY2VIAEIICgZ2YWx1ZXMiTgoMRW52VmFy",
+            "U291cmNlEj4KDnNlY3JldF9rZXlfcmVmGAEgASgLMiYuZ29vZ2xlLmNsb3Vk",
+            "LnJ1bi52Mi5TZWNyZXRLZXlTZWxlY3RvciKSAQoRU2VjcmV0S2V5U2VsZWN0",
+            "b3ISOwoGc2VjcmV0GAEgASgJQivgQQL6QSUKI3NlY3JldG1hbmFnZXIuZ29v",
+            "Z2xlYXBpcy5jb20vU2VjcmV0EkAKB3ZlcnNpb24YAiABKAlCL/pBLAoqc2Vj",
+            "cmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uIjUKDUNv",
+            "bnRhaW5lclBvcnQSDAoEbmFtZRgBIAEoCRIWCg5jb250YWluZXJfcG9ydBgD",
+            "IAEoBSI5CgtWb2x1bWVNb3VudBIRCgRuYW1lGAEgASgJQgPgQQISFwoKbW91",
+            "bnRfcGF0aBgDIAEoCUID4EECItQCCgZWb2x1bWUSEQoEbmFtZRgBIAEoCUID",
+            "4EECEjkKBnNlY3JldBgCIAEoCzInLmdvb2dsZS5jbG91ZC5ydW4udjIuU2Vj",
+            "cmV0Vm9sdW1lU291cmNlSAASQwoSY2xvdWRfc3FsX2luc3RhbmNlGAMgASgL",
+            "MiUuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5DbG91ZFNxbEluc3RhbmNlSAASPgoJ",
+            "ZW1wdHlfZGlyGAQgASgLMikuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5FbXB0eURp",
+            "clZvbHVtZVNvdXJjZUgAEjMKA25mcxgFIAEoCzIkLmdvb2dsZS5jbG91ZC5y",
+            "dW4udjIuTkZTVm9sdW1lU291cmNlSAASMwoDZ2NzGAYgASgLMiQuZ29vZ2xl",
+            "LmNsb3VkLnJ1bi52Mi5HQ1NWb2x1bWVTb3VyY2VIAEINCgt2b2x1bWVfdHlw",
+            "ZSJyChJTZWNyZXRWb2x1bWVTb3VyY2USEwoGc2VjcmV0GAEgASgJQgPgQQIS",
+            "MQoFaXRlbXMYAiADKAsyIi5nb29nbGUuY2xvdWQucnVuLnYyLlZlcnNpb25U",
+            "b1BhdGgSFAoMZGVmYXVsdF9tb2RlGAMgASgFIkEKDVZlcnNpb25Ub1BhdGgS",
+            "EQoEcGF0aBgBIAEoCUID4EECEg8KB3ZlcnNpb24YAiABKAkSDAoEbW9kZRgD",
+            "IAEoBSIlChBDbG91ZFNxbEluc3RhbmNlEhEKCWluc3RhbmNlcxgBIAMoCSKa",
+            "AQoURW1wdHlEaXJWb2x1bWVTb3VyY2USQAoGbWVkaXVtGAEgASgOMjAuZ29v",
+            "Z2xlLmNsb3VkLnJ1bi52Mi5FbXB0eURpclZvbHVtZVNvdXJjZS5NZWRpdW0S",
+            "EgoKc2l6ZV9saW1pdBgCIAEoCSIsCgZNZWRpdW0SFgoSTUVESVVNX1VOU1BF",
+            "Q0lGSUVEEAASCgoGTUVNT1JZEAEiQgoPTkZTVm9sdW1lU291cmNlEg4KBnNl",
+            "cnZlchgBIAEoCRIMCgRwYXRoGAIgASgJEhEKCXJlYWRfb25seRgDIAEoCCJL",
+            "Cg9HQ1NWb2x1bWVTb3VyY2USDgoGYnVja2V0GAEgASgJEhEKCXJlYWRfb25s",
+            "eRgCIAEoCBIVCg1tb3VudF9vcHRpb25zGAMgAygJIsgCCgVQcm9iZRIiChVp",
+            "bml0aWFsX2RlbGF5X3NlY29uZHMYASABKAVCA+BBARIcCg90aW1lb3V0X3Nl",
+            "Y29uZHMYAiABKAVCA+BBARIbCg5wZXJpb2Rfc2Vjb25kcxgDIAEoBUID4EEB",
+            "Eh4KEWZhaWx1cmVfdGhyZXNob2xkGAQgASgFQgPgQQESOwoIaHR0cF9nZXQY",
+            "BSABKAsyIi5nb29nbGUuY2xvdWQucnVuLnYyLkhUVFBHZXRBY3Rpb25CA+BB",
+            "AUgAEj8KCnRjcF9zb2NrZXQYBiABKAsyJC5nb29nbGUuY2xvdWQucnVuLnYy",
+            "LlRDUFNvY2tldEFjdGlvbkID4EEBSAASNAoEZ3JwYxgHIAEoCzIfLmdvb2ds",
+            "ZS5jbG91ZC5ydW4udjIuR1JQQ0FjdGlvbkID4EEBSABCDAoKcHJvYmVfdHlw",
+            "ZSJxCg1IVFRQR2V0QWN0aW9uEhEKBHBhdGgYASABKAlCA+BBARI6CgxodHRw",
+            "X2hlYWRlcnMYBCADKAsyHy5nb29nbGUuY2xvdWQucnVuLnYyLkhUVFBIZWFk",
+            "ZXJCA+BBARIRCgRwb3J0GAUgASgFQgPgQQEiMwoKSFRUUEhlYWRlchIRCgRu",
+            "YW1lGAEgASgJQgPgQQISEgoFdmFsdWUYAiABKAlCA+BBASIkCg9UQ1BTb2Nr",
+            "ZXRBY3Rpb24SEQoEcG9ydBgBIAEoBUID4EEBIjUKCkdSUENBY3Rpb24SEQoE",
+            "cG9ydBgBIAEoBUID4EEBEhQKB3NlcnZpY2UYAiABKAlCA+BBASJHCglCdWls",
+            "ZEluZm8SHAoPZnVuY3Rpb25fdGFyZ2V0GAEgASgJQgPgQQMSHAoPc291cmNl",
+            "X2xvY2F0aW9uGAIgASgJQgPgQQNC6QMKF2NvbS5nb29nbGUuY2xvdWQucnVu",
+            "LnYyQgtLOHNNaW5Qcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL3J1bi9h",
+            "cGl2Mi9ydW5wYjtydW5wYupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20v",
+            "Q3J5cHRvS2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9f",
+            "a2V5fepBSgojc2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXQS",
+            "I3Byb2plY3RzL3twcm9qZWN0fS9zZWNyZXRzL3tzZWNyZXR96kFkCipzZWNy",
+            "ZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1NlY3JldFZlcnNpb24SNnByb2pl",
+            "Y3RzL3twcm9qZWN0fS9zZWNyZXRzL3tzZWNyZXR9L3ZlcnNpb25zL3t2ZXJz",
+            "aW9ufepBZAoidnBjYWNjZXNzLmdvb2dsZWFwaXMuY29tL0Nvbm5lY3RvchI+",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nvbm5l",
+            "Y3RvcnMve2Nvbm5lY3Rvcn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Container), global::Google.Cloud.Run.V2.Container.Parser, new[]{ "Name", "Image", "Command", "Args", "Env", "Resources", "Ports", "VolumeMounts", "WorkingDir", "LivenessProbe", "StartupProbe" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ResourceRequirements), global::Google.Cloud.Run.V2.ResourceRequirements.Parser, new[]{ "Limits", "CpuIdle" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Container), global::Google.Cloud.Run.V2.Container.Parser, new[]{ "Name", "Image", "Command", "Args", "Env", "Resources", "Ports", "VolumeMounts", "WorkingDir", "LivenessProbe", "StartupProbe", "DependsOn", "BaseImageUri", "BuildInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ResourceRequirements), global::Google.Cloud.Run.V2.ResourceRequirements.Parser, new[]{ "Limits", "CpuIdle", "StartupCpuBoost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.EnvVar), global::Google.Cloud.Run.V2.EnvVar.Parser, new[]{ "Name", "Value", "ValueSource" }, new[]{ "Values" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.EnvVarSource), global::Google.Cloud.Run.V2.EnvVarSource.Parser, new[]{ "SecretKeyRef" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SecretKeySelector), global::Google.Cloud.Run.V2.SecretKeySelector.Parser, new[]{ "Secret", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ContainerPort), global::Google.Cloud.Run.V2.ContainerPort.Parser, new[]{ "Name", "ContainerPort_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VolumeMount), global::Google.Cloud.Run.V2.VolumeMount.Parser, new[]{ "Name", "MountPath" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Volume), global::Google.Cloud.Run.V2.Volume.Parser, new[]{ "Name", "Secret", "CloudSqlInstance" }, new[]{ "VolumeType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Volume), global::Google.Cloud.Run.V2.Volume.Parser, new[]{ "Name", "Secret", "CloudSqlInstance", "EmptyDir", "Nfs", "Gcs" }, new[]{ "VolumeType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SecretVolumeSource), global::Google.Cloud.Run.V2.SecretVolumeSource.Parser, new[]{ "Secret", "Items", "DefaultMode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.VersionToPath), global::Google.Cloud.Run.V2.VersionToPath.Parser, new[]{ "Path", "Version", "Mode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.CloudSqlInstance), global::Google.Cloud.Run.V2.CloudSqlInstance.Parser, new[]{ "Instances" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.EmptyDirVolumeSource), global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Parser, new[]{ "Medium", "SizeLimit" }, null, new[]{ typeof(global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.NFSVolumeSource), global::Google.Cloud.Run.V2.NFSVolumeSource.Parser, new[]{ "Server", "Path", "ReadOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GCSVolumeSource), global::Google.Cloud.Run.V2.GCSVolumeSource.Parser, new[]{ "Bucket", "ReadOnly", "MountOptions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Probe), global::Google.Cloud.Run.V2.Probe.Parser, new[]{ "InitialDelaySeconds", "TimeoutSeconds", "PeriodSeconds", "FailureThreshold", "HttpGet", "TcpSocket", "Grpc" }, new[]{ "ProbeType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.HTTPGetAction), global::Google.Cloud.Run.V2.HTTPGetAction.Parser, new[]{ "Path", "HttpHeaders" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.HTTPGetAction), global::Google.Cloud.Run.V2.HTTPGetAction.Parser, new[]{ "Path", "HttpHeaders", "Port" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.HTTPHeader), global::Google.Cloud.Run.V2.HTTPHeader.Parser, new[]{ "Name", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.TCPSocketAction), global::Google.Cloud.Run.V2.TCPSocketAction.Parser, new[]{ "Port" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GRPCAction), global::Google.Cloud.Run.V2.GRPCAction.Parser, new[]{ "Port", "Service" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GRPCAction), global::Google.Cloud.Run.V2.GRPCAction.Parser, new[]{ "Port", "Service" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BuildInfo), global::Google.Cloud.Run.V2.BuildInfo.Parser, new[]{ "FunctionTarget", "SourceLocation" }, null, null, null, null)
           }));
     }
     #endregion
@@ -110,9 +131,10 @@ namespace Google.Cloud.Run.V2 {
   /// A single application container.
   /// This specifies both the container to run, the command to run in the container
   /// and the arguments to supply to it.
-  /// Note that additional arguments may be supplied by the system to the container
+  /// Note that additional arguments can be supplied by the system to the container
   /// at runtime.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Container : pb::IMessage<Container>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -158,6 +180,9 @@ namespace Google.Cloud.Run.V2 {
       workingDir_ = other.workingDir_;
       livenessProbe_ = other.livenessProbe_ != null ? other.livenessProbe_.Clone() : null;
       startupProbe_ = other.startupProbe_ != null ? other.startupProbe_.Clone() : null;
+      dependsOn_ = other.dependsOn_.Clone();
+      baseImageUri_ = other.baseImageUri_;
+      buildInfo_ = other.buildInfo_ != null ? other.buildInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -188,8 +213,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Required. Name of the container image in Dockerhub, Google Artifact
     /// Registry, or Google Container Registry. If the host is not provided,
-    /// Dockerhub is assumed. More info:
-    /// https://kubernetes.io/docs/concepts/containers/images
+    /// Dockerhub is assumed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -208,13 +232,6 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Entrypoint array. Not executed within a shell.
     /// The docker image's ENTRYPOINT is used if this is not provided.
-    /// Variable references $(VAR_NAME) are expanded using the container's
-    /// environment. If a variable cannot be resolved, the reference in the input
-    /// string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-    /// double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-    /// regardless of whether the variable exists or not.
-    /// More info:
-    /// https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -230,13 +247,6 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Arguments to the entrypoint.
     /// The docker image's CMD is used if this is not provided.
-    /// Variable references $(VAR_NAME) are expanded using the container's
-    /// environment. If a variable cannot be resolved, the reference in the input
-    /// string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-    /// double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-    /// regardless of whether the variable exists or not.
-    /// More info:
-    /// https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -263,8 +273,6 @@ namespace Google.Cloud.Run.V2 {
     private global::Google.Cloud.Run.V2.ResourceRequirements resources_;
     /// <summary>
     /// Compute Resource requirements by this container.
-    /// More info:
-    /// https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -331,8 +339,6 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>
     /// Periodic probe of container liveness.
     /// Container will be restarted if the probe fails.
-    /// More info:
-    /// https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -351,8 +357,6 @@ namespace Google.Cloud.Run.V2 {
     /// All other probes are disabled if a startup probe is provided, until it
     /// succeeds. Container will not be added to service endpoints if the probe
     /// fails.
-    /// More info:
-    /// https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -360,6 +364,51 @@ namespace Google.Cloud.Run.V2 {
       get { return startupProbe_; }
       set {
         startupProbe_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "depends_on" field.</summary>
+    public const int DependsOnFieldNumber = 12;
+    private static readonly pb::FieldCodec<string> _repeated_dependsOn_codec
+        = pb::FieldCodec.ForString(98);
+    private readonly pbc::RepeatedField<string> dependsOn_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Names of the containers that must start before this container.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DependsOn {
+      get { return dependsOn_; }
+    }
+
+    /// <summary>Field number for the "base_image_uri" field.</summary>
+    public const int BaseImageUriFieldNumber = 13;
+    private string baseImageUri_ = "";
+    /// <summary>
+    /// Base image for this container. Only supported for services. If set, it
+    /// indicates that the service is enrolled into automatic base image update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BaseImageUri {
+      get { return baseImageUri_; }
+      set {
+        baseImageUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "build_info" field.</summary>
+    public const int BuildInfoFieldNumber = 15;
+    private global::Google.Cloud.Run.V2.BuildInfo buildInfo_;
+    /// <summary>
+    /// Output only. The build info of the container image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.BuildInfo BuildInfo {
+      get { return buildInfo_; }
+      set {
+        buildInfo_ = value;
       }
     }
 
@@ -389,6 +438,9 @@ namespace Google.Cloud.Run.V2 {
       if (WorkingDir != other.WorkingDir) return false;
       if (!object.Equals(LivenessProbe, other.LivenessProbe)) return false;
       if (!object.Equals(StartupProbe, other.StartupProbe)) return false;
+      if(!dependsOn_.Equals(other.dependsOn_)) return false;
+      if (BaseImageUri != other.BaseImageUri) return false;
+      if (!object.Equals(BuildInfo, other.BuildInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -407,6 +459,9 @@ namespace Google.Cloud.Run.V2 {
       if (WorkingDir.Length != 0) hash ^= WorkingDir.GetHashCode();
       if (livenessProbe_ != null) hash ^= LivenessProbe.GetHashCode();
       if (startupProbe_ != null) hash ^= StartupProbe.GetHashCode();
+      hash ^= dependsOn_.GetHashCode();
+      if (BaseImageUri.Length != 0) hash ^= BaseImageUri.GetHashCode();
+      if (buildInfo_ != null) hash ^= BuildInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -454,6 +509,15 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(90);
         output.WriteMessage(StartupProbe);
       }
+      dependsOn_.WriteTo(output, _repeated_dependsOn_codec);
+      if (BaseImageUri.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(BaseImageUri);
+      }
+      if (buildInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(BuildInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -493,6 +557,15 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(90);
         output.WriteMessage(StartupProbe);
       }
+      dependsOn_.WriteTo(ref output, _repeated_dependsOn_codec);
+      if (BaseImageUri.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(BaseImageUri);
+      }
+      if (buildInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(BuildInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -525,6 +598,13 @@ namespace Google.Cloud.Run.V2 {
       }
       if (startupProbe_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartupProbe);
+      }
+      size += dependsOn_.CalculateSize(_repeated_dependsOn_codec);
+      if (BaseImageUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BaseImageUri);
+      }
+      if (buildInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BuildInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -569,6 +649,16 @@ namespace Google.Cloud.Run.V2 {
           StartupProbe = new global::Google.Cloud.Run.V2.Probe();
         }
         StartupProbe.MergeFrom(other.StartupProbe);
+      }
+      dependsOn_.Add(other.dependsOn_);
+      if (other.BaseImageUri.Length != 0) {
+        BaseImageUri = other.BaseImageUri;
+      }
+      if (other.buildInfo_ != null) {
+        if (buildInfo_ == null) {
+          BuildInfo = new global::Google.Cloud.Run.V2.BuildInfo();
+        }
+        BuildInfo.MergeFrom(other.BuildInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -636,6 +726,21 @@ namespace Google.Cloud.Run.V2 {
               StartupProbe = new global::Google.Cloud.Run.V2.Probe();
             }
             input.ReadMessage(StartupProbe);
+            break;
+          }
+          case 98: {
+            dependsOn_.AddEntriesFrom(input, _repeated_dependsOn_codec);
+            break;
+          }
+          case 106: {
+            BaseImageUri = input.ReadString();
+            break;
+          }
+          case 122: {
+            if (buildInfo_ == null) {
+              BuildInfo = new global::Google.Cloud.Run.V2.BuildInfo();
+            }
+            input.ReadMessage(BuildInfo);
             break;
           }
         }
@@ -706,6 +811,21 @@ namespace Google.Cloud.Run.V2 {
             input.ReadMessage(StartupProbe);
             break;
           }
+          case 98: {
+            dependsOn_.AddEntriesFrom(ref input, _repeated_dependsOn_codec);
+            break;
+          }
+          case 106: {
+            BaseImageUri = input.ReadString();
+            break;
+          }
+          case 122: {
+            if (buildInfo_ == null) {
+              BuildInfo = new global::Google.Cloud.Run.V2.BuildInfo();
+            }
+            input.ReadMessage(BuildInfo);
+            break;
+          }
         }
       }
     }
@@ -716,6 +836,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// ResourceRequirements describes the compute resource requirements.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResourceRequirements : pb::IMessage<ResourceRequirements>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -752,6 +873,7 @@ namespace Google.Cloud.Run.V2 {
     public ResourceRequirements(ResourceRequirements other) : this() {
       limits_ = other.limits_.Clone();
       cpuIdle_ = other.cpuIdle_;
+      startupCpuBoost_ = other.startupCpuBoost_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -767,11 +889,14 @@ namespace Google.Cloud.Run.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 10);
     private readonly pbc::MapField<string, string> limits_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Only memory and CPU are supported. Note: The only
-    /// supported values for CPU are '1', '2',  '4', and '8'. Setting 4 CPU
-    /// requires at least 2Gi of memory. The values of the map is string form of
-    /// the 'quantity' k8s type:
-    /// https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+    /// Only `memory` and `cpu` keys in the map are supported.
+    ///
+    /// &lt;p>Notes:
+    ///  * The only supported values for CPU are '1', '2', '4', and '8'. Setting 4
+    /// CPU requires at least 2Gi of memory. For more information, go to
+    /// https://cloud.google.com/run/docs/configuring/cpu.
+    ///   * For supported 'memory' values and syntax, go to
+    ///  https://cloud.google.com/run/docs/configuring/memory-limits
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -783,7 +908,9 @@ namespace Google.Cloud.Run.V2 {
     public const int CpuIdleFieldNumber = 2;
     private bool cpuIdle_;
     /// <summary>
-    /// Determines whether CPU should be throttled or not outside of requests.
+    /// Determines whether CPU is only allocated during requests (true by default).
+    /// However, if ResourceRequirements is set, the caller must explicitly
+    /// set this field to true to preserve the default behavior.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -791,6 +918,23 @@ namespace Google.Cloud.Run.V2 {
       get { return cpuIdle_; }
       set {
         cpuIdle_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "startup_cpu_boost" field.</summary>
+    public const int StartupCpuBoostFieldNumber = 3;
+    private bool startupCpuBoost_;
+    /// <summary>
+    /// Determines whether CPU should be boosted on startup of a new container
+    /// instance above the requested CPU threshold, this can help reduce cold-start
+    /// latency.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool StartupCpuBoost {
+      get { return startupCpuBoost_; }
+      set {
+        startupCpuBoost_ = value;
       }
     }
 
@@ -811,6 +955,7 @@ namespace Google.Cloud.Run.V2 {
       }
       if (!Limits.Equals(other.Limits)) return false;
       if (CpuIdle != other.CpuIdle) return false;
+      if (StartupCpuBoost != other.StartupCpuBoost) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -820,6 +965,7 @@ namespace Google.Cloud.Run.V2 {
       int hash = 1;
       hash ^= Limits.GetHashCode();
       if (CpuIdle != false) hash ^= CpuIdle.GetHashCode();
+      if (StartupCpuBoost != false) hash ^= StartupCpuBoost.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -843,6 +989,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(16);
         output.WriteBool(CpuIdle);
       }
+      if (StartupCpuBoost != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(StartupCpuBoost);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -858,6 +1008,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(16);
         output.WriteBool(CpuIdle);
       }
+      if (StartupCpuBoost != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(StartupCpuBoost);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -872,6 +1026,9 @@ namespace Google.Cloud.Run.V2 {
       if (CpuIdle != false) {
         size += 1 + 1;
       }
+      if (StartupCpuBoost != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -884,9 +1041,12 @@ namespace Google.Cloud.Run.V2 {
       if (other == null) {
         return;
       }
-      limits_.Add(other.limits_);
+      limits_.MergeFrom(other.limits_);
       if (other.CpuIdle != false) {
         CpuIdle = other.CpuIdle;
+      }
+      if (other.StartupCpuBoost != false) {
+        StartupCpuBoost = other.StartupCpuBoost;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -909,6 +1069,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 16: {
             CpuIdle = input.ReadBool();
+            break;
+          }
+          case 24: {
+            StartupCpuBoost = input.ReadBool();
             break;
           }
         }
@@ -934,6 +1098,10 @@ namespace Google.Cloud.Run.V2 {
             CpuIdle = input.ReadBool();
             break;
           }
+          case 24: {
+            StartupCpuBoost = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -944,6 +1112,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// EnvVar represents an environment variable present in a Container.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnvVar : pb::IMessage<EnvVar>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1001,8 +1170,8 @@ namespace Google.Cloud.Run.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the environment variable. Must be a C_IDENTIFIER, and
-    /// mnay not exceed 32768 characters.
+    /// Required. Name of the environment variable. Must not exceed 32768
+    /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1016,22 +1185,31 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 2;
     /// <summary>
-    /// Variable references $(VAR_NAME) are expanded
-    /// using the previous defined environment variables in the container and
-    /// any route environment variables. If a variable cannot be resolved,
-    /// the reference in the input string will be unchanged. The $(VAR_NAME)
-    /// syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
-    /// references will never be expanded, regardless of whether the variable
-    /// exists or not.
+    /// Literal value of the environment variable.
     /// Defaults to "", and the maximum length is 32768 bytes.
+    /// Variable references are not supported in Cloud Run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {
-      get { return valuesCase_ == ValuesOneofCase.Value ? (string) values_ : ""; }
+      get { return HasValue ? (string) values_ : ""; }
       set {
         values_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valuesCase_ = ValuesOneofCase.Value;
+      }
+    }
+    /// <summary>Gets whether the "value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasValue {
+      get { return valuesCase_ == ValuesOneofCase.Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValue() {
+      if (HasValue) {
+        ClearValues();
       }
     }
 
@@ -1098,7 +1276,7 @@ namespace Google.Cloud.Run.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (valuesCase_ == ValuesOneofCase.Value) hash ^= Value.GetHashCode();
+      if (HasValue) hash ^= Value.GetHashCode();
       if (valuesCase_ == ValuesOneofCase.ValueSource) hash ^= ValueSource.GetHashCode();
       hash ^= (int) valuesCase_;
       if (_unknownFields != null) {
@@ -1123,7 +1301,7 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (valuesCase_ == ValuesOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(18);
         output.WriteString(Value);
       }
@@ -1145,7 +1323,7 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (valuesCase_ == ValuesOneofCase.Value) {
+      if (HasValue) {
         output.WriteRawTag(18);
         output.WriteString(Value);
       }
@@ -1166,7 +1344,7 @@ namespace Google.Cloud.Run.V2 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (valuesCase_ == ValuesOneofCase.Value) {
+      if (HasValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
       }
       if (valuesCase_ == ValuesOneofCase.ValueSource) {
@@ -1273,6 +1451,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// EnvVarSource represents a source for the value of an EnvVar.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EnvVarSource : pb::IMessage<EnvVarSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1477,6 +1656,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// SecretEnvVarSource represents a source for the value of an EnvVar.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SecretKeySelector : pb::IMessage<SecretKeySelector>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1717,6 +1897,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// ContainerPort represents a network port in a single container.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContainerPort : pb::IMessage<ContainerPort>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1954,6 +2135,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// VolumeMount describes a mounting of a Volume within a container.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VolumeMount : pb::IMessage<VolumeMount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2193,6 +2375,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// Volume represents a named volume in a container.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Volume : pb::IMessage<Volume>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2235,6 +2418,15 @@ namespace Google.Cloud.Run.V2 {
         case VolumeTypeOneofCase.CloudSqlInstance:
           CloudSqlInstance = other.CloudSqlInstance.Clone();
           break;
+        case VolumeTypeOneofCase.EmptyDir:
+          EmptyDir = other.EmptyDir.Clone();
+          break;
+        case VolumeTypeOneofCase.Nfs:
+          Nfs = other.Nfs.Clone();
+          break;
+        case VolumeTypeOneofCase.Gcs:
+          Gcs = other.Gcs.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2265,7 +2457,6 @@ namespace Google.Cloud.Run.V2 {
     public const int SecretFieldNumber = 2;
     /// <summary>
     /// Secret represents a secret that should populate this volume.
-    /// More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2294,12 +2485,60 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "empty_dir" field.</summary>
+    public const int EmptyDirFieldNumber = 4;
+    /// <summary>
+    /// Ephemeral storage used as a shared volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.EmptyDirVolumeSource EmptyDir {
+      get { return volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir ? (global::Google.Cloud.Run.V2.EmptyDirVolumeSource) volumeType_ : null; }
+      set {
+        volumeType_ = value;
+        volumeTypeCase_ = value == null ? VolumeTypeOneofCase.None : VolumeTypeOneofCase.EmptyDir;
+      }
+    }
+
+    /// <summary>Field number for the "nfs" field.</summary>
+    public const int NfsFieldNumber = 5;
+    /// <summary>
+    /// For NFS Voumes, contains the path to the nfs Volume
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.NFSVolumeSource Nfs {
+      get { return volumeTypeCase_ == VolumeTypeOneofCase.Nfs ? (global::Google.Cloud.Run.V2.NFSVolumeSource) volumeType_ : null; }
+      set {
+        volumeType_ = value;
+        volumeTypeCase_ = value == null ? VolumeTypeOneofCase.None : VolumeTypeOneofCase.Nfs;
+      }
+    }
+
+    /// <summary>Field number for the "gcs" field.</summary>
+    public const int GcsFieldNumber = 6;
+    /// <summary>
+    /// Persistent storage backed by a Google Cloud Storage bucket.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.GCSVolumeSource Gcs {
+      get { return volumeTypeCase_ == VolumeTypeOneofCase.Gcs ? (global::Google.Cloud.Run.V2.GCSVolumeSource) volumeType_ : null; }
+      set {
+        volumeType_ = value;
+        volumeTypeCase_ = value == null ? VolumeTypeOneofCase.None : VolumeTypeOneofCase.Gcs;
+      }
+    }
+
     private object volumeType_;
     /// <summary>Enum of possible cases for the "volume_type" oneof.</summary>
     public enum VolumeTypeOneofCase {
       None = 0,
       Secret = 2,
       CloudSqlInstance = 3,
+      EmptyDir = 4,
+      Nfs = 5,
+      Gcs = 6,
     }
     private VolumeTypeOneofCase volumeTypeCase_ = VolumeTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2333,6 +2572,9 @@ namespace Google.Cloud.Run.V2 {
       if (Name != other.Name) return false;
       if (!object.Equals(Secret, other.Secret)) return false;
       if (!object.Equals(CloudSqlInstance, other.CloudSqlInstance)) return false;
+      if (!object.Equals(EmptyDir, other.EmptyDir)) return false;
+      if (!object.Equals(Nfs, other.Nfs)) return false;
+      if (!object.Equals(Gcs, other.Gcs)) return false;
       if (VolumeTypeCase != other.VolumeTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2344,6 +2586,9 @@ namespace Google.Cloud.Run.V2 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (volumeTypeCase_ == VolumeTypeOneofCase.Secret) hash ^= Secret.GetHashCode();
       if (volumeTypeCase_ == VolumeTypeOneofCase.CloudSqlInstance) hash ^= CloudSqlInstance.GetHashCode();
+      if (volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir) hash ^= EmptyDir.GetHashCode();
+      if (volumeTypeCase_ == VolumeTypeOneofCase.Nfs) hash ^= Nfs.GetHashCode();
+      if (volumeTypeCase_ == VolumeTypeOneofCase.Gcs) hash ^= Gcs.GetHashCode();
       hash ^= (int) volumeTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2375,6 +2620,18 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(CloudSqlInstance);
       }
+      if (volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EmptyDir);
+      }
+      if (volumeTypeCase_ == VolumeTypeOneofCase.Nfs) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Nfs);
+      }
+      if (volumeTypeCase_ == VolumeTypeOneofCase.Gcs) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Gcs);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2397,6 +2654,18 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(CloudSqlInstance);
       }
+      if (volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EmptyDir);
+      }
+      if (volumeTypeCase_ == VolumeTypeOneofCase.Nfs) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Nfs);
+      }
+      if (volumeTypeCase_ == VolumeTypeOneofCase.Gcs) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Gcs);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2415,6 +2684,15 @@ namespace Google.Cloud.Run.V2 {
       }
       if (volumeTypeCase_ == VolumeTypeOneofCase.CloudSqlInstance) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudSqlInstance);
+      }
+      if (volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EmptyDir);
+      }
+      if (volumeTypeCase_ == VolumeTypeOneofCase.Nfs) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Nfs);
+      }
+      if (volumeTypeCase_ == VolumeTypeOneofCase.Gcs) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gcs);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2443,6 +2721,24 @@ namespace Google.Cloud.Run.V2 {
             CloudSqlInstance = new global::Google.Cloud.Run.V2.CloudSqlInstance();
           }
           CloudSqlInstance.MergeFrom(other.CloudSqlInstance);
+          break;
+        case VolumeTypeOneofCase.EmptyDir:
+          if (EmptyDir == null) {
+            EmptyDir = new global::Google.Cloud.Run.V2.EmptyDirVolumeSource();
+          }
+          EmptyDir.MergeFrom(other.EmptyDir);
+          break;
+        case VolumeTypeOneofCase.Nfs:
+          if (Nfs == null) {
+            Nfs = new global::Google.Cloud.Run.V2.NFSVolumeSource();
+          }
+          Nfs.MergeFrom(other.Nfs);
+          break;
+        case VolumeTypeOneofCase.Gcs:
+          if (Gcs == null) {
+            Gcs = new global::Google.Cloud.Run.V2.GCSVolumeSource();
+          }
+          Gcs.MergeFrom(other.Gcs);
           break;
       }
 
@@ -2483,6 +2779,33 @@ namespace Google.Cloud.Run.V2 {
             CloudSqlInstance = subBuilder;
             break;
           }
+          case 34: {
+            global::Google.Cloud.Run.V2.EmptyDirVolumeSource subBuilder = new global::Google.Cloud.Run.V2.EmptyDirVolumeSource();
+            if (volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir) {
+              subBuilder.MergeFrom(EmptyDir);
+            }
+            input.ReadMessage(subBuilder);
+            EmptyDir = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Run.V2.NFSVolumeSource subBuilder = new global::Google.Cloud.Run.V2.NFSVolumeSource();
+            if (volumeTypeCase_ == VolumeTypeOneofCase.Nfs) {
+              subBuilder.MergeFrom(Nfs);
+            }
+            input.ReadMessage(subBuilder);
+            Nfs = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Run.V2.GCSVolumeSource subBuilder = new global::Google.Cloud.Run.V2.GCSVolumeSource();
+            if (volumeTypeCase_ == VolumeTypeOneofCase.Gcs) {
+              subBuilder.MergeFrom(Gcs);
+            }
+            input.ReadMessage(subBuilder);
+            Gcs = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -2520,6 +2843,33 @@ namespace Google.Cloud.Run.V2 {
             CloudSqlInstance = subBuilder;
             break;
           }
+          case 34: {
+            global::Google.Cloud.Run.V2.EmptyDirVolumeSource subBuilder = new global::Google.Cloud.Run.V2.EmptyDirVolumeSource();
+            if (volumeTypeCase_ == VolumeTypeOneofCase.EmptyDir) {
+              subBuilder.MergeFrom(EmptyDir);
+            }
+            input.ReadMessage(subBuilder);
+            EmptyDir = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Run.V2.NFSVolumeSource subBuilder = new global::Google.Cloud.Run.V2.NFSVolumeSource();
+            if (volumeTypeCase_ == VolumeTypeOneofCase.Nfs) {
+              subBuilder.MergeFrom(Nfs);
+            }
+            input.ReadMessage(subBuilder);
+            Nfs = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Run.V2.GCSVolumeSource subBuilder = new global::Google.Cloud.Run.V2.GCSVolumeSource();
+            if (volumeTypeCase_ == VolumeTypeOneofCase.Gcs) {
+              subBuilder.MergeFrom(Gcs);
+            }
+            input.ReadMessage(subBuilder);
+            Gcs = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -2532,6 +2882,7 @@ namespace Google.Cloud.Run.V2 {
   /// name is defined in the item path. If no items are defined, the name of
   /// the file is the secret.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SecretVolumeSource : pb::IMessage<SecretVolumeSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2627,10 +2978,9 @@ namespace Google.Cloud.Run.V2 {
     /// * Internally, a umask of 0222 will be applied to any non-zero value.
     /// * This is an integer representation of the mode bits. So, the octal
     /// integer value should look exactly as the chmod numeric notation with a
-    /// leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or
-    /// 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or
-    /// 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493
-    /// (base-10).
+    /// leading zero. Some examples: for chmod 640 (u=rw,g=r), set to 0640 (octal)
+    /// or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or
+    /// 493 (base-10).
     /// * This might be in conflict with other options that affect the
     /// file mode, like fsGroup, and the result can be other mode bits set.
     ///
@@ -2821,6 +3171,7 @@ namespace Google.Cloud.Run.V2 {
   /// VersionToPath maps a specific version of a secret to a relative file to mount
   /// to, relative to VolumeMount's mount_path.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VersionToPath : pb::IMessage<VersionToPath>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2912,10 +3263,9 @@ namespace Google.Cloud.Run.V2 {
     /// * Internally, a umask of 0222 will be applied to any non-zero value.
     /// * This is an integer representation of the mode bits. So, the octal
     /// integer value should look exactly as the chmod numeric notation with a
-    /// leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or
-    /// 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or
-    /// 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493
-    /// (base-10).
+    /// leading zero. Some examples: for chmod 640 (u=rw,g=r), set to 0640 (octal)
+    /// or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or
+    /// 493 (base-10).
     /// * This might be in conflict with other options that affect the
     /// file mode, like fsGroup, and the result can be other mode bits set.
     /// </summary>
@@ -3115,6 +3465,7 @@ namespace Google.Cloud.Run.V2 {
   /// https://cloud.google.com/sql/docs/mysql/connect-run for more information on
   /// how to connect Cloud SQL and Cloud Run.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudSqlInstance : pb::IMessage<CloudSqlInstance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3301,9 +3652,824 @@ namespace Google.Cloud.Run.V2 {
   }
 
   /// <summary>
+  /// In memory (tmpfs) ephemeral storage.
+  /// It is ephemeral in the sense that when the sandbox is taken down, the data is
+  /// destroyed with it (it does not persist across sandbox runs).
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EmptyDirVolumeSource : pb::IMessage<EmptyDirVolumeSource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EmptyDirVolumeSource> _parser = new pb::MessageParser<EmptyDirVolumeSource>(() => new EmptyDirVolumeSource());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EmptyDirVolumeSource> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EmptyDirVolumeSource() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EmptyDirVolumeSource(EmptyDirVolumeSource other) : this() {
+      medium_ = other.medium_;
+      sizeLimit_ = other.sizeLimit_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EmptyDirVolumeSource Clone() {
+      return new EmptyDirVolumeSource(this);
+    }
+
+    /// <summary>Field number for the "medium" field.</summary>
+    public const int MediumFieldNumber = 1;
+    private global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium medium_ = global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium.Unspecified;
+    /// <summary>
+    /// The medium on which the data is stored. Acceptable values today is only
+    /// MEMORY or none. When none, the default will currently be backed by memory
+    /// but could change over time. +optional
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium Medium {
+      get { return medium_; }
+      set {
+        medium_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "size_limit" field.</summary>
+    public const int SizeLimitFieldNumber = 2;
+    private string sizeLimit_ = "";
+    /// <summary>
+    /// Limit on the storage usable by this EmptyDir volume.
+    /// The size limit is also applicable for memory medium.
+    /// The maximum usage on memory medium EmptyDir would be the minimum value
+    /// between the SizeLimit specified here and the sum of memory limits of all
+    /// containers. The default is nil which means that the limit is undefined.
+    /// More info:
+    /// https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume.
+    /// Info in Kubernetes:
+    /// https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SizeLimit {
+      get { return sizeLimit_; }
+      set {
+        sizeLimit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EmptyDirVolumeSource);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EmptyDirVolumeSource other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Medium != other.Medium) return false;
+      if (SizeLimit != other.SizeLimit) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Medium != global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium.Unspecified) hash ^= Medium.GetHashCode();
+      if (SizeLimit.Length != 0) hash ^= SizeLimit.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Medium != global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Medium);
+      }
+      if (SizeLimit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SizeLimit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Medium != global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Medium);
+      }
+      if (SizeLimit.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SizeLimit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Medium != global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Medium);
+      }
+      if (SizeLimit.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SizeLimit);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EmptyDirVolumeSource other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Medium != global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium.Unspecified) {
+        Medium = other.Medium;
+      }
+      if (other.SizeLimit.Length != 0) {
+        SizeLimit = other.SizeLimit;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Medium = (global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            SizeLimit = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Medium = (global::Google.Cloud.Run.V2.EmptyDirVolumeSource.Types.Medium) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            SizeLimit = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the EmptyDirVolumeSource message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The different types of medium supported for EmptyDir.
+      /// </summary>
+      public enum Medium {
+        /// <summary>
+        /// When not specified, falls back to the default implementation which
+        /// is currently in memory (this may change over time).
+        /// </summary>
+        [pbr::OriginalName("MEDIUM_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Explicitly set the EmptyDir to be in memory. Uses tmpfs.
+        /// </summary>
+        [pbr::OriginalName("MEMORY")] Memory = 1,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Represents an NFS mount.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class NFSVolumeSource : pb::IMessage<NFSVolumeSource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NFSVolumeSource> _parser = new pb::MessageParser<NFSVolumeSource>(() => new NFSVolumeSource());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NFSVolumeSource> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NFSVolumeSource() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NFSVolumeSource(NFSVolumeSource other) : this() {
+      server_ = other.server_;
+      path_ = other.path_;
+      readOnly_ = other.readOnly_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NFSVolumeSource Clone() {
+      return new NFSVolumeSource(this);
+    }
+
+    /// <summary>Field number for the "server" field.</summary>
+    public const int ServerFieldNumber = 1;
+    private string server_ = "";
+    /// <summary>
+    /// Hostname or IP address of the NFS server
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Server {
+      get { return server_; }
+      set {
+        server_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 2;
+    private string path_ = "";
+    /// <summary>
+    /// Path that is exported by the NFS server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Path {
+      get { return path_; }
+      set {
+        path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "read_only" field.</summary>
+    public const int ReadOnlyFieldNumber = 3;
+    private bool readOnly_;
+    /// <summary>
+    /// If true, the volume will be mounted as read only for all mounts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReadOnly {
+      get { return readOnly_; }
+      set {
+        readOnly_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NFSVolumeSource);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NFSVolumeSource other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Server != other.Server) return false;
+      if (Path != other.Path) return false;
+      if (ReadOnly != other.ReadOnly) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Server.Length != 0) hash ^= Server.GetHashCode();
+      if (Path.Length != 0) hash ^= Path.GetHashCode();
+      if (ReadOnly != false) hash ^= ReadOnly.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Server.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Server);
+      }
+      if (Path.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Path);
+      }
+      if (ReadOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ReadOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Server.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Server);
+      }
+      if (Path.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Path);
+      }
+      if (ReadOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ReadOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Server.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Server);
+      }
+      if (Path.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
+      }
+      if (ReadOnly != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NFSVolumeSource other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Server.Length != 0) {
+        Server = other.Server;
+      }
+      if (other.Path.Length != 0) {
+        Path = other.Path;
+      }
+      if (other.ReadOnly != false) {
+        ReadOnly = other.ReadOnly;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Server = input.ReadString();
+            break;
+          }
+          case 18: {
+            Path = input.ReadString();
+            break;
+          }
+          case 24: {
+            ReadOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Server = input.ReadString();
+            break;
+          }
+          case 18: {
+            Path = input.ReadString();
+            break;
+          }
+          case 24: {
+            ReadOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents a volume backed by a Cloud Storage bucket using Cloud Storage
+  /// FUSE.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GCSVolumeSource : pb::IMessage<GCSVolumeSource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GCSVolumeSource> _parser = new pb::MessageParser<GCSVolumeSource>(() => new GCSVolumeSource());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GCSVolumeSource> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GCSVolumeSource() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GCSVolumeSource(GCSVolumeSource other) : this() {
+      bucket_ = other.bucket_;
+      readOnly_ = other.readOnly_;
+      mountOptions_ = other.mountOptions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GCSVolumeSource Clone() {
+      return new GCSVolumeSource(this);
+    }
+
+    /// <summary>Field number for the "bucket" field.</summary>
+    public const int BucketFieldNumber = 1;
+    private string bucket_ = "";
+    /// <summary>
+    /// Cloud Storage Bucket name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Bucket {
+      get { return bucket_; }
+      set {
+        bucket_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "read_only" field.</summary>
+    public const int ReadOnlyFieldNumber = 2;
+    private bool readOnly_;
+    /// <summary>
+    /// If true, the volume will be mounted as read only for all mounts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReadOnly {
+      get { return readOnly_; }
+      set {
+        readOnly_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mount_options" field.</summary>
+    public const int MountOptionsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_mountOptions_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> mountOptions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// A list of additional flags to pass to the gcsfuse CLI.
+    /// Options should be specified without the leading "--".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> MountOptions {
+      get { return mountOptions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GCSVolumeSource);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GCSVolumeSource other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Bucket != other.Bucket) return false;
+      if (ReadOnly != other.ReadOnly) return false;
+      if(!mountOptions_.Equals(other.mountOptions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Bucket.Length != 0) hash ^= Bucket.GetHashCode();
+      if (ReadOnly != false) hash ^= ReadOnly.GetHashCode();
+      hash ^= mountOptions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Bucket.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Bucket);
+      }
+      if (ReadOnly != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(ReadOnly);
+      }
+      mountOptions_.WriteTo(output, _repeated_mountOptions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Bucket.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Bucket);
+      }
+      if (ReadOnly != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(ReadOnly);
+      }
+      mountOptions_.WriteTo(ref output, _repeated_mountOptions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Bucket.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Bucket);
+      }
+      if (ReadOnly != false) {
+        size += 1 + 1;
+      }
+      size += mountOptions_.CalculateSize(_repeated_mountOptions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GCSVolumeSource other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Bucket.Length != 0) {
+        Bucket = other.Bucket;
+      }
+      if (other.ReadOnly != false) {
+        ReadOnly = other.ReadOnly;
+      }
+      mountOptions_.Add(other.mountOptions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Bucket = input.ReadString();
+            break;
+          }
+          case 16: {
+            ReadOnly = input.ReadBool();
+            break;
+          }
+          case 26: {
+            mountOptions_.AddEntriesFrom(input, _repeated_mountOptions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Bucket = input.ReadString();
+            break;
+          }
+          case 16: {
+            ReadOnly = input.ReadBool();
+            break;
+          }
+          case 26: {
+            mountOptions_.AddEntriesFrom(ref input, _repeated_mountOptions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Probe describes a health check to be performed against a container to
   /// determine whether it is alive or ready to receive traffic.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Probe : pb::IMessage<Probe>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3318,7 +4484,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3367,12 +4533,9 @@ namespace Google.Cloud.Run.V2 {
     public const int InitialDelaySecondsFieldNumber = 1;
     private int initialDelaySeconds_;
     /// <summary>
-    /// Number of seconds after the container has started before the probe is
-    /// initiated.
-    /// Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe
-    /// is 3600. Maximum value for startup probe is 240.
-    /// More info:
-    /// https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
+    /// Optional. Number of seconds after the container has started before the
+    /// probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum
+    /// value for liveness probe is 3600. Maximum value for startup probe is 240.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3387,11 +4550,9 @@ namespace Google.Cloud.Run.V2 {
     public const int TimeoutSecondsFieldNumber = 2;
     private int timeoutSeconds_;
     /// <summary>
-    /// Number of seconds after which the probe times out.
+    /// Optional. Number of seconds after which the probe times out.
     /// Defaults to 1 second. Minimum value is 1. Maximum value is 3600.
     /// Must be smaller than period_seconds.
-    /// More info:
-    /// https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3406,7 +4567,7 @@ namespace Google.Cloud.Run.V2 {
     public const int PeriodSecondsFieldNumber = 3;
     private int periodSeconds_;
     /// <summary>
-    /// How often (in seconds) to perform the probe.
+    /// Optional. How often (in seconds) to perform the probe.
     /// Default to 10 seconds. Minimum value is 1. Maximum value for liveness probe
     /// is 3600. Maximum value for startup probe is 240.
     /// Must be greater or equal than timeout_seconds.
@@ -3424,8 +4585,8 @@ namespace Google.Cloud.Run.V2 {
     public const int FailureThresholdFieldNumber = 4;
     private int failureThreshold_;
     /// <summary>
-    /// Minimum consecutive failures for the probe to be considered failed after
-    /// having succeeded. Defaults to 3. Minimum value is 1.
+    /// Optional. Minimum consecutive failures for the probe to be considered
+    /// failed after having succeeded. Defaults to 3. Minimum value is 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3439,7 +4600,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>Field number for the "http_get" field.</summary>
     public const int HttpGetFieldNumber = 5;
     /// <summary>
-    /// HTTPGet specifies the http request to perform.
+    /// Optional. HTTPGet specifies the http request to perform.
     /// Exactly one of httpGet, tcpSocket, or grpc must be specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3455,7 +4616,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>Field number for the "tcp_socket" field.</summary>
     public const int TcpSocketFieldNumber = 6;
     /// <summary>
-    /// TCPSocket specifies an action involving a TCP port.
+    /// Optional. TCPSocket specifies an action involving a TCP port.
     /// Exactly one of httpGet, tcpSocket, or grpc must be specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3471,7 +4632,7 @@ namespace Google.Cloud.Run.V2 {
     /// <summary>Field number for the "grpc" field.</summary>
     public const int GrpcFieldNumber = 7;
     /// <summary>
-    /// GRPC specifies an action involving a gRPC port.
+    /// Optional. GRPC specifies an action involving a gRPC port.
     /// Exactly one of httpGet, tcpSocket, or grpc must be specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3830,6 +4991,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// HTTPGetAction describes an action based on HTTP Get requests.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HTTPGetAction : pb::IMessage<HTTPGetAction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3844,7 +5006,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3866,6 +5028,7 @@ namespace Google.Cloud.Run.V2 {
     public HTTPGetAction(HTTPGetAction other) : this() {
       path_ = other.path_;
       httpHeaders_ = other.httpHeaders_.Clone();
+      port_ = other.port_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3879,7 +5042,7 @@ namespace Google.Cloud.Run.V2 {
     public const int PathFieldNumber = 1;
     private string path_ = "";
     /// <summary>
-    /// Path to access on the HTTP server. Defaults to '/'.
+    /// Optional. Path to access on the HTTP server. Defaults to '/'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3896,12 +5059,30 @@ namespace Google.Cloud.Run.V2 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Run.V2.HTTPHeader.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Run.V2.HTTPHeader> httpHeaders_ = new pbc::RepeatedField<global::Google.Cloud.Run.V2.HTTPHeader>();
     /// <summary>
-    /// Custom headers to set in the request. HTTP allows repeated headers.
+    /// Optional. Custom headers to set in the request. HTTP allows repeated
+    /// headers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Run.V2.HTTPHeader> HttpHeaders {
       get { return httpHeaders_; }
+    }
+
+    /// <summary>Field number for the "port" field.</summary>
+    public const int PortFieldNumber = 5;
+    private int port_;
+    /// <summary>
+    /// Optional. Port number to access on the container. Must be in the range 1 to
+    /// 65535. If not specified, defaults to the exposed port of the container,
+    /// which is the value of container.ports[0].containerPort.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Port {
+      get { return port_; }
+      set {
+        port_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3921,6 +5102,7 @@ namespace Google.Cloud.Run.V2 {
       }
       if (Path != other.Path) return false;
       if(!httpHeaders_.Equals(other.httpHeaders_)) return false;
+      if (Port != other.Port) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3930,6 +5112,7 @@ namespace Google.Cloud.Run.V2 {
       int hash = 1;
       if (Path.Length != 0) hash ^= Path.GetHashCode();
       hash ^= httpHeaders_.GetHashCode();
+      if (Port != 0) hash ^= Port.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3953,6 +5136,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteString(Path);
       }
       httpHeaders_.WriteTo(output, _repeated_httpHeaders_codec);
+      if (Port != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Port);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3968,6 +5155,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteString(Path);
       }
       httpHeaders_.WriteTo(ref output, _repeated_httpHeaders_codec);
+      if (Port != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Port);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3982,6 +5173,9 @@ namespace Google.Cloud.Run.V2 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
       }
       size += httpHeaders_.CalculateSize(_repeated_httpHeaders_codec);
+      if (Port != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3998,6 +5192,9 @@ namespace Google.Cloud.Run.V2 {
         Path = other.Path;
       }
       httpHeaders_.Add(other.httpHeaders_);
+      if (other.Port != 0) {
+        Port = other.Port;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4019,6 +5216,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 34: {
             httpHeaders_.AddEntriesFrom(input, _repeated_httpHeaders_codec);
+            break;
+          }
+          case 40: {
+            Port = input.ReadInt32();
             break;
           }
         }
@@ -4044,6 +5245,10 @@ namespace Google.Cloud.Run.V2 {
             httpHeaders_.AddEntriesFrom(ref input, _repeated_httpHeaders_codec);
             break;
           }
+          case 40: {
+            Port = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -4054,6 +5259,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// HTTPHeader describes a custom header to be used in HTTP probes
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HTTPHeader : pb::IMessage<HTTPHeader>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4068,7 +5274,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4118,7 +5324,7 @@ namespace Google.Cloud.Run.V2 {
     public const int ValueFieldNumber = 2;
     private string value_ = "";
     /// <summary>
-    /// The header field value
+    /// Optional. The header field value
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4289,6 +5495,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// TCPSocketAction describes an action based on opening a socket
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TCPSocketAction : pb::IMessage<TCPSocketAction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4303,7 +5510,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4337,8 +5544,9 @@ namespace Google.Cloud.Run.V2 {
     public const int PortFieldNumber = 1;
     private int port_;
     /// <summary>
-    /// Port number to access on the container. Must be in the range 1 to 65535.
-    /// If not specified, defaults to 8080.
+    /// Optional. Port number to access on the container. Must be in the range 1 to
+    /// 65535. If not specified, defaults to the exposed port of the container,
+    /// which is the value of container.ports[0].containerPort.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4485,6 +5693,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// GRPCAction describes an action involving a GRPC port.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GRPCAction : pb::IMessage<GRPCAction>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4499,7 +5708,7 @@ namespace Google.Cloud.Run.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4534,8 +5743,9 @@ namespace Google.Cloud.Run.V2 {
     public const int PortFieldNumber = 1;
     private int port_;
     /// <summary>
-    /// Port number of the gRPC service. Number must be in the range 1 to 65535.
-    /// If not specified, defaults to 8080.
+    /// Optional. Port number of the gRPC service. Number must be in the range 1 to
+    /// 65535. If not specified, defaults to the exposed port of the container,
+    /// which is the value of container.ports[0].containerPort.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4550,9 +5760,10 @@ namespace Google.Cloud.Run.V2 {
     public const int ServiceFieldNumber = 2;
     private string service_ = "";
     /// <summary>
-    /// Service is the name of the service to place in the gRPC HealthCheckRequest
-    /// (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If
-    /// this is not specified, the default behavior is defined by gRPC.
+    /// Optional. Service is the name of the service to place in the gRPC
+    /// HealthCheckRequest (see
+    /// https://github.com/grpc/grpc/blob/master/doc/health-checking.md ). If this
+    /// is not specified, the default behavior is defined by gRPC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4711,6 +5922,243 @@ namespace Google.Cloud.Run.V2 {
           }
           case 18: {
             Service = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Build information of the image.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BuildInfo : pb::IMessage<BuildInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BuildInfo> _parser = new pb::MessageParser<BuildInfo>(() => new BuildInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BuildInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BuildInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BuildInfo(BuildInfo other) : this() {
+      functionTarget_ = other.functionTarget_;
+      sourceLocation_ = other.sourceLocation_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BuildInfo Clone() {
+      return new BuildInfo(this);
+    }
+
+    /// <summary>Field number for the "function_target" field.</summary>
+    public const int FunctionTargetFieldNumber = 1;
+    private string functionTarget_ = "";
+    /// <summary>
+    /// Output only. Entry point of the function when the image is a Cloud Run
+    /// function.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FunctionTarget {
+      get { return functionTarget_; }
+      set {
+        functionTarget_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_location" field.</summary>
+    public const int SourceLocationFieldNumber = 2;
+    private string sourceLocation_ = "";
+    /// <summary>
+    /// Output only. Source code location of the image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceLocation {
+      get { return sourceLocation_; }
+      set {
+        sourceLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BuildInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BuildInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FunctionTarget != other.FunctionTarget) return false;
+      if (SourceLocation != other.SourceLocation) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FunctionTarget.Length != 0) hash ^= FunctionTarget.GetHashCode();
+      if (SourceLocation.Length != 0) hash ^= SourceLocation.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FunctionTarget.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FunctionTarget);
+      }
+      if (SourceLocation.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceLocation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FunctionTarget.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FunctionTarget);
+      }
+      if (SourceLocation.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceLocation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FunctionTarget.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FunctionTarget);
+      }
+      if (SourceLocation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceLocation);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BuildInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FunctionTarget.Length != 0) {
+        FunctionTarget = other.FunctionTarget;
+      }
+      if (other.SourceLocation.Length != 0) {
+        SourceLocation = other.SourceLocation;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            FunctionTarget = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceLocation = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FunctionTarget = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceLocation = input.ReadString();
             break;
           }
         }

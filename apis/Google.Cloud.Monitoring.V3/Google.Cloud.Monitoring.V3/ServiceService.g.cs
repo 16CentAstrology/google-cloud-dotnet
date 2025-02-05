@@ -70,55 +70,55 @@ namespace Google.Cloud.Monitoring.V3 {
             "MQovbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlTGV2ZWxPYmpl",
             "Y3RpdmUy6g8KGFNlcnZpY2VNb25pdG9yaW5nU2VydmljZRKXAQoNQ3JlYXRl",
             "U2VydmljZRIqLmdvb2dsZS5tb25pdG9yaW5nLnYzLkNyZWF0ZVNlcnZpY2VS",
-            "ZXF1ZXN0Gh0uZ29vZ2xlLm1vbml0b3JpbmcudjMuU2VydmljZSI7gtPkkwIk",
-            "IhkvdjMve3BhcmVudD0qLyp9L3NlcnZpY2VzOgdzZXJ2aWNl2kEOcGFyZW50",
-            "LHNlcnZpY2USfgoKR2V0U2VydmljZRInLmdvb2dsZS5tb25pdG9yaW5nLnYz",
+            "ZXF1ZXN0Gh0uZ29vZ2xlLm1vbml0b3JpbmcudjMuU2VydmljZSI72kEOcGFy",
+            "ZW50LHNlcnZpY2WC0+STAiQiGS92My97cGFyZW50PSovKn0vc2VydmljZXM6",
+            "B3NlcnZpY2USfgoKR2V0U2VydmljZRInLmdvb2dsZS5tb25pdG9yaW5nLnYz",
             "LkdldFNlcnZpY2VSZXF1ZXN0Gh0uZ29vZ2xlLm1vbml0b3JpbmcudjMuU2Vy",
-            "dmljZSIogtPkkwIbEhkvdjMve25hbWU9Ki8qL3NlcnZpY2VzLyp92kEEbmFt",
-            "ZRKRAQoMTGlzdFNlcnZpY2VzEikuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlz",
+            "dmljZSIo2kEEbmFtZYLT5JMCGxIZL3YzL3tuYW1lPSovKi9zZXJ2aWNlcy8q",
+            "fRKRAQoMTGlzdFNlcnZpY2VzEikuZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlz",
             "dFNlcnZpY2VzUmVxdWVzdBoqLmdvb2dsZS5tb25pdG9yaW5nLnYzLkxpc3RT",
-            "ZXJ2aWNlc1Jlc3BvbnNlIiqC0+STAhsSGS92My97cGFyZW50PSovKn0vc2Vy",
-            "dmljZXPaQQZwYXJlbnQSmAEKDVVwZGF0ZVNlcnZpY2USKi5nb29nbGUubW9u",
+            "ZXJ2aWNlc1Jlc3BvbnNlIiraQQZwYXJlbnSC0+STAhsSGS92My97cGFyZW50",
+            "PSovKn0vc2VydmljZXMSmAEKDVVwZGF0ZVNlcnZpY2USKi5nb29nbGUubW9u",
             "aXRvcmluZy52My5VcGRhdGVTZXJ2aWNlUmVxdWVzdBodLmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLlNlcnZpY2UiPILT5JMCLDIhL3YzL3tzZXJ2aWNlLm5hbWU9",
-            "Ki8qL3NlcnZpY2VzLyp9OgdzZXJ2aWNl2kEHc2VydmljZRJ9Cg1EZWxldGVT",
+            "dG9yaW5nLnYzLlNlcnZpY2UiPNpBB3NlcnZpY2WC0+STAiwyIS92My97c2Vy",
+            "dmljZS5uYW1lPSovKi9zZXJ2aWNlcy8qfToHc2VydmljZRJ9Cg1EZWxldGVT",
             "ZXJ2aWNlEiouZ29vZ2xlLm1vbml0b3JpbmcudjMuRGVsZXRlU2VydmljZVJl",
-            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiKILT5JMCGyoZL3YzL3tu",
-            "YW1lPSovKi9zZXJ2aWNlcy8qfdpBBG5hbWUS+gEKG0NyZWF0ZVNlcnZpY2VM",
+            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiKNpBBG5hbWWC0+STAhsq",
+            "GS92My97bmFtZT0qLyovc2VydmljZXMvKn0S+gEKG0NyZWF0ZVNlcnZpY2VM",
             "ZXZlbE9iamVjdGl2ZRI4Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkNyZWF0ZVNl",
             "cnZpY2VMZXZlbE9iamVjdGl2ZVJlcXVlc3QaKy5nb29nbGUubW9uaXRvcmlu",
-            "Zy52My5TZXJ2aWNlTGV2ZWxPYmplY3RpdmUidILT5JMCTSIyL3YzL3twYXJl",
-            "bnQ9Ki8qL3NlcnZpY2VzLyp9L3NlcnZpY2VMZXZlbE9iamVjdGl2ZXM6F3Nl",
-            "cnZpY2VfbGV2ZWxfb2JqZWN0aXZl2kEecGFyZW50LHNlcnZpY2VfbGV2ZWxf",
+            "Zy52My5TZXJ2aWNlTGV2ZWxPYmplY3RpdmUidNpBHnBhcmVudCxzZXJ2aWNl",
+            "X2xldmVsX29iamVjdGl2ZYLT5JMCTSIyL3YzL3twYXJlbnQ9Ki8qL3NlcnZp",
+            "Y2VzLyp9L3NlcnZpY2VMZXZlbE9iamVjdGl2ZXM6F3NlcnZpY2VfbGV2ZWxf",
             "b2JqZWN0aXZlEsEBChhHZXRTZXJ2aWNlTGV2ZWxPYmplY3RpdmUSNS5nb29n",
             "bGUubW9uaXRvcmluZy52My5HZXRTZXJ2aWNlTGV2ZWxPYmplY3RpdmVSZXF1",
             "ZXN0GisuZ29vZ2xlLm1vbml0b3JpbmcudjMuU2VydmljZUxldmVsT2JqZWN0",
-            "aXZlIkGC0+STAjQSMi92My97bmFtZT0qLyovc2VydmljZXMvKi9zZXJ2aWNl",
-            "TGV2ZWxPYmplY3RpdmVzLyp92kEEbmFtZRLUAQoaTGlzdFNlcnZpY2VMZXZl",
+            "aXZlIkHaQQRuYW1lgtPkkwI0EjIvdjMve25hbWU9Ki8qL3NlcnZpY2VzLyov",
+            "c2VydmljZUxldmVsT2JqZWN0aXZlcy8qfRLUAQoaTGlzdFNlcnZpY2VMZXZl",
             "bE9iamVjdGl2ZXMSNy5nb29nbGUubW9uaXRvcmluZy52My5MaXN0U2Vydmlj",
             "ZUxldmVsT2JqZWN0aXZlc1JlcXVlc3QaOC5nb29nbGUubW9uaXRvcmluZy52",
-            "My5MaXN0U2VydmljZUxldmVsT2JqZWN0aXZlc1Jlc3BvbnNlIkOC0+STAjQS",
-            "Mi92My97cGFyZW50PSovKi9zZXJ2aWNlcy8qfS9zZXJ2aWNlTGV2ZWxPYmpl",
-            "Y3RpdmVz2kEGcGFyZW50EowCChtVcGRhdGVTZXJ2aWNlTGV2ZWxPYmplY3Rp",
+            "My5MaXN0U2VydmljZUxldmVsT2JqZWN0aXZlc1Jlc3BvbnNlIkPaQQZwYXJl",
+            "bnSC0+STAjQSMi92My97cGFyZW50PSovKi9zZXJ2aWNlcy8qfS9zZXJ2aWNl",
+            "TGV2ZWxPYmplY3RpdmVzEowCChtVcGRhdGVTZXJ2aWNlTGV2ZWxPYmplY3Rp",
             "dmUSOC5nb29nbGUubW9uaXRvcmluZy52My5VcGRhdGVTZXJ2aWNlTGV2ZWxP",
             "YmplY3RpdmVSZXF1ZXN0GisuZ29vZ2xlLm1vbml0b3JpbmcudjMuU2Vydmlj",
-            "ZUxldmVsT2JqZWN0aXZlIoUBgtPkkwJlMkovdjMve3NlcnZpY2VfbGV2ZWxf",
-            "b2JqZWN0aXZlLm5hbWU9Ki8qL3NlcnZpY2VzLyovc2VydmljZUxldmVsT2Jq",
-            "ZWN0aXZlcy8qfToXc2VydmljZV9sZXZlbF9vYmplY3RpdmXaQRdzZXJ2aWNl",
+            "ZUxldmVsT2JqZWN0aXZlIoUB2kEXc2VydmljZV9sZXZlbF9vYmplY3RpdmWC",
+            "0+STAmUySi92My97c2VydmljZV9sZXZlbF9vYmplY3RpdmUubmFtZT0qLyov",
+            "c2VydmljZXMvKi9zZXJ2aWNlTGV2ZWxPYmplY3RpdmVzLyp9OhdzZXJ2aWNl",
             "X2xldmVsX29iamVjdGl2ZRKyAQobRGVsZXRlU2VydmljZUxldmVsT2JqZWN0",
             "aXZlEjguZ29vZ2xlLm1vbml0b3JpbmcudjMuRGVsZXRlU2VydmljZUxldmVs",
-            "T2JqZWN0aXZlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJBgtPk",
-            "kwI0KjIvdjMve25hbWU9Ki8qL3NlcnZpY2VzLyovc2VydmljZUxldmVsT2Jq",
-            "ZWN0aXZlcy8qfdpBBG5hbWUaqQHKQRltb25pdG9yaW5nLmdvb2dsZWFwaXMu",
+            "T2JqZWN0aXZlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJB2kEE",
+            "bmFtZYLT5JMCNCoyL3YzL3tuYW1lPSovKi9zZXJ2aWNlcy8qL3NlcnZpY2VM",
+            "ZXZlbE9iamVjdGl2ZXMvKn0aqQHKQRltb25pdG9yaW5nLmdvb2dsZWFwaXMu",
             "Y29t0kGJAWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
             "cGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9tb25p",
             "dG9yaW5nLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvbW9uaXRv",
-            "cmluZy5yZWFkQtUBChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNCHVNlcnZp",
-            "Y2VNb25pdG9yaW5nU2VydmljZVByb3RvUAFaPmdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvbW9uaXRvcmluZy92Mzttb25pdG9yaW5n",
-            "qgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRc",
-            "TW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6OlYz",
-            "YgZwcm90bzM="));
+            "cmluZy5yZWFkQtgBChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNCHVNlcnZp",
+            "Y2VNb25pdG9yaW5nU2VydmljZVByb3RvUAFaQWNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vbW9uaXRvcmluZy9hcGl2My92Mi9tb25pdG9yaW5ncGI7bW9uaXRvcmlu",
+            "Z3BiqgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xv",
+            "dWRcTW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6",
+            "OlYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.ServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -143,6 +143,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `CreateService` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateServiceRequest : pb::IMessage<CreateServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -193,8 +194,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
-    /// the parent workspace. The format is:
+    /// Required. Resource
+    /// [name](https://cloud.google.com/monitoring/api/v3#project_name) of the
+    /// parent Metrics Scope. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -431,6 +433,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `GetService` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetServiceRequest : pb::IMessage<GetServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -628,6 +631,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListServices` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServicesRequest : pb::IMessage<ListServicesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -679,9 +683,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name of the parent containing the listed services, either a
-    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
-    /// Monitoring Workspace. The formats are:
+    /// Required. Resource name of the parent containing the listed services,
+    /// either a [project](https://cloud.google.com/monitoring/api/v3#project_name)
+    /// or a Monitoring Metrics Scope. The formats are:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     ///     workspaces/[HOST_PROJECT_ID_OR_NUMBER]
@@ -699,25 +703,24 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// A filter specifying what `Service`s to return. The filter currently
-    /// supports the following fields:
+    /// A filter specifying what `Service`s to return. The filter supports
+    /// filtering on a particular service-identifier type or one of its attributes.
     ///
-    ///     - `identifier_case`
-    ///     - `app_engine.module_id`
-    ///     - `cloud_endpoints.service` (reserved for future use)
-    ///     - `mesh_istio.mesh_uid`
-    ///     - `mesh_istio.service_namespace`
-    ///     - `mesh_istio.service_name`
-    ///     - `cluster_istio.location` (deprecated)
-    ///     - `cluster_istio.cluster_name` (deprecated)
-    ///     - `cluster_istio.service_namespace` (deprecated)
-    ///     - `cluster_istio.service_name` (deprecated)
+    /// To filter on a particular service-identifier type, the `identifier_case`
+    /// refers to which option in the `identifier` field is populated. For example,
+    /// the filter `identifier_case = "CUSTOM"` would match all services with a
+    /// value for the `custom` field. Valid options include "CUSTOM", "APP_ENGINE",
+    /// "MESH_ISTIO", and the other options listed at
+    /// https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services#Service
     ///
-    /// `identifier_case` refers to which option in the identifier oneof is
-    /// populated. For example, the filter `identifier_case = "CUSTOM"` would match
-    /// all services with a value for the `custom` field. Valid options are
-    /// "CUSTOM", "APP_ENGINE", "MESH_ISTIO", plus "CLUSTER_ISTIO" (deprecated)
-    /// and "CLOUD_ENDPOINTS" (reserved for future use).
+    /// To filter on an attribute of a service-identifier type, apply the filter
+    /// name by using the snake case of the service-identifier type and the
+    /// attribute of that service-identifier type, and join the two with a period.
+    /// For example, to filter by the `meshUid` field of the `MeshIstio`
+    /// service-identifier type, you must filter on `mesh_istio.mesh_uid =
+    /// "123"` to match all services with mesh UID "123". Service-identifier types
+    /// and their attributes are described at
+    /// https://cloud.google.com/monitoring/api/ref_v3/rest/v3/services#Service
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -969,6 +972,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListServices` response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServicesResponse : pb::IMessage<ListServicesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1195,6 +1199,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `UpdateService` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateServiceRequest : pb::IMessage<UpdateServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1449,6 +1454,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `DeleteService` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteServiceRequest : pb::IMessage<DeleteServiceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1646,6 +1652,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `CreateServiceLevelObjective` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateServiceLevelObjectiveRequest : pb::IMessage<CreateServiceLevelObjectiveRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1715,7 +1722,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// <summary>
     /// Optional. The ServiceLevelObjective id to use for this
     /// ServiceLevelObjective. If omitted, an id will be generated instead. Must
-    /// match the pattern `[a-z0-9\-]+`
+    /// match the pattern `^[a-zA-Z0-9-_:.]+$`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1936,6 +1943,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `GetServiceLevelObjective` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetServiceLevelObjectiveRequest : pb::IMessage<GetServiceLevelObjectiveRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1985,7 +1993,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Resource name of the `ServiceLevelObjective` to get. The format is:
+    /// Required. Resource name of the `ServiceLevelObjective` to get. The format
+    /// is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
     /// </summary>
@@ -2176,6 +2185,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListServiceLevelObjectives` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServiceLevelObjectivesRequest : pb::IMessage<ListServiceLevelObjectivesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2229,7 +2239,7 @@ namespace Google.Cloud.Monitoring.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. Resource name of the parent containing the listed SLOs, either a
-    /// project or a Monitoring Workspace. The formats are:
+    /// project or a Monitoring Metrics Scope. The formats are:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
     ///     workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
@@ -2541,6 +2551,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `ListServiceLevelObjectives` response.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListServiceLevelObjectivesResponse : pb::IMessage<ListServiceLevelObjectivesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2767,6 +2778,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `UpdateServiceLevelObjective` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateServiceLevelObjectiveRequest : pb::IMessage<UpdateServiceLevelObjectiveRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3021,6 +3033,7 @@ namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   /// The `DeleteServiceLevelObjective` request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteServiceLevelObjectiveRequest : pb::IMessage<DeleteServiceLevelObjectiveRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3069,7 +3082,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Resource name of the `ServiceLevelObjective` to delete. The format is:
+    /// Required. Resource name of the `ServiceLevelObjective` to delete. The
+    /// format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
     /// </summary>

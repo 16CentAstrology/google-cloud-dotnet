@@ -45,16 +45,21 @@ namespace Google.Cloud.Firestore
         public FirestoreSettings Settings { get; set; }
 
         /// <summary>
-        /// The ID of the Google Cloud Platform project that contains the database. May be null, in which case
+        /// The settings to use for BatchGetDocuments RPCs (used by all methods that get document snapshots),
+        /// or null for the default settings.
+        /// </summary>
+        public RetrySettings BatchGetDocumentsRetrySettings { get; set; }
+
+        /// <summary>
+        /// The ID of the Google Cloud project that contains the database. May be null, in which case
         /// the project will be automatically detected if possible.
         /// </summary>
         public string ProjectId { get; set; }
 
-        // TODO: Make this public again when the server supports it. Unskip the tests in FirestoreMultipleDbTest.
         /// <summary>
         /// The ID of the database within the project. May be null, in which case the default database will be used.
         /// </summary>
-        internal string DatabaseId { get; set; }
+        public string DatabaseId { get; set; }
 
         /// <summary>
         /// Action to receive warning messages. May be null, in which case warnings will be ignored.
@@ -138,7 +143,7 @@ namespace Google.Cloud.Firestore
             throw new InvalidOperationException($"This method should never execute in {nameof(FirestoreDbBuilder)}");
 
         private FirestoreDb BuildFromClient(string projectId, FirestoreClient client) =>
-            FirestoreDb.Create(projectId, DatabaseId, client, WarningLogger, ConverterRegistry);
+            FirestoreDb.Create(projectId, DatabaseId, client, WarningLogger, ConverterRegistry, BatchGetDocumentsRetrySettings);
 
         /// <summary>
         /// Returns the effective settings for a new client, including the "gccl" version header.

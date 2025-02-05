@@ -27,44 +27,68 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             "Ckxnb29nbGUvY2xvdWQvYmluYXJ5YXV0aG9yaXphdGlvbi92MWJldGExL2Nv",
             "bnRpbnVvdXNfdmFsaWRhdGlvbl9sb2dnaW5nLnByb3RvEihnb29nbGUuY2xv",
             "dWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvIt8IChlDb250aW51b3VzVmFsaWRhdGlvbkV2",
+            "dWYvdGltZXN0YW1wLnByb3RvIoURChlDb250aW51b3VzVmFsaWRhdGlvbkV2",
             "ZW50EnUKCXBvZF9ldmVudBgBIAEoCzJgLmdvb2dsZS5jbG91ZC5iaW5hcnlh",
             "dXRob3JpemF0aW9uLnYxYmV0YTEuQ29udGludW91c1ZhbGlkYXRpb25FdmVu",
-            "dC5Db250aW51b3VzVmFsaWRhdGlvblBvZEV2ZW50SAASfgoYdW5zdXBwb3J0",
-            "ZWRfcG9saWN5X2V2ZW50GAIgASgLMlouZ29vZ2xlLmNsb3VkLmJpbmFyeWF1",
-            "dGhvcml6YXRpb24udjFiZXRhMS5Db250aW51b3VzVmFsaWRhdGlvbkV2ZW50",
-            "LlVuc3VwcG9ydGVkUG9saWN5RXZlbnRIABqNBgocQ29udGludW91c1ZhbGlk",
-            "YXRpb25Qb2RFdmVudBIVCg1wb2RfbmFtZXNwYWNlGAcgASgJEgsKA3BvZBgB",
-            "IAEoCRIvCgtkZXBsb3lfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEooBCgd2ZXJkaWN0GAQgASgOMnkuZ29vZ2xlLmNsb3VkLmJp",
-            "bmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5Db250aW51b3VzVmFsaWRhdGlv",
-            "bkV2ZW50LkNvbnRpbnVvdXNWYWxpZGF0aW9uUG9kRXZlbnQuUG9saWN5Q29u",
-            "Zm9ybWFuY2VWZXJkaWN0En0KBmltYWdlcxgFIAMoCzJtLmdvb2dsZS5jbG91",
-            "ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQ29udGludW91c1ZhbGlk",
-            "YXRpb25FdmVudC5Db250aW51b3VzVmFsaWRhdGlvblBvZEV2ZW50LkltYWdl",
-            "RGV0YWlscxqAAgoMSW1hZ2VEZXRhaWxzEg0KBWltYWdlGAEgASgJEokBCgZy",
-            "ZXN1bHQYAiABKA4yeS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlv",
-            "bi52MWJldGExLkNvbnRpbnVvdXNWYWxpZGF0aW9uRXZlbnQuQ29udGludW91",
-            "c1ZhbGlkYXRpb25Qb2RFdmVudC5JbWFnZURldGFpbHMuQXVkaXRSZXN1bHQS",
-            "EwoLZGVzY3JpcHRpb24YAyABKAkiQAoLQXVkaXRSZXN1bHQSHAoYQVVESVRf",
-            "UkVTVUxUX1VOU1BFQ0lGSUVEEAASCQoFQUxMT1cQARIICgRERU5ZEAIiWwoY",
-            "UG9saWN5Q29uZm9ybWFuY2VWZXJkaWN0EioKJlBPTElDWV9DT05GT1JNQU5D",
-            "RV9WRVJESUNUX1VOU1BFQ0lGSUVEEAASEwoPVklPTEFURVNfUE9MSUNZEAEa",
-            "LQoWVW5zdXBwb3J0ZWRQb2xpY3lFdmVudBITCgtkZXNjcmlwdGlvbhgBIAEo",
-            "CUIMCgpldmVudF90eXBlQrkCCixjb20uZ29vZ2xlLmNsb3VkLmJpbmFyeWF1",
-            "dGhvcml6YXRpb24udjFiZXRhMUIgQ29udGludW91c1ZhbGlkYXRpb25Mb2dn",
-            "aW5nUHJvdG9QAVpeY2xvdWQuZ29vZ2xlLmNvbS9nby9iaW5hcnlhdXRob3Jp",
-            "emF0aW9uL2FwaXYxYmV0YTEvYmluYXJ5YXV0aG9yaXphdGlvbnBiO2JpbmFy",
-            "eWF1dGhvcml6YXRpb25wYvgBAaoCKEdvb2dsZS5DbG91ZC5CaW5hcnlBdXRo",
-            "b3JpemF0aW9uLlYxQmV0YTHKAihHb29nbGVcQ2xvdWRcQmluYXJ5QXV0aG9y",
-            "aXphdGlvblxWMWJldGEx6gIrR29vZ2xlOjpDbG91ZDo6QmluYXJ5QXV0aG9y",
-            "aXphdGlvbjo6VjFiZXRhMWIGcHJvdG8z"));
+            "dC5Db250aW51b3VzVmFsaWRhdGlvblBvZEV2ZW50SAAScgoSY29uZmlnX2Vy",
+            "cm9yX2V2ZW50GAQgASgLMlQuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6",
+            "YXRpb24udjFiZXRhMS5Db250aW51b3VzVmFsaWRhdGlvbkV2ZW50LkNvbmZp",
+            "Z0Vycm9yRXZlbnRIABrFDgocQ29udGludW91c1ZhbGlkYXRpb25Qb2RFdmVu",
+            "dBIVCg1wb2RfbmFtZXNwYWNlGAcgASgJEgsKA3BvZBgBIAEoCRITCgtwb2xp",
+            "Y3lfbmFtZRgIIAEoCRIvCgtkZXBsb3lfdGltZRgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEooBCgd2ZXJkaWN0GAQgASgOMnkuZ29vZ2xl",
+            "LmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5Db250aW51b3Vz",
+            "VmFsaWRhdGlvbkV2ZW50LkNvbnRpbnVvdXNWYWxpZGF0aW9uUG9kRXZlbnQu",
+            "UG9saWN5Q29uZm9ybWFuY2VWZXJkaWN0En0KBmltYWdlcxgFIAMoCzJtLmdv",
+            "b2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQ29udGlu",
+            "dW91c1ZhbGlkYXRpb25FdmVudC5Db250aW51b3VzVmFsaWRhdGlvblBvZEV2",
+            "ZW50LkltYWdlRGV0YWlscxqjCgoMSW1hZ2VEZXRhaWxzEg0KBWltYWdlGAEg",
+            "ASgJEhYKDmNvbnRhaW5lcl9uYW1lGAUgASgJEpMBCg5jb250YWluZXJfdHlw",
+            "ZRgGIAEoDjJ7Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYx",
+            "YmV0YTEuQ29udGludW91c1ZhbGlkYXRpb25FdmVudC5Db250aW51b3VzVmFs",
+            "aWRhdGlvblBvZEV2ZW50LkltYWdlRGV0YWlscy5Db250YWluZXJUeXBlEokB",
+            "CgZyZXN1bHQYAiABKA4yeS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXph",
+            "dGlvbi52MWJldGExLkNvbnRpbnVvdXNWYWxpZGF0aW9uRXZlbnQuQ29udGlu",
+            "dW91c1ZhbGlkYXRpb25Qb2RFdmVudC5JbWFnZURldGFpbHMuQXVkaXRSZXN1",
+            "bHQSEwoLZGVzY3JpcHRpb24YAyABKAkSkAEKDWNoZWNrX3Jlc3VsdHMYBCAD",
+            "KAsyeS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGEx",
+            "LkNvbnRpbnVvdXNWYWxpZGF0aW9uRXZlbnQuQ29udGludW91c1ZhbGlkYXRp",
+            "b25Qb2RFdmVudC5JbWFnZURldGFpbHMuQ2hlY2tSZXN1bHQa8gQKC0NoZWNr",
+            "UmVzdWx0EhcKD2NoZWNrX3NldF9pbmRleBgBIAEoCRIWCg5jaGVja19zZXRf",
+            "bmFtZRgCIAEoCRKhAQoPY2hlY2tfc2V0X3Njb3BlGAMgASgLMocBLmdvb2ds",
+            "ZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQ29udGludW91",
+            "c1ZhbGlkYXRpb25FdmVudC5Db250aW51b3VzVmFsaWRhdGlvblBvZEV2ZW50",
+            "LkltYWdlRGV0YWlscy5DaGVja1Jlc3VsdC5DaGVja1NldFNjb3BlEhMKC2No",
+            "ZWNrX2luZGV4GAQgASgJEhIKCmNoZWNrX25hbWUYBSABKAkSEgoKY2hlY2tf",
+            "dHlwZRgGIAEoCRKYAQoHdmVyZGljdBgHIAEoDjKGAS5nb29nbGUuY2xvdWQu",
+            "YmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkNvbnRpbnVvdXNWYWxpZGF0",
+            "aW9uRXZlbnQuQ29udGludW91c1ZhbGlkYXRpb25Qb2RFdmVudC5JbWFnZURl",
+            "dGFpbHMuQ2hlY2tSZXN1bHQuQ2hlY2tWZXJkaWN0EhMKC2V4cGxhbmF0aW9u",
+            "GAggASgJGl4KDUNoZWNrU2V0U2NvcGUSJAoaa3ViZXJuZXRlc19zZXJ2aWNl",
+            "X2FjY291bnQYASABKAlIABIeChRrdWJlcm5ldGVzX25hbWVzcGFjZRgCIAEo",
+            "CUgAQgcKBXNjb3BlIkEKDENoZWNrVmVyZGljdBIdChlDSEVDS19WRVJESUNU",
+            "X1VOU1BFQ0lGSUVEEAASEgoOTk9OX0NPTkZPUk1BTlQQASJrCg1Db250YWlu",
+            "ZXJUeXBlEh4KGkNPTlRBSU5FUl9UWVBFX1VOU1BFQ0lGSUVEEAASDQoJQ09O",
+            "VEFJTkVSEAESEgoOSU5JVF9DT05UQUlORVIQAhIXChNFUEhFTUVSQUxfQ09O",
+            "VEFJTkVSEAMiQAoLQXVkaXRSZXN1bHQSHAoYQVVESVRfUkVTVUxUX1VOU1BF",
+            "Q0lGSUVEEAASCQoFQUxMT1cQARIICgRERU5ZEAIiWwoYUG9saWN5Q29uZm9y",
+            "bWFuY2VWZXJkaWN0EioKJlBPTElDWV9DT05GT1JNQU5DRV9WRVJESUNUX1VO",
+            "U1BFQ0lGSUVEEAASEwoPVklPTEFURVNfUE9MSUNZEAEaJwoQQ29uZmlnRXJy",
+            "b3JFdmVudBITCgtkZXNjcmlwdGlvbhgBIAEoCUIMCgpldmVudF90eXBlQrkC",
+            "Cixjb20uZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRh",
+            "MUIgQ29udGludW91c1ZhbGlkYXRpb25Mb2dnaW5nUHJvdG9QAVpeY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9iaW5hcnlhdXRob3JpemF0aW9uL2FwaXYxYmV0YTEv",
+            "YmluYXJ5YXV0aG9yaXphdGlvbnBiO2JpbmFyeWF1dGhvcml6YXRpb25wYvgB",
+            "AaoCKEdvb2dsZS5DbG91ZC5CaW5hcnlBdXRob3JpemF0aW9uLlYxQmV0YTHK",
+            "AihHb29nbGVcQ2xvdWRcQmluYXJ5QXV0aG9yaXphdGlvblxWMWJldGEx6gIr",
+            "R29vZ2xlOjpDbG91ZDo6QmluYXJ5QXV0aG9yaXphdGlvbjo6VjFiZXRhMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Parser, new[]{ "PodEvent", "UnsupportedPolicyEvent" }, new[]{ "EventType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Parser, new[]{ "PodNamespace", "Pod", "DeployTime", "EndTime", "Verdict", "Images" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.PolicyConformanceVerdict) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Parser, new[]{ "Image", "Result", "Description" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent.Parser, new[]{ "Description" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Parser, new[]{ "PodEvent", "ConfigErrorEvent" }, new[]{ "EventType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Parser, new[]{ "PodNamespace", "Pod", "PolicyName", "DeployTime", "EndTime", "Verdict", "Images" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.PolicyConformanceVerdict) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Parser, new[]{ "Image", "ContainerName", "ContainerType", "Result", "Description", "CheckResults" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType), typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Parser, new[]{ "CheckSetIndex", "CheckSetName", "CheckSetScope", "CheckIndex", "CheckName", "CheckType", "Verdict", "Explanation" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckSetScope), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckSetScope.Parser, new[]{ "KubernetesServiceAccount", "KubernetesNamespace" }, new[]{ "Scope" }, null, null, null)})})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ConfigErrorEvent), global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ConfigErrorEvent.Parser, new[]{ "Description" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -74,6 +98,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   /// <summary>
   /// Represents an auditing event from Continuous Validation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ContinuousValidationEvent : pb::IMessage<ContinuousValidationEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -112,8 +137,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         case EventTypeOneofCase.PodEvent:
           PodEvent = other.PodEvent.Clone();
           break;
-        case EventTypeOneofCase.UnsupportedPolicyEvent:
-          UnsupportedPolicyEvent = other.UnsupportedPolicyEvent.Clone();
+        case EventTypeOneofCase.ConfigErrorEvent:
+          ConfigErrorEvent = other.ConfigErrorEvent.Clone();
           break;
       }
 
@@ -141,18 +166,18 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       }
     }
 
-    /// <summary>Field number for the "unsupported_policy_event" field.</summary>
-    public const int UnsupportedPolicyEventFieldNumber = 2;
+    /// <summary>Field number for the "config_error_event" field.</summary>
+    public const int ConfigErrorEventFieldNumber = 4;
     /// <summary>
-    /// Unsupported policy event.
+    /// Config error event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent UnsupportedPolicyEvent {
-      get { return eventTypeCase_ == EventTypeOneofCase.UnsupportedPolicyEvent ? (global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent) eventType_ : null; }
+    public global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ConfigErrorEvent ConfigErrorEvent {
+      get { return eventTypeCase_ == EventTypeOneofCase.ConfigErrorEvent ? (global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ConfigErrorEvent) eventType_ : null; }
       set {
         eventType_ = value;
-        eventTypeCase_ = value == null ? EventTypeOneofCase.None : EventTypeOneofCase.UnsupportedPolicyEvent;
+        eventTypeCase_ = value == null ? EventTypeOneofCase.None : EventTypeOneofCase.ConfigErrorEvent;
       }
     }
 
@@ -161,7 +186,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public enum EventTypeOneofCase {
       None = 0,
       PodEvent = 1,
-      UnsupportedPolicyEvent = 2,
+      ConfigErrorEvent = 4,
     }
     private EventTypeOneofCase eventTypeCase_ = EventTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -193,7 +218,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         return true;
       }
       if (!object.Equals(PodEvent, other.PodEvent)) return false;
-      if (!object.Equals(UnsupportedPolicyEvent, other.UnsupportedPolicyEvent)) return false;
+      if (!object.Equals(ConfigErrorEvent, other.ConfigErrorEvent)) return false;
       if (EventTypeCase != other.EventTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -203,7 +228,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (eventTypeCase_ == EventTypeOneofCase.PodEvent) hash ^= PodEvent.GetHashCode();
-      if (eventTypeCase_ == EventTypeOneofCase.UnsupportedPolicyEvent) hash ^= UnsupportedPolicyEvent.GetHashCode();
+      if (eventTypeCase_ == EventTypeOneofCase.ConfigErrorEvent) hash ^= ConfigErrorEvent.GetHashCode();
       hash ^= (int) eventTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -227,9 +252,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteMessage(PodEvent);
       }
-      if (eventTypeCase_ == EventTypeOneofCase.UnsupportedPolicyEvent) {
-        output.WriteRawTag(18);
-        output.WriteMessage(UnsupportedPolicyEvent);
+      if (eventTypeCase_ == EventTypeOneofCase.ConfigErrorEvent) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ConfigErrorEvent);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -245,9 +270,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteMessage(PodEvent);
       }
-      if (eventTypeCase_ == EventTypeOneofCase.UnsupportedPolicyEvent) {
-        output.WriteRawTag(18);
-        output.WriteMessage(UnsupportedPolicyEvent);
+      if (eventTypeCase_ == EventTypeOneofCase.ConfigErrorEvent) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ConfigErrorEvent);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -262,8 +287,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       if (eventTypeCase_ == EventTypeOneofCase.PodEvent) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PodEvent);
       }
-      if (eventTypeCase_ == EventTypeOneofCase.UnsupportedPolicyEvent) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UnsupportedPolicyEvent);
+      if (eventTypeCase_ == EventTypeOneofCase.ConfigErrorEvent) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConfigErrorEvent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -284,11 +309,11 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           }
           PodEvent.MergeFrom(other.PodEvent);
           break;
-        case EventTypeOneofCase.UnsupportedPolicyEvent:
-          if (UnsupportedPolicyEvent == null) {
-            UnsupportedPolicyEvent = new global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent();
+        case EventTypeOneofCase.ConfigErrorEvent:
+          if (ConfigErrorEvent == null) {
+            ConfigErrorEvent = new global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ConfigErrorEvent();
           }
-          UnsupportedPolicyEvent.MergeFrom(other.UnsupportedPolicyEvent);
+          ConfigErrorEvent.MergeFrom(other.ConfigErrorEvent);
           break;
       }
 
@@ -316,13 +341,13 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             PodEvent = subBuilder;
             break;
           }
-          case 18: {
-            global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent subBuilder = new global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent();
-            if (eventTypeCase_ == EventTypeOneofCase.UnsupportedPolicyEvent) {
-              subBuilder.MergeFrom(UnsupportedPolicyEvent);
+          case 34: {
+            global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ConfigErrorEvent subBuilder = new global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ConfigErrorEvent();
+            if (eventTypeCase_ == EventTypeOneofCase.ConfigErrorEvent) {
+              subBuilder.MergeFrom(ConfigErrorEvent);
             }
             input.ReadMessage(subBuilder);
-            UnsupportedPolicyEvent = subBuilder;
+            ConfigErrorEvent = subBuilder;
             break;
           }
         }
@@ -349,13 +374,13 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             PodEvent = subBuilder;
             break;
           }
-          case 18: {
-            global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent subBuilder = new global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent();
-            if (eventTypeCase_ == EventTypeOneofCase.UnsupportedPolicyEvent) {
-              subBuilder.MergeFrom(UnsupportedPolicyEvent);
+          case 34: {
+            global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ConfigErrorEvent subBuilder = new global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ConfigErrorEvent();
+            if (eventTypeCase_ == EventTypeOneofCase.ConfigErrorEvent) {
+              subBuilder.MergeFrom(ConfigErrorEvent);
             }
             input.ReadMessage(subBuilder);
-            UnsupportedPolicyEvent = subBuilder;
+            ConfigErrorEvent = subBuilder;
             break;
           }
         }
@@ -371,6 +396,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       /// <summary>
       /// An auditing event for one Pod.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ContinuousValidationPodEvent : pb::IMessage<ContinuousValidationPodEvent>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -407,6 +433,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         public ContinuousValidationPodEvent(ContinuousValidationPodEvent other) : this() {
           podNamespace_ = other.podNamespace_;
           pod_ = other.pod_;
+          policyName_ = other.policyName_;
           deployTime_ = other.deployTime_ != null ? other.deployTime_.Clone() : null;
           endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
           verdict_ = other.verdict_;
@@ -447,6 +474,21 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           get { return pod_; }
           set {
             pod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "policy_name" field.</summary>
+        public const int PolicyNameFieldNumber = 8;
+        private string policyName_ = "";
+        /// <summary>
+        /// The name of the policy.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PolicyName {
+          get { return policyName_; }
+          set {
+            policyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
@@ -526,6 +568,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           }
           if (PodNamespace != other.PodNamespace) return false;
           if (Pod != other.Pod) return false;
+          if (PolicyName != other.PolicyName) return false;
           if (!object.Equals(DeployTime, other.DeployTime)) return false;
           if (!object.Equals(EndTime, other.EndTime)) return false;
           if (Verdict != other.Verdict) return false;
@@ -539,6 +582,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           int hash = 1;
           if (PodNamespace.Length != 0) hash ^= PodNamespace.GetHashCode();
           if (Pod.Length != 0) hash ^= Pod.GetHashCode();
+          if (PolicyName.Length != 0) hash ^= PolicyName.GetHashCode();
           if (deployTime_ != null) hash ^= DeployTime.GetHashCode();
           if (endTime_ != null) hash ^= EndTime.GetHashCode();
           if (Verdict != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.PolicyConformanceVerdict.Unspecified) hash ^= Verdict.GetHashCode();
@@ -582,6 +626,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             output.WriteRawTag(58);
             output.WriteString(PodNamespace);
           }
+          if (PolicyName.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(PolicyName);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -613,6 +661,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             output.WriteRawTag(58);
             output.WriteString(PodNamespace);
           }
+          if (PolicyName.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(PolicyName);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -628,6 +680,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           }
           if (Pod.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Pod);
+          }
+          if (PolicyName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PolicyName);
           }
           if (deployTime_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeployTime);
@@ -656,6 +711,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           }
           if (other.Pod.Length != 0) {
             Pod = other.Pod;
+          }
+          if (other.PolicyName.Length != 0) {
+            PolicyName = other.PolicyName;
           }
           if (other.deployTime_ != null) {
             if (deployTime_ == null) {
@@ -718,6 +776,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                 PodNamespace = input.ReadString();
                 break;
               }
+              case 66: {
+                PolicyName = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -763,6 +825,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                 PodNamespace = input.ReadString();
                 break;
               }
+              case 66: {
+                PolicyName = input.ReadString();
+                break;
+              }
             }
           }
         }
@@ -790,6 +856,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           /// <summary>
           /// Container image with auditing details.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class ImageDetails : pb::IMessage<ImageDetails>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -825,8 +892,11 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ImageDetails(ImageDetails other) : this() {
               image_ = other.image_;
+              containerName_ = other.containerName_;
+              containerType_ = other.containerType_;
               result_ = other.result_;
               description_ = other.description_;
+              checkResults_ = other.checkResults_.Clone();
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -848,6 +918,36 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
               get { return image_; }
               set {
                 image_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "container_name" field.</summary>
+            public const int ContainerNameFieldNumber = 5;
+            private string containerName_ = "";
+            /// <summary>
+            /// The name of the container.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string ContainerName {
+              get { return containerName_; }
+              set {
+                containerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "container_type" field.</summary>
+            public const int ContainerTypeFieldNumber = 6;
+            private global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType containerType_ = global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType.Unspecified;
+            /// <summary>
+            /// The container type that this image belongs to.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType ContainerType {
+              get { return containerType_; }
+              set {
+                containerType_ = value;
               }
             }
 
@@ -881,6 +981,20 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
               }
             }
 
+            /// <summary>Field number for the "check_results" field.</summary>
+            public const int CheckResultsFieldNumber = 4;
+            private static readonly pb::FieldCodec<global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult> _repeated_checkResults_codec
+                = pb::FieldCodec.ForMessage(34, global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult> checkResults_ = new pbc::RepeatedField<global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult>();
+            /// <summary>
+            /// List of check results.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult> CheckResults {
+              get { return checkResults_; }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
@@ -897,8 +1011,11 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                 return true;
               }
               if (Image != other.Image) return false;
+              if (ContainerName != other.ContainerName) return false;
+              if (ContainerType != other.ContainerType) return false;
               if (Result != other.Result) return false;
               if (Description != other.Description) return false;
+              if(!checkResults_.Equals(other.checkResults_)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -907,8 +1024,11 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             public override int GetHashCode() {
               int hash = 1;
               if (Image.Length != 0) hash ^= Image.GetHashCode();
+              if (ContainerName.Length != 0) hash ^= ContainerName.GetHashCode();
+              if (ContainerType != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType.Unspecified) hash ^= ContainerType.GetHashCode();
               if (Result != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult.Unspecified) hash ^= Result.GetHashCode();
               if (Description.Length != 0) hash ^= Description.GetHashCode();
+              hash ^= checkResults_.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -939,6 +1059,15 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                 output.WriteRawTag(26);
                 output.WriteString(Description);
               }
+              checkResults_.WriteTo(output, _repeated_checkResults_codec);
+              if (ContainerName.Length != 0) {
+                output.WriteRawTag(42);
+                output.WriteString(ContainerName);
+              }
+              if (ContainerType != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType.Unspecified) {
+                output.WriteRawTag(48);
+                output.WriteEnum((int) ContainerType);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -961,6 +1090,15 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                 output.WriteRawTag(26);
                 output.WriteString(Description);
               }
+              checkResults_.WriteTo(ref output, _repeated_checkResults_codec);
+              if (ContainerName.Length != 0) {
+                output.WriteRawTag(42);
+                output.WriteString(ContainerName);
+              }
+              if (ContainerType != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType.Unspecified) {
+                output.WriteRawTag(48);
+                output.WriteEnum((int) ContainerType);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -974,12 +1112,19 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
               if (Image.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Image);
               }
+              if (ContainerName.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(ContainerName);
+              }
+              if (ContainerType != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContainerType);
+              }
               if (Result != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult.Unspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Result);
               }
               if (Description.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
               }
+              size += checkResults_.CalculateSize(_repeated_checkResults_codec);
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
               }
@@ -995,12 +1140,19 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
               if (other.Image.Length != 0) {
                 Image = other.Image;
               }
+              if (other.ContainerName.Length != 0) {
+                ContainerName = other.ContainerName;
+              }
+              if (other.ContainerType != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType.Unspecified) {
+                ContainerType = other.ContainerType;
+              }
               if (other.Result != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult.Unspecified) {
                 Result = other.Result;
               }
               if (other.Description.Length != 0) {
                 Description = other.Description;
               }
+              checkResults_.Add(other.checkResults_);
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 
@@ -1026,6 +1178,18 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                   }
                   case 26: {
                     Description = input.ReadString();
+                    break;
+                  }
+                  case 34: {
+                    checkResults_.AddEntriesFrom(input, _repeated_checkResults_codec);
+                    break;
+                  }
+                  case 42: {
+                    ContainerName = input.ReadString();
+                    break;
+                  }
+                  case 48: {
+                    ContainerType = (global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType) input.ReadEnum();
                     break;
                   }
                 }
@@ -1055,6 +1219,18 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                     Description = input.ReadString();
                     break;
                   }
+                  case 34: {
+                    checkResults_.AddEntriesFrom(ref input, _repeated_checkResults_codec);
+                    break;
+                  }
+                  case 42: {
+                    ContainerName = input.ReadString();
+                    break;
+                  }
+                  case 48: {
+                    ContainerType = (global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.ContainerType) input.ReadEnum();
+                    break;
+                  }
                 }
               }
             }
@@ -1065,6 +1241,30 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
+              /// <summary>
+              /// The container type.
+              /// </summary>
+              public enum ContainerType {
+                /// <summary>
+                /// The container type should always be specified. This is an error.
+                /// </summary>
+                [pbr::OriginalName("CONTAINER_TYPE_UNSPECIFIED")] Unspecified = 0,
+                /// <summary>
+                /// A regular deployment.
+                /// </summary>
+                [pbr::OriginalName("CONTAINER")] Container = 1,
+                /// <summary>
+                /// Init container defined as specified at
+                /// https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
+                /// </summary>
+                [pbr::OriginalName("INIT_CONTAINER")] InitContainer = 2,
+                /// <summary>
+                /// Ephemeral container defined as specified at
+                /// https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/
+                /// </summary>
+                [pbr::OriginalName("EPHEMERAL_CONTAINER")] EphemeralContainer = 3,
+              }
+
               /// <summary>
               /// Result of the audit.
               /// </summary>
@@ -1083,6 +1283,813 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
                 [pbr::OriginalName("DENY")] Deny = 2,
               }
 
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class CheckResult : pb::IMessage<CheckResult>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<CheckResult> _parser = new pb::MessageParser<CheckResult>(() => new CheckResult());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<CheckResult> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public CheckResult() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public CheckResult(CheckResult other) : this() {
+                  checkSetIndex_ = other.checkSetIndex_;
+                  checkSetName_ = other.checkSetName_;
+                  checkSetScope_ = other.checkSetScope_ != null ? other.checkSetScope_.Clone() : null;
+                  checkIndex_ = other.checkIndex_;
+                  checkName_ = other.checkName_;
+                  checkType_ = other.checkType_;
+                  verdict_ = other.verdict_;
+                  explanation_ = other.explanation_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public CheckResult Clone() {
+                  return new CheckResult(this);
+                }
+
+                /// <summary>Field number for the "check_set_index" field.</summary>
+                public const int CheckSetIndexFieldNumber = 1;
+                private string checkSetIndex_ = "";
+                /// <summary>
+                /// The index of the check set.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string CheckSetIndex {
+                  get { return checkSetIndex_; }
+                  set {
+                    checkSetIndex_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "check_set_name" field.</summary>
+                public const int CheckSetNameFieldNumber = 2;
+                private string checkSetName_ = "";
+                /// <summary>
+                /// The name of the check set.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string CheckSetName {
+                  get { return checkSetName_; }
+                  set {
+                    checkSetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "check_set_scope" field.</summary>
+                public const int CheckSetScopeFieldNumber = 3;
+                private global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckSetScope checkSetScope_;
+                /// <summary>
+                /// The scope of the check set.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckSetScope CheckSetScope {
+                  get { return checkSetScope_; }
+                  set {
+                    checkSetScope_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "check_index" field.</summary>
+                public const int CheckIndexFieldNumber = 4;
+                private string checkIndex_ = "";
+                /// <summary>
+                /// The index of the check.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string CheckIndex {
+                  get { return checkIndex_; }
+                  set {
+                    checkIndex_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "check_name" field.</summary>
+                public const int CheckNameFieldNumber = 5;
+                private string checkName_ = "";
+                /// <summary>
+                /// The name of the check.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string CheckName {
+                  get { return checkName_; }
+                  set {
+                    checkName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "check_type" field.</summary>
+                public const int CheckTypeFieldNumber = 6;
+                private string checkType_ = "";
+                /// <summary>
+                /// The type of the check.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string CheckType {
+                  get { return checkType_; }
+                  set {
+                    checkType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "verdict" field.</summary>
+                public const int VerdictFieldNumber = 7;
+                private global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict verdict_ = global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict.Unspecified;
+                /// <summary>
+                /// The verdict of this check.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict Verdict {
+                  get { return verdict_; }
+                  set {
+                    verdict_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "explanation" field.</summary>
+                public const int ExplanationFieldNumber = 8;
+                private string explanation_ = "";
+                /// <summary>
+                /// User-friendly explanation of this check result.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string Explanation {
+                  get { return explanation_; }
+                  set {
+                    explanation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as CheckResult);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(CheckResult other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (CheckSetIndex != other.CheckSetIndex) return false;
+                  if (CheckSetName != other.CheckSetName) return false;
+                  if (!object.Equals(CheckSetScope, other.CheckSetScope)) return false;
+                  if (CheckIndex != other.CheckIndex) return false;
+                  if (CheckName != other.CheckName) return false;
+                  if (CheckType != other.CheckType) return false;
+                  if (Verdict != other.Verdict) return false;
+                  if (Explanation != other.Explanation) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (CheckSetIndex.Length != 0) hash ^= CheckSetIndex.GetHashCode();
+                  if (CheckSetName.Length != 0) hash ^= CheckSetName.GetHashCode();
+                  if (checkSetScope_ != null) hash ^= CheckSetScope.GetHashCode();
+                  if (CheckIndex.Length != 0) hash ^= CheckIndex.GetHashCode();
+                  if (CheckName.Length != 0) hash ^= CheckName.GetHashCode();
+                  if (CheckType.Length != 0) hash ^= CheckType.GetHashCode();
+                  if (Verdict != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict.Unspecified) hash ^= Verdict.GetHashCode();
+                  if (Explanation.Length != 0) hash ^= Explanation.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (CheckSetIndex.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(CheckSetIndex);
+                  }
+                  if (CheckSetName.Length != 0) {
+                    output.WriteRawTag(18);
+                    output.WriteString(CheckSetName);
+                  }
+                  if (checkSetScope_ != null) {
+                    output.WriteRawTag(26);
+                    output.WriteMessage(CheckSetScope);
+                  }
+                  if (CheckIndex.Length != 0) {
+                    output.WriteRawTag(34);
+                    output.WriteString(CheckIndex);
+                  }
+                  if (CheckName.Length != 0) {
+                    output.WriteRawTag(42);
+                    output.WriteString(CheckName);
+                  }
+                  if (CheckType.Length != 0) {
+                    output.WriteRawTag(50);
+                    output.WriteString(CheckType);
+                  }
+                  if (Verdict != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict.Unspecified) {
+                    output.WriteRawTag(56);
+                    output.WriteEnum((int) Verdict);
+                  }
+                  if (Explanation.Length != 0) {
+                    output.WriteRawTag(66);
+                    output.WriteString(Explanation);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (CheckSetIndex.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(CheckSetIndex);
+                  }
+                  if (CheckSetName.Length != 0) {
+                    output.WriteRawTag(18);
+                    output.WriteString(CheckSetName);
+                  }
+                  if (checkSetScope_ != null) {
+                    output.WriteRawTag(26);
+                    output.WriteMessage(CheckSetScope);
+                  }
+                  if (CheckIndex.Length != 0) {
+                    output.WriteRawTag(34);
+                    output.WriteString(CheckIndex);
+                  }
+                  if (CheckName.Length != 0) {
+                    output.WriteRawTag(42);
+                    output.WriteString(CheckName);
+                  }
+                  if (CheckType.Length != 0) {
+                    output.WriteRawTag(50);
+                    output.WriteString(CheckType);
+                  }
+                  if (Verdict != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict.Unspecified) {
+                    output.WriteRawTag(56);
+                    output.WriteEnum((int) Verdict);
+                  }
+                  if (Explanation.Length != 0) {
+                    output.WriteRawTag(66);
+                    output.WriteString(Explanation);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (CheckSetIndex.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(CheckSetIndex);
+                  }
+                  if (CheckSetName.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(CheckSetName);
+                  }
+                  if (checkSetScope_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(CheckSetScope);
+                  }
+                  if (CheckIndex.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(CheckIndex);
+                  }
+                  if (CheckName.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(CheckName);
+                  }
+                  if (CheckType.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(CheckType);
+                  }
+                  if (Verdict != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict.Unspecified) {
+                    size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Verdict);
+                  }
+                  if (Explanation.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(Explanation);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(CheckResult other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.CheckSetIndex.Length != 0) {
+                    CheckSetIndex = other.CheckSetIndex;
+                  }
+                  if (other.CheckSetName.Length != 0) {
+                    CheckSetName = other.CheckSetName;
+                  }
+                  if (other.checkSetScope_ != null) {
+                    if (checkSetScope_ == null) {
+                      CheckSetScope = new global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckSetScope();
+                    }
+                    CheckSetScope.MergeFrom(other.CheckSetScope);
+                  }
+                  if (other.CheckIndex.Length != 0) {
+                    CheckIndex = other.CheckIndex;
+                  }
+                  if (other.CheckName.Length != 0) {
+                    CheckName = other.CheckName;
+                  }
+                  if (other.CheckType.Length != 0) {
+                    CheckType = other.CheckType;
+                  }
+                  if (other.Verdict != global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict.Unspecified) {
+                    Verdict = other.Verdict;
+                  }
+                  if (other.Explanation.Length != 0) {
+                    Explanation = other.Explanation;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        CheckSetIndex = input.ReadString();
+                        break;
+                      }
+                      case 18: {
+                        CheckSetName = input.ReadString();
+                        break;
+                      }
+                      case 26: {
+                        if (checkSetScope_ == null) {
+                          CheckSetScope = new global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckSetScope();
+                        }
+                        input.ReadMessage(CheckSetScope);
+                        break;
+                      }
+                      case 34: {
+                        CheckIndex = input.ReadString();
+                        break;
+                      }
+                      case 42: {
+                        CheckName = input.ReadString();
+                        break;
+                      }
+                      case 50: {
+                        CheckType = input.ReadString();
+                        break;
+                      }
+                      case 56: {
+                        Verdict = (global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict) input.ReadEnum();
+                        break;
+                      }
+                      case 66: {
+                        Explanation = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        CheckSetIndex = input.ReadString();
+                        break;
+                      }
+                      case 18: {
+                        CheckSetName = input.ReadString();
+                        break;
+                      }
+                      case 26: {
+                        if (checkSetScope_ == null) {
+                          CheckSetScope = new global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckSetScope();
+                        }
+                        input.ReadMessage(CheckSetScope);
+                        break;
+                      }
+                      case 34: {
+                        CheckIndex = input.ReadString();
+                        break;
+                      }
+                      case 42: {
+                        CheckName = input.ReadString();
+                        break;
+                      }
+                      case 50: {
+                        CheckType = input.ReadString();
+                        break;
+                      }
+                      case 56: {
+                        Verdict = (global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Types.CheckVerdict) input.ReadEnum();
+                        break;
+                      }
+                      case 66: {
+                        Explanation = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+                #region Nested types
+                /// <summary>Container for nested types declared in the CheckResult message type.</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static partial class Types {
+                  /// <summary>
+                  /// Result of evaluating one check.
+                  /// </summary>
+                  public enum CheckVerdict {
+                    /// <summary>
+                    /// We should always have a verdict. This is an error.
+                    /// </summary>
+                    [pbr::OriginalName("CHECK_VERDICT_UNSPECIFIED")] Unspecified = 0,
+                    /// <summary>
+                    /// The check was successfully evaluated and the image did not satisfy
+                    /// the check.
+                    /// </summary>
+                    [pbr::OriginalName("NON_CONFORMANT")] NonConformant = 1,
+                  }
+
+                  /// <summary>
+                  /// A scope specifier for check sets.
+                  /// </summary>
+                  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+                  public sealed partial class CheckSetScope : pb::IMessage<CheckSetScope>
+                  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                      , pb::IBufferMessage
+                  #endif
+                  {
+                    private static readonly pb::MessageParser<CheckSetScope> _parser = new pb::MessageParser<CheckSetScope>(() => new CheckSetScope());
+                    private pb::UnknownFieldSet _unknownFields;
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public static pb::MessageParser<CheckSetScope> Parser { get { return _parser; } }
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public static pbr::MessageDescriptor Descriptor {
+                      get { return global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.CheckResult.Descriptor.NestedTypes[0]; }
+                    }
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    pbr::MessageDescriptor pb::IMessage.Descriptor {
+                      get { return Descriptor; }
+                    }
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public CheckSetScope() {
+                      OnConstruction();
+                    }
+
+                    partial void OnConstruction();
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public CheckSetScope(CheckSetScope other) : this() {
+                      switch (other.ScopeCase) {
+                        case ScopeOneofCase.KubernetesServiceAccount:
+                          KubernetesServiceAccount = other.KubernetesServiceAccount;
+                          break;
+                        case ScopeOneofCase.KubernetesNamespace:
+                          KubernetesNamespace = other.KubernetesNamespace;
+                          break;
+                      }
+
+                      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                    }
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public CheckSetScope Clone() {
+                      return new CheckSetScope(this);
+                    }
+
+                    /// <summary>Field number for the "kubernetes_service_account" field.</summary>
+                    public const int KubernetesServiceAccountFieldNumber = 1;
+                    /// <summary>
+                    /// Matches a single Kubernetes service account, e.g.
+                    /// 'my-namespace:my-service-account'.
+                    /// `kubernetes_service_account` scope is always more specific than
+                    /// `kubernetes_namespace` scope for the same namespace.
+                    /// </summary>
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public string KubernetesServiceAccount {
+                      get { return HasKubernetesServiceAccount ? (string) scope_ : ""; }
+                      set {
+                        scope_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                        scopeCase_ = ScopeOneofCase.KubernetesServiceAccount;
+                      }
+                    }
+                    /// <summary>Gets whether the "kubernetes_service_account" field is set</summary>
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public bool HasKubernetesServiceAccount {
+                      get { return scopeCase_ == ScopeOneofCase.KubernetesServiceAccount; }
+                    }
+                    /// <summary> Clears the value of the oneof if it's currently set to "kubernetes_service_account" </summary>
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public void ClearKubernetesServiceAccount() {
+                      if (HasKubernetesServiceAccount) {
+                        ClearScope();
+                      }
+                    }
+
+                    /// <summary>Field number for the "kubernetes_namespace" field.</summary>
+                    public const int KubernetesNamespaceFieldNumber = 2;
+                    /// <summary>
+                    /// Matches all Kubernetes service accounts in the provided
+                    /// namespace, unless a more specific `kubernetes_service_account`
+                    /// scope already matched.
+                    /// </summary>
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public string KubernetesNamespace {
+                      get { return HasKubernetesNamespace ? (string) scope_ : ""; }
+                      set {
+                        scope_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                        scopeCase_ = ScopeOneofCase.KubernetesNamespace;
+                      }
+                    }
+                    /// <summary>Gets whether the "kubernetes_namespace" field is set</summary>
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public bool HasKubernetesNamespace {
+                      get { return scopeCase_ == ScopeOneofCase.KubernetesNamespace; }
+                    }
+                    /// <summary> Clears the value of the oneof if it's currently set to "kubernetes_namespace" </summary>
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public void ClearKubernetesNamespace() {
+                      if (HasKubernetesNamespace) {
+                        ClearScope();
+                      }
+                    }
+
+                    private object scope_;
+                    /// <summary>Enum of possible cases for the "scope" oneof.</summary>
+                    public enum ScopeOneofCase {
+                      None = 0,
+                      KubernetesServiceAccount = 1,
+                      KubernetesNamespace = 2,
+                    }
+                    private ScopeOneofCase scopeCase_ = ScopeOneofCase.None;
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public ScopeOneofCase ScopeCase {
+                      get { return scopeCase_; }
+                    }
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public void ClearScope() {
+                      scopeCase_ = ScopeOneofCase.None;
+                      scope_ = null;
+                    }
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public override bool Equals(object other) {
+                      return Equals(other as CheckSetScope);
+                    }
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public bool Equals(CheckSetScope other) {
+                      if (ReferenceEquals(other, null)) {
+                        return false;
+                      }
+                      if (ReferenceEquals(other, this)) {
+                        return true;
+                      }
+                      if (KubernetesServiceAccount != other.KubernetesServiceAccount) return false;
+                      if (KubernetesNamespace != other.KubernetesNamespace) return false;
+                      if (ScopeCase != other.ScopeCase) return false;
+                      return Equals(_unknownFields, other._unknownFields);
+                    }
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public override int GetHashCode() {
+                      int hash = 1;
+                      if (HasKubernetesServiceAccount) hash ^= KubernetesServiceAccount.GetHashCode();
+                      if (HasKubernetesNamespace) hash ^= KubernetesNamespace.GetHashCode();
+                      hash ^= (int) scopeCase_;
+                      if (_unknownFields != null) {
+                        hash ^= _unknownFields.GetHashCode();
+                      }
+                      return hash;
+                    }
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public override string ToString() {
+                      return pb::JsonFormatter.ToDiagnosticString(this);
+                    }
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public void WriteTo(pb::CodedOutputStream output) {
+                    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                      output.WriteRawMessage(this);
+                    #else
+                      if (HasKubernetesServiceAccount) {
+                        output.WriteRawTag(10);
+                        output.WriteString(KubernetesServiceAccount);
+                      }
+                      if (HasKubernetesNamespace) {
+                        output.WriteRawTag(18);
+                        output.WriteString(KubernetesNamespace);
+                      }
+                      if (_unknownFields != null) {
+                        _unknownFields.WriteTo(output);
+                      }
+                    #endif
+                    }
+
+                    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                      if (HasKubernetesServiceAccount) {
+                        output.WriteRawTag(10);
+                        output.WriteString(KubernetesServiceAccount);
+                      }
+                      if (HasKubernetesNamespace) {
+                        output.WriteRawTag(18);
+                        output.WriteString(KubernetesNamespace);
+                      }
+                      if (_unknownFields != null) {
+                        _unknownFields.WriteTo(ref output);
+                      }
+                    }
+                    #endif
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public int CalculateSize() {
+                      int size = 0;
+                      if (HasKubernetesServiceAccount) {
+                        size += 1 + pb::CodedOutputStream.ComputeStringSize(KubernetesServiceAccount);
+                      }
+                      if (HasKubernetesNamespace) {
+                        size += 1 + pb::CodedOutputStream.ComputeStringSize(KubernetesNamespace);
+                      }
+                      if (_unknownFields != null) {
+                        size += _unknownFields.CalculateSize();
+                      }
+                      return size;
+                    }
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public void MergeFrom(CheckSetScope other) {
+                      if (other == null) {
+                        return;
+                      }
+                      switch (other.ScopeCase) {
+                        case ScopeOneofCase.KubernetesServiceAccount:
+                          KubernetesServiceAccount = other.KubernetesServiceAccount;
+                          break;
+                        case ScopeOneofCase.KubernetesNamespace:
+                          KubernetesNamespace = other.KubernetesNamespace;
+                          break;
+                      }
+
+                      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                    }
+
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    public void MergeFrom(pb::CodedInputStream input) {
+                    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                      input.ReadRawMessage(this);
+                    #else
+                      uint tag;
+                      while ((tag = input.ReadTag()) != 0) {
+                        switch(tag) {
+                          default:
+                            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                            break;
+                          case 10: {
+                            KubernetesServiceAccount = input.ReadString();
+                            break;
+                          }
+                          case 18: {
+                            KubernetesNamespace = input.ReadString();
+                            break;
+                          }
+                        }
+                      }
+                    #endif
+                    }
+
+                    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                      uint tag;
+                      while ((tag = input.ReadTag()) != 0) {
+                        switch(tag) {
+                          default:
+                            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                            break;
+                          case 10: {
+                            KubernetesServiceAccount = input.ReadString();
+                            break;
+                          }
+                          case 18: {
+                            KubernetesNamespace = input.ReadString();
+                            break;
+                          }
+                        }
+                      }
+                    }
+                    #endif
+
+                  }
+
+                }
+                #endregion
+
+              }
+
             }
             #endregion
 
@@ -1094,18 +2101,20 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       }
 
       /// <summary>
-      /// An event describing that the project policy is unsupported by CV.
+      /// An event describing a user-actionable configuration issue that prevents CV
+      /// from auditing.
       /// </summary>
-      public sealed partial class UnsupportedPolicyEvent : pb::IMessage<UnsupportedPolicyEvent>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ConfigErrorEvent : pb::IMessage<ConfigErrorEvent>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<UnsupportedPolicyEvent> _parser = new pb::MessageParser<UnsupportedPolicyEvent>(() => new UnsupportedPolicyEvent());
+        private static readonly pb::MessageParser<ConfigErrorEvent> _parser = new pb::MessageParser<ConfigErrorEvent>(() => new ConfigErrorEvent());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public static pb::MessageParser<UnsupportedPolicyEvent> Parser { get { return _parser; } }
+        public static pb::MessageParser<ConfigErrorEvent> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1121,7 +2130,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public UnsupportedPolicyEvent() {
+        public ConfigErrorEvent() {
           OnConstruction();
         }
 
@@ -1129,22 +2138,22 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public UnsupportedPolicyEvent(UnsupportedPolicyEvent other) : this() {
+        public ConfigErrorEvent(ConfigErrorEvent other) : this() {
           description_ = other.description_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public UnsupportedPolicyEvent Clone() {
-          return new UnsupportedPolicyEvent(this);
+        public ConfigErrorEvent Clone() {
+          return new ConfigErrorEvent(this);
         }
 
         /// <summary>Field number for the "description" field.</summary>
         public const int DescriptionFieldNumber = 1;
         private string description_ = "";
         /// <summary>
-        /// A description of the unsupported policy.
+        /// A description of the issue.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1158,12 +2167,12 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
-          return Equals(other as UnsupportedPolicyEvent);
+          return Equals(other as ConfigErrorEvent);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public bool Equals(UnsupportedPolicyEvent other) {
+        public bool Equals(ConfigErrorEvent other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
@@ -1236,7 +2245,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public void MergeFrom(UnsupportedPolicyEvent other) {
+        public void MergeFrom(ConfigErrorEvent other) {
           if (other == null) {
             return;
           }

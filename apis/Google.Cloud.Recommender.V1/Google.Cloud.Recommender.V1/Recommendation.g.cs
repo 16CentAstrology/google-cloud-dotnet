@@ -75,36 +75,50 @@ namespace Google.Cloud.Recommender.V1 {
             "OAoFdmFsdWUYAiABKAsyKS5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEu",
             "VmFsdWVNYXRjaGVyOgI4AUIMCgpwYXRoX3ZhbHVlIjoKDFZhbHVlTWF0Y2hl",
             "chIZCg9tYXRjaGVzX3BhdHRlcm4YASABKAlIAEIPCg1tYXRjaF92YXJpYW50",
-            "Il8KDkNvc3RQcm9qZWN0aW9uEiAKBGNvc3QYASABKAsyEi5nb29nbGUudHlw",
-            "ZS5Nb25leRIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5E",
-            "dXJhdGlvbiI+ChJTZWN1cml0eVByb2plY3Rpb24SKAoHZGV0YWlscxgCIAEo",
-            "CzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3Qi0AIKBkltcGFjdBI+CghjYXRl",
-            "Z29yeRgBIAEoDjIsLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5JbXBh",
-            "Y3QuQ2F0ZWdvcnkSRgoPY29zdF9wcm9qZWN0aW9uGGQgASgLMisuZ29vZ2xl",
-            "LmNsb3VkLnJlY29tbWVuZGVyLnYxLkNvc3RQcm9qZWN0aW9uSAASTgoTc2Vj",
-            "dXJpdHlfcHJvamVjdGlvbhhlIAEoCzIvLmdvb2dsZS5jbG91ZC5yZWNvbW1l",
-            "bmRlci52MS5TZWN1cml0eVByb2plY3Rpb25IACJgCghDYXRlZ29yeRIYChRD",
-            "QVRFR09SWV9VTlNQRUNJRklFRBAAEggKBENPU1QQARIMCghTRUNVUklUWRAC",
-            "Eg8KC1BFUkZPUk1BTkNFEAMSEQoNTUFOQUdFQUJJTElUWRAEQgwKCnByb2pl",
-            "Y3Rpb24i3gIKF1JlY29tbWVuZGF0aW9uU3RhdGVJbmZvEkkKBXN0YXRlGAEg",
-            "ASgOMjouZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxLlJlY29tbWVuZGF0",
-            "aW9uU3RhdGVJbmZvLlN0YXRlEl8KDnN0YXRlX21ldGFkYXRhGAIgAygLMkcu",
-            "Z29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxLlJlY29tbWVuZGF0aW9uU3Rh",
-            "dGVJbmZvLlN0YXRlTWV0YWRhdGFFbnRyeRo0ChJTdGF0ZU1ldGFkYXRhRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJhCgVTdGF0ZRIV",
-            "ChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEgsKB0NMQUlNRUQQ",
-            "BhINCglTVUNDRUVERUQQAxIKCgZGQUlMRUQQBBINCglESVNNSVNTRUQQBULe",
-            "AwofY29tLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MVABWkFjbG91ZC5n",
-            "b29nbGUuY29tL2dvL3JlY29tbWVuZGVyL2FwaXYxL3JlY29tbWVuZGVycGI7",
-            "cmVjb21tZW5kZXJwYqICBENSRUOqAhtHb29nbGUuQ2xvdWQuUmVjb21tZW5k",
-            "ZXIuVjHqQc8CCiZyZWNvbW1lbmRlci5nb29nbGVhcGlzLmNvbS9SZWNvbW1l",
-            "bmRlchJCcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L3JlY29tbWVuZGVycy97cmVjb21tZW5kZXJ9ElFiaWxsaW5nQWNjb3VudHMv",
-            "e2JpbGxpbmdfYWNjb3VudH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVjb21t",
-            "ZW5kZXJzL3tyZWNvbW1lbmRlcn0SQGZvbGRlcnMve2ZvbGRlcn0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vcmVjb21tZW5kZXJzL3tyZWNvbW1lbmRlcn0STG9y",
-            "Z2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vcmVjb21tZW5kZXJzL3tyZWNvbW1lbmRlcn1iBnByb3RvMw=="));
+            "IpMBCg5Db3N0UHJvamVjdGlvbhIgCgRjb3N0GAEgASgLMhIuZ29vZ2xlLnR5",
+            "cGUuTW9uZXkSKwoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYu",
+            "RHVyYXRpb24SMgoWY29zdF9pbl9sb2NhbF9jdXJyZW5jeRgDIAEoCzISLmdv",
+            "b2dsZS50eXBlLk1vbmV5Ij4KElNlY3VyaXR5UHJvamVjdGlvbhIoCgdkZXRh",
+            "aWxzGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdCJZChhTdXN0YWlu",
+            "YWJpbGl0eVByb2plY3Rpb24SEAoIa2dfY19vMmUYASABKAESKwoIZHVyYXRp",
+            "b24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24i7AEKFVJlbGlh",
+            "YmlsaXR5UHJvamVjdGlvbhJKCgVyaXNrcxgBIAMoDjI7Lmdvb2dsZS5jbG91",
+            "ZC5yZWNvbW1lbmRlci52MS5SZWxpYWJpbGl0eVByb2plY3Rpb24uUmlza1R5",
+            "cGUSKAoHZGV0YWlscxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3Qi",
+            "XQoIUmlza1R5cGUSGQoVUklTS19UWVBFX1VOU1BFQ0lGSUVEEAASFgoSU0VS",
+            "VklDRV9ESVNSVVBUSU9OEAESDQoJREFUQV9MT1NTEAISDwoLQUNDRVNTX0RF",
+            "TlkQAyKoBAoGSW1wYWN0Ej4KCGNhdGVnb3J5GAEgASgOMiwuZ29vZ2xlLmNs",
+            "b3VkLnJlY29tbWVuZGVyLnYxLkltcGFjdC5DYXRlZ29yeRJGCg9jb3N0X3By",
+            "b2plY3Rpb24YZCABKAsyKy5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEu",
+            "Q29zdFByb2plY3Rpb25IABJOChNzZWN1cml0eV9wcm9qZWN0aW9uGGUgASgL",
+            "Mi8uZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxLlNlY3VyaXR5UHJvamVj",
+            "dGlvbkgAEloKGXN1c3RhaW5hYmlsaXR5X3Byb2plY3Rpb24YZiABKAsyNS5n",
+            "b29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuU3VzdGFpbmFiaWxpdHlQcm9q",
+            "ZWN0aW9uSAASVAoWcmVsaWFiaWxpdHlfcHJvamVjdGlvbhhnIAEoCzIyLmdv",
+            "b2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5SZWxpYWJpbGl0eVByb2plY3Rp",
+            "b25IACKFAQoIQ2F0ZWdvcnkSGAoUQ0FURUdPUllfVU5TUEVDSUZJRUQQABII",
+            "CgRDT1NUEAESDAoIU0VDVVJJVFkQAhIPCgtQRVJGT1JNQU5DRRADEhEKDU1B",
+            "TkFHRUFCSUxJVFkQBBISCg5TVVNUQUlOQUJJTElUWRAFEg8KC1JFTElBQklM",
+            "SVRZEAZCDAoKcHJvamVjdGlvbiLeAgoXUmVjb21tZW5kYXRpb25TdGF0ZUlu",
+            "Zm8SSQoFc3RhdGUYASABKA4yOi5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIu",
+            "djEuUmVjb21tZW5kYXRpb25TdGF0ZUluZm8uU3RhdGUSXwoOc3RhdGVfbWV0",
+            "YWRhdGEYAiADKAsyRy5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuUmVj",
+            "b21tZW5kYXRpb25TdGF0ZUluZm8uU3RhdGVNZXRhZGF0YUVudHJ5GjQKElN0",
+            "YXRlTWV0YWRhdGFFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBImEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZF",
+            "EAESCwoHQ0xBSU1FRBAGEg0KCVNVQ0NFRURFRBADEgoKBkZBSUxFRBAEEg0K",
+            "CURJU01JU1NFRBAFQt4DCh9jb20uZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVy",
+            "LnYxUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vcmVjb21tZW5kZXIvYXBpdjEv",
+            "cmVjb21tZW5kZXJwYjtyZWNvbW1lbmRlcnBiogIEQ1JFQ6oCG0dvb2dsZS5D",
+            "bG91ZC5SZWNvbW1lbmRlci5WMepBzwIKJnJlY29tbWVuZGVyLmdvb2dsZWFw",
+            "aXMuY29tL1JlY29tbWVuZGVyEkJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vcmVjb21tZW5kZXJzL3tyZWNvbW1lbmRlcn0SUWJp",
+            "bGxpbmdBY2NvdW50cy97YmlsbGluZ19hY2NvdW50fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9yZWNvbW1lbmRlcnMve3JlY29tbWVuZGVyfRJAZm9sZGVycy97",
+            "Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZWNvbW1lbmRlcnMve3Jl",
+            "Y29tbWVuZGVyfRJMb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9yZWNvbW1lbmRlcnMve3JlY29tbWVuZGVyfWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -113,9 +127,11 @@ namespace Google.Cloud.Recommender.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.OperationGroup), global::Google.Cloud.Recommender.V1.OperationGroup.Parser, new[]{ "Operations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Operation), global::Google.Cloud.Recommender.V1.Operation.Parser, new[]{ "Action", "ResourceType", "Resource", "Path", "SourceResource", "SourcePath", "Value", "ValueMatcher", "PathFilters", "PathValueMatchers" }, new[]{ "PathValue" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.ValueMatcher), global::Google.Cloud.Recommender.V1.ValueMatcher.Parser, new[]{ "MatchesPattern" }, new[]{ "MatchVariant" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.CostProjection), global::Google.Cloud.Recommender.V1.CostProjection.Parser, new[]{ "Cost", "Duration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.CostProjection), global::Google.Cloud.Recommender.V1.CostProjection.Parser, new[]{ "Cost", "Duration", "CostInLocalCurrency" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.SecurityProjection), global::Google.Cloud.Recommender.V1.SecurityProjection.Parser, new[]{ "Details" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Impact), global::Google.Cloud.Recommender.V1.Impact.Parser, new[]{ "Category", "CostProjection", "SecurityProjection" }, new[]{ "Projection" }, new[]{ typeof(global::Google.Cloud.Recommender.V1.Impact.Types.Category) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.SustainabilityProjection), global::Google.Cloud.Recommender.V1.SustainabilityProjection.Parser, new[]{ "KgCO2E", "Duration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.ReliabilityProjection), global::Google.Cloud.Recommender.V1.ReliabilityProjection.Parser, new[]{ "Risks", "Details" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.ReliabilityProjection.Types.RiskType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Impact), global::Google.Cloud.Recommender.V1.Impact.Parser, new[]{ "Category", "CostProjection", "SecurityProjection", "SustainabilityProjection", "ReliabilityProjection" }, new[]{ "Projection" }, new[]{ typeof(global::Google.Cloud.Recommender.V1.Impact.Types.Category) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.RecommendationStateInfo), global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Parser, new[]{ "State", "StateMetadata" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
@@ -127,6 +143,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// A recommendation along with a suggested action. E.g., a rightsizing
   /// recommendation for an underutilized VM, IAM role recommendations, etc
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Recommendation : pb::IMessage<Recommendation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -822,6 +839,7 @@ namespace Google.Cloud.Recommender.V1 {
       /// <summary>
       /// Reference to an associated insight.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InsightReference : pb::IMessage<InsightReference>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1023,6 +1041,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Contains what resources are changing and how they are changing.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RecommendationContent : pb::IMessage<RecommendationContent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1258,6 +1277,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Group of operations that need to be performed atomically.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationGroup : pb::IMessage<OperationGroup>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1451,6 +1471,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// * Allows extension to custom operations not natively supported by RFC6902.
   /// See https://tools.ietf.org/html/rfc6902 for details on the original RFC.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Operation : pb::IMessage<Operation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1932,8 +1953,8 @@ namespace Google.Cloud.Recommender.V1 {
       if (other.SourcePath.Length != 0) {
         SourcePath = other.SourcePath;
       }
-      pathFilters_.Add(other.pathFilters_);
-      pathValueMatchers_.Add(other.pathValueMatchers_);
+      pathFilters_.MergeFrom(other.pathFilters_);
+      pathValueMatchers_.MergeFrom(other.pathValueMatchers_);
       switch (other.PathValueCase) {
         case PathValueOneofCase.Value:
           if (Value == null) {
@@ -2089,6 +2110,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Contains various matching options for values for a GCP resource field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValueMatcher : pb::IMessage<ValueMatcher>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2148,10 +2170,24 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MatchesPattern {
-      get { return matchVariantCase_ == MatchVariantOneofCase.MatchesPattern ? (string) matchVariant_ : ""; }
+      get { return HasMatchesPattern ? (string) matchVariant_ : ""; }
       set {
         matchVariant_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         matchVariantCase_ = MatchVariantOneofCase.MatchesPattern;
+      }
+    }
+    /// <summary>Gets whether the "matches_pattern" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMatchesPattern {
+      get { return matchVariantCase_ == MatchVariantOneofCase.MatchesPattern; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "matches_pattern" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMatchesPattern() {
+      if (HasMatchesPattern) {
+        ClearMatchVariant();
       }
     }
 
@@ -2199,7 +2235,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (matchVariantCase_ == MatchVariantOneofCase.MatchesPattern) hash ^= MatchesPattern.GetHashCode();
+      if (HasMatchesPattern) hash ^= MatchesPattern.GetHashCode();
       hash ^= (int) matchVariantCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2219,7 +2255,7 @@ namespace Google.Cloud.Recommender.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (matchVariantCase_ == MatchVariantOneofCase.MatchesPattern) {
+      if (HasMatchesPattern) {
         output.WriteRawTag(10);
         output.WriteString(MatchesPattern);
       }
@@ -2233,7 +2269,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (matchVariantCase_ == MatchVariantOneofCase.MatchesPattern) {
+      if (HasMatchesPattern) {
         output.WriteRawTag(10);
         output.WriteString(MatchesPattern);
       }
@@ -2247,7 +2283,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (matchVariantCase_ == MatchVariantOneofCase.MatchesPattern) {
+      if (HasMatchesPattern) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MatchesPattern);
       }
       if (_unknownFields != null) {
@@ -2316,6 +2352,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Contains metadata about how much money a recommendation can save or incur.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CostProjection : pb::IMessage<CostProjection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2352,6 +2389,7 @@ namespace Google.Cloud.Recommender.V1 {
     public CostProjection(CostProjection other) : this() {
       cost_ = other.cost_ != null ? other.cost_.Clone() : null;
       duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+      costInLocalCurrency_ = other.costInLocalCurrency_ != null ? other.costInLocalCurrency_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2396,6 +2434,21 @@ namespace Google.Cloud.Recommender.V1 {
       }
     }
 
+    /// <summary>Field number for the "cost_in_local_currency" field.</summary>
+    public const int CostInLocalCurrencyFieldNumber = 3;
+    private global::Google.Type.Money costInLocalCurrency_;
+    /// <summary>
+    /// The approximate cost savings in the billing account's local currency.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.Money CostInLocalCurrency {
+      get { return costInLocalCurrency_; }
+      set {
+        costInLocalCurrency_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2413,6 +2466,7 @@ namespace Google.Cloud.Recommender.V1 {
       }
       if (!object.Equals(Cost, other.Cost)) return false;
       if (!object.Equals(Duration, other.Duration)) return false;
+      if (!object.Equals(CostInLocalCurrency, other.CostInLocalCurrency)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2422,6 +2476,7 @@ namespace Google.Cloud.Recommender.V1 {
       int hash = 1;
       if (cost_ != null) hash ^= Cost.GetHashCode();
       if (duration_ != null) hash ^= Duration.GetHashCode();
+      if (costInLocalCurrency_ != null) hash ^= CostInLocalCurrency.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2448,6 +2503,10 @@ namespace Google.Cloud.Recommender.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Duration);
       }
+      if (costInLocalCurrency_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CostInLocalCurrency);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2466,6 +2525,10 @@ namespace Google.Cloud.Recommender.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Duration);
       }
+      if (costInLocalCurrency_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CostInLocalCurrency);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2481,6 +2544,9 @@ namespace Google.Cloud.Recommender.V1 {
       }
       if (duration_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+      }
+      if (costInLocalCurrency_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CostInLocalCurrency);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2505,6 +2571,12 @@ namespace Google.Cloud.Recommender.V1 {
           Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         Duration.MergeFrom(other.Duration);
+      }
+      if (other.costInLocalCurrency_ != null) {
+        if (costInLocalCurrency_ == null) {
+          CostInLocalCurrency = new global::Google.Type.Money();
+        }
+        CostInLocalCurrency.MergeFrom(other.CostInLocalCurrency);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2533,6 +2605,13 @@ namespace Google.Cloud.Recommender.V1 {
               Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(Duration);
+            break;
+          }
+          case 26: {
+            if (costInLocalCurrency_ == null) {
+              CostInLocalCurrency = new global::Google.Type.Money();
+            }
+            input.ReadMessage(CostInLocalCurrency);
             break;
           }
         }
@@ -2564,6 +2643,13 @@ namespace Google.Cloud.Recommender.V1 {
             input.ReadMessage(Duration);
             break;
           }
+          case 26: {
+            if (costInLocalCurrency_ == null) {
+              CostInLocalCurrency = new global::Google.Type.Money();
+            }
+            input.ReadMessage(CostInLocalCurrency);
+            break;
+          }
         }
       }
     }
@@ -2574,6 +2660,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Contains various ways of describing the impact on Security.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SecurityProjection : pb::IMessage<SecurityProjection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2776,8 +2863,523 @@ namespace Google.Cloud.Recommender.V1 {
   }
 
   /// <summary>
+  /// Contains metadata about how much sustainability a recommendation can save or
+  /// incur.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SustainabilityProjection : pb::IMessage<SustainabilityProjection>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SustainabilityProjection> _parser = new pb::MessageParser<SustainabilityProjection>(() => new SustainabilityProjection());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SustainabilityProjection> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Recommender.V1.RecommendationReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SustainabilityProjection() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SustainabilityProjection(SustainabilityProjection other) : this() {
+      kgCO2E_ = other.kgCO2E_;
+      duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SustainabilityProjection Clone() {
+      return new SustainabilityProjection(this);
+    }
+
+    /// <summary>Field number for the "kg_c_o2e" field.</summary>
+    public const int KgCO2EFieldNumber = 1;
+    private double kgCO2E_;
+    /// <summary>
+    /// Carbon Footprint generated in kg of CO2 equivalent.
+    /// Chose kg_c_o2e so that the name renders correctly in camelCase (kgCO2e).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double KgCO2E {
+      get { return kgCO2E_; }
+      set {
+        kgCO2E_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "duration" field.</summary>
+    public const int DurationFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Duration duration_;
+    /// <summary>
+    /// Duration for which this sustainability applies.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Duration {
+      get { return duration_; }
+      set {
+        duration_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SustainabilityProjection);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SustainabilityProjection other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(KgCO2E, other.KgCO2E)) return false;
+      if (!object.Equals(Duration, other.Duration)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (KgCO2E != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(KgCO2E);
+      if (duration_ != null) hash ^= Duration.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (KgCO2E != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(KgCO2E);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Duration);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (KgCO2E != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(KgCO2E);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Duration);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (KgCO2E != 0D) {
+        size += 1 + 8;
+      }
+      if (duration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SustainabilityProjection other) {
+      if (other == null) {
+        return;
+      }
+      if (other.KgCO2E != 0D) {
+        KgCO2E = other.KgCO2E;
+      }
+      if (other.duration_ != null) {
+        if (duration_ == null) {
+          Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Duration.MergeFrom(other.Duration);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            KgCO2E = input.ReadDouble();
+            break;
+          }
+          case 18: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            KgCO2E = input.ReadDouble();
+            break;
+          }
+          case 18: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Contains information on the impact of a reliability recommendation.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ReliabilityProjection : pb::IMessage<ReliabilityProjection>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReliabilityProjection> _parser = new pb::MessageParser<ReliabilityProjection>(() => new ReliabilityProjection());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReliabilityProjection> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Recommender.V1.RecommendationReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReliabilityProjection() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReliabilityProjection(ReliabilityProjection other) : this() {
+      risks_ = other.risks_.Clone();
+      details_ = other.details_ != null ? other.details_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReliabilityProjection Clone() {
+      return new ReliabilityProjection(this);
+    }
+
+    /// <summary>Field number for the "risks" field.</summary>
+    public const int RisksFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Recommender.V1.ReliabilityProjection.Types.RiskType> _repeated_risks_codec
+        = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::Google.Cloud.Recommender.V1.ReliabilityProjection.Types.RiskType) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Recommender.V1.ReliabilityProjection.Types.RiskType> risks_ = new pbc::RepeatedField<global::Google.Cloud.Recommender.V1.ReliabilityProjection.Types.RiskType>();
+    /// <summary>
+    /// Reliability risks mitigated by this recommendation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Recommender.V1.ReliabilityProjection.Types.RiskType> Risks {
+      get { return risks_; }
+    }
+
+    /// <summary>Field number for the "details" field.</summary>
+    public const int DetailsFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Struct details_;
+    /// <summary>
+    /// Per-recommender projection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Struct Details {
+      get { return details_; }
+      set {
+        details_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReliabilityProjection);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReliabilityProjection other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!risks_.Equals(other.risks_)) return false;
+      if (!object.Equals(Details, other.Details)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= risks_.GetHashCode();
+      if (details_ != null) hash ^= Details.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      risks_.WriteTo(output, _repeated_risks_codec);
+      if (details_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Details);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      risks_.WriteTo(ref output, _repeated_risks_codec);
+      if (details_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Details);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += risks_.CalculateSize(_repeated_risks_codec);
+      if (details_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Details);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReliabilityProjection other) {
+      if (other == null) {
+        return;
+      }
+      risks_.Add(other.risks_);
+      if (other.details_ != null) {
+        if (details_ == null) {
+          Details = new global::Google.Protobuf.WellKnownTypes.Struct();
+        }
+        Details.MergeFrom(other.Details);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10:
+          case 8: {
+            risks_.AddEntriesFrom(input, _repeated_risks_codec);
+            break;
+          }
+          case 18: {
+            if (details_ == null) {
+              Details = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(Details);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10:
+          case 8: {
+            risks_.AddEntriesFrom(ref input, _repeated_risks_codec);
+            break;
+          }
+          case 18: {
+            if (details_ == null) {
+              Details = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(Details);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ReliabilityProjection message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The risk associated with the reliability issue.
+      /// </summary>
+      public enum RiskType {
+        /// <summary>
+        /// Default unspecified risk. Don't use directly.
+        /// </summary>
+        [pbr::OriginalName("RISK_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Potential service downtime.
+        /// </summary>
+        [pbr::OriginalName("SERVICE_DISRUPTION")] ServiceDisruption = 1,
+        /// <summary>
+        /// Potential data loss.
+        /// </summary>
+        [pbr::OriginalName("DATA_LOSS")] DataLoss = 2,
+        /// <summary>
+        /// Potential access denial. The service is still up but some or all clients
+        /// can't access it.
+        /// </summary>
+        [pbr::OriginalName("ACCESS_DENY")] AccessDeny = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Contains the impact a recommendation can have for a given category.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Impact : pb::IMessage<Impact>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2792,7 +3394,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Recommender.V1.RecommendationReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Recommender.V1.RecommendationReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2819,6 +3421,12 @@ namespace Google.Cloud.Recommender.V1 {
           break;
         case ProjectionOneofCase.SecurityProjection:
           SecurityProjection = other.SecurityProjection.Clone();
+          break;
+        case ProjectionOneofCase.SustainabilityProjection:
+          SustainabilityProjection = other.SustainabilityProjection.Clone();
+          break;
+        case ProjectionOneofCase.ReliabilityProjection:
+          ReliabilityProjection = other.ReliabilityProjection.Clone();
           break;
       }
 
@@ -2876,12 +3484,44 @@ namespace Google.Cloud.Recommender.V1 {
       }
     }
 
+    /// <summary>Field number for the "sustainability_projection" field.</summary>
+    public const int SustainabilityProjectionFieldNumber = 102;
+    /// <summary>
+    /// Use with CategoryType.SUSTAINABILITY
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Recommender.V1.SustainabilityProjection SustainabilityProjection {
+      get { return projectionCase_ == ProjectionOneofCase.SustainabilityProjection ? (global::Google.Cloud.Recommender.V1.SustainabilityProjection) projection_ : null; }
+      set {
+        projection_ = value;
+        projectionCase_ = value == null ? ProjectionOneofCase.None : ProjectionOneofCase.SustainabilityProjection;
+      }
+    }
+
+    /// <summary>Field number for the "reliability_projection" field.</summary>
+    public const int ReliabilityProjectionFieldNumber = 103;
+    /// <summary>
+    /// Use with CategoryType.RELIABILITY
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Recommender.V1.ReliabilityProjection ReliabilityProjection {
+      get { return projectionCase_ == ProjectionOneofCase.ReliabilityProjection ? (global::Google.Cloud.Recommender.V1.ReliabilityProjection) projection_ : null; }
+      set {
+        projection_ = value;
+        projectionCase_ = value == null ? ProjectionOneofCase.None : ProjectionOneofCase.ReliabilityProjection;
+      }
+    }
+
     private object projection_;
     /// <summary>Enum of possible cases for the "projection" oneof.</summary>
     public enum ProjectionOneofCase {
       None = 0,
       CostProjection = 100,
       SecurityProjection = 101,
+      SustainabilityProjection = 102,
+      ReliabilityProjection = 103,
     }
     private ProjectionOneofCase projectionCase_ = ProjectionOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2915,6 +3555,8 @@ namespace Google.Cloud.Recommender.V1 {
       if (Category != other.Category) return false;
       if (!object.Equals(CostProjection, other.CostProjection)) return false;
       if (!object.Equals(SecurityProjection, other.SecurityProjection)) return false;
+      if (!object.Equals(SustainabilityProjection, other.SustainabilityProjection)) return false;
+      if (!object.Equals(ReliabilityProjection, other.ReliabilityProjection)) return false;
       if (ProjectionCase != other.ProjectionCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2926,6 +3568,8 @@ namespace Google.Cloud.Recommender.V1 {
       if (Category != global::Google.Cloud.Recommender.V1.Impact.Types.Category.Unspecified) hash ^= Category.GetHashCode();
       if (projectionCase_ == ProjectionOneofCase.CostProjection) hash ^= CostProjection.GetHashCode();
       if (projectionCase_ == ProjectionOneofCase.SecurityProjection) hash ^= SecurityProjection.GetHashCode();
+      if (projectionCase_ == ProjectionOneofCase.SustainabilityProjection) hash ^= SustainabilityProjection.GetHashCode();
+      if (projectionCase_ == ProjectionOneofCase.ReliabilityProjection) hash ^= ReliabilityProjection.GetHashCode();
       hash ^= (int) projectionCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2957,6 +3601,14 @@ namespace Google.Cloud.Recommender.V1 {
         output.WriteRawTag(170, 6);
         output.WriteMessage(SecurityProjection);
       }
+      if (projectionCase_ == ProjectionOneofCase.SustainabilityProjection) {
+        output.WriteRawTag(178, 6);
+        output.WriteMessage(SustainabilityProjection);
+      }
+      if (projectionCase_ == ProjectionOneofCase.ReliabilityProjection) {
+        output.WriteRawTag(186, 6);
+        output.WriteMessage(ReliabilityProjection);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2979,6 +3631,14 @@ namespace Google.Cloud.Recommender.V1 {
         output.WriteRawTag(170, 6);
         output.WriteMessage(SecurityProjection);
       }
+      if (projectionCase_ == ProjectionOneofCase.SustainabilityProjection) {
+        output.WriteRawTag(178, 6);
+        output.WriteMessage(SustainabilityProjection);
+      }
+      if (projectionCase_ == ProjectionOneofCase.ReliabilityProjection) {
+        output.WriteRawTag(186, 6);
+        output.WriteMessage(ReliabilityProjection);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2997,6 +3657,12 @@ namespace Google.Cloud.Recommender.V1 {
       }
       if (projectionCase_ == ProjectionOneofCase.SecurityProjection) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SecurityProjection);
+      }
+      if (projectionCase_ == ProjectionOneofCase.SustainabilityProjection) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SustainabilityProjection);
+      }
+      if (projectionCase_ == ProjectionOneofCase.ReliabilityProjection) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReliabilityProjection);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3025,6 +3691,18 @@ namespace Google.Cloud.Recommender.V1 {
             SecurityProjection = new global::Google.Cloud.Recommender.V1.SecurityProjection();
           }
           SecurityProjection.MergeFrom(other.SecurityProjection);
+          break;
+        case ProjectionOneofCase.SustainabilityProjection:
+          if (SustainabilityProjection == null) {
+            SustainabilityProjection = new global::Google.Cloud.Recommender.V1.SustainabilityProjection();
+          }
+          SustainabilityProjection.MergeFrom(other.SustainabilityProjection);
+          break;
+        case ProjectionOneofCase.ReliabilityProjection:
+          if (ReliabilityProjection == null) {
+            ReliabilityProjection = new global::Google.Cloud.Recommender.V1.ReliabilityProjection();
+          }
+          ReliabilityProjection.MergeFrom(other.ReliabilityProjection);
           break;
       }
 
@@ -3065,6 +3743,24 @@ namespace Google.Cloud.Recommender.V1 {
             SecurityProjection = subBuilder;
             break;
           }
+          case 818: {
+            global::Google.Cloud.Recommender.V1.SustainabilityProjection subBuilder = new global::Google.Cloud.Recommender.V1.SustainabilityProjection();
+            if (projectionCase_ == ProjectionOneofCase.SustainabilityProjection) {
+              subBuilder.MergeFrom(SustainabilityProjection);
+            }
+            input.ReadMessage(subBuilder);
+            SustainabilityProjection = subBuilder;
+            break;
+          }
+          case 826: {
+            global::Google.Cloud.Recommender.V1.ReliabilityProjection subBuilder = new global::Google.Cloud.Recommender.V1.ReliabilityProjection();
+            if (projectionCase_ == ProjectionOneofCase.ReliabilityProjection) {
+              subBuilder.MergeFrom(ReliabilityProjection);
+            }
+            input.ReadMessage(subBuilder);
+            ReliabilityProjection = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -3102,6 +3798,24 @@ namespace Google.Cloud.Recommender.V1 {
             SecurityProjection = subBuilder;
             break;
           }
+          case 818: {
+            global::Google.Cloud.Recommender.V1.SustainabilityProjection subBuilder = new global::Google.Cloud.Recommender.V1.SustainabilityProjection();
+            if (projectionCase_ == ProjectionOneofCase.SustainabilityProjection) {
+              subBuilder.MergeFrom(SustainabilityProjection);
+            }
+            input.ReadMessage(subBuilder);
+            SustainabilityProjection = subBuilder;
+            break;
+          }
+          case 826: {
+            global::Google.Cloud.Recommender.V1.ReliabilityProjection subBuilder = new global::Google.Cloud.Recommender.V1.ReliabilityProjection();
+            if (projectionCase_ == ProjectionOneofCase.ReliabilityProjection) {
+              subBuilder.MergeFrom(ReliabilityProjection);
+            }
+            input.ReadMessage(subBuilder);
+            ReliabilityProjection = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -3136,6 +3850,14 @@ namespace Google.Cloud.Recommender.V1 {
         /// Indicates a potential increase or decrease in manageability.
         /// </summary>
         [pbr::OriginalName("MANAGEABILITY")] Manageability = 4,
+        /// <summary>
+        /// Indicates a potential increase or decrease in sustainability.
+        /// </summary>
+        [pbr::OriginalName("SUSTAINABILITY")] Sustainability = 5,
+        /// <summary>
+        /// Indicates a potential increase or decrease in reliability.
+        /// </summary>
+        [pbr::OriginalName("RELIABILITY")] Reliability = 6,
       }
 
     }
@@ -3146,6 +3868,7 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Information for state. Contains state and metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RecommendationStateInfo : pb::IMessage<RecommendationStateInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3160,7 +3883,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Recommender.V1.RecommendationReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Recommender.V1.RecommendationReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3313,7 +4036,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (other.State != global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State.Unspecified) {
         State = other.State;
       }
-      stateMetadata_.Add(other.stateMetadata_);
+      stateMetadata_.MergeFrom(other.stateMetadata_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

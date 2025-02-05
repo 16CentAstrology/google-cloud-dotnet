@@ -33,7 +33,7 @@ namespace Google.Cloud.DataCatalog.V1 {
             "bWVzdGFtcHMucHJvdG8aHmdvb2dsZS9pYW0vdjEvaWFtX3BvbGljeS5wcm90",
             "bxoaZ29vZ2xlL2lhbS92MS9wb2xpY3kucHJvdG8aG2dvb2dsZS9wcm90b2J1",
             "Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJv",
-            "dG8i6wQKCFRheG9ub215EhEKBG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5",
+            "dG8i6wQKCFRheG9ub215EhEKBG5hbWUYASABKAlCA+BBCBIZCgxkaXNwbGF5",
             "X25hbWUYAiABKAlCA+BBAhIYCgtkZXNjcmlwdGlvbhgDIAEoCUID4EEBEh0K",
             "EHBvbGljeV90YWdfY291bnQYBCABKAVCA+BBAxJPChN0YXhvbm9teV90aW1l",
             "c3RhbXBzGAUgASgLMi0uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlN5",
@@ -47,7 +47,7 @@ namespace Google.Cloud.DataCatalog.V1 {
             "R1JBSU5FRF9BQ0NFU1NfQ09OVFJPTBABOmfqQWQKI2RhdGFjYXRhbG9nLmdv",
             "b2dsZWFwaXMuY29tL1RheG9ub215Ej1wcm9qZWN0cy97cHJvamVjdH0vbG9j",
             "YXRpb25zL3tsb2NhdGlvbn0vdGF4b25vbWllcy97dGF4b25vbXl9IowCCglQ",
-            "b2xpY3lUYWcSEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgC",
+            "b2xpY3lUYWcSEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRpc3BsYXlfbmFtZRgC",
             "IAEoCUID4EECEhMKC2Rlc2NyaXB0aW9uGAMgASgJEhkKEXBhcmVudF9wb2xp",
             "Y3lfdGFnGAQgASgJEh4KEWNoaWxkX3BvbGljeV90YWdzGAUgAygJQgPgQQM6",
             "gAHqQX0KJGRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29tL1BvbGljeVRhZxJV",
@@ -86,47 +86,47 @@ namespace Google.Cloud.DataCatalog.V1 {
             "dGFsb2cuZ29vZ2xlYXBpcy5jb20vUG9saWN5VGFnMrsVChBQb2xpY3lUYWdN",
             "YW5hZ2VyEr8BCg5DcmVhdGVUYXhvbm9teRIyLmdvb2dsZS5jbG91ZC5kYXRh",
             "Y2F0YWxvZy52MS5DcmVhdGVUYXhvbm9teVJlcXVlc3QaJS5nb29nbGUuY2xv",
-            "dWQuZGF0YWNhdGFsb2cudjEuVGF4b25vbXkiUoLT5JMCOiIuL3YxL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vdGF4b25vbWllczoIdGF4b25v",
-            "bXnaQQ9wYXJlbnQsdGF4b25vbXkSmwEKDkRlbGV0ZVRheG9ub215EjIuZ29v",
+            "dWQuZGF0YWNhdGFsb2cudjEuVGF4b25vbXkiUtpBD3BhcmVudCx0YXhvbm9t",
+            "eYLT5JMCOiIuL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
+            "dGF4b25vbWllczoIdGF4b25vbXkSmwEKDkRlbGV0ZVRheG9ub215EjIuZ29v",
             "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkRlbGV0ZVRheG9ub215UmVxdWVz",
-            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI9gtPkkwIwKi4vdjEve25hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90YXhvbm9taWVzLyp92kEEbmFtZRLB",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI92kEEbmFtZYLT5JMCMCouL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdGF4b25vbWllcy8qfRLB",
             "AQoOVXBkYXRlVGF4b25vbXkSMi5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cu",
             "djEuVXBkYXRlVGF4b25vbXlSZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLmRhdGFj",
-            "YXRhbG9nLnYxLlRheG9ub215IlSC0+STAkMyNy92MS97dGF4b25vbXkubmFt",
-            "ZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3RheG9ub21pZXMvKn06CHRheG9u",
-            "b2152kEIdGF4b25vbXkSugEKDkxpc3RUYXhvbm9taWVzEjIuZ29vZ2xlLmNs",
+            "YXRhbG9nLnYxLlRheG9ub215IlTaQQh0YXhvbm9teYLT5JMCQzI3L3YxL3t0",
+            "YXhvbm9teS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdGF4b25vbWll",
+            "cy8qfToIdGF4b25vbXkSugEKDkxpc3RUYXhvbm9taWVzEjIuZ29vZ2xlLmNs",
             "b3VkLmRhdGFjYXRhbG9nLnYxLkxpc3RUYXhvbm9taWVzUmVxdWVzdBozLmdv",
             "b2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5MaXN0VGF4b25vbWllc1Jlc3Bv",
-            "bnNlIj+C0+STAjASLi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyp9L3RheG9ub21pZXPaQQZwYXJlbnQSpAEKC0dldFRheG9ub215Ei8uZ29v",
+            "bnNlIj/aQQZwYXJlbnSC0+STAjASLi92MS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyp9L3RheG9ub21pZXMSpAEKC0dldFRheG9ub215Ei8uZ29v",
             "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLkdldFRheG9ub215UmVxdWVzdBol",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYXhvbm9teSI9gtPkkwIw",
-            "Ei4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90YXhvbm9taWVz",
-            "Lyp92kEEbmFtZRLTAQoPQ3JlYXRlUG9saWN5VGFnEjMuZ29vZ2xlLmNsb3Vk",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5UYXhvbm9teSI92kEEbmFt",
+            "ZYLT5JMCMBIuL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdGF4",
+            "b25vbWllcy8qfRLTAQoPQ3JlYXRlUG9saWN5VGFnEjMuZ29vZ2xlLmNsb3Vk",
             "LmRhdGFjYXRhbG9nLnYxLkNyZWF0ZVBvbGljeVRhZ1JlcXVlc3QaJi5nb29n",
-            "bGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuUG9saWN5VGFnImOC0+STAkkiOy92",
-            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovdGF4b25vbWllcy8q",
-            "fS9wb2xpY3lUYWdzOgpwb2xpY3lfdGFn2kERcGFyZW50LHBvbGljeV90YWcS",
+            "bGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuUG9saWN5VGFnImPaQRFwYXJlbnQs",
+            "cG9saWN5X3RhZ4LT5JMCSSI7L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi90YXhvbm9taWVzLyp9L3BvbGljeVRhZ3M6CnBvbGljeV90YWcS",
             "qgEKD0RlbGV0ZVBvbGljeVRhZxIzLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
             "Zy52MS5EZWxldGVQb2xpY3lUYWdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5IkqC0+STAj0qOy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL3RheG9ub21pZXMvKi9wb2xpY3lUYWdzLyp92kEEbmFtZRLXAQoPVXBk",
+            "LkVtcHR5IkraQQRuYW1lgtPkkwI9KjsvdjEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi90YXhvbm9taWVzLyovcG9saWN5VGFncy8qfRLXAQoPVXBk",
             "YXRlUG9saWN5VGFnEjMuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlVw",
             "ZGF0ZVBvbGljeVRhZ1JlcXVlc3QaJi5nb29nbGUuY2xvdWQuZGF0YWNhdGFs",
-            "b2cudjEuUG9saWN5VGFnImeC0+STAlQyRi92MS97cG9saWN5X3RhZy5uYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovdGF4b25vbWllcy8qL3BvbGljeVRh",
-            "Z3MvKn06CnBvbGljeV90YWfaQQpwb2xpY3lfdGFnEscBCg5MaXN0UG9saWN5",
+            "b2cudjEuUG9saWN5VGFnImfaQQpwb2xpY3lfdGFngtPkkwJUMkYvdjEve3Bv",
+            "bGljeV90YWcubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3RheG9ub21p",
+            "ZXMvKi9wb2xpY3lUYWdzLyp9Ogpwb2xpY3lfdGFnEscBCg5MaXN0UG9saWN5",
             "VGFncxIyLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5MaXN0UG9saWN5",
             "VGFnc1JlcXVlc3QaMy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEuTGlz",
-            "dFBvbGljeVRhZ3NSZXNwb25zZSJMgtPkkwI9EjsvdjEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL3RheG9ub21pZXMvKn0vcG9saWN5VGFnc9pB",
-            "BnBhcmVudBK0AQoMR2V0UG9saWN5VGFnEjAuZ29vZ2xlLmNsb3VkLmRhdGFj",
+            "dFBvbGljeVRhZ3NSZXNwb25zZSJM2kEGcGFyZW50gtPkkwI9EjsvdjEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3RheG9ub21pZXMvKn0vcG9s",
+            "aWN5VGFncxK0AQoMR2V0UG9saWN5VGFnEjAuZ29vZ2xlLmNsb3VkLmRhdGFj",
             "YXRhbG9nLnYxLkdldFBvbGljeVRhZ1JlcXVlc3QaJi5nb29nbGUuY2xvdWQu",
-            "ZGF0YWNhdGFsb2cudjEuUG9saWN5VGFnIkqC0+STAj0SOy92MS97bmFtZT1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3RheG9ub21pZXMvKi9wb2xpY3lUYWdz",
-            "Lyp92kEEbmFtZRLqAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5H",
+            "ZGF0YWNhdGFsb2cudjEuUG9saWN5VGFnIkraQQRuYW1lgtPkkwI9EjsvdjEv",
+            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90YXhvbm9taWVzLyovcG9s",
+            "aWN5VGFncy8qfRLqAQoMR2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5H",
             "ZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kingGC",
             "0+STApcBIj8vdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyov",
             "dGF4b25vbWllcy8qfTpnZXRJYW1Qb2xpY3k6ASpaUSJML3YxL3tyZXNvdXJj",
@@ -144,12 +144,12 @@ namespace Google.Cloud.DataCatalog.V1 {
             "KlpXIlIvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovdGF4",
             "b25vbWllcy8qL3BvbGljeVRhZ3MvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq",
             "Gk7KQRpkYXRhY2F0YWxvZy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C3QEKH2NvbS5n",
+            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C2gEKH2NvbS5n",
             "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjFCFVBvbGljeVRhZ01hbmFnZXJQ",
             "cm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFjYXRhbG9nL2FwaXYx",
-            "L2RhdGFjYXRhbG9ncGI7ZGF0YWNhdGFsb2dwYvgBAaoCG0dvb2dsZS5DbG91",
-            "ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xW",
-            "MeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
+            "L2RhdGFjYXRhbG9ncGI7ZGF0YWNhdGFsb2dwYqoCG0dvb2dsZS5DbG91ZC5E",
+            "YXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoC",
+            "Hkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.CommonReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TimestampsReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -199,6 +199,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// + Public data
   /// ```
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Taxonomy : pb::IMessage<Taxonomy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -253,7 +254,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Resource name of this taxonomy in URL format.
+    /// Identifier. Resource name of this taxonomy in URL format.
     ///
     /// Note: Policy tag manager generates unique taxonomy IDs.
     /// </summary>
@@ -676,6 +677,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <summary>
       /// The source system of the Taxonomy.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Service : pb::IMessage<Service>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -740,7 +742,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         public const int IdentityFieldNumber = 2;
         private string identity_ = "";
         /// <summary>
-        /// P4SA Identity of the service.
+        /// The service agent for the service.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -927,6 +929,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   ///
   /// Where the "Geolocation" policy tag contains three children.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyTag : pb::IMessage<PolicyTag>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -979,7 +982,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Resource name of this policy tag in the URL format.
+    /// Identifier. Resource name of this policy tag in the URL format.
     ///
     /// The policy tag manager generates unique taxonomy IDs and policy tag IDs.
     /// </summary>
@@ -1287,6 +1290,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [CreateTaxonomy][google.cloud.datacatalog.v1.PolicyTagManager.CreateTaxonomy].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTaxonomyRequest : pb::IMessage<CreateTaxonomyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1532,6 +1536,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [DeleteTaxonomy][google.cloud.datacatalog.v1.PolicyTagManager.DeleteTaxonomy].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteTaxonomyRequest : pb::IMessage<DeleteTaxonomyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1730,6 +1735,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [UpdateTaxonomy][google.cloud.datacatalog.v1.PolicyTagManager.UpdateTaxonomy].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateTaxonomyRequest : pb::IMessage<UpdateTaxonomyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1989,6 +1995,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [ListTaxonomies][google.cloud.datacatalog.v1.PolicyTagManager.ListTaxonomies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTaxonomiesRequest : pb::IMessage<ListTaxonomiesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2310,6 +2317,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Response message for
   /// [ListTaxonomies][google.cloud.datacatalog.v1.PolicyTagManager.ListTaxonomies].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTaxonomiesResponse : pb::IMessage<ListTaxonomiesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2536,6 +2544,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [GetTaxonomy][google.cloud.datacatalog.v1.PolicyTagManager.GetTaxonomy].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTaxonomyRequest : pb::IMessage<GetTaxonomyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2732,6 +2741,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [CreatePolicyTag][google.cloud.datacatalog.v1.PolicyTagManager.CreatePolicyTag].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreatePolicyTagRequest : pb::IMessage<CreatePolicyTagRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2977,6 +2987,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [DeletePolicyTag][google.cloud.datacatalog.v1.PolicyTagManager.DeletePolicyTag].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeletePolicyTagRequest : pb::IMessage<DeletePolicyTagRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3175,6 +3186,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [UpdatePolicyTag][google.cloud.datacatalog.v1.PolicyTagManager.UpdatePolicyTag].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdatePolicyTagRequest : pb::IMessage<UpdatePolicyTagRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3435,6 +3447,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [ListPolicyTags][google.cloud.datacatalog.v1.PolicyTagManager.ListPolicyTags].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPolicyTagsRequest : pb::IMessage<ListPolicyTagsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3716,6 +3729,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Response message for
   /// [ListPolicyTags][google.cloud.datacatalog.v1.PolicyTagManager.ListPolicyTags].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPolicyTagsResponse : pb::IMessage<ListPolicyTagsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3942,6 +3956,7 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Request message for
   /// [GetPolicyTag][google.cloud.datacatalog.v1.PolicyTagManager.GetPolicyTag].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPolicyTagRequest : pb::IMessage<GetPolicyTagRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

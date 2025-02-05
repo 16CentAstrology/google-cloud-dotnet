@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Retail.V2.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Retail.V2;
     using Google.LongRunning;
     using System.Threading.Tasks;
 
@@ -38,6 +39,7 @@ namespace Google.Cloud.Retail.V2.Snippets
                 MaxSuggestions = 0,
                 Dataset = "",
                 VisitorId = "",
+                EnableAttributeSuggestions = false,
                 Entity = "",
             };
             // Make the request
@@ -62,6 +64,7 @@ namespace Google.Cloud.Retail.V2.Snippets
                 MaxSuggestions = 0,
                 Dataset = "",
                 VisitorId = "",
+                EnableAttributeSuggestions = false,
                 Entity = "",
             };
             // Make the request

@@ -26,14 +26,9 @@ namespace Google.Cloud.Spanner.V1
         public sealed class Statistics
         {
             /// <summary>
-            /// The total of <see cref="SessionPoolSegmentStatistics.ReadPoolCount"/> values across all databases in the pool.
+            /// The total of <see cref="SessionPoolSegmentStatistics.PoolCount"/> values across all databases in the pool.
             /// </summary>
-            public int TotalReadPoolCount => PerSegmentStatistics.Sum(d => d.ReadPoolCount);
-
-            /// <summary>
-            /// The total of <see cref="SessionPoolSegmentStatistics.ReadWritePoolCount"/> values across all databases in the pool.
-            /// </summary>
-            public int TotalReadWritePoolCount => PerSegmentStatistics.Sum(d => d.ReadWritePoolCount);
+            public int TotalPoolCount => PerSegmentStatistics.Sum(d => d.PoolCount);
 
             /// <summary>
             /// The total of <see cref="SessionPoolSegmentStatistics.ActiveSessionCount"/> values across all databases in the pool.
@@ -49,13 +44,6 @@ namespace Google.Cloud.Spanner.V1
             /// The total of <see cref="SessionPoolSegmentStatistics.PendingAcquisitionCount"/> values across all databases in the pool.
             /// </summary>
             public int TotalPendingAcquisitionCount => PerSegmentStatistics.Sum(d => d.PendingAcquisitionCount);
-
-            /// <summary>
-            /// The statistics broken down by <see cref="SessionPoolSegmentKey"/>. This is never null, but may be empty.
-            /// </summary>
-            [Obsolete($"Use {nameof(PerSegmentStatistics)} instead. Both properties return the same data, but the {nameof(PerSegmentStatistics)} name" +
-                " better represents the fact that sessions are pooled based on aspects other than database name.")]
-            public IReadOnlyList<DatabaseStatistics> PerDatabaseStatistics => PerSegmentStatistics.Select(s => new DatabaseStatistics(s)).ToList().AsReadOnly();
 
             /// <summary>
             /// The statistics broken down by <see cref="SessionPoolSegmentKey"/>. This is never null, but may be empty.

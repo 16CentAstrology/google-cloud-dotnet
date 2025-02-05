@@ -40,8 +40,8 @@ namespace Google.Cloud.ApigeeConnect.V1 {
             "AiABKAkyqgIKEUNvbm5lY3Rpb25TZXJ2aWNlEsIBCg9MaXN0Q29ubmVjdGlv",
             "bnMSNS5nb29nbGUuY2xvdWQuYXBpZ2VlY29ubmVjdC52MS5MaXN0Q29ubmVj",
             "dGlvbnNSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLmFwaWdlZWNvbm5lY3QudjEu",
-            "TGlzdENvbm5lY3Rpb25zUmVzcG9uc2UiQILT5JMCMRIvL3YxL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9lbmRwb2ludHMvKn0vY29ubmVjdGlvbnPaQQZwYXJlbnQa",
+            "TGlzdENvbm5lY3Rpb25zUmVzcG9uc2UiQNpBBnBhcmVudILT5JMCMRIvL3Yx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9lbmRwb2ludHMvKn0vY29ubmVjdGlvbnMa",
             "UMpBHGFwaWdlZWNvbm5lY3QuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3",
             "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQrUCCiFjb20u",
             "Z29vZ2xlLmNsb3VkLmFwaWdlZWNvbm5lY3QudjFCD0Nvbm5lY3Rpb25Qcm90",
@@ -67,6 +67,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   /// <summary>
   /// The request for [ListConnections][Management.ListConnections].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListConnectionsRequest : pb::IMessage<ListConnectionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -350,6 +351,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   /// The response for
   /// [ListConnections][Management.ListConnections].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListConnectionsResponse : pb::IMessage<ListConnectionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -572,6 +574,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Connection : pb::IMessage<Connection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -854,6 +857,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Cluster : pb::IMessage<Cluster>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

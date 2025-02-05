@@ -1,5 +1,49 @@
 # Version history
 
+## Version 2.9.0, released 2024-06-04
+
+### New features
+
+- Add properties for nested resource name references ([commit 15eec4d](https://github.com/googleapis/google-cloud-dotnet/commit/15eec4dabb9fd3cf3b8f4b978d64b7ba435ca995))
+
+## Version 2.8.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.7.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.6.0, released 2024-02-28
+
+No API surface changes; just dependency updates.
+
+## Version 2.5.0, released 2023-10-02
+
+### New features
+
+- Added EndpointLocation (v1, v1beta, v1alpha) ([commit 264ddbe](https://github.com/googleapis/google-cloud-dotnet/commit/264ddbe6cb6038cc68573ca7230a2e8446554490))
+
+## Version 2.4.0, released 2023-07-13
+
+### New features
+
+- Added Admin Interface (v1) ([commit bbd1b88](https://github.com/googleapis/google-cloud-dotnet/commit/bbd1b8818823d9cec0994cc232b427f988cf291a))
+- Added gRPC endpoint protocol (v1) ([commit bbd1b88](https://github.com/googleapis/google-cloud-dotnet/commit/bbd1b8818823d9cec0994cc232b427f988cf291a))
+- Added BigQuery as a backend metastore (v1) ([commit bbd1b88](https://github.com/googleapis/google-cloud-dotnet/commit/bbd1b8818823d9cec0994cc232b427f988cf291a))
+
+## Version 2.3.0, released 2023-04-19
+
+### New features
+
+- Added ScalingConfig (v1) ([commit d2e0f6c](https://github.com/googleapis/google-cloud-dotnet/commit/d2e0f6c8f53092c18b2d25bd9fc0e78fa29824d5))
+- Added Auxiliary Versions Config (v1) ([commit d2e0f6c](https://github.com/googleapis/google-cloud-dotnet/commit/d2e0f6c8f53092c18b2d25bd9fc0e78fa29824d5))
+- Added Dataplex and BQ metastore types for federation (v1alpa, v1beta) ([commit d2e0f6c](https://github.com/googleapis/google-cloud-dotnet/commit/d2e0f6c8f53092c18b2d25bd9fc0e78fa29824d5))
+
 ## Version 2.2.0, released 2023-01-16
 
 ### New features

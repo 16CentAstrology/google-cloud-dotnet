@@ -9,13 +9,10 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013;AD0001</NoWarn>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp1.0|AnyCPU'">
-    <DefineConstants>TRACE;DEBUG;NETCOREAPP1_0</DefineConstants>
-  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Spanner.Data\Google.Cloud.Spanner.Data.csproj" />
-    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit" Version="$(XUnitVersion)" />
     <Reference Condition="'$(TargetFramework)' == 'net452'" Include="Microsoft.CSharp" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>

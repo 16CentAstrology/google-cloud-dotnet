@@ -54,13 +54,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "AiABKAUSFQoNZnVuY3Rpb25fbmFtZRgEIAEoCSpqChBSZXNvbHV0aW9uU3Rh",
             "dHVzEiEKHVJFU09MVVRJT05fU1RBVFVTX1VOU1BFQ0lGSUVEEAASCAoET1BF",
             "ThABEhAKDEFDS05PV0xFREdFRBACEgwKCFJFU09MVkVEEAMSCQoFTVVURUQQ",
-            "BEKYAgovY29tLmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5n",
-            "LnYxYmV0YTFCC0NvbW1vblByb3RvUAFaXmdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvZGV2dG9vbHMvY2xvdWRlcnJvcnJlcG9ydGlu",
-            "Zy92MWJldGExO2Nsb3VkZXJyb3JyZXBvcnRpbmf4AQGqAiNHb29nbGUuQ2xv",
-            "dWQuRXJyb3JSZXBvcnRpbmcuVjFCZXRhMcoCI0dvb2dsZVxDbG91ZFxFcnJv",
-            "clJlcG9ydGluZ1xWMWJldGEx6gImR29vZ2xlOjpDbG91ZDo6RXJyb3JSZXBv",
-            "cnRpbmc6OlYxYmV0YTFiBnByb3RvMw=="));
+            "BEKJAgovY29tLmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5n",
+            "LnYxYmV0YTFCC0NvbW1vblByb3RvUAFaT2Nsb3VkLmdvb2dsZS5jb20vZ28v",
+            "ZXJyb3JyZXBvcnRpbmcvYXBpdjFiZXRhMS9lcnJvcnJlcG9ydGluZ3BiO2Vy",
+            "cm9ycmVwb3J0aW5ncGL4AQGqAiNHb29nbGUuQ2xvdWQuRXJyb3JSZXBvcnRp",
+            "bmcuVjFCZXRhMcoCI0dvb2dsZVxDbG91ZFxFcnJvclJlcG9ydGluZ1xWMWJl",
+            "dGEx6gImR29vZ2xlOjpDbG91ZDo6RXJyb3JSZXBvcnRpbmc6OlYxYmV0YTFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ResolutionStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -112,6 +112,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// <summary>
   /// Description of a group of similar error events.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorGroup : pb::IMessage<ErrorGroup>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -164,7 +165,21 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// The group resource name.
-    /// Example: &lt;code>projects/my-project-123/groups/CNSgkpnppqKCUw&lt;/code>
+    /// Written as `projects/{projectID}/groups/{group_id}` or
+    /// `projects/{projectID}/locations/{location}/groups/{group_id}`
+    ///
+    /// Examples: `projects/my-project-123/groups/my-group`,
+    /// `projects/my-project-123/locations/us-central1/groups/my-group`
+    ///
+    /// In the group resource name, the `group_id` is a unique identifier for a
+    /// particular error group. The identifier is derived from key parts of the
+    /// error-log content and is treated as Service Data. For information about
+    /// how Service Data is handled, see [Google Cloud Privacy
+    /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
+    ///
+    /// For a list of supported locations, see [Supported
+    /// Regions](https://cloud.google.com/logging/docs/region-support). `global` is
+    /// the default when unspecified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -179,8 +194,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int GroupIdFieldNumber = 2;
     private string groupId_ = "";
     /// <summary>
-    /// Group IDs are unique for a given project. If the same kind of error
-    /// occurs in different service contexts, it will receive the same group ID.
+    /// An opaque identifier of the group. This field is assigned by the Error
+    /// Reporting system and always populated.
+    ///
+    /// In the group resource name, the `group_id` is a unique identifier for a
+    /// particular error group. The identifier is derived from key parts of the
+    /// error-log content and is treated as Service Data. For information about
+    /// how Service Data is handled, see [Google Cloud Privacy
+    /// Notice](https://cloud.google.com/terms/cloud-privacy-notice).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -210,6 +231,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private global::Google.Cloud.ErrorReporting.V1Beta1.ResolutionStatus resolutionStatus_ = global::Google.Cloud.ErrorReporting.V1Beta1.ResolutionStatus.Unspecified;
     /// <summary>
     /// Error group's resolution status.
+    ///
     /// An unspecified resolution status will be interpreted as OPEN
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -419,6 +441,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// <summary>
   /// Information related to tracking the progress on resolving the error.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrackingIssue : pb::IMessage<TrackingIssue>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -615,6 +638,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// <summary>
   /// An error event which is returned by the Error Reporting system.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorEvent : pb::IMessage<ErrorEvent>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -960,6 +984,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// Describes a running service that sends errors.
   /// Its version changes over time and multiple versions can run in parallel.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServiceContext : pb::IMessage<ServiceContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1251,6 +1276,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// unless the
   /// error report has been generated automatically from Google App Engine logs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ErrorContext : pb::IMessage<ErrorContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1559,6 +1585,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// unless the
   /// error report has been generated automatically from Google App Engine logs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HttpRequestContext : pb::IMessage<HttpRequestContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1960,6 +1987,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// an error, unless the error report contains a `message` with a supported
   /// exception stack trace. All fields are optional for the later case.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SourceLocation : pb::IMessage<SourceLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

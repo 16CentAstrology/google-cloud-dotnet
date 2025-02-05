@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.4.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 3.3.0, released 2024-03-06
+
+No API surface changes; just dependency updates.
+
 ## Version 3.2.0, released 2023-03-27
 
 No API surface changes; just dependency updates and a GA release for self-signed JWTs.

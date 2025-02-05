@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Vision.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Vision.V1;
     using Google.LongRunning;
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -37,6 +38,7 @@ namespace Google.Cloud.Vision.V1.Snippets
                     new AnnotateImageRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(request);
@@ -58,6 +60,7 @@ namespace Google.Cloud.Vision.V1.Snippets
                     new AnnotateImageRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(request);
@@ -111,6 +114,7 @@ namespace Google.Cloud.Vision.V1.Snippets
                     new AnnotateFileRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             BatchAnnotateFilesResponse response = imageAnnotatorClient.BatchAnnotateFiles(request);
@@ -132,6 +136,7 @@ namespace Google.Cloud.Vision.V1.Snippets
                     new AnnotateFileRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             BatchAnnotateFilesResponse response = await imageAnnotatorClient.BatchAnnotateFilesAsync(request);
@@ -186,6 +191,7 @@ namespace Google.Cloud.Vision.V1.Snippets
                 },
                 OutputConfig = new OutputConfig(),
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response = imageAnnotatorClient.AsyncBatchAnnotateImages(request);
@@ -224,6 +230,7 @@ namespace Google.Cloud.Vision.V1.Snippets
                 },
                 OutputConfig = new OutputConfig(),
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<AsyncBatchAnnotateImagesResponse, OperationMetadata> response = await imageAnnotatorClient.AsyncBatchAnnotateImagesAsync(request);
@@ -327,6 +334,7 @@ namespace Google.Cloud.Vision.V1.Snippets
                     new AsyncAnnotateFileRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response = imageAnnotatorClient.AsyncBatchAnnotateFiles(request);
@@ -364,6 +372,7 @@ namespace Google.Cloud.Vision.V1.Snippets
                     new AsyncAnnotateFileRequest(),
                 },
                 Parent = "",
+                Labels = { { "", "" }, },
             };
             // Make the request
             Operation<AsyncBatchAnnotateFilesResponse, OperationMetadata> response = await imageAnnotatorClient.AsyncBatchAnnotateFilesAsync(request);

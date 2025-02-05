@@ -28,12 +28,12 @@ namespace Google.Maps.Routing.V2 {
             "bGUubWFwcy5yb3V0aW5nLnYyGh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMu",
             "cHJvdG8aGGdvb2dsZS90eXBlL2xhdGxuZy5wcm90byJeCghMb2NhdGlvbhIk",
             "CgdsYXRfbG5nGAEgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEiwKB2hlYWRp",
-            "bmcYAiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZULCAQoaY29t",
+            "bmcYAiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZUK/AQoaY29t",
             "Lmdvb2dsZS5tYXBzLnJvdXRpbmcudjJCDUxvY2F0aW9uUHJvdG9QAVo6Y2xv",
             "dWQuZ29vZ2xlLmNvbS9nby9tYXBzL3JvdXRpbmcvYXBpdjIvcm91dGluZ3Bi",
-            "O3JvdXRpbmdwYvgBAaICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91dGluZy5W",
-            "MsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJv",
-            "dXRpbmc6OlYyYgZwcm90bzM="));
+            "O3JvdXRpbmdwYqICBUdNUlYyqgIWR29vZ2xlLk1hcHMuUm91dGluZy5WMsoC",
+            "Fkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLqAhlHb29nbGU6Ok1hcHM6OlJvdXRp",
+            "bmc6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -47,6 +47,7 @@ namespace Google.Maps.Routing.V2 {
   /// <summary>
   /// Encapsulates a location (a geographic point, and an optional heading).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Location : pb::IMessage<Location>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -113,11 +114,11 @@ namespace Google.Maps.Routing.V2 {
     private int? heading_;
     /// <summary>
     /// The compass heading associated with the direction of the flow of traffic.
-    /// This value is used to specify the side of the road to use for pickup and
-    /// drop-off. Heading values can be from 0 to 360, where 0 specifies a heading
-    /// of due North, 90 specifies a heading of due East, etc. You can use this
-    /// field only for `DRIVE` and `TWO_WHEELER`
-    /// [RouteTravelMode][google.maps.routing.v2.RouteTravelMode].
+    /// This value specifies the side of the road for pickup and drop-off. Heading
+    /// values can be from 0 to 360, where 0 specifies a heading of due North, 90
+    /// specifies a heading of due East, and so on. You can use this field only for
+    /// `DRIVE` and `TWO_WHEELER`
+    /// [`RouteTravelMode`][google.maps.routing.v2.RouteTravelMode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -70,7 +70,7 @@ namespace Google.Apps.Script.Type {
     /// </summary>
     [pbr::OriginalName("HTTP_AUTHORIZATION_HEADER_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Send an ID token for the project-specific Google Workspace Add-ons system
+    /// Send an ID token for the project-specific Google Workspace add-ons system
     /// service account (default)
     /// </summary>
     [pbr::OriginalName("SYSTEM_ID_TOKEN")] SystemIdToken = 1,
@@ -90,6 +90,7 @@ namespace Google.Apps.Script.Type {
   /// <summary>
   /// Add-on configuration that is shared across all add-on host applications.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CommonAddOnManifest : pb::IMessage<CommonAddOnManifest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -603,6 +604,7 @@ namespace Google.Apps.Script.Type {
   /// <summary>
   /// Card layout properties shared across all add-on host applications.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LayoutProperties : pb::IMessage<LayoutProperties>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -844,6 +846,7 @@ namespace Google.Apps.Script.Type {
   /// <summary>
   /// Options for sending requests to add-on HTTP endpoints
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HttpOptions : pb::IMessage<HttpOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

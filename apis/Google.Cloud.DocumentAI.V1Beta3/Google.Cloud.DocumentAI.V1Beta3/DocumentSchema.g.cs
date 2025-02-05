@@ -25,39 +25,61 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjVnb29nbGUvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEzL2RvY3VtZW50X3Nj",
-            "aGVtYS5wcm90bxIfZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMyLA",
-            "BwoORG9jdW1lbnRTY2hlbWESFAoMZGlzcGxheV9uYW1lGAEgASgJEhMKC2Rl",
-            "c2NyaXB0aW9uGAIgASgJElAKDGVudGl0eV90eXBlcxgDIAMoCzI6Lmdvb2ds",
+            "aGVtYS5wcm90bxIfZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMyKs",
+            "AgoOU3VtbWFyeU9wdGlvbnMSRgoGbGVuZ3RoGAEgASgOMjYuZ29vZ2xlLmNs",
+            "b3VkLmRvY3VtZW50YWkudjFiZXRhMy5TdW1tYXJ5T3B0aW9ucy5MZW5ndGgS",
+            "RgoGZm9ybWF0GAIgASgOMjYuZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFi",
+            "ZXRhMy5TdW1tYXJ5T3B0aW9ucy5Gb3JtYXQiTAoGTGVuZ3RoEhYKEkxFTkdU",
+            "SF9VTlNQRUNJRklFRBAAEgkKBUJSSUVGEAESDAoITU9ERVJBVEUQAhIRCg1D",
+            "T01QUkVIRU5TSVZFEAMiPAoGRm9ybWF0EhYKEkZPUk1BVF9VTlNQRUNJRklF",
+            "RBAAEg0KCVBBUkFHUkFQSBABEgsKB0JVTExFVFMQAiJjChdGaWVsZEV4dHJh",
+            "Y3Rpb25NZXRhZGF0YRJICg9zdW1tYXJ5X29wdGlvbnMYAiABKAsyLy5nb29n",
+            "bGUuY2xvdWQuZG9jdW1lbnRhaS52MWJldGEzLlN1bW1hcnlPcHRpb25zIoEB",
+            "ChBQcm9wZXJ0eU1ldGFkYXRhEhAKCGluYWN0aXZlGAMgASgIElsKGWZpZWxk",
+            "X2V4dHJhY3Rpb25fbWV0YWRhdGEYCSABKAsyOC5nb29nbGUuY2xvdWQuZG9j",
+            "dW1lbnRhaS52MWJldGEzLkZpZWxkRXh0cmFjdGlvbk1ldGFkYXRhIiYKEkVu",
+            "dGl0eVR5cGVNZXRhZGF0YRIQCghpbmFjdGl2ZRgFIAEoCCKhCQoORG9jdW1l",
+            "bnRTY2hlbWESFAoMZGlzcGxheV9uYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9u",
+            "GAIgASgJElAKDGVudGl0eV90eXBlcxgDIAMoCzI6Lmdvb2dsZS5jbG91ZC5k",
+            "b2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZRJK",
+            "CghtZXRhZGF0YRgEIAEoCzI4Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
+            "YmV0YTMuRG9jdW1lbnRTY2hlbWEuTWV0YWRhdGEargYKCkVudGl0eVR5cGUS",
+            "XAoLZW51bV92YWx1ZXMYDiABKAsyRS5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
+            "aS52MWJldGEzLkRvY3VtZW50U2NoZW1hLkVudGl0eVR5cGUuRW51bVZhbHVl",
+            "c0gAEhQKDGRpc3BsYXlfbmFtZRgNIAEoCRIMCgRuYW1lGAEgASgJEhMKC2Rl",
+            "c2NyaXB0aW9uGA8gASgJEhIKCmJhc2VfdHlwZXMYAiADKAkSVwoKcHJvcGVy",
+            "dGllcxgGIAMoCzJDLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMu",
+            "RG9jdW1lbnRTY2hlbWEuRW50aXR5VHlwZS5Qcm9wZXJ0eRJRChRlbnRpdHlf",
+            "dHlwZV9tZXRhZGF0YRgLIAEoCzIzLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFp",
+            "LnYxYmV0YTMuRW50aXR5VHlwZU1ldGFkYXRhGhwKCkVudW1WYWx1ZXMSDgoG",
+            "dmFsdWVzGAEgAygJGpoDCghQcm9wZXJ0eRIMCgRuYW1lGAEgASgJEhMKC2Rl",
+            "c2NyaXB0aW9uGAcgASgJEhQKDGRpc3BsYXlfbmFtZRgGIAEoCRISCgp2YWx1",
+            "ZV90eXBlGAIgASgJEmsKD29jY3VycmVuY2VfdHlwZRgDIAEoDjJSLmdvb2ds",
             "ZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEuRW50",
-            "aXR5VHlwZRJKCghtZXRhZGF0YRgEIAEoCzI4Lmdvb2dsZS5jbG91ZC5kb2N1",
-            "bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEuTWV0YWRhdGEazQQKCkVu",
-            "dGl0eVR5cGUSXAoLZW51bV92YWx1ZXMYDiABKAsyRS5nb29nbGUuY2xvdWQu",
-            "ZG9jdW1lbnRhaS52MWJldGEzLkRvY3VtZW50U2NoZW1hLkVudGl0eVR5cGUu",
-            "RW51bVZhbHVlc0gAEhQKDGRpc3BsYXlfbmFtZRgNIAEoCRIMCgRuYW1lGAEg",
-            "ASgJEhIKCmJhc2VfdHlwZXMYAiADKAkSVwoKcHJvcGVydGllcxgGIAMoCzJD",
-            "Lmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hl",
-            "bWEuRW50aXR5VHlwZS5Qcm9wZXJ0eRocCgpFbnVtVmFsdWVzEg4KBnZhbHVl",
-            "cxgBIAMoCRqhAgoIUHJvcGVydHkSDAoEbmFtZRgBIAEoCRISCgp2YWx1ZV90",
-            "eXBlGAIgASgJEmsKD29jY3VycmVuY2VfdHlwZRgDIAEoDjJSLmdvb2dsZS5j",
-            "bG91ZC5kb2N1bWVudGFpLnYxYmV0YTMuRG9jdW1lbnRTY2hlbWEuRW50aXR5",
-            "VHlwZS5Qcm9wZXJ0eS5PY2N1cnJlbmNlVHlwZSKFAQoOT2NjdXJyZW5jZVR5",
-            "cGUSHwobT0NDVVJSRU5DRV9UWVBFX1VOU1BFQ0lGSUVEEAASEQoNT1BUSU9O",
-            "QUxfT05DRRABEhUKEU9QVElPTkFMX01VTFRJUExFEAISEQoNUkVRVUlSRURf",
-            "T05DRRADEhUKEVJFUVVJUkVEX01VTFRJUExFEARCDgoMdmFsdWVfc291cmNl",
-            "GpQBCghNZXRhZGF0YRIZChFkb2N1bWVudF9zcGxpdHRlchgBIAEoCBImCh5k",
-            "b2N1bWVudF9hbGxvd19tdWx0aXBsZV9sYWJlbHMYAiABKAgSJQodcHJlZml4",
-            "ZWRfbmFtaW5nX29uX3Byb3BlcnRpZXMYBiABKAgSHgoWc2tpcF9uYW1pbmdf",
-            "dmFsaWRhdGlvbhgHIAEoCELvAQojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVu",
-            "dGFpLnYxYmV0YTNCGERvY3VtZW50QWlEb2N1bWVudFNjaGVtYVABWkNjbG91",
-            "ZC5nb29nbGUuY29tL2dvL2RvY3VtZW50YWkvYXBpdjFiZXRhMy9kb2N1bWVu",
-            "dGFpcGI7ZG9jdW1lbnRhaXBiqgIfR29vZ2xlLkNsb3VkLkRvY3VtZW50QUku",
-            "VjFCZXRhM8oCH0dvb2dsZVxDbG91ZFxEb2N1bWVudEFJXFYxYmV0YTPqAiJH",
-            "b29nbGU6OkNsb3VkOjpEb2N1bWVudEFJOjpWMWJldGEzYgZwcm90bzM="));
+            "aXR5VHlwZS5Qcm9wZXJ0eS5PY2N1cnJlbmNlVHlwZRJMChFwcm9wZXJ0eV9t",
+            "ZXRhZGF0YRgFIAEoCzIxLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0",
+            "YTMuUHJvcGVydHlNZXRhZGF0YSKFAQoOT2NjdXJyZW5jZVR5cGUSHwobT0ND",
+            "VVJSRU5DRV9UWVBFX1VOU1BFQ0lGSUVEEAASEQoNT1BUSU9OQUxfT05DRRAB",
+            "EhUKEU9QVElPTkFMX01VTFRJUExFEAISEQoNUkVRVUlSRURfT05DRRADEhUK",
+            "EVJFUVVJUkVEX01VTFRJUExFEARCDgoMdmFsdWVfc291cmNlGpQBCghNZXRh",
+            "ZGF0YRIZChFkb2N1bWVudF9zcGxpdHRlchgBIAEoCBImCh5kb2N1bWVudF9h",
+            "bGxvd19tdWx0aXBsZV9sYWJlbHMYAiABKAgSJQodcHJlZml4ZWRfbmFtaW5n",
+            "X29uX3Byb3BlcnRpZXMYBiABKAgSHgoWc2tpcF9uYW1pbmdfdmFsaWRhdGlv",
+            "bhgHIAEoCELvAQojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0",
+            "YTNCGERvY3VtZW50QWlEb2N1bWVudFNjaGVtYVABWkNjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2RvY3VtZW50YWkvYXBpdjFiZXRhMy9kb2N1bWVudGFpcGI7ZG9j",
+            "dW1lbnRhaXBiqgIfR29vZ2xlLkNsb3VkLkRvY3VtZW50QUkuVjFCZXRhM8oC",
+            "H0dvb2dsZVxDbG91ZFxEb2N1bWVudEFJXFYxYmV0YTPqAiJHb29nbGU6OkNs",
+            "b3VkOjpEb2N1bWVudEFJOjpWMWJldGEzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Parser, new[]{ "DisplayName", "Description", "EntityTypes", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Parser, new[]{ "EnumValues", "DisplayName", "Name", "BaseTypes", "Properties" }, new[]{ "ValueSource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues.Parser, new[]{ "Values" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Parser, new[]{ "Name", "ValueType", "OccurrenceType" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions), global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Parser, new[]{ "Length", "Format" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Length), typeof(global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Format) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.FieldExtractionMetadata), global::Google.Cloud.DocumentAI.V1Beta3.FieldExtractionMetadata.Parser, new[]{ "SummaryOptions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata), global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata.Parser, new[]{ "Inactive", "FieldExtractionMetadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata), global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata.Parser, new[]{ "Inactive" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Parser, new[]{ "DisplayName", "Description", "EntityTypes", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Parser, new[]{ "EnumValues", "DisplayName", "Name", "Description", "BaseTypes", "Properties", "EntityTypeMetadata" }, new[]{ "ValueSource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.EnumValues.Parser, new[]{ "Values" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Parser, new[]{ "Name", "Description", "DisplayName", "ValueType", "OccurrenceType", "PropertyMetadata" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.Metadata), global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.Metadata.Parser, new[]{ "DocumentSplitter", "DocumentAllowMultipleLabels", "PrefixedNamingOnProperties", "SkipNamingValidation" }, null, null, null, null)})
           }));
     }
@@ -66,8 +88,939 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
   }
   #region Messages
   /// <summary>
+  /// Metadata for document summarization.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SummaryOptions : pb::IMessage<SummaryOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SummaryOptions> _parser = new pb::MessageParser<SummaryOptions>(() => new SummaryOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SummaryOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SummaryOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SummaryOptions(SummaryOptions other) : this() {
+      length_ = other.length_;
+      format_ = other.format_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SummaryOptions Clone() {
+      return new SummaryOptions(this);
+    }
+
+    /// <summary>Field number for the "length" field.</summary>
+    public const int LengthFieldNumber = 1;
+    private global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Length length_ = global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Length.Unspecified;
+    /// <summary>
+    /// How long the summary should be.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Length Length {
+      get { return length_; }
+      set {
+        length_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "format" field.</summary>
+    public const int FormatFieldNumber = 2;
+    private global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Format format_ = global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Format.Unspecified;
+    /// <summary>
+    /// The format the summary should be in.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Format Format {
+      get { return format_; }
+      set {
+        format_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SummaryOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SummaryOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Length != other.Length) return false;
+      if (Format != other.Format) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Length != global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Length.Unspecified) hash ^= Length.GetHashCode();
+      if (Format != global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Format.Unspecified) hash ^= Format.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Length != global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Length.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Length);
+      }
+      if (Format != global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Format.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Format);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Length != global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Length.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Length);
+      }
+      if (Format != global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Format.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Format);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Length != global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Length.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Length);
+      }
+      if (Format != global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Format.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Format);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SummaryOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Length != global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Length.Unspecified) {
+        Length = other.Length;
+      }
+      if (other.Format != global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Format.Unspecified) {
+        Format = other.Format;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Length = (global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Length) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            Format = (global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Format) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Length = (global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Length) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            Format = (global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions.Types.Format) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SummaryOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The Length enum.
+      /// </summary>
+      public enum Length {
+        /// <summary>
+        /// Default.
+        /// </summary>
+        [pbr::OriginalName("LENGTH_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// A brief summary of one or two sentences.
+        /// </summary>
+        [pbr::OriginalName("BRIEF")] Brief = 1,
+        /// <summary>
+        /// A paragraph-length summary.
+        /// </summary>
+        [pbr::OriginalName("MODERATE")] Moderate = 2,
+        /// <summary>
+        /// The longest option available.
+        /// </summary>
+        [pbr::OriginalName("COMPREHENSIVE")] Comprehensive = 3,
+      }
+
+      /// <summary>
+      /// The Format enum.
+      /// </summary>
+      public enum Format {
+        /// <summary>
+        /// Default.
+        /// </summary>
+        [pbr::OriginalName("FORMAT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Format the output in paragraphs.
+        /// </summary>
+        [pbr::OriginalName("PARAGRAPH")] Paragraph = 1,
+        /// <summary>
+        /// Format the output in bullets.
+        /// </summary>
+        [pbr::OriginalName("BULLETS")] Bullets = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Metadata for how this field value is extracted.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FieldExtractionMetadata : pb::IMessage<FieldExtractionMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FieldExtractionMetadata> _parser = new pb::MessageParser<FieldExtractionMetadata>(() => new FieldExtractionMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FieldExtractionMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FieldExtractionMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FieldExtractionMetadata(FieldExtractionMetadata other) : this() {
+      summaryOptions_ = other.summaryOptions_ != null ? other.summaryOptions_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FieldExtractionMetadata Clone() {
+      return new FieldExtractionMetadata(this);
+    }
+
+    /// <summary>Field number for the "summary_options" field.</summary>
+    public const int SummaryOptionsFieldNumber = 2;
+    private global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions summaryOptions_;
+    /// <summary>
+    /// Summary options config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions SummaryOptions {
+      get { return summaryOptions_; }
+      set {
+        summaryOptions_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FieldExtractionMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FieldExtractionMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(SummaryOptions, other.SummaryOptions)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (summaryOptions_ != null) hash ^= SummaryOptions.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (summaryOptions_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SummaryOptions);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (summaryOptions_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SummaryOptions);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (summaryOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SummaryOptions);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FieldExtractionMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.summaryOptions_ != null) {
+        if (summaryOptions_ == null) {
+          SummaryOptions = new global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions();
+        }
+        SummaryOptions.MergeFrom(other.SummaryOptions);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            if (summaryOptions_ == null) {
+              SummaryOptions = new global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions();
+            }
+            input.ReadMessage(SummaryOptions);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            if (summaryOptions_ == null) {
+              SummaryOptions = new global::Google.Cloud.DocumentAI.V1Beta3.SummaryOptions();
+            }
+            input.ReadMessage(SummaryOptions);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata about a property.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PropertyMetadata : pb::IMessage<PropertyMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PropertyMetadata> _parser = new pb::MessageParser<PropertyMetadata>(() => new PropertyMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PropertyMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PropertyMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PropertyMetadata(PropertyMetadata other) : this() {
+      inactive_ = other.inactive_;
+      fieldExtractionMetadata_ = other.fieldExtractionMetadata_ != null ? other.fieldExtractionMetadata_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PropertyMetadata Clone() {
+      return new PropertyMetadata(this);
+    }
+
+    /// <summary>Field number for the "inactive" field.</summary>
+    public const int InactiveFieldNumber = 3;
+    private bool inactive_;
+    /// <summary>
+    /// Whether the property should be considered as "inactive".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Inactive {
+      get { return inactive_; }
+      set {
+        inactive_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field_extraction_metadata" field.</summary>
+    public const int FieldExtractionMetadataFieldNumber = 9;
+    private global::Google.Cloud.DocumentAI.V1Beta3.FieldExtractionMetadata fieldExtractionMetadata_;
+    /// <summary>
+    /// Field extraction metadata on the property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DocumentAI.V1Beta3.FieldExtractionMetadata FieldExtractionMetadata {
+      get { return fieldExtractionMetadata_; }
+      set {
+        fieldExtractionMetadata_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PropertyMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PropertyMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Inactive != other.Inactive) return false;
+      if (!object.Equals(FieldExtractionMetadata, other.FieldExtractionMetadata)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Inactive != false) hash ^= Inactive.GetHashCode();
+      if (fieldExtractionMetadata_ != null) hash ^= FieldExtractionMetadata.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Inactive != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Inactive);
+      }
+      if (fieldExtractionMetadata_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(FieldExtractionMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Inactive != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Inactive);
+      }
+      if (fieldExtractionMetadata_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(FieldExtractionMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Inactive != false) {
+        size += 1 + 1;
+      }
+      if (fieldExtractionMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldExtractionMetadata);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PropertyMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Inactive != false) {
+        Inactive = other.Inactive;
+      }
+      if (other.fieldExtractionMetadata_ != null) {
+        if (fieldExtractionMetadata_ == null) {
+          FieldExtractionMetadata = new global::Google.Cloud.DocumentAI.V1Beta3.FieldExtractionMetadata();
+        }
+        FieldExtractionMetadata.MergeFrom(other.FieldExtractionMetadata);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 24: {
+            Inactive = input.ReadBool();
+            break;
+          }
+          case 74: {
+            if (fieldExtractionMetadata_ == null) {
+              FieldExtractionMetadata = new global::Google.Cloud.DocumentAI.V1Beta3.FieldExtractionMetadata();
+            }
+            input.ReadMessage(FieldExtractionMetadata);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 24: {
+            Inactive = input.ReadBool();
+            break;
+          }
+          case 74: {
+            if (fieldExtractionMetadata_ == null) {
+              FieldExtractionMetadata = new global::Google.Cloud.DocumentAI.V1Beta3.FieldExtractionMetadata();
+            }
+            input.ReadMessage(FieldExtractionMetadata);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata about an entity type.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EntityTypeMetadata : pb::IMessage<EntityTypeMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EntityTypeMetadata> _parser = new pb::MessageParser<EntityTypeMetadata>(() => new EntityTypeMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EntityTypeMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntityTypeMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntityTypeMetadata(EntityTypeMetadata other) : this() {
+      inactive_ = other.inactive_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntityTypeMetadata Clone() {
+      return new EntityTypeMetadata(this);
+    }
+
+    /// <summary>Field number for the "inactive" field.</summary>
+    public const int InactiveFieldNumber = 5;
+    private bool inactive_;
+    /// <summary>
+    /// Whether the entity type should be considered inactive.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Inactive {
+      get { return inactive_; }
+      set {
+        inactive_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EntityTypeMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EntityTypeMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Inactive != other.Inactive) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Inactive != false) hash ^= Inactive.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Inactive != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Inactive);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Inactive != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Inactive);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Inactive != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EntityTypeMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Inactive != false) {
+        Inactive = other.Inactive;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 40: {
+            Inactive = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 40: {
+            Inactive = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The schema defines the output of the processed document by a processor.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DocumentSchema : pb::IMessage<DocumentSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -82,7 +1035,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchemaReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -386,6 +1339,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// detailed attributes and limitations for entity-based processors. Multiple
       /// types can also compose a dependency tree to represent nested types.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EntityType : pb::IMessage<EntityType>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -422,8 +1376,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public EntityType(EntityType other) : this() {
           displayName_ = other.displayName_;
           name_ = other.name_;
+          description_ = other.description_;
           baseTypes_ = other.baseTypes_.Clone();
           properties_ = other.properties_.Clone();
+          entityTypeMetadata_ = other.entityTypeMetadata_ != null ? other.entityTypeMetadata_.Clone() : null;
           switch (other.ValueSourceCase) {
             case ValueSourceOneofCase.EnumValues:
               EnumValues = other.EnumValues.Clone();
@@ -478,16 +1434,15 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         private string name_ = "";
         /// <summary>
         /// Name of the type. It must be unique within the schema file and
-        /// cannot be a 'Common Type'.  Besides that we use the following naming
-        /// conventions:
+        /// cannot be a "Common Type".  The following naming conventions are used:
         ///
-        /// - *use `snake_casing`*
-        /// - name matching is case-sensitive
+        /// - Use `snake_casing`.
+        /// - Name matching is case-sensitive.
         /// - Maximum 64 characters.
         /// - Must start with a letter.
         /// - Allowed characters: ASCII letters `[a-z0-9_-]`.  (For backward
         ///   compatibility internal infrastructure and tooling can handle any ascii
-        ///   character)
+        ///   character.)
         /// - The `/` is sometimes used to denote a property of a type.  For example
         ///   `line_item/amount`.  This convention is deprecated, but will still be
         ///   honored for backward compatibility.
@@ -498,6 +1453,22 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           get { return name_; }
           set {
             name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "description" field.</summary>
+        public const int DescriptionFieldNumber = 15;
+        private string description_ = "";
+        /// <summary>
+        /// The description of the entity type. Could be used to provide more
+        /// information about the entity type for model calls.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Description {
+          get { return description_; }
+          set {
+            description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
@@ -522,12 +1493,27 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             = pb::FieldCodec.ForMessage(50, global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property> properties_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property>();
         /// <summary>
-        /// Describing the nested structure, or composition of an entity.
+        /// Description the nested structure, or composition of an entity.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property> Properties {
           get { return properties_; }
+        }
+
+        /// <summary>Field number for the "entity_type_metadata" field.</summary>
+        public const int EntityTypeMetadataFieldNumber = 11;
+        private global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata entityTypeMetadata_;
+        /// <summary>
+        /// Metadata for the entity type.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata EntityTypeMetadata {
+          get { return entityTypeMetadata_; }
+          set {
+            entityTypeMetadata_ = value;
+          }
         }
 
         private object valueSource_;
@@ -568,8 +1554,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           if (!object.Equals(EnumValues, other.EnumValues)) return false;
           if (DisplayName != other.DisplayName) return false;
           if (Name != other.Name) return false;
+          if (Description != other.Description) return false;
           if(!baseTypes_.Equals(other.baseTypes_)) return false;
           if(!properties_.Equals(other.properties_)) return false;
+          if (!object.Equals(EntityTypeMetadata, other.EntityTypeMetadata)) return false;
           if (ValueSourceCase != other.ValueSourceCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -581,8 +1569,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           if (valueSourceCase_ == ValueSourceOneofCase.EnumValues) hash ^= EnumValues.GetHashCode();
           if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
           if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (Description.Length != 0) hash ^= Description.GetHashCode();
           hash ^= baseTypes_.GetHashCode();
           hash ^= properties_.GetHashCode();
+          if (entityTypeMetadata_ != null) hash ^= EntityTypeMetadata.GetHashCode();
           hash ^= (int) valueSourceCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -608,6 +1598,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
           baseTypes_.WriteTo(output, _repeated_baseTypes_codec);
           properties_.WriteTo(output, _repeated_properties_codec);
+          if (entityTypeMetadata_ != null) {
+            output.WriteRawTag(90);
+            output.WriteMessage(EntityTypeMetadata);
+          }
           if (DisplayName.Length != 0) {
             output.WriteRawTag(106);
             output.WriteString(DisplayName);
@@ -615,6 +1609,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           if (valueSourceCase_ == ValueSourceOneofCase.EnumValues) {
             output.WriteRawTag(114);
             output.WriteMessage(EnumValues);
+          }
+          if (Description.Length != 0) {
+            output.WriteRawTag(122);
+            output.WriteString(Description);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -632,6 +1630,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           }
           baseTypes_.WriteTo(ref output, _repeated_baseTypes_codec);
           properties_.WriteTo(ref output, _repeated_properties_codec);
+          if (entityTypeMetadata_ != null) {
+            output.WriteRawTag(90);
+            output.WriteMessage(EntityTypeMetadata);
+          }
           if (DisplayName.Length != 0) {
             output.WriteRawTag(106);
             output.WriteString(DisplayName);
@@ -639,6 +1641,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           if (valueSourceCase_ == ValueSourceOneofCase.EnumValues) {
             output.WriteRawTag(114);
             output.WriteMessage(EnumValues);
+          }
+          if (Description.Length != 0) {
+            output.WriteRawTag(122);
+            output.WriteString(Description);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -659,8 +1665,14 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           if (Name.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
           }
+          if (Description.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+          }
           size += baseTypes_.CalculateSize(_repeated_baseTypes_codec);
           size += properties_.CalculateSize(_repeated_properties_codec);
+          if (entityTypeMetadata_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(EntityTypeMetadata);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -679,8 +1691,17 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           if (other.Name.Length != 0) {
             Name = other.Name;
           }
+          if (other.Description.Length != 0) {
+            Description = other.Description;
+          }
           baseTypes_.Add(other.baseTypes_);
           properties_.Add(other.properties_);
+          if (other.entityTypeMetadata_ != null) {
+            if (entityTypeMetadata_ == null) {
+              EntityTypeMetadata = new global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata();
+            }
+            EntityTypeMetadata.MergeFrom(other.EntityTypeMetadata);
+          }
           switch (other.ValueSourceCase) {
             case ValueSourceOneofCase.EnumValues:
               if (EnumValues == null) {
@@ -717,6 +1738,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 properties_.AddEntriesFrom(input, _repeated_properties_codec);
                 break;
               }
+              case 90: {
+                if (entityTypeMetadata_ == null) {
+                  EntityTypeMetadata = new global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata();
+                }
+                input.ReadMessage(EntityTypeMetadata);
+                break;
+              }
               case 106: {
                 DisplayName = input.ReadString();
                 break;
@@ -728,6 +1756,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 }
                 input.ReadMessage(subBuilder);
                 EnumValues = subBuilder;
+                break;
+              }
+              case 122: {
+                Description = input.ReadString();
                 break;
               }
             }
@@ -757,6 +1789,13 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 properties_.AddEntriesFrom(ref input, _repeated_properties_codec);
                 break;
               }
+              case 90: {
+                if (entityTypeMetadata_ == null) {
+                  EntityTypeMetadata = new global::Google.Cloud.DocumentAI.V1Beta3.EntityTypeMetadata();
+                }
+                input.ReadMessage(EntityTypeMetadata);
+                break;
+              }
               case 106: {
                 DisplayName = input.ReadString();
                 break;
@@ -768,6 +1807,10 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 }
                 input.ReadMessage(subBuilder);
                 EnumValues = subBuilder;
+                break;
+              }
+              case 122: {
+                Description = input.ReadString();
                 break;
               }
             }
@@ -783,6 +1826,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           /// <summary>
           /// Defines the a list of enum values.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class EnumValues : pb::IMessage<EnumValues>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -967,6 +2011,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
           /// <summary>
           /// Defines properties that can be part of the entity type.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Property : pb::IMessage<Property>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1002,8 +2047,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Property(Property other) : this() {
               name_ = other.name_;
+              description_ = other.description_;
+              displayName_ = other.displayName_;
               valueType_ = other.valueType_;
               occurrenceType_ = other.occurrenceType_;
+              propertyMetadata_ = other.propertyMetadata_ != null ? other.propertyMetadata_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -1026,6 +2074,37 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               get { return name_; }
               set {
                 name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "description" field.</summary>
+            public const int DescriptionFieldNumber = 7;
+            private string description_ = "";
+            /// <summary>
+            /// The description of the property. Could be used to provide more
+            /// information about the property for model calls.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Description {
+              get { return description_; }
+              set {
+                description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "display_name" field.</summary>
+            public const int DisplayNameFieldNumber = 6;
+            private string displayName_ = "";
+            /// <summary>
+            /// User defined name for the property.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string DisplayName {
+              get { return displayName_; }
+              set {
+                displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
               }
             }
 
@@ -1061,6 +2140,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               }
             }
 
+            /// <summary>Field number for the "property_metadata" field.</summary>
+            public const int PropertyMetadataFieldNumber = 5;
+            private global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata propertyMetadata_;
+            /// <summary>
+            /// Any additional metadata about the property can be added here.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata PropertyMetadata {
+              get { return propertyMetadata_; }
+              set {
+                propertyMetadata_ = value;
+              }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
@@ -1077,8 +2171,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 return true;
               }
               if (Name != other.Name) return false;
+              if (Description != other.Description) return false;
+              if (DisplayName != other.DisplayName) return false;
               if (ValueType != other.ValueType) return false;
               if (OccurrenceType != other.OccurrenceType) return false;
+              if (!object.Equals(PropertyMetadata, other.PropertyMetadata)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -1087,8 +2184,11 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             public override int GetHashCode() {
               int hash = 1;
               if (Name.Length != 0) hash ^= Name.GetHashCode();
+              if (Description.Length != 0) hash ^= Description.GetHashCode();
+              if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
               if (ValueType.Length != 0) hash ^= ValueType.GetHashCode();
               if (OccurrenceType != global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType.Unspecified) hash ^= OccurrenceType.GetHashCode();
+              if (propertyMetadata_ != null) hash ^= PropertyMetadata.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -1119,6 +2219,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(24);
                 output.WriteEnum((int) OccurrenceType);
               }
+              if (propertyMetadata_ != null) {
+                output.WriteRawTag(42);
+                output.WriteMessage(PropertyMetadata);
+              }
+              if (DisplayName.Length != 0) {
+                output.WriteRawTag(50);
+                output.WriteString(DisplayName);
+              }
+              if (Description.Length != 0) {
+                output.WriteRawTag(58);
+                output.WriteString(Description);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -1141,6 +2253,18 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 output.WriteRawTag(24);
                 output.WriteEnum((int) OccurrenceType);
               }
+              if (propertyMetadata_ != null) {
+                output.WriteRawTag(42);
+                output.WriteMessage(PropertyMetadata);
+              }
+              if (DisplayName.Length != 0) {
+                output.WriteRawTag(50);
+                output.WriteString(DisplayName);
+              }
+              if (Description.Length != 0) {
+                output.WriteRawTag(58);
+                output.WriteString(Description);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -1154,11 +2278,20 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               if (Name.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
               }
+              if (Description.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+              }
+              if (DisplayName.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+              }
               if (ValueType.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(ValueType);
               }
               if (OccurrenceType != global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType.Unspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OccurrenceType);
+              }
+              if (propertyMetadata_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropertyMetadata);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -1175,11 +2308,23 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
               if (other.Name.Length != 0) {
                 Name = other.Name;
               }
+              if (other.Description.Length != 0) {
+                Description = other.Description;
+              }
+              if (other.DisplayName.Length != 0) {
+                DisplayName = other.DisplayName;
+              }
               if (other.ValueType.Length != 0) {
                 ValueType = other.ValueType;
               }
               if (other.OccurrenceType != global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType.Unspecified) {
                 OccurrenceType = other.OccurrenceType;
+              }
+              if (other.propertyMetadata_ != null) {
+                if (propertyMetadata_ == null) {
+                  PropertyMetadata = new global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata();
+                }
+                PropertyMetadata.MergeFrom(other.PropertyMetadata);
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -1206,6 +2351,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                   }
                   case 24: {
                     OccurrenceType = (global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType) input.ReadEnum();
+                    break;
+                  }
+                  case 42: {
+                    if (propertyMetadata_ == null) {
+                      PropertyMetadata = new global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata();
+                    }
+                    input.ReadMessage(PropertyMetadata);
+                    break;
+                  }
+                  case 50: {
+                    DisplayName = input.ReadString();
+                    break;
+                  }
+                  case 58: {
+                    Description = input.ReadString();
                     break;
                   }
                 }
@@ -1235,6 +2395,21 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                     OccurrenceType = (global::Google.Cloud.DocumentAI.V1Beta3.DocumentSchema.Types.EntityType.Types.Property.Types.OccurrenceType) input.ReadEnum();
                     break;
                   }
+                  case 42: {
+                    if (propertyMetadata_ == null) {
+                      PropertyMetadata = new global::Google.Cloud.DocumentAI.V1Beta3.PropertyMetadata();
+                    }
+                    input.ReadMessage(PropertyMetadata);
+                    break;
+                  }
+                  case 50: {
+                    DisplayName = input.ReadString();
+                    break;
+                  }
+                  case 58: {
+                    Description = input.ReadString();
+                    break;
+                  }
                 }
               }
             }
@@ -1246,9 +2421,15 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
-              /// Types of occurrences of the entity type in the document.  Note: this
-              /// represents the number of instances of an entity types, not number of
-              /// mentions of a given entity instance.
+              /// Types of occurrences of the entity type in the document.  This
+              /// represents the number of instances, not mentions, of an entity.
+              /// For example, a bank statement might only have one
+              /// `account_number`, but this account number can be mentioned in several
+              /// places on the document.  In this case, the `account_number` is
+              /// considered a `REQUIRED_ONCE` entity type. If, on the other hand, we
+              /// expect a bank statement to contain the status of multiple different
+              /// accounts for the customers, the occurrence type is set to
+              /// `REQUIRED_MULTIPLE`.
               /// </summary>
               public enum OccurrenceType {
                 /// <summary>
@@ -1256,7 +2437,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 /// </summary>
                 [pbr::OriginalName("OCCURRENCE_TYPE_UNSPECIFIED")] Unspecified = 0,
                 /// <summary>
-                /// There will be zero or one instance of this entity type.
+                /// There will be zero or one instance of this entity type.  The same
+                /// entity instance may be mentioned multiple times.
                 /// </summary>
                 [pbr::OriginalName("OPTIONAL_ONCE")] OptionalOnce = 1,
                 /// <summary>
@@ -1264,7 +2446,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
                 /// </summary>
                 [pbr::OriginalName("OPTIONAL_MULTIPLE")] OptionalMultiple = 2,
                 /// <summary>
-                /// The entity type will only appear exactly once.
+                /// The entity type will only appear exactly once.  The same
+                /// entity instance may be mentioned multiple times.
                 /// </summary>
                 [pbr::OriginalName("REQUIRED_ONCE")] RequiredOnce = 3,
                 /// <summary>
@@ -1286,6 +2469,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
       /// <summary>
       /// Metadata for global schema behavior.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Metadata : pb::IMessage<Metadata>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1337,8 +2521,8 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
         public const int DocumentSplitterFieldNumber = 1;
         private bool documentSplitter_;
         /// <summary>
-        /// If true, a `document` entity type can be applied to subdocument (
-        /// splitting). Otherwise, it can only be applied to the entire document
+        /// If true, a `document` entity type can be applied to subdocument
+        /// (splitting). Otherwise, it can only be applied to the entire document
         /// (classification).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

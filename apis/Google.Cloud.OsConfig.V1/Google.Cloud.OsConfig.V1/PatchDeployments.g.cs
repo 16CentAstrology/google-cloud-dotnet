@@ -133,6 +133,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// managing patch deployments, see [Scheduling patch
   /// jobs](https://cloud.google.com/compute/docs/os-patch-management/schedule-patch-jobs).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PatchDeployment : pb::IMessage<PatchDeployment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -927,6 +928,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// Sets the time for a one time patch deployment. Timestamp is in
   /// [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OneTimeSchedule : pb::IMessage<OneTimeSchedule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1131,6 +1133,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// Sets the time for recurring patch deployments.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RecurringSchedule : pb::IMessage<RecurringSchedule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1795,6 +1798,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// Represents a weekly schedule.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WeeklySchedule : pb::IMessage<WeeklySchedule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1991,6 +1995,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// Represents a monthly schedule. An example of a valid monthly schedule is
   /// "on the third Tuesday of the month" or "on the 15th of the month".
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MonthlySchedule : pb::IMessage<MonthlySchedule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2069,10 +2074,24 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MonthDay {
-      get { return dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay ? (int) dayOfMonth_ : 0; }
+      get { return HasMonthDay ? (int) dayOfMonth_ : 0; }
       set {
         dayOfMonth_ = value;
         dayOfMonthCase_ = DayOfMonthOneofCase.MonthDay;
+      }
+    }
+    /// <summary>Gets whether the "month_day" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMonthDay {
+      get { return dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "month_day" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMonthDay() {
+      if (HasMonthDay) {
+        ClearDayOfMonth();
       }
     }
 
@@ -2123,7 +2142,7 @@ namespace Google.Cloud.OsConfig.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (dayOfMonthCase_ == DayOfMonthOneofCase.WeekDayOfMonth) hash ^= WeekDayOfMonth.GetHashCode();
-      if (dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay) hash ^= MonthDay.GetHashCode();
+      if (HasMonthDay) hash ^= MonthDay.GetHashCode();
       hash ^= (int) dayOfMonthCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2147,7 +2166,7 @@ namespace Google.Cloud.OsConfig.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(WeekDayOfMonth);
       }
-      if (dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay) {
+      if (HasMonthDay) {
         output.WriteRawTag(16);
         output.WriteInt32(MonthDay);
       }
@@ -2165,7 +2184,7 @@ namespace Google.Cloud.OsConfig.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(WeekDayOfMonth);
       }
-      if (dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay) {
+      if (HasMonthDay) {
         output.WriteRawTag(16);
         output.WriteInt32(MonthDay);
       }
@@ -2182,7 +2201,7 @@ namespace Google.Cloud.OsConfig.V1 {
       if (dayOfMonthCase_ == DayOfMonthOneofCase.WeekDayOfMonth) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(WeekDayOfMonth);
       }
-      if (dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay) {
+      if (HasMonthDay) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MonthDay);
       }
       if (_unknownFields != null) {
@@ -2275,6 +2294,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// Represents one week day in a month. An example is "the 4th Sunday".
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WeekDayOfMonth : pb::IMessage<WeekDayOfMonth>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2557,6 +2577,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// A request message for creating a patch deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreatePatchDeploymentRequest : pb::IMessage<CreatePatchDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2848,6 +2869,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// A request message for retrieving a patch deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPatchDeploymentRequest : pb::IMessage<GetPatchDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3044,6 +3066,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// A request message for listing patch deployments.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPatchDeploymentsRequest : pb::IMessage<ListPatchDeploymentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3322,6 +3345,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// A response message for listing patch deployments.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPatchDeploymentsResponse : pb::IMessage<ListPatchDeploymentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3547,6 +3571,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// A request message for deleting a patch deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeletePatchDeploymentRequest : pb::IMessage<DeletePatchDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3743,6 +3768,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// A request message for updating a patch deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdatePatchDeploymentRequest : pb::IMessage<UpdatePatchDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3997,6 +4023,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// A request message for pausing a patch deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PausePatchDeploymentRequest : pb::IMessage<PausePatchDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4193,6 +4220,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// A request message for resuming a patch deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResumePatchDeploymentRequest : pb::IMessage<ResumePatchDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

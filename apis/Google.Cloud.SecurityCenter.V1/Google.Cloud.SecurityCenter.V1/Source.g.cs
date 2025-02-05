@@ -54,6 +54,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// container of findings that come from the same scanner, logger, monitor, and
   /// other tools.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Source : pb::IMessage<Source>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -163,9 +164,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int CanonicalNameFieldNumber = 14;
     private string canonicalName_ = "";
     /// <summary>
-    /// The canonical name of the finding. It's either
+    /// The canonical name of the finding source. It's either
     /// "organizations/{organization_id}/sources/{source_id}",
-    /// "folders/{folder_id}/sources/{source_id}" or
+    /// "folders/{folder_id}/sources/{source_id}", or
     /// "projects/{project_number}/sources/{source_id}",
     /// depending on the closest CRM ancestor of the resource associated with the
     /// finding.

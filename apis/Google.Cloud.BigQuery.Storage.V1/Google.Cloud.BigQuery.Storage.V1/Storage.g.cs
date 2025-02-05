@@ -47,7 +47,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "IAEoBSKXAQoLU3RyZWFtU3RhdHMSSAoIcHJvZ3Jlc3MYAiABKAsyNi5nb29n",
             "bGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5TdHJlYW1TdGF0cy5Qcm9n",
             "cmVzcxo+CghQcm9ncmVzcxIZChFhdF9yZXNwb25zZV9zdGFydBgBIAEoARIX",
-            "Cg9hdF9yZXNwb25zZV9lbmQYAiABKAEi5wMKEFJlYWRSb3dzUmVzcG9uc2US",
+            "Cg9hdF9yZXNwb25zZV9lbmQYAiABKAEirAQKEFJlYWRSb3dzUmVzcG9uc2US",
             "PwoJYXZyb19yb3dzGAMgASgLMiouZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0",
             "b3JhZ2UudjEuQXZyb1Jvd3NIABJQChJhcnJvd19yZWNvcmRfYmF0Y2gYBCAB",
             "KAsyMi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcnJvd1Jl",
@@ -58,129 +58,142 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "GAcgASgLMiwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQXZy",
             "b1NjaGVtYUID4EEDSAESSgoMYXJyb3dfc2NoZW1hGAggASgLMi0uZ29vZ2xl",
             "LmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQXJyb3dTY2hlbWFCA+BBA0gB",
-            "QgYKBHJvd3NCCAoGc2NoZW1hImsKFlNwbGl0UmVhZFN0cmVhbVJlcXVlc3QS",
-            "PwoEbmFtZRgBIAEoCUIx4EEC+kErCiliaWdxdWVyeXN0b3JhZ2UuZ29vZ2xl",
-            "YXBpcy5jb20vUmVhZFN0cmVhbRIQCghmcmFjdGlvbhgCIAEoASKnAQoXU3Bs",
-            "aXRSZWFkU3RyZWFtUmVzcG9uc2USRAoOcHJpbWFyeV9zdHJlYW0YASABKAsy",
-            "LC5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5SZWFkU3RyZWFt",
-            "EkYKEHJlbWFpbmRlcl9zdHJlYW0YAiABKAsyLC5nb29nbGUuY2xvdWQuYmln",
-            "cXVlcnkuc3RvcmFnZS52MS5SZWFkU3RyZWFtIpsBChhDcmVhdGVXcml0ZVN0",
-            "cmVhbVJlcXVlc3QSNQoGcGFyZW50GAEgASgJQiXgQQL6QR8KHWJpZ3F1ZXJ5",
-            "Lmdvb2dsZWFwaXMuY29tL1RhYmxlEkgKDHdyaXRlX3N0cmVhbRgCIAEoCzIt",
-            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLldyaXRlU3RyZWFt",
-            "QgPgQQIiiQYKEUFwcGVuZFJvd3NSZXF1ZXN0EkgKDHdyaXRlX3N0cmVhbRgB",
-            "IAEoCUIy4EEC+kEsCipiaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20v",
-            "V3JpdGVTdHJlYW0SKwoGb2Zmc2V0GAIgASgLMhsuZ29vZ2xlLnByb3RvYnVm",
-            "LkludDY0VmFsdWUSUwoKcHJvdG9fcm93cxgEIAEoCzI9Lmdvb2dsZS5jbG91",
-            "ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFwcGVuZFJvd3NSZXF1ZXN0LlByb3Rv",
-            "RGF0YUgAEhAKCHRyYWNlX2lkGAYgASgJEnsKHW1pc3NpbmdfdmFsdWVfaW50",
-            "ZXJwcmV0YXRpb25zGAcgAygLMlQuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0",
-            "b3JhZ2UudjEuQXBwZW5kUm93c1JlcXVlc3QuTWlzc2luZ1ZhbHVlSW50ZXJw",
-            "cmV0YXRpb25zRW50cnkajAEKCVByb3RvRGF0YRJECg13cml0ZXJfc2NoZW1h",
-            "GAEgASgLMi0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuUHJv",
-            "dG9TY2hlbWESOQoEcm93cxgCIAEoCzIrLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5zdG9yYWdlLnYxLlByb3RvUm93cxqSAQogTWlzc2luZ1ZhbHVlSW50ZXJw",
-            "cmV0YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEl0KBXZhbHVlGAIgASgOMk4u",
-            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQXBwZW5kUm93c1Jl",
-            "cXVlc3QuTWlzc2luZ1ZhbHVlSW50ZXJwcmV0YXRpb246AjgBIm0KGk1pc3Np",
-            "bmdWYWx1ZUludGVycHJldGF0aW9uEiwKKE1JU1NJTkdfVkFMVUVfSU5URVJQ",
-            "UkVUQVRJT05fVU5TUEVDSUZJRUQQABIOCgpOVUxMX1ZBTFVFEAESEQoNREVG",
-            "QVVMVF9WQUxVRRACQgYKBHJvd3Mi+wIKEkFwcGVuZFJvd3NSZXNwb25zZRJa",
-            "Cg1hcHBlbmRfcmVzdWx0GAEgASgLMkEuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
-            "LnN0b3JhZ2UudjEuQXBwZW5kUm93c1Jlc3BvbnNlLkFwcGVuZFJlc3VsdEgA",
-            "EiMKBWVycm9yGAIgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNIABJFCg51cGRh",
-            "dGVkX3NjaGVtYRgDIAEoCzItLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9y",
-            "YWdlLnYxLlRhYmxlU2NoZW1hEj4KCnJvd19lcnJvcnMYBCADKAsyKi5nb29n",
-            "bGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Sb3dFcnJvchIUCgx3cml0",
-            "ZV9zdHJlYW0YBSABKAkaOwoMQXBwZW5kUmVzdWx0EisKBm9mZnNldBgBIAEo",
-            "CzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlQgoKCHJlc3BvbnNlIpoB",
-            "ChVHZXRXcml0ZVN0cmVhbVJlcXVlc3QSQAoEbmFtZRgBIAEoCUIy4EEC+kEs",
-            "CipiaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vV3JpdGVTdHJlYW0S",
-            "PwoEdmlldxgDIAEoDjIxLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdl",
-            "LnYxLldyaXRlU3RyZWFtVmlldyJzCh5CYXRjaENvbW1pdFdyaXRlU3RyZWFt",
-            "c1JlcXVlc3QSNQoGcGFyZW50GAEgASgJQiXgQQL6QR8KHWJpZ3F1ZXJ5Lmdv",
-            "b2dsZWFwaXMuY29tL1RhYmxlEhoKDXdyaXRlX3N0cmVhbXMYAiADKAlCA+BB",
-            "AiKZAQofQmF0Y2hDb21taXRXcml0ZVN0cmVhbXNSZXNwb25zZRIvCgtjb21t",
-            "aXRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASRQoN",
-            "c3RyZWFtX2Vycm9ycxgCIAMoCzIuLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5z",
-            "dG9yYWdlLnYxLlN0b3JhZ2VFcnJvciJeChpGaW5hbGl6ZVdyaXRlU3RyZWFt",
-            "UmVxdWVzdBJACgRuYW1lGAEgASgJQjLgQQL6QSwKKmJpZ3F1ZXJ5c3RvcmFn",
-            "ZS5nb29nbGVhcGlzLmNvbS9Xcml0ZVN0cmVhbSIwChtGaW5hbGl6ZVdyaXRl",
-            "U3RyZWFtUmVzcG9uc2USEQoJcm93X2NvdW50GAEgASgDIokBChBGbHVzaFJv",
-            "d3NSZXF1ZXN0EkgKDHdyaXRlX3N0cmVhbRgBIAEoCUIy4EEC+kEsCipiaWdx",
-            "dWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vV3JpdGVTdHJlYW0SKwoGb2Zm",
-            "c2V0GAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWUiIwoRRmx1",
-            "c2hSb3dzUmVzcG9uc2USDgoGb2Zmc2V0GAEgASgDIqUDCgxTdG9yYWdlRXJy",
-            "b3ISTQoEY29kZRgBIAEoDjI/Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9y",
-            "YWdlLnYxLlN0b3JhZ2VFcnJvci5TdG9yYWdlRXJyb3JDb2RlEg4KBmVudGl0",
-            "eRgCIAEoCRIVCg1lcnJvcl9tZXNzYWdlGAMgASgJIp4CChBTdG9yYWdlRXJy",
-            "b3JDb2RlEiIKHlNUT1JBR0VfRVJST1JfQ09ERV9VTlNQRUNJRklFRBAAEhMK",
-            "D1RBQkxFX05PVF9GT1VORBABEhwKGFNUUkVBTV9BTFJFQURZX0NPTU1JVFRF",
-            "RBACEhQKEFNUUkVBTV9OT1RfRk9VTkQQAxIXChNJTlZBTElEX1NUUkVBTV9U",
-            "WVBFEAQSGAoUSU5WQUxJRF9TVFJFQU1fU1RBVEUQBRIUChBTVFJFQU1fRklO",
-            "QUxJWkVEEAYSIAocU0NIRU1BX01JU01BVENIX0VYVFJBX0ZJRUxEUxAHEhkK",
-            "FU9GRlNFVF9BTFJFQURZX0VYSVNUUxAIEhcKE09GRlNFVF9PVVRfT0ZfUkFO",
-            "R0UQCSKzAQoIUm93RXJyb3ISDQoFaW5kZXgYASABKAMSRQoEY29kZRgCIAEo",
-            "DjI3Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLlJvd0Vycm9y",
-            "LlJvd0Vycm9yQ29kZRIPCgdtZXNzYWdlGAMgASgJIkAKDFJvd0Vycm9yQ29k",
-            "ZRIeChpST1dfRVJST1JfQ09ERV9VTlNQRUNJRklFRBAAEhAKDEZJRUxEU19F",
-            "UlJPUhABMpIGCgxCaWdRdWVyeVJlYWQS6QEKEUNyZWF0ZVJlYWRTZXNzaW9u",
-            "EjouZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQ3JlYXRlUmVh",
-            "ZFNlc3Npb25SZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3Jh",
-            "Z2UudjEuUmVhZFNlc3Npb24iaYLT5JMCPCI3L3YxL3tyZWFkX3Nlc3Npb24u",
-            "dGFibGU9cHJvamVjdHMvKi9kYXRhc2V0cy8qL3RhYmxlcy8qfToBKtpBJHBh",
-            "cmVudCxyZWFkX3Nlc3Npb24sbWF4X3N0cmVhbV9jb3VudBLPAQoIUmVhZFJv",
-            "d3MSMS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5SZWFkUm93",
-            "c1JlcXVlc3QaMi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5S",
-            "ZWFkUm93c1Jlc3BvbnNlIlqC0+STAj8SPS92MS97cmVhZF9zdHJlYW09cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9zZXNzaW9ucy8qL3N0cmVhbXMvKn3aQRJy",
-            "ZWFkX3N0cmVhbSxvZmZzZXQwARLGAQoPU3BsaXRSZWFkU3RyZWFtEjguZ29v",
-            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuU3BsaXRSZWFkU3RyZWFt",
-            "UmVxdWVzdBo5Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLlNw",
-            "bGl0UmVhZFN0cmVhbVJlc3BvbnNlIj6C0+STAjgSNi92MS97bmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL3Nlc3Npb25zLyovc3RyZWFtcy8qfRp7ykEe",
-            "YmlncXVlcnlzdG9yYWdlLmdvb2dsZWFwaXMuY29t0kFXaHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9iaWdxdWVyeSxodHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtMrwLCg1CaWdRdWVyeVdy",
-            "aXRlEtcBChFDcmVhdGVXcml0ZVN0cmVhbRI6Lmdvb2dsZS5jbG91ZC5iaWdx",
-            "dWVyeS5zdG9yYWdlLnYxLkNyZWF0ZVdyaXRlU3RyZWFtUmVxdWVzdBotLmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLldyaXRlU3RyZWFtIleC",
+            "EigKFnVuY29tcHJlc3NlZF9ieXRlX3NpemUYCSABKANCA+BBAUgCiAEBQgYK",
+            "BHJvd3NCCAoGc2NoZW1hQhkKF191bmNvbXByZXNzZWRfYnl0ZV9zaXplImsK",
+            "FlNwbGl0UmVhZFN0cmVhbVJlcXVlc3QSPwoEbmFtZRgBIAEoCUIx4EEC+kEr",
+            "CiliaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vUmVhZFN0cmVhbRIQ",
+            "CghmcmFjdGlvbhgCIAEoASKnAQoXU3BsaXRSZWFkU3RyZWFtUmVzcG9uc2US",
+            "RAoOcHJpbWFyeV9zdHJlYW0YASABKAsyLC5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuc3RvcmFnZS52MS5SZWFkU3RyZWFtEkYKEHJlbWFpbmRlcl9zdHJlYW0Y",
+            "AiABKAsyLC5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5SZWFk",
+            "U3RyZWFtIpsBChhDcmVhdGVXcml0ZVN0cmVhbVJlcXVlc3QSNQoGcGFyZW50",
+            "GAEgASgJQiXgQQL6QR8KHWJpZ3F1ZXJ5Lmdvb2dsZWFwaXMuY29tL1RhYmxl",
+            "EkgKDHdyaXRlX3N0cmVhbRgCIAEoCzItLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
+            "eS5zdG9yYWdlLnYxLldyaXRlU3RyZWFtQgPgQQIi+AgKEUFwcGVuZFJvd3NS",
+            "ZXF1ZXN0EkgKDHdyaXRlX3N0cmVhbRgBIAEoCUIy4EEC+kEsCipiaWdxdWVy",
+            "eXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vV3JpdGVTdHJlYW0SKwoGb2Zmc2V0",
+            "GAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWUSUwoKcHJvdG9f",
+            "cm93cxgEIAEoCzI9Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYx",
+            "LkFwcGVuZFJvd3NSZXF1ZXN0LlByb3RvRGF0YUgAElMKCmFycm93X3Jvd3MY",
+            "BSABKAsyPS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcHBl",
+            "bmRSb3dzUmVxdWVzdC5BcnJvd0RhdGFIABIQCgh0cmFjZV9pZBgGIAEoCRJ7",
+            "Ch1taXNzaW5nX3ZhbHVlX2ludGVycHJldGF0aW9ucxgHIAMoCzJULmdvb2ds",
+            "ZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFwcGVuZFJvd3NSZXF1ZXN0",
+            "Lk1pc3NpbmdWYWx1ZUludGVycHJldGF0aW9uc0VudHJ5EoEBCiRkZWZhdWx0",
+            "X21pc3NpbmdfdmFsdWVfaW50ZXJwcmV0YXRpb24YCCABKA4yTi5nb29nbGUu",
+            "Y2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcHBlbmRSb3dzUmVxdWVzdC5N",
+            "aXNzaW5nVmFsdWVJbnRlcnByZXRhdGlvbkID4EEBGpMBCglBcnJvd0RhdGES",
+            "RAoNd3JpdGVyX3NjaGVtYRgBIAEoCzItLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
+            "eS5zdG9yYWdlLnYxLkFycm93U2NoZW1hEkAKBHJvd3MYAiABKAsyMi5nb29n",
+            "bGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5BcnJvd1JlY29yZEJhdGNo",
+            "GowBCglQcm90b0RhdGESRAoNd3JpdGVyX3NjaGVtYRgBIAEoCzItLmdvb2ds",
+            "ZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLlByb3RvU2NoZW1hEjkKBHJv",
+            "d3MYAiABKAsyKy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Q",
+            "cm90b1Jvd3MakgEKIE1pc3NpbmdWYWx1ZUludGVycHJldGF0aW9uc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRJdCgV2YWx1ZRgCIAEoDjJOLmdvb2dsZS5jbG91ZC5i",
+            "aWdxdWVyeS5zdG9yYWdlLnYxLkFwcGVuZFJvd3NSZXF1ZXN0Lk1pc3NpbmdW",
+            "YWx1ZUludGVycHJldGF0aW9uOgI4ASJtChpNaXNzaW5nVmFsdWVJbnRlcnBy",
+            "ZXRhdGlvbhIsCihNSVNTSU5HX1ZBTFVFX0lOVEVSUFJFVEFUSU9OX1VOU1BF",
+            "Q0lGSUVEEAASDgoKTlVMTF9WQUxVRRABEhEKDURFRkFVTFRfVkFMVUUQAkIG",
+            "CgRyb3dzIvsCChJBcHBlbmRSb3dzUmVzcG9uc2USWgoNYXBwZW5kX3Jlc3Vs",
+            "dBgBIAEoCzJBLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFw",
+            "cGVuZFJvd3NSZXNwb25zZS5BcHBlbmRSZXN1bHRIABIjCgVlcnJvchgCIAEo",
+            "CzISLmdvb2dsZS5ycGMuU3RhdHVzSAASRQoOdXBkYXRlZF9zY2hlbWEYAyAB",
+            "KAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5UYWJsZVNj",
+            "aGVtYRI+Cgpyb3dfZXJyb3JzGAQgAygLMiouZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5LnN0b3JhZ2UudjEuUm93RXJyb3ISFAoMd3JpdGVfc3RyZWFtGAUgASgJ",
+            "GjsKDEFwcGVuZFJlc3VsdBIrCgZvZmZzZXQYASABKAsyGy5nb29nbGUucHJv",
+            "dG9idWYuSW50NjRWYWx1ZUIKCghyZXNwb25zZSKaAQoVR2V0V3JpdGVTdHJl",
+            "YW1SZXF1ZXN0EkAKBG5hbWUYASABKAlCMuBBAvpBLAoqYmlncXVlcnlzdG9y",
+            "YWdlLmdvb2dsZWFwaXMuY29tL1dyaXRlU3RyZWFtEj8KBHZpZXcYAyABKA4y",
+            "MS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Xcml0ZVN0cmVh",
+            "bVZpZXcicwoeQmF0Y2hDb21taXRXcml0ZVN0cmVhbXNSZXF1ZXN0EjUKBnBh",
+            "cmVudBgBIAEoCUIl4EEC+kEfCh1iaWdxdWVyeS5nb29nbGVhcGlzLmNvbS9U",
+            "YWJsZRIaCg13cml0ZV9zdHJlYW1zGAIgAygJQgPgQQIimQEKH0JhdGNoQ29t",
+            "bWl0V3JpdGVTdHJlYW1zUmVzcG9uc2USLwoLY29tbWl0X3RpbWUYASABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkUKDXN0cmVhbV9lcnJvcnMY",
+            "AiADKAsyLi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5TdG9y",
+            "YWdlRXJyb3IiXgoaRmluYWxpemVXcml0ZVN0cmVhbVJlcXVlc3QSQAoEbmFt",
+            "ZRgBIAEoCUIy4EEC+kEsCipiaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5j",
+            "b20vV3JpdGVTdHJlYW0iMAobRmluYWxpemVXcml0ZVN0cmVhbVJlc3BvbnNl",
+            "EhEKCXJvd19jb3VudBgBIAEoAyKJAQoQRmx1c2hSb3dzUmVxdWVzdBJICgx3",
+            "cml0ZV9zdHJlYW0YASABKAlCMuBBAvpBLAoqYmlncXVlcnlzdG9yYWdlLmdv",
+            "b2dsZWFwaXMuY29tL1dyaXRlU3RyZWFtEisKBm9mZnNldBgCIAEoCzIbLmdv",
+            "b2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlIiMKEUZsdXNoUm93c1Jlc3BvbnNl",
+            "Eg4KBm9mZnNldBgBIAEoAyKkBAoMU3RvcmFnZUVycm9yEk0KBGNvZGUYASAB",
+            "KA4yPy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5TdG9yYWdl",
+            "RXJyb3IuU3RvcmFnZUVycm9yQ29kZRIOCgZlbnRpdHkYAiABKAkSFQoNZXJy",
+            "b3JfbWVzc2FnZRgDIAEoCSKdAwoQU3RvcmFnZUVycm9yQ29kZRIiCh5TVE9S",
+            "QUdFX0VSUk9SX0NPREVfVU5TUEVDSUZJRUQQABITCg9UQUJMRV9OT1RfRk9V",
+            "TkQQARIcChhTVFJFQU1fQUxSRUFEWV9DT01NSVRURUQQAhIUChBTVFJFQU1f",
+            "Tk9UX0ZPVU5EEAMSFwoTSU5WQUxJRF9TVFJFQU1fVFlQRRAEEhgKFElOVkFM",
+            "SURfU1RSRUFNX1NUQVRFEAUSFAoQU1RSRUFNX0ZJTkFMSVpFRBAGEiAKHFND",
+            "SEVNQV9NSVNNQVRDSF9FWFRSQV9GSUVMRFMQBxIZChVPRkZTRVRfQUxSRUFE",
+            "WV9FWElTVFMQCBIXChNPRkZTRVRfT1VUX09GX1JBTkdFEAkSFQoRQ01FS19O",
+            "T1RfUFJPVklERUQQChIZChVJTlZBTElEX0NNRUtfUFJPVklERUQQCxIZChVD",
+            "TUVLX0VOQ1JZUFRJT05fRVJST1IQDBIVChFLTVNfU0VSVklDRV9FUlJPUhAN",
+            "EhkKFUtNU19QRVJNSVNTSU9OX0RFTklFRBAOIrMBCghSb3dFcnJvchINCgVp",
+            "bmRleBgBIAEoAxJFCgRjb2RlGAIgASgOMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5LnN0b3JhZ2UudjEuUm93RXJyb3IuUm93RXJyb3JDb2RlEg8KB21lc3Nh",
+            "Z2UYAyABKAkiQAoMUm93RXJyb3JDb2RlEh4KGlJPV19FUlJPUl9DT0RFX1VO",
+            "U1BFQ0lGSUVEEAASEAoMRklFTERTX0VSUk9SEAEykgYKDEJpZ1F1ZXJ5UmVh",
+            "ZBLpAQoRQ3JlYXRlUmVhZFNlc3Npb24SOi5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuc3RvcmFnZS52MS5DcmVhdGVSZWFkU2Vzc2lvblJlcXVlc3QaLS5nb29n",
+            "bGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5SZWFkU2Vzc2lvbiJp2kEk",
+            "cGFyZW50LHJlYWRfc2Vzc2lvbixtYXhfc3RyZWFtX2NvdW50gtPkkwI8Ijcv",
+            "djEve3JlYWRfc2Vzc2lvbi50YWJsZT1wcm9qZWN0cy8qL2RhdGFzZXRzLyov",
+            "dGFibGVzLyp9OgEqEs8BCghSZWFkUm93cxIxLmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5zdG9yYWdlLnYxLlJlYWRSb3dzUmVxdWVzdBoyLmdvb2dsZS5jbG91",
+            "ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLlJlYWRSb3dzUmVzcG9uc2UiWtpBEnJl",
+            "YWRfc3RyZWFtLG9mZnNldILT5JMCPxI9L3YxL3tyZWFkX3N0cmVhbT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL3Nlc3Npb25zLyovc3RyZWFtcy8qfTABEsYB",
+            "Cg9TcGxpdFJlYWRTdHJlYW0SOC5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3Rv",
+            "cmFnZS52MS5TcGxpdFJlYWRTdHJlYW1SZXF1ZXN0GjkuZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuU3BsaXRSZWFkU3RyZWFtUmVzcG9uc2Ui",
+            "PoLT5JMCOBI2L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovc2Vz",
+            "c2lvbnMvKi9zdHJlYW1zLyp9GnvKQR5iaWdxdWVyeXN0b3JhZ2UuZ29vZ2xl",
+            "YXBpcy5jb23SQVdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Jp",
+            "Z3F1ZXJ5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
+            "cGxhdGZvcm0yvAsKDUJpZ1F1ZXJ5V3JpdGUS1wEKEUNyZWF0ZVdyaXRlU3Ry",
+            "ZWFtEjouZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQ3JlYXRl",
+            "V3JpdGVTdHJlYW1SZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0",
+            "b3JhZ2UudjEuV3JpdGVTdHJlYW0iV9pBE3BhcmVudCx3cml0ZV9zdHJlYW2C",
             "0+STAjsiKy92MS97cGFyZW50PXByb2plY3RzLyovZGF0YXNldHMvKi90YWJs",
-            "ZXMvKn06DHdyaXRlX3N0cmVhbdpBE3BhcmVudCx3cml0ZV9zdHJlYW0S0gEK",
-            "CkFwcGVuZFJvd3MSMy5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52",
-            "MS5BcHBlbmRSb3dzUmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5z",
-            "dG9yYWdlLnYxLkFwcGVuZFJvd3NSZXNwb25zZSJVgtPkkwJAIjsvdjEve3dy",
-            "aXRlX3N0cmVhbT1wcm9qZWN0cy8qL2RhdGFzZXRzLyovdGFibGVzLyovc3Ry",
-            "ZWFtcy8qfToBKtpBDHdyaXRlX3N0cmVhbSgBMAESvwEKDkdldFdyaXRlU3Ry",
-            "ZWFtEjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuR2V0V3Jp",
-            "dGVTdHJlYW1SZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3Jh",
-            "Z2UudjEuV3JpdGVTdHJlYW0iRYLT5JMCOCIzL3YxL3tuYW1lPXByb2plY3Rz",
-            "LyovZGF0YXNldHMvKi90YWJsZXMvKi9zdHJlYW1zLyp9OgEq2kEEbmFtZRLZ",
-            "AQoTRmluYWxpemVXcml0ZVN0cmVhbRI8Lmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5zdG9yYWdlLnYxLkZpbmFsaXplV3JpdGVTdHJlYW1SZXF1ZXN0Gj0uZ29v",
-            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuRmluYWxpemVXcml0ZVN0",
-            "cmVhbVJlc3BvbnNlIkWC0+STAjgiMy92MS97bmFtZT1wcm9qZWN0cy8qL2Rh",
-            "dGFzZXRzLyovdGFibGVzLyovc3RyZWFtcy8qfToBKtpBBG5hbWUS3AEKF0Jh",
-            "dGNoQ29tbWl0V3JpdGVTdHJlYW1zEkAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
-            "LnN0b3JhZ2UudjEuQmF0Y2hDb21taXRXcml0ZVN0cmVhbXNSZXF1ZXN0GkEu",
-            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQmF0Y2hDb21taXRX",
-            "cml0ZVN0cmVhbXNSZXNwb25zZSI8gtPkkwItEisvdjEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2RhdGFzZXRzLyovdGFibGVzLyp92kEGcGFyZW50EssBCglGbHVz",
-            "aFJvd3MSMi5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5GbHVz",
-            "aFJvd3NSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2Uu",
-            "djEuRmx1c2hSb3dzUmVzcG9uc2UiVYLT5JMCQCI7L3YxL3t3cml0ZV9zdHJl",
-            "YW09cHJvamVjdHMvKi9kYXRhc2V0cy8qL3RhYmxlcy8qL3N0cmVhbXMvKn06",
-            "ASraQQx3cml0ZV9zdHJlYW0asAHKQR5iaWdxdWVyeXN0b3JhZ2UuZ29vZ2xl",
-            "YXBpcy5jb23SQYsBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9i",
-            "aWdxdWVyeSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2JpZ3F1",
-            "ZXJ5Lmluc2VydGRhdGEsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybUKUAgokY29tLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5zdG9yYWdlLnYxQgxTdG9yYWdlUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9iaWdxdWVyeS9zdG9yYWdlL2FwaXYxL3N0b3JhZ2VwYjtzdG9yYWdl",
-            "cGKqAiBHb29nbGUuQ2xvdWQuQmlnUXVlcnkuU3RvcmFnZS5WMcoCIEdvb2ds",
-            "ZVxDbG91ZFxCaWdRdWVyeVxTdG9yYWdlXFYx6kFVCh1iaWdxdWVyeS5nb29n",
-            "bGVhcGlzLmNvbS9UYWJsZRI0cHJvamVjdHMve3Byb2plY3R9L2RhdGFzZXRz",
-            "L3tkYXRhc2V0fS90YWJsZXMve3RhYmxlfWIGcHJvdG8z"));
+            "ZXMvKn06DHdyaXRlX3N0cmVhbRLSAQoKQXBwZW5kUm93cxIzLmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFwcGVuZFJvd3NSZXF1ZXN0GjQu",
+            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQXBwZW5kUm93c1Jl",
+            "c3BvbnNlIlXaQQx3cml0ZV9zdHJlYW2C0+STAkAiOy92MS97d3JpdGVfc3Ry",
+            "ZWFtPXByb2plY3RzLyovZGF0YXNldHMvKi90YWJsZXMvKi9zdHJlYW1zLyp9",
+            "OgEqKAEwARK/AQoOR2V0V3JpdGVTdHJlYW0SNy5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkuc3RvcmFnZS52MS5HZXRXcml0ZVN0cmVhbVJlcXVlc3QaLS5nb29n",
+            "bGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Xcml0ZVN0cmVhbSJF2kEE",
+            "bmFtZYLT5JMCOCIzL3YxL3tuYW1lPXByb2plY3RzLyovZGF0YXNldHMvKi90",
+            "YWJsZXMvKi9zdHJlYW1zLyp9OgEqEtkBChNGaW5hbGl6ZVdyaXRlU3RyZWFt",
+            "EjwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuRmluYWxpemVX",
+            "cml0ZVN0cmVhbVJlcXVlc3QaPS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3Rv",
+            "cmFnZS52MS5GaW5hbGl6ZVdyaXRlU3RyZWFtUmVzcG9uc2UiRdpBBG5hbWWC",
+            "0+STAjgiMy92MS97bmFtZT1wcm9qZWN0cy8qL2RhdGFzZXRzLyovdGFibGVz",
+            "Lyovc3RyZWFtcy8qfToBKhLcAQoXQmF0Y2hDb21taXRXcml0ZVN0cmVhbXMS",
+            "QC5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5CYXRjaENvbW1p",
+            "dFdyaXRlU3RyZWFtc1JlcXVlc3QaQS5nb29nbGUuY2xvdWQuYmlncXVlcnku",
+            "c3RvcmFnZS52MS5CYXRjaENvbW1pdFdyaXRlU3RyZWFtc1Jlc3BvbnNlIjza",
+            "QQZwYXJlbnSC0+STAi0SKy92MS97cGFyZW50PXByb2plY3RzLyovZGF0YXNl",
+            "dHMvKi90YWJsZXMvKn0SywEKCUZsdXNoUm93cxIyLmdvb2dsZS5jbG91ZC5i",
+            "aWdxdWVyeS5zdG9yYWdlLnYxLkZsdXNoUm93c1JlcXVlc3QaMy5nb29nbGUu",
+            "Y2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5GbHVzaFJvd3NSZXNwb25zZSJV",
+            "2kEMd3JpdGVfc3RyZWFtgtPkkwJAIjsvdjEve3dyaXRlX3N0cmVhbT1wcm9q",
+            "ZWN0cy8qL2RhdGFzZXRzLyovdGFibGVzLyovc3RyZWFtcy8qfToBKhqwAcpB",
+            "HmJpZ3F1ZXJ5c3RvcmFnZS5nb29nbGVhcGlzLmNvbdJBiwFodHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2JpZ3F1ZXJ5LGh0dHBzOi8vd3d3Lmdv",
+            "b2dsZWFwaXMuY29tL2F1dGgvYmlncXVlcnkuaW5zZXJ0ZGF0YSxodHRwczov",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpQCCiRj",
+            "b20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjFCDFN0b3JhZ2VQ",
+            "cm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2JpZ3F1ZXJ5L3N0b3JhZ2Uv",
+            "YXBpdjEvc3RvcmFnZXBiO3N0b3JhZ2VwYqoCIEdvb2dsZS5DbG91ZC5CaWdR",
+            "dWVyeS5TdG9yYWdlLlYxygIgR29vZ2xlXENsb3VkXEJpZ1F1ZXJ5XFN0b3Jh",
+            "Z2VcVjHqQVUKHWJpZ3F1ZXJ5Lmdvb2dsZWFwaXMuY29tL1RhYmxlEjRwcm9q",
+            "ZWN0cy97cHJvamVjdH0vZGF0YXNldHMve2RhdGFzZXR9L3RhYmxlcy97dGFi",
+            "bGV9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ArrowReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.AvroReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ProtobufReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.StreamReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.TableReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -188,11 +201,12 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadRowsRequest), global::Google.Cloud.BigQuery.Storage.V1.ReadRowsRequest.Parser, new[]{ "ReadStream", "Offset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ThrottleState), global::Google.Cloud.BigQuery.Storage.V1.ThrottleState.Parser, new[]{ "ThrottlePercent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.StreamStats), global::Google.Cloud.BigQuery.Storage.V1.StreamStats.Parser, new[]{ "Progress" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.StreamStats.Types.Progress), global::Google.Cloud.BigQuery.Storage.V1.StreamStats.Types.Progress.Parser, new[]{ "AtResponseStart", "AtResponseEnd" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadRowsResponse), global::Google.Cloud.BigQuery.Storage.V1.ReadRowsResponse.Parser, new[]{ "AvroRows", "ArrowRecordBatch", "RowCount", "Stats", "ThrottleState", "AvroSchema", "ArrowSchema" }, new[]{ "Rows", "Schema" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadRowsResponse), global::Google.Cloud.BigQuery.Storage.V1.ReadRowsResponse.Parser, new[]{ "AvroRows", "ArrowRecordBatch", "RowCount", "Stats", "ThrottleState", "AvroSchema", "ArrowSchema", "UncompressedByteSize" }, new[]{ "Rows", "Schema", "UncompressedByteSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.SplitReadStreamRequest), global::Google.Cloud.BigQuery.Storage.V1.SplitReadStreamRequest.Parser, new[]{ "Name", "Fraction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.SplitReadStreamResponse), global::Google.Cloud.BigQuery.Storage.V1.SplitReadStreamResponse.Parser, new[]{ "PrimaryStream", "RemainderStream" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest), global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest.Parser, new[]{ "Parent", "WriteStream" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Parser, new[]{ "WriteStream", "Offset", "ProtoRows", "TraceId", "MissingValueInterpretations" }, new[]{ "Rows" }, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ProtoData), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ProtoData.Parser, new[]{ "WriterSchema", "Rows" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Parser, new[]{ "WriteStream", "Offset", "ProtoRows", "ArrowRows", "TraceId", "MissingValueInterpretations", "DefaultMissingValueInterpretation" }, new[]{ "Rows" }, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData.Parser, new[]{ "WriterSchema", "Rows" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ProtoData), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ProtoData.Parser, new[]{ "WriterSchema", "Rows" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse.Parser, new[]{ "AppendResult", "Error", "UpdatedSchema", "RowErrors", "WriteStream" }, new[]{ "Response" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse.Types.AppendResult), global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse.Types.AppendResult.Parser, new[]{ "Offset" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest), global::Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest.Parser, new[]{ "Name", "View" }, null, null, null, null),
@@ -213,6 +227,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Request message for `CreateReadSession`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateReadSessionRequest : pb::IMessage<CreateReadSessionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -554,6 +569,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Request message for `ReadRows`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReadRowsRequest : pb::IMessage<ReadRowsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -791,6 +807,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Information on if the current connection is being throttled.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ThrottleState : pb::IMessage<ThrottleState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -987,6 +1004,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Estimated stream statistics for a given read Stream.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamStats : pb::IMessage<StreamStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1191,6 +1209,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Progress : pb::IMessage<Progress>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1444,6 +1463,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// Response from calling `ReadRows` may include row data, progress and
   /// throttling information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReadRowsResponse : pb::IMessage<ReadRowsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1451,6 +1471,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   {
     private static readonly pb::MessageParser<ReadRowsResponse> _parser = new pb::MessageParser<ReadRowsResponse>(() => new ReadRowsResponse());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ReadRowsResponse> Parser { get { return _parser; } }
@@ -1478,9 +1499,11 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadRowsResponse(ReadRowsResponse other) : this() {
+      _hasBits0 = other._hasBits0;
       rowCount_ = other.rowCount_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       throttleState_ = other.throttleState_ != null ? other.throttleState_.Clone() : null;
+      uncompressedByteSize_ = other.uncompressedByteSize_;
       switch (other.RowsCase) {
         case RowsOneofCase.AvroRows:
           AvroRows = other.AvroRows.Clone();
@@ -1614,6 +1637,49 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
 
+    /// <summary>Field number for the "uncompressed_byte_size" field.</summary>
+    public const int UncompressedByteSizeFieldNumber = 9;
+    private readonly static long UncompressedByteSizeDefaultValue = 0L;
+
+    private long uncompressedByteSize_;
+    /// <summary>
+    /// Optional. If the row data in this ReadRowsResponse is compressed, then
+    /// uncompressed byte size is the original size of the uncompressed row data.
+    /// If it is set to a value greater than 0, then decompress into a buffer of
+    /// size uncompressed_byte_size using the compression codec that was requested
+    /// during session creation time and which is specified in
+    /// TableReadOptions.response_compression_codec in ReadSession.
+    /// This value is not set if no response_compression_codec was not requested
+    /// and it is -1 if the requested compression would not have reduced the size
+    /// of this ReadRowsResponse's row data. This attempts to match Apache Arrow's
+    /// behavior described here https://github.com/apache/arrow/issues/15102 where
+    /// the uncompressed length may be set to -1 to indicate that the data that
+    /// follows is not compressed, which can be useful for cases where compression
+    /// does not yield appreciable savings. When uncompressed_byte_size is not
+    /// greater than 0, the client should skip decompression.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long UncompressedByteSize {
+      get { if ((_hasBits0 & 1) != 0) { return uncompressedByteSize_; } else { return UncompressedByteSizeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        uncompressedByteSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "uncompressed_byte_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUncompressedByteSize {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "uncompressed_byte_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUncompressedByteSize() {
+      _hasBits0 &= ~1;
+    }
+
     private object rows_;
     /// <summary>Enum of possible cases for the "rows" oneof.</summary>
     public enum RowsOneofCase {
@@ -1678,6 +1744,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (!object.Equals(ThrottleState, other.ThrottleState)) return false;
       if (!object.Equals(AvroSchema, other.AvroSchema)) return false;
       if (!object.Equals(ArrowSchema, other.ArrowSchema)) return false;
+      if (UncompressedByteSize != other.UncompressedByteSize) return false;
       if (RowsCase != other.RowsCase) return false;
       if (SchemaCase != other.SchemaCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1694,6 +1761,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (throttleState_ != null) hash ^= ThrottleState.GetHashCode();
       if (schemaCase_ == SchemaOneofCase.AvroSchema) hash ^= AvroSchema.GetHashCode();
       if (schemaCase_ == SchemaOneofCase.ArrowSchema) hash ^= ArrowSchema.GetHashCode();
+      if (HasUncompressedByteSize) hash ^= UncompressedByteSize.GetHashCode();
       hash ^= (int) rowsCase_;
       hash ^= (int) schemaCase_;
       if (_unknownFields != null) {
@@ -1742,6 +1810,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(ArrowSchema);
       }
+      if (HasUncompressedByteSize) {
+        output.WriteRawTag(72);
+        output.WriteInt64(UncompressedByteSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1780,6 +1852,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(ArrowSchema);
       }
+      if (HasUncompressedByteSize) {
+        output.WriteRawTag(72);
+        output.WriteInt64(UncompressedByteSize);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1811,6 +1887,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (schemaCase_ == SchemaOneofCase.ArrowSchema) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArrowSchema);
       }
+      if (HasUncompressedByteSize) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(UncompressedByteSize);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1837,6 +1916,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           ThrottleState = new global::Google.Cloud.BigQuery.Storage.V1.ThrottleState();
         }
         ThrottleState.MergeFrom(other.ThrottleState);
+      }
+      if (other.HasUncompressedByteSize) {
+        UncompressedByteSize = other.UncompressedByteSize;
       }
       switch (other.RowsCase) {
         case RowsOneofCase.AvroRows:
@@ -1937,6 +2019,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             ArrowSchema = subBuilder;
             break;
           }
+          case 72: {
+            UncompressedByteSize = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -2006,6 +2092,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             ArrowSchema = subBuilder;
             break;
           }
+          case 72: {
+            UncompressedByteSize = input.ReadInt64();
+            break;
+          }
         }
       }
     }
@@ -2016,6 +2106,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Request message for `SplitReadStream`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SplitReadStreamRequest : pb::IMessage<SplitReadStreamRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2257,6 +2348,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Response message for `SplitReadStream`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SplitReadStreamResponse : pb::IMessage<SplitReadStreamResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2513,6 +2605,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Request message for `CreateWriteStream`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateWriteStreamRequest : pb::IMessage<CreateWriteStreamRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2758,13 +2851,15 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Request message for `AppendRows`.
   ///
-  /// Due to the nature of AppendRows being a bidirectional streaming RPC, certain
-  /// parts of the AppendRowsRequest need only be specified for the first request
-  /// sent each time the gRPC network connection is opened/reopened.
+  /// Because AppendRows is a bidirectional streaming RPC, certain parts of the
+  /// AppendRowsRequest need only be specified for the first request before
+  /// switching table destinations. You can also switch table destinations within
+  /// the same connection for the default stream.
   ///
   /// The size of a single AppendRowsRequest must be less than 10 MB in size.
   /// Requests larger than this return an error, typically `INVALID_ARGUMENT`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppendRowsRequest : pb::IMessage<AppendRowsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2803,9 +2898,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       Offset = other.Offset;
       traceId_ = other.traceId_;
       missingValueInterpretations_ = other.missingValueInterpretations_.Clone();
+      defaultMissingValueInterpretation_ = other.defaultMissingValueInterpretation_;
       switch (other.RowsCase) {
         case RowsOneofCase.ProtoRows:
           ProtoRows = other.ProtoRows.Clone();
+          break;
+        case RowsOneofCase.ArrowRows:
+          ArrowRows = other.ArrowRows.Clone();
           break;
       }
 
@@ -2822,10 +2921,14 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     public const int WriteStreamFieldNumber = 1;
     private string writeStream_ = "";
     /// <summary>
-    /// Required. The write_stream identifies the target of the append operation,
-    /// and only needs to be specified as part of the first request on the gRPC
-    /// connection. If provided for subsequent requests, it must match the value of
-    /// the first request.
+    /// Required. The write_stream identifies the append operation. It must be
+    /// provided in the following scenarios:
+    ///
+    /// * In the first request to an AppendRows connection.
+    ///
+    /// * In all subsequent requests to an AppendRows connection, if you use the
+    /// same connection to write to multiple tables or change the input schema for
+    /// default streams.
     ///
     /// For explicitly created write streams, the format is:
     ///
@@ -2834,6 +2937,22 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// For the special default stream, the format is:
     ///
     /// * `projects/{project}/datasets/{dataset}/tables/{table}/streams/_default`.
+    ///
+    /// An example of a possible sequence of requests with write_stream fields
+    /// within a single connection:
+    ///
+    /// * r1: {write_stream: stream_name_1}
+    ///
+    /// * r2: {write_stream: /*omit*/}
+    ///
+    /// * r3: {write_stream: /*omit*/}
+    ///
+    /// * r4: {write_stream: stream_name_2}
+    ///
+    /// * r5: {write_stream: stream_name_2}
+    ///
+    /// The destination changed in request_4, so the write_stream field must be
+    /// populated in all subsequent requests in this stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2876,6 +2995,22 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       set {
         rows_ = value;
         rowsCase_ = value == null ? RowsOneofCase.None : RowsOneofCase.ProtoRows;
+      }
+    }
+
+    /// <summary>Field number for the "arrow_rows" field.</summary>
+    public const int ArrowRowsFieldNumber = 5;
+    /// <summary>
+    /// Rows in arrow format. This is an experimental feature only selected for
+    /// allowlisted customers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData ArrowRows {
+      get { return rowsCase_ == RowsOneofCase.ArrowRows ? (global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData) rows_ : null; }
+      set {
+        rows_ = value;
+        rowsCase_ = value == null ? RowsOneofCase.None : RowsOneofCase.ArrowRows;
       }
     }
 
@@ -2926,11 +3061,35 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       get { return missingValueInterpretations_; }
     }
 
+    /// <summary>Field number for the "default_missing_value_interpretation" field.</summary>
+    public const int DefaultMissingValueInterpretationFieldNumber = 8;
+    private global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation defaultMissingValueInterpretation_ = global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation.Unspecified;
+    /// <summary>
+    /// Optional. Default missing value interpretation for all columns in the
+    /// table. When a value is specified on an `AppendRowsRequest`, it is applied
+    /// to all requests on the connection from that point forward, until a
+    /// subsequent `AppendRowsRequest` sets it to a different value.
+    /// `missing_value_interpretation` can override
+    /// `default_missing_value_interpretation`. For example, if you want to write
+    /// `NULL` instead of using default values for some columns, you can set
+    /// `default_missing_value_interpretation` to `DEFAULT_VALUE` and at the same
+    /// time, set `missing_value_interpretations` to `NULL_VALUE` on those columns.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation DefaultMissingValueInterpretation {
+      get { return defaultMissingValueInterpretation_; }
+      set {
+        defaultMissingValueInterpretation_ = value;
+      }
+    }
+
     private object rows_;
     /// <summary>Enum of possible cases for the "rows" oneof.</summary>
     public enum RowsOneofCase {
       None = 0,
       ProtoRows = 4,
+      ArrowRows = 5,
     }
     private RowsOneofCase rowsCase_ = RowsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2964,8 +3123,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (WriteStream != other.WriteStream) return false;
       if (Offset != other.Offset) return false;
       if (!object.Equals(ProtoRows, other.ProtoRows)) return false;
+      if (!object.Equals(ArrowRows, other.ArrowRows)) return false;
       if (TraceId != other.TraceId) return false;
       if (!MissingValueInterpretations.Equals(other.MissingValueInterpretations)) return false;
+      if (DefaultMissingValueInterpretation != other.DefaultMissingValueInterpretation) return false;
       if (RowsCase != other.RowsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2977,8 +3138,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (WriteStream.Length != 0) hash ^= WriteStream.GetHashCode();
       if (offset_ != null) hash ^= Offset.GetHashCode();
       if (rowsCase_ == RowsOneofCase.ProtoRows) hash ^= ProtoRows.GetHashCode();
+      if (rowsCase_ == RowsOneofCase.ArrowRows) hash ^= ArrowRows.GetHashCode();
       if (TraceId.Length != 0) hash ^= TraceId.GetHashCode();
       hash ^= MissingValueInterpretations.GetHashCode();
+      if (DefaultMissingValueInterpretation != global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation.Unspecified) hash ^= DefaultMissingValueInterpretation.GetHashCode();
       hash ^= (int) rowsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3009,11 +3172,19 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ProtoRows);
       }
+      if (rowsCase_ == RowsOneofCase.ArrowRows) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ArrowRows);
+      }
       if (TraceId.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(TraceId);
       }
       missingValueInterpretations_.WriteTo(output, _map_missingValueInterpretations_codec);
+      if (DefaultMissingValueInterpretation != global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) DefaultMissingValueInterpretation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3035,11 +3206,19 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(ProtoRows);
       }
+      if (rowsCase_ == RowsOneofCase.ArrowRows) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ArrowRows);
+      }
       if (TraceId.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(TraceId);
       }
       missingValueInterpretations_.WriteTo(ref output, _map_missingValueInterpretations_codec);
+      if (DefaultMissingValueInterpretation != global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) DefaultMissingValueInterpretation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3059,10 +3238,16 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (rowsCase_ == RowsOneofCase.ProtoRows) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProtoRows);
       }
+      if (rowsCase_ == RowsOneofCase.ArrowRows) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArrowRows);
+      }
       if (TraceId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TraceId);
       }
       size += missingValueInterpretations_.CalculateSize(_map_missingValueInterpretations_codec);
+      if (DefaultMissingValueInterpretation != global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DefaultMissingValueInterpretation);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3086,13 +3271,22 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (other.TraceId.Length != 0) {
         TraceId = other.TraceId;
       }
-      missingValueInterpretations_.Add(other.missingValueInterpretations_);
+      missingValueInterpretations_.MergeFrom(other.missingValueInterpretations_);
+      if (other.DefaultMissingValueInterpretation != global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation.Unspecified) {
+        DefaultMissingValueInterpretation = other.DefaultMissingValueInterpretation;
+      }
       switch (other.RowsCase) {
         case RowsOneofCase.ProtoRows:
           if (ProtoRows == null) {
             ProtoRows = new global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ProtoData();
           }
           ProtoRows.MergeFrom(other.ProtoRows);
+          break;
+        case RowsOneofCase.ArrowRows:
+          if (ArrowRows == null) {
+            ArrowRows = new global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData();
+          }
+          ArrowRows.MergeFrom(other.ArrowRows);
           break;
       }
 
@@ -3131,12 +3325,25 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             ProtoRows = subBuilder;
             break;
           }
+          case 42: {
+            global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData();
+            if (rowsCase_ == RowsOneofCase.ArrowRows) {
+              subBuilder.MergeFrom(ArrowRows);
+            }
+            input.ReadMessage(subBuilder);
+            ArrowRows = subBuilder;
+            break;
+          }
           case 50: {
             TraceId = input.ReadString();
             break;
           }
           case 58: {
             missingValueInterpretations_.AddEntriesFrom(input, _map_missingValueInterpretations_codec);
+            break;
+          }
+          case 64: {
+            DefaultMissingValueInterpretation = (global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation) input.ReadEnum();
             break;
           }
         }
@@ -3174,12 +3381,25 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             ProtoRows = subBuilder;
             break;
           }
+          case 42: {
+            global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.ArrowData();
+            if (rowsCase_ == RowsOneofCase.ArrowRows) {
+              subBuilder.MergeFrom(ArrowRows);
+            }
+            input.ReadMessage(subBuilder);
+            ArrowRows = subBuilder;
+            break;
+          }
           case 50: {
             TraceId = input.ReadString();
             break;
           }
           case 58: {
             missingValueInterpretations_.AddEntriesFrom(ref input, _map_missingValueInterpretations_codec);
+            break;
+          }
+          case 64: {
+            DefaultMissingValueInterpretation = (global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Types.MissingValueInterpretation) input.ReadEnum();
             break;
           }
         }
@@ -3193,10 +3413,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// An enum to indicate how to interpret missing values. Missing values are
-      /// fields present in user schema but missing in rows. A missing value can
-      /// represent a NULL or a column default value defined in BigQuery table
-      /// schema.
+      /// An enum to indicate how to interpret missing values of fields that are
+      /// present in user schema but missing in rows. A missing value can represent a
+      /// NULL or a column default value defined in BigQuery table schema.
       /// </summary>
       public enum MissingValueInterpretation {
         /// <summary>
@@ -3216,9 +3435,266 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
 
       /// <summary>
+      /// Arrow schema and data.
+      /// Arrow format is an experimental feature only selected for allowlisted
+      /// customers.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ArrowData : pb::IMessage<ArrowData>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ArrowData> _parser = new pb::MessageParser<ArrowData>(() => new ArrowData());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ArrowData> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ArrowData() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ArrowData(ArrowData other) : this() {
+          writerSchema_ = other.writerSchema_ != null ? other.writerSchema_.Clone() : null;
+          rows_ = other.rows_ != null ? other.rows_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ArrowData Clone() {
+          return new ArrowData(this);
+        }
+
+        /// <summary>Field number for the "writer_schema" field.</summary>
+        public const int WriterSchemaFieldNumber = 1;
+        private global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema writerSchema_;
+        /// <summary>
+        /// Optional. Arrow Schema used to serialize the data.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema WriterSchema {
+          get { return writerSchema_; }
+          set {
+            writerSchema_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "rows" field.</summary>
+        public const int RowsFieldNumber = 2;
+        private global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch rows_;
+        /// <summary>
+        /// Required. Serialized row data in Arrow format.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch Rows {
+          get { return rows_; }
+          set {
+            rows_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ArrowData);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ArrowData other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(WriterSchema, other.WriterSchema)) return false;
+          if (!object.Equals(Rows, other.Rows)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (writerSchema_ != null) hash ^= WriterSchema.GetHashCode();
+          if (rows_ != null) hash ^= Rows.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (writerSchema_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(WriterSchema);
+          }
+          if (rows_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Rows);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (writerSchema_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(WriterSchema);
+          }
+          if (rows_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Rows);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (writerSchema_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(WriterSchema);
+          }
+          if (rows_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rows);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ArrowData other) {
+          if (other == null) {
+            return;
+          }
+          if (other.writerSchema_ != null) {
+            if (writerSchema_ == null) {
+              WriterSchema = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema();
+            }
+            WriterSchema.MergeFrom(other.WriterSchema);
+          }
+          if (other.rows_ != null) {
+            if (rows_ == null) {
+              Rows = new global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch();
+            }
+            Rows.MergeFrom(other.Rows);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (writerSchema_ == null) {
+                  WriterSchema = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema();
+                }
+                input.ReadMessage(WriterSchema);
+                break;
+              }
+              case 18: {
+                if (rows_ == null) {
+                  Rows = new global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch();
+                }
+                input.ReadMessage(Rows);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (writerSchema_ == null) {
+                  WriterSchema = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema();
+                }
+                input.ReadMessage(WriterSchema);
+                break;
+              }
+              case 18: {
+                if (rows_ == null) {
+                  Rows = new global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch();
+                }
+                input.ReadMessage(Rows);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// ProtoData contains the data rows and schema when constructing append
       /// requests.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ProtoData : pb::IMessage<ProtoData>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -3233,7 +3709,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3268,9 +3744,14 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         public const int WriterSchemaFieldNumber = 1;
         private global::Google.Cloud.BigQuery.Storage.V1.ProtoSchema writerSchema_;
         /// <summary>
-        /// Proto schema used to serialize the data.  This value only needs to be
-        /// provided as part of the first request on a gRPC network connection,
-        /// and will be ignored for subsequent requests on the connection.
+        /// The protocol buffer schema used to serialize the data. Provide this value
+        /// whenever:
+        ///
+        /// * You send the first request of an RPC connection.
+        ///
+        /// * You change the input schema.
+        ///
+        /// * You specify a new destination table.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3482,6 +3963,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Response message for `AppendRows`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AppendRowsResponse : pb::IMessage<AppendRowsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3921,6 +4403,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       /// <summary>
       /// AppendResult is returned for successful append requests.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class AppendResult : pb::IMessage<AppendResult>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -4130,6 +4613,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Request message for `GetWriteStreamRequest`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetWriteStreamRequest : pb::IMessage<GetWriteStreamRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4367,6 +4851,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Request message for `BatchCommitWriteStreams`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCommitWriteStreamsRequest : pb::IMessage<BatchCommitWriteStreamsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4592,6 +5077,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Response message for `BatchCommitWriteStreams`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchCommitWriteStreamsResponse : pb::IMessage<BatchCommitWriteStreamsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4831,6 +5317,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Request message for invoking `FinalizeWriteStream`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FinalizeWriteStreamRequest : pb::IMessage<FinalizeWriteStreamRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5027,6 +5514,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Response message for `FinalizeWriteStream`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FinalizeWriteStreamResponse : pb::IMessage<FinalizeWriteStreamResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5222,6 +5710,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Request message for `FlushRows`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FlushRowsRequest : pb::IMessage<FlushRowsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5466,6 +5955,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Respond message for `FlushRows`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FlushRowsResponse : pb::IMessage<FlushRowsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5664,6 +6154,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// codes allows more structured error handling, and reduces the need to evaluate
   /// unstructured error text strings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StorageError : pb::IMessage<StorageError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5987,6 +6478,28 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         /// Offset out of range.
         /// </summary>
         [pbr::OriginalName("OFFSET_OUT_OF_RANGE")] OffsetOutOfRange = 9,
+        /// <summary>
+        /// Customer-managed encryption key (CMEK) not provided for CMEK-enabled
+        /// data.
+        /// </summary>
+        [pbr::OriginalName("CMEK_NOT_PROVIDED")] CmekNotProvided = 10,
+        /// <summary>
+        /// Customer-managed encryption key (CMEK) was incorrectly provided.
+        /// </summary>
+        [pbr::OriginalName("INVALID_CMEK_PROVIDED")] InvalidCmekProvided = 11,
+        /// <summary>
+        /// There is an encryption error while using customer-managed encryption key.
+        /// </summary>
+        [pbr::OriginalName("CMEK_ENCRYPTION_ERROR")] CmekEncryptionError = 12,
+        /// <summary>
+        /// Key Management Service (KMS) service returned an error, which can be
+        /// retried.
+        /// </summary>
+        [pbr::OriginalName("KMS_SERVICE_ERROR")] KmsServiceError = 13,
+        /// <summary>
+        /// Permission denied while using customer-managed encryption key.
+        /// </summary>
+        [pbr::OriginalName("KMS_PERMISSION_DENIED")] KmsPermissionDenied = 14,
       }
 
     }
@@ -5997,6 +6510,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// The message that presents row level error info in a request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RowError : pb::IMessage<RowError>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

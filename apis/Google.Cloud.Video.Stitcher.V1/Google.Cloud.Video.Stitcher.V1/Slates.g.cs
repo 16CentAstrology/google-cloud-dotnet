@@ -49,6 +49,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
   /// <summary>
   /// Slate object
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Slate : pb::IMessage<Slate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -131,7 +132,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
     public const int GamSlateFieldNumber = 3;
     private global::Google.Cloud.Video.Stitcher.V1.Slate.Types.GamSlate gamSlate_;
     /// <summary>
-    /// gam_slate has all the GAM related attributes of slates.
+    /// gam_slate has all the GAM-related attributes of slates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -339,6 +340,7 @@ namespace Google.Cloud.Video.Stitcher.V1 {
       /// GamSlate object has Google Ad Manager (GAM) related properties for the
       /// slate.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class GamSlate : pb::IMessage<GamSlate>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

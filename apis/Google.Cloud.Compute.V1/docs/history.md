@@ -1,5 +1,95 @@
 # Version history
 
+## Version 3.4.0, released 2025-02-03
+
+### New features
+
+- Update Compute Engine API to revision 20250119 ([issue 981](https://github.com/googleapis/google-cloud-dotnet/issues/981)) ([commit 45c3223](https://github.com/googleapis/google-cloud-dotnet/commit/45c322349cb14789bf9318e44974042baa167659))
+
+## Version 3.3.0, released 2025-01-27
+
+### New features
+
+- Update Compute Engine API to revision 20250107 ([issue 975](https://github.com/googleapis/google-cloud-dotnet/issues/975)) ([commit f4f1f81](https://github.com/googleapis/google-cloud-dotnet/commit/f4f1f81c82fb1157a5bdcf28b1c0ee7412c71f11))
+
+## Version 3.2.0, released 2024-12-12
+
+### New features
+
+- Update Compute Engine API to revision 20241201 ([issue 966](https://github.com/googleapis/google-cloud-dotnet/issues/966)) ([commit 7239f50](https://github.com/googleapis/google-cloud-dotnet/commit/7239f50bdec0ada1978fe81799641632dc1084da))
+
+## Version 3.1.0, released 2024-11-18
+
+### New features
+
+- Update Compute Engine API to revision 20241105 ([issue 954](https://github.com/googleapis/google-cloud-dotnet/issues/954)) ([commit 8577e3f](https://github.com/googleapis/google-cloud-dotnet/commit/8577e3fd9f22769db8d740a44efc03dbc07689d8))
+
+## Version 3.0.0, released 2024-11-07
+
+### New features
+
+- Update Compute Engine API to revision 20241015 ([commit dd73c65](https://github.com/googleapis/google-cloud-dotnet/commit/dd73c65b8bb7aa8a5927b5e5f7bb8d5e8372f881))
+
+### Breaking changes
+
+This release removes some IAM-related client library types. These
+already had no effect on the service, but due to the wide-ranging
+nature of the removal, it's *possible* that customers may have been
+relying on the types. We do not expect these types to reappear in
+the library; if this removal breaks your code, please check
+carefully for what you expected it to do, and raise an issue in
+GitHub if you have concerns.
+
+## Version 2.17.0, released 2024-07-25
+
+### Bug fixes
+
+- Fix pagination for optional fields ([issue 13311](https://github.com/googleapis/google-cloud-dotnet/issues/13311))
+
+## Version 2.16.0, released 2024-05-08
+
+### New features
+
+- Update Compute Engine API to revision 20240430 ([issue 900](https://github.com/googleapis/google-cloud-dotnet/issues/900)) ([commit 95da052](https://github.com/googleapis/google-cloud-dotnet/commit/95da0521b6ee7c97fa560544647c3a29e7751c6e))
+- Update Compute Engine API to revision 20240421 ([issue 899](https://github.com/googleapis/google-cloud-dotnet/issues/899)) ([commit cc0431c](https://github.com/googleapis/google-cloud-dotnet/commit/cc0431c34f4a8affb8138beb711cd8c9bb5c8da4))
+- Update Compute Engine API to revision 20240407 ([issue 890](https://github.com/googleapis/google-cloud-dotnet/issues/890)) ([commit ee6c6f0](https://github.com/googleapis/google-cloud-dotnet/commit/ee6c6f02ddf65283b0919bc01cb65d7e6f2c87b0))
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 2.15.0, released 2024-03-26
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit 82bea85](https://github.com/googleapis/google-cloud-dotnet/commit/82bea850661975b9750ac30753528cc9d2e05240))
+
+## Version 2.14.0, released 2024-03-04
+
+### New features
+
+- Update Compute Engine API to revision 20240220 ([issue 886](https://github.com/googleapis/google-cloud-dotnet/issues/886)) ([commit eca3b4f](https://github.com/googleapis/google-cloud-dotnet/commit/eca3b4f258bac8d1b67e9b5178d0daf25efa2cef))
+
+## Version 2.13.0, released 2024-02-08
+
+### New features
+
+- Update Compute Engine API to revision 20240130 ([issue 881](https://github.com/googleapis/google-cloud-dotnet/issues/881)) ([commit f265ab6](https://github.com/googleapis/google-cloud-dotnet/commit/f265ab6a4e138a1285a4730288fbbf62f0938730))
+
+## Version 2.12.0, released 2023-12-11
+
+### New features
+
+- Update Compute Engine API to revision 20231110 ([issue 868](https://github.com/googleapis/google-cloud-dotnet/issues/868)) ([commit 8e8bab2](https://github.com/googleapis/google-cloud-dotnet/commit/8e8bab2c81fa30e3a176fc6a71f2abe9acae3646))
+
+## Version 2.11.0, released 2023-08-04
+
+### New features
+
+- Update Compute Engine API to revision 20230711 ([issue 836](https://github.com/googleapis/google-cloud-dotnet/issues/836)) ([commit 95216dc](https://github.com/googleapis/google-cloud-dotnet/commit/95216dcc3d77c9aefcbc4225c389932dde0f578c))
+
+## Version 2.10.0, released 2023-07-13
+
+### New features
+
+- Update Compute Engine API to revision 20230701 ([issue 821](https://github.com/googleapis/google-cloud-dotnet/issues/821)) ([commit 7b34803](https://github.com/googleapis/google-cloud-dotnet/commit/7b348032a29ca68847b80ab0c998586cf5a46c02))
 ## Version 2.9.0, released 2023-03-27
 
 ### New features

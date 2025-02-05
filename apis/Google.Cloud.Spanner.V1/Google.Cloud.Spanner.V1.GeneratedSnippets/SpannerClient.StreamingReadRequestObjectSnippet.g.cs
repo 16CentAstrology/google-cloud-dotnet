@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Spanner.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START spanner_v1_generated_Spanner_StreamingRead_sync]
     using Google.Api.Gax.Grpc;
@@ -49,10 +49,13 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
                 RequestOptions = new RequestOptions(),
+                DirectedReadOptions = new DirectedReadOptions(),
                 DataBoostEnabled = false,
+                OrderBy = ReadRequest.Types.OrderBy.Unspecified,
+                LockHint = ReadRequest.Types.LockHint.Unspecified,
             };
             // Make the request, returning a streaming response
-            SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
+            using SpannerClient.StreamingReadStream response = spannerClient.StreamingRead(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

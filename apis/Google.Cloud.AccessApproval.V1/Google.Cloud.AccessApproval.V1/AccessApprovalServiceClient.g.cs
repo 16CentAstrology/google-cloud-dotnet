@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,20 +15,20 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.AccessApproval.V1
 {
@@ -241,14 +241,14 @@ namespace Google.Cloud.AccessApproval.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AccessApprovalServiceClient.Create(callInvoker, Settings, Logger);
+            return AccessApprovalServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AccessApprovalServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AccessApprovalServiceClient.Create(callInvoker, Settings, Logger);
+            return AccessApprovalServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -415,13 +415,19 @@ namespace Google.Cloud.AccessApproval.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ApprovalRequest"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequests(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApprovalRequests(new ListApprovalRequestsMessage
+        public virtual gax::PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequests(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApprovalRequestsMessage request = new ListApprovalRequestsMessage { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApprovalRequests(request, callSettings);
+        }
 
         /// <summary>
         /// Lists approval requests associated with a project, folder, or organization.
@@ -442,13 +448,19 @@ namespace Google.Cloud.AccessApproval.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ApprovalRequest"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequestsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApprovalRequestsAsync(new ListApprovalRequestsMessage
+        public virtual gax::PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequestsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApprovalRequestsMessage request = new ListApprovalRequestsMessage { Parent = parent ?? "", };
+            if (pageToken != null)
             {
-                Parent = parent ?? "",
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApprovalRequestsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists approval requests associated with a project, folder, or organization.
@@ -469,13 +481,22 @@ namespace Google.Cloud.AccessApproval.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ApprovalRequest"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequests(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApprovalRequests(new ListApprovalRequestsMessage
+        public virtual gax::PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequests(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApprovalRequestsMessage request = new ListApprovalRequestsMessage
             {
                 ParentAsProjectName = parent,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApprovalRequests(request, callSettings);
+        }
 
         /// <summary>
         /// Lists approval requests associated with a project, folder, or organization.
@@ -496,13 +517,22 @@ namespace Google.Cloud.AccessApproval.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ApprovalRequest"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequestsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApprovalRequestsAsync(new ListApprovalRequestsMessage
+        public virtual gax::PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequestsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApprovalRequestsMessage request = new ListApprovalRequestsMessage
             {
                 ParentAsProjectName = parent,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApprovalRequestsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists approval requests associated with a project, folder, or organization.
@@ -523,13 +553,22 @@ namespace Google.Cloud.AccessApproval.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ApprovalRequest"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequests(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApprovalRequests(new ListApprovalRequestsMessage
+        public virtual gax::PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequests(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApprovalRequestsMessage request = new ListApprovalRequestsMessage
             {
                 ParentAsFolderName = parent,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApprovalRequests(request, callSettings);
+        }
 
         /// <summary>
         /// Lists approval requests associated with a project, folder, or organization.
@@ -550,13 +589,22 @@ namespace Google.Cloud.AccessApproval.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ApprovalRequest"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequestsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApprovalRequestsAsync(new ListApprovalRequestsMessage
+        public virtual gax::PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequestsAsync(gagr::FolderName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApprovalRequestsMessage request = new ListApprovalRequestsMessage
             {
                 ParentAsFolderName = parent,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApprovalRequestsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists approval requests associated with a project, folder, or organization.
@@ -577,13 +625,22 @@ namespace Google.Cloud.AccessApproval.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ApprovalRequest"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequests(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApprovalRequests(new ListApprovalRequestsMessage
+        public virtual gax::PagedEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequests(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApprovalRequestsMessage request = new ListApprovalRequestsMessage
             {
                 ParentAsOrganizationName = parent,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApprovalRequests(request, callSettings);
+        }
 
         /// <summary>
         /// Lists approval requests associated with a project, folder, or organization.
@@ -604,13 +661,22 @@ namespace Google.Cloud.AccessApproval.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ApprovalRequest"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequestsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListApprovalRequestsAsync(new ListApprovalRequestsMessage
+        public virtual gax::PagedAsyncEnumerable<ListApprovalRequestsResponse, ApprovalRequest> ListApprovalRequestsAsync(gagr::OrganizationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListApprovalRequestsMessage request = new ListApprovalRequestsMessage
             {
                 ParentAsOrganizationName = parent,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListApprovalRequestsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets an approval request. Returns NOT_FOUND if the request does not exist.
@@ -1354,7 +1420,11 @@ namespace Google.Cloud.AccessApproval.V1
         {
             GrpcClient = grpcClient;
             AccessApprovalServiceSettings effectiveSettings = settings ?? AccessApprovalServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListApprovalRequests = clientHelper.BuildApiCall<ListApprovalRequestsMessage, ListApprovalRequestsResponse>("ListApprovalRequests", grpcClient.ListApprovalRequestsAsync, grpcClient.ListApprovalRequests, effectiveSettings.ListApprovalRequestsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListApprovalRequests);
             Modify_ListApprovalRequestsApiCall(ref _callListApprovalRequests);

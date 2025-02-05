@@ -38,8 +38,8 @@ namespace Google.Cloud.Kms.Inventory.V1 {
             "S2V5RGFzaGJvYXJkU2VydmljZRKyAQoOTGlzdENyeXB0b0tleXMSNC5nb29n",
             "bGUuY2xvdWQua21zLmludmVudG9yeS52MS5MaXN0Q3J5cHRvS2V5c1JlcXVl",
             "c3QaNS5nb29nbGUuY2xvdWQua21zLmludmVudG9yeS52MS5MaXN0Q3J5cHRv",
-            "S2V5c1Jlc3BvbnNlIjOC0+STAiQSIi92MS97cGFyZW50PXByb2plY3RzLyp9",
-            "L2NyeXB0b0tleXPaQQZwYXJlbnQaT8pBG2ttc2ludmVudG9yeS5nb29nbGVh",
+            "S2V5c1Jlc3BvbnNlIjPaQQZwYXJlbnSC0+STAiQSIi92MS97cGFyZW50PXBy",
+            "b2plY3RzLyp9L2NyeXB0b0tleXMaT8pBG2ttc2ludmVudG9yeS5nb29nbGVh",
             "cGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
             "dWQtcGxhdGZvcm1CwwEKIWNvbS5nb29nbGUuY2xvdWQua21zLmludmVudG9y",
             "eS52MUIYS2V5RGFzaGJvYXJkU2VydmljZVByb3RvUAFaP2Nsb3VkLmdvb2ds",
@@ -61,6 +61,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
   /// Request message for
   /// [KeyDashboardService.ListCryptoKeys][google.cloud.kms.inventory.v1.KeyDashboardService.ListCryptoKeys].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCryptoKeysRequest : pb::IMessage<ListCryptoKeysRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -341,6 +342,7 @@ namespace Google.Cloud.Kms.Inventory.V1 {
   /// Response message for
   /// [KeyDashboardService.ListCryptoKeys][google.cloud.kms.inventory.v1.KeyDashboardService.ListCryptoKeys].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCryptoKeysResponse : pb::IMessage<ListCryptoKeysResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

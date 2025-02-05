@@ -14,6 +14,9 @@ unset APPVEYOR_API_URL
 # match anything, e.g. when looking for tests.
 shopt -s nullglob
 
+# Enable testing for Storage.V2
+export STORAGE_V2_IS_NOT_FOR_PRODUCTION_USE_IN_DOTNET=true
+
 # Command line arguments are the APIs to build. Each argument
 # should be the name of a directory, either relative to the location
 # of this script, or under apis.
@@ -22,10 +25,8 @@ shopt -s nullglob
 # --diff: Detect which APIs to build based on a diff to the main branch
 # --regex regex: Only build APIs that match the given regex
 # --nobuild: Just list which APIs would be built; don't run the build
-# --coverage: Run tests with coverage enabled
 apis=()
 runtests=true
-runcoverage=false
 apiregex=
 nobuild=false
 diff=false
@@ -44,24 +45,22 @@ while (( "$#" )); do
   elif [[ "$1" == "--nobuild" ]]
   then
     nobuild=true
-  elif [[ "$1" == "--coverage" ]]
-  then
-    runcoverage=true
-    install_dotcover
-    mkdir -p coverage
   else
     apis+=($1)
   fi
   shift
 done
 
-# Build and test the tools, but only on Windows
-[[ "$OS" == "Windows_NT" ]] && tools="tools" || tools=""
-
 # If no APIs were specified explicitly, build all of them (and tools on Windows)
 if [[ ${#apis[@]} -eq 0 && $diff == false ]]
 then
-  apis=(${tools} $($PYTHON3 tools/listapis.py apis/apis.json))
+  # Build and test the tools, but only on Windows
+  [[ "$OS" == "Windows_NT" ]] && tools="tools" || tools=""
+
+  # Build ReleaseManager first separately, so that we get any build messages
+  # here rather than when we try to run it
+  dotnet build tools/Google.Cloud.Tools.ReleaseManager
+  apis=(${tools} $(dotnet run --no-build --no-restore --project tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog list))
 fi
 
 # If we were given an API filter regex, apply it now.
@@ -163,8 +162,8 @@ log_build_action "(End) Building"
 
 if [[ "$runtests" = true ]]
 then
-
   log_build_action "(Start) Client creation tests"
+  # TODO: allow a ReleaseManager binary to be passed in instead, if we've got one already.
   dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.ReleaseManager
   for api in ${apis[*]}
   do
@@ -182,15 +181,9 @@ then
   do
     testdir=$(dirname $testproject)
     log_build_action "Testing $testdir"
-    if [[ "$runcoverage" = true && -f "$testdir/coverage.xml" ]]
-    then
-      echo "(Running with coverage)"
-      (cd "$testdir"; $DOTCOVER cover "coverage.xml" --ReturnTargetExitCode)
-    else
-      # Note that even though we should have built everything by now,
-      # --no-build causes odd issues on GitHub CI.
-      dotnet test -nologo -c Release $testproject
-    fi
+    # Note that even though we should have built everything by now,
+    # --no-build causes odd issues on GitHub CI.
+    dotnet test -nologo -c Release $testproject
   done < AllTests.txt
   log_build_action "(End) Unit tests"
 fi

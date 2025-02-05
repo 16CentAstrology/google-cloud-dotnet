@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
 
         public BigtableFixtureBase()
         {
-#if NET462_OR_GREATER            
+#if NET462_OR_GREATER
             GrpcInfo.EnableSubchannelCounting();
 #endif
             RunningAgainstEmulator = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable(EmulatorEnvironmentVariable));
@@ -54,11 +54,6 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
             {
                 projectId = "emulator-test-project";
                 instanceId = "doesnt-matter";
-#if NETCOREAPP3_1
-                // On .NET Core 3.1 (but not .NET 6) Grpc.Net.Client needs an additional switch
-                // to allow an insecure channel in HTTP/2.
-                AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-#endif
             }
             else
             {
@@ -110,7 +105,7 @@ namespace Google.Cloud.Bigtable.V2.IntegrationTests
                 }
                 catch (RpcException e) when (e.Status.StatusCode == StatusCode.NotFound)
                 {
-                    Assert.True(false, $"The Bigtable instance for testing does not exist: {InstanceName}");
+                    Assert.Fail($"The Bigtable instance for testing does not exist: {InstanceName}");
                 }
             }
 

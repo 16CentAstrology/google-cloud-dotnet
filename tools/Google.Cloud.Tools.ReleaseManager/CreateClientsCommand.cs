@@ -24,17 +24,15 @@ namespace Google.Cloud.Tools.ReleaseManager;
 
 public class CreateClientsCommand : CommandBase
 {
-    private const string PublishTargetFramework = "netstandard2.1";
-
     public CreateClientsCommand()
         : base("create-clients", "Checks that we can create clients for a pure-GAPIC package", "id")
     {
     }
 
-    protected override void ExecuteImpl(string[] args)
+    protected override int ExecuteImpl(string[] args)
     {
         string id = args[0];
-        var catalog = ApiCatalog.Load();
+        var catalog = ApiCatalog.Load(RootLayout);
         if (!catalog.TryGetApi(id, out var api))
         {
             throw new UserErrorException($"No such API: {id}");
@@ -42,24 +40,42 @@ public class CreateClientsCommand : CommandBase
         if (api.Generator != GeneratorType.Micro)
         {
             Console.WriteLine($"{id} is not a GAPIC-generated API; skipping client creation test.");
-            return;
+            return 0;
         }
 
         var assembly = PublishAndLoadAssembly(id);
         CreateClients(assembly, id);
+        return 0;
+    }
+
+    /// <summary>
+    /// Returns the tfm (e.g. netstandard2.0 or netstandard2.1) to build/load for tools
+    /// that need to load the library with reflection, e.g. for smoke tests.
+    /// </summary>
+    internal static string GetTargetForReflectionLoad(RootLayout rootLayout, string id)
+    {
+        // Work out the TFM to publish, based on specified target frameworks.
+        var api = ApiCatalog.Load(rootLayout)[id];
+        return api.TargetFrameworks?
+            .Split(';')
+            .FirstOrDefault(candidate => candidate.StartsWith("netstandard"))
+            ?? NonSourceGenerator.DefaultNetstandardTarget;
     }
 
     // Note: a lot of code from here on is copied/modified from SmokeTest and SuggestSmokeTestsCommand.
     // We could consider refactoring later, if we find this is a problem.
     private Assembly PublishAndLoadAssembly(string id)
     {
-        var sourceRoot = DirectoryLayout.ForApi(id).SourceDirectory;
+        var apiLayout = RootLayout.CreateRepositoryApiLayout(id);
+
+        // Work out the TFM to publish, based on specified target frameworks.
+        string tfm = GetTargetForReflectionLoad(RootLayout, id);
+
         // Note: we explicitly don't build here, as this code is normally run from a build script which has
         // has already built. Avoiding the rebuild saves a lot of time.
-        Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", "--no-build", id, "-f", PublishTargetFramework);
+        Processes.RunDotnet(apiLayout.ProductionDirectory, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", "--no-build", "-f", tfm);
 
-        var assemblyFile = Path.Combine(sourceRoot, id, "bin", "Release", PublishTargetFramework, "publish", $"{id}.dll");
-        return Assembly.LoadFrom(assemblyFile);
+        return Assembly.LoadFrom(apiLayout.GetPublishedAssembly(tfm));
     }
 
     private void CreateClients(Assembly assembly, string id)

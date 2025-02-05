@@ -408,6 +408,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Defines a job to be run by the Cloud Dataflow service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Job : pb::IMessage<Job>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1330,7 +1331,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other.ReplaceJobId.Length != 0) {
         ReplaceJobId = other.ReplaceJobId;
       }
-      transformNameMapping_.Add(other.transformNameMapping_);
+      transformNameMapping_.MergeFrom(other.transformNameMapping_);
       if (other.ClientRequestId.Length != 0) {
         ClientRequestId = other.ClientRequestId;
       }
@@ -1338,7 +1339,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         ReplacedByJobId = other.ReplacedByJobId;
       }
       tempFiles_.Add(other.tempFiles_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.Location.Length != 0) {
         Location = other.Location;
       }
@@ -1649,6 +1650,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a Datastore connector used by the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatastoreIODetails : pb::IMessage<DatastoreIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1884,6 +1886,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a Pub/Sub connector used by the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PubSubIODetails : pb::IMessage<PubSubIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2119,6 +2122,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a File connector used by the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FileIODetails : pb::IMessage<FileIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2314,6 +2318,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a Cloud Bigtable connector used by the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigTableIODetails : pb::IMessage<BigTableIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2589,6 +2594,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a BigQuery connector used by the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryIODetails : pb::IMessage<BigQueryIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2904,6 +2910,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Metadata for a Spanner connector used by the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SpannerIODetails : pb::IMessage<SpannerIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3179,6 +3186,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// The version of the SDK used to run the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SdkVersion : pb::IMessage<SdkVersion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3490,6 +3498,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Metadata available primarily for filtering jobs. Will be included in the
   /// ListJob response and Job SUMMARY view.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobMetadata : pb::IMessage<JobMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3868,6 +3877,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// A message describing the state of a particular execution stage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExecutionStageState : pb::IMessage<ExecutionStageState>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4154,6 +4164,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// form.  This data is provided by the Dataflow service for ease of visualizing
   /// the pipeline and interpreting Dataflow provided metrics.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PipelineDescription : pb::IMessage<PipelineDescription>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4396,6 +4407,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Description of the type, names/ids, and input/outputs for a transform.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransformSummary : pb::IMessage<TransformSummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4760,6 +4772,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// stage of execution.  Some composing transforms and sources may have been
   /// generated by the Dataflow service during execution planning.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExecutionStageSummary : pb::IMessage<ExecutionStageSummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5183,6 +5196,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// <summary>
       /// Description of an input or output of an execution stage.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class StageSource : pb::IMessage<StageSource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5499,6 +5513,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// <summary>
       /// Description of a transform executed as part of an execution stage.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ComponentTransform : pb::IMessage<ComponentTransform>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5776,6 +5791,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// Description of an interstitial value between transforms in an execution
       /// stage.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ComponentSource : pb::IMessage<ComponentSource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6057,6 +6073,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Data provided with a pipeline or transform to provide descriptive info.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisplayData : pb::IMessage<DisplayData>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6172,10 +6189,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StrValue {
-      get { return valueCase_ == ValueOneofCase.StrValue ? (string) value_ : ""; }
+      get { return HasStrValue ? (string) value_ : ""; }
       set {
         value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueCase_ = ValueOneofCase.StrValue;
+      }
+    }
+    /// <summary>Gets whether the "str_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStrValue {
+      get { return valueCase_ == ValueOneofCase.StrValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "str_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStrValue() {
+      if (HasStrValue) {
+        ClearValue();
       }
     }
 
@@ -6187,10 +6218,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Int64Value {
-      get { return valueCase_ == ValueOneofCase.Int64Value ? (long) value_ : 0L; }
+      get { return HasInt64Value ? (long) value_ : 0L; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.Int64Value;
+      }
+    }
+    /// <summary>Gets whether the "int64_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInt64Value {
+      get { return valueCase_ == ValueOneofCase.Int64Value; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "int64_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInt64Value() {
+      if (HasInt64Value) {
+        ClearValue();
       }
     }
 
@@ -6202,10 +6247,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float FloatValue {
-      get { return valueCase_ == ValueOneofCase.FloatValue ? (float) value_ : 0F; }
+      get { return HasFloatValue ? (float) value_ : 0F; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.FloatValue;
+      }
+    }
+    /// <summary>Gets whether the "float_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFloatValue {
+      get { return valueCase_ == ValueOneofCase.FloatValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "float_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFloatValue() {
+      if (HasFloatValue) {
+        ClearValue();
       }
     }
 
@@ -6217,10 +6276,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string JavaClassValue {
-      get { return valueCase_ == ValueOneofCase.JavaClassValue ? (string) value_ : ""; }
+      get { return HasJavaClassValue ? (string) value_ : ""; }
       set {
         value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         valueCase_ = ValueOneofCase.JavaClassValue;
+      }
+    }
+    /// <summary>Gets whether the "java_class_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasJavaClassValue {
+      get { return valueCase_ == ValueOneofCase.JavaClassValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "java_class_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearJavaClassValue() {
+      if (HasJavaClassValue) {
+        ClearValue();
       }
     }
 
@@ -6262,10 +6335,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BoolValue {
-      get { return valueCase_ == ValueOneofCase.BoolValue ? (bool) value_ : false; }
+      get { return HasBoolValue ? (bool) value_ : false; }
       set {
         value_ = value;
         valueCase_ = ValueOneofCase.BoolValue;
+      }
+    }
+    /// <summary>Gets whether the "bool_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBoolValue {
+      get { return valueCase_ == ValueOneofCase.BoolValue; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "bool_value" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBoolValue() {
+      if (HasBoolValue) {
+        ClearValue();
       }
     }
 
@@ -6382,13 +6469,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       int hash = 1;
       if (Key.Length != 0) hash ^= Key.GetHashCode();
       if (Namespace.Length != 0) hash ^= Namespace.GetHashCode();
-      if (valueCase_ == ValueOneofCase.StrValue) hash ^= StrValue.GetHashCode();
-      if (valueCase_ == ValueOneofCase.Int64Value) hash ^= Int64Value.GetHashCode();
-      if (valueCase_ == ValueOneofCase.FloatValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FloatValue);
-      if (valueCase_ == ValueOneofCase.JavaClassValue) hash ^= JavaClassValue.GetHashCode();
+      if (HasStrValue) hash ^= StrValue.GetHashCode();
+      if (HasInt64Value) hash ^= Int64Value.GetHashCode();
+      if (HasFloatValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FloatValue);
+      if (HasJavaClassValue) hash ^= JavaClassValue.GetHashCode();
       if (valueCase_ == ValueOneofCase.TimestampValue) hash ^= TimestampValue.GetHashCode();
       if (valueCase_ == ValueOneofCase.DurationValue) hash ^= DurationValue.GetHashCode();
-      if (valueCase_ == ValueOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
+      if (HasBoolValue) hash ^= BoolValue.GetHashCode();
       if (ShortStrValue.Length != 0) hash ^= ShortStrValue.GetHashCode();
       if (Url.Length != 0) hash ^= Url.GetHashCode();
       if (Label.Length != 0) hash ^= Label.GetHashCode();
@@ -6419,19 +6506,19 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(18);
         output.WriteString(Namespace);
       }
-      if (valueCase_ == ValueOneofCase.StrValue) {
+      if (HasStrValue) {
         output.WriteRawTag(34);
         output.WriteString(StrValue);
       }
-      if (valueCase_ == ValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(40);
         output.WriteInt64(Int64Value);
       }
-      if (valueCase_ == ValueOneofCase.FloatValue) {
+      if (HasFloatValue) {
         output.WriteRawTag(53);
         output.WriteFloat(FloatValue);
       }
-      if (valueCase_ == ValueOneofCase.JavaClassValue) {
+      if (HasJavaClassValue) {
         output.WriteRawTag(58);
         output.WriteString(JavaClassValue);
       }
@@ -6443,7 +6530,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(74);
         output.WriteMessage(DurationValue);
       }
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(80);
         output.WriteBool(BoolValue);
       }
@@ -6477,19 +6564,19 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(18);
         output.WriteString(Namespace);
       }
-      if (valueCase_ == ValueOneofCase.StrValue) {
+      if (HasStrValue) {
         output.WriteRawTag(34);
         output.WriteString(StrValue);
       }
-      if (valueCase_ == ValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         output.WriteRawTag(40);
         output.WriteInt64(Int64Value);
       }
-      if (valueCase_ == ValueOneofCase.FloatValue) {
+      if (HasFloatValue) {
         output.WriteRawTag(53);
         output.WriteFloat(FloatValue);
       }
-      if (valueCase_ == ValueOneofCase.JavaClassValue) {
+      if (HasJavaClassValue) {
         output.WriteRawTag(58);
         output.WriteString(JavaClassValue);
       }
@@ -6501,7 +6588,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         output.WriteRawTag(74);
         output.WriteMessage(DurationValue);
       }
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         output.WriteRawTag(80);
         output.WriteBool(BoolValue);
       }
@@ -6533,16 +6620,16 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (Namespace.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Namespace);
       }
-      if (valueCase_ == ValueOneofCase.StrValue) {
+      if (HasStrValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(StrValue);
       }
-      if (valueCase_ == ValueOneofCase.Int64Value) {
+      if (HasInt64Value) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Int64Value);
       }
-      if (valueCase_ == ValueOneofCase.FloatValue) {
+      if (HasFloatValue) {
         size += 1 + 4;
       }
-      if (valueCase_ == ValueOneofCase.JavaClassValue) {
+      if (HasJavaClassValue) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(JavaClassValue);
       }
       if (valueCase_ == ValueOneofCase.TimestampValue) {
@@ -6551,7 +6638,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (valueCase_ == ValueOneofCase.DurationValue) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DurationValue);
       }
-      if (valueCase_ == ValueOneofCase.BoolValue) {
+      if (HasBoolValue) {
         size += 1 + 1;
       }
       if (ShortStrValue.Length != 0) {
@@ -6800,6 +6887,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Note that the Cloud Dataflow service may be used to run many different
   /// types of jobs, not just Map-Reduce.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Step : pb::IMessage<Step>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7088,6 +7176,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Additional information about how a Cloud Dataflow job will be executed that
   /// isn't contained in the submitted job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobExecutionInfo : pb::IMessage<JobExecutionInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7223,7 +7312,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       if (other == null) {
         return;
       }
-      stages_.Add(other.stages_);
+      stages_.MergeFrom(other.stages_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -7273,6 +7362,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// Contains information about how a particular
   /// [google.dataflow.v1beta3.Step][google.dataflow.v1beta3.Step] will be executed.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JobExecutionStageInfo : pb::IMessage<JobExecutionStageInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7459,6 +7549,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to create a Cloud Dataflow job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateJobRequest : pb::IMessage<CreateJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7825,6 +7916,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to get the state of a Cloud Dataflow job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetJobRequest : pb::IMessage<GetJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8142,6 +8234,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to update a Cloud Dataflow job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateJobRequest : pb::IMessage<UpdateJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8469,6 +8562,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to list Cloud Dataflow jobs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsRequest : pb::IMessage<ListJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8909,6 +9003,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) failed
   /// to respond to a request for data.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FailedLocation : pb::IMessage<FailedLocation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9110,6 +9205,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// ListJobsResponse is not returned and the requests's response
   /// body is empty {}.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListJobsResponse : pb::IMessage<ListJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9365,6 +9461,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to create a snapshot of a job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SnapshotJobRequest : pb::IMessage<SnapshotJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9769,6 +9866,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Request to check is active jobs exists for a project
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CheckActiveJobsRequest : pb::IMessage<CheckActiveJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9964,6 +10062,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   /// <summary>
   /// Response for CheckActiveJobsRequest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CheckActiveJobsResponse : pb::IMessage<CheckActiveJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

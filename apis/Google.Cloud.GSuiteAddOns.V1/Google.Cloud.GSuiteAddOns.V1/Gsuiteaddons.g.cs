@@ -90,40 +90,40 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
             "Y3JpcHQudHlwZS5IdHRwT3B0aW9uczKkDQoMR1N1aXRlQWRkT25zEqoBChBH",
             "ZXRBdXRob3JpemF0aW9uEjUuZ29vZ2xlLmNsb3VkLmdzdWl0ZWFkZG9ucy52",
             "MS5HZXRBdXRob3JpemF0aW9uUmVxdWVzdBorLmdvb2dsZS5jbG91ZC5nc3Vp",
-            "dGVhZGRvbnMudjEuQXV0aG9yaXphdGlvbiIygtPkkwIlEiMvdjEve25hbWU9",
-            "cHJvamVjdHMvKi9hdXRob3JpemF0aW9ufdpBBG5hbWUSzgEKEENyZWF0ZURl",
+            "dGVhZGRvbnMudjEuQXV0aG9yaXphdGlvbiIy2kEEbmFtZYLT5JMCJRIjL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovYXV0aG9yaXphdGlvbn0SzgEKEENyZWF0ZURl",
             "cGxveW1lbnQSNS5nb29nbGUuY2xvdWQuZ3N1aXRlYWRkb25zLnYxLkNyZWF0",
             "ZURlcGxveW1lbnRSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmdzdWl0ZWFkZG9u",
-            "cy52MS5EZXBsb3ltZW50IlmC0+STAjEiIy92MS97cGFyZW50PXByb2plY3Rz",
-            "Lyp9L2RlcGxveW1lbnRzOgpkZXBsb3ltZW502kEfcGFyZW50LGRlcGxveW1l",
-            "bnQsZGVwbG95bWVudF9pZBLGAQoRUmVwbGFjZURlcGxveW1lbnQSNi5nb29n",
+            "cy52MS5EZXBsb3ltZW50IlnaQR9wYXJlbnQsZGVwbG95bWVudCxkZXBsb3lt",
+            "ZW50X2lkgtPkkwIxIiMvdjEve3BhcmVudD1wcm9qZWN0cy8qfS9kZXBsb3lt",
+            "ZW50czoKZGVwbG95bWVudBLGAQoRUmVwbGFjZURlcGxveW1lbnQSNi5nb29n",
             "bGUuY2xvdWQuZ3N1aXRlYWRkb25zLnYxLlJlcGxhY2VEZXBsb3ltZW50UmVx",
             "dWVzdBooLmdvb2dsZS5jbG91ZC5nc3VpdGVhZGRvbnMudjEuRGVwbG95bWVu",
-            "dCJPgtPkkwI8Gi4vdjEve2RlcGxveW1lbnQubmFtZT1wcm9qZWN0cy8qL2Rl",
-            "cGxveW1lbnRzLyp9OgpkZXBsb3ltZW502kEKZGVwbG95bWVudBKhAQoNR2V0",
+            "dCJP2kEKZGVwbG95bWVudILT5JMCPBouL3YxL3tkZXBsb3ltZW50Lm5hbWU9",
+            "cHJvamVjdHMvKi9kZXBsb3ltZW50cy8qfToKZGVwbG95bWVudBKhAQoNR2V0",
             "RGVwbG95bWVudBIyLmdvb2dsZS5jbG91ZC5nc3VpdGVhZGRvbnMudjEuR2V0",
             "RGVwbG95bWVudFJlcXVlc3QaKC5nb29nbGUuY2xvdWQuZ3N1aXRlYWRkb25z",
-            "LnYxLkRlcGxveW1lbnQiMoLT5JMCJRIjL3YxL3tuYW1lPXByb2plY3RzLyov",
-            "ZGVwbG95bWVudHMvKn3aQQRuYW1lErQBCg9MaXN0RGVwbG95bWVudHMSNC5n",
+            "LnYxLkRlcGxveW1lbnQiMtpBBG5hbWWC0+STAiUSIy92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2RlcGxveW1lbnRzLyp9ErQBCg9MaXN0RGVwbG95bWVudHMSNC5n",
             "b29nbGUuY2xvdWQuZ3N1aXRlYWRkb25zLnYxLkxpc3REZXBsb3ltZW50c1Jl",
             "cXVlc3QaNS5nb29nbGUuY2xvdWQuZ3N1aXRlYWRkb25zLnYxLkxpc3REZXBs",
-            "b3ltZW50c1Jlc3BvbnNlIjSC0+STAiUSIy92MS97cGFyZW50PXByb2plY3Rz",
-            "Lyp9L2RlcGxveW1lbnRz2kEGcGFyZW50EpUBChBEZWxldGVEZXBsb3ltZW50",
+            "b3ltZW50c1Jlc3BvbnNlIjTaQQZwYXJlbnSC0+STAiUSIy92MS97cGFyZW50",
+            "PXByb2plY3RzLyp9L2RlcGxveW1lbnRzEpUBChBEZWxldGVEZXBsb3ltZW50",
             "EjUuZ29vZ2xlLmNsb3VkLmdzdWl0ZWFkZG9ucy52MS5EZWxldGVEZXBsb3lt",
-            "ZW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIygtPkkwIlKiMv",
-            "djEve25hbWU9cHJvamVjdHMvKi9kZXBsb3ltZW50cy8qfdpBBG5hbWUSogEK",
+            "ZW50UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIy2kEEbmFtZYLT",
+            "5JMCJSojL3YxL3tuYW1lPXByb2plY3RzLyovZGVwbG95bWVudHMvKn0SogEK",
             "EUluc3RhbGxEZXBsb3ltZW50EjYuZ29vZ2xlLmNsb3VkLmdzdWl0ZWFkZG9u",
             "cy52MS5JbnN0YWxsRGVwbG95bWVudFJlcXVlc3QaFi5nb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkiPYLT5JMCMCIrL3YxL3tuYW1lPXByb2plY3RzLyovZGVwbG95",
-            "bWVudHMvKn06aW5zdGFsbDoBKtpBBG5hbWUSqAEKE1VuaW5zdGFsbERlcGxv",
+            "dWYuRW1wdHkiPdpBBG5hbWWC0+STAjAiKy92MS97bmFtZT1wcm9qZWN0cy8q",
+            "L2RlcGxveW1lbnRzLyp9Omluc3RhbGw6ASoSqAEKE1VuaW5zdGFsbERlcGxv",
             "eW1lbnQSOC5nb29nbGUuY2xvdWQuZ3N1aXRlYWRkb25zLnYxLlVuaW5zdGFs",
-            "bERlcGxveW1lbnRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ij+C",
-            "0+STAjIiLS92MS97bmFtZT1wcm9qZWN0cy8qL2RlcGxveW1lbnRzLyp9OnVu",
-            "aW5zdGFsbDoBKtpBBG5hbWUSuAEKEEdldEluc3RhbGxTdGF0dXMSNS5nb29n",
+            "bERlcGxveW1lbnRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ij/a",
+            "QQRuYW1lgtPkkwIyIi0vdjEve25hbWU9cHJvamVjdHMvKi9kZXBsb3ltZW50",
+            "cy8qfTp1bmluc3RhbGw6ASoSuAEKEEdldEluc3RhbGxTdGF0dXMSNS5nb29n",
             "bGUuY2xvdWQuZ3N1aXRlYWRkb25zLnYxLkdldEluc3RhbGxTdGF0dXNSZXF1",
             "ZXN0GisuZ29vZ2xlLmNsb3VkLmdzdWl0ZWFkZG9ucy52MS5JbnN0YWxsU3Rh",
-            "dHVzIkCC0+STAjMSMS92MS97bmFtZT1wcm9qZWN0cy8qL2RlcGxveW1lbnRz",
-            "LyovaW5zdGFsbFN0YXR1c33aQQRuYW1lGk/KQRtnc3VpdGVhZGRvbnMuZ29v",
+            "dHVzIkDaQQRuYW1lgtPkkwIzEjEvdjEve25hbWU9cHJvamVjdHMvKi9kZXBs",
+            "b3ltZW50cy8qL2luc3RhbGxTdGF0dXN9Gk/KQRtnc3VpdGVhZGRvbnMuZ29v",
             "Z2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
             "L2Nsb3VkLXBsYXRmb3JtQt0BCiBjb20uZ29vZ2xlLmNsb3VkLmdzdWl0ZWFk",
             "ZG9ucy52MUIRR1N1aXRlQWRkT25zUHJvdG9QAVpEY2xvdWQuZ29vZ2xlLmNv",
@@ -155,8 +155,9 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message to get Google Workspace Add-ons authorization information.
+  /// Request message to get Google Workspace add-ons authorization information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAuthorizationRequest : pb::IMessage<GetAuthorizationRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -205,7 +206,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the project for which to get the Google Workspace Add-ons
+    /// Required. Name of the project for which to get the Google Workspace add-ons
     /// authorization information.
     ///
     /// Example: `projects/my_project/authorization`.
@@ -355,6 +356,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   /// <summary>
   /// The authorization information used when invoking deployment endpoints.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Authorization : pb::IMessage<Authorization>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -633,6 +635,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   /// <summary>
   /// Request message to create a deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateDeploymentRequest : pb::IMessage<CreateDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -920,6 +923,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   /// <summary>
   /// Request message to create or replace a deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ReplaceDeploymentRequest : pb::IMessage<ReplaceDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1124,6 +1128,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   /// <summary>
   /// Request message to get a deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDeploymentRequest : pb::IMessage<GetDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1321,6 +1326,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   /// <summary>
   /// Request message to list deployments for a project.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDeploymentsRequest : pb::IMessage<ListDeploymentsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1605,6 +1611,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   /// <summary>
   /// Response message to list deployments.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDeploymentsResponse : pb::IMessage<ListDeploymentsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1830,6 +1837,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   /// <summary>
   /// Request message to delete a deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteDeploymentRequest : pb::IMessage<DeleteDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2068,6 +2076,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   /// <summary>
   /// Request message to install a developer mode deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InstallDeploymentRequest : pb::IMessage<InstallDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2265,6 +2274,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   /// <summary>
   /// Request message to uninstall a developer mode deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UninstallDeploymentRequest : pb::IMessage<UninstallDeploymentRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2462,6 +2472,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   /// <summary>
   /// Request message to get the install status of a developer mode deployment.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstallStatusRequest : pb::IMessage<GetInstallStatusRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2659,6 +2670,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   /// <summary>
   /// Developer mode install status of a deployment
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InstallStatus : pb::IMessage<InstallStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2902,8 +2914,9 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   }
 
   /// <summary>
-  /// A Google Workspace Add-on deployment
+  /// A Google Workspace add-on deployment
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Deployment : pb::IMessage<Deployment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2986,7 +2999,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
     public const int AddOnsFieldNumber = 3;
     private global::Google.Cloud.GSuiteAddOns.V1.AddOns addOns_;
     /// <summary>
-    /// The Google Workspace Add-on configuration.
+    /// The Google Workspace add-on configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3219,8 +3232,9 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   }
 
   /// <summary>
-  /// A Google Workspace Add-on configuration.
+  /// A Google Workspace add-on configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddOns : pb::IMessage<AddOns>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3276,7 +3290,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
     public const int CommonFieldNumber = 1;
     private global::Google.Apps.Script.Type.CommonAddOnManifest common_;
     /// <summary>
-    /// Configuration that is common across all Google Workspace Add-ons.
+    /// Configuration that is common across all Google Workspace add-ons.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -10,10 +10,22 @@
         "grpc": {
           "libraryClient": "BatchServiceClient",
           "rpcs": {
+            "CancelJob": {
+              "methods": [
+                "CancelJob",
+                "CancelJobAsync"
+              ]
+            },
             "CreateJob": {
               "methods": [
                 "CreateJob",
                 "CreateJobAsync"
+              ]
+            },
+            "CreateResourceAllowance": {
+              "methods": [
+                "CreateResourceAllowance",
+                "CreateResourceAllowanceAsync"
               ]
             },
             "DeleteJob": {
@@ -22,10 +34,22 @@
                 "DeleteJobAsync"
               ]
             },
+            "DeleteResourceAllowance": {
+              "methods": [
+                "DeleteResourceAllowance",
+                "DeleteResourceAllowanceAsync"
+              ]
+            },
             "GetJob": {
               "methods": [
                 "GetJob",
                 "GetJobAsync"
+              ]
+            },
+            "GetResourceAllowance": {
+              "methods": [
+                "GetResourceAllowance",
+                "GetResourceAllowanceAsync"
               ]
             },
             "GetTask": {
@@ -40,10 +64,28 @@
                 "ListJobsAsync"
               ]
             },
+            "ListResourceAllowances": {
+              "methods": [
+                "ListResourceAllowances",
+                "ListResourceAllowancesAsync"
+              ]
+            },
             "ListTasks": {
               "methods": [
                 "ListTasks",
                 "ListTasksAsync"
+              ]
+            },
+            "UpdateJob": {
+              "methods": [
+                "UpdateJob",
+                "UpdateJobAsync"
+              ]
+            },
+            "UpdateResourceAllowance": {
+              "methods": [
+                "UpdateResourceAllowance",
+                "UpdateResourceAllowanceAsync"
               ]
             }
           }

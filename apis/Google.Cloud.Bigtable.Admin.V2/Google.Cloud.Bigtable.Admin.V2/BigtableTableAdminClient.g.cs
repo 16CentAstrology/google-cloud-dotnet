@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,18 +19,18 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using gciv = Google.Cloud.Iam.V1;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Bigtable.Admin.V2
 {
@@ -59,6 +59,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteTableSettings = existing.DeleteTableSettings;
             UndeleteTableSettings = existing.UndeleteTableSettings;
             UndeleteTableOperationsSettings = existing.UndeleteTableOperationsSettings.Clone();
+            CreateAuthorizedViewSettings = existing.CreateAuthorizedViewSettings;
+            CreateAuthorizedViewOperationsSettings = existing.CreateAuthorizedViewOperationsSettings.Clone();
+            ListAuthorizedViewsSettings = existing.ListAuthorizedViewsSettings;
+            GetAuthorizedViewSettings = existing.GetAuthorizedViewSettings;
+            UpdateAuthorizedViewSettings = existing.UpdateAuthorizedViewSettings;
+            UpdateAuthorizedViewOperationsSettings = existing.UpdateAuthorizedViewOperationsSettings.Clone();
+            DeleteAuthorizedViewSettings = existing.DeleteAuthorizedViewSettings;
             ModifyColumnFamiliesSettings = existing.ModifyColumnFamiliesSettings;
             DropRowRangeSettings = existing.DropRowRangeSettings;
             GenerateConsistencyTokenSettings = existing.GenerateConsistencyTokenSettings;
@@ -76,6 +83,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListBackupsSettings = existing.ListBackupsSettings;
             RestoreTableSettings = existing.RestoreTableSettings;
             RestoreTableOperationsSettings = existing.RestoreTableOperationsSettings.Clone();
+            CopyBackupSettings = existing.CopyBackupSettings;
+            CopyBackupOperationsSettings = existing.CopyBackupOperationsSettings.Clone();
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
@@ -136,7 +145,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 2</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
@@ -146,7 +155,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListTablesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings ListTablesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -157,7 +166,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 2</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
@@ -167,7 +176,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetTableSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings GetTableSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -206,10 +215,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteTableSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings DeleteTableSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -240,6 +249,107 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.CreateAuthorizedView</c> and
+        /// <c>BigtableTableAdminClient.CreateAuthorizedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAuthorizedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.CreateAuthorizedView</c> and
+        /// <c>BigtableTableAdminClient.CreateAuthorizedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateAuthorizedViewOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.ListAuthorizedViews</c> and <c>BigtableTableAdminClient.ListAuthorizedViewsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAuthorizedViewsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.GetAuthorizedView</c> and <c>BigtableTableAdminClient.GetAuthorizedViewAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAuthorizedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.UpdateAuthorizedView</c> and
+        /// <c>BigtableTableAdminClient.UpdateAuthorizedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAuthorizedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.UpdateAuthorizedView</c> and
+        /// <c>BigtableTableAdminClient.UpdateAuthorizedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateAuthorizedViewOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.DeleteAuthorizedView</c> and
+        /// <c>BigtableTableAdminClient.DeleteAuthorizedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAuthorizedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -297,17 +407,17 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 2</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: 100</description></item>
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
         /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
         /// </description>
         /// </item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CheckConsistencySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings CheckConsistencySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 100, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -348,7 +458,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 2</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
@@ -358,7 +468,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetSnapshotSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings GetSnapshotSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -388,10 +498,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteSnapshotSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings DeleteSnapshotSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -432,7 +542,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 2</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
@@ -442,7 +552,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetBackupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings GetBackupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -463,10 +573,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings DeleteBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -477,7 +587,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 2</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
         /// <item>
         /// <description>
         /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
@@ -487,7 +597,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListBackupsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings ListBackupsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -515,6 +625,36 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// </remarks>
         public lro::OperationsSettings RestoreTableOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableTableAdminClient.CopyBackup</c> and <c>BigtableTableAdminClient.CopyBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CopyBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableTableAdminClient.CopyBackup</c> and
+        /// <c>BigtableTableAdminClient.CopyBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CopyBackupOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -617,14 +757,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return BigtableTableAdminClient.Create(callInvoker, Settings, Logger);
+            return BigtableTableAdminClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<BigtableTableAdminClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return BigtableTableAdminClient.Create(callInvoker, Settings, Logger);
+            return BigtableTableAdminClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -775,8 +915,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
@@ -802,8 +942,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
@@ -829,8 +969,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
@@ -851,8 +991,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
@@ -878,8 +1018,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
@@ -905,8 +1045,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// Maximum 50 characters.
         /// </param>
         /// <param name="table">
@@ -1007,13 +1147,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// </param>
         /// <param name="sourceSnapshot">
-        /// Required. The unique name of the snapshot from which to restore the table. The
-        /// snapshot and the table must be in the same instance.
-        /// Values are of the form
+        /// Required. The unique name of the snapshot from which to restore the table.
+        /// The snapshot and the table must be in the same instance. Values are of the
+        /// form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1041,13 +1181,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// </param>
         /// <param name="sourceSnapshot">
-        /// Required. The unique name of the snapshot from which to restore the table. The
-        /// snapshot and the table must be in the same instance.
-        /// Values are of the form
+        /// Required. The unique name of the snapshot from which to restore the table.
+        /// The snapshot and the table must be in the same instance. Values are of the
+        /// form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1075,13 +1215,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// </param>
         /// <param name="sourceSnapshot">
-        /// Required. The unique name of the snapshot from which to restore the table. The
-        /// snapshot and the table must be in the same instance.
-        /// Values are of the form
+        /// Required. The unique name of the snapshot from which to restore the table.
+        /// The snapshot and the table must be in the same instance. Values are of the
+        /// form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1104,13 +1244,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// </param>
         /// <param name="sourceSnapshot">
-        /// Required. The unique name of the snapshot from which to restore the table. The
-        /// snapshot and the table must be in the same instance.
-        /// Values are of the form
+        /// Required. The unique name of the snapshot from which to restore the table.
+        /// The snapshot and the table must be in the same instance. Values are of the
+        /// form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1138,13 +1278,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// </param>
         /// <param name="sourceSnapshot">
-        /// Required. The unique name of the snapshot from which to restore the table. The
-        /// snapshot and the table must be in the same instance.
-        /// Values are of the form
+        /// Required. The unique name of the snapshot from which to restore the table.
+        /// The snapshot and the table must be in the same instance. Values are of the
+        /// form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1172,13 +1312,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="tableId">
-        /// Required. The name by which the new table should be referred to within the parent
-        /// instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
+        /// Required. The name by which the new table should be referred to within the
+        /// parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`.
         /// </param>
         /// <param name="sourceSnapshot">
-        /// Required. The unique name of the snapshot from which to restore the table. The
-        /// snapshot and the table must be in the same instance.
-        /// Values are of the form
+        /// Required. The unique name of the snapshot from which to restore the table.
+        /// The snapshot and the table must be in the same instance. Values are of the
+        /// form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1208,8 +1348,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Lists all tables served from a specified instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which tables should be listed.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance for which tables should be
+        /// listed. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1221,20 +1361,29 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Table"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTablesResponse, Table> ListTables(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTables(new ListTablesRequest
+        public virtual gax::PagedEnumerable<ListTablesResponse, Table> ListTables(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTablesRequest request = new ListTablesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTables(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all tables served from a specified instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which tables should be listed.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance for which tables should be
+        /// listed. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1246,20 +1395,29 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Table"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTablesAsync(new ListTablesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTablesRequest request = new ListTablesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTablesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all tables served from a specified instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which tables should be listed.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance for which tables should be
+        /// listed. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1271,20 +1429,29 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Table"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListTablesResponse, Table> ListTables(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTables(new ListTablesRequest
+        public virtual gax::PagedEnumerable<ListTablesResponse, Table> ListTables(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTablesRequest request = new ListTablesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTables(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all tables served from a specified instance.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the instance for which tables should be listed.
-        /// Values are of the form `projects/{project}/instances/{instance}`.
+        /// Required. The unique name of the instance for which tables should be
+        /// listed. Values are of the form `projects/{project}/instances/{instance}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1296,13 +1463,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Table"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListTablesAsync(new ListTablesRequest
+        public virtual gax::PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTablesRequest request = new ListTablesRequest
             {
                 ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTablesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets metadata information about the specified table.
@@ -1483,11 +1659,15 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="updateMask">
         /// Required. The list of fields to update.
-        /// A mask specifying which fields (e.g. `deletion_protection`) in the `table`
+        /// A mask specifying which fields (e.g. `change_stream_config`) in the `table`
         /// field should be updated. This mask is relative to the `table` field, not to
         /// the request message. The wildcard (*) path is currently not supported.
-        /// Currently UpdateTable is only supported for the following field:
+        /// Currently UpdateTable is only supported for the following fields:
+        /// 
+        /// * `change_stream_config`
+        /// * `change_stream_config.retention_period`
         /// * `deletion_protection`
+        /// 
         /// If `column_families` is set in `update_mask`, it will return an
         /// UNIMPLEMENTED error.
         /// </param>
@@ -1509,11 +1689,15 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="updateMask">
         /// Required. The list of fields to update.
-        /// A mask specifying which fields (e.g. `deletion_protection`) in the `table`
+        /// A mask specifying which fields (e.g. `change_stream_config`) in the `table`
         /// field should be updated. This mask is relative to the `table` field, not to
         /// the request message. The wildcard (*) path is currently not supported.
-        /// Currently UpdateTable is only supported for the following field:
+        /// Currently UpdateTable is only supported for the following fields:
+        /// 
+        /// * `change_stream_config`
+        /// * `change_stream_config.retention_period`
         /// * `deletion_protection`
+        /// 
         /// If `column_families` is set in `update_mask`, it will return an
         /// UNIMPLEMENTED error.
         /// </param>
@@ -1535,11 +1719,15 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="updateMask">
         /// Required. The list of fields to update.
-        /// A mask specifying which fields (e.g. `deletion_protection`) in the `table`
+        /// A mask specifying which fields (e.g. `change_stream_config`) in the `table`
         /// field should be updated. This mask is relative to the `table` field, not to
         /// the request message. The wildcard (*) path is currently not supported.
-        /// Currently UpdateTable is only supported for the following field:
+        /// Currently UpdateTable is only supported for the following fields:
+        /// 
+        /// * `change_stream_config`
+        /// * `change_stream_config.retention_period`
         /// * `deletion_protection`
+        /// 
         /// If `column_families` is set in `update_mask`, it will return an
         /// UNIMPLEMENTED error.
         /// </param>
@@ -1809,6 +1997,735 @@ namespace Google.Cloud.Bigtable.Admin.V2
             UndeleteTableAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata> CreateAuthorizedView(CreateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(CreateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(CreateAuthorizedViewRequest request, st::CancellationToken cancellationToken) =>
+            CreateAuthorizedViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateAuthorizedView</c>.</summary>
+        public virtual lro::OperationsClient CreateAuthorizedViewOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateAuthorizedView</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata> PollOnceCreateAuthorizedView(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAuthorizedViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAuthorizedView</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> PollOnceCreateAuthorizedViewAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAuthorizedViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This is the name of the table the AuthorizedView belongs to.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to create.
+        /// </param>
+        /// <param name="authorizedViewId">
+        /// Required. The id of the AuthorizedView to create. This AuthorizedView must
+        /// not already exist. The `authorized_view_id` appended to `parent` forms the
+        /// full AuthorizedView name of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata> CreateAuthorizedView(string parent, AuthorizedView authorizedView, string authorizedViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuthorizedView(new CreateAuthorizedViewRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AuthorizedViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)),
+                AuthorizedView = gax::GaxPreconditions.CheckNotNull(authorizedView, nameof(authorizedView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This is the name of the table the AuthorizedView belongs to.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to create.
+        /// </param>
+        /// <param name="authorizedViewId">
+        /// Required. The id of the AuthorizedView to create. This AuthorizedView must
+        /// not already exist. The `authorized_view_id` appended to `parent` forms the
+        /// full AuthorizedView name of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(string parent, AuthorizedView authorizedView, string authorizedViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuthorizedViewAsync(new CreateAuthorizedViewRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AuthorizedViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)),
+                AuthorizedView = gax::GaxPreconditions.CheckNotNull(authorizedView, nameof(authorizedView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This is the name of the table the AuthorizedView belongs to.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to create.
+        /// </param>
+        /// <param name="authorizedViewId">
+        /// Required. The id of the AuthorizedView to create. This AuthorizedView must
+        /// not already exist. The `authorized_view_id` appended to `parent` forms the
+        /// full AuthorizedView name of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(string parent, AuthorizedView authorizedView, string authorizedViewId, st::CancellationToken cancellationToken) =>
+            CreateAuthorizedViewAsync(parent, authorizedView, authorizedViewId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This is the name of the table the AuthorizedView belongs to.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to create.
+        /// </param>
+        /// <param name="authorizedViewId">
+        /// Required. The id of the AuthorizedView to create. This AuthorizedView must
+        /// not already exist. The `authorized_view_id` appended to `parent` forms the
+        /// full AuthorizedView name of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata> CreateAuthorizedView(gcbcv::TableName parent, AuthorizedView authorizedView, string authorizedViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuthorizedView(new CreateAuthorizedViewRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuthorizedViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)),
+                AuthorizedView = gax::GaxPreconditions.CheckNotNull(authorizedView, nameof(authorizedView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This is the name of the table the AuthorizedView belongs to.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to create.
+        /// </param>
+        /// <param name="authorizedViewId">
+        /// Required. The id of the AuthorizedView to create. This AuthorizedView must
+        /// not already exist. The `authorized_view_id` appended to `parent` forms the
+        /// full AuthorizedView name of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(gcbcv::TableName parent, AuthorizedView authorizedView, string authorizedViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAuthorizedViewAsync(new CreateAuthorizedViewRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AuthorizedViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)),
+                AuthorizedView = gax::GaxPreconditions.CheckNotNull(authorizedView, nameof(authorizedView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This is the name of the table the AuthorizedView belongs to.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to create.
+        /// </param>
+        /// <param name="authorizedViewId">
+        /// Required. The id of the AuthorizedView to create. This AuthorizedView must
+        /// not already exist. The `authorized_view_id` appended to `parent` forms the
+        /// full AuthorizedView name of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedView/{authorized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(gcbcv::TableName parent, AuthorizedView authorizedView, string authorizedViewId, st::CancellationToken cancellationToken) =>
+            CreateAuthorizedViewAsync(parent, authorizedView, authorizedViewId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViews(ListAuthorizedViewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViewsAsync(ListAuthorizedViewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the table for which AuthorizedViews should be
+        /// listed. Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthorizedViewsRequest request = new ListAuthorizedViewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthorizedViews(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the table for which AuthorizedViews should be
+        /// listed. Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthorizedViewsRequest request = new ListAuthorizedViewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthorizedViewsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the table for which AuthorizedViews should be
+        /// listed. Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViews(gcbcv::TableName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthorizedViewsRequest request = new ListAuthorizedViewsRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthorizedViews(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the table for which AuthorizedViews should be
+        /// listed. Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViewsAsync(gcbcv::TableName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthorizedViewsRequest request = new ListAuthorizedViewsRequest
+            {
+                ParentAsTableName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthorizedViewsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthorizedView GetAuthorizedView(GetAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthorizedView> GetAuthorizedViewAsync(GetAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthorizedView> GetAuthorizedViewAsync(GetAuthorizedViewRequest request, st::CancellationToken cancellationToken) =>
+            GetAuthorizedViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested AuthorizedView.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthorizedView GetAuthorizedView(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthorizedView(new GetAuthorizedViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested AuthorizedView.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthorizedView> GetAuthorizedViewAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthorizedViewAsync(new GetAuthorizedViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested AuthorizedView.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthorizedView> GetAuthorizedViewAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAuthorizedViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested AuthorizedView.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthorizedView GetAuthorizedView(AuthorizedViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthorizedView(new GetAuthorizedViewRequest
+            {
+                AuthorizedViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested AuthorizedView.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthorizedView> GetAuthorizedViewAsync(AuthorizedViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthorizedViewAsync(new GetAuthorizedViewRequest
+            {
+                AuthorizedViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested AuthorizedView.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthorizedView> GetAuthorizedViewAsync(AuthorizedViewName name, st::CancellationToken cancellationToken) =>
+            GetAuthorizedViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata> UpdateAuthorizedView(UpdateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>> UpdateAuthorizedViewAsync(UpdateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>> UpdateAuthorizedViewAsync(UpdateAuthorizedViewRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAuthorizedViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateAuthorizedView</c>.</summary>
+        public virtual lro::OperationsClient UpdateAuthorizedViewOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateAuthorizedView</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata> PollOnceUpdateAuthorizedView(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAuthorizedViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAuthorizedView</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>> PollOnceUpdateAuthorizedViewAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAuthorizedViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to update. The `name` in `authorized_view` is
+        /// used to identify the AuthorizedView. AuthorizedView name must in this
+        /// format
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// A mask specifying which fields in the AuthorizedView resource should be
+        /// updated. This mask is relative to the AuthorizedView resource, not to the
+        /// request message. A field will be overwritten if it is in the mask. If
+        /// empty, all fields set in the request will be overwritten. A special value
+        /// `*` means to overwrite all fields (including fields not set in the
+        /// request).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata> UpdateAuthorizedView(AuthorizedView authorizedView, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAuthorizedView(new UpdateAuthorizedViewRequest
+            {
+                AuthorizedView = gax::GaxPreconditions.CheckNotNull(authorizedView, nameof(authorizedView)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to update. The `name` in `authorized_view` is
+        /// used to identify the AuthorizedView. AuthorizedView name must in this
+        /// format
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// A mask specifying which fields in the AuthorizedView resource should be
+        /// updated. This mask is relative to the AuthorizedView resource, not to the
+        /// request message. A field will be overwritten if it is in the mask. If
+        /// empty, all fields set in the request will be overwritten. A special value
+        /// `*` means to overwrite all fields (including fields not set in the
+        /// request).
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>> UpdateAuthorizedViewAsync(AuthorizedView authorizedView, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAuthorizedViewAsync(new UpdateAuthorizedViewRequest
+            {
+                AuthorizedView = gax::GaxPreconditions.CheckNotNull(authorizedView, nameof(authorizedView)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="authorizedView">
+        /// Required. The AuthorizedView to update. The `name` in `authorized_view` is
+        /// used to identify the AuthorizedView. AuthorizedView name must in this
+        /// format
+        /// projects/&lt;project&gt;/instances/&lt;instance&gt;/tables/&lt;table&gt;/authorizedViews/&lt;authorized_view&gt;
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// A mask specifying which fields in the AuthorizedView resource should be
+        /// updated. This mask is relative to the AuthorizedView resource, not to the
+        /// request message. A field will be overwritten if it is in the mask. If
+        /// empty, all fields set in the request will be overwritten. A special value
+        /// `*` means to overwrite all fields (including fields not set in the
+        /// request).
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>> UpdateAuthorizedViewAsync(AuthorizedView authorizedView, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAuthorizedViewAsync(authorizedView, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAuthorizedView(DeleteAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAuthorizedViewAsync(DeleteAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAuthorizedViewAsync(DeleteAuthorizedViewRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAuthorizedViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the AuthorizedView to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAuthorizedView(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthorizedView(new DeleteAuthorizedViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the AuthorizedView to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAuthorizedViewAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthorizedViewAsync(new DeleteAuthorizedViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the AuthorizedView to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAuthorizedViewAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAuthorizedViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the AuthorizedView to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAuthorizedView(AuthorizedViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthorizedView(new DeleteAuthorizedViewRequest
+            {
+                AuthorizedViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the AuthorizedView to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAuthorizedViewAsync(AuthorizedViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthorizedViewAsync(new DeleteAuthorizedViewRequest
+            {
+                AuthorizedViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the AuthorizedView to be deleted.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAuthorizedViewAsync(AuthorizedViewName name, st::CancellationToken cancellationToken) =>
+            DeleteAuthorizedViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Performs a series of column family modifications on the specified table.
         /// Either all or none of the modifications will occur before this method
         /// returns, but data requests received prior to that point may see a table
@@ -1856,10 +2773,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Required. Modifications to be atomically applied to the specified table's families.
-        /// Entries are applied in order, meaning that earlier modifications can be
-        /// masked by later ones (in the case of repeated updates to the same family,
-        /// for example).
+        /// Required. Modifications to be atomically applied to the specified table's
+        /// families. Entries are applied in order, meaning that earlier modifications
+        /// can be masked by later ones (in the case of repeated updates to the same
+        /// family, for example).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1885,10 +2802,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Required. Modifications to be atomically applied to the specified table's families.
-        /// Entries are applied in order, meaning that earlier modifications can be
-        /// masked by later ones (in the case of repeated updates to the same family,
-        /// for example).
+        /// Required. Modifications to be atomically applied to the specified table's
+        /// families. Entries are applied in order, meaning that earlier modifications
+        /// can be masked by later ones (in the case of repeated updates to the same
+        /// family, for example).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1914,10 +2831,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Required. Modifications to be atomically applied to the specified table's families.
-        /// Entries are applied in order, meaning that earlier modifications can be
-        /// masked by later ones (in the case of repeated updates to the same family,
-        /// for example).
+        /// Required. Modifications to be atomically applied to the specified table's
+        /// families. Entries are applied in order, meaning that earlier modifications
+        /// can be masked by later ones (in the case of repeated updates to the same
+        /// family, for example).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1936,10 +2853,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Required. Modifications to be atomically applied to the specified table's families.
-        /// Entries are applied in order, meaning that earlier modifications can be
-        /// masked by later ones (in the case of repeated updates to the same family,
-        /// for example).
+        /// Required. Modifications to be atomically applied to the specified table's
+        /// families. Entries are applied in order, meaning that earlier modifications
+        /// can be masked by later ones (in the case of repeated updates to the same
+        /// family, for example).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1965,10 +2882,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Required. Modifications to be atomically applied to the specified table's families.
-        /// Entries are applied in order, meaning that earlier modifications can be
-        /// masked by later ones (in the case of repeated updates to the same family,
-        /// for example).
+        /// Required. Modifications to be atomically applied to the specified table's
+        /// families. Entries are applied in order, meaning that earlier modifications
+        /// can be masked by later ones (in the case of repeated updates to the same
+        /// family, for example).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1994,10 +2911,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="modifications">
-        /// Required. Modifications to be atomically applied to the specified table's families.
-        /// Entries are applied in order, meaning that earlier modifications can be
-        /// masked by later ones (in the case of repeated updates to the same family,
-        /// for example).
+        /// Required. Modifications to be atomically applied to the specified table's
+        /// families. Entries are applied in order, meaning that earlier modifications
+        /// can be masked by later ones (in the case of repeated updates to the same
+        /// family, for example).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2080,8 +2997,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to create a consistency token.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to create a consistency
+        /// token. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2099,8 +3016,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to create a consistency token.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to create a consistency
+        /// token. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2118,8 +3035,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to create a consistency token.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to create a consistency
+        /// token. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2134,8 +3051,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to create a consistency token.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to create a consistency
+        /// token. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2153,8 +3070,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to create a consistency token.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to create a consistency
+        /// token. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2172,8 +3089,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// for 90 days.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to create a consistency token.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to create a consistency
+        /// token. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2220,8 +3137,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to check replication consistency.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to check replication
+        /// consistency. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
@@ -2242,8 +3159,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to check replication consistency.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to check replication
+        /// consistency. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
@@ -2264,8 +3181,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to check replication consistency.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to check replication
+        /// consistency. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
@@ -2282,8 +3199,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to check replication consistency.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to check replication
+        /// consistency. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
@@ -2304,8 +3221,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to check replication consistency.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to check replication
+        /// consistency. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
@@ -2326,8 +3243,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// and the check request.
         /// </summary>
         /// <param name="name">
-        /// Required. The unique name of the Table for which to check replication consistency.
-        /// Values are of the form
+        /// Required. The unique name of the Table for which to check replication
+        /// consistency. Values are of the form
         /// `projects/{project}/instances/{instance}/tables/{table}`.
         /// </param>
         /// <param name="consistencyToken">
@@ -2433,9 +3350,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="snapshotId">
-        /// Required. The ID by which the new snapshot should be referred to within the parent
-        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
-        /// rather than
+        /// Required. The ID by which the new snapshot should be referred to within the
+        /// parent cluster, e.g., `mysnapshot` of the form:
+        /// `[_a-zA-Z0-9][-_.a-zA-Z0-9]*` rather than
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
         /// </param>
         /// <param name="description">
@@ -2473,9 +3390,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="snapshotId">
-        /// Required. The ID by which the new snapshot should be referred to within the parent
-        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
-        /// rather than
+        /// Required. The ID by which the new snapshot should be referred to within the
+        /// parent cluster, e.g., `mysnapshot` of the form:
+        /// `[_a-zA-Z0-9][-_.a-zA-Z0-9]*` rather than
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
         /// </param>
         /// <param name="description">
@@ -2513,9 +3430,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="snapshotId">
-        /// Required. The ID by which the new snapshot should be referred to within the parent
-        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
-        /// rather than
+        /// Required. The ID by which the new snapshot should be referred to within the
+        /// parent cluster, e.g., `mysnapshot` of the form:
+        /// `[_a-zA-Z0-9][-_.a-zA-Z0-9]*` rather than
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
         /// </param>
         /// <param name="description">
@@ -2547,9 +3464,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="snapshotId">
-        /// Required. The ID by which the new snapshot should be referred to within the parent
-        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
-        /// rather than
+        /// Required. The ID by which the new snapshot should be referred to within the
+        /// parent cluster, e.g., `mysnapshot` of the form:
+        /// `[_a-zA-Z0-9][-_.a-zA-Z0-9]*` rather than
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
         /// </param>
         /// <param name="description">
@@ -2587,9 +3504,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="snapshotId">
-        /// Required. The ID by which the new snapshot should be referred to within the parent
-        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
-        /// rather than
+        /// Required. The ID by which the new snapshot should be referred to within the
+        /// parent cluster, e.g., `mysnapshot` of the form:
+        /// `[_a-zA-Z0-9][-_.a-zA-Z0-9]*` rather than
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
         /// </param>
         /// <param name="description">
@@ -2627,9 +3544,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// </param>
         /// <param name="snapshotId">
-        /// Required. The ID by which the new snapshot should be referred to within the parent
-        /// cluster, e.g., `mysnapshot` of the form: `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`
-        /// rather than
+        /// Required. The ID by which the new snapshot should be referred to within the
+        /// parent cluster, e.g., `mysnapshot` of the form:
+        /// `[_a-zA-Z0-9][-_.a-zA-Z0-9]*` rather than
         /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/mysnapshot`.
         /// </param>
         /// <param name="description">
@@ -2851,8 +3768,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// policy.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the cluster for which snapshots should be listed.
-        /// Values are of the form
+        /// Required. The unique name of the cluster for which snapshots should be
+        /// listed. Values are of the form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// Use `{cluster} = '-'` to list snapshots for all clusters in an instance,
         /// e.g., `projects/{project}/instances/{instance}/clusters/-`.
@@ -2867,13 +3784,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshots(new ListSnapshotsRequest
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshots(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all snapshots associated with the specified cluster.
@@ -2885,8 +3811,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// policy.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the cluster for which snapshots should be listed.
-        /// Values are of the form
+        /// Required. The unique name of the cluster for which snapshots should be
+        /// listed. Values are of the form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// Use `{cluster} = '-'` to list snapshots for all clusters in an instance,
         /// e.g., `projects/{project}/instances/{instance}/clusters/-`.
@@ -2901,13 +3827,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshotsAsync(new ListSnapshotsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshotsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all snapshots associated with the specified cluster.
@@ -2919,8 +3854,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// policy.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the cluster for which snapshots should be listed.
-        /// Values are of the form
+        /// Required. The unique name of the cluster for which snapshots should be
+        /// listed. Values are of the form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// Use `{cluster} = '-'` to list snapshots for all clusters in an instance,
         /// e.g., `projects/{project}/instances/{instance}/clusters/-`.
@@ -2935,13 +3870,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshots(new ListSnapshotsRequest
+        public virtual gax::PagedEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshots(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshots(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all snapshots associated with the specified cluster.
@@ -2953,8 +3897,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// policy.
         /// </summary>
         /// <param name="parent">
-        /// Required. The unique name of the cluster for which snapshots should be listed.
-        /// Values are of the form
+        /// Required. The unique name of the cluster for which snapshots should be
+        /// listed. Values are of the form
         /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
         /// Use `{cluster} = '-'` to list snapshots for all clusters in an instance,
         /// e.g., `projects/{project}/instances/{instance}/clusters/-`.
@@ -2969,13 +3913,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Snapshot"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListSnapshotsAsync(new ListSnapshotsRequest
+        public virtual gax::PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> ListSnapshotsAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSnapshotsRequest request = new ListSnapshotsRequest
             {
                 ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSnapshotsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Permanently deletes the specified snapshot.
@@ -3155,8 +4108,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3171,8 +4124,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3187,8 +4140,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3229,8 +4182,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="parent">
         /// Required. This must be one of the clusters in the instance in which this
@@ -3265,8 +4218,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="parent">
         /// Required. This must be one of the clusters in the instance in which this
@@ -3301,8 +4254,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="parent">
         /// Required. This must be one of the clusters in the instance in which this
@@ -3332,8 +4285,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="parent">
         /// Required. This must be one of the clusters in the instance in which this
@@ -3368,8 +4321,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="parent">
         /// Required. This must be one of the clusters in the instance in which this
@@ -3404,8 +4357,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="parent">
         /// Required. This must be one of the clusters in the instance in which this
@@ -3579,6 +4532,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Required. The backup to update. `backup.name`, and the fields to be updated
         /// as specified by `update_mask` are required. Other fields are ignored.
         /// Update is only supported for the following fields:
+        /// 
         /// * `backup.expire_time`.
         /// </param>
         /// <param name="updateMask">
@@ -3604,6 +4558,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Required. The backup to update. `backup.name`, and the fields to be updated
         /// as specified by `update_mask` are required. Other fields are ignored.
         /// Update is only supported for the following fields:
+        /// 
         /// * `backup.expire_time`.
         /// </param>
         /// <param name="updateMask">
@@ -3629,6 +4584,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// Required. The backup to update. `backup.name`, and the fields to be updated
         /// as specified by `update_mask` are required. Other fields are ignored.
         /// Update is only supported for the following fields:
+        /// 
         /// * `backup.expire_time`.
         /// </param>
         /// <param name="updateMask">
@@ -3800,13 +4756,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Bigtable backups. Returns both completed and pending
@@ -3828,13 +4793,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Bigtable backups. Returns both completed and pending
@@ -3856,13 +4830,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists Cloud Bigtable backups. Returns both completed and pending
@@ -3884,21 +4867,29 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
-        /// Create a new table by restoring from a completed backup. The new table
-        /// must be in the same project as the instance containing the backup.  The
+        /// Create a new table by restoring from a completed backup.  The
         /// returned table [long-running operation][google.longrunning.Operation] can
         /// be used to track the progress of the operation, and to cancel it.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
+        /// [RestoreTableMetadata][google.bigtable.admin.v2.RestoreTableMetadata].  The
         /// [response][google.longrunning.Operation.response] type is
         /// [Table][google.bigtable.admin.v2.Table], if successful.
         /// </summary>
@@ -3909,12 +4900,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new table by restoring from a completed backup. The new table
-        /// must be in the same project as the instance containing the backup.  The
+        /// Create a new table by restoring from a completed backup.  The
         /// returned table [long-running operation][google.longrunning.Operation] can
         /// be used to track the progress of the operation, and to cancel it.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
+        /// [RestoreTableMetadata][google.bigtable.admin.v2.RestoreTableMetadata].  The
         /// [response][google.longrunning.Operation.response] type is
         /// [Table][google.bigtable.admin.v2.Table], if successful.
         /// </summary>
@@ -3925,12 +4915,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Create a new table by restoring from a completed backup. The new table
-        /// must be in the same project as the instance containing the backup.  The
+        /// Create a new table by restoring from a completed backup.  The
         /// returned table [long-running operation][google.longrunning.Operation] can
         /// be used to track the progress of the operation, and to cancel it.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
+        /// [RestoreTableMetadata][google.bigtable.admin.v2.RestoreTableMetadata].  The
         /// [response][google.longrunning.Operation.response] type is
         /// [Table][google.bigtable.admin.v2.Table], if successful.
         /// </summary>
@@ -3965,6 +4954,314 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<Table, RestoreTableMetadata>> PollOnceRestoreTableAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Table, RestoreTableMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreTableOperationsClient, callSettings);
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, CopyBackupMetadata> CopyBackup(CopyBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(CopyBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(CopyBackupRequest request, st::CancellationToken cancellationToken) =>
+            CopyBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CopyBackup</c>.</summary>
+        public virtual lro::OperationsClient CopyBackupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CopyBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Backup, CopyBackupMetadata> PollOnceCopyBackup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, CopyBackupMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CopyBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CopyBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> PollOnceCopyBackupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, CopyBackupMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CopyBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination cluster that will contain the backup
+        /// copy. The cluster must already exist. Values are of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the new backup. The `backup_id` along with `parent`
+        /// are combined as {parent}/backups/{backup_id} to create the full backup
+        /// name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied from.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Copying a copied backup is not allowed.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/backups/&lt;backup&gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. Required. The expiration time of the copied backup with
+        /// microsecond granularity that must be at least 6 hours and at most 30 days
+        /// from the time the request is received. Once the `expire_time` has
+        /// passed, Cloud Bigtable will delete the backup and free the resources used
+        /// by the backup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, CopyBackupMetadata> CopyBackup(string parent, string backupId, string sourceBackup, wkt::Timestamp expireTime, gaxgrpc::CallSettings callSettings = null) =>
+            CopyBackup(new CopyBackupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                SourceBackup = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceBackup, nameof(sourceBackup)),
+                ExpireTime = gax::GaxPreconditions.CheckNotNull(expireTime, nameof(expireTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination cluster that will contain the backup
+        /// copy. The cluster must already exist. Values are of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the new backup. The `backup_id` along with `parent`
+        /// are combined as {parent}/backups/{backup_id} to create the full backup
+        /// name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied from.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Copying a copied backup is not allowed.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/backups/&lt;backup&gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. Required. The expiration time of the copied backup with
+        /// microsecond granularity that must be at least 6 hours and at most 30 days
+        /// from the time the request is received. Once the `expire_time` has
+        /// passed, Cloud Bigtable will delete the backup and free the resources used
+        /// by the backup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(string parent, string backupId, string sourceBackup, wkt::Timestamp expireTime, gaxgrpc::CallSettings callSettings = null) =>
+            CopyBackupAsync(new CopyBackupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                SourceBackup = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceBackup, nameof(sourceBackup)),
+                ExpireTime = gax::GaxPreconditions.CheckNotNull(expireTime, nameof(expireTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination cluster that will contain the backup
+        /// copy. The cluster must already exist. Values are of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the new backup. The `backup_id` along with `parent`
+        /// are combined as {parent}/backups/{backup_id} to create the full backup
+        /// name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied from.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Copying a copied backup is not allowed.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/backups/&lt;backup&gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. Required. The expiration time of the copied backup with
+        /// microsecond granularity that must be at least 6 hours and at most 30 days
+        /// from the time the request is received. Once the `expire_time` has
+        /// passed, Cloud Bigtable will delete the backup and free the resources used
+        /// by the backup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(string parent, string backupId, string sourceBackup, wkt::Timestamp expireTime, st::CancellationToken cancellationToken) =>
+            CopyBackupAsync(parent, backupId, sourceBackup, expireTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination cluster that will contain the backup
+        /// copy. The cluster must already exist. Values are of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the new backup. The `backup_id` along with `parent`
+        /// are combined as {parent}/backups/{backup_id} to create the full backup
+        /// name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied from.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Copying a copied backup is not allowed.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/backups/&lt;backup&gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. Required. The expiration time of the copied backup with
+        /// microsecond granularity that must be at least 6 hours and at most 30 days
+        /// from the time the request is received. Once the `expire_time` has
+        /// passed, Cloud Bigtable will delete the backup and free the resources used
+        /// by the backup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, CopyBackupMetadata> CopyBackup(ClusterName parent, string backupId, BackupName sourceBackup, wkt::Timestamp expireTime, gaxgrpc::CallSettings callSettings = null) =>
+            CopyBackup(new CopyBackupRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                SourceBackupAsBackupName = gax::GaxPreconditions.CheckNotNull(sourceBackup, nameof(sourceBackup)),
+                ExpireTime = gax::GaxPreconditions.CheckNotNull(expireTime, nameof(expireTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination cluster that will contain the backup
+        /// copy. The cluster must already exist. Values are of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the new backup. The `backup_id` along with `parent`
+        /// are combined as {parent}/backups/{backup_id} to create the full backup
+        /// name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied from.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Copying a copied backup is not allowed.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/backups/&lt;backup&gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. Required. The expiration time of the copied backup with
+        /// microsecond granularity that must be at least 6 hours and at most 30 days
+        /// from the time the request is received. Once the `expire_time` has
+        /// passed, Cloud Bigtable will delete the backup and free the resources used
+        /// by the backup.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(ClusterName parent, string backupId, BackupName sourceBackup, wkt::Timestamp expireTime, gaxgrpc::CallSettings callSettings = null) =>
+            CopyBackupAsync(new CopyBackupRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                SourceBackupAsBackupName = gax::GaxPreconditions.CheckNotNull(sourceBackup, nameof(sourceBackup)),
+                ExpireTime = gax::GaxPreconditions.CheckNotNull(expireTime, nameof(expireTime)),
+            }, callSettings);
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the destination cluster that will contain the backup
+        /// copy. The cluster must already exist. Values are of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the new backup. The `backup_id` along with `parent`
+        /// are combined as {parent}/backups/{backup_id} to create the full backup
+        /// name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="sourceBackup">
+        /// Required. The source backup to be copied from.
+        /// The source backup needs to be in READY state for it to be copied.
+        /// Copying a copied backup is not allowed.
+        /// Once CopyBackup is in progress, the source backup cannot be deleted or
+        /// cleaned up on expiration until CopyBackup is finished.
+        /// Values are of the form:
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/clusters/&lt;cluster&gt;/backups/&lt;backup&gt;`.
+        /// </param>
+        /// <param name="expireTime">
+        /// Required. Required. The expiration time of the copied backup with
+        /// microsecond granularity that must be at least 6 hours and at most 30 days
+        /// from the time the request is received. Once the `expire_time` has
+        /// passed, Cloud Bigtable will delete the backup and free the resources used
+        /// by the backup.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(ClusterName parent, string backupId, BackupName sourceBackup, wkt::Timestamp expireTime, st::CancellationToken cancellationToken) =>
+            CopyBackupAsync(parent, backupId, sourceBackup, expireTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the access control policy for a Table or Backup resource.
@@ -4256,7 +5553,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4265,7 +5563,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4274,7 +5573,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4283,7 +5583,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -4308,7 +5609,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -4333,7 +5635,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -4351,7 +5654,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -4376,7 +5680,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -4401,7 +5706,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }, callSettings);
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -4443,6 +5749,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private readonly gaxgrpc::ApiCall<UndeleteTableRequest, lro::Operation> _callUndeleteTable;
 
+        private readonly gaxgrpc::ApiCall<CreateAuthorizedViewRequest, lro::Operation> _callCreateAuthorizedView;
+
+        private readonly gaxgrpc::ApiCall<ListAuthorizedViewsRequest, ListAuthorizedViewsResponse> _callListAuthorizedViews;
+
+        private readonly gaxgrpc::ApiCall<GetAuthorizedViewRequest, AuthorizedView> _callGetAuthorizedView;
+
+        private readonly gaxgrpc::ApiCall<UpdateAuthorizedViewRequest, lro::Operation> _callUpdateAuthorizedView;
+
+        private readonly gaxgrpc::ApiCall<DeleteAuthorizedViewRequest, wkt::Empty> _callDeleteAuthorizedView;
+
         private readonly gaxgrpc::ApiCall<ModifyColumnFamiliesRequest, Table> _callModifyColumnFamilies;
 
         private readonly gaxgrpc::ApiCall<DropRowRangeRequest, wkt::Empty> _callDropRowRange;
@@ -4471,6 +5787,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private readonly gaxgrpc::ApiCall<RestoreTableRequest, lro::Operation> _callRestoreTable;
 
+        private readonly gaxgrpc::ApiCall<CopyBackupRequest, lro::Operation> _callCopyBackup;
+
         private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
@@ -4487,13 +5805,20 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             GrpcClient = grpcClient;
             BigtableTableAdminSettings effectiveSettings = settings ?? BigtableTableAdminSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateTableFromSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTableFromSnapshotOperationsSettings, logger);
             UpdateTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTableOperationsSettings, logger);
             UndeleteTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeleteTableOperationsSettings, logger);
+            CreateAuthorizedViewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAuthorizedViewOperationsSettings, logger);
+            UpdateAuthorizedViewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAuthorizedViewOperationsSettings, logger);
             SnapshotTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SnapshotTableOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             RestoreTableOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreTableOperationsSettings, logger);
+            CopyBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CopyBackupOperationsSettings, logger);
             _callCreateTable = clientHelper.BuildApiCall<CreateTableRequest, Table>("CreateTable", grpcClient.CreateTableAsync, grpcClient.CreateTable, effectiveSettings.CreateTableSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateTable);
             Modify_CreateTableApiCall(ref _callCreateTable);
@@ -4515,6 +5840,21 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callUndeleteTable = clientHelper.BuildApiCall<UndeleteTableRequest, lro::Operation>("UndeleteTable", grpcClient.UndeleteTableAsync, grpcClient.UndeleteTable, effectiveSettings.UndeleteTableSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUndeleteTable);
             Modify_UndeleteTableApiCall(ref _callUndeleteTable);
+            _callCreateAuthorizedView = clientHelper.BuildApiCall<CreateAuthorizedViewRequest, lro::Operation>("CreateAuthorizedView", grpcClient.CreateAuthorizedViewAsync, grpcClient.CreateAuthorizedView, effectiveSettings.CreateAuthorizedViewSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAuthorizedView);
+            Modify_CreateAuthorizedViewApiCall(ref _callCreateAuthorizedView);
+            _callListAuthorizedViews = clientHelper.BuildApiCall<ListAuthorizedViewsRequest, ListAuthorizedViewsResponse>("ListAuthorizedViews", grpcClient.ListAuthorizedViewsAsync, grpcClient.ListAuthorizedViews, effectiveSettings.ListAuthorizedViewsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAuthorizedViews);
+            Modify_ListAuthorizedViewsApiCall(ref _callListAuthorizedViews);
+            _callGetAuthorizedView = clientHelper.BuildApiCall<GetAuthorizedViewRequest, AuthorizedView>("GetAuthorizedView", grpcClient.GetAuthorizedViewAsync, grpcClient.GetAuthorizedView, effectiveSettings.GetAuthorizedViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAuthorizedView);
+            Modify_GetAuthorizedViewApiCall(ref _callGetAuthorizedView);
+            _callUpdateAuthorizedView = clientHelper.BuildApiCall<UpdateAuthorizedViewRequest, lro::Operation>("UpdateAuthorizedView", grpcClient.UpdateAuthorizedViewAsync, grpcClient.UpdateAuthorizedView, effectiveSettings.UpdateAuthorizedViewSettings).WithGoogleRequestParam("authorized_view.name", request => request.AuthorizedView?.Name);
+            Modify_ApiCall(ref _callUpdateAuthorizedView);
+            Modify_UpdateAuthorizedViewApiCall(ref _callUpdateAuthorizedView);
+            _callDeleteAuthorizedView = clientHelper.BuildApiCall<DeleteAuthorizedViewRequest, wkt::Empty>("DeleteAuthorizedView", grpcClient.DeleteAuthorizedViewAsync, grpcClient.DeleteAuthorizedView, effectiveSettings.DeleteAuthorizedViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAuthorizedView);
+            Modify_DeleteAuthorizedViewApiCall(ref _callDeleteAuthorizedView);
             _callModifyColumnFamilies = clientHelper.BuildApiCall<ModifyColumnFamiliesRequest, Table>("ModifyColumnFamilies", grpcClient.ModifyColumnFamiliesAsync, grpcClient.ModifyColumnFamilies, effectiveSettings.ModifyColumnFamiliesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callModifyColumnFamilies);
             Modify_ModifyColumnFamiliesApiCall(ref _callModifyColumnFamilies);
@@ -4557,6 +5897,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callRestoreTable = clientHelper.BuildApiCall<RestoreTableRequest, lro::Operation>("RestoreTable", grpcClient.RestoreTableAsync, grpcClient.RestoreTable, effectiveSettings.RestoreTableSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRestoreTable);
             Modify_RestoreTableApiCall(ref _callRestoreTable);
+            _callCopyBackup = clientHelper.BuildApiCall<CopyBackupRequest, lro::Operation>("CopyBackup", grpcClient.CopyBackupAsync, grpcClient.CopyBackup, effectiveSettings.CopyBackupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCopyBackup);
+            Modify_CopyBackupApiCall(ref _callCopyBackup);
             _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
@@ -4584,6 +5927,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_DeleteTableApiCall(ref gaxgrpc::ApiCall<DeleteTableRequest, wkt::Empty> call);
 
         partial void Modify_UndeleteTableApiCall(ref gaxgrpc::ApiCall<UndeleteTableRequest, lro::Operation> call);
+
+        partial void Modify_CreateAuthorizedViewApiCall(ref gaxgrpc::ApiCall<CreateAuthorizedViewRequest, lro::Operation> call);
+
+        partial void Modify_ListAuthorizedViewsApiCall(ref gaxgrpc::ApiCall<ListAuthorizedViewsRequest, ListAuthorizedViewsResponse> call);
+
+        partial void Modify_GetAuthorizedViewApiCall(ref gaxgrpc::ApiCall<GetAuthorizedViewRequest, AuthorizedView> call);
+
+        partial void Modify_UpdateAuthorizedViewApiCall(ref gaxgrpc::ApiCall<UpdateAuthorizedViewRequest, lro::Operation> call);
+
+        partial void Modify_DeleteAuthorizedViewApiCall(ref gaxgrpc::ApiCall<DeleteAuthorizedViewRequest, wkt::Empty> call);
 
         partial void Modify_ModifyColumnFamiliesApiCall(ref gaxgrpc::ApiCall<ModifyColumnFamiliesRequest, Table> call);
 
@@ -4613,6 +5966,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         partial void Modify_RestoreTableApiCall(ref gaxgrpc::ApiCall<RestoreTableRequest, lro::Operation> call);
 
+        partial void Modify_CopyBackupApiCall(ref gaxgrpc::ApiCall<CopyBackupRequest, lro::Operation> call);
+
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
 
         partial void Modify_SetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> call);
@@ -4637,6 +5992,16 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_DeleteTableRequest(ref DeleteTableRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UndeleteTableRequest(ref UndeleteTableRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAuthorizedViewRequest(ref CreateAuthorizedViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAuthorizedViewsRequest(ref ListAuthorizedViewsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAuthorizedViewRequest(ref GetAuthorizedViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAuthorizedViewRequest(ref UpdateAuthorizedViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAuthorizedViewRequest(ref DeleteAuthorizedViewRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ModifyColumnFamiliesRequest(ref ModifyColumnFamiliesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4665,6 +6030,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_ListBackupsRequest(ref ListBackupsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RestoreTableRequest(ref RestoreTableRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CopyBackupRequest(ref CopyBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4865,6 +6232,132 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Modify_UndeleteTableRequest(ref request, ref callSettings);
             return new lro::Operation<Table, UndeleteTableMetadata>(await _callUndeleteTable.Async(request, callSettings).ConfigureAwait(false), UndeleteTableOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateAuthorizedView</c>.</summary>
+        public override lro::OperationsClient CreateAuthorizedViewOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata> CreateAuthorizedView(CreateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAuthorizedViewRequest(ref request, ref callSettings);
+            return new lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>(_callCreateAuthorizedView.Sync(request, callSettings), CreateAuthorizedViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>> CreateAuthorizedViewAsync(CreateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAuthorizedViewRequest(ref request, ref callSettings);
+            return new lro::Operation<AuthorizedView, CreateAuthorizedViewMetadata>(await _callCreateAuthorizedView.Async(request, callSettings).ConfigureAwait(false), CreateAuthorizedViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViews(ListAuthorizedViewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAuthorizedViewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAuthorizedViewsRequest, ListAuthorizedViewsResponse, AuthorizedView>(_callListAuthorizedViews, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all AuthorizedViews from a specific table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthorizedView"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAuthorizedViewsResponse, AuthorizedView> ListAuthorizedViewsAsync(ListAuthorizedViewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAuthorizedViewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAuthorizedViewsRequest, ListAuthorizedViewsResponse, AuthorizedView>(_callListAuthorizedViews, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AuthorizedView GetAuthorizedView(GetAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAuthorizedViewRequest(ref request, ref callSettings);
+            return _callGetAuthorizedView.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information from a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AuthorizedView> GetAuthorizedViewAsync(GetAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAuthorizedViewRequest(ref request, ref callSettings);
+            return _callGetAuthorizedView.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateAuthorizedView</c>.</summary>
+        public override lro::OperationsClient UpdateAuthorizedViewOperationsClient { get; }
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata> UpdateAuthorizedView(UpdateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAuthorizedViewRequest(ref request, ref callSettings);
+            return new lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>(_callUpdateAuthorizedView.Sync(request, callSettings), UpdateAuthorizedViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates an AuthorizedView in a table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>> UpdateAuthorizedViewAsync(UpdateAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAuthorizedViewRequest(ref request, ref callSettings);
+            return new lro::Operation<AuthorizedView, UpdateAuthorizedViewMetadata>(await _callUpdateAuthorizedView.Async(request, callSettings).ConfigureAwait(false), UpdateAuthorizedViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteAuthorizedView(DeleteAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAuthorizedViewRequest(ref request, ref callSettings);
+            _callDeleteAuthorizedView.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Permanently deletes a specified AuthorizedView.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteAuthorizedViewAsync(DeleteAuthorizedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAuthorizedViewRequest(ref request, ref callSettings);
+            return _callDeleteAuthorizedView.Async(request, callSettings);
         }
 
         /// <summary>
@@ -5142,8 +6635,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5161,8 +6654,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
         /// [response][google.longrunning.Operation.response] field type is
-        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
-        /// creation and delete the backup.
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5275,12 +6768,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public override lro::OperationsClient RestoreTableOperationsClient { get; }
 
         /// <summary>
-        /// Create a new table by restoring from a completed backup. The new table
-        /// must be in the same project as the instance containing the backup.  The
+        /// Create a new table by restoring from a completed backup.  The
         /// returned table [long-running operation][google.longrunning.Operation] can
         /// be used to track the progress of the operation, and to cancel it.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
+        /// [RestoreTableMetadata][google.bigtable.admin.v2.RestoreTableMetadata].  The
         /// [response][google.longrunning.Operation.response] type is
         /// [Table][google.bigtable.admin.v2.Table], if successful.
         /// </summary>
@@ -5294,12 +6786,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Create a new table by restoring from a completed backup. The new table
-        /// must be in the same project as the instance containing the backup.  The
+        /// Create a new table by restoring from a completed backup.  The
         /// returned table [long-running operation][google.longrunning.Operation] can
         /// be used to track the progress of the operation, and to cancel it.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
-        /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
+        /// [RestoreTableMetadata][google.bigtable.admin.v2.RestoreTableMetadata].  The
         /// [response][google.longrunning.Operation.response] type is
         /// [Table][google.bigtable.admin.v2.Table], if successful.
         /// </summary>
@@ -5310,6 +6801,35 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Modify_RestoreTableRequest(ref request, ref callSettings);
             return new lro::Operation<Table, RestoreTableMetadata>(await _callRestoreTable.Async(request, callSettings).ConfigureAwait(false), RestoreTableOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CopyBackup</c>.</summary>
+        public override lro::OperationsClient CopyBackupOperationsClient { get; }
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Backup, CopyBackupMetadata> CopyBackup(CopyBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CopyBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, CopyBackupMetadata>(_callCopyBackup.Sync(request, callSettings), CopyBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Copy a Cloud Bigtable backup to a new backup in the destination cluster
+        /// located in the destination instance and project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Backup, CopyBackupMetadata>> CopyBackupAsync(CopyBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CopyBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, CopyBackupMetadata>(await _callCopyBackup.Async(request, callSettings).ConfigureAwait(false), CopyBackupOperationsClient);
         }
 
         /// <summary>
@@ -5367,7 +6887,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5379,7 +6900,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
 
         /// <summary>
-        /// Returns permissions that the caller has on the specified Table or Backup resource.
+        /// Returns permissions that the caller has on the specified Table or Backup
+        /// resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5395,6 +6917,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
     {
     }
 
+    public partial class ListAuthorizedViewsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListSnapshotsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -5407,6 +6933,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Table> GetEnumerator() => Tables.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAuthorizedViewsResponse : gaxgrpc::IPageResponse<AuthorizedView>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AuthorizedView> GetEnumerator() => AuthorizedViews.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

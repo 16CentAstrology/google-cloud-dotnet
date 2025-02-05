@@ -10,16 +10,46 @@
         "grpc": {
           "libraryClient": "ArtifactRegistryClient",
           "rpcs": {
+            "BatchDeleteVersions": {
+              "methods": [
+                "BatchDeleteVersions",
+                "BatchDeleteVersionsAsync"
+              ]
+            },
+            "CreateAttachment": {
+              "methods": [
+                "CreateAttachment",
+                "CreateAttachmentAsync"
+              ]
+            },
             "CreateRepository": {
               "methods": [
                 "CreateRepository",
                 "CreateRepositoryAsync"
               ]
             },
+            "CreateRule": {
+              "methods": [
+                "CreateRule",
+                "CreateRuleAsync"
+              ]
+            },
             "CreateTag": {
               "methods": [
                 "CreateTag",
                 "CreateTagAsync"
+              ]
+            },
+            "DeleteAttachment": {
+              "methods": [
+                "DeleteAttachment",
+                "DeleteAttachmentAsync"
+              ]
+            },
+            "DeleteFile": {
+              "methods": [
+                "DeleteFile",
+                "DeleteFileAsync"
               ]
             },
             "DeletePackage": {
@@ -34,6 +64,12 @@
                 "DeleteRepositoryAsync"
               ]
             },
+            "DeleteRule": {
+              "methods": [
+                "DeleteRule",
+                "DeleteRuleAsync"
+              ]
+            },
             "DeleteTag": {
               "methods": [
                 "DeleteTag",
@@ -44,6 +80,12 @@
               "methods": [
                 "DeleteVersion",
                 "DeleteVersionAsync"
+              ]
+            },
+            "GetAttachment": {
+              "methods": [
+                "GetAttachment",
+                "GetAttachmentAsync"
               ]
             },
             "GetDockerImage": {
@@ -100,6 +142,12 @@
                 "GetRepositoryAsync"
               ]
             },
+            "GetRule": {
+              "methods": [
+                "GetRule",
+                "GetRuleAsync"
+              ]
+            },
             "GetTag": {
               "methods": [
                 "GetTag",
@@ -128,6 +176,12 @@
               "methods": [
                 "ImportYumArtifacts",
                 "ImportYumArtifactsAsync"
+              ]
+            },
+            "ListAttachments": {
+              "methods": [
+                "ListAttachments",
+                "ListAttachmentsAsync"
               ]
             },
             "ListDockerImages": {
@@ -172,6 +226,12 @@
                 "ListRepositoriesAsync"
               ]
             },
+            "ListRules": {
+              "methods": [
+                "ListRules",
+                "ListRulesAsync"
+              ]
+            },
             "ListTags": {
               "methods": [
                 "ListTags",
@@ -196,6 +256,18 @@
                 "TestIamPermissionsAsync"
               ]
             },
+            "UpdateFile": {
+              "methods": [
+                "UpdateFile",
+                "UpdateFileAsync"
+              ]
+            },
+            "UpdatePackage": {
+              "methods": [
+                "UpdatePackage",
+                "UpdatePackageAsync"
+              ]
+            },
             "UpdateProjectSettings": {
               "methods": [
                 "UpdateProjectSettings",
@@ -208,6 +280,12 @@
                 "UpdateRepositoryAsync"
               ]
             },
+            "UpdateRule": {
+              "methods": [
+                "UpdateRule",
+                "UpdateRuleAsync"
+              ]
+            },
             "UpdateTag": {
               "methods": [
                 "UpdateTag",
@@ -218,6 +296,12 @@
               "methods": [
                 "UpdateVPCSCConfig",
                 "UpdateVPCSCConfigAsync"
+              ]
+            },
+            "UpdateVersion": {
+              "methods": [
+                "UpdateVersion",
+                "UpdateVersionAsync"
               ]
             }
           }

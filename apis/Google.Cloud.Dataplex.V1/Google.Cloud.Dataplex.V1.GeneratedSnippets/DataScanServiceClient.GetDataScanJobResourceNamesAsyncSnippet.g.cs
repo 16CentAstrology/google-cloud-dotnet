@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Dataplex.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataScanService_GetDataScanJob_async_flattened_resourceNames]
     using System.Threading.Tasks;
@@ -35,11 +35,11 @@ namespace Google.Cloud.Dataplex.V1.Snippets
         public async Task GetDataScanJobResourceNamesAsync()
         {
             // Create client
-            DataScanServiceClient dataScanServiceClient = await DataScanServiceClient.CreateAsync();
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DataScanJobName name = DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]");
+            gcdv::DataScanJobName name = gcdv::DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]");
             // Make the request
-            DataScanJob response = await dataScanServiceClient.GetDataScanJobAsync(name);
+            gcdv::DataScanJob response = await dataScanServiceClient.GetDataScanJobAsync(name);
         }
     }
     // [END dataplex_v1_generated_DataScanService_GetDataScanJob_async_flattened_resourceNames]

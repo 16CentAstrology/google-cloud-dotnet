@@ -131,6 +131,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
   /// A top-level description of an API.
   /// Produced by producers and are commitments to provide services.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Api : pb::IMessage<Api>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -567,8 +568,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       if (other.RecommendedDeployment.Length != 0) {
         RecommendedDeployment = other.RecommendedDeployment;
       }
-      labels_.Add(other.labels_);
-      annotations_.Add(other.annotations_);
+      labels_.MergeFrom(other.labels_);
+      annotations_.MergeFrom(other.annotations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -702,6 +703,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
   /// Describes a particular version of an API.
   /// ApiVersions are what consumers actually use.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApiVersion : pb::IMessage<ApiVersion>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1073,8 +1075,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       if (other.State.Length != 0) {
         State = other.State;
       }
-      labels_.Add(other.labels_);
-      annotations_.Add(other.annotations_);
+      labels_.MergeFrom(other.labels_);
+      annotations_.MergeFrom(other.annotations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1198,6 +1200,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
   /// Synchronization of these representations would be provided by tooling and
   /// background services.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApiSpec : pb::IMessage<ApiSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1777,8 +1780,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       if (other.Contents.Length != 0) {
         Contents = other.Contents;
       }
-      labels_.Add(other.labels_);
-      annotations_.Add(other.annotations_);
+      labels_.MergeFrom(other.labels_);
+      annotations_.MergeFrom(other.annotations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1953,6 +1956,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
   /// Revision identifiers should be updated whenever the served API spec or
   /// endpoint address changes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApiDeployment : pb::IMessage<ApiDeployment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2524,8 +2528,8 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
       if (other.AccessGuidance.Length != 0) {
         AccessGuidance = other.AccessGuidance;
       }
-      labels_.Add(other.labels_);
-      annotations_.Add(other.annotations_);
+      labels_.MergeFrom(other.labels_);
+      annotations_.MergeFrom(other.annotations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2703,6 +2707,7 @@ namespace Google.Cloud.ApigeeRegistry.V1 {
   /// allows artifacts to be quickly enumerated and checked for presence without
   /// downloading their (potentially-large) contents.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Artifact : pb::IMessage<Artifact>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

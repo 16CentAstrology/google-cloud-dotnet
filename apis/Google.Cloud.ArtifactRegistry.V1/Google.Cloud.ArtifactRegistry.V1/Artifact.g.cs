@@ -131,6 +131,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// * mediaType
   /// * buildTime
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DockerImage : pb::IMessage<DockerImage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -642,6 +643,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The request to list docker images.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDockerImagesRequest : pb::IMessage<ListDockerImagesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -709,7 +711,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of artifacts to return.
+    /// The maximum number of artifacts to return. Maximum page size is 1,000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -958,6 +960,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The response from listing docker images.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListDockerImagesResponse : pb::IMessage<ListDockerImagesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1183,6 +1186,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The request to get docker images.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetDockerImageRequest : pb::IMessage<GetDockerImageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1378,6 +1382,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// MavenArtifact represents a maven artifact.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MavenArtifact : pb::IMessage<MavenArtifact>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1842,6 +1847,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The request to list maven artifacts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListMavenArtifactsRequest : pb::IMessage<ListMavenArtifactsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1908,7 +1914,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of artifacts to return.
+    /// The maximum number of artifacts to return. Maximum page size is 1,000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2118,6 +2124,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The response from listing maven artifacts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListMavenArtifactsResponse : pb::IMessage<ListMavenArtifactsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2343,6 +2350,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The request to get maven artifacts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetMavenArtifactRequest : pb::IMessage<GetMavenArtifactRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2538,6 +2546,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// NpmPackage represents an npm artifact.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NpmPackage : pb::IMessage<NpmPackage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2946,6 +2955,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The request to list npm packages.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListNpmPackagesRequest : pb::IMessage<ListNpmPackagesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3012,7 +3022,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of artifacts to return.
+    /// The maximum number of artifacts to return. Maximum page size is 1,000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3222,6 +3232,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The response from listing npm packages.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListNpmPackagesResponse : pb::IMessage<ListNpmPackagesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3447,6 +3458,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The request to get npm packages.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetNpmPackageRequest : pb::IMessage<GetNpmPackageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3642,6 +3654,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// PythonPackage represents a python artifact.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PythonPackage : pb::IMessage<PythonPackage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4065,6 +4078,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The request to list python packages.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPythonPackagesRequest : pb::IMessage<ListPythonPackagesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4131,7 +4145,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of artifacts to return.
+    /// The maximum number of artifacts to return. Maximum page size is 1,000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4341,6 +4355,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The response from listing python packages.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPythonPackagesResponse : pb::IMessage<ListPythonPackagesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4566,6 +4581,7 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// <summary>
   /// The request to get python packages.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPythonPackageRequest : pb::IMessage<GetPythonPackageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

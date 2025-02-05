@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.GkeMultiCloud.V1
 {
@@ -60,6 +60,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
             DeleteAttachedClusterOperationsSettings = existing.DeleteAttachedClusterOperationsSettings.Clone();
             GetAttachedServerConfigSettings = existing.GetAttachedServerConfigSettings;
             GenerateAttachedClusterInstallManifestSettings = existing.GenerateAttachedClusterInstallManifestSettings;
+            GenerateAttachedClusterAgentTokenSettings = existing.GenerateAttachedClusterAgentTokenSettings;
             OnCopy(existing);
         }
 
@@ -264,6 +265,25 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </remarks>
         public gaxgrpc::CallSettings GenerateAttachedClusterInstallManifestSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AttachedClustersClient.GenerateAttachedClusterAgentToken</c> and
+        /// <c>AttachedClustersClient.GenerateAttachedClusterAgentTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateAttachedClusterAgentTokenSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AttachedClustersSettings"/> object.</returns>
         public AttachedClustersSettings Clone() => new AttachedClustersSettings(this);
@@ -307,14 +327,14 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AttachedClustersClient.Create(callInvoker, Settings, Logger);
+            return AttachedClustersClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AttachedClustersClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AttachedClustersClient.Create(callInvoker, Settings, Logger);
+            return AttachedClustersClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -348,7 +368,7 @@ namespace Google.Cloud.GkeMultiCloud.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AttachedClusters.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(AttachedClusters.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -805,12 +825,18 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// fields from
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster]:
         /// 
-        /// *   `description`.
         /// *   `annotations`.
-        /// *   `platform_version`.
+        /// *   `authorization.admin_groups`.
         /// *   `authorization.admin_users`.
+        /// *   `binary_authorization.evaluation_mode`.
+        /// *   `description`.
         /// *   `logging_config.component_config.enable_components`.
         /// *   `monitoring_config.managed_prometheus_config.enabled`.
+        /// *   `platform_version`.
+        /// *   `proxy_config.kubernetes_secret.name`.
+        /// *   `proxy_config.kubernetes_secret.namespace`.
+        /// *   `security_posture_config.vulnerability_mode`
+        /// *   `monitoring_config.cloud_monitoring_config.enabled`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -836,12 +862,18 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// fields from
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster]:
         /// 
-        /// *   `description`.
         /// *   `annotations`.
-        /// *   `platform_version`.
+        /// *   `authorization.admin_groups`.
         /// *   `authorization.admin_users`.
+        /// *   `binary_authorization.evaluation_mode`.
+        /// *   `description`.
         /// *   `logging_config.component_config.enable_components`.
         /// *   `monitoring_config.managed_prometheus_config.enabled`.
+        /// *   `platform_version`.
+        /// *   `proxy_config.kubernetes_secret.name`.
+        /// *   `proxy_config.kubernetes_secret.namespace`.
+        /// *   `security_posture_config.vulnerability_mode`
+        /// *   `monitoring_config.cloud_monitoring_config.enabled`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -867,12 +899,18 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// fields from
         /// [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster]:
         /// 
-        /// *   `description`.
         /// *   `annotations`.
-        /// *   `platform_version`.
+        /// *   `authorization.admin_groups`.
         /// *   `authorization.admin_users`.
+        /// *   `binary_authorization.evaluation_mode`.
+        /// *   `description`.
         /// *   `logging_config.component_config.enable_components`.
         /// *   `monitoring_config.managed_prometheus_config.enabled`.
+        /// *   `platform_version`.
+        /// *   `proxy_config.kubernetes_secret.name`.
+        /// *   `proxy_config.kubernetes_secret.namespace`.
+        /// *   `security_posture_config.vulnerability_mode`
+        /// *   `monitoring_config.cloud_monitoring_config.enabled`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1361,13 +1399,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AttachedCluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttachedClusters(new ListAttachedClustersRequest
+        public virtual gax::PagedEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClusters(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachedClustersRequest request = new ListAttachedClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachedClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster]
@@ -1392,13 +1439,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AttachedCluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttachedClustersAsync(new ListAttachedClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClustersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachedClustersRequest request = new ListAttachedClustersRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachedClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster]
@@ -1423,13 +1479,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AttachedCluster"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClusters(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttachedClusters(new ListAttachedClustersRequest
+        public virtual gax::PagedEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClusters(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachedClustersRequest request = new ListAttachedClustersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachedClusters(request, callSettings);
+        }
 
         /// <summary>
         /// Lists all [AttachedCluster][google.cloud.gkemulticloud.v1.AttachedCluster]
@@ -1454,13 +1519,22 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AttachedCluster"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClustersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAttachedClustersAsync(new ListAttachedClustersRequest
+        public virtual gax::PagedAsyncEnumerable<ListAttachedClustersResponse, AttachedCluster> ListAttachedClustersAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAttachedClustersRequest request = new ListAttachedClustersRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAttachedClustersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes a specific
@@ -2095,6 +2169,33 @@ namespace Google.Cloud.GkeMultiCloud.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<GenerateAttachedClusterInstallManifestResponse> GenerateAttachedClusterInstallManifestAsync(gagr::LocationName parent, string attachedClusterId, st::CancellationToken cancellationToken) =>
             GenerateAttachedClusterInstallManifestAsync(parent, attachedClusterId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateAttachedClusterAgentTokenResponse GenerateAttachedClusterAgentToken(GenerateAttachedClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateAttachedClusterAgentTokenResponse> GenerateAttachedClusterAgentTokenAsync(GenerateAttachedClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateAttachedClusterAgentTokenResponse> GenerateAttachedClusterAgentTokenAsync(GenerateAttachedClusterAgentTokenRequest request, st::CancellationToken cancellationToken) =>
+            GenerateAttachedClusterAgentTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AttachedClusters client wrapper implementation, for convenient use.</summary>
@@ -2121,6 +2222,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         private readonly gaxgrpc::ApiCall<GenerateAttachedClusterInstallManifestRequest, GenerateAttachedClusterInstallManifestResponse> _callGenerateAttachedClusterInstallManifest;
 
+        private readonly gaxgrpc::ApiCall<GenerateAttachedClusterAgentTokenRequest, GenerateAttachedClusterAgentTokenResponse> _callGenerateAttachedClusterAgentToken;
+
         /// <summary>
         /// Constructs a client wrapper for the AttachedClusters service, with the specified gRPC client and settings.
         /// </summary>
@@ -2131,7 +2234,11 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             GrpcClient = grpcClient;
             AttachedClustersSettings effectiveSettings = settings ?? AttachedClustersSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateAttachedClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAttachedClusterOperationsSettings, logger);
             UpdateAttachedClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAttachedClusterOperationsSettings, logger);
             ImportAttachedClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportAttachedClusterOperationsSettings, logger);
@@ -2160,6 +2267,9 @@ namespace Google.Cloud.GkeMultiCloud.V1
             _callGenerateAttachedClusterInstallManifest = clientHelper.BuildApiCall<GenerateAttachedClusterInstallManifestRequest, GenerateAttachedClusterInstallManifestResponse>("GenerateAttachedClusterInstallManifest", grpcClient.GenerateAttachedClusterInstallManifestAsync, grpcClient.GenerateAttachedClusterInstallManifest, effectiveSettings.GenerateAttachedClusterInstallManifestSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callGenerateAttachedClusterInstallManifest);
             Modify_GenerateAttachedClusterInstallManifestApiCall(ref _callGenerateAttachedClusterInstallManifest);
+            _callGenerateAttachedClusterAgentToken = clientHelper.BuildApiCall<GenerateAttachedClusterAgentTokenRequest, GenerateAttachedClusterAgentTokenResponse>("GenerateAttachedClusterAgentToken", grpcClient.GenerateAttachedClusterAgentTokenAsync, grpcClient.GenerateAttachedClusterAgentToken, effectiveSettings.GenerateAttachedClusterAgentTokenSettings).WithGoogleRequestParam("attached_cluster", request => request.AttachedCluster);
+            Modify_ApiCall(ref _callGenerateAttachedClusterAgentToken);
+            Modify_GenerateAttachedClusterAgentTokenApiCall(ref _callGenerateAttachedClusterAgentToken);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2181,6 +2291,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
 
         partial void Modify_GenerateAttachedClusterInstallManifestApiCall(ref gaxgrpc::ApiCall<GenerateAttachedClusterInstallManifestRequest, GenerateAttachedClusterInstallManifestResponse> call);
 
+        partial void Modify_GenerateAttachedClusterAgentTokenApiCall(ref gaxgrpc::ApiCall<GenerateAttachedClusterAgentTokenRequest, GenerateAttachedClusterAgentTokenResponse> call);
+
         partial void OnConstruction(AttachedClusters.AttachedClustersClient grpcClient, AttachedClustersSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AttachedClusters client</summary>
@@ -2201,6 +2313,8 @@ namespace Google.Cloud.GkeMultiCloud.V1
         partial void Modify_GetAttachedServerConfigRequest(ref GetAttachedServerConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GenerateAttachedClusterInstallManifestRequest(ref GenerateAttachedClusterInstallManifestRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateAttachedClusterAgentTokenRequest(ref GenerateAttachedClusterAgentTokenRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateAttachedCluster</c>.</summary>
         public override lro::OperationsClient CreateAttachedClusterOperationsClient { get; }
@@ -2452,6 +2566,30 @@ namespace Google.Cloud.GkeMultiCloud.V1
         {
             Modify_GenerateAttachedClusterInstallManifestRequest(ref request, ref callSettings);
             return _callGenerateAttachedClusterInstallManifest.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateAttachedClusterAgentTokenResponse GenerateAttachedClusterAgentToken(GenerateAttachedClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateAttachedClusterAgentTokenRequest(ref request, ref callSettings);
+            return _callGenerateAttachedClusterAgentToken.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates an access token for a cluster agent.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateAttachedClusterAgentTokenResponse> GenerateAttachedClusterAgentTokenAsync(GenerateAttachedClusterAgentTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateAttachedClusterAgentTokenRequest(ref request, ref callSettings);
+            return _callGenerateAttachedClusterAgentToken.Async(request, callSettings);
         }
     }
 

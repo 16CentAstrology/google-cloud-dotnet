@@ -107,6 +107,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// Google Cloud Storage location for input content.
   /// format.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -297,6 +298,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// The inline source for the input config for ImportCatalogItems method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CatalogInlineSource : pb::IMessage<CatalogInlineSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -482,6 +484,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// The inline source for the input config for ImportUserEvents method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserEventInlineSource : pb::IMessage<UserEventInlineSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -666,6 +669,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Configuration of destination for Import related errors.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportErrorsConfig : pb::IMessage<ImportErrorsConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -726,10 +730,24 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsPrefix {
-      get { return destinationCase_ == DestinationOneofCase.GcsPrefix ? (string) destination_ : ""; }
+      get { return HasGcsPrefix ? (string) destination_ : ""; }
       set {
         destination_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         destinationCase_ = DestinationOneofCase.GcsPrefix;
+      }
+    }
+    /// <summary>Gets whether the "gcs_prefix" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsPrefix {
+      get { return destinationCase_ == DestinationOneofCase.GcsPrefix; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_prefix" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsPrefix() {
+      if (HasGcsPrefix) {
+        ClearDestination();
       }
     }
 
@@ -777,7 +795,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (destinationCase_ == DestinationOneofCase.GcsPrefix) hash ^= GcsPrefix.GetHashCode();
+      if (HasGcsPrefix) hash ^= GcsPrefix.GetHashCode();
       hash ^= (int) destinationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -797,7 +815,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (destinationCase_ == DestinationOneofCase.GcsPrefix) {
+      if (HasGcsPrefix) {
         output.WriteRawTag(10);
         output.WriteString(GcsPrefix);
       }
@@ -811,7 +829,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (destinationCase_ == DestinationOneofCase.GcsPrefix) {
+      if (HasGcsPrefix) {
         output.WriteRawTag(10);
         output.WriteString(GcsPrefix);
       }
@@ -825,7 +843,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (destinationCase_ == DestinationOneofCase.GcsPrefix) {
+      if (HasGcsPrefix) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsPrefix);
       }
       if (_unknownFields != null) {
@@ -894,6 +912,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Request message for Import methods.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportCatalogItemsRequest : pb::IMessage<ImportCatalogItemsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1230,6 +1249,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// Request message for the ImportUserEvents request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportUserEventsRequest : pb::IMessage<ImportUserEventsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1569,6 +1589,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// <summary>
   /// The input config source.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InputConfig : pb::IMessage<InputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1920,6 +1941,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// Metadata related to the progress of the Import operation. This will be
   /// returned by the google.longrunning.Operation.metadata field.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportMetadata : pb::IMessage<ImportMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2337,6 +2359,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// operation is done, then this message is returned by the
   /// google.longrunning.Operations.response field if the operation was successful.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportCatalogItemsResponse : pb::IMessage<ImportCatalogItemsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2572,6 +2595,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// operation was successful, then this message is returned by the
   /// google.longrunning.Operations.response field if the operation was successful.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImportUserEventsResponse : pb::IMessage<ImportUserEventsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2856,6 +2880,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   /// A summary of import result. The UserEventImportSummary summarizes
   /// the import status for user events.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserEventImportSummary : pb::IMessage<UserEventImportSummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

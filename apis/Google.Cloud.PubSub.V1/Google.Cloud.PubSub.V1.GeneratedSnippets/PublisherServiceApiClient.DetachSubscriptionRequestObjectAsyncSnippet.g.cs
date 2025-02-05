@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.PubSub.V1.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START pubsub_v1_generated_PublisherServiceApi_DetachSubscription_async]
+    // [START pubsub_v1_generated_Publisher_DetachSubscription_async]
     using Google.Cloud.PubSub.V1;
     using System.Threading.Tasks;
 
@@ -43,5 +43,5 @@ namespace Google.Cloud.PubSub.V1.Snippets
             DetachSubscriptionResponse response = await publisherServiceApiClient.DetachSubscriptionAsync(request);
         }
     }
-    // [END pubsub_v1_generated_PublisherServiceApi_DetachSubscription_async]
+    // [END pubsub_v1_generated_Publisher_DetachSubscription_async]
 }

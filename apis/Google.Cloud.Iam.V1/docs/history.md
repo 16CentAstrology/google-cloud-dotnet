@@ -1,5 +1,31 @@
 # Version history
 
+## Version 3.4.0, released 2024-12-06
+
+### New features
+
+- Add ResourcePolicyMember to google/iam/v1 ([commit 3c1d048](https://github.com/googleapis/google-cloud-dotnet/commit/3c1d048a7cf49965a67dabdf8e5a7628ab9efde0))
+
+## Version 3.3.0, released 2024-05-14
+
+### New features
+
+- Add IServiceCollection extension methods for client registration where an IServiceProvider is required. ([commit 022fab2](https://github.com/googleapis/google-cloud-dotnet/commit/022fab203f28fb9c608972af7f8b83f571ae5694))
+
+## Version 3.2.0, released 2024-03-25
+
+### New features
+
+This library now targets netstandard2.0 instead of netstandard2.1.
+This should be compatible with existing libraries that depend on it,
+but will allow new libraries to also target netstandard2.0.
+
+## Version 3.1.0, released 2024-02-28
+
+### Documentation improvements
+
+- Minor formatting ([commit cae56e0](https://github.com/googleapis/google-cloud-dotnet/commit/cae56e096d7119fe82d7201316ff6da42223eb52))
+
 ## Version 3.0.0, released 2022-06-07
 
 This is the first version of this package to depend on GAX v4.

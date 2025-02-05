@@ -93,6 +93,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// compliance](https://cloud.google.com/compute/docs/os-configuration-management/view-compliance).
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InstanceOSPoliciesCompliance : pb::IMessage<InstanceOSPoliciesCompliance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -589,6 +590,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// Compliance data for an OS policy
       /// </summary>
       [global::System.ObsoleteAttribute]
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OSPolicyCompliance : pb::IMessage<OSPolicyCompliance>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -906,6 +908,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// Compute Engine VM instance.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetInstanceOSPoliciesComplianceRequest : pb::IMessage<GetInstanceOSPoliciesComplianceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1111,6 +1114,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// Engine VMs in the given location.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstanceOSPoliciesCompliancesRequest : pb::IMessage<ListInstanceOSPoliciesCompliancesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1436,6 +1440,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   /// Engine VMs in the given location.
   /// </summary>
   [global::System.ObsoleteAttribute]
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListInstanceOSPoliciesCompliancesResponse : pb::IMessage<ListInstanceOSPoliciesCompliancesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

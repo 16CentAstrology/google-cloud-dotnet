@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -778,6 +779,130 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateEndpointLongRunning</summary>
+        public void UpdateEndpointLongRunningRequestObject()
+        {
+            // Snippet: UpdateEndpointLongRunning(UpdateEndpointLongRunningRequest, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateEndpointLongRunningRequest request = new UpdateEndpointLongRunningRequest
+            {
+                Endpoint = new Endpoint(),
+            };
+            // Make the request
+            Operation<Endpoint, UpdateEndpointOperationMetadata> response = endpointServiceClient.UpdateEndpointLongRunning(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Endpoint, UpdateEndpointOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Endpoint result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Endpoint, UpdateEndpointOperationMetadata> retrievedResponse = endpointServiceClient.PollOnceUpdateEndpointLongRunning(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Endpoint retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEndpointLongRunningAsync</summary>
+        public async Task UpdateEndpointLongRunningRequestObjectAsync()
+        {
+            // Snippet: UpdateEndpointLongRunningAsync(UpdateEndpointLongRunningRequest, CallSettings)
+            // Additional: UpdateEndpointLongRunningAsync(UpdateEndpointLongRunningRequest, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateEndpointLongRunningRequest request = new UpdateEndpointLongRunningRequest
+            {
+                Endpoint = new Endpoint(),
+            };
+            // Make the request
+            Operation<Endpoint, UpdateEndpointOperationMetadata> response = await endpointServiceClient.UpdateEndpointLongRunningAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Endpoint, UpdateEndpointOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Endpoint result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Endpoint, UpdateEndpointOperationMetadata> retrievedResponse = await endpointServiceClient.PollOnceUpdateEndpointLongRunningAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Endpoint retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEndpointLongRunning</summary>
+        public void UpdateEndpointLongRunning()
+        {
+            // Snippet: UpdateEndpointLongRunning(Endpoint, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            Endpoint endpoint = new Endpoint();
+            // Make the request
+            Operation<Endpoint, UpdateEndpointOperationMetadata> response = endpointServiceClient.UpdateEndpointLongRunning(endpoint);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Endpoint, UpdateEndpointOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Endpoint result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Endpoint, UpdateEndpointOperationMetadata> retrievedResponse = endpointServiceClient.PollOnceUpdateEndpointLongRunning(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Endpoint retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateEndpointLongRunningAsync</summary>
+        public async Task UpdateEndpointLongRunningAsync()
+        {
+            // Snippet: UpdateEndpointLongRunningAsync(Endpoint, CallSettings)
+            // Additional: UpdateEndpointLongRunningAsync(Endpoint, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Endpoint endpoint = new Endpoint();
+            // Make the request
+            Operation<Endpoint, UpdateEndpointOperationMetadata> response = await endpointServiceClient.UpdateEndpointLongRunningAsync(endpoint);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Endpoint, UpdateEndpointOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Endpoint result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Endpoint, UpdateEndpointOperationMetadata> retrievedResponse = await endpointServiceClient.PollOnceUpdateEndpointLongRunningAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Endpoint retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteEndpoint</summary>
         public void DeleteEndpointRequestObject()
         {
@@ -1347,6 +1472,201 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 // If it has completed, then access the result
                 UndeployModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateDeployedModel</summary>
+        public void MutateDeployedModelRequestObject()
+        {
+            // Snippet: MutateDeployedModel(MutateDeployedModelRequest, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            MutateDeployedModelRequest request = new MutateDeployedModelRequest
+            {
+                EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+                DeployedModel = new DeployedModel(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> response = endpointServiceClient.MutateDeployedModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MutateDeployedModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> retrievedResponse = endpointServiceClient.PollOnceMutateDeployedModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MutateDeployedModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateDeployedModelAsync</summary>
+        public async Task MutateDeployedModelRequestObjectAsync()
+        {
+            // Snippet: MutateDeployedModelAsync(MutateDeployedModelRequest, CallSettings)
+            // Additional: MutateDeployedModelAsync(MutateDeployedModelRequest, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MutateDeployedModelRequest request = new MutateDeployedModelRequest
+            {
+                EndpointAsEndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+                DeployedModel = new DeployedModel(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> response = await endpointServiceClient.MutateDeployedModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MutateDeployedModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> retrievedResponse = await endpointServiceClient.PollOnceMutateDeployedModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MutateDeployedModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateDeployedModel</summary>
+        public void MutateDeployedModel()
+        {
+            // Snippet: MutateDeployedModel(string, DeployedModel, FieldMask, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            string endpoint = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
+            DeployedModel deployedModel = new DeployedModel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> response = endpointServiceClient.MutateDeployedModel(endpoint, deployedModel, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MutateDeployedModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> retrievedResponse = endpointServiceClient.PollOnceMutateDeployedModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MutateDeployedModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateDeployedModelAsync</summary>
+        public async Task MutateDeployedModelAsync()
+        {
+            // Snippet: MutateDeployedModelAsync(string, DeployedModel, FieldMask, CallSettings)
+            // Additional: MutateDeployedModelAsync(string, DeployedModel, FieldMask, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string endpoint = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
+            DeployedModel deployedModel = new DeployedModel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> response = await endpointServiceClient.MutateDeployedModelAsync(endpoint, deployedModel, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MutateDeployedModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> retrievedResponse = await endpointServiceClient.PollOnceMutateDeployedModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MutateDeployedModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateDeployedModel</summary>
+        public void MutateDeployedModelResourceNames()
+        {
+            // Snippet: MutateDeployedModel(EndpointName, DeployedModel, FieldMask, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+            DeployedModel deployedModel = new DeployedModel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> response = endpointServiceClient.MutateDeployedModel(endpoint, deployedModel, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MutateDeployedModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> retrievedResponse = endpointServiceClient.PollOnceMutateDeployedModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MutateDeployedModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateDeployedModelAsync</summary>
+        public async Task MutateDeployedModelResourceNamesAsync()
+        {
+            // Snippet: MutateDeployedModelAsync(EndpointName, DeployedModel, FieldMask, CallSettings)
+            // Additional: MutateDeployedModelAsync(EndpointName, DeployedModel, FieldMask, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EndpointName endpoint = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+            DeployedModel deployedModel = new DeployedModel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> response = await endpointServiceClient.MutateDeployedModelAsync(endpoint, deployedModel, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MutateDeployedModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata> retrievedResponse = await endpointServiceClient.PollOnceMutateDeployedModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MutateDeployedModelResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

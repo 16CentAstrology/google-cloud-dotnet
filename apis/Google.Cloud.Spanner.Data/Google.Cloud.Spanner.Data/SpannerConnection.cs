@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,6 +19,7 @@ using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
+using Google.Protobuf.Reflection;
 using Grpc.Core;
 using System;
 using System.ComponentModel;
@@ -27,7 +28,6 @@ using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Cloud.Spanner.V1.SessionPool;
-using static Google.Cloud.Spanner.V1.TransactionOptions.Types;
 using Transaction = System.Transactions.Transaction;
 
 namespace Google.Cloud.Spanner.Data
@@ -49,10 +49,6 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class SpannerConnection : DbConnection
     {
-        // Transaction options; no additional state, so can be reused.
-        internal static TransactionOptions ReadWriteTransactionOptions { get; } = new TransactionOptions { ReadWrite = new ReadWrite() };
-        internal static TransactionOptions PartitionedDmlTransactionOptions { get; } = new TransactionOptions { PartitionedDml = new PartitionedDml() };
-
         private readonly object _sync = new object();
 
         // The SessionPool to use to allocate sessions. This is obtained from the SessionPoolManager,
@@ -75,6 +71,17 @@ namespace Google.Cloud.Spanner.Data
                 TrySetNewConnectionInfo(newBuilder);
             }
         }
+
+        /// <inheritdoc />
+        protected override DbProviderFactory DbProviderFactory => SpannerProviderFactory.Instance;
+
+        /// <summary>
+        /// The current connection string builder. The object is never mutated and never exposed to consumers.
+        /// The value may be changed to a new builder by setting the <see cref="ConnectionString"/>
+        /// property, or within this class via the <see cref="TrySetNewConnectionInfo(SpannerConnectionStringBuilder)"/> method.
+        /// This value is never null.
+        /// </summary>
+        internal SpannerConnectionStringBuilder Builder { get; private set; }
 
         /// <inheritdoc />
         public override string Database => Builder.SpannerDatabase;
@@ -114,9 +121,9 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        internal bool IsClosed => (State & ConnectionState.Open) == 0;
-
         internal bool IsOpen => (State & ConnectionState.Open) == ConnectionState.Open;
+
+        internal bool IsClosed => (State & ConnectionState.Open) == 0;
 
         /// <summary>
         /// Query options to use throughout the lifetime of the connection when
@@ -138,6 +145,17 @@ namespace Google.Cloud.Spanner.Data
         /// <see cref="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogCommitStats(CommitRequest, CommitResponse)"/>
         /// </remarks>
         public bool LogCommitStats => Builder.LogCommitStats;
+
+        /// <summary>
+        /// Gets or Sets whether to participate in the active <see cref="System.Transactions.TransactionScope" />
+        /// </summary>
+        public bool EnlistInTransaction { get; set; } = true;
+
+        /// <summary>
+        /// Returns the current ambient transaction (from TransactionScope), if any.
+        /// The .NET Standard 1.x version will always return null, as TransactionScope is not supported in .NET Core 1.x.
+        /// </summary>
+        internal ISpannerTransaction AmbientTransaction => _volatileResourceManager;
 
         /// <summary>
         /// Creates a SpannerConnection with no datasource or credential specified.
@@ -184,6 +202,225 @@ namespace Google.Cloud.Spanner.Data
             TrySetNewConnectionInfo(connectionStringBuilder);
         }
 
+        /// <inheritdoc />
+        public override void Open()
+        {
+            if (IsOpen)
+            {
+                return;
+            }
+            Open(GetTransactionEnlister());
+        }
+
+        private void Open(Action transactionEnlister)
+        {
+            Func<Task> taskRunner = () => OpenAsyncImpl(transactionEnlister, CancellationToken.None);
+
+            // This is slightly annoying, but hard to get round: most of our timeouts use Expiration, but this is more of
+            // a BCL-oriented timeout.
+            int timeoutSeconds = Builder.Timeout;
+            TimeSpan timeout = Builder.AllowImmediateTimeouts && timeoutSeconds == 0
+                ? TimeSpan.FromMilliseconds(-1)
+                : TimeSpan.FromSeconds(timeoutSeconds);
+            if (!Task.Run(taskRunner).WaitWithUnwrappedExceptions(timeout))
+            {
+                throw new SpannerException(ErrorCode.DeadlineExceeded, "Timed out opening connection");
+            }
+        }
+
+        /// <inheritdoc />
+        public override Task OpenAsync(CancellationToken cancellationToken) => OpenAsyncImpl(GetTransactionEnlister(), cancellationToken);
+
+        /// <summary>
+        /// Opens the connection within a <see cref="System.Transactions.TransactionScope"/> with specific
+        /// <see cref="SpannerTransactionCreationOptions"/> and <see cref="SpannerTransactionOptions"/>.
+        /// </summary>
+        /// <param name="creationOptions">
+        /// Options to be used when creating the ambient <see cref="SpannerTransaction"/>.
+        /// Must not be null.
+        /// </param>
+        /// <param name="options">
+        /// Options to be applied to the ambient <see cref="SpannerTransaction"/> after creation.
+        /// May be null, in which case defaults will be used.
+        /// A copy of this value will be used internally, so any changes to <paramref name="options"/> made after calling this method
+        /// will have no effect on the ambient transaction.
+        /// </param>
+        public void Open(SpannerTransactionCreationOptions creationOptions, SpannerTransactionOptions options)
+        {
+            GaxPreconditions.CheckNotNull(creationOptions, nameof(creationOptions));
+            GaxPreconditions.CheckArgument(
+                !creationOptions.IsPartitionedDml,
+                nameof(creationOptions),
+                $"Partitioned DML transactions may only be used when executing {nameof(SpannerCommand.ExecutePartitionedUpdateAsync)} and similar methods.");
+
+            var transaction = Transaction.Current;
+            if (transaction == null)
+            {
+                throw new InvalidOperationException($"{nameof(Open)} should only be called within a TransactionScope.");
+            }
+            if (!EnlistInTransaction)
+            {
+                throw new InvalidOperationException($"{nameof(Open)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
+            }
+
+            // Copy options because SpannerTransactionOptions is mutable.
+            options = options is null ? new SpannerTransactionOptions() : new SpannerTransactionOptions(options);
+
+            Open(() => EnlistTransaction(transaction, creationOptions, options));
+        }
+
+        /// <summary>
+        /// Opens the connection within a <see cref="System.Transactions.TransactionScope"/> with specific
+        /// <see cref="SpannerTransactionCreationOptions"/> and <see cref="SpannerTransactionOptions"/>.
+        /// </summary>
+        /// <param name="creationOptions">
+        /// Options to be used when creating the ambient <see cref="SpannerTransaction"/>.
+        /// Must not be null.
+        /// </param>
+        /// <param name="options">
+        /// Options to be applied to the ambient <see cref="SpannerTransaction"/> after creation.
+        /// May be null, in which case defaults will be used.
+        /// A copy of this value will be used internally, so any changes to <paramref name="options"/> made after calling this method
+        /// will have no effect on the ambient transaction.
+        /// </param>
+        /// <param name="cancellationToken">The cancellation token for the operation.</param>
+        public Task OpenAsync(SpannerTransactionCreationOptions creationOptions, SpannerTransactionOptions options, CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckNotNull(creationOptions, nameof(creationOptions));
+            GaxPreconditions.CheckArgument(
+                !creationOptions.IsPartitionedDml,
+                nameof(creationOptions),
+                $"Partitioned DML transactions may only be used when executing {nameof(SpannerCommand.ExecutePartitionedUpdateAsync)} and similar methods.");
+
+            var transaction = Transaction.Current;
+            if (transaction == null)
+            {
+                throw new InvalidOperationException($"{nameof(Open)} should only be called within a TransactionScope.");
+            }
+            if (!EnlistInTransaction)
+            {
+                throw new InvalidOperationException($"{nameof(Open)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
+            }
+
+            // Copy options because SpannerTransactionOptions is mutable.
+            options = options is null ? new SpannerTransactionOptions() : new SpannerTransactionOptions(options);
+
+            return OpenAsyncImpl(() => EnlistTransaction(transaction, creationOptions, options), cancellationToken);
+        }
+
+        /// <summary>
+        /// Call OpenAsReadOnly within a <see cref="System.Transactions.TransactionScope" /> to open the connection
+        /// with a read-only transaction with the given <see cref="TimestampBound" /> settings
+        /// </summary>
+        /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
+        [Obsolete($"Use the {nameof(Open)} overload that takes {nameof(SpannerTransactionCreationOptions)} and {nameof(SpannerTransactionOptions)} parameters instead.")]
+        public void OpenAsReadOnly(TimestampBound timestampBound = null) =>
+            Open(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(timestampBound), options: null);
+
+        /// <summary>
+        /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this
+        /// will connect to an existing transaction identified by <paramref name="transactionId"/>.
+        /// </summary>
+        /// <param name="transactionId">The <see cref="TransactionId"/> representing an active readonly <see cref="SpannerTransaction"/>.</param>
+        [Obsolete($"Use the {nameof(Open)} overload that takes {nameof(SpannerTransactionCreationOptions)} and {nameof(SpannerTransactionOptions)} parameters instead.")]
+        public void OpenAsReadOnly(TransactionId transactionId) =>
+            Open(SpannerTransactionCreationOptions.FromReadOnlyTransactionId(transactionId), options: null);
+
+        /// <summary>
+        /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this forces
+        /// the created Cloud Spanner transaction to be a read-only transaction with the given
+        /// <see cref="TimestampBound" /> settings.
+        /// </summary>
+        /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        [Obsolete($"Use the {nameof(OpenAsync)} overload that takes {nameof(SpannerTransactionCreationOptions)} and {nameof(SpannerTransactionOptions)} parameters instead.")]
+        public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default) =>
+            OpenAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(timestampBound), options: null, cancellationToken);
+
+        /// <summary>
+        /// Opens the connection, which involves acquiring a SessionPool,
+        /// and potentially enlists the connection in the current transaction.
+        /// </summary>
+        /// <param name="transactionEnlister">Enlistment delegate; may be null.</param>
+        /// <param name="cancellationToken">Cancellation token; may be None</param>
+        private Task OpenAsyncImpl(Action transactionEnlister, CancellationToken cancellationToken)
+        {
+            // TODO: Use the cancellation token. We can't at the moment, as the only reason for this being async is
+            // due to credential fetching, and we can't pass a cancellation token to any of that.
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
+                {
+                    ConnectionState previousState;
+                    lock (_sync)
+                    {
+                        previousState = _state;
+                        if (IsOpen)
+                        {
+                            return;
+                        }
+
+                        if (previousState == ConnectionState.Connecting)
+                        {
+                            throw new InvalidOperationException("The SpannerConnection is already being opened.");
+                        }
+
+                        _state = ConnectionState.Connecting;
+                    }
+                    OnStateChange(new StateChangeEventArgs(previousState, ConnectionState.Connecting));
+                    try
+                    {
+                        _sessionPool = await Builder.AcquireSessionPoolAsync().ConfigureAwait(false);
+                    }
+                    finally
+                    {
+                        // Note: the code could be simplified if we don't mind the ordering of "change state, enlist, fire OnStateChange" -
+                        // but it's not clear whether or not that's a problem.
+                        lock (_sync)
+                        {
+                            _state = _sessionPool != null ? ConnectionState.Open : ConnectionState.Broken;
+                        }
+                        if (IsOpen)
+                        {
+                            transactionEnlister?.Invoke();
+                        }
+                        OnStateChange(new StateChangeEventArgs(ConnectionState.Connecting, _state));
+                    }
+                }, "SpannerConnection.OpenAsync", Logger);
+        }
+
+        /// <summary>
+        /// Returns a delegate to enlist the current transaction (as detected on the executing thread *now*)
+        /// when opening the connection.
+        /// </summary>
+        private Action GetTransactionEnlister()
+        {
+            Transaction current = Transaction.Current;
+            return current == null ? (Action) null : () => EnlistTransaction(current);
+        }
+
+        /// <inheritdoc />
+        public override void EnlistTransaction(Transaction transaction) => EnlistTransaction(transaction, SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions());
+
+        /// <summary>
+        /// Enlists this connection in <paramref name="transaction"/>.
+        /// A <see cref="SpannerTransaction"/> will be created from the given options.
+        /// Note that <see cref="SpannerTransactionOptions"/> is mutable and <paramref name="options"/> is not copied.
+        /// Callers should take care to pass an exclusive instance.
+        /// </summary>
+        private void EnlistTransaction(Transaction transaction, SpannerTransactionCreationOptions creationOptions, SpannerTransactionOptions options)
+        {
+            if (!EnlistInTransaction)
+            {
+                return;
+            }
+            if (_volatileResourceManager != null)
+            {
+                throw new InvalidOperationException("This connection is already enlisted to a transaction.");
+            }
+            _volatileResourceManager = new VolatileResourceManager(this, creationOptions, options);
+            transaction.EnlistVolatile(_volatileResourceManager, System.Transactions.EnlistmentOptions.None);
+        }
+
         /// <summary>
         /// Begins a read-only transaction using the optionally provided <see cref="CancellationToken" />.
         /// Read transactions are preferred if possible because they do not impose locks internally.
@@ -192,42 +429,24 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="cancellationToken">An optional token for canceling the call. May be null.</param>
         /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
-        public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
-            CancellationToken cancellationToken = default) => BeginReadOnlyTransactionAsync(
-            TimestampBound.Strong, cancellationToken);
+        [Obsolete($"Use the {nameof(BeginTransactionAsync)} overload that takes {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
+        public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(CancellationToken cancellationToken = default) =>
+            BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, cancellationToken);
 
         /// <summary>
         /// Begins a read-only transaction using the optionally provided <see cref="CancellationToken" />
         /// and provided <see cref="TimestampBound" /> to control the read timestamp and/or staleness
         /// of data.
         /// Read transactions are preferred if possible because they do not impose locks internally.
-        /// Stale read-only transactions can execute more quickly than strong or read-write transactions,.
+        /// Stale read-only transactions can execute more quickly than strong or read-write transactions.
         /// This method is thread safe.
         /// </summary>
         /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data. Must not be null.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
-        public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(
-            TimestampBound targetReadTimestamp,
-            CancellationToken cancellationToken = default)
-        {
-            GaxPreconditions.CheckNotNull(targetReadTimestamp, nameof(targetReadTimestamp));
-            if (targetReadTimestamp.Mode == TimestampBoundMode.MinReadTimestamp
-                || targetReadTimestamp.Mode == TimestampBoundMode.MaxStaleness)
-            {
-                throw new ArgumentException(
-                    nameof(targetReadTimestamp),
-                    $"{nameof(TimestampBoundMode.MinReadTimestamp)} and "
-                    + $"{nameof(TimestampBoundMode.MaxStaleness)} can only be used in a single-use"
-                    + " transaction as an argument to SpannerCommand.ExecuteReader().");
-            }
-
-            return BeginTransactionImplAsync(
-                targetReadTimestamp.ToTransactionOptions(),
-                TransactionMode.ReadOnly,
-                cancellationToken,
-                targetReadTimestamp);
-        }
+        [Obsolete($"Use the {nameof(BeginTransactionAsync)} overload that takes {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
+        public Task<SpannerTransaction> BeginReadOnlyTransactionAsync(TimestampBound targetReadTimestamp, CancellationToken cancellationToken = default) =>
+            BeginTransactionAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(targetReadTimestamp), cancellationToken);
 
         /// <summary>
         /// Begins a read-only transaction.
@@ -240,7 +459,8 @@ namespace Google.Cloud.Spanner.Data
         /// <para>This method is thread safe.</para>
         /// </remarks>
         /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
-        public SpannerTransaction BeginReadOnlyTransaction() => BeginReadOnlyTransaction(TimestampBound.Strong);
+        [Obsolete($"Use the {nameof(BeginTransaction)} overload that takes {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
+        public SpannerTransaction BeginReadOnlyTransaction() => BeginTransaction(SpannerTransactionCreationOptions.ReadOnly);
 
         /// <summary>
         /// Begins a read-only transaction using the provided <see cref="TimestampBound"/> to control the read timestamp
@@ -255,8 +475,8 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         /// <param name="targetReadTimestamp">Specifies the timestamp or allowed staleness of data. Must not be null.</param>
         /// <returns>The newly created <see cref="SpannerTransaction"/>.</returns>
-        public SpannerTransaction BeginReadOnlyTransaction(TimestampBound targetReadTimestamp) =>
-            Task.Run(() => BeginReadOnlyTransactionAsync(targetReadTimestamp)).ResultWithUnwrappedExceptions();
+        [Obsolete($"Use the {nameof(BeginTransaction)} overload that takes {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
+        public SpannerTransaction BeginReadOnlyTransaction(TimestampBound targetReadTimestamp) => BeginTransaction(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(targetReadTimestamp));
 
         /// <summary>
         /// Begins a read-only transaction using the provided <see cref="TransactionId" /> to refer to an existing server-side transaction.
@@ -271,27 +491,39 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="transactionId">Specifies the transaction ID of an existing read-only transaction.</param>
         /// <returns>A <see cref="SpannerTransaction"/> attached to the existing transaction represented by
         /// <paramref name="transactionId"/>.</returns>
-        public SpannerTransaction BeginReadOnlyTransaction(TransactionId transactionId)
-        {
-            Open();
-
-            GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-            SessionName sessionName = SessionName.Parse(transactionId.Session);
-            ByteString transactionIdBytes = ByteString.FromBase64(transactionId.Id);
-            var session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
-            // This transaction is coming from another process potentially, so we don't auto close it.
-            return new SpannerTransaction(this, TransactionMode.ReadOnly, session, transactionId.TimestampBound)
-            {
-                Shared = true,
-                DisposeBehavior = DisposeBehavior.Detach
-            };
-        }
+        [Obsolete($"Use the {nameof(BeginTransaction)} overload that takes {nameof(SpannerTransactionCreationOptions)} as a parameter instead.")]
+        public SpannerTransaction BeginReadOnlyTransaction(TransactionId transactionId) => BeginTransaction(SpannerTransactionCreationOptions.FromReadOnlyTransactionId(transactionId));
 
         /// <summary>
         /// Begins a new Spanner transaction synchronously. This method hides <see cref="DbConnection.BeginTransaction()"/>, but behaves
         /// the same way, just with a more specific return type.
         /// </summary>
         public new SpannerTransaction BeginTransaction() => (SpannerTransaction)base.BeginTransaction();
+
+        /// <summary>
+        /// Begins a new read/write transaction.
+        /// This method is thread safe.
+        /// </summary>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>A new <see cref="SpannerTransaction" /></returns>
+#if NET462
+        public Task<SpannerTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
+#else
+        public new Task<SpannerTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
+#endif
+            BeginTransactionAsync(SpannerTransactionCreationOptions.ReadWrite, cancellationToken);
+
+        /// <inheritdoc />
+        protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel)
+        {
+            if (isolationLevel != IsolationLevel.Unspecified
+                && isolationLevel != IsolationLevel.Serializable)
+            {
+                throw new NotSupportedException(
+                    $"Cloud Spanner only supports isolation levels {IsolationLevel.Serializable} and {IsolationLevel.Unspecified}.");
+            }
+            return Task.Run(() => BeginTransactionAsync()).ResultWithUnwrappedExceptions();
+        }
 
 #if NETSTANDARD2_1_OR_GREATER
         /// <inheritdoc />
@@ -306,17 +538,57 @@ namespace Google.Cloud.Spanner.Data
         }
 #endif
         /// <summary>
-        /// Begins a new read/write transaction.
-        /// This method is thread safe.
+        /// Creates a <see cref="SpannerTransaction"/> based on the given creation options.
         /// </summary>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        /// <returns>A new <see cref="SpannerTransaction" /></returns>
-#if NET462
-        public Task<SpannerTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
-#else
-        public new Task<SpannerTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
-#endif
-            BeginTransactionImplAsync(ReadWriteTransactionOptions, TransactionMode.ReadWrite, cancellationToken);
+        public SpannerTransaction BeginTransaction(SpannerTransactionCreationOptions transactionCreationOptions) =>
+            Task.Run(
+                () => BeginTransactionAsync(transactionCreationOptions, cancellationToken: default))
+            .ResultWithUnwrappedExceptions();
+
+        /// <summary>
+        /// Creates a <see cref="SpannerTransaction"/> based on the given creation options.
+        /// </summary>
+        public Task<SpannerTransaction> BeginTransactionAsync(
+            SpannerTransactionCreationOptions transactionCreationOptions,
+            CancellationToken cancellationToken)
+        {
+            GaxPreconditions.CheckNotNull(transactionCreationOptions, nameof(transactionCreationOptions));
+            GaxPreconditions.CheckArgument(
+                !transactionCreationOptions.IsPartitionedDml,
+                nameof(transactionCreationOptions),
+                $"Partitioned DML transactions may only be used when executing {nameof(SpannerCommand.ExecutePartitionedUpdateAsync)} and similar methods.");
+
+            GaxPreconditions.CheckArgument(
+                !transactionCreationOptions.IsSingleUse,
+                nameof(transactionCreationOptions.IsSingleUse),
+                $"Single-use transactions may only be used with the {nameof(SpannerCommand.ExecuteReader)} set  of methods.");
+
+            return BeginTransactionAsyncImpl(transactionCreationOptions, cancellationToken);
+        }
+
+        internal Task<SpannerTransaction> BeginTransactionAsyncImpl(
+            SpannerTransactionCreationOptions transactionCreationOptions,
+            CancellationToken cancellationToken)
+        {
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
+                {
+                    await OpenAsync(cancellationToken).ConfigureAwait(false);
+
+                    PooledSession session;
+                    if (transactionCreationOptions.TransactionId is null)
+                    {
+                        session = await AcquireSessionAsync(transactionCreationOptions, cancellationToken).ConfigureAwait(false);
+                    }
+                    else
+                    {
+                        SessionName sessionName = SessionName.Parse(transactionCreationOptions.TransactionId.Session);
+                        ByteString transactionIdBytes = ByteString.FromBase64(transactionCreationOptions.TransactionId.Id);
+                        session = _sessionPool.CreateDetachedSession(sessionName, transactionIdBytes, TransactionOptions.ModeOneofCase.ReadOnly);
+                    }
+                    return new SpannerTransaction(this, session, transactionCreationOptions, isRetriable: false);
+                }, "SpannerConnection.BeginTransactionAsync", Logger);
+        }
 
         /// <summary>
         /// Executes a read-write transaction, with retries as necessary.
@@ -328,20 +600,27 @@ namespace Google.Cloud.Spanner.Data
         /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="asyncWork"/>
         /// each time it is rerun.
         /// <paramref name="asyncWork"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
-        /// it will be automatically committed after <paramref name="asyncWork"/> has finished or rollbacked if an 
+        /// it will be automatically committed after <paramref name="asyncWork"/> has finished or rollbacked if an
         /// <see cref="Exception"/> (other than because the transaction commit aborted) is thrown by <paramref name="asyncWork"/>.</remarks>
         /// <param name="asyncWork">The work to perform in each transaction attempt.</param>
+        /// <param name="transactionCreationOptions">
+        /// Options for creating transactions. These options should be for a read-write transaction that
+        /// is not detached. May be null in which case defaults will be used.
+        /// </param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>The value returned by <paramref name="asyncWork"/> if the transaction commits successfully.</returns>
-        public async Task<TResult> RunWithRetriableTransactionAsync<TResult>(Func<SpannerTransaction, Task<TResult>> asyncWork, CancellationToken cancellationToken = default)
+        public async Task<TResult> RunWithRetriableTransactionAsync<TResult>(Func<SpannerTransaction, Task<TResult>> asyncWork, SpannerTransactionCreationOptions transactionCreationOptions, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
-            
-            await OpenAsync(cancellationToken).ConfigureAwait(false);
+
             RetriableTransaction transaction = new RetriableTransaction(
                 this,
                 Builder.SessionPoolManager.SpannerSettings.Clock ?? SystemClock.Instance,
-                Builder.SessionPoolManager.SpannerSettings.Scheduler ?? SystemScheduler.Instance);
+                Builder.SessionPoolManager.SpannerSettings.Scheduler ?? SystemScheduler.Instance,
+                transactionCreationOptions,
+                retryOptions: null);
+
+            await OpenAsync(cancellationToken).ConfigureAwait(false);
             return await transaction.RunAsync(asyncWork, cancellationToken).ConfigureAwait(false);
         }
 
@@ -355,19 +634,85 @@ namespace Google.Cloud.Spanner.Data
         /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="asyncWork"/>
         /// each time it is rerun.
         /// <paramref name="asyncWork"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
-        /// it will be automatically committed after <paramref name="asyncWork"/> has finished or rollbacked if an 
+        /// it will be automatically committed after <paramref name="asyncWork"/> has finished or rollbacked if an
         /// <see cref="Exception"/> (other than because the transaction commit aborted) is thrown by <paramref name="asyncWork"/>.</remarks>
         /// <param name="asyncWork">The work to perform in each transaction attempt.</param>
         /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>The value returned by <paramref name="asyncWork"/> if the transaction commits successfully.</returns>
+        public Task<TResult> RunWithRetriableTransactionAsync<TResult>(Func<SpannerTransaction, Task<TResult>> asyncWork, CancellationToken cancellationToken = default) =>
+            RunWithRetriableTransactionAsync(asyncWork, transactionCreationOptions: null, cancellationToken);
+
+        /// <summary>
+        /// Executes a read-write transaction, with retries as necessary.
+        /// The work to perform in each transaction attempt is defined by <paramref name="asyncWork"/>.
+        /// </summary>
+        /// <remarks><paramref name="asyncWork"/> will be fully retried whenever the <see cref="SpannerTransaction"/>
+        /// that it receives as a parameter aborts. <paramref name="asyncWork"/> won't be retried if any other errors occur.
+        /// <paramref name="asyncWork"/> must be prepared to be called more than once.
+        /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="asyncWork"/>
+        /// each time it is rerun.
+        /// <paramref name="asyncWork"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
+        /// it will be automatically committed after <paramref name="asyncWork"/> has finished or rollbacked if an
+        /// <see cref="Exception"/> (other than because the transaction commit aborted) is thrown by <paramref name="asyncWork"/>.</remarks>
+        /// <param name="asyncWork">The work to perform in each transaction attempt.</param>
+        /// <param name="transactionCreationOptions">
+        /// Options for creating transactions. These options should be for a read-write transaction that
+        /// is not detached. May be null in which case defaults will be used.
+        /// </param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
         /// <returns>A task that when completed will signal that the work is done.</returns>
-        public async Task RunWithRetriableTransactionAsync(Func<SpannerTransaction, Task> asyncWork, CancellationToken cancellationToken = default)
+        public async Task RunWithRetriableTransactionAsync(Func<SpannerTransaction, Task> asyncWork, SpannerTransactionCreationOptions transactionCreationOptions, CancellationToken cancellationToken)
         {
             GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
             await RunWithRetriableTransactionAsync(async transaction =>
             {
                 await asyncWork(transaction).ConfigureAwait(false);
                 return true;
-            }, cancellationToken).ConfigureAwait(false);
+            }, transactionCreationOptions, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Executes a read-write transaction, with retries as necessary.
+        /// The work to perform in each transaction attempt is defined by <paramref name="asyncWork"/>.
+        /// </summary>
+        /// <remarks><paramref name="asyncWork"/> will be fully retried whenever the <see cref="SpannerTransaction"/>
+        /// that it receives as a parameter aborts. <paramref name="asyncWork"/> won't be retried if any other errors occur.
+        /// <paramref name="asyncWork"/> must be prepared to be called more than once.
+        /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="asyncWork"/>
+        /// each time it is rerun.
+        /// <paramref name="asyncWork"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
+        /// it will be automatically committed after <paramref name="asyncWork"/> has finished or rollbacked if an
+        /// <see cref="Exception"/> (other than because the transaction commit aborted) is thrown by <paramref name="asyncWork"/>.</remarks>
+        /// <param name="asyncWork">The work to perform in each transaction attempt.</param>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>A task that when completed will signal that the work is done.</returns>
+        public Task RunWithRetriableTransactionAsync(Func<SpannerTransaction, Task> asyncWork, CancellationToken cancellationToken = default) =>
+            RunWithRetriableTransactionAsync(asyncWork, transactionCreationOptions: null, cancellationToken);
+
+        /// <summary>
+        /// Executes a read-write transaction, with retries as necessary.
+        /// The work to perform in each transaction attempt is defined by <paramref name="work"/>.
+        /// </summary>
+        /// <remarks><paramref name="work"/> will be fully retried whenever the <see cref="SpannerTransaction"/>
+        /// that it receives as a parameter aborts. <paramref name="work"/> won't be retried if any other errors occur.
+        /// <paramref name="work"/> must be prepared to be called more than once.
+        /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="work"/>
+        /// each time it is rerun.
+        /// <paramref name="work"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
+        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an
+        /// <see cref="Exception"/> (other than because the transaction aborted) is thrown by <paramref name="work"/>.</remarks>
+        /// <param name="work">The work to perform in each transaction attempt.</param>
+        /// <param name="transactionCreationOptions">
+        /// Options for creating transactions. These options should be for a read-write transaction that
+        /// is not detached. May be null in which case defaults will be used.
+        /// </param>
+        /// <returns>The value returned by <paramref name="work"/> if the transaction commits successfully.</returns>
+        public TResult RunWithRetriableTransaction<TResult>(Func<SpannerTransaction, TResult> work, SpannerTransactionCreationOptions transactionCreationOptions)
+        {
+            GaxPreconditions.CheckNotNull(work, nameof(work));
+            return Task.Run(
+                () => RunWithRetriableTransactionAsync(transaction => Task.FromResult(work(transaction)), transactionCreationOptions, CancellationToken.None))
+            .ResultWithUnwrappedExceptions();
         }
 
         /// <summary>
@@ -380,16 +725,37 @@ namespace Google.Cloud.Spanner.Data
         /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="work"/>
         /// each time it is rerun.
         /// <paramref name="work"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
-        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an 
+        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an
         /// <see cref="Exception"/> (other than because the transaction aborted) is thrown by <paramref name="work"/>.</remarks>
         /// <param name="work">The work to perform in each transaction attempt.</param>
         /// <returns>The value returned by <paramref name="work"/> if the transaction commits successfully.</returns>
-        public TResult RunWithRetriableTransaction<TResult>(Func<SpannerTransaction, TResult> work)
+        public TResult RunWithRetriableTransaction<TResult>(Func<SpannerTransaction, TResult> work) => RunWithRetriableTransaction(work, transactionCreationOptions: null);
+
+        /// <summary>
+        /// Executes a read-write transaction, with retries as necessary.
+        /// The work to perform in each transaction attempt is defined by <paramref name="work"/>.
+        /// </summary>
+        /// <remarks><paramref name="work"/> will be fully retried whenever the <see cref="SpannerTransaction"/>
+        /// that it receives as a parameter aborts. <paramref name="work"/> won't be retried if any other errors occur.
+        /// <paramref name="work"/> must be prepared to be called more than once.
+        /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="work"/>
+        /// each time it is rerun.
+        /// <paramref name="work"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
+        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an
+        /// <see cref="Exception"/> (other than because the transaction aborted) is thrown by <paramref name="work"/>.</remarks>
+        /// <param name="work">The work to perform in each transaction attempt.</param>
+        /// <param name="transactionCreationOptions">
+        /// Options for creating transactions. These options should be for a read-write transaction that
+        /// is not detached. May be null in which case defaults will be used.
+        /// </param>
+        public void RunWithRetriableTransaction(Action<SpannerTransaction> work, SpannerTransactionCreationOptions transactionCreationOptions)
         {
             GaxPreconditions.CheckNotNull(work, nameof(work));
-            return Task.Run(() => RunWithRetriableTransactionAsync(
-                transaction => Task.FromResult(work(transaction)),
-                CancellationToken.None)).ResultWithUnwrappedExceptions();
+            RunWithRetriableTransaction(transaction =>
+            {
+                work(transaction);
+                return (true);
+            }, transactionCreationOptions);
         }
 
         /// <summary>
@@ -402,63 +768,10 @@ namespace Google.Cloud.Spanner.Data
         /// A new <see cref="SpannerTransaction"/> will be passed to <paramref name="work"/>
         /// each time it is rerun.
         /// <paramref name="work"/> doesn't need to handle the lifecycle of the <see cref="SpannerTransaction"/>,
-        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an 
+        /// it will be automatically committed after <paramref name="work"/> has finished or rollbacked if an
         /// <see cref="Exception"/> (other than because the transaction aborted) is thrown by <paramref name="work"/>.</remarks>
         /// <param name="work">The work to perform in each transaction attempt.</param>
-        public void RunWithRetriableTransaction(Action<SpannerTransaction> work)
-        {
-            GaxPreconditions.CheckNotNull(work, nameof(work));
-            Task.Run(() => RunWithRetriableTransactionAsync(transaction =>
-            {
-                work(transaction);
-                return Task.FromResult(true);
-            }, CancellationToken.None)).WaitWithUnwrappedExceptions();
-        }
-
-        /// <inheritdoc />
-        public override void ChangeDatabase(string newDataSource)
-        {
-            if (IsOpen)
-            {
-                Close();
-            }
-
-            TrySetNewConnectionInfo(Builder.CloneWithNewDataSource(newDataSource));
-        }
-
-        /// <inheritdoc />
-        public override void Close()
-        {
-            SessionPool sessionPool;
-
-            ConnectionState oldState;
-            lock (_sync)
-            {
-                if (IsClosed)
-                {
-                    return;
-                }
-
-                oldState = _state;
-                sessionPool = _sessionPool;
-
-                _sessionPool = null;
-                _state = ConnectionState.Closed;
-            }
-
-            if (sessionPool != null)
-            {
-                // Note: if we're in an implicit transaction using TransactionScope, this will "release" the session pool
-                // back to the session pool manager before we're really done with it, but that's okay - it will just report
-                // inaccurate connection counts temporarily. This is an inherent problem with implicit transactions.
-                Builder.SessionPoolManager.Release(sessionPool);
-            }
-
-            if (oldState != _state)
-            {
-                OnStateChange(new StateChangeEventArgs(oldState, _state));
-            }
-        }
+        public void RunWithRetriableTransaction(Action<SpannerTransaction> work) => RunWithRetriableTransaction(work, transactionCreationOptions: null);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to read rows from a Spanner database table. The rows will be
@@ -577,7 +890,20 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>A configured <see cref="SpannerCommand" /></returns>
         public SpannerCommand CreateDdlCommand(
             string ddlStatement, params string[] extraDdlStatements) =>
-            new SpannerCommand(SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement, extraDdlStatements), this);
+            CreateDdlCommand(ddlStatement, protobufDescriptors: null, extraDdlStatements);
+
+        /// <summary>
+        /// Creates a new <see cref="SpannerCommand" /> to execute a DDL (CREATE/DROP TABLE, etc) statement.
+        /// This method is thread safe.
+        /// </summary>
+        /// <param name="ddlStatement">The DDL statement (eg 'CREATE TABLE MYTABLE ...').  Must not be null.</param>
+        /// <param name="protobufDescriptors">The set of protobuf descriptors that can be used to create proto bundles. May be null.</param>
+        /// <param name="extraDdlStatements">An optional set of additional DDL statements to execute after
+        /// the first statement.  Extra Ddl statements cannot be used to create additional databases.</param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
+        public SpannerCommand CreateDdlCommand(
+            string ddlStatement, FileDescriptorSet protobufDescriptors, params string[] extraDdlStatements) =>
+            new SpannerCommand(SpannerCommandTextBuilder.CreateDdlTextBuilder(ddlStatement, protobufDescriptors, extraDdlStatements), this);
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to execute a general DML (UPDATE, INSERT, DELETE) statement.
@@ -606,33 +932,7 @@ namespace Google.Cloud.Spanner.Data
         public SpannerBatchCommand CreateBatchDmlCommand() => new SpannerBatchCommand(this);
 
         /// <inheritdoc />
-        public override void Open()
-        {
-            if (IsOpen)
-            {
-                return;
-            }
-            Open(GetTransactionEnlister());
-        }
-
-        private void Open(Action transactionEnlister)
-        {
-            Func<Task> taskRunner = () => OpenAsyncImpl(transactionEnlister, CancellationToken.None);
-
-            // This is slightly annoying, but hard to get round: most of our timeouts use Expiration, but this is more of
-            // a BCL-oriented timeout.
-            int timeoutSeconds = Builder.Timeout;
-            TimeSpan timeout = Builder.AllowImmediateTimeouts && timeoutSeconds == 0
-                ? TimeSpan.FromMilliseconds(-1)
-                : TimeSpan.FromSeconds(timeoutSeconds);
-            if (!Task.Run(taskRunner).WaitWithUnwrappedExceptions(timeout))
-            {
-                throw new SpannerException(ErrorCode.DeadlineExceeded, "Timed out opening connection");
-            }
-        }
-
-        /// <inheritdoc />
-        public override Task OpenAsync(CancellationToken cancellationToken) => OpenAsyncImpl(GetTransactionEnlister(), cancellationToken);
+        protected override DbCommand CreateDbCommand() => new SpannerCommand(this);
 
         /// <summary>
         /// Returns a task indicating when the session pool associated with the connection is populated up to its minimum size.
@@ -648,6 +948,26 @@ namespace Google.Cloud.Spanner.Data
             var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(WhenSessionPoolReady));
             await OpenAsync(cancellationToken).ConfigureAwait(false);
             await _sessionPool.WhenPoolReady(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
+        }
+
+        internal Task<PooledSession> AcquireSessionAsync(SpannerTransactionCreationOptions creationOptions, CancellationToken cancellationToken)
+        {
+            SessionPool pool;
+            DatabaseName databaseName;
+            lock (_sync)
+            {
+                AssertOpen("acquire session.");
+                pool = _sessionPool;
+                databaseName = Builder.DatabaseName;
+            }
+            if (databaseName is null)
+            {
+                throw new InvalidOperationException("Unable to acquire session on connection with no database name");
+            }
+            var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(AcquireSessionAsync));
+            return creationOptions?.IsDetached == true ?
+                pool.AcquireDetachedSessionAsync(sessionPoolSegmentKey, creationOptions?.GetTransactionOptions(), creationOptions?.IsSingleUse == true, cancellationToken) :
+                pool.AcquireSessionAsync(sessionPoolSegmentKey, creationOptions?.GetTransactionOptions(), creationOptions?.IsSingleUse == true, cancellationToken);
         }
 
         /// <summary>
@@ -666,24 +986,6 @@ namespace Google.Cloud.Spanner.Data
             await _sessionPool.ShutdownPoolAsync(sessionPoolSegmentKey, cancellationToken).ConfigureAwait(false);
         }
 
-        // Note: this pragma shouldn't be required, but appears to be a compiler bug when using an interpolated string literal
-        // in ObsoleteAttribute.
-#pragma warning disable CS0618 // Type or member is obsolete
-        /// <summary>
-        /// Retrieves the database-specific statistics for the session pool associated with the connection string. The connection string must
-        /// include a database name.
-        /// </summary>
-        /// <returns>The session pool statistics, or <c>null</c> if there is no current session pool
-        /// for the database specified in the connection string.</returns>
-        [Obsolete($"Use {nameof(GetSessionPoolSegmentStatistics)} instead. Both methods return the same data, but the ${nameof(GetSessionPoolSegmentStatistics)} name better reflects the fact that sessions are pooled on aspects other than database name.")]
-        public SessionPool.DatabaseStatistics GetSessionPoolDatabaseStatistics()
-        {
-            DatabaseName databaseName = Builder.DatabaseName;
-            GaxPreconditions.CheckState(databaseName != null, $"{nameof(GetSessionPoolDatabaseStatistics)} cannot be used without a database.");
-            return Builder.SessionPoolManager.GetDatabaseStatistics(new SpannerClientCreationOptions(Builder), databaseName);
-        }
-#pragma warning restore CS0618 // Type or member is obsolete
-
         /// <summary>
         /// Retrieves statistics for the session pool associated with the corresponding <see cref="SessionPoolSegmentKey"/>. The connection string must
         /// include a database name.
@@ -696,101 +998,64 @@ namespace Google.Cloud.Spanner.Data
             return Builder.SessionPoolManager.GetDatabaseStatistics(new SpannerClientCreationOptions(Builder), sessionPoolSegmentKey);
         }
 
-        private SessionPoolSegmentKey  GetSessionPoolSegmentKey(string operationName)
+        private SessionPoolSegmentKey GetSessionPoolSegmentKey(string operationName)
         {
             DatabaseName databaseName = Builder.DatabaseName;
             GaxPreconditions.CheckState(databaseName != null, $"{operationName} cannot be used without a database.");
             return SessionPoolSegmentKey.Create(databaseName).WithDatabaseRole(Builder.DatabaseRole);
         }
 
-        /// <summary>
-        /// Opens the connection, which involves acquiring a SessionPool,
-        /// and potentially enlists the connection in the current transaction.
-        /// </summary>
-        /// <param name="transactionEnlister">Enlistment delegate; may be null.</param>
-        /// <param name="cancellationToken">Cancellation token; may be None</param>
-        private Task OpenAsyncImpl(Action transactionEnlister, CancellationToken cancellationToken)
-        {
-            // TODO: Use the cancellation token. We can't at the moment, as the only reason for this being async is
-            // due to credential fetching, and we can't pass a cancellation token to any of that.
-            return ExecuteHelper.WithErrorTranslationAndProfiling(
-                async () =>
-                {
-                    ConnectionState previousState;
-                    lock (_sync)
-                    {
-                        previousState = _state;
-                        if (IsOpen)
-                        {
-                            return;
-                        }
-
-                        if (previousState == ConnectionState.Connecting)
-                        {
-                            throw new InvalidOperationException("The SpannerConnection is already being opened.");
-                        }
-
-                        _state = ConnectionState.Connecting;
-                    }
-                    OnStateChange(new StateChangeEventArgs(previousState, ConnectionState.Connecting));
-                    try
-                    {
-                        _sessionPool = await Builder.AcquireSessionPoolAsync().ConfigureAwait(false);
-                    }
-                    finally
-                    {
-                        // Note: the code could be simplified if we don't mind the ordering of "change state, enlist, fire OnStateChange" -
-                        // but it's not clear whether or not that's a problem.
-                        lock (_sync)
-                        {
-                            _state = _sessionPool != null ? ConnectionState.Open : ConnectionState.Broken;
-                        }
-                        if (IsOpen)
-                        {
-                            transactionEnlister?.Invoke();
-                        }
-                        OnStateChange(new StateChangeEventArgs(ConnectionState.Connecting, _state));
-                    }
-                }, "SpannerConnection.OpenAsync", Logger);
-        }
-
         /// <inheritdoc />
-        protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel)
-        {
-            if (isolationLevel != IsolationLevel.Unspecified
-                && isolationLevel != IsolationLevel.Serializable)
-            {
-                throw new NotSupportedException(
-                    $"Cloud Spanner only supports isolation levels {IsolationLevel.Serializable} and {IsolationLevel.Unspecified}.");
-            }
-            return Task.Run(() => BeginTransactionAsync()).ResultWithUnwrappedExceptions();
-        }
-
-        /// <inheritdoc />
-        protected override DbCommand CreateDbCommand() => new SpannerCommand(this);
-
-        /// <inheritdoc />
-        protected override void Dispose(bool disposing)
+        public override void ChangeDatabase(string newDataSource)
         {
             if (IsOpen)
             {
                 Close();
             }
+
+            TrySetNewConnectionInfo(Builder.CloneWithNewDataSource(newDataSource));
         }
 
-        /// <summary>
-        /// Returns the current ambient transaction (from TransactionScope), if any.
-        /// The .NET Standard 1.x version will always return null, as TransactionScope is not supported in .NET Core 1.x.
-        /// </summary>
-        internal ISpannerTransaction AmbientTransaction => _volatileResourceManager;
+        private void TrySetNewConnectionInfo(SpannerConnectionStringBuilder newBuilder)
+        {
+            AssertClosed("change connection information.");
+            // We will never allow our internal SpannerConnectionStringBuilder to be touched from the outside, so it's cloned.
+            Builder = newBuilder.Clone();
+        }
 
-        /// <summary>
-        /// The current connection string builder. The object is never mutated and never exposed to consumers.
-        /// The value may be changed to a new builder by setting the <see cref="ConnectionString"/>
-        /// property, or within this class via the <see cref="TrySetNewConnectionInfo(SpannerConnectionStringBuilder)"/> method.
-        /// This value is never null.
-        /// </summary>
-        internal SpannerConnectionStringBuilder Builder { get; private set; }
+        /// <inheritdoc />
+        public override void Close()
+        {
+            SessionPool sessionPool;
+
+            ConnectionState oldState;
+            lock (_sync)
+            {
+                if (IsClosed)
+                {
+                    return;
+                }
+
+                oldState = _state;
+                sessionPool = _sessionPool;
+
+                _sessionPool = null;
+                _state = ConnectionState.Closed;
+            }
+
+            if (sessionPool != null)
+            {
+                // Note: if we're in an implicit transaction using TransactionScope, this will "release" the session pool
+                // back to the session pool manager before we're really done with it, but that's okay - it will just report
+                // inaccurate connection counts temporarily. This is an inherent problem with implicit transactions.
+                Builder.SessionPoolManager.Release(sessionPool);
+            }
+
+            if (oldState != _state)
+            {
+                OnStateChange(new StateChangeEventArgs(oldState, _state));
+            }
+        }
 
         private void AssertClosed(string message)
         {
@@ -831,145 +1096,13 @@ namespace Google.Cloud.Spanner.Data
             return originalSettings.WithExpiration(expiration).WithCancellationToken(cancellationToken);
         }
 
-        internal async Task<PooledSession> AcquireReadWriteSessionAsync(CancellationToken cancellationToken) =>
-            await AcquireSessionAsync(ReadWriteTransactionOptions, cancellationToken).ConfigureAwait(false);
-
-        internal Task<PooledSession> AcquireSessionAsync(TransactionOptions options, CancellationToken cancellationToken)
-        {
-            SessionPool pool;
-            DatabaseName databaseName;
-            lock (_sync)
-            {
-                AssertOpen("acquire session.");
-                pool = _sessionPool;
-                databaseName = Builder.DatabaseName;
-            }
-            if (databaseName is null)
-            {
-                throw new InvalidOperationException("Unable to acquire session on connection with no database name");
-            }
-            var sessionPoolSegmentKey = GetSessionPoolSegmentKey(nameof(AcquireSessionAsync));
-            return pool.AcquireSessionAsync(sessionPoolSegmentKey, options, cancellationToken);
-        }
-
-        internal Task<SpannerTransaction> BeginTransactionImplAsync(
-            TransactionOptions transactionOptions,
-            TransactionMode transactionMode,
-            CancellationToken cancellationToken,
-            TimestampBound targetReadTimestamp = null)
-        {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(
-                async () =>
-                {
-                    await OpenAsync(cancellationToken).ConfigureAwait(false);
-                    var session = await AcquireSessionAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
-                    return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp);
-                }, "SpannerConnection.BeginTransaction", Logger);
-        }
-
-        private void TrySetNewConnectionInfo(SpannerConnectionStringBuilder newBuilder)
-        {
-            AssertClosed("change connection information.");
-            // We will never allow our internal SpannerConnectionStringBuilder to be touched from the outside, so it's cloned.
-            Builder = newBuilder.Clone();
-        }
-
-        /// <summary>
-        /// Returns a delegate to enlist the current transaction (as detected on the executing thread *now*)
-        /// when opening the connection.
-        /// </summary>
-        private Action GetTransactionEnlister()
-        {
-            Transaction current = Transaction.Current;
-            return current == null ? (Action) null : () => EnlistTransaction(current);
-        }
-
-        /// <summary>
-        /// Call OpenAsReadOnly within a <see cref="System.Transactions.TransactionScope" /> to open the connection
-        /// with a read-only transaction with the given <see cref="TimestampBound" /> settings
-        /// </summary>
-        /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
-        public void OpenAsReadOnly(TimestampBound timestampBound = null)
-        {
-            // Note: This has to be checked on the current thread, which is why we don't just use Task.Run
-            // and delegate to OpenAsReadOnlyAsync
-            var transaction = Transaction.Current;
-            if (transaction == null)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
-            }
-            if (!EnlistInTransaction)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
-            }
-            Open(() => EnlistTransaction(transaction, timestampBound ?? TimestampBound.Strong, null));
-        }
-
-        /// <summary>
-        /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this
-        /// will connect to an existing transaction identified by <paramref name="transactionId"/>.
-        /// </summary>
-        /// <param name="transactionId">The <see cref="TransactionId"/> representing an active readonly <see cref="SpannerTransaction"/>.</param>
-        public void OpenAsReadOnly(TransactionId transactionId)
-        {
-            GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId));
-            var transaction = Transaction.Current;
-            if (transaction == null)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
-            }
-            if (!EnlistInTransaction)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
-            }
-            Open(() => EnlistTransaction(transaction, null, transactionId));
-        }
-
-        /// <summary>
-        /// If this connection is being opened within a <see cref="System.Transactions.TransactionScope" />, this forces
-        /// the created Cloud Spanner transaction to be a read-only transaction with the given
-        /// <see cref="TimestampBound" /> settings.
-        /// </summary>
-        /// <param name="timestampBound">Specifies the timestamp or maximum staleness of a read operation. May be null.</param>
-        /// <param name="cancellationToken">An optional token for canceling the call.</param>
-        public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default)
-        {
-            var transaction = Transaction.Current;
-            if (transaction == null)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called within a TransactionScope.");
-            }
-            if (!EnlistInTransaction)
-            {
-                throw new InvalidOperationException($"{nameof(OpenAsReadOnlyAsync)} should only be called with ${nameof(EnlistInTransaction)} set to true.");
-            }
-            Action transactionEnlister = () => EnlistTransaction(transaction, timestampBound ?? TimestampBound.Strong, null);
-            return OpenAsyncImpl(transactionEnlister, cancellationToken);
-        }
-
-        /// <summary>
-        /// Gets or Sets whether to participate in the active <see cref="System.Transactions.TransactionScope" />
-        /// </summary>
-        public bool EnlistInTransaction { get; set; } = true;
-
         /// <inheritdoc />
-        public override void EnlistTransaction(Transaction transaction) => EnlistTransaction(transaction, null, null);
-
-        private void EnlistTransaction(Transaction transaction, TimestampBound timestampBound, TransactionId transactionId)
+        protected override void Dispose(bool disposing)
         {
-            if (!EnlistInTransaction)
+            if (IsOpen)
             {
-                return;
+                Close();
             }
-            if (_volatileResourceManager != null)
-            {
-                throw new InvalidOperationException("This connection is already enlisted to a transaction.");
-            }
-            _volatileResourceManager = new VolatileResourceManager(this, timestampBound, transactionId);
-            transaction.EnlistVolatile(_volatileResourceManager, System.Transactions.EnlistmentOptions.None);
         }
-
-        /// <inheritdoc />
-        protected override DbProviderFactory DbProviderFactory => SpannerProviderFactory.Instance;
     }
 }

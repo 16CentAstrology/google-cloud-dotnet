@@ -46,6 +46,12 @@
                 "CreateSecondaryInstanceAsync"
               ]
             },
+            "CreateUser": {
+              "methods": [
+                "CreateUser",
+                "CreateUserAsync"
+              ]
+            },
             "DeleteBackup": {
               "methods": [
                 "DeleteBackup",
@@ -62,6 +68,18 @@
               "methods": [
                 "DeleteInstance",
                 "DeleteInstanceAsync"
+              ]
+            },
+            "DeleteUser": {
+              "methods": [
+                "DeleteUser",
+                "DeleteUserAsync"
+              ]
+            },
+            "ExecuteSql": {
+              "methods": [
+                "ExecuteSql",
+                "ExecuteSqlAsync"
               ]
             },
             "FailoverInstance": {
@@ -100,6 +118,18 @@
                 "GetInstanceAsync"
               ]
             },
+            "GetUser": {
+              "methods": [
+                "GetUser",
+                "GetUserAsync"
+              ]
+            },
+            "InjectFault": {
+              "methods": [
+                "InjectFault",
+                "InjectFaultAsync"
+              ]
+            },
             "ListBackups": {
               "methods": [
                 "ListBackups",
@@ -112,6 +142,12 @@
                 "ListClustersAsync"
               ]
             },
+            "ListDatabases": {
+              "methods": [
+                "ListDatabases",
+                "ListDatabasesAsync"
+              ]
+            },
             "ListInstances": {
               "methods": [
                 "ListInstances",
@@ -122,6 +158,12 @@
               "methods": [
                 "ListSupportedDatabaseFlags",
                 "ListSupportedDatabaseFlagsAsync"
+              ]
+            },
+            "ListUsers": {
+              "methods": [
+                "ListUsers",
+                "ListUsersAsync"
               ]
             },
             "PromoteCluster": {
@@ -142,6 +184,12 @@
                 "RestoreClusterAsync"
               ]
             },
+            "SwitchoverCluster": {
+              "methods": [
+                "SwitchoverCluster",
+                "SwitchoverClusterAsync"
+              ]
+            },
             "UpdateBackup": {
               "methods": [
                 "UpdateBackup",
@@ -158,6 +206,18 @@
               "methods": [
                 "UpdateInstance",
                 "UpdateInstanceAsync"
+              ]
+            },
+            "UpdateUser": {
+              "methods": [
+                "UpdateUser",
+                "UpdateUserAsync"
+              ]
+            },
+            "UpgradeCluster": {
+              "methods": [
+                "UpgradeCluster",
+                "UpgradeClusterAsync"
               ]
             }
           }

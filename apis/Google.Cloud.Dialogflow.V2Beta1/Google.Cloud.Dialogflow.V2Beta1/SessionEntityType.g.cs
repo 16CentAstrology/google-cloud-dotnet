@@ -71,70 +71,70 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "eVR5cGVzEuQDChZMaXN0U2Vzc2lvbkVudGl0eVR5cGVzEj4uZ29vZ2xlLmNs",
             "b3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5MaXN0U2Vzc2lvbkVudGl0eVR5cGVz",
             "UmVxdWVzdBo/Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuTGlz",
-            "dFNlc3Npb25FbnRpdHlUeXBlc1Jlc3BvbnNlIsgCgtPkkwK4AhI5L3YyYmV0",
-            "YTEve3BhcmVudD1wcm9qZWN0cy8qL2FnZW50L3Nlc3Npb25zLyp9L2VudGl0",
-            "eVR5cGVzWlISUC92MmJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9hZ2VudC9l",
-            "bnZpcm9ubWVudHMvKi91c2Vycy8qL3Nlc3Npb25zLyp9L2VudGl0eVR5cGVz",
-            "WkcSRS92MmJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9h",
-            "Z2VudC9zZXNzaW9ucy8qfS9lbnRpdHlUeXBlc1peElwvdjJiZXRhMS97cGFy",
-            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnQvZW52aXJvbm1lbnRz",
-            "LyovdXNlcnMvKi9zZXNzaW9ucy8qfS9lbnRpdHlUeXBlc9pBBnBhcmVudBLR",
+            "dFNlc3Npb25FbnRpdHlUeXBlc1Jlc3BvbnNlIsgC2kEGcGFyZW50gtPkkwK4",
+            "AhI5L3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2FnZW50L3Nlc3Npb25z",
+            "Lyp9L2VudGl0eVR5cGVzWlISUC92MmJldGExL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9hZ2VudC9lbnZpcm9ubWVudHMvKi91c2Vycy8qL3Nlc3Npb25zLyp9L2Vu",
+            "dGl0eVR5cGVzWkcSRS92MmJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKi9hZ2VudC9zZXNzaW9ucy8qfS9lbnRpdHlUeXBlc1peElwvdjJi",
+            "ZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnQvZW52",
+            "aXJvbm1lbnRzLyovdXNlcnMvKi9zZXNzaW9ucy8qfS9lbnRpdHlUeXBlcxLR",
             "AwoUR2V0U2Vzc2lvbkVudGl0eVR5cGUSPC5nb29nbGUuY2xvdWQuZGlhbG9n",
             "Zmxvdy52MmJldGExLkdldFNlc3Npb25FbnRpdHlUeXBlUmVxdWVzdBoyLmdv",
             "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuU2Vzc2lvbkVudGl0eVR5",
-            "cGUixgKC0+STArgCEjkvdjJiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2FnZW50",
-            "L3Nlc3Npb25zLyovZW50aXR5VHlwZXMvKn1aUhJQL3YyYmV0YTEve25hbWU9",
-            "cHJvamVjdHMvKi9hZ2VudC9lbnZpcm9ubWVudHMvKi91c2Vycy8qL3Nlc3Np",
-            "b25zLyovZW50aXR5VHlwZXMvKn1aRxJFL3YyYmV0YTEve25hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9hZ2VudC9zZXNzaW9ucy8qL2VudGl0eVR5cGVz",
-            "Lyp9Wl4SXC92MmJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "YWdlbnQvZW52aXJvbm1lbnRzLyovdXNlcnMvKi9zZXNzaW9ucy8qL2VudGl0",
-            "eVR5cGVzLyp92kEEbmFtZRLBBAoXQ3JlYXRlU2Vzc2lvbkVudGl0eVR5cGUS",
+            "cGUixgLaQQRuYW1lgtPkkwK4AhI5L3YyYmV0YTEve25hbWU9cHJvamVjdHMv",
+            "Ki9hZ2VudC9zZXNzaW9ucy8qL2VudGl0eVR5cGVzLyp9WlISUC92MmJldGEx",
+            "L3tuYW1lPXByb2plY3RzLyovYWdlbnQvZW52aXJvbm1lbnRzLyovdXNlcnMv",
+            "Ki9zZXNzaW9ucy8qL2VudGl0eVR5cGVzLyp9WkcSRS92MmJldGExL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnQvc2Vzc2lvbnMvKi9lbnRp",
+            "dHlUeXBlcy8qfVpeElwvdjJiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2FnZW50L2Vudmlyb25tZW50cy8qL3VzZXJzLyovc2Vzc2lvbnMv",
+            "Ki9lbnRpdHlUeXBlcy8qfRLBBAoXQ3JlYXRlU2Vzc2lvbkVudGl0eVR5cGUS",
             "Py5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkNyZWF0ZVNlc3Np",
             "b25FbnRpdHlUeXBlUmVxdWVzdBoyLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyYmV0YTEuU2Vzc2lvbkVudGl0eVR5cGUisAOC0+STAowDIjkvdjJiZXRh",
-            "MS97cGFyZW50PXByb2plY3RzLyovYWdlbnQvc2Vzc2lvbnMvKn0vZW50aXR5",
-            "VHlwZXM6E3Nlc3Npb25fZW50aXR5X3R5cGVaZyJQL3YyYmV0YTEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2FnZW50L2Vudmlyb25tZW50cy8qL3VzZXJzLyovc2Vz",
-            "c2lvbnMvKn0vZW50aXR5VHlwZXM6E3Nlc3Npb25fZW50aXR5X3R5cGVaXCJF",
-            "L3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50",
-            "L3Nlc3Npb25zLyp9L2VudGl0eVR5cGVzOhNzZXNzaW9uX2VudGl0eV90eXBl",
-            "WnMiXC92MmJldGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9h",
-            "Z2VudC9lbnZpcm9ubWVudHMvKi91c2Vycy8qL3Nlc3Npb25zLyp9L2VudGl0",
-            "eVR5cGVzOhNzZXNzaW9uX2VudGl0eV90eXBl2kEacGFyZW50LHNlc3Npb25f",
+            "LnYyYmV0YTEuU2Vzc2lvbkVudGl0eVR5cGUisAPaQRpwYXJlbnQsc2Vzc2lv",
+            "bl9lbnRpdHlfdHlwZYLT5JMCjAMiOS92MmJldGExL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9hZ2VudC9zZXNzaW9ucy8qfS9lbnRpdHlUeXBlczoTc2Vzc2lvbl9l",
+            "bnRpdHlfdHlwZVpnIlAvdjJiZXRhMS97cGFyZW50PXByb2plY3RzLyovYWdl",
+            "bnQvZW52aXJvbm1lbnRzLyovdXNlcnMvKi9zZXNzaW9ucy8qfS9lbnRpdHlU",
+            "eXBlczoTc2Vzc2lvbl9lbnRpdHlfdHlwZVpcIkUvdjJiZXRhMS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnQvc2Vzc2lvbnMvKn0vZW50",
+            "aXR5VHlwZXM6E3Nlc3Npb25fZW50aXR5X3R5cGVacyJcL3YyYmV0YTEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50L2Vudmlyb25tZW50",
+            "cy8qL3VzZXJzLyovc2Vzc2lvbnMvKn0vZW50aXR5VHlwZXM6E3Nlc3Npb25f",
             "ZW50aXR5X3R5cGUSrQUKF1VwZGF0ZVNlc3Npb25FbnRpdHlUeXBlEj8uZ29v",
             "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5VcGRhdGVTZXNzaW9uRW50",
             "aXR5VHlwZVJlcXVlc3QaMi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJl",
-            "dGExLlNlc3Npb25FbnRpdHlUeXBlIpwEgtPkkwLdAzJNL3YyYmV0YTEve3Nl",
-            "c3Npb25fZW50aXR5X3R5cGUubmFtZT1wcm9qZWN0cy8qL2FnZW50L3Nlc3Np",
-            "b25zLyovZW50aXR5VHlwZXMvKn06E3Nlc3Npb25fZW50aXR5X3R5cGVaezJk",
-            "L3YyYmV0YTEve3Nlc3Npb25fZW50aXR5X3R5cGUubmFtZT1wcm9qZWN0cy8q",
-            "L2FnZW50L2Vudmlyb25tZW50cy8qL3VzZXJzLyovc2Vzc2lvbnMvKi9lbnRp",
-            "dHlUeXBlcy8qfToTc2Vzc2lvbl9lbnRpdHlfdHlwZVpwMlkvdjJiZXRhMS97",
-            "c2Vzc2lvbl9lbnRpdHlfdHlwZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovYWdlbnQvc2Vzc2lvbnMvKi9lbnRpdHlUeXBlcy8qfToTc2Vzc2lvbl9l",
-            "bnRpdHlfdHlwZVqHATJwL3YyYmV0YTEve3Nlc3Npb25fZW50aXR5X3R5cGUu",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50L2Vudmlyb25tZW50",
-            "cy8qL3VzZXJzLyovc2Vzc2lvbnMvKi9lbnRpdHlUeXBlcy8qfToTc2Vzc2lv",
-            "bl9lbnRpdHlfdHlwZdpBE3Nlc3Npb25fZW50aXR5X3R5cGXaQR9zZXNzaW9u",
-            "X2VudGl0eV90eXBlLHVwZGF0ZV9tYXNrErsDChdEZWxldGVTZXNzaW9uRW50",
+            "dGExLlNlc3Npb25FbnRpdHlUeXBlIpwE2kETc2Vzc2lvbl9lbnRpdHlfdHlw",
+            "ZdpBH3Nlc3Npb25fZW50aXR5X3R5cGUsdXBkYXRlX21hc2uC0+STAt0DMk0v",
+            "djJiZXRhMS97c2Vzc2lvbl9lbnRpdHlfdHlwZS5uYW1lPXByb2plY3RzLyov",
+            "YWdlbnQvc2Vzc2lvbnMvKi9lbnRpdHlUeXBlcy8qfToTc2Vzc2lvbl9lbnRp",
+            "dHlfdHlwZVp7MmQvdjJiZXRhMS97c2Vzc2lvbl9lbnRpdHlfdHlwZS5uYW1l",
+            "PXByb2plY3RzLyovYWdlbnQvZW52aXJvbm1lbnRzLyovdXNlcnMvKi9zZXNz",
+            "aW9ucy8qL2VudGl0eVR5cGVzLyp9OhNzZXNzaW9uX2VudGl0eV90eXBlWnAy",
+            "WS92MmJldGExL3tzZXNzaW9uX2VudGl0eV90eXBlLm5hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9hZ2VudC9zZXNzaW9ucy8qL2VudGl0eVR5cGVzLyp9",
+            "OhNzZXNzaW9uX2VudGl0eV90eXBlWocBMnAvdjJiZXRhMS97c2Vzc2lvbl9l",
+            "bnRpdHlfdHlwZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYWdlbnQv",
+            "ZW52aXJvbm1lbnRzLyovdXNlcnMvKi9zZXNzaW9ucy8qL2VudGl0eVR5cGVz",
+            "Lyp9OhNzZXNzaW9uX2VudGl0eV90eXBlErsDChdEZWxldGVTZXNzaW9uRW50",
             "aXR5VHlwZRI/Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuRGVs",
             "ZXRlU2Vzc2lvbkVudGl0eVR5cGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5IsYCgtPkkwK4Aio5L3YyYmV0YTEve25hbWU9cHJvamVjdHMvKi9h",
-            "Z2VudC9zZXNzaW9ucy8qL2VudGl0eVR5cGVzLyp9WlIqUC92MmJldGExL3tu",
-            "YW1lPXByb2plY3RzLyovYWdlbnQvZW52aXJvbm1lbnRzLyovdXNlcnMvKi9z",
-            "ZXNzaW9ucy8qL2VudGl0eVR5cGVzLyp9WkcqRS92MmJldGExL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovYWdlbnQvc2Vzc2lvbnMvKi9lbnRpdHlU",
-            "eXBlcy8qfVpeKlwvdjJiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2FnZW50L2Vudmlyb25tZW50cy8qL3VzZXJzLyovc2Vzc2lvbnMvKi9l",
-            "bnRpdHlUeXBlcy8qfdpBBG5hbWUaeMpBGWRpYWxvZ2Zsb3cuZ29vZ2xlYXBp",
+            "LkVtcHR5IsYC2kEEbmFtZYLT5JMCuAIqOS92MmJldGExL3tuYW1lPXByb2pl",
+            "Y3RzLyovYWdlbnQvc2Vzc2lvbnMvKi9lbnRpdHlUeXBlcy8qfVpSKlAvdjJi",
+            "ZXRhMS97bmFtZT1wcm9qZWN0cy8qL2FnZW50L2Vudmlyb25tZW50cy8qL3Vz",
+            "ZXJzLyovc2Vzc2lvbnMvKi9lbnRpdHlUeXBlcy8qfVpHKkUvdjJiZXRhMS97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2FnZW50L3Nlc3Npb25zLyov",
+            "ZW50aXR5VHlwZXMvKn1aXipcL3YyYmV0YTEve25hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9hZ2VudC9lbnZpcm9ubWVudHMvKi91c2Vycy8qL3Nlc3Np",
+            "b25zLyovZW50aXR5VHlwZXMvKn0aeMpBGWRpYWxvZ2Zsb3cuZ29vZ2xlYXBp",
             "cy5jb23SQVlodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
             "LXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlh",
-            "bG9nZmxvd0KuAQojY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0",
+            "bG9nZmxvd0KrAQojY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0",
             "YTFCFlNlc3Npb25FbnRpdHlUeXBlUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNv",
             "bS9nby9kaWFsb2dmbG93L2FwaXYyYmV0YTEvZGlhbG9nZmxvd3BiO2RpYWxv",
-            "Z2Zsb3dwYvgBAaICAkRGqgIfR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJC",
-            "ZXRhMWIGcHJvdG8z"));
+            "Z2Zsb3dwYqICAkRGqgIfR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJCZXRh",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.EntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -161,6 +161,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// For more information, see the [session entity
   /// guide](https://cloud.google.com/dialogflow/docs/entities-session).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SessionEntityType : pb::IMessage<SessionEntityType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -480,6 +481,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.v2beta1.SessionEntityTypes.ListSessionEntityTypes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSessionEntityTypesRequest : pb::IMessage<ListSessionEntityTypesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -770,6 +772,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The response message for
   /// [SessionEntityTypes.ListSessionEntityTypes][google.cloud.dialogflow.v2beta1.SessionEntityTypes.ListSessionEntityTypes].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSessionEntityTypesResponse : pb::IMessage<ListSessionEntityTypesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -997,6 +1000,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [SessionEntityTypes.GetSessionEntityType][google.cloud.dialogflow.v2beta1.SessionEntityTypes.GetSessionEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSessionEntityTypeRequest : pb::IMessage<GetSessionEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1206,6 +1210,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [SessionEntityTypes.CreateSessionEntityType][google.cloud.dialogflow.v2beta1.SessionEntityTypes.CreateSessionEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSessionEntityTypeRequest : pb::IMessage<CreateSessionEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1464,6 +1469,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [SessionEntityTypes.UpdateSessionEntityType][google.cloud.dialogflow.v2beta1.SessionEntityTypes.UpdateSessionEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateSessionEntityTypeRequest : pb::IMessage<UpdateSessionEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1718,6 +1724,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
   /// The request message for
   /// [SessionEntityTypes.DeleteSessionEntityType][google.cloud.dialogflow.v2beta1.SessionEntityTypes.DeleteSessionEntityType].
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSessionEntityTypeRequest : pb::IMessage<DeleteSessionEntityTypeRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

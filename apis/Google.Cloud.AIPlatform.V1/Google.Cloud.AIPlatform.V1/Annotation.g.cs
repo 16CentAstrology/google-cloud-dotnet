@@ -62,6 +62,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Used to assign specific AnnotationSpec to a particular area of a DataItem or
   /// the whole part of the DataItem.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Annotation : pb::IMessage<Annotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -462,7 +463,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         AnnotationSource.MergeFrom(other.AnnotationSource);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

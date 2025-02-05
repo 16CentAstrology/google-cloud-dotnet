@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,20 +16,20 @@
 
 #pragma warning disable CS8981
 using ga = Google.Api;
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Monitoring.V3
 {
@@ -203,14 +203,14 @@ namespace Google.Cloud.Monitoring.V3
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return GroupServiceClient.Create(callInvoker, Settings, Logger);
+            return GroupServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<GroupServiceClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return GroupServiceClient.Create(callInvoker, Settings, Logger);
+            return GroupServiceClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -338,8 +338,9 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -353,20 +354,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroups(new ListGroupsRequest
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -380,20 +391,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupsAsync(new ListGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -407,20 +428,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroups(new ListGroupsRequest
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -434,20 +465,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupsAsync(new ListGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::ProjectName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -461,20 +502,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroups(new ListGroupsRequest
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -488,20 +539,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupsAsync(new ListGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::OrganizationName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 OrganizationName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -515,20 +576,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroups(new ListGroupsRequest
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -542,20 +613,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupsAsync(new ListGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gagr::FolderName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -569,20 +650,30 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroups(new ListGroupsRequest
+        public virtual gax::PagedEnumerable<ListGroupsResponse, Group> ListGroups(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the existing groups.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
-        /// whose groups are to be listed. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) whose
+        /// groups are to be listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -596,13 +687,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Group"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupsAsync(new ListGroupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupsRequest request = new ListGroupsRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets a single group.
@@ -797,14 +897,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -819,14 +920,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -841,14 +943,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -859,14 +962,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -881,14 +985,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -903,14 +1008,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -921,14 +1027,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -943,14 +1050,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -965,14 +1073,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -983,14 +1092,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1005,14 +1115,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1027,14 +1138,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1045,14 +1157,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1067,14 +1180,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1089,14 +1203,15 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new group.
         /// </summary>
         /// <param name="name">
-        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
-        /// which to create the group. The format is:
+        /// Required. The
+        /// [project](https://cloud.google.com/monitoring/api/v3#project_name) in which
+        /// to create the group. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="group">
-        /// Required. A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// Required. A group definition. It is an error to define the `name` field
+        /// because the system assigns the name.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1138,8 +1253,9 @@ namespace Google.Cloud.Monitoring.V3
         /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        /// Required. The new definition of the group.  All fields of the existing group,
-        /// excepting `name`, are replaced with the corresponding fields of this group.
+        /// Required. The new definition of the group.  All fields of the existing
+        /// group, excepting `name`, are replaced with the corresponding fields of this
+        /// group.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1154,8 +1270,9 @@ namespace Google.Cloud.Monitoring.V3
         /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        /// Required. The new definition of the group.  All fields of the existing group,
-        /// excepting `name`, are replaced with the corresponding fields of this group.
+        /// Required. The new definition of the group.  All fields of the existing
+        /// group, excepting `name`, are replaced with the corresponding fields of this
+        /// group.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1170,8 +1287,9 @@ namespace Google.Cloud.Monitoring.V3
         /// You can change any group attributes except `name`.
         /// </summary>
         /// <param name="group">
-        /// Required. The new definition of the group.  All fields of the existing group,
-        /// excepting `name`, are replaced with the corresponding fields of this group.
+        /// Required. The new definition of the group.  All fields of the existing
+        /// group, excepting `name`, are replaced with the corresponding fields of this
+        /// group.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1376,13 +1494,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupMembers(new ListGroupMembersRequest
+        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupMembers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -1402,13 +1529,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MonitoredResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupMembersAsync(new ListGroupMembersRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupMembersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -1428,13 +1564,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(GroupName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupMembers(new ListGroupMembersRequest
+        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(GroupName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
             {
                 GroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupMembers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -1454,13 +1599,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MonitoredResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(GroupName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupMembersAsync(new ListGroupMembersRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(GroupName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
             {
                 GroupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupMembersAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -1480,13 +1634,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="ga::MonitoredResource"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupMembers(new ListGroupMembersRequest
+        public virtual gax::PagedEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembers(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupMembers(request, callSettings);
+        }
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -1506,13 +1669,22 @@ namespace Google.Cloud.Monitoring.V3
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="ga::MonitoredResource"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListGroupMembersAsync(new ListGroupMembersRequest
+        public virtual gax::PagedAsyncEnumerable<ListGroupMembersResponse, ga::MonitoredResource> ListGroupMembersAsync(gax::IResourceName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGroupMembersRequest request = new ListGroupMembersRequest
             {
                 ResourceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGroupMembersAsync(request, callSettings);
+        }
     }
 
     /// <summary>GroupService client wrapper implementation, for convenient use.</summary>
@@ -1554,7 +1726,11 @@ namespace Google.Cloud.Monitoring.V3
         {
             GrpcClient = grpcClient;
             GroupServiceSettings effectiveSettings = settings ?? GroupServiceSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             _callListGroups = clientHelper.BuildApiCall<ListGroupsRequest, ListGroupsResponse>("ListGroups", grpcClient.ListGroupsAsync, grpcClient.ListGroups, effectiveSettings.ListGroupsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListGroups);
             Modify_ListGroupsApiCall(ref _callListGroups);

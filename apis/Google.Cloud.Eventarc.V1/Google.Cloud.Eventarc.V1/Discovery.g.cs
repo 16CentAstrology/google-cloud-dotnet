@@ -57,6 +57,7 @@ namespace Google.Cloud.Eventarc.V1 {
   /// <summary>
   /// A representation of the Provider resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Provider : pb::IMessage<Provider>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -107,8 +108,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. In `projects/{project}/locations/{location}/providers/{provider_id}`
-    /// format.
+    /// Output only. In
+    /// `projects/{project}/locations/{location}/providers/{provider_id}` format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +124,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Output only. Human friendly name for the Provider. For example "Cloud Storage".
+    /// Output only. Human friendly name for the Provider. For example "Cloud
+    /// Storage".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -322,6 +324,7 @@ namespace Google.Cloud.Eventarc.V1 {
   /// <summary>
   /// A representation of the event type resource.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EventType : pb::IMessage<EventType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -635,6 +638,7 @@ namespace Google.Cloud.Eventarc.V1 {
   /// A representation of the FilteringAttribute resource.
   /// Filtering attributes are per event type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FilteringAttribute : pb::IMessage<FilteringAttribute>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -716,8 +720,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int RequiredFieldNumber = 3;
     private bool required_;
     /// <summary>
-    /// Output only. If true, the triggers for this provider should always specify a filter
-    /// on these attributes. Trigger creation will fail otherwise.
+    /// Output only. If true, the triggers for this provider should always specify
+    /// a filter on these attributes. Trigger creation will fail otherwise.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -732,8 +736,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int PathPatternSupportedFieldNumber = 4;
     private bool pathPatternSupported_;
     /// <summary>
-    /// Output only. If true, the attribute accepts matching expressions in the Eventarc
-    /// PathPattern format.
+    /// Output only. If true, the attribute accepts matching expressions in the
+    /// Eventarc PathPattern format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

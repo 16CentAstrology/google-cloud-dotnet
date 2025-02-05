@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,11 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Speech.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Speech.V2;
     using Google.LongRunning;
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
@@ -1276,7 +1277,7 @@ namespace Google.Cloud.Speech.V2.Snippets
             // Create client
             SpeechClient speechClient = SpeechClient.Create();
             // Initialize streaming call, retrieving the stream object
-            SpeechClient.StreamingRecognizeStream response = speechClient.StreamingRecognize();
+            using SpeechClient.StreamingRecognizeStream response = speechClient.StreamingRecognize();
 
             // Sending requests and retrieving responses can be arbitrarily interleaved
             // Exact sequence will depend on client/server behavior
@@ -1334,6 +1335,7 @@ namespace Google.Cloud.Speech.V2.Snippets
                 Config = new RecognitionConfig(),
                 ConfigMask = new FieldMask(),
                 RecognitionOutputConfig = new RecognitionOutputConfig(),
+                ProcessingStrategy = BatchRecognizeRequest.Types.ProcessingStrategy.Unspecified,
             };
             // Make the request
             Operation<BatchRecognizeResponse, OperationMetadata> response = speechClient.BatchRecognize(request);
@@ -1374,6 +1376,7 @@ namespace Google.Cloud.Speech.V2.Snippets
                 Config = new RecognitionConfig(),
                 ConfigMask = new FieldMask(),
                 RecognitionOutputConfig = new RecognitionOutputConfig(),
+                ProcessingStrategy = BatchRecognizeRequest.Types.ProcessingStrategy.Unspecified,
             };
             // Make the request
             Operation<BatchRecognizeResponse, OperationMetadata> response = await speechClient.BatchRecognizeAsync(request);

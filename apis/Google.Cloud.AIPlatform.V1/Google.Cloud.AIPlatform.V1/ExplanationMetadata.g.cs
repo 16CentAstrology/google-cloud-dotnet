@@ -102,6 +102,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Metadata describing the Model's input and output for explanation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExplanationMetadata : pb::IMessage<ExplanationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -345,8 +346,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (other == null) {
         return;
       }
-      inputs_.Add(other.inputs_);
-      outputs_.Add(other.outputs_);
+      inputs_.MergeFrom(other.inputs_);
+      outputs_.MergeFrom(other.outputs_);
       if (other.FeatureAttributionsSchemaUri.Length != 0) {
         FeatureAttributionsSchemaUri = other.FeatureAttributionsSchemaUri;
       }
@@ -433,6 +434,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// are applicable only for Models that are using Vertex AI-provided images for
       /// Tensorflow.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InputMetadata : pb::IMessage<InputMetadata>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1185,6 +1187,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// mean and stddev of the original feature (e.g. image tensor) from which
           /// input feature (with mean = 0 and stddev = 1) was obtained.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class FeatureValueDomain : pb::IMessage<FeatureValueDomain>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -1504,6 +1507,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           /// <summary>
           /// Visualization configurations for image explanation.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Visualization : pb::IMessage<Visualization>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2045,6 +2049,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Metadata of the prediction output to be explained.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class OutputMetadata : pb::IMessage<OutputMetadata>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2141,10 +2146,24 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string DisplayNameMappingKey {
-          get { return displayNameMappingCase_ == DisplayNameMappingOneofCase.DisplayNameMappingKey ? (string) displayNameMapping_ : ""; }
+          get { return HasDisplayNameMappingKey ? (string) displayNameMapping_ : ""; }
           set {
             displayNameMapping_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             displayNameMappingCase_ = DisplayNameMappingOneofCase.DisplayNameMappingKey;
+          }
+        }
+        /// <summary>Gets whether the "display_name_mapping_key" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasDisplayNameMappingKey {
+          get { return displayNameMappingCase_ == DisplayNameMappingOneofCase.DisplayNameMappingKey; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "display_name_mapping_key" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearDisplayNameMappingKey() {
+          if (HasDisplayNameMappingKey) {
+            ClearDisplayNameMapping();
           }
         }
 
@@ -2212,7 +2231,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (displayNameMappingCase_ == DisplayNameMappingOneofCase.IndexDisplayNameMapping) hash ^= IndexDisplayNameMapping.GetHashCode();
-          if (displayNameMappingCase_ == DisplayNameMappingOneofCase.DisplayNameMappingKey) hash ^= DisplayNameMappingKey.GetHashCode();
+          if (HasDisplayNameMappingKey) hash ^= DisplayNameMappingKey.GetHashCode();
           if (OutputTensorName.Length != 0) hash ^= OutputTensorName.GetHashCode();
           hash ^= (int) displayNameMappingCase_;
           if (_unknownFields != null) {
@@ -2237,7 +2256,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(IndexDisplayNameMapping);
           }
-          if (displayNameMappingCase_ == DisplayNameMappingOneofCase.DisplayNameMappingKey) {
+          if (HasDisplayNameMappingKey) {
             output.WriteRawTag(18);
             output.WriteString(DisplayNameMappingKey);
           }
@@ -2259,7 +2278,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             output.WriteRawTag(10);
             output.WriteMessage(IndexDisplayNameMapping);
           }
-          if (displayNameMappingCase_ == DisplayNameMappingOneofCase.DisplayNameMappingKey) {
+          if (HasDisplayNameMappingKey) {
             output.WriteRawTag(18);
             output.WriteString(DisplayNameMappingKey);
           }
@@ -2280,7 +2299,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           if (displayNameMappingCase_ == DisplayNameMappingOneofCase.IndexDisplayNameMapping) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(IndexDisplayNameMapping);
           }
-          if (displayNameMappingCase_ == DisplayNameMappingOneofCase.DisplayNameMappingKey) {
+          if (HasDisplayNameMappingKey) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayNameMappingKey);
           }
           if (OutputTensorName.Length != 0) {

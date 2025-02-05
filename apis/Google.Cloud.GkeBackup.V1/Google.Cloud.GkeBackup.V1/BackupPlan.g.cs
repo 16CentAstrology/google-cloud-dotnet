@@ -27,47 +27,74 @@ namespace Google.Cloud.GkeBackup.V1 {
             "Citnb29nbGUvY2xvdWQvZ2tlYmFja3VwL3YxL2JhY2t1cF9wbGFuLnByb3Rv",
             "Ehlnb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxGh9nb29nbGUvYXBpL2ZpZWxk",
             "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiZn",
-            "b29nbGUvY2xvdWQvZ2tlYmFja3VwL3YxL2NvbW1vbi5wcm90bxofZ29vZ2xl",
-            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLXCQoKQmFja3VwUGxhbhIRCgRu",
-            "YW1lGAEgASgJQgPgQQMSEAoDdWlkGAIgASgJQgPgQQMSNAoLY3JlYXRlX3Rp",
-            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoL",
-            "dXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSEwoLZGVzY3JpcHRpb24YBSABKAkSPAoHY2x1c3RlchgGIAEoCUIr",
-            "4EEF4EEC+kEiCiBjb250YWluZXIuZ29vZ2xlYXBpcy5jb20vQ2x1c3RlchJP",
-            "ChByZXRlbnRpb25fcG9saWN5GAcgASgLMjUuZ29vZ2xlLmNsb3VkLmdrZWJh",
-            "Y2t1cC52MS5CYWNrdXBQbGFuLlJldGVudGlvblBvbGljeRJBCgZsYWJlbHMY",
-            "CCADKAsyMS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLkJhY2t1cFBsYW4u",
-            "TGFiZWxzRW50cnkSRwoPYmFja3VwX3NjaGVkdWxlGAkgASgLMi4uZ29vZ2xl",
-            "LmNsb3VkLmdrZWJhY2t1cC52MS5CYWNrdXBQbGFuLlNjaGVkdWxlEhEKBGV0",
-            "YWcYCiABKAlCA+BBAxITCgtkZWFjdGl2YXRlZBgLIAEoCBJJCg1iYWNrdXBf",
-            "Y29uZmlnGAwgASgLMjIuZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52MS5CYWNr",
-            "dXBQbGFuLkJhY2t1cENvbmZpZxIgChNwcm90ZWN0ZWRfcG9kX2NvdW50GA0g",
-            "ASgFQgPgQQMaXgoPUmV0ZW50aW9uUG9saWN5Eh8KF2JhY2t1cF9kZWxldGVf",
-            "bG9ja19kYXlzGAEgASgFEhoKEmJhY2t1cF9yZXRhaW5fZGF5cxgCIAEoBRIO",
-            "CgZsb2NrZWQYAyABKAgaMQoIU2NoZWR1bGUSFQoNY3Jvbl9zY2hlZHVsZRgB",
-            "IAEoCRIOCgZwYXVzZWQYAiABKAgawwIKDEJhY2t1cENvbmZpZxIYCg5hbGxf",
-            "bmFtZXNwYWNlcxgBIAEoCEgAEkQKE3NlbGVjdGVkX25hbWVzcGFjZXMYAiAB",
-            "KAsyJS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZXNIABJL",
-            "ChVzZWxlY3RlZF9hcHBsaWNhdGlvbnMYAyABKAsyKi5nb29nbGUuY2xvdWQu",
-            "Z2tlYmFja3VwLnYxLk5hbWVzcGFjZWROYW1lc0gAEhsKE2luY2x1ZGVfdm9s",
-            "dW1lX2RhdGEYBCABKAgSFwoPaW5jbHVkZV9zZWNyZXRzGAUgASgIEkAKDmVu",
-            "Y3J5cHRpb25fa2V5GAYgASgLMiguZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52",
-            "MS5FbmNyeXB0aW9uS2V5Qg4KDGJhY2t1cF9zY29wZRotCgtMYWJlbHNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOmvqQWgKI2drZWJh",
-            "Y2t1cC5nb29nbGVhcGlzLmNvbS9CYWNrdXBQbGFuEkFwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYmFja3VwUGxhbnMve2JhY2t1",
-            "cF9wbGFufULGAQodY29tLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjFCD0Jh",
-            "Y2t1cFBsYW5Qcm90b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL2drZWJhY2t1",
-            "cC9hcGl2MS9na2ViYWNrdXBwYjtna2ViYWNrdXBwYqoCGUdvb2dsZS5DbG91",
-            "ZC5Ha2VCYWNrdXAuVjHKAhlHb29nbGVcQ2xvdWRcR2tlQmFja3VwXFYx6gIc",
-            "R29vZ2xlOjpDbG91ZDo6R2tlQmFja3VwOjpWMWIGcHJvdG8z"));
+            "b29nbGUvY2xvdWQvZ2tlYmFja3VwL3YxL2NvbW1vbi5wcm90bxoeZ29vZ2xl",
+            "L3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
+            "ZXN0YW1wLnByb3RvGhZnb29nbGUvdHlwZS9kYXRlLnByb3RvGhtnb29nbGUv",
+            "dHlwZS9kYXlvZndlZWsucHJvdG8aG2dvb2dsZS90eXBlL3RpbWVvZmRheS5w",
+            "cm90byLUDQoKQmFja3VwUGxhbhIRCgRuYW1lGAEgASgJQgPgQQMSEAoDdWlk",
+            "GAIgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGAoLZGVzY3JpcHRpb24Y",
+            "BSABKAlCA+BBARI8CgdjbHVzdGVyGAYgASgJQivgQQXgQQL6QSIKIGNvbnRh",
+            "aW5lci5nb29nbGVhcGlzLmNvbS9DbHVzdGVyElQKEHJldGVudGlvbl9wb2xp",
+            "Y3kYByABKAsyNS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLkJhY2t1cFBs",
+            "YW4uUmV0ZW50aW9uUG9saWN5QgPgQQESRgoGbGFiZWxzGAggAygLMjEuZ29v",
+            "Z2xlLmNsb3VkLmdrZWJhY2t1cC52MS5CYWNrdXBQbGFuLkxhYmVsc0VudHJ5",
+            "QgPgQQESTAoPYmFja3VwX3NjaGVkdWxlGAkgASgLMi4uZ29vZ2xlLmNsb3Vk",
+            "LmdrZWJhY2t1cC52MS5CYWNrdXBQbGFuLlNjaGVkdWxlQgPgQQESEQoEZXRh",
+            "ZxgKIAEoCUID4EEDEhgKC2RlYWN0aXZhdGVkGAsgASgIQgPgQQESTgoNYmFj",
+            "a3VwX2NvbmZpZxgMIAEoCzIyLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEu",
+            "QmFja3VwUGxhbi5CYWNrdXBDb25maWdCA+BBARIgChNwcm90ZWN0ZWRfcG9k",
+            "X2NvdW50GA0gASgFQgPgQQMSPwoFc3RhdGUYDiABKA4yKy5nb29nbGUuY2xv",
+            "dWQuZ2tlYmFja3VwLnYxLkJhY2t1cFBsYW4uU3RhdGVCA+BBAxIZCgxzdGF0",
+            "ZV9yZWFzb24YDyABKAlCA+BBAxIbCg5ycG9fcmlza19sZXZlbBgQIAEoBUID",
+            "4EEDEhwKD3Jwb19yaXNrX3JlYXNvbhgRIAEoCUID4EEDGm0KD1JldGVudGlv",
+            "blBvbGljeRIkChdiYWNrdXBfZGVsZXRlX2xvY2tfZGF5cxgBIAEoBUID4EEB",
+            "Eh8KEmJhY2t1cF9yZXRhaW5fZGF5cxgCIAEoBUID4EEBEhMKBmxvY2tlZBgD",
+            "IAEoCEID4EEBGr8BCghTY2hlZHVsZRIaCg1jcm9uX3NjaGVkdWxlGAEgASgJ",
+            "QgPgQQESEwoGcGF1c2VkGAIgASgIQgPgQQESPQoKcnBvX2NvbmZpZxgDIAEo",
+            "CzIkLmdvb2dsZS5jbG91ZC5na2ViYWNrdXAudjEuUnBvQ29uZmlnQgPgQQES",
+            "QwoabmV4dF9zY2hlZHVsZWRfYmFja3VwX3RpbWUYBCABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMa8AIKDEJhY2t1cENvbmZpZxIYCg5h",
+            "bGxfbmFtZXNwYWNlcxgBIAEoCEgAEkQKE3NlbGVjdGVkX25hbWVzcGFjZXMY",
+            "AiABKAsyJS5nb29nbGUuY2xvdWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZXNI",
+            "ABJLChVzZWxlY3RlZF9hcHBsaWNhdGlvbnMYAyABKAsyKi5nb29nbGUuY2xv",
+            "dWQuZ2tlYmFja3VwLnYxLk5hbWVzcGFjZWROYW1lc0gAEiAKE2luY2x1ZGVf",
+            "dm9sdW1lX2RhdGEYBCABKAhCA+BBARIcCg9pbmNsdWRlX3NlY3JldHMYBSAB",
+            "KAhCA+BBARJFCg5lbmNyeXB0aW9uX2tleRgGIAEoCzIoLmdvb2dsZS5jbG91",
+            "ZC5na2ViYWNrdXAudjEuRW5jcnlwdGlvbktleUID4EEBEhwKD3Blcm1pc3Np",
+            "dmVfbW9kZRgHIAEoCEID4EEBQg4KDGJhY2t1cF9zY29wZRotCgtMYWJlbHNF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInsKBVN0YXRl",
+            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEwoPQ0xVU1RFUl9QRU5ESU5HEAES",
+            "EAoMUFJPVklTSU9OSU5HEAISCQoFUkVBRFkQAxIKCgZGQUlMRUQQBBIPCgtE",
+            "RUFDVElWQVRFRBAFEgwKCERFTEVUSU5HEAY6a+pBaAojZ2tlYmFja3VwLmdv",
+            "b2dsZWFwaXMuY29tL0JhY2t1cFBsYW4SQXByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9iYWNrdXBQbGFucy97YmFja3VwX3BsYW59",
+            "IngKCVJwb0NvbmZpZxIfChJ0YXJnZXRfcnBvX21pbnV0ZXMYASABKAVCA+BB",
+            "AhJKChFleGNsdXNpb25fd2luZG93cxgCIAMoCzIqLmdvb2dsZS5jbG91ZC5n",
+            "a2ViYWNrdXAudjEuRXhjbHVzaW9uV2luZG93QgPgQQEi3gIKD0V4Y2x1c2lv",
+            "bldpbmRvdxIvCgpzdGFydF90aW1lGAEgASgLMhYuZ29vZ2xlLnR5cGUuVGlt",
+            "ZU9mRGF5QgPgQQISMAoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb25CA+BBAhIzChZzaW5nbGVfb2NjdXJyZW5jZV9kYXRlGAMg",
+            "ASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUgAEg8KBWRhaWx5GAQgASgISAASUAoM",
+            "ZGF5c19vZl93ZWVrGAUgASgLMjguZ29vZ2xlLmNsb3VkLmdrZWJhY2t1cC52",
+            "MS5FeGNsdXNpb25XaW5kb3cuRGF5T2ZXZWVrTGlzdEgAGkIKDURheU9mV2Vl",
+            "a0xpc3QSMQoMZGF5c19vZl93ZWVrGAEgAygOMhYuZ29vZ2xlLnR5cGUuRGF5",
+            "T2ZXZWVrQgPgQQFCDAoKcmVjdXJyZW5jZULGAQodY29tLmdvb2dsZS5jbG91",
+            "ZC5na2ViYWNrdXAudjFCD0JhY2t1cFBsYW5Qcm90b1ABWjtjbG91ZC5nb29n",
+            "bGUuY29tL2dvL2drZWJhY2t1cC9hcGl2MS9na2ViYWNrdXBwYjtna2ViYWNr",
+            "dXBwYqoCGUdvb2dsZS5DbG91ZC5Ha2VCYWNrdXAuVjHKAhlHb29nbGVcQ2xv",
+            "dWRcR2tlQmFja3VwXFYx6gIcR29vZ2xlOjpDbG91ZDo6R2tlQmFja3VwOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeBackup.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeBackup.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan), global::Google.Cloud.GkeBackup.V1.BackupPlan.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Description", "Cluster", "RetentionPolicy", "Labels", "BackupSchedule", "Etag", "Deactivated", "BackupConfig", "ProtectedPodCount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.RetentionPolicy), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.RetentionPolicy.Parser, new[]{ "BackupDeleteLockDays", "BackupRetainDays", "Locked" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.Schedule), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.Schedule.Parser, new[]{ "CronSchedule", "Paused" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.BackupConfig), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.BackupConfig.Parser, new[]{ "AllNamespaces", "SelectedNamespaces", "SelectedApplications", "IncludeVolumeData", "IncludeSecrets", "EncryptionKey" }, new[]{ "BackupScope" }, null, null, null),
-            null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan), global::Google.Cloud.GkeBackup.V1.BackupPlan.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "Description", "Cluster", "RetentionPolicy", "Labels", "BackupSchedule", "Etag", "Deactivated", "BackupConfig", "ProtectedPodCount", "State", "StateReason", "RpoRiskLevel", "RpoRiskReason" }, null, new[]{ typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.RetentionPolicy), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.RetentionPolicy.Parser, new[]{ "BackupDeleteLockDays", "BackupRetainDays", "Locked" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.Schedule), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.Schedule.Parser, new[]{ "CronSchedule", "Paused", "RpoConfig", "NextScheduledBackupTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.BackupConfig), global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.BackupConfig.Parser, new[]{ "AllNamespaces", "SelectedNamespaces", "SelectedApplications", "IncludeVolumeData", "IncludeSecrets", "EncryptionKey", "PermissiveMode" }, new[]{ "BackupScope" }, null, null, null),
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.RpoConfig), global::Google.Cloud.GkeBackup.V1.RpoConfig.Parser, new[]{ "TargetRpoMinutes", "ExclusionWindows" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.ExclusionWindow), global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Parser, new[]{ "StartTime", "Duration", "SingleOccurrenceDate", "Daily", "DaysOfWeek" }, new[]{ "Recurrence" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Types.DayOfWeekList), global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Types.DayOfWeekList.Parser, new[]{ "DaysOfWeek" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -77,6 +104,7 @@ namespace Google.Cloud.GkeBackup.V1 {
   /// <summary>
   /// Defines the configuration and scheduling for a "line" of Backups.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BackupPlan : pb::IMessage<BackupPlan>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -124,6 +152,10 @@ namespace Google.Cloud.GkeBackup.V1 {
       deactivated_ = other.deactivated_;
       backupConfig_ = other.backupConfig_ != null ? other.backupConfig_.Clone() : null;
       protectedPodCount_ = other.protectedPodCount_;
+      state_ = other.state_;
+      stateReason_ = other.stateReason_;
+      rpoRiskLevel_ = other.rpoRiskLevel_;
+      rpoRiskReason_ = other.rpoRiskReason_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -138,7 +170,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The full name of the BackupPlan resource.
-    /// Format: projects/*/locations/*/backupPlans/*
+    /// Format: `projects/*/locations/*/backupPlans/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -200,7 +232,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int DescriptionFieldNumber = 5;
     private string description_ = "";
     /// <summary>
-    /// User specified descriptive string for this BackupPlan.
+    /// Optional. User specified descriptive string for this BackupPlan.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -215,12 +247,11 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int ClusterFieldNumber = 6;
     private string cluster_ = "";
     /// <summary>
-    /// Required. Immutable. The source cluster from which Backups will be created via
-    /// this BackupPlan.
-    /// Valid formats:
+    /// Required. Immutable. The source cluster from which Backups will be created
+    /// via this BackupPlan. Valid formats:
     ///
-    /// - projects/*/locations/*/clusters/*
-    /// - projects/*/zones/*/clusters/*
+    /// - `projects/*/locations/*/clusters/*`
+    /// - `projects/*/zones/*/clusters/*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -235,7 +266,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int RetentionPolicyFieldNumber = 7;
     private global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.RetentionPolicy retentionPolicy_;
     /// <summary>
-    /// RetentionPolicy governs lifecycle of Backups created under this plan.
+    /// Optional. RetentionPolicy governs lifecycle of Backups created under this
+    /// plan.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -252,7 +284,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// A set of custom labels supplied by user.
+    /// Optional. A set of custom labels supplied by user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -264,7 +296,8 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int BackupScheduleFieldNumber = 9;
     private global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.Schedule backupSchedule_;
     /// <summary>
-    /// Defines a schedule for automatic Backup creation via this BackupPlan.
+    /// Optional. Defines a schedule for automatic Backup creation via this
+    /// BackupPlan.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -279,9 +312,9 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int EtagFieldNumber = 10;
     private string etag_ = "";
     /// <summary>
-    /// Output only. `etag` is used for optimistic concurrency control as a way to help
-    /// prevent simultaneous updates of a backup plan from overwriting each other.
-    /// It is strongly suggested that systems make use of the 'etag' in the
+    /// Output only. `etag` is used for optimistic concurrency control as a way to
+    /// help prevent simultaneous updates of a backup plan from overwriting each
+    /// other. It is strongly suggested that systems make use of the 'etag' in the
     /// read-modify-write cycle to perform BackupPlan updates in order to avoid
     /// race conditions: An `etag` is returned in the response to `GetBackupPlan`,
     /// and systems are expected to put that etag in the request to
@@ -301,7 +334,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int DeactivatedFieldNumber = 11;
     private bool deactivated_;
     /// <summary>
-    /// This flag indicates whether this BackupPlan has been deactivated.
+    /// Optional. This flag indicates whether this BackupPlan has been deactivated.
     /// Setting this field to True locks the BackupPlan such that no further
     /// updates will be allowed (except deletes), including the deactivated field
     /// itself. It also prevents any new Backups from being created via this
@@ -322,7 +355,7 @@ namespace Google.Cloud.GkeBackup.V1 {
     public const int BackupConfigFieldNumber = 12;
     private global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.BackupConfig backupConfig_;
     /// <summary>
-    /// Defines the configuration of Backups created via this BackupPlan.
+    /// Optional. Defines the configuration of Backups created via this BackupPlan.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -346,6 +379,73 @@ namespace Google.Cloud.GkeBackup.V1 {
       get { return protectedPodCount_; }
       set {
         protectedPodCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 14;
+    private global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State state_ = global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. State of the BackupPlan. This State field reflects the
+    /// various stages a BackupPlan can be in
+    /// during the Create operation. It will be set to "DEACTIVATED"
+    /// if the BackupPlan is deactivated on an Update
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state_reason" field.</summary>
+    public const int StateReasonFieldNumber = 15;
+    private string stateReason_ = "";
+    /// <summary>
+    /// Output only. Human-readable description of why BackupPlan is in the current
+    /// `state`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StateReason {
+      get { return stateReason_; }
+      set {
+        stateReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "rpo_risk_level" field.</summary>
+    public const int RpoRiskLevelFieldNumber = 16;
+    private int rpoRiskLevel_;
+    /// <summary>
+    /// Output only. A number that represents the current risk level of this
+    /// BackupPlan from RPO perspective with 1 being no risk and 5 being highest
+    /// risk.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int RpoRiskLevel {
+      get { return rpoRiskLevel_; }
+      set {
+        rpoRiskLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rpo_risk_reason" field.</summary>
+    public const int RpoRiskReasonFieldNumber = 17;
+    private string rpoRiskReason_ = "";
+    /// <summary>
+    /// Output only. Human-readable description of why the BackupPlan is in the
+    /// current rpo_risk_level and action items if any.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RpoRiskReason {
+      get { return rpoRiskReason_; }
+      set {
+        rpoRiskReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -377,6 +477,10 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (Deactivated != other.Deactivated) return false;
       if (!object.Equals(BackupConfig, other.BackupConfig)) return false;
       if (ProtectedPodCount != other.ProtectedPodCount) return false;
+      if (State != other.State) return false;
+      if (StateReason != other.StateReason) return false;
+      if (RpoRiskLevel != other.RpoRiskLevel) return false;
+      if (RpoRiskReason != other.RpoRiskReason) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -397,6 +501,10 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (Deactivated != false) hash ^= Deactivated.GetHashCode();
       if (backupConfig_ != null) hash ^= BackupConfig.GetHashCode();
       if (ProtectedPodCount != 0) hash ^= ProtectedPodCount.GetHashCode();
+      if (State != global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (StateReason.Length != 0) hash ^= StateReason.GetHashCode();
+      if (RpoRiskLevel != 0) hash ^= RpoRiskLevel.GetHashCode();
+      if (RpoRiskReason.Length != 0) hash ^= RpoRiskReason.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -464,6 +572,22 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(104);
         output.WriteInt32(ProtectedPodCount);
       }
+      if (State != global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) State);
+      }
+      if (StateReason.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(StateReason);
+      }
+      if (RpoRiskLevel != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(RpoRiskLevel);
+      }
+      if (RpoRiskReason.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(RpoRiskReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -523,6 +647,22 @@ namespace Google.Cloud.GkeBackup.V1 {
         output.WriteRawTag(104);
         output.WriteInt32(ProtectedPodCount);
       }
+      if (State != global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) State);
+      }
+      if (StateReason.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(StateReason);
+      }
+      if (RpoRiskLevel != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(RpoRiskLevel);
+      }
+      if (RpoRiskReason.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(RpoRiskReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -570,6 +710,18 @@ namespace Google.Cloud.GkeBackup.V1 {
       if (ProtectedPodCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ProtectedPodCount);
       }
+      if (State != global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (StateReason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StateReason);
+      }
+      if (RpoRiskLevel != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(RpoRiskLevel);
+      }
+      if (RpoRiskReason.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(RpoRiskReason);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -612,7 +764,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         }
         RetentionPolicy.MergeFrom(other.RetentionPolicy);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.backupSchedule_ != null) {
         if (backupSchedule_ == null) {
           BackupSchedule = new global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.Schedule();
@@ -633,6 +785,18 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
       if (other.ProtectedPodCount != 0) {
         ProtectedPodCount = other.ProtectedPodCount;
+      }
+      if (other.State != global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.StateReason.Length != 0) {
+        StateReason = other.StateReason;
+      }
+      if (other.RpoRiskLevel != 0) {
+        RpoRiskLevel = other.RpoRiskLevel;
+      }
+      if (other.RpoRiskReason.Length != 0) {
+        RpoRiskReason = other.RpoRiskReason;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -714,6 +878,22 @@ namespace Google.Cloud.GkeBackup.V1 {
           }
           case 104: {
             ProtectedPodCount = input.ReadInt32();
+            break;
+          }
+          case 112: {
+            State = (global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            StateReason = input.ReadString();
+            break;
+          }
+          case 128: {
+            RpoRiskLevel = input.ReadInt32();
+            break;
+          }
+          case 138: {
+            RpoRiskReason = input.ReadString();
             break;
           }
         }
@@ -798,6 +978,22 @@ namespace Google.Cloud.GkeBackup.V1 {
             ProtectedPodCount = input.ReadInt32();
             break;
           }
+          case 112: {
+            State = (global::Google.Cloud.GkeBackup.V1.BackupPlan.Types.State) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            StateReason = input.ReadString();
+            break;
+          }
+          case 128: {
+            RpoRiskLevel = input.ReadInt32();
+            break;
+          }
+          case 138: {
+            RpoRiskReason = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -809,8 +1005,43 @@ namespace Google.Cloud.GkeBackup.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
+      /// State
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Default first value for Enums.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Waiting for cluster state to be RUNNING.
+        /// </summary>
+        [pbr::OriginalName("CLUSTER_PENDING")] ClusterPending = 1,
+        /// <summary>
+        /// The BackupPlan is in the process of being created.
+        /// </summary>
+        [pbr::OriginalName("PROVISIONING")] Provisioning = 2,
+        /// <summary>
+        /// The BackupPlan has successfully been created and is ready for Backups.
+        /// </summary>
+        [pbr::OriginalName("READY")] Ready = 3,
+        /// <summary>
+        /// BackupPlan creation has failed.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 4,
+        /// <summary>
+        /// The BackupPlan has been deactivated.
+        /// </summary>
+        [pbr::OriginalName("DEACTIVATED")] Deactivated = 5,
+        /// <summary>
+        /// The BackupPlan is in the process of being deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 6,
+      }
+
+      /// <summary>
       /// RetentionPolicy defines a Backup retention policy for a BackupPlan.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class RetentionPolicy : pb::IMessage<RetentionPolicy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -861,7 +1092,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int BackupDeleteLockDaysFieldNumber = 1;
         private int backupDeleteLockDays_;
         /// <summary>
-        /// Minimum age for Backups created via this BackupPlan (in days).
+        /// Optional. Minimum age for Backups created via this BackupPlan (in days).
         /// This field MUST be an integer value between 0-90 (inclusive).
         /// A Backup created under this BackupPlan will NOT be deletable until it
         /// reaches Backup's (create_time + backup_delete_lock_days).
@@ -884,17 +1115,23 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int BackupRetainDaysFieldNumber = 2;
         private int backupRetainDays_;
         /// <summary>
-        /// The default maximum age of a Backup created via this BackupPlan.
-        /// This field MUST be an integer value >= 0.
-        /// If specified, a Backup created under this BackupPlan will be
-        /// automatically deleted after its age reaches (create_time +
-        /// backup_retain_days).
-        /// If not specified, Backups created under this BackupPlan will NOT be
-        /// subject to automatic deletion.
-        /// Updating this field does NOT affect existing Backups under it. Backups
-        /// created AFTER a successful update will automatically pick up the new
-        /// value.
-        /// NOTE: backup_retain_days must be >= [backup_delete_lock_days][google.cloud.gkebackup.v1.BackupPlan.RetentionPolicy.backup_delete_lock_days].
+        /// Optional. The default maximum age of a Backup created via this
+        /// BackupPlan. This field MUST be an integer value >= 0 and &lt;= 365. If
+        /// specified, a Backup created under this BackupPlan will be automatically
+        /// deleted after its age reaches (create_time + backup_retain_days). If not
+        /// specified, Backups created under this BackupPlan will NOT be subject to
+        /// automatic deletion. Updating this field does NOT affect existing Backups
+        /// under it. Backups created AFTER a successful update will automatically
+        /// pick up the new value. NOTE: backup_retain_days must be >=
+        /// [backup_delete_lock_days][google.cloud.gkebackup.v1.BackupPlan.RetentionPolicy.backup_delete_lock_days].
+        /// If
+        /// [cron_schedule][google.cloud.gkebackup.v1.BackupPlan.Schedule.cron_schedule]
+        /// is defined, then this must be
+        /// &lt;= 360 * the creation interval. If
+        /// [rpo_config][google.cloud.gkebackup.v1.BackupPlan.Schedule.rpo_config] is
+        /// defined, then this must be
+        /// &lt;= 360 * [target_rpo_minutes][Schedule.rpo_config.target_rpo_minutes] /
+        /// (1440minutes/day).
         ///
         /// Default: 0 (no automatic deletion)
         /// </summary>
@@ -911,9 +1148,9 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int LockedFieldNumber = 3;
         private bool locked_;
         /// <summary>
-        /// This flag denotes whether the retention policy of this BackupPlan is
-        /// locked.  If set to True, no further update is allowed on this policy,
-        /// including the `locked` field itself.
+        /// Optional. This flag denotes whether the retention policy of this
+        /// BackupPlan is locked.  If set to True, no further update is allowed on
+        /// this policy, including the `locked` field itself.
         ///
         /// Default: False
         /// </summary>
@@ -1108,9 +1345,10 @@ namespace Google.Cloud.GkeBackup.V1 {
       }
 
       /// <summary>
-      /// Schedule defines scheduling parameters for automatically creating Backups
+      /// Defines scheduling parameters for automatically creating Backups
       /// via this BackupPlan.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Schedule : pb::IMessage<Schedule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1147,6 +1385,8 @@ namespace Google.Cloud.GkeBackup.V1 {
         public Schedule(Schedule other) : this() {
           cronSchedule_ = other.cronSchedule_;
           paused_ = other.paused_;
+          rpoConfig_ = other.rpoConfig_ != null ? other.rpoConfig_.Clone() : null;
+          nextScheduledBackupTime_ = other.nextScheduledBackupTime_ != null ? other.nextScheduledBackupTime_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1160,8 +1400,14 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int CronScheduleFieldNumber = 1;
         private string cronSchedule_ = "";
         /// <summary>
-        /// A standard [cron](https://wikipedia.com/wiki/cron) string that defines a
-        /// repeating schedule for creating Backups via this BackupPlan.
+        /// Optional. A standard [cron](https://wikipedia.com/wiki/cron) string that
+        /// defines a repeating schedule for creating Backups via this BackupPlan.
+        /// This is mutually exclusive with the
+        /// [rpo_config][google.cloud.gkebackup.v1.BackupPlan.Schedule.rpo_config]
+        /// field since at most one schedule can be defined for a BackupPlan. If this
+        /// is defined, then
+        /// [backup_retain_days][google.cloud.gkebackup.v1.BackupPlan.RetentionPolicy.backup_retain_days]
+        /// must also be defined.
         ///
         /// Default (empty): no automatic backup creation will occur.
         /// </summary>
@@ -1178,8 +1424,8 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int PausedFieldNumber = 2;
         private bool paused_;
         /// <summary>
-        /// This flag denotes whether automatic Backup creation is paused for this
-        /// BackupPlan.
+        /// Optional. This flag denotes whether automatic Backup creation is paused
+        /// for this BackupPlan.
         ///
         /// Default: False
         /// </summary>
@@ -1189,6 +1435,45 @@ namespace Google.Cloud.GkeBackup.V1 {
           get { return paused_; }
           set {
             paused_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "rpo_config" field.</summary>
+        public const int RpoConfigFieldNumber = 3;
+        private global::Google.Cloud.GkeBackup.V1.RpoConfig rpoConfig_;
+        /// <summary>
+        /// Optional. Defines the RPO schedule configuration for this BackupPlan.
+        /// This is mutually exclusive with the
+        /// [cron_schedule][google.cloud.gkebackup.v1.BackupPlan.Schedule.cron_schedule]
+        /// field since at most one schedule can be defined for a BackupPLan. If this
+        /// is defined, then
+        /// [backup_retain_days][google.cloud.gkebackup.v1.BackupPlan.RetentionPolicy.backup_retain_days]
+        /// must also be defined.
+        ///
+        /// Default (empty): no automatic backup creation will occur.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.GkeBackup.V1.RpoConfig RpoConfig {
+          get { return rpoConfig_; }
+          set {
+            rpoConfig_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "next_scheduled_backup_time" field.</summary>
+        public const int NextScheduledBackupTimeFieldNumber = 4;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp nextScheduledBackupTime_;
+        /// <summary>
+        /// Output only. Start time of next scheduled backup under this BackupPlan by
+        /// either cron_schedule or rpo config.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp NextScheduledBackupTime {
+          get { return nextScheduledBackupTime_; }
+          set {
+            nextScheduledBackupTime_ = value;
           }
         }
 
@@ -1209,6 +1494,8 @@ namespace Google.Cloud.GkeBackup.V1 {
           }
           if (CronSchedule != other.CronSchedule) return false;
           if (Paused != other.Paused) return false;
+          if (!object.Equals(RpoConfig, other.RpoConfig)) return false;
+          if (!object.Equals(NextScheduledBackupTime, other.NextScheduledBackupTime)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1218,6 +1505,8 @@ namespace Google.Cloud.GkeBackup.V1 {
           int hash = 1;
           if (CronSchedule.Length != 0) hash ^= CronSchedule.GetHashCode();
           if (Paused != false) hash ^= Paused.GetHashCode();
+          if (rpoConfig_ != null) hash ^= RpoConfig.GetHashCode();
+          if (nextScheduledBackupTime_ != null) hash ^= NextScheduledBackupTime.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1244,6 +1533,14 @@ namespace Google.Cloud.GkeBackup.V1 {
             output.WriteRawTag(16);
             output.WriteBool(Paused);
           }
+          if (rpoConfig_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(RpoConfig);
+          }
+          if (nextScheduledBackupTime_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(NextScheduledBackupTime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1262,6 +1559,14 @@ namespace Google.Cloud.GkeBackup.V1 {
             output.WriteRawTag(16);
             output.WriteBool(Paused);
           }
+          if (rpoConfig_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(RpoConfig);
+          }
+          if (nextScheduledBackupTime_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(NextScheduledBackupTime);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1277,6 +1582,12 @@ namespace Google.Cloud.GkeBackup.V1 {
           }
           if (Paused != false) {
             size += 1 + 1;
+          }
+          if (rpoConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(RpoConfig);
+          }
+          if (nextScheduledBackupTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(NextScheduledBackupTime);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1295,6 +1606,18 @@ namespace Google.Cloud.GkeBackup.V1 {
           }
           if (other.Paused != false) {
             Paused = other.Paused;
+          }
+          if (other.rpoConfig_ != null) {
+            if (rpoConfig_ == null) {
+              RpoConfig = new global::Google.Cloud.GkeBackup.V1.RpoConfig();
+            }
+            RpoConfig.MergeFrom(other.RpoConfig);
+          }
+          if (other.nextScheduledBackupTime_ != null) {
+            if (nextScheduledBackupTime_ == null) {
+              NextScheduledBackupTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            NextScheduledBackupTime.MergeFrom(other.NextScheduledBackupTime);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1317,6 +1640,20 @@ namespace Google.Cloud.GkeBackup.V1 {
               }
               case 16: {
                 Paused = input.ReadBool();
+                break;
+              }
+              case 26: {
+                if (rpoConfig_ == null) {
+                  RpoConfig = new global::Google.Cloud.GkeBackup.V1.RpoConfig();
+                }
+                input.ReadMessage(RpoConfig);
+                break;
+              }
+              case 34: {
+                if (nextScheduledBackupTime_ == null) {
+                  NextScheduledBackupTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(NextScheduledBackupTime);
                 break;
               }
             }
@@ -1342,6 +1679,20 @@ namespace Google.Cloud.GkeBackup.V1 {
                 Paused = input.ReadBool();
                 break;
               }
+              case 26: {
+                if (rpoConfig_ == null) {
+                  RpoConfig = new global::Google.Cloud.GkeBackup.V1.RpoConfig();
+                }
+                input.ReadMessage(RpoConfig);
+                break;
+              }
+              case 34: {
+                if (nextScheduledBackupTime_ == null) {
+                  NextScheduledBackupTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(NextScheduledBackupTime);
+                break;
+              }
             }
           }
         }
@@ -1353,6 +1704,7 @@ namespace Google.Cloud.GkeBackup.V1 {
       /// BackupConfig defines the configuration of Backups created via this
       /// BackupPlan.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BackupConfig : pb::IMessage<BackupConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1390,6 +1742,7 @@ namespace Google.Cloud.GkeBackup.V1 {
           includeVolumeData_ = other.includeVolumeData_;
           includeSecrets_ = other.includeSecrets_;
           encryptionKey_ = other.encryptionKey_ != null ? other.encryptionKey_.Clone() : null;
+          permissiveMode_ = other.permissiveMode_;
           switch (other.BackupScopeCase) {
             case BackupScopeOneofCase.AllNamespaces:
               AllNamespaces = other.AllNamespaces;
@@ -1419,10 +1772,24 @@ namespace Google.Cloud.GkeBackup.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool AllNamespaces {
-          get { return backupScopeCase_ == BackupScopeOneofCase.AllNamespaces ? (bool) backupScope_ : false; }
+          get { return HasAllNamespaces ? (bool) backupScope_ : false; }
           set {
             backupScope_ = value;
             backupScopeCase_ = BackupScopeOneofCase.AllNamespaces;
+          }
+        }
+        /// <summary>Gets whether the "all_namespaces" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAllNamespaces {
+          get { return backupScopeCase_ == BackupScopeOneofCase.AllNamespaces; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "all_namespaces" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAllNamespaces() {
+          if (HasAllNamespaces) {
+            ClearBackupScope();
           }
         }
 
@@ -1461,8 +1828,8 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int IncludeVolumeDataFieldNumber = 4;
         private bool includeVolumeData_;
         /// <summary>
-        /// This flag specifies whether volume data should be backed up when
-        /// PVCs are included in the scope of a Backup.
+        /// Optional. This flag specifies whether volume data should be backed up
+        /// when PVCs are included in the scope of a Backup.
         ///
         /// Default: False
         /// </summary>
@@ -1479,8 +1846,8 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int IncludeSecretsFieldNumber = 5;
         private bool includeSecrets_;
         /// <summary>
-        /// This flag specifies whether Kubernetes Secret resources should be
-        /// included when they fall into the scope of Backups.
+        /// Optional. This flag specifies whether Kubernetes Secret resources should
+        /// be included when they fall into the scope of Backups.
         ///
         /// Default: False
         /// </summary>
@@ -1497,9 +1864,9 @@ namespace Google.Cloud.GkeBackup.V1 {
         public const int EncryptionKeyFieldNumber = 6;
         private global::Google.Cloud.GkeBackup.V1.EncryptionKey encryptionKey_;
         /// <summary>
-        /// This defines a customer managed encryption key that will be used to
-        /// encrypt the "config" portion (the Kubernetes resources) of Backups
-        /// created via this plan.
+        /// Optional. This defines a customer managed encryption key that will be
+        /// used to encrypt the "config" portion (the Kubernetes resources) of
+        /// Backups created via this plan.
         ///
         /// Default (empty): Config backup artifacts will not be encrypted.
         /// </summary>
@@ -1509,6 +1876,25 @@ namespace Google.Cloud.GkeBackup.V1 {
           get { return encryptionKey_; }
           set {
             encryptionKey_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "permissive_mode" field.</summary>
+        public const int PermissiveModeFieldNumber = 7;
+        private bool permissiveMode_;
+        /// <summary>
+        /// Optional. If false, Backups will fail when Backup for GKE detects
+        /// Kubernetes configuration that is non-standard or
+        /// requires additional setup to restore.
+        ///
+        /// Default: False
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool PermissiveMode {
+          get { return permissiveMode_; }
+          set {
+            permissiveMode_ = value;
           }
         }
 
@@ -1555,6 +1941,7 @@ namespace Google.Cloud.GkeBackup.V1 {
           if (IncludeVolumeData != other.IncludeVolumeData) return false;
           if (IncludeSecrets != other.IncludeSecrets) return false;
           if (!object.Equals(EncryptionKey, other.EncryptionKey)) return false;
+          if (PermissiveMode != other.PermissiveMode) return false;
           if (BackupScopeCase != other.BackupScopeCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -1563,12 +1950,13 @@ namespace Google.Cloud.GkeBackup.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) hash ^= AllNamespaces.GetHashCode();
+          if (HasAllNamespaces) hash ^= AllNamespaces.GetHashCode();
           if (backupScopeCase_ == BackupScopeOneofCase.SelectedNamespaces) hash ^= SelectedNamespaces.GetHashCode();
           if (backupScopeCase_ == BackupScopeOneofCase.SelectedApplications) hash ^= SelectedApplications.GetHashCode();
           if (IncludeVolumeData != false) hash ^= IncludeVolumeData.GetHashCode();
           if (IncludeSecrets != false) hash ^= IncludeSecrets.GetHashCode();
           if (encryptionKey_ != null) hash ^= EncryptionKey.GetHashCode();
+          if (PermissiveMode != false) hash ^= PermissiveMode.GetHashCode();
           hash ^= (int) backupScopeCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1588,7 +1976,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) {
+          if (HasAllNamespaces) {
             output.WriteRawTag(8);
             output.WriteBool(AllNamespaces);
           }
@@ -1611,6 +1999,10 @@ namespace Google.Cloud.GkeBackup.V1 {
           if (encryptionKey_ != null) {
             output.WriteRawTag(50);
             output.WriteMessage(EncryptionKey);
+          }
+          if (PermissiveMode != false) {
+            output.WriteRawTag(56);
+            output.WriteBool(PermissiveMode);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -1622,7 +2014,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) {
+          if (HasAllNamespaces) {
             output.WriteRawTag(8);
             output.WriteBool(AllNamespaces);
           }
@@ -1646,6 +2038,10 @@ namespace Google.Cloud.GkeBackup.V1 {
             output.WriteRawTag(50);
             output.WriteMessage(EncryptionKey);
           }
+          if (PermissiveMode != false) {
+            output.WriteRawTag(56);
+            output.WriteBool(PermissiveMode);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1656,7 +2052,7 @@ namespace Google.Cloud.GkeBackup.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (backupScopeCase_ == BackupScopeOneofCase.AllNamespaces) {
+          if (HasAllNamespaces) {
             size += 1 + 1;
           }
           if (backupScopeCase_ == BackupScopeOneofCase.SelectedNamespaces) {
@@ -1673,6 +2069,9 @@ namespace Google.Cloud.GkeBackup.V1 {
           }
           if (encryptionKey_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionKey);
+          }
+          if (PermissiveMode != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1697,6 +2096,9 @@ namespace Google.Cloud.GkeBackup.V1 {
               EncryptionKey = new global::Google.Cloud.GkeBackup.V1.EncryptionKey();
             }
             EncryptionKey.MergeFrom(other.EncryptionKey);
+          }
+          if (other.PermissiveMode != false) {
+            PermissiveMode = other.PermissiveMode;
           }
           switch (other.BackupScopeCase) {
             case BackupScopeOneofCase.AllNamespaces:
@@ -1768,6 +2170,10 @@ namespace Google.Cloud.GkeBackup.V1 {
                 input.ReadMessage(EncryptionKey);
                 break;
               }
+              case 56: {
+                PermissiveMode = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -1818,6 +2224,906 @@ namespace Google.Cloud.GkeBackup.V1 {
                   EncryptionKey = new global::Google.Cloud.GkeBackup.V1.EncryptionKey();
                 }
                 input.ReadMessage(EncryptionKey);
+                break;
+              }
+              case 56: {
+                PermissiveMode = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Defines RPO scheduling configuration for automatically creating
+  /// Backups via this BackupPlan.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RpoConfig : pb::IMessage<RpoConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RpoConfig> _parser = new pb::MessageParser<RpoConfig>(() => new RpoConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RpoConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeBackup.V1.BackupPlanReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RpoConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RpoConfig(RpoConfig other) : this() {
+      targetRpoMinutes_ = other.targetRpoMinutes_;
+      exclusionWindows_ = other.exclusionWindows_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RpoConfig Clone() {
+      return new RpoConfig(this);
+    }
+
+    /// <summary>Field number for the "target_rpo_minutes" field.</summary>
+    public const int TargetRpoMinutesFieldNumber = 1;
+    private int targetRpoMinutes_;
+    /// <summary>
+    /// Required. Defines the target RPO for the BackupPlan in minutes, which means
+    /// the target maximum data loss in time that is acceptable for this
+    /// BackupPlan. This must be at least 60, i.e., 1 hour, and at most 86400,
+    /// i.e., 60 days.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int TargetRpoMinutes {
+      get { return targetRpoMinutes_; }
+      set {
+        targetRpoMinutes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "exclusion_windows" field.</summary>
+    public const int ExclusionWindowsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GkeBackup.V1.ExclusionWindow> _repeated_exclusionWindows_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.ExclusionWindow> exclusionWindows_ = new pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.ExclusionWindow>();
+    /// <summary>
+    /// Optional. User specified time windows during which backup can NOT happen
+    /// for this BackupPlan - backups should start and finish outside of any given
+    /// exclusion window. Note: backup jobs will be scheduled to start and
+    /// finish outside the duration of the window as much as possible, but
+    /// running jobs will not get canceled when it runs into the window.
+    /// All the time and date values in exclusion_windows entry in the API are in
+    /// UTC.
+    /// We only allow &lt;=1 recurrence (daily or weekly) exclusion window for a
+    /// BackupPlan while no restriction on number of single occurrence
+    /// windows.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GkeBackup.V1.ExclusionWindow> ExclusionWindows {
+      get { return exclusionWindows_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RpoConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RpoConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TargetRpoMinutes != other.TargetRpoMinutes) return false;
+      if(!exclusionWindows_.Equals(other.exclusionWindows_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TargetRpoMinutes != 0) hash ^= TargetRpoMinutes.GetHashCode();
+      hash ^= exclusionWindows_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TargetRpoMinutes != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(TargetRpoMinutes);
+      }
+      exclusionWindows_.WriteTo(output, _repeated_exclusionWindows_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TargetRpoMinutes != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(TargetRpoMinutes);
+      }
+      exclusionWindows_.WriteTo(ref output, _repeated_exclusionWindows_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TargetRpoMinutes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TargetRpoMinutes);
+      }
+      size += exclusionWindows_.CalculateSize(_repeated_exclusionWindows_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RpoConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TargetRpoMinutes != 0) {
+        TargetRpoMinutes = other.TargetRpoMinutes;
+      }
+      exclusionWindows_.Add(other.exclusionWindows_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TargetRpoMinutes = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            exclusionWindows_.AddEntriesFrom(input, _repeated_exclusionWindows_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TargetRpoMinutes = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            exclusionWindows_.AddEntriesFrom(ref input, _repeated_exclusionWindows_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Defines a time window during which no backup should
+  /// happen. All time and date are in UTC.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExclusionWindow : pb::IMessage<ExclusionWindow>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExclusionWindow> _parser = new pb::MessageParser<ExclusionWindow>(() => new ExclusionWindow());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExclusionWindow> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeBackup.V1.BackupPlanReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExclusionWindow() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExclusionWindow(ExclusionWindow other) : this() {
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      duration_ = other.duration_ != null ? other.duration_.Clone() : null;
+      switch (other.RecurrenceCase) {
+        case RecurrenceOneofCase.SingleOccurrenceDate:
+          SingleOccurrenceDate = other.SingleOccurrenceDate.Clone();
+          break;
+        case RecurrenceOneofCase.Daily:
+          Daily = other.Daily;
+          break;
+        case RecurrenceOneofCase.DaysOfWeek:
+          DaysOfWeek = other.DaysOfWeek.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExclusionWindow Clone() {
+      return new ExclusionWindow(this);
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 1;
+    private global::Google.Type.TimeOfDay startTime_;
+    /// <summary>
+    /// Required. Specifies the start time of the window using time of the day in
+    /// UTC.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.TimeOfDay StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "duration" field.</summary>
+    public const int DurationFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Duration duration_;
+    /// <summary>
+    /// Required. Specifies duration of the window.
+    /// Duration must be >= 5 minutes and &lt; (target RPO - 20 minutes).
+    /// Additional restrictions based on the recurrence type to allow some time for
+    /// backup to happen:
+    /// - single_occurrence_date:  no restriction, but UI may warn about this when
+    /// duration >= target RPO
+    /// - daily window: duration &lt; 24 hours
+    /// - weekly window:
+    ///   - days of week includes all seven days of a week: duration &lt; 24 hours
+    ///   - all other weekly window: duration &lt; 168 hours (i.e., 24 * 7 hours)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Duration {
+      get { return duration_; }
+      set {
+        duration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "single_occurrence_date" field.</summary>
+    public const int SingleOccurrenceDateFieldNumber = 3;
+    /// <summary>
+    /// No recurrence. The exclusion window occurs only once and on this
+    /// date in UTC.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Type.Date SingleOccurrenceDate {
+      get { return recurrenceCase_ == RecurrenceOneofCase.SingleOccurrenceDate ? (global::Google.Type.Date) recurrence_ : null; }
+      set {
+        recurrence_ = value;
+        recurrenceCase_ = value == null ? RecurrenceOneofCase.None : RecurrenceOneofCase.SingleOccurrenceDate;
+      }
+    }
+
+    /// <summary>Field number for the "daily" field.</summary>
+    public const int DailyFieldNumber = 4;
+    /// <summary>
+    /// The exclusion window occurs every day if set to "True".
+    /// Specifying this field to "False" is an error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Daily {
+      get { return HasDaily ? (bool) recurrence_ : false; }
+      set {
+        recurrence_ = value;
+        recurrenceCase_ = RecurrenceOneofCase.Daily;
+      }
+    }
+    /// <summary>Gets whether the "daily" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDaily {
+      get { return recurrenceCase_ == RecurrenceOneofCase.Daily; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "daily" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDaily() {
+      if (HasDaily) {
+        ClearRecurrence();
+      }
+    }
+
+    /// <summary>Field number for the "days_of_week" field.</summary>
+    public const int DaysOfWeekFieldNumber = 5;
+    /// <summary>
+    /// The exclusion window occurs on these days of each week in UTC.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Types.DayOfWeekList DaysOfWeek {
+      get { return recurrenceCase_ == RecurrenceOneofCase.DaysOfWeek ? (global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Types.DayOfWeekList) recurrence_ : null; }
+      set {
+        recurrence_ = value;
+        recurrenceCase_ = value == null ? RecurrenceOneofCase.None : RecurrenceOneofCase.DaysOfWeek;
+      }
+    }
+
+    private object recurrence_;
+    /// <summary>Enum of possible cases for the "recurrence" oneof.</summary>
+    public enum RecurrenceOneofCase {
+      None = 0,
+      SingleOccurrenceDate = 3,
+      Daily = 4,
+      DaysOfWeek = 5,
+    }
+    private RecurrenceOneofCase recurrenceCase_ = RecurrenceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RecurrenceOneofCase RecurrenceCase {
+      get { return recurrenceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRecurrence() {
+      recurrenceCase_ = RecurrenceOneofCase.None;
+      recurrence_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExclusionWindow);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExclusionWindow other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(Duration, other.Duration)) return false;
+      if (!object.Equals(SingleOccurrenceDate, other.SingleOccurrenceDate)) return false;
+      if (Daily != other.Daily) return false;
+      if (!object.Equals(DaysOfWeek, other.DaysOfWeek)) return false;
+      if (RecurrenceCase != other.RecurrenceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (duration_ != null) hash ^= Duration.GetHashCode();
+      if (recurrenceCase_ == RecurrenceOneofCase.SingleOccurrenceDate) hash ^= SingleOccurrenceDate.GetHashCode();
+      if (HasDaily) hash ^= Daily.GetHashCode();
+      if (recurrenceCase_ == RecurrenceOneofCase.DaysOfWeek) hash ^= DaysOfWeek.GetHashCode();
+      hash ^= (int) recurrenceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Duration);
+      }
+      if (recurrenceCase_ == RecurrenceOneofCase.SingleOccurrenceDate) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SingleOccurrenceDate);
+      }
+      if (HasDaily) {
+        output.WriteRawTag(32);
+        output.WriteBool(Daily);
+      }
+      if (recurrenceCase_ == RecurrenceOneofCase.DaysOfWeek) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DaysOfWeek);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Duration);
+      }
+      if (recurrenceCase_ == RecurrenceOneofCase.SingleOccurrenceDate) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SingleOccurrenceDate);
+      }
+      if (HasDaily) {
+        output.WriteRawTag(32);
+        output.WriteBool(Daily);
+      }
+      if (recurrenceCase_ == RecurrenceOneofCase.DaysOfWeek) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DaysOfWeek);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (duration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Duration);
+      }
+      if (recurrenceCase_ == RecurrenceOneofCase.SingleOccurrenceDate) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SingleOccurrenceDate);
+      }
+      if (HasDaily) {
+        size += 1 + 1;
+      }
+      if (recurrenceCase_ == RecurrenceOneofCase.DaysOfWeek) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DaysOfWeek);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExclusionWindow other) {
+      if (other == null) {
+        return;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Type.TimeOfDay();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.duration_ != null) {
+        if (duration_ == null) {
+          Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Duration.MergeFrom(other.Duration);
+      }
+      switch (other.RecurrenceCase) {
+        case RecurrenceOneofCase.SingleOccurrenceDate:
+          if (SingleOccurrenceDate == null) {
+            SingleOccurrenceDate = new global::Google.Type.Date();
+          }
+          SingleOccurrenceDate.MergeFrom(other.SingleOccurrenceDate);
+          break;
+        case RecurrenceOneofCase.Daily:
+          Daily = other.Daily;
+          break;
+        case RecurrenceOneofCase.DaysOfWeek:
+          if (DaysOfWeek == null) {
+            DaysOfWeek = new global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Types.DayOfWeekList();
+          }
+          DaysOfWeek.MergeFrom(other.DaysOfWeek);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Type.TimeOfDay();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 26: {
+            global::Google.Type.Date subBuilder = new global::Google.Type.Date();
+            if (recurrenceCase_ == RecurrenceOneofCase.SingleOccurrenceDate) {
+              subBuilder.MergeFrom(SingleOccurrenceDate);
+            }
+            input.ReadMessage(subBuilder);
+            SingleOccurrenceDate = subBuilder;
+            break;
+          }
+          case 32: {
+            Daily = input.ReadBool();
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Types.DayOfWeekList subBuilder = new global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Types.DayOfWeekList();
+            if (recurrenceCase_ == RecurrenceOneofCase.DaysOfWeek) {
+              subBuilder.MergeFrom(DaysOfWeek);
+            }
+            input.ReadMessage(subBuilder);
+            DaysOfWeek = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Type.TimeOfDay();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 26: {
+            global::Google.Type.Date subBuilder = new global::Google.Type.Date();
+            if (recurrenceCase_ == RecurrenceOneofCase.SingleOccurrenceDate) {
+              subBuilder.MergeFrom(SingleOccurrenceDate);
+            }
+            input.ReadMessage(subBuilder);
+            SingleOccurrenceDate = subBuilder;
+            break;
+          }
+          case 32: {
+            Daily = input.ReadBool();
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Types.DayOfWeekList subBuilder = new global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Types.DayOfWeekList();
+            if (recurrenceCase_ == RecurrenceOneofCase.DaysOfWeek) {
+              subBuilder.MergeFrom(DaysOfWeek);
+            }
+            input.ReadMessage(subBuilder);
+            DaysOfWeek = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ExclusionWindow message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Holds repeated DaysOfWeek values as a container.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DayOfWeekList : pb::IMessage<DayOfWeekList>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DayOfWeekList> _parser = new pb::MessageParser<DayOfWeekList>(() => new DayOfWeekList());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DayOfWeekList> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.GkeBackup.V1.ExclusionWindow.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DayOfWeekList() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DayOfWeekList(DayOfWeekList other) : this() {
+          daysOfWeek_ = other.daysOfWeek_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DayOfWeekList Clone() {
+          return new DayOfWeekList(this);
+        }
+
+        /// <summary>Field number for the "days_of_week" field.</summary>
+        public const int DaysOfWeekFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Type.DayOfWeek> _repeated_daysOfWeek_codec
+            = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::Google.Type.DayOfWeek) x);
+        private readonly pbc::RepeatedField<global::Google.Type.DayOfWeek> daysOfWeek_ = new pbc::RepeatedField<global::Google.Type.DayOfWeek>();
+        /// <summary>
+        /// Optional. A list of days of week.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Type.DayOfWeek> DaysOfWeek {
+          get { return daysOfWeek_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DayOfWeekList);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DayOfWeekList other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!daysOfWeek_.Equals(other.daysOfWeek_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= daysOfWeek_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          daysOfWeek_.WriteTo(output, _repeated_daysOfWeek_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          daysOfWeek_.WriteTo(ref output, _repeated_daysOfWeek_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += daysOfWeek_.CalculateSize(_repeated_daysOfWeek_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DayOfWeekList other) {
+          if (other == null) {
+            return;
+          }
+          daysOfWeek_.Add(other.daysOfWeek_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10:
+              case 8: {
+                daysOfWeek_.AddEntriesFrom(input, _repeated_daysOfWeek_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10:
+              case 8: {
+                daysOfWeek_.AddEntriesFrom(ref input, _repeated_daysOfWeek_codec);
                 break;
               }
             }

@@ -53,6 +53,7 @@ namespace Google.Apps.Script.Type.Slides {
   /// <summary>
   /// Slides add-on manifest.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SlidesAddOnManifest : pb::IMessage<SlidesAddOnManifest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -308,6 +309,7 @@ namespace Google.Apps.Script.Type.Slides {
   /// <summary>
   /// Common format for declaring a Slides add-on's triggers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SlidesExtensionPoint : pb::IMessage<SlidesExtensionPoint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

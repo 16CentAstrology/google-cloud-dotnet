@@ -240,12 +240,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 50,
+          "end": 51,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 48,
+          "end": 49,
           "type": "SHORT"
         }
       ]
@@ -289,12 +289,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 51,
+          "end": 52,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 49,
+          "end": 50,
           "type": "SHORT"
         }
       ]
@@ -406,6 +406,54 @@
         {
           "start": 35,
           "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "texttospeech_v1beta1_generated_TextToSpeech_StreamingSynthesize_sync",
+      "title": "StreamingSynthesize",
+      "description": "Snippet for StreamingSynthesize",
+      "file": "TextToSpeechClient.StreamingSynthesizeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamingSynthesize",
+        "fullName": "Google.Cloud.TextToSpeech.V1Beta1.TextToSpeechClient.StreamingSynthesize",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.TextToSpeech.V1Beta1.TextToSpeechClient+StreamingSynthesizeStream",
+        "client": {
+          "shortName": "TextToSpeechClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1Beta1.TextToSpeechClient"
+        },
+        "method": {
+          "shortName": "StreamingSynthesize",
+          "fullName": "google.cloud.texttospeech.v1beta1.TextToSpeech.StreamingSynthesize",
+          "service": {
+            "shortName": "TextToSpeech",
+            "fullName": "google.cloud.texttospeech.v1beta1.TextToSpeech"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
           "type": "SHORT"
         }
       ]

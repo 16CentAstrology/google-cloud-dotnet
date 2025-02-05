@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Bigtable.V2.Snippets
+namespace GoogleCSharpSnippets
 {
-    // [START bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_sync]
+    // [START bigtable_v2_generated_Bigtable_ReadModifyWriteRow_sync]
     using Google.Cloud.Bigtable.Common.V2;
     using Google.Cloud.Bigtable.V2;
     using Google.Protobuf;
@@ -45,10 +45,11 @@ namespace Google.Cloud.Bigtable.V2.Snippets
                     new ReadModifyWriteRule(),
                 },
                 AppProfileId = "",
+                AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
             };
             // Make the request
             ReadModifyWriteRowResponse response = bigtableServiceApiClient.ReadModifyWriteRow(request);
         }
     }
-    // [END bigtable_v2_generated_BigtableServiceApi_ReadModifyWriteRow_sync]
+    // [END bigtable_v2_generated_Bigtable_ReadModifyWriteRow_sync]
 }

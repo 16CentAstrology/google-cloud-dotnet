@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gax = Google.Api.Gax;
 using gagr = Google.Api.Gax.ResourceNames;
+using gax = Google.Api.Gax;
 using gcov = Google.Cloud.OrgPolicy.V2;
 using sys = System;
 
@@ -317,10 +317,22 @@ namespace Google.Cloud.OrgPolicy.V2
         /// <inheritdoc/>
         public bool Equals(PolicyName other) => ToString() == other?.ToString();
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator ==(PolicyName a, PolicyName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
-        /// <inheritdoc/>
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
         public static bool operator !=(PolicyName a, PolicyName b) => !(a == b);
     }
 
@@ -542,6 +554,54 @@ namespace Google.Cloud.OrgPolicy.V2
         public gcov::PolicyName PolicyName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcov::PolicyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateCustomConstraintRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetCustomConstraintRequest
+    {
+        /// <summary>
+        /// <see cref="gcov::CustomConstraintName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcov::CustomConstraintName CustomConstraintName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcov::CustomConstraintName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListCustomConstraintsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::OrganizationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::OrganizationName ParentAsOrganizationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::OrganizationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteCustomConstraintRequest
+    {
+        /// <summary>
+        /// <see cref="gcov::CustomConstraintName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcov::CustomConstraintName CustomConstraintName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcov::CustomConstraintName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 
-namespace Google.Cloud.Batch.V1Alpha.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START batch_v1alpha_generated_BatchService_GetTask_async_flattened]
     using System.Threading.Tasks;
@@ -35,7 +35,7 @@ namespace Google.Cloud.Batch.V1Alpha.Snippets
         public async Task GetTaskAsync()
         {
             // Create client
-            BatchServiceClient batchServiceClient = await BatchServiceClient.CreateAsync();
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]/taskGroups/[TASK_GROUP]/tasks/[TASK]";
             // Make the request

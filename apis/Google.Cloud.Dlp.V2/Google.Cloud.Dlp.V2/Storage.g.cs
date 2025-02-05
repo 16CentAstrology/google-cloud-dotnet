@@ -26,133 +26,137 @@ namespace Google.Cloud.Dlp.V2 {
           string.Concat(
             "CiNnb29nbGUvcHJpdmFjeS9kbHAvdjIvc3RvcmFnZS5wcm90bxIVZ29vZ2xl",
             "LnByaXZhY3kuZGxwLnYyGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9n",
-            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIikKCEluZm9UeXBlEgwK",
-            "BG5hbWUYASABKAkSDwoHdmVyc2lvbhgCIAEoCSLhAQoQU2Vuc2l0aXZpdHlT",
-            "Y29yZRJMCgVzY29yZRgBIAEoDjI9Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5T",
-            "ZW5zaXRpdml0eVNjb3JlLlNlbnNpdGl2aXR5U2NvcmVMZXZlbCJ/ChVTZW5z",
-            "aXRpdml0eVNjb3JlTGV2ZWwSIQodU0VOU0lUSVZJVFlfU0NPUkVfVU5TUEVD",
-            "SUZJRUQQABITCg9TRU5TSVRJVklUWV9MT1cQChIYChRTRU5TSVRJVklUWV9N",
-            "T0RFUkFURRAUEhQKEFNFTlNJVElWSVRZX0hJR0gQHiJLCgpTdG9yZWRUeXBl",
-            "EgwKBG5hbWUYASABKAkSLwoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wIsgLCg5DdXN0b21JbmZvVHlwZRIyCglpbmZv",
-            "X3R5cGUYASABKAsyHy5nb29nbGUucHJpdmFjeS5kbHAudjIuSW5mb1R5cGUS",
-            "NQoKbGlrZWxpaG9vZBgGIAEoDjIhLmdvb2dsZS5wcml2YWN5LmRscC52Mi5M",
-            "aWtlbGlob29kEkYKCmRpY3Rpb25hcnkYAiABKAsyMC5nb29nbGUucHJpdmFj",
-            "eS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuRGljdGlvbmFyeUgAEjwKBXJlZ2V4",
-            "GAMgASgLMisuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBl",
-            "LlJlZ2V4SAASTQoOc3Vycm9nYXRlX3R5cGUYBCABKAsyMy5nb29nbGUucHJp",
-            "dmFjeS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuU3Vycm9nYXRlVHlwZUgAEjgK",
-            "C3N0b3JlZF90eXBlGAUgASgLMiEuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLlN0",
-            "b3JlZFR5cGVIABJMCg9kZXRlY3Rpb25fcnVsZXMYByADKAsyMy5nb29nbGUu",
-            "cHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuRGV0ZWN0aW9uUnVsZRJL",
-            "Cg5leGNsdXNpb25fdHlwZRgIIAEoDjIzLmdvb2dsZS5wcml2YWN5LmRscC52",
-            "Mi5DdXN0b21JbmZvVHlwZS5FeGNsdXNpb25UeXBlGsgBCgpEaWN0aW9uYXJ5",
-            "Ek4KCXdvcmRfbGlzdBgBIAEoCzI5Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5D",
-            "dXN0b21JbmZvVHlwZS5EaWN0aW9uYXJ5LldvcmRMaXN0SAASRQoSY2xvdWRf",
-            "c3RvcmFnZV9wYXRoGAMgASgLMicuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNs",
-            "b3VkU3RvcmFnZVBhdGhIABoZCghXb3JkTGlzdBINCgV3b3JkcxgBIAMoCUII",
-            "CgZzb3VyY2UaLwoFUmVnZXgSDwoHcGF0dGVybhgBIAEoCRIVCg1ncm91cF9p",
-            "bmRleGVzGAIgAygFGg8KDVN1cnJvZ2F0ZVR5cGUavgQKDURldGVjdGlvblJ1",
-            "bGUSVwoMaG90d29yZF9ydWxlGAEgASgLMj8uZ29vZ2xlLnByaXZhY3kuZGxw",
-            "LnYyLkN1c3RvbUluZm9UeXBlLkRldGVjdGlvblJ1bGUuSG90d29yZFJ1bGVI",
-            "ABo4CglQcm94aW1pdHkSFQoNd2luZG93X2JlZm9yZRgBIAEoBRIUCgx3aW5k",
-            "b3dfYWZ0ZXIYAiABKAUaggEKFExpa2VsaWhvb2RBZGp1c3RtZW50Ej0KEGZp",
-            "eGVkX2xpa2VsaWhvb2QYASABKA4yIS5nb29nbGUucHJpdmFjeS5kbHAudjIu",
-            "TGlrZWxpaG9vZEgAEh0KE3JlbGF0aXZlX2xpa2VsaWhvb2QYAiABKAVIAEIM",
-            "CgphZGp1c3RtZW50GowCCgtIb3R3b3JkUnVsZRJCCg1ob3R3b3JkX3JlZ2V4",
-            "GAEgASgLMisuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBl",
-            "LlJlZ2V4ElAKCXByb3hpbWl0eRgCIAEoCzI9Lmdvb2dsZS5wcml2YWN5LmRs",
-            "cC52Mi5DdXN0b21JbmZvVHlwZS5EZXRlY3Rpb25SdWxlLlByb3hpbWl0eRJn",
-            "ChVsaWtlbGlob29kX2FkanVzdG1lbnQYAyABKAsySC5nb29nbGUucHJpdmFj",
-            "eS5kbHAudjIuQ3VzdG9tSW5mb1R5cGUuRGV0ZWN0aW9uUnVsZS5MaWtlbGlo",
-            "b29kQWRqdXN0bWVudEIGCgR0eXBlIksKDUV4Y2x1c2lvblR5cGUSHgoaRVhD",
-            "TFVTSU9OX1RZUEVfVU5TUEVDSUZJRUQQABIaChZFWENMVVNJT05fVFlQRV9F",
-            "WENMVURFEAFCBgoEdHlwZSIXCgdGaWVsZElkEgwKBG5hbWUYASABKAkiNwoL",
-            "UGFydGl0aW9uSWQSEgoKcHJvamVjdF9pZBgCIAEoCRIUCgxuYW1lc3BhY2Vf",
-            "aWQYBCABKAkiHgoOS2luZEV4cHJlc3Npb24SDAoEbmFtZRgBIAEoCSKBAQoQ",
-            "RGF0YXN0b3JlT3B0aW9ucxI4CgxwYXJ0aXRpb25faWQYASABKAsyIi5nb29n",
-            "bGUucHJpdmFjeS5kbHAudjIuUGFydGl0aW9uSWQSMwoEa2luZBgCIAEoCzIl",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5LaW5kRXhwcmVzc2lvbiJdChhDbG91",
-            "ZFN0b3JhZ2VSZWdleEZpbGVTZXQSEwoLYnVja2V0X25hbWUYASABKAkSFQoN",
-            "aW5jbHVkZV9yZWdleBgCIAMoCRIVCg1leGNsdWRlX3JlZ2V4GAMgAygJIuwD",
-            "ChNDbG91ZFN0b3JhZ2VPcHRpb25zEkQKCGZpbGVfc2V0GAEgASgLMjIuZ29v",
-            "Z2xlLnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZU9wdGlvbnMuRmlsZVNl",
-            "dBIcChRieXRlc19saW1pdF9wZXJfZmlsZRgEIAEoAxIkChxieXRlc19saW1p",
-            "dF9wZXJfZmlsZV9wZXJjZW50GAggASgFEjMKCmZpbGVfdHlwZXMYBSADKA4y",
-            "Hy5nb29nbGUucHJpdmFjeS5kbHAudjIuRmlsZVR5cGUSTgoNc2FtcGxlX21l",
-            "dGhvZBgGIAEoDjI3Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3Jh",
-            "Z2VPcHRpb25zLlNhbXBsZU1ldGhvZBIbChNmaWxlc19saW1pdF9wZXJjZW50",
-            "GAcgASgFGl8KB0ZpbGVTZXQSCwoDdXJsGAEgASgJEkcKDnJlZ2V4X2ZpbGVf",
-            "c2V0GAIgASgLMi8uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFn",
-            "ZVJlZ2V4RmlsZVNldCJICgxTYW1wbGVNZXRob2QSHQoZU0FNUExFX01FVEhP",
-            "RF9VTlNQRUNJRklFRBAAEgcKA1RPUBABEhAKDFJBTkRPTV9TVEFSVBACIiIK",
-            "E0Nsb3VkU3RvcmFnZUZpbGVTZXQSCwoDdXJsGAEgASgJIiAKEENsb3VkU3Rv",
-            "cmFnZVBhdGgSDAoEcGF0aBgBIAEoCSLEAwoPQmlnUXVlcnlPcHRpb25zEj0K",
-            "D3RhYmxlX3JlZmVyZW5jZRgBIAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52",
-            "Mi5CaWdRdWVyeVRhYmxlEjoKEmlkZW50aWZ5aW5nX2ZpZWxkcxgCIAMoCzIe",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkEhIKCnJvd3NfbGltaXQY",
-            "AyABKAMSGgoScm93c19saW1pdF9wZXJjZW50GAYgASgFEkoKDXNhbXBsZV9t",
-            "ZXRob2QYBCABKA4yMy5nb29nbGUucHJpdmFjeS5kbHAudjIuQmlnUXVlcnlP",
-            "cHRpb25zLlNhbXBsZU1ldGhvZBI3Cg9leGNsdWRlZF9maWVsZHMYBSADKAsy",
-            "Hi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZBI3Cg9pbmNsdWRlZF9m",
-            "aWVsZHMYByADKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZCJI",
-            "CgxTYW1wbGVNZXRob2QSHQoZU0FNUExFX01FVEhPRF9VTlNQRUNJRklFRBAA",
-            "EgcKA1RPUBABEhAKDFJBTkRPTV9TVEFSVBACItoECg1TdG9yYWdlQ29uZmln",
-            "EkQKEWRhdGFzdG9yZV9vcHRpb25zGAIgASgLMicuZ29vZ2xlLnByaXZhY3ku",
-            "ZGxwLnYyLkRhdGFzdG9yZU9wdGlvbnNIABJLChVjbG91ZF9zdG9yYWdlX29w",
-            "dGlvbnMYAyABKAsyKi5nb29nbGUucHJpdmFjeS5kbHAudjIuQ2xvdWRTdG9y",
-            "YWdlT3B0aW9uc0gAEkMKEWJpZ19xdWVyeV9vcHRpb25zGAQgASgLMiYuZ29v",
-            "Z2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5T3B0aW9uc0gAEj4KDmh5YnJp",
-            "ZF9vcHRpb25zGAkgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkh5YnJp",
-            "ZE9wdGlvbnNIABJMCg90aW1lc3Bhbl9jb25maWcYBiABKAsyMy5nb29nbGUu",
-            "cHJpdmFjeS5kbHAudjIuU3RvcmFnZUNvbmZpZy5UaW1lc3BhbkNvbmZpZxra",
-            "AQoOVGltZXNwYW5Db25maWcSLgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEjcKD3RpbWVzdGFtcF9maWVsZBgDIAEo",
-            "CzIeLmdvb2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkEjEKKWVuYWJsZV9h",
-            "dXRvX3BvcHVsYXRpb25fb2ZfdGltZXNwYW5fY29uZmlnGAQgASgIQgYKBHR5",
-            "cGUi9gEKDUh5YnJpZE9wdGlvbnMSEwoLZGVzY3JpcHRpb24YASABKAkSIwob",
-            "cmVxdWlyZWRfZmluZGluZ19sYWJlbF9rZXlzGAIgAygJEkAKBmxhYmVscxgD",
-            "IAMoCzIwLmdvb2dsZS5wcml2YWN5LmRscC52Mi5IeWJyaWRPcHRpb25zLkxh",
-            "YmVsc0VudHJ5EjoKDXRhYmxlX29wdGlvbnMYBCABKAsyIy5nb29nbGUucHJp",
-            "dmFjeS5kbHAudjIuVGFibGVPcHRpb25zGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiYAoLQmlnUXVlcnlLZXkSPQoP",
-            "dGFibGVfcmVmZXJlbmNlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYy",
-            "LkJpZ1F1ZXJ5VGFibGUSEgoKcm93X251bWJlchgCIAEoAyI+CgxEYXRhc3Rv",
-            "cmVLZXkSLgoKZW50aXR5X2tleRgBIAEoCzIaLmdvb2dsZS5wcml2YWN5LmRs",
-            "cC52Mi5LZXkiuwEKA0tleRI4CgxwYXJ0aXRpb25faWQYASABKAsyIi5nb29n",
-            "bGUucHJpdmFjeS5kbHAudjIuUGFydGl0aW9uSWQSNAoEcGF0aBgCIAMoCzIm",
-            "Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5LZXkuUGF0aEVsZW1lbnQaRAoLUGF0",
-            "aEVsZW1lbnQSDAoEa2luZBgBIAEoCRIMCgJpZBgCIAEoA0gAEg4KBG5hbWUY",
-            "AyABKAlIAEIJCgdpZF90eXBlIqEBCglSZWNvcmRLZXkSPAoNZGF0YXN0b3Jl",
-            "X2tleRgCIAEoCzIjLmdvb2dsZS5wcml2YWN5LmRscC52Mi5EYXRhc3RvcmVL",
-            "ZXlIABI7Cg1iaWdfcXVlcnlfa2V5GAMgASgLMiIuZ29vZ2xlLnByaXZhY3ku",
-            "ZGxwLnYyLkJpZ1F1ZXJ5S2V5SAASEQoJaWRfdmFsdWVzGAUgAygJQgYKBHR5",
-            "cGUiSQoNQmlnUXVlcnlUYWJsZRISCgpwcm9qZWN0X2lkGAEgASgJEhIKCmRh",
-            "dGFzZXRfaWQYAiABKAkSEAoIdGFibGVfaWQYAyABKAkicwoNQmlnUXVlcnlG",
-            "aWVsZBIzCgV0YWJsZRgBIAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5C",
-            "aWdRdWVyeVRhYmxlEi0KBWZpZWxkGAIgASgLMh4uZ29vZ2xlLnByaXZhY3ku",
-            "ZGxwLnYyLkZpZWxkSWQiOQoIRW50aXR5SWQSLQoFZmllbGQYASABKAsyHi5n",
-            "b29nbGUucHJpdmFjeS5kbHAudjIuRmllbGRJZCJKCgxUYWJsZU9wdGlvbnMS",
-            "OgoSaWRlbnRpZnlpbmdfZmllbGRzGAEgAygLMh4uZ29vZ2xlLnByaXZhY3ku",
-            "ZGxwLnYyLkZpZWxkSWQqdAoKTGlrZWxpaG9vZBIaChZMSUtFTElIT09EX1VO",
-            "U1BFQ0lGSUVEEAASEQoNVkVSWV9VTkxJS0VMWRABEgwKCFVOTElLRUxZEAIS",
-            "DAoIUE9TU0lCTEUQAxIKCgZMSUtFTFkQBBIPCgtWRVJZX0xJS0VMWRAFKpoB",
-            "CghGaWxlVHlwZRIZChVGSUxFX1RZUEVfVU5TUEVDSUZJRUQQABIPCgtCSU5B",
-            "UllfRklMRRABEg0KCVRFWFRfRklMRRACEgkKBUlNQUdFEAMSCAoEV09SRBAF",
-            "EgcKA1BERhAGEggKBEFWUk8QBxIHCgNDU1YQCBIHCgNUU1YQCRIOCgpQT1dF",
-            "UlBPSU5UEAsSCQoFRVhDRUwQDEKZAQoZY29tLmdvb2dsZS5wcml2YWN5LmRs",
-            "cC52MkIKRGxwU3RvcmFnZVABWiljbG91ZC5nb29nbGUuY29tL2dvL2RscC9h",
-            "cGl2Mi9kbHBwYjtkbHBwYqoCE0dvb2dsZS5DbG91ZC5EbHAuVjLKAhNHb29n",
-            "bGVcQ2xvdWRcRGxwXFYy6gIWR29vZ2xlOjpDbG91ZDo6RGxwOjpWMmIGcHJv",
-            "dG8z"));
+            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIm0KCEluZm9UeXBlEgwK",
+            "BG5hbWUYASABKAkSDwoHdmVyc2lvbhgCIAEoCRJCChFzZW5zaXRpdml0eV9z",
+            "Y29yZRgDIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5TZW5zaXRpdml0",
+            "eVNjb3JlIvsBChBTZW5zaXRpdml0eVNjb3JlEkwKBXNjb3JlGAEgASgOMj0u",
+            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyLlNlbnNpdGl2aXR5U2NvcmUuU2Vuc2l0",
+            "aXZpdHlTY29yZUxldmVsIpgBChVTZW5zaXRpdml0eVNjb3JlTGV2ZWwSIQod",
+            "U0VOU0lUSVZJVFlfU0NPUkVfVU5TUEVDSUZJRUQQABITCg9TRU5TSVRJVklU",
+            "WV9MT1cQChIXChNTRU5TSVRJVklUWV9VTktOT1dOEAwSGAoUU0VOU0lUSVZJ",
+            "VFlfTU9ERVJBVEUQFBIUChBTRU5TSVRJVklUWV9ISUdIEB4iSwoKU3RvcmVk",
+            "VHlwZRIMCgRuYW1lGAEgASgJEi8KC2NyZWF0ZV90aW1lGAIgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCKMDAoOQ3VzdG9tSW5mb1R5cGUSMgoJ",
+            "aW5mb190eXBlGAEgASgLMh8uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkluZm9U",
+            "eXBlEjUKCmxpa2VsaWhvb2QYBiABKA4yIS5nb29nbGUucHJpdmFjeS5kbHAu",
+            "djIuTGlrZWxpaG9vZBJGCgpkaWN0aW9uYXJ5GAIgASgLMjAuZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLkRpY3Rpb25hcnlIABI8CgVy",
+            "ZWdleBgDIAEoCzIrLmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZv",
+            "VHlwZS5SZWdleEgAEk0KDnN1cnJvZ2F0ZV90eXBlGAQgASgLMjMuZ29vZ2xl",
+            "LnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLlN1cnJvZ2F0ZVR5cGVI",
+            "ABI4CgtzdG9yZWRfdHlwZRgFIAEoCzIhLmdvb2dsZS5wcml2YWN5LmRscC52",
+            "Mi5TdG9yZWRUeXBlSAASTAoPZGV0ZWN0aW9uX3J1bGVzGAcgAygLMjMuZ29v",
+            "Z2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLkRldGVjdGlvblJ1",
+            "bGUSSwoOZXhjbHVzaW9uX3R5cGUYCCABKA4yMy5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjIuQ3VzdG9tSW5mb1R5cGUuRXhjbHVzaW9uVHlwZRJCChFzZW5zaXRp",
+            "dml0eV9zY29yZRgJIAEoCzInLmdvb2dsZS5wcml2YWN5LmRscC52Mi5TZW5z",
+            "aXRpdml0eVNjb3JlGsgBCgpEaWN0aW9uYXJ5Ek4KCXdvcmRfbGlzdBgBIAEo",
+            "CzI5Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlwZS5EaWN0",
+            "aW9uYXJ5LldvcmRMaXN0SAASRQoSY2xvdWRfc3RvcmFnZV9wYXRoGAMgASgL",
+            "MicuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZVBhdGhIABoZ",
+            "CghXb3JkTGlzdBINCgV3b3JkcxgBIAMoCUIICgZzb3VyY2UaLwoFUmVnZXgS",
+            "DwoHcGF0dGVybhgBIAEoCRIVCg1ncm91cF9pbmRleGVzGAIgAygFGg8KDVN1",
+            "cnJvZ2F0ZVR5cGUavgQKDURldGVjdGlvblJ1bGUSVwoMaG90d29yZF9ydWxl",
+            "GAEgASgLMj8uZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBl",
+            "LkRldGVjdGlvblJ1bGUuSG90d29yZFJ1bGVIABo4CglQcm94aW1pdHkSFQoN",
+            "d2luZG93X2JlZm9yZRgBIAEoBRIUCgx3aW5kb3dfYWZ0ZXIYAiABKAUaggEK",
+            "FExpa2VsaWhvb2RBZGp1c3RtZW50Ej0KEGZpeGVkX2xpa2VsaWhvb2QYASAB",
+            "KA4yIS5nb29nbGUucHJpdmFjeS5kbHAudjIuTGlrZWxpaG9vZEgAEh0KE3Jl",
+            "bGF0aXZlX2xpa2VsaWhvb2QYAiABKAVIAEIMCgphZGp1c3RtZW50GowCCgtI",
+            "b3R3b3JkUnVsZRJCCg1ob3R3b3JkX3JlZ2V4GAEgASgLMisuZ29vZ2xlLnBy",
+            "aXZhY3kuZGxwLnYyLkN1c3RvbUluZm9UeXBlLlJlZ2V4ElAKCXByb3hpbWl0",
+            "eRgCIAEoCzI9Lmdvb2dsZS5wcml2YWN5LmRscC52Mi5DdXN0b21JbmZvVHlw",
+            "ZS5EZXRlY3Rpb25SdWxlLlByb3hpbWl0eRJnChVsaWtlbGlob29kX2FkanVz",
+            "dG1lbnQYAyABKAsySC5nb29nbGUucHJpdmFjeS5kbHAudjIuQ3VzdG9tSW5m",
+            "b1R5cGUuRGV0ZWN0aW9uUnVsZS5MaWtlbGlob29kQWRqdXN0bWVudEIGCgR0",
+            "eXBlIksKDUV4Y2x1c2lvblR5cGUSHgoaRVhDTFVTSU9OX1RZUEVfVU5TUEVD",
+            "SUZJRUQQABIaChZFWENMVVNJT05fVFlQRV9FWENMVURFEAFCBgoEdHlwZSIX",
+            "CgdGaWVsZElkEgwKBG5hbWUYASABKAkiNwoLUGFydGl0aW9uSWQSEgoKcHJv",
+            "amVjdF9pZBgCIAEoCRIUCgxuYW1lc3BhY2VfaWQYBCABKAkiHgoOS2luZEV4",
+            "cHJlc3Npb24SDAoEbmFtZRgBIAEoCSKBAQoQRGF0YXN0b3JlT3B0aW9ucxI4",
+            "CgxwYXJ0aXRpb25faWQYASABKAsyIi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "UGFydGl0aW9uSWQSMwoEa2luZBgCIAEoCzIlLmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52Mi5LaW5kRXhwcmVzc2lvbiJdChhDbG91ZFN0b3JhZ2VSZWdleEZpbGVT",
+            "ZXQSEwoLYnVja2V0X25hbWUYASABKAkSFQoNaW5jbHVkZV9yZWdleBgCIAMo",
+            "CRIVCg1leGNsdWRlX3JlZ2V4GAMgAygJIuwDChNDbG91ZFN0b3JhZ2VPcHRp",
+            "b25zEkQKCGZpbGVfc2V0GAEgASgLMjIuZ29vZ2xlLnByaXZhY3kuZGxwLnYy",
+            "LkNsb3VkU3RvcmFnZU9wdGlvbnMuRmlsZVNldBIcChRieXRlc19saW1pdF9w",
+            "ZXJfZmlsZRgEIAEoAxIkChxieXRlc19saW1pdF9wZXJfZmlsZV9wZXJjZW50",
+            "GAggASgFEjMKCmZpbGVfdHlwZXMYBSADKA4yHy5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjIuRmlsZVR5cGUSTgoNc2FtcGxlX21ldGhvZBgGIAEoDjI3Lmdvb2ds",
+            "ZS5wcml2YWN5LmRscC52Mi5DbG91ZFN0b3JhZ2VPcHRpb25zLlNhbXBsZU1l",
+            "dGhvZBIbChNmaWxlc19saW1pdF9wZXJjZW50GAcgASgFGl8KB0ZpbGVTZXQS",
+            "CwoDdXJsGAEgASgJEkcKDnJlZ2V4X2ZpbGVfc2V0GAIgASgLMi8uZ29vZ2xl",
+            "LnByaXZhY3kuZGxwLnYyLkNsb3VkU3RvcmFnZVJlZ2V4RmlsZVNldCJICgxT",
+            "YW1wbGVNZXRob2QSHQoZU0FNUExFX01FVEhPRF9VTlNQRUNJRklFRBAAEgcK",
+            "A1RPUBABEhAKDFJBTkRPTV9TVEFSVBACIiIKE0Nsb3VkU3RvcmFnZUZpbGVT",
+            "ZXQSCwoDdXJsGAEgASgJIiAKEENsb3VkU3RvcmFnZVBhdGgSDAoEcGF0aBgB",
+            "IAEoCSLEAwoPQmlnUXVlcnlPcHRpb25zEj0KD3RhYmxlX3JlZmVyZW5jZRgB",
+            "IAEoCzIkLmdvb2dsZS5wcml2YWN5LmRscC52Mi5CaWdRdWVyeVRhYmxlEjoK",
+            "EmlkZW50aWZ5aW5nX2ZpZWxkcxgCIAMoCzIeLmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52Mi5GaWVsZElkEhIKCnJvd3NfbGltaXQYAyABKAMSGgoScm93c19saW1p",
+            "dF9wZXJjZW50GAYgASgFEkoKDXNhbXBsZV9tZXRob2QYBCABKA4yMy5nb29n",
+            "bGUucHJpdmFjeS5kbHAudjIuQmlnUXVlcnlPcHRpb25zLlNhbXBsZU1ldGhv",
+            "ZBI3Cg9leGNsdWRlZF9maWVsZHMYBSADKAsyHi5nb29nbGUucHJpdmFjeS5k",
+            "bHAudjIuRmllbGRJZBI3Cg9pbmNsdWRlZF9maWVsZHMYByADKAsyHi5nb29n",
+            "bGUucHJpdmFjeS5kbHAudjIuRmllbGRJZCJICgxTYW1wbGVNZXRob2QSHQoZ",
+            "U0FNUExFX01FVEhPRF9VTlNQRUNJRklFRBAAEgcKA1RPUBABEhAKDFJBTkRP",
+            "TV9TVEFSVBACItoECg1TdG9yYWdlQ29uZmlnEkQKEWRhdGFzdG9yZV9vcHRp",
+            "b25zGAIgASgLMicuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkRhdGFzdG9yZU9w",
+            "dGlvbnNIABJLChVjbG91ZF9zdG9yYWdlX29wdGlvbnMYAyABKAsyKi5nb29n",
+            "bGUucHJpdmFjeS5kbHAudjIuQ2xvdWRTdG9yYWdlT3B0aW9uc0gAEkMKEWJp",
+            "Z19xdWVyeV9vcHRpb25zGAQgASgLMiYuZ29vZ2xlLnByaXZhY3kuZGxwLnYy",
+            "LkJpZ1F1ZXJ5T3B0aW9uc0gAEj4KDmh5YnJpZF9vcHRpb25zGAkgASgLMiQu",
+            "Z29vZ2xlLnByaXZhY3kuZGxwLnYyLkh5YnJpZE9wdGlvbnNIABJMCg90aW1l",
+            "c3Bhbl9jb25maWcYBiABKAsyMy5nb29nbGUucHJpdmFjeS5kbHAudjIuU3Rv",
+            "cmFnZUNvbmZpZy5UaW1lc3BhbkNvbmZpZxraAQoOVGltZXNwYW5Db25maWcS",
+            "LgoKc3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEjcKD3RpbWVzdGFtcF9maWVsZBgDIAEoCzIeLmdvb2dsZS5wcml2YWN5",
+            "LmRscC52Mi5GaWVsZElkEjEKKWVuYWJsZV9hdXRvX3BvcHVsYXRpb25fb2Zf",
+            "dGltZXNwYW5fY29uZmlnGAQgASgIQgYKBHR5cGUi9gEKDUh5YnJpZE9wdGlv",
+            "bnMSEwoLZGVzY3JpcHRpb24YASABKAkSIwobcmVxdWlyZWRfZmluZGluZ19s",
+            "YWJlbF9rZXlzGAIgAygJEkAKBmxhYmVscxgDIAMoCzIwLmdvb2dsZS5wcml2",
+            "YWN5LmRscC52Mi5IeWJyaWRPcHRpb25zLkxhYmVsc0VudHJ5EjoKDXRhYmxl",
+            "X29wdGlvbnMYBCABKAsyIy5nb29nbGUucHJpdmFjeS5kbHAudjIuVGFibGVP",
+            "cHRpb25zGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAEiYAoLQmlnUXVlcnlLZXkSPQoPdGFibGVfcmVmZXJlbmNlGAEg",
+            "ASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5VGFibGUSEgoK",
+            "cm93X251bWJlchgCIAEoAyI+CgxEYXRhc3RvcmVLZXkSLgoKZW50aXR5X2tl",
+            "eRgBIAEoCzIaLmdvb2dsZS5wcml2YWN5LmRscC52Mi5LZXkiuwEKA0tleRI4",
+            "CgxwYXJ0aXRpb25faWQYASABKAsyIi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "UGFydGl0aW9uSWQSNAoEcGF0aBgCIAMoCzImLmdvb2dsZS5wcml2YWN5LmRs",
+            "cC52Mi5LZXkuUGF0aEVsZW1lbnQaRAoLUGF0aEVsZW1lbnQSDAoEa2luZBgB",
+            "IAEoCRIMCgJpZBgCIAEoA0gAEg4KBG5hbWUYAyABKAlIAEIJCgdpZF90eXBl",
+            "IqEBCglSZWNvcmRLZXkSPAoNZGF0YXN0b3JlX2tleRgCIAEoCzIjLmdvb2ds",
+            "ZS5wcml2YWN5LmRscC52Mi5EYXRhc3RvcmVLZXlIABI7Cg1iaWdfcXVlcnlf",
+            "a2V5GAMgASgLMiIuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5S2V5",
+            "SAASEQoJaWRfdmFsdWVzGAUgAygJQgYKBHR5cGUiSQoNQmlnUXVlcnlUYWJs",
+            "ZRISCgpwcm9qZWN0X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEAoI",
+            "dGFibGVfaWQYAyABKAkiNgoOVGFibGVSZWZlcmVuY2USEgoKZGF0YXNldF9p",
+            "ZBgBIAEoCRIQCgh0YWJsZV9pZBgCIAEoCSJzCg1CaWdRdWVyeUZpZWxkEjMK",
+            "BXRhYmxlGAEgASgLMiQuZ29vZ2xlLnByaXZhY3kuZGxwLnYyLkJpZ1F1ZXJ5",
+            "VGFibGUSLQoFZmllbGQYAiABKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "RmllbGRJZCI5CghFbnRpdHlJZBItCgVmaWVsZBgBIAEoCzIeLmdvb2dsZS5w",
+            "cml2YWN5LmRscC52Mi5GaWVsZElkIkoKDFRhYmxlT3B0aW9ucxI6ChJpZGVu",
+            "dGlmeWluZ19maWVsZHMYASADKAsyHi5nb29nbGUucHJpdmFjeS5kbHAudjIu",
+            "RmllbGRJZCp0CgpMaWtlbGlob29kEhoKFkxJS0VMSUhPT0RfVU5TUEVDSUZJ",
+            "RUQQABIRCg1WRVJZX1VOTElLRUxZEAESDAoIVU5MSUtFTFkQAhIMCghQT1NT",
+            "SUJMRRADEgoKBkxJS0VMWRAEEg8KC1ZFUllfTElLRUxZEAUqmgEKCEZpbGVU",
+            "eXBlEhkKFUZJTEVfVFlQRV9VTlNQRUNJRklFRBAAEg8KC0JJTkFSWV9GSUxF",
+            "EAESDQoJVEVYVF9GSUxFEAISCQoFSU1BR0UQAxIICgRXT1JEEAUSBwoDUERG",
+            "EAYSCAoEQVZSTxAHEgcKA0NTVhAIEgcKA1RTVhAJEg4KClBPV0VSUE9JTlQQ",
+            "CxIJCgVFWENFTBAMQpkBChljb20uZ29vZ2xlLnByaXZhY3kuZGxwLnYyQgpE",
+            "bHBTdG9yYWdlUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28vZGxwL2FwaXYyL2Rs",
+            "cHBiO2RscHBiqgITR29vZ2xlLkNsb3VkLkRscC5WMsoCE0dvb2dsZVxDbG91",
+            "ZFxEbHBcVjLqAhZHb29nbGU6OkNsb3VkOjpEbHA6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoType), global::Google.Cloud.Dlp.V2.InfoType.Parser, new[]{ "Name", "Version" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.InfoType), global::Google.Cloud.Dlp.V2.InfoType.Parser, new[]{ "Name", "Version", "SensitivityScore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.SensitivityScore), global::Google.Cloud.Dlp.V2.SensitivityScore.Parser, new[]{ "Score" }, null, new[]{ typeof(global::Google.Cloud.Dlp.V2.SensitivityScore.Types.SensitivityScoreLevel) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.StoredType), global::Google.Cloud.Dlp.V2.StoredType.Parser, new[]{ "Name", "CreateTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "StoredType", "DetectionRules", "ExclusionType" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType), global::Google.Cloud.Dlp.V2.CustomInfoType.Parser, new[]{ "InfoType", "Likelihood", "Dictionary", "Regex", "SurrogateType", "StoredType", "DetectionRules", "ExclusionType", "SensitivityScore" }, new[]{ "Type" }, new[]{ typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Parser, new[]{ "WordList", "CloudStoragePath" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary.Types.WordList.Parser, new[]{ "Words" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex.Parser, new[]{ "Pattern", "GroupIndexes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.SurrogateType.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Parser, new[]{ "HotwordRule" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity), global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.Proximity.Parser, new[]{ "WindowBefore", "WindowAfter" }, null, null, null, null),
@@ -174,6 +178,7 @@ namespace Google.Cloud.Dlp.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Key), global::Google.Cloud.Dlp.V2.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.Key.Types.PathElement), global::Google.Cloud.Dlp.V2.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.RecordKey), global::Google.Cloud.Dlp.V2.RecordKey.Parser, new[]{ "DatastoreKey", "BigQueryKey", "IdValues" }, new[]{ "Type" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryTable), global::Google.Cloud.Dlp.V2.BigQueryTable.Parser, new[]{ "ProjectId", "DatasetId", "TableId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TableReference), global::Google.Cloud.Dlp.V2.TableReference.Parser, new[]{ "DatasetId", "TableId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.BigQueryField), global::Google.Cloud.Dlp.V2.BigQueryField.Parser, new[]{ "Table", "Field" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.EntityId), global::Google.Cloud.Dlp.V2.EntityId.Parser, new[]{ "Field" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dlp.V2.TableOptions), global::Google.Cloud.Dlp.V2.TableOptions.Parser, new[]{ "IdentifyingFields" }, null, null, null, null)
@@ -184,8 +189,21 @@ namespace Google.Cloud.Dlp.V2 {
   }
   #region Enums
   /// <summary>
-  /// Categorization of results based on how likely they are to represent a match,
-  /// based on the number of elements they contain which imply a match.
+  /// Coarse-grained confidence level of how well a particular finding
+  /// satisfies the criteria to match a particular infoType.
+  ///
+  /// Likelihood is calculated based on the number of signals a
+  /// finding has that implies that the finding matches the infoType. For
+  /// example, a string that has an '@' and a '.com' is more likely to be a
+  /// match for an email address than a string that only has an '@'.
+  ///
+  /// In general, the highest likelihood level has the strongest signals that
+  /// indicate a match. That is, a finding with a high likelihood has a low chance
+  /// of being a false positive.
+  ///
+  /// For more information about each likelihood level
+  /// and how likelihood works, see [Match
+  /// likelihood](https://cloud.google.com/sensitive-data-protection/docs/likelihood).
   /// </summary>
   public enum Likelihood {
     /// <summary>
@@ -193,17 +211,23 @@ namespace Google.Cloud.Dlp.V2 {
     /// </summary>
     [pbr::OriginalName("LIKELIHOOD_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Few matching elements.
+    /// Highest chance of a false positive.
     /// </summary>
     [pbr::OriginalName("VERY_UNLIKELY")] VeryUnlikely = 1,
+    /// <summary>
+    /// High chance of a false positive.
+    /// </summary>
     [pbr::OriginalName("UNLIKELY")] Unlikely = 2,
     /// <summary>
-    /// Some matching elements.
+    /// Some matching signals. The default value.
     /// </summary>
     [pbr::OriginalName("POSSIBLE")] Possible = 3,
+    /// <summary>
+    /// Low chance of a false positive.
+    /// </summary>
     [pbr::OriginalName("LIKELY")] Likely = 4,
     /// <summary>
-    /// Many matching elements.
+    /// Confidence level is high. Lowest chance of a false positive.
     /// </summary>
     [pbr::OriginalName("VERY_LIKELY")] VeryLikely = 5,
   }
@@ -222,7 +246,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// scanning attempts to convert the content of the file to utf_8 to scan
     /// the file.
     /// If you wish to avoid this fall back, specify one or more of the other
-    /// FileType's in your storage scan.
+    /// file types in your storage scan.
     /// </summary>
     [pbr::OriginalName("BINARY_FILE")] BinaryFile = 1,
     /// <summary>
@@ -231,27 +255,33 @@ namespace Google.Cloud.Dlp.V2 {
     ///   dat, dot, eml,, epbub, ged, go, h, hh, hpp, hxx, h++, hs, html, htm,
     ///   mkd, markdown, m, ml, mli, perl, pl, plist, pm, php, phtml, pht,
     ///   properties, py, pyw, rb, rbw, rs, rss,  rc, scala, sh, sql, swift, tex,
-    ///   shtml, shtm, xhtml, lhs, ics, ini, java, js, json, kix, kml, ocaml, md,
-    ///   txt, text, tsv, vb, vcard, vcs, wml, xcodeproj, xml, xsl, xsd, yml, yaml.
+    ///   shtml, shtm, xhtml, lhs, ics, ini, java, js, json, jsonl, kix, kml,
+    ///   ocaml, md, txt, text, tsv, vb, vcard, vcs, wml, xcodeproj, xml, xsl, xsd,
+    ///   yml, yaml.
     /// </summary>
     [pbr::OriginalName("TEXT_FILE")] TextFile = 2,
     /// <summary>
     /// Included file extensions:
-    ///   bmp, gif, jpg, jpeg, jpe, png.
-    /// bytes_limit_per_file has no effect on image files.
-    /// Image inspection is restricted to 'global', 'us', 'asia', and 'europe'.
+    ///   bmp, gif, jpg, jpeg, jpe, png. Setting
+    /// [bytes_limit_per_file][google.privacy.dlp.v2.CloudStorageOptions.bytes_limit_per_file]
+    /// or
+    /// [bytes_limit_per_file_percent][google.privacy.dlp.v2.CloudStorageOptions.bytes_limit_per_file]
+    /// has no effect on image files. Image inspection is restricted to the
+    /// `global`, `us`, `asia`, and `europe` regions.
     /// </summary>
     [pbr::OriginalName("IMAGE")] Image = 3,
     /// <summary>
-    /// Word files >30 MB will be scanned as binary files.
+    /// Microsoft Word files larger than 30 MB will be scanned as binary files.
     /// Included file extensions:
-    ///   docx, dotx, docm, dotm
+    ///   docx, dotx, docm, dotm. Setting `bytes_limit_per_file` or
+    ///   `bytes_limit_per_file_percent` has no effect on Word files.
     /// </summary>
     [pbr::OriginalName("WORD")] Word = 5,
     /// <summary>
-    /// PDF files >30 MB will be scanned as binary files.
+    /// PDF files larger than 30 MB will be scanned as binary files.
     /// Included file extensions:
-    ///   pdf
+    ///   pdf. Setting `bytes_limit_per_file` or `bytes_limit_per_file_percent`
+    /// has no effect on PDF files.
     /// </summary>
     [pbr::OriginalName("PDF")] Pdf = 6,
     /// <summary>
@@ -270,15 +300,17 @@ namespace Google.Cloud.Dlp.V2 {
     /// </summary>
     [pbr::OriginalName("TSV")] Tsv = 9,
     /// <summary>
-    /// Powerpoint files >30 MB will be scanned as binary files.
-    /// Included file extensions:
-    ///   pptx, pptm, potx, potm, pot
+    /// Microsoft PowerPoint files larger than 30 MB will be scanned as binary
+    /// files. Included file extensions:
+    ///   pptx, pptm, potx, potm, pot. Setting `bytes_limit_per_file` or
+    ///   `bytes_limit_per_file_percent` has no effect on PowerPoint files.
     /// </summary>
     [pbr::OriginalName("POWERPOINT")] Powerpoint = 11,
     /// <summary>
-    /// Excel files >30 MB will be scanned as binary files.
+    /// Microsoft Excel files larger than 30 MB will be scanned as binary files.
     /// Included file extensions:
-    ///   xlsx, xlsm, xltx, xltm
+    ///   xlsx, xlsm, xltx, xltm. Setting `bytes_limit_per_file` or
+    ///   `bytes_limit_per_file_percent` has no effect on Excel files.
     /// </summary>
     [pbr::OriginalName("EXCEL")] Excel = 12,
   }
@@ -289,6 +321,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Type of information detected by the API.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InfoType : pb::IMessage<InfoType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -325,6 +358,7 @@ namespace Google.Cloud.Dlp.V2 {
     public InfoType(InfoType other) : this() {
       name_ = other.name_;
       version_ = other.version_;
+      sensitivityScore_ = other.sensitivityScore_ != null ? other.sensitivityScore_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -340,9 +374,11 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// Name of the information type. Either a name of your choosing when
     /// creating a CustomInfoType, or one of the names listed
-    /// at https://cloud.google.com/dlp/docs/infotypes-reference when specifying
-    /// a built-in type.  When sending Cloud DLP results to Data Catalog, infoType
-    /// names should conform to the pattern `[A-Za-z0-9$_-]{1,64}`.
+    /// at
+    /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
+    /// when specifying a built-in type.  When sending Cloud DLP results to Data
+    /// Catalog, infoType names should conform to the pattern
+    /// `[A-Za-z0-9$_-]{1,64}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -368,6 +404,22 @@ namespace Google.Cloud.Dlp.V2 {
       }
     }
 
+    /// <summary>Field number for the "sensitivity_score" field.</summary>
+    public const int SensitivityScoreFieldNumber = 3;
+    private global::Google.Cloud.Dlp.V2.SensitivityScore sensitivityScore_;
+    /// <summary>
+    /// Optional custom sensitivity for this InfoType.
+    /// This only applies to data profiling.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dlp.V2.SensitivityScore SensitivityScore {
+      get { return sensitivityScore_; }
+      set {
+        sensitivityScore_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -385,6 +437,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (Name != other.Name) return false;
       if (Version != other.Version) return false;
+      if (!object.Equals(SensitivityScore, other.SensitivityScore)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -394,6 +447,7 @@ namespace Google.Cloud.Dlp.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (sensitivityScore_ != null) hash ^= SensitivityScore.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -420,6 +474,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(18);
         output.WriteString(Version);
       }
+      if (sensitivityScore_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SensitivityScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -438,6 +496,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(18);
         output.WriteString(Version);
       }
+      if (sensitivityScore_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SensitivityScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -453,6 +515,9 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (Version.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (sensitivityScore_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SensitivityScore);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -471,6 +536,12 @@ namespace Google.Cloud.Dlp.V2 {
       }
       if (other.Version.Length != 0) {
         Version = other.Version;
+      }
+      if (other.sensitivityScore_ != null) {
+        if (sensitivityScore_ == null) {
+          SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
+        }
+        SensitivityScore.MergeFrom(other.SensitivityScore);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -493,6 +564,13 @@ namespace Google.Cloud.Dlp.V2 {
           }
           case 18: {
             Version = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (sensitivityScore_ == null) {
+              SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
+            }
+            input.ReadMessage(SensitivityScore);
             break;
           }
         }
@@ -518,6 +596,13 @@ namespace Google.Cloud.Dlp.V2 {
             Version = input.ReadString();
             break;
           }
+          case 26: {
+            if (sensitivityScore_ == null) {
+              SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
+            }
+            input.ReadMessage(SensitivityScore);
+            break;
+          }
         }
       }
     }
@@ -526,9 +611,10 @@ namespace Google.Cloud.Dlp.V2 {
   }
 
   /// <summary>
-  /// Score is a summary of all elements in the data profile.
-  /// A higher number means more sensitive.
+  /// Score is calculated from of all elements in the data profile.
+  /// A higher level means the data is more sensitive.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SensitivityScore : pb::IMessage<SensitivityScore>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -577,7 +663,7 @@ namespace Google.Cloud.Dlp.V2 {
     public const int ScoreFieldNumber = 1;
     private global::Google.Cloud.Dlp.V2.SensitivityScore.Types.SensitivityScoreLevel score_ = global::Google.Cloud.Dlp.V2.SensitivityScore.Types.SensitivityScoreLevel.SensitivityScoreUnspecified;
     /// <summary>
-    /// The score applied to the resource.
+    /// The sensitivity score applied to the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -725,7 +811,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Various score levels for resources.
+      /// Various sensitivity score levels for resources.
       /// </summary>
       public enum SensitivityScoreLevel {
         /// <summary>
@@ -733,19 +819,26 @@ namespace Google.Cloud.Dlp.V2 {
         /// </summary>
         [pbr::OriginalName("SENSITIVITY_SCORE_UNSPECIFIED")] SensitivityScoreUnspecified = 0,
         /// <summary>
-        /// No sensitive information detected. Limited access.
+        /// No sensitive information detected. The resource isn't publicly
+        /// accessible.
         /// </summary>
         [pbr::OriginalName("SENSITIVITY_LOW")] SensitivityLow = 10,
         /// <summary>
-        /// Medium risk - PII, potentially sensitive data, or fields with free-text
-        /// data that are at higher risk of having intermittent sensitive data.
-        /// Consider limiting access.
+        /// Unable to determine sensitivity.
+        /// </summary>
+        [pbr::OriginalName("SENSITIVITY_UNKNOWN")] SensitivityUnknown = 12,
+        /// <summary>
+        /// Medium risk. Contains personally identifiable information (PII),
+        /// potentially sensitive data, or fields with free-text data that are at a
+        /// higher risk of having intermittent sensitive data. Consider limiting
+        /// access.
         /// </summary>
         [pbr::OriginalName("SENSITIVITY_MODERATE")] SensitivityModerate = 20,
         /// <summary>
-        /// High risk – SPII may be present. Exfiltration of data may lead to user
-        /// data loss. Re-identification of users may be possible. Consider limiting
-        /// usage and or removing SPII.
+        /// High risk. Sensitive personally identifiable information (SPII) can be
+        /// present. Exfiltration of data can lead to user data loss.
+        /// Re-identification of users might be possible. Consider limiting usage and
+        /// or removing SPII.
         /// </summary>
         [pbr::OriginalName("SENSITIVITY_HIGH")] SensitivityHigh = 30,
       }
@@ -758,6 +851,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// A reference to a StoredInfoType to use with scanning.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StoredType : pb::IMessage<StoredType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1006,6 +1100,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// Custom information type provided by the user. Used to find domain-specific
   /// sensitive information configurable to the data in question.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomInfoType : pb::IMessage<CustomInfoType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1044,6 +1139,7 @@ namespace Google.Cloud.Dlp.V2 {
       likelihood_ = other.likelihood_;
       detectionRules_ = other.detectionRules_.Clone();
       exclusionType_ = other.exclusionType_;
+      sensitivityScore_ = other.sensitivityScore_ != null ? other.sensitivityScore_.Clone() : null;
       switch (other.TypeCase) {
         case TypeOneofCase.Dictionary:
           Dictionary = other.Dictionary.Clone();
@@ -1199,6 +1295,25 @@ namespace Google.Cloud.Dlp.V2 {
       }
     }
 
+    /// <summary>Field number for the "sensitivity_score" field.</summary>
+    public const int SensitivityScoreFieldNumber = 9;
+    private global::Google.Cloud.Dlp.V2.SensitivityScore sensitivityScore_;
+    /// <summary>
+    /// Sensitivity for this CustomInfoType. If this CustomInfoType extends an
+    /// existing InfoType, the sensitivity here will take precedence over that of
+    /// the original InfoType. If unset for a CustomInfoType, it will default to
+    /// HIGH.
+    /// This only applies to data profiling.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dlp.V2.SensitivityScore SensitivityScore {
+      get { return sensitivityScore_; }
+      set {
+        sensitivityScore_ = value;
+      }
+    }
+
     private object type_;
     /// <summary>Enum of possible cases for the "type" oneof.</summary>
     public enum TypeOneofCase {
@@ -1245,6 +1360,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (!object.Equals(StoredType, other.StoredType)) return false;
       if(!detectionRules_.Equals(other.detectionRules_)) return false;
       if (ExclusionType != other.ExclusionType) return false;
+      if (!object.Equals(SensitivityScore, other.SensitivityScore)) return false;
       if (TypeCase != other.TypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1261,6 +1377,7 @@ namespace Google.Cloud.Dlp.V2 {
       if (typeCase_ == TypeOneofCase.StoredType) hash ^= StoredType.GetHashCode();
       hash ^= detectionRules_.GetHashCode();
       if (ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) hash ^= ExclusionType.GetHashCode();
+      if (sensitivityScore_ != null) hash ^= SensitivityScore.GetHashCode();
       hash ^= (int) typeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1309,6 +1426,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(64);
         output.WriteEnum((int) ExclusionType);
       }
+      if (sensitivityScore_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SensitivityScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1348,6 +1469,10 @@ namespace Google.Cloud.Dlp.V2 {
         output.WriteRawTag(64);
         output.WriteEnum((int) ExclusionType);
       }
+      if (sensitivityScore_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SensitivityScore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1380,6 +1505,9 @@ namespace Google.Cloud.Dlp.V2 {
       if (ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExclusionType);
       }
+      if (sensitivityScore_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SensitivityScore);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1404,6 +1532,12 @@ namespace Google.Cloud.Dlp.V2 {
       detectionRules_.Add(other.detectionRules_);
       if (other.ExclusionType != global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType.Unspecified) {
         ExclusionType = other.ExclusionType;
+      }
+      if (other.sensitivityScore_ != null) {
+        if (sensitivityScore_ == null) {
+          SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
+        }
+        SensitivityScore.MergeFrom(other.SensitivityScore);
       }
       switch (other.TypeCase) {
         case TypeOneofCase.Dictionary:
@@ -1502,6 +1636,13 @@ namespace Google.Cloud.Dlp.V2 {
             ExclusionType = (global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) input.ReadEnum();
             break;
           }
+          case 74: {
+            if (sensitivityScore_ == null) {
+              SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
+            }
+            input.ReadMessage(SensitivityScore);
+            break;
+          }
         }
       }
     #endif
@@ -1572,6 +1713,13 @@ namespace Google.Cloud.Dlp.V2 {
             ExclusionType = (global::Google.Cloud.Dlp.V2.CustomInfoType.Types.ExclusionType) input.ReadEnum();
             break;
           }
+          case 74: {
+            if (sensitivityScore_ == null) {
+              SensitivityScore = new global::Google.Cloud.Dlp.V2.SensitivityScore();
+            }
+            input.ReadMessage(SensitivityScore);
+            break;
+          }
         }
       }
     }
@@ -1582,6 +1730,9 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Type of exclusion rule.
+      /// </summary>
       public enum ExclusionType {
         /// <summary>
         /// A finding of this custom info type will not be excluded from results.
@@ -1614,11 +1765,12 @@ namespace Google.Cloud.Dlp.V2 {
       /// Dictionary words containing a large number of characters that are not
       /// letters or digits may result in unexpected findings because such characters
       /// are treated as whitespace. The
-      /// [limits](https://cloud.google.com/dlp/limits) page contains details about
-      /// the size limits of dictionaries. For dictionaries that do not fit within
-      /// these constraints, consider using `LargeCustomDictionaryConfig` in the
-      /// `StoredInfoType` API.
+      /// [limits](https://cloud.google.com/sensitive-data-protection/limits) page
+      /// contains details about the size limits of dictionaries. For dictionaries
+      /// that do not fit within these constraints, consider using
+      /// `LargeCustomDictionaryConfig` in the `StoredInfoType` API.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Dictionary : pb::IMessage<Dictionary>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1917,6 +2069,7 @@ namespace Google.Cloud.Dlp.V2 {
           /// <summary>
           /// Message defining a list of words or phrases to search for in the data.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class WordList : pb::IMessage<WordList>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2108,6 +2261,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Message defining a custom regular expression.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Regex : pb::IMessage<Regex>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2337,13 +2491,14 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Message for detecting output from deidentification transformations
       /// such as
-      /// [`CryptoReplaceFfxFpeConfig`](https://cloud.google.com/dlp/docs/reference/rest/v2/organizations.deidentifyTemplates#cryptoreplaceffxfpeconfig).
+      /// [`CryptoReplaceFfxFpeConfig`](https://cloud.google.com/sensitive-data-protection/docs/reference/rest/v2/organizations.deidentifyTemplates#cryptoreplaceffxfpeconfig).
       /// These types of transformations are
       /// those that perform pseudonymization, thereby producing a "surrogate" as
       /// output. This should be used in conjunction with a field on the
       /// transformation such as `surrogate_info_type`. This CustomInfoType does
       /// not support the use of `detection_rules`.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class SurrogateType : pb::IMessage<SurrogateType>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2502,6 +2657,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// on the specific details of the rule. Not supported for the `surrogate_type`
       /// custom infoType.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DetectionRule : pb::IMessage<DetectionRule>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2744,6 +2900,7 @@ namespace Google.Cloud.Dlp.V2 {
           /// Message for specifying a window around a finding to apply a detection
           /// rule.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Proximity : pb::IMessage<Proximity>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -2797,7 +2954,7 @@ namespace Google.Cloud.Dlp.V2 {
             /// if you want to modify the likelihood of an entire column of findngs,
             /// set this to 1. For more information, see
             /// [Hotword example: Set the match likelihood of a table column]
-            /// (https://cloud.google.com/dlp/docs/creating-custom-infotypes-likelihood#match-column-values).
+            /// (https://cloud.google.com/sensitive-data-protection/docs/creating-custom-infotypes-likelihood#match-column-values).
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2984,6 +3141,7 @@ namespace Google.Cloud.Dlp.V2 {
           /// Message for specifying an adjustment to the likelihood of a finding as
           /// part of a detection rule.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class LikelihoodAdjustment : pb::IMessage<LikelihoodAdjustment>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3044,10 +3202,24 @@ namespace Google.Cloud.Dlp.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.Dlp.V2.Likelihood FixedLikelihood {
-              get { return adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood ? (global::Google.Cloud.Dlp.V2.Likelihood) adjustment_ : global::Google.Cloud.Dlp.V2.Likelihood.Unspecified; }
+              get { return HasFixedLikelihood ? (global::Google.Cloud.Dlp.V2.Likelihood) adjustment_ : global::Google.Cloud.Dlp.V2.Likelihood.Unspecified; }
               set {
                 adjustment_ = value;
                 adjustmentCase_ = AdjustmentOneofCase.FixedLikelihood;
+              }
+            }
+            /// <summary>Gets whether the "fixed_likelihood" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasFixedLikelihood {
+              get { return adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "fixed_likelihood" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearFixedLikelihood() {
+              if (HasFixedLikelihood) {
+                ClearAdjustment();
               }
             }
 
@@ -3066,10 +3238,24 @@ namespace Google.Cloud.Dlp.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int RelativeLikelihood {
-              get { return adjustmentCase_ == AdjustmentOneofCase.RelativeLikelihood ? (int) adjustment_ : 0; }
+              get { return HasRelativeLikelihood ? (int) adjustment_ : 0; }
               set {
                 adjustment_ = value;
                 adjustmentCase_ = AdjustmentOneofCase.RelativeLikelihood;
+              }
+            }
+            /// <summary>Gets whether the "relative_likelihood" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasRelativeLikelihood {
+              get { return adjustmentCase_ == AdjustmentOneofCase.RelativeLikelihood; }
+            }
+            /// <summary> Clears the value of the oneof if it's currently set to "relative_likelihood" </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearRelativeLikelihood() {
+              if (HasRelativeLikelihood) {
+                ClearAdjustment();
               }
             }
 
@@ -3119,8 +3305,8 @@ namespace Google.Cloud.Dlp.V2 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
-              if (adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood) hash ^= FixedLikelihood.GetHashCode();
-              if (adjustmentCase_ == AdjustmentOneofCase.RelativeLikelihood) hash ^= RelativeLikelihood.GetHashCode();
+              if (HasFixedLikelihood) hash ^= FixedLikelihood.GetHashCode();
+              if (HasRelativeLikelihood) hash ^= RelativeLikelihood.GetHashCode();
               hash ^= (int) adjustmentCase_;
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -3140,11 +3326,11 @@ namespace Google.Cloud.Dlp.V2 {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
-              if (adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood) {
+              if (HasFixedLikelihood) {
                 output.WriteRawTag(8);
                 output.WriteEnum((int) FixedLikelihood);
               }
-              if (adjustmentCase_ == AdjustmentOneofCase.RelativeLikelihood) {
+              if (HasRelativeLikelihood) {
                 output.WriteRawTag(16);
                 output.WriteInt32(RelativeLikelihood);
               }
@@ -3158,11 +3344,11 @@ namespace Google.Cloud.Dlp.V2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-              if (adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood) {
+              if (HasFixedLikelihood) {
                 output.WriteRawTag(8);
                 output.WriteEnum((int) FixedLikelihood);
               }
-              if (adjustmentCase_ == AdjustmentOneofCase.RelativeLikelihood) {
+              if (HasRelativeLikelihood) {
                 output.WriteRawTag(16);
                 output.WriteInt32(RelativeLikelihood);
               }
@@ -3176,10 +3362,10 @@ namespace Google.Cloud.Dlp.V2 {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
-              if (adjustmentCase_ == AdjustmentOneofCase.FixedLikelihood) {
+              if (HasFixedLikelihood) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FixedLikelihood);
               }
-              if (adjustmentCase_ == AdjustmentOneofCase.RelativeLikelihood) {
+              if (HasRelativeLikelihood) {
                 size += 1 + pb::CodedOutputStream.ComputeInt32Size(RelativeLikelihood);
               }
               if (_unknownFields != null) {
@@ -3262,6 +3448,7 @@ namespace Google.Cloud.Dlp.V2 {
           /// The rule that adjusts the likelihood of findings within a certain
           /// proximity of hotwords.
           /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class HotwordRule : pb::IMessage<HotwordRule>
           #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               , pb::IBufferMessage
@@ -3339,7 +3526,7 @@ namespace Google.Cloud.Dlp.V2 {
             /// For tabular data, if you want to modify the likelihood of an entire
             /// column of findngs, see
             /// [Hotword example: Set the match likelihood of a table column]
-            /// (https://cloud.google.com/dlp/docs/creating-custom-infotypes-likelihood#match-column-values).
+            /// (https://cloud.google.com/sensitive-data-protection/docs/creating-custom-infotypes-likelihood#match-column-values).
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3586,6 +3773,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// General identifier of a data field in a storage service.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FieldId : pb::IMessage<FieldId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3786,6 +3974,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// A partition ID contains several dimensions:
   /// project ID and namespace ID.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PartitionId : pb::IMessage<PartitionId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4021,6 +4210,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// A representation of a Datastore kind.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class KindExpression : pb::IMessage<KindExpression>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4216,6 +4406,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Options defining a data set within Google Cloud Datastore.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatastoreOptions : pb::IMessage<DatastoreOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4501,6 +4692,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// include all files directly under `gs://mybucket/directory/`, without matching
   /// across `/`
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudStorageRegexFileSet : pb::IMessage<CloudStorageRegexFileSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4769,6 +4961,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// Options defining a file or a set of files within a Cloud Storage
   /// bucket.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudStorageOptions : pb::IMessage<CloudStorageOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4838,9 +5031,12 @@ namespace Google.Cloud.Dlp.V2 {
     private long bytesLimitPerFile_;
     /// <summary>
     /// Max number of bytes to scan from a file. If a scanned file's size is bigger
-    /// than this value then the rest of the bytes are omitted. Only one
-    /// of bytes_limit_per_file and bytes_limit_per_file_percent can be specified.
-    /// Cannot be set if de-identification is requested.
+    /// than this value then the rest of the bytes are omitted. Only one of
+    /// `bytes_limit_per_file` and `bytes_limit_per_file_percent` can be specified.
+    /// This field can't be set if de-identification is requested. For certain file
+    /// types, setting this field has no effect. For more information, see [Limits
+    /// on bytes scanned per
+    /// file](https://cloud.google.com/sensitive-data-protection/docs/supported-file-types#max-byte-size-per-file).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4857,9 +5053,12 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// Max percentage of bytes to scan from a file. The rest are omitted. The
     /// number of bytes scanned is rounded down. Must be between 0 and 100,
-    /// inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one
-    /// of bytes_limit_per_file and bytes_limit_per_file_percent can be specified.
-    /// Cannot be set if de-identification is requested.
+    /// inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of
+    /// bytes_limit_per_file and bytes_limit_per_file_percent can be specified.
+    /// This field can't be set if de-identification is requested. For certain file
+    /// types, setting this field has no effect. For more information, see [Limits
+    /// on bytes scanned per
+    /// file](https://cloud.google.com/sensitive-data-protection/docs/supported-file-types#max-byte-size-per-file).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4893,6 +5092,9 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>Field number for the "sample_method" field.</summary>
     public const int SampleMethodFieldNumber = 6;
     private global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod sampleMethod_ = global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod.Unspecified;
+    /// <summary>
+    /// How to sample the data.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dlp.V2.CloudStorageOptions.Types.SampleMethod SampleMethod {
@@ -5182,6 +5384,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// start from the top.
       /// </summary>
       public enum SampleMethod {
+        /// <summary>
+        /// No sampling.
+        /// </summary>
         [pbr::OriginalName("SAMPLE_METHOD_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Scan from the top (default).
@@ -5197,6 +5402,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Set of files to scan.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class FileSet : pb::IMessage<FileSet>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5456,6 +5662,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Message representing a set of files in Cloud Storage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudStorageFileSet : pb::IMessage<CloudStorageFileSet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5652,6 +5859,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Message representing a single file or path in Cloud Storage.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloudStoragePath : pb::IMessage<CloudStoragePath>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5700,8 +5908,8 @@ namespace Google.Cloud.Dlp.V2 {
     public const int PathFieldNumber = 1;
     private string path_ = "";
     /// <summary>
-    /// A url representing a file or path (no wildcards) in Cloud Storage.
-    /// Example: gs://[BUCKET_NAME]/dictionary.txt
+    /// A URL representing a file or path (no wildcards) in Cloud Storage.
+    /// Example: `gs://[BUCKET_NAME]/dictionary.txt`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5848,6 +6056,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Options defining BigQuery table and row identifiers.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryOptions : pb::IMessage<BigQueryOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5958,6 +6167,11 @@ namespace Google.Cloud.Dlp.V2 {
     /// 100 means no limit. Defaults to 0. Only one of rows_limit and
     /// rows_limit_percent can be specified. Cannot be used in conjunction with
     /// TimespanConfig.
+    ///
+    /// Caution: A [known
+    /// issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#bq-sampling)
+    /// is causing the `rowsLimitPercent` field to behave unexpectedly. We
+    /// recommend using `rowsLimit` instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5971,6 +6185,9 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>Field number for the "sample_method" field.</summary>
     public const int SampleMethodFieldNumber = 4;
     private global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod sampleMethod_ = global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod.Unspecified;
+    /// <summary>
+    /// How to sample the data.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dlp.V2.BigQueryOptions.Types.SampleMethod SampleMethod {
@@ -5988,6 +6205,9 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// References to fields excluded from scanning. This allows you to skip
     /// inspection of entire columns which you know have no findings.
+    /// When inspecting a table, we recommend that you inspect all columns.
+    /// Otherwise, findings might be affected because hints from excluded columns
+    /// will not be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6002,6 +6222,9 @@ namespace Google.Cloud.Dlp.V2 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dlp.V2.FieldId> includedFields_ = new pbc::RepeatedField<global::Google.Cloud.Dlp.V2.FieldId>();
     /// <summary>
     /// Limit scanning only to these fields.
+    /// When inspecting a table, we recommend that you inspect all columns.
+    /// Otherwise, findings might be affected because hints from excluded columns
+    /// will not be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6274,6 +6497,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// specified, rows are scanned in the order BigQuery reads them.
       /// </summary>
       public enum SampleMethod {
+        /// <summary>
+        /// No sampling.
+        /// </summary>
         [pbr::OriginalName("SAMPLE_METHOD_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Scan groups of rows in the order BigQuery provides (default). Multiple
@@ -6295,6 +6521,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Shared message indicating Cloud storage type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StorageConfig : pb::IMessage<StorageConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6417,6 +6644,9 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>Field number for the "timespan_config" field.</summary>
     public const int TimespanConfigFieldNumber = 6;
     private global::Google.Cloud.Dlp.V2.StorageConfig.Types.TimespanConfig timespanConfig_;
+    /// <summary>
+    /// Configuration of the timespan of the items to include in scanning.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dlp.V2.StorageConfig.Types.TimespanConfig TimespanConfig {
@@ -6751,6 +6981,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// Configuration of the timespan of the items to include in scanning.
       /// Currently only supported when inspecting Cloud Storage and BigQuery.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class TimespanConfig : pb::IMessage<TimespanConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6837,7 +7068,7 @@ namespace Google.Cloud.Dlp.V2 {
         /// Specification of the field containing the timestamp of scanned items.
         /// Used for data sources like Datastore and BigQuery.
         ///
-        /// &lt;b>For BigQuery&lt;/b>
+        /// **For BigQuery**
         ///
         /// If this value is not specified and the table was modified between the
         /// given start and end times, the entire table will be scanned. If this
@@ -6852,13 +7083,11 @@ namespace Google.Cloud.Dlp.V2 {
         /// you can use any of the following pseudo-columns as your timestamp field.
         /// When used with Cloud DLP, these pseudo-column names are case sensitive.
         ///
-        /// &lt;ul>
-        /// &lt;li>&lt;code>_PARTITIONTIME&lt;/code>&lt;/li>
-        /// &lt;li>&lt;code>_PARTITIONDATE&lt;/code>&lt;/li>
-        /// &lt;li>&lt;code>_PARTITION_LOAD_TIME&lt;/code>&lt;/li>
-        /// &lt;/ul>
+        /// - `_PARTITIONTIME`
+        /// - `_PARTITIONDATE`
+        /// - `_PARTITION_LOAD_TIME`
         ///
-        /// &lt;b>For Datastore&lt;/b>
+        /// **For Datastore**
         ///
         /// If this value is specified, then entities are filtered based on the given
         /// start and end times. If an entity does not contain the provided timestamp
@@ -6866,7 +7095,8 @@ namespace Google.Cloud.Dlp.V2 {
         /// Valid data types of the provided timestamp property are: `TIMESTAMP`.
         ///
         /// See the
-        /// [known issue](https://cloud.google.com/dlp/docs/known-issues#bq-timespan)
+        /// [known
+        /// issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#bq-timespan)
         /// related to this operation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6887,6 +7117,17 @@ namespace Google.Cloud.Dlp.V2 {
         /// since the last time the JobTrigger executed. This will be based on the
         /// time of the execution of the last run of the JobTrigger or the timespan
         /// end_time used in the last run of the JobTrigger.
+        ///
+        /// **For BigQuery**
+        ///
+        /// Inspect jobs triggered by automatic population will scan data that is at
+        /// least three hours old when the job starts. This is because streaming
+        /// buffer rows are not read during inspection and reading up to the current
+        /// timestamp will result in skipped rows.
+        ///
+        /// See the [known
+        /// issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#recently-streamed-data)
+        /// related to this operation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7138,6 +7379,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// Configuration to control jobs where the content being inspected is outside
   /// of Google Cloud Platform.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HybridOptions : pb::IMessage<HybridOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7239,6 +7481,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// No more than 10 labels can be associated with a given finding.
     ///
     /// Examples:
+    ///
     /// * `"environment" : "production"`
     /// * `"pipeline" : "etl"`
     /// </summary>
@@ -7376,7 +7619,7 @@ namespace Google.Cloud.Dlp.V2 {
         Description = other.Description;
       }
       requiredFindingLabelKeys_.Add(other.requiredFindingLabelKeys_);
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.tableOptions_ != null) {
         if (tableOptions_ == null) {
           TableOptions = new global::Google.Cloud.Dlp.V2.TableOptions();
@@ -7461,6 +7704,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Row key for identifying a record in BigQuery table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryKey : pb::IMessage<BigQueryKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7709,6 +7953,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Record key for a finding in Cloud Datastore.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DatastoreKey : pb::IMessage<DatastoreKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7916,6 +8161,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// reserved/read-only, the key is reserved/read-only.
   /// A reserved/read-only key is forbidden in certain documented contexts.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Key : pb::IMessage<Key>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8165,6 +8411,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// If either name or ID is set, the element is complete.
       /// If neither is set, the element is incomplete.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class PathElement : pb::IMessage<PathElement>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -8246,10 +8493,24 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long Id {
-          get { return idTypeCase_ == IdTypeOneofCase.Id ? (long) idType_ : 0L; }
+          get { return HasId ? (long) idType_ : 0L; }
           set {
             idType_ = value;
             idTypeCase_ = IdTypeOneofCase.Id;
+          }
+        }
+        /// <summary>Gets whether the "id" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasId {
+          get { return idTypeCase_ == IdTypeOneofCase.Id; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "id" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearId() {
+          if (HasId) {
+            ClearIdType();
           }
         }
 
@@ -8264,10 +8525,24 @@ namespace Google.Cloud.Dlp.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Name {
-          get { return idTypeCase_ == IdTypeOneofCase.Name ? (string) idType_ : ""; }
+          get { return HasName ? (string) idType_ : ""; }
           set {
             idType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             idTypeCase_ = IdTypeOneofCase.Name;
+          }
+        }
+        /// <summary>Gets whether the "name" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasName {
+          get { return idTypeCase_ == IdTypeOneofCase.Name; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "name" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearName() {
+          if (HasName) {
+            ClearIdType();
           }
         }
 
@@ -8319,8 +8594,8 @@ namespace Google.Cloud.Dlp.V2 {
         public override int GetHashCode() {
           int hash = 1;
           if (Kind.Length != 0) hash ^= Kind.GetHashCode();
-          if (idTypeCase_ == IdTypeOneofCase.Id) hash ^= Id.GetHashCode();
-          if (idTypeCase_ == IdTypeOneofCase.Name) hash ^= Name.GetHashCode();
+          if (HasId) hash ^= Id.GetHashCode();
+          if (HasName) hash ^= Name.GetHashCode();
           hash ^= (int) idTypeCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -8344,11 +8619,11 @@ namespace Google.Cloud.Dlp.V2 {
             output.WriteRawTag(10);
             output.WriteString(Kind);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Id) {
+          if (HasId) {
             output.WriteRawTag(16);
             output.WriteInt64(Id);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Name) {
+          if (HasName) {
             output.WriteRawTag(26);
             output.WriteString(Name);
           }
@@ -8366,11 +8641,11 @@ namespace Google.Cloud.Dlp.V2 {
             output.WriteRawTag(10);
             output.WriteString(Kind);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Id) {
+          if (HasId) {
             output.WriteRawTag(16);
             output.WriteInt64(Id);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Name) {
+          if (HasName) {
             output.WriteRawTag(26);
             output.WriteString(Name);
           }
@@ -8387,10 +8662,10 @@ namespace Google.Cloud.Dlp.V2 {
           if (Kind.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Kind);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Id) {
+          if (HasId) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(Id);
           }
-          if (idTypeCase_ == IdTypeOneofCase.Name) {
+          if (HasName) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
           }
           if (_unknownFields != null) {
@@ -8486,6 +8761,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Message for a unique key indicating a record that contains a finding.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RecordKey : pb::IMessage<RecordKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8541,6 +8817,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "datastore_key" field.</summary>
     public const int DatastoreKeyFieldNumber = 2;
+    /// <summary>
+    /// BigQuery key
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dlp.V2.DatastoreKey DatastoreKey {
@@ -8553,6 +8832,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Field number for the "big_query_key" field.</summary>
     public const int BigQueryKeyFieldNumber = 3;
+    /// <summary>
+    /// Datastore key
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dlp.V2.BigQueryKey BigQueryKey {
@@ -8808,6 +9090,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// `&lt;project_id>:&lt;dataset_id>.&lt;table_id>` or
   /// `&lt;project_id>.&lt;dataset_id>.&lt;table_id>`.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryTable : pb::IMessage<BigQueryTable>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9082,8 +9365,246 @@ namespace Google.Cloud.Dlp.V2 {
   }
 
   /// <summary>
+  /// Message defining the location of a BigQuery table with the projectId inferred
+  /// from the parent project.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TableReference : pb::IMessage<TableReference>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TableReference> _parser = new pb::MessageParser<TableReference>(() => new TableReference());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TableReference> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TableReference() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TableReference(TableReference other) : this() {
+      datasetId_ = other.datasetId_;
+      tableId_ = other.tableId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TableReference Clone() {
+      return new TableReference(this);
+    }
+
+    /// <summary>Field number for the "dataset_id" field.</summary>
+    public const int DatasetIdFieldNumber = 1;
+    private string datasetId_ = "";
+    /// <summary>
+    /// Dataset ID of the table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DatasetId {
+      get { return datasetId_; }
+      set {
+        datasetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "table_id" field.</summary>
+    public const int TableIdFieldNumber = 2;
+    private string tableId_ = "";
+    /// <summary>
+    /// Name of the table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TableId {
+      get { return tableId_; }
+      set {
+        tableId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TableReference);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TableReference other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DatasetId != other.DatasetId) return false;
+      if (TableId != other.TableId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
+      if (TableId.Length != 0) hash ^= TableId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DatasetId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DatasetId);
+      }
+      if (TableId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TableId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DatasetId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DatasetId);
+      }
+      if (TableId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TableId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DatasetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetId);
+      }
+      if (TableId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TableId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TableReference other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DatasetId.Length != 0) {
+        DatasetId = other.DatasetId;
+      }
+      if (other.TableId.Length != 0) {
+        TableId = other.TableId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DatasetId = input.ReadString();
+            break;
+          }
+          case 18: {
+            TableId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DatasetId = input.ReadString();
+            break;
+          }
+          case 18: {
+            TableId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Message defining a field of a BigQuery table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryField : pb::IMessage<BigQueryField>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9098,7 +9619,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9341,6 +9862,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// identifier. This message is used when generalizations or analysis must take
   /// into account that multiple rows correspond to the same entity.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityId : pb::IMessage<EntityId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9355,7 +9877,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9545,6 +10067,7 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Instructions regarding the table content being inspected.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TableOptions : pb::IMessage<TableOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9559,7 +10082,7 @@ namespace Google.Cloud.Dlp.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Dlp.V2.StorageReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

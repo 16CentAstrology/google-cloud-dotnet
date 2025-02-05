@@ -42,6 +42,7 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Unspecified:
                 case TypeCode.Bool:
                 case TypeCode.Int64:
+                case TypeCode.Float32:
                 case TypeCode.Float64:
                 case TypeCode.Timestamp:
                 case TypeCode.Date:
@@ -62,7 +63,7 @@ namespace Google.Cloud.Spanner.Data
                     {
                         return false;
                     }
-                    spannerDbType = new SpannerDbType(type.Code, elementType);
+                    spannerDbType = new SpannerDbType(elementType);
                     return true;
                 case TypeCode.Struct:
                     // There could be nested structs, so we need to be careful about parsing the inner string.
@@ -104,7 +105,14 @@ namespace Google.Cloud.Spanner.Data
                         fields.Add(new StructField(fieldName, fieldDbType));
                         currentIndex = endFieldIndex + 1;
                     }
-                    spannerDbType = new SpannerDbType(type.Code, fields);
+                    spannerDbType = new SpannerDbType(fields);
+                    return true;
+                case TypeCode.Proto:
+                    if (string.IsNullOrEmpty(remainder))
+                    {
+                        return false;
+                    }
+                    spannerDbType = new SpannerDbType(remainder);
                     return true;
                 default:
                     return false;
@@ -143,7 +151,8 @@ namespace Google.Cloud.Spanner.Data
             }
 
             var trimmedComplexName = complexName.Trim();
-            // Special handling for NUMERIC{PG} and JSONB{PG}, as other types are just based on TypeCode and we need to keep the code backward compatible.
+            // Special handling for NUMERIC{PG}, JSONB{PG} and OID{PG}, as other types are just based on
+            // TypeCode and we need to keep the code backward compatible.
             if (string.Equals(trimmedComplexName, "NUMERIC{PG}", StringComparison.OrdinalIgnoreCase))
             {
                 type.Code = TypeCode.Numeric;
@@ -154,6 +163,12 @@ namespace Google.Cloud.Spanner.Data
             {
                 type.Code = TypeCode.Json;
                 type.TypeAnnotation = TypeAnnotationCode.PgJsonb;
+                return true;
+            }
+            else if (string.Equals(trimmedComplexName, "OID{PG}", StringComparison.OrdinalIgnoreCase))
+            {
+                type.Code = TypeCode.Int64;
+                type.TypeAnnotation = TypeAnnotationCode.PgOid;
                 return true;
             }
 
@@ -214,6 +229,10 @@ namespace Google.Cloud.Spanner.Data
                 s.Append(">");
                 return s.ToString();
             }
+            if (ProtobufTypeName != null)
+            {
+                return $"PROTO<{ProtobufTypeName}>";
+            }
             if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
             {
                 return "NUMERIC{PG}";
@@ -221,6 +240,10 @@ namespace Google.Cloud.Spanner.Data
             else if (TypeAnnotationCode == TypeAnnotationCode.PgJsonb)
             {
                 return "JSONB{PG}";
+            }
+            else if (TypeAnnotationCode == TypeAnnotationCode.PgOid)
+            {
+                return "OID{PG}";
             }
 
             return Size.HasValue ? $"{TypeCode.GetOriginalName()}({Size})" : TypeCode.GetOriginalName();

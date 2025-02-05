@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,17 +18,17 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dialogflow.V2Beta1
 {
@@ -214,14 +214,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return EnvironmentsClient.Create(callInvoker, Settings, Logger);
+            return EnvironmentsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<EnvironmentsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return EnvironmentsClient.Create(callInvoker, Settings, Logger);
+            return EnvironmentsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -342,8 +342,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// <param name="parent">
         /// Required. The agent to list all environments from.
         /// Format:
-        /// - `projects/&lt;Project Number / ID&gt;/agent`
-        /// - `projects/&lt;Project Number / ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -355,13 +355,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironments(new ListEnvironmentsRequest
+        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all non-draft environments of the specified agent.
@@ -369,8 +378,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// <param name="parent">
         /// Required. The agent to list all environments from.
         /// Format:
-        /// - `projects/&lt;Project Number / ID&gt;/agent`
-        /// - `projects/&lt;Project Number / ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -382,13 +391,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironmentsAsync(new ListEnvironmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all non-draft environments of the specified agent.
@@ -396,8 +414,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// <param name="parent">
         /// Required. The agent to list all environments from.
         /// Format:
-        /// - `projects/&lt;Project Number / ID&gt;/agent`
-        /// - `projects/&lt;Project Number / ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -409,13 +427,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironments(new ListEnvironmentsRequest
+        public virtual gax::PagedEnumerable<ListEnvironmentsResponse, Environment> ListEnvironments(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironments(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all non-draft environments of the specified agent.
@@ -423,8 +450,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// <param name="parent">
         /// Required. The agent to list all environments from.
         /// Format:
-        /// - `projects/&lt;Project Number / ID&gt;/agent`
-        /// - `projects/&lt;Project Number / ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/agent`
+        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -436,13 +463,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Environment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListEnvironmentsAsync(new ListEnvironmentsRequest
+        public virtual gax::PagedAsyncEnumerable<ListEnvironmentsResponse, Environment> ListEnvironmentsAsync(AgentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListEnvironmentsRequest request = new ListEnvironmentsRequest
             {
                 ParentAsAgentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListEnvironmentsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Retrieves the specified agent environment.
@@ -635,7 +671,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         {
             GrpcClient = grpcClient;
             EnvironmentsSettings effectiveSettings = settings ?? EnvironmentsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListEnvironments = clientHelper.BuildApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse>("ListEnvironments", grpcClient.ListEnvironmentsAsync, grpcClient.ListEnvironments, effectiveSettings.ListEnvironmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListEnvironments);

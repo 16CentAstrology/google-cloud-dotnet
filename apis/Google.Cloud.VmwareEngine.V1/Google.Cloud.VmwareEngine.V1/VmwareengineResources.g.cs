@@ -26,160 +26,385 @@ namespace Google.Cloud.VmwareEngine.V1 {
           string.Concat(
             "Cjlnb29nbGUvY2xvdWQvdm13YXJlZW5naW5lL3YxL3Ztd2FyZWVuZ2luZV9y",
             "ZXNvdXJjZXMucHJvdG8SHGdvb2dsZS5jbG91ZC52bXdhcmVlbmdpbmUudjEa",
-            "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
-            "cmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
-            "dG8imgIKDU5ldHdvcmtDb25maWcSHAoPbWFuYWdlbWVudF9jaWRyGAQgASgJ",
-            "QgPgQQISVgoVdm13YXJlX2VuZ2luZV9uZXR3b3JrGAUgASgJQjfgQQH6QTEK",
-            "L3Ztd2FyZWVuZ2luZS5nb29nbGVhcGlzLmNvbS9WbXdhcmVFbmdpbmVOZXR3",
-            "b3JrEmAKH3Ztd2FyZV9lbmdpbmVfbmV0d29ya19jYW5vbmljYWwYBiABKAlC",
-            "N+BBA/pBMQovdm13YXJlZW5naW5lLmdvb2dsZWFwaXMuY29tL1Ztd2FyZUVu",
-            "Z2luZU5ldHdvcmsSMQokbWFuYWdlbWVudF9pcF9hZGRyZXNzX2xheW91dF92",
-            "ZXJzaW9uGAggASgFQgPgQQMiSQoOTm9kZVR5cGVDb25maWcSFwoKbm9kZV9j",
-            "b3VudBgBIAEoBUID4EECEh4KEWN1c3RvbV9jb3JlX2NvdW50GAIgASgFQgPg",
-            "QQEipQkKDFByaXZhdGVDbG91ZBIRCgRuYW1lGAEgASgJQgPgQQMSNAoLY3Jl",
-            "YXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSNAoLZGVsZXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLZXhwaXJlX3RpbWUYBSABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSRAoFc3RhdGUYCCABKA4y",
-            "MC5nb29nbGUuY2xvdWQudm13YXJlZW5naW5lLnYxLlByaXZhdGVDbG91ZC5T",
-            "dGF0ZUID4EEDEkgKDm5ldHdvcmtfY29uZmlnGAkgASgLMisuZ29vZ2xlLmNs",
-            "b3VkLnZtd2FyZWVuZ2luZS52MS5OZXR3b3JrQ29uZmlnQgPgQQISYAoSbWFu",
-            "YWdlbWVudF9jbHVzdGVyGAogASgLMjwuZ29vZ2xlLmNsb3VkLnZtd2FyZWVu",
-            "Z2luZS52MS5Qcml2YXRlQ2xvdWQuTWFuYWdlbWVudENsdXN0ZXJCBuBBBOBB",
-            "AhITCgtkZXNjcmlwdGlvbhgLIAEoCRIzCgNoY3gYESABKAsyIS5nb29nbGUu",
-            "Y2xvdWQudm13YXJlZW5naW5lLnYxLkhjeEID4EEDEjMKA25zeBgSIAEoCzIh",
-            "Lmdvb2dsZS5jbG91ZC52bXdhcmVlbmdpbmUudjEuTnN4QgPgQQMSOwoHdmNl",
-            "bnRlchgTIAEoCzIlLmdvb2dsZS5jbG91ZC52bXdhcmVlbmdpbmUudjEuVmNl",
-            "bnRlckID4EEDEhAKA3VpZBgUIAEoCUID4EEDGoUCChFNYW5hZ2VtZW50Q2x1",
-            "c3RlchIXCgpjbHVzdGVyX2lkGAEgASgJQgPgQQIScQoRbm9kZV90eXBlX2Nv",
-            "bmZpZ3MYByADKAsyUS5nb29nbGUuY2xvdWQudm13YXJlZW5naW5lLnYxLlBy",
-            "aXZhdGVDbG91ZC5NYW5hZ2VtZW50Q2x1c3Rlci5Ob2RlVHlwZUNvbmZpZ3NF",
-            "bnRyeUID4EECGmQKFE5vZGVUeXBlQ29uZmlnc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRI7CgV2YWx1ZRgCIAEoCzIsLmdvb2dsZS5jbG91ZC52bXdhcmVlbmdpbmUu",
-            "djEuTm9kZVR5cGVDb25maWc6AjgBImwKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASCgoGQUNUSVZFEAESDAoIQ1JFQVRJTkcQAhIMCghVUERBVElO",
-            "RxADEgoKBkZBSUxFRBAFEgsKB0RFTEVURUQQBhILCgdQVVJHSU5HEAc6dOpB",
-            "cQoodm13YXJlZW5naW5lLmdvb2dsZWFwaXMuY29tL1ByaXZhdGVDbG91ZBJF",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3ByaXZh",
-            "dGVDbG91ZHMve3ByaXZhdGVfY2xvdWR9IqAFCgdDbHVzdGVyEhEKBG5hbWUY",
-            "ASABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI/CgVzdGF0ZRgGIAEoDjIr",
-            "Lmdvb2dsZS5jbG91ZC52bXdhcmVlbmdpbmUudjEuQ2x1c3Rlci5TdGF0ZUID",
-            "4EEDEhcKCm1hbmFnZW1lbnQYByABKAhCA+BBAxIQCgN1aWQYDiABKAlCA+BB",
-            "AxJaChFub2RlX3R5cGVfY29uZmlncxgQIAMoCzI6Lmdvb2dsZS5jbG91ZC52",
-            "bXdhcmVlbmdpbmUudjEuQ2x1c3Rlci5Ob2RlVHlwZUNvbmZpZ3NFbnRyeUID",
-            "4EECGmQKFE5vZGVUeXBlQ29uZmlnc0VudHJ5EgsKA2tleRgBIAEoCRI7CgV2",
-            "YWx1ZRgCIAEoCzIsLmdvb2dsZS5jbG91ZC52bXdhcmVlbmdpbmUudjEuTm9k",
-            "ZVR5cGVDb25maWc6AjgBImMKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVE",
-            "EAASCgoGQUNUSVZFEAESDAoIQ1JFQVRJTkcQAhIMCghVUERBVElORxADEgwK",
-            "CERFTEVUSU5HEAQSDQoJUkVQQUlSSU5HEAU6ggHqQX8KI3Ztd2FyZWVuZ2lu",
-            "ZS5nb29nbGVhcGlzLmNvbS9DbHVzdGVyElhwcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vcHJpdmF0ZUNsb3Vkcy97cHJpdmF0ZV9j",
-            "bG91ZH0vY2x1c3RlcnMve2NsdXN0ZXJ9IvACCgZTdWJuZXQSEQoEbmFtZRgB",
-            "IAEoCUID4EEDEhUKDWlwX2NpZHJfcmFuZ2UYByABKAkSEgoKZ2F0ZXdheV9p",
-            "cBgIIAEoCRIRCgR0eXBlGAsgASgJQgPgQQMSPgoFc3RhdGUYDSABKA4yKi5n",
-            "b29nbGUuY2xvdWQudm13YXJlZW5naW5lLnYxLlN1Ym5ldC5TdGF0ZUID4EED",
-            "IlQKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAES",
-            "DAoIQ1JFQVRJTkcQAhIMCghVUERBVElORxADEgwKCERFTEVUSU5HEAQ6f+pB",
-            "fAoidm13YXJlZW5naW5lLmdvb2dsZWFwaXMuY29tL1N1Ym5ldBJWcHJvamVj",
-            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3ByaXZhdGVDbG91",
-            "ZHMve3ByaXZhdGVfY2xvdWR9L3N1Ym5ldHMve3N1Ym5ldH0i2gIKCE5vZGVU",
-            "eXBlEhEKBG5hbWUYASABKAlCA+BBAxIZCgxub2RlX3R5cGVfaWQYAiABKAlC",
-            "A+BBAxIZCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAxIeChF2aXJ0dWFsX2Nw",
-            "dV9jb3VudBgEIAEoBUID4EEDEh0KEHRvdGFsX2NvcmVfY291bnQYBSABKAVC",
-            "A+BBAxIWCgltZW1vcnlfZ2IYByABKAVCA+BBAxIZCgxkaXNrX3NpemVfZ2IY",
-            "CCABKAVCA+BBAxIpChxhdmFpbGFibGVfY3VzdG9tX2NvcmVfY291bnRzGAsg",
-            "AygFQgPgQQM6aOpBZQokdm13YXJlZW5naW5lLmdvb2dsZWFwaXMuY29tL05v",
-            "ZGVUeXBlEj1wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vbm9kZVR5cGVzL3tub2RlX3R5cGV9IjEKC0NyZWRlbnRpYWxzEhAKCHVz",
-            "ZXJuYW1lGAEgASgJEhAKCHBhc3N3b3JkGAIgASgJIsIDChBIY3hBY3RpdmF0",
-            "aW9uS2V5EhEKBG5hbWUYASABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgCIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJICgVzdGF0ZRgD",
-            "IAEoDjI0Lmdvb2dsZS5jbG91ZC52bXdhcmVlbmdpbmUudjEuSGN4QWN0aXZh",
-            "dGlvbktleS5TdGF0ZUID4EEDEhsKDmFjdGl2YXRpb25fa2V5GAQgASgJQgPg",
-            "QQMSEAoDdWlkGAUgASgJQgPgQQMiSQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVD",
-            "SUZJRUQQABINCglBVkFJTEFCTEUQARIMCghDT05TVU1FRBACEgwKCENSRUFU",
-            "SU5HEAM6oAHqQZwBCix2bXdhcmVlbmdpbmUuZ29vZ2xlYXBpcy5jb20vSGN4",
-            "QWN0aXZhdGlvbktleRJscHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L3ByaXZhdGVDbG91ZHMve3ByaXZhdGVfY2xvdWR9L2hjeEFj",
-            "dGl2YXRpb25LZXlzL3toY3hfYWN0aXZhdGlvbl9rZXl9IrABCgNIY3gSEwoL",
-            "aW50ZXJuYWxfaXAYAiABKAkSDwoHdmVyc2lvbhgEIAEoCRI7CgVzdGF0ZRgF",
-            "IAEoDjInLmdvb2dsZS5jbG91ZC52bXdhcmVlbmdpbmUudjEuSGN4LlN0YXRl",
-            "QgPgQQMSDAoEZnFkbhgGIAEoCSI4CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
-            "RklFRBAAEgoKBkFDVElWRRABEgwKCENSRUFUSU5HEAIisAEKA05zeBITCgtp",
-            "bnRlcm5hbF9pcBgCIAEoCRIPCgd2ZXJzaW9uGAQgASgJEjsKBXN0YXRlGAUg",
-            "ASgOMicuZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5Oc3guU3RhdGVC",
-            "A+BBAxIMCgRmcWRuGAYgASgJIjgKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lG",
-            "SUVEEAASCgoGQUNUSVZFEAESDAoIQ1JFQVRJTkcQAiK4AQoHVmNlbnRlchIT",
-            "CgtpbnRlcm5hbF9pcBgCIAEoCRIPCgd2ZXJzaW9uGAQgASgJEj8KBXN0YXRl",
-            "GAUgASgOMisuZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5WY2VudGVy",
-            "LlN0YXRlQgPgQQMSDAoEZnFkbhgGIAEoCSI4CgVTdGF0ZRIVChFTVEFURV9V",
-            "TlNQRUNJRklFRBAAEgoKBkFDVElWRRABEgwKCENSRUFUSU5HEAIi/wYKDU5l",
-            "dHdvcmtQb2xpY3kSEQoEbmFtZRgBIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1l",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3Vw",
-            "ZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDElMKD2ludGVybmV0X2FjY2VzcxgGIAEoCzI6Lmdvb2dsZS5jbG91ZC52",
-            "bXdhcmVlbmdpbmUudjEuTmV0d29ya1BvbGljeS5OZXR3b3JrU2VydmljZRJP",
-            "CgtleHRlcm5hbF9pcBgHIAEoCzI6Lmdvb2dsZS5jbG91ZC52bXdhcmVlbmdp",
-            "bmUudjEuTmV0d29ya1BvbGljeS5OZXR3b3JrU2VydmljZRIfChJlZGdlX3Nl",
-            "cnZpY2VzX2NpZHIYCSABKAlCA+BBAhIQCgN1aWQYCiABKAlCA+BBAxJWChV2",
-            "bXdhcmVfZW5naW5lX25ldHdvcmsYDCABKAlCN+BBAfpBMQovdm13YXJlZW5n",
-            "aW5lLmdvb2dsZWFwaXMuY29tL1Ztd2FyZUVuZ2luZU5ldHdvcmsSGAoLZGVz",
-            "Y3JpcHRpb24YDSABKAlCA+BBARJgCh92bXdhcmVfZW5naW5lX25ldHdvcmtf",
-            "Y2Fub25pY2FsGA4gASgJQjfgQQP6QTEKL3Ztd2FyZWVuZ2luZS5nb29nbGVh",
-            "cGlzLmNvbS9WbXdhcmVFbmdpbmVOZXR3b3JrGscBCg5OZXR3b3JrU2Vydmlj",
-            "ZRIPCgdlbmFibGVkGAEgASgIElQKBXN0YXRlGAIgASgOMkAuZ29vZ2xlLmNs",
-            "b3VkLnZtd2FyZWVuZ2luZS52MS5OZXR3b3JrUG9saWN5Lk5ldHdvcmtTZXJ2",
-            "aWNlLlN0YXRlQgPgQQMiTgoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
-            "ABIRCg1VTlBST1ZJU0lPTkVEEAESDwoLUkVDT05DSUxJTkcQAhIKCgZBQ1RJ",
-            "VkUQAzp46kF1Cil2bXdhcmVlbmdpbmUuZ29vZ2xlYXBpcy5jb20vTmV0d29y",
-            "a1BvbGljeRJIcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L25ldHdvcmtQb2xpY2llcy97bmV0d29ya19wb2xpY3l9IrIHChNWbXdh",
-            "cmVFbmdpbmVOZXR3b3JrEhEKBG5hbWUYASABKAlCA+BBAxI0CgtjcmVhdGVf",
+            "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aG2dvb2dsZS9hcGkv",
+            "ZmllbGRfaW5mby5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoe",
+            "Z29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9i",
+            "dWYvdGltZXN0YW1wLnByb3RvIrYCCg1OZXR3b3JrQ29uZmlnEhwKD21hbmFn",
+            "ZW1lbnRfY2lkchgEIAEoCUID4EECElYKFXZtd2FyZV9lbmdpbmVfbmV0d29y",
+            "axgFIAEoCUI34EEB+kExCi92bXdhcmVlbmdpbmUuZ29vZ2xlYXBpcy5jb20v",
+            "Vm13YXJlRW5naW5lTmV0d29yaxJgCh92bXdhcmVfZW5naW5lX25ldHdvcmtf",
+            "Y2Fub25pY2FsGAYgASgJQjfgQQP6QTEKL3Ztd2FyZWVuZ2luZS5nb29nbGVh",
+            "cGlzLmNvbS9WbXdhcmVFbmdpbmVOZXR3b3JrEjEKJG1hbmFnZW1lbnRfaXBf",
+            "YWRkcmVzc19sYXlvdXRfdmVyc2lvbhgIIAEoBUID4EEDEhoKDWRuc19zZXJ2",
+            "ZXJfaXAYCSABKAlCA+BBAyJJCg5Ob2RlVHlwZUNvbmZpZxIXCgpub2RlX2Nv",
+            "dW50GAEgASgFQgPgQQISHgoRY3VzdG9tX2NvcmVfY291bnQYAiABKAVCA+BB",
+            "ASKmAQoWU3RyZXRjaGVkQ2x1c3RlckNvbmZpZxJFChJwcmVmZXJyZWRfbG9j",
+            "YXRpb24YASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29t",
+            "L0xvY2F0aW9uEkUKEnNlY29uZGFyeV9sb2NhdGlvbhgCIAEoCUIp4EEC+kEj",
+            "CiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24i/QoKDFByaXZh",
+            "dGVDbG91ZBIRCgRuYW1lGAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRl",
+            "X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "NAoLZGVsZXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSNAoLZXhwaXJlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSRAoFc3RhdGUYCCABKA4yMC5nb29nbGUuY2xv",
+            "dWQudm13YXJlZW5naW5lLnYxLlByaXZhdGVDbG91ZC5TdGF0ZUID4EEDEkgK",
+            "Dm5ldHdvcmtfY29uZmlnGAkgASgLMisuZ29vZ2xlLmNsb3VkLnZtd2FyZWVu",
+            "Z2luZS52MS5OZXR3b3JrQ29uZmlnQgPgQQISYAoSbWFuYWdlbWVudF9jbHVz",
+            "dGVyGAogASgLMjwuZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5Qcml2",
+            "YXRlQ2xvdWQuTWFuYWdlbWVudENsdXN0ZXJCBuBBBOBBAhITCgtkZXNjcmlw",
+            "dGlvbhgLIAEoCRIzCgNoY3gYESABKAsyIS5nb29nbGUuY2xvdWQudm13YXJl",
+            "ZW5naW5lLnYxLkhjeEID4EEDEjMKA25zeBgSIAEoCzIhLmdvb2dsZS5jbG91",
+            "ZC52bXdhcmVlbmdpbmUudjEuTnN4QgPgQQMSOwoHdmNlbnRlchgTIAEoCzIl",
+            "Lmdvb2dsZS5jbG91ZC52bXdhcmVlbmdpbmUudjEuVmNlbnRlckID4EEDEhAK",
+            "A3VpZBgUIAEoCUID4EEDEkIKBHR5cGUYFiABKA4yLy5nb29nbGUuY2xvdWQu",
+            "dm13YXJlZW5naW5lLnYxLlByaXZhdGVDbG91ZC5UeXBlQgPgQQEa4gIKEU1h",
+            "bmFnZW1lbnRDbHVzdGVyEhcKCmNsdXN0ZXJfaWQYASABKAlCA+BBAhJxChFu",
+            "b2RlX3R5cGVfY29uZmlncxgHIAMoCzJRLmdvb2dsZS5jbG91ZC52bXdhcmVl",
+            "bmdpbmUudjEuUHJpdmF0ZUNsb3VkLk1hbmFnZW1lbnRDbHVzdGVyLk5vZGVU",
+            "eXBlQ29uZmlnc0VudHJ5QgPgQQISWwoYc3RyZXRjaGVkX2NsdXN0ZXJfY29u",
+            "ZmlnGAggASgLMjQuZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5TdHJl",
+            "dGNoZWRDbHVzdGVyQ29uZmlnQgPgQQEaZAoUTm9kZVR5cGVDb25maWdzRW50",
+            "cnkSCwoDa2V5GAEgASgJEjsKBXZhbHVlGAIgASgLMiwuZ29vZ2xlLmNsb3Vk",
+            "LnZtd2FyZWVuZ2luZS52MS5Ob2RlVHlwZUNvbmZpZzoCOAEibAoFU3RhdGUS",
+            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghDUkVBVElO",
+            "RxACEgwKCFVQREFUSU5HEAMSCgoGRkFJTEVEEAUSCwoHREVMRVRFRBAGEgsK",
+            "B1BVUkdJTkcQByI1CgRUeXBlEgwKCFNUQU5EQVJEEAASEAoMVElNRV9MSU1J",
+            "VEVEEAESDQoJU1RSRVRDSEVEEAI6dOpBcQoodm13YXJlZW5naW5lLmdvb2ds",
+            "ZWFwaXMuY29tL1ByaXZhdGVDbG91ZBJFcHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L3ByaXZhdGVDbG91ZHMve3ByaXZhdGVfY2xv",
+            "dWR9ItMGCgdDbHVzdGVyEhEKBG5hbWUYASABKAlCA+BBAxI0CgtjcmVhdGVf",
             "dGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0",
             "Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxITCgtkZXNjcmlwdGlvbhgFIAEoCRJXCgx2cGNfbmV0d29ya3MY",
-            "BiADKAsyPC5nb29nbGUuY2xvdWQudm13YXJlZW5naW5lLnYxLlZtd2FyZUVu",
-            "Z2luZU5ldHdvcmsuVnBjTmV0d29ya0ID4EEDEksKBXN0YXRlGAcgASgOMjcu",
+            "bXBCA+BBAxI/CgVzdGF0ZRgGIAEoDjIrLmdvb2dsZS5jbG91ZC52bXdhcmVl",
+            "bmdpbmUudjEuQ2x1c3Rlci5TdGF0ZUID4EEDEhcKCm1hbmFnZW1lbnQYByAB",
+            "KAhCA+BBAxJUChRhdXRvc2NhbGluZ19zZXR0aW5ncxgSIAEoCzIxLmdvb2ds",
+            "ZS5jbG91ZC52bXdhcmVlbmdpbmUudjEuQXV0b3NjYWxpbmdTZXR0aW5nc0ID",
+            "4EEBEhAKA3VpZBgOIAEoCUID4EEDEloKEW5vZGVfdHlwZV9jb25maWdzGBAg",
+            "AygLMjouZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5DbHVzdGVyLk5v",
+            "ZGVUeXBlQ29uZmlnc0VudHJ5QgPgQQISWwoYc3RyZXRjaGVkX2NsdXN0ZXJf",
+            "Y29uZmlnGBEgASgLMjQuZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5T",
+            "dHJldGNoZWRDbHVzdGVyQ29uZmlnQgPgQQEaZAoUTm9kZVR5cGVDb25maWdz",
+            "RW50cnkSCwoDa2V5GAEgASgJEjsKBXZhbHVlGAIgASgLMiwuZ29vZ2xlLmNs",
+            "b3VkLnZtd2FyZWVuZ2luZS52MS5Ob2RlVHlwZUNvbmZpZzoCOAEiYwoFU3Rh",
+            "dGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghDUkVB",
+            "VElORxACEgwKCFVQREFUSU5HEAMSDAoIREVMRVRJTkcQBBINCglSRVBBSVJJ",
+            "TkcQBTqCAepBfwojdm13YXJlZW5naW5lLmdvb2dsZWFwaXMuY29tL0NsdXN0",
+            "ZXISWHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9w",
+            "cml2YXRlQ2xvdWRzL3twcml2YXRlX2Nsb3VkfS9jbHVzdGVycy97Y2x1c3Rl",
+            "cn0iugMKBE5vZGUSEQoEbmFtZRgBIAEoCUID4EEDEhEKBGZxZG4YAiABKAlC",
+            "A+BBAxIYCgtpbnRlcm5hbF9pcBgDIAEoCUID4EEDEhkKDG5vZGVfdHlwZV9p",
+            "ZBgEIAEoCUID4EEDEhQKB3ZlcnNpb24YBSABKAlCA+BBAxIeChFjdXN0b21f",
+            "Y29yZV9jb3VudBgGIAEoA0ID4EEDEjwKBXN0YXRlGAcgASgOMiguZ29vZ2xl",
+            "LmNsb3VkLnZtd2FyZWVuZ2luZS52MS5Ob2RlLlN0YXRlQgPgQQMiUwoFU3Rh",
+            "dGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghDUkVB",
+            "VElORxACEgoKBkZBSUxFRBADEg0KCVVQR1JBRElORxAEOo0B6kGJAQogdm13",
+            "YXJlZW5naW5lLmdvb2dsZWFwaXMuY29tL05vZGUSZXByb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9wcml2YXRlQ2xvdWRzL3twcml2",
+            "YXRlX2Nsb3VkfS9jbHVzdGVycy97Y2x1c3Rlcn0vbm9kZXMve25vZGV9IqUE",
+            "Cg9FeHRlcm5hbEFkZHJlc3MSEQoEbmFtZRgBIAEoCUID4EEDEjQKC2NyZWF0",
+            "ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EjQKC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEhMKC2ludGVybmFsX2lwGAYgASgJEhgKC2V4dGVybmFsX2lw",
+            "GAcgASgJQgPgQQMSRwoFc3RhdGUYCCABKA4yMy5nb29nbGUuY2xvdWQudm13",
+            "YXJlZW5naW5lLnYxLkV4dGVybmFsQWRkcmVzcy5TdGF0ZUID4EEDEhAKA3Vp",
+            "ZBgJIAEoCUID4EEDEhMKC2Rlc2NyaXB0aW9uGAsgASgJIlQKBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDAoIQ1JFQVRJTkcQ",
+            "AhIMCghVUERBVElORxADEgwKCERFTEVUSU5HEAQ6nQHqQZkBCit2bXdhcmVl",
+            "bmdpbmUuZ29vZ2xlYXBpcy5jb20vRXh0ZXJuYWxBZGRyZXNzEmpwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHJpdmF0ZUNsb3Vk",
+            "cy97cHJpdmF0ZV9jbG91ZH0vZXh0ZXJuYWxBZGRyZXNzZXMve2V4dGVybmFs",
+            "X2FkZHJlc3N9IqMDCgZTdWJuZXQSEQoEbmFtZRgBIAEoCUID4EEDEhUKDWlw",
+            "X2NpZHJfcmFuZ2UYByABKAkSEgoKZ2F0ZXdheV9pcBgIIAEoCRIRCgR0eXBl",
+            "GAsgASgJQgPgQQMSPgoFc3RhdGUYDSABKA4yKi5nb29nbGUuY2xvdWQudm13",
+            "YXJlZW5naW5lLnYxLlN1Ym5ldC5TdGF0ZUID4EEDEhQKB3ZsYW5faWQYECAB",
+            "KAVCA+BBAyJxCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFD",
+            "VElWRRABEgwKCENSRUFUSU5HEAISDAoIVVBEQVRJTkcQAxIMCghERUxFVElO",
+            "RxAEEg8KC1JFQ09OQ0lMSU5HEAUSCgoGRkFJTEVEEAY6f+pBfAoidm13YXJl",
+            "ZW5naW5lLmdvb2dsZWFwaXMuY29tL1N1Ym5ldBJWcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3ByaXZhdGVDbG91ZHMve3ByaXZh",
+            "dGVfY2xvdWR9L3N1Ym5ldHMve3N1Ym5ldH0ipQgKEkV4dGVybmFsQWNjZXNz",
+            "UnVsZRIRCgRuYW1lGAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3Rp",
+            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEwoL",
+            "ZGVzY3JpcHRpb24YBSABKAkSEAoIcHJpb3JpdHkYBiABKAUSRwoGYWN0aW9u",
+            "GAcgASgOMjcuZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5FeHRlcm5h",
+            "bEFjY2Vzc1J1bGUuQWN0aW9uEhMKC2lwX3Byb3RvY29sGAggASgJElIKEHNv",
+            "dXJjZV9pcF9yYW5nZXMYCSADKAsyOC5nb29nbGUuY2xvdWQudm13YXJlZW5n",
+            "aW5lLnYxLkV4dGVybmFsQWNjZXNzUnVsZS5JcFJhbmdlEhQKDHNvdXJjZV9w",
+            "b3J0cxgKIAMoCRJXChVkZXN0aW5hdGlvbl9pcF9yYW5nZXMYCyADKAsyOC5n",
+            "b29nbGUuY2xvdWQudm13YXJlZW5naW5lLnYxLkV4dGVybmFsQWNjZXNzUnVs",
+            "ZS5JcFJhbmdlEhkKEWRlc3RpbmF0aW9uX3BvcnRzGAwgAygJEkoKBXN0YXRl",
+            "GA0gASgOMjYuZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5FeHRlcm5h",
+            "bEFjY2Vzc1J1bGUuU3RhdGVCA+BBAxIQCgN1aWQYDiABKAlCA+BBAxqVAQoH",
+            "SXBSYW5nZRIUCgppcF9hZGRyZXNzGAEgASgJSAASGgoQaXBfYWRkcmVzc19y",
+            "YW5nZRgCIAEoCUgAEkwKEGV4dGVybmFsX2FkZHJlc3MYAyABKAlCMPpBLQor",
+            "dm13YXJlZW5naW5lLmdvb2dsZWFwaXMuY29tL0V4dGVybmFsQWRkcmVzc0gA",
+            "QgoKCGlwX3JhbmdlIjUKBkFjdGlvbhIWChJBQ1RJT05fVU5TUEVDSUZJRUQQ",
+            "ABIJCgVBTExPVxABEggKBERFTlkQAiJUCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
+            "RUNJRklFRBAAEgoKBkFDVElWRRABEgwKCENSRUFUSU5HEAISDAoIVVBEQVRJ",
+            "TkcQAxIMCghERUxFVElORxAEOqkB6kGlAQoudm13YXJlZW5naW5lLmdvb2ds",
+            "ZWFwaXMuY29tL0V4dGVybmFsQWNjZXNzUnVsZRJzcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L25ldHdvcmtQb2xpY2llcy97bmV0",
+            "d29ya19wb2xpY3l9L2V4dGVybmFsQWNjZXNzUnVsZXMve2V4dGVybmFsX2Fj",
+            "Y2Vzc19ydWxlfSKVBQoNTG9nZ2luZ1NlcnZlchIRCgRuYW1lGAEgASgJQgPg",
+            "QQMSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSFQoIaG9zdG5hbWUYBSABKAlCA+BBAhIR",
+            "CgRwb3J0GAcgASgFQgPgQQISSwoIcHJvdG9jb2wYBiABKA4yNC5nb29nbGUu",
+            "Y2xvdWQudm13YXJlZW5naW5lLnYxLkxvZ2dpbmdTZXJ2ZXIuUHJvdG9jb2xC",
+            "A+BBAhJQCgtzb3VyY2VfdHlwZRgKIAEoDjI2Lmdvb2dsZS5jbG91ZC52bXdh",
+            "cmVlbmdpbmUudjEuTG9nZ2luZ1NlcnZlci5Tb3VyY2VUeXBlQgPgQQISEAoD",
+            "dWlkGAggASgJQgPgQQMiUgoIUHJvdG9jb2wSGAoUUFJPVE9DT0xfVU5TUEVD",
+            "SUZJRUQQABIHCgNVRFAQARIHCgNUQ1AQAhIHCgNUTFMQAxIHCgNTU0wQBBII",
+            "CgRSRUxQEAUiPQoKU291cmNlVHlwZRIbChdTT1VSQ0VfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEggKBEVTWEkQARIICgRWQ1NBEAI6lgHqQZIBCil2bXdhcmVlbmdp",
+            "bmUuZ29vZ2xlYXBpcy5jb20vTG9nZ2luZ1NlcnZlchJlcHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3ByaXZhdGVDbG91ZHMve3By",
+            "aXZhdGVfY2xvdWR9L2xvZ2dpbmdTZXJ2ZXJzL3tsb2dnaW5nX3NlcnZlcn0i",
+            "/wQKCE5vZGVUeXBlEhEKBG5hbWUYASABKAlCA+BBAxIZCgxub2RlX3R5cGVf",
+            "aWQYAiABKAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAxIeChF2",
+            "aXJ0dWFsX2NwdV9jb3VudBgEIAEoBUID4EEDEh0KEHRvdGFsX2NvcmVfY291",
+            "bnQYBSABKAVCA+BBAxIWCgltZW1vcnlfZ2IYByABKAVCA+BBAxIZCgxkaXNr",
+            "X3NpemVfZ2IYCCABKAVCA+BBAxIpChxhdmFpbGFibGVfY3VzdG9tX2NvcmVf",
+            "Y291bnRzGAsgAygFQgPgQQMSPgoEa2luZBgMIAEoDjIrLmdvb2dsZS5jbG91",
+            "ZC52bXdhcmVlbmdpbmUudjEuTm9kZVR5cGUuS2luZEID4EEDEhUKCGZhbWls",
+            "aWVzGA0gAygJQgPgQQMSTAoMY2FwYWJpbGl0aWVzGA4gAygOMjEuZ29vZ2xl",
+            "LmNsb3VkLnZtd2FyZWVuZ2luZS52MS5Ob2RlVHlwZS5DYXBhYmlsaXR5QgPg",
+            "QQMiPAoES2luZBIUChBLSU5EX1VOU1BFQ0lGSUVEEAASDAoIU1RBTkRBUkQQ",
+            "ARIQCgxTVE9SQUdFX09OTFkQAiJACgpDYXBhYmlsaXR5EhoKFkNBUEFCSUxJ",
+            "VFlfVU5TUEVDSUZJRUQQABIWChJTVFJFVENIRURfQ0xVU1RFUlMQATpo6kFl",
+            "CiR2bXdhcmVlbmdpbmUuZ29vZ2xlYXBpcy5jb20vTm9kZVR5cGUSPXByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9ub2RlVHlwZXMv",
+            "e25vZGVfdHlwZX0iMQoLQ3JlZGVudGlhbHMSEAoIdXNlcm5hbWUYASABKAkS",
+            "EAoIcGFzc3dvcmQYAiABKAkiwgMKEEhjeEFjdGl2YXRpb25LZXkSEQoEbmFt",
+            "ZRgBIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEkgKBXN0YXRlGAMgASgOMjQuZ29vZ2xl",
+            "LmNsb3VkLnZtd2FyZWVuZ2luZS52MS5IY3hBY3RpdmF0aW9uS2V5LlN0YXRl",
+            "QgPgQQMSGwoOYWN0aXZhdGlvbl9rZXkYBCABKAlCA+BBAxIQCgN1aWQYBSAB",
+            "KAlCA+BBAyJJCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEg0KCUFW",
+            "QUlMQUJMRRABEgwKCENPTlNVTUVEEAISDAoIQ1JFQVRJTkcQAzqgAepBnAEK",
+            "LHZtd2FyZWVuZ2luZS5nb29nbGVhcGlzLmNvbS9IY3hBY3RpdmF0aW9uS2V5",
+            "Emxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHJp",
+            "dmF0ZUNsb3Vkcy97cHJpdmF0ZV9jbG91ZH0vaGN4QWN0aXZhdGlvbktleXMv",
+            "e2hjeF9hY3RpdmF0aW9uX2tleX0iwAEKA0hjeBITCgtpbnRlcm5hbF9pcBgC",
+            "IAEoCRIPCgd2ZXJzaW9uGAQgASgJEjsKBXN0YXRlGAUgASgOMicuZ29vZ2xl",
+            "LmNsb3VkLnZtd2FyZWVuZ2luZS52MS5IY3guU3RhdGVCA+BBAxIMCgRmcWRu",
+            "GAYgASgJIkgKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNU",
+            "SVZFEAESDAoIQ1JFQVRJTkcQAhIOCgpBQ1RJVkFUSU5HEAMisAEKA05zeBIT",
+            "CgtpbnRlcm5hbF9pcBgCIAEoCRIPCgd2ZXJzaW9uGAQgASgJEjsKBXN0YXRl",
+            "GAUgASgOMicuZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5Oc3guU3Rh",
+            "dGVCA+BBAxIMCgRmcWRuGAYgASgJIjgKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
+            "Q0lGSUVEEAASCgoGQUNUSVZFEAESDAoIQ1JFQVRJTkcQAiK4AQoHVmNlbnRl",
+            "chITCgtpbnRlcm5hbF9pcBgCIAEoCRIPCgd2ZXJzaW9uGAQgASgJEj8KBXN0",
+            "YXRlGAUgASgOMisuZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5WY2Vu",
+            "dGVyLlN0YXRlQgPgQQMSDAoEZnFkbhgGIAEoCSI4CgVTdGF0ZRIVChFTVEFU",
+            "RV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEgwKCENSRUFUSU5HEAIimwcK",
+            "E0F1dG9zY2FsaW5nU2V0dGluZ3MSbQoUYXV0b3NjYWxpbmdfcG9saWNpZXMY",
+            "ASADKAsySi5nb29nbGUuY2xvdWQudm13YXJlZW5naW5lLnYxLkF1dG9zY2Fs",
+            "aW5nU2V0dGluZ3MuQXV0b3NjYWxpbmdQb2xpY2llc0VudHJ5QgPgQQISIwoW",
+            "bWluX2NsdXN0ZXJfbm9kZV9jb3VudBgCIAEoBUID4EEBEiMKFm1heF9jbHVz",
+            "dGVyX25vZGVfY291bnQYAyABKAVCA+BBARI4ChBjb29sX2Rvd25fcGVyaW9k",
+            "GAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQEaOwoKVGhy",
+            "ZXNob2xkcxIWCglzY2FsZV9vdXQYASABKAVCA+BBAhIVCghzY2FsZV9pbhgC",
+            "IAEoBUID4EECGtIDChFBdXRvc2NhbGluZ1BvbGljeRIZCgxub2RlX3R5cGVf",
+            "aWQYASABKAlCA+BBAhIbCg5zY2FsZV9vdXRfc2l6ZRgCIAEoBUID4EECElkK",
+            "DmNwdV90aHJlc2hvbGRzGAsgASgLMjwuZ29vZ2xlLmNsb3VkLnZtd2FyZWVu",
+            "Z2luZS52MS5BdXRvc2NhbGluZ1NldHRpbmdzLlRocmVzaG9sZHNCA+BBARJk",
+            "ChlncmFudGVkX21lbW9yeV90aHJlc2hvbGRzGAwgASgLMjwuZ29vZ2xlLmNs",
+            "b3VkLnZtd2FyZWVuZ2luZS52MS5BdXRvc2NhbGluZ1NldHRpbmdzLlRocmVz",
+            "aG9sZHNCA+BBARJlChpjb25zdW1lZF9tZW1vcnlfdGhyZXNob2xkcxgNIAEo",
+            "CzI8Lmdvb2dsZS5jbG91ZC52bXdhcmVlbmdpbmUudjEuQXV0b3NjYWxpbmdT",
+            "ZXR0aW5ncy5UaHJlc2hvbGRzQgPgQQESXQoSc3RvcmFnZV90aHJlc2hvbGRz",
+            "GA4gASgLMjwuZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5BdXRvc2Nh",
+            "bGluZ1NldHRpbmdzLlRocmVzaG9sZHNCA+BBARp/ChhBdXRvc2NhbGluZ1Bv",
+            "bGljaWVzRW50cnkSCwoDa2V5GAEgASgJElIKBXZhbHVlGAIgASgLMkMuZ29v",
+            "Z2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5BdXRvc2NhbGluZ1NldHRpbmdz",
+            "LkF1dG9zY2FsaW5nUG9saWN5OgI4ASKyAwoNRG5zRm9yd2FyZGluZxIRCgRu",
+            "YW1lGAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSWQoQZm9yd2FyZGlu",
+            "Z19ydWxlcxgEIAMoCzI6Lmdvb2dsZS5jbG91ZC52bXdhcmVlbmdpbmUudjEu",
+            "RG5zRm9yd2FyZGluZy5Gb3J3YXJkaW5nUnVsZUID4EECGkAKDkZvcndhcmRp",
+            "bmdSdWxlEhMKBmRvbWFpbhgBIAEoCUID4EECEhkKDG5hbWVfc2VydmVycxgC",
+            "IAMoCUID4EECOoQB6kGAAQopdm13YXJlZW5naW5lLmdvb2dsZWFwaXMuY29t",
+            "L0Ruc0ZvcndhcmRpbmcSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9wcml2YXRlQ2xvdWRzL3twcml2YXRlX2Nsb3VkfS9kbnNG",
+            "b3J3YXJkaW5nIsQKCg5OZXR3b3JrUGVlcmluZxIRCgRuYW1lGAEgASgJQgPg",
+            "QQMSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSGQoMcGVlcl9uZXR3b3JrGAUgASgJQgPg",
+            "QQISJgoUZXhwb3J0X2N1c3RvbV9yb3V0ZXMYCCABKAhCA+BBAUgAiAEBEiYK",
+            "FGltcG9ydF9jdXN0b21fcm91dGVzGAkgASgIQgPgQQFIAYgBARIoChZleGNo",
+            "YW5nZV9zdWJuZXRfcm91dGVzGAogASgIQgPgQQFIAogBARI1CiNleHBvcnRf",
+            "Y3VzdG9tX3JvdXRlc193aXRoX3B1YmxpY19pcBgLIAEoCEID4EEBSAOIAQES",
+            "NQojaW1wb3J0X2N1c3RvbV9yb3V0ZXNfd2l0aF9wdWJsaWNfaXAYDCABKAhC",
+            "A+BBAUgEiAEBEkYKBXN0YXRlGA0gASgOMjIuZ29vZ2xlLmNsb3VkLnZtd2Fy",
+            "ZWVuZ2luZS52MS5OZXR3b3JrUGVlcmluZy5TdGF0ZUID4EEDEhoKDXN0YXRl",
+            "X2RldGFpbHMYByABKAlCA+BBAxIVCghwZWVyX210dRgOIAEoBUID4EEBElwK",
+            "EXBlZXJfbmV0d29ya190eXBlGBAgASgOMjwuZ29vZ2xlLmNsb3VkLnZtd2Fy",
+            "ZWVuZ2luZS52MS5OZXR3b3JrUGVlcmluZy5QZWVyTmV0d29ya1R5cGVCA+BB",
+            "AhIQCgN1aWQYESABKAlCA+BBAxJWChV2bXdhcmVfZW5naW5lX25ldHdvcmsY",
+            "FCABKAlCN+BBAvpBMQovdm13YXJlZW5naW5lLmdvb2dsZWFwaXMuY29tL1Zt",
+            "d2FyZUVuZ2luZU5ldHdvcmsSGAoLZGVzY3JpcHRpb24YFSABKAlCA+BBASJU",
+            "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCElOQUNUSVZFEAES",
+            "CgoGQUNUSVZFEAISDAoIQ1JFQVRJTkcQAxIMCghERUxFVElORxAEIuMBCg9Q",
+            "ZWVyTmV0d29ya1R5cGUSIQodUEVFUl9ORVRXT1JLX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIMCghTVEFOREFSRBABEhkKFVZNV0FSRV9FTkdJTkVfTkVUV09SSxAC",
+            "EhsKF1BSSVZBVEVfU0VSVklDRVNfQUNDRVNTEAMSGAoUTkVUQVBQX0NMT1VE",
+            "X1ZPTFVNRVMQBBIXChNUSElSRF9QQVJUWV9TRVJWSUNFEAUSEwoPREVMTF9Q",
+            "T1dFUlNDQUxFEAYSHwobR09PR0xFX0NMT1VEX05FVEFQUF9WT0xVTUVTEAc6",
+            "eupBdwoqdm13YXJlZW5naW5lLmdvb2dsZWFwaXMuY29tL05ldHdvcmtQZWVy",
+            "aW5nEklwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "bmV0d29ya1BlZXJpbmdzL3tuZXR3b3JrX3BlZXJpbmd9QhcKFV9leHBvcnRf",
+            "Y3VzdG9tX3JvdXRlc0IXChVfaW1wb3J0X2N1c3RvbV9yb3V0ZXNCGQoXX2V4",
+            "Y2hhbmdlX3N1Ym5ldF9yb3V0ZXNCJgokX2V4cG9ydF9jdXN0b21fcm91dGVz",
+            "X3dpdGhfcHVibGljX2lwQiYKJF9pbXBvcnRfY3VzdG9tX3JvdXRlc193aXRo",
+            "X3B1YmxpY19pcCK2AwoMUGVlcmluZ1JvdXRlEhcKCmRlc3RfcmFuZ2UYASAB",
+            "KAlCA+BBAxJCCgR0eXBlGAIgASgOMi8uZ29vZ2xlLmNsb3VkLnZtd2FyZWVu",
+            "Z2luZS52MS5QZWVyaW5nUm91dGUuVHlwZUID4EEDEhwKD25leHRfaG9wX3Jl",
+            "Z2lvbhgDIAEoCUID4EEDEhUKCHByaW9yaXR5GAQgASgDQgPgQQMSFQoIaW1w",
+            "b3J0ZWQYBSABKAhCA+BBAxJMCglkaXJlY3Rpb24YBiABKA4yNC5nb29nbGUu",
+            "Y2xvdWQudm13YXJlZW5naW5lLnYxLlBlZXJpbmdSb3V0ZS5EaXJlY3Rpb25C",
+            "A+BBAyJrCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIZChVEWU5BTUlD",
+            "X1BFRVJJTkdfUk9VVEUQARIYChRTVEFUSUNfUEVFUklOR19ST1VURRACEhgK",
+            "FFNVQk5FVF9QRUVSSU5HX1JPVVRFEAMiQgoJRGlyZWN0aW9uEhkKFURJUkVD",
+            "VElPTl9VTlNQRUNJRklFRBAAEgwKCElOQ09NSU5HEAESDAoIT1VUR09JTkcQ",
+            "AiL/BgoNTmV0d29ya1BvbGljeRIRCgRuYW1lGAEgASgJQgPgQQMSNAoLY3Jl",
+            "YXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSUwoPaW50ZXJuZXRfYWNjZXNzGAYgASgLMjouZ29vZ2xl",
+            "LmNsb3VkLnZtd2FyZWVuZ2luZS52MS5OZXR3b3JrUG9saWN5Lk5ldHdvcmtT",
+            "ZXJ2aWNlEk8KC2V4dGVybmFsX2lwGAcgASgLMjouZ29vZ2xlLmNsb3VkLnZt",
+            "d2FyZWVuZ2luZS52MS5OZXR3b3JrUG9saWN5Lk5ldHdvcmtTZXJ2aWNlEh8K",
+            "EmVkZ2Vfc2VydmljZXNfY2lkchgJIAEoCUID4EECEhAKA3VpZBgKIAEoCUID",
+            "4EEDElYKFXZtd2FyZV9lbmdpbmVfbmV0d29yaxgMIAEoCUI34EEB+kExCi92",
+            "bXdhcmVlbmdpbmUuZ29vZ2xlYXBpcy5jb20vVm13YXJlRW5naW5lTmV0d29y",
+            "axIYCgtkZXNjcmlwdGlvbhgNIAEoCUID4EEBEmAKH3Ztd2FyZV9lbmdpbmVf",
+            "bmV0d29ya19jYW5vbmljYWwYDiABKAlCN+BBA/pBMQovdm13YXJlZW5naW5l",
+            "Lmdvb2dsZWFwaXMuY29tL1Ztd2FyZUVuZ2luZU5ldHdvcmsaxwEKDk5ldHdv",
+            "cmtTZXJ2aWNlEg8KB2VuYWJsZWQYASABKAgSVAoFc3RhdGUYAiABKA4yQC5n",
+            "b29nbGUuY2xvdWQudm13YXJlZW5naW5lLnYxLk5ldHdvcmtQb2xpY3kuTmV0",
+            "d29ya1NlcnZpY2UuU3RhdGVCA+BBAyJOCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
+            "RUNJRklFRBAAEhEKDVVOUFJPVklTSU9ORUQQARIPCgtSRUNPTkNJTElORxAC",
+            "EgoKBkFDVElWRRADOnjqQXUKKXZtd2FyZWVuZ2luZS5nb29nbGVhcGlzLmNv",
+            "bS9OZXR3b3JrUG9saWN5Ekhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vbmV0d29ya1BvbGljaWVzL3tuZXR3b3JrX3BvbGljeX0i",
+            "0wUKGE1hbmFnZW1lbnREbnNab25lQmluZGluZxIRCgRuYW1lGAEgASgJQgPg",
+            "QQMSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSUAoFc3RhdGUYCCABKA4yPC5nb29nbGUu",
+            "Y2xvdWQudm13YXJlZW5naW5lLnYxLk1hbmFnZW1lbnREbnNab25lQmluZGlu",
+            "Zy5TdGF0ZUID4EEDEhMKC2Rlc2NyaXB0aW9uGA0gASgJEjoKC3ZwY19uZXR3",
+            "b3JrGA4gASgJQiP6QSAKHmNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29y",
+            "a0gAElUKFXZtd2FyZV9lbmdpbmVfbmV0d29yaxgPIAEoCUI0+kExCi92bXdh",
+            "cmVlbmdpbmUuZ29vZ2xlYXBpcy5jb20vVm13YXJlRW5naW5lTmV0d29ya0gA",
+            "EhAKA3VpZBgJIAEoCUID4EEDImAKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lG",
+            "SUVEEAASCgoGQUNUSVZFEAESDAoIQ1JFQVRJTkcQAhIMCghVUERBVElORxAD",
+            "EgwKCERFTEVUSU5HEAQSCgoGRkFJTEVEEAU6uQHqQbUBCjR2bXdhcmVlbmdp",
+            "bmUuZ29vZ2xlYXBpcy5jb20vTWFuYWdlbWVudERuc1pvbmVCaW5kaW5nEn1w",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHJpdmF0",
+            "ZUNsb3Vkcy97cHJpdmF0ZV9jbG91ZH0vbWFuYWdlbWVudERuc1pvbmVCaW5k",
+            "aW5ncy97bWFuYWdlbWVudF9kbnNfem9uZV9iaW5kaW5nfUIOCgxiaW5kX25l",
+            "dHdvcmsiwAcKE1Ztd2FyZUVuZ2luZU5ldHdvcmsSEQoEbmFtZRgBIAEoCUID",
+            "4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEhMKC2Rlc2NyaXB0aW9uGAUgASgJElcK",
+            "DHZwY19uZXR3b3JrcxgGIAMoCzI8Lmdvb2dsZS5jbG91ZC52bXdhcmVlbmdp",
+            "bmUudjEuVm13YXJlRW5naW5lTmV0d29yay5WcGNOZXR3b3JrQgPgQQMSSwoF",
+            "c3RhdGUYByABKA4yNy5nb29nbGUuY2xvdWQudm13YXJlZW5naW5lLnYxLlZt",
+            "d2FyZUVuZ2luZU5ldHdvcmsuU3RhdGVCA+BBAxJJCgR0eXBlGAggASgOMjYu",
             "Z29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5WbXdhcmVFbmdpbmVOZXR3",
-            "b3JrLlN0YXRlQgPgQQMSSQoEdHlwZRgIIAEoDjI2Lmdvb2dsZS5jbG91ZC52",
-            "bXdhcmVlbmdpbmUudjEuVm13YXJlRW5naW5lTmV0d29yay5UeXBlQgPgQQIS",
-            "EAoDdWlkGAkgASgJQgPgQQMSDAoEZXRhZxgKIAEoCRrnAQoKVnBjTmV0d29y",
-            "axJUCgR0eXBlGAEgASgOMkEuZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52",
-            "MS5WbXdhcmVFbmdpbmVOZXR3b3JrLlZwY05ldHdvcmsuVHlwZUID4EEDEjcK",
-            "B25ldHdvcmsYAiABKAlCJuBBA/pBIAoeY29tcHV0ZS5nb29nbGVhcGlzLmNv",
-            "bS9OZXR3b3JrIkoKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEgwKCElO",
-            "VFJBTkVUEAESDAoISU5URVJORVQQAhIQCgxHT09HTEVfQ0xPVUQQAyJUCgVT",
-            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCgoG",
-            "QUNUSVZFEAISDAoIVVBEQVRJTkcQAxIMCghERUxFVElORxAEIigKBFR5cGUS",
-            "FAoQVFlQRV9VTlNQRUNJRklFRBAAEgoKBkxFR0FDWRABOosB6kGHAQovdm13",
-            "YXJlZW5naW5lLmdvb2dsZWFwaXMuY29tL1Ztd2FyZUVuZ2luZU5ldHdvcmsS",
-            "VHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS92bXdh",
-            "cmVFbmdpbmVOZXR3b3Jrcy97dm13YXJlX2VuZ2luZV9uZXR3b3JrfULmAQog",
-            "Y29tLmdvb2dsZS5jbG91ZC52bXdhcmVlbmdpbmUudjFCGlZtd2FyZWVuZ2lu",
-            "ZVJlc291cmNlc1Byb3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vdm13YXJl",
-            "ZW5naW5lL2FwaXYxL3Ztd2FyZWVuZ2luZXBiO3Ztd2FyZWVuZ2luZXBiqgIc",
-            "R29vZ2xlLkNsb3VkLlZtd2FyZUVuZ2luZS5WMcoCHEdvb2dsZVxDbG91ZFxW",
-            "bXdhcmVFbmdpbmVcVjHqAh9Hb29nbGU6OkNsb3VkOjpWbXdhcmVFbmdpbmU6",
-            "OlYxYgZwcm90bzM="));
+            "b3JrLlR5cGVCA+BBAhIQCgN1aWQYCSABKAlCA+BBAxIMCgRldGFnGAogASgJ",
+            "GucBCgpWcGNOZXR3b3JrElQKBHR5cGUYASABKA4yQS5nb29nbGUuY2xvdWQu",
+            "dm13YXJlZW5naW5lLnYxLlZtd2FyZUVuZ2luZU5ldHdvcmsuVnBjTmV0d29y",
+            "ay5UeXBlQgPgQQMSNwoHbmV0d29yaxgCIAEoCUIm4EED+kEgCh5jb21wdXRl",
+            "Lmdvb2dsZWFwaXMuY29tL05ldHdvcmsiSgoEVHlwZRIUChBUWVBFX1VOU1BF",
+            "Q0lGSUVEEAASDAoISU5UUkFORVQQARIMCghJTlRFUk5FVBACEhAKDEdPT0dM",
+            "RV9DTE9VRBADIlQKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoI",
+            "Q1JFQVRJTkcQARIKCgZBQ1RJVkUQAhIMCghVUERBVElORxADEgwKCERFTEVU",
+            "SU5HEAQiNgoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoGTEVHQUNZ",
+            "EAESDAoIU1RBTkRBUkQQAjqLAepBhwEKL3Ztd2FyZWVuZ2luZS5nb29nbGVh",
+            "cGlzLmNvbS9WbXdhcmVFbmdpbmVOZXR3b3JrElRwcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdm13YXJlRW5naW5lTmV0d29ya3Mv",
+            "e3Ztd2FyZV9lbmdpbmVfbmV0d29ya30itwoKEVByaXZhdGVDb25uZWN0aW9u",
+            "EhEKBG5hbWUYASABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgD",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIYCgtkZXNj",
+            "cmlwdGlvbhgEIAEoCUID4EEBEkkKBXN0YXRlGAUgASgOMjUuZ29vZ2xlLmNs",
+            "b3VkLnZtd2FyZWVuZ2luZS52MS5Qcml2YXRlQ29ubmVjdGlvbi5TdGF0ZUID",
+            "4EEDElYKFXZtd2FyZV9lbmdpbmVfbmV0d29yaxgIIAEoCUI34EEC+kExCi92",
+            "bXdhcmVlbmdpbmUuZ29vZ2xlYXBpcy5jb20vVm13YXJlRW5naW5lTmV0d29y",
+            "axJgCh92bXdhcmVfZW5naW5lX25ldHdvcmtfY2Fub25pY2FsGAkgASgJQjfg",
+            "QQP6QTEKL3Ztd2FyZWVuZ2luZS5nb29nbGVhcGlzLmNvbS9WbXdhcmVFbmdp",
+            "bmVOZXR3b3JrEkcKBHR5cGUYCiABKA4yNC5nb29nbGUuY2xvdWQudm13YXJl",
+            "ZW5naW5lLnYxLlByaXZhdGVDb25uZWN0aW9uLlR5cGVCA+BBAhIXCgpwZWVy",
+            "aW5nX2lkGAwgASgJQgPgQQMSVgoMcm91dGluZ19tb2RlGA0gASgOMjsuZ29v",
+            "Z2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5Qcml2YXRlQ29ubmVjdGlvbi5S",
+            "b3V0aW5nTW9kZUID4EEBEhAKA3VpZBgOIAEoCUID4EEDEj8KD3NlcnZpY2Vf",
+            "bmV0d29yaxgQIAEoCUIm4EEC+kEgCh5jb21wdXRlLmdvb2dsZWFwaXMuY29t",
+            "L05ldHdvcmsSWAoNcGVlcmluZ19zdGF0ZRgRIAEoDjI8Lmdvb2dsZS5jbG91",
+            "ZC52bXdhcmVlbmdpbmUudjEuUHJpdmF0ZUNvbm5lY3Rpb24uUGVlcmluZ1N0",
+            "YXRlQgPgQQMicwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghD",
+            "UkVBVElORxABEgoKBkFDVElWRRACEgwKCFVQREFUSU5HEAMSDAoIREVMRVRJ",
+            "TkcQBBIRCg1VTlBST1ZJU0lPTkVEEAUSCgoGRkFJTEVEEAYigAEKBFR5cGUS",
+            "FAoQVFlQRV9VTlNQRUNJRklFRBAAEhoKFlBSSVZBVEVfU0VSVklDRV9BQ0NF",
+            "U1MQARIYChRORVRBUFBfQ0xPVURfVk9MVU1FUxACEhMKD0RFTExfUE9XRVJT",
+            "Q0FMRRADEhcKE1RISVJEX1BBUlRZX1NFUlZJQ0UQBCJFCgtSb3V0aW5nTW9k",
+            "ZRIcChhST1VUSU5HX01PREVfVU5TUEVDSUZJRUQQABIKCgZHTE9CQUwQARIM",
+            "CghSRUdJT05BTBACIlcKDFBlZXJpbmdTdGF0ZRIdChlQRUVSSU5HX1NUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASEgoOUEVFUklOR19BQ1RJVkUQARIUChBQRUVSSU5H",
+            "X0lOQUNUSVZFEAI6hAHqQYABCi12bXdhcmVlbmdpbmUuZ29vZ2xlYXBpcy5j",
+            "b20vUHJpdmF0ZUNvbm5lY3Rpb24ST3Byb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9wcml2YXRlQ29ubmVjdGlvbnMve3ByaXZhdGVf",
+            "Y29ubmVjdGlvbn0iqgEKEExvY2F0aW9uTWV0YWRhdGESVAoMY2FwYWJpbGl0",
+            "aWVzGAEgAygOMjkuZ29vZ2xlLmNsb3VkLnZtd2FyZWVuZ2luZS52MS5Mb2Nh",
+            "dGlvbk1ldGFkYXRhLkNhcGFiaWxpdHlCA+BBAyJACgpDYXBhYmlsaXR5EhoK",
+            "FkNBUEFCSUxJVFlfVU5TUEVDSUZJRUQQABIWChJTVFJFVENIRURfQ0xVU1RF",
+            "UlMQASLXAQoRRG5zQmluZFBlcm1pc3Npb24SEQoEbmFtZRgBIAEoCUID4EED",
+            "EkAKCnByaW5jaXBhbHMYAiADKAsyJy5nb29nbGUuY2xvdWQudm13YXJlZW5n",
+            "aW5lLnYxLlByaW5jaXBhbEID4EEDOm3qQWoKLXZtd2FyZWVuZ2luZS5nb29n",
+            "bGVhcGlzLmNvbS9EbnNCaW5kUGVybWlzc2lvbhI5cHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Ruc0JpbmRQZXJtaXNzaW9uIkMK",
+            "CVByaW5jaXBhbBIOCgR1c2VyGAEgASgJSAASGQoPc2VydmljZV9hY2NvdW50",
+            "GAIgASgJSABCCwoJcHJpbmNpcGFsQuYBCiBjb20uZ29vZ2xlLmNsb3VkLnZt",
+            "d2FyZWVuZ2luZS52MUIaVm13YXJlZW5naW5lUmVzb3VyY2VzUHJvdG9QAVpE",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby92bXdhcmVlbmdpbmUvYXBpdjEvdm13YXJl",
+            "ZW5naW5lcGI7dm13YXJlZW5naW5lcGKqAhxHb29nbGUuQ2xvdWQuVm13YXJl",
+            "RW5naW5lLlYxygIcR29vZ2xlXENsb3VkXFZtd2FyZUVuZ2luZVxWMeoCH0dv",
+            "b2dsZTo6Q2xvdWQ6OlZtd2FyZUVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.NetworkConfig), global::Google.Cloud.VmwareEngine.V1.NetworkConfig.Parser, new[]{ "ManagementCidr", "VmwareEngineNetwork", "VmwareEngineNetworkCanonical", "ManagementIpAddressLayoutVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.NetworkConfig), global::Google.Cloud.VmwareEngine.V1.NetworkConfig.Parser, new[]{ "ManagementCidr", "VmwareEngineNetwork", "VmwareEngineNetworkCanonical", "ManagementIpAddressLayoutVersion", "DnsServerIp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.NodeTypeConfig), global::Google.Cloud.VmwareEngine.V1.NodeTypeConfig.Parser, new[]{ "NodeCount", "CustomCoreCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.PrivateCloud), global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "State", "NetworkConfig", "ManagementCluster", "Description", "Hcx", "Nsx", "Vcenter", "Uid" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.ManagementCluster), global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.ManagementCluster.Parser, new[]{ "ClusterId", "NodeTypeConfigs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.Cluster), global::Google.Cloud.VmwareEngine.V1.Cluster.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "State", "Management", "Uid", "NodeTypeConfigs" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.Subnet), global::Google.Cloud.VmwareEngine.V1.Subnet.Parser, new[]{ "Name", "IpCidrRange", "GatewayIp", "Type", "State" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.Subnet.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.NodeType), global::Google.Cloud.VmwareEngine.V1.NodeType.Parser, new[]{ "Name", "NodeTypeId", "DisplayName", "VirtualCpuCount", "TotalCoreCount", "MemoryGb", "DiskSizeGb", "AvailableCustomCoreCounts" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.StretchedClusterConfig), global::Google.Cloud.VmwareEngine.V1.StretchedClusterConfig.Parser, new[]{ "PreferredLocation", "SecondaryLocation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.PrivateCloud), global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DeleteTime", "ExpireTime", "State", "NetworkConfig", "ManagementCluster", "Description", "Hcx", "Nsx", "Vcenter", "Uid", "Type" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.State), typeof(global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.ManagementCluster), global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.ManagementCluster.Parser, new[]{ "ClusterId", "NodeTypeConfigs", "StretchedClusterConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.Cluster), global::Google.Cloud.VmwareEngine.V1.Cluster.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "State", "Management", "AutoscalingSettings", "Uid", "NodeTypeConfigs", "StretchedClusterConfig" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.Node), global::Google.Cloud.VmwareEngine.V1.Node.Parser, new[]{ "Name", "Fqdn", "InternalIp", "NodeTypeId", "Version", "CustomCoreCount", "State" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.Node.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.ExternalAddress), global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "InternalIp", "ExternalIp", "State", "Uid", "Description" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.Subnet), global::Google.Cloud.VmwareEngine.V1.Subnet.Parser, new[]{ "Name", "IpCidrRange", "GatewayIp", "Type", "State", "VlanId" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.Subnet.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule), global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Description", "Priority", "Action", "IpProtocol", "SourceIpRanges", "SourcePorts", "DestinationIpRanges", "DestinationPorts", "State", "Uid" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.Action), typeof(global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.IpRange), global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.IpRange.Parser, new[]{ "IpAddress", "IpAddressRange", "ExternalAddress" }, new[]{ "IpRange" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.LoggingServer), global::Google.Cloud.VmwareEngine.V1.LoggingServer.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Hostname", "Port", "Protocol", "SourceType", "Uid" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.Protocol), typeof(global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.SourceType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.NodeType), global::Google.Cloud.VmwareEngine.V1.NodeType.Parser, new[]{ "Name", "NodeTypeId", "DisplayName", "VirtualCpuCount", "TotalCoreCount", "MemoryGb", "DiskSizeGb", "AvailableCustomCoreCounts", "Kind", "Families", "Capabilities" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Kind), typeof(global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Capability) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.Credentials), global::Google.Cloud.VmwareEngine.V1.Credentials.Parser, new[]{ "Username", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.HcxActivationKey), global::Google.Cloud.VmwareEngine.V1.HcxActivationKey.Parser, new[]{ "Name", "CreateTime", "State", "ActivationKey", "Uid" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.HcxActivationKey.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.Hcx), global::Google.Cloud.VmwareEngine.V1.Hcx.Parser, new[]{ "InternalIp", "Version", "State", "Fqdn" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.Hcx.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.Nsx), global::Google.Cloud.VmwareEngine.V1.Nsx.Parser, new[]{ "InternalIp", "Version", "State", "Fqdn" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.Nsx.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.Vcenter), global::Google.Cloud.VmwareEngine.V1.Vcenter.Parser, new[]{ "InternalIp", "Version", "State", "Fqdn" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.Vcenter.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings), global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Parser, new[]{ "AutoscalingPolicies", "MinClusterNodeCount", "MaxClusterNodeCount", "CoolDownPeriod" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds), global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds.Parser, new[]{ "ScaleOut", "ScaleIn" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.AutoscalingPolicy), global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.AutoscalingPolicy.Parser, new[]{ "NodeTypeId", "ScaleOutSize", "CpuThresholds", "GrantedMemoryThresholds", "ConsumedMemoryThresholds", "StorageThresholds" }, null, null, null, null),
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.DnsForwarding), global::Google.Cloud.VmwareEngine.V1.DnsForwarding.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "ForwardingRules" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.DnsForwarding.Types.ForwardingRule), global::Google.Cloud.VmwareEngine.V1.DnsForwarding.Types.ForwardingRule.Parser, new[]{ "Domain", "NameServers" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.NetworkPeering), global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "PeerNetwork", "ExportCustomRoutes", "ImportCustomRoutes", "ExchangeSubnetRoutes", "ExportCustomRoutesWithPublicIp", "ImportCustomRoutesWithPublicIp", "State", "StateDetails", "PeerMtu", "PeerNetworkType", "Uid", "VmwareEngineNetwork", "Description" }, new[]{ "ExportCustomRoutes", "ImportCustomRoutes", "ExchangeSubnetRoutes", "ExportCustomRoutesWithPublicIp", "ImportCustomRoutesWithPublicIp" }, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.State), typeof(global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.PeerNetworkType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.PeeringRoute), global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Parser, new[]{ "DestRange", "Type", "NextHopRegion", "Priority", "Imported", "Direction" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Type), typeof(global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Direction) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.NetworkPolicy), global::Google.Cloud.VmwareEngine.V1.NetworkPolicy.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "InternetAccess", "ExternalIp", "EdgeServicesCidr", "Uid", "VmwareEngineNetwork", "Description", "VmwareEngineNetworkCanonical" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.NetworkPolicy.Types.NetworkService), global::Google.Cloud.VmwareEngine.V1.NetworkPolicy.Types.NetworkService.Parser, new[]{ "Enabled", "State" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.NetworkPolicy.Types.NetworkService.Types.State) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork), global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Description", "VpcNetworks", "State", "Type", "Uid", "Etag" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork.Types.State), typeof(global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork.Types.VpcNetwork), global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork.Types.VpcNetwork.Parser, new[]{ "Type", "Network" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork.Types.VpcNetwork.Types.Type) }, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding), global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "State", "Description", "VpcNetwork", "VmwareEngineNetwork", "Uid" }, new[]{ "BindNetwork" }, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork), global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Description", "VpcNetworks", "State", "Type", "Uid", "Etag" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork.Types.State), typeof(global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork.Types.VpcNetwork), global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork.Types.VpcNetwork.Parser, new[]{ "Type", "Network" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.VmwareEngineNetwork.Types.VpcNetwork.Types.Type) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.PrivateConnection), global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Description", "State", "VmwareEngineNetwork", "VmwareEngineNetworkCanonical", "Type", "PeeringId", "RoutingMode", "Uid", "ServiceNetwork", "PeeringState" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.State), typeof(global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.Type), typeof(global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.RoutingMode), typeof(global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.PeeringState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.LocationMetadata), global::Google.Cloud.VmwareEngine.V1.LocationMetadata.Parser, new[]{ "Capabilities" }, null, new[]{ typeof(global::Google.Cloud.VmwareEngine.V1.LocationMetadata.Types.Capability) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.DnsBindPermission), global::Google.Cloud.VmwareEngine.V1.DnsBindPermission.Parser, new[]{ "Name", "Principals" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VmwareEngine.V1.Principal), global::Google.Cloud.VmwareEngine.V1.Principal.Parser, new[]{ "User", "ServiceAccount" }, new[]{ "Principal" }, null, null, null)
           }));
     }
     #endregion
@@ -190,6 +415,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
   /// Network configuration in the consumer project
   /// with which the peering has to be done.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NetworkConfig : pb::IMessage<NetworkConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -228,6 +454,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
       vmwareEngineNetwork_ = other.vmwareEngineNetwork_;
       vmwareEngineNetworkCanonical_ = other.vmwareEngineNetworkCanonical_;
       managementIpAddressLayoutVersion_ = other.managementIpAddressLayoutVersion_;
+      dnsServerIp_ = other.dnsServerIp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -308,6 +535,24 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "dns_server_ip" field.</summary>
+    public const int DnsServerIpFieldNumber = 9;
+    private string dnsServerIp_ = "";
+    /// <summary>
+    /// Output only. DNS Server IP of the Private Cloud.
+    /// All DNS queries can be forwarded to this address for name resolution of
+    /// Private Cloud's management entities like vCenter, NSX-T Manager and
+    /// ESXi hosts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DnsServerIp {
+      get { return dnsServerIp_; }
+      set {
+        dnsServerIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -327,6 +572,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (VmwareEngineNetwork != other.VmwareEngineNetwork) return false;
       if (VmwareEngineNetworkCanonical != other.VmwareEngineNetworkCanonical) return false;
       if (ManagementIpAddressLayoutVersion != other.ManagementIpAddressLayoutVersion) return false;
+      if (DnsServerIp != other.DnsServerIp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -338,6 +584,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (VmwareEngineNetwork.Length != 0) hash ^= VmwareEngineNetwork.GetHashCode();
       if (VmwareEngineNetworkCanonical.Length != 0) hash ^= VmwareEngineNetworkCanonical.GetHashCode();
       if (ManagementIpAddressLayoutVersion != 0) hash ^= ManagementIpAddressLayoutVersion.GetHashCode();
+      if (DnsServerIp.Length != 0) hash ^= DnsServerIp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -372,6 +619,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
         output.WriteRawTag(64);
         output.WriteInt32(ManagementIpAddressLayoutVersion);
       }
+      if (DnsServerIp.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(DnsServerIp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -398,6 +649,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
         output.WriteRawTag(64);
         output.WriteInt32(ManagementIpAddressLayoutVersion);
       }
+      if (DnsServerIp.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(DnsServerIp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -419,6 +674,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
       if (ManagementIpAddressLayoutVersion != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ManagementIpAddressLayoutVersion);
+      }
+      if (DnsServerIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DnsServerIp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -443,6 +701,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
       if (other.ManagementIpAddressLayoutVersion != 0) {
         ManagementIpAddressLayoutVersion = other.ManagementIpAddressLayoutVersion;
+      }
+      if (other.DnsServerIp.Length != 0) {
+        DnsServerIp = other.DnsServerIp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -473,6 +734,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
           }
           case 64: {
             ManagementIpAddressLayoutVersion = input.ReadInt32();
+            break;
+          }
+          case 74: {
+            DnsServerIp = input.ReadString();
             break;
           }
         }
@@ -506,6 +771,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
             ManagementIpAddressLayoutVersion = input.ReadInt32();
             break;
           }
+          case 74: {
+            DnsServerIp = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -516,6 +785,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
   /// <summary>
   /// Information about the type and number of nodes associated with the cluster.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NodeTypeConfig : pb::IMessage<NodeTypeConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -752,8 +1022,255 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
-  /// Represents a private cloud resource. Private clouds are zonal resources.
+  /// Configuration of a stretched cluster.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StretchedClusterConfig : pb::IMessage<StretchedClusterConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StretchedClusterConfig> _parser = new pb::MessageParser<StretchedClusterConfig>(() => new StretchedClusterConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StretchedClusterConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StretchedClusterConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StretchedClusterConfig(StretchedClusterConfig other) : this() {
+      preferredLocation_ = other.preferredLocation_;
+      secondaryLocation_ = other.secondaryLocation_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StretchedClusterConfig Clone() {
+      return new StretchedClusterConfig(this);
+    }
+
+    /// <summary>Field number for the "preferred_location" field.</summary>
+    public const int PreferredLocationFieldNumber = 1;
+    private string preferredLocation_ = "";
+    /// <summary>
+    /// Required. Zone that will remain operational when connection between the two
+    /// zones is lost. Specify the resource name of a zone that belongs to the
+    /// region of the private cloud. For example:
+    /// `projects/{project}/locations/europe-west3-a` where `{project}` can either
+    /// be a project number or a project ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PreferredLocation {
+      get { return preferredLocation_; }
+      set {
+        preferredLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "secondary_location" field.</summary>
+    public const int SecondaryLocationFieldNumber = 2;
+    private string secondaryLocation_ = "";
+    /// <summary>
+    /// Required. Additional zone for a higher level of availability and load
+    /// balancing. Specify the resource name of a zone that belongs to the region
+    /// of the private cloud. For example:
+    /// `projects/{project}/locations/europe-west3-b` where `{project}` can either
+    /// be a project number or a project ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SecondaryLocation {
+      get { return secondaryLocation_; }
+      set {
+        secondaryLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StretchedClusterConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StretchedClusterConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PreferredLocation != other.PreferredLocation) return false;
+      if (SecondaryLocation != other.SecondaryLocation) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PreferredLocation.Length != 0) hash ^= PreferredLocation.GetHashCode();
+      if (SecondaryLocation.Length != 0) hash ^= SecondaryLocation.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PreferredLocation.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PreferredLocation);
+      }
+      if (SecondaryLocation.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SecondaryLocation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PreferredLocation.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PreferredLocation);
+      }
+      if (SecondaryLocation.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SecondaryLocation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PreferredLocation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PreferredLocation);
+      }
+      if (SecondaryLocation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SecondaryLocation);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StretchedClusterConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PreferredLocation.Length != 0) {
+        PreferredLocation = other.PreferredLocation;
+      }
+      if (other.SecondaryLocation.Length != 0) {
+        SecondaryLocation = other.SecondaryLocation;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PreferredLocation = input.ReadString();
+            break;
+          }
+          case 18: {
+            SecondaryLocation = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PreferredLocation = input.ReadString();
+            break;
+          }
+          case 18: {
+            SecondaryLocation = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents a private cloud resource. Private clouds of type `STANDARD` and
+  /// `TIME_LIMITED` are zonal resources, `STRETCHED` private clouds are
+  /// regional.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PrivateCloud : pb::IMessage<PrivateCloud>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -768,7 +1285,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -801,6 +1318,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
       nsx_ = other.nsx_ != null ? other.nsx_.Clone() : null;
       vcenter_ = other.vcenter_ != null ? other.vcenter_.Clone() : null;
       uid_ = other.uid_;
+      type_ = other.type_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1015,6 +1533,21 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 22;
+    private global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.Type type_ = global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.Type.Standard;
+    /// <summary>
+    /// Optional. Type of the private cloud. Defaults to STANDARD.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.Type Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1043,6 +1576,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (!object.Equals(Nsx, other.Nsx)) return false;
       if (!object.Equals(Vcenter, other.Vcenter)) return false;
       if (Uid != other.Uid) return false;
+      if (Type != other.Type) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1063,6 +1597,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (nsx_ != null) hash ^= Nsx.GetHashCode();
       if (vcenter_ != null) hash ^= Vcenter.GetHashCode();
       if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (Type != global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.Type.Standard) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1133,6 +1668,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
         output.WriteRawTag(162, 1);
         output.WriteString(Uid);
       }
+      if (Type != global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.Type.Standard) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) Type);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1195,6 +1734,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
         output.WriteRawTag(162, 1);
         output.WriteString(Uid);
       }
+      if (Type != global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.Type.Standard) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) Type);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1243,6 +1786,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
       if (Uid.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (Type != global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.Type.Standard) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1321,6 +1867,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
       if (other.Uid.Length != 0) {
         Uid = other.Uid;
+      }
+      if (other.Type != global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.Type.Standard) {
+        Type = other.Type;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1414,6 +1963,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
           }
           case 162: {
             Uid = input.ReadString();
+            break;
+          }
+          case 176: {
+            Type = (global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.Type) input.ReadEnum();
             break;
           }
         }
@@ -1510,6 +2063,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
             Uid = input.ReadString();
             break;
           }
+          case 176: {
+            Type = (global::Google.Cloud.VmwareEngine.V1.PrivateCloud.Types.Type) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -1557,8 +2114,31 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
 
       /// <summary>
+      /// Enum Type defines private cloud type.
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// Standard private is a zonal resource, with 3+ nodes. Default type.
+        /// </summary>
+        [pbr::OriginalName("STANDARD")] Standard = 0,
+        /// <summary>
+        /// Time limited private cloud is a zonal resource, can have only 1 node and
+        /// has limited life span. Will be deleted after defined period of time,
+        /// can be converted into standard private cloud by expanding it up to 3
+        /// or more nodes.
+        /// </summary>
+        [pbr::OriginalName("TIME_LIMITED")] TimeLimited = 1,
+        /// <summary>
+        /// Stretched private cloud is a regional resource with redundancy,
+        /// with a minimum of 6 nodes, nodes count has to be even.
+        /// </summary>
+        [pbr::OriginalName("STRETCHED")] Stretched = 2,
+      }
+
+      /// <summary>
       /// Management cluster configuration.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ManagementCluster : pb::IMessage<ManagementCluster>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1595,6 +2175,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
         public ManagementCluster(ManagementCluster other) : this() {
           clusterId_ = other.clusterId_;
           nodeTypeConfigs_ = other.nodeTypeConfigs_.Clone();
+          stretchedClusterConfig_ = other.stretchedClusterConfig_ != null ? other.stretchedClusterConfig_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1642,6 +2223,22 @@ namespace Google.Cloud.VmwareEngine.V1 {
           get { return nodeTypeConfigs_; }
         }
 
+        /// <summary>Field number for the "stretched_cluster_config" field.</summary>
+        public const int StretchedClusterConfigFieldNumber = 8;
+        private global::Google.Cloud.VmwareEngine.V1.StretchedClusterConfig stretchedClusterConfig_;
+        /// <summary>
+        /// Optional. Configuration of a stretched cluster. Required for STRETCHED
+        /// private clouds.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.VmwareEngine.V1.StretchedClusterConfig StretchedClusterConfig {
+          get { return stretchedClusterConfig_; }
+          set {
+            stretchedClusterConfig_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1659,6 +2256,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
           }
           if (ClusterId != other.ClusterId) return false;
           if (!NodeTypeConfigs.Equals(other.NodeTypeConfigs)) return false;
+          if (!object.Equals(StretchedClusterConfig, other.StretchedClusterConfig)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1668,6 +2266,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
           int hash = 1;
           if (ClusterId.Length != 0) hash ^= ClusterId.GetHashCode();
           hash ^= NodeTypeConfigs.GetHashCode();
+          if (stretchedClusterConfig_ != null) hash ^= StretchedClusterConfig.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1691,6 +2290,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
             output.WriteString(ClusterId);
           }
           nodeTypeConfigs_.WriteTo(output, _map_nodeTypeConfigs_codec);
+          if (stretchedClusterConfig_ != null) {
+            output.WriteRawTag(66);
+            output.WriteMessage(StretchedClusterConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1706,6 +2309,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
             output.WriteString(ClusterId);
           }
           nodeTypeConfigs_.WriteTo(ref output, _map_nodeTypeConfigs_codec);
+          if (stretchedClusterConfig_ != null) {
+            output.WriteRawTag(66);
+            output.WriteMessage(StretchedClusterConfig);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1720,6 +2327,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(ClusterId);
           }
           size += nodeTypeConfigs_.CalculateSize(_map_nodeTypeConfigs_codec);
+          if (stretchedClusterConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StretchedClusterConfig);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -1735,7 +2345,13 @@ namespace Google.Cloud.VmwareEngine.V1 {
           if (other.ClusterId.Length != 0) {
             ClusterId = other.ClusterId;
           }
-          nodeTypeConfigs_.Add(other.nodeTypeConfigs_);
+          nodeTypeConfigs_.MergeFrom(other.nodeTypeConfigs_);
+          if (other.stretchedClusterConfig_ != null) {
+            if (stretchedClusterConfig_ == null) {
+              StretchedClusterConfig = new global::Google.Cloud.VmwareEngine.V1.StretchedClusterConfig();
+            }
+            StretchedClusterConfig.MergeFrom(other.StretchedClusterConfig);
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1757,6 +2373,13 @@ namespace Google.Cloud.VmwareEngine.V1 {
               }
               case 58: {
                 nodeTypeConfigs_.AddEntriesFrom(input, _map_nodeTypeConfigs_codec);
+                break;
+              }
+              case 66: {
+                if (stretchedClusterConfig_ == null) {
+                  StretchedClusterConfig = new global::Google.Cloud.VmwareEngine.V1.StretchedClusterConfig();
+                }
+                input.ReadMessage(StretchedClusterConfig);
                 break;
               }
             }
@@ -1782,6 +2405,13 @@ namespace Google.Cloud.VmwareEngine.V1 {
                 nodeTypeConfigs_.AddEntriesFrom(ref input, _map_nodeTypeConfigs_codec);
                 break;
               }
+              case 66: {
+                if (stretchedClusterConfig_ == null) {
+                  StretchedClusterConfig = new global::Google.Cloud.VmwareEngine.V1.StretchedClusterConfig();
+                }
+                input.ReadMessage(StretchedClusterConfig);
+                break;
+              }
             }
           }
         }
@@ -1797,6 +2427,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
   /// <summary>
   /// A cluster in a private cloud.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Cluster : pb::IMessage<Cluster>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1811,7 +2442,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1836,8 +2467,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       state_ = other.state_;
       management_ = other.management_;
+      autoscalingSettings_ = other.autoscalingSettings_ != null ? other.autoscalingSettings_.Clone() : null;
       uid_ = other.uid_;
       nodeTypeConfigs_ = other.nodeTypeConfigs_.Clone();
+      stretchedClusterConfig_ = other.stretchedClusterConfig_ != null ? other.stretchedClusterConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1928,6 +2561,21 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "autoscaling_settings" field.</summary>
+    public const int AutoscalingSettingsFieldNumber = 18;
+    private global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings autoscalingSettings_;
+    /// <summary>
+    /// Optional. Configuration of the autoscaling applied to this cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings AutoscalingSettings {
+      get { return autoscalingSettings_; }
+      set {
+        autoscalingSettings_ = value;
+      }
+    }
+
     /// <summary>Field number for the "uid" field.</summary>
     public const int UidFieldNumber = 14;
     private string uid_ = "";
@@ -1958,6 +2606,22 @@ namespace Google.Cloud.VmwareEngine.V1 {
       get { return nodeTypeConfigs_; }
     }
 
+    /// <summary>Field number for the "stretched_cluster_config" field.</summary>
+    public const int StretchedClusterConfigFieldNumber = 17;
+    private global::Google.Cloud.VmwareEngine.V1.StretchedClusterConfig stretchedClusterConfig_;
+    /// <summary>
+    /// Optional. Configuration of a stretched cluster. Required for clusters that
+    /// belong to a STRETCHED private cloud.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.StretchedClusterConfig StretchedClusterConfig {
+      get { return stretchedClusterConfig_; }
+      set {
+        stretchedClusterConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1978,8 +2642,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (State != other.State) return false;
       if (Management != other.Management) return false;
+      if (!object.Equals(AutoscalingSettings, other.AutoscalingSettings)) return false;
       if (Uid != other.Uid) return false;
       if (!NodeTypeConfigs.Equals(other.NodeTypeConfigs)) return false;
+      if (!object.Equals(StretchedClusterConfig, other.StretchedClusterConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1992,8 +2658,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (State != global::Google.Cloud.VmwareEngine.V1.Cluster.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (Management != false) hash ^= Management.GetHashCode();
+      if (autoscalingSettings_ != null) hash ^= AutoscalingSettings.GetHashCode();
       if (Uid.Length != 0) hash ^= Uid.GetHashCode();
       hash ^= NodeTypeConfigs.GetHashCode();
+      if (stretchedClusterConfig_ != null) hash ^= StretchedClusterConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2037,6 +2705,14 @@ namespace Google.Cloud.VmwareEngine.V1 {
         output.WriteString(Uid);
       }
       nodeTypeConfigs_.WriteTo(output, _map_nodeTypeConfigs_codec);
+      if (stretchedClusterConfig_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(StretchedClusterConfig);
+      }
+      if (autoscalingSettings_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(AutoscalingSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2072,6 +2748,14 @@ namespace Google.Cloud.VmwareEngine.V1 {
         output.WriteString(Uid);
       }
       nodeTypeConfigs_.WriteTo(ref output, _map_nodeTypeConfigs_codec);
+      if (stretchedClusterConfig_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(StretchedClusterConfig);
+      }
+      if (autoscalingSettings_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(AutoscalingSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2097,10 +2781,16 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (Management != false) {
         size += 1 + 1;
       }
+      if (autoscalingSettings_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AutoscalingSettings);
+      }
       if (Uid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
       }
       size += nodeTypeConfigs_.CalculateSize(_map_nodeTypeConfigs_codec);
+      if (stretchedClusterConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(StretchedClusterConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2134,10 +2824,22 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (other.Management != false) {
         Management = other.Management;
       }
+      if (other.autoscalingSettings_ != null) {
+        if (autoscalingSettings_ == null) {
+          AutoscalingSettings = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings();
+        }
+        AutoscalingSettings.MergeFrom(other.AutoscalingSettings);
+      }
       if (other.Uid.Length != 0) {
         Uid = other.Uid;
       }
-      nodeTypeConfigs_.Add(other.nodeTypeConfigs_);
+      nodeTypeConfigs_.MergeFrom(other.nodeTypeConfigs_);
+      if (other.stretchedClusterConfig_ != null) {
+        if (stretchedClusterConfig_ == null) {
+          StretchedClusterConfig = new global::Google.Cloud.VmwareEngine.V1.StretchedClusterConfig();
+        }
+        StretchedClusterConfig.MergeFrom(other.StretchedClusterConfig);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2185,6 +2887,20 @@ namespace Google.Cloud.VmwareEngine.V1 {
           }
           case 130: {
             nodeTypeConfigs_.AddEntriesFrom(input, _map_nodeTypeConfigs_codec);
+            break;
+          }
+          case 138: {
+            if (stretchedClusterConfig_ == null) {
+              StretchedClusterConfig = new global::Google.Cloud.VmwareEngine.V1.StretchedClusterConfig();
+            }
+            input.ReadMessage(StretchedClusterConfig);
+            break;
+          }
+          case 146: {
+            if (autoscalingSettings_ == null) {
+              AutoscalingSettings = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings();
+            }
+            input.ReadMessage(AutoscalingSettings);
             break;
           }
         }
@@ -2236,6 +2952,20 @@ namespace Google.Cloud.VmwareEngine.V1 {
             nodeTypeConfigs_.AddEntriesFrom(ref input, _map_nodeTypeConfigs_codec);
             break;
           }
+          case 138: {
+            if (stretchedClusterConfig_ == null) {
+              StretchedClusterConfig = new global::Google.Cloud.VmwareEngine.V1.StretchedClusterConfig();
+            }
+            input.ReadMessage(StretchedClusterConfig);
+            break;
+          }
+          case 146: {
+            if (autoscalingSettings_ == null) {
+              AutoscalingSettings = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings();
+            }
+            input.ReadMessage(AutoscalingSettings);
+            break;
+          }
         }
       }
     }
@@ -2284,9 +3014,1020 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
+  /// Node in a cluster.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Node : pb::IMessage<Node>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Node> _parser = new pb::MessageParser<Node>(() => new Node());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Node> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Node() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Node(Node other) : this() {
+      name_ = other.name_;
+      fqdn_ = other.fqdn_;
+      internalIp_ = other.internalIp_;
+      nodeTypeId_ = other.nodeTypeId_;
+      version_ = other.version_;
+      customCoreCount_ = other.customCoreCount_;
+      state_ = other.state_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Node Clone() {
+      return new Node(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The resource name of this node.
+    /// Resource names are schemeless URIs that follow the conventions in
+    /// https://cloud.google.com/apis/design/resource_names.
+    /// For example:
+    /// projects/my-project/locations/us-central1-a/privateClouds/my-cloud/clusters/my-cluster/nodes/my-node
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "fqdn" field.</summary>
+    public const int FqdnFieldNumber = 2;
+    private string fqdn_ = "";
+    /// <summary>
+    /// Output only. Fully qualified domain name of the node.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Fqdn {
+      get { return fqdn_; }
+      set {
+        fqdn_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "internal_ip" field.</summary>
+    public const int InternalIpFieldNumber = 3;
+    private string internalIp_ = "";
+    /// <summary>
+    /// Output only. Internal IP address of the node.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InternalIp {
+      get { return internalIp_; }
+      set {
+        internalIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "node_type_id" field.</summary>
+    public const int NodeTypeIdFieldNumber = 4;
+    private string nodeTypeId_ = "";
+    /// <summary>
+    /// Output only. The canonical identifier of the node type (corresponds to the
+    /// `NodeType`).
+    /// For example: standard-72.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NodeTypeId {
+      get { return nodeTypeId_; }
+      set {
+        nodeTypeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 5;
+    private string version_ = "";
+    /// <summary>
+    /// Output only. The version number of the VMware ESXi
+    /// management component in this cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "custom_core_count" field.</summary>
+    public const int CustomCoreCountFieldNumber = 6;
+    private long customCoreCount_;
+    /// <summary>
+    /// Output only. Customized number of cores
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long CustomCoreCount {
+      get { return customCoreCount_; }
+      set {
+        customCoreCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 7;
+    private global::Google.Cloud.VmwareEngine.V1.Node.Types.State state_ = global::Google.Cloud.VmwareEngine.V1.Node.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The state of the appliance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.Node.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Node);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Node other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Fqdn != other.Fqdn) return false;
+      if (InternalIp != other.InternalIp) return false;
+      if (NodeTypeId != other.NodeTypeId) return false;
+      if (Version != other.Version) return false;
+      if (CustomCoreCount != other.CustomCoreCount) return false;
+      if (State != other.State) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Fqdn.Length != 0) hash ^= Fqdn.GetHashCode();
+      if (InternalIp.Length != 0) hash ^= InternalIp.GetHashCode();
+      if (NodeTypeId.Length != 0) hash ^= NodeTypeId.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (CustomCoreCount != 0L) hash ^= CustomCoreCount.GetHashCode();
+      if (State != global::Google.Cloud.VmwareEngine.V1.Node.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Fqdn.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Fqdn);
+      }
+      if (InternalIp.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(InternalIp);
+      }
+      if (NodeTypeId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(NodeTypeId);
+      }
+      if (Version.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Version);
+      }
+      if (CustomCoreCount != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(CustomCoreCount);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.Node.Types.State.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) State);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Fqdn.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Fqdn);
+      }
+      if (InternalIp.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(InternalIp);
+      }
+      if (NodeTypeId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(NodeTypeId);
+      }
+      if (Version.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Version);
+      }
+      if (CustomCoreCount != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(CustomCoreCount);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.Node.Types.State.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) State);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Fqdn.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Fqdn);
+      }
+      if (InternalIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InternalIp);
+      }
+      if (NodeTypeId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeTypeId);
+      }
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (CustomCoreCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CustomCoreCount);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.Node.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Node other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Fqdn.Length != 0) {
+        Fqdn = other.Fqdn;
+      }
+      if (other.InternalIp.Length != 0) {
+        InternalIp = other.InternalIp;
+      }
+      if (other.NodeTypeId.Length != 0) {
+        NodeTypeId = other.NodeTypeId;
+      }
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
+      if (other.CustomCoreCount != 0L) {
+        CustomCoreCount = other.CustomCoreCount;
+      }
+      if (other.State != global::Google.Cloud.VmwareEngine.V1.Node.Types.State.Unspecified) {
+        State = other.State;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Fqdn = input.ReadString();
+            break;
+          }
+          case 26: {
+            InternalIp = input.ReadString();
+            break;
+          }
+          case 34: {
+            NodeTypeId = input.ReadString();
+            break;
+          }
+          case 42: {
+            Version = input.ReadString();
+            break;
+          }
+          case 48: {
+            CustomCoreCount = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            State = (global::Google.Cloud.VmwareEngine.V1.Node.Types.State) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Fqdn = input.ReadString();
+            break;
+          }
+          case 26: {
+            InternalIp = input.ReadString();
+            break;
+          }
+          case 34: {
+            NodeTypeId = input.ReadString();
+            break;
+          }
+          case 42: {
+            Version = input.ReadString();
+            break;
+          }
+          case 48: {
+            CustomCoreCount = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            State = (global::Google.Cloud.VmwareEngine.V1.Node.Types.State) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Node message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Enum State defines possible states of a node in a cluster.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// The default value. This value should never be used.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Node is operational and can be used by the user.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 1,
+        /// <summary>
+        /// Node is being provisioned.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 2,
+        /// <summary>
+        /// Node is in a failed state.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 3,
+        /// <summary>
+        /// Node is undergoing maintenance, e.g.: during private cloud upgrade.
+        /// </summary>
+        [pbr::OriginalName("UPGRADING")] Upgrading = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Represents an allocated external IP address and its corresponding internal IP
+  /// address in a private cloud.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExternalAddress : pb::IMessage<ExternalAddress>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExternalAddress> _parser = new pb::MessageParser<ExternalAddress>(() => new ExternalAddress());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExternalAddress> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExternalAddress() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExternalAddress(ExternalAddress other) : this() {
+      name_ = other.name_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      internalIp_ = other.internalIp_;
+      externalIp_ = other.externalIp_;
+      state_ = other.state_;
+      uid_ = other.uid_;
+      description_ = other.description_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExternalAddress Clone() {
+      return new ExternalAddress(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The resource name of this external IP address.
+    /// Resource names are schemeless URIs that follow the conventions in
+    /// https://cloud.google.com/apis/design/resource_names.
+    /// For example:
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-address`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Creation time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. Last update time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "internal_ip" field.</summary>
+    public const int InternalIpFieldNumber = 6;
+    private string internalIp_ = "";
+    /// <summary>
+    /// The internal IP address of a workload VM.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InternalIp {
+      get { return internalIp_; }
+      set {
+        internalIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "external_ip" field.</summary>
+    public const int ExternalIpFieldNumber = 7;
+    private string externalIp_ = "";
+    /// <summary>
+    /// Output only. The external IP address of a workload VM.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ExternalIp {
+      get { return externalIp_; }
+      set {
+        externalIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 8;
+    private global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Types.State state_ = global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The state of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 9;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. System-generated unique identifier for the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 11;
+    private string description_ = "";
+    /// <summary>
+    /// User-provided description for this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExternalAddress);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExternalAddress other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (InternalIp != other.InternalIp) return false;
+      if (ExternalIp != other.ExternalIp) return false;
+      if (State != other.State) return false;
+      if (Uid != other.Uid) return false;
+      if (Description != other.Description) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (InternalIp.Length != 0) hash ^= InternalIp.GetHashCode();
+      if (ExternalIp.Length != 0) hash ^= ExternalIp.GetHashCode();
+      if (State != global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (InternalIp.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(InternalIp);
+      }
+      if (ExternalIp.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ExternalIp);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Types.State.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) State);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Uid);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (InternalIp.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(InternalIp);
+      }
+      if (ExternalIp.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ExternalIp);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Types.State.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) State);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Uid);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (InternalIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InternalIp);
+      }
+      if (ExternalIp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalIp);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExternalAddress other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.InternalIp.Length != 0) {
+        InternalIp = other.InternalIp;
+      }
+      if (other.ExternalIp.Length != 0) {
+        ExternalIp = other.ExternalIp;
+      }
+      if (other.State != global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 50: {
+            InternalIp = input.ReadString();
+            break;
+          }
+          case 58: {
+            ExternalIp = input.ReadString();
+            break;
+          }
+          case 64: {
+            State = (global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Types.State) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 90: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 50: {
+            InternalIp = input.ReadString();
+            break;
+          }
+          case 58: {
+            ExternalIp = input.ReadString();
+            break;
+          }
+          case 64: {
+            State = (global::Google.Cloud.VmwareEngine.V1.ExternalAddress.Types.State) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 90: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ExternalAddress message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Enum State defines possible states of external addresses.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// The default value. This value should never be used.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The address is ready.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 1,
+        /// <summary>
+        /// The address is being created.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 2,
+        /// <summary>
+        /// The address is being updated.
+        /// </summary>
+        [pbr::OriginalName("UPDATING")] Updating = 3,
+        /// <summary>
+        /// The address is being deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 4,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Subnet in a private cloud. Either `management` subnets (such as vMotion) that
   /// are read-only, or `userDefined`, which can also be updated.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Subnet : pb::IMessage<Subnet>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2301,7 +4042,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2326,6 +4067,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
       gatewayIp_ = other.gatewayIp_;
       type_ = other.type_;
       state_ = other.state_;
+      vlanId_ = other.vlanId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2416,6 +4158,21 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "vlan_id" field.</summary>
+    public const int VlanIdFieldNumber = 16;
+    private int vlanId_;
+    /// <summary>
+    /// Output only. VLAN ID of the VLAN on which the subnet is configured
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int VlanId {
+      get { return vlanId_; }
+      set {
+        vlanId_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2436,6 +4193,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (GatewayIp != other.GatewayIp) return false;
       if (Type != other.Type) return false;
       if (State != other.State) return false;
+      if (VlanId != other.VlanId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2448,6 +4206,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (GatewayIp.Length != 0) hash ^= GatewayIp.GetHashCode();
       if (Type.Length != 0) hash ^= Type.GetHashCode();
       if (State != global::Google.Cloud.VmwareEngine.V1.Subnet.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (VlanId != 0) hash ^= VlanId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2486,6 +4245,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
         output.WriteRawTag(104);
         output.WriteEnum((int) State);
       }
+      if (VlanId != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(VlanId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2516,6 +4279,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
         output.WriteRawTag(104);
         output.WriteEnum((int) State);
       }
+      if (VlanId != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(VlanId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2540,6 +4307,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
       if (State != global::Google.Cloud.VmwareEngine.V1.Subnet.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (VlanId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(VlanId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2567,6 +4337,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       }
       if (other.State != global::Google.Cloud.VmwareEngine.V1.Subnet.Types.State.Unspecified) {
         State = other.State;
+      }
+      if (other.VlanId != 0) {
+        VlanId = other.VlanId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2601,6 +4374,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
           }
           case 104: {
             State = (global::Google.Cloud.VmwareEngine.V1.Subnet.Types.State) input.ReadEnum();
+            break;
+          }
+          case 128: {
+            VlanId = input.ReadInt32();
             break;
           }
         }
@@ -2638,6 +4415,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
             State = (global::Google.Cloud.VmwareEngine.V1.Subnet.Types.State) input.ReadEnum();
             break;
           }
+          case 128: {
+            VlanId = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -2672,6 +4453,1666 @@ namespace Google.Cloud.VmwareEngine.V1 {
         /// The subnet is being deleted.
         /// </summary>
         [pbr::OriginalName("DELETING")] Deleting = 4,
+        /// <summary>
+        /// Changes requested in the last operation are being propagated.
+        /// </summary>
+        [pbr::OriginalName("RECONCILING")] Reconciling = 5,
+        /// <summary>
+        /// Last operation on the subnet did not succeed. Subnet's payload is
+        /// reverted back to its most recent working state.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 6,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// External access firewall rules for filtering incoming traffic destined to
+  /// `ExternalAddress` resources.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExternalAccessRule : pb::IMessage<ExternalAccessRule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExternalAccessRule> _parser = new pb::MessageParser<ExternalAccessRule>(() => new ExternalAccessRule());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExternalAccessRule> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExternalAccessRule() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExternalAccessRule(ExternalAccessRule other) : this() {
+      name_ = other.name_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      description_ = other.description_;
+      priority_ = other.priority_;
+      action_ = other.action_;
+      ipProtocol_ = other.ipProtocol_;
+      sourceIpRanges_ = other.sourceIpRanges_.Clone();
+      sourcePorts_ = other.sourcePorts_.Clone();
+      destinationIpRanges_ = other.destinationIpRanges_.Clone();
+      destinationPorts_ = other.destinationPorts_.Clone();
+      state_ = other.state_;
+      uid_ = other.uid_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExternalAccessRule Clone() {
+      return new ExternalAccessRule(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The resource name of this external access rule.
+    /// Resource names are schemeless URIs that follow the conventions in
+    /// https://cloud.google.com/apis/design/resource_names.
+    /// For example:
+    /// `projects/my-project/locations/us-central1/networkPolicies/my-policy/externalAccessRules/my-rule`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Creation time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. Last update time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 5;
+    private string description_ = "";
+    /// <summary>
+    /// User-provided description for this external access rule.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "priority" field.</summary>
+    public const int PriorityFieldNumber = 6;
+    private int priority_;
+    /// <summary>
+    /// External access rule priority, which determines the external access rule to
+    /// use when multiple rules apply. If multiple rules have the same priority,
+    /// their ordering is non-deterministic. If specific ordering is required,
+    /// assign unique priorities to enforce such ordering. The external access rule
+    /// priority is an integer from 100 to 4096, both inclusive. Lower integers
+    /// indicate higher precedence. For example, a rule with priority `100` has
+    /// higher precedence than a rule with priority `101`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Priority {
+      get { return priority_; }
+      set {
+        priority_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "action" field.</summary>
+    public const int ActionFieldNumber = 7;
+    private global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.Action action_ = global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.Action.Unspecified;
+    /// <summary>
+    /// The action that the external access rule performs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.Action Action {
+      get { return action_; }
+      set {
+        action_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ip_protocol" field.</summary>
+    public const int IpProtocolFieldNumber = 8;
+    private string ipProtocol_ = "";
+    /// <summary>
+    /// The IP protocol to which the external access rule applies. This value can
+    /// be one of the following three protocol strings (not case-sensitive):
+    /// `tcp`, `udp`, or `icmp`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IpProtocol {
+      get { return ipProtocol_; }
+      set {
+        ipProtocol_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_ip_ranges" field.</summary>
+    public const int SourceIpRangesFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.IpRange> _repeated_sourceIpRanges_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.IpRange.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.IpRange> sourceIpRanges_ = new pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.IpRange>();
+    /// <summary>
+    /// If source ranges are specified, the external access rule applies only to
+    /// traffic that has a source IP address in these ranges. These ranges can
+    /// either be expressed in the CIDR format or as an IP address. As only inbound
+    /// rules are supported, `ExternalAddress` resources cannot be the source IP
+    /// addresses of an external access rule. To match all source addresses,
+    /// specify `0.0.0.0/0`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.IpRange> SourceIpRanges {
+      get { return sourceIpRanges_; }
+    }
+
+    /// <summary>Field number for the "source_ports" field.</summary>
+    public const int SourcePortsFieldNumber = 10;
+    private static readonly pb::FieldCodec<string> _repeated_sourcePorts_codec
+        = pb::FieldCodec.ForString(82);
+    private readonly pbc::RepeatedField<string> sourcePorts_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// A list of source ports to which the external access rule applies. This
+    /// field is only applicable for the UDP or TCP protocol.
+    /// Each entry must be either an integer or a range. For example: `["22"]`,
+    /// `["80","443"]`, or `["12345-12349"]`. To match all source ports, specify
+    /// `["0-65535"]`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> SourcePorts {
+      get { return sourcePorts_; }
+    }
+
+    /// <summary>Field number for the "destination_ip_ranges" field.</summary>
+    public const int DestinationIpRangesFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.IpRange> _repeated_destinationIpRanges_codec
+        = pb::FieldCodec.ForMessage(90, global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.IpRange.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.IpRange> destinationIpRanges_ = new pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.IpRange>();
+    /// <summary>
+    /// If destination ranges are specified, the external access rule applies only
+    /// to the traffic that has a destination IP address in these ranges. The
+    /// specified IP addresses must have reserved external IP addresses in the
+    /// scope of the parent network policy. To match all external IP addresses in
+    /// the scope of the parent network policy, specify `0.0.0.0/0`. To match a
+    /// specific external IP address, specify it using the
+    /// `IpRange.external_address` property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.IpRange> DestinationIpRanges {
+      get { return destinationIpRanges_; }
+    }
+
+    /// <summary>Field number for the "destination_ports" field.</summary>
+    public const int DestinationPortsFieldNumber = 12;
+    private static readonly pb::FieldCodec<string> _repeated_destinationPorts_codec
+        = pb::FieldCodec.ForString(98);
+    private readonly pbc::RepeatedField<string> destinationPorts_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// A list of destination ports to which the external access rule applies. This
+    /// field is only applicable for the UDP or TCP protocol.
+    /// Each entry must be either an integer or a range. For example: `["22"]`,
+    /// `["80","443"]`, or `["12345-12349"]`. To match all destination ports,
+    /// specify `["0-65535"]`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DestinationPorts {
+      get { return destinationPorts_; }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 13;
+    private global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.State state_ = global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The state of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 14;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. System-generated unique identifier for the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExternalAccessRule);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExternalAccessRule other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (Description != other.Description) return false;
+      if (Priority != other.Priority) return false;
+      if (Action != other.Action) return false;
+      if (IpProtocol != other.IpProtocol) return false;
+      if(!sourceIpRanges_.Equals(other.sourceIpRanges_)) return false;
+      if(!sourcePorts_.Equals(other.sourcePorts_)) return false;
+      if(!destinationIpRanges_.Equals(other.destinationIpRanges_)) return false;
+      if(!destinationPorts_.Equals(other.destinationPorts_)) return false;
+      if (State != other.State) return false;
+      if (Uid != other.Uid) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (Priority != 0) hash ^= Priority.GetHashCode();
+      if (Action != global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.Action.Unspecified) hash ^= Action.GetHashCode();
+      if (IpProtocol.Length != 0) hash ^= IpProtocol.GetHashCode();
+      hash ^= sourceIpRanges_.GetHashCode();
+      hash ^= sourcePorts_.GetHashCode();
+      hash ^= destinationIpRanges_.GetHashCode();
+      hash ^= destinationPorts_.GetHashCode();
+      if (State != global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Description);
+      }
+      if (Priority != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(Priority);
+      }
+      if (Action != global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.Action.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Action);
+      }
+      if (IpProtocol.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(IpProtocol);
+      }
+      sourceIpRanges_.WriteTo(output, _repeated_sourceIpRanges_codec);
+      sourcePorts_.WriteTo(output, _repeated_sourcePorts_codec);
+      destinationIpRanges_.WriteTo(output, _repeated_destinationIpRanges_codec);
+      destinationPorts_.WriteTo(output, _repeated_destinationPorts_codec);
+      if (State != global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.State.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) State);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Uid);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Description);
+      }
+      if (Priority != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(Priority);
+      }
+      if (Action != global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.Action.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Action);
+      }
+      if (IpProtocol.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(IpProtocol);
+      }
+      sourceIpRanges_.WriteTo(ref output, _repeated_sourceIpRanges_codec);
+      sourcePorts_.WriteTo(ref output, _repeated_sourcePorts_codec);
+      destinationIpRanges_.WriteTo(ref output, _repeated_destinationIpRanges_codec);
+      destinationPorts_.WriteTo(ref output, _repeated_destinationPorts_codec);
+      if (State != global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.State.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) State);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Uid);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (Priority != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Priority);
+      }
+      if (Action != global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.Action.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Action);
+      }
+      if (IpProtocol.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IpProtocol);
+      }
+      size += sourceIpRanges_.CalculateSize(_repeated_sourceIpRanges_codec);
+      size += sourcePorts_.CalculateSize(_repeated_sourcePorts_codec);
+      size += destinationIpRanges_.CalculateSize(_repeated_destinationIpRanges_codec);
+      size += destinationPorts_.CalculateSize(_repeated_destinationPorts_codec);
+      if (State != global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExternalAccessRule other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.Priority != 0) {
+        Priority = other.Priority;
+      }
+      if (other.Action != global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.Action.Unspecified) {
+        Action = other.Action;
+      }
+      if (other.IpProtocol.Length != 0) {
+        IpProtocol = other.IpProtocol;
+      }
+      sourceIpRanges_.Add(other.sourceIpRanges_);
+      sourcePorts_.Add(other.sourcePorts_);
+      destinationIpRanges_.Add(other.destinationIpRanges_);
+      destinationPorts_.Add(other.destinationPorts_);
+      if (other.State != global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 42: {
+            Description = input.ReadString();
+            break;
+          }
+          case 48: {
+            Priority = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            Action = (global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.Action) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            IpProtocol = input.ReadString();
+            break;
+          }
+          case 74: {
+            sourceIpRanges_.AddEntriesFrom(input, _repeated_sourceIpRanges_codec);
+            break;
+          }
+          case 82: {
+            sourcePorts_.AddEntriesFrom(input, _repeated_sourcePorts_codec);
+            break;
+          }
+          case 90: {
+            destinationIpRanges_.AddEntriesFrom(input, _repeated_destinationIpRanges_codec);
+            break;
+          }
+          case 98: {
+            destinationPorts_.AddEntriesFrom(input, _repeated_destinationPorts_codec);
+            break;
+          }
+          case 104: {
+            State = (global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.State) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            Uid = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 42: {
+            Description = input.ReadString();
+            break;
+          }
+          case 48: {
+            Priority = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            Action = (global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.Action) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            IpProtocol = input.ReadString();
+            break;
+          }
+          case 74: {
+            sourceIpRanges_.AddEntriesFrom(ref input, _repeated_sourceIpRanges_codec);
+            break;
+          }
+          case 82: {
+            sourcePorts_.AddEntriesFrom(ref input, _repeated_sourcePorts_codec);
+            break;
+          }
+          case 90: {
+            destinationIpRanges_.AddEntriesFrom(ref input, _repeated_destinationIpRanges_codec);
+            break;
+          }
+          case 98: {
+            destinationPorts_.AddEntriesFrom(ref input, _repeated_destinationPorts_codec);
+            break;
+          }
+          case 104: {
+            State = (global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Types.State) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            Uid = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ExternalAccessRule message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Action determines whether the external access rule permits or blocks
+      /// traffic, subject to the other components of the rule matching the traffic.
+      /// </summary>
+      public enum Action {
+        /// <summary>
+        /// Defaults to allow.
+        /// </summary>
+        [pbr::OriginalName("ACTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Allows connections that match the other specified components.
+        /// </summary>
+        [pbr::OriginalName("ALLOW")] Allow = 1,
+        /// <summary>
+        /// Blocks connections that match the other specified components.
+        /// </summary>
+        [pbr::OriginalName("DENY")] Deny = 2,
+      }
+
+      /// <summary>
+      /// Defines possible states of external access firewall rules.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// The default value. This value is used if the state is omitted.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The rule is ready.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 1,
+        /// <summary>
+        /// The rule is being created.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 2,
+        /// <summary>
+        /// The rule is being updated.
+        /// </summary>
+        [pbr::OriginalName("UPDATING")] Updating = 3,
+        /// <summary>
+        /// The rule is being deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 4,
+      }
+
+      /// <summary>
+      /// An IP range provided in any one of the supported formats.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class IpRange : pb::IMessage<IpRange>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<IpRange> _parser = new pb::MessageParser<IpRange>(() => new IpRange());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<IpRange> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.VmwareEngine.V1.ExternalAccessRule.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IpRange() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IpRange(IpRange other) : this() {
+          switch (other.IpRangeCase) {
+            case IpRangeOneofCase.IpAddress:
+              IpAddress = other.IpAddress;
+              break;
+            case IpRangeOneofCase.IpAddressRange:
+              IpAddressRange = other.IpAddressRange;
+              break;
+            case IpRangeOneofCase.ExternalAddress:
+              ExternalAddress = other.ExternalAddress;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IpRange Clone() {
+          return new IpRange(this);
+        }
+
+        /// <summary>Field number for the "ip_address" field.</summary>
+        public const int IpAddressFieldNumber = 1;
+        /// <summary>
+        /// A single IP address. For example: `10.0.0.5`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string IpAddress {
+          get { return HasIpAddress ? (string) ipRange_ : ""; }
+          set {
+            ipRange_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            ipRangeCase_ = IpRangeOneofCase.IpAddress;
+          }
+        }
+        /// <summary>Gets whether the "ip_address" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasIpAddress {
+          get { return ipRangeCase_ == IpRangeOneofCase.IpAddress; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "ip_address" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearIpAddress() {
+          if (HasIpAddress) {
+            ClearIpRange();
+          }
+        }
+
+        /// <summary>Field number for the "ip_address_range" field.</summary>
+        public const int IpAddressRangeFieldNumber = 2;
+        /// <summary>
+        /// An IP address range in the CIDR format. For example: `10.0.0.0/24`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string IpAddressRange {
+          get { return HasIpAddressRange ? (string) ipRange_ : ""; }
+          set {
+            ipRange_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            ipRangeCase_ = IpRangeOneofCase.IpAddressRange;
+          }
+        }
+        /// <summary>Gets whether the "ip_address_range" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasIpAddressRange {
+          get { return ipRangeCase_ == IpRangeOneofCase.IpAddressRange; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "ip_address_range" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearIpAddressRange() {
+          if (HasIpAddressRange) {
+            ClearIpRange();
+          }
+        }
+
+        /// <summary>Field number for the "external_address" field.</summary>
+        public const int ExternalAddressFieldNumber = 3;
+        /// <summary>
+        /// The name of an `ExternalAddress` resource. The external address must
+        /// have been reserved in the scope of this external access rule's parent
+        /// network policy.  Provide the external address name in the form of
+        /// `projects/{project}/locations/{location}/privateClouds/{private_cloud}/externalAddresses/{external_address}`.
+        /// For example:
+        /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/externalAddresses/my-address`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ExternalAddress {
+          get { return HasExternalAddress ? (string) ipRange_ : ""; }
+          set {
+            ipRange_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            ipRangeCase_ = IpRangeOneofCase.ExternalAddress;
+          }
+        }
+        /// <summary>Gets whether the "external_address" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasExternalAddress {
+          get { return ipRangeCase_ == IpRangeOneofCase.ExternalAddress; }
+        }
+        /// <summary> Clears the value of the oneof if it's currently set to "external_address" </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearExternalAddress() {
+          if (HasExternalAddress) {
+            ClearIpRange();
+          }
+        }
+
+        private object ipRange_;
+        /// <summary>Enum of possible cases for the "ip_range" oneof.</summary>
+        public enum IpRangeOneofCase {
+          None = 0,
+          IpAddress = 1,
+          IpAddressRange = 2,
+          ExternalAddress = 3,
+        }
+        private IpRangeOneofCase ipRangeCase_ = IpRangeOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public IpRangeOneofCase IpRangeCase {
+          get { return ipRangeCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearIpRange() {
+          ipRangeCase_ = IpRangeOneofCase.None;
+          ipRange_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as IpRange);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(IpRange other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (IpAddress != other.IpAddress) return false;
+          if (IpAddressRange != other.IpAddressRange) return false;
+          if (ExternalAddress != other.ExternalAddress) return false;
+          if (IpRangeCase != other.IpRangeCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasIpAddress) hash ^= IpAddress.GetHashCode();
+          if (HasIpAddressRange) hash ^= IpAddressRange.GetHashCode();
+          if (HasExternalAddress) hash ^= ExternalAddress.GetHashCode();
+          hash ^= (int) ipRangeCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasIpAddress) {
+            output.WriteRawTag(10);
+            output.WriteString(IpAddress);
+          }
+          if (HasIpAddressRange) {
+            output.WriteRawTag(18);
+            output.WriteString(IpAddressRange);
+          }
+          if (HasExternalAddress) {
+            output.WriteRawTag(26);
+            output.WriteString(ExternalAddress);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasIpAddress) {
+            output.WriteRawTag(10);
+            output.WriteString(IpAddress);
+          }
+          if (HasIpAddressRange) {
+            output.WriteRawTag(18);
+            output.WriteString(IpAddressRange);
+          }
+          if (HasExternalAddress) {
+            output.WriteRawTag(26);
+            output.WriteString(ExternalAddress);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasIpAddress) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddress);
+          }
+          if (HasIpAddressRange) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddressRange);
+          }
+          if (HasExternalAddress) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalAddress);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(IpRange other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.IpRangeCase) {
+            case IpRangeOneofCase.IpAddress:
+              IpAddress = other.IpAddress;
+              break;
+            case IpRangeOneofCase.IpAddressRange:
+              IpAddressRange = other.IpAddressRange;
+              break;
+            case IpRangeOneofCase.ExternalAddress:
+              ExternalAddress = other.ExternalAddress;
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                IpAddress = input.ReadString();
+                break;
+              }
+              case 18: {
+                IpAddressRange = input.ReadString();
+                break;
+              }
+              case 26: {
+                ExternalAddress = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                IpAddress = input.ReadString();
+                break;
+              }
+              case 18: {
+                IpAddressRange = input.ReadString();
+                break;
+              }
+              case 26: {
+                ExternalAddress = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Logging server to receive vCenter or ESXi logs.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LoggingServer : pb::IMessage<LoggingServer>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LoggingServer> _parser = new pb::MessageParser<LoggingServer>(() => new LoggingServer());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LoggingServer> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LoggingServer() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LoggingServer(LoggingServer other) : this() {
+      name_ = other.name_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      hostname_ = other.hostname_;
+      port_ = other.port_;
+      protocol_ = other.protocol_;
+      sourceType_ = other.sourceType_;
+      uid_ = other.uid_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LoggingServer Clone() {
+      return new LoggingServer(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The resource name of this logging server.
+    /// Resource names are schemeless URIs that follow the conventions in
+    /// https://cloud.google.com/apis/design/resource_names.
+    /// For example:
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/loggingServers/my-logging-server`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Creation time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. Last update time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hostname" field.</summary>
+    public const int HostnameFieldNumber = 5;
+    private string hostname_ = "";
+    /// <summary>
+    /// Required. Fully-qualified domain name (FQDN) or IP Address of the logging
+    /// server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Hostname {
+      get { return hostname_; }
+      set {
+        hostname_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "port" field.</summary>
+    public const int PortFieldNumber = 7;
+    private int port_;
+    /// <summary>
+    /// Required. Port number at which the logging server receives logs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Port {
+      get { return port_; }
+      set {
+        port_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "protocol" field.</summary>
+    public const int ProtocolFieldNumber = 6;
+    private global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.Protocol protocol_ = global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.Protocol.Unspecified;
+    /// <summary>
+    /// Required. Protocol used by vCenter to send logs to a logging server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.Protocol Protocol {
+      get { return protocol_; }
+      set {
+        protocol_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "source_type" field.</summary>
+    public const int SourceTypeFieldNumber = 10;
+    private global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.SourceType sourceType_ = global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.SourceType.Unspecified;
+    /// <summary>
+    /// Required. The type of component that produces logs that will be forwarded
+    /// to this logging server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.SourceType SourceType {
+      get { return sourceType_; }
+      set {
+        sourceType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 8;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. System-generated unique identifier for the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LoggingServer);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LoggingServer other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (Hostname != other.Hostname) return false;
+      if (Port != other.Port) return false;
+      if (Protocol != other.Protocol) return false;
+      if (SourceType != other.SourceType) return false;
+      if (Uid != other.Uid) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
+      if (Port != 0) hash ^= Port.GetHashCode();
+      if (Protocol != global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.Protocol.Unspecified) hash ^= Protocol.GetHashCode();
+      if (SourceType != global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.SourceType.Unspecified) hash ^= SourceType.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (Hostname.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Hostname);
+      }
+      if (Protocol != global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.Protocol.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Protocol);
+      }
+      if (Port != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(Port);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Uid);
+      }
+      if (SourceType != global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.SourceType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) SourceType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (Hostname.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Hostname);
+      }
+      if (Protocol != global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.Protocol.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Protocol);
+      }
+      if (Port != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(Port);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Uid);
+      }
+      if (SourceType != global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.SourceType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) SourceType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (Hostname.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Hostname);
+      }
+      if (Port != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
+      }
+      if (Protocol != global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.Protocol.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Protocol);
+      }
+      if (SourceType != global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.SourceType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SourceType);
+      }
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LoggingServer other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.Hostname.Length != 0) {
+        Hostname = other.Hostname;
+      }
+      if (other.Port != 0) {
+        Port = other.Port;
+      }
+      if (other.Protocol != global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.Protocol.Unspecified) {
+        Protocol = other.Protocol;
+      }
+      if (other.SourceType != global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.SourceType.Unspecified) {
+        SourceType = other.SourceType;
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 42: {
+            Hostname = input.ReadString();
+            break;
+          }
+          case 48: {
+            Protocol = (global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.Protocol) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            Port = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 80: {
+            SourceType = (global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.SourceType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 42: {
+            Hostname = input.ReadString();
+            break;
+          }
+          case 48: {
+            Protocol = (global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.Protocol) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            Port = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 80: {
+            SourceType = (global::Google.Cloud.VmwareEngine.V1.LoggingServer.Types.SourceType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the LoggingServer message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Defines possible protocols used to send logs to
+      /// a logging server.
+      /// </summary>
+      public enum Protocol {
+        /// <summary>
+        /// Unspecified communications protocol. This is the default value.
+        /// </summary>
+        [pbr::OriginalName("PROTOCOL_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// UDP
+        /// </summary>
+        [pbr::OriginalName("UDP")] Udp = 1,
+        /// <summary>
+        /// TCP
+        /// </summary>
+        [pbr::OriginalName("TCP")] Tcp = 2,
+        /// <summary>
+        /// TLS
+        /// </summary>
+        [pbr::OriginalName("TLS")] Tls = 3,
+        /// <summary>
+        /// SSL
+        /// </summary>
+        [pbr::OriginalName("SSL")] Ssl = 4,
+        /// <summary>
+        /// RELP
+        /// </summary>
+        [pbr::OriginalName("RELP")] Relp = 5,
+      }
+
+      /// <summary>
+      /// Defines possible types of component that produces logs.
+      /// </summary>
+      public enum SourceType {
+        /// <summary>
+        /// The default value. This value should never be used.
+        /// </summary>
+        [pbr::OriginalName("SOURCE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Logs produced by ESXI hosts
+        /// </summary>
+        [pbr::OriginalName("ESXI")] Esxi = 1,
+        /// <summary>
+        /// Logs produced by vCenter server
+        /// </summary>
+        [pbr::OriginalName("VCSA")] Vcsa = 2,
       }
 
     }
@@ -2682,6 +6123,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
   /// <summary>
   /// Describes node type.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NodeType : pb::IMessage<NodeType>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2696,7 +6138,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2724,6 +6166,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       memoryGb_ = other.memoryGb_;
       diskSizeGb_ = other.diskSizeGb_;
       availableCustomCoreCounts_ = other.availableCustomCoreCounts_.Clone();
+      kind_ = other.kind_;
+      families_ = other.families_.Clone();
+      capabilities_ = other.capabilities_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2858,6 +6303,51 @@ namespace Google.Cloud.VmwareEngine.V1 {
       get { return availableCustomCoreCounts_; }
     }
 
+    /// <summary>Field number for the "kind" field.</summary>
+    public const int KindFieldNumber = 12;
+    private global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Kind kind_ = global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Kind.Unspecified;
+    /// <summary>
+    /// Output only. The type of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Kind Kind {
+      get { return kind_; }
+      set {
+        kind_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "families" field.</summary>
+    public const int FamiliesFieldNumber = 13;
+    private static readonly pb::FieldCodec<string> _repeated_families_codec
+        = pb::FieldCodec.ForString(106);
+    private readonly pbc::RepeatedField<string> families_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Families of the node type.
+    /// For node types to be in the same cluster
+    /// they must share at least one element in the `families`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Families {
+      get { return families_; }
+    }
+
+    /// <summary>Field number for the "capabilities" field.</summary>
+    public const int CapabilitiesFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Capability> _repeated_capabilities_codec
+        = pb::FieldCodec.ForEnum(114, x => (int) x, x => (global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Capability) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Capability> capabilities_ = new pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Capability>();
+    /// <summary>
+    /// Output only. Capabilities of this node type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Capability> Capabilities {
+      get { return capabilities_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2881,6 +6371,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (MemoryGb != other.MemoryGb) return false;
       if (DiskSizeGb != other.DiskSizeGb) return false;
       if(!availableCustomCoreCounts_.Equals(other.availableCustomCoreCounts_)) return false;
+      if (Kind != other.Kind) return false;
+      if(!families_.Equals(other.families_)) return false;
+      if(!capabilities_.Equals(other.capabilities_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2896,6 +6389,9 @@ namespace Google.Cloud.VmwareEngine.V1 {
       if (MemoryGb != 0) hash ^= MemoryGb.GetHashCode();
       if (DiskSizeGb != 0) hash ^= DiskSizeGb.GetHashCode();
       hash ^= availableCustomCoreCounts_.GetHashCode();
+      if (Kind != global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Kind.Unspecified) hash ^= Kind.GetHashCode();
+      hash ^= families_.GetHashCode();
+      hash ^= capabilities_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2943,6 +6439,12 @@ namespace Google.Cloud.VmwareEngine.V1 {
         output.WriteInt32(DiskSizeGb);
       }
       availableCustomCoreCounts_.WriteTo(output, _repeated_availableCustomCoreCounts_codec);
+      if (Kind != global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Kind.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Kind);
+      }
+      families_.WriteTo(output, _repeated_families_codec);
+      capabilities_.WriteTo(output, _repeated_capabilities_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2982,6 +6484,12 @@ namespace Google.Cloud.VmwareEngine.V1 {
         output.WriteInt32(DiskSizeGb);
       }
       availableCustomCoreCounts_.WriteTo(ref output, _repeated_availableCustomCoreCounts_codec);
+      if (Kind != global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Kind.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Kind);
+      }
+      families_.WriteTo(ref output, _repeated_families_codec);
+      capabilities_.WriteTo(ref output, _repeated_capabilities_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3014,6 +6522,11 @@ namespace Google.Cloud.VmwareEngine.V1 {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(DiskSizeGb);
       }
       size += availableCustomCoreCounts_.CalculateSize(_repeated_availableCustomCoreCounts_codec);
+      if (Kind != global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Kind.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
+      }
+      size += families_.CalculateSize(_repeated_families_codec);
+      size += capabilities_.CalculateSize(_repeated_capabilities_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3048,6 +6561,11 @@ namespace Google.Cloud.VmwareEngine.V1 {
         DiskSizeGb = other.DiskSizeGb;
       }
       availableCustomCoreCounts_.Add(other.availableCustomCoreCounts_);
+      if (other.Kind != global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Kind.Unspecified) {
+        Kind = other.Kind;
+      }
+      families_.Add(other.families_);
+      capabilities_.Add(other.capabilities_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3094,6 +6612,19 @@ namespace Google.Cloud.VmwareEngine.V1 {
           case 90:
           case 88: {
             availableCustomCoreCounts_.AddEntriesFrom(input, _repeated_availableCustomCoreCounts_codec);
+            break;
+          }
+          case 96: {
+            Kind = (global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Kind) input.ReadEnum();
+            break;
+          }
+          case 106: {
+            families_.AddEntriesFrom(input, _repeated_families_codec);
+            break;
+          }
+          case 114:
+          case 112: {
+            capabilities_.AddEntriesFrom(input, _repeated_capabilities_codec);
             break;
           }
         }
@@ -3144,16 +6675,71 @@ namespace Google.Cloud.VmwareEngine.V1 {
             availableCustomCoreCounts_.AddEntriesFrom(ref input, _repeated_availableCustomCoreCounts_codec);
             break;
           }
+          case 96: {
+            Kind = (global::Google.Cloud.VmwareEngine.V1.NodeType.Types.Kind) input.ReadEnum();
+            break;
+          }
+          case 106: {
+            families_.AddEntriesFrom(ref input, _repeated_families_codec);
+            break;
+          }
+          case 114:
+          case 112: {
+            capabilities_.AddEntriesFrom(ref input, _repeated_capabilities_codec);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the NodeType message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Enum Kind defines possible types of a NodeType.
+      /// </summary>
+      public enum Kind {
+        /// <summary>
+        /// The default value. This value should never be used.
+        /// </summary>
+        [pbr::OriginalName("KIND_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Standard HCI node.
+        /// </summary>
+        [pbr::OriginalName("STANDARD")] Standard = 1,
+        /// <summary>
+        /// Storage only Node.
+        /// </summary>
+        [pbr::OriginalName("STORAGE_ONLY")] StorageOnly = 2,
+      }
+
+      /// <summary>
+      /// Capability of a node type.
+      /// </summary>
+      public enum Capability {
+        /// <summary>
+        /// The default value. This value is used if the capability is omitted or
+        /// unknown.
+        /// </summary>
+        [pbr::OriginalName("CAPABILITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// This node type supports stretch clusters.
+        /// </summary>
+        [pbr::OriginalName("STRETCHED_CLUSTERS")] StretchedClusters = 1,
+      }
+
+    }
+    #endregion
 
   }
 
   /// <summary>
   /// Credentials for a private cloud.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Credentials : pb::IMessage<Credentials>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3168,7 +6754,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3396,6 +6982,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
   /// [VmwareEngine.CreateHcxActivationKey][google.cloud.vmwareengine.v1.VmwareEngine.CreateHcxActivationKey]
   /// to create new ones.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HcxActivationKey : pb::IMessage<HcxActivationKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3410,7 +6997,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3794,6 +7381,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
   /// <summary>
   /// Details about a HCX Cloud Manager appliance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Hcx : pb::IMessage<Hcx>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3808,7 +7396,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4125,6 +7713,10 @@ namespace Google.Cloud.VmwareEngine.V1 {
         /// The appliance is being deployed.
         /// </summary>
         [pbr::OriginalName("CREATING")] Creating = 2,
+        /// <summary>
+        /// The appliance is being activated.
+        /// </summary>
+        [pbr::OriginalName("ACTIVATING")] Activating = 3,
       }
 
     }
@@ -4135,6 +7727,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
   /// <summary>
   /// Details about a NSX Manager appliance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Nsx : pb::IMessage<Nsx>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4149,7 +7742,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4476,6 +8069,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
   /// <summary>
   /// Details about a vCenter Server management appliance.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Vcenter : pb::IMessage<Vcenter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4490,7 +8084,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4815,6 +8409,3045 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
+  /// Autoscaling settings define the rules used by VMware Engine to
+  /// automatically scale-out and scale-in the clusters in a private cloud.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AutoscalingSettings : pb::IMessage<AutoscalingSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AutoscalingSettings> _parser = new pb::MessageParser<AutoscalingSettings>(() => new AutoscalingSettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AutoscalingSettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingSettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingSettings(AutoscalingSettings other) : this() {
+      autoscalingPolicies_ = other.autoscalingPolicies_.Clone();
+      minClusterNodeCount_ = other.minClusterNodeCount_;
+      maxClusterNodeCount_ = other.maxClusterNodeCount_;
+      coolDownPeriod_ = other.coolDownPeriod_ != null ? other.coolDownPeriod_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingSettings Clone() {
+      return new AutoscalingSettings(this);
+    }
+
+    /// <summary>Field number for the "autoscaling_policies" field.</summary>
+    public const int AutoscalingPoliciesFieldNumber = 1;
+    private static readonly pbc::MapField<string, global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.AutoscalingPolicy>.Codec _map_autoscalingPolicies_codec
+        = new pbc::MapField<string, global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.AutoscalingPolicy>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.AutoscalingPolicy.Parser), 10);
+    private readonly pbc::MapField<string, global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.AutoscalingPolicy> autoscalingPolicies_ = new pbc::MapField<string, global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.AutoscalingPolicy>();
+    /// <summary>
+    /// Required. The map with autoscaling policies applied to the cluster.
+    /// The key is the identifier of the policy.
+    /// It must meet the following requirements:
+    ///
+    /// * Only contains 1-63 alphanumeric characters and hyphens
+    /// * Begins with an alphabetical character
+    /// * Ends with a non-hyphen character
+    /// * Not formatted as a UUID
+    /// * Complies with [RFC
+    /// 1034](https://datatracker.ietf.org/doc/html/rfc1034) (section 3.5)
+    ///
+    /// Currently there map must contain only one element
+    /// that describes the autoscaling policy for compute nodes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.AutoscalingPolicy> AutoscalingPolicies {
+      get { return autoscalingPolicies_; }
+    }
+
+    /// <summary>Field number for the "min_cluster_node_count" field.</summary>
+    public const int MinClusterNodeCountFieldNumber = 2;
+    private int minClusterNodeCount_;
+    /// <summary>
+    /// Optional. Minimum number of nodes of any type in a cluster.
+    /// If not specified the default limits apply.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MinClusterNodeCount {
+      get { return minClusterNodeCount_; }
+      set {
+        minClusterNodeCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_cluster_node_count" field.</summary>
+    public const int MaxClusterNodeCountFieldNumber = 3;
+    private int maxClusterNodeCount_;
+    /// <summary>
+    /// Optional. Maximum number of nodes of any type in a cluster.
+    /// If not specified the default limits apply.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxClusterNodeCount {
+      get { return maxClusterNodeCount_; }
+      set {
+        maxClusterNodeCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cool_down_period" field.</summary>
+    public const int CoolDownPeriodFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Duration coolDownPeriod_;
+    /// <summary>
+    /// Optional. The minimum duration between consecutive autoscale operations.
+    /// It starts once addition or removal of nodes is fully completed.
+    /// Defaults to 30 minutes if not specified. Cool down period must be in whole
+    /// minutes (for example, 30, 31, 50, 180 minutes).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration CoolDownPeriod {
+      get { return coolDownPeriod_; }
+      set {
+        coolDownPeriod_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AutoscalingSettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AutoscalingSettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!AutoscalingPolicies.Equals(other.AutoscalingPolicies)) return false;
+      if (MinClusterNodeCount != other.MinClusterNodeCount) return false;
+      if (MaxClusterNodeCount != other.MaxClusterNodeCount) return false;
+      if (!object.Equals(CoolDownPeriod, other.CoolDownPeriod)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= AutoscalingPolicies.GetHashCode();
+      if (MinClusterNodeCount != 0) hash ^= MinClusterNodeCount.GetHashCode();
+      if (MaxClusterNodeCount != 0) hash ^= MaxClusterNodeCount.GetHashCode();
+      if (coolDownPeriod_ != null) hash ^= CoolDownPeriod.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      autoscalingPolicies_.WriteTo(output, _map_autoscalingPolicies_codec);
+      if (MinClusterNodeCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MinClusterNodeCount);
+      }
+      if (MaxClusterNodeCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MaxClusterNodeCount);
+      }
+      if (coolDownPeriod_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CoolDownPeriod);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      autoscalingPolicies_.WriteTo(ref output, _map_autoscalingPolicies_codec);
+      if (MinClusterNodeCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MinClusterNodeCount);
+      }
+      if (MaxClusterNodeCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MaxClusterNodeCount);
+      }
+      if (coolDownPeriod_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CoolDownPeriod);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += autoscalingPolicies_.CalculateSize(_map_autoscalingPolicies_codec);
+      if (MinClusterNodeCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinClusterNodeCount);
+      }
+      if (MaxClusterNodeCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxClusterNodeCount);
+      }
+      if (coolDownPeriod_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CoolDownPeriod);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AutoscalingSettings other) {
+      if (other == null) {
+        return;
+      }
+      autoscalingPolicies_.MergeFrom(other.autoscalingPolicies_);
+      if (other.MinClusterNodeCount != 0) {
+        MinClusterNodeCount = other.MinClusterNodeCount;
+      }
+      if (other.MaxClusterNodeCount != 0) {
+        MaxClusterNodeCount = other.MaxClusterNodeCount;
+      }
+      if (other.coolDownPeriod_ != null) {
+        if (coolDownPeriod_ == null) {
+          CoolDownPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        CoolDownPeriod.MergeFrom(other.CoolDownPeriod);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            autoscalingPolicies_.AddEntriesFrom(input, _map_autoscalingPolicies_codec);
+            break;
+          }
+          case 16: {
+            MinClusterNodeCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            MaxClusterNodeCount = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            if (coolDownPeriod_ == null) {
+              CoolDownPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(CoolDownPeriod);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            autoscalingPolicies_.AddEntriesFrom(ref input, _map_autoscalingPolicies_codec);
+            break;
+          }
+          case 16: {
+            MinClusterNodeCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            MaxClusterNodeCount = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            if (coolDownPeriod_ == null) {
+              CoolDownPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(CoolDownPeriod);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AutoscalingSettings message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Thresholds define the utilization of resources triggering
+      /// scale-out and scale-in operations.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Thresholds : pb::IMessage<Thresholds>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Thresholds> _parser = new pb::MessageParser<Thresholds>(() => new Thresholds());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Thresholds> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Thresholds() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Thresholds(Thresholds other) : this() {
+          scaleOut_ = other.scaleOut_;
+          scaleIn_ = other.scaleIn_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Thresholds Clone() {
+          return new Thresholds(this);
+        }
+
+        /// <summary>Field number for the "scale_out" field.</summary>
+        public const int ScaleOutFieldNumber = 1;
+        private int scaleOut_;
+        /// <summary>
+        /// Required. The utilization triggering the scale-out operation in percent.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int ScaleOut {
+          get { return scaleOut_; }
+          set {
+            scaleOut_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "scale_in" field.</summary>
+        public const int ScaleInFieldNumber = 2;
+        private int scaleIn_;
+        /// <summary>
+        /// Required. The utilization triggering the scale-in operation in percent.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int ScaleIn {
+          get { return scaleIn_; }
+          set {
+            scaleIn_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Thresholds);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Thresholds other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ScaleOut != other.ScaleOut) return false;
+          if (ScaleIn != other.ScaleIn) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ScaleOut != 0) hash ^= ScaleOut.GetHashCode();
+          if (ScaleIn != 0) hash ^= ScaleIn.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ScaleOut != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(ScaleOut);
+          }
+          if (ScaleIn != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(ScaleIn);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ScaleOut != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(ScaleOut);
+          }
+          if (ScaleIn != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(ScaleIn);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ScaleOut != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(ScaleOut);
+          }
+          if (ScaleIn != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(ScaleIn);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Thresholds other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ScaleOut != 0) {
+            ScaleOut = other.ScaleOut;
+          }
+          if (other.ScaleIn != 0) {
+            ScaleIn = other.ScaleIn;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ScaleOut = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                ScaleIn = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ScaleOut = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                ScaleIn = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Autoscaling policy describes the behavior of the autoscaling
+      /// with respect to the resource utilization.
+      /// The scale-out operation is initiated if the utilization
+      /// exceeds ANY of the respective thresholds.
+      /// The scale-in operation is initiated if the utilization
+      /// is below ALL of the respective thresholds.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AutoscalingPolicy : pb::IMessage<AutoscalingPolicy>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AutoscalingPolicy> _parser = new pb::MessageParser<AutoscalingPolicy>(() => new AutoscalingPolicy());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AutoscalingPolicy> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingPolicy() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingPolicy(AutoscalingPolicy other) : this() {
+          nodeTypeId_ = other.nodeTypeId_;
+          scaleOutSize_ = other.scaleOutSize_;
+          cpuThresholds_ = other.cpuThresholds_ != null ? other.cpuThresholds_.Clone() : null;
+          grantedMemoryThresholds_ = other.grantedMemoryThresholds_ != null ? other.grantedMemoryThresholds_.Clone() : null;
+          consumedMemoryThresholds_ = other.consumedMemoryThresholds_ != null ? other.consumedMemoryThresholds_.Clone() : null;
+          storageThresholds_ = other.storageThresholds_ != null ? other.storageThresholds_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AutoscalingPolicy Clone() {
+          return new AutoscalingPolicy(this);
+        }
+
+        /// <summary>Field number for the "node_type_id" field.</summary>
+        public const int NodeTypeIdFieldNumber = 1;
+        private string nodeTypeId_ = "";
+        /// <summary>
+        /// Required. The canonical identifier of the node type to add or remove.
+        /// Corresponds to the `NodeType`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string NodeTypeId {
+          get { return nodeTypeId_; }
+          set {
+            nodeTypeId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "scale_out_size" field.</summary>
+        public const int ScaleOutSizeFieldNumber = 2;
+        private int scaleOutSize_;
+        /// <summary>
+        /// Required. Number of nodes to add to a cluster during a scale-out
+        /// operation. Must be divisible by 2 for stretched clusters. During a
+        /// scale-in operation only one node (or 2 for stretched clusters) are
+        /// removed in a single iteration.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int ScaleOutSize {
+          get { return scaleOutSize_; }
+          set {
+            scaleOutSize_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "cpu_thresholds" field.</summary>
+        public const int CpuThresholdsFieldNumber = 11;
+        private global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds cpuThresholds_;
+        /// <summary>
+        /// Optional. Utilization thresholds pertaining to CPU utilization.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds CpuThresholds {
+          get { return cpuThresholds_; }
+          set {
+            cpuThresholds_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "granted_memory_thresholds" field.</summary>
+        public const int GrantedMemoryThresholdsFieldNumber = 12;
+        private global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds grantedMemoryThresholds_;
+        /// <summary>
+        /// Optional. Utilization thresholds pertaining to amount of granted memory.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds GrantedMemoryThresholds {
+          get { return grantedMemoryThresholds_; }
+          set {
+            grantedMemoryThresholds_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "consumed_memory_thresholds" field.</summary>
+        public const int ConsumedMemoryThresholdsFieldNumber = 13;
+        private global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds consumedMemoryThresholds_;
+        /// <summary>
+        /// Optional. Utilization thresholds pertaining to amount of consumed memory.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds ConsumedMemoryThresholds {
+          get { return consumedMemoryThresholds_; }
+          set {
+            consumedMemoryThresholds_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "storage_thresholds" field.</summary>
+        public const int StorageThresholdsFieldNumber = 14;
+        private global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds storageThresholds_;
+        /// <summary>
+        /// Optional. Utilization thresholds pertaining to amount of consumed
+        /// storage.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds StorageThresholds {
+          get { return storageThresholds_; }
+          set {
+            storageThresholds_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AutoscalingPolicy);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AutoscalingPolicy other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (NodeTypeId != other.NodeTypeId) return false;
+          if (ScaleOutSize != other.ScaleOutSize) return false;
+          if (!object.Equals(CpuThresholds, other.CpuThresholds)) return false;
+          if (!object.Equals(GrantedMemoryThresholds, other.GrantedMemoryThresholds)) return false;
+          if (!object.Equals(ConsumedMemoryThresholds, other.ConsumedMemoryThresholds)) return false;
+          if (!object.Equals(StorageThresholds, other.StorageThresholds)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (NodeTypeId.Length != 0) hash ^= NodeTypeId.GetHashCode();
+          if (ScaleOutSize != 0) hash ^= ScaleOutSize.GetHashCode();
+          if (cpuThresholds_ != null) hash ^= CpuThresholds.GetHashCode();
+          if (grantedMemoryThresholds_ != null) hash ^= GrantedMemoryThresholds.GetHashCode();
+          if (consumedMemoryThresholds_ != null) hash ^= ConsumedMemoryThresholds.GetHashCode();
+          if (storageThresholds_ != null) hash ^= StorageThresholds.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (NodeTypeId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(NodeTypeId);
+          }
+          if (ScaleOutSize != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(ScaleOutSize);
+          }
+          if (cpuThresholds_ != null) {
+            output.WriteRawTag(90);
+            output.WriteMessage(CpuThresholds);
+          }
+          if (grantedMemoryThresholds_ != null) {
+            output.WriteRawTag(98);
+            output.WriteMessage(GrantedMemoryThresholds);
+          }
+          if (consumedMemoryThresholds_ != null) {
+            output.WriteRawTag(106);
+            output.WriteMessage(ConsumedMemoryThresholds);
+          }
+          if (storageThresholds_ != null) {
+            output.WriteRawTag(114);
+            output.WriteMessage(StorageThresholds);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (NodeTypeId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(NodeTypeId);
+          }
+          if (ScaleOutSize != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(ScaleOutSize);
+          }
+          if (cpuThresholds_ != null) {
+            output.WriteRawTag(90);
+            output.WriteMessage(CpuThresholds);
+          }
+          if (grantedMemoryThresholds_ != null) {
+            output.WriteRawTag(98);
+            output.WriteMessage(GrantedMemoryThresholds);
+          }
+          if (consumedMemoryThresholds_ != null) {
+            output.WriteRawTag(106);
+            output.WriteMessage(ConsumedMemoryThresholds);
+          }
+          if (storageThresholds_ != null) {
+            output.WriteRawTag(114);
+            output.WriteMessage(StorageThresholds);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (NodeTypeId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(NodeTypeId);
+          }
+          if (ScaleOutSize != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(ScaleOutSize);
+          }
+          if (cpuThresholds_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CpuThresholds);
+          }
+          if (grantedMemoryThresholds_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(GrantedMemoryThresholds);
+          }
+          if (consumedMemoryThresholds_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConsumedMemoryThresholds);
+          }
+          if (storageThresholds_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StorageThresholds);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AutoscalingPolicy other) {
+          if (other == null) {
+            return;
+          }
+          if (other.NodeTypeId.Length != 0) {
+            NodeTypeId = other.NodeTypeId;
+          }
+          if (other.ScaleOutSize != 0) {
+            ScaleOutSize = other.ScaleOutSize;
+          }
+          if (other.cpuThresholds_ != null) {
+            if (cpuThresholds_ == null) {
+              CpuThresholds = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds();
+            }
+            CpuThresholds.MergeFrom(other.CpuThresholds);
+          }
+          if (other.grantedMemoryThresholds_ != null) {
+            if (grantedMemoryThresholds_ == null) {
+              GrantedMemoryThresholds = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds();
+            }
+            GrantedMemoryThresholds.MergeFrom(other.GrantedMemoryThresholds);
+          }
+          if (other.consumedMemoryThresholds_ != null) {
+            if (consumedMemoryThresholds_ == null) {
+              ConsumedMemoryThresholds = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds();
+            }
+            ConsumedMemoryThresholds.MergeFrom(other.ConsumedMemoryThresholds);
+          }
+          if (other.storageThresholds_ != null) {
+            if (storageThresholds_ == null) {
+              StorageThresholds = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds();
+            }
+            StorageThresholds.MergeFrom(other.StorageThresholds);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                NodeTypeId = input.ReadString();
+                break;
+              }
+              case 16: {
+                ScaleOutSize = input.ReadInt32();
+                break;
+              }
+              case 90: {
+                if (cpuThresholds_ == null) {
+                  CpuThresholds = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds();
+                }
+                input.ReadMessage(CpuThresholds);
+                break;
+              }
+              case 98: {
+                if (grantedMemoryThresholds_ == null) {
+                  GrantedMemoryThresholds = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds();
+                }
+                input.ReadMessage(GrantedMemoryThresholds);
+                break;
+              }
+              case 106: {
+                if (consumedMemoryThresholds_ == null) {
+                  ConsumedMemoryThresholds = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds();
+                }
+                input.ReadMessage(ConsumedMemoryThresholds);
+                break;
+              }
+              case 114: {
+                if (storageThresholds_ == null) {
+                  StorageThresholds = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds();
+                }
+                input.ReadMessage(StorageThresholds);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                NodeTypeId = input.ReadString();
+                break;
+              }
+              case 16: {
+                ScaleOutSize = input.ReadInt32();
+                break;
+              }
+              case 90: {
+                if (cpuThresholds_ == null) {
+                  CpuThresholds = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds();
+                }
+                input.ReadMessage(CpuThresholds);
+                break;
+              }
+              case 98: {
+                if (grantedMemoryThresholds_ == null) {
+                  GrantedMemoryThresholds = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds();
+                }
+                input.ReadMessage(GrantedMemoryThresholds);
+                break;
+              }
+              case 106: {
+                if (consumedMemoryThresholds_ == null) {
+                  ConsumedMemoryThresholds = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds();
+                }
+                input.ReadMessage(ConsumedMemoryThresholds);
+                break;
+              }
+              case 114: {
+                if (storageThresholds_ == null) {
+                  StorageThresholds = new global::Google.Cloud.VmwareEngine.V1.AutoscalingSettings.Types.Thresholds();
+                }
+                input.ReadMessage(StorageThresholds);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// DNS forwarding config.
+  /// This config defines a list of domain to name server mappings,
+  /// and is attached to the private cloud for custom domain resolution.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DnsForwarding : pb::IMessage<DnsForwarding>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DnsForwarding> _parser = new pb::MessageParser<DnsForwarding>(() => new DnsForwarding());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DnsForwarding> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DnsForwarding() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DnsForwarding(DnsForwarding other) : this() {
+      name_ = other.name_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      forwardingRules_ = other.forwardingRules_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DnsForwarding Clone() {
+      return new DnsForwarding(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The resource name of this DNS profile.
+    /// Resource names are schemeless URIs that follow the conventions in
+    /// https://cloud.google.com/apis/design/resource_names.
+    /// For example:
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/dnsForwarding`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Creation time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. Last update time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "forwarding_rules" field.</summary>
+    public const int ForwardingRulesFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VmwareEngine.V1.DnsForwarding.Types.ForwardingRule> _repeated_forwardingRules_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.VmwareEngine.V1.DnsForwarding.Types.ForwardingRule.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.DnsForwarding.Types.ForwardingRule> forwardingRules_ = new pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.DnsForwarding.Types.ForwardingRule>();
+    /// <summary>
+    /// Required. List of domain mappings to configure
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.DnsForwarding.Types.ForwardingRule> ForwardingRules {
+      get { return forwardingRules_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DnsForwarding);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DnsForwarding other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if(!forwardingRules_.Equals(other.forwardingRules_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      hash ^= forwardingRules_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      forwardingRules_.WriteTo(output, _repeated_forwardingRules_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      forwardingRules_.WriteTo(ref output, _repeated_forwardingRules_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      size += forwardingRules_.CalculateSize(_repeated_forwardingRules_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DnsForwarding other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      forwardingRules_.Add(other.forwardingRules_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 34: {
+            forwardingRules_.AddEntriesFrom(input, _repeated_forwardingRules_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 34: {
+            forwardingRules_.AddEntriesFrom(ref input, _repeated_forwardingRules_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the DnsForwarding message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A forwarding rule is a mapping of a `domain` to `name_servers`.
+      /// This mapping allows VMware Engine to resolve domains for attached private
+      /// clouds by forwarding DNS requests for a given domain to the specified
+      /// nameservers.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ForwardingRule : pb::IMessage<ForwardingRule>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ForwardingRule> _parser = new pb::MessageParser<ForwardingRule>(() => new ForwardingRule());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ForwardingRule> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.VmwareEngine.V1.DnsForwarding.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ForwardingRule() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ForwardingRule(ForwardingRule other) : this() {
+          domain_ = other.domain_;
+          nameServers_ = other.nameServers_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ForwardingRule Clone() {
+          return new ForwardingRule(this);
+        }
+
+        /// <summary>Field number for the "domain" field.</summary>
+        public const int DomainFieldNumber = 1;
+        private string domain_ = "";
+        /// <summary>
+        /// Required. Domain used to resolve a `name_servers` list.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Domain {
+          get { return domain_; }
+          set {
+            domain_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "name_servers" field.</summary>
+        public const int NameServersFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_nameServers_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> nameServers_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Required. List of DNS servers to use for domain resolution
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> NameServers {
+          get { return nameServers_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ForwardingRule);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ForwardingRule other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Domain != other.Domain) return false;
+          if(!nameServers_.Equals(other.nameServers_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Domain.Length != 0) hash ^= Domain.GetHashCode();
+          hash ^= nameServers_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Domain.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Domain);
+          }
+          nameServers_.WriteTo(output, _repeated_nameServers_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Domain.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Domain);
+          }
+          nameServers_.WriteTo(ref output, _repeated_nameServers_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Domain.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Domain);
+          }
+          size += nameServers_.CalculateSize(_repeated_nameServers_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ForwardingRule other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Domain.Length != 0) {
+            Domain = other.Domain;
+          }
+          nameServers_.Add(other.nameServers_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Domain = input.ReadString();
+                break;
+              }
+              case 18: {
+                nameServers_.AddEntriesFrom(input, _repeated_nameServers_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Domain = input.ReadString();
+                break;
+              }
+              case 18: {
+                nameServers_.AddEntriesFrom(ref input, _repeated_nameServers_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Details of a network peering.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class NetworkPeering : pb::IMessage<NetworkPeering>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NetworkPeering> _parser = new pb::MessageParser<NetworkPeering>(() => new NetworkPeering());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NetworkPeering> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NetworkPeering() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NetworkPeering(NetworkPeering other) : this() {
+      _hasBits0 = other._hasBits0;
+      name_ = other.name_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      peerNetwork_ = other.peerNetwork_;
+      exportCustomRoutes_ = other.exportCustomRoutes_;
+      importCustomRoutes_ = other.importCustomRoutes_;
+      exchangeSubnetRoutes_ = other.exchangeSubnetRoutes_;
+      exportCustomRoutesWithPublicIp_ = other.exportCustomRoutesWithPublicIp_;
+      importCustomRoutesWithPublicIp_ = other.importCustomRoutesWithPublicIp_;
+      state_ = other.state_;
+      stateDetails_ = other.stateDetails_;
+      peerMtu_ = other.peerMtu_;
+      peerNetworkType_ = other.peerNetworkType_;
+      uid_ = other.uid_;
+      vmwareEngineNetwork_ = other.vmwareEngineNetwork_;
+      description_ = other.description_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NetworkPeering Clone() {
+      return new NetworkPeering(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The resource name of the network peering. NetworkPeering is a
+    /// global resource and location can only be global. Resource names are
+    /// scheme-less URIs that follow the conventions in
+    /// https://cloud.google.com/apis/design/resource_names.
+    /// For example:
+    /// `projects/my-project/locations/global/networkPeerings/my-peering`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Creation time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. Last update time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "peer_network" field.</summary>
+    public const int PeerNetworkFieldNumber = 5;
+    private string peerNetwork_ = "";
+    /// <summary>
+    /// Required. The relative resource name of the network to peer with
+    /// a standard VMware Engine network. The provided network can be a
+    /// consumer VPC network or another standard VMware Engine network. If the
+    /// `peer_network_type` is VMWARE_ENGINE_NETWORK, specify the name in the form:
+    /// `projects/{project}/locations/global/vmwareEngineNetworks/{vmware_engine_network_id}`.
+    /// Otherwise specify the name in the form:
+    /// `projects/{project}/global/networks/{network_id}`, where
+    /// `{project}` can either be a project number or a project ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PeerNetwork {
+      get { return peerNetwork_; }
+      set {
+        peerNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "export_custom_routes" field.</summary>
+    public const int ExportCustomRoutesFieldNumber = 8;
+    private readonly static bool ExportCustomRoutesDefaultValue = false;
+
+    private bool exportCustomRoutes_;
+    /// <summary>
+    /// Optional. True if custom routes are exported to the peered network;
+    /// false otherwise. The default value is true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ExportCustomRoutes {
+      get { if ((_hasBits0 & 1) != 0) { return exportCustomRoutes_; } else { return ExportCustomRoutesDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        exportCustomRoutes_ = value;
+      }
+    }
+    /// <summary>Gets whether the "export_custom_routes" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExportCustomRoutes {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "export_custom_routes" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExportCustomRoutes() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "import_custom_routes" field.</summary>
+    public const int ImportCustomRoutesFieldNumber = 9;
+    private readonly static bool ImportCustomRoutesDefaultValue = false;
+
+    private bool importCustomRoutes_;
+    /// <summary>
+    /// Optional. True if custom routes are imported from the peered network;
+    /// false otherwise. The default value is true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ImportCustomRoutes {
+      get { if ((_hasBits0 & 2) != 0) { return importCustomRoutes_; } else { return ImportCustomRoutesDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        importCustomRoutes_ = value;
+      }
+    }
+    /// <summary>Gets whether the "import_custom_routes" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasImportCustomRoutes {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "import_custom_routes" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearImportCustomRoutes() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "exchange_subnet_routes" field.</summary>
+    public const int ExchangeSubnetRoutesFieldNumber = 10;
+    private readonly static bool ExchangeSubnetRoutesDefaultValue = false;
+
+    private bool exchangeSubnetRoutes_;
+    /// <summary>
+    /// Optional. True if full mesh connectivity is created and managed
+    /// automatically between peered networks; false otherwise. Currently this
+    /// field is always true because Google Compute Engine automatically creates
+    /// and manages subnetwork routes between two VPC networks when peering state
+    /// is 'ACTIVE'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ExchangeSubnetRoutes {
+      get { if ((_hasBits0 & 4) != 0) { return exchangeSubnetRoutes_; } else { return ExchangeSubnetRoutesDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        exchangeSubnetRoutes_ = value;
+      }
+    }
+    /// <summary>Gets whether the "exchange_subnet_routes" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExchangeSubnetRoutes {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "exchange_subnet_routes" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExchangeSubnetRoutes() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "export_custom_routes_with_public_ip" field.</summary>
+    public const int ExportCustomRoutesWithPublicIpFieldNumber = 11;
+    private readonly static bool ExportCustomRoutesWithPublicIpDefaultValue = false;
+
+    private bool exportCustomRoutesWithPublicIp_;
+    /// <summary>
+    /// Optional. True if all subnet routes with a public IP address range are
+    /// exported; false otherwise. The default value is true. IPv4 special-use
+    /// ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always
+    /// exported to peers and are not controlled by this field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ExportCustomRoutesWithPublicIp {
+      get { if ((_hasBits0 & 8) != 0) { return exportCustomRoutesWithPublicIp_; } else { return ExportCustomRoutesWithPublicIpDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        exportCustomRoutesWithPublicIp_ = value;
+      }
+    }
+    /// <summary>Gets whether the "export_custom_routes_with_public_ip" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExportCustomRoutesWithPublicIp {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "export_custom_routes_with_public_ip" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExportCustomRoutesWithPublicIp() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "import_custom_routes_with_public_ip" field.</summary>
+    public const int ImportCustomRoutesWithPublicIpFieldNumber = 12;
+    private readonly static bool ImportCustomRoutesWithPublicIpDefaultValue = false;
+
+    private bool importCustomRoutesWithPublicIp_;
+    /// <summary>
+    /// Optional. True if all subnet routes with public IP address range are
+    /// imported; false otherwise. The default value is true. IPv4 special-use
+    /// ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always
+    /// imported to peers and are not controlled by this field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ImportCustomRoutesWithPublicIp {
+      get { if ((_hasBits0 & 16) != 0) { return importCustomRoutesWithPublicIp_; } else { return ImportCustomRoutesWithPublicIpDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        importCustomRoutesWithPublicIp_ = value;
+      }
+    }
+    /// <summary>Gets whether the "import_custom_routes_with_public_ip" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasImportCustomRoutesWithPublicIp {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "import_custom_routes_with_public_ip" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearImportCustomRoutesWithPublicIp() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 13;
+    private global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.State state_ = global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. State of the network peering. This field
+    /// has a value of 'ACTIVE' when there's a matching configuration in the peer
+    /// network. New values may be added to this enum when appropriate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state_details" field.</summary>
+    public const int StateDetailsFieldNumber = 7;
+    private string stateDetails_ = "";
+    /// <summary>
+    /// Output only. Output Only. Details about the current state of the network
+    /// peering.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StateDetails {
+      get { return stateDetails_; }
+      set {
+        stateDetails_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "peer_mtu" field.</summary>
+    public const int PeerMtuFieldNumber = 14;
+    private int peerMtu_;
+    /// <summary>
+    /// Optional. Maximum transmission unit (MTU) in bytes.
+    /// The default value is `1500`. If a value of `0` is provided for this field,
+    /// VMware Engine uses the default value instead.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PeerMtu {
+      get { return peerMtu_; }
+      set {
+        peerMtu_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "peer_network_type" field.</summary>
+    public const int PeerNetworkTypeFieldNumber = 16;
+    private global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.PeerNetworkType peerNetworkType_ = global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.PeerNetworkType.Unspecified;
+    /// <summary>
+    /// Required. The type of the network to peer with the VMware Engine network.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.PeerNetworkType PeerNetworkType {
+      get { return peerNetworkType_; }
+      set {
+        peerNetworkType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 17;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. System-generated unique identifier for the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "vmware_engine_network" field.</summary>
+    public const int VmwareEngineNetworkFieldNumber = 20;
+    private string vmwareEngineNetwork_ = "";
+    /// <summary>
+    /// Required. The relative resource name of the VMware Engine network.
+    /// Specify the name in the following form:
+    /// `projects/{project}/locations/{location}/vmwareEngineNetworks/{vmware_engine_network_id}`
+    /// where `{project}` can either be a project number or a project ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VmwareEngineNetwork {
+      get { return vmwareEngineNetwork_; }
+      set {
+        vmwareEngineNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 21;
+    private string description_ = "";
+    /// <summary>
+    /// Optional. User-provided description for this network peering.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NetworkPeering);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NetworkPeering other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (PeerNetwork != other.PeerNetwork) return false;
+      if (ExportCustomRoutes != other.ExportCustomRoutes) return false;
+      if (ImportCustomRoutes != other.ImportCustomRoutes) return false;
+      if (ExchangeSubnetRoutes != other.ExchangeSubnetRoutes) return false;
+      if (ExportCustomRoutesWithPublicIp != other.ExportCustomRoutesWithPublicIp) return false;
+      if (ImportCustomRoutesWithPublicIp != other.ImportCustomRoutesWithPublicIp) return false;
+      if (State != other.State) return false;
+      if (StateDetails != other.StateDetails) return false;
+      if (PeerMtu != other.PeerMtu) return false;
+      if (PeerNetworkType != other.PeerNetworkType) return false;
+      if (Uid != other.Uid) return false;
+      if (VmwareEngineNetwork != other.VmwareEngineNetwork) return false;
+      if (Description != other.Description) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (PeerNetwork.Length != 0) hash ^= PeerNetwork.GetHashCode();
+      if (HasExportCustomRoutes) hash ^= ExportCustomRoutes.GetHashCode();
+      if (HasImportCustomRoutes) hash ^= ImportCustomRoutes.GetHashCode();
+      if (HasExchangeSubnetRoutes) hash ^= ExchangeSubnetRoutes.GetHashCode();
+      if (HasExportCustomRoutesWithPublicIp) hash ^= ExportCustomRoutesWithPublicIp.GetHashCode();
+      if (HasImportCustomRoutesWithPublicIp) hash ^= ImportCustomRoutesWithPublicIp.GetHashCode();
+      if (State != global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (StateDetails.Length != 0) hash ^= StateDetails.GetHashCode();
+      if (PeerMtu != 0) hash ^= PeerMtu.GetHashCode();
+      if (PeerNetworkType != global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.PeerNetworkType.Unspecified) hash ^= PeerNetworkType.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (VmwareEngineNetwork.Length != 0) hash ^= VmwareEngineNetwork.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (PeerNetwork.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PeerNetwork);
+      }
+      if (StateDetails.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(StateDetails);
+      }
+      if (HasExportCustomRoutes) {
+        output.WriteRawTag(64);
+        output.WriteBool(ExportCustomRoutes);
+      }
+      if (HasImportCustomRoutes) {
+        output.WriteRawTag(72);
+        output.WriteBool(ImportCustomRoutes);
+      }
+      if (HasExchangeSubnetRoutes) {
+        output.WriteRawTag(80);
+        output.WriteBool(ExchangeSubnetRoutes);
+      }
+      if (HasExportCustomRoutesWithPublicIp) {
+        output.WriteRawTag(88);
+        output.WriteBool(ExportCustomRoutesWithPublicIp);
+      }
+      if (HasImportCustomRoutesWithPublicIp) {
+        output.WriteRawTag(96);
+        output.WriteBool(ImportCustomRoutesWithPublicIp);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.State.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) State);
+      }
+      if (PeerMtu != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(PeerMtu);
+      }
+      if (PeerNetworkType != global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.PeerNetworkType.Unspecified) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) PeerNetworkType);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(Uid);
+      }
+      if (VmwareEngineNetwork.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(VmwareEngineNetwork);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (PeerNetwork.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PeerNetwork);
+      }
+      if (StateDetails.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(StateDetails);
+      }
+      if (HasExportCustomRoutes) {
+        output.WriteRawTag(64);
+        output.WriteBool(ExportCustomRoutes);
+      }
+      if (HasImportCustomRoutes) {
+        output.WriteRawTag(72);
+        output.WriteBool(ImportCustomRoutes);
+      }
+      if (HasExchangeSubnetRoutes) {
+        output.WriteRawTag(80);
+        output.WriteBool(ExchangeSubnetRoutes);
+      }
+      if (HasExportCustomRoutesWithPublicIp) {
+        output.WriteRawTag(88);
+        output.WriteBool(ExportCustomRoutesWithPublicIp);
+      }
+      if (HasImportCustomRoutesWithPublicIp) {
+        output.WriteRawTag(96);
+        output.WriteBool(ImportCustomRoutesWithPublicIp);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.State.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) State);
+      }
+      if (PeerMtu != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(PeerMtu);
+      }
+      if (PeerNetworkType != global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.PeerNetworkType.Unspecified) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) PeerNetworkType);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(Uid);
+      }
+      if (VmwareEngineNetwork.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(VmwareEngineNetwork);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (PeerNetwork.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PeerNetwork);
+      }
+      if (HasExportCustomRoutes) {
+        size += 1 + 1;
+      }
+      if (HasImportCustomRoutes) {
+        size += 1 + 1;
+      }
+      if (HasExchangeSubnetRoutes) {
+        size += 1 + 1;
+      }
+      if (HasExportCustomRoutesWithPublicIp) {
+        size += 1 + 1;
+      }
+      if (HasImportCustomRoutesWithPublicIp) {
+        size += 1 + 1;
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (StateDetails.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StateDetails);
+      }
+      if (PeerMtu != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PeerMtu);
+      }
+      if (PeerNetworkType != global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.PeerNetworkType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) PeerNetworkType);
+      }
+      if (Uid.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (VmwareEngineNetwork.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(VmwareEngineNetwork);
+      }
+      if (Description.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NetworkPeering other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.PeerNetwork.Length != 0) {
+        PeerNetwork = other.PeerNetwork;
+      }
+      if (other.HasExportCustomRoutes) {
+        ExportCustomRoutes = other.ExportCustomRoutes;
+      }
+      if (other.HasImportCustomRoutes) {
+        ImportCustomRoutes = other.ImportCustomRoutes;
+      }
+      if (other.HasExchangeSubnetRoutes) {
+        ExchangeSubnetRoutes = other.ExchangeSubnetRoutes;
+      }
+      if (other.HasExportCustomRoutesWithPublicIp) {
+        ExportCustomRoutesWithPublicIp = other.ExportCustomRoutesWithPublicIp;
+      }
+      if (other.HasImportCustomRoutesWithPublicIp) {
+        ImportCustomRoutesWithPublicIp = other.ImportCustomRoutesWithPublicIp;
+      }
+      if (other.State != global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.StateDetails.Length != 0) {
+        StateDetails = other.StateDetails;
+      }
+      if (other.PeerMtu != 0) {
+        PeerMtu = other.PeerMtu;
+      }
+      if (other.PeerNetworkType != global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.PeerNetworkType.Unspecified) {
+        PeerNetworkType = other.PeerNetworkType;
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
+      if (other.VmwareEngineNetwork.Length != 0) {
+        VmwareEngineNetwork = other.VmwareEngineNetwork;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 42: {
+            PeerNetwork = input.ReadString();
+            break;
+          }
+          case 58: {
+            StateDetails = input.ReadString();
+            break;
+          }
+          case 64: {
+            ExportCustomRoutes = input.ReadBool();
+            break;
+          }
+          case 72: {
+            ImportCustomRoutes = input.ReadBool();
+            break;
+          }
+          case 80: {
+            ExchangeSubnetRoutes = input.ReadBool();
+            break;
+          }
+          case 88: {
+            ExportCustomRoutesWithPublicIp = input.ReadBool();
+            break;
+          }
+          case 96: {
+            ImportCustomRoutesWithPublicIp = input.ReadBool();
+            break;
+          }
+          case 104: {
+            State = (global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.State) input.ReadEnum();
+            break;
+          }
+          case 112: {
+            PeerMtu = input.ReadInt32();
+            break;
+          }
+          case 128: {
+            PeerNetworkType = (global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.PeerNetworkType) input.ReadEnum();
+            break;
+          }
+          case 138: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 162: {
+            VmwareEngineNetwork = input.ReadString();
+            break;
+          }
+          case 170: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 42: {
+            PeerNetwork = input.ReadString();
+            break;
+          }
+          case 58: {
+            StateDetails = input.ReadString();
+            break;
+          }
+          case 64: {
+            ExportCustomRoutes = input.ReadBool();
+            break;
+          }
+          case 72: {
+            ImportCustomRoutes = input.ReadBool();
+            break;
+          }
+          case 80: {
+            ExchangeSubnetRoutes = input.ReadBool();
+            break;
+          }
+          case 88: {
+            ExportCustomRoutesWithPublicIp = input.ReadBool();
+            break;
+          }
+          case 96: {
+            ImportCustomRoutesWithPublicIp = input.ReadBool();
+            break;
+          }
+          case 104: {
+            State = (global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.State) input.ReadEnum();
+            break;
+          }
+          case 112: {
+            PeerMtu = input.ReadInt32();
+            break;
+          }
+          case 128: {
+            PeerNetworkType = (global::Google.Cloud.VmwareEngine.V1.NetworkPeering.Types.PeerNetworkType) input.ReadEnum();
+            break;
+          }
+          case 138: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 162: {
+            VmwareEngineNetwork = input.ReadString();
+            break;
+          }
+          case 170: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the NetworkPeering message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Possible states of a network peering.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Unspecified network peering state. This is the default value.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The peering is not active.
+        /// </summary>
+        [pbr::OriginalName("INACTIVE")] Inactive = 1,
+        /// <summary>
+        /// The peering is active.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 2,
+        /// <summary>
+        /// The peering is being created.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 3,
+        /// <summary>
+        /// The peering is being deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 4,
+      }
+
+      /// <summary>
+      /// Type or purpose of the network peering connection.
+      /// </summary>
+      public enum PeerNetworkType {
+        /// <summary>
+        /// Unspecified
+        /// </summary>
+        [pbr::OriginalName("PEER_NETWORK_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Peering connection used for connecting to another VPC network established
+        /// by the same user. For example, a peering connection to another VPC
+        /// network in the same project or to an on-premises network.
+        /// </summary>
+        [pbr::OriginalName("STANDARD")] Standard = 1,
+        /// <summary>
+        /// Peering connection used for connecting to another VMware Engine network.
+        /// </summary>
+        [pbr::OriginalName("VMWARE_ENGINE_NETWORK")] VmwareEngineNetwork = 2,
+        /// <summary>
+        /// Peering connection used for establishing [private services
+        /// access](https://cloud.google.com/vpc/docs/private-services-access).
+        /// </summary>
+        [pbr::OriginalName("PRIVATE_SERVICES_ACCESS")] PrivateServicesAccess = 3,
+        /// <summary>
+        /// Peering connection used for connecting to NetApp Cloud Volumes.
+        /// </summary>
+        [pbr::OriginalName("NETAPP_CLOUD_VOLUMES")] NetappCloudVolumes = 4,
+        /// <summary>
+        /// Peering connection used for connecting to third-party services. Most
+        /// third-party services require manual setup of reverse peering on the VPC
+        /// network associated with the third-party service.
+        /// </summary>
+        [pbr::OriginalName("THIRD_PARTY_SERVICE")] ThirdPartyService = 5,
+        /// <summary>
+        /// Peering connection used for connecting to Dell PowerScale Filers
+        /// </summary>
+        [pbr::OriginalName("DELL_POWERSCALE")] DellPowerscale = 6,
+        /// <summary>
+        /// Peering connection used for connecting to Google Cloud NetApp Volumes.
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_CLOUD_NETAPP_VOLUMES")] GoogleCloudNetappVolumes = 7,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Exchanged network peering route.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PeeringRoute : pb::IMessage<PeeringRoute>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PeeringRoute> _parser = new pb::MessageParser<PeeringRoute>(() => new PeeringRoute());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PeeringRoute> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PeeringRoute() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PeeringRoute(PeeringRoute other) : this() {
+      destRange_ = other.destRange_;
+      type_ = other.type_;
+      nextHopRegion_ = other.nextHopRegion_;
+      priority_ = other.priority_;
+      imported_ = other.imported_;
+      direction_ = other.direction_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PeeringRoute Clone() {
+      return new PeeringRoute(this);
+    }
+
+    /// <summary>Field number for the "dest_range" field.</summary>
+    public const int DestRangeFieldNumber = 1;
+    private string destRange_ = "";
+    /// <summary>
+    /// Output only. Destination range of the peering route in CIDR notation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestRange {
+      get { return destRange_; }
+      set {
+        destRange_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Type type_ = global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Type.Unspecified;
+    /// <summary>
+    /// Output only. Type of the route in the peer VPC network.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Type Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "next_hop_region" field.</summary>
+    public const int NextHopRegionFieldNumber = 3;
+    private string nextHopRegion_ = "";
+    /// <summary>
+    /// Output only. Region containing the next hop of the peering route. This
+    /// field only applies to dynamic routes in the peer VPC network.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextHopRegion {
+      get { return nextHopRegion_; }
+      set {
+        nextHopRegion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "priority" field.</summary>
+    public const int PriorityFieldNumber = 4;
+    private long priority_;
+    /// <summary>
+    /// Output only. The priority of the peering route.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Priority {
+      get { return priority_; }
+      set {
+        priority_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "imported" field.</summary>
+    public const int ImportedFieldNumber = 5;
+    private bool imported_;
+    /// <summary>
+    /// Output only. True if the peering route has been imported from a peered
+    /// VPC network; false otherwise. The import happens if the field
+    /// `NetworkPeering.importCustomRoutes` is true for this network,
+    /// `NetworkPeering.exportCustomRoutes` is true for the peer VPC network, and
+    /// the import does not result in a route conflict.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Imported {
+      get { return imported_; }
+      set {
+        imported_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "direction" field.</summary>
+    public const int DirectionFieldNumber = 6;
+    private global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Direction direction_ = global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Direction.Unspecified;
+    /// <summary>
+    /// Output only. Direction of the routes exchanged with the peer network, from
+    /// the VMware Engine network perspective:
+    ///
+    /// * Routes of direction `INCOMING` are imported from the peer network.
+    /// * Routes of direction `OUTGOING` are exported from the intranet VPC network
+    /// of the VMware Engine network.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Direction Direction {
+      get { return direction_; }
+      set {
+        direction_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PeeringRoute);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PeeringRoute other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DestRange != other.DestRange) return false;
+      if (Type != other.Type) return false;
+      if (NextHopRegion != other.NextHopRegion) return false;
+      if (Priority != other.Priority) return false;
+      if (Imported != other.Imported) return false;
+      if (Direction != other.Direction) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DestRange.Length != 0) hash ^= DestRange.GetHashCode();
+      if (Type != global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+      if (NextHopRegion.Length != 0) hash ^= NextHopRegion.GetHashCode();
+      if (Priority != 0L) hash ^= Priority.GetHashCode();
+      if (Imported != false) hash ^= Imported.GetHashCode();
+      if (Direction != global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Direction.Unspecified) hash ^= Direction.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DestRange.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DestRange);
+      }
+      if (Type != global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Type.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (NextHopRegion.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NextHopRegion);
+      }
+      if (Priority != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(Priority);
+      }
+      if (Imported != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Imported);
+      }
+      if (Direction != global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Direction.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Direction);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DestRange.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DestRange);
+      }
+      if (Type != global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Type.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (NextHopRegion.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NextHopRegion);
+      }
+      if (Priority != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(Priority);
+      }
+      if (Imported != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Imported);
+      }
+      if (Direction != global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Direction.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Direction);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DestRange.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestRange);
+      }
+      if (Type != global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Type.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (NextHopRegion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextHopRegion);
+      }
+      if (Priority != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Priority);
+      }
+      if (Imported != false) {
+        size += 1 + 1;
+      }
+      if (Direction != global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Direction.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Direction);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PeeringRoute other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DestRange.Length != 0) {
+        DestRange = other.DestRange;
+      }
+      if (other.Type != global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Type.Unspecified) {
+        Type = other.Type;
+      }
+      if (other.NextHopRegion.Length != 0) {
+        NextHopRegion = other.NextHopRegion;
+      }
+      if (other.Priority != 0L) {
+        Priority = other.Priority;
+      }
+      if (other.Imported != false) {
+        Imported = other.Imported;
+      }
+      if (other.Direction != global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Direction.Unspecified) {
+        Direction = other.Direction;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DestRange = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            NextHopRegion = input.ReadString();
+            break;
+          }
+          case 32: {
+            Priority = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            Imported = input.ReadBool();
+            break;
+          }
+          case 48: {
+            Direction = (global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Direction) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DestRange = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            NextHopRegion = input.ReadString();
+            break;
+          }
+          case 32: {
+            Priority = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            Imported = input.ReadBool();
+            break;
+          }
+          case 48: {
+            Direction = (global::Google.Cloud.VmwareEngine.V1.PeeringRoute.Types.Direction) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PeeringRoute message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of the peering route.
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// Unspecified peering route type. This is the default value.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Dynamic routes in the peer network.
+        /// </summary>
+        [pbr::OriginalName("DYNAMIC_PEERING_ROUTE")] DynamicPeeringRoute = 1,
+        /// <summary>
+        /// Static routes in the peer network.
+        /// </summary>
+        [pbr::OriginalName("STATIC_PEERING_ROUTE")] StaticPeeringRoute = 2,
+        /// <summary>
+        /// Created, updated, and removed automatically by Google Cloud when subnets
+        /// are created, modified, or deleted in the peer network.
+        /// </summary>
+        [pbr::OriginalName("SUBNET_PEERING_ROUTE")] SubnetPeeringRoute = 3,
+      }
+
+      /// <summary>
+      /// The direction of the exchanged routes.
+      /// </summary>
+      public enum Direction {
+        /// <summary>
+        /// Unspecified exchanged routes direction. This is default.
+        /// </summary>
+        [pbr::OriginalName("DIRECTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Routes imported from the peer network.
+        /// </summary>
+        [pbr::OriginalName("INCOMING")] Incoming = 1,
+        /// <summary>
+        /// Routes exported to the peer network.
+        /// </summary>
+        [pbr::OriginalName("OUTGOING")] Outgoing = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Represents a network policy resource. Network policies are regional
   /// resources. You can use a network policy to enable or disable internet access
   /// and external IP access. Network policies are associated with a VMware Engine
@@ -4822,6 +11455,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
   /// policy applies to all private clouds in the VMware Engine network associated
   /// with the policy.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NetworkPolicy : pb::IMessage<NetworkPolicy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4836,7 +11470,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5433,6 +12067,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
       /// private clouds governed by a network policy can access or be accessed from
       /// the internet.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class NetworkService : pb::IMessage<NetworkService>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -5703,9 +12338,618 @@ namespace Google.Cloud.VmwareEngine.V1 {
   }
 
   /// <summary>
+  /// Represents a binding between a network and the management DNS zone.
+  /// A management DNS zone is the Cloud DNS cross-project binding zone that
+  /// VMware Engine creates for each private cloud. It contains FQDNs and
+  /// corresponding IP addresses for the private cloud's ESXi hosts and management
+  /// VM appliances like vCenter and NSX Manager.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ManagementDnsZoneBinding : pb::IMessage<ManagementDnsZoneBinding>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ManagementDnsZoneBinding> _parser = new pb::MessageParser<ManagementDnsZoneBinding>(() => new ManagementDnsZoneBinding());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ManagementDnsZoneBinding> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ManagementDnsZoneBinding() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ManagementDnsZoneBinding(ManagementDnsZoneBinding other) : this() {
+      name_ = other.name_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      state_ = other.state_;
+      description_ = other.description_;
+      uid_ = other.uid_;
+      switch (other.BindNetworkCase) {
+        case BindNetworkOneofCase.VpcNetwork:
+          VpcNetwork = other.VpcNetwork;
+          break;
+        case BindNetworkOneofCase.VmwareEngineNetwork:
+          VmwareEngineNetwork = other.VmwareEngineNetwork;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ManagementDnsZoneBinding Clone() {
+      return new ManagementDnsZoneBinding(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The resource name of this binding.
+    /// Resource names are schemeless URIs that follow the conventions in
+    /// https://cloud.google.com/apis/design/resource_names.
+    /// For example:
+    /// `projects/my-project/locations/us-central1-a/privateClouds/my-cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Creation time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. Last update time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 8;
+    private global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Types.State state_ = global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The state of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 13;
+    private string description_ = "";
+    /// <summary>
+    /// User-provided description for this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "vpc_network" field.</summary>
+    public const int VpcNetworkFieldNumber = 14;
+    /// <summary>
+    /// Network to bind is a standard consumer VPC.
+    /// Specify the name in the following form for consumer
+    /// VPC network: `projects/{project}/global/networks/{network_id}`.
+    /// `{project}` can either be a project number or a project ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VpcNetwork {
+      get { return HasVpcNetwork ? (string) bindNetwork_ : ""; }
+      set {
+        bindNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        bindNetworkCase_ = BindNetworkOneofCase.VpcNetwork;
+      }
+    }
+    /// <summary>Gets whether the "vpc_network" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVpcNetwork {
+      get { return bindNetworkCase_ == BindNetworkOneofCase.VpcNetwork; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "vpc_network" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVpcNetwork() {
+      if (HasVpcNetwork) {
+        ClearBindNetwork();
+      }
+    }
+
+    /// <summary>Field number for the "vmware_engine_network" field.</summary>
+    public const int VmwareEngineNetworkFieldNumber = 15;
+    /// <summary>
+    /// Network to bind is a VMware Engine network.
+    /// Specify the name in the following form for VMware engine network:
+    /// `projects/{project}/locations/global/vmwareEngineNetworks/{vmware_engine_network_id}`.
+    /// `{project}` can either be a project number or a project ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VmwareEngineNetwork {
+      get { return HasVmwareEngineNetwork ? (string) bindNetwork_ : ""; }
+      set {
+        bindNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        bindNetworkCase_ = BindNetworkOneofCase.VmwareEngineNetwork;
+      }
+    }
+    /// <summary>Gets whether the "vmware_engine_network" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVmwareEngineNetwork {
+      get { return bindNetworkCase_ == BindNetworkOneofCase.VmwareEngineNetwork; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "vmware_engine_network" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVmwareEngineNetwork() {
+      if (HasVmwareEngineNetwork) {
+        ClearBindNetwork();
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 9;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. System-generated unique identifier for the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object bindNetwork_;
+    /// <summary>Enum of possible cases for the "bind_network" oneof.</summary>
+    public enum BindNetworkOneofCase {
+      None = 0,
+      VpcNetwork = 14,
+      VmwareEngineNetwork = 15,
+    }
+    private BindNetworkOneofCase bindNetworkCase_ = BindNetworkOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BindNetworkOneofCase BindNetworkCase {
+      get { return bindNetworkCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBindNetwork() {
+      bindNetworkCase_ = BindNetworkOneofCase.None;
+      bindNetwork_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ManagementDnsZoneBinding);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ManagementDnsZoneBinding other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (State != other.State) return false;
+      if (Description != other.Description) return false;
+      if (VpcNetwork != other.VpcNetwork) return false;
+      if (VmwareEngineNetwork != other.VmwareEngineNetwork) return false;
+      if (Uid != other.Uid) return false;
+      if (BindNetworkCase != other.BindNetworkCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (State != global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (HasVpcNetwork) hash ^= VpcNetwork.GetHashCode();
+      if (HasVmwareEngineNetwork) hash ^= VmwareEngineNetwork.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      hash ^= (int) bindNetworkCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Types.State.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) State);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Uid);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Description);
+      }
+      if (HasVpcNetwork) {
+        output.WriteRawTag(114);
+        output.WriteString(VpcNetwork);
+      }
+      if (HasVmwareEngineNetwork) {
+        output.WriteRawTag(122);
+        output.WriteString(VmwareEngineNetwork);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Types.State.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) State);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Uid);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Description);
+      }
+      if (HasVpcNetwork) {
+        output.WriteRawTag(114);
+        output.WriteString(VpcNetwork);
+      }
+      if (HasVmwareEngineNetwork) {
+        output.WriteRawTag(122);
+        output.WriteString(VmwareEngineNetwork);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (HasVpcNetwork) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VpcNetwork);
+      }
+      if (HasVmwareEngineNetwork) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VmwareEngineNetwork);
+      }
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ManagementDnsZoneBinding other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.State != global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
+      switch (other.BindNetworkCase) {
+        case BindNetworkOneofCase.VpcNetwork:
+          VpcNetwork = other.VpcNetwork;
+          break;
+        case BindNetworkOneofCase.VmwareEngineNetwork:
+          VmwareEngineNetwork = other.VmwareEngineNetwork;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 64: {
+            State = (global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Types.State) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 106: {
+            Description = input.ReadString();
+            break;
+          }
+          case 114: {
+            VpcNetwork = input.ReadString();
+            break;
+          }
+          case 122: {
+            VmwareEngineNetwork = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 64: {
+            State = (global::Google.Cloud.VmwareEngine.V1.ManagementDnsZoneBinding.Types.State) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 106: {
+            Description = input.ReadString();
+            break;
+          }
+          case 114: {
+            VpcNetwork = input.ReadString();
+            break;
+          }
+          case 122: {
+            VmwareEngineNetwork = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ManagementDnsZoneBinding message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Enum State defines possible states of binding between the consumer VPC
+      /// network and the management DNS zone.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// The default value. This value should never be used.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The binding is ready.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 1,
+        /// <summary>
+        /// The binding is being created.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 2,
+        /// <summary>
+        /// The binding is being updated.
+        /// </summary>
+        [pbr::OriginalName("UPDATING")] Updating = 3,
+        /// <summary>
+        /// The binding is being deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 4,
+        /// <summary>
+        /// The binding has failed.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 5,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// VMware Engine network resource that provides connectivity for VMware Engine
   /// private clouds.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VmwareEngineNetwork : pb::IMessage<VmwareEngineNetwork>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5720,7 +12964,7 @@ namespace Google.Cloud.VmwareEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6277,12 +13521,17 @@ namespace Google.Cloud.VmwareEngine.V1 {
         /// Engine private cloud deployments.
         /// </summary>
         [pbr::OriginalName("LEGACY")] Legacy = 1,
+        /// <summary>
+        /// Standard network type used for private cloud connectivity.
+        /// </summary>
+        [pbr::OriginalName("STANDARD")] Standard = 2,
       }
 
       /// <summary>
       /// Represents a VMware Engine VPC network that is managed by a
       /// VMware Engine network resource.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class VpcNetwork : pb::IMessage<VpcNetwork>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -6555,6 +13804,1579 @@ namespace Google.Cloud.VmwareEngine.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Private connection resource that provides connectivity for VMware Engine
+  /// private clouds.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PrivateConnection : pb::IMessage<PrivateConnection>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PrivateConnection> _parser = new pb::MessageParser<PrivateConnection>(() => new PrivateConnection());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PrivateConnection> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrivateConnection() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrivateConnection(PrivateConnection other) : this() {
+      name_ = other.name_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      description_ = other.description_;
+      state_ = other.state_;
+      vmwareEngineNetwork_ = other.vmwareEngineNetwork_;
+      vmwareEngineNetworkCanonical_ = other.vmwareEngineNetworkCanonical_;
+      type_ = other.type_;
+      peeringId_ = other.peeringId_;
+      routingMode_ = other.routingMode_;
+      uid_ = other.uid_;
+      serviceNetwork_ = other.serviceNetwork_;
+      peeringState_ = other.peeringState_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrivateConnection Clone() {
+      return new PrivateConnection(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The resource name of the private connection.
+    /// Resource names are schemeless URIs that follow the conventions in
+    /// https://cloud.google.com/apis/design/resource_names.
+    /// For example:
+    /// `projects/my-project/locations/us-central1/privateConnections/my-connection`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Creation time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. Last update time of this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 4;
+    private string description_ = "";
+    /// <summary>
+    /// Optional. User-provided description for this private connection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 5;
+    private global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.State state_ = global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. State of the private connection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vmware_engine_network" field.</summary>
+    public const int VmwareEngineNetworkFieldNumber = 8;
+    private string vmwareEngineNetwork_ = "";
+    /// <summary>
+    /// Required. The relative resource name of Legacy VMware Engine network.
+    /// Specify the name in the following form:
+    /// `projects/{project}/locations/{location}/vmwareEngineNetworks/{vmware_engine_network_id}`
+    /// where `{project}`, `{location}` will be same as specified in private
+    /// connection resource name and `{vmware_engine_network_id}` will be in the
+    /// form of `{location}`-default e.g.
+    /// projects/project/locations/us-central1/vmwareEngineNetworks/us-central1-default.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VmwareEngineNetwork {
+      get { return vmwareEngineNetwork_; }
+      set {
+        vmwareEngineNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "vmware_engine_network_canonical" field.</summary>
+    public const int VmwareEngineNetworkCanonicalFieldNumber = 9;
+    private string vmwareEngineNetworkCanonical_ = "";
+    /// <summary>
+    /// Output only. The canonical name of the VMware Engine network in the form:
+    /// `projects/{project_number}/locations/{location}/vmwareEngineNetworks/{vmware_engine_network_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VmwareEngineNetworkCanonical {
+      get { return vmwareEngineNetworkCanonical_; }
+      set {
+        vmwareEngineNetworkCanonical_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 10;
+    private global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.Type type_ = global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.Type.Unspecified;
+    /// <summary>
+    /// Required. Private connection type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.Type Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "peering_id" field.</summary>
+    public const int PeeringIdFieldNumber = 12;
+    private string peeringId_ = "";
+    /// <summary>
+    /// Output only. VPC network peering id between given network VPC and
+    /// VMwareEngineNetwork.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PeeringId {
+      get { return peeringId_; }
+      set {
+        peeringId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "routing_mode" field.</summary>
+    public const int RoutingModeFieldNumber = 13;
+    private global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.RoutingMode routingMode_ = global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.RoutingMode.Unspecified;
+    /// <summary>
+    /// Optional. Routing Mode.
+    /// Default value is set to GLOBAL.
+    /// For type = PRIVATE_SERVICE_ACCESS, this field can be set to GLOBAL or
+    /// REGIONAL, for other types only GLOBAL is supported.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.RoutingMode RoutingMode {
+      get { return routingMode_; }
+      set {
+        routingMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 14;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. System-generated unique identifier for the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "service_network" field.</summary>
+    public const int ServiceNetworkFieldNumber = 16;
+    private string serviceNetwork_ = "";
+    /// <summary>
+    /// Required. Service network to create private connection.
+    /// Specify the name in the following form:
+    /// `projects/{project}/global/networks/{network_id}`
+    /// For type = PRIVATE_SERVICE_ACCESS, this field represents servicenetworking
+    /// VPC, e.g. projects/project-tp/global/networks/servicenetworking.
+    /// For type = NETAPP_CLOUD_VOLUME, this field represents NetApp service VPC,
+    /// e.g. projects/project-tp/global/networks/netapp-tenant-vpc.
+    /// For type = DELL_POWERSCALE, this field represent Dell service VPC, e.g.
+    /// projects/project-tp/global/networks/dell-tenant-vpc.
+    /// For type= THIRD_PARTY_SERVICE, this field could represent a consumer VPC or
+    /// any other producer VPC to which the VMware Engine Network needs to be
+    /// connected, e.g. projects/project/global/networks/vpc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceNetwork {
+      get { return serviceNetwork_; }
+      set {
+        serviceNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "peering_state" field.</summary>
+    public const int PeeringStateFieldNumber = 17;
+    private global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.PeeringState peeringState_ = global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.PeeringState.Unspecified;
+    /// <summary>
+    /// Output only. Peering state between service network and VMware Engine
+    /// network.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.PeeringState PeeringState {
+      get { return peeringState_; }
+      set {
+        peeringState_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PrivateConnection);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PrivateConnection other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (Description != other.Description) return false;
+      if (State != other.State) return false;
+      if (VmwareEngineNetwork != other.VmwareEngineNetwork) return false;
+      if (VmwareEngineNetworkCanonical != other.VmwareEngineNetworkCanonical) return false;
+      if (Type != other.Type) return false;
+      if (PeeringId != other.PeeringId) return false;
+      if (RoutingMode != other.RoutingMode) return false;
+      if (Uid != other.Uid) return false;
+      if (ServiceNetwork != other.ServiceNetwork) return false;
+      if (PeeringState != other.PeeringState) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (State != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (VmwareEngineNetwork.Length != 0) hash ^= VmwareEngineNetwork.GetHashCode();
+      if (VmwareEngineNetworkCanonical.Length != 0) hash ^= VmwareEngineNetworkCanonical.GetHashCode();
+      if (Type != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+      if (PeeringId.Length != 0) hash ^= PeeringId.GetHashCode();
+      if (RoutingMode != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.RoutingMode.Unspecified) hash ^= RoutingMode.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (ServiceNetwork.Length != 0) hash ^= ServiceNetwork.GetHashCode();
+      if (PeeringState != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.PeeringState.Unspecified) hash ^= PeeringState.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Description);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.State.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) State);
+      }
+      if (VmwareEngineNetwork.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(VmwareEngineNetwork);
+      }
+      if (VmwareEngineNetworkCanonical.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(VmwareEngineNetworkCanonical);
+      }
+      if (Type != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.Type.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) Type);
+      }
+      if (PeeringId.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(PeeringId);
+      }
+      if (RoutingMode != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.RoutingMode.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) RoutingMode);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Uid);
+      }
+      if (ServiceNetwork.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(ServiceNetwork);
+      }
+      if (PeeringState != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.PeeringState.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) PeeringState);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Description);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.State.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) State);
+      }
+      if (VmwareEngineNetwork.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(VmwareEngineNetwork);
+      }
+      if (VmwareEngineNetworkCanonical.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(VmwareEngineNetworkCanonical);
+      }
+      if (Type != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.Type.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) Type);
+      }
+      if (PeeringId.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(PeeringId);
+      }
+      if (RoutingMode != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.RoutingMode.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) RoutingMode);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Uid);
+      }
+      if (ServiceNetwork.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(ServiceNetwork);
+      }
+      if (PeeringState != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.PeeringState.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) PeeringState);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (State != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (VmwareEngineNetwork.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VmwareEngineNetwork);
+      }
+      if (VmwareEngineNetworkCanonical.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VmwareEngineNetworkCanonical);
+      }
+      if (Type != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.Type.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (PeeringId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PeeringId);
+      }
+      if (RoutingMode != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.RoutingMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RoutingMode);
+      }
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (ServiceNetwork.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ServiceNetwork);
+      }
+      if (PeeringState != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.PeeringState.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) PeeringState);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PrivateConnection other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.State != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.VmwareEngineNetwork.Length != 0) {
+        VmwareEngineNetwork = other.VmwareEngineNetwork;
+      }
+      if (other.VmwareEngineNetworkCanonical.Length != 0) {
+        VmwareEngineNetworkCanonical = other.VmwareEngineNetworkCanonical;
+      }
+      if (other.Type != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.Type.Unspecified) {
+        Type = other.Type;
+      }
+      if (other.PeeringId.Length != 0) {
+        PeeringId = other.PeeringId;
+      }
+      if (other.RoutingMode != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.RoutingMode.Unspecified) {
+        RoutingMode = other.RoutingMode;
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
+      if (other.ServiceNetwork.Length != 0) {
+        ServiceNetwork = other.ServiceNetwork;
+      }
+      if (other.PeeringState != global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.PeeringState.Unspecified) {
+        PeeringState = other.PeeringState;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
+            break;
+          }
+          case 40: {
+            State = (global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.State) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            VmwareEngineNetwork = input.ReadString();
+            break;
+          }
+          case 74: {
+            VmwareEngineNetworkCanonical = input.ReadString();
+            break;
+          }
+          case 80: {
+            Type = (global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            PeeringId = input.ReadString();
+            break;
+          }
+          case 104: {
+            RoutingMode = (global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.RoutingMode) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 130: {
+            ServiceNetwork = input.ReadString();
+            break;
+          }
+          case 136: {
+            PeeringState = (global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.PeeringState) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
+            break;
+          }
+          case 40: {
+            State = (global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.State) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            VmwareEngineNetwork = input.ReadString();
+            break;
+          }
+          case 74: {
+            VmwareEngineNetworkCanonical = input.ReadString();
+            break;
+          }
+          case 80: {
+            Type = (global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            PeeringId = input.ReadString();
+            break;
+          }
+          case 104: {
+            RoutingMode = (global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.RoutingMode) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 130: {
+            ServiceNetwork = input.ReadString();
+            break;
+          }
+          case 136: {
+            PeeringState = (global::Google.Cloud.VmwareEngine.V1.PrivateConnection.Types.PeeringState) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PrivateConnection message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Enum State defines possible states of private connection.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// The default value. This value is used if the state is omitted.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The private connection is being created.
+        /// </summary>
+        [pbr::OriginalName("CREATING")] Creating = 1,
+        /// <summary>
+        /// The private connection is ready.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 2,
+        /// <summary>
+        /// The private connection is being updated.
+        /// </summary>
+        [pbr::OriginalName("UPDATING")] Updating = 3,
+        /// <summary>
+        /// The private connection is being deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETING")] Deleting = 4,
+        /// <summary>
+        /// The private connection is not provisioned, since no private cloud is
+        /// present for which this private connection is needed.
+        /// </summary>
+        [pbr::OriginalName("UNPROVISIONED")] Unprovisioned = 5,
+        /// <summary>
+        /// The private connection is in failed state.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 6,
+      }
+
+      /// <summary>
+      /// Enum Type defines possible types of private connection.
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// The default value. This value should never be used.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Connection used for establishing [private services
+        /// access](https://cloud.google.com/vpc/docs/private-services-access).
+        /// </summary>
+        [pbr::OriginalName("PRIVATE_SERVICE_ACCESS")] PrivateServiceAccess = 1,
+        /// <summary>
+        /// Connection used for connecting to NetApp Cloud Volumes.
+        /// </summary>
+        [pbr::OriginalName("NETAPP_CLOUD_VOLUMES")] NetappCloudVolumes = 2,
+        /// <summary>
+        /// Connection used for connecting to Dell PowerScale.
+        /// </summary>
+        [pbr::OriginalName("DELL_POWERSCALE")] DellPowerscale = 3,
+        /// <summary>
+        /// Connection used for connecting to third-party services.
+        /// </summary>
+        [pbr::OriginalName("THIRD_PARTY_SERVICE")] ThirdPartyService = 4,
+      }
+
+      /// <summary>
+      /// Possible types for RoutingMode
+      /// </summary>
+      public enum RoutingMode {
+        /// <summary>
+        /// The default value. This value should never be used.
+        /// </summary>
+        [pbr::OriginalName("ROUTING_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Global Routing Mode
+        /// </summary>
+        [pbr::OriginalName("GLOBAL")] Global = 1,
+        /// <summary>
+        /// Regional Routing Mode
+        /// </summary>
+        [pbr::OriginalName("REGIONAL")] Regional = 2,
+      }
+
+      /// <summary>
+      /// Enum PeeringState defines the possible states of peering between service
+      /// network and the vpc network peered to service network
+      /// </summary>
+      public enum PeeringState {
+        /// <summary>
+        /// The default value. This value is used if the peering state is omitted or
+        /// unknown.
+        /// </summary>
+        [pbr::OriginalName("PEERING_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The peering is in active state.
+        /// </summary>
+        [pbr::OriginalName("PEERING_ACTIVE")] PeeringActive = 1,
+        /// <summary>
+        /// The peering is in inactive state.
+        /// </summary>
+        [pbr::OriginalName("PEERING_INACTIVE")] PeeringInactive = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// VmwareEngine specific metadata for the given
+  /// [google.cloud.location.Location][google.cloud.location.Location]. It is
+  /// returned as a content of the `google.cloud.location.Location.metadata` field.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LocationMetadata : pb::IMessage<LocationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LocationMetadata> _parser = new pb::MessageParser<LocationMetadata>(() => new LocationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LocationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LocationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LocationMetadata(LocationMetadata other) : this() {
+      capabilities_ = other.capabilities_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LocationMetadata Clone() {
+      return new LocationMetadata(this);
+    }
+
+    /// <summary>Field number for the "capabilities" field.</summary>
+    public const int CapabilitiesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VmwareEngine.V1.LocationMetadata.Types.Capability> _repeated_capabilities_codec
+        = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::Google.Cloud.VmwareEngine.V1.LocationMetadata.Types.Capability) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.LocationMetadata.Types.Capability> capabilities_ = new pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.LocationMetadata.Types.Capability>();
+    /// <summary>
+    /// Output only. Capabilities of this location.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.LocationMetadata.Types.Capability> Capabilities {
+      get { return capabilities_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LocationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LocationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!capabilities_.Equals(other.capabilities_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= capabilities_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      capabilities_.WriteTo(output, _repeated_capabilities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      capabilities_.WriteTo(ref output, _repeated_capabilities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += capabilities_.CalculateSize(_repeated_capabilities_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LocationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      capabilities_.Add(other.capabilities_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10:
+          case 8: {
+            capabilities_.AddEntriesFrom(input, _repeated_capabilities_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10:
+          case 8: {
+            capabilities_.AddEntriesFrom(ref input, _repeated_capabilities_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the LocationMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Capability of a location.
+      /// </summary>
+      public enum Capability {
+        /// <summary>
+        /// The default value. This value is used if the capability is omitted or
+        /// unknown.
+        /// </summary>
+        [pbr::OriginalName("CAPABILITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Stretch clusters are supported in this location.
+        /// </summary>
+        [pbr::OriginalName("STRETCHED_CLUSTERS")] StretchedClusters = 1,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// DnsBindPermission resource that contains the accounts having the consumer DNS
+  /// bind permission on the corresponding intranet VPC of the consumer project.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DnsBindPermission : pb::IMessage<DnsBindPermission>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DnsBindPermission> _parser = new pb::MessageParser<DnsBindPermission>(() => new DnsBindPermission());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DnsBindPermission> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DnsBindPermission() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DnsBindPermission(DnsBindPermission other) : this() {
+      name_ = other.name_;
+      principals_ = other.principals_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DnsBindPermission Clone() {
+      return new DnsBindPermission(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Output only. The name of the resource which stores the
+    /// users/service accounts having the permission to bind to the corresponding
+    /// intranet VPC of the consumer project. DnsBindPermission is a global
+    /// resource and location can only be global. Resource names are schemeless
+    /// URIs that follow the conventions in
+    /// https://cloud.google.com/apis/design/resource_names. For example:
+    /// `projects/my-project/locations/global/dnsBindPermission`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "principals" field.</summary>
+    public const int PrincipalsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VmwareEngine.V1.Principal> _repeated_principals_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.VmwareEngine.V1.Principal.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.Principal> principals_ = new pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.Principal>();
+    /// <summary>
+    /// Output only. Users/Service accounts which have access for binding on the
+    /// intranet VPC project corresponding to the consumer project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.VmwareEngine.V1.Principal> Principals {
+      get { return principals_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DnsBindPermission);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DnsBindPermission other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if(!principals_.Equals(other.principals_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= principals_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      principals_.WriteTo(output, _repeated_principals_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      principals_.WriteTo(ref output, _repeated_principals_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += principals_.CalculateSize(_repeated_principals_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DnsBindPermission other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      principals_.Add(other.principals_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            principals_.AddEntriesFrom(input, _repeated_principals_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            principals_.AddEntriesFrom(ref input, _repeated_principals_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Users/Service accounts which have access for DNS binding on the intranet
+  /// VPC corresponding to the consumer project.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Principal : pb::IMessage<Principal>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Principal> _parser = new pb::MessageParser<Principal>(() => new Principal());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Principal> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VmwareEngine.V1.VmwareengineResourcesReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Principal() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Principal(Principal other) : this() {
+      switch (other.PrincipalCase) {
+        case PrincipalOneofCase.User:
+          User = other.User;
+          break;
+        case PrincipalOneofCase.ServiceAccount:
+          ServiceAccount = other.ServiceAccount;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Principal Clone() {
+      return new Principal(this);
+    }
+
+    /// <summary>Field number for the "user" field.</summary>
+    public const int UserFieldNumber = 1;
+    /// <summary>
+    /// The user who needs to be granted permission.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string User {
+      get { return HasUser ? (string) principal_ : ""; }
+      set {
+        principal_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        principalCase_ = PrincipalOneofCase.User;
+      }
+    }
+    /// <summary>Gets whether the "user" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUser {
+      get { return principalCase_ == PrincipalOneofCase.User; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "user" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUser() {
+      if (HasUser) {
+        ClearPrincipal();
+      }
+    }
+
+    /// <summary>Field number for the "service_account" field.</summary>
+    public const int ServiceAccountFieldNumber = 2;
+    /// <summary>
+    /// The service account which needs to be granted the permission.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAccount {
+      get { return HasServiceAccount ? (string) principal_ : ""; }
+      set {
+        principal_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        principalCase_ = PrincipalOneofCase.ServiceAccount;
+      }
+    }
+    /// <summary>Gets whether the "service_account" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasServiceAccount {
+      get { return principalCase_ == PrincipalOneofCase.ServiceAccount; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "service_account" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearServiceAccount() {
+      if (HasServiceAccount) {
+        ClearPrincipal();
+      }
+    }
+
+    private object principal_;
+    /// <summary>Enum of possible cases for the "principal" oneof.</summary>
+    public enum PrincipalOneofCase {
+      None = 0,
+      User = 1,
+      ServiceAccount = 2,
+    }
+    private PrincipalOneofCase principalCase_ = PrincipalOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PrincipalOneofCase PrincipalCase {
+      get { return principalCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPrincipal() {
+      principalCase_ = PrincipalOneofCase.None;
+      principal_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Principal);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Principal other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (User != other.User) return false;
+      if (ServiceAccount != other.ServiceAccount) return false;
+      if (PrincipalCase != other.PrincipalCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasUser) hash ^= User.GetHashCode();
+      if (HasServiceAccount) hash ^= ServiceAccount.GetHashCode();
+      hash ^= (int) principalCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasUser) {
+        output.WriteRawTag(10);
+        output.WriteString(User);
+      }
+      if (HasServiceAccount) {
+        output.WriteRawTag(18);
+        output.WriteString(ServiceAccount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasUser) {
+        output.WriteRawTag(10);
+        output.WriteString(User);
+      }
+      if (HasServiceAccount) {
+        output.WriteRawTag(18);
+        output.WriteString(ServiceAccount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasUser) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(User);
+      }
+      if (HasServiceAccount) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Principal other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.PrincipalCase) {
+        case PrincipalOneofCase.User:
+          User = other.User;
+          break;
+        case PrincipalOneofCase.ServiceAccount:
+          ServiceAccount = other.ServiceAccount;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            User = input.ReadString();
+            break;
+          }
+          case 18: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            User = input.ReadString();
+            break;
+          }
+          case 18: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

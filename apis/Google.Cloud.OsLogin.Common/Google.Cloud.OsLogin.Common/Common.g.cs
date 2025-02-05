@@ -83,6 +83,7 @@ namespace Google.Cloud.OsLogin.Common {
   /// <summary>
   /// The POSIX account information associated with a Google account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PosixAccount : pb::IMessage<PosixAccount>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -679,6 +680,7 @@ namespace Google.Cloud.OsLogin.Common {
   /// <summary>
   /// The SSH public key information associated with a Google account.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SshPublicKey : pb::IMessage<SshPublicKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

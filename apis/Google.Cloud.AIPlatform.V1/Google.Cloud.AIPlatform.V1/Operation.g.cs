@@ -53,6 +53,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Generic Metadata shared by all operations.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GenericOperationMetadata : pb::IMessage<GenericOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -340,6 +341,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Details of operations that perform deletes of any entities.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteOperationMetadata : pb::IMessage<DeleteOperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

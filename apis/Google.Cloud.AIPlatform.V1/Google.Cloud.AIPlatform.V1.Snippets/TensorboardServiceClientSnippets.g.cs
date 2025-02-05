@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,11 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.AIPlatform.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.AIPlatform.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -302,93 +303,6 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             TensorboardName name = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]");
             // Make the request
             Tensorboard response = await tensorboardServiceClient.GetTensorboardAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ReadTensorboardUsage</summary>
-        public void ReadTensorboardUsageRequestObject()
-        {
-            // Snippet: ReadTensorboardUsage(ReadTensorboardUsageRequest, CallSettings)
-            // Create client
-            TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
-            // Initialize request argument(s)
-            ReadTensorboardUsageRequest request = new ReadTensorboardUsageRequest
-            {
-                TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
-            };
-            // Make the request
-            ReadTensorboardUsageResponse response = tensorboardServiceClient.ReadTensorboardUsage(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ReadTensorboardUsageAsync</summary>
-        public async Task ReadTensorboardUsageRequestObjectAsync()
-        {
-            // Snippet: ReadTensorboardUsageAsync(ReadTensorboardUsageRequest, CallSettings)
-            // Additional: ReadTensorboardUsageAsync(ReadTensorboardUsageRequest, CancellationToken)
-            // Create client
-            TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ReadTensorboardUsageRequest request = new ReadTensorboardUsageRequest
-            {
-                TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
-            };
-            // Make the request
-            ReadTensorboardUsageResponse response = await tensorboardServiceClient.ReadTensorboardUsageAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ReadTensorboardUsage</summary>
-        public void ReadTensorboardUsage()
-        {
-            // Snippet: ReadTensorboardUsage(string, CallSettings)
-            // Create client
-            TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
-            // Initialize request argument(s)
-            string tensorboard = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]";
-            // Make the request
-            ReadTensorboardUsageResponse response = tensorboardServiceClient.ReadTensorboardUsage(tensorboard);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ReadTensorboardUsageAsync</summary>
-        public async Task ReadTensorboardUsageAsync()
-        {
-            // Snippet: ReadTensorboardUsageAsync(string, CallSettings)
-            // Additional: ReadTensorboardUsageAsync(string, CancellationToken)
-            // Create client
-            TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string tensorboard = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]";
-            // Make the request
-            ReadTensorboardUsageResponse response = await tensorboardServiceClient.ReadTensorboardUsageAsync(tensorboard);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ReadTensorboardUsage</summary>
-        public void ReadTensorboardUsageResourceNames()
-        {
-            // Snippet: ReadTensorboardUsage(TensorboardName, CallSettings)
-            // Create client
-            TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
-            // Initialize request argument(s)
-            TensorboardName tensorboard = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]");
-            // Make the request
-            ReadTensorboardUsageResponse response = tensorboardServiceClient.ReadTensorboardUsage(tensorboard);
-            // End snippet
-        }
-
-        /// <summary>Snippet for ReadTensorboardUsageAsync</summary>
-        public async Task ReadTensorboardUsageResourceNamesAsync()
-        {
-            // Snippet: ReadTensorboardUsageAsync(TensorboardName, CallSettings)
-            // Additional: ReadTensorboardUsageAsync(TensorboardName, CancellationToken)
-            // Create client
-            TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            TensorboardName tensorboard = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]");
-            // Make the request
-            ReadTensorboardUsageResponse response = await tensorboardServiceClient.ReadTensorboardUsageAsync(tensorboard);
             // End snippet
         }
 
@@ -982,6 +896,180 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadTensorboardUsage</summary>
+        public void ReadTensorboardUsageRequestObject()
+        {
+            // Snippet: ReadTensorboardUsage(ReadTensorboardUsageRequest, CallSettings)
+            // Create client
+            TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
+            // Initialize request argument(s)
+            ReadTensorboardUsageRequest request = new ReadTensorboardUsageRequest
+            {
+                TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
+            };
+            // Make the request
+            ReadTensorboardUsageResponse response = tensorboardServiceClient.ReadTensorboardUsage(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadTensorboardUsageAsync</summary>
+        public async Task ReadTensorboardUsageRequestObjectAsync()
+        {
+            // Snippet: ReadTensorboardUsageAsync(ReadTensorboardUsageRequest, CallSettings)
+            // Additional: ReadTensorboardUsageAsync(ReadTensorboardUsageRequest, CancellationToken)
+            // Create client
+            TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReadTensorboardUsageRequest request = new ReadTensorboardUsageRequest
+            {
+                TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
+            };
+            // Make the request
+            ReadTensorboardUsageResponse response = await tensorboardServiceClient.ReadTensorboardUsageAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadTensorboardUsage</summary>
+        public void ReadTensorboardUsage()
+        {
+            // Snippet: ReadTensorboardUsage(string, CallSettings)
+            // Create client
+            TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
+            // Initialize request argument(s)
+            string tensorboard = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]";
+            // Make the request
+            ReadTensorboardUsageResponse response = tensorboardServiceClient.ReadTensorboardUsage(tensorboard);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadTensorboardUsageAsync</summary>
+        public async Task ReadTensorboardUsageAsync()
+        {
+            // Snippet: ReadTensorboardUsageAsync(string, CallSettings)
+            // Additional: ReadTensorboardUsageAsync(string, CancellationToken)
+            // Create client
+            TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string tensorboard = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]";
+            // Make the request
+            ReadTensorboardUsageResponse response = await tensorboardServiceClient.ReadTensorboardUsageAsync(tensorboard);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadTensorboardUsage</summary>
+        public void ReadTensorboardUsageResourceNames()
+        {
+            // Snippet: ReadTensorboardUsage(TensorboardName, CallSettings)
+            // Create client
+            TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
+            // Initialize request argument(s)
+            TensorboardName tensorboard = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]");
+            // Make the request
+            ReadTensorboardUsageResponse response = tensorboardServiceClient.ReadTensorboardUsage(tensorboard);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadTensorboardUsageAsync</summary>
+        public async Task ReadTensorboardUsageResourceNamesAsync()
+        {
+            // Snippet: ReadTensorboardUsageAsync(TensorboardName, CallSettings)
+            // Additional: ReadTensorboardUsageAsync(TensorboardName, CancellationToken)
+            // Create client
+            TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TensorboardName tensorboard = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]");
+            // Make the request
+            ReadTensorboardUsageResponse response = await tensorboardServiceClient.ReadTensorboardUsageAsync(tensorboard);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadTensorboardSize</summary>
+        public void ReadTensorboardSizeRequestObject()
+        {
+            // Snippet: ReadTensorboardSize(ReadTensorboardSizeRequest, CallSettings)
+            // Create client
+            TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
+            // Initialize request argument(s)
+            ReadTensorboardSizeRequest request = new ReadTensorboardSizeRequest
+            {
+                TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
+            };
+            // Make the request
+            ReadTensorboardSizeResponse response = tensorboardServiceClient.ReadTensorboardSize(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadTensorboardSizeAsync</summary>
+        public async Task ReadTensorboardSizeRequestObjectAsync()
+        {
+            // Snippet: ReadTensorboardSizeAsync(ReadTensorboardSizeRequest, CallSettings)
+            // Additional: ReadTensorboardSizeAsync(ReadTensorboardSizeRequest, CancellationToken)
+            // Create client
+            TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReadTensorboardSizeRequest request = new ReadTensorboardSizeRequest
+            {
+                TensorboardAsTensorboardName = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]"),
+            };
+            // Make the request
+            ReadTensorboardSizeResponse response = await tensorboardServiceClient.ReadTensorboardSizeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadTensorboardSize</summary>
+        public void ReadTensorboardSize()
+        {
+            // Snippet: ReadTensorboardSize(string, CallSettings)
+            // Create client
+            TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
+            // Initialize request argument(s)
+            string tensorboard = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]";
+            // Make the request
+            ReadTensorboardSizeResponse response = tensorboardServiceClient.ReadTensorboardSize(tensorboard);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadTensorboardSizeAsync</summary>
+        public async Task ReadTensorboardSizeAsync()
+        {
+            // Snippet: ReadTensorboardSizeAsync(string, CallSettings)
+            // Additional: ReadTensorboardSizeAsync(string, CancellationToken)
+            // Create client
+            TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string tensorboard = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]";
+            // Make the request
+            ReadTensorboardSizeResponse response = await tensorboardServiceClient.ReadTensorboardSizeAsync(tensorboard);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadTensorboardSize</summary>
+        public void ReadTensorboardSizeResourceNames()
+        {
+            // Snippet: ReadTensorboardSize(TensorboardName, CallSettings)
+            // Create client
+            TensorboardServiceClient tensorboardServiceClient = TensorboardServiceClient.Create();
+            // Initialize request argument(s)
+            TensorboardName tensorboard = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]");
+            // Make the request
+            ReadTensorboardSizeResponse response = tensorboardServiceClient.ReadTensorboardSize(tensorboard);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReadTensorboardSizeAsync</summary>
+        public async Task ReadTensorboardSizeResourceNamesAsync()
+        {
+            // Snippet: ReadTensorboardSizeAsync(TensorboardName, CallSettings)
+            // Additional: ReadTensorboardSizeAsync(TensorboardName, CancellationToken)
+            // Create client
+            TensorboardServiceClient tensorboardServiceClient = await TensorboardServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TensorboardName tensorboard = TensorboardName.FromProjectLocationTensorboard("[PROJECT]", "[LOCATION]", "[TENSORBOARD]");
+            // Make the request
+            ReadTensorboardSizeResponse response = await tensorboardServiceClient.ReadTensorboardSizeAsync(tensorboard);
             // End snippet
         }
 
@@ -3547,7 +3635,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
                 BlobIds = { "", },
             };
             // Make the request, returning a streaming response
-            TensorboardServiceClient.ReadTensorboardBlobDataStream response = tensorboardServiceClient.ReadTensorboardBlobData(request);
+            using TensorboardServiceClient.ReadTensorboardBlobDataStream response = tensorboardServiceClient.ReadTensorboardBlobData(request);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -3570,7 +3658,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Initialize request argument(s)
             string timeSeries = "projects/[PROJECT]/locations/[LOCATION]/tensorboards/[TENSORBOARD]/experiments/[EXPERIMENT]/runs/[RUN]/timeSeries/[TIME_SERIES]";
             // Make the request, returning a streaming response
-            TensorboardServiceClient.ReadTensorboardBlobDataStream response = tensorboardServiceClient.ReadTensorboardBlobData(timeSeries);
+            using TensorboardServiceClient.ReadTensorboardBlobDataStream response = tensorboardServiceClient.ReadTensorboardBlobData(timeSeries);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -3593,7 +3681,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             // Initialize request argument(s)
             TensorboardTimeSeriesName timeSeries = TensorboardTimeSeriesName.FromProjectLocationTensorboardExperimentRunTimeSeries("[PROJECT]", "[LOCATION]", "[TENSORBOARD]", "[EXPERIMENT]", "[RUN]", "[TIME_SERIES]");
             // Make the request, returning a streaming response
-            TensorboardServiceClient.ReadTensorboardBlobDataStream response = tensorboardServiceClient.ReadTensorboardBlobData(timeSeries);
+            using TensorboardServiceClient.ReadTensorboardBlobDataStream response = tensorboardServiceClient.ReadTensorboardBlobData(timeSeries);
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

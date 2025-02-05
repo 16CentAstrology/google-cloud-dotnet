@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.VersionCompat;
 using LibGit2Sharp;
 using Mono.Cecil;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager
 {
@@ -31,12 +31,12 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         public string ExpectedArguments => "[id [id...]]";
 
-        public void Execute(string[] args)
+        public int Execute(string[] args)
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            var catalog = ApiCatalog.Load();
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var catalog = ApiCatalog.Load(rootLayout);
             HashSet<string> tags;
-            using (var repo = new Repository(root))
+            using (var repo = new Repository(rootLayout.RepositoryRoot))
             {
                 tags = new HashSet<string>(repo.Tags.Select(tag => tag.FriendlyName));
             }
@@ -48,25 +48,31 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             foreach (var api in apisToCheck)
             {
-                Console.WriteLine($"Checking compatibility for {api.Id} version {api.Version}");
-                var prefix = api.Id + "-";
+                CheckCompatibilityWithPreviousRelease(rootLayout, tags, api);
+            }
+            return 0;
+        }
 
-                var taggedVersions = tags
-                    .Where(tag => tag.StartsWith(prefix))
-                    .Select(tag => tag.Split(new char[] { '-' }, 2)[1])
-                    .Where(v => !v.StartsWith("0")) // We can reasonably ignore old 0.x versions
-                    .Select(StructuredVersion.FromString)
-                    .OrderBy(v => v)
-                    .ToList();
+        internal static void CheckCompatibilityWithPreviousRelease(RootLayout rootLayout, HashSet<string> allRepoTags, ApiMetadata api)
+        {
+            Console.WriteLine($"Checking compatibility for {api.Id} version {api.Version}");
+            var prefix = api.Id + "-";
 
-                var comparisons = GetComparisons(api.StructuredVersion, taggedVersions);
-                foreach (var (oldVersion, requiredLevel) in comparisons)
+            var taggedVersions = allRepoTags
+                .Where(tag => tag.StartsWith(prefix))
+                .Select(tag => tag.Split(new char[] { '-' }, 2)[1])
+                .Where(v => !v.StartsWith("0")) // We can reasonably ignore old 0.x versions
+                .Select(StructuredVersion.FromString)
+                .OrderBy(v => v)
+                .ToList();
+
+            var comparisons = GetComparisons(api.StructuredVersion, taggedVersions);
+            foreach (var (oldVersion, requiredLevel) in comparisons)
+            {
+                var actualLevel = CheckCompatibility(rootLayout, api, oldVersion);
+                if (actualLevel < requiredLevel)
                 {
-                    var actualLevel = CheckCompatibility(api, oldVersion);
-                    if (actualLevel < requiredLevel)
-                    {
-                        throw new UserErrorException($"Required compatibility level: {requiredLevel}. Actual compatibility level: {actualLevel}.");
-                    }
+                    throw new UserErrorException($"Required compatibility level: {requiredLevel}. Actual compatibility level: {actualLevel}.");
                 }
             }
         }
@@ -116,8 +122,9 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// Checks the compatibility of the locally-built API against a version on NuGet.
         /// This assumes the local package has already been built and is up-to-date.
         /// </summary>
-        private static Level CheckCompatibility(ApiMetadata api, StructuredVersion version)
+        private static Level CheckCompatibility(RootLayout rootLayout, ApiMetadata api, StructuredVersion version)
         {
+            var apiLayout = rootLayout.CreateRepositoryApiLayout(api);
             Console.WriteLine($"Differences from {version}");
 
             // TODO: Remove this try/catch when we can detect that a package has never been pushed.
@@ -136,7 +143,19 @@ namespace Google.Cloud.Tools.ReleaseManager
                 Console.WriteLine($"Returning 'identical' as the change level; please check carefully before release.");
                 return Level.Identical;
             }
-            var sourceAssembly = Path.Combine(DirectoryLayout.ForApi(api.Id).SourceDirectory, api.Id, "bin", "Release", "netstandard2.1", $"{api.Id}.dll");
+            // Google.Cloud.Diagnostics.AspNetCore3 targets .NET Core 3.1
+            string[] candidateTfms = { "netstandard2.1", "netstandard2.0", "netcoreapp3.1" };
+            var sourceAssembly = candidateTfms
+                .Select(apiLayout.GetReleaseAssembly)
+                .FirstOrDefault(File.Exists);
+            if (sourceAssembly is null)
+            {
+                Console.WriteLine($"Unable to find the built assembly for {api.Id}. Some possible causes:");
+                Console.WriteLine("- Package has not been built (in Release configuration).");
+                Console.WriteLine($"- Package does not target one of {string.Join(',', candidateTfms)}.");
+                Console.WriteLine($"Returning 'major' as the change level to strongly encourage diagnosis.");
+                return Level.Major;
+            }
             var newMetadata = Assemblies.LoadFile(sourceAssembly);
 
             var diff = Assemblies.Compare(oldMetadata, newMetadata, null);

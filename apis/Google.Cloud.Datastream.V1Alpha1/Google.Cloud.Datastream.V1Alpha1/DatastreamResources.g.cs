@@ -259,6 +259,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// File format in Cloud Storage.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public enum GcsFileFormat {
     /// <summary>
     /// Unspecified Cloud Storage file format.
@@ -294,6 +295,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Oracle database profile.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OracleProfile : pb::IMessage<OracleProfile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -589,7 +591,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       if (other.DatabaseService.Length != 0) {
         DatabaseService = other.DatabaseService;
       }
-      connectionAttributes_.Add(other.connectionAttributes_);
+      connectionAttributes_.MergeFrom(other.connectionAttributes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -678,6 +680,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// MySQL database profile.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MysqlProfile : pb::IMessage<MysqlProfile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1042,6 +1045,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Cloud Storage bucket profile.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsProfile : pb::IMessage<GcsProfile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1278,6 +1282,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// No connectivity settings.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NoConnectivitySettings : pb::IMessage<NoConnectivitySettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1433,6 +1438,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Static IP address connectivity.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StaticServiceIpConnectivity : pb::IMessage<StaticServiceIpConnectivity>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1588,6 +1594,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Forward SSH Tunnel connectivity.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ForwardSshTunnelConnectivity : pb::IMessage<ForwardSshTunnelConnectivity>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1696,10 +1703,24 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Password {
-      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.Password ? (string) authenticationMethod_ : ""; }
+      get { return HasPassword ? (string) authenticationMethod_ : ""; }
       set {
         authenticationMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         authenticationMethodCase_ = AuthenticationMethodOneofCase.Password;
+      }
+    }
+    /// <summary>Gets whether the "password" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPassword {
+      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.Password; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "password" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPassword() {
+      if (HasPassword) {
+        ClearAuthenticationMethod();
       }
     }
 
@@ -1711,10 +1732,24 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PrivateKey {
-      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey ? (string) authenticationMethod_ : ""; }
+      get { return HasPrivateKey ? (string) authenticationMethod_ : ""; }
       set {
         authenticationMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         authenticationMethodCase_ = AuthenticationMethodOneofCase.PrivateKey;
+      }
+    }
+    /// <summary>Gets whether the "private_key" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPrivateKey {
+      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "private_key" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPrivateKey() {
+      if (HasPrivateKey) {
+        ClearAuthenticationMethod();
       }
     }
 
@@ -1770,8 +1805,8 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
       if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (Port != 0) hash ^= Port.GetHashCode();
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.Password) hash ^= Password.GetHashCode();
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey) hash ^= PrivateKey.GetHashCode();
+      if (HasPassword) hash ^= Password.GetHashCode();
+      if (HasPrivateKey) hash ^= PrivateKey.GetHashCode();
       hash ^= (int) authenticationMethodCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1803,11 +1838,11 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         output.WriteRawTag(24);
         output.WriteInt32(Port);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.Password) {
+      if (HasPassword) {
         output.WriteRawTag(162, 6);
         output.WriteString(Password);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey) {
+      if (HasPrivateKey) {
         output.WriteRawTag(170, 6);
         output.WriteString(PrivateKey);
       }
@@ -1833,11 +1868,11 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         output.WriteRawTag(24);
         output.WriteInt32(Port);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.Password) {
+      if (HasPassword) {
         output.WriteRawTag(162, 6);
         output.WriteString(Password);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey) {
+      if (HasPrivateKey) {
         output.WriteRawTag(170, 6);
         output.WriteString(PrivateKey);
       }
@@ -1860,10 +1895,10 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       if (Port != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.Password) {
+      if (HasPassword) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Password);
       }
-      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey) {
+      if (HasPrivateKey) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(PrivateKey);
       }
       if (_unknownFields != null) {
@@ -1977,6 +2012,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// The VPC Peering configuration is used to create VPC peering between
   /// Datastream and the consumer's VPC.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VpcPeeringConfig : pb::IMessage<VpcPeeringConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2213,6 +2249,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// The PrivateConnection resource is used to establish private connectivity
   /// between Datastream and a customer's network.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PrivateConnection : pb::IMessage<PrivateConnection>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2566,7 +2603,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -2740,6 +2777,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Private Connectivity
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PrivateConnectivity : pb::IMessage<PrivateConnectivity>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2933,6 +2971,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// The Route resource is the child of the PrivateConnection resource.
   /// It used to define a route for a PrivateConnection setup.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Route : pb::IMessage<Route>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3257,7 +3296,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -3375,6 +3414,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// MySQL SSL configuration information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MysqlSslConfig : pb::IMessage<MysqlSslConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3772,6 +3812,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ConnectionProfile : pb::IMessage<ConnectionProfile>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4310,7 +4351,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -4580,6 +4621,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Oracle Column.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OracleColumn : pb::IMessage<OracleColumn>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5095,6 +5137,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Oracle table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OracleTable : pb::IMessage<OracleTable>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5321,6 +5364,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Oracle schema.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OracleSchema : pb::IMessage<OracleSchema>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5545,6 +5589,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Oracle database structure.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OracleRdbms : pb::IMessage<OracleRdbms>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5729,6 +5774,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Oracle data source configuration
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OracleSourceConfig : pb::IMessage<OracleSourceConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5982,6 +6028,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// MySQL Column.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MysqlColumn : pb::IMessage<MysqlColumn>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6418,6 +6465,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// MySQL table.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MysqlTable : pb::IMessage<MysqlTable>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6644,6 +6692,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// MySQL database.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MysqlDatabase : pb::IMessage<MysqlDatabase>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6868,6 +6917,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// MySQL database structure
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MysqlRdbms : pb::IMessage<MysqlRdbms>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7052,6 +7102,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// MySQL source configuration
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MysqlSourceConfig : pb::IMessage<MysqlSourceConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7305,6 +7356,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// The configuration of the stream source.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SourceConfig : pb::IMessage<SourceConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7639,6 +7691,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// AVRO file format configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AvroFileFormat : pb::IMessage<AvroFileFormat>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7794,6 +7847,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// JSON file format configuration.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class JsonFileFormat : pb::IMessage<JsonFileFormat>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8055,6 +8109,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Google Cloud Storage destination configuration
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDestinationConfig : pb::IMessage<GcsDestinationConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8521,6 +8576,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// The configuration of the stream destination.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DestinationConfig : pb::IMessage<DestinationConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8793,6 +8849,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Stream : pb::IMessage<Stream>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9255,7 +9312,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      labels_.Add(other.labels_);
+      labels_.MergeFrom(other.labels_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
@@ -9512,6 +9569,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// Backfill strategy to automatically backfill the Stream's objects.
       /// Specific objects can be excluded.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BackfillAllStrategy : pb::IMessage<BackfillAllStrategy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9806,6 +9864,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <summary>
       /// Backfill strategy to disable automatic backfill for the Stream's objects.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BackfillNoneStrategy : pb::IMessage<BackfillNoneStrategy>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -9966,6 +10025,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Represent a user-facing Error.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Error : pb::IMessage<Error>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10233,7 +10293,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
         ErrorTime.MergeFrom(other.ErrorTime);
       }
-      details_.Add(other.details_);
+      details_.MergeFrom(other.details_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10320,6 +10380,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Contains the current validation results.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidationResult : pb::IMessage<ValidationResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10502,6 +10563,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Validation : pb::IMessage<Validation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10836,6 +10898,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   /// <summary>
   /// Represent user-facing validation result message.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValidationMessage : pb::IMessage<ValidationMessage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11064,7 +11127,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       if (other.Level != global::Google.Cloud.Datastream.V1Alpha1.ValidationMessage.Types.Level.Unspecified) {
         Level = other.Level;
       }
-      metadata_.Add(other.metadata_);
+      metadata_.MergeFrom(other.metadata_);
       if (other.Code.Length != 0) {
         Code = other.Code;
       }

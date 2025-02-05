@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,11 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Run.V2.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START run_v2_generated_Services_UpdateService_sync]
     using Google.Cloud.Run.V2;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedServicesClientSnippets
     {
@@ -38,6 +39,7 @@ namespace Google.Cloud.Run.V2.Snippets
             UpdateServiceRequest request = new UpdateServiceRequest
             {
                 Service = new Service(),
+                UpdateMask = new FieldMask(),
                 ValidateOnly = false,
                 AllowMissing = false,
             };

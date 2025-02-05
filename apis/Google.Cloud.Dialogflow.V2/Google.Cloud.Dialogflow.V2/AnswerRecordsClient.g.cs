@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,21 +15,21 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gcl = Google.Cloud.Location;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Dialogflow.V2
 {
@@ -140,14 +140,14 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return AnswerRecordsClient.Create(callInvoker, Settings, Logger);
+            return AnswerRecordsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<AnswerRecordsClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return AnswerRecordsClient.Create(callInvoker, Settings, Logger);
+            return AnswerRecordsClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -283,13 +283,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AnswerRecord"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAnswerRecordsResponse, AnswerRecord> ListAnswerRecords(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnswerRecords(new ListAnswerRecordsRequest
+        public virtual gax::PagedEnumerable<ListAnswerRecordsResponse, AnswerRecord> ListAnswerRecords(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnswerRecordsRequest request = new ListAnswerRecordsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnswerRecords(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all answer records in the specified project in reverse
@@ -310,13 +319,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AnswerRecord"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAnswerRecordsResponse, AnswerRecord> ListAnswerRecordsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnswerRecordsAsync(new ListAnswerRecordsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAnswerRecordsResponse, AnswerRecord> ListAnswerRecordsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnswerRecordsRequest request = new ListAnswerRecordsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnswerRecordsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all answer records in the specified project in reverse
@@ -337,13 +355,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AnswerRecord"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAnswerRecordsResponse, AnswerRecord> ListAnswerRecords(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnswerRecords(new ListAnswerRecordsRequest
+        public virtual gax::PagedEnumerable<ListAnswerRecordsResponse, AnswerRecord> ListAnswerRecords(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnswerRecordsRequest request = new ListAnswerRecordsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnswerRecords(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all answer records in the specified project in reverse
@@ -364,13 +391,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AnswerRecord"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAnswerRecordsResponse, AnswerRecord> ListAnswerRecordsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnswerRecordsAsync(new ListAnswerRecordsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAnswerRecordsResponse, AnswerRecord> ListAnswerRecordsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnswerRecordsRequest request = new ListAnswerRecordsRequest
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnswerRecordsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all answer records in the specified project in reverse
@@ -391,13 +427,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="AnswerRecord"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListAnswerRecordsResponse, AnswerRecord> ListAnswerRecords(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnswerRecords(new ListAnswerRecordsRequest
+        public virtual gax::PagedEnumerable<ListAnswerRecordsResponse, AnswerRecord> ListAnswerRecords(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnswerRecordsRequest request = new ListAnswerRecordsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnswerRecords(request, callSettings);
+        }
 
         /// <summary>
         /// Returns the list of all answer records in the specified project in reverse
@@ -418,13 +463,22 @@ namespace Google.Cloud.Dialogflow.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="AnswerRecord"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListAnswerRecordsResponse, AnswerRecord> ListAnswerRecordsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListAnswerRecordsAsync(new ListAnswerRecordsRequest
+        public virtual gax::PagedAsyncEnumerable<ListAnswerRecordsResponse, AnswerRecord> ListAnswerRecordsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnswerRecordsRequest request = new ListAnswerRecordsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnswerRecordsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Updates the specified answer record.
@@ -525,7 +579,11 @@ namespace Google.Cloud.Dialogflow.V2
         {
             GrpcClient = grpcClient;
             AnswerRecordsSettings effectiveSettings = settings ?? AnswerRecordsSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListAnswerRecords = clientHelper.BuildApiCall<ListAnswerRecordsRequest, ListAnswerRecordsResponse>("ListAnswerRecords", grpcClient.ListAnswerRecordsAsync, grpcClient.ListAnswerRecords, effectiveSettings.ListAnswerRecordsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAnswerRecords);

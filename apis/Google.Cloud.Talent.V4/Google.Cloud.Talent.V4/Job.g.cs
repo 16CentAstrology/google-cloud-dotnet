@@ -93,6 +93,7 @@ namespace Google.Cloud.Talent.V4 {
   /// [Company][google.cloud.talent.v4.Company], which is the hiring entity
   /// responsible for the job.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Job : pb::IMessage<Job>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -303,13 +304,16 @@ namespace Google.Cloud.Talent.V4 {
     /// search experience.
     ///
     /// Jobs with multiple addresses must have their addresses with the same
-    /// [LocationType][] to allow location filtering to work properly. (For
-    /// example, a Job with addresses "1600 Amphitheatre Parkway, Mountain View,
-    /// CA, USA" and "London, UK" may not have location filters applied correctly
-    /// at search time since the first is a [LocationType.STREET_ADDRESS][] and the
-    /// second is a [LocationType.LOCALITY][].) If a job needs to have multiple
-    /// addresses, it is suggested to split it into multiple jobs with same
-    /// LocationTypes.
+    /// [LocationType][google.cloud.talent.v4.Location.LocationType] to allow
+    /// location filtering to work properly. (For example, a Job with addresses
+    /// "1600 Amphitheatre Parkway, Mountain View, CA, USA" and "London, UK" may
+    /// not have location filters applied correctly at search time since the first
+    /// is a
+    /// [LocationType.STREET_ADDRESS][google.cloud.talent.v4.Location.LocationType.STREET_ADDRESS]
+    /// and the second is a
+    /// [LocationType.LOCALITY][google.cloud.talent.v4.Location.LocationType.LOCALITY].)
+    /// If a job needs to have multiple addresses, it is suggested to split it into
+    /// multiple jobs with same LocationTypes.
     ///
     /// The maximum number of allowed characters is 500.
     /// </summary>
@@ -692,10 +696,11 @@ namespace Google.Cloud.Talent.V4 {
     /// [posting_publish_time][google.cloud.talent.v4.Job.posting_publish_time]
     /// must be set before
     /// [posting_expire_time][google.cloud.talent.v4.Job.posting_expire_time]. The
-    /// purpose of this feature is to allow other objects, such as [Application][],
-    /// to refer a job that didn't exist in the system prior to becoming expired.
-    /// If you want to modify a job that was expired on creation, delete it and
-    /// create a new one.
+    /// purpose of this feature is to allow other objects, such as
+    /// [ApplicationInfo][google.cloud.talent.v4.Job.ApplicationInfo], to refer a
+    /// job that didn't exist in the system prior to becoming expired. If you want
+    /// to modify a job that was expired on creation, delete it and create a new
+    /// one.
     ///
     /// If this value isn't provided at the time of job creation or is invalid,
     /// the job posting expires after 30 days from the job's creation time. For
@@ -1246,7 +1251,7 @@ namespace Google.Cloud.Talent.V4 {
         }
         CompensationInfo.MergeFrom(other.CompensationInfo);
       }
-      customAttributes_.Add(other.customAttributes_);
+      customAttributes_.MergeFrom(other.customAttributes_);
       degreeTypes_.Add(other.degreeTypes_);
       if (other.Department.Length != 0) {
         Department = other.Department;
@@ -1676,6 +1681,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <summary>
       /// Application related details of a job posting.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ApplicationInfo : pb::IMessage<ApplicationInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -1941,6 +1947,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <summary>
       /// Derived details about the job posting.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DerivedInfo : pb::IMessage<DerivedInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2162,6 +2169,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <summary>
       /// Options for job processing.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ProcessingOptions : pb::IMessage<ProcessingOptions>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage

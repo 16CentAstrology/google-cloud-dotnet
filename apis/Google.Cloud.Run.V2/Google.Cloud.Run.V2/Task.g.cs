@@ -38,60 +38,63 @@ namespace Google.Cloud.Run.V2 {
             "YXBpcy5jb20vVGFzaxIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tl",
             "bhgDIAEoCRIUCgxzaG93X2RlbGV0ZWQYBCABKAgiVgoRTGlzdFRhc2tzUmVz",
             "cG9uc2USKAoFdGFza3MYASADKAsyGS5nb29nbGUuY2xvdWQucnVuLnYyLlRh",
-            "c2sSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJItkLCgRUYXNrEhEKBG5hbWUY",
+            "c2sSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIrgMCgRUYXNrEhEKBG5hbWUY",
             "ASABKAlCA+BBAxIQCgN1aWQYAiABKAlCA+BBAxIXCgpnZW5lcmF0aW9uGAMg",
-            "ASgDQgPgQQMSNQoGbGFiZWxzGAQgAygLMiUuZ29vZ2xlLmNsb3VkLnJ1bi52",
-            "Mi5UYXNrLkxhYmVsc0VudHJ5Ej8KC2Fubm90YXRpb25zGAUgAygLMiouZ29v",
-            "Z2xlLmNsb3VkLnJ1bi52Mi5UYXNrLkFubm90YXRpb25zRW50cnkSNAoLY3Jl",
-            "YXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSMwoKc3RhcnRfdGltZRgbIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxI4Cg9jb21wbGV0aW9uX3RpbWUYByABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYCCABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLZGVsZXRlX3Rp",
-            "bWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoL",
-            "ZXhwaXJlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSKwoDam9iGAwgASgJQh7gQQP6QRgKFnJ1bi5nb29nbGVhcGlzLmNv",
-            "bS9Kb2ISNwoJZXhlY3V0aW9uGA0gASgJQiTgQQP6QR4KHHJ1bi5nb29nbGVh",
-            "cGlzLmNvbS9FeGVjdXRpb24SMgoKY29udGFpbmVycxgOIAMoCzIeLmdvb2ds",
-            "ZS5jbG91ZC5ydW4udjIuQ29udGFpbmVyEiwKB3ZvbHVtZXMYDyADKAsyGy5n",
-            "b29nbGUuY2xvdWQucnVuLnYyLlZvbHVtZRITCgttYXhfcmV0cmllcxgQIAEo",
-            "BRIqCgd0aW1lb3V0GBEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "EhcKD3NlcnZpY2VfYWNjb3VudBgSIAEoCRJIChVleGVjdXRpb25fZW52aXJv",
-            "bm1lbnQYFCABKA4yKS5nb29nbGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvbkVu",
-            "dmlyb25tZW50EhgKC3JlY29uY2lsaW5nGBUgASgIQgPgQQMSNwoKY29uZGl0",
-            "aW9ucxgWIAMoCzIeLmdvb2dsZS5jbG91ZC5ydW4udjIuQ29uZGl0aW9uQgPg",
-            "QQMSIAoTb2JzZXJ2ZWRfZ2VuZXJhdGlvbhgXIAEoA0ID4EEDEhIKBWluZGV4",
-            "GBggASgFQgPgQQMSFAoHcmV0cmllZBgZIAEoBUID4EEDEkgKE2xhc3RfYXR0",
-            "ZW1wdF9yZXN1bHQYGiABKAsyJi5nb29nbGUuY2xvdWQucnVuLnYyLlRhc2tB",
-            "dHRlbXB0UmVzdWx0QgPgQQMSQQoOZW5jcnlwdGlvbl9rZXkYHCABKAlCKeBB",
-            "A/pBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5EjcKCnZw",
-            "Y19hY2Nlc3MYHSABKAsyHi5nb29nbGUuY2xvdWQucnVuLnYyLlZwY0FjY2Vz",
-            "c0ID4EEDEhQKB2xvZ191cmkYICABKAlCA+BBAxIRCgRldGFnGGMgASgJQgPg",
-            "QQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
-            "OgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAE6d+pBdAoXcnVuLmdvb2dsZWFwaXMuY29tL1Rhc2sSVnBy",
-            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9qb2JzL3tq",
-            "b2J9L2V4ZWN1dGlvbnMve2V4ZWN1dGlvbn0vdGFza3Mve3Rhc2t9UgEBIlQK",
-            "EVRhc2tBdHRlbXB0UmVzdWx0EicKBnN0YXR1cxgBIAEoCzISLmdvb2dsZS5y",
-            "cGMuU3RhdHVzQgPgQQMSFgoJZXhpdF9jb2RlGAIgASgFQgPgQQMylgMKBVRh",
-            "c2tzEpcBCgdHZXRUYXNrEiMuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5HZXRUYXNr",
-            "UmVxdWVzdBoZLmdvb2dsZS5jbG91ZC5ydW4udjIuVGFzayJMgtPkkwI/Ej0v",
-            "djIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyovZXhlY3V0",
-            "aW9ucy8qL3Rhc2tzLyp92kEEbmFtZRKqAQoJTGlzdFRhc2tzEiUuZ29vZ2xl",
-            "LmNsb3VkLnJ1bi52Mi5MaXN0VGFza3NSZXF1ZXN0GiYuZ29vZ2xlLmNsb3Vk",
-            "LnJ1bi52Mi5MaXN0VGFza3NSZXNwb25zZSJOgtPkkwI/Ej0vdjIve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYnMvKi9leGVjdXRpb25zLyp9",
-            "L3Rhc2tz2kEGcGFyZW50GkbKQRJydW4uZ29vZ2xlYXBpcy5jb23SQS5odHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQlEK",
-            "F2NvbS5nb29nbGUuY2xvdWQucnVuLnYyQglUYXNrUHJvdG9QAVopY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9ydW4vYXBpdjIvcnVucGI7cnVucGJiBnByb3RvMw=="));
+            "ASgDQgPgQQMSOgoGbGFiZWxzGAQgAygLMiUuZ29vZ2xlLmNsb3VkLnJ1bi52",
+            "Mi5UYXNrLkxhYmVsc0VudHJ5QgPgQQMSRAoLYW5ub3RhdGlvbnMYBSADKAsy",
+            "Ki5nb29nbGUuY2xvdWQucnVuLnYyLlRhc2suQW5ub3RhdGlvbnNFbnRyeUID",
+            "4EEDEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEjcKDnNjaGVkdWxlZF90aW1lGCIgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjMKCnN0YXJ0X3RpbWUYGyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSOAoPY29tcGxldGlv",
+            "bl90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EjQKC3VwZGF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEjQKC2RlbGV0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC2V4cGlyZV90aW1lGAogASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEisKA2pvYhgMIAEoCUIe4EED",
+            "+kEYChZydW4uZ29vZ2xlYXBpcy5jb20vSm9iEjcKCWV4ZWN1dGlvbhgNIAEo",
+            "CUIk4EED+kEeChxydW4uZ29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uEjIKCmNv",
+            "bnRhaW5lcnMYDiADKAsyHi5nb29nbGUuY2xvdWQucnVuLnYyLkNvbnRhaW5l",
+            "chIsCgd2b2x1bWVzGA8gAygLMhsuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5Wb2x1",
+            "bWUSEwoLbWF4X3JldHJpZXMYECABKAUSKgoHdGltZW91dBgRIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIXCg9zZXJ2aWNlX2FjY291bnQYEiAB",
+            "KAkSSAoVZXhlY3V0aW9uX2Vudmlyb25tZW50GBQgASgOMikuZ29vZ2xlLmNs",
+            "b3VkLnJ1bi52Mi5FeGVjdXRpb25FbnZpcm9ubWVudBIYCgtyZWNvbmNpbGlu",
+            "ZxgVIAEoCEID4EEDEjcKCmNvbmRpdGlvbnMYFiADKAsyHi5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLkNvbmRpdGlvbkID4EEDEiAKE29ic2VydmVkX2dlbmVyYXRp",
+            "b24YFyABKANCA+BBAxISCgVpbmRleBgYIAEoBUID4EEDEhQKB3JldHJpZWQY",
+            "GSABKAVCA+BBAxJIChNsYXN0X2F0dGVtcHRfcmVzdWx0GBogASgLMiYuZ29v",
+            "Z2xlLmNsb3VkLnJ1bi52Mi5UYXNrQXR0ZW1wdFJlc3VsdEID4EEDEkEKDmVu",
+            "Y3J5cHRpb25fa2V5GBwgASgJQingQQP6QSMKIWNsb3Vka21zLmdvb2dsZWFw",
+            "aXMuY29tL0NyeXB0b0tleRI3Cgp2cGNfYWNjZXNzGB0gASgLMh4uZ29vZ2xl",
+            "LmNsb3VkLnJ1bi52Mi5WcGNBY2Nlc3NCA+BBAxIUCgdsb2dfdXJpGCAgASgJ",
+            "QgPgQQMSGgoNc2F0aXNmaWVzX3B6cxghIAEoCEID4EEDEhEKBGV0YWcYYyAB",
+            "KAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ATp36kF0ChdydW4uZ29vZ2xlYXBpcy5jb20vVGFz",
+            "axJWcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2pv",
+            "YnMve2pvYn0vZXhlY3V0aW9ucy97ZXhlY3V0aW9ufS90YXNrcy97dGFza31S",
+            "AQEiVAoRVGFza0F0dGVtcHRSZXN1bHQSJwoGc3RhdHVzGAEgASgLMhIuZ29v",
+            "Z2xlLnJwYy5TdGF0dXNCA+BBAxIWCglleGl0X2NvZGUYAiABKAVCA+BBAzKW",
+            "AwoFVGFza3MSlwEKB0dldFRhc2sSIy5nb29nbGUuY2xvdWQucnVuLnYyLkdl",
+            "dFRhc2tSZXF1ZXN0GhkuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5UYXNrIkzaQQRu",
+            "YW1lgtPkkwI/Ej0vdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9q",
+            "b2JzLyovZXhlY3V0aW9ucy8qL3Rhc2tzLyp9EqoBCglMaXN0VGFza3MSJS5n",
+            "b29nbGUuY2xvdWQucnVuLnYyLkxpc3RUYXNrc1JlcXVlc3QaJi5nb29nbGUu",
+            "Y2xvdWQucnVuLnYyLkxpc3RUYXNrc1Jlc3BvbnNlIk7aQQZwYXJlbnSC0+ST",
+            "Aj8SPS92Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8q",
+            "L2V4ZWN1dGlvbnMvKn0vdGFza3MaRspBEnJ1bi5nb29nbGVhcGlzLmNvbdJB",
+            "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
+            "cm1CUQoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJCCVRhc2tQcm90b1ABWilj",
+            "bG91ZC5nb29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.K8SMinReflection.Descriptor, global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.GetTaskRequest), global::Google.Cloud.Run.V2.GetTaskRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListTasksRequest), global::Google.Cloud.Run.V2.ListTasksRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "ShowDeleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListTasksResponse), global::Google.Cloud.Run.V2.ListTasksResponse.Parser, new[]{ "Tasks", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Task), global::Google.Cloud.Run.V2.Task.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "StartTime", "CompletionTime", "UpdateTime", "DeleteTime", "ExpireTime", "Job", "Execution", "Containers", "Volumes", "MaxRetries", "Timeout", "ServiceAccount", "ExecutionEnvironment", "Reconciling", "Conditions", "ObservedGeneration", "Index", "Retried", "LastAttemptResult", "EncryptionKey", "VpcAccess", "LogUri", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Task), global::Google.Cloud.Run.V2.Task.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "ScheduledTime", "StartTime", "CompletionTime", "UpdateTime", "DeleteTime", "ExpireTime", "Job", "Execution", "Containers", "Volumes", "MaxRetries", "Timeout", "ServiceAccount", "ExecutionEnvironment", "Reconciling", "Conditions", "ObservedGeneration", "Index", "Retried", "LastAttemptResult", "EncryptionKey", "VpcAccess", "LogUri", "SatisfiesPzs", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.TaskAttemptResult), global::Google.Cloud.Run.V2.TaskAttemptResult.Parser, new[]{ "Status", "ExitCode" }, null, null, null, null)
           }));
     }
@@ -102,6 +105,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// Request message for obtaining a Task by its full name.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTaskRequest : pb::IMessage<GetTaskRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -299,6 +303,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// Request message for retrieving a list of Tasks.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTasksRequest : pb::IMessage<ListTasksRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -618,6 +623,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// Response message containing a list of Tasks.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListTasksResponse : pb::IMessage<ListTasksResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -843,6 +849,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// Task represents a single run of a container to completion.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Task : pb::IMessage<Task>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -883,6 +890,7 @@ namespace Google.Cloud.Run.V2 {
       labels_ = other.labels_.Clone();
       annotations_ = other.annotations_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      scheduledTime_ = other.scheduledTime_ != null ? other.scheduledTime_.Clone() : null;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       completionTime_ = other.completionTime_ != null ? other.completionTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
@@ -905,6 +913,7 @@ namespace Google.Cloud.Run.V2 {
       encryptionKey_ = other.encryptionKey_;
       vpcAccess_ = other.vpcAccess_ != null ? other.vpcAccess_.Clone() : null;
       logUri_ = other.logUri_;
+      satisfiesPzs_ = other.satisfiesPzs_;
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -969,10 +978,10 @@ namespace Google.Cloud.Run.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// KRM-style labels for the resource.
-    /// User-provided labels are shared with Google's billing system, so they can
-    /// be used to filter, or break down billing charges by team, component,
-    /// environment, state, etc. For more information, visit
+    /// Output only. Unstructured key value map that can be used to organize and
+    /// categorize objects. User-provided labels are shared with Google's billing
+    /// system, so they can be used to filter, or break down billing charges by
+    /// team, component, environment, state, etc. For more information, visit
     /// https://cloud.google.com/resource-manager/docs/creating-managing-labels or
     /// https://cloud.google.com/run/docs/configuring/labels
     /// </summary>
@@ -988,7 +997,10 @@ namespace Google.Cloud.Run.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// KRM-style annotations for the resource.
+    /// Output only. Unstructured key value map that may
+    /// be set by external tools to store and arbitrary metadata.
+    /// They are not queryable and should be preserved
+    /// when modifying objects.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1000,9 +1012,9 @@ namespace Google.Cloud.Run.V2 {
     public const int CreateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. Represents time when the task was created by the job
-    /// controller. It is not guaranteed to be set in happens-before order across
-    /// separate operations.
+    /// Output only. Represents time when the task was created by the system.
+    /// It is not guaranteed to be set in happens-before order across separate
+    /// operations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1010,6 +1022,23 @@ namespace Google.Cloud.Run.V2 {
       get { return createTime_; }
       set {
         createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "scheduled_time" field.</summary>
+    public const int ScheduledTimeFieldNumber = 34;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp scheduledTime_;
+    /// <summary>
+    /// Output only. Represents time when the task was scheduled to run by the
+    /// system. It is not guaranteed to be set in happens-before order across
+    /// separate operations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ScheduledTime {
+      get { return scheduledTime_; }
+      set {
+        scheduledTime_ = value;
       }
     }
 
@@ -1362,6 +1391,21 @@ namespace Google.Cloud.Run.V2 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 33;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
     /// <summary>Field number for the "etag" field.</summary>
     public const int EtagFieldNumber = 99;
     private string etag_ = "";
@@ -1399,6 +1443,7 @@ namespace Google.Cloud.Run.V2 {
       if (!Labels.Equals(other.Labels)) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(ScheduledTime, other.ScheduledTime)) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(CompletionTime, other.CompletionTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
@@ -1421,6 +1466,7 @@ namespace Google.Cloud.Run.V2 {
       if (EncryptionKey != other.EncryptionKey) return false;
       if (!object.Equals(VpcAccess, other.VpcAccess)) return false;
       if (LogUri != other.LogUri) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1435,6 +1481,7 @@ namespace Google.Cloud.Run.V2 {
       hash ^= Labels.GetHashCode();
       hash ^= Annotations.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (scheduledTime_ != null) hash ^= ScheduledTime.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (completionTime_ != null) hash ^= CompletionTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -1457,6 +1504,7 @@ namespace Google.Cloud.Run.V2 {
       if (EncryptionKey.Length != 0) hash ^= EncryptionKey.GetHashCode();
       if (vpcAccess_ != null) hash ^= VpcAccess.GetHashCode();
       if (LogUri.Length != 0) hash ^= LogUri.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1573,6 +1621,14 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(130, 2);
         output.WriteString(LogUri);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(136, 2);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (scheduledTime_ != null) {
+        output.WriteRawTag(146, 2);
+        output.WriteMessage(ScheduledTime);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -1684,6 +1740,14 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(130, 2);
         output.WriteString(LogUri);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(136, 2);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (scheduledTime_ != null) {
+        output.WriteRawTag(146, 2);
+        output.WriteMessage(ScheduledTime);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -1711,6 +1775,9 @@ namespace Google.Cloud.Run.V2 {
       size += annotations_.CalculateSize(_map_annotations_codec);
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (scheduledTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ScheduledTime);
       }
       if (startTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
@@ -1772,6 +1839,9 @@ namespace Google.Cloud.Run.V2 {
       if (LogUri.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(LogUri);
       }
+      if (SatisfiesPzs != false) {
+        size += 2 + 1;
+      }
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
@@ -1796,13 +1866,19 @@ namespace Google.Cloud.Run.V2 {
       if (other.Generation != 0L) {
         Generation = other.Generation;
       }
-      labels_.Add(other.labels_);
-      annotations_.Add(other.annotations_);
+      labels_.MergeFrom(other.labels_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.createTime_ != null) {
         if (createTime_ == null) {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.scheduledTime_ != null) {
+        if (scheduledTime_ == null) {
+          ScheduledTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ScheduledTime.MergeFrom(other.ScheduledTime);
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
@@ -1887,6 +1963,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.LogUri.Length != 0) {
         LogUri = other.LogUri;
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
@@ -2043,6 +2122,17 @@ namespace Google.Cloud.Run.V2 {
           }
           case 258: {
             LogUri = input.ReadString();
+            break;
+          }
+          case 264: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 274: {
+            if (scheduledTime_ == null) {
+              ScheduledTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduledTime);
             break;
           }
           case 794: {
@@ -2203,6 +2293,17 @@ namespace Google.Cloud.Run.V2 {
             LogUri = input.ReadString();
             break;
           }
+          case 264: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 274: {
+            if (scheduledTime_ == null) {
+              ScheduledTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduledTime);
+            break;
+          }
           case 794: {
             Etag = input.ReadString();
             break;
@@ -2217,6 +2318,7 @@ namespace Google.Cloud.Run.V2 {
   /// <summary>
   /// Result of a task attempt.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TaskAttemptResult : pb::IMessage<TaskAttemptResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,9 +14,10 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Video.Stitcher.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START videostitcher_v1_generated_VideoStitcherService_CreateLiveSession_async]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Video.Stitcher.V1;
     using System.Threading.Tasks;
 
@@ -37,7 +38,7 @@ namespace Google.Cloud.Video.Stitcher.V1.Snippets
             // Initialize request argument(s)
             CreateLiveSessionRequest request = new CreateLiveSessionRequest
             {
-                ParentAsLiveSessionName = LiveSessionName.FromProjectLocationLiveSession("[PROJECT]", "[LOCATION]", "[LIVE_SESSION]"),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 LiveSession = new LiveSession(),
             };
             // Make the request

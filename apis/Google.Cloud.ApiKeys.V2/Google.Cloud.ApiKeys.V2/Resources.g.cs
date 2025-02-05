@@ -82,6 +82,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// The representation of a key managed by the API Keys API.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Key : pb::IMessage<Key>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -240,8 +241,8 @@ namespace Google.Cloud.ApiKeys.V2 {
     public const int DeleteTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
     /// <summary>
-    /// Output only. A timestamp when this key was deleted. If the resource is not deleted,
-    /// this must be empty.
+    /// Output only. A timestamp when this key was deleted. If the resource is not
+    /// deleted, this must be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -287,10 +288,10 @@ namespace Google.Cloud.ApiKeys.V2 {
     public const int EtagFieldNumber = 11;
     private string etag_ = "";
     /// <summary>
-    /// Output only. A checksum computed by the server based on the current value of the Key
-    /// resource. This may be sent on update and delete requests to ensure the
-    /// client has an up-to-date value before proceeding.
-    /// See https://google.aip.dev/154.
+    /// Output only. A checksum computed by the server based on the current value
+    /// of the Key resource. This may be sent on update and delete requests to
+    /// ensure the client has an up-to-date value before proceeding. See
+    /// https://google.aip.dev/154.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -525,7 +526,7 @@ namespace Google.Cloud.ApiKeys.V2 {
         }
         DeleteTime.MergeFrom(other.DeleteTime);
       }
-      annotations_.Add(other.annotations_);
+      annotations_.MergeFrom(other.annotations_);
       if (other.restrictions_ != null) {
         if (restrictions_ == null) {
           Restrictions = new global::Google.Cloud.ApiKeys.V2.Restrictions();
@@ -679,6 +680,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// Describes the restrictions on the key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Restrictions : pb::IMessage<Restrictions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1117,6 +1119,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// The HTTP referrers (websites) that are allowed to use the key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BrowserKeyRestrictions : pb::IMessage<BrowserKeyRestrictions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1302,6 +1305,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// The IP addresses of callers that are allowed to use the key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ServerKeyRestrictions : pb::IMessage<ServerKeyRestrictions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1487,6 +1491,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// The Android apps that are allowed to use the key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AndroidKeyRestrictions : pb::IMessage<AndroidKeyRestrictions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1672,6 +1677,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// Identifier of an Android application for key use.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AndroidApplication : pb::IMessage<AndroidApplication>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1910,6 +1916,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// <summary>
   /// The iOS apps that are allowed to use the key.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IosKeyRestrictions : pb::IMessage<IosKeyRestrictions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2095,6 +2102,7 @@ namespace Google.Cloud.ApiKeys.V2 {
   /// A restriction for a specific service and optionally one or multiple
   /// specific methods. Both fields are case insensitive.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApiTarget : pb::IMessage<ApiTarget>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

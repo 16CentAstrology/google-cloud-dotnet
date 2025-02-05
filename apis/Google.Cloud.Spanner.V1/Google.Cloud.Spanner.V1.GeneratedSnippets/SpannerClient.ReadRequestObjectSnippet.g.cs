@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Spanner.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START spanner_v1_generated_Spanner_Read_sync]
     using Google.Cloud.Spanner.V1;
@@ -47,7 +47,10 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 ResumeToken = ByteString.Empty,
                 PartitionToken = ByteString.Empty,
                 RequestOptions = new RequestOptions(),
+                DirectedReadOptions = new DirectedReadOptions(),
                 DataBoostEnabled = false,
+                OrderBy = ReadRequest.Types.OrderBy.Unspecified,
+                LockHint = ReadRequest.Types.LockHint.Unspecified,
             };
             // Make the request
             ResultSet response = spannerClient.Read(request);

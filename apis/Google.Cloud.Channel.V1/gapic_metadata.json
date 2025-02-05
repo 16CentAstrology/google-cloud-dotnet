@@ -217,6 +217,18 @@
                 "ListPurchasableSkusAsync"
               ]
             },
+            "ListSkuGroupBillableSkus": {
+              "methods": [
+                "ListSkuGroupBillableSkus",
+                "ListSkuGroupBillableSkusAsync"
+              ]
+            },
+            "ListSkuGroups": {
+              "methods": [
+                "ListSkuGroups",
+                "ListSkuGroupsAsync"
+              ]
+            },
             "ListSkus": {
               "methods": [
                 "ListSkus",
@@ -251,6 +263,12 @@
               "methods": [
                 "ProvisionCloudIdentity",
                 "ProvisionCloudIdentityAsync"
+              ]
+            },
+            "QueryEligibleBillingAccounts": {
+              "methods": [
+                "QueryEligibleBillingAccounts",
+                "QueryEligibleBillingAccountsAsync"
               ]
             },
             "RegisterSubscriber": {

@@ -49,6 +49,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// Success and error statistics of processing multiple entities
   /// (for example, DataItems or structured data rows) in batch.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompletionStats : pb::IMessage<CompletionStats>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,11 +15,11 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using gaxgrpc = Google.Api.Gax.Grpc;
 using gatv = Google.Area120.Tables.V1Alpha1;
+using gaxgrpc = Google.Api.Gax.Grpc;
 using gpr = Google.Protobuf.Reflection;
-using sys = System;
 using scg = System.Collections.Generic;
+using sys = System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -39,6 +39,22 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 gatv::TablesServiceClientBuilder builder = new gatv::TablesServiceClientBuilder();
                 action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gatv::TablesServiceClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddTablesServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gatv::TablesServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gatv::TablesServiceClientBuilder builder = new gatv::TablesServiceClientBuilder();
+                action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
     }

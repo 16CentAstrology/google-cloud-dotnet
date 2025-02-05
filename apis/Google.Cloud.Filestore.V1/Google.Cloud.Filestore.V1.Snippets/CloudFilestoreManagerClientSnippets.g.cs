@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,11 +14,12 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Filestore.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Common;
+    using Google.Cloud.Filestore.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -778,6 +779,73 @@ namespace Google.Cloud.Filestore.V1.Snippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             Operation<Instance, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOnceRestoreInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevertInstance</summary>
+        public void RevertInstanceRequestObject()
+        {
+            // Snippet: RevertInstance(RevertInstanceRequest, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            RevertInstanceRequest request = new RevertInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                TargetSnapshotId = "",
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = cloudFilestoreManagerClient.RevertInstance(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = cloudFilestoreManagerClient.PollOnceRevertInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RevertInstanceAsync</summary>
+        public async Task RevertInstanceRequestObjectAsync()
+        {
+            // Snippet: RevertInstanceAsync(RevertInstanceRequest, CallSettings)
+            // Additional: RevertInstanceAsync(RevertInstanceRequest, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            RevertInstanceRequest request = new RevertInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                TargetSnapshotId = "",
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await cloudFilestoreManagerClient.RevertInstanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOnceRevertInstanceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

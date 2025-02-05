@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,23 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
-using lro = Google.LongRunning;
-using proto = Google.Protobuf;
-using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
-using sys = System;
+using proto = Google.Protobuf;
 using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
+using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Metastore.V1
 {
@@ -74,6 +74,12 @@ namespace Google.Cloud.Metastore.V1
             CreateBackupOperationsSettings = existing.CreateBackupOperationsSettings.Clone();
             DeleteBackupSettings = existing.DeleteBackupSettings;
             DeleteBackupOperationsSettings = existing.DeleteBackupOperationsSettings.Clone();
+            QueryMetadataSettings = existing.QueryMetadataSettings;
+            QueryMetadataOperationsSettings = existing.QueryMetadataOperationsSettings.Clone();
+            MoveTableToDatabaseSettings = existing.MoveTableToDatabaseSettings;
+            MoveTableToDatabaseOperationsSettings = existing.MoveTableToDatabaseOperationsSettings.Clone();
+            AlterMetadataResourceLocationSettings = existing.AlterMetadataResourceLocationSettings;
+            AlterMetadataResourceLocationOperationsSettings = existing.AlterMetadataResourceLocationOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -463,6 +469,116 @@ namespace Google.Cloud.Metastore.V1
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.QueryMetadata</c> and <c>DataprocMetastoreClient.QueryMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings QueryMetadataSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataprocMetastoreClient.QueryMetadata</c> and
+        /// <c>DataprocMetastoreClient.QueryMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings QueryMetadataOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.MoveTableToDatabase</c> and <c>DataprocMetastoreClient.MoveTableToDatabaseAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MoveTableToDatabaseSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataprocMetastoreClient.MoveTableToDatabase</c> and
+        /// <c>DataprocMetastoreClient.MoveTableToDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings MoveTableToDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.AlterMetadataResourceLocation</c> and
+        /// <c>DataprocMetastoreClient.AlterMetadataResourceLocationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AlterMetadataResourceLocationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataprocMetastoreClient.AlterMetadataResourceLocation</c>
+        /// and <c>DataprocMetastoreClient.AlterMetadataResourceLocationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AlterMetadataResourceLocationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -515,14 +631,14 @@ namespace Google.Cloud.Metastore.V1
         {
             Validate();
             grpccore::CallInvoker callInvoker = CreateCallInvoker();
-            return DataprocMetastoreClient.Create(callInvoker, Settings, Logger);
+            return DataprocMetastoreClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         private async stt::Task<DataprocMetastoreClient> BuildAsyncImpl(st::CancellationToken cancellationToken)
         {
             Validate();
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
-            return DataprocMetastoreClient.Create(callInvoker, Settings, Logger);
+            return DataprocMetastoreClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
 
         /// <summary>Returns the channel pool to use when no other options are specified.</summary>
@@ -657,8 +773,8 @@ namespace Google.Cloud.Metastore.V1
         /// Lists services in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore services to
-        /// list, in the following form:
+        /// Required. The relative resource name of the location of metastore services
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -672,20 +788,29 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
         /// Lists services in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore services to
-        /// list, in the following form:
+        /// Required. The relative resource name of the location of metastore services
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -699,20 +824,29 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists services in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore services to
-        /// list, in the following form:
+        /// Required. The relative resource name of the location of metastore services
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -726,20 +860,29 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServices(new ListServicesRequest
+        public virtual gax::PagedEnumerable<ListServicesResponse, Service> ListServices(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServices(request, callSettings);
+        }
 
         /// <summary>
         /// Lists services in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location of metastore services to
-        /// list, in the following form:
+        /// Required. The relative resource name of the location of metastore services
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -753,13 +896,22 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Service"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListServicesAsync(new ListServicesRequest
+        public virtual gax::PagedAsyncEnumerable<ListServicesResponse, Service> ListServicesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListServicesRequest request = new ListServicesRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListServicesAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets the details of a single service.
@@ -792,8 +944,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to retrieve,
+        /// in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -809,8 +961,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to retrieve,
+        /// in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -826,8 +978,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to retrieve,
+        /// in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -840,8 +992,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to retrieve,
+        /// in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -857,8 +1009,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to retrieve,
+        /// in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -874,8 +1026,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets the details of a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to retrieve,
+        /// in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -941,8 +1093,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore service in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a metastore
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// metastore service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -973,8 +1125,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore service in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a metastore
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// metastore service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -1005,8 +1157,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore service in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a metastore
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// metastore service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -1032,8 +1184,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore service in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a metastore
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// metastore service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -1064,8 +1216,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore service in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a metastore
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// metastore service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -1096,8 +1248,8 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a metastore service in a project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the location in which to create a metastore
-        /// service, in the following form:
+        /// Required. The relative resource name of the location in which to create a
+        /// metastore service, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
@@ -1300,8 +1452,8 @@ namespace Google.Cloud.Metastore.V1
         /// Deletes a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to delete, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to delete, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -1317,8 +1469,8 @@ namespace Google.Cloud.Metastore.V1
         /// Deletes a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to delete, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to delete, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -1334,8 +1486,8 @@ namespace Google.Cloud.Metastore.V1
         /// Deletes a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to delete, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to delete, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -1348,8 +1500,8 @@ namespace Google.Cloud.Metastore.V1
         /// Deletes a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to delete, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to delete, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -1365,8 +1517,8 @@ namespace Google.Cloud.Metastore.V1
         /// Deletes a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to delete, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to delete, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -1382,8 +1534,8 @@ namespace Google.Cloud.Metastore.V1
         /// Deletes a single service.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metastore service to delete, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to delete, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
@@ -1414,8 +1566,8 @@ namespace Google.Cloud.Metastore.V1
         /// Lists imports in a service.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service whose metadata imports to
-        /// list, in the following form:
+        /// Required. The relative resource name of the service whose metadata imports
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
         /// </param>
@@ -1429,20 +1581,29 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MetadataImport"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetadataImportsResponse, MetadataImport> ListMetadataImports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetadataImports(new ListMetadataImportsRequest
+        public virtual gax::PagedEnumerable<ListMetadataImportsResponse, MetadataImport> ListMetadataImports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataImportsRequest request = new ListMetadataImportsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataImports(request, callSettings);
+        }
 
         /// <summary>
         /// Lists imports in a service.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service whose metadata imports to
-        /// list, in the following form:
+        /// Required. The relative resource name of the service whose metadata imports
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
         /// </param>
@@ -1456,20 +1617,29 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MetadataImport"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetadataImportsResponse, MetadataImport> ListMetadataImportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetadataImportsAsync(new ListMetadataImportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetadataImportsResponse, MetadataImport> ListMetadataImportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataImportsRequest request = new ListMetadataImportsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataImportsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists imports in a service.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service whose metadata imports to
-        /// list, in the following form:
+        /// Required. The relative resource name of the service whose metadata imports
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
         /// </param>
@@ -1483,20 +1653,29 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="MetadataImport"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListMetadataImportsResponse, MetadataImport> ListMetadataImports(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetadataImports(new ListMetadataImportsRequest
+        public virtual gax::PagedEnumerable<ListMetadataImportsResponse, MetadataImport> ListMetadataImports(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataImportsRequest request = new ListMetadataImportsRequest
             {
                 ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataImports(request, callSettings);
+        }
 
         /// <summary>
         /// Lists imports in a service.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service whose metadata imports to
-        /// list, in the following form:
+        /// Required. The relative resource name of the service whose metadata imports
+        /// to list, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
         /// </param>
@@ -1510,13 +1689,22 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="MetadataImport"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListMetadataImportsResponse, MetadataImport> ListMetadataImportsAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListMetadataImportsAsync(new ListMetadataImportsRequest
+        public virtual gax::PagedAsyncEnumerable<ListMetadataImportsResponse, MetadataImport> ListMetadataImportsAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMetadataImportsRequest request = new ListMetadataImportsRequest
             {
                 ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMetadataImportsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single import.
@@ -1549,8 +1737,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets details of a single import.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metadata import to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metadata import to retrieve, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
@@ -1566,8 +1754,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets details of a single import.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metadata import to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metadata import to retrieve, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
@@ -1583,8 +1771,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets details of a single import.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metadata import to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metadata import to retrieve, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
@@ -1597,8 +1785,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets details of a single import.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metadata import to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metadata import to retrieve, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
@@ -1614,8 +1802,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets details of a single import.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metadata import to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metadata import to retrieve, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
@@ -1631,8 +1819,8 @@ namespace Google.Cloud.Metastore.V1
         /// Gets details of a single import.
         /// </summary>
         /// <param name="name">
-        /// Required. The relative resource name of the metadata import to retrieve, in the
-        /// following form:
+        /// Required. The relative resource name of the metadata import to retrieve, in
+        /// the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
@@ -1699,19 +1887,19 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a new MetadataImport in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a metastore
-        /// import, in the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// metastore import, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
-        /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-        /// created metadata import must be provided in the request's
+        /// Required. The metadata import to create. The `name` field is ignored. The
+        /// ID of the created metadata import must be provided in the request's
         /// `metadata_import_id` field.
         /// </param>
         /// <param name="metadataImportId">
-        /// Required. The ID of the metadata import, which is used as the final component of the
-        /// metadata import's name.
+        /// Required. The ID of the metadata import, which is used as the final
+        /// component of the metadata import's name.
         /// 
         /// This value must be between 1 and 64 characters long, begin with a letter,
         /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -1731,19 +1919,19 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a new MetadataImport in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a metastore
-        /// import, in the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// metastore import, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
-        /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-        /// created metadata import must be provided in the request's
+        /// Required. The metadata import to create. The `name` field is ignored. The
+        /// ID of the created metadata import must be provided in the request's
         /// `metadata_import_id` field.
         /// </param>
         /// <param name="metadataImportId">
-        /// Required. The ID of the metadata import, which is used as the final component of the
-        /// metadata import's name.
+        /// Required. The ID of the metadata import, which is used as the final
+        /// component of the metadata import's name.
         /// 
         /// This value must be between 1 and 64 characters long, begin with a letter,
         /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -1763,19 +1951,19 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a new MetadataImport in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a metastore
-        /// import, in the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// metastore import, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
-        /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-        /// created metadata import must be provided in the request's
+        /// Required. The metadata import to create. The `name` field is ignored. The
+        /// ID of the created metadata import must be provided in the request's
         /// `metadata_import_id` field.
         /// </param>
         /// <param name="metadataImportId">
-        /// Required. The ID of the metadata import, which is used as the final component of the
-        /// metadata import's name.
+        /// Required. The ID of the metadata import, which is used as the final
+        /// component of the metadata import's name.
         /// 
         /// This value must be between 1 and 64 characters long, begin with a letter,
         /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -1790,19 +1978,19 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a new MetadataImport in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a metastore
-        /// import, in the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// metastore import, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
-        /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-        /// created metadata import must be provided in the request's
+        /// Required. The metadata import to create. The `name` field is ignored. The
+        /// ID of the created metadata import must be provided in the request's
         /// `metadata_import_id` field.
         /// </param>
         /// <param name="metadataImportId">
-        /// Required. The ID of the metadata import, which is used as the final component of the
-        /// metadata import's name.
+        /// Required. The ID of the metadata import, which is used as the final
+        /// component of the metadata import's name.
         /// 
         /// This value must be between 1 and 64 characters long, begin with a letter,
         /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -1822,19 +2010,19 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a new MetadataImport in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a metastore
-        /// import, in the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// metastore import, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
-        /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-        /// created metadata import must be provided in the request's
+        /// Required. The metadata import to create. The `name` field is ignored. The
+        /// ID of the created metadata import must be provided in the request's
         /// `metadata_import_id` field.
         /// </param>
         /// <param name="metadataImportId">
-        /// Required. The ID of the metadata import, which is used as the final component of the
-        /// metadata import's name.
+        /// Required. The ID of the metadata import, which is used as the final
+        /// component of the metadata import's name.
         /// 
         /// This value must be between 1 and 64 characters long, begin with a letter,
         /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -1854,19 +2042,19 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a new MetadataImport in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a metastore
-        /// import, in the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// metastore import, in the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="metadataImport">
-        /// Required. The metadata import to create. The `name` field is ignored. The ID of the
-        /// created metadata import must be provided in the request's
+        /// Required. The metadata import to create. The `name` field is ignored. The
+        /// ID of the created metadata import must be provided in the request's
         /// `metadata_import_id` field.
         /// </param>
         /// <param name="metadataImportId">
-        /// Required. The ID of the metadata import, which is used as the final component of the
-        /// metadata import's name.
+        /// Required. The ID of the metadata import, which is used as the final
+        /// component of the metadata import's name.
         /// 
         /// This value must be between 1 and 64 characters long, begin with a letter,
         /// end with a letter or number, and consist of alpha-numeric ASCII characters
@@ -2118,14 +2306,14 @@ namespace Google.Cloud.Metastore.V1
         /// Restores a service from a backup.
         /// </summary>
         /// <param name="service">
-        /// Required. The relative resource name of the metastore service to run restore, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to run
+        /// restore, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The relative resource name of the metastore service backup to restore
-        /// from, in the following form:
+        /// Required. The relative resource name of the metastore service backup to
+        /// restore from, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
@@ -2142,14 +2330,14 @@ namespace Google.Cloud.Metastore.V1
         /// Restores a service from a backup.
         /// </summary>
         /// <param name="service">
-        /// Required. The relative resource name of the metastore service to run restore, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to run
+        /// restore, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The relative resource name of the metastore service backup to restore
-        /// from, in the following form:
+        /// Required. The relative resource name of the metastore service backup to
+        /// restore from, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
@@ -2166,14 +2354,14 @@ namespace Google.Cloud.Metastore.V1
         /// Restores a service from a backup.
         /// </summary>
         /// <param name="service">
-        /// Required. The relative resource name of the metastore service to run restore, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to run
+        /// restore, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The relative resource name of the metastore service backup to restore
-        /// from, in the following form:
+        /// Required. The relative resource name of the metastore service backup to
+        /// restore from, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
@@ -2186,14 +2374,14 @@ namespace Google.Cloud.Metastore.V1
         /// Restores a service from a backup.
         /// </summary>
         /// <param name="service">
-        /// Required. The relative resource name of the metastore service to run restore, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to run
+        /// restore, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The relative resource name of the metastore service backup to restore
-        /// from, in the following form:
+        /// Required. The relative resource name of the metastore service backup to
+        /// restore from, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
@@ -2210,14 +2398,14 @@ namespace Google.Cloud.Metastore.V1
         /// Restores a service from a backup.
         /// </summary>
         /// <param name="service">
-        /// Required. The relative resource name of the metastore service to run restore, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to run
+        /// restore, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The relative resource name of the metastore service backup to restore
-        /// from, in the following form:
+        /// Required. The relative resource name of the metastore service backup to
+        /// restore from, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
@@ -2234,14 +2422,14 @@ namespace Google.Cloud.Metastore.V1
         /// Restores a service from a backup.
         /// </summary>
         /// <param name="service">
-        /// Required. The relative resource name of the metastore service to run restore, in the
-        /// following form:
+        /// Required. The relative resource name of the metastore service to run
+        /// restore, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The relative resource name of the metastore service backup to restore
-        /// from, in the following form:
+        /// Required. The relative resource name of the metastore service backup to
+        /// restore from, in the following form:
         /// 
         /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
         /// </param>
@@ -2287,13 +2475,22 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists backups in a service.
@@ -2314,13 +2511,22 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Lists backups in a service.
@@ -2341,13 +2547,22 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackups(new ListBackupsRequest
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
 
         /// <summary>
         /// Lists backups in a service.
@@ -2368,13 +2583,22 @@ namespace Google.Cloud.Metastore.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListBackupsAsync(new ListBackupsRequest
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Gets details of a single backup.
@@ -2556,14 +2780,14 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a backup
-        /// of the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// backup of the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The backup to create. The `name` field is ignored. The ID of the created
-        /// backup must be provided in the request's `backup_id` field.
+        /// Required. The backup to create. The `name` field is ignored. The ID of the
+        /// created backup must be provided in the request's `backup_id` field.
         /// </param>
         /// <param name="backupId">
         /// Required. The ID of the backup, which is used as the final component of the
@@ -2587,14 +2811,14 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a backup
-        /// of the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// backup of the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The backup to create. The `name` field is ignored. The ID of the created
-        /// backup must be provided in the request's `backup_id` field.
+        /// Required. The backup to create. The `name` field is ignored. The ID of the
+        /// created backup must be provided in the request's `backup_id` field.
         /// </param>
         /// <param name="backupId">
         /// Required. The ID of the backup, which is used as the final component of the
@@ -2618,14 +2842,14 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a backup
-        /// of the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// backup of the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The backup to create. The `name` field is ignored. The ID of the created
-        /// backup must be provided in the request's `backup_id` field.
+        /// Required. The backup to create. The `name` field is ignored. The ID of the
+        /// created backup must be provided in the request's `backup_id` field.
         /// </param>
         /// <param name="backupId">
         /// Required. The ID of the backup, which is used as the final component of the
@@ -2644,14 +2868,14 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a backup
-        /// of the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// backup of the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The backup to create. The `name` field is ignored. The ID of the created
-        /// backup must be provided in the request's `backup_id` field.
+        /// Required. The backup to create. The `name` field is ignored. The ID of the
+        /// created backup must be provided in the request's `backup_id` field.
         /// </param>
         /// <param name="backupId">
         /// Required. The ID of the backup, which is used as the final component of the
@@ -2675,14 +2899,14 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a backup
-        /// of the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// backup of the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The backup to create. The `name` field is ignored. The ID of the created
-        /// backup must be provided in the request's `backup_id` field.
+        /// Required. The backup to create. The `name` field is ignored. The ID of the
+        /// created backup must be provided in the request's `backup_id` field.
         /// </param>
         /// <param name="backupId">
         /// Required. The ID of the backup, which is used as the final component of the
@@ -2706,14 +2930,14 @@ namespace Google.Cloud.Metastore.V1
         /// Creates a new backup in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The relative resource name of the service in which to create a backup
-        /// of the following form:
+        /// Required. The relative resource name of the service in which to create a
+        /// backup of the following form:
         /// 
         /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="backup">
-        /// Required. The backup to create. The `name` field is ignored. The ID of the created
-        /// backup must be provided in the request's `backup_id` field.
+        /// Required. The backup to create. The `name` field is ignored. The ID of the
+        /// created backup must be provided in the request's `backup_id` field.
         /// </param>
         /// <param name="backupId">
         /// Required. The ID of the backup, which is used as the final component of the
@@ -2876,6 +3100,176 @@ namespace Google.Cloud.Metastore.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
             DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Query DPMS metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<QueryMetadataResponse, OperationMetadata> QueryMetadata(QueryMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Query DPMS metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QueryMetadataResponse, OperationMetadata>> QueryMetadataAsync(QueryMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Query DPMS metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QueryMetadataResponse, OperationMetadata>> QueryMetadataAsync(QueryMetadataRequest request, st::CancellationToken cancellationToken) =>
+            QueryMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>QueryMetadata</c>.</summary>
+        public virtual lro::OperationsClient QueryMetadataOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>QueryMetadata</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<QueryMetadataResponse, OperationMetadata> PollOnceQueryMetadata(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<QueryMetadataResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), QueryMetadataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>QueryMetadata</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<QueryMetadataResponse, OperationMetadata>> PollOnceQueryMetadataAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<QueryMetadataResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), QueryMetadataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Move a table to another database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MoveTableToDatabaseResponse, OperationMetadata> MoveTableToDatabase(MoveTableToDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Move a table to another database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>> MoveTableToDatabaseAsync(MoveTableToDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Move a table to another database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>> MoveTableToDatabaseAsync(MoveTableToDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            MoveTableToDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>MoveTableToDatabase</c>.</summary>
+        public virtual lro::OperationsClient MoveTableToDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>MoveTableToDatabase</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MoveTableToDatabaseResponse, OperationMetadata> PollOnceMoveTableToDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveTableToDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>MoveTableToDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>> PollOnceMoveTableToDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MoveTableToDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Alter metadata resource location. The metadata resource can be a database,
+        /// table, or partition. This functionality only updates the parent directory
+        /// for the respective metadata resource and does not transfer any existing
+        /// data to the new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata> AlterMetadataResourceLocation(AlterMetadataResourceLocationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Alter metadata resource location. The metadata resource can be a database,
+        /// table, or partition. This functionality only updates the parent directory
+        /// for the respective metadata resource and does not transfer any existing
+        /// data to the new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>> AlterMetadataResourceLocationAsync(AlterMetadataResourceLocationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Alter metadata resource location. The metadata resource can be a database,
+        /// table, or partition. This functionality only updates the parent directory
+        /// for the respective metadata resource and does not transfer any existing
+        /// data to the new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>> AlterMetadataResourceLocationAsync(AlterMetadataResourceLocationRequest request, st::CancellationToken cancellationToken) =>
+            AlterMetadataResourceLocationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AlterMetadataResourceLocation</c>.</summary>
+        public virtual lro::OperationsClient AlterMetadataResourceLocationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AlterMetadataResourceLocation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata> PollOnceAlterMetadataResourceLocation(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AlterMetadataResourceLocationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AlterMetadataResourceLocation</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>> PollOnceAlterMetadataResourceLocationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AlterMetadataResourceLocationOperationsClient, callSettings);
     }
 
     /// <summary>DataprocMetastore client wrapper implementation, for convenient use.</summary>
@@ -2930,6 +3324,12 @@ namespace Google.Cloud.Metastore.V1
 
         private readonly gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> _callDeleteBackup;
 
+        private readonly gaxgrpc::ApiCall<QueryMetadataRequest, lro::Operation> _callQueryMetadata;
+
+        private readonly gaxgrpc::ApiCall<MoveTableToDatabaseRequest, lro::Operation> _callMoveTableToDatabase;
+
+        private readonly gaxgrpc::ApiCall<AlterMetadataResourceLocationRequest, lro::Operation> _callAlterMetadataResourceLocation;
+
         /// <summary>
         /// Constructs a client wrapper for the DataprocMetastore service, with the specified gRPC client and settings.
         /// </summary>
@@ -2940,7 +3340,11 @@ namespace Google.Cloud.Metastore.V1
         {
             GrpcClient = grpcClient;
             DataprocMetastoreSettings effectiveSettings = settings ?? DataprocMetastoreSettings.GetDefault();
-            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
+            gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(new gaxgrpc::ClientHelper.Options
+            {
+                Settings = effectiveSettings,
+                Logger = logger,
+            });
             CreateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServiceOperationsSettings, logger);
             UpdateServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateServiceOperationsSettings, logger);
             DeleteServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServiceOperationsSettings, logger);
@@ -2950,6 +3354,9 @@ namespace Google.Cloud.Metastore.V1
             RestoreServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreServiceOperationsSettings, logger);
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
+            QueryMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.QueryMetadataOperationsSettings, logger);
+            MoveTableToDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveTableToDatabaseOperationsSettings, logger);
+            AlterMetadataResourceLocationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AlterMetadataResourceLocationOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>("ListServices", grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2997,6 +3404,15 @@ namespace Google.Cloud.Metastore.V1
             _callDeleteBackup = clientHelper.BuildApiCall<DeleteBackupRequest, lro::Operation>("DeleteBackup", grpcClient.DeleteBackupAsync, grpcClient.DeleteBackup, effectiveSettings.DeleteBackupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBackup);
             Modify_DeleteBackupApiCall(ref _callDeleteBackup);
+            _callQueryMetadata = clientHelper.BuildApiCall<QueryMetadataRequest, lro::Operation>("QueryMetadata", grpcClient.QueryMetadataAsync, grpcClient.QueryMetadata, effectiveSettings.QueryMetadataSettings).WithGoogleRequestParam("service", request => request.Service);
+            Modify_ApiCall(ref _callQueryMetadata);
+            Modify_QueryMetadataApiCall(ref _callQueryMetadata);
+            _callMoveTableToDatabase = clientHelper.BuildApiCall<MoveTableToDatabaseRequest, lro::Operation>("MoveTableToDatabase", grpcClient.MoveTableToDatabaseAsync, grpcClient.MoveTableToDatabase, effectiveSettings.MoveTableToDatabaseSettings).WithGoogleRequestParam("service", request => request.Service);
+            Modify_ApiCall(ref _callMoveTableToDatabase);
+            Modify_MoveTableToDatabaseApiCall(ref _callMoveTableToDatabase);
+            _callAlterMetadataResourceLocation = clientHelper.BuildApiCall<AlterMetadataResourceLocationRequest, lro::Operation>("AlterMetadataResourceLocation", grpcClient.AlterMetadataResourceLocationAsync, grpcClient.AlterMetadataResourceLocation, effectiveSettings.AlterMetadataResourceLocationSettings).WithGoogleRequestParam("service", request => request.Service);
+            Modify_ApiCall(ref _callAlterMetadataResourceLocation);
+            Modify_AlterMetadataResourceLocationApiCall(ref _callAlterMetadataResourceLocation);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3031,6 +3447,12 @@ namespace Google.Cloud.Metastore.V1
         partial void Modify_CreateBackupApiCall(ref gaxgrpc::ApiCall<CreateBackupRequest, lro::Operation> call);
 
         partial void Modify_DeleteBackupApiCall(ref gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> call);
+
+        partial void Modify_QueryMetadataApiCall(ref gaxgrpc::ApiCall<QueryMetadataRequest, lro::Operation> call);
+
+        partial void Modify_MoveTableToDatabaseApiCall(ref gaxgrpc::ApiCall<MoveTableToDatabaseRequest, lro::Operation> call);
+
+        partial void Modify_AlterMetadataResourceLocationApiCall(ref gaxgrpc::ApiCall<AlterMetadataResourceLocationRequest, lro::Operation> call);
 
         partial void OnConstruction(DataprocMetastore.DataprocMetastoreClient grpcClient, DataprocMetastoreSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3072,6 +3494,12 @@ namespace Google.Cloud.Metastore.V1
         partial void Modify_CreateBackupRequest(ref CreateBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteBackupRequest(ref DeleteBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_QueryMetadataRequest(ref QueryMetadataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MoveTableToDatabaseRequest(ref MoveTableToDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AlterMetadataResourceLocationRequest(ref AlterMetadataResourceLocationRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists services in a project and location.
@@ -3460,6 +3888,93 @@ namespace Google.Cloud.Metastore.V1
         {
             Modify_DeleteBackupRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteBackup.Async(request, callSettings).ConfigureAwait(false), DeleteBackupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>QueryMetadata</c>.</summary>
+        public override lro::OperationsClient QueryMetadataOperationsClient { get; }
+
+        /// <summary>
+        /// Query DPMS metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<QueryMetadataResponse, OperationMetadata> QueryMetadata(QueryMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryMetadataRequest(ref request, ref callSettings);
+            return new lro::Operation<QueryMetadataResponse, OperationMetadata>(_callQueryMetadata.Sync(request, callSettings), QueryMetadataOperationsClient);
+        }
+
+        /// <summary>
+        /// Query DPMS metadata.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<QueryMetadataResponse, OperationMetadata>> QueryMetadataAsync(QueryMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_QueryMetadataRequest(ref request, ref callSettings);
+            return new lro::Operation<QueryMetadataResponse, OperationMetadata>(await _callQueryMetadata.Async(request, callSettings).ConfigureAwait(false), QueryMetadataOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>MoveTableToDatabase</c>.</summary>
+        public override lro::OperationsClient MoveTableToDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Move a table to another database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MoveTableToDatabaseResponse, OperationMetadata> MoveTableToDatabase(MoveTableToDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveTableToDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>(_callMoveTableToDatabase.Sync(request, callSettings), MoveTableToDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Move a table to another database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>> MoveTableToDatabaseAsync(MoveTableToDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveTableToDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<MoveTableToDatabaseResponse, OperationMetadata>(await _callMoveTableToDatabase.Async(request, callSettings).ConfigureAwait(false), MoveTableToDatabaseOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>AlterMetadataResourceLocation</c>.</summary>
+        public override lro::OperationsClient AlterMetadataResourceLocationOperationsClient { get; }
+
+        /// <summary>
+        /// Alter metadata resource location. The metadata resource can be a database,
+        /// table, or partition. This functionality only updates the parent directory
+        /// for the respective metadata resource and does not transfer any existing
+        /// data to the new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata> AlterMetadataResourceLocation(AlterMetadataResourceLocationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AlterMetadataResourceLocationRequest(ref request, ref callSettings);
+            return new lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>(_callAlterMetadataResourceLocation.Sync(request, callSettings), AlterMetadataResourceLocationOperationsClient);
+        }
+
+        /// <summary>
+        /// Alter metadata resource location. The metadata resource can be a database,
+        /// table, or partition. This functionality only updates the parent directory
+        /// for the respective metadata resource and does not transfer any existing
+        /// data to the new location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>> AlterMetadataResourceLocationAsync(AlterMetadataResourceLocationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AlterMetadataResourceLocationRequest(ref request, ref callSettings);
+            return new lro::Operation<AlterMetadataResourceLocationResponse, OperationMetadata>(await _callAlterMetadataResourceLocation.Async(request, callSettings).ConfigureAwait(false), AlterMetadataResourceLocationOperationsClient);
         }
     }
 

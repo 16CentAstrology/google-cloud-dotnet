@@ -30,31 +30,32 @@ namespace Google.Cloud.TextToSpeech.V1 {
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGixnb29nbGUvY2xv",
             "dWQvdGV4dHRvc3BlZWNoL3YxL2Nsb3VkX3R0cy5wcm90bxojZ29vZ2xlL2xv",
             "bmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8ijwIKGlN5bnRoZXNpemVMb25nQXVkaW9SZXF1ZXN0",
+            "aW1lc3RhbXAucHJvdG8imQIKGlN5bnRoZXNpemVMb25nQXVkaW9SZXF1ZXN0",
             "Eg4KBnBhcmVudBgBIAEoCRJACgVpbnB1dBgCIAEoCzIsLmdvb2dsZS5jbG91",
             "ZC50ZXh0dG9zcGVlY2gudjEuU3ludGhlc2lzSW5wdXRCA+BBAhJECgxhdWRp",
             "b19jb25maWcYAyABKAsyKS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYx",
-            "LkF1ZGlvQ29uZmlnQgPgQQISFgoOb3V0cHV0X2djc191cmkYBCABKAkSQQoF",
-            "dm9pY2UYBSABKAsyMi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlZv",
-            "aWNlU2VsZWN0aW9uUGFyYW1zIh0KG1N5bnRoZXNpemVMb25nQXVkaW9SZXNw",
-            "b25zZSKgAQobU3ludGhlc2l6ZUxvbmdBdWRpb01ldGFkYXRhEi4KCnN0YXJ0",
-            "X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjQKEGxh",
-            "c3RfdXBkYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wEhsKE3Byb2dyZXNzX3BlcmNlbnRhZ2UYAyABKAEy7gIKH1RleHRUb1Nw",
-            "ZWVjaExvbmdBdWRpb1N5bnRoZXNpemUS+QEKE1N5bnRoZXNpemVMb25nQXVk",
-            "aW8SOC5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlN5bnRoZXNpemVM",
-            "b25nQXVkaW9SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biKIAYLT5JMCRSJAL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki92b2ljZXMvKn06U3ludGhlc2l6ZUxvbmdBdWRpbzoBKspBOgobU3ludGhl",
-            "c2l6ZUxvbmdBdWRpb1Jlc3BvbnNlEhtTeW50aGVzaXplTG9uZ0F1ZGlvTWV0",
-            "YWRhdGEaT8pBG3RleHR0b3NwZWVjaC5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C8gEK",
-            "IGNvbS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxQiNUZXh0VG9TcGVl",
-            "Y2hMb25nQXVkaW9TeW50aGVzaXNQcm90b1ABWkRjbG91ZC5nb29nbGUuY29t",
-            "L2dvL3RleHR0b3NwZWVjaC9hcGl2MS90ZXh0dG9zcGVlY2hwYjt0ZXh0dG9z",
-            "cGVlY2hwYvgBAaoCHEdvb2dsZS5DbG91ZC5UZXh0VG9TcGVlY2guVjHKAhxH",
-            "b29nbGVcQ2xvdWRcVGV4dFRvU3BlZWNoXFYx6gIfR29vZ2xlOjpDbG91ZDo6",
-            "VGV4dFRvU3BlZWNoOjpWMWIGcHJvdG8z"));
+            "LkF1ZGlvQ29uZmlnQgPgQQISGwoOb3V0cHV0X2djc191cmkYBCABKAlCA+BB",
+            "AhJGCgV2b2ljZRgFIAEoCzIyLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gu",
+            "djEuVm9pY2VTZWxlY3Rpb25QYXJhbXNCA+BBAiIdChtTeW50aGVzaXplTG9u",
+            "Z0F1ZGlvUmVzcG9uc2UipAEKG1N5bnRoZXNpemVMb25nQXVkaW9NZXRhZGF0",
+            "YRIuCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBI4ChBsYXN0X3VwZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEICGAESGwoTcHJvZ3Jlc3NfcGVyY2VudGFnZRgDIAEo",
+            "ATKfAwofVGV4dFRvU3BlZWNoTG9uZ0F1ZGlvU3ludGhlc2l6ZRKqAgoTU3lu",
+            "dGhlc2l6ZUxvbmdBdWRpbxI4Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gu",
+            "djEuU3ludGhlc2l6ZUxvbmdBdWRpb1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
+            "bm5pbmcuT3BlcmF0aW9uIrkBykF0Cjhnb29nbGUuY2xvdWQudGV4dHRvc3Bl",
+            "ZWNoLnYxLlN5bnRoZXNpemVMb25nQXVkaW9SZXNwb25zZRI4Z29vZ2xlLmNs",
+            "b3VkLnRleHR0b3NwZWVjaC52MS5TeW50aGVzaXplTG9uZ0F1ZGlvTWV0YWRh",
+            "dGGC0+STAjwiNy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
+            "OnN5bnRoZXNpemVMb25nQXVkaW86ASoaT8pBG3RleHR0b3NwZWVjaC5nb29n",
+            "bGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtcGxhdGZvcm1C7wEKIGNvbS5nb29nbGUuY2xvdWQudGV4dHRvc3Bl",
+            "ZWNoLnYxQiNUZXh0VG9TcGVlY2hMb25nQXVkaW9TeW50aGVzaXNQcm90b1AB",
+            "WkRjbG91ZC5nb29nbGUuY29tL2dvL3RleHR0b3NwZWVjaC9hcGl2MS90ZXh0",
+            "dG9zcGVlY2hwYjt0ZXh0dG9zcGVlY2hwYqoCHEdvb2dsZS5DbG91ZC5UZXh0",
+            "VG9TcGVlY2guVjHKAhxHb29nbGVcQ2xvdWRcVGV4dFRvU3BlZWNoXFYx6gIf",
+            "R29vZ2xlOjpDbG91ZDo6VGV4dFRvU3BlZWNoOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -71,6 +72,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
   /// The top-level message sent by the client for the
   /// `SynthesizeLongAudio` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SynthesizeLongAudioRequest : pb::IMessage<SynthesizeLongAudioRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -124,7 +126,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private string parent_ = "";
     /// <summary>
     /// The resource states of the request in the form of
-    /// `projects/*/locations/*/voices/*`.
+    /// `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,7 +171,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int OutputGcsUriFieldNumber = 4;
     private string outputGcsUri_ = "";
     /// <summary>
-    /// Specifies a Cloud Storage URI for the synthesis results. Must be
+    /// Required. Specifies a Cloud Storage URI for the synthesis results. Must be
     /// specified in the format: `gs://bucket_name/object_name`, and the bucket
     /// must already exist.
     /// </summary>
@@ -186,7 +188,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int VoiceFieldNumber = 5;
     private global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams voice_;
     /// <summary>
-    /// The desired voice of the synthesized audio.
+    /// Required. The desired voice of the synthesized audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -456,6 +458,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
   /// <summary>
   /// The message returned to the client by the `SynthesizeLongAudio` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SynthesizeLongAudioResponse : pb::IMessage<SynthesizeLongAudioResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -611,6 +614,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
   /// <summary>
   /// Metadata for response returned by the `SynthesizeLongAudio` method.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SynthesizeLongAudioMetadata : pb::IMessage<SynthesizeLongAudioMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -676,8 +680,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int LastUpdateTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdateTime_;
     /// <summary>
-    /// Time of the most recent processing update.
+    /// Deprecated. Do not use.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastUpdateTime {

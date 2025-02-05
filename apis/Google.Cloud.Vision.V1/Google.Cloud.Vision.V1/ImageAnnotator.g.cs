@@ -118,132 +118,145 @@ namespace Google.Cloud.Vision.V1 {
             "bmNlGAIgASgCEhsKE2ltcG9ydGFuY2VfZnJhY3Rpb24YAyABKAIiSwoTQ3Jv",
             "cEhpbnRzQW5ub3RhdGlvbhI0Cgpjcm9wX2hpbnRzGAEgAygLMiAuZ29vZ2xl",
             "LmNsb3VkLnZpc2lvbi52MS5Dcm9wSGludCIoCg9Dcm9wSGludHNQYXJhbXMS",
-            "FQoNYXNwZWN0X3JhdGlvcxgBIAMoAiIxChJXZWJEZXRlY3Rpb25QYXJhbXMS",
-            "GwoTaW5jbHVkZV9nZW9fcmVzdWx0cxgCIAEoCCJjChNUZXh0RGV0ZWN0aW9u",
-            "UGFyYW1zEi4KJmVuYWJsZV90ZXh0X2RldGVjdGlvbl9jb25maWRlbmNlX3Nj",
-            "b3JlGAkgASgIEhwKFGFkdmFuY2VkX29jcl9vcHRpb25zGAsgAygJIogDCgxJ",
-            "bWFnZUNvbnRleHQSOgoNbGF0X2xvbmdfcmVjdBgBIAEoCzIjLmdvb2dsZS5j",
-            "bG91ZC52aXNpb24udjEuTGF0TG9uZ1JlY3QSFgoObGFuZ3VhZ2VfaGludHMY",
-            "AiADKAkSQgoRY3JvcF9oaW50c19wYXJhbXMYBCABKAsyJy5nb29nbGUuY2xv",
-            "dWQudmlzaW9uLnYxLkNyb3BIaW50c1BhcmFtcxJKChVwcm9kdWN0X3NlYXJj",
-            "aF9wYXJhbXMYBSABKAsyKy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlByb2R1",
-            "Y3RTZWFyY2hQYXJhbXMSSAoUd2ViX2RldGVjdGlvbl9wYXJhbXMYBiABKAsy",
-            "Ki5nb29nbGUuY2xvdWQudmlzaW9uLnYxLldlYkRldGVjdGlvblBhcmFtcxJK",
-            "ChV0ZXh0X2RldGVjdGlvbl9wYXJhbXMYDCABKAsyKy5nb29nbGUuY2xvdWQu",
-            "dmlzaW9uLnYxLlRleHREZXRlY3Rpb25QYXJhbXMitAEKFEFubm90YXRlSW1h",
-            "Z2VSZXF1ZXN0EiwKBWltYWdlGAEgASgLMh0uZ29vZ2xlLmNsb3VkLnZpc2lv",
-            "bi52MS5JbWFnZRIxCghmZWF0dXJlcxgCIAMoCzIfLmdvb2dsZS5jbG91ZC52",
-            "aXNpb24udjEuRmVhdHVyZRI7Cg1pbWFnZV9jb250ZXh0GAMgASgLMiQuZ29v",
-            "Z2xlLmNsb3VkLnZpc2lvbi52MS5JbWFnZUNvbnRleHQiOgoWSW1hZ2VBbm5v",
-            "dGF0aW9uQ29udGV4dBILCgN1cmkYASABKAkSEwoLcGFnZV9udW1iZXIYAiAB",
-            "KAUi5AcKFUFubm90YXRlSW1hZ2VSZXNwb25zZRJAChBmYWNlX2Fubm90YXRp",
-            "b25zGAEgAygLMiYuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5GYWNlQW5ub3Rh",
-            "dGlvbhJGChRsYW5kbWFya19hbm5vdGF0aW9ucxgCIAMoCzIoLmdvb2dsZS5j",
-            "bG91ZC52aXNpb24udjEuRW50aXR5QW5ub3RhdGlvbhJCChBsb2dvX2Fubm90",
-            "YXRpb25zGAMgAygLMiguZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5FbnRpdHlB",
-            "bm5vdGF0aW9uEkMKEWxhYmVsX2Fubm90YXRpb25zGAQgAygLMiguZ29vZ2xl",
-            "LmNsb3VkLnZpc2lvbi52MS5FbnRpdHlBbm5vdGF0aW9uElcKHGxvY2FsaXpl",
-            "ZF9vYmplY3RfYW5ub3RhdGlvbnMYFiADKAsyMS5nb29nbGUuY2xvdWQudmlz",
-            "aW9uLnYxLkxvY2FsaXplZE9iamVjdEFubm90YXRpb24SQgoQdGV4dF9hbm5v",
-            "dGF0aW9ucxgFIAMoCzIoLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRW50aXR5",
-            "QW5ub3RhdGlvbhJEChRmdWxsX3RleHRfYW5ub3RhdGlvbhgMIAEoCzImLmdv",
-            "b2dsZS5jbG91ZC52aXNpb24udjEuVGV4dEFubm90YXRpb24STAoWc2FmZV9z",
-            "ZWFyY2hfYW5ub3RhdGlvbhgGIAEoCzIsLmdvb2dsZS5jbG91ZC52aXNpb24u",
-            "djEuU2FmZVNlYXJjaEFubm90YXRpb24STAobaW1hZ2VfcHJvcGVydGllc19h",
-            "bm5vdGF0aW9uGAggASgLMicuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5JbWFn",
-            "ZVByb3BlcnRpZXMSSgoVY3JvcF9oaW50c19hbm5vdGF0aW9uGAsgASgLMisu",
-            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Dcm9wSGludHNBbm5vdGF0aW9uEjsK",
-            "DXdlYl9kZXRlY3Rpb24YDSABKAsyJC5nb29nbGUuY2xvdWQudmlzaW9uLnYx",
-            "LldlYkRldGVjdGlvbhJMChZwcm9kdWN0X3NlYXJjaF9yZXN1bHRzGA4gASgL",
-            "MiwuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Qcm9kdWN0U2VhcmNoUmVzdWx0",
-            "cxIhCgVlcnJvchgJIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEj8KB2NvbnRl",
-            "eHQYFSABKAsyLi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkltYWdlQW5ub3Rh",
-            "dGlvbkNvbnRleHQicQoaQmF0Y2hBbm5vdGF0ZUltYWdlc1JlcXVlc3QSQwoI",
-            "cmVxdWVzdHMYASADKAsyLC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFubm90",
-            "YXRlSW1hZ2VSZXF1ZXN0QgPgQQISDgoGcGFyZW50GAQgASgJIl8KG0JhdGNo",
-            "QW5ub3RhdGVJbWFnZXNSZXNwb25zZRJACglyZXNwb25zZXMYASADKAsyLS5n",
-            "b29nbGUuY2xvdWQudmlzaW9uLnYxLkFubm90YXRlSW1hZ2VSZXNwb25zZSLP",
-            "AQoTQW5ub3RhdGVGaWxlUmVxdWVzdBI5CgxpbnB1dF9jb25maWcYASABKAsy",
-            "Iy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLklucHV0Q29uZmlnEjEKCGZlYXR1",
-            "cmVzGAIgAygLMh8uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5GZWF0dXJlEjsK",
-            "DWltYWdlX2NvbnRleHQYAyABKAsyJC5nb29nbGUuY2xvdWQudmlzaW9uLnYx",
-            "LkltYWdlQ29udGV4dBINCgVwYWdlcxgEIAMoBSLLAQoUQW5ub3RhdGVGaWxl",
-            "UmVzcG9uc2USOQoMaW5wdXRfY29uZmlnGAEgASgLMiMuZ29vZ2xlLmNsb3Vk",
-            "LnZpc2lvbi52MS5JbnB1dENvbmZpZxJACglyZXNwb25zZXMYAiADKAsyLS5n",
-            "b29nbGUuY2xvdWQudmlzaW9uLnYxLkFubm90YXRlSW1hZ2VSZXNwb25zZRIT",
-            "Cgt0b3RhbF9wYWdlcxgDIAEoBRIhCgVlcnJvchgEIAEoCzISLmdvb2dsZS5y",
-            "cGMuU3RhdHVzIm8KGUJhdGNoQW5ub3RhdGVGaWxlc1JlcXVlc3QSQgoIcmVx",
-            "dWVzdHMYASADKAsyKy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFubm90YXRl",
-            "RmlsZVJlcXVlc3RCA+BBAhIOCgZwYXJlbnQYAyABKAkiXQoaQmF0Y2hBbm5v",
-            "dGF0ZUZpbGVzUmVzcG9uc2USPwoJcmVzcG9uc2VzGAEgAygLMiwuZ29vZ2xl",
-            "LmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0ZUZpbGVSZXNwb25zZSKCAgoYQXN5",
-            "bmNBbm5vdGF0ZUZpbGVSZXF1ZXN0EjkKDGlucHV0X2NvbmZpZxgBIAEoCzIj",
-            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuSW5wdXRDb25maWcSMQoIZmVhdHVy",
-            "ZXMYAiADKAsyHy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkZlYXR1cmUSOwoN",
-            "aW1hZ2VfY29udGV4dBgDIAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEu",
-            "SW1hZ2VDb250ZXh0EjsKDW91dHB1dF9jb25maWcYBCABKAsyJC5nb29nbGUu",
-            "Y2xvdWQudmlzaW9uLnYxLk91dHB1dENvbmZpZyJYChlBc3luY0Fubm90YXRl",
-            "RmlsZVJlc3BvbnNlEjsKDW91dHB1dF9jb25maWcYASABKAsyJC5nb29nbGUu",
-            "Y2xvdWQudmlzaW9uLnYxLk91dHB1dENvbmZpZyK4AQofQXN5bmNCYXRjaEFu",
-            "bm90YXRlSW1hZ2VzUmVxdWVzdBJDCghyZXF1ZXN0cxgBIAMoCzIsLmdvb2ds",
-            "ZS5jbG91ZC52aXNpb24udjEuQW5ub3RhdGVJbWFnZVJlcXVlc3RCA+BBAhJA",
-            "Cg1vdXRwdXRfY29uZmlnGAIgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
-            "MS5PdXRwdXRDb25maWdCA+BBAhIOCgZwYXJlbnQYBCABKAkiXwogQXN5bmNC",
-            "YXRjaEFubm90YXRlSW1hZ2VzUmVzcG9uc2USOwoNb3V0cHV0X2NvbmZpZxgB",
-            "IAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEuT3V0cHV0Q29uZmlnInkK",
-            "HkFzeW5jQmF0Y2hBbm5vdGF0ZUZpbGVzUmVxdWVzdBJHCghyZXF1ZXN0cxgB",
-            "IAMoCzIwLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQXN5bmNBbm5vdGF0ZUZp",
-            "bGVSZXF1ZXN0QgPgQQISDgoGcGFyZW50GAQgASgJImcKH0FzeW5jQmF0Y2hB",
-            "bm5vdGF0ZUZpbGVzUmVzcG9uc2USRAoJcmVzcG9uc2VzGAEgAygLMjEuZ29v",
-            "Z2xlLmNsb3VkLnZpc2lvbi52MS5Bc3luY0Fubm90YXRlRmlsZVJlc3BvbnNl",
-            "ImgKC0lucHV0Q29uZmlnEjUKCmdjc19zb3VyY2UYASABKAsyIS5nb29nbGUu",
-            "Y2xvdWQudmlzaW9uLnYxLkdjc1NvdXJjZRIPCgdjb250ZW50GAMgASgMEhEK",
-            "CW1pbWVfdHlwZRgCIAEoCSJjCgxPdXRwdXRDb25maWcSPwoPZ2NzX2Rlc3Rp",
-            "bmF0aW9uGAEgASgLMiYuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5HY3NEZXN0",
-            "aW5hdGlvbhISCgpiYXRjaF9zaXplGAIgASgFIhgKCUdjc1NvdXJjZRILCgN1",
-            "cmkYASABKAkiHQoOR2NzRGVzdGluYXRpb24SCwoDdXJpGAEgASgJIogCChFP",
-            "cGVyYXRpb25NZXRhZGF0YRI+CgVzdGF0ZRgBIAEoDjIvLmdvb2dsZS5jbG91",
-            "ZC52aXNpb24udjEuT3BlcmF0aW9uTWV0YWRhdGEuU3RhdGUSLwoLY3JlYXRl",
-            "X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3Vw",
-            "ZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJR",
-            "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB0NSRUFURUQQARIL",
-            "CgdSVU5OSU5HEAISCAoERE9ORRADEg0KCUNBTkNFTExFRBAEKmUKCkxpa2Vs",
-            "aWhvb2QSCwoHVU5LTk9XThAAEhEKDVZFUllfVU5MSUtFTFkQARIMCghVTkxJ",
-            "S0VMWRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoLVkVSWV9MSUtF",
-            "TFkQBTL1CgoOSW1hZ2VBbm5vdGF0b3ISkwIKE0JhdGNoQW5ub3RhdGVJbWFn",
-            "ZXMSMi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkJhdGNoQW5ub3RhdGVJbWFn",
-            "ZXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRjaEFubm90",
-            "YXRlSW1hZ2VzUmVzcG9uc2UikgGC0+STAoABIhMvdjEvaW1hZ2VzOmFubm90",
-            "YXRlOgEqWjgiMy92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
-            "L2ltYWdlczphbm5vdGF0ZToBKlosIicvdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "fS9pbWFnZXM6YW5ub3RhdGU6ASraQQhyZXF1ZXN0cxKMAgoSQmF0Y2hBbm5v",
-            "dGF0ZUZpbGVzEjEuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRjaEFubm90",
-            "YXRlRmlsZXNSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRj",
-            "aEFubm90YXRlRmlsZXNSZXNwb25zZSKOAYLT5JMCfSISL3YxL2ZpbGVzOmFu",
-            "bm90YXRlOgEqWjciMi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyp9L2ZpbGVzOmFubm90YXRlOgEqWisiJi92MS97cGFyZW50PXByb2plY3Rz",
-            "Lyp9L2ZpbGVzOmFubm90YXRlOgEq2kEIcmVxdWVzdHMS6wIKGEFzeW5jQmF0",
-            "Y2hBbm5vdGF0ZUltYWdlcxI3Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuQXN5",
-            "bmNCYXRjaEFubm90YXRlSW1hZ2VzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24i9gGC0+STAp4BIh0vdjEvaW1hZ2VzOmFzeW5jQmF0",
-            "Y2hBbm5vdGF0ZToBKlpCIj0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qfS9pbWFnZXM6YXN5bmNCYXRjaEFubm90YXRlOgEqWjYiMS92MS97",
-            "cGFyZW50PXByb2plY3RzLyp9L2ltYWdlczphc3luY0JhdGNoQW5ub3RhdGU6",
-            "ASraQRZyZXF1ZXN0cyxvdXRwdXRfY29uZmlnykE1CiBBc3luY0JhdGNoQW5u",
-            "b3RhdGVJbWFnZXNSZXNwb25zZRIRT3BlcmF0aW9uTWV0YWRhdGES1wIKF0Fz",
-            "eW5jQmF0Y2hBbm5vdGF0ZUZpbGVzEjYuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
-            "MS5Bc3luY0JhdGNoQW5ub3RhdGVGaWxlc1JlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uIuQBgtPkkwKbASIcL3YxL2ZpbGVzOmFzeW5j",
-            "QmF0Y2hBbm5vdGF0ZToBKlpBIjwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9maWxlczphc3luY0JhdGNoQW5ub3RhdGU6ASpaNSIwL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKn0vZmlsZXM6YXN5bmNCYXRjaEFubm90YXRl",
-            "OgEq2kEIcmVxdWVzdHPKQTQKH0FzeW5jQmF0Y2hBbm5vdGF0ZUZpbGVzUmVz",
-            "cG9uc2USEU9wZXJhdGlvbk1ldGFkYXRhGnbKQRV2aXNpb24uZ29vZ2xlYXBp",
-            "cy5jb23SQVtodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
-            "LXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
-            "dWQtdmlzaW9uQnEKGmNvbS5nb29nbGUuY2xvdWQudmlzaW9uLnYxQhNJbWFn",
-            "ZUFubm90YXRvclByb3RvUAFaMmNsb3VkLmdvb2dsZS5jb20vZ28vdmlzaW9u",
-            "L2FwaXYxL3Zpc2lvbnBiO3Zpc2lvbnBi+AEBogIER0NWTmIGcHJvdG8z"));
+            "FQoNYXNwZWN0X3JhdGlvcxgBIAMoAiI1ChJXZWJEZXRlY3Rpb25QYXJhbXMS",
+            "HwoTaW5jbHVkZV9nZW9fcmVzdWx0cxgCIAEoCEICGAEiYwoTVGV4dERldGVj",
+            "dGlvblBhcmFtcxIuCiZlbmFibGVfdGV4dF9kZXRlY3Rpb25fY29uZmlkZW5j",
+            "ZV9zY29yZRgJIAEoCBIcChRhZHZhbmNlZF9vY3Jfb3B0aW9ucxgLIAMoCSKI",
+            "AwoMSW1hZ2VDb250ZXh0EjoKDWxhdF9sb25nX3JlY3QYASABKAsyIy5nb29n",
+            "bGUuY2xvdWQudmlzaW9uLnYxLkxhdExvbmdSZWN0EhYKDmxhbmd1YWdlX2hp",
+            "bnRzGAIgAygJEkIKEWNyb3BfaGludHNfcGFyYW1zGAQgASgLMicuZ29vZ2xl",
+            "LmNsb3VkLnZpc2lvbi52MS5Dcm9wSGludHNQYXJhbXMSSgoVcHJvZHVjdF9z",
+            "ZWFyY2hfcGFyYW1zGAUgASgLMisuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Q",
+            "cm9kdWN0U2VhcmNoUGFyYW1zEkgKFHdlYl9kZXRlY3Rpb25fcGFyYW1zGAYg",
+            "ASgLMiouZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5XZWJEZXRlY3Rpb25QYXJh",
+            "bXMSSgoVdGV4dF9kZXRlY3Rpb25fcGFyYW1zGAwgASgLMisuZ29vZ2xlLmNs",
+            "b3VkLnZpc2lvbi52MS5UZXh0RGV0ZWN0aW9uUGFyYW1zIrQBChRBbm5vdGF0",
+            "ZUltYWdlUmVxdWVzdBIsCgVpbWFnZRgBIAEoCzIdLmdvb2dsZS5jbG91ZC52",
+            "aXNpb24udjEuSW1hZ2USMQoIZmVhdHVyZXMYAiADKAsyHy5nb29nbGUuY2xv",
+            "dWQudmlzaW9uLnYxLkZlYXR1cmUSOwoNaW1hZ2VfY29udGV4dBgDIAEoCzIk",
+            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuSW1hZ2VDb250ZXh0IjoKFkltYWdl",
+            "QW5ub3RhdGlvbkNvbnRleHQSCwoDdXJpGAEgASgJEhMKC3BhZ2VfbnVtYmVy",
+            "GAIgASgFIuQHChVBbm5vdGF0ZUltYWdlUmVzcG9uc2USQAoQZmFjZV9hbm5v",
+            "dGF0aW9ucxgBIAMoCzImLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRmFjZUFu",
+            "bm90YXRpb24SRgoUbGFuZG1hcmtfYW5ub3RhdGlvbnMYAiADKAsyKC5nb29n",
+            "bGUuY2xvdWQudmlzaW9uLnYxLkVudGl0eUFubm90YXRpb24SQgoQbG9nb19h",
+            "bm5vdGF0aW9ucxgDIAMoCzIoLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRW50",
+            "aXR5QW5ub3RhdGlvbhJDChFsYWJlbF9hbm5vdGF0aW9ucxgEIAMoCzIoLmdv",
+            "b2dsZS5jbG91ZC52aXNpb24udjEuRW50aXR5QW5ub3RhdGlvbhJXChxsb2Nh",
+            "bGl6ZWRfb2JqZWN0X2Fubm90YXRpb25zGBYgAygLMjEuZ29vZ2xlLmNsb3Vk",
+            "LnZpc2lvbi52MS5Mb2NhbGl6ZWRPYmplY3RBbm5vdGF0aW9uEkIKEHRleHRf",
+            "YW5ub3RhdGlvbnMYBSADKAsyKC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkVu",
+            "dGl0eUFubm90YXRpb24SRAoUZnVsbF90ZXh0X2Fubm90YXRpb24YDCABKAsy",
+            "Ji5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlRleHRBbm5vdGF0aW9uEkwKFnNh",
+            "ZmVfc2VhcmNoX2Fubm90YXRpb24YBiABKAsyLC5nb29nbGUuY2xvdWQudmlz",
+            "aW9uLnYxLlNhZmVTZWFyY2hBbm5vdGF0aW9uEkwKG2ltYWdlX3Byb3BlcnRp",
+            "ZXNfYW5ub3RhdGlvbhgIIAEoCzInLmdvb2dsZS5jbG91ZC52aXNpb24udjEu",
+            "SW1hZ2VQcm9wZXJ0aWVzEkoKFWNyb3BfaGludHNfYW5ub3RhdGlvbhgLIAEo",
+            "CzIrLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQ3JvcEhpbnRzQW5ub3RhdGlv",
+            "bhI7Cg13ZWJfZGV0ZWN0aW9uGA0gASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lv",
+            "bi52MS5XZWJEZXRlY3Rpb24STAoWcHJvZHVjdF9zZWFyY2hfcmVzdWx0cxgO",
+            "IAEoCzIsLmdvb2dsZS5jbG91ZC52aXNpb24udjEuUHJvZHVjdFNlYXJjaFJl",
+            "c3VsdHMSIQoFZXJyb3IYCSABKAsyEi5nb29nbGUucnBjLlN0YXR1cxI/Cgdj",
+            "b250ZXh0GBUgASgLMi4uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5JbWFnZUFu",
+            "bm90YXRpb25Db250ZXh0IvUBChpCYXRjaEFubm90YXRlSW1hZ2VzUmVxdWVz",
+            "dBJDCghyZXF1ZXN0cxgBIAMoCzIsLmdvb2dsZS5jbG91ZC52aXNpb24udjEu",
+            "QW5ub3RhdGVJbWFnZVJlcXVlc3RCA+BBAhIOCgZwYXJlbnQYBCABKAkSUwoG",
+            "bGFiZWxzGAUgAygLMj4uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRjaEFu",
+            "bm90YXRlSW1hZ2VzUmVxdWVzdC5MYWJlbHNFbnRyeUID4EEBGi0KC0xhYmVs",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiXwobQmF0",
+            "Y2hBbm5vdGF0ZUltYWdlc1Jlc3BvbnNlEkAKCXJlc3BvbnNlcxgBIAMoCzIt",
+            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuQW5ub3RhdGVJbWFnZVJlc3BvbnNl",
+            "Is8BChNBbm5vdGF0ZUZpbGVSZXF1ZXN0EjkKDGlucHV0X2NvbmZpZxgBIAEo",
+            "CzIjLmdvb2dsZS5jbG91ZC52aXNpb24udjEuSW5wdXRDb25maWcSMQoIZmVh",
+            "dHVyZXMYAiADKAsyHy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkZlYXR1cmUS",
+            "OwoNaW1hZ2VfY29udGV4dBgDIAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24u",
+            "djEuSW1hZ2VDb250ZXh0Eg0KBXBhZ2VzGAQgAygFIssBChRBbm5vdGF0ZUZp",
+            "bGVSZXNwb25zZRI5CgxpbnB1dF9jb25maWcYASABKAsyIy5nb29nbGUuY2xv",
+            "dWQudmlzaW9uLnYxLklucHV0Q29uZmlnEkAKCXJlc3BvbnNlcxgCIAMoCzIt",
+            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuQW5ub3RhdGVJbWFnZVJlc3BvbnNl",
+            "EhMKC3RvdGFsX3BhZ2VzGAMgASgFEiEKBWVycm9yGAQgASgLMhIuZ29vZ2xl",
+            "LnJwYy5TdGF0dXMi8gEKGUJhdGNoQW5ub3RhdGVGaWxlc1JlcXVlc3QSQgoI",
+            "cmVxdWVzdHMYASADKAsyKy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFubm90",
+            "YXRlRmlsZVJlcXVlc3RCA+BBAhIOCgZwYXJlbnQYAyABKAkSUgoGbGFiZWxz",
+            "GAUgAygLMj0uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRjaEFubm90YXRl",
+            "RmlsZXNSZXF1ZXN0LkxhYmVsc0VudHJ5QgPgQQEaLQoLTGFiZWxzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJdChpCYXRjaEFubm90",
+            "YXRlRmlsZXNSZXNwb25zZRI/CglyZXNwb25zZXMYASADKAsyLC5nb29nbGUu",
+            "Y2xvdWQudmlzaW9uLnYxLkFubm90YXRlRmlsZVJlc3BvbnNlIoICChhBc3lu",
+            "Y0Fubm90YXRlRmlsZVJlcXVlc3QSOQoMaW5wdXRfY29uZmlnGAEgASgLMiMu",
+            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5JbnB1dENvbmZpZxIxCghmZWF0dXJl",
+            "cxgCIAMoCzIfLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRmVhdHVyZRI7Cg1p",
+            "bWFnZV9jb250ZXh0GAMgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5J",
+            "bWFnZUNvbnRleHQSOwoNb3V0cHV0X2NvbmZpZxgEIAEoCzIkLmdvb2dsZS5j",
+            "bG91ZC52aXNpb24udjEuT3V0cHV0Q29uZmlnIlgKGUFzeW5jQW5ub3RhdGVG",
+            "aWxlUmVzcG9uc2USOwoNb3V0cHV0X2NvbmZpZxgBIAEoCzIkLmdvb2dsZS5j",
+            "bG91ZC52aXNpb24udjEuT3V0cHV0Q29uZmlnIsECCh9Bc3luY0JhdGNoQW5u",
+            "b3RhdGVJbWFnZXNSZXF1ZXN0EkMKCHJlcXVlc3RzGAEgAygLMiwuZ29vZ2xl",
+            "LmNsb3VkLnZpc2lvbi52MS5Bbm5vdGF0ZUltYWdlUmVxdWVzdEID4EECEkAK",
+            "DW91dHB1dF9jb25maWcYAiABKAsyJC5nb29nbGUuY2xvdWQudmlzaW9uLnYx",
+            "Lk91dHB1dENvbmZpZ0ID4EECEg4KBnBhcmVudBgEIAEoCRJYCgZsYWJlbHMY",
+            "BSADKAsyQy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFzeW5jQmF0Y2hBbm5v",
+            "dGF0ZUltYWdlc1JlcXVlc3QuTGFiZWxzRW50cnlCA+BBARotCgtMYWJlbHNF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIl8KIEFzeW5j",
+            "QmF0Y2hBbm5vdGF0ZUltYWdlc1Jlc3BvbnNlEjsKDW91dHB1dF9jb25maWcY",
+            "ASABKAsyJC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLk91dHB1dENvbmZpZyKB",
+            "AgoeQXN5bmNCYXRjaEFubm90YXRlRmlsZXNSZXF1ZXN0EkcKCHJlcXVlc3Rz",
+            "GAEgAygLMjAuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Bc3luY0Fubm90YXRl",
+            "RmlsZVJlcXVlc3RCA+BBAhIOCgZwYXJlbnQYBCABKAkSVwoGbGFiZWxzGAUg",
+            "AygLMkIuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Bc3luY0JhdGNoQW5ub3Rh",
+            "dGVGaWxlc1JlcXVlc3QuTGFiZWxzRW50cnlCA+BBARotCgtMYWJlbHNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImcKH0FzeW5jQmF0",
+            "Y2hBbm5vdGF0ZUZpbGVzUmVzcG9uc2USRAoJcmVzcG9uc2VzGAEgAygLMjEu",
+            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Bc3luY0Fubm90YXRlRmlsZVJlc3Bv",
+            "bnNlImgKC0lucHV0Q29uZmlnEjUKCmdjc19zb3VyY2UYASABKAsyIS5nb29n",
+            "bGUuY2xvdWQudmlzaW9uLnYxLkdjc1NvdXJjZRIPCgdjb250ZW50GAMgASgM",
+            "EhEKCW1pbWVfdHlwZRgCIAEoCSJjCgxPdXRwdXRDb25maWcSPwoPZ2NzX2Rl",
+            "c3RpbmF0aW9uGAEgASgLMiYuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5HY3NE",
+            "ZXN0aW5hdGlvbhISCgpiYXRjaF9zaXplGAIgASgFIhgKCUdjc1NvdXJjZRIL",
+            "CgN1cmkYASABKAkiHQoOR2NzRGVzdGluYXRpb24SCwoDdXJpGAEgASgJIogC",
+            "ChFPcGVyYXRpb25NZXRhZGF0YRI+CgVzdGF0ZRgBIAEoDjIvLmdvb2dsZS5j",
+            "bG91ZC52aXNpb24udjEuT3BlcmF0aW9uTWV0YWRhdGEuU3RhdGUSLwoLY3Jl",
+            "YXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8K",
+            "C3VwZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cCJRCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB0NSRUFURUQQ",
+            "ARILCgdSVU5OSU5HEAISCAoERE9ORRADEg0KCUNBTkNFTExFRBAEKmUKCkxp",
+            "a2VsaWhvb2QSCwoHVU5LTk9XThAAEhEKDVZFUllfVU5MSUtFTFkQARIMCghV",
+            "TkxJS0VMWRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoLVkVSWV9M",
+            "SUtFTFkQBTL1CgoOSW1hZ2VBbm5vdGF0b3ISkwIKE0JhdGNoQW5ub3RhdGVJ",
+            "bWFnZXMSMi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkJhdGNoQW5ub3RhdGVJ",
+            "bWFnZXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRjaEFu",
+            "bm90YXRlSW1hZ2VzUmVzcG9uc2UikgHaQQhyZXF1ZXN0c4LT5JMCgAEiEy92",
+            "MS9pbWFnZXM6YW5ub3RhdGU6ASpaOCIzL3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKn0vaW1hZ2VzOmFubm90YXRlOgEqWiwiJy92MS97cGFy",
+            "ZW50PXByb2plY3RzLyp9L2ltYWdlczphbm5vdGF0ZToBKhKMAgoSQmF0Y2hB",
+            "bm5vdGF0ZUZpbGVzEjEuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRjaEFu",
+            "bm90YXRlRmlsZXNSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5C",
+            "YXRjaEFubm90YXRlRmlsZXNSZXNwb25zZSKOAdpBCHJlcXVlc3RzgtPkkwJ9",
+            "IhIvdjEvZmlsZXM6YW5ub3RhdGU6ASpaNyIyL3YxL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKn0vZmlsZXM6YW5ub3RhdGU6ASpaKyImL3YxL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKn0vZmlsZXM6YW5ub3RhdGU6ASoS6wIKGEFzeW5j",
+            "QmF0Y2hBbm5vdGF0ZUltYWdlcxI3Lmdvb2dsZS5jbG91ZC52aXNpb24udjEu",
+            "QXN5bmNCYXRjaEFubm90YXRlSW1hZ2VzUmVxdWVzdBodLmdvb2dsZS5sb25n",
+            "cnVubmluZy5PcGVyYXRpb24i9gHKQTUKIEFzeW5jQmF0Y2hBbm5vdGF0ZUlt",
+            "YWdlc1Jlc3BvbnNlEhFPcGVyYXRpb25NZXRhZGF0YdpBFnJlcXVlc3RzLG91",
+            "dHB1dF9jb25maWeC0+STAp4BIh0vdjEvaW1hZ2VzOmFzeW5jQmF0Y2hBbm5v",
+            "dGF0ZToBKlpCIj0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "fS9pbWFnZXM6YXN5bmNCYXRjaEFubm90YXRlOgEqWjYiMS92MS97cGFyZW50",
+            "PXByb2plY3RzLyp9L2ltYWdlczphc3luY0JhdGNoQW5ub3RhdGU6ASoS1wIK",
+            "F0FzeW5jQmF0Y2hBbm5vdGF0ZUZpbGVzEjYuZ29vZ2xlLmNsb3VkLnZpc2lv",
+            "bi52MS5Bc3luY0JhdGNoQW5ub3RhdGVGaWxlc1JlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIuQBykE0Ch9Bc3luY0JhdGNoQW5ub3Rh",
+            "dGVGaWxlc1Jlc3BvbnNlEhFPcGVyYXRpb25NZXRhZGF0YdpBCHJlcXVlc3Rz",
+            "gtPkkwKbASIcL3YxL2ZpbGVzOmFzeW5jQmF0Y2hBbm5vdGF0ZToBKlpBIjwv",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9maWxlczphc3lu",
+            "Y0JhdGNoQW5ub3RhdGU6ASpaNSIwL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0v",
+            "ZmlsZXM6YXN5bmNCYXRjaEFubm90YXRlOgEqGnbKQRV2aXNpb24uZ29vZ2xl",
+            "YXBpcy5jb23SQVtodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Ns",
+            "b3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtdmlzaW9uQnQKGmNvbS5nb29nbGUuY2xvdWQudmlzaW9uLnYxQhNJ",
+            "bWFnZUFubm90YXRvclByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vdmlz",
+            "aW9uL3YyL2FwaXYxL3Zpc2lvbnBiO3Zpc2lvbnBi+AEBogIER0NWTmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1.ProductSearchReflection.Descriptor, global::Google.Cloud.Vision.V1.TextAnnotationReflection.Descriptor, global::Google.Cloud.Vision.V1.WebDetectionReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Vision.V1.Likelihood), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -269,17 +282,17 @@ namespace Google.Cloud.Vision.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateImageRequest), global::Google.Cloud.Vision.V1.AnnotateImageRequest.Parser, new[]{ "Image", "Features", "ImageContext" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageAnnotationContext), global::Google.Cloud.Vision.V1.ImageAnnotationContext.Parser, new[]{ "Uri", "PageNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateImageResponse), global::Google.Cloud.Vision.V1.AnnotateImageResponse.Parser, new[]{ "FaceAnnotations", "LandmarkAnnotations", "LogoAnnotations", "LabelAnnotations", "LocalizedObjectAnnotations", "TextAnnotations", "FullTextAnnotation", "SafeSearchAnnotation", "ImagePropertiesAnnotation", "CropHintsAnnotation", "WebDetection", "ProductSearchResults", "Error", "Context" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.Parser, new[]{ "Requests", "Parent", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse), global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.Parser, new[]{ "Responses" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateFileRequest), global::Google.Cloud.Vision.V1.AnnotateFileRequest.Parser, new[]{ "InputConfig", "Features", "ImageContext", "Pages" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateFileResponse), global::Google.Cloud.Vision.V1.AnnotateFileResponse.Parser, new[]{ "InputConfig", "Responses", "TotalPages", "Error" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateFilesRequest.Parser, new[]{ "Requests", "Parent", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateFilesResponse), global::Google.Cloud.Vision.V1.BatchAnnotateFilesResponse.Parser, new[]{ "Responses" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncAnnotateFileRequest), global::Google.Cloud.Vision.V1.AsyncAnnotateFileRequest.Parser, new[]{ "InputConfig", "Features", "ImageContext", "OutputConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncAnnotateFileResponse), global::Google.Cloud.Vision.V1.AsyncAnnotateFileResponse.Parser, new[]{ "OutputConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest.Parser, new[]{ "Requests", "OutputConfig", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesRequest.Parser, new[]{ "Requests", "OutputConfig", "Parent", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateImagesResponse.Parser, new[]{ "OutputConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesRequest.Parser, new[]{ "Requests", "Parent", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse), global::Google.Cloud.Vision.V1.AsyncBatchAnnotateFilesResponse.Parser, new[]{ "Responses" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.InputConfig), global::Google.Cloud.Vision.V1.InputConfig.Parser, new[]{ "GcsSource", "Content", "MimeType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.OutputConfig), global::Google.Cloud.Vision.V1.OutputConfig.Parser, new[]{ "GcsDestination", "BatchSize" }, null, null, null, null),
@@ -331,6 +344,7 @@ namespace Google.Cloud.Vision.V1 {
   /// number of results to return for that type. Multiple `Feature` objects can
   /// be specified in the `features` list.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Feature : pb::IMessage<Feature>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -681,6 +695,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// External image source (Google Cloud Storage or web URL image location).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageSource : pb::IMessage<ImageSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -937,6 +952,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Client image to perform Google Cloud Vision API tasks over.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Image : pb::IMessage<Image>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1188,6 +1204,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A face annotation object contains the results of face detection.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FaceAnnotation : pb::IMessage<FaceAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1969,6 +1986,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       /// A face-specific landmark (for example, a face feature).
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Landmark : pb::IMessage<Landmark>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -2383,6 +2401,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Detected entity location information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocationInfo : pb::IMessage<LocationInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2587,6 +2606,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A `Property` consists of a user-supplied name/value pair.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Property : pb::IMessage<Property>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2862,6 +2882,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Set of detected entity features.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityAnnotation : pb::IMessage<EntityAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3382,6 +3403,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Set of detected objects with bounding boxes.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LocalizedObjectAnnotation : pb::IMessage<LocalizedObjectAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3750,6 +3772,7 @@ namespace Google.Cloud.Vision.V1 {
   /// methods over safe-search verticals (for example, adult, spoof, medical,
   /// violence).
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SafeSearchAnnotation : pb::IMessage<SafeSearchAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3851,7 +3874,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int ViolenceFieldNumber = 4;
     private global::Google.Cloud.Vision.V1.Likelihood violence_ = global::Google.Cloud.Vision.V1.Likelihood.Unknown;
     /// <summary>
-    /// Likelihood that this image contains violent content.
+    /// Likelihood that this image contains violent content. Violent content may
+    /// include death, serious harm, or injury to individuals or groups of
+    /// individuals.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4112,6 +4137,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Rectangle determined by min and max `LatLng` pairs.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LatLongRect : pb::IMessage<LatLongRect>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4366,6 +4392,7 @@ namespace Google.Cloud.Vision.V1 {
   /// Color information consists of RGB channels, score, and the fraction of
   /// the image that the color occupies in the image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ColorInfo : pb::IMessage<ColorInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4651,6 +4678,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Set of dominant colors and their corresponding scores.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DominantColorsAnnotation : pb::IMessage<DominantColorsAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4835,6 +4863,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Stores image properties, such as dominant colors.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageProperties : pb::IMessage<ImageProperties>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5039,6 +5068,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Single crop hint that is used to generate a new crop when serving an image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CropHint : pb::IMessage<CropHint>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5325,6 +5355,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Set of crop hints that are used to generate new crops when serving images.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CropHintsAnnotation : pb::IMessage<CropHintsAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5509,6 +5540,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Parameters for crop hints annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CropHintsParams : pb::IMessage<CropHintsParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5700,6 +5732,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Parameters for web detection request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WebDetectionParams : pb::IMessage<WebDetectionParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5748,8 +5781,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int IncludeGeoResultsFieldNumber = 2;
     private bool includeGeoResults_;
     /// <summary>
-    /// Whether to include results derived from the geo information in the image.
+    /// This field has no effect on results.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeGeoResults {
@@ -5896,6 +5930,7 @@ namespace Google.Cloud.Vision.V1 {
   /// Parameters for text detections. This is used to control TEXT_DETECTION and
   /// DOCUMENT_TEXT_DETECTION features.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TextDetectionParams : pb::IMessage<TextDetectionParams>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5964,7 +5999,13 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> advancedOcrOptions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of advanced OCR options to fine-tune OCR behavior.
+    /// A list of advanced OCR options to further fine-tune OCR behavior.
+    /// Current valid values are:
+    ///
+    /// - `legacy_layout`: a heuristics layout detection algorithm, which serves as
+    /// an alternative to the current ML-based layout detection algorithm.
+    /// Customers can choose the best suitable layout algorithm based on their
+    /// situation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6122,6 +6163,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Image context and/or feature-specific parameters.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageContext : pb::IMessage<ImageContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6559,6 +6601,7 @@ namespace Google.Cloud.Vision.V1 {
   /// Request for performing Google Cloud Vision API tasks over a user-provided
   /// image, with user-requested features, and with context information.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateImageRequest : pb::IMessage<AnnotateImageRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -6842,6 +6885,7 @@ namespace Google.Cloud.Vision.V1 {
   /// If an image was produced from a file (e.g. a PDF), this message gives
   /// information about the source of that image.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ImageAnnotationContext : pb::IMessage<ImageAnnotationContext>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7078,6 +7122,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Response to an image annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateImageResponse : pb::IMessage<AnnotateImageResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7806,6 +7851,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Multiple image annotation requests are batched into a single service call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchAnnotateImagesRequest : pb::IMessage<BatchAnnotateImagesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -7842,6 +7888,7 @@ namespace Google.Cloud.Vision.V1 {
     public BatchAnnotateImagesRequest(BatchAnnotateImagesRequest other) : this() {
       requests_ = other.requests_.Clone();
       parent_ = other.parent_;
+      labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7891,6 +7938,25 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The labels with user-defined metadata for the request.
+    ///
+    /// Label keys and values can be no longer than 63 characters
+    /// (Unicode codepoints), can only contain lowercase letters, numeric
+    /// characters, underscores and dashes. International characters are allowed.
+    /// Label values are optional. Label keys must start with a letter.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7908,6 +7974,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if(!requests_.Equals(other.requests_)) return false;
       if (Parent != other.Parent) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7917,6 +7984,7 @@ namespace Google.Cloud.Vision.V1 {
       int hash = 1;
       hash ^= requests_.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7940,6 +8008,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7955,6 +8024,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7969,6 +8039,7 @@ namespace Google.Cloud.Vision.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -7985,6 +8056,7 @@ namespace Google.Cloud.Vision.V1 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8006,6 +8078,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 34: {
             Parent = input.ReadString();
+            break;
+          }
+          case 42: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
         }
@@ -8031,6 +8107,10 @@ namespace Google.Cloud.Vision.V1 {
             Parent = input.ReadString();
             break;
           }
+          case 42: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
         }
       }
     }
@@ -8041,6 +8121,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Response to a batch image annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchAnnotateImagesResponse : pb::IMessage<BatchAnnotateImagesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8225,6 +8306,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A request to annotate one single file, e.g. a PDF, TIFF or GIF file.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateFileRequest : pb::IMessage<AnnotateFileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8552,6 +8634,7 @@ namespace Google.Cloud.Vision.V1 {
   /// Response to a single file annotation request. A file may contain one or more
   /// images, which individually have their own responses.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnnotateFileResponse : pb::IMessage<AnnotateFileResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8876,6 +8959,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A list of requests to annotate files using the BatchAnnotateFiles API.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchAnnotateFilesRequest : pb::IMessage<BatchAnnotateFilesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -8912,6 +8996,7 @@ namespace Google.Cloud.Vision.V1 {
     public BatchAnnotateFilesRequest(BatchAnnotateFilesRequest other) : this() {
       requests_ = other.requests_.Clone();
       parent_ = other.parent_;
+      labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8927,8 +9012,8 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.AnnotateFileRequest.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.AnnotateFileRequest> requests_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.AnnotateFileRequest>();
     /// <summary>
-    /// Required. The list of file annotation requests. Right now we support only one
-    /// AnnotateFileRequest in BatchAnnotateFilesRequest.
+    /// Required. The list of file annotation requests. Right now we support only
+    /// one AnnotateFileRequest in BatchAnnotateFilesRequest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8962,6 +9047,25 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The labels with user-defined metadata for the request.
+    ///
+    /// Label keys and values can be no longer than 63 characters
+    /// (Unicode codepoints), can only contain lowercase letters, numeric
+    /// characters, underscores and dashes. International characters are allowed.
+    /// Label values are optional. Label keys must start with a letter.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8979,6 +9083,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if(!requests_.Equals(other.requests_)) return false;
       if (Parent != other.Parent) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8988,6 +9093,7 @@ namespace Google.Cloud.Vision.V1 {
       int hash = 1;
       hash ^= requests_.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9011,6 +9117,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(26);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9026,6 +9133,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(26);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9040,6 +9148,7 @@ namespace Google.Cloud.Vision.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -9056,6 +9165,7 @@ namespace Google.Cloud.Vision.V1 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -9077,6 +9187,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 26: {
             Parent = input.ReadString();
+            break;
+          }
+          case 42: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
         }
@@ -9102,6 +9216,10 @@ namespace Google.Cloud.Vision.V1 {
             Parent = input.ReadString();
             break;
           }
+          case 42: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
         }
       }
     }
@@ -9112,6 +9230,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// A list of file annotation responses.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchAnnotateFilesResponse : pb::IMessage<BatchAnnotateFilesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9297,6 +9416,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// An offline file annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncAnnotateFileRequest : pb::IMessage<AsyncAnnotateFileRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9628,6 +9748,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// The response for a single offline file annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncAnnotateFileResponse : pb::IMessage<AsyncAnnotateFileResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9832,6 +9953,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Request for async image annotation for a list of images.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncBatchAnnotateImagesRequest : pb::IMessage<AsyncBatchAnnotateImagesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -9869,6 +9991,7 @@ namespace Google.Cloud.Vision.V1 {
       requests_ = other.requests_.Clone();
       outputConfig_ = other.outputConfig_ != null ? other.outputConfig_.Clone() : null;
       parent_ = other.parent_;
+      labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9933,6 +10056,25 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The labels with user-defined metadata for the request.
+    ///
+    /// Label keys and values can be no longer than 63 characters
+    /// (Unicode codepoints), can only contain lowercase letters, numeric
+    /// characters, underscores and dashes. International characters are allowed.
+    /// Label values are optional. Label keys must start with a letter.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9951,6 +10093,7 @@ namespace Google.Cloud.Vision.V1 {
       if(!requests_.Equals(other.requests_)) return false;
       if (!object.Equals(OutputConfig, other.OutputConfig)) return false;
       if (Parent != other.Parent) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9961,6 +10104,7 @@ namespace Google.Cloud.Vision.V1 {
       hash ^= requests_.GetHashCode();
       if (outputConfig_ != null) hash ^= OutputConfig.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9988,6 +10132,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10007,6 +10152,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10024,6 +10170,7 @@ namespace Google.Cloud.Vision.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -10046,6 +10193,7 @@ namespace Google.Cloud.Vision.V1 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10074,6 +10222,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 34: {
             Parent = input.ReadString();
+            break;
+          }
+          case 42: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
         }
@@ -10106,6 +10258,10 @@ namespace Google.Cloud.Vision.V1 {
             Parent = input.ReadString();
             break;
           }
+          case 42: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
         }
       }
     }
@@ -10116,6 +10272,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Response to an async batch image annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncBatchAnnotateImagesResponse : pb::IMessage<AsyncBatchAnnotateImagesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10321,6 +10478,7 @@ namespace Google.Cloud.Vision.V1 {
   /// Multiple async file annotation requests are batched into a single service
   /// call.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncBatchAnnotateFilesRequest : pb::IMessage<AsyncBatchAnnotateFilesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10357,6 +10515,7 @@ namespace Google.Cloud.Vision.V1 {
     public AsyncBatchAnnotateFilesRequest(AsyncBatchAnnotateFilesRequest other) : this() {
       requests_ = other.requests_.Clone();
       parent_ = other.parent_;
+      labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10406,6 +10565,25 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 5;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The labels with user-defined metadata for the request.
+    ///
+    /// Label keys and values can be no longer than 63 characters
+    /// (Unicode codepoints), can only contain lowercase letters, numeric
+    /// characters, underscores and dashes. International characters are allowed.
+    /// Label values are optional. Label keys must start with a letter.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -10423,6 +10601,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if(!requests_.Equals(other.requests_)) return false;
       if (Parent != other.Parent) return false;
+      if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10432,6 +10611,7 @@ namespace Google.Cloud.Vision.V1 {
       int hash = 1;
       hash ^= requests_.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10455,6 +10635,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10470,6 +10651,7 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(34);
         output.WriteString(Parent);
       }
+      labels_.WriteTo(ref output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10484,6 +10666,7 @@ namespace Google.Cloud.Vision.V1 {
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
+      size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -10500,6 +10683,7 @@ namespace Google.Cloud.Vision.V1 {
       if (other.Parent.Length != 0) {
         Parent = other.Parent;
       }
+      labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10521,6 +10705,10 @@ namespace Google.Cloud.Vision.V1 {
           }
           case 34: {
             Parent = input.ReadString();
+            break;
+          }
+          case 42: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
         }
@@ -10546,6 +10734,10 @@ namespace Google.Cloud.Vision.V1 {
             Parent = input.ReadString();
             break;
           }
+          case 42: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
         }
       }
     }
@@ -10556,6 +10748,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Response to an async batch file annotation request.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AsyncBatchAnnotateFilesResponse : pb::IMessage<AsyncBatchAnnotateFilesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -10741,6 +10934,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// The desired input location and metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InputConfig : pb::IMessage<InputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11031,6 +11225,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// The desired output location and metadata.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OutputConfig : pb::IMessage<OutputConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11285,6 +11480,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// The Google Cloud Storage location where the input will be read from.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsSource : pb::IMessage<GcsSource>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11481,6 +11677,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// The Google Cloud Storage location where the output will be written to.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GcsDestination : pb::IMessage<GcsDestination>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -11697,6 +11894,7 @@ namespace Google.Cloud.Vision.V1 {
   /// <summary>
   /// Contains metadata for the BatchAnnotateImages operation.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

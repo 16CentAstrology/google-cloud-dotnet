@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,8 +14,9 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.Eventarc.Publishing.V1.Snippets
+namespace GoogleCSharpSnippets
 {
+    using Google.Cloud.Eventarc.Publishing.V1;
     using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
@@ -93,6 +94,41 @@ namespace Google.Cloud.Eventarc.Publishing.V1.Snippets
             };
             // Make the request
             PublishEventsResponse response = await publisherClient.PublishEventsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for Publish</summary>
+        public void PublishRequestObject()
+        {
+            // Snippet: Publish(PublishRequest, CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            PublishRequest request = new PublishRequest
+            {
+                MessageBus = "",
+                ProtoMessage = new CloudEvent(),
+            };
+            // Make the request
+            PublishResponse response = publisherClient.Publish(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PublishAsync</summary>
+        public async Task PublishRequestObjectAsync()
+        {
+            // Snippet: PublishAsync(PublishRequest, CallSettings)
+            // Additional: PublishAsync(PublishRequest, CancellationToken)
+            // Create client
+            PublisherClient publisherClient = await PublisherClient.CreateAsync();
+            // Initialize request argument(s)
+            PublishRequest request = new PublishRequest
+            {
+                MessageBus = "",
+                ProtoMessage = new CloudEvent(),
+            };
+            // Make the request
+            PublishResponse response = await publisherClient.PublishAsync(request);
             // End snippet
         }
     }

@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
-namespace Google.Cloud.SecurityCenter.V1.Snippets
+namespace GoogleCSharpSnippets
 {
     // [START securitycenter_v1_generated_SecurityCenter_ListAssets_async]
     using Google.Api.Gax;
@@ -50,7 +50,9 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
                 FieldMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListAssetsResponse, ListAssetsResponse.Types.ListAssetsResult> response = securityCenterClient.ListAssetsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((ListAssetsResponse.Types.ListAssetsResult item) =>
